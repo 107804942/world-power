@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2020/9/7 22:10:47 -->
+<GameData>
+
+
+	<ArtDefine_LandmarkTypes>
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_BEACON</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>BEACON</FriendlyName>
+		</Row>
+
+
+		
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_SILUMGAR_NECROPOLIS</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>Necropolis</FriendlyName>
+		</Row>
+		
+		
+		
+
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_LATIFUNDIUM</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>LATIFUNDIUM</FriendlyName>
+		</Row>
+		
+		
+		
+		
+		
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_FW_GENERATOR</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>FW_GENERATOR</FriendlyName>
+		</Row>
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_FW_COMM_ARRAY</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>FW_COMM_ARRAY</FriendlyName>
+		</Row>
+
+
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_BE_ACADEMY</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>BE_ACADEMY</FriendlyName>
+		</Row>
+
+
+
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_BE_ARRAY</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>BE_ARRAY</FriendlyName>
+		</Row>
+
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_BARGE</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>BARGE</FriendlyName>
+		</Row>
+
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_TERRASCAPE</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>TERRASCAPE</FriendlyName>
+		</Row>
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_FW_CORE</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>FW_CORE</FriendlyName>
+		</Row>
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_BE_MANUFACTORY</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>BE_MANUFACTORY</FriendlyName>
+		</Row>
+
+
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_FW_ARCOLOGY</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>FW_ARCOLOGY</FriendlyName>
+		</Row>
+
+		<Row>
+			<Type>ART_DEF_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>FW_INDUSTRIAL_COMPLEX</FriendlyName>
+		</Row>
+
+		<Row>
+			<Type>ART_DEF_EARTHLING_SETTLEMENT</Type>
+			<LandmarkType>Improvement</LandmarkType>
+			<FriendlyName>EARTHLING_SETTLEMENT</FriendlyName>
+		</Row>
+		
+		
+	</ArtDefine_LandmarkTypes>
+
+
+	<ArtDefine_Landmarks>
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_SILUMGAR_NECROPOLIS</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Silumgar_Necropolis.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_SILUMGAR_NECROPOLIS</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Silumgar_Necropolis.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_SILUMGAR_NECROPOLIS</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>holy_site_pil.fxsxml</Model>
+		</Row>
+
+		
+		
+		
+		
+		
+		
+
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Mediterranean Villa_HB.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Mediterranean Villa_B.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Mediterranean Villa_PL.fxsxml</Model>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BARGE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>bargealgae_cn.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BARGE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>bargealgae_pl.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BARGE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>bargealgae_hb.fxsxml</Model>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>academy_cn.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>academy_pl.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>academy_hb.fxsxml</Model>
+		</Row>
+
+
+
+
+
+
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>WellGeothermalHeavy_CN.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>WellGeothermalHeavy_PL.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>WellGeothermalHeavy_HB.fxsxml</Model>
+		</Row>
+
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>CommsArray.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>CommsArray_PL.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>CommsArray_build.fxsxml</Model>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_ARRAY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>array_cn.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_ARRAY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>array_pl.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_ARRAY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>array_hb.fxsxml</Model>
+		</Row>
+
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_MANUFACTORY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>manufactory_hb.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_MANUFACTORY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>manufactory_cn.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BE_MANUFACTORY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>manufactory_pl.fxsxml</Model>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>IndustrialSite_build.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>IndustrialSite.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>IndustrialSite_PL.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_CORE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Node_cn.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_CORE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Node_pl.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_CORE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Node_hb.fxsxml</Model>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Arcology_hb.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Arcology.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Arcology_pl.fxsxml</Model>
+		</Row>
+
+
+
+
+
+		<!-- TerraScape -->
+
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Terrascape_CN.fxsxml</Model>
+		</Row>
+		
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Terrascape_CN_02.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Terrascape_CN_03.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Terrascape_CN_01.fxsxml</Model>
+		</Row>
+		
+		
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>Terrascape_PL.fxsxml</Model>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_EARTHLING_SETTLEMENT</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>PuritySettlement_CN.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_EARTHLING_SETTLEMENT</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>PuritySettlement_CN.fxsxml</Model>
+		</Row>
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_EARTHLING_SETTLEMENT</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>PuritySettlement_PL.fxsxml</Model>
+		</Row>
+
+
+
+
+
+
+
+
+
+		<!--阿基米德杠杆-->
+
+		<Row>
+			<Era>Any</Era>
+			<State>UnderConstruction</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BEACON</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>beacon_hb.fxsxml</Model>
+		</Row>
+
+		<Row>
+			<Era>Any</Era>
+			<State>Constructed</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BEACON</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>beacon.fxsxml</Model>
+		</Row>
+		
+
+
+		<Row>
+			<Era>Any</Era>
+			<State>Pillaged</State>
+			<Scale>1.0</Scale>
+			<ImprovementType>ART_DEF_IMPROVEMENT_BEACON</ImprovementType>
+			<LayoutHandler>SNAPSHOT</LayoutHandler>
+			<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+			<Model>beacon_pil.fxsxml</Model>
+		</Row>
+
+
+
+
+
+		
+
+
+
+	</ArtDefine_Landmarks>
+
+
+
+
+	
+
+	
+	
+
+	
+	
+	<ArtDefine_StrategicView>
+
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_SILUMGAR_NECROPOLIS</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_landmark.dds</Asset>
+		</Row>
+
+
+
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_LATIFUNDIUM</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>SV_Farm.dds</Asset>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<StrategicViewType>ART_DEF_EARTHLING_SETTLEMENT</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_Arcology.dds</Asset>
+		</Row>
+		
+		
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_BE_MANUFACTORY</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_manufactory.dds</Asset>
+		</Row>
+
+
+
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_FW_CORE</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_SupportCore.dds</Asset>
+		</Row>
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_FW_ARCOLOGY</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_Arcology.dds</Asset>
+		</Row>
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_IndustrialSite.dds</Asset>
+		</Row>
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_TERRASCAPE</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_NaturePreserve.dds</Asset>
+		</Row>
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_FW_COMM_ARRAY</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_CommArray.dds</Asset>
+		</Row>
+
+
+
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_FW_GENERATOR</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_Generator.dds</Asset>
+		</Row>
+
+
+
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_BE_ACADEMY</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_academy.dds</Asset>
+		</Row>
+
+
+		<Row>
+			<StrategicViewType>ART_DEF_IMPROVEMENT_BE_ARRAY</StrategicViewType>
+			<TileType>Improvement</TileType>
+			<Asset>sv_array.dds</Asset>
+		</Row>
+		
+	</ArtDefine_StrategicView>
+
+
+
+
+
+
+	
+</GameData>

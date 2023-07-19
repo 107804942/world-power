@@ -1,0 +1,29 @@
+<Asset>
+  <Mesh file="Manufactory_CN.gr2" source="Max" />
+  <Animation file="Manufactory_Idle.gr2" name="Idle" ec="1000" source="Max" layer="None" />
+  <Texture file="Manufactory_CN_DIFF.dds" source="Max" />
+  <Texture file="Manufactory_CN_DecalD.dds" source="Max" />
+  <Texture file="Manufactory_CN_DecalH.dds" source="Max" />
+  <Texture file="Manufactory_CN_SREF.dds" source="Max" />
+  <Texture file="Manufactory_HB_DIFF.dds" source="Max" />
+  <Texture file="Manufactory_HB_SREF.dds" source="Max" />
+  <Texture file="Manufactory_PL_DIFF.dds" source="Max" />
+  <Texture file="Manufactory_PL_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <DecisionTree file="LandmarkDecisionTree.ddtxml" source="Tool" />
+  <BoneUsage>
+    <Bone name="BONE_FXSmokeStack01" />
+    <Bone name="BONE_FXSmokeStack02" />
+    <Bone name="BONE_FXSmokeStack03" />
+    <Bone name="BONE_FXSmokeStack04" />
+    <Bone name="BONE_FXSmokeStack05" />
+    <Bone name="BONE_FXGasFlare" />
+    <Bone name="BONE_FXSlagEmitter" />
+    <Bone name="BONE_FXSlagPool" />
+  </BoneUsage>
+  <TimedTrigger file="FX_Triggers_Manufactory_SmokeStacks01.ftsxml" source="Tool" model="CN_Manufactory01" state="2" />
+  <TimedTrigger file="FX_Triggers_Manufactory_SmokeStacks03.ftsxml" source="Tool" model="CN_Manufactory03" state="2" />
+  <TimedTrigger file="FX_Triggers_Manufactory_Flame_Vent_VFX.ftsxml" source="Tool" model="CN_Manufactory02" state="2" />
+</Asset>

@@ -1,0 +1,102 @@
+<Asset>
+	<Mesh file="Angel.gr2"/>
+	<Animation file="Angel_IdleA.gr2" ec="1000"/>
+	<Animation file="Angel_IdleA_Trans_IdleB.gr2" ec="1020"/>
+	<Animation file="Angel_IdleB.gr2" ec="2000"/>
+	<Animation file="Angel_IdleBTranIdleA.gr2" ec="2020"/>
+	<Animation file="Angel_FidgetA.gr2" ec="1040"/>
+	<Animation file="Angel_FidgetB.gr2" ec="2040"/>
+	<Animation file="Angel_Fortify.gr2" ec="1500"/>
+	<Animation file="Angel_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="Angel_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="Angel_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="Angel_Fortify_Idle_Trans_Combat_Ready_Idle.gr2" ec="1560"/>
+	<Animation file="Angel_Run.gr2" ec="1400, 1120, 1450"/>
+	<Animation file="Angel_Stop_Run_A.gr2" ec="1440"/>
+	<Animation file="Angel_Stop_Run_B.gr2" ec="2440"/>
+	<Animation file="Angel_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Angel_Combat_Ready_Idle.gr2" ec="1620"/>
+	<Animation file="Angel_AttackA.gr2" ec="1100, 1140"/>
+	<Animation file="Angel_AttackB.gr2" ec="2100"/>
+	<Animation file="Angel_Bombardment.gr2" ec="1180"/>
+	<Animation file="Angel_Attack_City.gr2" ec="1160"/>
+	<Animation file="Angel_Attack_Air.gr2" ec="1130"/>
+	<Animation file="Angel_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640, 1800"/>
+	<Animation file="Angel_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Angel_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Angel_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Angel_DeathA.gr2" ec="1200"/>
+	<Animation file="Angel_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="Angel_DeathB.gr2" ec="2200"/>
+	<Animation file="Angel_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Ultron_DIFF.dds"/>
+	<Texture file="Ultron_SREF.dds"/>
+	<Texture file="Ultron_DMG_DIFF.dds"/>
+	<Texture file="Ultron_DMG_SREF.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Sunlight_Irradiance.dds"/>
+	<AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="ENTER_FORTIFY.dge"/>
+	<AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="DEATH_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_GRAPH.dge"/>
+	<AnimGraph file="TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="STOP_RUNNING.dge"/>
+	<AnimGraph file="IDLE_GRAPH.dge"/>
+	<AnimGraph file="FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="MELEE_ATTACKS.dge"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge"/>
+	<StateMachine file="1_OMNI_STATE_01.fsmxml"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_LOOP.dge"/>
+	<AnimGraph file="ATTACK_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="ATTACK_CITY_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="START_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="SHUFFLE_STOP_GRAPH.dge"/>
+	<TimedTrigger file="FX_Triggers_ANGEL.ftsxml"/>
+	<BoneUsage>
+		<Bone name="FX_Scanner_Bone"/>
+		<Bone name="FX_MG_Bone_R"/>
+		<Bone name="FX_MG_Bone_L"/>
+		<Bone name="FX_MG_Bone_M"/>
+		<Bone name="FX_Foot_FrontRight01"/>
+		<Bone name="FX_Foot_FrontLeft01"/>
+		<Bone name="FX_Foot_BackRight01"/>
+		<Bone name="FX_Foot_BackLeft01"/>
+		<Bone name="Point_GunTop_L"/>
+		<Bone name="Point_PROJECTILE_L01"/>
+		<Bone name="Point_GunEnergy_L"/>
+		<Bone name="Point_GunTop_R"/>
+		<Bone name="Point_PROJECTILE_R01"/>
+		<Bone name="Point_GunVentRight"/>
+		<Bone name="Point_GunEnergy_R"/>
+		<Bone name="Point_GunVentLeft"/>
+		<Bone name="Point_PROJECTILE_R02"/>
+		<Bone name="Point_PROJECTILE_L02"/>
+		<Bone name="FX_AA_Muzzle_R05"/>
+		<Bone name="FX_AA_Muzzle_R04"/>
+		<Bone name="FX_AA_Muzzle_R06"/>
+		<Bone name="FX_AA_Muzzle_L04"/>
+		<Bone name="FX_AA_Muzzle_L05"/>
+		<Bone name="FX_AA_Muzzle_L06"/>
+		<Bone name="SB_AntiAir_Right04"/>
+		<Bone name="SB_BigGun_L"/>
+		<Bone name="SB_Bone14"/>
+		<Bone name="SB_COreBody01"/>
+		<Bone name="SB_Left_UpperShield01"/>
+		<Bone name="SB_Bone15"/>
+		<Bone name="SB_AntiAir_Left06"/>
+		<Bone name="SB_AntiAir_Left05"/>
+		<Bone name="SB_AntiAir_Right05"/>
+		<Bone name="SB_AntiAir_Left04"/>
+	</BoneUsage>
+</Asset>
+

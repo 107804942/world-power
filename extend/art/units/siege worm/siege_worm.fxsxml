@@ -1,0 +1,91 @@
+<Asset>
+	<Mesh file="Siege_Worm.gr2"/>
+	<Animation file="Siege_Worm_IdleA.gr2" ec="1000"/>
+	<Animation file="Siege_Worm_FidgetA.gr2" ec="1040"/>
+	<Animation file="Siege_Worm_IdleA_Trans_IdleB.gr2" ec="1020"/>
+	<Animation file="Siege_Worm_FidgetB.gr2" ec="2040"/>
+	<Animation file="Siege_Worm_IdleB_Trans_IdleA.gr2" ec="2020"/>
+	<Animation file="Siege_Worm_Fortify.gr2" ec="1500"/>
+	<Animation file="Siege_Worm_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="Siege_Worm_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="Siege_Worm_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="Siege_Worm_IdleB.gr2" ec="2000"/>
+	<Animation file="Siege_Worm_StartRun.gr2" ec="1420, 1110"/>
+	<Animation file="Siege_Worm_Run.gr2" ec="1400, 1120, 1140, 1450"/>
+	<Animation file="Siege_Worm_Stop_Run.gr2" ec="1440, 2440"/>
+	<Animation file="Siege_Worm_Worm_Combat_Facing.gr2" ec="1300"/>
+	<Animation file="Siege_Worm_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Siege_Worm_Combat_Ready_Idle.gr2" ec="1620"/>
+	<Animation file="Siege_Worm_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640"/>
+	<Animation file="Siege_Worm_Combat_Ready_Trans_Run.gr2" ec="1650"/>
+	<Animation file="Siege_Worm_AttackA.gr2" ec="1100"/>
+	<Animation file="Siege_Worm_AttackC.gr2" ec="2100"/>
+	<Animation file="Siege_Worm_Attack_City.gr2" ec="1160, 1180"/>
+	<Animation file="Siege_Worm_Attack_Air.gr2" ec="1130"/>
+	<Animation file="Siege_Worm_Victory.gr2" ec="1800"/>
+	<Animation file="Siege_Worm_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Siege_Worm_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Siege_Worm_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Siege_Worm_DeathB.gr2" ec="2200"/>
+	<Animation file="Siege_Worm_DeathB_Idle.gr2" ec="2220"/>
+	<Animation file="Siege_Worm_DeathA.gr2" ec="1200"/>
+	<Animation file="Siege_Worm_DeathA_Idle.gr2" ec="1220"/>
+	<Texture file="SiegeWorm_DIFF.dds"/>
+	<Texture file="SiegeWorm_SREF.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Irradiance.dds"/>
+	<AnimGraph file="WORM_IDLE_TO_RUN.dge"/>
+	<AnimGraph file="WORM_START_RUN.dge"/>
+	<AnimGraph file="WORM_ATTACK_CITY_TO_RUN.dge"/>
+	<AnimGraph file="WORM_COMBAT_TO_RUN.dge"/>
+	<AnimGraph file="WORM_LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="Worm_ENTER_COMBAT_READY.dge"/>
+	<AnimGraph file="COMBAT_FACING_GRAPH.dge"/>
+	<AnimGraph file="WORM_ENTER_BOMBARD_DEFEND.dge"/>
+	<StateMachine file="SIEGE_WORM_STATE_01.fsmxml"/>
+	<TimedTrigger file="FX_Trigger_Siege_Worm.ftsxml"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge"/>
+	<AnimGraph file="SHUFFLE_STOP_GRAPH.dge"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_LOOP.dge"/>
+	<AnimGraph file="MELEE_ATTACKS.dge"/>
+	<AnimGraph file="FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="IDLE_GRAPH.dge"/>
+	<AnimGraph file="STOP_RUNNING.dge"/>
+	<AnimGraph file="TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="FORTIFY_GRAPH.dge"/>
+	<AnimGraph file="COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="DEATH_GRAPH.dge"/>
+	<AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<BoneUsage>
+		<Bone name="FX_Drill_02"/>
+		<Bone name="FX_Drill_01"/>
+		<Bone name="FX_Drill_03"/>
+		<Bone name="FX_Drill_05"/>
+		<Bone name="FX_Drill_06"/>
+		<Bone name="FX_Drill_04"/>
+		<Bone name="MasterDummy"/>
+		<Bone name="SB_TentacleB05"/>
+		<Bone name="SB_TentacleA05"/>
+		<Bone name="SB_TentacleC05"/>
+		<Bone name="SB_TentacleC01"/>
+		<Bone name="SB_WormBody04"/>
+		<Bone name="SB_TentacleC04"/>
+		<Bone name="SB_TentacleA"/>
+		<Bone name="SB_TentacleB04"/>
+		<Bone name="SB_TentacleB01"/>
+		<Bone name="SB_TentacleA02"/>
+		<Bone name="SB_WormBody03"/>
+		<Bone name="SB_TentacleA04"/>
+		<Bone name="SB_TentacleA01"/>
+		<Bone name="WORLD_CENTER"/>
+	</BoneUsage>
+	<AnimGraph file="WORM_ENTER_FORTIFY.dge"/>
+	<AnimGraph file="WORM_COMBAT_READY_START.dge"/>
+	<AnimGraph file="WORM_FORTIFY_LEAVE.dge"/>
+</Asset>
+

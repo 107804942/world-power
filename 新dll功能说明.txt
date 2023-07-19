@@ -1,0 +1,481 @@
+﻿-- Text File1
+-- Author: 11585
+-- DateCreated: 2023/2/4 19:06:04
+--------------------------------------------------------------
+41.地块能否被远程攻击的判定事件
+ <Row Class="3" Name="EVENTS_UNIT_CAN_RANGEATTACK" Value="0"/>
+ <!--GameEvents.UnitCanRangeAttackPlot.Add(function(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar) return true end)-->
+
+45.单位过回合
+<Row Class="3" Name="EVENTS_UNIT_DO_TURN" Value="0"/>
+<!-- GameEvents.UnitDoTurn.Add(function(iPlayer, iUnit, iPlotX, iPlotY) end)-->
+
+43.单位在不同地块间移动的判定事件
+ <Row Class="3" Name="EVENTS_UNIT_MOVE" Value="0"/>
+<!--GameEvents.UnitMoveInto.Add(function(iPlayer, iUnit, iUsedMoves, iOldPlotX, iOldPlotY,iNewPlotX, iNewPlotY) end)-->
+
+
+1.单位创建杰作
+ <Row Class="3" Name="EVENTS_GREAT_WORK_CREATED" Value="0"/>
+<!--GameEvents.GreatWorkCreated.Add(function(iPlayer, iUnit, iGreatWork) end)--> 
+
+2.伟人执行产出任务
+<Row Class="3" Name="EVENTS_GREAT_PEOPLE_BOOST" Value="0"/> 
+<!--GameEvents.ScienceDiscover.Add(function(iPlayer,iUnit,iX,iY,bIsGreatPerson) end)-->   大科烧科技
+<!--GameEvents.CultureDiscover.Add(function(iPlayer, iUnit, iX, iY, bIsGreatPerson) end)-->   大文烧文化
+<!--GameEvents.TourismDiscover.Add(function(iPlayer, iUnit, iX, iY, bIsGreatPerson) end)-->   大音烧魅力
+<!--GameEvents.ProductionDiscover.Add(function(iPlayer, iUnit, iX, iY, bIsGreatPerson) end)-->  大工烧产能
+<!--GameEvents.GoldDiscover.Add(function(iPlayer, iUnit, iX, iY, bIsGreatPerson) end)-->   大商爆金币
+<!--GameEvents.GoldenAgeDiscover.Add(function(iPlayer, iUnit, iX, iY, bIsGreatPerson) end)-->  大艺开黄金时代
+<!--GameEvents.CultureBombDiscover.Add(function(iPlayer, iUnit, iX, iY, bIsGreatPerson) end)-->  伟人偷地块
+<!--GameEvents.FaithDiscover.Add(function(iPlayer, iUnit, iX, iY, bIsGreatPerson) end)-->   单位传播宗教
+
+3.城市傀儡状态的变化事件
+<Row Class="3" Name="EVENTS_CITY_PUPPETED" Value="0"/>
+<!--GameEvents.CityPuppeted.Add(function(playerID, cityID) end)--> 
+
+4.城市板砖攻击
+<Row Class="3" Name="EVENTS_CITY_RANGE_STRIKE" Value="0"/>
+<!--GameEvents.CityRangedStrike.Add(function(iPlayer,iAttCity,idefPlayer,idefUnit,iX, iY) end)--> 
+
+5.地块归属者改变(需注意列出iOldOwner,iNewOwner分别为空值的情形)
+<Row Class="3" Name="EVENTS_TILE_SET_OWNER" Value="0"/>
+<!--GameEvents.TileSetOwnership.Add(iPlotX, iPlotY, iOldOwner,iNewOwner) end)--> 
+
+6.爱领袖日
+
+<Row Class="3" Name="EVENTS_WLKD_DAY" Value="0"/>
+<!--GameEvents.CityBeginsWLTKD.Add(iPlayer, iPlotX, iPlotY, iChange) end)--> 
+<!--GameEvents.CityEndsWLTKD.Add(iPlayer, iPlotX, iPlotY) end)--> 
+
+7.地块被掠劫
+<Row Class="3" Name="EVENTS_IMPROVEMENTS_PILLAGED" Value="0"/>  
+<!--GameEvents.TileImprovementPillaged.Add(iPlotX, iPlotY, iOwner,iImprovement,bPillaged) end)--> 
+bPillaged 决定本次是否掠劫地块，执行掠劫则为bPillaged  反之从掠劫恢复则 not bPillaged
+
+
+
+8.新改良设施效果
+
+--改良设施提供资源
+ALTER TABLE Improvements ADD COLUMN 'ImprovementResource' TEXT DEFAULT NULL;
+ALTER TABLE Improvements ADD COLUMN 'ImprovementResourceQuantity' INTEGER DEFAULT 0;
+
+---改良设施提供奇观建造速度加成
+ALTER TABLE Improvements ADD WonderProductionModifier INTEGER DEFAULT 0;
+
+<Row Class="2" Name="ROG_CORE" Value="1"/>
+	<!--地貌对同格改良设施产出加成  -->
+	<Table name="Improvement_FeatureYieldChanges">
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+    <!--资源对临近的改良设施产出加成 -->
+	<Table name="Improvement_AdjacentResourceYieldChanges">
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<!--地形对临近的改良设施产出加成 -->
+	<Table name="Improvement_AdjacentTerrainYieldChanges">
+	<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="TerrainType" type="text" reference="Terrains(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<!--地貌对临近的改良设施产出加成 -->
+	<Table name="Improvement_AdjacentFeatureYieldChanges">
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+9.地貌对临近地块的产出加成
+<!-- 地貌对临近的地块产出加成，效果类似文明6的自然奇观对周围地块加成 -->
+	<Table name="Plot_AdjacentFeatureYieldChanges">
+		<Column name="PlotType" type="text" reference="Plots(Type)"/>
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+		<Column name="IgnoreNaturalWonderPlots" type="boolean" default="false"/>
+	</Table>
+
+
+
+
+
+
+
+
+
+15..临近的兵种加成
+ALTER TABLE UnitPromotions ADD NearbyUnitClassBonus INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD NearbyUnitClassBonusRange INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD CombatBonusFromNearbyUnitClass INTEGER DEFAULT -1;
+
+
+
+17.单位移动时的aoe伤害
+ALTER TABLE UnitPromotions ADD 'AoEDamageOnMove' INTEGER DEFAULT 0;
+
+
+18.将最终伤害强制换位某个数值(不可为零)
+ALTER TABLE UnitPromotions ADD 'ForcedDamageValue' INTEGER DEFAULT 0;
+
+19.抵消一部分最终伤害
+ALTER TABLE UnitPromotions ADD 'ChangeDamageValue' INTEGER DEFAULT 0;
+
+20.对满血单位加成
+ALTER TABLE UnitPromotions ADD 'AttackFullyHealedMod' INTEGER DEFAULT 0;
+
+21.对超过半血的单位攻击加成
+ALTER TABLE UnitPromotions ADD 'AttackAbove50HealthMod' INTEGER DEFAULT 0;
+
+22.对不足半血的单位攻击加成
+ALTER TABLE UnitPromotions ADD 'AttackBelowEqual50HealthMod' INTEGER DEFAULT 0;
+
+23.残血加成
+ALTER TABLE UnitPromotions ADD COLUMN 'StrongerDamaged' BOOLEAN DEFAULT 0; 
+ALTER TABLE UnitPromotions ADD COLUMN 'FightWellDamaged' BOOLEAN DEFAULT 0; ---仅无惩罚
+
+
+24.黄金时代加成
+ALTER TABLE UnitPromotions ADD COLUMN 'GoldenAgeMod' INTEGER DEFAULT 0;
+
+提升远程支援火力(1+X基数除以2)
+ALTER TABLE UnitPromotions ADD COLUMN 'RangedSupportFireMod' INTEGER DEFAULT 0;
+
+28.剩余移动力攻击力加成
+ALTER TABLE UnitPromotions ADD 'MoveLfetAttackMod' INTEGER DEFAULT 0;
+
+29.已用移动力攻击力加成
+ALTER TABLE UnitPromotions ADD 'MoveUsedAttackMod' INTEGER DEFAULT 0;
+
+
+30.对领域的攻击与防御加成
+ALTER TABLE UnitPromotions_Domains ADD 'Attack' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions_Domains ADD 'Defense' INTEGER DEFAULT 0;
+
+
+27.军事单位不再被判定为大军，改为绑定 GetUnitAIType(UNITAI_GENERAL) 类型
+
+45.近战防御力加成
+ALTER TABLE UnitPromotions ADD 'MeleeDefenseMod' INTEGER DEFAULT 0;
+
+
+
+29.杀敌后我方所有单位回血
+ALTER TABLE UnitPromotions ADD 'HPHealedIfDestroyEnemyGlobal' INTEGER DEFAULT 0;
+
+
+30.拥有的每个原始首都攻击力与防御力加成
+ALTER TABLE UnitPromotions ADD 'NumOriginalCapitalAttackMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'NumOriginalCapitalDefenseMod' INTEGER DEFAULT 0;
+
+31.原始首都个数提供的攻击力与防御力加成最大上限
+INSERT INTO Defines(Name, Value) VALUES('ORIGINAL_CAPITAL_MODMAX', 8);
+
+
+
+32.与首都异大陆或同大陆加成
+ALTER TABLE UnitPromotions ADD 'OnCapitalLandAttackMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'OutsideCapitalLandAttackMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'OnCapitalLandDefenseMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'OutsideCapitalLandDefenseMod' INTEGER DEFAULT 0;
+
+
+46.间谍数量战斗力加成
+ALTER TABLE UnitPromotions ADD 'NumSpyDefenseMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'NumSpyAttackMod' INTEGER DEFAULT 0;
+
+47.奇观数量攻击力加成
+ALTER TABLE UnitPromotions ADD 'NumWonderDefenseMod'INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'NumWonderAttackMod' INTEGER DEFAULT 0;
+
+48.杰作数量攻击力加成
+ALTER TABLE UnitPromotions ADD 'NumWorkDefenseMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'NumWorkAttackMod' INTEGER DEFAULT 0;
+
+
+49.无视战略资源不足的惩罚
+ALTER TABLE UnitPromotions ADD COLUMN 'NoResourcePunishment' BOOLEAN DEFAULT 0; 
+
+
+50.根据当前血量加成
+ALTER TABLE UnitPromotions ADD 'CurrentHitPointAttackMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'CurrentHitPointDefenseMod' INTEGER DEFAULT 0;
+
+
+
+51.根据当前临近敌军设置加成
+ALTER TABLE UnitPromotions ADD 'NearNumEnemyAttackMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'NearNumEnemyDefenseMod' INTEGER DEFAULT 0;
+
+
+
+
+
+
+
+ALTER TABLE UnitPromotions ADD 'WorkRateMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'AoEWhileFortified' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'AOEDamageOnKill' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'CaptureDefeatedEnemyChance' BOOLEAN DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'BarbarianCombatBonus' INTEGER DEFAULT 0;
+
+ALTER TABLE UnitPromotions ADD 'CannotBeCaptured' BOOLEAN DEFAULT 0;
+
+ALTER TABLE UnitPromotions ADD 'ImmueMeleeAttack' BOOLEAN DEFAULT 0;
+
+
+根据单位type解锁免费晋升
+	<Table name="UnitPromotions_UnitType">
+		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
+		<Column name="UnitType" type="text" reference="Units(Type)"/>
+	</Table>
+
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+16.建成后本城人口改变（非全局效果）
+ALTER TABLE Buildings ADD COLUMN 'PopulationChange' INTEGER DEFAULT 0;  
+
+
+25.城市攻击次数
+ALTER TABLE Buildings ADD COLUMN 'ExtraAttacks' INTEGER DEFAULT 0;
+
+
+26. 建筑的核拦截几率
+ALTER TABLE Buildings ADD 'NukeInterceptionChance' INTEGER DEFAULT 0;
+
+
+
+31.建造改良设施的过时科技
+ALTER TABLE Builds ADD COLUMN 'ObsoleteTech' TEXT DEFAULT NULL;
+
+
+42.改良设施周围回血
+ALTER TABLE Improvements ADD 'NearbyFriendHeal' INTEGER DEFAULT 0;
+
+
+10.新增产能转城防的效果
+ALTER TABLE Processes ADD COLUMN 'DefenseValue' INTEGER DEFAULT 0;
+DefenseValue 等于产能和防御的转换比例，填写100则100产能等价于100防御的建筑
+
+11.城市远程攻击力百分比加成
+ALTER TABLE Buildings ADD COLUMN 'RangedStrikeModifier' INTEGER DEFAULT 0;
+
+
+12.本城每回合额外回血
+ALTER TABLE Buildings ADD COLUMN 'ExtraDamageHeal' INTEGER DEFAULT 0;
+
+13.建筑的强制减伤
+ALTER TABLE Buildings ADD COLUMN 'ResetDamageValue' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'ReduceDamageValue' INTEGER DEFAULT 0;
+
+14.建筑全局城防加成和远程伤害提升
+ALTER TABLE Buildings ADD COLUMN 'GlobalCityStrengthMod' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'GlobalRangedStrikeModifier' INTEGER DEFAULT 0;
+
+15.城市范围的伤害判定
+ALTER TABLE Buildings ADD COLUMN 'WaterTileDamage' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'WaterTileMovementReduce' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'WaterTileTurnDamage' INTEGER DEFAULT 0;
+
+ALTER TABLE Buildings ADD COLUMN 'LandTileDamage' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'LandTileMovementReduce' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'LandTileTurnDamage' INTEGER DEFAULT 0;
+
+
+ALTER TABLE Buildings ADD COLUMN 'MoveAfterCreated' INTEGER DEFAULT 0; 
+
+
+
+	<Table name="Policy_CityLoveKingDayYieldMod">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+
+----------------------------------------------------------------------------------------------
+
+建筑对全局人口产出的加成
+	<Table name="Building_YieldChangesPerPopInEmpire">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/> <!-- This is a percent, eg 100 will give the same number of yields as there is population in the empire. -->
+	</Table>
+
+
+建筑关联人口提供资源
+	<Table name="Building_ResourceQuantityFromPOP">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="Modifier" type="integer"/>
+	</Table>
+
+
+32.建筑对全局杰作的产出加成
+	<Table name="Building_GreatWorkYieldChanges">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+
+
+34.建筑提供全局资源加成
+	<Table name="Building_ResourceYieldChangesGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+	
+37.建筑对本地专家加成
+	<Table name="Building_SpecialistYieldChangesLocal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+
+40.科技对专家的产出加成
+	<Table name="Tech_SpecialistYieldChanges">
+		<Column name="TechType" type="text" reference="Technologies(Type)"/>
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+35.建筑对本地改良设施加成
+	<Table name="Building_ImprovementYieldChanges">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+	36.建筑对全国改良设施加成
+	<Table name="Building_ImprovementYieldChangesGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+
+	33.建筑对建筑种类产出的全局加成
+	<Table name="Building_BuildingClassYieldModifiers">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Modifier" type="integer" default="0"/>
+	</Table>
+
+	33.建筑对建筑种类产出的本地加成
+	<Table name="Building_BuildingClassLocalYieldChanges">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="YieldChange" type="integer" default="0"/>
+	</Table>
+
+
+		<!-- BUILDING: Allows you to define a building to grant +1 yield based on the # of tiles of terrain type in the city's working radius Yield value = divisor (so 3 = for every 3 tiles, get +1 of a yield) -->
+	<Table name="Building_YieldPerXTerrainTimes100">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="TerrainType" type="text" reference="Terrains(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<Table name="Building_YieldPerXFeatureTimes100">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+
+
+
+	38.建筑对本地奇观加成   
+	<Table name="Building_YieldChangeWorldWonder">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/> 
+	</Table>
+
+39.建筑对全国奇观加成    
+	<Table name="Building_YieldChangeWorldWonderGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/> 
+	</Table>
+
+
+
+40.建筑对全国有奇观的城市产出加成 
+	<Table name="Building_CityWithWorldWonderYieldModifierGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/> 
+	</Table>
+	
+
+
+
+
+	全国杰作数量经验加成
+	<Table name="Building_DomainFreeExperiencePerGreatWorkGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="DomainType" type="text" reference="Domains(Type)"/>
+		<Column name="Experience" type="integer"/>
+	</Table>
+	
+	全国单位经验
+	<Table name="Building_DomainFreeExperiencesGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="DomainType" type="text" reference="Domains(Type)"/>
+		<Column name="Experience" type="integer"/>
+	</Table>
+
+
+
+
+	产能额外转换率
+	<Table name="Building_YieldFromProcessModifier">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+	<Table name="Building_YieldFromProcessModifierGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+
+
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);
+ALTER TABLE UnitPromotions ADD COLUMN 'IsPlague' BOOLEAN DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT 0;
+
+

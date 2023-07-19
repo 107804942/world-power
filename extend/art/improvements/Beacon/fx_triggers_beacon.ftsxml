@@ -1,0 +1,82 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+      <track id="9" name="Effect" />
+      <track id="10" name="Effect" />
+      <track id="11" name="Effect" />
+    </event_track>
+    <event_track ec="1990">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+      <track id="9" name="Effect" />
+      <track id="10" name="Effect" />
+      <track id="11" name="Effect" />
+    </event_track>
+    <event_track ec="2000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+      <track id="9" name="Effect" />
+      <track id="10" name="Effect" />
+      <track id="11" name="Effect" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="1" time="0" duration="66.6666641" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_BEACON_INACTIVE_IDLE" bone="Body" />
+    <trigger type="FTimedTriggerEffect" id="2" time="0" duration="66.6666641" repeat="0" ec="1000" track="5" event="ART_DEF_VEFFECT_BEACON_INACTIVE_IDLE_STATIONARY" bone="World" />
+    <trigger type="FTimedTriggerSound" id="3" time="54.7844734" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="4" time="2.73104048" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SWEETENER_IDLE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="5" time="17.002367" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="6" time="24.8099346" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="7" time="32.17143" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="8" time="40.5999947" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="9" time="47.94284" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="10" time="0.166666672" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL_IDLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="11" time="22.666666" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="12" time="30.166666" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="13" time="37.6666679" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="14" time="45.1666679" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="15" time="60.1666679" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="16" time="52.6666679" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="17" time="15.166667" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="18" time="7.66666651" duration="0" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="19" time="0" duration="2.1" repeat="0" ec="1990" track="2" event="ART_DEF_VEFFECT_BEACON_INACTIVE_IDLE" bone="Body" />
+    <trigger type="FTimedTriggerEffect" id="20" time="0" duration="2.1" repeat="0" ec="1990" track="5" event="ART_DEF_VEFFECT_BEACON_INACTIVE_IDLE_STATIONARY" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="21" time="0" duration="3" repeat="0" ec="1990" track="9" event="ART_DEF_VEFFECT_BEACON_ACTIVATE_STATIONARY" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="22" time="1.6" duration="0.5" repeat="0" ec="1990" track="10" event="ART_DEF_VEFFECT_BEACON_PULSE" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="23" time="1.9" duration="1" repeat="0" ec="1990" track="11" event="ART_DEF_VEFFECT_BEACON_BURST_SHOT" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="24" time="0" duration="2" repeat="0" ec="1990" track="6" event="ART_DEF_VEFFECT_BEACON_ACTIVATE_SCALING" bone="FX_Bone_01" />
+    <trigger type="FTimedTriggerEffect" id="25" time="2.1" duration="4" repeat="0" ec="1990" track="7" event="ART_DEF_VEFFECT_BEACON_ACTIVE_IDLE" bone="Body" />
+    <trigger type="FTimedTriggerEffect" id="26" time="2.07142854" duration="4" repeat="0" ec="1990" track="8" event="ART_DEF_VEFFECT_BEACON_ACTIVE_IDLE_STATIONARY" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="27" time="0" duration="66.6666641" repeat="0" ec="2000" track="7" event="ART_DEF_VEFFECT_BEACON_ACTIVE_IDLE" bone="Body" />
+    <trigger type="FTimedTriggerEffect" id="28" time="0" duration="66.6666641" repeat="0" ec="2000" track="8" event="ART_DEF_VEFFECT_BEACON_ACTIVE_IDLE_STATIONARY" bone="World" />
+    <trigger type="FTimedTriggerSound" id="29" time="0" duration="3" repeat="0" ec="1000" track="1" event="AS3D_WONDER_BEACON_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="30" time="0" duration="66.6666641" repeat="0" ec="2000" track="1" event="AS3D_WONDER_BEACON_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="31" time="0" duration="0" repeat="0" ec="1990" track="1" event="AS3D_WONDER_BEACON_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="32" time="1.79999971" duration="0" repeat="0" ec="1990" track="1" event="AS3D_WONDER_BEACON_SIGNAL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="33" time="0" duration="3" repeat="0" ec="1990" track="1" event="AS3D_WONDER_BEACON_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="34" time="0" duration="0" repeat="0" ec="1990" track="1" event="AS3D_WONDER_BEACON_ONLINE" bone="" tier="0" />
+  </triggers>
+</trigger_system>

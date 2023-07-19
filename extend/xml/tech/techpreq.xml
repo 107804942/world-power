@@ -1,0 +1,2896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/25 12:43:25 -->
+<GameData>
+
+	<!--**************************************************远古时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+
+		<Delete TechType="TECH_CALENDAR"/>
+		<Delete TechType="TECH_ANIMAL_HUSBANDRY"/>
+		<Delete TechType="TECH_BRONZE_WORKING"/>
+		<Delete TechType="TECH_SAILING"/>
+		<Delete TechType="TECH_WRITING"/>
+		<Delete TechType="TECH_THE_WHEEL"/>
+		<Delete TechType="TECH_MASONRY"/>
+		<Delete TechType="TECH_IRON_WORKING"/>
+		<Delete TechType="TECH_CONSTRUCTION"/>
+		<Delete TechType="TECH_ARCHERY"/>
+		<Delete TechType="TECH_PHILOSOPHY"/>
+		<Delete TechType="TECH_MATHEMATICS"/>
+		<Delete TechType="TECH_HORSEBACK_RIDING"/>
+		<Delete TechType="TECH_ENGINEERING"/>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_SAILING</TechType>
+			<PrereqTech>TECH_POTTERY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ENGINEERING</TechType>
+			<PrereqTech>TECH_HORSEBACK_RIDING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ENGINEERING</TechType>
+			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_IRON_WORKING</TechType>
+			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_HORSEBACK_RIDING</TechType>
+			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_HORSEBACK_RIDING</TechType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MATHEMATICS</TechType>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MATHEMATICS</TechType>
+			<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_PHILOSOPHY</TechType>
+			<PrereqTech>TECH_WRITING</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_PHILOSOPHY</TechType>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_IRON_WORKING</TechType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_BRONZE_WORKING</TechType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_BRONZE_WORKING</TechType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_MASONRY</TechType>
+			<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ENGINEERING</TechType>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_CONSTRUCTION</TechType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_WOOD_WORKING</TechType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_WOOD_WORKING</TechType>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_CALENDAR</TechType>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_SAILING</TechType>
+			<PrereqTech>TECH_FISHERY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_WRITING</TechType>
+			<PrereqTech>TECH_POTTERY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MYSTICISM</TechType>
+			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_WRITING</TechType>
+			<PrereqTech>TECH_MYSTICISM</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ANIMAL_HUSBANDRY</TechType>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_CONSTRUCTION</TechType>
+			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_THE_WHEEL</TechType>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_THE_WHEEL</TechType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_THE_WHEEL</TechType>
+			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MINING</TechType>
+			<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
+		</Row>
+
+
+
+
+	</Technology_PrereqTechs>
+
+
+	<!--**************************************************古典时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+		
+		
+	<Delete TechType="TECH_PHILOSOPHY"/>
+	<Delete TechType="TECH_THEOLOGY"/>
+	<Delete TechType="TECH_ART_THEORY"/>
+
+
+
+		<Row>
+			<TechType>TECH_PHILOSOPHY</TechType>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
+		</Row>
+		
+		
+		<Row>
+			<TechType>TECH_PHILOSOPHY</TechType>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_ART_THEORY</TechType>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ART_THEORY</TechType>
+			<PrereqTech>TECH_OPTICS</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_LITERATURE</TechType>
+			<PrereqTech>TECH_WRITING</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_LITERATURE</TechType>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_CARTOGRAPHY</TechType>
+			<PrereqTech>TECH_ART_THEORY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_DRAMA</TechType>
+			<PrereqTech>TECH_ART_THEORY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_DRAMA</TechType>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_THEOLOGY</TechType>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+		</Row>
+	
+		
+		
+		
+
+		<Row>
+			<TechType>TECH_MANIPULAR_SYSTEM</TechType>
+			<PrereqTech>TECH_HORSEBACK_RIDING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MANIPULAR_SYSTEM</TechType>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_NATURAL_MEDICINE</TechType>
+			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ADVANCED_AGRICULTURE</TechType>
+			<PrereqTech>TECH_NATURAL_MEDICINE</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ADVANCED_AGRICULTURE</TechType>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+		</Row>
+		
+
+
+	</Technology_PrereqTechs>
+
+
+
+	<!--**************************************************中古时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+		<Delete TechType="TECH_COMPASS"/>
+		<Delete TechType="TECH_CIVIL_SERVICE"/>
+		<Delete TechType="TECH_GUILDS"/>
+		<Delete TechType="TECH_PHYSICS"/>
+		<Delete TechType="TECH_STEEL"/>
+
+		<Delete TechType="TECH_ASTRONOMY"/>
+		<Delete TechType="TECH_EDUCATION"/>
+		<Delete TechType="TECH_CHIVALRY"/>
+		<Delete TechType="TECH_MACHINERY"/>
+
+
+		<Row>
+			<TechType>TECH_ASTRONOMY</TechType>
+			<PrereqTech>TECH_EPHEMERIDES</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ASTRONOMY</TechType>
+			<PrereqTech>TECH_FEUDALISM</PrereqTech>
+		</Row>
+		
+		
+		<Row>
+			<TechType>TECH_EDUCATION</TechType>
+			<PrereqTech>TECH_FEUDALISM</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_EDUCATION</TechType>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
+		</Row>
+
+		
+
+
+		<Row>
+			<TechType>TECH_CHIVALRY</TechType>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CHIVALRY</TechType>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CHIVALRY</TechType>
+			<PrereqTech>TECH_MILITARY_ORDERS</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_MACHINERY</TechType>
+			<PrereqTech>TECH_ALCHEMY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MACHINERY</TechType>
+			<PrereqTech>TECH_PHYSICS</PrereqTech>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_EPHEMERIDES</TechType>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+		</Row>
+		
+		<Row>
+			<TechType>TECH_FEUDALISM</TechType>
+			<PrereqTech>TECH_DRAMA</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_FEUDALISM</TechType>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_DIVINE_RIGHT</TechType>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+		</Row>
+	
+		<Row>
+			<TechType>TECH_DIVINE_RIGHT</TechType>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_MILITARY_ORDERS</TechType>
+			<PrereqTech>TECH_MANIPULAR_SYSTEM</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_ALCHEMY</TechType>
+			<PrereqTech>TECH_STEEL</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ALCHEMY</TechType>
+			<PrereqTech>TECH_PHYSICS</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_GUILDS</TechType>
+			<PrereqTech>TECH_DRAMA</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_COMPASS</TechType>
+			<PrereqTech>TECH_CARTOGRAPHY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_CIVIL_SERVICE</TechType>
+			<PrereqTech>TECH_DRAMA</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_CIVIL_SERVICE</TechType>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_GUILDS</TechType>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_GUILDS</TechType>
+			<PrereqTech>TECH_CURRENCY</PrereqTech>
+		</Row>
+		
+		
+		
+		<Row>
+			<TechType>TECH_PHYSICS</TechType>
+			<PrereqTech>TECH_ADVANCED_AGRICULTURE</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_PHYSICS</TechType>
+			<PrereqTech>TECH_MANIPULAR_SYSTEM</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_STEEL</TechType>
+			<PrereqTech>TECH_ADVANCED_AGRICULTURE</PrereqTech>
+		</Row>
+
+		
+	</Technology_PrereqTechs>
+
+
+	<!--**************************************************启蒙时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+		<Delete TechType="TECH_ADMINISTRATION"/>
+		<Delete TechType="TECH_ECONOMICS"/>		
+		<Delete TechType="TECH_ARCHITECTURE"/>		
+		<Delete TechType="TECH_SCIENTIFIC_THEORY"/>
+		<Delete TechType="TECH_PRINTING_PRESS"/>
+		<Delete TechType="TECH_FERTILIZER"/>
+		<Delete TechType="TECH_METALLURGY"/>
+		
+
+		<Row>
+			<TechType>TECH_NAUTICAL_SCIENCE</TechType>
+			<PrereqTech>TECH_NAVIGATION</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ADMINISTRATION</TechType>
+			<PrereqTech>TECH_ACOUSTICS</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ADMINISTRATION</TechType>
+			<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_FERTILIZER</TechType>
+			<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_PRINTING_PRESS</TechType>
+			<PrereqTech>TECH_MACHINERY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_PRINTING_PRESS</TechType>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_EXPLORATION2</TechType>
+			<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_FERTILIZER</TechType>
+			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
+		</Row>
+	
+
+		<Row>
+			<TechType>TECH_NEW_HUMANISM</TechType>
+			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SCIENTIFIC_THEORY</TechType>
+			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_SCIENTIFIC_THEORY</TechType>
+			<PrereqTech>TECH_FERTILIZER</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_SCIENTIFIC_THEORY</TechType>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
+		</Row>
+
+		
+		<Row>
+			<TechType>TECH_ECONOMICS</TechType>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ARCHITECTURE</TechType>
+			<PrereqTech>TECH_NAUTICAL_SCIENCE</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ARCHITECTURE</TechType>
+			<PrereqTech>TECH_ADMINISTRATION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SOVEREIGNTY</TechType>
+			<PrereqTech>TECH_ADMINISTRATION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_METALLURGY</TechType>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
+		</Row>
+
+		
+
+	</Technology_PrereqTechs>
+
+
+
+	<!--**************************************************工业时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+		<Delete TechType="TECH_STEAM_POWER"/>
+		<Delete TechType="TECH_ARCHAEOLOGY"/>
+		<Delete TechType="TECH_ELECTRICITY"/>
+		<Delete TechType="TECH_BIOLOGY"/>
+		<Delete TechType="TECH_RIFLING"/>
+		<Delete TechType="TECH_FORTIFICATION"/>
+		<Delete TechType="TECH_MARINE_ENGINEERING"/>
+		<Delete TechType="TECH_MANUFACTURING"/>
+		<Delete TechType="TECH_MILITARY_SCIENCE"/>
+		<Delete TechType="TECH_INDUSTRIALIZATION"/>
+		<Delete TechType="TECH_RAILROAD"/>
+		<Delete TechType="TECH_TELEGRAPH"/>
+
+		
+
+		<Row>
+			<TechType>TECH_MILITARY_SCIENCE</TechType>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_INDUSTRIALIZATION</TechType>
+			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_INDUSTRIALIZATION</TechType>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_INDUSTRIALIZATION</TechType>
+			<PrereqTech>TECH_ARCHAEOLOGY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_TELEGRAPH</TechType>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_BIOLOGY</TechType>
+			<PrereqTech>TECH_ARCHAEOLOGY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_BIOLOGY</TechType>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_RAILROAD</TechType>
+			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_RAILROAD</TechType>
+			<PrereqTech>TECH_MARINE_ENGINEERING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_STEAM_POWER</TechType>
+			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<PrereqTech>TECH_SOVEREIGNTY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<PrereqTech>TECH_SCIENTIFIC_THEORY</PrereqTech>
+		</Row>
+		
+	
+
+		<Row>
+			<TechType>TECH_RIFLING</TechType>
+			<PrereqTech>TECH_SCIENTIFIC_THEORY</PrereqTech>
+		</Row>
+
+		
+
+		<Row>
+			<TechType>TECH_FORTIFICATION</TechType>
+			<PrereqTech>TECH_ECONOMICS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_FORTIFICATION</TechType>
+			<PrereqTech>TECH_SCIENTIFIC_THEORY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ELECTRICITY</TechType>
+			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MARINE_ENGINEERING</TechType>
+			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MARINE_ENGINEERING</TechType>
+			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ARCHAEOLOGY</TechType>
+			<PrereqTech>TECH_NATURAL_HISTORY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MANUFACTURING</TechType>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MANUFACTURING</TechType>
+			<PrereqTech>TECH_FORTIFICATION</PrereqTech>
+		</Row>
+
+
+		
+	</Technology_PrereqTechs>
+
+
+	<!--**************************************************电器全战时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+		<Delete TechType="TECH_URBANLIZATION"/>
+		<Delete TechType="TECH_FLIGHT"/>
+		<Delete TechType="TECH_COMBUSTION"/>
+		<Delete TechType="TECH_BALLISTICS"/>
+		<Delete TechType="TECH_DYNAMITE"/>
+		<Delete TechType="TECH_RADIO"/>
+		<Delete TechType="TECH_PLASTIC"/>
+		<Delete TechType="TECH_REPLACEABLE_PARTS"/>
+		<Delete TechType="TECH_ADV_ENGINEERING"/>
+		<Delete TechType="TECH_MILITARY_LOGISTICS"/>
+		<Delete TechType="TECH_LARGE_CALIBRE"/>
+		<Delete TechType="TECH_CORPORATION"/>
+		<Delete TechType="TECH_COMBINED_ARMS"/>
+		<Delete TechType="TECH_MOBILIZATION_T"/>
+		<Delete TechType="TECH_ATOMIC_THEORY"/>
+
+
+
+		<Row>
+			<TechType>TECH_ATOMIC_THEORY</TechType>
+			<PrereqTech>TECH_COMBINED_ARMS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ATOMIC_THEORY</TechType>
+			<PrereqTech>TECH_RADAR</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ELECTRONICS</TechType>
+			<PrereqTech>TECH_SONAR</PrereqTech>
+		</Row>
+
+		
+
+
+		<Row>
+			<TechType>TECH_COMBINED_ARMS</TechType>
+			<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_COMBINED_ARMS</TechType>
+			<PrereqTech>TECH_MILITARY_LOGISTICS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MOBILIZATION_T</TechType>
+			<PrereqTech>TECH_MILITARY_LOGISTICS</PrereqTech>
+		</Row>
+		
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<PrereqTech>TECH_TELEGRAPH</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<PrereqTech>TECH_BIOLOGY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<PrereqTech>TECH_RAILROAD</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<PrereqTech>TECH_JOURNALISM</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_RADIO</TechType>
+			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_RADIO</TechType>
+			<PrereqTech>TECH_URBANLIZATION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_URBANLIZATION</TechType>
+			<PrereqTech>TECH_FLIGHT</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_URBANLIZATION</TechType>
+			<PrereqTech>TECH_JOURNALISM</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_PLASTIC</TechType>
+			<PrereqTech>TECH_URBANLIZATION</PrereqTech>
+		</Row>
+		
+
+		<Row>
+			<TechType>TECH_FLIGHT</TechType>
+			<PrereqTech>TECH_RAILROAD</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_FLIGHT</TechType>
+			<PrereqTech>TECH_INDUSTRIALIZATION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_COMBUSTION</TechType>
+			<PrereqTech>TECH_INDUSTRIALIZATION</PrereqTech>
+		</Row>
+		
+		<Row>
+			<TechType>TECH_BALLISTICS</TechType>
+			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_BALLISTICS</TechType>
+			<PrereqTech>TECH_INDUSTRIALIZATION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_DYNAMITE</TechType>
+			<PrereqTech>TECH_BALLISTICS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_REPLACEABLE_PARTS</TechType>
+			<PrereqTech>TECH_REFINING</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_REPLACEABLE_PARTS</TechType>
+			<PrereqTech>TECH_URBANLIZATION</PrereqTech>
+		</Row>
+		
+		<Row>
+			<TechType>TECH_MILITARY_LOGISTICS</TechType>
+			<PrereqTech>TECH_DYNAMITE</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_DYNAMITE</TechType>
+			<PrereqTech>TECH_COMBUSTION</PrereqTech>
+		</Row>
+		
+		<Row>
+			<TechType>TECH_BLITZKRIEG</TechType>
+			<PrereqTech>TECH_MOBILIZATION_T</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_BLITZKRIEG</TechType>
+			<PrereqTech>TECH_COMBINED_ARMS</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MODERN_SANITATION</TechType>
+			<PrereqTech>TECH_PENICILIN</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MODERN_SANITATION</TechType>
+			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+		</Row>
+
+		
+		<Row>
+			<TechType>TECH_REFINING</TechType>
+			<PrereqTech>TECH_COMBUSTION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CORPORATION</TechType>
+			<PrereqTech>TECH_ATOMIC_THEORY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_LARGE_CALIBRE</TechType>
+			<PrereqTech>TECH_ATOMIC_THEORY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_LARGE_CALIBRE</TechType>
+			<PrereqTech>TECH_BLITZKRIEG</PrereqTech>
+		</Row>
+		
+		
+		
+		
+	</Technology_PrereqTechs>
+
+
+
+	<!--**************************************************原子时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+
+		<Delete TechType="TECH_NUCLEAR_FISSION"/>
+		<Delete TechType="TECH_MASS_MEDIA"/>
+		<Delete TechType="TECH_INTEGRATED_CIRCUIT"/>
+		<Delete TechType="TECH_ROCKETRY"/>
+
+		<Row>
+			<TechType>TECH_ROCKETRY</TechType>
+			<PrereqTech>TECH_ADV_ENGINEERING</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ROCKETRY</TechType>
+			<PrereqTech>TECH_LARGE_CALIBRE</PrereqTech>
+		</Row>
+		
+		<Row>
+			<TechType>TECH_INTEGRATED_CIRCUIT</TechType>
+			<PrereqTech>TECH_ADV_ENGINEERING</PrereqTech>
+		</Row>
+		
+		
+		<Row>
+			<TechType>TECH_MASS_MEDIA</TechType>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MASS_MEDIA</TechType>
+			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_NUCLEAR_FISSION</TechType>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_NUCLEAR_FISSION</TechType>
+			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
+		</Row>
+		
+		
+		<Row>
+			<TechType>TECH_NUCLEAR_FISSION</TechType>
+			<PrereqTech>TECH_ADV_ENGINEERING</PrereqTech>
+		</Row>
+		
+
+		<Row>
+			<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
+			<PrereqTech>TECH_ADV_ENGINEERING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
+			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ELECTRONICS</TechType>
+			<PrereqTech>TECH_RADAR</PrereqTech>
+		</Row>
+
+		
+		<Row>
+			<TechType>TECH_CORPORATION</TechType>
+			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ADV_ENGINEERING</TechType>
+			<PrereqTech>TECH_ATOMIC_THEORY</PrereqTech>
+		</Row>
+	</Technology_PrereqTechs>
+	
+	<!--**************************************************未来时代科技调整***************************************************-->
+
+	<Technology_PrereqTechs>
+
+
+		<Delete TechType="TECH_NANOTECHNOLOGY"/>
+		<Delete TechType="TECH_INTERSTELLAR_TRAVEL"/>
+		<Delete TechType="TECH_PHOTON_COMPUTER"/>
+		<Delete TechType="TECH_SPACE_TECHNOLOGY"/>
+		<Delete TechType="TECH_PARTICLE_PHYSICS"/>
+		<Delete TechType="TECH_TRANSHUMANISM"/>
+		<Delete TechType="TECH_METAMATERIAL"/>
+		<Delete TechType="TECH_INTEGRATED_DEFENSE"/>
+		<Delete TechType="TECH_ARTIFICIAL_INTELLIGENCE"/>
+		<Delete TechType="TECH_IOT_NETWORK"/>
+		<Delete TechType="TECH_ARTIFICIAL_INTELLIGENCE"/>
+		<Delete TechType="TECH_FUTURE_TECH"/>		
+		<Delete TechType="TECH_ROBOTICS"/>
+		<Delete TechType="TECH_GENETIC_ENGEERING"/>
+		<Delete TechType="TECH_INTERNET"/>
+		<Delete TechType="TECH_SATELLITES"/>
+		<Delete TechType="TECH_LASERS"/>
+		<Delete TechType="TECH_ARMOR"/>
+
+		
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_SOLAR_POWER</TechType>
+			<PrereqTech>TECH_TELECOM</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SOLAR_POWER</TechType>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SOLAR_POWER</TechType>
+			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_CITY_SCAPE</TechType>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SUBTERRANEAN_EXPLORE</TechType>
+			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_SUBTERRANEAN_EXPLORE</TechType>
+			<PrereqTech>TECH_ECOLOGY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MEGAENGINEERING</TechType>
+			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+		</Row>
+		
+		<Row>
+			<TechType>TECH_MEGAENGINEERING</TechType>
+			<PrereqTech>TECH_MILITARY_OCEANOGRAPHY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MEGAENGINEERING</TechType>
+			<PrereqTech>TECH_COMPOSITE</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ARMOR</TechType>
+			<PrereqTech>TECH_ADV_FLIGHT</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ARMOR</TechType>
+			<PrereqTech>TECH_COMPOSITE</PrereqTech>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+	
+
+		<Row>
+			<TechType>TECH_ROBOTICS</TechType>
+			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ROBOTICS</TechType>
+			<PrereqTech>TECH_CITY_SCAPE</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_GENETIC_ENGEERING</TechType>
+			<PrereqTech>TECH_CITY_SCAPE</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_GENETIC_ENGEERING</TechType>
+			<PrereqTech>TECH_SUBTERRANEAN_EXPLORE</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_INTERNET</TechType>
+			<PrereqTech>TECH_SUBTERRANEAN_EXPLORE</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_SATELLITES</TechType>
+			<PrereqTech>TECH_MEGAENGINEERING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SATELLITES</TechType>
+			<PrereqTech>TECH_SUBTERRANEAN_EXPLORE</PrereqTech>
+		</Row>
+		
+
+		<Row>
+			<TechType>TECH_LASERS</TechType>
+			<PrereqTech>TECH_MEGAENGINEERING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_LASERS</TechType>
+			<PrereqTech>TECH_ARMOR</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_MASS_MEDIA</TechType>
+			<PrereqTech>TECH_PENICILIN</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MASS_MEDIA</TechType>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+		</Row>
+	
+
+		<Row>
+			<TechType>TECH_ARTIFICIAL_INTELLIGENCE</TechType>
+			<PrereqTech>TECH_PLANETARY_NETWORKS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_IOT_NETWORK</TechType>
+			<PrereqTech>TECH_AUTOMATION_T</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_IOT_NETWORK</TechType>
+			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ARTIFICIAL_INTELLIGENCE</TechType>
+			<PrereqTech>TECH_MASS</PrereqTech>
+		</Row>
+		
+		
+		
+		<Row>
+			<TechType>TECH_INTEGRATED_DEFENSE</TechType>
+			<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_INTEGRATED_DEFENSE</TechType>
+			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_METAMATERIAL</TechType>
+			<PrereqTech>TECH_MATTERTRANSMISSION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_METAMATERIAL</TechType>
+			<PrereqTech>TECH_PROBABILITYMECHANICS</PrereqTech>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_TRANSHUMANISM</TechType>
+			<PrereqTech>TECH_COGNITIVE</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_PARTICLE_PHYSICS</TechType>
+			<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_SPACE_TECHNOLOGY</TechType>
+			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_SPACE_TECHNOLOGY</TechType>
+			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_CHAOS</TechType>
+			<PrereqTech>TECH_EARTH</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_CHAOS</TechType>
+			<PrereqTech>TECH_SPACE_TECHNOLOGY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_INTERSTELLAR_TRAVEL</TechType>
+			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_INTERSTELLAR_TRAVEL</TechType>
+			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_PHOTON_COMPUTER</TechType>
+			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_PHOTON_COMPUTER</TechType>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
+		</Row>
+
+		
+	
+
+	</Technology_PrereqTechs>
+
+
+
+
+
+
+	<!-- 新增 -->
+	<Technology_PrereqTechs>
+
+
+		<!--<Row>
+			<TechType>TECH_MILITARY_SCIENCE</TechType>
+			<PrereqTech>TECH_RIFLING</PrereqTech>
+		</Row>-->
+
+
+
+		<Row>
+			<TechType>TECH_MASS</TechType>
+			<PrereqTech>TECH_IOT_NETWORK</PrereqTech>
+		</Row>
+	
+
+
+		<Row>
+			<TechType>TECH_SDI</TechType>
+			<PrereqTech>TECH_STEALTH</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<PrereqTech>TECH_SDI</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_PLANETARY_NETWORKS</TechType>
+			<PrereqTech>TECH_IOT_NETWORK</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_WAVEMECHANICS</TechType>
+			<PrereqTech>TECH_STEALTH</PrereqTech>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_WAVEMECHANICS</TechType>
+			<PrereqTech>TECH_NUCLEAR_FUSION</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_MATTERTRANSMISSION</TechType>
+			<PrereqTech>TECH_SUPERCONDUCTOR</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_PROBABILITYMECHANICS</TechType>
+			<PrereqTech>TECH_SUPERCONDUCTOR</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_LIQUIDMETAL</TechType>
+			<PrereqTech>TECH_MATTERTRANSMISSION</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_LIQUIDMETAL</TechType>
+			<PrereqTech>TECH_PROBABILITYMECHANICS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_OPTICALCOMPUTERS</TechType>
+			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<PrereqTech>TECH_PLANETARY_NETWORKS</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_COGNITIVE</TechType>
+			<PrereqTech>TECH_ARTIFICIAL_INTELLIGENCE</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_COGNITIVE</TechType>
+			<PrereqTech>TECH_SOCIAL_DYNAMICS</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_TERRAFORMING</TechType>
+			<PrereqTech>TECH_SOCIAL_DYNAMICS</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ENERGY_THEORY</TechType>
+			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ENERGY_THEORY</TechType>
+			<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
+			<PrereqTech>TECH_METAMATERIAL</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
+			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_DIGITAL_SOCIETY</TechType>
+			<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_DIGITAL_SOCIETY</TechType>
+			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_NANOTECHNOLOGY</TechType>
+			<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_NANOTECHNOLOGY</TechType>
+			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_HOMO_SUPERIOR</TechType>
+			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_MECHANICAL_ENGINEERING</TechType>
+			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_GRID_COMPUTING</TechType>
+			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_GRID_COMPUTING</TechType>
+			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
+		</Row>
+
+		<Row>
+			<TechType>TECH_AUTONOMOUS_SYSTEMS</TechType>
+			<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_HOLOGRAPHY</TechType>
+			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
+		</Row>	
+		
+		
+		
+	<Row>
+		<TechType>TECH_NEW_ENERGY</TechType>
+		<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+	</Row>
+
+	<Row>
+		<TechType>TECH_NEW_ENERGY</TechType>
+		<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
+	</Row>
+
+
+	<Row>
+		<TechType>TECH_ORBITAL_SUSPENSION</TechType>
+		<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
+	</Row>
+
+
+
+	<Row>
+		<TechType>TECH_CYBERNETICS</TechType>
+		<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
+	</Row>
+
+
+	<Row>
+		<TechType>TECH_CYBERNETICS</TechType>
+		<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
+	</Row>
+
+	<Row>
+		<TechType>TECH_NEURAL_INTERFACE</TechType>
+		<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
+	</Row>
+
+	<Row>
+		<TechType>TECH_NEURAL_INTERFACE</TechType>
+		<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
+	</Row>
+	<Row>
+		<TechType>TECH_NEURAL_INTERFACE</TechType>
+		<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
+	</Row>
+
+
+	<Row>
+		<TechType>TECH_SPACE_COLONIZATION</TechType>
+		<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
+	</Row>
+	<Row>
+		<TechType>TECH_SPACE_COLONIZATION</TechType>
+		<PrereqTech>TECH_PARTICLE_PHYSICS</PrereqTech>
+	</Row>
+
+	<Row>
+		<TechType>TECH_PLASMA_PROPULSION</TechType>
+		<PrereqTech>TECH_PARTICLE_PHYSICS</PrereqTech>
+	</Row>
+	<Row>
+		<TechType>TECH_PLASMA_PROPULSION</TechType>
+		<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
+	</Row>
+
+
+
+		<Row>
+			<TechType>TECH_EARTH</TechType>
+			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
+		</Row>
+
+		<Row>
+		<TechType>TECH_EARTH</TechType>
+		<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
+	</Row>
+	<Row>
+		<TechType>TECH_EARTH</TechType>
+		<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
+	</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_FUTURE_TECH</TechType>
+			<PrereqTech>TECH_PHOTON_COMPUTER</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_FUTURE_TECH</TechType>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_FUTURE_TECH</TechType>
+			<PrereqTech>TECH_CHAOS</PrereqTech>
+		</Row>
+	</Technology_PrereqTechs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<Technology_Flavors>
+
+
+
+
+		<Row>
+			<TechType>TECH_TERRAFORMING</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_TERRAFORMING</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_TERRAFORMING</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_TERRAFORMING</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+
+
+
+		
+
+
+
+		<Row>
+			<TechType>TECH_EARTH</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_EARTH</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_EARTH</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_EARTH</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_NEW_ENERGY</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_ENERGY</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_ENERGY</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_ENERGY</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_ENERGY</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_SDI</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SDI</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SDI</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_LIQUIDMETAL</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_LIQUIDMETAL</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_LIQUIDMETAL</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_LIQUIDMETAL</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_LIQUIDMETAL</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_MASS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MASS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MASS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_PLANETARY_NETWORKS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_PLANETARY_NETWORKS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_PLANETARY_NETWORKS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_WAVEMECHANICS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_WAVEMECHANICS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_WAVEMECHANICS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_MATTERTRANSMISSION</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MATTERTRANSMISSION</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MATTERTRANSMISSION</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_PROBABILITYMECHANICS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_PROBABILITYMECHANICS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_PROBABILITYMECHANICS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_OPTICALCOMPUTERS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_OPTICALCOMPUTERS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_OPTICALCOMPUTERS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_HOLOGRAPHY</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_HOLOGRAPHY</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_HOLOGRAPHY</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_PLASMA_PROPULSION</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_PLASMA_PROPULSION</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_PLASMA_PROPULSION</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_GRID_COMPUTING</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_GRID_COMPUTING</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_GRID_COMPUTING</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_COGNITIVE</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_COGNITIVE</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_COGNITIVE</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_COGNITIVE</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_ENERGY_THEORY</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_ENERGY_THEORY</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_ENERGY_THEORY</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_AUTONOMOUS_SYSTEMS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_AUTONOMOUS_SYSTEMS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_AUTONOMOUS_SYSTEMS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_HOMO_SUPERIOR</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_HOMO_SUPERIOR</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_HOMO_SUPERIOR</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MECHANICAL_ENGINEERING</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MECHANICAL_ENGINEERING</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_ORBITAL_SUSPENSION</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_ORBITAL_SUSPENSION</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_SPACE_COLONIZATION</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SPACE_COLONIZATION</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SPACE_COLONIZATION</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_DIGITAL_SOCIETY</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_DIGITAL_SOCIETY</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_DIGITAL_SOCIETY</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_NEURAL_INTERFACE</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEURAL_INTERFACE</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEURAL_INTERFACE</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_CYBERNETICS</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CYBERNETICS</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CYBERNETICS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_CORPORATION</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CORPORATION</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>7</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_EXPLORATION2</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_EXPLORATION2</TechType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_EXPLORATION2</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>7</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_EXPLORATION2</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_EXPLORATION2</TechType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_FORTIFICATION</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_FORTIFICATION</TechType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_FORTIFICATION</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>7</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_FORTIFICATION</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_FORTIFICATION</TechType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MANUFACTURING</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MANUFACTURING</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>13</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MANUFACTURING</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>7</Flavor>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_SOLAR_POWER</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_SOLAR_POWER</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOLAR_POWER</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_CITY_SCAPE</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_CITY_SCAPE</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CITY_SCAPE</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SUPERCONDUCTOR</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_SUBTERRANEAN_EXPLORE</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SUBTERRANEAN_EXPLORE</TechType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SUBTERRANEAN_EXPLORE</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MEGAENGINEERING</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>55</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MEGAENGINEERING</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MEGAENGINEERING</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+
+
+
+
+
+		
+
+
+		<Row>
+			<TechType>TECH_ADVANCED_AGRICULTURE</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_ADVANCED_AGRICULTURE</TechType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_ADVANCED_AGRICULTURE</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_STONE_TOOLS</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_STONE_TOOLS</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_STONE_TOOLS</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_MYSTICISM</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MYSTICISM</TechType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>9</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_MINING</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>13</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MINING</TechType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>12</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_WOOD_WORKING</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>13</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_WOOD_WORKING</TechType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_WOOD_WORKING</TechType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_WOOD_WORKING</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_NATURAL_MEDICINE</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>12</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_NATURAL_MEDICINE</TechType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>16</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NATURAL_MEDICINE</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_LITERATURE</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>7</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_LITERATURE</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>12</Flavor>
+		</Row>
+
+
+		
+
+		<Row>
+			<TechType>TECH_CARTOGRAPHY</TechType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_CARTOGRAPHY</TechType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>12</Flavor>
+		</Row>
+
+
+		
+
+		<Row>
+			<TechType>TECH_MANIPULAR_SYSTEM</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MANIPULAR_SYSTEM</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>4</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MANIPULAR_SYSTEM</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MANIPULAR_SYSTEM</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+
+
+
+		
+
+		<Row>
+			<TechType>TECH_ADVANCED_AGRICULTURE</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_ADVANCED_AGRICULTURE</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>7</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+		
+		
+		<Row>
+		<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
+		<FlavorType>FLAVOR_OFFENSE</FlavorType>
+		<Flavor>25</Flavor>
+	  </Row>
+
+		<Row>
+			<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>22</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_DRAMA</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_DRAMA</TechType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>4</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_EPHEMERIDES</TechType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>16</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_FEUDALISM</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>14</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_DIVINE_RIGHT</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>14</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_MILITARY_ORDERS</TechType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>16</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MILITARY_ORDERS</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>16</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_ALCHEMY</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>14</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<TechType>TECH_NAUTICAL_SCIENCE</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NAUTICAL_SCIENCE</TechType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NAUTICAL_SCIENCE</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>7</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NAUTICAL_SCIENCE</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NAUTICAL_SCIENCE</TechType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_SOVEREIGNTY</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOVEREIGNTY</TechType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_SOVEREIGNTY</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>17</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<TechType>TECH_NEW_HUMANISM</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_HUMANISM</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_HUMANISM</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_HUMANISM</TechType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_NEW_HUMANISM</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>6</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<TechType>TECH_BLITZKRIEG</TechType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>56</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_BLITZKRIEG</TechType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>36</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_BLITZKRIEG</TechType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>76</Flavor>
+		</Row>
+
+
+
+
+		
+		
+
+		<Row>
+			<TechType>TECH_MODERN_SANITATION</TechType>
+			<FlavorType>FLAVOR_NAVAL_GROWTH</FlavorType>
+			<Flavor>24</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MODERN_SANITATION</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>55</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MODERN_SANITATION</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>26</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_REFINING</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>36</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_REFINING</TechType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_REFINING</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_REFINING</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>29</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>38</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_SOCIAL_AGENDA</TechType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+			<Flavor>38</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>34</Flavor>
+		</Row>
+		
+	</Technology_Flavors>
+</GameData>

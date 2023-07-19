@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trigger_system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1120">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1160">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1280">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1520">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1560">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1600">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1640">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1800">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1290">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1140">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1500">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1540">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1580">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1620">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1285">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1110">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1180">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1450">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1130">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="0" time="0.6888889" duration="0" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+    <trigger type="FTimedTriggerSound" id="1" time="0.8574297" duration="0" repeat="0" ec="1040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="2" time="3.81265688" duration="0" repeat="0" ec="1040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="3" time="0.02538071" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="4" time="0.2402707" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+
+
+
+    <trigger type="FTimedTriggerEffect" id="5" time="0.402083665" duration="0" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="6" time="0.385416955" duration="0.07" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="7" time="0.3858616" duration="0" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="8" time="0.4091124" duration="0.11" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerTransfer" id="9" time="0.456837654" duration="0" repeat="0" ec="1100" track="3" refid="8" speed="0" tangent.x="-0.00034890126" tangent.y="-0.9999542" tangent.z="-0.0095647" />
+    <trigger type="FTimedTriggerEffect" id="10" time="0.3857963" duration="0.1" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+    <trigger type="FTimedTriggerEffect" id="11" time="0.111062281" duration="0.1" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+
+
+
+    <trigger type="FTimedTriggerSound" id="12" time="0.39259252" duration="0" repeat="0" ec="1110" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="13" time="0.350253761" duration="0" repeat="0" ec="1110" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="14" time="0.384094745" duration="0" repeat="0" ec="1110" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+
+
+
+    <trigger type="FTimedTriggerEffect" id="15" time="0.440740645" duration="0" repeat="0" ec="1110" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+
+
+
+    <trigger type="FTimedTriggerSound" id="16" time="0.240740746" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="17" time="0.609259248" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="18" time="0.214890018" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="19" time="0.514382243" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="20" time="0.5837564" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="21" time="0.133672073" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="22" time="0.2776179" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="23" time="0.62962985" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="24" time="0.17766495" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="25" time="0.02538071" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="26" time="0.538070738" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="27" time="0.443316" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="28" time="0.751269" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="29" time="0.2872688" duration="0.07" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="30" time="0.303935379" duration="0" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="31" time="0.720602155" duration="0.07" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="32" time="0.735417" duration="0" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="33" time="0.287713319" duration="0" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="34" time="0.312816024" duration="0.11" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerTransfer" id="35" time="0.3629629" duration="0" repeat="0" ec="1130" track="3" refid="34" speed="0" tangent.x="-0.375947118" tangent.y="-0.8724594" tangent.z="0.312214971" />
+    <trigger type="FTimedTriggerEffect" id="36" time="0.7210469" duration="0" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="37" time="0.744297743" duration="0.11" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerTransfer" id="38" time="0.7777778" duration="0" repeat="0" ec="1130" track="3" refid="37" speed="0" tangent.x="0.445276916" tangent.y="-0.8409566" tangent.z="0.307441622" />
+    <trigger type="FTimedTriggerEffect" id="39" time="0.109210409" duration="0.1" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="40" time="0.289499938" duration="0.1" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+    <trigger type="FTimedTriggerEffect" id="41" time="0.555506945" duration="0.1" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="42" time="0.720981956" duration="0.1" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="43" time="0.204737768" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="44" time="0.09306261" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="45" time="0.0338409133" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="46" time="0.0744500458" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="47" time="0.181049064" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="48" time="0.343485624" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="49" time="0.111111112" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="50" time="0.216666654" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="51" time="0.275925845" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="52" time="0.475925773" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerAction" id="53" time="0.6925926" duration="0" repeat="0" ec="1140" track="4" action="1" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="54" time="0.02538071" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="55" time="0.17766495" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="56" time="0.443316" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="57" time="0.538070738" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="58" time="0.751269" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="59" time="1.03651738" duration="0" repeat="0" ec="1160" track="1" event="AS3D_IMPACT_LASERLG_CITY" bone="" tier="-1" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="60" time="0.2872688" duration="0.07" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="61" time="0.303935379" duration="0" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="62" time="0.720602155" duration="0.07" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="63" time="0.735417" duration="0" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="64" time="0.287713319" duration="0" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="65" time="0.312816024" duration="0.11" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="66" time="0.7210469" duration="0" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="67" time="0.744297743" duration="0.11" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerTransfer" id="68" time="0.3629629" duration="0" repeat="0" ec="1160" track="3" refid="67" speed="0" tangent.x="-0.00649679545" tangent.y="-0.945638359" tangent.z="0.325155079" />
+    <trigger type="FTimedTriggerTransfer" id="69" time="0.7777778" duration="0" repeat="0" ec="1160" track="3" refid="68" speed="0" tangent.x="-0.006496791" tangent.y="-0.9456384" tangent.z="0.325155139" />
+    <trigger type="FTimedTriggerEffect" id="70" time="0.109210409" duration="0.1" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="71" time="0.289499938" duration="0.1" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+    <trigger type="FTimedTriggerEffect" id="72" time="0.555506945" duration="0.1" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="73" time="0.720981956" duration="0.1" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="74" time="0.06768192" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="75" time="0.2402707" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="76" time="0.0203045234" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="77" time="0.428009629" duration="0.07" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="78" time="0.45023185" duration="0" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="79" time="0.432158" duration="0" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="80" time="0.460964322" duration="0.11" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerTransfer" id="81" time="0.503134" duration="0" repeat="0" ec="1180" track="3" refid="80" speed="0" tangent.x="-0.008713485" tangent.y="-0.9455979" tangent.z="0.325221062" />
+    <trigger type="FTimedTriggerEffect" id="82" time="0.205506757" duration="0.1" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="83" time="0.4302408" duration="0.1" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="84" time="0.006140353" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_GELIOPOD_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="85" time="0.7415412" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="86" time="0.974284768" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="87" time="0.14166455" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="88" time="0.387712926" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_GELIOPOD_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="89" time="0.00216718274" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_MARINE_04SH_IMPACT_$(WEAPON)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="90" time="0.222290143" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_GELIOPOD_DEATH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="91" time="0.470370442" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_MARINE_04SH_BODY_FALL_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="92" time="0.222221568" duration="0.9444452" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A01" bone="FX_Exp_Front_L" />
+    <trigger type="FTimedTriggerEffect" id="93" time="0" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_MECH_DEATH_A_01" bone="Base HumanSpine1" />
+    <trigger type="FTimedTriggerEffect" id="94" time="0.137036771" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_EXP_METAL_SHIP_DEATH_XSM_02" bone="Base HumanLCalf" />
+    <trigger type="FTimedTriggerEffect" id="95" time="0.07037037" duration="0.6" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_HS_DEATH_SPARK_NAVAL_MELEE04" bone="FX_Exp_Top" />
+    <trigger type="FTimedTriggerEffect" id="96" time="0.414819151" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="97" time="0.2185187" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="98" time="0.188888937" duration="0.2" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_HS_DEATH_SPARK_NAVAL_MELEE04" bone="Base HumanLCalf" />
+    <trigger type="FTimedTriggerEffect" id="99" time="0.6462963" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_DEATH_SPARK_HIT_SM" bone="FX_Exp_Front_R" />
+    <trigger type="FTimedTriggerEffect" id="100" time="0" duration="0.666667" repeat="0" ec="1220" track="2" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A01" bone="FX_Exp_Front_L" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="101" time="0.106598921" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="102" time="0.164128542" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="103" time="0.321488917" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="104" time="0.257190973" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="105" time="0.216581941" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="106" time="0.00676826" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="107" time="0.5431475" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="108" time="0.181481481" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="109" time="0.337037" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="110" time="0.451852" duration="0" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="111" time="0" duration="0" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="112" time="0.0203045681" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="113" time="0.8257188" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="114" time="0.6785106" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="115" time="0.6379022" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="116" time="0.780034" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="117" time="0.512690246" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="118" time="0.09813872" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="119" time="0.112962976" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="120" time="0.688888848" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="121" time="0.837037" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="122" time="0.8944444" duration="0" repeat="0" ec="1290" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="123" time="0.0372249819" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="124" time="0.138747945" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="125" time="0.480701327" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="126" time="0.362098426" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="127" time="0.151851833" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="128" time="0.49999994" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="129" time="0.497028351" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="130" time="0.139343187" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="131" time="0.0481481478" duration="0" repeat="0" ec="1420" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="132" time="0.292592555" duration="0" repeat="0" ec="1420" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="133" time="0.0304568522" duration="0" repeat="0" ec="1420" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="134" time="0.269035518" duration="0" repeat="0" ec="1420" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="135" time="0.29640156" duration="0" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="136" time="0.274074078" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="137" time="0.392592549" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="138" time="0.6814815" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="139" time="0.0338409469" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="140" time="0.258883238" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="141" time="0.370558381" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="142" time="0.65989846" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="143" time="0.5820643" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="144" time="0.6277778" duration="0" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="145" time="0.368902743" duration="0" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="146" time="0.2872462" duration="0" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="147" time="0.242592588" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="148" time="0.5796296" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="149" time="0.219966158" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="150" time="0.560067654" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="151" time="0.184433132" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="152" time="0.5143824" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="153" time="0.38742128" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="154" time="0.6574075" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="155" time="0.1685185" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="156" time="0.235194564" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="157" time="0.5719118" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="158" time="0.155668363" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="159" time="0.467005074" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="160" time="0.1319798" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="161" time="0.6125212" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="162" time="0.06937394" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="163" time="0.2555555" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="164" time="0.583333552" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="165" time="0.6008735" duration="0" repeat="0" ec="1500" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="166" time="0.3481477" duration="0" repeat="0" ec="1500" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="167" time="0.8518515" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="168" time="3.61728668" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="169" time="2.01234579" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="170" time="0.5925926" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="171" time="3.469136" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="172" time="0.22841233" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="173" time="0.395543069" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="174" time="0.805013955" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="175" time="0.671308935" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="176" time="0.0445682444" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="177" time="0.414348453" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="178" time="0.821376264" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="179" time="0.4910906" duration="0" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="180" time="0.839902043" duration="0" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="181" time="0.557102859" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="182" time="0.891364932" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="183" time="0.3203342" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="184" time="0.7520892" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="185" time="0.5739385" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="186" time="0.9062958" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="187" time="0.9352533" duration="0" repeat="0" ec="1580" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="188" time="0.6602379" duration="0" repeat="0" ec="1580" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="189" time="0.06937394" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="190" time="0.1319798" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="191" time="0.155668363" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="192" time="0.2527641" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="193" time="0.465540946" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="194" time="0.6787932" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="195" time="0.6125212" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="196" time="0.267935574" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="197" time="0.6939971" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="198" time="0.468168765" duration="0" repeat="0" ec="1600" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="199" time="0.897239447" duration="0" repeat="0" ec="1600" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="200" time="0.344082654" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="201" time="0.760446" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="202" time="0.3601757" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="203" time="0.774524152" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="204" time="0.159590036" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="205" time="0.7218155" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="206" time="0.4547868" duration="0" repeat="0" ec="1640" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="207" time="0.952865541" duration="0" repeat="0" ec="1640" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="208" time="0.0334261842" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="209" time="0.1615599" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="210" time="0.261838436" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="211" time="0.665738165" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="212" time="0.29526487" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="213" time="0.7158777" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="214" time="0.4580358" duration="0" repeat="0" ec="1800" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="215" time="0.951257646" duration="0" repeat="0" ec="1800" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="216" time="0.6777778" duration="0" repeat="0" ec="2020" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="217" time="0.9275766" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="218" time="1.53203344" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="219" time="0.40229848" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="220" time="3.137931" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="221" time="3.62643671" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="222" time="2.67241549" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="223" time="1.71839035" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="224" time="3.93678141" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="225" time="0.977743149" duration="0" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="226" time="3.71320748" duration="0" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="227" time="1.60122383" duration="0" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="228" time="3.15778875" duration="0" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="229" time="0.02538071" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="230" time="0.228909448" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="231" time="0.6742347" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="232" time="0.4231332" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="233" time="0.28359887" duration="0.07" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="234" time="0.714507639" duration="0.07" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="235" time="0.296561867" duration="0" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="236" time="0.727470636" duration="0" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="237" time="0.3182034" duration="0.11" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="238" time="0.280407161" duration="0" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="239" time="0.7545668" duration="0.11" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HS_MARINE04_MUZZLE_STEAM_SM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="240" time="0.7131343" duration="0" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HS_BACK_FLASH_GELIOPOD" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerTransfer" id="241" time="0.809442163" duration="0" repeat="0" ec="2100" track="3" refid="240" speed="0" tangent.x="-0.009990235" tangent.y="-0.9997619" tangent.z="-0.0193987712" />
+    <trigger type="FTimedTriggerTransfer" id="242" time="0.375138462" duration="0" repeat="0" ec="2100" track="3" refid="241" speed="0" tangent.x="-0.00999024" tangent.y="-0.9997619" tangent.z="-0.019399507" />
+    <trigger type="FTimedTriggerEffect" id="243" time="0.5256077" duration="0.1" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="244" time="0.7112508" duration="0.13" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+    <trigger type="FTimedTriggerEffect" id="245" time="0.0510623" duration="0.1" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_HS_MARINE04HS_WEAPONACCENT_VENTSTEAM" bone="FX_Muzzel_Flash" />
+    <trigger type="FTimedTriggerEffect" id="246" time="0.282160044" duration="0.13" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ" bone="FX_Point_projectile" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="247" time="0.328102082" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_GELIOPOD_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="248" time="0.2295075" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="249" time="0.7138606" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="250" time="0.166463941" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_GELIOPOD_DEATH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="251" time="0.970802844" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="252" time="0.09002433" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="253" time="0.01666667" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_GELIOPOD_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="254" time="0.470370442" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_MARINE_04SH_BODY_FALL_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="255" time="0" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_MARINE_04SH_IMPACT_$(WEAPON)" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="256" time="0.301851422" duration="0.864815354" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A02" bone="FX_Exp_Front_L" />
+    <trigger type="FTimedTriggerEffect" id="257" time="0.00185172854" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_MECH_DEATH_B_01" bone="FX_Exp_Front_L" />
+    <trigger type="FTimedTriggerEffect" id="258" time="0.170370132" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_EXP_METAL_SHIP_DEATH_XSM_02" bone="Base HumanPelvis" />
+    <trigger type="FTimedTriggerEffect" id="259" time="0.111111104" duration="0.05" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_HS_DEATH_SPARK_NAVAL_MELEE04" bone="Base HumanRCalf" />
+    <trigger type="FTimedTriggerEffect" id="260" time="0.17592597" duration="0.2" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_HS_DEATH_SPARK_NAVAL_MELEE04" bone="Base HumanLCalf" />
+    <trigger type="FTimedTriggerEffect" id="261" time="0.225924179" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="262" time="0.06296475" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="263" time="0.446296066" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_EXP_METAL_SHIP_DEATH_XSM_02" bone="FX_Rear_Exhaust_01" />
+    <trigger type="FTimedTriggerEffect" id="264" time="0" duration="0.400000036" repeat="0" ec="2220" track="2" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A02" bone="FX_Exp_Front_L" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="265" time="0.0338409469" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="266" time="0.258883238" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="267" time="0.274074078" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="268" time="0.370558381" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_RUN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="269" time="0.392592549" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="270" time="0.5839161" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="271" time="0.65989846" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="272" time="0.6814815" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_GELIOPOD_FOOTSTEP_$(TERRAIN)" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="273" time="0.419217378" duration="0" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanLPlatform" />
+    <trigger type="FTimedTriggerEffect" id="274" time="0.7331936" duration="0" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+    <trigger type="FTimedTriggerEffect" id="275" time="0.248671934" duration="0" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_GELIOPOD_FOOTPRINT_$(TERRAIN)" bone="Base HumanRPlatform" />
+  </triggers>
+</trigger_system>

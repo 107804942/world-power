@@ -1,0 +1,36 @@
+<Asset>
+  <Mesh file="WellGeothermalHeavy_CN.gr2" source="Max" />
+  <Animation file="WellGeothermalHeavy_Idle.gr2" name="Idle" ec="1000" source="Max" layer="None" />
+  <Texture file="HBKit_DIFF.dds" source="Max" />
+  <Texture file="HBKit_SREF.dds" source="Max" />
+  <Texture file="WellGeothermalHeavy_CN_DecalD.dds" source="Max" />
+  <Texture file="WellGeothermalHeavy_CN_DecalH.dds" source="Max" />
+  <Texture file="WellGeothermalHeavy_CN_DecalS.dds" source="Max" />
+  <Texture file="WellGeothermalHeavy_HB_DecalD.dds" source="Max" />
+  <Texture file="WellGeothermalHeavy_HB_DecalH.dds" source="Max" />
+  <Texture file="WellGeothermalHeavy_PL_DecalD.dds" source="Max" />
+  <Texture file="WellGeothermalHeavy_PL_DecalH.dds" source="Max" />
+  <Texture file="WellGeothermal_CN_DIFF.dds" source="Max" />
+  <Texture file="WellGeothermal_CN_SREF.dds" source="Max" />
+  <Texture file="WellGeothermal_HB_DIFF.dds" source="Max" />
+  <Texture file="WellGeothermal_HB_SREF.dds" source="Max" />
+  <Texture file="WellGeothermal_PL_DIFF.dds" source="Max" />
+  <Texture file="WellGeothermal_PL_SREF.dds" source="Max" />
+  <Texture file="Geothermal_Decal_D.dds" source="Max" />
+  <Texture file="Geothermal_Decal_H.dds" source="Max" />
+  <Texture file="Geothermal_Decal_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <DecisionTree file="LandmarkDecisionTree.ddtxml" source="Tool" />
+  <TimedTrigger file="FX_Triggers_Geothermal_Well_Smokestack.ftsxml" source="Tool" model="WellGeothermal_CN04" state="2" />
+  <TimedTrigger file="FX_Triggers_Geothermal_Well_HazardLight.ftsxml" source="Tool" model="WellGeothermal_CN02" state="2" />
+  <TimedTrigger file="FX_Triggers_Geothermal_Well_Glow.ftsxml" source="Tool" model="Bone_GeoCoreBase" state="2" />
+  <BoneUsage>
+    <Bone name="FXBONE_GeoCore" />
+    <Bone name="FXBONE_HazardLight" />
+    <Bone name="FXBONE_GeoSmokestack" />
+    <Bone name="Bone_GeoCoreBlades" />
+    <Bone name="Bone_GeoCoreBase" />
+  </BoneUsage>
+</Asset>

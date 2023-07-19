@@ -1,0 +1,19 @@
+<Asset>
+  <Mesh file="Manufactory_HB.gr2" source="Max" />
+  <Texture file="HBKit_DIFF.dds" source="Max" />
+  <Texture file="HBKit_SREF.dds" source="Max" />
+  <Texture file="Manufactory_CN_DIFF.dds" source="Max" />
+  <Texture file="Manufactory_CN_DecalD.dds" source="Max" />
+  <Texture file="Manufactory_CN_DecalH.dds" source="Max" />
+  <Texture file="Manufactory_CN_SREF.dds" source="Max" />
+  <Texture file="Manufactory_HB_DIFF.dds" source="Max" />
+  <Texture file="Manufactory_HB_DecalD.dds" source="Max" />
+  <Texture file="Manufactory_HB_DecalH.dds" source="Max" />
+  <Texture file="Manufactory_HB_SREF.dds" source="Max" />
+  <Texture file="Manufactory_PL_DIFF.dds" source="Max" />
+  <Texture file="Manufactory_PL_DecalD.dds" source="Max" />
+  <Texture file="Manufactory_PL_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+</Asset>

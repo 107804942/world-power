@@ -1,0 +1,474 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1160">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1280">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1520">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1560">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1600">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1640">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1800">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2160">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1290">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+    </event_track>
+    <event_track ec="1180">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1500">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1540">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1580">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1620">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+    </event_track>
+    <event_track ec="2180">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1285">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1120">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1450">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1140">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+    </event_track>
+    <event_track ec="1130">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerSound" id="98" time="0.457407415" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerEffect" id="20" time="0" duration="1" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="1" time="0" duration="6.00000048" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="14" time="0" duration="6.00000048" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="23" time="0" duration="1.33333337" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_KRAKEN_WAKE_TRAIL" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="90" time="0.187302" duration="0.7" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_KRAKEN_SINKING_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="88" time="0.535851061" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_KRAKEN_WATER_DEATH_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerSound" id="216" time="0" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_KRAKEN_RUN_STOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="150" time="0.00185185182" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="227" time="0" duration="1.33" repeat="0" ec="1400" track="1" event="AS3D_UNIT_KRAKEN_RUN_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="228" time="0.00240740739" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="127" time="0.00626749" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="153" time="0.8351851" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_KRAKEN_UNDERWATER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerEffect" id="112" time="0.2981481" duration="0.33333" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="122" time="0.7685185" duration="0" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_WHALE_BREACH_SPLASH_02" bone="bone_bodyfin_01" />
+    <trigger type="FTimedTriggerEffect" id="154" time="0.2981481" duration="0.33333" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerAction" id="156" time="0.546097755" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="159" time="0.7685185" duration="0" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_WHALE_BREACH_SPLASH_02" bone="bone_bodyfin_01" />
+    <trigger type="FTimedTriggerAction" id="165" time="0.884989" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="171" time="0.2981481" duration="0.33333" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LG_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="175" time="0" duration="1.33333" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LG_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerSound" id="5" time="0.6077898" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerAction" id="24" time="0.5374223" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="25" time="0.3462961" duration="0" repeat="0" ec="2160" track="4" action="0" />
+    <trigger type="FTimedTriggerAction" id="26" time="0.687037" duration="0" repeat="0" ec="2160" track="4" action="0" />
+    <trigger type="FTimedTriggerAction" id="27" time="0.3462961" duration="0" repeat="0" ec="2180" track="4" action="0" />
+    <trigger type="FTimedTriggerAction" id="28" time="0.687037" duration="0" repeat="0" ec="2180" track="4" action="0" />
+    <trigger type="FTimedTriggerEffect" id="40" time="0.598147452" duration="0" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_FIN_SPLASH_RIGHT" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="41" time="0.690740466" duration="0" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_SCOLOSSUS_ATTACK_SPLASH_01" bone="bone_mouth_R_01" />
+    <trigger type="FTimedTriggerEffect" id="46" time="0" duration="1.33333" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LG_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="47" time="0.0148147987" duration="1.26667" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_WAKE_TRAIL_MD_01" bone="bone_tail_04" />
+    <trigger type="FTimedTriggerEffect" id="48" time="0.0148147987" duration="1.26667" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_WAKE_TRAIL_MD_01" bone="bone_tail_04" />
+    <trigger type="FTimedTriggerEffect" id="53" time="0.5419485" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_KRAKEN_WATER_DEATH_01" bone="bone_head" />
+    <trigger type="FTimedTriggerEffect" id="61" time="0.1910057" duration="0.5" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_KRAKEN_SINKING_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerSound" id="63" time="0" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerEffect" id="64" time="0.35925886" duration="0" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_SCOLOSSUS_ATTACK_SPLASH_01" bone="bone_mouth_L_01" />
+    <trigger type="FTimedTriggerEffect" id="65" time="1.09814751" duration="0" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_FIN_SPLASH_LEFT" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="66" time="1.09814751" duration="0" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_FIN_SPLASH_LEFT" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="67" time="0.690740466" duration="0" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_SCOLOSSUS_ATTACK_SPLASH_01" bone="bone_mouth_R_01" />
+    <trigger type="FTimedTriggerEffect" id="68" time="0.598147452" duration="0" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_FIN_SPLASH_RIGHT" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="69" time="0.35925886" duration="0" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_SCOLOSSUS_ATTACK_SPLASH_01" bone="bone_mouth_L_01" />
+    <trigger type="FTimedTriggerEffect" id="70" time="0.2981481" duration="0.33333" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LG_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="77" time="0.405555248" duration="0" repeat="0" ec="2160" track="2" event="ART_DEF_VEFFECT_WATER_SPLASH_FRONT" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="78" time="0.4037034" duration="0" repeat="0" ec="2180" track="2" event="ART_DEF_VEFFECT_WATER_SPLASH_FRONT" bone="WORLD_center" />
+    <trigger type="FTimedTriggerSound" id="13" time="0" duration="1.33" repeat="0" ec="1120" track="1" event="AS3D_UNIT_KRAKEN_RUN_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="30" time="0" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="32" time="0.00185185182" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="38" time="0" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_KRAKEN_RUN_STOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="49" time="0.0222222228" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="51" time="0.957407236" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_UNDERWATER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="62" time="0" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_DEATH_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="84" time="0" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_KRAKEN_DEATH_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="29" time="0.714814663" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="39" time="0.00185185182" duration="0" repeat="0" ec="1040" track="1" event="AS3D_UNIT_KRAKEN_WATER_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="42" time="0.00185185182" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_IMPACT_$(WEAPON)" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="85" time="0" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_KRAKEN_IMPACT_$(WEAPON)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="50" time="1.99259341" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_KRAKEN_WATER_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="87" time="0.0392713733" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="89" time="0.43148154" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="93" time="0.0411232263" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="94" time="0.00185185182" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="105" time="0.000555555569" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="107" time="0.294826776" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_BREACHSPLASH" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="108" time="0.65370363" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="109" time="0.41481477" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="110" time="0.457407415" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_KRAKEN_MOVEMENT_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="114" time="0.188888818" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_SPLASH_LARGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="115" time="0.3074074" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="116" time="0.314814836" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="118" time="0.459259272" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="117" time="0.190740764" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="119" time="0.459259272" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="123" time="0.187037051" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_KRAKEN_SPLASH_LARGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="124" time="0.459259272" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="125" time="0.459259272" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="33" time="0.762962937" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="34" time="0.4611111" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="35" time="0.129629627" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="36" time="0.8592592" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_SPLASH_LARGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="12" time="0.00185185182" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="126" time="0.6462963" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="128" time="0.209259272" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="129" time="0.172222227" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_KRAKEN_RUN_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="130" time="0.03741952" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="131" time="0.00185185182" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="133" time="0.6462963" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="134" time="1.30740738" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="135" time="0.457407415" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="136" time="1.47037041" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="137" time="0.757407367" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="138" time="0.43148154" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="139" time="0.205555558" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="140" time="0.43148154" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="141" time="0.457407415" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="142" time="0.6462963" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="143" time="0.757407367" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="144" time="0.207407415" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="145" time="0.9777778" duration="0" repeat="0" ec="1160" track="1" event="AS3D_IMPACT_BLUNT_CITY" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="146" time="0.04297508" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="147" time="0.207407415" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="148" time="0.43148154" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="149" time="0.457407415" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="151" time="0.6462963" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="152" time="0.757407367" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="160" time="0.04297508" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="161" time="0.207407415" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="162" time="0.43148154" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="163" time="0.457407415" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="166" time="0.6462963" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="168" time="0.757407367" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="169" time="0.5833334" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="170" time="0.198148146" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_KRAKEN_RUN_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="172" time="0.2333334" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="173" time="1.012963" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="174" time="0.00185185182" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="176" time="0.375925928" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="177" time="0.114814833" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="178" time="0.00185185182" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="179" time="0.112962976" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="180" time="0.216666669" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="181" time="1.26481485" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="182" time="0.657407343" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="184" time="0.375925928" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="186" time="0.112962976" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="187" time="0.00185185182" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_KRAKEN_OCEAN_END" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="185" time="0.464814872" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="188" time="0.218518555" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="189" time="0.5722222" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="31" time="0.218518525" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="37" time="0.5148149" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_SPLASH_LARGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="43" time="0.429629743" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_KRAKEN_SPLASH_LARGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="45" time="0.375925928" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_WATER_SWISH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="92" time="0.5611111" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_KRAKEN_WATER_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="95" time="0.027777778" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_KRAKEN_WATER_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="96" time="0.148148149" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_KRAKEN_MOVEMENT_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="97" time="0.027777778" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_KRAKEN_WATER_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="99" time="0.148148149" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_KRAKEN_MOVEMENT_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="100" time="0.02962963" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_KRAKEN_WATER_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="102" time="1.012963" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="103" time="0.05964162" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="104" time="0.6077898" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_KRAKEN_ATTACK_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="101" time="0.5203705" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_KRAKEN_RUN_STOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="106" time="0.2333334" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="111" time="0.2333334" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_KRAKEN_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="4" time="0" duration="1.33333337" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="44" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="60" time="0" duration="1.33333337" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="82" time="0" duration="2" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="83" time="0" duration="2" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="86" time="0" duration="0.6666667" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="113" time="0" duration="4" repeat="0" ec="1285" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="120" time="0" duration="1" repeat="0" ec="1290" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="121" time="0" duration="1" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="132" time="0" duration="6.00000048" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="157" time="0" duration="1.33333337" repeat="0" ec="1500" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="167" time="0" duration="6.00000048" repeat="0" ec="1520" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="183" time="0" duration="6.00000048" repeat="0" ec="1540" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="191" time="0" duration="1.33333337" repeat="0" ec="1580" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="193" time="0" duration="6.00000048" repeat="0" ec="1620" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="194" time="0" duration="1.66666675" repeat="0" ec="1640" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="195" time="0" duration="1.66666675" repeat="0" ec="1800" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="196" time="0" duration="6.00000048" repeat="0" ec="2000" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="197" time="0" duration="1" repeat="0" ec="2020" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="198" time="0" duration="6.00000048" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="199" time="0" duration="1.66666675" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="200" time="0" duration="1" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="201" time="0" duration="1.33333337" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_KRAKEN_WAKE_TRAIL" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="202" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_KRAKEN_WAKE_TRAIL" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="81" time="0.864838243" duration="0" repeat="0" ec="1100" track="6" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerEffect" id="155" time="0.312963" duration="0.33333" repeat="0" ec="1100" track="7" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="75" time="0.2981481" duration="0.33333" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="6" time="0.8819445" duration="0.19" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RB" />
+    <trigger type="FTimedTriggerEffect" id="7" time="1.17298174" duration="0.25" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_KRAKEN_CONTINUOUSFROTHYSPLASHINESS" bone="fx_Tent_LB" />
+    <trigger type="FTimedTriggerEffect" id="8" time="0.25935933" duration="1" repeat="0" ec="1640" track="3" event="ART_DEF_VEFFECT_KRAKEN_SPLASHRING_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="190" time="0" duration="1.66666675" repeat="0" ec="1560" track="4" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="16" time="1.13720477" duration="0.35" repeat="0" ec="1600" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerEffect" id="17" time="1.13720477" duration="0.3" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_LF_02" />
+    <trigger type="FTimedTriggerEffect" id="18" time="0.9756632" duration="0.53" repeat="0" ec="1600" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerEffect" id="19" time="0.9627397" duration="0.2" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_RF_03" />
+    <trigger type="FTimedTriggerEffect" id="21" time="0.96956563" duration="0.48" repeat="0" ec="1600" track="2" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_RF_02" />
+    <trigger type="FTimedTriggerEffect" id="22" time="1.13720477" duration="0.4" repeat="0" ec="1600" track="2" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_LF_03" />
+    <trigger type="FTimedTriggerEffect" id="80" time="0.5418735" duration="0" repeat="0" ec="1100" track="6" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerEffect" id="54" time="1.12392986" duration="0" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_WIDE_FORCEFUL_LG" bone="fx_Tent_RB" />
+    <trigger type="FTimedTriggerEffect" id="55" time="0.8682512" duration="0" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_WIDE_FORCEFUL_MD" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerEffect" id="71" time="0.5452865" duration="0" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerEffect" id="72" time="0.177756861" duration="0.48" repeat="0" ec="1160" track="6" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_RB_02" />
+    <trigger type="FTimedTriggerEffect" id="73" time="0.177756861" duration="0.48" repeat="0" ec="1180" track="6" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_RB_02" />
+    <trigger type="FTimedTriggerEffect" id="74" time="0.5452865" duration="0" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerEffect" id="76" time="0.8682512" duration="0" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_WIDE_FORCEFUL_MD" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerEffect" id="79" time="1.12207806" duration="0" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_WIDE_FORCEFUL_LG" bone="fx_Tent_RB" />
+    <trigger type="FTimedTriggerAction" id="164" time="0.797101438" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="208" time="1.33148158" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="205" time="0.5072464" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="158" time="0.6038647" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="206" time="0.657004833" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="207" time="0.8888889" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="203" time="1.09178746" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="204" time="1.294686" duration="0" repeat="0" ec="1130" track="4" action="2" />
+    <trigger type="FTimedTriggerAction" id="209" time="0.860119045" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="210" time="0.312963" duration="0.33333" repeat="0" ec="1140" track="7" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="59" time="0.312963" duration="0.33333" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="211" time="0.312963" duration="0.33333" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="212" time="0.5418735" duration="0" repeat="0" ec="1140" track="6" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerAction" id="213" time="0.546097755" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="214" time="0.864838243" duration="0" repeat="0" ec="1140" track="6" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerAction" id="215" time="0.860119045" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="217" time="0.9958898" duration="0.33333" repeat="0" ec="1130" track="5" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="218" time="0.312963" duration="0.33333" repeat="0" ec="1130" track="6" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="220" time="0.312963" duration="0.33333" repeat="0" ec="1130" track="5" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="219" time="0.9958896" duration="0.33333" repeat="0" ec="1130" track="6" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="15" time="0.526884556" duration="0.6" repeat="0" ec="1560" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASHRING_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="192" time="0" duration="1.66666675" repeat="0" ec="1600" track="4" event="ART_DEF_VEFFECT_KRAKEN_IDLE_WATER_WAKE_ROUND" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="2" time="0.5329821" duration="0.6" repeat="0" ec="1600" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASHRING_01" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="3" time="1.13720477" duration="0.35" repeat="0" ec="1560" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerEffect" id="9" time="0.96956563" duration="0.53" repeat="0" ec="1560" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerEffect" id="10" time="0.96956563" duration="0.48" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_RF_02" />
+    <trigger type="FTimedTriggerEffect" id="221" time="1.13720477" duration="0.4" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_LF_03" />
+    <trigger type="FTimedTriggerEffect" id="11" time="1.137205" duration="0.3" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_LF_02" />
+    <trigger type="FTimedTriggerEffect" id="222" time="0.9627397" duration="0.2" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_KRAKEN_WATER_DRIPPING_01" bone="bon_Tent_RF_03" />
+    <trigger type="FTimedTriggerEffect" id="223" time="0.25935933" duration="1" repeat="0" ec="1640" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASHRING_OFFSET" bone="WORLD_center" />
+    <trigger type="FTimedTriggerEffect" id="224" time="0.5870307" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerEffect" id="225" time="0.5767918" duration="0" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_TALL" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerEffect" id="226" time="0.559726954" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_TALL" bone="fx_Tent_RF" />
+    <trigger type="FTimedTriggerEffect" id="229" time="0.552901" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_KRAKEN_SPLASH_SM_SHALLOW" bone="fx_Tent_LF" />
+    <trigger type="FTimedTriggerSound" id="52" time="1.122222" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_ENERGY_IMPACT" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="56" time="0.859259248" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_KRAKEN_ENERGY_IMPACT" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="57" time="1.12407362" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_ENERGY_IMPACT" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="58" time="0.868518531" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_KRAKEN_ENERGY_IMPACT" bone="" tier="-1" />
+    <trigger type="FTimedTriggerEffect" id="91" time="0.5378183" duration="0.46" repeat="0" ec="1130" track="7" event="ART_DEF_VEFFECT_UNIT_GREEN_TRAIL_01" bone="bon_Tent_LF_05" />
+    <trigger type="FTimedTriggerEffect" id="230" time="0.445225716" duration="0.36" repeat="0" ec="1130" track="7" event="ART_DEF_VEFFECT_UNIT_GREEN_TRAIL_01" bone="bon_Tent_RF_05" />
+    <trigger type="FTimedTriggerEffect" id="231" time="0.7452257" duration="0.4" repeat="0" ec="1130" track="7" event="ART_DEF_VEFFECT_UNIT_GREEN_TRAIL_01" bone="bon_Tent_RB_05" />
+    <trigger type="FTimedTriggerEffect" id="232" time="1.0007813" duration="0.543" repeat="0" ec="1130" track="7" event="ART_DEF_VEFFECT_UNIT_GREEN_TRAIL_01" bone="bon_Tent_LB_05" />
+  </triggers>
+</trigger_system>

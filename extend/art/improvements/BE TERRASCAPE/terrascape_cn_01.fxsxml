@@ -1,0 +1,14 @@
+<Asset>
+  <Mesh file="Terrascape_CN_01.gr2" source="Max" />
+  <Animation file="Terrascape_CN_01_CN01Idle.gr2" name="CN01Idle" ec="1000" source="Max" layer="None" />
+  <Texture file="Terraform_Decal_SREF.dds" source="Max" />
+  <Texture file="Terrascape_DIFF.dds" source="Max" />
+  <Texture file="Terrascape_Decal_DIFF.dds" source="Max" />
+  <Texture file="Terrascape_Decal_H.dds" source="Max" />
+  <Texture file="Terrascape_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <TimedTrigger file="FX_Triggers_Terrascape_01.ftsxml" source="Tool" model="Object01" state="1,2,3"/>
+  <DecisionTree file="LandmarkDecisionTree.ddtxml" source="Tool" />
+</Asset>

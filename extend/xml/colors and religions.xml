@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GameData>
+
+
+
+	
+	
+	<Colors>
+
+
+		<!-- 粉色 -->
+		<Row>
+			<Type>COLOR_PINK</Type>
+			<Red>0.74</Red>
+			<Green>0.1</Green>
+			<Blue>0.47</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+		<!-- 紫蓝色 -->
+		<Row>
+			<Type>COLOR_MAGIC</Type>
+			<Red>0.5</Red>
+			<Green>0.65</Green>
+			<Blue>1</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+		<!-- 几乎无色 -->
+		<Row>
+			<Type>COLOR_UNIQUE</Type>
+			<Red>0.82</Red>
+			<Green>0.7</Green>
+			<Blue>0.6</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+		<!-- 紫色 -->
+		<Row>
+			<Type>COLOR_LEGENDARY</Type>
+			<Red>0.7</Red>
+			<Green>0.3</Green>
+			<Blue>1</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+
+
+		<!-- 红色 -->
+		<Row>
+			<Type>COLOR_SAVAGE</Type>
+			<Red>1</Red>
+			<Green>0.3</Green>
+			<Blue>0.3</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+
+		<!-- 史诗金色 -->
+		<Row>
+			<Type>COLOR_MIGHT</Type>
+			<Red>1</Red>
+			<Green>0.7</Green>
+			<Blue>0.2</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+		<!-- 亮黄色 -->
+		<Row>
+			<Type>COLOR_COURAGE</Type>
+			<Red>1</Red>
+			<Green>1</Green>
+			<Blue>0</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+		<!-- 绿色 -->
+		<Row>
+			<Type>COLOR_AGILITY</Type>
+			<Red>0.3</Red>
+			<Green>1</Green>
+			<Blue>0.3</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+		<!-- xcom蓝色 -->
+		<Row>
+			<Type>COLOR_ENDURANCE</Type>
+			<Red>0</Red>
+			<Green>1</Green>
+			<Blue>1</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+
+
+		<!--深蓝色 -->
+		<Row>
+			<Type>COLOR_WISDOM</Type>
+			<Red>0.3</Red>
+			<Green>0.4</Green>
+			<Blue>1</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+		<!--深紫色 -->
+		<Row>
+			<Type>COLOR_SORCERY</Type>
+			<Red>0.6</Red>
+			<Green>0.2</Green>
+			<Blue>1</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+
+
+		<!--淡蓝色 -->
+		<Row>
+			<Type>COLOR_MANA</Type>
+			<Red>0</Red>
+			<Green>1</Green>
+			<Blue>1</Blue>
+			<Alpha>1</Alpha>
+		</Row>
+	</Colors>
+
+
+
+
+
+	<Religions>
+
+		<Update>
+			<Where Type="RELIGION_PANTHEON"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_PANTHEON]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_BUDDHISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_BUDDHISM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_CHRISTIANITY"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_CHRISTIANITY]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_CONFUCIANISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_CONFUCIANISM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_HINDUISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_HINDUISM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_ISLAM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_ISLAM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_JUDAISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_JUDAISM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_SHINTO"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_SHINTO]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_SIKHISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_SIKHISM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_TAOISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_TAOISM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_TENGRIISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_TENGRIISM]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_ZOROASTRIANISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_ZOROASTRIANISM]"/>
+		</Update>
+		<!--Update the two scenario religions to use modded icon atlases.-->
+		<Update>
+			<Where Type="RELIGION_ORTHODOXY"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_ORTHODOXY]"/>
+		</Update>
+		<Update>
+			<Where Type="RELIGION_PROTESTANTISM"/>
+			<Set IconAtlas="CALYPSO_RELIGIONS_ATLAS_MOD_BASIC" IconString="[ICON_CALYPSO_RELIGION_PROTESTANTISM]"/>
+		</Update>
+	</Religions>
+
+
+
+
+	
+
+	
+</GameData>

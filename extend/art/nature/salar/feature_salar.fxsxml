@@ -1,0 +1,6 @@
+<Asset>
+	<Mesh file="Feature_Salar.gr2" source="Max" />
+	<Texture file="salar_ground_diff.dds" source="Max" />
+	<Texture file="Salar_Ground_H.dds" source="Max" />
+	<Texture file="kilimanjaro_ground_sref.dds" source="Max" />
+</Asset>

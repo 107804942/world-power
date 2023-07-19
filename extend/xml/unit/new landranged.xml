@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/23 20:48:00 -->
+<GameData>
+	<Units>
+
+
+	
+
+		<!--防空炮-->
+		<Row>
+			<Class>UNITCLASS_SABR</Class>
+			<Type>UNIT_SABR</Type>
+			<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
+			<Combat>130</Combat>
+			<RangedCombat>260</RangedCombat>
+			<Cost>1300</Cost>
+			<Moves>5</Moves>
+			<Range>3</Range>
+			<Immobile>0</Immobile>
+			<HurryCostModifier>40</HurryCostModifier>
+			<BaseSightRange>2</BaseSightRange>
+			<AirInterceptRange>4</AirInterceptRange>
+			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SABR</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_SABR_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SABR_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_ANTI_AIR_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<AdvancedStartCost>50</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_SABR</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
+			<UnitFlagIconOffset>14</UnitFlagIconOffset>
+			<PortraitIndex>11</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<ExtraMaintenanceCost>50</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+		<!--攻城炮-->
+		<Row>
+			<Class>UNITCLASS_FW_HOVERTANK</Class>
+			<Type>UNIT_FW_HOVERTANK</Type>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
+			<Combat>100</Combat>
+			<RangedCombat>360</RangedCombat>
+			<Cost>1900</Cost>
+			<Moves>5</Moves>
+			<Range>3</Range>
+			<HurryCostModifier>60</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_CITY_BOMBARD</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_FW_HOVERTANK</Description>
+			<Civilopedia>TXT_KEY_UNIT_FW_HOVERTANK_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FW_HOVERTANK_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CITY_SIEGE_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>90</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_SIEGE04P</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
+			<UnitFlagIconOffset>4</UnitFlagIconOffset>
+			<PortraitIndex>113</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<MoveRate>WHEELED</MoveRate>
+			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
+			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
+		</Row>
+
+
+		<!--火箭炮-->
+		<Row>
+			<Class>UNITCLASS_SUPER_ROCKET</Class>
+			<Type>UNIT_SUPER_ROCKET</Type>
+			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
+			<BaseSightRange>2</BaseSightRange>
+			<Combat>100</Combat>
+			<RangedCombat>500</RangedCombat>
+			<Cost>3000</Cost>
+			<Moves>4</Moves>
+			<Range>5</Range>
+			<HurryCostModifier>100</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SUPER_ROCKET</Description>
+			<Civilopedia>TXT_KEY_UNITS_SUPER_ROCKET_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_AOE_WEAPONS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_SPLASH_DAMAGE_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>120</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_SIEGE05P</UnitArtInfo>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<UnitFlagIconOffset>50</UnitFlagIconOffset>
+			<PortraitIndex>20</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<MoveRate>WHEELED</MoveRate>
+			<ExtraMaintenanceCost>110</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+	</Units>
+
+
+	<Unit_FreePromotions>
+
+	
+
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<PromotionType>PROMOTION_CARGO_II</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<PromotionType>PROMOTION_ANTI_AIR</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<PromotionType>PROMOTION_BARRAGE_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<PromotionType>PROMOTION_BARRAGE_2</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<PromotionType>PROMOTION_BARRAGE_3</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<PromotionType>PROMOTION_CARGO_II</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<PromotionType>PROMOTION_SPLASH_DAMAGE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+
+
+
+	</Unit_FreePromotions>
+	
+
+	<Unit_ResourceQuantityRequirements>
+
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+		</Row>
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>9</Cost>
+		</Row>
+
+
+	</Unit_ResourceQuantityRequirements>
+
+
+
+
+	<Unit_AITypes>
+
+		
+
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<UnitAIType>UNITAI_RANGED</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<UnitAIType>UNITAI_CITY_SPECIAL</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<UnitAIType>UNITAI_COUNTER</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitAIType>UNITAI_CITY_BOMBARD</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitAIType>UNITAI_RANGED</UnitAIType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<UnitAIType>UNITAI_RANGED</UnitAIType>
+		</Row>
+
+
+
+	</Unit_AITypes>
+
+
+	<Unit_Flavors>
+	
+		
+			
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>160</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>165</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>115</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>155</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>130</Flavor>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>155</Flavor>
+		</Row>
+	</Unit_Flavors>
+
+
+
+
+
+	<Units>
+
+
+		<Update>
+			<Set  IconAtlas="UNIT_ATLAS_2" PortraitIndex="29"/>
+			<Where Type="UNIT_SAM_INFANTRY" />
+		</Update>
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_SA19" />
+			<Where Class="UNITCLASS_SAM_INFANTRY" />
+		</Update>
+
+
+
+		<Update>
+			<Set   UnitArtInfo="ART_DEF_UNIT_BOMBARD1"/>
+			<Where Type="UNIT_CULVERIN" />
+		</Update>
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_UNION_ARTILLERY_PARROTT" IconAtlas="ROBOT_ICON_ATLAS2" PortraitIndex="92"/>
+			<Where Type="UNIT_CANNON" />
+		</Update>
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_UNION_ARTILLERY_PARROTT"/>
+			<Where Type="UNIT_FRANCE_BATTERY" />
+		</Update>
+
+		<Update>
+			<Set   UnitArtInfo="ART_DEF_UNIT_ROCKETARTILLERY2"/>
+			<Where Type="UNIT_ROCKET_ARTILLERY" />
+		</Update>
+
+
+		<Update>
+			<Set  ObsoleteTech="TECH_MATHEMATICS"/>
+			<Where Type="UNIT_ARCHER" />
+		</Update>
+
+
+		<Update>
+			<Set  PrereqTech="TECH_MATHEMATICS"/>
+			<Where Type="UNIT_COMPOSITE_BOWMAN" />
+		</Update>
+
+		<Update>
+			<Set  PrereqTech="TECH_MATHEMATICS"/>
+			<Where Type="UNIT_BABYLONIAN_BOWMAN" />
+		</Update>
+	</Units>
+	
+</GameData>

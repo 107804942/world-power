@@ -1,0 +1,124 @@
+<Asset>
+	<Mesh file="lev_destroyer.gr2"/>
+	<Animation file="Lev_Destroyer_Aim_L.gr2" ec="1700"/>
+	<Animation file="Lev_Destroyer_Aim_R.gr2" ec="1705"/>
+	<Animation file="Lev_Destroyer_Aim_Center.gr2" ec="1710"/>
+	<Animation file="Lev_Destroyer_IdleA.gr2" ec="1000"/>
+	<Animation file="Lev_Destroyer_FidgetA.gr2" ec="1040"/>
+	<Animation file="Lev_Destroyer_IdleA_Trans_IdleB.gr2" ec="1020"/>
+	<Animation file="Lev_Destroyer_IdleB.gr2" ec="2000"/>
+	<Animation file="Lev_Destroyer_FidgetB.gr2" ec="2040"/>
+	<Animation file="Lev_Destroyer_IdleB_Trans_IdleA.gr2" ec="2020"/>
+	<Animation file="Lev_Destroyer_Fortify.gr2" ec="1500"/>
+	<Animation file="Lev_Destroyer_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="Lev_Destroyer_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="Lev_Destroyer_Fortify_Idle_Trans_Combat_Ready_Idle.gr2" ec="1560"/>
+	<Animation file="Lev_Destroyer_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="Lev_Destroyer_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Lev_Destroyer_Combat_Ready_Idle.gr2" ec="1620"/>
+	<Animation file="Lev_Destroyer_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640"/>
+	<Animation file="Lev_Destroyer_Charge_Run.gr2" ec="1120"/>
+	<Animation file="Lev_Destroyer_Run_Hover.gr2" ec="1400"/>
+	<Animation file="Lev_Destroyer_Stop_Run.gr2" ec="1440, 1140"/>
+	<Animation file="Lev_Destroyer_Attack_City.gr2" ec="1160"/>
+	<Animation file="Lev_Destroyer_Bombardment.gr2" ec="1180"/>
+	<Animation file="Lev_Destroyer_AttackA.gr2" ec="1100"/>
+	<Animation file="Lev_Destroyer_AttackB.gr2" ec="2100"/>
+	<Animation file="Lev_Destroyer_Attack_Air.gr2" ec="1130"/>
+	<Animation file="Lev_Destroyer_Victory.gr2" ec="1800"/>
+	<Animation file="Lev_Destroyer_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Lev_Destroyer_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Lev_Destroyer_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Lev_Destroyer_DeathA.gr2" ec="1200"/>
+	<Animation file="Lev_Destroyer_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="Lev_Destroyer_DeathB.gr2" ec="2200"/>
+	<Animation file="Lev_Destroyer_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Lev_Destroyer_DIFF.dds"/>
+	<Texture file="Lev_Destroyer_SREF.dds"/>
+	<Texture file="Lev_Destroyer_DMG_DIFF.dds"/>
+	<Texture file="Lev_Destroyer_DMG_SREF.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Sunlight_Irradiance.dds"/>
+	<StateMachine file="MECHANIZED_AIM_STATE_01.fsmxml"/>
+	<AnimGraph file="AIM_IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<AnimGraph file="AIM_FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="AIM_START_RUNNING.dge"/>
+	<AnimGraph file="AIM_STOP_RUNNING.dge"/>
+	<AnimGraph file="AIM_TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="AIM_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="AIM_FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="AIM_ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="AIM_LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="AIM_DEATH_GRAPH.dge"/>
+	<AnimGraph file="AIM_ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="AIM_RUNNING_LOOP.dge"/>
+	<AnimGraph file="AIM_BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="AIM_DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="AIM_LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="AIM_ATTACK_TO_RUN_GRAPH.dge"/>
+	<AnimGraph file="AIM_ATTACK_CITY_TO_RUN.dge"/>
+	<AnimGraph file="AIM_ENTER_FORTIFY.dge"/>
+	<AnimGraph file="AIM_FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="AIM_MELEE_ATTACKS.dge"/>
+	<AnimGraph file="AIM_IDLE_GRAPH.dge"/>
+	<AnimGraph file="AIM_FORTIFY_GRAPH.dge"/>
+	<TimedTrigger file="FX_Triggers_LevDestroyer.ftsxml"/>
+	<BoneUsage>
+		<Bone name="point_WORLD"/>
+		<Bone name="Ship"/>
+		<Bone name="FX_Muzzle_FrntGun_01"/>
+		<Bone name="FX_Muzzle_FrntGun_02"/>
+		<Bone name="FX_MUZZ_R_01"/>
+		<Bone name="FX_MUZZ_R_02"/>
+		<Bone name="FX_MUZZ_R_03"/>
+		<Bone name="FX_MUZZ_R_04"/>
+		<Bone name="FX_MUZZ_R_05"/>
+		<Bone name="FX_MUZZ_R_06"/>
+		<Bone name="FX_Missile_R_01"/>
+		<Bone name="FX_Missile_R_02"/>
+		<Bone name="FX_Missile_R_03"/>
+		<Bone name="FX_Missile_R_04"/>
+		<Bone name="FX_Missile_R_05"/>
+		<Bone name="FX_Missile_R_06"/>
+		<Bone name="AIM_DR"/>
+		<Bone name="FX_MUZZ_L_01"/>
+		<Bone name="FX_MUZZ_L_02"/>
+		<Bone name="FX_MUZZ_L_03"/>
+		<Bone name="FX_MUZZ_L_04"/>
+		<Bone name="FX_MUZZ_L_05"/>
+		<Bone name="FX_MUZZ_L_06"/>
+		<Bone name="FX_Missile_L_01"/>
+		<Bone name="FX_Missile_L_02"/>
+		<Bone name="FX_Missile_L_03"/>
+		<Bone name="FX_Missile_L_04"/>
+		<Bone name="FX_Missile_L_05"/>
+		<Bone name="FX_Missile_L_06"/>
+		<Bone name="Engine_R_R"/>
+		<Bone name="bone_hover_BL"/>
+		<Bone name="bone_hover_FL"/>
+		<Bone name="Cannon_F_R"/>
+		<Bone name="Cannon_F_L"/>
+		<Bone name="Lev_R"/>
+		<Bone name="bone_ammobox"/>
+		<Bone name="FX_proj_FrntGun_02"/>
+		<Bone name="FX_VENT_FrontGun_L_01"/>
+		<Bone name="FX_VENT_FrontGun_R_01"/>
+		<Bone name="Turbine_R_F"/>
+		<Bone name="Missle_L_D"/>
+		<Bone name="FX_Explosion_05"/>
+		<Bone name="FX_Explosion_02"/>
+		<Bone name="FX_Explosion_03"/>
+		<Bone name="FX_Explosion_00"/>
+		<Bone name="FX_Explosion_01"/>
+		<Bone name="World_Center"/>
+		<Bone name="FX_Explosion_04"/>
+		<Bone name="Turbine_L_R"/>
+		<Bone name="Engine_L_M"/>
+		<Bone name="Turbine_R_R"/>
+		<Bone name="Engine_L_F"/>
+		<Bone name="Missle_L_C"/>
+		<Bone name="Lev_L"/>
+	</BoneUsage>
+</Asset>
+

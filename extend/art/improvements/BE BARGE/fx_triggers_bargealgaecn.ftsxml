@@ -1,0 +1,16 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="1" time="0" duration="10" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_ALGAE_RESOURCE" bone="FX_AlgaeCN" />
+    <trigger type="FTimedTriggerEffect" id="2" time="0" duration="10" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_LIGHT_ONE_BLINK_RED_SCALED" bone="FX_PointLight01" />
+    <trigger type="FTimedTriggerEffect" id="3" time="0" duration="10" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_LIGHT_ONE_BLINK_RED_SCALED" bone="FX_PointLight02" />
+    <trigger type="FTimedTriggerEffect" id="4" time="0" duration="10" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_LIGHT_ONE_BLINK_RED_SCALED" bone="FX_PointLight03" />
+    <trigger type="FTimedTriggerEffect" id="5" time="0" duration="10" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_LIGHT_ONE_BLINK_RED_SCALED" bone="FX_PointLight04" />
+  </triggers>
+</trigger_system>

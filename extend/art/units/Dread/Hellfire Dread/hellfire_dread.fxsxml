@@ -1,0 +1,51 @@
+<Asset>
+  <Mesh file="hellfire_dread.gr2" source="Tool" />
+  <Animation file="hellfire_dreadAttackA.gr2" ec="" />
+  <Animation file="hellfire_dreadAttackB.gr2" ec="" />
+  <Animation file="hellfire_dreadAttackC.gr2" ec="" />
+  <Animation file="hellfire_dreadDieA.gr2" ec="1200" />
+  <Animation file="hellfire_dreadDieB.gr2" ec="2200" />
+  <Animation file="hellfire_dreadIdleA.gr2" ec="1600, 1620, 1640, 1220, 2220, 1500, 1520, 1540, 1560, 1000, 1020, 2000, 2020, 1440, 2440" />
+  <Animation file="hellfire_dreadIdleB.gr2" ec="2040, 1580" />
+  <Animation file="hellfire_dreadIdleC.gr2" ec="1040" />
+  <Animation file="hellfire_dreadRun.gr2" ec="1120, 1400, 1450" />
+  <Animation file="hellfire_dreadAttackCityA.gr2" ec="1160, 1280, 1290, 1800, 1180, 1285, 1100, 1140, 2100" />
+  <Animation file="hellfire_dreadAttackCityB.gr2" ec="" />
+  <AnimGraph file="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge" />
+  <AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge" />
+  <AnimGraph file="FORTIFY_FIDGET_GRAPH.dge" />
+  <AnimGraph file="ENTER_FORTIFY.dge" />
+  <AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge" />
+  <AnimGraph file="DEATH_FINAL_GRAPH.dge" />
+  <AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge" />
+  <AnimGraph file="ENTER_BOMBARD_DEFEND_GRAPH.dge" />
+  <AnimGraph file="DEATH_GRAPH.dge" />
+  <AnimGraph file="LEAVE_COMBAT_READY.dge" />
+  <AnimGraph file="ENTER_COMBAT_READY_GRAPH.dge" />
+  <AnimGraph file="FORTIFY_LEAVE_GRAPH.dge" />
+  <AnimGraph file="COMBAT_READY_GRAPH.dge" />
+  <AnimGraph file="FORTIFY_GRAPH.dge" />
+  <AnimGraph file="TRANSITIONS_FOR_IDLES.dge" />
+  <AnimGraph file="STOP_RUNNING.dge" />
+  <AnimGraph file="IDLE_GRAPH.dge" />
+  <AnimGraph file="FIDGETS_GRAPH.dge" />
+  <AnimGraph file="MELEE_ATTACKS.dge" />
+  <StateMachine file="1_OMNI_STATE_01.fsmxml" />
+  <AnimGraph file="RUN_CHARGE_SHUFFLE_LOOP.dge" />
+  <AnimGraph file="ATTACK_TO_RUN_CHARGE_SHUFFLE.dge" />
+  <AnimGraph file="ATTACK_CITY_TO_RUN_CHARGE_SHUFFLE.dge" />
+  <AnimGraph file="START_RUN_CHARGE_SHUFFLE.dge" />
+  <AnimGraph file="SHUFFLE_STOP_GRAPH.dge" />
+  <TimedTrigger file="fx_triggers_hellfire_dread.ftsxml" />
+	<BoneUsage>
+		<Bone name="marker_muzzle"/>
+		<Bone name="mrk_grenade_launch"/>
+		<Bone name="Point01"/>
+		<Bone name="marker_muzzle_l"/>
+		<Bone name="marker_footfall_right"/>
+		<Bone name="marker_footfall_left"/>
+		<Bone name="marker_exhaust_right"/>
+		<Bone name="marker_exhaust_left"/>
+		<Bone name="marker_damage_00"/>
+	</BoneUsage>
+</Asset>

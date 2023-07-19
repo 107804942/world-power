@@ -1,0 +1,10 @@
+<Asset>
+  <Mesh file="Siege_Worm_Variant1.gr2" source="Max" />
+  <Texture file="Siege_Worm_Bones_Var1_DIFF.dds" source="Max" />
+  <Texture file="Siege_Worm_Bones_Var1_SREF.dds" source="Max" />
+  <Texture file="Siege_Worm_Ground_Var1_DIFF.dds" source="Max" />
+  <Texture file="Siege_Worm_Ground_Var1_h.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+</Asset>

@@ -1,0 +1,20 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerSound" id="2" time="2.05714321" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_BIRDS_1" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="3" time="12.1142864" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_BIRDS_1" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="4" time="22.0571537" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_BIRDS_1" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="5" time="18.00001" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_LONG" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="6" time="24.05715" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_FROGS" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="7" time="5.94285727" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_FROGS" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="8" time="10.0571356" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_FROGS" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="9" time="14.0857086" duration="0" repeat="0" ec="1000" track="1" event="AS3D_IMPROVEMENT_TERRASCAPE_FROGS" bone="" tier="0" />
+  </triggers>
+</trigger_system>

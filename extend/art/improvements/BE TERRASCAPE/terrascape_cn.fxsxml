@@ -1,0 +1,12 @@
+<Asset>
+  <Mesh file="Terrascape_CN.gr2" source="Max" />
+  <Animation file="Terrascape_CN_CNIdle.gr2" name="CNIdle" ec="1000" source="Max" layer="None" />
+  <Texture file="Terraform_Decal_SREF.dds" source="Max" />
+  <Texture file="Terrascape_DIFF.dds" source="Max" />
+  <Texture file="Terrascape_SREF.dds" source="Max" />
+  <Texture file="terrascape_HB_Decal_DIFF.dds" source="Max" />
+  <Texture file="terrascape_HB_Decal_H.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <Texture file="Unit_Environment_Sharp.dds" source="Max" />
+</Asset>

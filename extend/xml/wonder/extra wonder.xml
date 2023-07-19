@@ -1,0 +1,5436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2020/3/17 16:51:16 -->
+<GameData>
+	
+	<BuildingClasses>
+
+
+
+		<!--古城-->
+		<Row>
+			<Type>BUILDINGCLASS_ANCIENT_CITY</Type>
+			<DefaultBuilding>BUILDING_ANCIENT_CITY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ANCIENT_CITY</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		
+		<!--洛克斐尔-->
+		<Row>
+			<Type>BUILDINGCLASS_ROCKEFELLER</Type>
+			<DefaultBuilding>BUILDING_ROCKEFELLER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ROCKEFELLER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		<!-- 疾控中心-->
+		<Row>
+			<Type>BUILDINGCLASS_CENTERS</Type>
+			<DefaultBuilding>BUILDING_CENTERS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CENTERS</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<!-- 情报局-->
+		<Row>
+			<Type>BUILDINGCLASS_INTELLIGENCE_BUREAU</Type>
+			<DefaultBuilding>BUILDING_INTELLIGENCE_BUREAU</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_INTELLIGENCE_BUREAU</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		
+		<!-- 外交部-->
+		<Row>
+			<Type>BUILDINGCLASS_FOREIGN_OFFICE</Type>
+			<DefaultBuilding>BUILDING_FOREIGN_OFFICE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FOREIGN_OFFICE</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<!-- 克格勃-->
+		<Row>
+			<Type>BUILDINGCLASS_KGB</Type>
+			<DefaultBuilding>BUILDING_KGB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KGB</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<!-- 美联社-->
+		<Row>
+			<Type>BUILDINGCLASS_AP</Type>
+			<DefaultBuilding>BUILDING_AP</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_AP</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		<!-- 克虏伯-->
+		<Row>
+			<Type>BUILDINGCLASS_KARRUPP</Type>
+			<DefaultBuilding>BUILDING_KARRUPP</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KARRUPP</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!-- 金色大厅-->
+		<Row>
+			<Type>BUILDINGCLASS_KARLSTEJN</Type>
+			<DefaultBuilding>BUILDING_KARLSTEJN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KARLSTEJN</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		
+		<!-- 海军学院 -->
+		<Row>
+			<Type>BUILDINGCLASS_NAVAL_ACADEMY</Type>
+			<DefaultBuilding>BUILDING_NAVAL_ACADEMY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NAVAL_ACADEMY</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+
+
+		<!-- 国会大厦-->
+		<Row>
+			<Type>BUILDINGCLASS_THE_CAPITOL</Type>
+			<DefaultBuilding>BUILDING_THE_CAPITOL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_THE_CAPITOL</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<!-- 华盛顿纪念碑 -->
+		<Row>
+			<Type>BUILDINGCLASS_WASHION_TOWER</Type>
+			<DefaultBuilding>BUILDING_WASHION_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WASHION_TOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!-- 贝伦塔 -->
+		<Row>
+			<Type>BUILDINGCLASS_BEILUN_TOWER</Type>
+			<DefaultBuilding>BUILDING_BEILUN_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BEILUN_TOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!-- 乐山 -->
+		<Row>
+			<Type>BUILDINGCLASS_LESHAN_BUDDHA</Type>
+			<DefaultBuilding>BUILDING_LESHAN_BUDDHA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LESHAN_BUDDHA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+
+		<!-- 桑科雷 -->
+		<Row>
+			<Type>BUILDINGCLASS_SANKORE</Type>
+			<DefaultBuilding>BUILDING_SANKORE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SANKORE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		
+		
+
+		<!-- 硅谷 -->
+		<Row>
+			<Type>BUILDINGCLASS_GUIGU</Type>
+			<DefaultBuilding>BUILDING_GUIGU</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GUIGU</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		<!-- 人民大厅 -->
+		<Row>
+			<Type>BUILDINGCLASS_PEOPLES_HALL</Type>
+			<DefaultBuilding>BUILDING_PEOPLES_HALL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PEOPLES_HALL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!-- 苏维埃宫 -->
+		<Row>
+			<Type>BUILDINGCLASS_SOVIET_PALACE</Type>
+			<DefaultBuilding>BUILDING_SOVIET_PALACE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SOVIET_PALACE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		<!-- 熟药所 -->
+		<Row>
+			<Type>BUILDINGCLASS_COOKED_MEDICINE</Type>
+			<DefaultBuilding>BUILDING_COOKED_MEDICINE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_COOKED_MEDICINE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		
+
+		<!-- 普罗米修斯-->
+		<Row>
+			<Type>BUILDINGCLASS_PROMETHEUS</Type>
+			<DefaultBuilding>BUILDING_PROMETHEUS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PROMETHEUS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		
+		
+
+
+
+		<!--波塞冬神庙-->
+		<Row>
+			<Type>BUILDINGCLASS_POSEIDON_TEMPLE</Type>
+			<DefaultBuilding>BUILDING_POSEIDON_TEMPLE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_POSEIDON_TEMPLE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<!--白宫-->
+		<Row>
+			<Type>BUILDINGCLASS_WHITE_HOUSE</Type>
+			<DefaultBuilding>BUILDING_WHITE_HOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WHITE_HOUSE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+	
+
+		<!--大津巴布韦-->
+		<Row>
+			<Type>BUILDINGCLASS_DZIMBABWE</Type>
+			<DefaultBuilding>BUILDING_DZIMBABWE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DZIMBABWE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		<!--普马彭谷神庙-->
+		<Row>
+			<Type>BUILDINGCLASS_PUMA_PUMKU</Type>
+			<DefaultBuilding>BUILDING_PUMA_PUMKU</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PUMA_PUMKU</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+	
+
+	
+		
+		<!--马奇诺防线-->
+		<Row>
+			<Type>BUILDINGCLASS_MAGINOT_LINE</Type>
+			<DefaultBuilding>BUILDING_MAGINOT_LINE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MAGINOT_LINE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		<!--帆船酒店-->
+		<Row>
+			<Type>BUILDINGCLASS_BURJALARAB</Type>
+			<DefaultBuilding>BUILDING_BURJALARAB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BURJALARAB</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!--维琪奥桥-->
+		<Row>
+			<Type>BUILDINGCLASS_PONTE_VECCHIO</Type>
+			<DefaultBuilding>BUILDING_PONTE_VECCHIO</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PONTE_VECCHIO</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!--加尔桥-->
+		<Row>  
+			<Type>BUILDINGCLASS_PONTDUGARD</Type>
+			<DefaultBuilding>BUILDING_PONTDUGARD</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PONTDUGARD</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!--解放门-->
+		<Row>
+			<Type>BUILDINGCLASS_LIBERATION_GATE</Type>
+			<DefaultBuilding>BUILDING_LIBERATION_GATE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LIBERATION_GATE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		<!-- 太阳神空间站-->
+		<Row>
+			<Type>BUILDINGCLASS_HELIOS_BUILDING</Type>
+			<DefaultBuilding>BUILDING_HELIOS_BUILDING</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HELIOS_BUILDING</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!-- 所罗门-->
+		<Row>
+			<Type>BUILDINGCLASS_KING_SOLOMON</Type>
+			<DefaultBuilding>BUILDING_KING_SOLOMON</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KING_SOLOMON</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		
+
+		<!-- 乌鲁伯格天文台-->
+		<Row>
+			<Type>BUILDINGCLASS_ULUGH_BEG</Type>
+			<DefaultBuilding>BUILDING_ULUGH_BEG</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ULUGH_BEG</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!-- 雷吉斯坦-->
+		<Row>
+			<Type>BUILDINGCLASS_REGISTAN</Type>
+			<DefaultBuilding>BUILDING_REGISTAN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_REGISTAN</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		
+
+
+
+		
+		<!-- 圣米歇尔山 -->
+		<Row>
+			<Type>BUILDINGCLASS_MONT_SAINT_MICHEL</Type>
+			<DefaultBuilding>BUILDING_MONT_SAINT_MICHEL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MONT_SAINT_MICHEL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		
+		<!-- 金塔 -->
+		<Row>
+			<Type>BUILDINGCLASS_TORRE</Type>
+			<DefaultBuilding>BUILDING_TORRE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_TORRE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+	
+
+		<!-- 时态演算 -->
+		<Row>
+			<Type>BUILDINGCLASS_DIABLO</Type>
+			<DefaultBuilding>BUILDING_DIABLO</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DIABLO</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+	
+
+		<!-- 布利奇 -->
+		<Row>
+			<Type>BUILDINGCLASS_BLETCHLEY_PARK</Type>
+			<DefaultBuilding>BUILDING_BLETCHLEY_PARK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BLETCHLEY_PARK</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!-- 太阳神 -->
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_HELIOS</Type>
+			<DefaultBuilding>BUILDING_FW_HELIOS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_HELIOS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!--月球基地 -->
+		<Row>
+			<Type>BUILDINGCLASS_FW_MOON_BASE</Type>
+			<DefaultBuilding>BUILDING_FW_MOON_BASE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_MOON_BASE</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+		<!-- 天网-->
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_SKYNET</Type>
+			<DefaultBuilding>BUILDING_FW_SKYNET</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_SKYNET</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!-- 天空城-->
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_SKYCITY</Type>
+			<DefaultBuilding>BUILDING_FW_SKYCITY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_SKYCITY</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_VIRTUAL_IDOL</Type>
+			<DefaultBuilding>BUILDING_VIRTUAL_IDOL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_VIRTUAL_IDOL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_SATELLITE_NET</Type>
+			<DefaultBuilding>BUILDING_SATELLITE_NET</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SATELLITE_NET</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_US_BANK_TOWER</Type>
+			<DefaultBuilding>BUILDING_US_BANK_TOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_US_BANK_TOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_LEP</Type>
+			<DefaultBuilding>BUILDING_LEP</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LEP</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_NATIONAL_HOSPITAL</Type>
+			<DefaultBuilding>BUILDING_NATIONAL_HOSPITAL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NATIONAL_HOSPITAL</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_JURASSIC_PARK</Type>
+			<DefaultBuilding>BUILDING_FW_JURASSIC_PARK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_JURASSIC_PARK</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_TECHNOMART</Type>
+			<DefaultBuilding>BUILDING_TECHNOMART</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_TECHNOMART_DESC</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_VERSAILLES</Type>
+			<DefaultBuilding>BUILDING_VERSAILLES</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_VERSAILLES</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+	
+		
+		
+		<Row>
+			<Type>BUILDINGCLASS_MALBORK</Type>
+			<DefaultBuilding>BUILDING_MALBORK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MALBORK</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_SUMMER_PALACE</Type>
+			<DefaultBuilding>BUILDING_SUMMER_PALACE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SUMMER_PALACE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_SMITHSONIAN</Type>
+			<DefaultBuilding>BUILDING_SMITHSONIAN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SMITHSONIAN</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!--法西尔盖比-->
+		<Row>
+			<Type>BUILDINGCLASS_FASIL_GHEBBI</Type>
+			<DefaultBuilding>BUILDING_FASIL_GHEBBI</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FASIL_GHEBBI</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		
+		
+
+
+		<Row>
+			<Type>BUILDINGCLASS_CRYSTAL_PALACE</Type>
+			<DefaultBuilding>BUILDING_CRYSTAL_PALACE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CRYSTAL_PALACE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_KRONBORG</Type>
+			<DefaultBuilding>BUILDING_KRONBORG</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KRONBORG</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<!--终极塔-->
+		<Row>
+			<Type>BUILDINGCLASS_FW_ULTIMATOWER</Type>
+			<DefaultBuilding>BUILDING_FW_ULTIMATOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_ULTIMATOWER</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<!--太空基地-->
+		<Row>
+			<Type>BUILDINGCLASS_SPACE_FORTRESS</Type>
+			<DefaultBuilding>BUILDING_SPACE_FORTRESS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SPACE_FORTRESS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!--北极星-->
+		<Row>
+			<Type>BUILDINGCLASS_FOLDING_MACHINE</Type>
+			<DefaultBuilding>BUILDING_FOLDING_MACHINE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FOLDING_MACHINE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_INTERSTATE_HIGHWAY_SYSTEM</Type>
+			<DefaultBuilding>BUILDING_INTERSTATE_HIGHWAY_SYSTEM</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_INTERSTATE_HIGHWAY_SYSTEM</Description>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+		<!--马尔可夫-->
+		<Row>
+			<Type>BUILDINGCLASS_FW_MARKOV</Type>
+			<DefaultBuilding>BUILDING_FW_MARKOV</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_MARKOV</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!--克若索斯迷宫-->
+		<Row>
+			<Type>BUILDINGCLASS_KNOSSOS</Type>
+			<DefaultBuilding>BUILDING_KNOSSOS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KNOSSOS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!--拉斯科洞穴-->
+		<Row>
+			<Type>BUILDINGCLASS_LASCAUX_CAVES</Type>
+			<DefaultBuilding>BUILDING_LASCAUX_CAVES</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LASCAUX_CAVES</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!--阿基米德杠杆-->
+		<Row>
+			<Type>BUILDINGCLASS_ARCHIMEDES</Type>
+			<DefaultBuilding>BUILDING_ARCHIMEDES</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ARCHIMEDES</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<!--斯芬克斯 -->
+		<Row>
+			<Type>BUILDINGCLASS_SPHINX</Type>
+			<DefaultBuilding>BUILDING_SPHINX</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SPHINX</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_MALTA</Type>
+			<DefaultBuilding>BUILDING_MALTA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MALTA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_MEROE</Type>
+			<DefaultBuilding>BUILDING_MEROE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MEROE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+
+
+		<!-- 郑国渠 -->
+		<Row>
+			<Type>BUILDINGCLASS_ZHENGGUOQU</Type>
+			<DefaultBuilding>BUILDING_ZHENGGUOQU</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ZHENGGUOQU</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+
+		<!-- 丝绸之路 -->
+		<Row>
+			<Type>BUILDINGCLASS_SILKROAD</Type>
+			<DefaultBuilding>BUILDING_SILKROAD</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SILKROAD</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
+		
+
+
+
+
+		<!-- 哥贝克力石阵 -->
+		<Row>
+			<Type>BUILDINGCLASS_SKARABRAE</Type>
+			<DefaultBuilding>BUILDING_SKARABRAE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SKARABRAE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!-- 巴尔米拉 -->
+		<Row>
+			<Type>BUILDINGCLASS_PALMYRA</Type>
+			<DefaultBuilding>BUILDING_PALMYRA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PALMYRA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		<!-- 岳阳楼 -->
+		<Row>
+			<Type>BUILDINGCLASS_YUEYANG</Type>
+			<DefaultBuilding>BUILDING_YUEYANG</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_YUEYANG</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<!-- 达芬奇工坊 -->
+		<Row>
+			<Type>BUILDINGCLASS_LEONOARDOS_WORKSHOP</Type>
+			<DefaultBuilding>BUILDING_LEONOARDOS_WORKSHOP</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+	
+
+		<!-- 阿布辛贝勒神庙 -->
+		<Row>
+			<Type>BUILDINGCLASS_ABUSIMBEL</Type>
+			<DefaultBuilding>BUILDING_ABUSIMBEL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ABUSIMBEL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+
+		<!-- 总统山 -->
+		<Row>
+			<Type>BUILDINGCLASS_RUSHMORE</Type>
+			<DefaultBuilding>BUILDING_RUSHMORE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_RUSHMORE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!-- Kamuthi光伏电站-->
+		<Row>
+			<Type>BUILDINGCLASS_KAMUTHI</Type>
+			<DefaultBuilding>BUILDING_KAMUTHI</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KAMUTHI</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+
+		<!-- 太阳能卫星-->
+		<Row>
+			<Type>BUILDINGCLASS_SATELLITE_SOLAR</Type>
+			<DefaultBuilding>BUILDING_SATELLITE_SOLAR</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SATELLITE_SOLAR</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		<!-- 酒神剧场-->
+		<Row>
+			<Type>BUILDINGCLASS_DIONYSUS</Type>
+			<DefaultBuilding>BUILDING_DIONYSUS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DIONYSUS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+	
+		
+		
+		<!-- 环球影视-->
+
+		<Row>
+			<Type>BUILDINGCLASS_GLOBALCNIEMA</Type>
+			<DefaultBuilding>BUILDING_GLOBALCNIEMA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GLOBALCNIEMA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<!-- 伊斯塔尔门-->
+		<Row>
+			<Type>BUILDINGCLASS_ISHTARGATE</Type>
+			<DefaultBuilding>BUILDING_ISHTARGATE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ISHTARGATE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<!-- 骑士堡-->
+		<Row>
+			<Type>BUILDINGCLASS_KRAK_DES_CHEVALIERS</Type>
+			<DefaultBuilding>BUILDING_KRAK_DES_CHEVALIERS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<!-- 卡尔卡松城堡-->
+		<Row>
+			<Type>BUILDINGCLASS_CITADEL_OF_CARCASSONNE</Type>
+			<DefaultBuilding>BUILDING_CITADEL_OF_CARCASSONNE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		<!-- 高德院 -->
+		<Row>
+			<Type>BUILDINGCLASS_OSARAGI</Type>
+			<DefaultBuilding>BUILDING_OSARAGI</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_OSARAGI</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+
+		
+		<!-- 迈泰奥拉修道院-->
+		<Row>
+			<Type>BUILDINGCLASS_MONASTERY_OF_METEORA</Type>
+			<DefaultBuilding>BUILDING_MONASTERY_OF_METEORA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MONASTERY_OF_METEORA</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+	</BuildingClasses>
+
+
+	<Buildings>
+
+		<Delete Type="BUILDING_NATIONAL_LIBRARY"/>
+
+
+		<!--古城-->
+		<Row>
+			<Type>BUILDING_ANCIENT_CITY</Type>
+			<BuildingClass>BUILDINGCLASS_ANCIENT_CITY</BuildingClass>
+			<Description>TXT_KEY_BUILDING_ANCIENT_CITY</Description>
+			<Help>TXT_KEY_WONDER_ANCIENT_CITY_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_ANCIENT_CITY_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ANCIENT_CITY_QUOTE</Quote>
+			<Cost>180</Cost>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>61</PortraitIndex>
+			<WonderSplashImage>ANCIENT_CITY.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+			<GlobalPopulationChange>1</GlobalPopulationChange>
+		</Row>
+
+		<!--洛克斐尔-->
+		<Row>
+			<Type>BUILDING_ROCKEFELLER</Type>
+			<BuildingClass>BUILDINGCLASS_ROCKEFELLER</BuildingClass>
+			<Description>TXT_KEY_BUILDING_ROCKEFELLER</Description>
+			<Help>TXT_KEY_WONDER_ROCKEFELLER_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_ROCKEFELLER_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ROCKEFELLER_QUOTE</Quote>
+			<Cost>4000</Cost>
+			<CultureRateModifier>25</CultureRateModifier>
+			<SpecialistCount>2</SpecialistCount>
+			<PrereqTech>TECH_MEGAENGINEERING</PrereqTech>
+			<MaxStartEra>ERA_FUTURE</MaxStartEra>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinorFriendshipChange>200</MinorFriendshipChange>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>30</PortraitIndex>
+			<WonderSplashImage>ROCKEFELLER_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+		<!--疾控中心-->
+		<Row>
+			<Type>BUILDING_CENTERS</Type>
+			<BuildingClass>BUILDINGCLASS_CENTERS</BuildingClass>
+			<Cost>1050</Cost>
+			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
+			<Description>TXT_KEY_BUILDING_CENTERS</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_CENTERS_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_CENTERS_HELP</Help>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>29</PortraitIndex>
+			<NumCityCostMod>30</NumCityCostMod>
+		</Row>
+
+
+		<!--情报局-->
+		<Row>
+			<Type>BUILDING_INTELLIGENCE_BUREAU</Type>
+			<BuildingClass>BUILDINGCLASS_INTELLIGENCE_BUREAU</BuildingClass>
+			<Cost>900</Cost>
+			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
+			<Description>TXT_KEY_BUILDING_INTELLIGENCE_BUREAU</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_INTELLIGENCE_BUREAU_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_INTELLIGENCE_BUREAU_HELP</Help>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<FreePromotion>PROMOTION_SPY_ADJACENCY_BUFF</FreePromotion>
+			<PortraitIndex>7</PortraitIndex>
+			<NumCityCostMod>30</NumCityCostMod>
+		</Row>
+
+
+		<!--外交部-->
+		<Row>
+			<Type>BUILDING_FOREIGN_OFFICE</Type>
+			<BuildingClass>BUILDINGCLASS_FOREIGN_OFFICE</BuildingClass>
+			<Cost>900</Cost>
+			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
+			<Description>TXT_KEY_BUILDING_FOREIGN_OFFICE</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_FOREIGN_OFFICE_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_FOREIGN_OFFICE_HELP</Help>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>61</PortraitIndex>
+			<NumCityCostMod>30</NumCityCostMod>
+			<ExtraLeagueVotes>2</ExtraLeagueVotes>
+		</Row>
+
+
+		<!--克格勃-->
+		<Row>
+			<Type>BUILDING_KGB</Type>
+			<BuildingClass>BUILDINGCLASS_KGB</BuildingClass>
+			<Cost>3000</Cost>
+			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
+			<Description>TXT_KEY_BUILDING_KGB</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_KGB_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_KGB_HELP</Help>
+			<Quote>TXT_KEY_WONDER_KGB_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<!--<SpyRankChange>1</SpyRankChange>-->
+			<ConquestProb>100</ConquestProb>
+			<EspionageModifier>-999</EspionageModifier>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>15</PortraitIndex>
+			<FreePromotion>PROMOTION_KGB</FreePromotion>
+			<WonderSplashImage>KGB.dds</WonderSplashImage>
+		</Row>
+		
+		
+
+		<!--美联社-->
+		<Row>
+			<Type>BUILDING_AP</Type>
+			<BuildingClass>BUILDINGCLASS_AP</BuildingClass>
+			<Cost>2500</Cost>
+			<PrereqTech>TECH_JOURNALISM</PrereqTech>
+			<Description>TXT_KEY_BUILDING_AP</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_AP_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_AP_HELP</Help>
+			<Quote>TXT_KEY_WONDER_AP_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<UnmoddedHappiness>5</UnmoddedHappiness>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+			<WonderSplashImage>AP.dds</WonderSplashImage>
+		</Row>
+
+
+		<!--克虏伯-->
+		<Row>
+			<Type>BUILDING_KARRUPP</Type>
+			<BuildingClass>BUILDINGCLASS_KARRUPP</BuildingClass>
+			<Cost>3500</Cost>
+			<PrereqTech>TECH_BLITZKRIEG</PrereqTech>
+			<Description>TXT_KEY_BUILDING_KARRUPP</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_KARRUPP_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_KARRUPP_HELP</Help>
+			<Quote>TXT_KEY_WONDER_KARRUPP_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<FreePromotion>PROMOTION_KARRUPP</FreePromotion>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<WonderSplashImage>KARRUPP.dds</WonderSplashImage>
+			<PortraitIndex>13</PortraitIndex>
+		</Row>
+
+
+		<!--金色大厅-->
+		<Row>
+			<Type>BUILDING_KARLSTEJN</Type>
+			<BuildingClass>BUILDINGCLASS_KARLSTEJN</BuildingClass>
+			<Cost>600</Cost>
+			<PrereqTech>TECH_ADMINISTRATION</PrereqTech>
+			<Description>TXT_KEY_BUILDING_KARLSTEJN</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_KARLSTEJN_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_KARLSTEJN_HELP</Help>
+			<Quote>TXT_KEY_WONDER_KARLSTEJN_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_MUSIC</GreatWorkSlotType>
+			<GreatWorkCount>4</GreatWorkCount>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<WonderSplashImage>KARLSTEJN.dds</WonderSplashImage>
+			<PortraitIndex>250</PortraitIndex>
+		</Row>
+	
+
+
+		<!--国会大厦-->
+
+		<Row>
+			<Type>BUILDING_THE_CAPITOL</Type>
+			<BuildingClass>BUILDINGCLASS_THE_CAPITOL</BuildingClass>
+			<Description>TXT_KEY_BUILDING_THE_CAPITOL</Description>
+			<Help>TXT_KEY_WONDER_THE_CAPITOL_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_THE_CAPITOL_PEDIA</Civilopedia>
+			<Cost>340</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<FreePolicies>1</FreePolicies> 
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>248</PortraitIndex>
+			<NumCityCostMod>30</NumCityCostMod>
+			<ExtraLeagueVotes>2</ExtraLeagueVotes>
+		</Row>
+
+
+		<!--皇家海军学院-->
+		<Row>
+			<Type>BUILDING_NAVAL_ACADEMY</Type>
+			<BuildingClass>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClass>
+			<Description>TXT_KEY_BUILDING_NAVAL_ACADEMY</Description>
+			<Help>TXT_KEY_WONDER_NAVAL_ACADEMY_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_NAVAL_ACADEMY_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_NAVAL_ACADEMY_QUOTE</Quote>
+			<Cost>640</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_MODERN</MaxStartEra>
+			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>249</PortraitIndex>
+			<FreePromotion>PROMOTION_NAVAL_ACADEMY</FreePromotion>
+			<WonderSplashImage>NAVAL_ACADEMY.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+	
+
+		<!--贝伦塔-->
+		<Row>
+			<Type>BUILDING_BEILUN_TOWER</Type>
+			<BuildingClass>BUILDINGCLASS_BEILUN_TOWER</BuildingClass>
+			<Description>TXT_KEY_BUILDING_BEILUN_TOWER</Description>
+			<Help>TXT_KEY_WONDER_BEILUN_TOWER_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_BEILUN_TOWER_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_BEILUN_TOWER_QUOTE</Quote>
+			<Cost>640</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_MODERN</MaxStartEra>
+			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<Defense>2500</Defense>
+			<ExtraCityHitPoints>50</ExtraCityHitPoints>
+			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+			<TechEnhancedTourism>6</TechEnhancedTourism>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>237</PortraitIndex>
+			<Water>1</Water>
+			<FreePromotion>PROMOTION_BEILUN_TOWER</FreePromotion>
+			<WonderSplashImage>BEILUN_TOWER.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		<!--华盛顿纪念碑-->
+		<Row>
+			<Type>BUILDING_WASHION_TOWER</Type>
+			<BuildingClass>BUILDINGCLASS_WASHION_TOWER</BuildingClass>
+			<Description>TXT_KEY_BUILDING_WASHION_TOWER</Description>
+			<Help>TXT_KEY_WONDER_WASHION_TOWER_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_WASHION_TOWER_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_WASHION_TOWER_QUOTE</Quote>
+			<Cost>600</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_MODERN</MaxStartEra>
+			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<Flat>1</Flat>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>238</PortraitIndex>
+			<WonderSplashImage>WASHION_TOWER.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+		<!--桑科雷-->
+		<Row>
+			<Type>BUILDING_SANKORE</Type>
+			<BuildingClass>BUILDINGCLASS_SANKORE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_SANKORE</Description>
+			<Help>TXT_KEY_WONDER_SANKORE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SANKORE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SANKORE_QUOTE</Quote>
+			<Cost>690</Cost>
+			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<!--<GreatPeopleRateChange>1</GreatPeopleRateChange>-->
+			<NukeImmune>true</NukeImmune>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>74</PortraitIndex>
+			<WonderSplashImage>SANKORE.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,T</WonderSplashAnchor>
+		</Row>
+
+	
+
+
+		<!--硅谷-->
+		<Row>
+			<Type>BUILDING_GUIGU</Type>
+			<BuildingClass>BUILDINGCLASS_GUIGU</BuildingClass>
+			<Description>TXT_KEY_BUILDING_GUIGU</Description>
+			<Help>TXT_KEY_WONDER_GUIGU_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_GUIGU_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_GUIGU_QUOTE</Quote>
+			<Cost>5800</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PolicyBranchType>POLICY_BRANCH_FREEDOM</PolicyBranchType>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<GlobalGreatPeopleRateModifier>33</GlobalGreatPeopleRateModifier> 
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>225</PortraitIndex>
+			<WonderSplashImage>GUIGU.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+		
+		
+
+		<!--人民大厅-->
+		<Row>
+			<Type>BUILDING_PEOPLES_HALL</Type>
+			<BuildingClass>BUILDINGCLASS_PEOPLES_HALL</BuildingClass>
+			<Description>TXT_KEY_BUILDING_PEOPLES_HALL</Description>
+			<Help>TXT_KEY_WONDER_PEOPLES_HALL_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_PEOPLES_HALL_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_PEOPLES_HALL_QUOTE</Quote>
+			<Cost>5800</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PolicyBranchType>POLICY_BRANCH_AUTOCRACY</PolicyBranchType>
+			<PrereqTech>TECH_LARGE_CALIBRE</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<FreeTechs>1</FreeTechs>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>107</PortraitIndex>
+			<FreePromotion>PROMOTION_PEOPLES_HALL</FreePromotion>
+			<WonderSplashImage>PEOPLES_HALL.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+		
+		
+		
+		<!--苏维埃宫-->
+		<Row>
+			<Type>BUILDING_SOVIET_PALACE</Type>
+			<BuildingClass>BUILDINGCLASS_SOVIET_PALACE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_SOVIET_PALACE</Description>
+			<Help>TXT_KEY_WONDER_SOVIET_PALACE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SOVIET_PALACE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SOVIET_PALACE_QUOTE</Quote>
+			<Cost>5800</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+			<PolicyBranchType>POLICY_BRANCH_ORDER</PolicyBranchType>
+			<NukeImmune>true</NukeImmune>
+			<GlobalDefenseMod>33</GlobalDefenseMod>
+			<FreeGreatPeople>1</FreeGreatPeople>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>224</PortraitIndex>
+			<FreePromotion>PROMOTION_SOVIET_FRIEND</FreePromotion>
+			<WonderSplashImage>SOVIET_PALACE.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+		
+		
+		<!--熟药所-->
+		<Row>
+			<Type>BUILDING_COOKED_MEDICINE</Type>
+			<BuildingClass>BUILDINGCLASS_COOKED_MEDICINE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_COOKED_MEDICINE</Description>
+			<Help>TXT_KEY_WONDER_COOKED_MEDICINE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_COOKED_MEDICINE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_COOKED_MEDICINE_QUOTE</Quote>
+			<Cost>620</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>223</PortraitIndex>
+			<WonderSplashImage>COOKED_MEDICINE.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+	
+
+
+		<Row>
+			<Type>BUILDING_NATIONAL_LIBRARY</Type>
+			<BuildingClass>BUILDINGCLASS_NATIONAL_LIBRARY</BuildingClass>
+			<GoldMaintenance>6</GoldMaintenance>
+			<Cost>30</Cost>
+			<!--<PrereqTech>TECH_WRITING</PrereqTech>-->
+			<PolicyBranchType>POLICY_BRANCH_AESTHETICS</PolicyBranchType>
+			<Help>TXT_KEY_BUILDING_NATIONAL_LIBRARY_HELP</Help>
+			<ThemingBonusHelp>TXT_KEY_NATIONAL_LIBRARY_THEMING_BONUS_HELP</ThemingBonusHelp>
+			<Description>TXT_KEY_BUILDING_NATIONAL_LIBRARY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_LIBRARY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NATIONAL_LIBRARY_STRATEGY</Strategy>
+			<NukeImmune>true</NukeImmune>
+			<NumCityCostMod>20</NumCityCostMod>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<CultureRateModifier>25</CultureRateModifier>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<NeverCapture>true</NeverCapture>
+			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
+			<PortraitIndex>48</PortraitIndex>
+		</Row>
+
+
+		<!--波塞冬神庙-->
+		<Row>
+			<Type>BUILDING_POSEIDON_TEMPLE</Type>
+			<BuildingClass>BUILDINGCLASS_POSEIDON_TEMPLE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_POSEIDON_TEMPLE</Description>
+			<Help>TXT_KEY_WONDER_POSEIDON_TEMPLE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_POSEIDON_TEMPLE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_POSEIDON_TEMPLE_QUOTE</Quote>
+			<Cost>180</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<PrereqTech>TECH_SAILING</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<Water>1</Water>
+			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+			<TechEnhancedTourism>6</TechEnhancedTourism>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<FreePromotion>PROMOTION_STEAM_POWERED</FreePromotion>
+			<PortraitIndex>175</PortraitIndex>
+			<WonderSplashImage>POSEIDON_TEMPLE.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+		
+		
+		
+
+		<!--白宫 -->
+		<Row>
+			<Type>BUILDING_WHITE_HOUSE</Type>
+			<BuildingClass>BUILDINGCLASS_WHITE_HOUSE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_WHITE_HOUSE</Description>
+			<Help>TXT_KEY_WONDER_WHITE_HOUSE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_WHITE_HOUSE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_WHITE_HOUSE_QUOTE</Quote>
+			<Cost>1300</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_MODERN</MaxStartEra>
+			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<Flat>1</Flat>
+			<XBuiltTriggersIdeologyChoice>1</XBuiltTriggersIdeologyChoice>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>189</PortraitIndex>
+			<WonderSplashImage>WHITE_HOUSE.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		
+
+
+		<!--大津巴布韦 -->
+		<Row>
+			<Type>BUILDING_DZIMBABWE</Type>
+			<BuildingClass>BUILDINGCLASS_DZIMBABWE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_DZIMBABWE</Description>
+			<Help>TXT_KEY_WONDER_DZIMBABWE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_DZIMBABWE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_DZIMBABWE_QUOTE</Quote>
+			<Cost>180</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<PrereqTech>TECH_ADVANCED_AGRICULTURE</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<NumTradeRouteBonus>2</NumTradeRouteBonus>
+			<Happiness>3</Happiness>
+			<TradeRouteLandDistanceModifier>50</TradeRouteLandDistanceModifier>
+			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>177</PortraitIndex>
+			<WonderSplashImage>DZIMBABWE.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+		<!--普马彭谷神庙 -->
+		<Row>
+			<Type>BUILDING_PUMA_PUMKU</Type>
+			<BuildingClass>BUILDINGCLASS_PUMA_PUMKU</BuildingClass>
+			<Description>TXT_KEY_BUILDING_PUMA_PUMKU</Description>
+			<Help>TXT_KEY_WONDER_PUMA_PUMKU_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_PUMA_PUMKU_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_PUMA_PUMKU_QUOTE</Quote>
+			<Cost>150</Cost>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<Flat>1</Flat>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>104</PortraitIndex>
+			<Happiness>2</Happiness>
+			<WonderSplashImage>Puma.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+		
+
+	
+
+		<!--马奇诺防线-->
+		<Row>
+			<Type>BUILDING_MAGINOT_LINE</Type>
+			<BuildingClass>BUILDINGCLASS_MAGINOT_LINE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_MAGINOT_LINE</Description>
+			<Help>TXT_KEY_WONDER_MAGINOT_LINE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_MAGINOT_LINE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_MAGINOT_LINE_QUOTE</Quote>
+			<Cost>3800</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PrereqTech>TECH_MOBILIZATION_T</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>92</PortraitIndex>
+			<Happiness>-5</Happiness>
+			<FreePromotion>PROMOTION_HPMOD2</FreePromotion>
+			<FreePromotion2>PROMOTION_MAGINOT_LINE</FreePromotion2>
+			<!--<TrainedFreePromotion>PROMOTION_MAGINOT_LINE</TrainedFreePromotion>-->
+			<Defense>8000</Defense>
+			<ExtraCityHitPoints>100</ExtraCityHitPoints>
+			<GlobalDefenseMod>20</GlobalDefenseMod>
+			<WonderSplashImage>MaginotLine.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+		
+		<!--帆船酒店-->
+		<Row>
+			<Type>BUILDING_BURJALARAB</Type>
+			<BuildingClass>BUILDINGCLASS_BURJALARAB</BuildingClass>
+			<Cost>2600</Cost>
+			<PrereqTech>TECH_CITY_SCAPE</PrereqTech>
+			<Description>TXT_KEY_BUILDING_BURJALARAB</Description>
+			<Help>TXT_KEY_WONDER_BURJALARAB_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_BURJALARAB_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_BURJALARAB_QUOTE</Quote>
+			<!--<GoldMaintenance>2</GoldMaintenance>-->
+			<HappinessPerCity>1</HappinessPerCity>
+			<LandmarksTourismPercent>100</LandmarksTourismPercent>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<DisplayPosition>2</DisplayPosition>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>163</PortraitIndex>
+			<WonderSplashImage>BurjAlArab.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+		<!--维琪奥桥-->
+		<Row>
+			<Type>BUILDING_PONTE_VECCHIO</Type>
+			<BuildingClass>BUILDINGCLASS_PONTE_VECCHIO</BuildingClass>
+			<Cost>625</Cost>
+			<PrereqTech>TECH_ECONOMICS</PrereqTech>
+			<Description>TXT_KEY_BUILDING_PONTE_VECCHIO</Description>
+			<Help>TXT_KEY_WONDER_PONTE_VECCHIO_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_PONTE_VECCHIO_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_PONTE_VECCHIO_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<ConquestProb>100</ConquestProb>
+			<River>true</River>
+			<MinAreaSize>-1</MinAreaSize>
+			<DisplayPosition>3</DisplayPosition>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<SpecialistCount>3</SpecialistCount>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>107</PortraitIndex>
+			<WonderSplashImage>PONTE_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+		
+		<!--加尔桥-->
+		<Row>
+			<Type>BUILDING_PONTDUGARD</Type>
+			<BuildingClass>BUILDINGCLASS_PONTDUGARD</BuildingClass>
+			<Description>TXT_KEY_BUILDING_PONTDUGARD</Description>
+			<Help>TXT_KEY_WONDER_PONTDUGARD_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_PONTDUGARD_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_PONTDUGARD_QUOTE</Quote>
+			<Cost>220</Cost>
+			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<PrereqTech>TECH_ADVANCED_AGRICULTURE</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<FreeBuildingThisCity>BUILDINGCLASS_AQUEDUCT</FreeBuildingThisCity>
+			<PortraitIndex>8</PortraitIndex>
+			<WonderSplashImage>Wonder_PontDuGard.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		
+
+		<!--*****所罗门*****-->
+		<Row>
+			<Type>BUILDING_KING_SOLOMON</Type>
+			<BuildingClass>BUILDINGCLASS_KING_SOLOMON</BuildingClass>
+			<Cost>150</Cost>
+			<PrereqTech>TECH_LITERATURE</PrereqTech>
+			<Description>TXT_KEY_BUILDING_KING_SOLOMON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KING_SOLOMON_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_KING_SOLOMON_HELP</Help>
+			<Quote>TXT_KEY_BUILDING_KING_SOLOMON_QUOTE</Quote>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<GreatScientistBeakerModifier>20</GreatScientistBeakerModifier>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<WonderSplashImage>Solomon_splash.dds</WonderSplashImage>
+			<FreeBuildingThisCity>BUILDINGCLASS_ACADEMY</FreeBuildingThisCity>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>78</PortraitIndex>
+		</Row>
+
+
+
+		<!-- 乌鲁伯格天文台-->
+		<Row>
+			<Type>BUILDING_ULUGH_BEG</Type>
+			<BuildingClass>BUILDINGCLASS_ULUGH_BEG</BuildingClass>
+			<Cost>580</Cost>
+			<PrereqTech>TECH_EPHEMERIDES</PrereqTech>
+			<Description>TXT_KEY_BUILDING_ULUGH_BEG</Description>
+			<Quote>TXT_KEY_WONDER_ULUGH_BEG_QUOTE</Quote>
+			<Civilopedia>TXT_KEY_WONDER_ULUGH_BEG_PEDIA</Civilopedia>
+			<Help>TXT_KEY_WONDER_ULUGH_BEG_HELP</Help>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>3</SpecialistCount>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<FreeBuildingThisCity>BUILDINGCLASS_OBSERVATORY</FreeBuildingThisCity>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>79</PortraitIndex>
+			<WonderSplashImage>BEGplash.dds</WonderSplashImage>
+		</Row>
+
+	
+		
+		<!-- 雷吉斯坦-->
+		<Row>
+			<Type>BUILDING_REGISTAN</Type>
+			<BuildingClass>BUILDINGCLASS_REGISTAN</BuildingClass>
+			<Cost>580</Cost>
+			<PrereqTech>TECH_EPHEMERIDES</PrereqTech>
+			<Description>TXT_KEY_BUILDING_REGISTAN</Description>
+			<Quote>TXT_KEY_WONDER_REGISTAN_QUOTE</Quote>
+			<Civilopedia>TXT_KEY_WONDER_REGISTAN_PEDIA</Civilopedia>
+			<Help>TXT_KEY_WONDER_REGISTAN_HELP</Help>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<UnmoddedHappiness>5</UnmoddedHappiness>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<MedianTechPercentChange>25</MedianTechPercentChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>180</PortraitIndex>
+			<WonderSplashImage>PBSplash.dds</WonderSplashImage>
+		</Row>
+
+
+
+
+
+
+		<!-- 乐山大佛 -->
+
+		<Row>
+			<Type>BUILDING_LESHAN_BUDDHA</Type>
+			<BuildingClass>BUILDINGCLASS_LESHAN_BUDDHA</BuildingClass>
+			<Cost>580</Cost>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
+			<Description>TXT_KEY_BUILDING_LESHAN_BUDDHA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LESHAN_BUDDHA_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_LESHAN_BUDDHA_HELP</Help>
+			<Quote>TXT_KEY_BUILDING_LESHAN_BUDDHA_QUOTE</Quote>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<NeverCapture>false</NeverCapture>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NearbyMountainRequired>true</NearbyMountainRequired>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<ExtraMissionarySpreads>2</ExtraMissionarySpreads>
+			<WonderSplashImage>LESHAN_BUDDHA.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>236</PortraitIndex>
+		</Row>
+
+
+
+
+		
+		<!-- 迈泰奥拉修道院-->
+		<Row>
+			<Type>BUILDING_MONASTERY_OF_METEORA</Type>
+			<BuildingClass>BUILDINGCLASS_MONASTERY_OF_METEORA</BuildingClass>
+			<Cost>580</Cost>
+			<NumCityCostMod>0</NumCityCostMod>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
+			<Description>TXT_KEY_BUILDING_MONASTERY_OF_METEORA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MONASTERY_OF_METEORA_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MONASTERY_OF_METEORA_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<NeverCapture>false</NeverCapture>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<Mountain>1</Mountain>
+			<ReligiousPressureModifier>100</ReligiousPressureModifier>
+			<FreeBuildingThisCity>BUILDINGCLASS_MONASTERY</FreeBuildingThisCity>
+			<Quote>TXT_KEY_BUILDING_MONASTERY_OF_METEORA_QUOTE</Quote>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<WonderSplashImage>Meteora_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+		</Row>
+
+		<!-- 高德院 -->
+
+		<Row>
+			<Type>BUILDING_OSARAGI</Type>
+			<BuildingClass>BUILDINGCLASS_OSARAGI</BuildingClass>
+			<Cost>580</Cost>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
+			<Description>TXT_KEY_BUILDING_OSARAGI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OSARAGI_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_OSARAGI_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<NeverCapture>false</NeverCapture>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NearbyMountainRequired>true</NearbyMountainRequired>
+			<Quote>TXT_KEY_BUILDING_OSARAGI_QUOTE</Quote>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<ReligiousPressureModifier>300</ReligiousPressureModifier>
+			<WonderSplashImage>OSARAGI.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>152</PortraitIndex>
+		</Row>
+
+
+	
+
+		<!--卡尔卡松城堡-->
+		<Row>
+			<Type>BUILDING_CITADEL_OF_CARCASSONNE</Type>
+			<BuildingClass>BUILDINGCLASS_CITADEL_OF_CARCASSONNE</BuildingClass>
+			<Cost>580</Cost>
+			<NumCityCostMod>0</NumCityCostMod>
+			<PrereqTech>TECH_FEUDALISM</PrereqTech>
+			<Description>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<NeverCapture>false</NeverCapture>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<Hill>1</Hill>
+			<FreePromotion>PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</FreePromotion>
+			<Quote>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_QUOTE</Quote>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<WonderSplashImage>Carcassonne_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>31</PortraitIndex>
+		</Row>
+
+		<!--骑士堡-->
+		<Row>
+			<Type>BUILDING_KRAK_DES_CHEVALIERS</Type>
+			<BuildingClass>BUILDINGCLASS_KRAK_DES_CHEVALIERS</BuildingClass>
+			<Cost>580</Cost>
+			<NumCityCostMod>0</NumCityCostMod>
+			<PrereqTech>TECH_MILITARY_ORDERS</PrereqTech>
+			<Description>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<NeverCapture>false</NeverCapture>
+			<AllowsRangeStrike>true</AllowsRangeStrike>
+			<Defense>5000</Defense>
+			<ExtraCityHitPoints>50</ExtraCityHitPoints>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<FreePromotion>PROMOTION_GENERAL_1</FreePromotion>
+			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
+			<Quote>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_QUOTE</Quote>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<WonderSplashImage>KrakChevaliers_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>86</PortraitIndex>
+		</Row>
+		
+ 
+		
+		<!--米歇尔山-->
+		<Row>
+			<Type>BUILDING_MONT_SAINT_MICHEL</Type>
+			<BuildingClass>BUILDINGCLASS_MONT_SAINT_MICHEL</BuildingClass>
+			<Cost>580</Cost>
+			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
+			<Description>TXT_KEY_BUILDING_MONT_SAINT_MICHEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MONT_SAINT_MICHEL_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MONT_SAINT_MICHEL_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<NeverCapture>false</NeverCapture>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<Water>1</Water>
+			<Defense>5000</Defense>
+			<ExtraCityHitPoints>50</ExtraCityHitPoints>
+			<ExtraDamageHeal>50</ExtraDamageHeal>
+			<ReduceDamageValue>-25</ReduceDamageValue>						
+			<Quote>TXT_KEY_BUILDING_MONT_SAINT_MICHEL_QUOTE</Quote>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<WonderSplashImage>MontStMichel_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>215</PortraitIndex>
+		</Row>
+		
+		
+
+		<!--托雷德尔奥罗 金塔-->
+		<Row>
+			<Type>BUILDING_TORRE</Type>
+			<BuildingClass>BUILDINGCLASS_TORRE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_TORRE</Description>
+			<Help>TXT_KEY_WONDER_TORRE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_TORRE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_TORRE_QUOTE</Quote>
+			<Cost>850</Cost>
+			<PrereqTech>TECH_EPHEMERIDES</PrereqTech>
+			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<Gold>500</Gold>
+			<Defense>2500</Defense>
+			<CapturePlunderModifier>100</CapturePlunderModifier>
+			<!--<GreatPersonExpendGold>200</GreatPersonExpendGold>-->
+			<TradeRouteRecipientBonus>4</TradeRouteRecipientBonus>
+			<TradeRouteTargetBonus>4</TradeRouteTargetBonus>
+			<TradeRouteSeaDistanceModifier>50</TradeRouteSeaDistanceModifier>
+			<FreeBuildingThisCity>BUILDINGCLASS_HARBOR</FreeBuildingThisCity>
+			<Water>true</Water>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>1</PortraitIndex>
+			<WonderSplashImage>Torre_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+	
+		
+		
+
+		<!--*****伊斯塔尔门*****-->
+		<Row>
+			<Type>BUILDING_ISHTARGATE</Type>
+			<BuildingClass>BUILDINGCLASS_ISHTARGATE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_ISHTARGATE</Description>
+			<Help>TXT_KEY_WONDER_ISHTARGATE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_ISHTARGATE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ISHTARGATE_QUOTE</Quote>
+			<Cost>130</Cost>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<AllowsRangeStrike>true</AllowsRangeStrike>
+			<Defense>2500</Defense>
+			<WorkerSpeedModifier>25</WorkerSpeedModifier>
+			<ExtraCityHitPoints>50</ExtraCityHitPoints>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<FreePromotion>PROMOTION_ISHTARGATE</FreePromotion>
+			<PortraitIndex>89</PortraitIndex>
+			<WonderSplashImage>ISHTAR.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,B</WonderSplashAnchor>
+		</Row>
+
+
+		<!--*****环球影视*****-->
+		<Row>
+			<Type>BUILDING_GLOBALCNIEMA</Type>
+			<BuildingClass>BUILDINGCLASS_GLOBALCNIEMA</BuildingClass>
+			<Cost>2500</Cost>
+			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<Description>TXT_KEY_BUILDING_GLOBALCNIEMA</Description>
+			<Help>TXT_KEY_WONDER_GLOBALCNIEMA_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_GLOBALCNIEMA_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_GLOBALCNIEMA_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<SpecialistCount>3</SpecialistCount>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>3</GreatWorkCount>
+			<NearbyMountainRequired>true</NearbyMountainRequired>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>80</PortraitIndex>
+			<WonderSplashImage>GLOBALCNIEMA_Splash.dds</WonderSplashImage>
+			<FreeBuildingThisCity>BUILDINGCLASS_CINEMA</FreeBuildingThisCity>
+		</Row>
+
+
+		
+
+
+		<!--*****酒神剧场*****-->
+		<Row>
+			<Type>BUILDING_DIONYSUS</Type>
+			<BuildingClass>BUILDINGCLASS_DIONYSUS</BuildingClass>
+			<Cost>200</Cost>
+			<PrereqTech>TECH_DRAMA</PrereqTech>
+			<Help>TXT_KEY_WONDER_DIONYSUS_HELP</Help>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<PolicyBranchType>POLICY_BRANCH_PATRONAGE</PolicyBranchType>
+			<Description>TXT_KEY_WONDER_DIONYSUS</Description>
+			<Civilopedia>TXT_KEY_WONDER_DIONYSUS_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_DIONYSUS_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<SpecialistCount>2</SpecialistCount>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<FreeBuilding>BUILDINGCLASS_AMPHITHEATER</FreeBuilding>
+			<NukeImmune>true</NukeImmune>
+			<FreePolicies>1</FreePolicies>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>84</PortraitIndex>
+			<!--<MinorFriendshipChange>100</MinorFriendshipChange>-->
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<WonderSplashImage>DionysusSplash.dds</WonderSplashImage>
+		</Row>
+
+
+
+		<!-- 阿布辛贝勒神庙 -->
+		<Row>
+			<Type>BUILDING_ABUSIMBEL</Type>
+			<BuildingClass>BUILDINGCLASS_ABUSIMBEL</BuildingClass>
+			<Description>TXT_KEY_BUILDING_ABUSIMBEL</Description>
+			<Help>TXT_KEY_WONDER_ABUSIMBEL_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_ABUSIMBEL_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ABUSIMBEL_QUOTE</Quote>
+			<Cost>185</Cost>
+			<PrereqTech>TECH_WRITING</PrereqTech>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>153</PortraitIndex>
+			<WonderSplashImage>AbuSimbel_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+		<!-- 达芬奇工坊 -->
+		<Row>
+			<Type>BUILDING_LEONOARDOS_WORKSHOP</Type>
+			<BuildingClass>BUILDINGCLASS_LEONOARDOS_WORKSHOP</BuildingClass>
+			<Cost>625</Cost>
+			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+			<Help>TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP_HELP</Help>
+			<Description>TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP</Description>
+			<ArtDefineTag>NONE</ArtDefineTag>
+			<MaxStartEra>ERA_MODERN</MaxStartEra>
+			<MinAreaSize>-1</MinAreaSize>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NukeImmune>true</NukeImmune>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>48</PortraitIndex>
+			<Quote>TXT_KEY_WONDER_LEONOARDOS_WORKSHOP_QUOTE</Quote>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+			<WonderSplashImage>LeonardoSplash.dds</WonderSplashImage>
+		</Row>
+
+
+
+
+		<!-- 哥贝克力 -->
+		<Row>
+			<Type>BUILDING_SKARABRAE</Type>
+			<BuildingClass>BUILDINGCLASS_SKARABRAE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_SKARABRAE</Description>
+			<Help>TXT_KEY_WONDER_SKARABRAE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SKARABRAE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SKARABRAE_QUOTE</Quote>
+			<Cost>90</Cost>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<PrereqTech>TECH_MYSTICISM</PrereqTech>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>160</PortraitIndex>
+			<WonderSplashImage>SkaraBrae.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,B</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+		<!-- 岳阳楼 -->
+		<Row>
+			<Type>BUILDING_YUEYANG</Type>
+			<BuildingClass>BUILDINGCLASS_YUEYANG</BuildingClass>
+			<Cost>180</Cost>
+			<PrereqTech>TECH_MANIPULAR_SYSTEM</PrereqTech>
+			<Description>TXT_KEY_BUILDING_YUEYANG</Description>
+			<Civilopedia>TXT_KEY_BUILDING_YUEYANG_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_YUEYANG_QUOTE</Quote>
+			<Help>TXT_KEY_BUILDING_YUEYANG_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<NukeImmune>true</NukeImmune>
+			<FreshWater>true</FreshWater>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>9</PortraitIndex>
+			<FreePromotion>PROMOTION_YUEYANG</FreePromotion>
+			<WonderSplashImage>YUEYANG_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+
+
+		<!-- 巴尔米拉-->
+		<Row>
+			<Type>BUILDING_PALMYRA</Type>
+			<BuildingClass>BUILDINGCLASS_PALMYRA</BuildingClass>
+			<Cost>331</Cost>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+			<Description>TXT_KEY_BUILDING_PALMYRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PALMYRA_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_PALMYRA_QUOTE</Quote>
+			<Help>TXT_KEY_BUILDING_PALMYRA_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<NukeImmune>true</NukeImmune>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>190</PortraitIndex>
+			<WonderSplashImage>PALMYRA.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+
+		<!-- 丝绸之路 -->
+		<Row>
+			<Type>BUILDING_SILKROAD</Type>
+			<BuildingClass>BUILDINGCLASS_SILKROAD</BuildingClass>
+			<Cost>200</Cost>
+			<PrereqTech>TECH_CARTOGRAPHY</PrereqTech>
+			<Description>TXT_KEY_BUILDING_SILKROAD</Description>
+			<Quote>TXT_KEY_WONDER_SILKROAD_QUOTE</Quote>
+			<Civilopedia>TXT_KEY_CIV5_BUILDING_SILKROAD_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_SILKROAD_HELP</Help>
+			<ExtraLuxuries>true</ExtraLuxuries>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<NukeImmune>true</NukeImmune>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>154</PortraitIndex>
+			<WonderSplashImage>SILKROAD.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+		
+		<!-- 郑国渠 -->
+		<Row>
+			<Type>BUILDING_ZHENGGUOQU</Type>
+			<BuildingClass>BUILDINGCLASS_ZHENGGUOQU</BuildingClass>
+			<Cost>200</Cost>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<Description>TXT_KEY_BUILDING_ZHENGGUOQU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ZHENGGUOQU_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ZHENGGUOQU_QUOTE</Quote>
+			<Help>TXT_KEY_BUILDING_ZHENGGUOQU_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<GlobalPopulationChange>1</GlobalPopulationChange>
+			<FreshWater>true</FreshWater>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>70</PortraitIndex>
+			<WonderSplashImage>ZHENGGUOQU_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>		
+    	</Row>
+		
+	
+
+		<!-- 麦罗埃 -->
+		<Row>
+			<Type>BUILDING_MEROE</Type>
+			<BuildingClass>BUILDINGCLASS_MEROE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_MEROE</Description>
+			<Help>TXT_KEY_WONDER_MEROE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_MEROE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_MEROE_QUOTE</Quote>
+			<Cost>150</Cost>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<SpecialistCount>1</SpecialistCount>
+			<Hill>true</Hill>
+			<NukeImmune>true</NukeImmune>
+			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>200</PortraitIndex>
+			<WonderSplashImage>MEROE_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+		
+		
+
+
+		<!-- 塔尔欣寺庙 -->
+		<Row>
+			<Type>BUILDING_MALTA</Type>
+			<BuildingClass>BUILDINGCLASS_MALTA</BuildingClass>
+			<Description>TXT_KEY_BUILDING_MALTA</Description>
+			<Help>TXT_KEY_WONDER_MALTA_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_MALTA_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_MALTA_QUOTE</Quote>
+			<Cost>115</Cost>
+			<PrereqTech>TECH_MYSTICISM</PrereqTech>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<ReligiousPressureModifier>250</ReligiousPressureModifier>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<FreeBuilding>BUILDINGCLASS_TEMPLE</FreeBuilding>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>151</PortraitIndex>
+			<WonderSplashImage>MALTA.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+		
+		
+		
+
+
+		<!-- 斯芬克斯 -->
+		<Row>
+			<Type>BUILDING_SPHINX</Type>
+			<BuildingClass>BUILDINGCLASS_SPHINX</BuildingClass>
+			<Description>TXT_KEY_BUILDING_SPHINX</Description>
+			<Help>TXT_KEY_WONDER_SPHINX_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SPHINX_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SPHINX_QUOTE</Quote>
+			<Cost>90</Cost>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<!--<CultureRateModifier>15</CultureRateModifier>-->
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>155</PortraitIndex>
+			<TechEnhancedTourism>4</TechEnhancedTourism>
+			<WonderSplashImage>Sphinx_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+		
+
+
+
+
+		<!-- 拉斯科洞窟 -->
+		<Row>
+			<Type>BUILDING_LASCAUX_CAVES</Type>
+			<BuildingClass>BUILDINGCLASS_LASCAUX_CAVES</BuildingClass>
+			<Cost>140</Cost>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Help>TXT_KEY_WONDER_LASCAUX_CAVES_WONDER_HELP</Help>
+			<Description>TXT_KEY_WONDER_LASCAUX_CAVES_WONDER_TITLE</Description>
+			<Civilopedia>TXT_KEY_WONDER_LASCAUX_CAVES_CIVILOPEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_LASCAUX_CAVES_WONDER_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>124</PortraitIndex>
+			<WonderSplashImage>LascauxSplash.dds</WonderSplashImage>
+			<Happiness>2</Happiness>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+		<!-- 克若索斯迷宫 -->
+		<Row>
+			<Type>BUILDING_KNOSSOS</Type>
+			<BuildingClass>BUILDINGCLASS_KNOSSOS</BuildingClass>
+			<Cost>90</Cost>
+			<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
+			<Help>TXT_KEY_WONDER_KNOSSOS_HELP</Help>
+			<Description>TXT_KEY_WONDER_KNOSSOS_WONDER_TITLE</Description>
+			<Civilopedia>TXT_KEY_WONDER_KNOSSOS_CIVILOPEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_KNOSSOS_WONDER_QUOTE</Quote>
+			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
+			<SpecialistCount>1</SpecialistCount>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<Defense>3000</Defense>
+			<ExtraCityHitPoints>75</ExtraCityHitPoints>
+			<BuildingProductionModifier>10</BuildingProductionModifier>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>43</PortraitIndex>
+			<WonderSplashImage>KnossosSplash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+			<LandTileDamage>10</LandTileDamage>
+			<LandTileTurnDamage>10</LandTileTurnDamage>
+		</Row>
+
+
+
+
+
+
+
+		
+
+		<!--卡隆堡-->
+		<Row>
+			<Type>BUILDING_KRONBORG</Type>
+			<BuildingClass>BUILDINGCLASS_KRONBORG</BuildingClass>
+			<Description>TXT_KEY_BUILDING_KRONBORG</Description>
+			<Help>TXT_KEY_WONDER_KRONBORG_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_KRONBORG_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_KRONBORG_QUOTE</Quote>
+			<Cost>780</Cost>
+			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<Defense>10000</Defense>
+			<ExtraCityHitPoints>50</ExtraCityHitPoints>
+			<Water>true</Water>
+			<GlobalDefenseMod>10</GlobalDefenseMod>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
+			<WonderSplashImage>Kronborg_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+	
+
+
+
+		<!--水晶宫-->	
+
+			
+		
+		<Row>
+			<Type>BUILDING_CRYSTAL_PALACE</Type>
+			<BuildingClass>BUILDINGCLASS_CRYSTAL_PALACE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_CRYSTAL_PALACE</Description>
+			<Help>TXT_KEY_WONDER_CRYSTAL_PALACE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_CRYSTAL_PALACE_PEDIA</Civilopedia>
+			<ThemingBonusHelp>TXT_KEY_CRYSTAL_PALACE_THEMING_BONUS_HELP</ThemingBonusHelp>
+			<Quote>TXT_KEY_WONDER_CRYSTAL_PALACE_QUOTE</Quote>
+			<Cost>950</Cost>
+			<PrereqTech>TECH_NATURAL_HISTORY</PrereqTech>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>4</GreatWorkCount>
+			<ExtraLeagueVotes>2</ExtraLeagueVotes>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>3</PortraitIndex>
+			<WonderSplashImage>Crystal_Palace_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+	
+
+		<!--法西尔盖比-->
+		<Row>
+			<Type>BUILDING_FASIL_GHEBBI</Type>
+			<BuildingClass>BUILDINGCLASS_FASIL_GHEBBI</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FASIL_GHEBBI</Description>
+			<Help>TXT_KEY_WONDER_FASIL_GHEBBI_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FASIL_GHEBBI_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FASIL_GHEBBI_QUOTE</Quote>
+			<Cost>875</Cost>
+			<PrereqTech>TECH_FORTIFICATION</PrereqTech>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<Defense>5000</Defense>
+			<ExtraCityHitPoints>75</ExtraCityHitPoints>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>5</PortraitIndex>
+			<FreePromotion>PROMOTION_FASIL_GHEBBI</FreePromotion>
+			<GlobalCityStrengthMod>25</GlobalCityStrengthMod>
+			<GlobalRangedStrikeModifier>20</GlobalRangedStrikeModifier>
+			<WonderSplashImage>FasilGhebbi_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+		
+		
+		
+		
+		
+		<!--史密森学会-->
+		<Row>
+			<Type>BUILDING_SMITHSONIAN</Type>
+			<BuildingClass>BUILDINGCLASS_SMITHSONIAN</BuildingClass>
+			<ThemingBonusHelp>TXT_KEY_SMITHSONIAN_THEMING_BONUS_HELP</ThemingBonusHelp>
+			<Description>TXT_KEY_BUILDING_SMITHSONIAN</Description>
+			<Help>TXT_KEY_WONDER_SMITHSONIAN_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SMITHSONIAN_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SMITHSONIAN_QUOTE</Quote>
+			<Cost>875</Cost>
+			<PrereqTech>TECH_NATURAL_HISTORY</PrereqTech>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<FreeBuildingThisCity>BUILDINGCLASS_MUSEUM</FreeBuildingThisCity>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>93</PortraitIndex>
+			<WonderSplashImage>SMITHSONIAN_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+		<!--马尔堡城堡-->
+		<Row>
+			<Type>BUILDING_MALBORK</Type>
+			<BuildingClass>BUILDINGCLASS_MALBORK</BuildingClass>
+			<Description>TXT_KEY_BUILDING_MALBORK</Description>
+			<Help>TXT_KEY_WONDER_MALBORK_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_MALBORK_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_MALBORK_QUOTE</Quote>
+			<Cost>625</Cost>
+			<PrereqTech>TECH_SOVEREIGNTY</PrereqTech>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>150</PortraitIndex>
+			<WonderSplashImage>MALBORK.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,T</WonderSplashAnchor>
+			<FreePromotion>PROMOTION_GOLDEN_BUFF</FreePromotion>
+		</Row>
+
+		<!--凡尔赛宫-->
+		<Row>
+			<Type>BUILDING_VERSAILLES</Type>
+			<BuildingClass>BUILDINGCLASS_VERSAILLES</BuildingClass>
+			<Description>TXT_KEY_BUILDING_VERSAILLES</Description>
+			<Help>TXT_KEY_WONDER_VERSAILLES_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_VERSAILLES_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_VERSAILLES_QUOTE</Quote>
+			<Cost>625</Cost>
+			<PrereqTech>TECH_SOVEREIGNTY</PrereqTech>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>29</PortraitIndex>
+			<WonderSplashImage>Versailles_splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+		<!--颐和园-->
+		<Row>
+			<Type>BUILDING_SUMMER_PALACE</Type>
+			<BuildingClass>BUILDINGCLASS_SUMMER_PALACE</BuildingClass>
+			<Cost>625</Cost>
+			<PrereqTech>TECH_SOVEREIGNTY</PrereqTech>
+			<Help>TXT_KEY_BUILDING_SUMMER_PALACE_HELP</Help>
+			<Description>TXT_KEY_BUILDING_SUMMER_PALACE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SUMMER_PALACE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SUMMER_PALACE_QUOTE</Quote>
+			<FreeGreatPeople>1</FreeGreatPeople>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<NukeImmune>true</NukeImmune>
+			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>7</PortraitIndex>
+			<Happiness>8</Happiness>
+			<WonderSplashImage>WonderSummerPalace.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+
+		<!--Kamuthi光伏电站-->
+		<Row>
+			<Type>BUILDING_KAMUTHI</Type>
+			<BuildingClass>BUILDINGCLASS_KAMUTHI</BuildingClass>
+			<Cost>2600</Cost>
+			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
+			<Help>TXT_KEY_WONDER_KAMUTHI_HELP</Help>
+			<Description>TXT_KEY_BUILDING_KAMUTHI</Description>
+			<Civilopedia>TXT_KEY_WONDER_KAMUTHI_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_KAMUTHI_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>64</PortraitIndex>
+			<FreeTechs>1</FreeTechs>
+			<WonderSplashImage>KAMUTHI_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+		
+
+
+
+		<!--总统山-->
+		<Row>
+			<Type>BUILDING_RUSHMORE</Type>
+			<BuildingClass>BUILDINGCLASS_RUSHMORE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_RUSHMORE</Description>
+			<Help>TXT_KEY_WONDER_RUSHMORE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_RUSHMORE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_RUSHMORE_QUOTE</Quote>
+			<Cost>3000</Cost>
+			<PrereqTech>TECH_MEGAENGINEERING</PrereqTech>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<NearbyMountainRequired>true</NearbyMountainRequired>
+			<UnhappinessModifier>-15</UnhappinessModifier>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>156</PortraitIndex>
+			<WorkerSpeedModifier>25</WorkerSpeedModifier>			
+			<GlobalCultureRateModifier>20</GlobalCultureRateModifier> 
+			<WonderSplashImage>Rushmore_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>	
+	    </Row>
+
+
+
+
+
+
+
+		<!--太阳能卫星-->
+		<Row>
+			<Type>BUILDING_SATELLITE_SOLAR</Type>
+			<BuildingClass>BUILDINGCLASS_SATELLITE_SOLAR</BuildingClass>
+			<Cost>-1</Cost>
+			<Description>TXT_KEY_UNIT_SATELLITE_SOLAR</Description>
+			<Civilopedia>TXT_KEY_UNIT_SATELLITE_SOLAR_PEDIA</Civilopedia>
+			<Help>TXT_KEY_UNIT_SATELLITE_SOLAR_HELP</Help>
+			<Quote>TXT_KEY_UNIT_SATELLITE_SOLAR_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<NeverCapture>true</NeverCapture>
+			<!--<FreeBuilding>BUILDINGCLASS_SATELLITE_SOLAR_DUMMY</FreeBuilding>-->
+			<PortraitIndex>117</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<WonderSplashImage>Helios_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		<!-- ***************************未来时代***************************-->
+
+		<Update>
+			<Set  Cost="25000"/>
+			<Where Type="BUILDING_NATIONAL_FREEDOM" />
+		</Update>
+		<Update>
+			<Set  Cost="25000"/>
+			<Where Type="BUILDING_NATIONAL_ORDER" />
+		</Update>
+		<Update>
+			<Set  Cost="25000"/>
+			<Where Type="BUILDING_NATIONAL_AUTOCRACY" />
+		</Update>
+
+		<Update>
+			<Set  Cost="18000"/>
+			<Where Type="BUILDING_MEGACITY_PYRAMID" />
+		</Update>
+		
+		<!-- 阿基米德杠杆 -->
+
+
+
+		<Row>
+			<Type>BUILDING_ARCHIMEDES</Type>
+			<BuildingClass>BUILDINGCLASS_ARCHIMEDES</BuildingClass>
+			<Help>TXT_KEY_WONDER_ARCHIMEDES_WONDER_HELP</Help>
+			<Description>TXT_KEY_WONDER_ARCHIMEDES_WONDER_TITLE</Description>
+			<Civilopedia>TXT_KEY_WONDER_ARCHIMEDES_CIVILOPEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ARCHIMEDES_WONDER_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<Cost>50000</Cost>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<PrereqTech>TECH_SDI</PrereqTech>
+			<AirModifier>1</AirModifier>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>75</PortraitIndex>
+			<WonderSplashImage>Lift_Splash.dds</WonderSplashImage>
+		</Row>
+
+
+
+
+		<!--异种研究所-->
+		<Row>
+			<Type>BUILDING_FW_JURASSIC_PARK</Type>
+			<BuildingClass>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FW_JURASSIC_PARK</Description>
+			<Help>TXT_KEY_WONDER_FW_JURASSIC_PARK_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FW_JURASSIC_PARK_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FW_JURASSIC_PARK_QUOTE</Quote>
+			<Cost>17000</Cost>
+			<PrereqTech>TECH_MASS</PrereqTech>
+			<UnmoddedHappiness>20</UnmoddedHappiness>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>97</PortraitIndex>
+			<Flat>true</Flat>
+			<NearbyTerrainRequired>TERRAIN_COAST</NearbyTerrainRequired>
+			<WonderSplashImage>JurassicPark_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+		<!--摩天起重机-->
+		<Row>
+			<Type>BUILDING_TECHNOMART</Type>
+			<BuildingClass>BUILDINGCLASS_TECHNOMART</BuildingClass>
+			<Cost>12000</Cost>
+			<PrereqTech>TECH_MASS</PrereqTech>
+			<Help>TXT_KEY_WONDER_TECHNOMART_HELP</Help>
+			<Description>TXT_KEY_BUILDING_TECHNOMART_DESC</Description>
+			<Civilopedia>TXT_KEY_WONDER_TECHNOMART_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_TECHNOMART_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<River>true</River>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>113</PortraitIndex>
+			<WorkerSpeedModifier>25</WorkerSpeedModifier>
+			<WonderSplashImage>DataHaven_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,B</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<Type>BUILDING_NATIONAL_HOSPITAL</Type>
+			<BuildingClass>BUILDINGCLASS_NATIONAL_HOSPITAL</BuildingClass>
+			<Cost>3300</Cost>
+			<PrereqTech>TECH_MATTERTRANSMISSION</PrereqTech>
+			<Description>TXT_KEY_BUILDING_NATIONAL_HOSPITAL</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_NATIONAL_HOSPITAL_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_NATIONAL_HOSPITAL_HELP</Help>
+			<HappinessPerCity>1</HappinessPerCity>
+			<GlobalPopulationChange>3</GlobalPopulationChange>
+			<NukeImmune>true</NukeImmune>
+			<NumCityCostMod>30</NumCityCostMod>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>92</PortraitIndex>
+		</Row>
+
+
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+		<Row>
+			<Type>BUILDING_US_BANK_TOWER</Type>
+			<BuildingClass>BUILDINGCLASS_US_BANK_TOWER</BuildingClass>
+			<Description>TXT_KEY_BUILDING_US_BANK_TOWER</Description>
+			<Help>TXT_KEY_WONDER_US_BANK_TOWER_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_US_BANK_TOWER_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_US_BANK_TOWER_QUOTE</Quote>
+			<Cost>2150</Cost>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+			<!--<CultureRateModifier>34</CultureRateModifier>-->
+			<LandmarksTourismPercent>100</LandmarksTourismPercent>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<GreatWorksTourismModifier>100</GreatWorksTourismModifier>
+			<Water>true</Water>
+			<MinAreaSize>10</MinAreaSize>
+			<TradeRouteRecipientBonus>40</TradeRouteRecipientBonus>
+			<TradeRouteTargetBonus>40</TradeRouteTargetBonus>
+			<ConquestProb>100</ConquestProb>
+			<NumTradeRouteBonus>1</NumTradeRouteBonus>
+			<TradeRouteLandDistanceModifier>50</TradeRouteLandDistanceModifier>
+			<TradeRouteSeaDistanceModifier>50</TradeRouteSeaDistanceModifier>
+			<TradeRouteLandGoldBonus>4000</TradeRouteLandGoldBonus>
+			<TradeRouteSeaGoldBonus>4000</TradeRouteSeaGoldBonus>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>9</PortraitIndex>
+			<WonderSplashImage>US_BANK_TOWER_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,B</WonderSplashAnchor>
+		</Row>
+		
+
+
+		
+		
+		
+		
+		
+	
+
+		<Row>
+			<Type>BUILDING_BLETCHLEY_PARK</Type>
+			<BuildingClass>BUILDINGCLASS_BLETCHLEY_PARK</BuildingClass>
+			<Cost>2300</Cost>
+			<PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
+			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
+			<Description>TXT_KEY_BUILDING_BLETCHLEY_PARK</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_BLETCHLEY_PARK_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP</Help>
+			<Quote>TXT_KEY_WONDER_BLETCHLEY_PARK_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<DisplayPosition>1</DisplayPosition>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<EspionageModifier>-15</EspionageModifier>
+			<ExtraSpies>2</ExtraSpies>
+			<MedianTechPercentChange>25</MedianTechPercentChange>
+			<Espionage>true</Espionage>
+			<FreeTechs>1</FreeTechs>
+			<WonderSplashImage>bletchleysplash.dds</WonderSplashImage>
+			<PortraitIndex>50</PortraitIndex>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDING_SATELLITE_NET</Type>
+			<BuildingClass>BUILDINGCLASS_SATELLITE_NET</BuildingClass>
+			<Cost>1500</Cost>
+			<PrereqTech>TECH_PROBABILITYMECHANICS</PrereqTech>
+			<Description>TXT_KEY_BUILDING_SATELLITE_NET</Description>
+			<Help>TXT_KEY_WONDER_SATELLITE_NET_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SATELLITE_NET_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SATELLITE_NET_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<Espionage>true</Espionage>
+			<NumCityCostMod>30</NumCityCostMod>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<EspionageModifier>-40</EspionageModifier>
+			<GlobalEspionageModifier>-40</GlobalEspionageModifier>
+			<AffectSpiesNow>true</AffectSpiesNow>
+			<NeverCapture>true</NeverCapture>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>73</PortraitIndex>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<Type>BUILDING_LEP</Type>
+			<BuildingClass>BUILDINGCLASS_LEP</BuildingClass>
+			<Cost>13000</Cost>
+			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
+			<Help>TXT_KEY_WONDER_LEP_HELP</Help>
+			<Description>TXT_KEY_BUILDING_LEP</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_LEP_TEXT</Civilopedia>
+			<Quote>TXT_KEY_WONDER_LEP_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>3</GreatPeopleRateChange>
+			<GreatScientistBeakerModifier>50</GreatScientistBeakerModifier>
+			<FreeBuildingThisCity>BUILDINGCLASS_SPACESHIP_FACTORY</FreeBuildingThisCity>
+			<!--<UnhappinessModifier>-15</UnhappinessModifier>-->
+			<ExtraLeagueVotes>5</ExtraLeagueVotes>
+			<GoldenAge>true</GoldenAge>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<DisplayPosition>39</DisplayPosition>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>93</PortraitIndex>
+			<WonderSplashImage>W_LEP.dds</WonderSplashImage>
+		</Row>
+
+
+
+		<Row>
+			<Type>BUILDING_FW_HELIOS</Type>
+			<BuildingClass>BUILDINGCLASS_FW_HELIOS</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FW_HELIOS</Description>
+			<Help>TXT_KEY_WONDER_FW_HELIOS_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FW_HELIOS_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FW_HELIOS_QUOTE</Quote>
+			<Cost>12000</Cost>
+			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
+			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
+			<FreeBuildingThisCity>BUILDINGCLASS_SOLAR_PLANT</FreeBuildingThisCity>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>52</PortraitIndex>
+			<WonderSplashImage>death_laser.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+		<Row>
+			<Type>BUILDING_FW_MOON_BASE</Type>
+			<BuildingClass>BUILDINGCLASS_FW_MOON_BASE</BuildingClass>
+			<Cost>3000</Cost>
+			<PrereqTech>TECH_EARTH</PrereqTech>
+			<NumCityCostMod>25</NumCityCostMod>
+			<Help>TXT_KEY_BUILDING_FW_MOON_BASE_HELP</Help>
+			<Description>TXT_KEY_BUILDING_FW_MOON_BASE_DESC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FW_MOON_BASE_PEDIA</Civilopedia>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>3</SpecialistCount>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>128</PortraitIndex>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDING_FW_SKYNET</Type>
+			<BuildingClass>BUILDINGCLASS_FW_SKYNET</BuildingClass>
+			<Help>TXT_KEY_BUILDING_FW_SKYNET_HELP</Help>
+			<Description>TXT_KEY_BUILDING_FW_SKYNET_DESC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FW_SKYNET_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FW_SKYNET_QUOTE</Quote>
+			<Cost>13000</Cost>
+			<Happiness>-20</Happiness>
+			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
+			<FreePromotion>PROMOTION_FW_SKYNET_LINK</FreePromotion>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>102</PortraitIndex>
+			<WonderSplashImage>Skynet_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<NukeInterceptionChance>50</NukeInterceptionChance>
+		</Row>
+
+		<!-- 虚拟偶像-->
+		<Row>
+			<Type>BUILDING_VIRTUAL_IDOL</Type>
+			<BuildingClass>BUILDINGCLASS_VIRTUAL_IDOL</BuildingClass>
+			<Description>TXT_KEY_BUILDING_VIRTUAL_IDOL</Description>
+			<Help>TXT_KEY_WONDER_VIRTUAL_IDOL_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_VIRTUAL_IDOL_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_VIRTUAL_IDOL_QUOTE</Quote>
+			<Cost>12000</Cost>
+			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<GreatWorksTourismModifier>100</GreatWorksTourismModifier>
+			<CultureRateModifier>50</CultureRateModifier>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_MUSIC</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>62</PortraitIndex>
+			<WonderSplashImage>VirtualIdol_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+		
+		<Row>
+			<Type>BUILDING_FW_SKYCITY</Type>
+			<BuildingClass>BUILDINGCLASS_FW_SKYCITY</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FW_SKYCITY</Description>
+			<Help>TXT_KEY_WONDER_FW_SKYCITY_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FW_SKYCITY_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FW_SKYCITY_QUOTE</Quote>
+			<Cost>12000</Cost>
+			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>76</PortraitIndex>
+			<WonderSplashImage>FWSkyCity_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,T</WonderSplashAnchor>
+		</Row>
+
+
+		<!--时态演算-->
+
+		<Row>
+			<Type>BUILDING_DIABLO</Type>
+			<BuildingClass>BUILDINGCLASS_DIABLO</BuildingClass>
+			<Description>TXT_KEY_BUILDING_DIABLO</Description>
+			<Help>TXT_KEY_WONDER_DIABLO_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_DIABLO_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_DIABLO_QUOTE</Quote>
+			<Cost>17000</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<FreeTechs>4</FreeTechs>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>74</PortraitIndex>
+			<WonderSplashImage>DIABLO.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		<!--普罗米修斯-->
+
+		<Row>
+			<Type>BUILDING_PROMETHEUS</Type>
+			<BuildingClass>BUILDINGCLASS_PROMETHEUS</BuildingClass>
+			<Description>TXT_KEY_BUILDING_PROMETHEUS</Description>
+			<Help>TXT_KEY_WONDER_PROMETHEUS_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_PROMETHEUS_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_PROMETHEUS_QUOTE</Quote>
+			<Cost>19000</Cost>
+			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>137</PortraitIndex>
+			<ConquestProb>100</ConquestProb>
+			<WonderSplashImage>PROMETHEUS.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+
+
+		<!--太空基地-->
+		<Row>
+			<Type>BUILDING_SPACE_FORTRESS</Type>
+			<BuildingClass>BUILDINGCLASS_SPACE_FORTRESS</BuildingClass>
+			<Description>TXT_KEY_BUILDING_SPACE_FORTRESS</Description>
+			<Help>TXT_KEY_WONDER_SPACE_FORTRESS_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SPACE_FORTRESS_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SPACE_FORTRESS_QUOTE</Quote>
+			<Cost>30000</Cost>
+			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>127</PortraitIndex>
+			<Happiness>-20</Happiness>
+			<Defense>13000</Defense>
+			<ConquestProb>100</ConquestProb>
+			<GlobalDefenseMod>100</GlobalDefenseMod>
+			<ExtraCityHitPoints>2500</ExtraCityHitPoints>
+			<WonderSplashImage>OrbitalRefinery_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+			<ExtraAttacks>2</ExtraAttacks>
+		</Row>
+
+
+		<!--终极塔-->
+		<Row>
+			<Type>BUILDING_FW_ULTIMATOWER</Type>
+			<BuildingClass>BUILDINGCLASS_FW_ULTIMATOWER</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FW_ULTIMATOWER</Description>
+			<Help>TXT_KEY_WONDER_FW_ULTIMATOWER_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FW_ULTIMATOWER_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FW_ULTIMATOWER_QUOTE</Quote>
+			<Cost>20000</Cost>
+			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
+			<GlobalPopulationChange>5</GlobalPopulationChange>
+			<!--<UnmoddedHappiness>20</UnmoddedHappiness>-->
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>124</PortraitIndex>
+			<WonderSplashImage>FWUltimaTower_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+
+		<Row>
+			<Type>BUILDING_FOLDING_MACHINE</Type>
+			<BuildingClass>BUILDINGCLASS_FOLDING_MACHINE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FOLDING_MACHINE</Description>
+			<Help>TXT_KEY_WONDER_FOLDING_MACHINE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FOLDING_MACHINE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FOLDING_MACHINE_QUOTE</Quote>
+			<Cost>15000</Cost>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>3</SpecialistCount>
+			<PrereqTech>TECH_PLANETARY_NETWORKS</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<NearbyMountainRequired>true</NearbyMountainRequired>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>55</PortraitIndex>
+			<WonderSplashImage>FOLDING.dds</WonderSplashImage>
+		</Row>
+
+
+
+		<!--解放门-->
+		<Row>
+			<Type>BUILDING_LIBERATION_GATE</Type>
+			<BuildingClass>BUILDINGCLASS_LIBERATION_GATE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_LIBERATION_GATE</Description>
+			<Help>TXT_KEY_WONDER_LIBERATION_GATE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_LIBERATION_GATE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_LIBERATION_GATE_QUOTE</Quote>
+			<Cost>60000</Cost>
+			<PolicyBranchType>POLICY_BRANCH_AUTOCRACY</PolicyBranchType>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<Happiness>-100</Happiness>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>61</PortraitIndex>
+			<FreePromotion>PROMOTION_LIBERATION_STRENGTH</FreePromotion>
+			<WonderSplashImage>victory_emancipation.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		<!--*****行星扫描仪*****-->
+
+		<Row>
+			<BuildingClass>BUILDINGCLASS_HELIOS_BUILDING</BuildingClass>
+			<Type>BUILDING_HELIOS_BUILDING</Type>
+			<Description>TXT_KEY_BUILDING_HELIOS_BUILDING</Description>
+			<Civilopedia>TXT_KEY_WONDER_HELIOS_BUILDING_PEDIA</Civilopedia>
+			<Help>TXT_KEY_WONDER_HELIOS_BUILDING_HELP</Help>
+			<Quote>TXT_KEY_WONDER_HELIOS_BUILDING_QUOTE</Quote>
+			<NukeImmune>1</NukeImmune>
+			<Cost>60000</Cost>
+			<PrereqTech>TECH_EARTH</PrereqTech>
+			<NumCityCostMod>0</NumCityCostMod>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+			<PortraitIndex>84</PortraitIndex>
+			<FreePromotion>PROMOTION_PARATROOPER_BUFF</FreePromotion>
+			<WonderSplashImage>HeliosSplash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+		</Row>
+
+		<!-- 马尔科夫系统 -->
+		<Row>
+			<Type>BUILDING_FW_MARKOV</Type>
+			<BuildingClass>BUILDINGCLASS_FW_MARKOV</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FW_MARKOV</Description>
+			<Help>TXT_KEY_WONDER_FW_MARKOV_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FW_MARKOV_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FW_MARKOV_QUOTE</Quote>
+			<Cost>18000</Cost>
+			<Happiness>-50</Happiness>
+			<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
+			<MaxStartEra>ERA_FUTURE</MaxStartEra>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<GreatPeopleRateChange>10</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>121</PortraitIndex>
+			<WonderSplashImage>Mnemosyne_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+
+
+		<!-- 真空运输管道 -->
+		<Row>
+			<Type>BUILDING_INTERSTATE_HIGHWAY_SYSTEM</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTATE_HIGHWAY_SYSTEM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTATE_HIGHWAY_SYSTEM_DESC</Civilopedia>
+			<Help>TXT_KEY_BUILDING_INTERSTATE_HIGHWAY_SYSTEM_HELP</Help>
+			<NukeImmune>true</NukeImmune>
+			<Cost>5000</Cost>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<NumTradeRouteBonus>3</NumTradeRouteBonus>
+			<CityConnectionTradeRouteModifier>50</CityConnectionTradeRouteModifier>
+			<TradeRouteLandDistanceModifier>300</TradeRouteLandDistanceModifier>
+			<!--<TradeRouteModifier>50</TradeRouteModifier>-->
+			<BuildingClass>BUILDINGCLASS_INTERSTATE_HIGHWAY_SYSTEM</BuildingClass>
+			<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+			<!--<GreatPeopleRateChange>15</GreatPeopleRateChange>-->
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>108</PortraitIndex>
+		</Row>
+
+	</Buildings>
+
+
+
+			
+	<Building_ThemingBonuses>
+
+	
+		<Row>
+			<BuildingType>BUILDING_SMITHSONIAN</BuildingType>
+			<Description>TXT_KEY_THEMING_BONUS_SMITHSONIAN</Description>
+			<Bonus>3</Bonus>
+			<UniqueEras>true</UniqueEras>
+			<RequiresUniquePlayers>true</RequiresUniquePlayers>
+			<AIPriority>5</AIPriority>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_CRYSTAL_PALACE</BuildingType>
+			<Description>TXT_KEY_THEMING_BONUS_CRYSTAL_PALACE</Description>
+			<Bonus>10</Bonus>
+			<!--<SameEra>true</SameEra>
+			<MustBeArt>true</MustBeArt>-->
+			<RequiresUniquePlayers>true</RequiresUniquePlayers>
+			<AIPriority>5</AIPriority>
+		</Row>
+		
+				
+		
+		<Row>
+			<BuildingType>BUILDING_VIRTUAL_IDOL</BuildingType>
+			<Description>TXT_KEY_THEMING_BONUS_VIRTUAL_IDOL</Description>
+			<Bonus>2</Bonus>
+			<SameEra>true</SameEra>
+			<RequiresSamePlayer>true</RequiresSamePlayer>
+			<AIPriority>2</AIPriority>
+		</Row>
+	</Building_ThemingBonuses>
+
+
+
+
+
+	<Building_ResourceQuantityRequirements>
+		<!--古城-->
+		<Row>
+			<BuildingType>BUILDING_ANCIENT_CITY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+
+		<!--洛克斐乐-->
+		<Row>
+			<BuildingType>BUILDING_ROCKEFELLER</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+		
+		<!--疾控中心-->
+		<Row>
+			<BuildingType>BUILDING_CENTERS</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CENTERS</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		
+		
+		
+		
+		<!--情报局-->
+		<Row>
+			<BuildingType>BUILDING_INTELLIGENCE_BUREAU</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_INTELLIGENCE_BUREAU</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+		<!--外交部-->
+		<Row>
+			<BuildingType>BUILDING_FOREIGN_OFFICE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOREIGN_OFFICE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		
+
+		<!--克格勃-->
+		<Row>
+			<BuildingType>BUILDING_KGB</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_KGB</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+
+		
+		<!--美联社-->
+		<Row>
+			<BuildingType>BUILDING_AP</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_AP</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		
+		
+		
+
+		<!--克虏伯-->
+		<Row>
+			<BuildingType>BUILDING_KARRUPP</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_KARRUPP</BuildingType>
+			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_KARRUPP</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_KARRUPP</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+		
+		
+		<!--金色大厅-->
+		<Row>
+			<BuildingType>BUILDING_KARLSTEJN</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+
+		
+		<!--国会-->
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		<!--海军学院-->
+		<Row>
+			<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+		
+
+		<!--华盛顿纪念碑-->
+		<Row>
+			<BuildingType>BUILDING_WASHION_TOWER</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<!--贝伦塔-->
+		<Row>
+			<BuildingType>BUILDING_BEILUN_TOWER</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		
+
+		<!--乐山大佛-->
+		<Row>
+			<BuildingType>BUILDING_LESHAN_BUDDHA</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		
+
+		<!--硅谷-->
+		<Row>
+			<BuildingType>BUILDING_GUIGU</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>15</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_GUIGU</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>15</Cost>
+		</Row>
+
+
+
+
+		<!--熟药所-->
+		<Row>
+			<BuildingType>BUILDING_COOKED_MEDICINE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_COOKED_MEDICINE</BuildingType>
+			<ResourceType>RESOURCE_LUMBER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		
+		
+		
+
+		
+		
+
+		<!--普罗米-->
+		<Row>
+			<BuildingType>BUILDING_PROMETHEUS</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>20</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PROMETHEUS</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		
+		
+		
+
+
+		<!--波塞冬神庙-->
+		<Row>
+			<BuildingType>BUILDING_POSEIDON_TEMPLE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+		
+
+
+		<!--白宫-->
+		<Row>
+			<BuildingType>BUILDING_WHITE_HOUSE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+
+		<!--大津巴布韦-->
+		<Row>
+			<BuildingType>BUILDING_DZIMBABWE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		
+		
+		<!--普马彭谷神庙-->
+		<Row>
+			<BuildingType>BUILDING_PUMA_PUMKU</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+		
+		<!--马奇诺-->
+
+		<Row>
+			<BuildingType>BUILDING_MAGINOT_LINE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>15</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MAGINOT_LINE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+
+
+
+		<!--帆船酒店-->
+
+		<Row>
+			<BuildingType>BUILDING_BURJALARAB</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BURJALARAB</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BURJALARAB</BuildingType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+		<!--维琪奥桥-->
+
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		
+		<!--加尔桥-->
+		<Row>
+			<BuildingType>BUILDING_PONTDUGARD</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+
+		<!--解放门-->
+		<Row>
+			<BuildingType>BUILDING_LIBERATION_GATE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_LIBERATION_GATE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>20</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_LIBERATION_GATE</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+		<!--太阳神空间站-->
+		<Row>
+			<BuildingType>BUILDING_HELIOS_BUILDING</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HELIOS_BUILDING</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		
+		
+		<!--所罗门-->
+		<Row>
+			<BuildingType>BUILDING_KING_SOLOMON</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+
+
+		<!--乌鲁伯格天文台-->
+		<Row>
+			<BuildingType>BUILDING_ULUGH_BEG</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		
+		
+		<!--雷吉斯坦广场-->
+		<Row>
+			<BuildingType>BUILDING_REGISTAN</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		
+		<!--迈泰奥拉修道院-->
+		<Row>
+			<BuildingType>BUILDING_MONASTERY_OF_METEORA</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		
+		
+		<!--高德院 -->
+		<Row>
+			<BuildingType>BUILDING_OSARAGI</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		<!--卡尔卡松城堡-->
+		<Row>
+			<BuildingType>BUILDING_CITADEL_OF_CARCASSONNE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		
+		<!--骑士堡-->
+		<Row>
+			<BuildingType>BUILDING_KRAK_DES_CHEVALIERS</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		
+
+		<!--米歇尔山-->
+		<Row>
+			<BuildingType>BUILDING_MONT_SAINT_MICHEL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		
+		<!--伊斯塔-->
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<!--环球影视-->
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+		<!--郑国渠-->
+		<Row>
+			<BuildingType>BUILDING_ZHENGGUOQU</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+
+		<!--酒神剧场-->
+		<Row>
+			<BuildingType>BUILDING_DIONYSUS</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+	
+
+		<!--异种研究所-->
+		<Row>
+			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>25</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+
+		<!--光伏电站-->
+		<Row>
+			<BuildingType>BUILDING_KAMUTHI</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>9</Cost>
+		</Row>
+
+
+
+
+		<!--总统山-->
+		<Row>
+			<BuildingType>BUILDING_RUSHMORE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_RUSHMORE</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+		
+		
+
+
+
+
+		
+		<Row>
+			<BuildingType>BUILDING_ABUSIMBEL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+		
+		<!--达芬奇-->
+		<Row>
+			<BuildingType>BUILDING_LEONOARDOS_WORKSHOP</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_YUEYANG</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_SILKROAD</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_MEROE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MALTA</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+		
+	
+
+
+
+		<Row>
+			<BuildingType>BUILDING_KNOSSOS</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_LASCAUX_CAVES</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>18</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>25</Cost>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_FW_ULTIMATOWER</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>18</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_ULTIMATOWER</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>15</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_FOLDING_MACHINE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOLDING_MACHINE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>20</Cost>
+		</Row>
+
+		
+		<Row>
+			<BuildingType>BUILDING_CRYSTAL_PALACE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_KRONBORG</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_KRONBORG</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+	
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>150</Cost>
+		</Row>
+	
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>80</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_US_BANK_TOWER</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_US_BANK_TOWER</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>25</Cost>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>25</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+	
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_HELIOS</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_VIRTUAL_IDOL</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_BLETCHLEY_PARK</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>15</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_TECHNOMART</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_TECHNOMART</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>50</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VERSAILLES</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SMITHSONIAN</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FASIL_GHEBBI</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SANKORE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+
+
+
+		
+
+
+		<Row>
+			<BuildingType>BUILDING_INTERSTATE_HIGHWAY_SYSTEM</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>16</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_INTERSTATE_HIGHWAY_SYSTEM</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_ARCHIMEDES</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>20</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_ARCHIMEDES</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_PALMYRA</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+	</Building_ResourceQuantityRequirements>
+
+
+
+	<Building_BuildingClassYieldChanges>
+		
+		<!--疾控-->
+
+		<Row>
+			<BuildingType>BUILDING_CENTERS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MEDICAL_LAB</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CENTERS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CENTERS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_HEALTH_BUREAU</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+
+		<!--金色大厅-->
+
+
+		<Row>
+			<BuildingType>BUILDING_KARLSTEJN</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_OPERA_HOUSE</BuildingClassType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		
+
+		<!--国会-->
+
+
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV1</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV2</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV3</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV4</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV5</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		
+
+		<!--贝伦塔-->
+
+		<Row>
+			<BuildingType>BUILDING_BEILUN_TOWER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_JAIL</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BEILUN_TOWER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_DUNGEON</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BEILUN_TOWER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		
+
+	
+	
+
+		
+		
+		<!--波塞冬神庙 -->
+
+		<Row>
+			<BuildingType>BUILDING_POSEIDON_TEMPLE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WOOD_DOCK</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_POSEIDON_TEMPLE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WOOD_DOCK</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+
+
+		<!--颐和园 -->
+
+		<Row>
+			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_GARDEN</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		
+
+		<!-- 帆船酒店 -->
+
+		<Row>
+			<BuildingType>BUILDING_BURJALARAB</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BURJALARAB</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_HOTEL</BuildingClassType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BURJALARAB</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_AMUSEMENT_PARK</BuildingClassType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BURJALARAB</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_STADIUM</BuildingClassType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		
+
+		<!-- 东印度公司 -->
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_STOCK_EXCHANGE</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_TREASURY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FINANCE_COMPANY</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+
+
+
+
+
+		<!-- 维琪奥桥 -->
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_ECITY</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_STOCK_EXCHANGE</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FINANCE_COMPANY</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MINT</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+		
+
+
+		<Row>
+			<BuildingType>BUILDING_KING_SOLOMON</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_ACADEMY</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_ULUGH_BEG</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_OBSERVATORY</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		
+		
+
+
+
+
+
+		
+
+		
+		<Row>
+			<BuildingType>BUILDING_SKARABRAE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MONUMENT</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SKARABRAE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MONUMENT</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		
+		
+
+
+		<Row>
+			<BuildingType>BUILDING_FOLDING_MACHINE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MILITARY_AIRBASE</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MISSILE_BASE</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_DEFENSE_NETWORK</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NAVAL_BASE</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>3</YieldChange>
+		</Row>
+
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+	
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+	
+
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_JAPANESE_DOJO</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_EE_BASTION</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_HELIOS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_SOLAR_PLANT</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>10</YieldChange>
+		</Row>
+		
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_THORIUM_REACTOR</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_THORIUM_REACTOR</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_THORIUM_REACTOR</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>20</YieldChange>
+		</Row>
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>20</YieldChange>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MEDICAL_LAB</BuildingClassType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_QUANTUM_LAB</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>6</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FW_SERVER_HUB</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>4</YieldChange>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MALTA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_AP</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AP</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+	</Building_BuildingClassYieldChanges>
+	
+	
+	
+	<Building_BuildingClassHappiness>
+
+
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_OPERA_HOUSE</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BROADCAST_TOWER</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CINEMA</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_THEME_PARK</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BEVERAGE_FACTORY</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_TV_STATION</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_DIGITAL_NETWORK</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_VIDEO_GAME_COMPANY</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_THEATRE</BuildingClassType>
+			<Happiness>1</Happiness>
+		</Row>
+		</Building_BuildingClassHappiness>
+
+
+
+
+
+	<Building_ResourceQuantity>
+
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+		
+		
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>25</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Quantity>25</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Quantity>25</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
+			<Quantity>25</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Quantity>25</Quantity>
+		</Row>
+		
+
+
+
+		<Row>
+			<BuildingType>BUILDING_SPHINX</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Quantity>25</Quantity>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_CITADEL_OF_CARCASSONNE</BuildingType>
+			<ResourceType>RESOURCE_FOIEGRAS</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_KAMUTHI</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>35</Quantity>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SILKROAD</BuildingType>
+			<ResourceType>RESOURCE_SILK</ResourceType>
+			<Quantity>2</Quantity>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SILKROAD</BuildingType>
+			<ResourceType>RESOURCE_TEA</ResourceType>
+			<Quantity>2</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SILKROAD</BuildingType>
+			<ResourceType>RESOURCE_PORCELAIN</ResourceType>
+			<Quantity>2</Quantity>
+		</Row>
+		
+		
+		
+	
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>100</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_COAL</ResourceType>
+			<Quantity>100</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Quantity>100</Quantity>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Quantity>100</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Quantity>80</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<ResourceType>RESOURCE_LUMBER</ResourceType>
+			<Quantity>100</Quantity>
+		</Row>
+		
+
+	    <Row>
+		      <BuildingType>BUILDING_VIRTUAL_IDOL</BuildingType>
+		      <ResourceType>RESOURCE_CONSUMER</ResourceType>
+		      <Quantity>80</Quantity>
+	    </Row>
+		
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_SATELLITE_SOLAR</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>35</Quantity>
+		</Row>
+
+	</Building_ResourceQuantity>
+	
+
+
+	<Building_YieldChanges>
+
+		<Delete BuildingType="BUILDING_STONEHENGE"/>
+		<Delete BuildingType="BUILDING_GRAND_TEMPLE"/>
+
+	
+		<!--克虏伯-->
+		<Row>
+			<BuildingType>BUILDING_KARRUPP</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>8</Yield>
+		</Row>
+
+		<!--金色大厅-->
+		<Row>
+			<BuildingType>BUILDING_KARLSTEJN</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		
+		<!--华盛顿纪念碑-->
+		<Row>
+			<BuildingType>BUILDING_WASHION_TOWER</BuildingType>
+			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WASHION_TOWER</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+
+
+		
+
+		<!--波塞冬神庙-->
+		<Row>
+			<BuildingType>BUILDING_WHITE_HOUSE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<!--白宫 -->
+		<Row>
+			<BuildingType>BUILDING_WHITE_HOUSE</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		
+
+		<!--大津巴布韦 -->
+		<Row>
+			<BuildingType>BUILDING_DZIMBABWE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<!--普马彭谷神庙 -->
+		<Row>
+			<BuildingType>BUILDING_PUMA_PUMKU</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PUMA_PUMKU</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_PROMETHEUS</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
+		
+		
+		
+		<!--马奇诺 -->
+		<Row>
+			<BuildingType>BUILDING_MAGINOT_LINE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-50</Yield>
+		</Row>
+		
+
+		<!--哥贝克力石阵 -->
+		<Row>
+			<BuildingType>BUILDING_SKARABRAE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<!--巨石阵 -->
+		<Row>
+			<BuildingType>BUILDING_STONEHENGE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>12</Yield>
+		</Row>
+
+		<!--圣殿 -->
+		<Row>
+			<BuildingType>BUILDING_GRAND_TEMPLE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>6</Yield>
+		</Row>
+
+
+		<!--维琪奥桥 -->
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PONTE_VECCHIO</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+
+
+		<Row>
+			<BuildingType>BUILDING_LIBERATION_GATE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-5000</Yield>
+		</Row>
+
+
+
+	
+
+		<Row>
+			<BuildingType>BUILDING_HELIOS_BUILDING</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-5000</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-30</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-250</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-2500</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_FOLDING_MACHINE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_REGISTAN</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_MONASTERY_OF_METEORA</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_OSARAGI</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_MONT_SAINT_MICHEL</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_TORRE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_TORRE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_DIONYSUS</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>6</Yield>
+		</Row>
+	
+		
+		<Row>
+			<BuildingType>BUILDING_ABUSIMBEL</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_PALMYRA</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_YUEYANG</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_SKARABRAE</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_SILKROAD</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>6</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SILKROAD</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	
+		<Row>
+			<BuildingType>BUILDING_SILKROAD</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_MALTA</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_SPHINX</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SPHINX</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_LASCAUX_CAVES</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+		
+	
+		<Row>
+			<BuildingType>BUILDING_FASIL_GHEBBI</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMITHSONIAN</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMITHSONIAN</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VERSAILLES</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SUMMER_PALACE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>30</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>50</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>100</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_OSARAGI</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_CITADEL_OF_CARCASSONNE</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_KRAK_DES_CHEVALIERS</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MONT_SAINT_MICHEL</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DIONYSUS</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>2500</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_MALBORK</BuildingType>
+			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<Yield>20</Yield>
+		</Row>
+
+	</Building_YieldChanges>
+
+
+
+
+	
+	
+	
+	<Building_ClassesNeededInCity>
+
+
+		<Row>
+			<BuildingType>BUILDING_INTELLIGENCE_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOREIGN_OFFICE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_CENTERS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_SOVIET_PALACE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_WHITE_HOUSE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_LIBERATION_GATE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_ULTIMATOWER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOLDING_MACHINE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_HELIOS_BUILDING</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_GLOBALCNIEMA</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
+		</Row>
+	
+		
+		
+		<Row>
+			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_INTERSTATE_HIGHWAY_SYSTEM</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+
+	
+		<Row>
+			<BuildingType>BUILDING_US_BANK_TOWER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_LEP</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV1</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_NATIONAL_HOSPITAL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+	
+
+
+	</Building_ClassesNeededInCity>
+
+
+
+	
+
+	<Building_PrereqBuildingClasses>
+		
+        <Row>
+			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<NumBuildingNeeded>-1</NumBuildingNeeded>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
+			<NumBuildingNeeded>-1</NumBuildingNeeded>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_CENTERS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_HEALTH_BUREAU</BuildingClassType>
+			<NumBuildingNeeded>-1</NumBuildingNeeded>
+		</Row>
+	</Building_PrereqBuildingClasses>
+	
+	
+
+
+
+	<Building_LocalResourceOrs>
+		<Row>
+			<BuildingType>BUILDING_KNOSSOS</BuildingType>
+			<ResourceType>RESOURCE_STONE</ResourceType>
+		</Row>
+
+	
+	</Building_LocalResourceOrs>
+
+
+	<Building_TechEnhancedYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_SPHINX</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>6</Yield>
+		</Row>
+
+		
+	</Building_TechEnhancedYieldChanges>
+
+
+
+
+	<Resources>
+		<Row>
+			<Type>RESOURCE_FOIEGRAS</Type>
+			<Happiness>4</Happiness>
+			<TechCityTrade>TECH_AGRICULTURE</TechCityTrade>
+			<Description>TXT_KEY_RESOURCE_FOIEGRAS</Description>
+			<Civilopedia>TXT_KEY_CIV5_RESOURCE_FOIEGRAS_TEXT</Civilopedia>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<ArtDefineTag>ART_DEF_RESOURCE_GOLD</ArtDefineTag>
+			<AltArtDefineTag>ART_DEF_RESOURCE_GOLD</AltArtDefineTag>
+			<AIObjective>3</AIObjective>
+			<PlacementOrder>4</PlacementOrder>
+			<ConstAppearance>50</ConstAppearance>
+			<MinAreaSize>3</MinAreaSize>
+			<MaxLatitude>0</MaxLatitude>
+			<RandApp1>25</RandApp1>
+			<RandApp2>25</RandApp2>
+			<Player>67</Player>
+			<IconString>[ICON_RES_FOIEGRAS]</IconString>
+			<PortraitIndex>90</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+		</Row>
+	</Resources>
+	
+	
+	<Resource_Flavors>
+		<Row>
+			<ResourceType>RESOURCE_FOIEGRAS</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+	</Resource_Flavors>
+
+
+
+
+	<Policy_BuildingClassYieldChanges>
+		<Row>
+			<PolicyType>POLICY_COMMERCE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_ROCKEFELLER</BuildingClassType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<YieldChange>20</YieldChange>
+		</Row>
+	</Policy_BuildingClassYieldChanges>
+	
+	
+	<Policy_BuildingClassHappiness>
+		<Row>
+			<PolicyType>POLICY_COMMERCE</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_ROCKEFELLER</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+	</Policy_BuildingClassHappiness>
+
+
+
+	
+	
+</GameData>

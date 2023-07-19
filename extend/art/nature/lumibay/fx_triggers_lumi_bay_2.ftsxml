@@ -1,0 +1,13 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="1" time="0.0" duration="99.0" repeat="0" ec="1000" track="2" tier="0" event="ART_DEF_VEFFECT_BIOLUMINESCENT_1" bone="Glow_02" />
+    <trigger type="FTimedTriggerEffect" id="5" time="8.0" duration="99.0" repeat="0" ec="1000" track="2" tier="0" event="ART_DEF_VEFFECT_BIOLUMINESCENT_2" bone="Glow_02" />
+  </triggers>
+</trigger_system>

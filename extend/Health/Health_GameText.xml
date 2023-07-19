@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2/14/2017 6:15:06 AM -->
+<GameData>
+	<Language_en_US>
+
+		<!--PLAGUES-->
+		<Row Tag="TXT_KEY_PLAGUE_AIDS">
+			<Text>艾滋病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_ALCOHOL">
+			<Text>酒精中毒</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_BONES">
+			<Text>脆骨病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_BRONCHITIS">
+			<Text>支气管炎</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_BUBONIC">
+			<Text>黑死病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_CANCER">
+			<Text>癌症</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_CHOLERA">
+			<Text>霍乱</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_DANCING">
+			<Text>流行性舞蹈病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_DENGUE">
+			<Text>登革热</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_DYSENTERY">
+			<Text>痢疾</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_FATIGUE">
+			<Text>肺炭疽</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_FEVER">
+			<Text>回归热</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_FOOD">
+			<Text>食物中毒</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_HIVES">
+			<Text>荨麻疹</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_IMPOTENCE">
+			<Text>肺气肿</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_INFLUENZA">
+			<Text>流感</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_GOUT">
+			<Text>痛风</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_LEG">
+			<Text>不宁腿综合征</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_LEPROSY">
+			<Text>麻风病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_LOCKJAW">
+			<Text>破伤风</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_LUNACY">
+			<Text>埃博拉</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_MALAISE">
+			<Text>抑郁症</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_MEASLES">
+			<Text>囊尾蚴病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_MENIERE">
+			<Text>梅尼埃病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_POSSESSION">
+			<Text>出血热</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_PNEUMONIA">
+			<Text>肺炎</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_RABIES">
+			<Text>狂犬病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SCURVY">
+			<Text>坏血病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SEPTICEMIA">
+			<Text>败血症</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SIDS">
+			<Text>婴儿猝死症</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SLEEPING">
+			<Text>昏睡病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SMALLPOX">
+			<Text>天花</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SYPHILIS">
+			<Text>梅毒</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SUICIDE">
+			<Text>肝炎</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_TUBERCULOSIS">
+			<Text>肺结核</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_TYPHOID">
+			<Text>慢性发热</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_TYPHUS">
+			<Text>斑疹伤寒</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_WEILS">
+			<Text>威尔氏病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_YELLOW">
+			<Text>黄热病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_ZIKA">
+			<Text>寨卡病毒疫</Text>
+		</Row>
+
+		<!--UNITS-->
+		<!--Great Doctor-->
+		<Row Tag="TXT_KEY_UNIT_GREAT_DOCTOR">
+			<Text>大医学家</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_GREAT_DOCTOR_TEXT">
+			<Text>“医学家”处于医学的最前沿，有助于延长和支持人类的生活。他们为疾病寻找新的治疗方法，指导人们过着充实的生活，并帮助我们了解人类状况。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY">
+			<Text>
+				可执行治疗任务或者在城市中建造一座医馆。当执行治疗时，会将你所拥有的所有城市的[ICON_HEALTH]健康度恢复至最大值，并且会清除所有城市与单位的[ICON_PLAGUE]瘟疫状态。
+				[NEWLINE]可执行3次治疗，次数耗尽后被消耗。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_1">
+			<Text>托马斯·贝克特</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_2">
+			<Text>希波克拉底</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_3">
+			<Text>马格迪·雅库布</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_4">
+			<Text>山姆·赫尼曼</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_5">
+			<Text>克劳迪亚斯-盖伦</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_6">
+			<Text>华佗</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_7">
+			<Text>图姆比阿</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_8">
+			<Text>扁鹊</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_9">
+			<Text>伊本·西那</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_10">
+			<Text>伊本鲁希德</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_11">
+			<Text>皮耶费查</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_12">
+			<Text>拉比摩西·本·迈蒙</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_13">
+			<Text>盖伦</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_14">
+			<Text>帕拉塞尔苏斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_15">
+			<Text>加西亚德奥尔塔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_16">
+			<Text>巴雷</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_17">
+			<Text>恰拉卡</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_18">
+			<Text>安·维萨列斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_19">
+			<Text>威廉·哈维</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_20">
+			<Text>张仲景</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_21">
+			<Text>马尔切罗·马尔皮基</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_22">
+			<Text>罗尔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_23">
+			<Text>托马斯·西登汉姆</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_24">
+			<Text>让·阿斯特鲁克</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_25">
+			<Text>格雷戈里</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_26">
+			<Text>爱德华·詹纳</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_27">
+			<Text>拉埃奈克</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_28">
+			<Text>William McBride</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_29">
+			<Text>约翰·斯诺</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_30">
+			<Text>埃米尔·特奥多尔·科赫尔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_31">
+			<Text>塞麦尔维斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_32">
+			<Text>梅奥</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_33">
+			<Text>约瑟夫·李斯特</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_34">
+			<Text>比尔罗斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_35">
+			<Text>让-马丁·沙可</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_36">
+			<Text>海克尔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_37">
+			<Text>罗伯特科赫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_38">
+			<Text>威廉奥斯勒</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_39">
+			<Text>孙思邈</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_40">
+			<Text>艾克曼</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_41">
+			<Text>卡尔·古斯塔夫·荣格</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_42">
+			<Text>威廉·詹姆斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_43">
+			<Text>巴鲁克·布隆伯格</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_44">
+			<Text>查尔斯•让•亨利•尼科尔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_45">
+			<Text>Carlos Chaga</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_46">
+			<Text>弗洛伊德</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_47">
+			<Text>奥托·迈尔霍夫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_48">
+			<Text>乔治·迈诺特</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_49">
+			<Text>Oswaldo Cruz</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_50">
+			<Text>怀尔德·彭菲尔德</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_51">
+			<Text>弗雷德里克·班廷</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_52">
+			<Text>查尔斯德鲁</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_53">
+			<Text>Virginia Apgar</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_54">
+			<Text>乔纳斯·索尔克</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_55">
+			<Text>约瑟夫·兰索夫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_56">
+			<Text>克里斯蒂亚·巴纳德</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_57">
+			<Text>丹尼尔·卡尔顿·盖杜谢克</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_58">
+			<Text>Susruta</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_59">
+			<Text>卡洛·乌尔巴尼</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_60">
+			<Text>狄奥斯科里迪斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_61">
+			<Text>阿布卡色斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_62">
+			<Text>梅里特·普塔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_63">
+			<Text>马尔杜克</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_64">
+			<Text>帕丝夏特</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_65">
+			<Text>赫斯-拉</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_66">
+			<Text>Agnodice</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_67">
+			<Text>Qar</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_68">
+			<Text>西蒙·赛斯</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_69">
+			<Text>路易·巴斯德</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_70">
+			<Text>埃萨吉尔—金—阿普里</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_72">
+			<Text>朱丹溪</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_73">
+			<Text>皇普谧</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_74">
+			<Text>弗拉基米尔·萨莫伊洛夫</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_75">
+			<Text>吉恩·马丁夏科</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_76">
+			<Text>扎博洛特</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_77">
+			<Text>Ivan Puluj</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_78">
+			<Text>弗洛伦斯·南丁格尔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_79">
+			<Text>Betsi Cadwaladr</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_80">
+			<Text>Dorothy Price</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_81">
+			<Text>伐八他</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_82">
+			<Text>博尔德特</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_83">
+			<Text>安德雷亚斯·维萨里</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_84">
+			<Text>格拉尼特</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_85">
+			<Text>伊格纳兹·塞梅尔魏斯</Text>
+		</Row>
+
+
+
+
+
+		<!--Disease-->
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_CITY_CONNECTION">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自城市连接</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_BUILDINGS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自建筑</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_DEVELOPMENT">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自发展</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_MODIFIERS">
+			<Text>[NEWLINE][NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自城市加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_POLICIES">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自政策</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_POPULATION">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自人口</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_TERRAIN">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自地形</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_TRADE">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自贸易路线</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_PUPPET">
+			<Text>[NEWLINE][NEWLINE][ICON_BULLET]{1_Num}%[ICON_DISEASE]来自傀儡状态</Text>
+		</Row>
+
+		<!--Health-->
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_BUILDINGS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自建筑</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_DEVELOPMENT">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自发展</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_FAITH">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自[ICON_PEACE]信仰</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_MODIFIERS">
+			<Text>[NEWLINE][NEWLINE][ICON_BULLET]{1_Num}%[ICON_HEALTH]来自城市加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_POLICIES">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自政策</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_RELIGION">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自宗教</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_SPECIALISTS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自专家</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_TERRAIN">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自地形</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_TRAITS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自领袖特质</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_POPULATION">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自人口</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_PUPPET">
+			<Text>[NEWLINE][NEWLINE][ICON_BULLET]{1_Num}%[ICON_HEALTH]来自傀儡状态</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_GREATWORK">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自杰作</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_OTHER_YIELD">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自其他产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_EMPIRE_MODIFIERS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自全局健康度</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_FRESH_WATER">
+			<Text>[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR][ICON_HEALTH]因临近淡水</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TT_FROM_NO_FRESH_WATER">
+			<Text>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]-{1_Num}[ENDCOLOR][ICON_HEALTH]因缺乏淡水</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_FOOD_TEXT_TT">
+			<Text>{1_Num}[ICON_FOOD]来自健康度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_FOOD_MOD_TEXT_TT">
+			<Text>{1_Num}%[ICON_FOOD]来自健康度</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_GOLD_TEXT_TT">
+			<Text>{1_Num}[ICON_GOLD]来自健康度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_GOLD_MOD_TEXT_TT">
+			<Text>{1_Num}%[ICON_GOLD]来自健康度</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_FAITH_TEXT_TT">
+			<Text>{1_Num}[ICON_PEACE]来自健康度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_FAITH_MOD_TEXT_TT">
+			<Text>{1_Num}%[ICON_PEACE]来自健康度</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_SCIENCE_TEXT_TT">
+			<Text>{1_Num}[ICON_RESEARCH]来自健康度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_SCIENCE_MOD_TEXT_TT">
+			<Text>{1_Num}%[ICON_RESEARCH]来自健康度</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_PRODUCTION_TEXT_TT">
+			<Text>{1_Num}[ICON_PRODUCTION]来自健康度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_CHANGE_PRODUCTION_MOD_TEXT_TT">
+			<Text>{1_Num}%[ICON_PRODUCTION]来自健康度</Text>
+		</Row>
+
+
+		<!--CITY VIEW-->
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_PLAGUE_SENTIMENT_TEXT_TT">
+			<Text>{1_ColourHL}[ICON_PLAGUE]瘟疫进度:{2_Num}/{3_Num}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_PLAGUE_TURNS_TEXT_TT">
+			<Text>{1_ColourHL}城市将在{2_Num}回合后爆发[ICON_PLAGUE]瘟疫[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TEXT_TT">
+			<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当健康度不足以抵消疾病时将积累瘟疫点数，当瘟疫点数到上限时城市会爆发[ICON_PLAGUE]瘟疫。瘟疫的阈值会受政策、建筑、领袖特质等因素加成。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TEXT_TT_FOOD">
+			<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当健康度不足以抵消疾病时将积累瘟疫点数，当瘟疫点数到上限值时城市会爆发[ICON_PLAGUE]瘟疫。瘟疫的阈值会受政策、建筑、领袖特质等因素加成。富余的健康度将按照一定数值（每回合刷新）转换为其他产出。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TEXT">
+			<Text>疾病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TEXT">
+			<Text>健康</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_PLAGUED_TEXT">
+			<Text>瘟疫</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_PLAGUE_NONE_TURNS_TEXT">
+			<Text>[COLOR_HEALTH]无瘟疫风险[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_PLAGUE_RECEDING_TURNS_TEXT">
+			<Text>[COLOR_HEALTH]瘟疫威胁消退[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_PLAGUE_TURNS_TEXT">
+			<Text>[COLOR_DISEASE]{1_NumTurns:number} {1_NumTurns: plural 1?turn; other?turns;}直至[ICON_PLAGUE]瘟疫[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_PLAGUED_TURNS_TEXT">
+			<Text>[COLOR_PLAGUE]{1_Num}回合[ENDCOLOR]</Text>
+		</Row>
+	
+		<Row Tag="TXT_KEY_YIELD_MODIFIER_HEALTH">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}%来自城市健康度</Text>
+		</Row>
+
+
+
+		<Replace Tag="TXT_KEY_BUILDING_CITY_SIZE_SMALL_HELP">
+			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：4格。[NEWLINE][NEWLINE][ICON_BULLET]+6[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]+3[ICON_DISEASE]疾病。[NEWLINE][ICON_BULLET]消耗6[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗6[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]没有交通和污染问题[ENDCOLOR]。[NEWLINE][ICON_BULLET]当人口达到15时升级为[COLOR_POSITIVE_TEXT]中型城市[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CITY_SIZE_MEDIUM_HELP">
+			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：4格。[NEWLINE][NEWLINE][ICON_BULLET]+12[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]+6[ICON_DISEASE]疾病。[NEWLINE][ICON_BULLET]消耗12[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗12[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]交通和污染问题[ENDCOLOR]导致2点额外[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]中型城市[ENDCOLOR]需要有引水渠或自来水系统才能继续增长人口。[NEWLINE][ICON_BULLET]当人口达到26时升级为[COLOR_POSITIVE_TEXT]大型城市[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CITY_SIZE_LARGE_HELP">
+			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：4格。[NEWLINE][NEWLINE][ICON_BULLET]+24[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]+10[ICON_DISEASE]疾病。[NEWLINE][ICON_BULLET]消耗24[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗24[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]交通和污染问题[ENDCOLOR]导致[ICON_FOOD]食物累积-10%以及4点额外[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]大型城市[ENDCOLOR]需要有医院才能继续增长人口。[NEWLINE][ICON_BULLET]当人口达到40时升级为[COLOR_POSITIVE_TEXT]特大城市[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CITY_SIZE_XL_HELP">
+			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：5格。[NEWLINE][NEWLINE][ICON_BULLET][ICON_TOURISM]魅力产出+25%。[NEWLINE][ICON_BULLET]+36[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]+14[ICON_DISEASE]疾病。[NEWLINE][ICON_BULLET]消耗36[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗36[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]交通和污染问题[ENDCOLOR]导致[ICON_FOOD]食物累积-25%以及6点额外[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]特大城市[ENDCOLOR]需要有污水处理厂才能继续增长人口。[NEWLINE][ICON_BULLET]当人口达到60时升级为[COLOR_POSITIVE_TEXT]巨型城市[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CITY_SIZE_XXL_HELP">
+			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：5格。[NEWLINE][NEWLINE][ICON_BULLET][ICON_TOURISM]魅力产出+50%。[NEWLINE][ICON_BULLET]+54[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]+20[ICON_DISEASE]疾病。[NEWLINE][ICON_BULLET]消耗54[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗54[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]交通和污染问题[ENDCOLOR]导致[ICON_FOOD]食物累积-35%以及10点额外[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]+5%解锁未来政策所需的[ICON_CULTURE] 文化值。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]巨型城市[ENDCOLOR]需要有醫學實驗室才能继续增长人口。[NEWLINE][ICON_BULLET]当人口达到80时升级为[COLOR_POSITIVE_TEXT]大都会[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CITY_SIZE_GLOBAL_HELP">
+			<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：5格。[NEWLINE][NEWLINE][ICON_BULLET][ICON_TOURISM]魅力产出+100%。[NEWLINE][ICON_BULLET]+72[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]+28[ICON_DISEASE]疾病。[NEWLINE][ICON_BULLET]消耗72[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗72[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]交通和污染问题[ENDCOLOR]导致[ICON_FOOD]食物累积-55%以及16点额外[ICON_HAPPINESS_4]不满。[NEWLINE][ICON_BULLET]+10%解锁未来政策所需的[ICON_CULTURE] 文化值。[NEWLINE][ICON_BULLET]祝贺你，你建造了一座大地奇观，史诗般的大都市！</Text>
+		</Replace>
+
+
+		<Row Tag="TXT_KEY_PM_CITY_PLAGUED">
+			<Text>城市处于{1_PlagueIcon}瘟疫{1_Turns}回合中![ICON_CITIZEN]人口将减少,临近城市一格内的单位会受到伤害。</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITYBANNER_HEALTH_TEXT_TT_PLAGUE">
+			<Text>城市爆发了{1_PlagueIcon}{2_PlagueDesc}，疾病状态持续{3_Num}回合![ICON_CITIZEN]人口将减少,临近城市一格内的单位会受到伤害。</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_IMPROVEMENT_SANATORIUM">
+			<Text>疗养院</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_SANATORIUM_TEXT">
+			<Text>疗养院，指的是提供物理治疗(如水疗,光疗),并配合饮食、体操等疗法以帮助病人恢复健康的医疗机构。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_SANATORIUM_HELP">
+			<Text>该改良设施为所建成地块+8[ICON_HEALTH]健康度，+8[ICON_GOLDEN_AGE]黄金时代点数。临近一格内的我方单位每回合恢复50点生命值。</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_BUILD_SANATORIUM">
+			<Text>疗养院</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SANATORIUM_HELP">
+			<Text>建造一个疗养院，为地块提供[ICON_HEALTH]健康度与[ICON_GOLDEN_AGE]黄金时代点数产出。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SANATORIUM_REC">
+			<Text>
+				该改良设施可以增加地块的[ICON_HEALTH]健康度与[ICON_GOLDEN_AGE]黄金时代点数产出。
+			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION_SHORT">
+			<Text>瘟疫结束!</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION">
+			<Text>位于{3_CityName}的传染病{1_PlagueIcon}{2_PlagueDesc}已经被消灭!</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITY_PLAGUE_NOTIFICATION_SHORT">
+			<Text>瘟疫!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITY_PLAGUE_NOTIFICATION">
+			<Text>由于持续性的健康度不足，在{3_CityName}爆发了{1_PlagueIcon}{2_PlagueDesc}流行!</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_PLAGUED">
+			<Text>疾病缠身</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_PLAGUED_HELP">
+			<Text>-50%攻击力与防御力。</Text>
+		</Row>
+
+
+
+
+		<Row Tag="TXT_KEY_BUILDING_OPEN_HEAITH">
+			<Text>开启瘟疫</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_DISABLED">
+			<Text>未满足条件，无法执行治疗。（处于瘟疫状态的城市中可治疗城市；临近一格内有患病的己方单位时可治疗单位）</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_UNIT">
+			<Text>治疗患病单位</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_UNIT_HELP">
+			<Text>执行该指令可以治愈临近一格内所有患病的己方单位。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_CITY">
+			<Text>治疗瘟疫城市</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_CITY_HELP">
+			<Text>
+				执行该指令可以消除城市中的瘟疫。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DOCTOR_CURED_UNIT_SHORT">
+			<Text>治愈！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DOCTOR_CURED_UNIT">
+			<Text>医生执行了治疗方案，附近患病单位被治愈！</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROMOTION_DOCTOR">
+			<Text>治疗疾病</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_DOCTOR_HELP">
+			<Text>
+				可以用于治疗城市瘟疫或者治疗临近一格内感染疾病的单位（治疗城市后立即被消耗，治疗单位可以使用三次）。
+			</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_DOCTOR_CURED_SHORT">
+			<Text>治愈！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DOCTOR_CURED">
+			<Text>大医学家执行了治疗方案，你的所有城市及单位均被治愈！</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_DOCTOR_CONSTRUCT_SHORT">
+			<Text>医疗建设！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_DOCTOR_CONSTRUCT">
+			<Text>大医学家在你的城市{1_CityName}中建造了医馆！</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CONSTRUCT_CITY_DISABLED">
+			<Text>未满足条件，无法执行建造。（必须位于未建造医馆的城市中）</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CURE_DISABLED">
+			<Text>未满足条件，无法执行治疗。（当前国内不存在任何瘟疫单位或城市）</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CURE">
+			<Text>救死扶伤</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CURE_HELP">
+			<Text>执行该指令可以治愈你当前所有城市与单位，并且接下来的3回合城市将免疫因健康度不足造成的健康度消耗。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CONSTRUCT_CITY">
+			<Text>建立医疗场所</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CONSTRUCT_CITY_HELP">
+			<Text>
+				执行该指令可以在当前所在城市中建立一座医馆。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_LOCAL_HOSPITAL">
+			<Text>[ICON_HEALTH]医馆</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILDING_LOCAL_HOSPITAL_HELP">
+			<Text>+5[ICON_HEALTH]，提供三个[ICON_GREAT_DOCTOR]医学家槽位，根据城市规模提供额外[ICON_HEALTH]健康度。本城爆发[ICON_PLAGUE]瘟疫时，[ICON_PLAGUE]瘟疫的持续回合数-25%。本城[ICON_RESEARCH]科研产出+15%。</Text>
+		</Row>
+
+
+
+
+
+
+		<Row Tag="TXT_KEY_UNIT_ERALY_DOCTOR">
+			<Text>医生</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_MODERN_DOCTOR">
+			<Text>现代医生</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_HELP_DOCTOR">
+			<Text>
+				可用于治疗瘟疫城市，或者治疗患病单位。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_UNIT_DOCTOR_STRATEGY">
+			<Text>可用于治疗瘟疫城市，或者治疗患病单位。当治疗城市后，或者完成三次单位治疗后将被消耗。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT">
+			<Text>
+				因为古代认为得病是由于恶魔和神等的诅咒，所以医生职业在世界各地同宗教有很大关系。在西方的"医"是象征希腊神话里Asklepios(Asklepios手拿拐杖的形象是WHO世界卫生组织标志)。
+				[NEWLINE]希腊古代按照不同阶级进行诊断治疗，奴隶医生为奴隶工作(奴隶与后世黑人奴隶概念不同)，自由市民找自由市民的医生看病。医生的地位不高贵(这个是由于罗马统治阶级少于奴隶阶级，还有就是大部分医生是由于战争被俘虏)。医生的社会地位的提高是在中世纪的欧洲。因为是关乎人命的重要职业，作为专门技术职务给予特别的地位。但当时中国由于儒家思想的影响，医生的社会地位同陶土木匠等相当，认为是下贱的工作。朝鲜医生社会地位往往低于高级妓女的地位。印度的医生作为统治阶级存在，只看护高贵血统的人。在日本医生称为药师并和宗教联系密切，在江户时代社会地位在士农工商工上，依附于武士阶级存在。日本明治维新后医生的制度变更加完善，中医同西医合并存在。中国;韩国和朝鲜的中医与西医，依然各自独立存在，但中医逐渐减少有失传迹象。
+				[NEWLINE]中国自古不同于西方，宋代以前，对医生的称呼较为复杂，一般根据其专科进行称呼，如食医、疾医、金疮医等。宋代始北方人对医生的尊称为大夫。大夫本是官名。三代时，天子及诸侯皆设之。分为上大夫、中大夫、下大夫3级。秦汉以来，有御史大夫、谏大夫、太中大夫、光禄大夫等名。清代文官阶自正一品至五品，亦称大夫。旧时，太医院专称大夫。加之唐末五代以后官衔泛滥，以官名称呼逐渐形成社会风气，所以，北方人尊称医生为"大夫"。为了区别于官名，将称医生为"大夫"的"大"读成dài，而不读dà。南方人对医生的尊称为郎中。郎中本是官名，即帝王侍从官的通称。其职责原为护卫、陪从，随时建议，备顾问及差遣。战国始有，秦汉治置。后世遂以侍郎、郎中、员外郎为各部要职。郎中作为医生的称呼始自宋代。尊称医生为郎中是南方方言，由唐末五代后官衔泛滥所致。
+				坐堂医是在中药店中为患者诊脉看病的中医大夫。坐堂医源于汉。相传汉代名医张仲景曾作过长沙太守，每月的初一和十五他坐堂行医，并分文不取。为了纪念张仲景崇高的医德和高超的医术，后来许多中药店都冠以某某堂，并把坐在药铺里诊病的医师称为"坐堂医"。直至近代，医生才成为为业医生者之通称。日本在明治以后称呼为:医师先生、医生、老师美国传统性地医生被称Physician。同时，以不同专业领域被分招呼为:内科医生(Physician)和外科医生(Surgeon)，Doctor。
+			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_SPECIALISTSANDGP_DOCTOR_HEADING3_TITLE">
+			<Text>医学家</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAMEOPTION_PLAGUE_DISABLED">
+			<Text>健康度:关闭</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GAMEOPTION_PLAGUE_DISABLED_HELP">
+			<Text>取消所有健康度的效果（该模式下除了数值显示外，健康度不再有任何意义）</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GAMEOPTION_PLAGUE_DESTROYS_CITIES">
+			<Text>瘟疫:爆发</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GAMEOPTION_PLAGUE_DESTROYS_CITIES_HELP">
+			<Text>开启瘟疫爆发（处于瘟疫状态的城市人口将持续减少，关闭后不会爆发瘟疫，但与健康度有关的基础产出加成效果依旧有效）</Text>
+		</Row>
+
+
+
+
+		<Row Tag="TXT_KEY_PRODUCTION_BUILDING_HEALTH">
+			<Text>[ICON_HEALTH]健康:+{1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PRODUCTION_BUILDING_HEALTH_NEGATIVE">
+			<Text>[ICON_HEALTH]健康:{1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PRODUCTION_BUILDING_HEALTHMOD">
+			<Text>[ICON_HEALTH]全局健康:+{1_Num}%</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PRODUCTION_BUILDING_HEALTHMOD_NEGATIVE">
+			<Text>[ICON_HEALTH]全局健康:{1_Num}%</Text>
+		</Row>
+
+	
+
+		<Row Tag="TXT_KEY_PM_CITY_PLAGUED_NOT_OPEN">
+			<Text>未开启瘟疫：城市不会爆发[ICON_PLAGUE]瘟疫。</Text>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+
+		<Row Tag="TXT_KEY_TP_HEALTH_EXPLANATION">
+			<Text>全局[ICON_HEALTH]健康度会影响每座城市的[ICON_HEALTH]健康度，[ICON_HEALTH]健康度低的城市更容易爆发[ICON_PLAGUE]疾病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_NEGATIVE">
+			<Text>[COLOR_WARNING_TEXT]{1_Percent}%[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_POSITIVE">
+			<Text>[COLOR_POSITIVE_TEXT]+{1_Percent}%[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_OVERALL">
+			<Text>[ICON_HEALTH]全局健康:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_TRAIT">
+			<Text>来自地貌特征</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_POLICY">
+			<Text>来自[ICON_CULTURE]政策</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_BUILDING">
+			<Text>来自[ICON_GREAT_ENGINEER]建筑</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_TECH">
+			<Text>来自[ICON_RESEARCH]科技</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_TRADE">
+			<Text>来自[ICON_TURNS_REMAINING]国际贸易</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_TP_HEALTH_GOLDENAGE">
+			<Text>来自[ICON_GOLDEN_AGE]黄金时代</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TP_HEALTH_UNHAPPY">
+			<Text>来自[ICON_HAPPINESS_3]不满意度</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT2">
+			<Text>[COLOR_SAVAGE]+{1_perTurn:number "#.##"}[ENDCOLOR]  [COLOR_SAVAGE]{2_Num}/{3_Num}[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_NEGATIVE2">
+			<Text>[COLOR_SAVAGE]{1_perTurn:number "#.##"}[ENDCOLOR]  [COLOR_SAVAGE]{2_Num}/{3_Num}[ENDCOLOR]</Text>
+		</Row>
+
+
+
+
+
+		<Row Tag="TXT_KEY_PROCESS_HEALTH">
+			<Text>医疗</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROCESS_HEALTH_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]医疗[ENDCOLOR]:城市1%的[ICON_PRODUCTION]产能转化为[ICON_HEALTH]健康度</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROCESS_HEALTH_STRATEGY">
+			<Text>1%的[ICON_PRODUCTION]城市产能转化为[ICON_HEALTH]健康度</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_YIELD_FROM_HEALTH">
+			<Text>{1_Num}{2_IconString} 来自城市健康度</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_YIELD_FROM_CRIME">
+			<Text>{1_Num}{2_IconString} 来自城市犯罪率</Text>
+		</Row>
+
+	</Language_en_US>
+
+
+
+
+	<!--City View Screen-->
+	<Language_en_US>
+
+		<Row Tag="TXT_KEY_SPECIALIST_DOCTOR">
+			<Text>医学家</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SPECIALIST_DOCTOR_STRATEGY">
+			<Text>+2[ICON_HEALTH]健康度，+2[ICON_GREAT_PEOPLE]大医学家点数。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SPECIALIST_DOCTOR_SLOTS">
+			<Text>医学家槽位:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SPECIALIST_DOCTOR_TITLE">
+			<Text>大医学家点数:</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PM_DISEASE_TOTAL">
+			<Text>城市健康度总量:</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PM_CITYVIEW_HEALTH_TEXT">
+			<Text>[COLOR_SAVAGE]健康[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PM_HEALTH_HELP_INFO">
+			<Text>[ICON_HEALTH]健康度不足的城市相关基础产出会减少（减少的数值与城市当前健康度数值关联）。当城市健康度总量耗尽时，城市会爆发[ICON_PLAGUE]瘟疫。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PM_HEALTH_HELP_PLAGUE_INFO">
+			<Text>当城市处于[ICON_PLAGUE]瘟疫时,[ICON_CITIZEN]人口将减少,且每回合会损失部分生命值。临近城市一格内的单位会受到伤害。</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PM_DISEASE_FROM_GOLDENAGE">
+			<Text>[COLOR_POSITIVE_TEXT]{1_Total}[ENDCOLOR][ICON_HEALTH]来自黄金时代</Text>
+		</Row>
+
+
+
+
+		<Row Tag="TXT_KEY_PM_HEALTH_FROM_TOURISM">
+			<Text>[COLOR_POSITIVE_TEXT]{1_Total}[ENDCOLOR][ICON_HEALTH]来自[ICON_TOURISM]魅力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PM_DISEASE_FROM_TOURISM">
+			<Text>[COLOR_WARNING_TEXT]{1_Total}[ENDCOLOR][ICON_HEALTH]来自[ICON_TOURISM]魅力</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_PM_HEALTH_FROM_NOT_ENOUGH_TECH">
+			<Text>[COLOR_WARNING_TEXT]{1_Total}[ENDCOLOR][ICON_HEALTH]因科技落后</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PM_HEALTH_FROM_UNHAPPY">
+			<Text>[COLOR_WARNING_TEXT]{1_Total}[ENDCOLOR][ICON_HEALTH]来自全局不满</Text>
+		</Row>
+
+
+
+
+
+
+
+
+		<Row Tag="TXT_KEY_CITIES_HEALTH_HEADING3_TITLE">
+			<Text>[COLOR_POSITIVE_TEXT]城市健康度[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITIES_HEALTH_HEADING3_BODY">
+			<Text>
+				城市的[ICON_HEALTH]健康度基于是否临近淡水,资源,地貌特征,人口,建筑，政策，改良设施等。城市健康度被全局健康度影响。(参见[COLOR_POSITIVE_TEXT]全局健康度[ENDCOLOR])。
+				[NEWLINE]城市健康度可以每回合影响[ICON_FOOD]基础产出:健康度不足时减少食物储备。健康度不会直接影响城市人口。
+				[NEWLINE]健康度不足的城市在消耗完所有基础健康度后将随机爆发一种类型的[ICON_PLAGUE]瘟疫。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EMPIRE_HEALTH_HEADING3_TITLE">
+			<Text>[COLOR_POSITIVE_TEXT]全局健康度[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EMPIRE_HEALTH_HEADING3_BODY">
+			<Text>
+				全局[ICON_HEALTH]健康度会影响城市健康度(参见[COLOR_POSITIVE_TEXT]城市健康度[ENDCOLOR])。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITIES_PLAGUE_HEADING3_TITLE">
+			<Text>[COLOR_NEGATIVE_TEXT]瘟疫[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITIES_PLAGUE_HEADING3_BODY">
+			<Text>
+				[ICON_PLAGUE]瘟疫只会出现在[ICON_HEALTH]健康度耗尽的城市。瘟疫可能蔓延到附近的城市，跨越国际边界，并通过陆路和海路传播到遥远的城市。
+				[NEWLINE]
+				[NEWLINE][COLOR_POSITIVE_TEXT]瘟疫效果[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]如果城市爆发了瘟疫，将导致额外的人口损失。
+				[NEWLINE][ICON_BULLET]使用大医学家，可以立即治愈饱受困扰的城市。
+				[NEWLINE][ICON_BULLET]受瘟疫困扰的城市无法恢复生命值，而且有几率将瘟疫传播到附近的城市。
+				[NEWLINE][ICON_BULLET]在瘟疫城市附近的单位每回合都会受到伤害。
+				[NEWLINE][ICON_BULLET]当临近瘟疫城市时，单位会染上[COLOR_NEGATIVE_TEXT]疾病[ENDCOLOR]。效果:防御力降低，降低邻近城市的健康度。
+			</Text>
+		</Row>
+
+
+
+
+		<Row Tag="TXT_KEY_CH_OVERVIEW">
+			<Text>健康度总览</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_CITIES">
+			<Text>城市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_CITY">
+			<Text>城市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RISK">
+			<Text>疾病风险</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CH_STATUS_PLAGUED_TT">
+			<Text>城市爆发了{1_PlagueIcon}{2_PlagueDesc}，持续{3_turns}回合</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_CH_CITY_TT">
+			<Text>点击进入城市界面</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_SORT_STATUS_TT">
+			<Text>当前疾病状态</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_SORT_NAME_TT">
+			<Text>单击按城市名字排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_SORT_HEALTH_TT">
+			<Text>单击按城市健康状况排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RISK_TT">
+			<Text>单击按疾病风险排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RISK_NONE">
+			<Text>[COLOR_POSITIVE_TEXT]无[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RISK_LOW">
+			<Text>[COLOR_POSITIVE_TEXT]低[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RISK_AVERAGE">
+			<Text>中等</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RISK_HIGH">
+			<Text>[COLOR_WARNING_TEXT]高[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RISK_EXTREME">
+			<Text>[COLOR_WARNING_TEXT]极高[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_DIPLO_CORNER_HOOK">
+			<Text>城市健康度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_DIPLO_CORNER_HOOK_TT">
+			<Text>所有城市[ICON_HEALTH]健康度摘要和详细信息</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_PLAGUE_SPREAD_SHORT">
+			<Text>疫情蔓延！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SPREAD">
+			<Text>{1_PlagueName}导致的[ICON_PLAGUE]瘟疫传播到了{2_CityName}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PLAGUE_DEATH_SHORT">
+			<Text>瘟疫肆虐!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_DEATH">
+			<Text>受{1_PlagueIcon}{2_PlagueDesc}的影响，{3_CityName}的人口持续减少。</Text>
+		</Row>
+		
+
+
+
+
+		<Row Tag="TXT_KEY_PLAGUE_SPY_SABOTAGE_US">
+			<Text>一个外国间谍在{1_CityName}释放了一种致命的[ICON_PLAGUE]疾病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAGUE_SPY_SABOTAGE_THEM">
+			<Text>我们的间谍在{1_CityName}释放了一种致命的[ICON_PLAGUE]疾病</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_PLAGUE_DISEASE1">
+			<Text>[ICON_PLAGUE]</Text>
+		</Row>
+
+
+
+
+	</Language_en_US>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</GameData>

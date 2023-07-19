@@ -1,0 +1,7 @@
+<Asset>
+	<Mesh file="Canal_IND_Bent_Base_120_CON.gr2" source="Max" />
+	<Texture file="Canal_Base_B.dds" source="Max" />
+	<Texture file="Canal_Base_B_SREF.dds" source="Max" />
+	<Texture file="Water_B.dds" source="Max" />
+	<Texture file="Water_H.dds" source="Max" />
+</Asset>

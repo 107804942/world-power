@@ -1,0 +1,6437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<!--大海怪-->
+	<Audio_Sounds>
+
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_ATTACK_VOX</SoundID>
+			<Filename>krakenattackvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_DEATH_VOX</SoundID>
+			<Filename>krakendeathvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_RUN_LOOP</SoundID>
+			<Filename>krakenmovesweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_RUN_STOP</SoundID>
+			<Filename>krakenrunstop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_OCEAN_END</SoundID>
+			<Filename>OceanEnd</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_WATER_SWISH</SoundID>
+			<Filename>waterswish</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_MOVEMENT_SWEETENER</SoundID>
+			<Filename>krakenmovesweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SPLASH_LARGE</SoundID>
+			<Filename>splashlarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_EMERGE</SoundID>
+			<Filename>krakenemerge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_RESOURCE_BREACHSPLASH</SoundID>
+			<Filename>breachsplash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_UNDERWATER</SoundID>
+			<Filename>underwater</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_WATER_VOX</SoundID>
+			<Filename>krakenwatervox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_KRAKEN_RUN_VOX</SoundID>
+			<Filename>krakenrunvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_EXPLOSION_P</SoundID>
+			<Filename>Explosion04P</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+	</Audio_Sounds>
+	
+	<Audio_3DSounds>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_ATTACK_VOX</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_ATTACK_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_DEATH_VOX</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_DEATH_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_RUN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_RUN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_RUN_STOP</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_RUN_STOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_OCEAN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_OCEAN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>50</MaxVolume>
+			<MinVolume>50</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_OCEAN_END</ScriptID>
+			<SoundID>SND_UNIT_OCEAN_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>50</MaxVolume>
+			<MinVolume>50</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_WATER_SWISH</ScriptID>
+			<SoundID>SND_UNIT_WATER_SWISH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>20</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_MOVEMENT_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_MOVEMENT_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>20</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_SPLASH_LARGE</ScriptID>
+			<SoundID>SND_UNIT_SPLASH_LARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_EMERGE</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_EMERGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_BREACHSPLASH</ScriptID>
+			<SoundID>SND_RESOURCE_BREACHSPLASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>40</MaxVolume>
+			<MinVolume>40</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_UNDERWATER</ScriptID>
+			<SoundID>SND_UNIT_UNDERWATER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_SWORD_SWING</ScriptID>
+			<SoundID>SND_UNIT_SWING</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_WATER_VOX</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_WATER_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_RUN_VOX</ScriptID>
+			<SoundID>SND_UNIT_KRAKEN_RUN_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_KRAKEN_ENERGY_IMPACT</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_EXPLOSION_P</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+	</Audio_3DSounds>
+
+
+
+
+
+
+	<!--蠕虫-->
+	<Audio_Sounds>
+		
+		<Row>
+			<SoundID>SND_UNIT_RUN_LOOP</SoundID>
+			<Filename>wormrunloop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ENTER_$(TERRAIN)</SoundID>
+			<Filename>wormrunloop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+          <Row>
+			<SoundID>SND_UNIT_ATTACK_VOX</SoundID>
+			<Filename>wormattackvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+            <Row>
+			<SoundID>SND_UNIT_SWING</SoundID>
+			<Filename>wormswing</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+          <Row>
+			<SoundID>SND_UNIT_IDLE_VOX</SoundID>
+			<Filename>wormidlevox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+          <Row>
+			<SoundID>SND_UNIT_IDLE_MOVE_6S</SoundID>
+			<Filename>wormidlemove6s</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+          <Row>
+			<SoundID>SND_UNIT_IDLE_MOVE_4S</SoundID>
+			<Filename>wormidlemove4s</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+      <Row>
+			<SoundID>SND_UNIT_COMBAT_READY_VOX</SoundID>
+			<Filename>wormcombatreadyvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+       <Row>
+			<SoundID>SND_UNIT_ACID_BREATH</SoundID>
+			<Filename>wormacidbreath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+      <Row>
+			<SoundID>SND_UNIT_DEATH_VOX</SoundID>
+			<Filename>wormdeathvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+	<Audio_3DSounds>
+
+
+         <Row>
+			<ScriptID>AS3D_UNIT_WORM_DEATH_VOX</ScriptID>
+			<SoundID>SND_UNIT_DEATH_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+        <Row>
+			<ScriptID>AS3D_UNIT_WORM_ACID_BREATH</ScriptID>
+			<SoundID>SND_UNIT_ACID_BREATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+        <Row>
+			<ScriptID>AS3D_UNIT_WORM_COMBAT_READY_VOX</ScriptID>
+			<SoundID>SND_UNIT_COMBAT_READY_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+         <Row>
+			<ScriptID>AS3D_UNIT_WORM_IDLE_MOVE_4S</ScriptID>
+			<SoundID>SND_UNIT_IDLE_MOVE_4S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+         <Row>
+			<ScriptID>AS3D_UNIT_WORM_IDLE_MOVE_6S</ScriptID>
+			<SoundID>SND_UNIT_IDLE_MOVE_6S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+            <Row>
+			<ScriptID>AS3D_UNIT_WORM_IDLE_VOX</ScriptID>
+			<SoundID>SND_UNIT_IDLE_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_WORM_RUN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_RUN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>35</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_WORM_ENTER_$(TERRAIN)</ScriptID>
+			<SoundID>SND_UNIT_ENTER_$(TERRAIN)</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_WORM_ATTACK_VOX</ScriptID>
+			<SoundID>SND_UNIT_ATTACK_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+          <Row>
+			<ScriptID>AS3D_UNIT_WORM_SWING</ScriptID>
+			<SoundID>SND_UNIT_SWING</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+
+	<!--机动橇-->
+	<Audio_Sounds>
+
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_RUN_LOOP</SoundID>
+			<Filename>airfighterturn</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_RUN_STOP</SoundID>
+			<Filename>AutosledRunStop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_READY_DOWN</SoundID>
+			<Filename>AutosledReadyDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_READY_UP</SoundID>
+			<Filename>AutosledReadyUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_SCANNER_UP</SoundID>
+			<Filename>AutosledScannerUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_SCANNER_DOWN</SoundID>
+			<Filename>AutosledScannerDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_GUN_CHARGE_LARGE</SoundID>
+			<Filename>GunChargeLarge04SP</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_GUN_FIRE</SoundID>
+			<Filename>Cavalry04HSCannonFire1</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_FIRE_VOLLEY</SoundID>
+			<Filename>Cavalry04SPFireVolley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AUTOSLED_FIRE_SINGLE</SoundID>
+			<Filename>Cavalry04SPFireSingle</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	
+		
+	</Audio_Sounds>
+
+	<Audio_3DSounds>
+
+
+	
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_FIRE_SINGLE</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_FIRE_SINGLE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>50</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_FIRE_VOLLEY</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_FIRE_VOLLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_GUN_FIRE</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_GUN_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_GUN_CHARGE_LARGE</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_GUN_CHARGE_LARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_SCANNER_DOWN</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_SCANNER_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_SCANNER_UP</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_SCANNER_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_RUN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_RUN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_RUN_STOP</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_RUN_STOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_READY_DOWN</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_READY_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_READY_UP</ScriptID>
+			<SoundID>SND_UNIT_AUTOSLED_READY_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+	</Audio_3DSounds>
+
+
+	<!--aegis-->
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_CLOTH</SoundID>
+			<Filename>aegiscloth</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_DEATH</SoundID>
+			<Filename>aegisdeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_RUN_STOP_SWEETENER</SoundID>
+			<Filename>aegisrunstopsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_GUN_MOVE</SoundID>
+			<Filename>aegisgunmove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_GUN_SPIN</SoundID>
+			<Filename>aegisgunspin</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_FOOTSTEP</SoundID>
+			<Filename>aegisfootstep</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_FOOTSTEP_SWEETENER</SoundID>
+			<Filename>aegisfootstepsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_SERVO_02</SoundID>
+			<Filename>aegisservo02</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_SERVO_LEG</SoundID>
+			<Filename>aegisservoleg</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_MOVE</SoundID>
+			<Filename>metallargemove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_MISSILE_FIRE</SoundID>
+			<Filename>04smissilefire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_MISSILE_FIRE_END</SoundID>
+			<Filename>03pmissilefireend</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_CRASH</SoundID>
+			<Filename>metallargecrash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_FALL</SoundID>
+			<Filename>metallargefall</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+
+
+	<Audio_3DSounds>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_METAL_LARGE_FALL</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_FALL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_METAL_LARGE_CRASH</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_CRASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_METAL_LARGE_MOVE</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_SERVO_LEG</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_SERVO_LEG</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_SERVO_02</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_SERVO_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_FOOTSTEP_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_FOOTSTEP_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_FOOTSTEP</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_FOOTSTEP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_GUN_SPIN</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_GUN_SPIN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_GUN_MOVE</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_GUN_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_CLOTH</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_CLOTH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_DEATH</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_AEGIS_RUN_STOP_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_RUN_STOP_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+	</Audio_3DSounds>
+
+
+
+
+
+
+	<!--粒子炮-->
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_SMALL_GUN_FIRE</SoundID>
+			<Filename>NavalFighter04HSSmallGunFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_CANNON_FIRE</SoundID>
+			<Filename>NavalFighter04HSCannonFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_HATCH_CLOSE</SoundID>
+			<Filename>NavalFighter04HSHatchClose</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_HATCH_OPEN</SoundID>
+			<Filename>NavalFighter04HSHatchOpen</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_MISSILE_FIRE</SoundID>
+			<Filename>04smissilefire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_METAL_LARGE_CRASH</SoundID>
+			<Filename>metallargecrash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_SINK</SoundID>
+			<Filename>metallargecrash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_IMPACT_INCOMING</SoundID>
+			<Filename>NavalMeleeImpactIncoming</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_GUN_MOVE</SoundID>
+			<Filename>gunmove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+
+
+	<Audio_3DSounds>
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_GUN_MOVE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_GUN_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_IMPACT_INCOMING</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_IMPACT_INCOMING</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_SINK</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_SINK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+		<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_METAL_LARGE_CRASH</ScriptID>
+		<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_METAL_LARGE_CRASH</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>100</MaxVolume>
+		<MinVolume>60</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_SMALL_GUN_FIRE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_SMALL_GUN_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_CANNON_FIRE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_CANNON_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_HATCH_CLOSE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_HATCH_CLOSE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04HS_HATCH_OPEN</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04HS_HATCH_OPEN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+	<!--泰坦战舰-->
+	<Audio_Sounds>
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04P_CANNON_FIRE</SoundID>
+			<Filename>levtankcannonfire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+
+
+	<Audio_3DSounds>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04P_CANNON_FIRE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04P_CANNON_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+	</Audio_3DSounds>
+
+
+
+
+	<!--navalfighter04sp-->
+	<Audio_Sounds>
+
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_MOVE</SoundID>
+			<Filename>NavalFighter04SPTurretMove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_FIRE_VOLLEY</SoundID>
+			<Filename>NavalFighter04SPFireVolley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_FIRE_SINGLE</SoundID>
+			<Filename>levtankguncharge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH</SoundID>
+			<Filename>NavalFighter04SPDeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH_CREAK</SoundID>
+			<Filename>explosionlarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_EXPLOSION_LARGE_WATER</SoundID>
+			<Filename>explosionlargewater</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_RUN_LOOP</SoundID>
+			<Filename>NavalFighter04SPRunStop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_FIRE_SINGLE_FLOURISH</SoundID>
+			<Filename>levtankcannonfire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_IMPACT_$(WEAPON)</SoundID>
+			<Filename>explosion200pound</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_MOVE_02</SoundID>
+			<Filename>NavalFighter04SPTurretMove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_04</SoundID>
+			<Filename>NavalFighter04SPTurretFidget04</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_03</SoundID>
+			<Filename>NavalFighter04SPTurretFidget03</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_02</SoundID>
+			<Filename>NavalFighter04SPTurretFidget02</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_01</SoundID>
+			<Filename>NavalFighter04SPTurretFidget01</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH_SPLASH_A</SoundID>
+			<Filename>NavalMeleeDeathSplash02</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_RUN_STOP_SPLASH</SoundID>
+			<Filename>Sub03SRunStop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+
+	</Audio_Sounds>
+
+	<Audio_3DSounds>
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_RUN_STOP_SPLASH</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_RUN_STOP_SPLASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_DEATH_SPLASH_A</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH_SPLASH_A</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_01</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_01</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_02</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_03</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_03</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_04</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_FIDGET_04</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_TURRET_MOVE_02</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_MOVE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_TURRET_MOVE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_TURRET_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_FIRE_VOLLEY</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_FIRE_VOLLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_FIRE_SINGLE</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_FIRE_SINGLE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_DEATH</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_DEATH_CREAK</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH_CREAK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_EXPLOSION_LARGE_WATER</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_EXPLOSION_LARGE_WATER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_RUN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_RUN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04SP_FIRE_SINGLE_FLOURISH</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_FIRE_SINGLE_FLOURISH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_IMPACT_$(WEAPON)</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_IMPACT_$(WEAPON)</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+	</Audio_3DSounds>
+
+	
+	
+		
+
+	
+	
+
+
+		
+		
+		
+		
+		
+		
+	<!--CARVR-->
+	<Audio_Sounds>
+
+		<Row>
+			<SoundID>SND_UNIT_RIFLE_FIRE_CNDR</SoundID>
+			<Filename>riflefirecndr</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_CARVR_SCAN</SoundID>
+			<Filename>scan</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04S_SOLDIER_FOLEY</SoundID>
+			<Filename>soldierfoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_CARVR_MISSILE_FIRE</SoundID>
+			<Filename>03smissilefire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_CARVR_GUN_CHARGE</SoundID>
+			<Filename>gunchargecndr</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+	
+
+		<Row>
+			<SoundID>SND_UNIT_CARVR_FOOTSTEP_SWEETENER</SoundID>
+			<Filename>Marine04SPFootstepSweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_CARVR_MOVE_SUIT_RUN</SoundID>
+			<Filename>marine03smovesuitrun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_CARVR_SERVO_LARGE_DOWN</SoundID>
+			<Filename>servolargedown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_CARVR_SERVO_LARGE_UP</SoundID>
+			<Filename>servolargeup</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_CARVR_DEATH_VOX</SoundID>
+			<Filename>sabrvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_CARVR_EXPLOSION</SoundID>
+			<Filename>explosionlarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_CARVR_METAL_LARGE_CRASH</SoundID>
+			<Filename>metallargecrash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_CARVR_METAL_LARGE_FALL</SoundID>
+			<Filename>metallargefall</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_CARVR_POWER_DOWN</SoundID>
+			<Filename>cavalrypowerdown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+
+	</Audio_Sounds>
+
+
+
+
+
+
+	<Audio_3DSounds>
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_SCAN</ScriptID>
+			<SoundID>SND_UNIT_CARVR_SCAN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_MARINE_04S_SOLDIER_FOLEY</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04S_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_MISSILE_FIRE</ScriptID>  
+			<SoundID>SND_UNIT_CARVR_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_CARVR_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+	
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_SERVO_LEG</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_SERVO_LEG</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_RIFLE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_RIFLE_FIRE_CNDR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_FOOTSTEP_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_CARVR_FOOTSTEP_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_MOVE_SUIT_RUN</ScriptID>
+			<SoundID>SND_UNIT_CARVR_MOVE_SUIT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_SERVO_LARGE_UP</ScriptID>
+			<SoundID>SND_UNIT_CARVR_SERVO_LARGE_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_SERVO_LARGE_DOWN</ScriptID>
+			<SoundID>SND_UNIT_CARVR_SERVO_LARGE_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_DEATH_VOX</ScriptID>
+			<SoundID>SND_UNIT_CARVR_DEATH_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_CARVR_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_METAL_LARGE_CRASH</ScriptID>
+			<SoundID>SND_UNIT_CARVR_METAL_LARGE_CRASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_METAL_LARGE_FALL</ScriptID>
+			<SoundID>SND_UNIT_CARVR_METAL_LARGE_FALL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CARVR_POWER_DOWN</ScriptID>
+			<SoundID>SND_UNIT_CARVR_POWER_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+	
+	
+		
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--GHOST-->
+
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_FOLEY_SHORT_FIDGET</SoundID>
+			<Filename>Marine04HSFoleyShort</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_FOLEY_SHORT</SoundID>
+			<Filename>Marine04HSFoleyShort</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_CANNON_FIRE</SoundID>
+			<Filename>GunFire04SH</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_FOLEY_LONG</SoundID>
+			<Filename>Marine04HSFoleyLong</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_BREATH</SoundID>
+			<Filename>Marine04HSBreath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FOLEY</SoundID>
+			<Filename>Marine04HSGunFoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_MOVE_SUIT</SoundID>
+			<Filename>Marine04HMoveSuit</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FOLEY_FIDGET</SoundID>
+			<Filename>Marine04HSGunFoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_MOVEMENT_SWEETENER</SoundID>
+			<Filename>03hmovementsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FOLEY_RUN</SoundID>
+			<Filename>Marine04HSGunFoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_LOAD</SoundID>
+			<Filename>04sgunchargelarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_ACTIVATE_DOOR</SoundID>
+			<Filename>ColonistDoor</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_EXPLOSION</SoundID>
+			<Filename>ExplosionSmallElectrical</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_BREATH_RUN</SoundID>
+			<Filename>Marine04HSBreath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_AMMO_LOAD</SoundID>
+			<Filename>RangedMarine04HPAmmoLoad</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_BOX_DROP</SoundID>
+			<Filename>RangedMarine04HPAmmoBoxDrop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_BOX_OPEN</SoundID>
+			<Filename>RangedMarine04HPAmmoBoxOpen</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_BOX_CLOSE</SoundID>
+			<Filename>RangedMarine04HPAmmoBoxClose</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FIRE</SoundID>
+			<Filename>GunFire04SH</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+
+
+
+
+	<Audio_3DSounds>
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_FOLEY_SHORT_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_FOLEY_SHORT_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_GUN_FIRE</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_FOLEY_SHORT</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_FOLEY_SHORT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_CANNON_FIRE</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_CANNON_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_FOLEY_LONG</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_FOLEY_LONG</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_BREATH</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_BREATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_GUN_FOLEY</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_MOVE_SUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_GUN_FOLEY_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FOLEY_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_MOVEMENT_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_MOVEMENT_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_GUN_FOLEY_RUN</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_FOLEY_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_GUN_LOAD</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_GUN_LOAD</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_ACTIVATE_DOOR</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_ACTIVATE_DOOR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_BREATH_RUN</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_BREATH_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HP_AMMO_LOAD</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_AMMO_LOAD</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_AMMO_BOX_DROP</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_AMMO_BOX_DROP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_AMMO_BOX_CLOSE</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_AMMO_BOX_CLOSE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04HS_AMMO_BOX_OPEN</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_AMMO_BOX_OPEN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+	</Audio_3DSounds>
+
+
+
+<!--sabr-->
+
+
+
+
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_UNIT_SABR_SERVO_LEG</SoundID>
+			<Filename>sabrservoleg</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SABR_FOOTSTEP_SWEETENER</SoundID>
+			<Filename>sabrfootstepsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SABR_FOOTSTEP</SoundID>
+			<Filename>sabrfootstep</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SABR_DEATH</SoundID>
+			<Filename>sabrdeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SABR_VOX</SoundID>
+			<Filename>sabrvox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SABR_EXPLOSION</SoundID>
+			<Filename>explosionsmallelectrical</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SABR_DEATH_MASK</SoundID>
+			<Filename>MarineDeathMask</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SABR_SCAN</SoundID>
+			<Filename>ScanCNDR</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SABR_MOVE_SUIT</SoundID>
+			<Filename>Marine03SMoveSuitRun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04S_MOVE_SUIT</SoundID>
+			<Filename>marine03smovesuit</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_GUN_SWEETENER</SoundID>
+			<Filename>03SGunSweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_SABR_GUN_CHARGE</SoundID>
+			<Filename>gunchargecndr</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SABR_RIFLE_FIRE</SoundID>
+			<Filename>riflefirecndr</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SABR_GUN_CHARGE_02</SoundID>
+			<Filename>04SGunChargeLarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_SABR_MISSILE_FIRE_02</SoundID>
+			<Filename>03SMissileFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SABR_GUN_LOAD_LARGE</SoundID>
+			<Filename>LargeGunLoadS</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SABR_METAL_LARGE_STOP</SoundID>
+			<Filename>MetalLargeStop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+	</Audio_Sounds>
+
+	
+	<Audio_3DSounds>	
+	<Row>
+			<ScriptID>AS3D_UNIT_SABR_SERVO_LEG</ScriptID>
+			<SoundID>SND_UNIT_SABR_SERVO_LEG</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_FOOTSTEP_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_SABR_FOOTSTEP_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_FOOTSTEP</ScriptID>
+			<SoundID>SND_UNIT_SABR_FOOTSTEP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_DEATH</ScriptID>
+			<SoundID>SND_UNIT_SABR_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_VOX</ScriptID>
+			<SoundID>SND_UNIT_SABR_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_SABR_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_DEATH_MASK</ScriptID>
+			<SoundID>SND_UNIT_SABR_DEATH_MASK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_SCAN</ScriptID>
+			<SoundID>SND_UNIT_SABR_SCAN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_SABR_MOVE_SUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_MARINE_04S_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04S_MOVE_SUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+
+
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_GUN_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_GUN_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>35</MinVolume>
+           <IsMusic>0</IsMusic>
+		</Row>
+		
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_SABR_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_RIFLE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_SABR_RIFLE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_GUN_CHARGE_02</ScriptID>
+			<SoundID>SND_UNIT_SABR_GUN_CHARGE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_MISSILE_FIRE_02</ScriptID>
+			<SoundID>SND_UNIT_SABR_MISSILE_FIRE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_GUN_LOAD_LARGE</ScriptID>
+			<SoundID>SND_UNIT_SABR_GUN_LOAD_LARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SABR_METAL_LARGE_STOP</ScriptID>
+			<SoundID>SND_UNIT_SABR_METAL_LARGE_STOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+	</Audio_3DSounds>
+
+
+
+
+
+	<!--ANGEL-->
+
+
+
+
+	<Audio_Sounds>
+
+         <Row>
+	     <SoundID>SND_UNIT_ANGEL_RUN</SoundID>
+		<Filename>marine03smovesuitrun</Filename>
+		<LoadType>DynamicResident</LoadType>
+	    </Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_FORTIFY</SoundID>
+			<Filename>Fortify</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SOLDIER_FOLEY</SoundID>
+			<Filename>SoldierFoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SOLDIER_FOLEY_LOUD</SoundID>
+			<Filename>SoldierFoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SOLDIER_FOLEY_RUN</SoundID>
+			<Filename>SoldierFoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_ARMOUR_MOVE_20</SoundID>
+			<Filename>ArmourMove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_MACHINE_GUN</SoundID>
+			<Filename>RifleFire03ST1</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_GUN</SoundID>
+			<Filename>AirFighter03SGun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_FOOTSTEP_SWEETENER</SoundID>
+			<Filename>SABRFootstepSweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_FOOTSTEP</SoundID>
+			<Filename>SABRFootstep</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SCAN</SoundID>
+			<Filename>ScanCNDR</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_ERROR</SoundID>
+			<Filename>ErrorCNDR</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_RIFLE_FIRE</SoundID>
+			<Filename>RifleFireCNDR</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_GUN_CHARGE</SoundID>
+			<Filename>04SGunCharge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_GUN_CHARGE_02</SoundID>
+			<Filename>04SGunChargeLarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_GUN_LOAD_LARGE</SoundID>
+			<Filename>LargeGunLoadS</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_MISSILE_FIRE_02</SoundID>
+			<Filename>04SMissileFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_PANEL</SoundID>
+			<Filename>Panel</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_DEATH</SoundID>
+			<Filename>SABRDeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_DEATH_SWEETENER</SoundID>
+			<Filename>04SDeathSweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_VOX</SoundID>
+			<Filename>SABRVox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LEG_02</SoundID>
+			<Filename>AegisServoLeg</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LEG</SoundID>
+			<Filename>SABRServoLeg</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LARGE_UP</SoundID>
+			<Filename>ServoLargeUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LARGE_DOWN</SoundID>
+			<Filename>ServoLargeDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_MISSILE_FIRE</SoundID>
+			<Filename>04SMissileFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_MISSILE_FIRE_END</SoundID>
+			<Filename>03SMissileFireEnd</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_METAL_LARGE_MOVE</SoundID>
+			<Filename>MetalLargeMove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_METAL_LARGE_CRASH</SoundID>
+			<Filename>MetalLargeCrash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_METAL_LARGE_FALL</SoundID>
+			<Filename>MetalLargeFall</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_DEATH_MASK</SoundID>
+			<Filename>MarineDeathMask</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_MOVE_SUIT</SoundID>
+			<Filename>Marine03SMoveSuit</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_MOVE_SUIT_RUN</SoundID>
+			<Filename>Marine03SMoveSuitRun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_ACTIVATE_DOOR</SoundID>
+			<Filename>ColonistDoor</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_EXPLOSION</SoundID>
+			<Filename>ExplosionSmallElectrical</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_EXPLOSION_SMALL_GLITCHY</SoundID>
+			<Filename>ExplosionSmallH</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_HYDRAULIC_SHORT</SoundID>
+			<Filename>HydraulicShort</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_ANGEL_POWER_DOWN</SoundID>
+			<Filename>CavalryPowerDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+	</Audio_Sounds>
+
+
+
+
+
+
+
+
+	<Audio_3DSounds>
+		<Row>
+		<ScriptID>AS3D_UNIT_ANGEL_RUN</ScriptID>
+		<SoundID>SND_UNIT_ANGEL_RUN</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>90</MaxVolume>
+		<MinVolume>70</MinVolume>
+		<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_FORTIFY</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_FORTIFY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SOLDIER_FOLEY</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>50</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SOLDIER_FOLEY_LOUD</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SOLDIER_FOLEY_LOUD</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SOLDIER_FOLEY_RUN</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SOLDIER_FOLEY_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>50</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_ARMOUR_MOVE_20</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_ARMOUR_MOVE_20</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>40</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_MACHINE_GUN</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_MACHINE_GUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_GUN</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_GUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_FOOTSTEP_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_FOOTSTEP_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>	
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_FOOTSTEP</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_FOOTSTEP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SCAN</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SCAN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>50</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_ERROR</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_ERROR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_RIFLE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_RIFLE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_GUN_CHARGE_02</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_GUN_CHARGE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_GUN_LOAD_LARGE</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_GUN_LOAD_LARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>40</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_MISSILE_FIRE_02</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_MISSILE_FIRE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_PANEL</ScriptID>
+			<SoundID>SND_UNIT_PANEL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>50</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_DEATH</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_DEATH_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_DEATH_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_VOX</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SERVO_LEG_02</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LEG_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>30</MaxVolume>
+			<MinVolume>25</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SERVO_LEG</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LEG</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SERVO_LARGE_UP</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LARGE_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_SERVO_LARGE_DOWN</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_SERVO_LARGE_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_METAL_LARGE_MOVE</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_METAL_LARGE_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>50</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_METAL_LARGE_CRASH</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_METAL_LARGE_CRASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_METAL_LARGE_FALL</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_METAL_LARGE_FALL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_DEATH_MASK</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_DEATH_MASK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>50</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_MOVE_SUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>30</MaxVolume>
+			<MinVolume>20</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_MOVE_SUIT_RUN</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_MOVE_SUIT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>25</MaxVolume>
+			<MinVolume>18</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+	
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_ACTIVATE_DOOR</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_ACTIVATE_DOOR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_EXPLOSION_SMALL_GLITCHY</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_EXPLOSION_SMALL_GLITCHY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_HYDRAULIC_SHORT</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_HYDRAULIC_SHORT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>35</MaxVolume>
+			<MinVolume>25</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_ANGEL_POWER_DOWN</ScriptID>
+			<SoundID>SND_UNIT_ANGEL_POWER_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+
+		
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 悬浮攻城炮-->
+
+	<Audio_Sounds>
+	<Row>
+		<SoundID>SND_UNIT_SIEGE_04S_MACHINE_GUN</SoundID>
+		<Filename>RifleFire03ST0</Filename>
+		<LoadType>DynamicResident</LoadType>
+	</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_GUN</SoundID>
+			<Filename>AirFighter03SGun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_GUN_CHARGE_LARGE</SoundID>
+			<Filename>04SGunChargeLarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_GUN_LOAD_LARGE</SoundID>
+			<Filename>LargeGunLoadS</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_MISSILE_FIRE</SoundID>
+			<Filename>04SMissileFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_MISSILE_FIRE_END</SoundID>
+			<Filename>03SMissileFireEnd</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_SERVO_LARGE_UP</SoundID>
+			<Filename>ServoLargeUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+			
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_SERVO_LARGE_DOWN</SoundID>
+			<Filename>ServoLargeDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_TURRET_MOVE_END</SoundID>
+			<Filename>TurretMoveEnd</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_ACTIVATE_DOOR</SoundID>
+			<Filename>ColonistDoor</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_DEATH</SoundID>
+			<Filename>Siege03SDeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_HOVER_START</SoundID>
+			<Filename>HoverStart</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_ATTACK_HOVER</SoundID>
+			<Filename>Cavalry04SAttackHover</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_RUN_STOP</SoundID>
+			<Filename>Cavalry04SRunStop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_RUN_STOP_2</SoundID>
+			<Filename>Siege02RunStop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_FIDGET</SoundID>
+			<Filename>Siege04SFidget</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_04S_EXPLOSION_01</SoundID>
+			<Filename>explosionlarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+	</Audio_Sounds>
+
+	<Audio_3DSounds>
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_MACHINE_GUN</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_MACHINE_GUN</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>95</MaxVolume>
+		<MinVolume>80</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	
+	
+	
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_GUN</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_GUN</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>95</MaxVolume>
+		<MinVolume>80</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	
+	
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_GUN_CHARGE</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_GUN_CHARGE</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>100</MaxVolume>
+		<MinVolume>100</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	
+	
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_GUN_LOAD_LARGE</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_GUN_LOAD_LARGE</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>60</MaxVolume>
+		<MinVolume>40</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_MISSILE_FIRE</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_MISSILE_FIRE</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>95</MaxVolume>
+		<MinVolume>90</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_MISSILE_FIRE_END</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_MISSILE_FIRE_END</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>95</MaxVolume>
+		<MinVolume>80</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_SERVO_LARGE_UP</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_SERVO_LARGE_UP</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>75</MaxVolume>
+		<MinVolume>55</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_SERVO_LARGE_DOWN</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_SERVO_LARGE_DOWN</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>75</MaxVolume>
+		<MinVolume>55</MinVolume>
+	
+	</Row>
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_TURRET_MOVE_END</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_TURRET_MOVE_END</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>85</MaxVolume>
+		<MinVolume>75</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+	<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04S_ACTIVATE_DOOR</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_04S_ACTIVATE_DOOR</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>70</MaxVolume>
+		<MinVolume>55</MinVolume>
+		<IsMusic>0</IsMusic>
+	</Row>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_DEATH</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>50</MinVolume>
+			<IsMusic>0</IsMusic>
+			</Row>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_HOVER_LOOP</ScriptID>
+			<SoundID>SND_UNIT_STEALTH_BOMBER_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_HOVER_START</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_HOVER_START</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_ATTACK_HOVER</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_ATTACK_HOVER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_RUN_STOP</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_RUN_STOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_RUN_STOP_2</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_RUN_STOP_2</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04S_EXPLOSION_01</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_EXPLOSION_01</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+	</Audio_3DSounds>
+
+
+
+	<!--圣盾-->
+	<Audio_Sounds>
+	<Row>
+		<SoundID>SND_UNIT_BATTLESUIT_MOVE_SUIT</SoundID>
+		<Filename>marine03pmovesuit</Filename>
+		<LoadType>DynamicResident</LoadType>
+	</Row>
+		<Row>
+			<SoundID>SND_UNIT_BATTLESUIT_GUN_MOVE</SoundID>
+			<Filename>aegisgunmove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_BATTLESUIT_RIFLE_FIRE</SoundID>
+			<Filename>riflefire04pt0</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_BATTLESUIT_GUN_CHARGE</SoundID>
+			<Filename>04PGunCharge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_BATTLESUIT_FOOTSTEP_SWEETENE</SoundID>
+			<Filename>03pfootstepsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+	
+		<Row>
+			<SoundID>SND_UNIT_BATTLESUIT_DEATH_MASK</SoundID>
+			<Filename>marinedeathmask</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_BATTLESUIT_CLOTH_RUN</SoundID>
+			<Filename>aegiscloth</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_BATTLESUIT_FOOTSTEP_SWEETENER_02</SoundID>
+			<Filename>03pfootstepsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+
+	</Audio_Sounds>
+	
+		<Audio_3DSounds>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_BATTLESUIT_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_BATTLESUIT_MOVE_SUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+			<Row>
+				<ScriptID>AS3D_UNIT_BATTLESUIT_GUN_MOVE</ScriptID>
+				<SoundID>SND_UNIT_BATTLESUIT_GUN_MOVE</SoundID>
+				<SoundType>GAME_SFX</SoundType>
+				<MaxVolume>85</MaxVolume>
+				<MinVolume>65</MinVolume>
+				<IsMusic>0</IsMusic>
+			</Row>
+
+			<Row>
+				<ScriptID>AS3D_UNIT_BATTLESUIT_RIFLE_FIRE</ScriptID>
+				<SoundID>SND_UNIT_BATTLESUIT_RIFLE_FIRE</SoundID>
+				<SoundType>GAME_SFX</SoundType>
+				<MaxVolume>85</MaxVolume>
+				<MinVolume>65</MinVolume>
+				<IsMusic>0</IsMusic>
+			</Row>
+
+			<Row>
+				<ScriptID>AS3D_UNIT_BATTLESUIT_GUN_CHARGE</ScriptID>
+				<SoundID>SND_UNIT_BATTLESUIT_GUN_CHARGE</SoundID>
+				<SoundType>GAME_SFX</SoundType>
+				<MaxVolume>85</MaxVolume>
+				<MinVolume>65</MinVolume>
+				<IsMusic>0</IsMusic>
+			</Row>
+
+			<Row>
+				<ScriptID>AS3D_UNIT_BATTLESUIT_FOOTSTEP_SWEETENER</ScriptID>
+				<SoundID>SND_UNIT_BATTLESUIT_FOOTSTEP_SWEETENE</SoundID>
+				<SoundType>GAME_SFX</SoundType>
+				<MaxVolume>85</MaxVolume>
+				<MinVolume>65</MinVolume>
+				<IsMusic>0</IsMusic>
+			</Row>
+
+
+
+			<Row>
+				<ScriptID>AS3D_UNIT_BATTLESUIT_DEATH_MASK</ScriptID>
+				<SoundID>SND_UNIT_BATTLESUIT_DEATH_MASK</SoundID>
+				<SoundType>GAME_SFX</SoundType>
+				<MaxVolume>85</MaxVolume>
+				<MinVolume>65</MinVolume>
+				<IsMusic>0</IsMusic>
+			</Row>
+			<Row>
+				<ScriptID>AS3D_UNIT_BATTLESUIT_CLOTH_RUN</ScriptID>
+				<SoundID>SND_UNIT_BATTLESUIT_CLOTH_RUN</SoundID>
+				<SoundType>GAME_SFX</SoundType>
+				<MaxVolume>85</MaxVolume>
+				<MinVolume>65</MinVolume>
+				<IsMusic>0</IsMusic>
+			</Row>
+			<Row>
+				<ScriptID>AS3D_UNIT_BATTLESUIT_FOOTSTEP_SWEETENER_02</ScriptID>
+				<SoundID>SND_UNIT_BATTLESUIT_FOOTSTEP_SWEETENER_02</SoundID>
+				<SoundType>GAME_SFX</SoundType>
+				<MaxVolume>85</MaxVolume>
+				<MinVolume>65</MinVolume>
+				<IsMusic>0</IsMusic>
+			</Row>
+			
+
+		</Audio_3DSounds>
+
+
+
+	<!--GOLEM-->
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_FOOTSTEP</SoundID>
+			<Filename>GolemFootstep</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_ATTACK_FIRE_BEAM</SoundID>
+			<Filename>GolemAttackFireBeam</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_ATTACK_FIRE_PROJECTILE</SoundID>
+			<Filename>GolemAttackFireProjectile</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_DEATH</SoundID>
+			<Filename>GolemDeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_FORTIFY</SoundID>
+			<Filename>GolemFortify</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_FORKLIFT</SoundID>
+			<Filename>GolemMotorForklift</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_LOW</SoundID>
+			<Filename>GolemMotorLow</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_MID</SoundID>
+			<Filename>GolemMotorMid</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_HIGH</SoundID>
+			<Filename>GolemMotorHigh</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+		<SoundID>SND_UNIT_GOLEM_MOVEMENT_IMPACT_SMALL</SoundID>
+		<Filename>GolemMovementImpactSmall</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+		<SoundID>SND_UNIT_GOLEM_MOVEMENT_IMPACT_MED</SoundID>
+		<Filename>GolemMovementImpactMed</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+		<SoundID>SND_UNIT_GOLEM_MOVEMENT_IMPACT_LARGE</SoundID>
+		<Filename>GolemMovementImpactLarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_LASER_ON</SoundID>
+			<Filename>LaserOn</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_LASER_SIGHT</SoundID>
+			<Filename>lasersight</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_UP</SoundID>
+			<Filename>NavalMelee04HPServoUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_DOWN</SoundID>
+			<Filename>NavalMelee04HPServoDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_UP_FIDGET</SoundID>
+			<Filename>NavalMelee04HPServoUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_DOWN_FIDGET</SoundID>
+			<Filename>NavalMelee04HPServoDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_TURN_FIDGET</SoundID>
+			<Filename>ServoTurn2s</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_MED_FIDGET</SoundID>
+			<Filename>ServoMed</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_TURN1s</SoundID>
+			<Filename>ServoTurn1s</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_SERVO_TURN2s</SoundID>
+			<Filename>ServoTurn2s</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_GOLEM_IMPACT_EXPLOSIONSM</SoundID>
+			<Filename>ExplosionLarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+		<SoundID>SND_UNIT_IMPACT_BLUNT_CITY</SoundID>
+		<Filename>BluntCity</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+	
+	
+	<Audio_3DSounds>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_FOOTSTEP</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_FOOTSTEP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_ATTACK_FIRE_BEAM</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_ATTACK_FIRE_BEAM</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>95</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_ATTACK_FIRE_BEAM_SOFT</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_ATTACK_FIRE_BEAM</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>95</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_ATTACK_FIRE_PROJECTILE</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_ATTACK_FIRE_PROJECTILE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_DEATH</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_FORTIFY</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_FORTIFY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+		<ScriptID>AS3D_UNIT_GOLEM_MOVEMENT_MOTOR_FORKLIFT</ScriptID>
+		<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_FORKLIFT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>67</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_MOVEMENT_MOTOR_LOW</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_LOW</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>67</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_MOVEMENT_MOTOR_MID</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_MID</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>67</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_MOVEMENT_MOTOR_HIGH</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_MOTOR_HIGH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>67</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+		<ScriptID>AS3D_UNIT_GOLEM_MOVEMENT_IMPACT_SMALL</ScriptID>
+		<SoundID>SND_UNIT_GOLEM_MOVEMENT_IMPACT_SMALL</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>05</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_MOVEMENT_IMPACT_MID</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_IMPACT_MID</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_MOVEMENT_IMPACT_LARGE</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_MOVEMENT_IMPACT_LARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_LASER_ON</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_LASER_ON</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_LASER_SIGHT</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_LASER_SIGHT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_UP</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_DOWN</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_UP_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_UP_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_DOWN_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_DOWN_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_TURN_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_TURN_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_MED_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_MED_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_TURN1s_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_TURN1s_FIDGETV</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_SERVO_TURN2s_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_SERVO_TURN2s_FIDGET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>25</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_GOLEM_IMPACT_EXPLOSIONSM</ScriptID>
+			<SoundID>SND_UNIT_GOLEM_IMPACT_EXPLOSIONSM</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_IMPACT_BLUNT_CITY</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_BLUNT_CITY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>0</MaxVolume>
+			<MinVolume>0</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+	<!--盖里欧机甲-->
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL</SoundID>
+			<Filename>GeliopodNozzleMovementSmall</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP</SoundID>
+			<Filename>GeliopodNozzleMovementBigUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN</SoundID>
+			<Filename>GeliopodNozzleMovementBigDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_RUN</SoundID>
+			<Filename>GeliopodRunMove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+		<SoundID>SND_UNIT_GELIOPOD_DEATH</SoundID>
+		<Filename>GeliopodDeath</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+		<SoundID>SND_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE</SoundID>
+		<Filename>GeliopodFireSingle</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+		<SoundID>SND_UNIT_GELIOPOD_FOOTSTEP_WALK</SoundID>
+		<Filename>GeliopodWalkFootstep</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_MELEE_01_IMPACT_INCOMING</SoundID>
+			<Filename>NavalMeleeImpactIncoming</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+		<SoundID>SND_UNIT_IMPACT_LASERLG_CITY</SoundID>
+		<Filename>LaserLargeCity</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+
+
+
+	<Audio_3DSounds>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_MOVEMENT_RUN</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_DEATH</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_ATTACK_FIRE_SINGLE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_FOOTSTEP_WALK</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_FOOTSTEP_WALK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_SMALL</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_SMALL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>30</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_BIG_UP</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>30</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_NOZZLE_BIG_DOWN</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_NOZZLE_BIG_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>30</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_FIDGET_MOVEMENT_RUN</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_MOVEMENT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>30</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_FIDGET_FOOTSTEP_RUN</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_FOOTSTEP_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>30</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_FIDGET_FOOTSTEP_WALK</ScriptID>
+			<SoundID>SND_UNIT_GELIOPOD_FOOTSTEP_WALK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>40</MaxVolume>
+			<MinVolume>30</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_GELIOPOD_IMPACT_INCOMING</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_MELEE_01_IMPACT_INCOMING</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		
+		<Row>
+			<ScriptID>AS3D_IMPACT_LASERLG_CITY</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_LASERLG_CITY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+	
+
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--siege03p-->	
+	
+
+	<Audio_Sounds>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_MACHINE_GUN</SoundID>
+			<Filename>siege03pmachinegun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_MISSILE_FIRE</SoundID>
+			<Filename>03PMissileFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_MISSILE_FIRE_END</SoundID>
+			<Filename>03pmissilefireend</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_TURRET_MOVE_END</SoundID>
+			<Filename>turretmoveend</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_ACTIVATE_DOOR</SoundID>
+			<Filename>ColonistDoor</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_HYDRAULIC</SoundID>
+			<Filename>Hydraulic</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_DEATH</SoundID>
+			<Filename>Siege02Death</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+		<SoundID>SND_UNIT_SIEGE_03P_HYDRAULIC_SHORT</SoundID>
+		<Filename>HydraulicShort</Filename>
+		<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_HYDRAULIC_LONG</SoundID>
+			<Filename>HydraulicLong</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_02</SoundID>
+			<Filename>servo02</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_LARGE</SoundID>
+			<Filename>servolarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_LARGE_UP</SoundID>
+			<Filename>servolargeup</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_LARGE_DOWN</SoundID>
+			<Filename>servolargedown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_MOVE</SoundID>
+			<Filename>metallargemove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_CRASH</SoundID>
+			<Filename>metallargecrash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_FALL</SoundID>
+			<Filename>metallargefall</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_STOP</SoundID>
+			<Filename>metallargestop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_RATTLE</SoundID>
+			<Filename>MetalLargeRattle</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_RUN_LOOP</SoundID>
+			<Filename>siege03prunloop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_RUN_STOP</SoundID>
+			<Filename>siege03prunstop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03P_IMPACT_EXPLOSIONLG</SoundID>
+			<Filename>explosionlarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+	</Audio_Sounds>
+
+
+
+	
+	<Audio_3DSounds>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_MACHINE_GUN</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_MACHINE_GUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_TURRET_MOVE_END</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_TURRET_MOVE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_ACTIVATE_DOOR</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_ACTIVATE_DOOR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_HYDRAULIC</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_HYDRAULIC</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_DEATH</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_HYDRAULIC_SHORT</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_HYDRAULIC_SHORT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_HYDRAULIC_LONG</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_HYDRAULIC_LONG</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_SERVO_02</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>50</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_SERVO_LARGE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_LARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>50</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_SERVO_LARGE_UP</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_LARGE_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_SERVO_LARGE_DOWN</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_SERVO_LARGE_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_METAL_LARGE_MOVE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_METAL_LARGE_CRASH</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_CRASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_METAL_LARGE_FALL</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_FALL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_METAL_LARGE_STOP</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_STOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_METAL_LARGE_RATTLE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_RATTLE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_RUN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_RUN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_RUN_STOP</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_RUN_STOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_03P_IMPACT_EXPLOSIONLG</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_IMPACT_EXPLOSIONLG</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>95</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--spaceship3-->
+
+
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_UNIT_LEV_DESTROYER_GUN_FIRE_T1</SoundID>
+			<Filename>riflefire03pt1</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_LEV_DESTROYER_GUN_FIRE_02</SoundID>
+			<Filename>cavalry03pgunfire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_LEV_DESTROYER_CANNON_FIRE</SoundID>
+			<Filename>navalfighter04pcannonfire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_LEV_TANK_CANNON_FIRE</SoundID>
+			<Filename>levtankcannonfire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_LEV_DESTROYER_MISSILE_FIRE_02</SoundID>
+			<Filename>04PMissileLaunch</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+	
+		<Row>
+			<SoundID>SND_UNIT_03P_GUN_FIRE_END_SWEETENER</SoundID>
+			<Filename>03pgunfireendsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GUN_03S_SWEETENER</SoundID>
+			<Filename>03sgunsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_LEV_TANK_GUN_CHARGE</SoundID>
+			<Filename>levtankguncharge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_LEV_TANK_DEATH</SoundID>
+			<Filename>levtankdeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_EXPLOSION_LARGE_ELECTRICAL</SoundID>
+			<Filename>explosionlargeelectrical</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_LEVER_LARGE</SoundID>
+			<Filename>LeverLarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_LEV_TANK_SERVO_DOWN</SoundID>
+			<Filename>LevTankServoDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_LEV_TANK_SERVO_UP</SoundID>
+			<Filename>LevTankServoUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_POWER_OFF_03</SoundID>
+			<Filename>PowerOff03</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_GUN_MOVE</SoundID>
+			<Filename>GunMove</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GUN_LOAD_P</SoundID>
+			<Filename>GunLoadP</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	
+	</Audio_Sounds>
+
+
+	<Audio_3DSounds>
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_ACTIVATE_DOOR</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_ACTIVATE_DOOR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_MOVE_02</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_GUN_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_FIRE</ScriptID>
+			<SoundID>SND_UNIT_BATTLESUIT_RIFLE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>110</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_FIRE_T1</ScriptID>
+			<SoundID>SND_UNIT_LEV_DESTROYER_GUN_FIRE_T1</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_FIRE_02</ScriptID>
+			<SoundID>SND_UNIT_LEV_DESTROYER_GUN_FIRE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_CANNON_FIRE</ScriptID>
+			<SoundID>SND_UNIT_LEV_DESTROYER_CANNON_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_CANNON_FIRE_02</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_CANNON_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_MISSILE_FIRE_02</ScriptID>
+			<SoundID>SND_UNIT_LEV_DESTROYER_MISSILE_FIRE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_MACHINE_GUN</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_MACHINE_GUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_FIRE_END_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_03P_GUN_FIRE_END_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_GUN_03S_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_DEATH</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_METAL_LARGE_RATTLE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_METAL_LARGE_RATTLE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_METAL_LARGE_FALL</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_FALL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_METAL_LARGE_CRASH</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_METAL_LARGE_CRASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+		<ScriptID>AS3D_UNIT_LEV_DESTROYER_EXPLOSION_LARGE</ScriptID>
+		<SoundID>SND_UNIT_EXPLOSION_LARGE_ELECTRICAL</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>100</MaxVolume>
+		<MinVolume>100</MinVolume>
+		<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_LEVER_LARGE</ScriptID>
+			<SoundID>SND_UNIT_LEVER_LARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+	
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_SERVO_UP</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_SERVO_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_SERVO_DOWN</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_SERVO_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_IMPACT_EXPLOSIONLG</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH_CREAK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_POWER_DOWN</ScriptID>
+			<SoundID>SND_UNIT_CARVR_POWER_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+	
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_POWER_OFF</ScriptID>
+			<SoundID>SND_UNIT_POWER_OFF_03</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_MOVE</ScriptID>
+			<SoundID>SND_UNIT_GUN_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_LEV_DESTROYER_GUN_LOAD</ScriptID>
+			<SoundID>SND_UNIT_GUN_LOAD_P</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 悬浮攻城炮及巨型粒子炮 -->
+	<Audio_Sounds>
+	
+		<Row>
+			<SoundID>SND_UNIT_CAVALRY_04P_GUN_FIRE</SoundID>
+			<Filename>Cavalry04PGunFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_04P_GUN_SWEETENER_00</SoundID>
+			<Filename>04pgunsweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+	</Audio_Sounds>
+
+
+
+	<Audio_3DSounds>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_ACTIVATE_DOOR</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_ACTIVATE_DOOR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_GUN_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_04P_GUN_SWEETENER_00</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_GUN_MOVE</ScriptID>
+			<SoundID>SND_UNIT_AEGIS_GUN_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_BATTLESUIT_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_CANNON_FIRE</ScriptID>
+			<SoundID>SND_UNIT_BATTLESUIT_RIFLE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_GUN_FIRE_END_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_03P_GUN_FIRE_END_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		<Row>
+		<ScriptID>AS3D_UNIT_SIEGE_04P_MACHINE_GUN</ScriptID>
+		<SoundID>SND_UNIT_SIEGE_03P_MACHINE_GUN</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<MaxVolume>90</MaxVolume>
+		<MinVolume>70</MinVolume>
+		<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_MISSILE_FIRE_02</ScriptID>
+			<SoundID>SND_UNIT_CAVALRY_04P_GUN_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_LEV_DESTROYER_MISSILE_FIRE_02</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03P_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_DEATH</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04HS_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_POWER_OFF</ScriptID>
+			<SoundID>SND_UNIT_POWER_OFF_03</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_SERVO</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_SERVO</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_SERVO_UP</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_SERVO_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_SERVO_DOWN</ScriptID>
+			<SoundID>SND_UNIT_LEV_TANK_SERVO_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_SERVO_LARGE_UP</ScriptID>
+			<SoundID>SND_UNIT_CARVR_SERVO_LARGE_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_SERVO_LARGE_DOWN</ScriptID>
+			<SoundID>SND_UNIT_CARVR_SERVO_LARGE_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_ATTACK_HOVER</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_ATTACK_HOVER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SIEGE_04P_IMPACT_EXPLOSIONLG</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_04SP_DEATH_CREAK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+	</Audio_3DSounds>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 潜艇利维坦-->
+	<Audio_Sounds>
+
+	
+
+		<Row>
+			<SoundID>SND_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH</SoundID>
+			<Filename>Sub04SAttackTorpedoLaunch</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SUB01_ATTACK_TORPEDO_LAUNCH_BUBBLES</SoundID>
+			<Filename>SubAttackTorpedoLaunchBubbles</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_UNIT_SUB_DEATH_CREAK</SoundID>
+			<Filename>SubDeathCreak</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SUB04S_RUN_START</SoundID>
+			<Filename>Sub04SRun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SUB_DEATH_ELECTRICITY</SoundID>
+			<Filename>SubDeathElectricity</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SUB04S_ATTACK_HATCH_OPEN</SoundID>
+			<Filename>Sub04SHatchOpen</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SUB04S_ATTACK_HATCH_CLOSE</SoundID>
+			<Filename>Sub04SHatchClose</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_SUB01_RUN_STOP_SPLASH</SoundID>
+			<Filename>SubRunStopSplash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_SUB04S_FORTIFY_ENGINE</SoundID>
+			<Filename>Sub04SFortifyEngine</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_OCEAN_LOOP</SoundID>
+			<Filename>OceanLoop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_SUB04S_RUN_HUM</SoundID>
+			<Filename>Sub04SRunHum</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_EXPLOSION6_POUND_CITY</SoundID>
+			<Filename>ExplosionLargeCity</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+	</Audio_Sounds>
+
+
+
+	<Audio_3DSounds>
+
+		<Row>
+			<ScriptID>AS3D_IMPACT_EXPLOSION6_POUND_CITY</ScriptID>
+			<SoundID>SND_UNIT_EXPLOSION6_POUND_CITY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_RUN_HUM</ScriptID>
+			<SoundID>SND_UNIT_SUB04S_RUN_HUM</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>30</MaxVolume>
+			<MinVolume>20</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_OCEAN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_OCEAN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>30</MaxVolume>
+			<MinVolume>20</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_FORTIFY_SPLASH</ScriptID>
+			<SoundID>SND_UNIT_SUB01_RUN_STOP_SPLASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>30</MaxVolume>
+			<MinVolume>20</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_FORTIFY_ENGINE</ScriptID>
+			<SoundID>SND_UNIT_SUB04S_FORTIFY_ENGINE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_RUN_STOP_SPLASH</ScriptID>
+			<SoundID>SND_UNIT_SUB01_RUN_STOP_SPLASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_ATTACK_HATCH_CLOSE</ScriptID>
+			<SoundID>SND_UNIT_SUB04S_ATTACK_HATCH_CLOSE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_ATTACK_HATCH_OPEN</ScriptID>
+			<SoundID>SND_UNIT_SUB04S_ATTACK_HATCH_OPEN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_DEATH_ELECTRICITY</ScriptID>
+			<SoundID>SND_UNIT_SUB_DEATH_ELECTRICITY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		
+		
+		
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_RUN_START</ScriptID>
+			<SoundID>SND_UNIT_SUB04S_RUN_START</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_DEATH_CREAK</ScriptID>
+			<SoundID>SND_UNIT_SUB_DEATH_CREAK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>65</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES</ScriptID>
+			<SoundID>SND_UNIT_SUB01_ATTACK_TORPEDO_LAUNCH_BUBBLES</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH</ScriptID>
+			<SoundID>SND_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_IMPACT_INCOMING</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_MELEE_01_IMPACT_INCOMING</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SUB04S_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+	</Audio_3DSounds>
+	
+	<Audio_3DSounds>
+       <!--浮石章鱼-->
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_BLUNT</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_BLUNT_FLESH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_METAL</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_METAL_FLESH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_BULLET</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_BULLETSM_FLESH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_BULLETHC</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_BULLETLG_FLESH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_LASERSM</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_LASERSM_FLESH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_ACID</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_ACID_FLESH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<!--New -->
+		<!--<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_RUN_LOOP</ScriptID>
+			<SoundID>SND_UNIT_ROCKTOPUS_RUN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_RUN_STOP</ScriptID>
+			<SoundID>SND_UNIT_ROCKTOPUS_RUN_STOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>-->
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_MOVEMENT</ScriptID>
+			<SoundID>SND_UNIT_ROCKTOPUS_MOVEMENT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IDLE_MOVEMENT</ScriptID>
+			<SoundID>SND_UNIT_ROCKTOPUS_MOVEMENT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_ATTACK</ScriptID>
+			<SoundID>SND_UNIT_ALIEN_FLYER_ATTACK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_ACID_SPLASH</ScriptID>
+			<SoundID>SND_UNIT_ACID_SPLASH_03H</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_DEATH_VOX</ScriptID>
+			<SoundID>SND_UNIT_ROCKTOPUS_DEATH_VOX</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_DEATH_IMPACT</ScriptID>
+			<SoundID>SND_UNIT_ROCKTOPUS_DEATH_IMPACT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_EXPLOSIONS</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_EXPLOSION_S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_IMPACT_EXPLOSIONH</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_EXPLOSION_H</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_BODY_FALL_SAND</ScriptID>
+			<SoundID>SND_UNIT_ANIMAL_BODY_FALL_SAND</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_TENTACLES</ScriptID>
+			<SoundID>SND_UNIT_ROCKTOPUS_TENTACLES</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ROCKTOPUS_HEAVY_AURA</ScriptID>
+			<SoundID>SND_RESOURCE_FLOATSTONE_AURA</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>45</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ZOMBIE_ATTACK</ScriptID>
+			<SoundID>SND_UNIT_ZOMBIE_ATTACK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_ZOMBIE_DEATH</ScriptID>
+			<SoundID>SND_UNIT_ZOMBIE_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>110</MaxVolume>
+			<MinVolume>110</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_SAND_WORM_BATTLE</ScriptID>
+			<SoundID>SND_UNIT_RUN_LOOP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>140</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_RIFLE_FIRE_T1</ScriptID>
+			<SoundID>SND_UNIT_RIFLE_FIRE_04S_T1</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04S_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_ACTIVATE_DOOR</ScriptID>
+			<SoundID>SND_UNIT_COLONIST_DOOR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_EXPLOSION_SMALL_ELECTRICAL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_MOVE_SUIT_RUN</ScriptID>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_CNDR_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_CNDR_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>120</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03S_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>110</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_CNDR_RIFLE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_RIFLE_FIRE_CNDR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>110</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_GUN_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_GUN_03S_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_LARGE_GUN_LOAD</ScriptID>
+			<SoundID>SND_UNIT_LARGE_GUN_LOAD_S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_GUN_LOAD</ScriptID>
+			<SoundID>SND_UNIT_GUN_LOAD_S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_SOLDIER_FOLEY_RUN</ScriptID>
+			<SoundID>SND_UNIT_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04S_CLUB_DROP</ScriptID>
+			<SoundID>SND_UNIT_CLUB_DROP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04P_SOLDIER_FOLEY</ScriptID>
+			<SoundID>SND_UNIT_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_CNDR_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_RIFLE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_RIFLE_FIRE_CNDR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>135</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_SCAN</ScriptID>
+			<SoundID>SND_UNIT_CNDR_SCAN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>65</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_ERROR</ScriptID>
+			<SoundID>SND_UNIT_CNDR_ERROR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_EXPLOSION_SMALL_ELECTRICAL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_DEATH_MASK</ScriptID>
+			<SoundID>SND_UNIT_MARINE_DEATH_MASK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_SOLDIER_FOLEY_RUN</ScriptID>
+			<SoundID>SND_UNIT_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_MOVE_SUIT_RUN</ScriptID>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_ACTIVATE_DOOR</ScriptID>
+			<SoundID>SND_UNIT_COLONIST_DOOR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_POWER_DOWN</ScriptID>
+			<SoundID>SND_UNIT_CAVALRY_POWER_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_FOOT_DIRT</ScriptID>
+			<SoundID>SND_UNIT_MARINE_03S_FOOT_DIRT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_CNDR_FOOTSTEP_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04S_FOOTSTEP_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04S_GUN_CHARGE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>130</MaxVolume>
+			<MinVolume>110</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03S_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>120</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_04S_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>120</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_GUN_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_GUN_03S_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_IMPACT_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_IMPACT_SWEETENER_S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_RIFLE_FIRE_02</ScriptID>
+			<SoundID>SND_UNIT_RIFLE_FIRE_04S_T1</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_RIFLE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_RIFLE_FIRE_04S_T0</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_DEATH</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_GUN_LOAD_LARGE</ScriptID>
+			<SoundID>SND_UNIT_LARGE_GUN_LOAD_S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_SERVO_LARGE_DOWN</ScriptID>
+			<SoundID>SND_UNIT_SERVO_LARGE_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_HYDRAULIC_SHORT</ScriptID>
+			<SoundID>SND_UNIT_HYDRAULIC</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_04S_EXPLOSION_LARGE_WATER</ScriptID>
+			<SoundID>SND_UNIT_EXPLOSION_LARGE_WATER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_MISSILE_FIRE_END</ScriptID>
+			<SoundID>SND_UNIT_SIEGE_03S_MISSILE_FIRE_END</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>130</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_METAL_LARGE_RATTLE</ScriptID>
+			<SoundID>SND_UNIT_METAL_LARGE_RATTLE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_SERVO_MED</ScriptID>
+			<SoundID>SND_UNIT_SERVO_MED</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_HYDRAULIC</ScriptID>
+			<SoundID>SND_UNIT_HYDRAULIC</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_UNDERWATER</ScriptID>
+			<SoundID>SND_UNIT_UNDERWATER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_SERVO_LARGE_DOWN</ScriptID>
+			<SoundID>SND_UNIT_SERVO_LARGE_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>85</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_GUN_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_GUN_03S_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_CANNON_ATTACK</ScriptID>
+			<SoundID>SND_UNIT_RIFLE_FIRE_03S_T2</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>150</MaxVolume>
+			<MinVolume>130</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_EXPLOSION_SMALL_ELECTRICAL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_PANEL</ScriptID>
+			<SoundID>SND_UNIT_PANEL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_SERVO_LARGE_UP</ScriptID>
+			<SoundID>SND_UNIT_SERVO_LARGE_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_GUN_LOAD</ScriptID>
+			<SoundID>SND_UNIT_GUN_LOAD_S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>80</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_POWER_DOWN</ScriptID>
+			<SoundID>SND_UNIT_CAVALRY_POWER_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_GUN_MOVE</ScriptID>
+			<SoundID>SND_UNIT_GUN_MOVE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_DEATH</ScriptID>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_DEATH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_NAVAL_FIGHTER_03S_SINK</ScriptID>
+			<SoundID>SND_UNIT_CARAVEL_SINK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE</ScriptID>
+			<SoundID>SND_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE_LARGE</ScriptID>
+			<SoundID>SND_UNIT_GUN_CHARGE_LARGE_04SP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_GUN_FIRE</ScriptID>
+			<SoundID>SND_UNIT_GUN_FIRE_04SP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>90</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE</ScriptID>
+			<SoundID>SND_UNIT_GUN_CHARGE_04SP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>95</MaxVolume>
+			<MinVolume>85</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_SUPREMACY_PURITY_VOX_SWEETENER</ScriptID>
+			<SoundID>SND_UNIT_SUPREMACY_PURITY_VOX_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>55</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_FOOTSTEP_SWEETENER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>35</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>25</MaxVolume>
+			<MinVolume>18</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>18</MaxVolume>
+			<MinVolume>12</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>22</MaxVolume>
+			<MinVolume>18</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC_DOWN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>22</MaxVolume>
+			<MinVolume>18</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+		
+		
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>22</MaxVolume>
+			<MinVolume>18</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP_FIDGET</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC_UP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>22</MaxVolume>
+			<MinVolume>18</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_SERVO</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>25</MaxVolume>
+			<MinVolume>18</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_RUN_RATCHET</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>32</MaxVolume>
+			<MinVolume>28</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE</ScriptID>
+			<SoundID>SND_UNIT_MARINE_04SP_RUN_RATTLE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>35</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_PANEL</ScriptID>
+			<SoundID>SND_UNIT_PANEL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>75</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_DEATH_MASK</ScriptID>
+			<SoundID>SND_UNIT_MARINE_DEATH_MASK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>80</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_MOVE_SUIT</ScriptID>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>25</MaxVolume>
+			<MinVolume>15</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_MOVE_SUIT_RUN</ScriptID>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT_RUN</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>18</MaxVolume>
+			<MinVolume>10</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_EXPLOSION</ScriptID>
+			<SoundID>SND_UNIT_EXPLOSION_SMALL_ELECTRICAL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>45</MaxVolume>
+			<MinVolume>30</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_SOLDIER_FOLEY_LOUD</ScriptID>
+			<SoundID>SND_UNIT_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>90</MaxVolume>
+			<MinVolume>75</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_CLUB_DROP</ScriptID>
+			<SoundID>SND_UNIT_CLUB_DROP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_SOLDIER_FOLEY</ScriptID>
+			<SoundID>SND_UNIT_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS3D_UNIT_RANGED_MARINE_04SP_SOLDIER_FOLEY_RUN</ScriptID>
+			<SoundID>SND_UNIT_SOLDIER_FOLEY</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>60</MaxVolume>
+			<MinVolume>55</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+	</Audio_3DSounds>
+
+
+
+
+	<Audio_Sounds>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04SP_RUN_RATTLE</SoundID>
+			<Filename>Marine04SPRunRattle</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04SP_RUN_RATCHET</SoundID>
+			<Filename>Marine04SPRunRatchet</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_SERVO</SoundID>
+			<Filename>Marine04SPLegServo</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC_UP</SoundID>
+			<Filename>Marine04SPLegHydraulicUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC</SoundID>
+			<Filename>Marine04SPLegHydraulic</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+	
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04SP_LEG_HYDRAULIC_DOWN</SoundID>
+			<Filename>Marine04SPLegHydraulicDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_SUPREMACY_PURITY_VOX_SWEETENER</SoundID>
+			<Filename>SupremacyPurityVoxSweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04SP_FOOTSTEP_SWEETENER</SoundID>
+			<Filename>Marine04SPFootstepSweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE</SoundID>
+			<Filename>RangedMarine04SPMissileFire</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GUN_CHARGE_LARGE_04SP</SoundID>
+			<Filename>GunChargeLarge04SP</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_GUN_FIRE_04SP</SoundID>
+			<Filename>GunFire04SP</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_GUN_CHARGE_04SP</SoundID>
+			<Filename>GunCharge04SP</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_CARAVEL_SINK</SoundID>
+			<Filename>CaravelSink</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_SERVO_LARGE_UP</SoundID>
+			<Filename>ServoLargeUp</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_RIFLE_FIRE_03S_T2</SoundID>
+			<Filename>RifleFire03ST2</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_SERVO_MED</SoundID>
+			<Filename>ServoMed</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_METAL_LARGE_RATTLE</SoundID>
+			<Filename>MetalLargeRattle</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_EXPLOSION_LARGE_WATER</SoundID>
+			<Filename>ExplosionLargeWater</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_HYDRAULIC</SoundID>
+			<Filename>Hydraulic</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_SERVO_LARGE_DOWN</SoundID>
+			<Filename>ServoLargeDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_NAVAL_FIGHTER_DEATH</SoundID>
+			<Filename>NavalFighterDeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_RIFLE_FIRE_04S_T0</SoundID>
+			<Filename>RifleFire04ST0</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_SWEETENER_S</SoundID>
+			<Filename>ImpactSweetenerS</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04S_FOOTSTEP_SWEETENER</SoundID>
+			<Filename>04SFootstepSweetener</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_03S_FOOT_DIRT</SoundID>
+			<Filename>Marine03SFootDirt</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_CAVALRY_POWER_DOWN</SoundID>
+			<Filename>CavalryPowerDown</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_DEATH_MASK</SoundID>
+			<Filename>MarineDeathMask</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_CNDR_ERROR</SoundID>
+			<Filename>ErrorCNDR</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_CNDR_SCAN</SoundID>
+			<Filename>ScanCNDR</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_CLUB_DROP</SoundID>
+			<Filename>ClubDrop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_SOLDIER_FOLEY</SoundID>
+			<Filename>SoldierFoley</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_GUN_LOAD_S</SoundID>
+			<Filename>GunLoadS</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_LARGE_GUN_LOAD_S</SoundID>
+			<Filename>LargeGunLoadS</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+		<Row>
+			<SoundID>SND_UNIT_SIEGE_03S_MISSILE_FIRE_END</SoundID>
+			<Filename>03SMissileFireEnd</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_CNDR_GUN_CHARGE</SoundID>
+			<Filename>gunchargecndr</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT</SoundID>
+			<Filename>Marine03SMoveSuit</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_03S_MOVE_SUIT_RUN</SoundID>
+			<Filename>Marine03SMoveSuitRun</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_EXPLOSION_SMALL_ELECTRICAL</SoundID>
+			<Filename>ExplosionSmallElectrical</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_COLONIST_DOOR</SoundID>
+			<Filename>ColonistDoor</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_MARINE_04S_GUN_CHARGE</SoundID>
+			<Filename>04SGunCharge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_RIFLE_FIRE_04S_T1</SoundID>
+			<Filename>RifleFire04ST1</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_SAND_WORM_BATTLE</SoundID>
+			<Filename>sandwormbattle</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ZOMBIE_ATTACK</SoundID>
+			<Filename>ZombieAttack</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_ZOMBIE_DEATH</SoundID>
+			<Filename>ZombieDeath</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+
+		<Row>
+			<SoundID>SND_RESOURCE_FLOATSTONE_AURA</SoundID>
+			<Filename>FloatstoneAura</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_ROCKTOPUS_TENTACLES</SoundID>
+			<Filename>RocktopusTentacles</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_EXPLOSION_S</SoundID>
+			<Filename>Explosion04S</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_EXPLOSION_H</SoundID>
+			<Filename>ExplosionH</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_ROCKTOPUS_DEATH_IMPACT</SoundID>
+			<Filename>RocktopusDeathImpact</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_ACID_SPLASH_03H</SoundID>
+			<Filename>03HAcidSplash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ROCKTOPUS_DEATH_VOX</SoundID>
+			<Filename>RocktopusDeathVox</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		<Row>
+			<SoundID>SND_UNIT_ALIEN_FLYER_ATTACK</SoundID>
+			<Filename>AlienFlyerAttack</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		<Row>
+			<SoundID>SND_UNIT_ROCKTOPUS_RUN_LOOP</SoundID>
+			<Filename>RocktopusRunLoop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_ROCKTOPUS_RUN_STOP</SoundID>
+			<Filename>RocktopusRunStop</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_ROCKTOPUS_MOVEMENT</SoundID>
+			<Filename>RocktopusMovement</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_BLUNT_FLESH</SoundID>
+			<Filename>BluntFlesh</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_METAL_FLESH</SoundID>
+			<Filename>metallarge</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_BULLETSM_FLESH</SoundID>
+			<Filename>BulletSmallFlesh</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_BULLETLG_FLESH</SoundID>
+			<Filename>BulletLargeFlesh</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_LASERSM_FLESH</SoundID>
+			<Filename>LaserSmallFlesh</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_UNIT_IMPACT_ACID_FLESH</SoundID>
+			<Filename>AcidBallFlesh</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+		
+	</Audio_Sounds>
+	
+	
+	</GameData>

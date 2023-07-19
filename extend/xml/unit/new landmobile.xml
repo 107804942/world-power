@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/23 20:47:36 -->
+<GameData>
+	
+	
+	
+	<Units>
+
+		
+	
+
+
+
+		<Row>
+			<Class>UNITCLASS_MARINE02</Class>
+			<Type>UNIT_MARINE02</Type>
+			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+			<Combat>150</Combat>
+			<BaseSightRange>5</BaseSightRange>
+			<HurryCostModifier>50</HurryCostModifier>
+			<Cost>500</Cost>
+			<Moves>5</Moves>
+			<Immobile>0</Immobile>
+			<Range>0</Range>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_MARINE02</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_MARINE02_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MARINE02_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_MARINE02</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ObsoleteTech></ObsoleteTech>
+			<AdvancedStartCost>80</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_MARINE02</UnitArtInfo>
+			<UnitFlagAtlas>THIRD_ARMY_INFANTRY_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<PortraitIndex>68</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
+		</Row>
+
+
+
+		<Row>
+			<Class>UNITCLASS_BATTLESUIT</Class>
+			<Type>UNIT_BATTLESUIT</Type>
+			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<Combat>300</Combat>
+			<Cost>2100</Cost>
+			<HurryCostModifier>75</HurryCostModifier>
+			<Moves>4</Moves>
+			<Immobile>0</Immobile>
+			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<BaseSightRange>2</BaseSightRange>
+			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_BATTLESUIT</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_BATTLESUIT_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BATTLESUIT_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ObsoleteTech></ObsoleteTech>
+			<AdvancedStartCost>60</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_BATTLESUIT</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
+			<UnitFlagIconOffset>9</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>101</PortraitIndex>
+			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
+			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_AEGIS</Class>
+			<Type>UNIT_AEGIS</Type>
+			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Combat>430</Combat>
+			<RangedCombat>430</RangedCombat>
+			<Range>2</Range>
+			<Cost>2900</Cost>
+			<HurryCostModifier>75</HurryCostModifier>
+			<Moves>5</Moves>
+			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_AEGIS</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_AEGIS_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_AEGIS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>60</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<Conscription>7</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_AEGIS</UnitArtInfo>
+			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>54</UnitFlagIconOffset>
+			<PortraitIndex>68</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_CARVR</Class>
+			<Type>UNIT_CARVR</Type>
+			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
+			<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
+			<Combat>390</Combat>
+			<HurryCostModifier>75</HurryCostModifier>
+			<Cost>2700</Cost>
+			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
+			<Moves>5</Moves>
+			<Immobile>0</Immobile>
+			<Domain>DOMAIN_LAND</Domain>
+			<BaseSightRange>5</BaseSightRange>
+			<Description>TXT_KEY_UNIT_CARVR</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_CARVR_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CARVR_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<AdvancedStartCost>150</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<!--<UnitArtInfo>ART_DEF_UNIT_MECH2</UnitArtInfo>-->
+			<UnitArtInfo>ART_DEF_UNIT_MECH2142</UnitArtInfo>			
+			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>33</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>205</PortraitIndex>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<ExtraMaintenanceCost>45</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_BEAM_JUMPER</Class>
+			<Type>UNIT_BEAM_JUMPER</Type>
+			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
+			<Combat>500</Combat>
+			<Cost>3600</Cost>
+			<HurryCostModifier>75</HurryCostModifier>
+			<Moves>5</Moves>
+			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_BEAM_JUMPER</Description>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_BEAM_JUMPER_TEXT</Civilopedia>
+			<Help>TXT_KEY_UNIT_HELP_BEAM_JUMPER</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<Strategy>TXT_KEY_UNIT_BEAM_JUMPER_STRATEGY</Strategy>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>60</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_MECH2</UnitArtInfo>
+			<!--<UnitArtInfo>ART_DEF_UNIT_DREAD</UnitArtInfo>-->
+			<UnitFlagAtlas>FA_UNIT_FLAG_ATLAS_A</UnitFlagAtlas>
+			<UnitFlagIconOffset>29</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>64</PortraitIndex>
+			<MoveRate>ROBOT</MoveRate>
+			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_FW_VERTOL</Class>
+			<Type>UNIT_FW_VERTOL</Type>
+			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Combat>300</Combat>
+			<RangedCombat>270</RangedCombat>
+			<Cost>1600</Cost>
+			<HurryCostModifier>75</HurryCostModifier>
+			<Moves>11</Moves>
+			<Range>1</Range>
+			<ExtraMaintenanceCost>30</ExtraMaintenanceCost>
+			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_FW_VERTOL</Description>
+			<Civilopedia>TXT_KEY_UNIT_FW_VERTOL_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FW_VERTOL_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_HELI_ATTACK_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>120</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_SUPER_HELICOPTER</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_FUTURE</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>95</PortraitIndex>
+			<MoveRate>WHEELED</MoveRate>
+		</Row>
+
+
+
+	</Units>
+
+
+
+
+	<Unit_ClassUpgrades>
+
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+
+
+
+	</Unit_ClassUpgrades>
+
+
+	<Unit_FreePromotions>
+
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
+		
+		
+
+
+
+		<Row>
+			<UnitType>UNIT_MARINE02</UnitType>
+			<PromotionType>PROMOTION_RECON_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MARINE02</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MARINE02</UnitType>
+			<PromotionType>PROMOTION_RIVAL_TERRITORY</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MARINE02</UnitType>
+			<PromotionType>PROMOTION_SELL_EXOTIC_GOODS</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<PromotionType>PROMOTION_HEAVY_ROBORT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<PromotionType>PROMOTION_WITHDRAW_MELEE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<PromotionType>PROMOTION_HEAVY_ROBORT</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<PromotionType>PROMOTION_EMP_ATTACK</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<PromotionType>PROMOTION_ARMORER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<PromotionType>PROMOTION_HEAVY_ROBORT</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<PromotionType>PROMOTION_HEAVY_ROBORT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<PromotionType>PROMOTION_NUKE_FALLOUT</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
+
+
+
+	</Unit_FreePromotions>
+
+
+
+	<Unit_AITypes>
+
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
+
+
+
+		<Row>
+			<UnitType>UNIT_MARINE02</UnitType>
+			<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+
+	
+		
+		
+		
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+
+	
+
+
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitAIType>UNITAI_RANGED</UnitAIType>
+		</Row>
+
+	</Unit_AITypes>
+
+
+	<!--************************Resource Required**********************-->
+	<Unit_ResourceQuantityRequirements>
+
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
+		
+		
+		
+	
+
+		<Row>
+			<UnitType>UNIT_MODERN_ARMOR</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+		</Row>
+		
+		
+	
+		
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_MARINE02</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+	</Unit_ResourceQuantityRequirements>
+
+
+	<Unit_Flavors>
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
+
+
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>170</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>190</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>160</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
+
+	</Unit_Flavors>
+
+
+
+
+
+
+
+
+	<Units>
+
+		<Update>
+			<Set  IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="101"/>
+			<Where Type="UNIT_TANK" />
+		</Update>
+		
+		
+
+		<Update>
+			<Set  IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="251"/>
+			<Where Type="UNIT_AZTEC_EAGLE" />
+		</Update>
+
+
+		<Update>
+			<Set  Combat="200" PrereqTech="TECH_PLANETARY_NETWORKS"/>
+			<Where Type="UNIT_UAV" />
+		</Update>
+
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_WW1_TANK"/>
+			<Where Type="UNIT_WWI_TANK" />
+		</Update>
+
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_M4A4_SHERMAN_V888"/>
+			<Where Type="UNIT_TANK" />
+		</Update>
+
+
+		<Update>
+			<Set   UnitArtInfo="ART_DEF_UNIT_CHALLENGER_2_BATTLETANK"/>
+			<Where Type="UNIT_MAIN_BATTLE_TANK" />
+		</Update>
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_CHALLENGER_2_BATTLETANK"/>
+			<Where Type="UNIT_ZULU_OLIFANT" />
+		</Update>
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_LEOPARD_2_BATTLETANK888" UnitFlagAtlas="RFEMOD_FLAG_ATLAS" UnitFlagIconOffset="3" />
+			<Where Type="UNIT_MODERN_ARMOR" />
+		</Update>
+
+
+
+		<Delete Type="UNIT_AMERICAN_APACHE"/>
+
+		<Delete Type="UNIT_POLISH_PZLW3_HELICOPTER"/>
+
+
+		<!--游猎锤子调整-->
+
+		<Update>
+			<Set Cost="60" />
+			<Where Type="UNIT_CHARIOT_ARCHER" />
+		</Update>
+		<Update>
+			<Set Cost="53" />
+			<Where Type="UNIT_EGYPTIAN_WARCHARIOT" />
+		</Update>
+		<Update>
+			<Set Cost="42" />
+			<Where Type="UNIT_HUN_HORSE_ARCHER" />
+		</Update>
+		<Update>
+			<Set Cost="38" />
+			<Where Type="UNIT_BARBARIAN_AXMAN" />
+		</Update>
+		<Update>
+			<Set Cost="87" PrereqTech="TECH_MANIPULAR_SYSTEM" />
+			<Where Type="UNIT_MEDIEVAL_CHARIOT" />
+		</Update>
+		<Update>
+			<Set Cost="87" PrereqTech="TECH_MANIPULAR_SYSTEM"/>
+			<Where Type="UNIT_MONGOLIAN_KESHIK" />
+		</Update>
+		<Update>
+			<Set Cost="77"  PrereqTech="TECH_MANIPULAR_SYSTEM"/>
+			<Where Type="UNIT_ARABIAN_CAMELARCHER" />
+		</Update>
+
+		<Update>
+			<Set Cost="130" />
+			<Where Type="UNIT_BOMBARD" />
+		</Update>
+
+		<Update>
+			<Set Cost="115" />
+			<Where Type="UNIT_AZTEC_EAGLE" />
+		</Update>
+		<Update>
+			<Set Cost="130" />
+			<Where Type="UNIT_INDIAN_WARELEPHANT" />
+		</Update>
+
+		<Update>
+			<Set Cost="185" />
+			<Where Type="UNIT_CAVALRY" />
+		</Update>
+
+		<Update>
+			<Set Cost="185" />
+			<Where Type="UNIT_AUSTRIAN_HUSSAR" />
+		</Update>
+
+
+		<Update>
+			<Set Cost="161" />
+			<Where Type="UNIT_SHOSHONE_COMANCHE_RIDERS" />
+		</Update>
+
+
+
+		<Update>
+			<Set Cost="311" />
+			<Where Type="UNIT_CRUISER_TANK" />
+		</Update>
+
+		<Update>
+			<Set Cost="311" />
+			<Where Type="UNIT_ENGLISH_CROMWELL_TANK" />
+		</Update>
+
+
+		<Update>
+			<Set Cost="504" />
+			<Where Type="UNIT_HELICOPTER_GUNSHIP" />
+		</Update>
+
+		<!--<Update>
+			<Set Cost="504" />
+			<Where Type="UNIT_POLISH_PZLW3_HELICOPTER" />
+		</Update>-->
+
+
+
+		<Update>
+			<Set Cost="721" UnitArtInfo="ART_DEF_UNIT_AMERICAN_APACHE"/>
+			<Where Type="UNIT_ATTACK_HELICOPTER" />
+		</Update>
+
+
+		<Update>
+			<Set Cost="721" />
+			<Where Type="UNIT_GERMAN_EUROCOPTER_TIGER" />
+		</Update>
+	</Units>
+
+
+
+
+
+
+</GameData>

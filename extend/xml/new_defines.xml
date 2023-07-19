@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/24 18:54:30 -->
+<GameData>
+
+
+
+
+	<Tech_SpecialistYieldChanges>
+
+		<Row>
+			<TechType>TECH_JOURNALISM</TechType>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<TechType>TECH_NATURAL_HISTORY</TechType>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<TechType>TECH_MODERN_SANITATION</TechType>
+			<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<Row>
+			<TechType>TECH_IMPERIALISM</TechType>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Tech_SpecialistYieldChanges>
+
+	
+
+	<Specialists>
+
+		<Update>
+			<Where Type="SPECIALIST_WRITER"/>
+			<Set IconAtlas="ROBOT_ICON_ATLAS4" PortraitIndex="47"/>
+		</Update>
+		<Update>
+			<Where Type="SPECIALIST_MUSICIAN"/>
+			<Set IconAtlas="ROBOT_ICON_ATLAS4" PortraitIndex="42"/>
+		</Update>
+
+
+		<Update>
+			<Where Type="SPECIALIST_CITIZEN"/>
+			<Set IconAtlas="ROBOT_ICON_ATLAS4" PortraitIndex="44"/>
+		</Update>
+		
+    </Specialists>
+
+
+	<!--***********************基础设置***********************-->
+	<CustomModOptions>
+		<!--*****额外新增功能******-->
+		<Replace Name="MORE_NATURAL_WONDER" Value="1"/>
+		<Replace Name="SPECIALIST_RESOURCES" Value="1"/>
+		<Replace Name="GLOBAL_PROMOTIONS_REMOVAL" Value="1"/> 
+		
+		<Replace Name="ROG_CORE" Value="1"/>
+		<Replace Name="EVENTS_GREAT_WORK_CREATED" Value="1"/>
+		<Replace Name="EVENTS_GREAT_PEOPLE_BOOST" Value="1"/>
+		<Replace Name="EVENTS_CITY_RANGE_STRIKE" Value="1"/>
+		<Replace Name="EVENTS_UNIT_DO_TURN" Value="1"/>
+		<Replace Name="EVENTS_IMPROVEMENTS_PILLAGED" Value="1"/>
+		<Replace Name="EVENTS_UNIT_CAN_RANGEATTACK" Value="1"/>
+		<Replace Name="EVENTS_UNIT_MOVE" Value="1"/>
+
+		<Replace Name="EVENTS_TILE_SET_OWNER" Value="1"/>
+		<Replace Name="EVENTS_WLKD_DAY" Value="1"/>
+		<Replace Name="EVENTS_CITY_PUPPETED" Value="1"/>
+
+		<Replace Name="PROMOTION_COLLATERAL_DAMAGE" Value="1"/>
+		<!--*****end******-->
+		<Replace Name="PROMOTIONS_IMPROVEMENT_BONUS" Value="1"/>
+		<Replace Name="EVENTS_TILE_IMPROVEMENTS" Value="1"/>
+		
+		<Replace Name="EVENTS_TRADE_ROUTES" Value="1"/>
+		
+		<Replace Name="EVENTS_MINORS_INTERACTION" Value="1"/>
+		<Replace Name="EVENTS_MINORS_GIFTS" Value="1"/>
+		<Replace Name="EVENTS_MINORS" Value="1"/>
+		<Replace Name="EVENTS_ESPIONAGE" Value="1"/>
+		
+		<Replace Name="RELIGION_LOCAL_RELIGIONS" Value="1"/>
+		<Replace Name="EVENTS_ACQUIRE_BELIEFS" Value="1"/>
+		<Replace Name="EVENTS_RELIGION" Value="1"/>
+
+		<!--<Replace Name="TRAITS_ANY_BELIEF" Value="1"/>-->
+		
+		<!-- Fixes the very dodgy maths in the calculation of a unit's power (v19) -->
+		<Replace Name="BUGFIX_INTERCEPTOR_STRENGTH" Value="1"/>
+		<!-- Fixes the Anti-Air non-domain bonuses issue, requires BUGFIX_UNIT_POWER_CALC to be enabled -->
+		<Replace Name="BUGFIX_UNIT_POWER_CALC" Value="1"/>
+		<Replace Name="BUGFIX_UNIT_POWER_BONUS_VS_DOMAIN_ONLY" Value="1"/>
+		<Replace Name="BUGFIX_UNIT_POWER_NAVAL_CONSISTENCY" Value="1"/>
+		<Replace Name="BUGFIX_REMOVE_GHOST_ROUTES" Value="1"/>
+		
+		<Replace Name="GLOBAL_SEPARATE_GP_COUNTERS" Value="1"/>
+		<!-- Displays the opinion weight in the tooltip when meeting a leader (v80) -->
+		<Replace Name="DIPLOMACY_BY_NUMBERS" Value="1"/>
+		<Replace Name="UI_CITY_PRODUCTION" Value="1"/>
+		<Replace Name="EVENTS_UNIT_CREATED" Value="1"/>
+
+		<!--<Replace Name="GLOBAL_BREAK_CIVILIAN_1UPT" Value="1"/>
+		<Replace Name="GLOBAL_BREAK_CIVILIAN_RESTRICTIONS" Value="1"/>-->
+		<!-- 大军出现在战场而非城市 -->
+		<!--<Replace Name="GLOBAL_LOCAL_GENERALS" Value="1"/>-->
+		<Replace Name="EVENTS_IDEOLOGIES" Value="1"/>
+		<Replace Name="EVENTS_LIBERATION" Value="1"/>
+
+		<Replace Name="EVENTS_WAR_AND_PEACE" Value="1"/>
+		<Replace Name="EVENTS_CITY" Value="1"/>
+		<Replace Name="EVENTS_PLAYER_TURN" Value="1"/>
+		<Replace Name="EVENTS_BATTLES_DAMAGE" Value="1"/>
+		<Replace Name="GLOBAL_EXCLUDE_FROM_GIFTS" Value="1"/>
+		<!-- 不可被城邦赠送 -->
+		<Replace Name="GLOBAL_CS_GIFT_SHIPS" Value="1"/>
+		<!-- 城邦赠送船只 -->
+		<!--<Replace Name="EVENTS_UNIT_RANGEATTACK" Value="1"/>-->
+		<Replace Name="EVENTS_UNIT_FOUNDED" Value="1"/>
+		<Replace Name="API_EXTENSIONS" Value="1"/>
+		<Replace Name="API_LUA_EXTENSIONS" Value="1"/>
+		<Replace Name="EVENTS_COMMAND" Value="1"/>
+		<Replace Name="EVENTS_CUSTOM_MISSIONS" Value="1"/>
+		<Replace Name="PROMOTIONS_AURA_CHANGE" Value="1"/>
+		<Replace Name="EVENTS_GREAT_PEOPLE" Value="1"/>
+		<Replace Name="EVENTS_PLOT" Value="1"/>
+		<Replace Name="EVENTS_GOLDEN_AGE" Value="1"/>
+		<Replace Name="EVENTS_NEW_ERA" Value="1"/>
+		<Replace Name="EVENTS_UNIT_UPGRADES" Value="1"/>
+		<Replace Name="EVENTS_NW_DISCOVERY" Value="1"/>
+		<Replace Name="EVENTS_BARBARIANS" Value="1"/>
+		<Replace Name="EVENTS_REBASE" Value="1"/>
+
+		<Replace Name="EVENTS_AIRLIFT" Value="1"/>
+		<Replace Name="EVENTS_PARADROPS" Value="1"/>
+		<Replace Name="EVENTS_CAN_MOVE_INTO" Value="1"/>
+		<Replace Name="EVENTS_UNIT_ACTIONS" Value="1"/>
+		<Replace Name="EVENTS_TRADE_ROUTE_PLUNDERED" Value="1"/>
+		<Replace Name="EVENTS_UNIT_CAPTURE" Value="1"/>
+		<Replace Name="BUGFIX_NAVAL_NEAREST_WATER" Value="1"/>
+		<Replace Name="BUGFIX_UNITS_AWAKE_IN_DANGER" Value="1"/>
+		<Replace Name="BUGFIX_WORKERS_VISIBLE_DANGER" Value="1"/>
+		<Replace Name="GLOBAL_NO_FOLLOWUP" Value="1"/>
+		<Replace Name="GLOBAL_NO_FOLLOWUP_FROM_CITIES" Value="1"/>
+		<Replace Name="GLOBAL_CAPTURE_AFTER_ATTACKING" Value="1"/>
+		<Replace Name="BUGFIX_CITY_STACKING" Value="1"/>
+		<Replace Name="BUGFIX_DUMMY_POLICIES" Value="1"/>
+		<Replace Name="GLOBAL_SUBS_UNDER_ICE_IMMUNITY" Value="1"/>
+		<Replace Name="GLOBAL_CS_GIFTS_LOCAL_XP" Value="1"/>
+		<Replace Name="GLOBAL_ALPINE_PASSES" Value="1"/>
+		<Replace Name="GLOBAL_CS_NO_ALLIED_SKIRMISHES" Value="1"/>
+
+		<Replace Name="AI_GREAT_PEOPLE_CHOICES" Value="1"/>
+		<Replace Name="BUGFIX_RESEARCH_OVERFLOW" Value="1"/>
+		<Replace Name="EVENTS_CITY_RAZING" Value="1"/>
+		<Replace Name="EVENTS_FOUND_RELIGION" Value="1"/>
+		<Replace Name="GLOBAL_ALPINE_PASSES" Value="1"/>
+		<Replace Name="GLOBAL_MOVE_AFTER_UPGRADE" Value="1"/>
+		<Replace Name="GLOBAL_CANNOT_EMBARK" Value="1"/>
+		<!--<Replace Name="BUILDINGS_PRO_RATA_PURCHASE" Value="1"/>
+		<Replace Name="BUILDINGS_PRO_RATA_PURCHASE_DEPRECIATION" Value="80"/>-->
+		<Replace Name="EVENTS_CIRCUMNAVIGATION" Value="80"/>
+		<Replace Name="GLOBAL_GREATWORK_YIELDTYPES" Value="1"/>
+
+		<!-- 阻止宗教传播 -->
+		<Replace Name="RELIGION_CONVERSION_MODIFIERS" Value="1"/>
+		<!-- 军事单位执行工人任务 -->
+		<Replace Name="AI_SECONDARY_WORKERS" Value="1"/>
+		<Replace Name="AI_SECONDARY_SETTLERS" Value="1"/>
+		<Replace Name="UNITS_LOCAL_WORKERS_COMBATLIMIT" Value="3"/>
+
+
+		<!-- * 探索晋升 * -->
+		<Replace Name="EVENTS_TILE_REVEALED" Value="1"/>
+		<Replace Name="EVENTS_NW_DISCOVERY" Value="1"/>
+
+	</CustomModOptions>
+
+
+
+	<Defines>
+		
+	<Update>
+		<Set Value="20"/>
+		<Where Name="GREAT_GENERAL_STRENGTH_MOD" />
+	</Update>
+
+	<Update>
+		<Set Value="2"/>
+		<Where Name="GREAT_GENERAL_RANGE" />
+	</Update>
+
+	<Replace Name="GREAT_GENERAL_MAX_RANGE">
+			<Value>5</Value>
+	</Replace>
+		
+	</Defines>
+	
+
+
+	<UnitPromotions>
+		<Row>
+			<Type>PROMOTION_GENERAL_1</Type>
+			<Description>TXT_KEY_PROMOTION_GENERAL_1</Description>
+			<Help>TXT_KEY_PROMOTION_GENERAL_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GENERAL_1</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<AuraRangeChange>1</AuraRangeChange>
+			<AuraEffectChange>15</AuraEffectChange>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+		    <ShowInPedia>0</ShowInPedia>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_GENERAL_2</Type>
+			<Description>TXT_KEY_PROMOTION_GENERAL_2</Description>
+			<Help>TXT_KEY_PROMOTION_GENERAL_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GENERAL_2</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<AuraRangeChange>2</AuraRangeChange>
+			<AuraEffectChange>20</AuraEffectChange>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<ShowInPedia>0</ShowInPedia>
+		</Row>
+	</UnitPromotions>
+	
+	
+
+
+
+
+	<Buildings>
+		<!--<Update>
+			<Where Type="BUILDING_SHRINE"/>
+			<Set ConversionModifier="-10"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_MAYA_PYRAMID"/>
+			<Set ConversionModifier="-10"/>
+		</Update>
+
+		<Update>
+			<Where Type="BUILDING_TEMPLE"/>
+			<Set ConversionModifier="-10"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_MUD_PYRAMID_MOSQUE"/>
+			<Set ConversionModifier="-10"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_BURIAL_TOMB"/>
+			<Set ConversionModifier="-10"/>
+		</Update>
+
+		<Update>
+			<Where Type="BUILDING_STONEHENGE"/>
+			<Set GlobalConversionModifier="-5"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_HAGIA_SOPHIA"/>
+			<Set GlobalConversionModifier="-5"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_NOTRE_DAME"/>
+			<Set GlobalConversionModifier="-5"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_MOSQUE_OF_DJENNE"/>
+			<Set GlobalConversionModifier="-5"/>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_GRAND_TEMPLE"/>
+			<Set GlobalConversionModifier="-20"/>
+		</Update>-->
+
+
+		<Update>
+			<Where Type="BUILDING_POSEIDON_TEMPLE"/>
+			<Set GlobalConversionModifier="-20"/>
+		</Update>
+	</Buildings>
+
+	<!--<Policies>
+		<Update>
+			<Where Type="POLICY_ORGANIZED_RELIGION"/>
+			<Set ConversionModifier="-10"/>
+		</Update>
+	</Policies>-->
+
+
+
+
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
+			<ResourceType>RESOURCE_TIN</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
+			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+		
+
+
+		<Row>
+			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
+			<ResourceType>RESOURCE_LUMBER</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+
+	</Building_ResourceQuantity>
+	
+	
+
+	<Missions>
+		<!-- Horse Artillery -->
+		<Row>
+			<Type>MISSION_FIRE_GUNS</Type>
+			<Description>TXT_KEY_COMMAND_FIRE_GUNS</Description>
+			<Help>TXT_KEY_MISSION_FIRE_GUNS_HELP</Help>
+			<DisabledHelp>TXT_KEY_MISSION_FIRE_GUNS_HELP_DISABLED</DisabledHelp>
+			<HotKey>KB_U</HotKey>
+			<HotKeyPriority>2</HotKeyPriority>
+			<OrderPriority>150</OrderPriority>
+			<Visible>1</Visible>
+			<IconIndex>13</IconIndex>
+			<IconAtlas>UNIT_ACTION_ATLAS</IconAtlas>
+		</Row>
+		
+		
+		<Row>
+			<Type>MISSION_LIMBER_GUNS</Type>
+			<Description>TXT_KEY_COMMAND_LIMBER</Description>
+			<Help>TXT_KEY_MISSION_LIMBER_HELP</Help>
+			<DisabledHelp>TXT_KEY_MISSION_LIMBER_HELP_DISABLED</DisabledHelp>
+			<HotKey>KB_U</HotKey>
+			<HotKeyPriority>2</HotKeyPriority>
+			<OrderPriority>150</OrderPriority>
+			<Visible>1</Visible>
+			<IconIndex>17</IconIndex>
+			<IconAtlas>SP_UNIT_ACTION_ATLAS</IconAtlas>
+		</Row>
+
+
+
+
+		
+		
+	</Missions>
+	
+	
+	
+
+
+	<Terrains>
+		<!-- 深海 -->
+		<Update>
+			<Where Type="TERRAIN_OCEAN"/>
+			<Set ExtraTurnDamage="35"/>
+		</Update>
+
+
+		<!--山脉 -->
+		<Update>
+			<Set  TurnDamage="20"/>
+			<Where Type="TERRAIN_MOUNTAIN" />
+		</Update>
+
+
+		<!-- 雪原 -->
+		<Update>
+			<Set Defense="-15" Movement="2" />
+			<Where Type="TERRAIN_SNOW" />
+		</Update>
+
+		<!-- 荒漠 -->
+		<Update>
+			<Set  Movement="2" Defense="0" />
+			<Where Type="TERRAIN_DESERT" />
+		</Update>
+
+		<!-- 草原 -->
+		<Update>
+			<Set Defense="0" />
+			<Where Type="TERRAIN_GRASS" />
+		</Update>
+		<!-- 平原 -->
+		<Update>
+			<Set Defense="0" />
+			<Where Type="TERRAIN_PLAINS" />
+		</Update>
+		<!-- 冻土 -->
+		<Update>
+			<Set Defense="-15" />
+			<Where Type="TERRAIN_TUNDRA" />
+		</Update>
+	</Terrains>
+
+	<Features>
+	
+		<!--修复维多利亚湖非水源的判定-->
+		<Update>
+			<Where Type="FEATURE_LAKE_VICTORIA"/>
+			<Set AddsFreshWater="true" SeeThrough="0"/>
+		</Update>
+		<!--所罗门宝藏额外快乐加成-->
+		<Update>
+			<Where Type="FEATURE_SOLOMONS_MINES"/>
+			<Set InBorderHappiness="2"/>
+		</Update>
+
+		<!--树林-->
+		<Update>
+			<Set Defense="25" />
+			<Where Type="FEATURE_JUNGLE" />
+		</Update>
+		<Update>
+			<Set Defense="25" />
+			<Where Type="FEATURE_FOREST" />
+		</Update>
+		
+		<!--沼泽-->
+		<Update>
+			<Set Defense="-15" />
+			<Where Type="FEATURE_MARSH" />
+		</Update>
+		
+		<!--绿洲-->
+		<Update>
+			<Set Defense="25" />
+			<Where Type="FEATURE_OASIS" />
+		</Update>
+
+		<!--泛滥平原-->
+		<Update>
+			<Set Defense="-15" Movement="2"/>
+			<Where Type="FEATURE_FLOOD_PLAINS" />
+		</Update>
+
+
+		<!--冰块-->
+		<Update>
+			<Set Defense="-15"/>
+			<Where Type="FEATURE_ICE" />
+		</Update>
+		
+		<!--辐射-->
+		<Update>
+			<Set Defense="-25" Movement="2" />
+			<Where Type="FEATURE_FALLOUT" />
+		</Update>
+		
+		
+	
+		
+	</Features>
+
+
+
+	<Improvements>
+		<Update>
+			<Where Type="IMPROVEMENT_CITADEL"/>
+			<Set NoFollowup="1"/>
+		</Update>
+		<Update>
+			<Where Type="IMPROVEMENT_FORT"/>
+			<Set NoFollowup="1"/>
+		</Update>
+		<Update>
+			<Where Type="IMPROVEMENT_KASBAH"/>
+			<Set NoFollowup="1"/>
+		</Update>
+		<Update>
+			<Where Type="IMPROVEMENT_FEITORIA"/>
+			<Set NoFollowup="1"/>
+		</Update>
+		<Update>
+			<Where Type="IMPROVEMENT_CHATEAU"/>
+			<Set NoFollowup="1"/>
+		</Update>
+
+		<Update>
+			<Where Type="IMPROVEMENT_FW_CORE"/>
+			<Set NoFollowup="1"/>
+		</Update>
+		<Update>
+			<Where Type="IMPROVEMENT_BYZANTIUM_ANGELOKASTRO"/>
+			<Set NoFollowup="1"/>
+		</Update>
+
+	</Improvements>
+
+
+	<Resources>
+		<!--<Update>
+			<Set TechCityTrade="TECH_STONE_TOOLS" TechReveal="TECH_STONE_TOOLS" />
+			<Where Type="RESOURCE_STONE" />
+		</Update>-->
+		
+		<Update>
+			<Set TechCityTrade="TECH_ANIMAL_HUSBANDRY" TechReveal="TECH_ANIMAL_HUSBANDRY" />
+			<Where Type="RESOURCE_BISON" />
+		</Update>
+		<Update>
+			<Set TechCityTrade="TECH_ANIMAL_HUSBANDRY" TechReveal="TECH_ANIMAL_HUSBANDRY" />
+			<Where Type="RESOURCE_COW" />
+		</Update>
+
+
+		<Update>
+			<Set TechCityTrade="TECH_BRONZE_WORKING" TechReveal="TECH_BRONZE_WORKING" />
+			<Where Type="RESOURCE_IRON" />
+		</Update>
+		
+	</Resources>
+
+
+
+
+
+	<SpecialistYields>
+
+		<Delete SpecialistType="SPECIALIST_SCIENTIST"/>
+		<Delete SpecialistType="SPECIALIST_MUSICIAN"/>
+		<Delete SpecialistType="SPECIALIST_ARTIST"/>
+		<Delete SpecialistType="SPECIALIST_WRITER"/>
+		<Delete SpecialistType="SPECIALIST_ENGINEER"/>
+		
+		
+
+		<Row>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+
+		<Row>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+
+
+	</SpecialistYields>
+
+
+
+
+
+	<GameOptions>
+
+
+		
+		<Update>
+			<Where Type="GAMEOPTION_PLAGUE_DESTROYS_CITIES"/>
+			<Set Default="1"/>
+		</Update>
+
+		<Update>
+			<Where Type="GAMEOPTION_POLICY_SAVING"/>
+			<Set Default="1"/>
+		</Update>
+
+		<Update>
+			<Where Type="GAMEOPTION_PROMOTION_SAVING"/>
+			<Set Default="1"/>
+		</Update>
+
+
+		
+		<Update>
+			<Where Type="GAMEOPTION_NO_BARBARIANS"/>
+			<Set Default="1"/>
+		</Update>
+		
+	</GameOptions>
+
+	<Defines>
+		<Update>
+			<Where Name="AIR_UNIT_REBASE_RANGE_MULTIPLIER"/>
+			<Set Value="200"/>
+		</Update>
+
+		<Update>
+			<Where Name="PILLAGE_HEAL_AMOUNT"/>
+			<Set Value="20"/>
+		</Update>
+
+
+		<Update>
+			<Where Name="CIRCUMNAVIGATE_FREE_MOVES"/>
+			<Set Value="1"/>
+		</Update>
+		
+
+		<Update>
+			<Where Name="INSTA_HEAL_RATE"/>
+			<Set Value="50"/>
+		</Update>
+
+
+		<Update>
+			<Where Name="MAX_HIT_POINTS"/>
+			<Set Value="100"/>
+		</Update>
+
+		<Update>
+			<Where Name="MAX_CITY_HIT_POINTS"/>
+			<Set Value="250"/>
+		</Update>
+
+		<Update>
+			<Where Name="CITY_UNIT_LIMIT"/>
+			<Set Value="2"/>
+		</Update>
+
+		<Update>
+			<Set Value="25" />
+			<Where Name="HILLS_EXTRA_DEFENSE" />
+		</Update>
+
+		<Update>
+			<Set Value="0" />
+			<Where Name="FLAT_LAND_EXTRA_DEFENSE" />
+		</Update>
+
+
+
+		<Update>
+			<Set Value="100"/>
+			<Where Name="NONCOMBAT_UNIT_RANGED_DAMAGE"/>
+		</Update>
+
+
+		<!-- City Damage-->
+
+
+		<!-- 核弹-->
+
+		<Update>
+			<Set Value="40"/>
+			<Where Name="NUKE_FALLOUT_PROB" />
+		</Update>
+		<Update>
+			<Set Value="30"/>
+			<Where Name="NUKE_UNIT_DAMAGE_BASE" />
+		</Update>
+		<Update>
+			<Set Value="20"/>
+			<Where Name="NUKE_UNIT_DAMAGE_RAND_1" />
+		</Update>
+		<Update>
+			<Set Value="20"/>
+			<Where Name="NUKE_UNIT_DAMAGE_RAND_2" />
+		</Update>
+		
+	
+		<Update>
+			<Set Value="30"/>
+			<Where Name="NUKE_LEVEL1_POPULATION_DEATH_BASE" />
+		</Update>
+
+		<Update>
+			<Set Value="20"/>
+			<Where Name="NUKE_LEVEL1_POPULATION_DEATH_RAND_1" />
+		</Update>
+		
+		
+		<Update>
+			<Set Value="70"/>
+			<Where Name="NUKE_LEVEL2_POPULATION_DEATH_BASE" />
+		</Update>
+		<Update>
+			<Set Value="6"/>
+			<Where Name="NUKE_LEVEL2_ELIM_POPULATION_THRESHOLD" />
+		</Update>
+		<Update>
+			<Set Value="80"/>
+			<Where Name="NUKE_CITY_HIT_POINT_DAMAGE" />
+		</Update>
+		<Update>
+			<Set Value="2"/>
+			<Where Name="NUKE_BLAST_RADIUS" />
+		</Update>
+
+
+		<!-- Unit/Combat Defines -->
+	
+		<Update>
+			<Set Value="60"/>
+			<Where Name="CITY_HIT_POINTS_HEALED_PER_TURN" />
+		</Update>
+
+		<Update>
+			<Set Value="-33"/>
+			<Where Name="TRAIT_WOUNDED_DAMAGE_MOD" />
+		</Update>
+
+		<Update>
+			<Set Value="33"/>
+			<Where Name="WOUNDED_DAMAGE_MULTIPLIER" />
+		</Update>
+
+		<!--<Update>
+			<Set Value="800"/>
+			<Where Name="CITY_STRENGTH_DEFAULT" />
+		</Update>-->
+
+		<Update>
+			<Set Value="100"/>
+			<Where Name="CITY_RANGED_ATTACK_STRENGTH_MULTIPLIER" />
+		</Update>
+		<Update>
+			<Set Value="250"/>
+			<Where Name="CITY_STRENGTH_UNIT_DIVISOR"/>
+		</Update>
+		<!-- Other-->
+
+		<Update>
+			<Set Value="0"/>
+			<Where Name="COMBAT_CAPTURE_HEALTH"/>
+		</Update>
+
+		<Update>
+			<Set Value="5"/>
+			<Where Name="COMBAT_CAPTURE_MIN_CHANCE"/>
+		</Update>
+		<Update>
+			<Set Value="60"/>
+			<Where Name="COMBAT_CAPTURE_MAX_CHANCE"/>
+		</Update>
+
+
+		<Update>
+			<Set Value="3"/>
+			<Where Name="UNHAPPINESS_PER_CITY"/>
+		</Update>
+
+		<Update>
+			<Set Value="1.5"/>
+			<Where Name="UNHAPPINESS_PER_POPULATION"/>
+		</Update>
+		
+		<Update>
+			<Set Value="3"/>
+			<Where Name="UNHAPPINESS_PER_OCCUPIED_POPULATION"/>
+		</Update>
+		
+		<Update>
+			<Set Value="7"/>
+			<Where Name="UNHAPPINESS_PER_CAPTURED_CITY" />
+		</Update>
+		
+		
+		<Update>
+			<Set Value="40"/>
+			<Where Name="GOLD_PURCHASE_GOLD_PER_PRODUCTION" />
+		</Update>
+
+		<Update>
+			<Set Value="0.8"/>
+			<Where Name="HURRY_GOLD_PRODUCTION_EXPONENT" />
+		</Update>
+
+		<Update>
+			<Set Value="10"/>
+			<Where Name="GOLD_PURCHASE_VISIBLE_DIVISOR" />
+		</Update>
+
+
+
+		<!--黄金时代点数-->
+		<Update>
+			<Set Value="750"/>
+			<Where Name="GOLDEN_AGE_BASE_THRESHOLD_HAPPINESS" />
+		</Update>
+		<Update>
+			<Set Value="0.015"/>
+			<Where Name="GOLDEN_AGE_THRESHOLD_CITY_MULTIPLIER" />
+		</Update>
+		
+	
+
+		<!--快乐度战斗力惩罚下限-->
+		<Update>
+			<Set Value="-40"/>
+			<Where Name="VERY_UNHAPPY_MAX_COMBAT_PENALTY" />
+		</Update>
+		<!--资源缺失战斗力惩罚-->
+		<Update>
+			<Set Value="-50"/>
+			<Where Name="STRATEGIC_RESOURCE_EXHAUSTED_PENALTY" />
+		</Update>
+
+		<!--铁路连接提供产能加成-->
+		<Update>
+			<Set Value="0"/>
+			<Where Name="INDUSTRIAL_ROUTE_PRODUCTION_MOD" />
+		</Update>
+
+		<!--单位升级价格-->
+		<Update>
+			<Set Value="2"/>
+			<Where Name="UNIT_UPGRADE_COST_PER_PRODUCTION" />
+		</Update>
+
+
+		<!-- 政策 -->
+
+		<Update>
+			<Set Value="40"/>
+			<Where Name="BASE_POLICY_COST" />
+		</Update>
+		<Update>
+			<Set Value="3"/>
+			<Where Name="POLICY_COST_INCREASE_TO_BE_EXPONENTED" />
+		</Update>
+		<Update>
+			<Set Value="2.1"/>
+			<Where Name="POLICY_COST_EXPONENT" />
+		</Update>
+		<!--<Update>
+			<Set Value="60"/>
+			<Where Name="POLICY_COST_DISCOUNT_MAX" />
+		</Update>-->
+
+		<!-- END Policy Stuff -->
+
+		<Update>
+			<Set Value="100"/>
+			<Where Name="CULTURE_LEVEL_EXOTIC" />
+		</Update>
+
+		<Update>
+			<Set Value="200"/>
+			<Where Name="CULTURE_LEVEL_FAMILIAR" />
+		</Update>
+
+		<Update>
+			<Set Value="400"/>
+			<Where Name="CULTURE_LEVEL_POPULAR" />
+		</Update>
+		
+		
+		
+		<Update>
+			<Set Value="600"/>
+			<Where Name="CULTURE_LEVEL_INFLUENTIAL" />
+		</Update>
+
+		<Update>
+			<Set Value="1000"/>
+			<Where Name="CULTURE_LEVEL_DOMINANT" />
+		</Update>
+
+
+
+		<Update>
+			<Set Value="100"/>
+			<Where Name="GREAT_PERSON_THRESHOLD_BASE" />
+		</Update>
+		<Update>
+			<Set Value="125"/>
+			<Where Name="GREAT_PERSON_THRESHOLD_INCREASE" />
+		</Update>
+		
+
+
+
+		<!-- 伤害判定 -->
+
+		<Update>
+			<Set Value="2400"/>
+			<Where Name="ATTACK_SAME_STRENGTH_MIN_DAMAGE" />
+		</Update>
+
+		<Update>
+			<Set Value="100"/>
+			<Where Name="RANGE_ATTACK_RANGED_DEFENDER_MOD" />
+		</Update>
+
+		<!-- Note: this will actually produce something between 0.00 and the listed number in damage 原设定为1200-->
+		<Update>
+			<Set Value="0"/>
+			<Where Name="ATTACK_SAME_STRENGTH_POSSIBLE_EXTRA_DAMAGE" />
+		</Update>
+		<Update>
+			<Set Value="2400"/>
+			<Where Name="RANGE_ATTACK_SAME_STRENGTH_MIN_DAMAGE" />
+		</Update>
+		
+		
+		<!-- Note: this will actually produce something between 0.00 and the listed number in damage -->
+
+		<Update>
+			<Set Value="0"/>
+			<Where Name="RANGE_ATTACK_SAME_STRENGTH_POSSIBLE_EXTRA_DAMAGE" />
+		</Update>
+		<Update>
+			<Set Value="2400"/>
+			<Where Name="AIR_STRIKE_SAME_STRENGTH_MIN_DEFENSE_DAMAGE" />
+		</Update>
+
+		<!-- Note: this will actually produce something between 0.00 and the listed number in damage -->
+
+		<Update>
+			<Set Value="0"/> 
+			<Where Name="AIR_STRIKE_SAME_STRENGTH_POSSIBLE_EXTRA_DEFENSE_DAMAGE" />
+		</Update>
+		<Update>
+			<Set Value="2400"/>
+			<Where Name="INTERCEPTION_SAME_STRENGTH_MIN_DAMAGE" />
+		</Update>
+
+		<!-- Note: this will actually produce something between 0.00 and the listed number in damage -->
+		<Update>
+			<Set Value="0"/>
+			<Where Name="INTERCEPTION_SAME_STRENGTH_POSSIBLE_EXTRA_DAMAGE" />
+		</Update>
+
+
+
+
+		<!-- 最大折扣上限 -->
+		<Update>
+			<Set Value="-65"/>
+			<Where Name="UNIT_UPGRADE_COST_DISCOUNT_MAX" />
+		</Update>
+
+
+		<Update>
+			<Set Value="-65"/>
+			<Where Name="POLICY_COST_DISCOUNT_MAX" />
+		</Update>
+
+
+
+		<Update>
+			<Set Value="100"/>
+			<Where Name="MAX_EVASION_PROBABILITY" />
+		</Update>
+
+
+	
+
+
+		<Update>
+			<Set Value="7"/>
+			<Where Name="MAX_YIELD_STACK" />
+		</Update>
+
+		<Update>
+			<Set Value="1200"/>
+			<Where Name="RELIGION_FAITH_DELTA_NEXT_GREAT_PERSON" />
+		</Update>
+
+		<Update>
+			<Set Value="30"/>
+			<Where Name="COMBAT_CAPTURE_RATIO_MULTIPLIER" />
+		</Update>
+
+
+		<!-- 杰作产出 -->
+		<Update>
+			<Set Value="8"/>
+			<Where Name="BASE_CULTURE_PER_GREAT_WORK" />
+		</Update>
+
+
+		<Update>
+			<Set Value="2"/>
+			<Where Name="BASE_TOURISM_PER_GREAT_WORK" />
+		</Update>
+
+
+		<Update>
+			<Set Value="8"/>
+			<Where Name="GOLDEN_AGE_LENGTH" />
+		</Update>
+	</Defines>
+
+
+
+
+	<!-- 额外胜利 -->
+
+	<Victories>
+		<Row>
+			<Type>VICTORY_RELIGIOUS</Type>
+			<Description>TXT_KEY_VICTORY_RELIGIOUS</Description>
+			<VictoryStatement>TXT_KEY_VICTORY_RELIGIOUS_BANG</VictoryStatement>
+			<!--<VictoryBackground>Found_Religion_background.dds</VictoryBackground>-->
+			<VictoryBackground>CoronationOfCharlemagne.dds</VictoryBackground>
+			<Civilopedia>TXT_KEY_VICTORY_RELIGIOUS_PEDIA</Civilopedia>
+			<WinsGame>true</WinsGame>
+			<TargetScore>true</TargetScore>
+			<Audio>AS2D_VICTORY_SPEECH_RELIGIOUS_VICTORY</Audio>
+		</Row>
+		<Row>
+			<Type>VICTORY_ECONOMIC</Type>
+			<Description>TXT_KEY_VICTORY_ECONOMIC</Description>
+			<VictoryStatement>TXT_KEY_VICTORY_ECONOMIC_BANG</VictoryStatement>
+			<VictoryBackground>SolonAndCroesus2.dds</VictoryBackground>
+			<Civilopedia>TXT_KEY_VICTORY_ECONOMIC_PEDIA</Civilopedia>
+			<WinsGame>true</WinsGame>
+			<TargetScore>true</TargetScore>
+			<Audio>AS2D_VICTORY_SPEECH_ECONOMIC_VICTORY</Audio>
+		</Row>
+	</Victories>
+
+	<Audio_Sounds>
+		<Row>
+			<SoundID>SND_VICTORY_SPEECH_RELIGIOUS_VICTORY</SoundID>
+			<Filename>Speech_Religious_Victory</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		<Row>
+			<SoundID>SND_VICTORY_SPEECH_ECONOMIC_VICTORY</SoundID>
+			<Filename>Speech_Economic_Victory</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+	</Audio_Sounds>
+	<Audio_2DSounds>
+		<Row>
+			<ScriptID>AS2D_VICTORY_SPEECH_RELIGIOUS_VICTORY</ScriptID>
+			<SoundID>SND_VICTORY_SPEECH_RELIGIOUS_VICTORY</SoundID>
+			<SoundType>GAME_SPEECH</SoundType>
+			<MinVolume>100</MinVolume>
+			<MaxVolume>100</MaxVolume>
+			<TaperSoundtrackVolume>0.75</TaperSoundtrackVolume>
+		</Row>
+		<Row>
+			<ScriptID>AS2D_VICTORY_SPEECH_ECONOMIC_VICTORY</ScriptID>
+			<SoundID>SND_VICTORY_SPEECH_ECONOMIC_VICTORY</SoundID>
+			<SoundType>GAME_SPEECH</SoundType>
+			<MinVolume>100</MinVolume>
+			<MaxVolume>100</MaxVolume>
+			<TaperSoundtrackVolume>0.75</TaperSoundtrackVolume>
+		</Row>
+	</Audio_2DSounds>
+
+
+</GameData>

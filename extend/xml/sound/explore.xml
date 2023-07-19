@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2020/9/9 0:42:51 -->
+<GameData>
+	<Audio_Sounds>
+
+		<Row>
+			<SoundID>SND_AUTOSLED_IMPACT_EXPLOSIONSM</SoundID>
+			<Filename>explosionxlargeh</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+		<Row>
+			<SoundID>SND_AUTOSLED_METAL_LARGE_CRASH</SoundID>
+			<Filename>metallargecrash</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+
+		<Row>
+			<SoundID>SND_IMPACT_LASERLG_CITY</SoundID>
+			<Filename>laserlargecity</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+
+
+	</Audio_Sounds>
+
+
+
+	<Audio_3DSounds>
+
+
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_IMPACT_EXPLOSIONSM</ScriptID>
+			<SoundID>SND_AUTOSLED_IMPACT_EXPLOSIONSM</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+
+
+		<Row>
+			<ScriptID>AS3D_UNIT_AUTOSLED_METAL_LARGE_CRASH</ScriptID>
+			<SoundID>SND_AUTOSLED_METAL_LARGE_CRASH</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>60</MinVolume>
+			<IsMusic>0</IsMusic>
+		</Row>
+
+	
+	
+		
+
+
+	</Audio_3DSounds>
+</GameData>

@@ -1,0 +1,23 @@
+<Asset>
+  <Mesh file="Array_CN.gr2" source="Max" />
+  <Animation file="Array_IdlePos01.gr2" name="IdlePos01" ec="1000" source="Max" layer="None" />
+  <Animation file="Array_IdlePos02.gr2" name="IdlePos02" ec="1001" source="Max" layer="None" />
+  <Animation file="Array_IdlePos03.gr2" name="IdlePos03" ec="1002" source="Max" layer="None" />
+  <Animation file="Array_IdlePos04.gr2" name="IdlePos04" ec="1003" source="Max" layer="None" />
+  <Texture file="Array_CN_DIFF.dds" source="Max" />
+  <Texture file="Array_CN_DecalD.dds" source="Max" />
+  <Texture file="Array_CN_DecalH.dds" source="Max" />
+  <Texture file="Array_CN_SREF.dds" source="Max" />
+  <Texture file="Array_HB_DIFF.dds" source="Max" />
+  <Texture file="Array_HB_DecalD.dds" source="Max" />
+  <Texture file="Array_HB_DecalH.dds" source="Max" />
+  <Texture file="Array_PL_DIFF.dds" source="Max" />
+  <Texture file="Array_PL_DecalD.dds" source="Max" />
+  <Texture file="Array_PL_SREF.dds" source="Max" />
+  <Texture file="HBKit_DIFF.dds" source="Max" />
+  <Texture file="HBKit_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <DecisionTree file="LandmarkDecisionTree4.ddtxml" source="Tool" />
+</Asset>

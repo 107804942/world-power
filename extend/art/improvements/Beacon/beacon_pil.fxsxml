@@ -1,0 +1,10 @@
+<Asset>
+  <Mesh file="Beacon_PIL.gr2" source="Max" />
+  <Texture file="Beacon_PIL.dds" source="Max" />
+  <Texture file="Beacon_PIL_SREF.dds" source="Max" />
+  <Texture file="Construction_Dirt_Decal_PIL.dds" source="Max" />
+  <Texture file="Construction_Dirt_H.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+</Asset>

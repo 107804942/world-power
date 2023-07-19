@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/23 20:47:18 -->
+<GameData>
+	<Units>
+
+		<Update>
+			<Set PrereqTech="TECH_CHEMISTRY"/>
+			<Where Type="UNIT_FRENCH_MUSKETEER" />
+		</Update>
+
+		<Update>
+			<Set PrereqTech="TECH_ORBITAL_SUSPENSION"/>
+			<Where Type="UNIT_SATELLITE_ECCM" />
+		</Update>
+
+
+		<Update>
+			<Set PrereqTech="TECH_WAVEMECHANICS"/>
+			<Where Type="UNIT_SATELLITE_RESOURCEPLUS" />
+		</Update>
+
+
+		<Update>
+			<Set PrereqTech="TECH_SPACE_TECHNOLOGY"/>
+			<Where Type="UNIT_SATELLITE_ORBITAL_STRIKE" />
+		</Update>
+
+		<Update>
+			<Set PrereqTech="TECH_ARTIFICIAL_INTELLIGENCE"/>
+			<Where Type="UNIT_SATELLITE_SPACE_ELEVATOR" />
+		</Update>
+
+
+		<Delete Type="UNIT_GUIDED_MISSILE"/>
+		<Delete Type="UNIT_ASSYRIAN_SCUD_MISSILE"/>
+
+		<Delete Type="UNIT_CITADEL_LATE"/>
+		<Delete Type="UNIT_CITADEL_MID"/>
+		<Delete Type="UNIT_CITADEL_EARLY"/>
+
+
+
+
+
+		<Update>
+			<Set Combat="200"  PrereqTech="TECH_GRID_COMPUTING" Cost="1800" Moves="4"/>
+			<Where Type="UNIT_XCOM_SQUAD" />
+		</Update>
+		<Update>
+			<Set UnitArtInfo="ART_DEF_UNIT_EXOTIC_UNIT_CONDOTTIERI" UnitFlagAtlas="SMAN_EXOTIC_UNIT_FLAG_ATLAS" UnitFlagIconOffset="27"/>
+			<Where Type="UNIT_LONGSWORDSMAN" />
+		</Update>
+
+
+		<Update>
+			<Set   IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="149"/>
+			<Where Type="UNIT_INFANTRY" />
+		</Update>
+
+
+		<Update>
+			<Set UnitArtInfo="ART_DEF_UNIT_ANTIMISSILE" />
+			<Where Type="UNIT_ATGM_VEHICLE" />
+		</Update>
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_MODERN_MARINE888" />
+			<Where Type="UNIT_MILITIA_MODERN" />
+		</Update>
+		<Update>
+			<Set  UnitFlagAtlas="SMAN_EXOTIC_UNIT_FLAG_ATLAS" UnitFlagIconOffset="18"/>
+			<Where Type="UNIT_WARRIOR" />
+		</Update>
+		<Update>
+			<Set  PrereqTech="TECH_MANIPULAR_SYSTEM" />
+			<Where Type="UNIT_MILITIA_ANCIENT" />
+		</Update>
+
+
+
+
+	</Units>
+
+
+	<Units>
+
+
+	
+		<!-- 蠕虫 -->
+		<Row>
+			<Class>UNITCLASS_ZOMBIE</Class>
+			<Type>UNIT_ZOMBIE</Type>
+			<PrereqTech>TECH_COGNITIVE</PrereqTech>
+			<Combat>300</Combat>
+			<Cost>-1</Cost>
+			<Moves>4</Moves>
+			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_ZOMBIE</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_ZOMBIE_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_ZOMBIE_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>70</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<MaxHitPoints>200</MaxHitPoints>
+			<UnitArtInfo>ART_DEF_UNIT_SPORE_LAUNCHER</UnitArtInfo>
+			<UnitFlagAtlas>MOP_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>182</PortraitIndex>
+			<ShowInPedia>false</ShowInPedia>
+		</Row>
+
+		<!-- 武僧 -->
+		<Row>
+			<Class>UNITCLASS_MONK</Class>
+			<Type>UNIT_MONK</Type>
+			<PrereqTech>TECH_THEOLOGY</PrereqTech>
+			<BaseSightRange>2</BaseSightRange>
+			<Combat>26</Combat>
+			<Cost>160</Cost>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<PurchaseOnly>true</PurchaseOnly>
+			<!--<RequiresFaithPurchaseEnabled>true</RequiresFaithPurchaseEnabled>-->
+			<!--<FaithCost>150</FaithCost>-->
+			<Moves>2</Moves>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_MONK</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_MONK_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<MoveAfterPurchase>true</MoveAfterPurchase>
+			<ObsoleteTech>TECH_MOBILIZATION_T</ObsoleteTech>
+			<!--<GoodyHutUpgradeUnitClass>UNITCLASS_MUSKETMAN</GoodyHutUpgradeUnitClass>-->
+			<AdvancedStartCost>20</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<Conscription>1</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_WARRIOR_MONK</UnitArtInfo>
+			<UnitFlagAtlas>MONK_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>74</PortraitIndex>
+			<MoveRate>HEAVY_BIPED</MoveRate>
+			<ExtraMaintenanceCost>3</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_CITADEL_EARLY</Class>
+			<Type>UNIT_CITADEL_EARLY</Type>
+			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
+			<BaseSightRange>3</BaseSightRange>
+			<Immobile>true</Immobile>
+			<Combat>200</Combat>
+			<RangedCombat>200</RangedCombat>
+			<Cost>-1</Cost>
+			<Moves>2</Moves>
+			<Range>2</Range>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+			<Domain>DOMAIN_HOVER</Domain>
+			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CITADEL_EARLY</Description>
+			<Civilopedia>TXT_KEY_UNIT_CITADEL_EARLY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>false</Pillage>
+			<Mechanized>true</Mechanized>
+			<ObsoleteTech>TECH_ADV_ENGINEERING</ObsoleteTech>
+			<AdvancedStartCost>25</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_FRANCE_BATTERY</UnitArtInfo>
+			<UnitFlagAtlas>SMAN_EXOTIC_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>26</UnitFlagIconOffset>
+			<PortraitIndex>62</PortraitIndex>
+			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
+			<MoveRate>ARTILLERY</MoveRate>
+			<ExtraMaintenanceCost>12</ExtraMaintenanceCost>
+		</Row>
+
+		<Row>
+			<Class>UNITCLASS_CITADEL_MID</Class>
+			<Type>UNIT_CITADEL_MID</Type>
+			<PrereqTech>TECH_MILITARY_LOGISTICS</PrereqTech>
+			<BaseSightRange>3</BaseSightRange>
+			<Immobile>true</Immobile>
+			<Combat>350</Combat>
+			<RangedCombat>350</RangedCombat>
+			<AirInterceptRange>2</AirInterceptRange>
+			<Cost>-1</Cost>
+			<Moves>2</Moves>
+			<Range>3</Range>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+			<Domain>DOMAIN_HOVER</Domain>
+			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CITADEL_MID</Description>
+			<Civilopedia>TXT_KEY_UNIT_CITADEL_MID_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>false</Pillage>
+			<Mechanized>true</Mechanized>
+			<ObsoleteTech>TECH_ADV_FLIGHT</ObsoleteTech>
+			<AdvancedStartCost>25</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_FLAK88GUN</UnitArtInfo>
+			<UnitFlagIconOffset>2</UnitFlagIconOffset>
+			<UnitFlagAtlas>WAW_IMPROVEMENTS_FLAG_ATLAS</UnitFlagAtlas>
+			<PortraitIndex>25</PortraitIndex>
+			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
+			<MoveRate>ARTILLERY</MoveRate>
+			<ExtraMaintenanceCost>24</ExtraMaintenanceCost>
+			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+		</Row>
+
+		<Row>
+			<Class>UNITCLASS_CITADEL_LATE</Class>
+			<Type>UNIT_CITADEL_LATE</Type>
+			<PrereqTech>TECH_ADV_FLIGHT</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Immobile>true</Immobile>
+			<Combat>550</Combat>
+			<RangedCombat>550</RangedCombat>
+			<ObsoleteTech>TECH_INTEGRATED_DEFENSE</ObsoleteTech>
+			<Cost>-1</Cost>
+			<Moves>2</Moves>
+			<Range>4</Range>
+			<AirInterceptRange>3</AirInterceptRange>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+			<Domain>DOMAIN_HOVER</Domain>
+			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CITADEL_LATE</Description>
+			<Civilopedia>TXT_KEY_UNIT_CITADEL_LATE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>false</Pillage>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>25</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_COASTAL_ARTILLERY</UnitArtInfo>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<UnitFlagAtlas>COASTAL_CANON_FLAG</UnitFlagAtlas>
+			<PortraitIndex>31</PortraitIndex>
+			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
+			<MoveRate>WHEELED</MoveRate>
+			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
+			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+		</Row>
+
+
+		<Row>
+			<Class>UNITCLASS_CITADEL_FUTURE</Class>
+			<Type>UNIT_CITADEL_FUTURE</Type>
+			<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Immobile>true</Immobile>
+			<Combat>900</Combat>
+			<RangedCombat>900</RangedCombat>
+			<Cost>-1</Cost>
+			<Moves>2</Moves>
+			<Range>5</Range>
+			<AirInterceptRange>4</AirInterceptRange>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+			<Domain>DOMAIN_HOVER</Domain>
+			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CITADEL_FUTURE</Description>
+			<Civilopedia>TXT_KEY_UNIT_CITADEL_FUTURE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>false</Pillage>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>25</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_SIEGE03P</UnitArtInfo>
+			<UnitFlagIconOffset>1</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_MOD_FLAG_ATLAS</UnitFlagAtlas>
+			<PortraitIndex>32</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<MoveRate>WHEELED</MoveRate>
+			<ExtraMaintenanceCost>150</ExtraMaintenanceCost>
+			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+		</Row>
+
+
+
+		<Row>
+			<Class>UNITCLASS_GUIDED_MISSILE</Class>
+			<Type>UNIT_GUIDED_MISSILE</Type>
+			<PrereqTech>TECH_ADV_FLIGHT</PrereqTech>
+			<RangedCombat>200</RangedCombat>
+			<Cost>-1</Cost>
+			<Moves>2</Moves>
+			<Immobile>true</Immobile>
+			<!--<NoMaintenance>true</NoMaintenance>-->
+			<Range>10</Range>
+			<Special>SPECIALUNIT_MISSILE</Special>
+			<Domain>DOMAIN_AIR</Domain>
+			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_GUIDED_MISSILE</Description>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MODERN_GUIDEDMISSLE_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GUIDED_MISSILE_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_GUIDED_MISSILE</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<Suicide>true</Suicide>
+			<AdvancedStartCost>40</AdvancedStartCost>
+			<AirUnitCap>1</AirUnitCap>
+			<RangedCombatLimit>100</RangedCombatLimit>
+			<CombatLimit>0</CombatLimit>
+			<XPValueDefense>2</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_GUIDED_MISSILE</UnitArtInfo>
+			<UnitFlagIconOffset>77</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
+			<PortraitIndex>30</PortraitIndex>
+			<MoveRate>AIR_REBASE</MoveRate>
+			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
+		</Row>
+		
+
+
+		<Row>
+			<Class>UNITCLASS_RANGEDMARINE04P</Class>
+			<Type>UNIT_RANGEDMARINE04P</Type>
+			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+			<BaseSightRange>2</BaseSightRange>
+			<Combat>150</Combat>
+			<Cost>300</Cost>
+			<Moves>4</Moves>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_DEFENSE</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_RANGEDMARINE04P</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_RANGEDMARINE04P_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_MILITIA_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_MILITIA_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>30</AdvancedStartCost>
+			<XPValueAttack>1</XPValueAttack>
+			<XPValueDefense>1</XPValueDefense>
+			<Conscription>5</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_ROBOTMARINE</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
+			<UnitFlagIconOffset>1</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>96</PortraitIndex>
+			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
+			<WorkRate>150</WorkRate>
+		</Row>
+
+
+
+
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_FW_AUTOMATON</Class>
+			<Type>UNIT_FW_AUTOMATON</Type>
+			<BaseSightRange>3</BaseSightRange>
+			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Combat>320</Combat>
+			<Cost>1800</Cost>
+			<Moves>4</Moves>
+			<HurryCostModifier>33</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<Description>TXT_KEY_UNIT_FW_AUTOMATON</Description>
+			<Civilopedia>TXT_KEY_UNIT_FW_AUTOMATON_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FW_AUTOMATON_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>40</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<Conscription>7</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_CARVR</UnitArtInfo>
+			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitFlagIconOffset>14</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>65</PortraitIndex>
+			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_FW_BATTLESUIT</Class>
+			<Type>UNIT_FW_BATTLESUIT</Type>
+			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
+			<BaseSightRange>3</BaseSightRange>
+			<Combat>250</Combat>
+			<RangedCombat>360</RangedCombat>
+			<Range>1</Range>
+			<Cost>1800</Cost>
+			<HurryCostModifier>33</HurryCostModifier>
+			<Moves>4</Moves>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_FW_BATTLESUIT</Description>
+			<Civilopedia>TXT_KEY_UNIT_FW_BATTLESUIT_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FW_BATTLESUIT_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>60</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<Conscription>7</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_FW_AUTOMATON</UnitArtInfo>
+			<UnitFlagIconOffset>26</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>79</PortraitIndex>
+			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
+		</Row>
+
+
+		<Row>
+			<Class>UNITCLASS_CNDR</Class>
+			<Type>UNIT_CNDR</Type>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
+			<Combat>170</Combat>
+			<HurryCostModifier>45</HurryCostModifier>
+			<Cost>1100</Cost>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Moves>3</Moves>
+			<Immobile>0</Immobile>
+			<Domain>DOMAIN_LAND</Domain>
+			<BaseSightRange>1</BaseSightRange>
+			<Description>TXT_KEY_UNIT_CNDR</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_CNDR_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_CNDR_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_CNDR</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<AdvancedStartCost>150</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_CNDR</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
+			<UnitFlagIconOffset>12</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
+			<MaxHitPoints>400</MaxHitPoints>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
+		</Row>
+
+
+		<!--毁灭战士-->
+		<Row>
+			<Class>UNITCLASS_FW_ROBOT_INFANTRY</Class>
+			<Type>UNIT_FW_ROBOT_INFANTRY</Type>
+			<BaseSightRange>3</BaseSightRange>
+			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+			<Combat>220</Combat>
+			<RangedCombat>220</RangedCombat>
+			<Range>2</Range>
+			<HurryCostModifier>33</HurryCostModifier>
+			<Cost>1300</Cost>
+			<Moves>5</Moves>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_FW_ROBOT_INFANTRY</Description>
+			<Civilopedia>TXT_KEY_UNIT_FW_ROBOT_INFANTRY_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FW_ROBOT_INFANTRY_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_FW_ROBOT_INFANTRY_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>50</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<Conscription>7</Conscription>
+			<UnitArtInfo>ART_DEF_UNIT_RANGEDMARINE04SP</UnitArtInfo>
+			<UnitFlagAtlas>ATLAS_DOOMGUY_FLAG</UnitFlagAtlas>
+			<UnitFlagIconOffset>0</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>85</PortraitIndex>
+			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_RANGEDMARINE03S</Class>
+			<Type>UNIT_RANGEDMARINE03S</Type>
+			<BaseSightRange>3</BaseSightRange>
+			<HurryCostModifier>33</HurryCostModifier>
+			<PrereqTech>TECH_COGNITIVE</PrereqTech>
+			<Combat>220</Combat>
+			<Cost>1400</Cost>
+			<Moves>4</Moves>
+			<Immobile>0</Immobile>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_RANGEDMARINE03S</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_RANGEDMARINE03S_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_RANGEDMARINE03S_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_RANGEDMARINE03S</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
+			<ObsoleteTech></ObsoleteTech>
+			<AdvancedStartCost>80</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_RANGEDMARINE04S</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
+			<UnitFlagIconOffset>2</UnitFlagIconOffset>
+			<PortraitIndex>98</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<Class>UNITCLASS_FW_RAILGUN_TANK</Class>
+			<Type>UNIT_FW_RAILGUN_TANK</Type>
+			<BaseSightRange>2</BaseSightRange>
+			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
+			<Combat>270</Combat>
+			<RangedCombat>270</RangedCombat>
+			<Range>2</Range>
+			<Cost>1000</Cost>
+			<Moves>5</Moves>
+			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<HurryCostModifier>45</HurryCostModifier>
+			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_FW_RAILGUN_TANK</Description>
+			<Civilopedia>TXT_KEY_UNIT_FW_RAILGUN_TANK_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_FW_RAILGUN_TANK_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_ANTI_TANK_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>70</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_FW_HOVERTANK</UnitArtInfo>
+			<UnitFlagAtlas>FLAG_ATLAS_FUTURE_4</UnitFlagAtlas>
+			<UnitFlagIconOffset>2</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>143</PortraitIndex>
+			<MoveRate>WHEELED</MoveRate>
+			<ExtraMaintenanceCost>50</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+	</Units>
+
+	<Unit_ClassUpgrades>
+	
+
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<UnitClassType>UNITCLASS_GREAT_WAR_INFANTRY</UnitClassType>
+		</Row>
+		
+	</Unit_ClassUpgrades>
+
+	
+	
+	
+	<Unit_FreePromotions>
+
+		<Delete UnitType="UNIT_CITADEL_EARLY"/>
+		<Delete UnitType="UNIT_CITADEL_MID"/>
+		<Delete UnitType="UNIT_CITADEL_LATE"/>
+
+
+
+		<Row>
+			<UnitType>UNIT_ZOMBIE</UnitType>
+			<PromotionType>PROMOTION_EVIL</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ZOMBIE</UnitType>
+			<PromotionType>PROMOTION_ANTI_EMP</PromotionType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_ZOMBIE</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		
+
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<PromotionType>PROMOTION_INFANTRY_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<PromotionType>PROMOTION_SNOW_EXTRA</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<PromotionType>PROMOTION_DESERT_EXTRA</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<PromotionType>PROMOTION_JUNJLE_EXTRA</PromotionType>
+		</Row>
+		
+		
+
+		
+
+		
+
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<PromotionType>PROMOTION_ANTI_TANK</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<PromotionType>PROMOTION_HOVERING_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
+		</Row>
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<PromotionType>PROMOTION_GUN_1</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<PromotionType>PROMOTION_FREEZE_BOMB</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<PromotionType>PROMOTION_BURNING_BOMB</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<PromotionType>PROMOTION_GUN_1</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE04P</UnitType>
+			<PromotionType>PROMOTION_MILITIA_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE04P</UnitType>
+			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
+		</Row>
+
+	
+
+		<!--<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_CORPS_1</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_CORPS_2</PromotionType>
+		</Row>-->
+
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_CITADEL_DEFENSE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_CARGO_VI</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_ANTI_AIR_III</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<PromotionType>PROMOTION_NAVAL_BONUS_STRONG</PromotionType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_CITADEL_EARLY</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CITADEL_EARLY</UnitType>
+			<PromotionType>PROMOTION_CITADEL_DEFENSE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_EARLY</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_EARLY</UnitType>
+			<PromotionType>PROMOTION_NAVAL_BONUS_STRONG</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CITADEL_MID</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CITADEL_MID</UnitType>
+			<PromotionType>PROMOTION_CITADEL_DEFENSE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_MID</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_MID</UnitType>
+			<PromotionType>PROMOTION_CARGO_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_MID</UnitType>
+			<PromotionType>PROMOTION_ANTI_AIR_III</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_MID</UnitType>
+			<PromotionType>PROMOTION_NAVAL_BONUS_STRONG</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CITADEL_LATE</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_LATE</UnitType>
+			<PromotionType>PROMOTION_CITADEL_DEFENSE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_LATE</UnitType>
+			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_LATE</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_LATE</UnitType>
+			<PromotionType>PROMOTION_ANTI_AIR_III</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CITADEL_LATE</UnitType>
+			<PromotionType>PROMOTION_NAVAL_BONUS_STRONG</PromotionType>
+		</Row>
+
+
+		<!--<Row>
+			<UnitType>UNIT_CITADEL_LATE</UnitType>
+			<PromotionType>PROMOTION_HPMOD3</PromotionType>
+		</Row>-->
+
+
+	</Unit_FreePromotions>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<Unit_ResourceQuantityRequirements>
+	
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+	
+		
+		
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<ResourceType>RESOURCE_LUMBER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		
+
+		
+	
+		<Row>
+			<UnitType>UNIT_XCOM_SQUAD</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+
+
+		
+	</Unit_ResourceQuantityRequirements>
+
+	<Unit_AITypes>
+
+		<Row>
+			<UnitType>UNIT_ZOMBIE</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		
+
+
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<UnitAIType>UNITAI_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+		
+		
+
+
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE04P</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<UnitAIType>UNITAI_RANGED</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+
+
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitAIType>UNITAI_RANGED</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitAIType>UNITAI_COUNTER</UnitAIType>
+		</Row>
+
+
+
+
+	</Unit_AITypes>
+
+
+
+
+
+	<Unit_Flavors>
+
+
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>500</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONK</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>540</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+		<UnitType>UNIT_RANGEDMARINE04P</UnitType>
+		<FlavorType>FLAVOR_DEFENSE</FlavorType>
+		<Flavor>3</Flavor>
+	</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+   </Unit_Flavors>
+
+
+
+</GameData>

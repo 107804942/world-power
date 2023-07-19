@@ -1,0 +1,52 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerAction" id="2" time="0.0148152" duration="0" repeat="0" ec="1100" track="4" tier="0" action="1"/>
+    <trigger type="FTimedTriggerEffect" id="3" time="0" duration="1" repeat="0" ec="1400" track="2" tier="0" event="ART_DEF_VEFFECT_GUIDED_MISSILE_TRAIL" bone="WORLD_center"/>
+    <trigger type="FTimedTriggerEffect" id="4" time="0.0129629625" duration="0" repeat="0" ec="1200" track="2" tier="0" event="ART_DEF_VEFFECT_AIR_DEATH_01" bone="WORLD_center"/>
+    <trigger type="FTimedTriggerEffect" id="6" time="0.0314814746" duration="1" repeat="0" ec="1420" track="2" tier="0" event="ART_DEF_VEFFECT_GUIDED_MISSILE_TRAIL" bone="WORLD_center"/>
+    <trigger type="FTimedTriggerEffect" id="7" time="0.0129629634" duration="0" repeat="0" ec="1420" track="2" tier="0" event="ART_DEF_VEFFECT_ROCKET_ARTILLERY_LAUNCH_SMOKE" bone="WORLD_center"/>
+    <trigger type="FTimedTriggerSound" id="1" time="0" duration="0" repeat="0" ec="1200" track="1" tier="-1" event="AS3D_UNIT_GUIDED_MISSILE_IMPACT_$(WEAPON)" bone=""/>
+    <trigger type="FTimedTriggerSound" id="5" time="0.027777778" duration="0" repeat="0" ec="1200" track="1" tier="-1" event="AS3D_UNIT_GUIDED_MISSILE_EXPLOSION200_POUND" bone=""/>
+    <trigger type="FTimedTriggerSound" id="8" time="0.335185438" duration="0" repeat="0" ec="1200" track="1" tier="-1" event="AS3D_UNIT_GUIDED_MISSILE_G_M_DEBRIS" bone=""/>
+    <trigger type="FTimedTriggerSound" id="9" time="0" duration="1" repeat="0" ec="1400" track="1" tier="-1" event="AS3D_UNIT_GUIDED_MISSILE_G_M_RUN" bone=""/>
+    <trigger type="FTimedTriggerSound" id="10" time="0" duration="1" repeat="0" ec="1420" track="1" tier="-1" event="AS3D_UNIT_GUIDED_MISSILE_G_M_START_RUN" bone=""/>
+  </triggers>
+</trigger_system>

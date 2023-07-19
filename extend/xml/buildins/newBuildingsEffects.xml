@@ -1,0 +1,3426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/19 19:14:07 -->
+<GameData>
+
+	<!--*********************新资源关联方式 ********************-->
+	<Table name="Building_EmpireResourceAnds">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="AllowsImport" type="boolean" default="true"/>
+	</Table>
+
+	<Table name="Building_EmpireResourceOrs">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="AllowsImport" type="boolean" default="true"/>
+	</Table>
+
+
+		
+		
+		
+	<Building_EmpireResourceAnds>
+		
+		<Row>
+			<BuildingType>BUILDING_ISHTARGATE</BuildingType>
+			<ResourceType>RESOURCE_STONE</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
+			<ResourceType>RESOURCE_TIN</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_WAR_MACHINE_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_PUMA_PUMKU</BuildingType>
+			<ResourceType>RESOURCE_MARBLE</ResourceType>
+		</Row>
+		
+	</Building_EmpireResourceAnds>
+	
+
+	<Building_EmpireResourceOrs>
+
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_SHEEP</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_COTTON</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_SILK</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_FLAX</ResourceType>
+		</Row>
+	</Building_EmpireResourceOrs>
+	<!--*********************end ********************-->
+	
+	
+	
+	
+
+
+	<!--*********************新建筑关联方式 ********************-->
+
+	<!--<Building_ClassesNeededInCityOR>
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MATRIX</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WATER_TREATMENT_FACTORY</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_SMALL_MARKET</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCityOR>-->
+	
+	<!--*********************end ********************-->
+	
+	
+	
+	
+
+	<!--*********************自然地型产出 ********************-->
+	<Building_FeatureYieldChanges>
+
+		
+
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<FeatureType>FEATURE_OASIS</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<FeatureType>FEATURE_OASIS</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_HERBALIST</BuildingType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_HERBALIST</BuildingType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+	</Building_FeatureYieldChanges>
+
+
+
+	<!--*********************建筑需要关联资源 ********************-->
+	<Building_LocalResourceOrs>
+
+		
+		<!--*****植物油工厂*****-->
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_FLAX</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_OLIVE</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_LAVENDER</ResourceType>
+		</Row>
+
+
+
+
+		<!--*****电冶金厂*****-->
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+		</Row>
+		
+		
+		
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_PUMA_PUMKU</BuildingType>
+			<ResourceType>RESOURCE_STONE</ResourceType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+		</Row>
+
+
+
+
+		
+
+		<!--*****粮酒坊*****-->
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
+		</Row>
+	
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+		</Row>
+
+
+		<!--****植物园*****-->
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_OLIVE</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_BANANA</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_LAVENDER</ResourceType>
+		</Row>
+
+
+
+
+
+
+	</Building_LocalResourceOrs>
+
+
+
+	<!--*********************建筑建造单位产出加成********************-->
+
+	<Building_DomainProductionModifiers>
+
+	
+		
+		
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Modifier>15</Modifier>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_ZXZCC</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>15</Modifier>
+		</Row>
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_WAR_MACHINE_FACTORY</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>15</Modifier>
+		</Row>
+
+
+
+	</Building_DomainProductionModifiers>	
+		
+		
+		
+	<!--*********************建筑资源产出加成********************-->
+	
+	<Building_ResourceYieldChanges>
+		<!--****食物市场******-->
+
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_BANANA</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_OLIVE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+		
+
+		<!--****粮油厂******-->
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_FLAX</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_LAVENDER</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_OLIVE</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_FLAX</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_LAVENDER</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_OLIVE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<!--****电化冶金******-->
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+		
+		<!--****市场******-->
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SPICES</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SALT</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_INCENSE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SHEEP</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MARKET</BuildingType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<!--****苏克******-->
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SPICES</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SUGAR</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SALT</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_INCENSE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_SHEEP</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_MARKET</BuildingType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<!--****植物园******-->
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_OLIVE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_BANANA</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_OLIVE</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_BANANA</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_LAVENDER</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_LAVENDER</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+
+
+
+		<!-- 炼金室-->
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<ResourceType>RESOURCE_SULFUR</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<ResourceType>RESOURCE_TIN</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<ResourceType>RESOURCE_GEMS</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+
+
+
+
+
+		<!-- 熏制室-->
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_BISON</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_CRAB</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_DEER</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_FISH</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_PEARLS</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_SHEEP</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ResourceType>RESOURCE_WHALE</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<!-- 布厂-->
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_COTTON</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_SHEEP</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_SILK</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_FLAX</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_COTTON</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_SHEEP</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_SILK</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_FLAX</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--****纺织厂***-->
+
+		<Row>
+			<BuildingType>BUILDING_GARMENT_WORKSHOP</BuildingType>
+			<ResourceType>RESOURCE_FLAX</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		
+
+
+
+		<!--****火药库***-->
+
+		<Row>
+			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
+			<ResourceType>RESOURCE_TIN</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+		
+		<!--****矿业公司***-->
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+		
+		
+
+
+		<!--****超深油井***-->
+
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+	
+
+
+		<!--****酿酒坊加成***-->
+
+		<!--红酒、龙蛇兰酒、小麦、浆果、大麦-->
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_WINE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<!--****酒吧加成***-->
+		<Row>
+			<BuildingType>BUILDING_BEVERAGE_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BEVERAGE_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CELTS_IRISHPUB</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CELTS_IRISHPUB</BuildingType>
+			<ResourceType>RESOURCE_TEQUILA</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CELTS_IRISHPUB</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+		<!--****粮仓加成***-->
+		<Row>
+			<BuildingType>BUILDING_GRANARY</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_GRANARY</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<!--****粮库***-->
+		<Row>
+			<BuildingType>BUILDING_GRAIN_DEPOT</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_MOROCCO_IRRIGATION</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		
+
+		<!--****超市加成***-->
+		<Row>
+			<BuildingType>BUILDING_FOOD_MARKET</BuildingType>
+			<ResourceType>RESOURCE_BARLEY</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_FOOD_MARKET</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_PORTUGAL_AVENIDA</BuildingType>
+			<ResourceType>RESOURCE_RASPBERRYZ</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+
+		<!--****乡村小屋***-->
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<ResourceType>RESOURCE_DEER</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<ResourceType>RESOURCE_BISON</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<ResourceType>RESOURCE_FUR</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<ResourceType>RESOURCE_IVORY</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+	</Building_ResourceYieldChanges>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 建筑湖面加成 -->
+	<Building_LakePlotYieldChanges>
+		<!--生物工厂-->
+		<Row>
+			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+	</Building_LakePlotYieldChanges>
+	
+	
+	
+	
+	
+	<!-- 建筑消耗资源 -->
+	<Building_ResourceQuantityRequirements>
+
+		<Delete BuildingType="BUILDING_ALUMINUM_PROVIDER"/>
+		<Delete BuildingType="BUILDING_COAL_COMPANY"/>
+		<Delete BuildingType="BUILDING_IRON_PROVIDER"/>
+		<Delete BuildingType="BUILDING_FORGE"/>
+
+
+		<!--卫生局-->
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+		<!--食品市场-->
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		
+		
+
+
+		<!--火器坊-->
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<!--私人药店-->
+		<Row>
+			<BuildingType>BUILDING_PRIVATE_PHARMACY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+		<!--生物制剂工厂-->
+		<Row>
+			<BuildingType>BUILDING_BIOLOGICAL_FACTORIES</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BIOLOGICAL_FACTORIES</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+		
+		
+		<!--医药公司-->
+		<Row>
+			<BuildingType>BUILDING_MEDICAL_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MEDICAL_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+		<!--植物园-->
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+
+		<!--沙漠改造基地-->
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+
+
+		<!--炸药厂-->
+		<Row>
+			<BuildingType>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+
+
+
+		<!--战争机器工厂-->
+
+		<Row>
+			<BuildingType>BUILDING_WAR_MACHINE_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WAR_MACHINE_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_WAR_MACHINE_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+		<!--电子人工厂-->
+		
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		
+
+
+		<!--火药铺-->
+		<Row>
+			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
+			<ResourceType>RESOURCE_TIN</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+
+
+		<!--矿业公司-->
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+	
+
+		<!--超深油井-->
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+
+		
+
+
+		<!--量子实验室-->
+		<Row>
+			<BuildingType>BUILDING_QUANTUM_LAB</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+
+		<!--改造实验室-->
+		<Row>
+			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+
+
+
+
+		<!--未来金融公司-->
+		<Row>
+			<BuildingType>BUILDING_ECITY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<!--地热发电厂-->
+		<Row>
+			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+		<!--超级计算机中心-->
+		<Row>
+			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<!--星际基地-->
+		<Row>
+			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		<!--地下基地-->
+		<Row>
+			<BuildingType>BUILDING_UNDERGROUND</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+		<!--虚拟训练-->
+		<Row>
+			<BuildingType>BUILDING_VR_TRAINING</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		
+		<!--生物工厂-->
+		<Row>
+			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<!--水雷区-->
+		<Row>
+			<BuildingType>BUILDING_MINEFIELD</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		
+
+		<!--矩阵防御炮-->
+
+		<Row>
+			<BuildingType>BUILDING_MATRIX</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MATRIX</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+		<!--电子人工厂-->
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+
+		<!--海军基地-->
+		<Row>
+			<BuildingType>BUILDING_NAVAL_BASE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_NAVAL_BASE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<!--空军基地-->
+
+		<Row>
+			<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<!--导弹基地-->
+
+		<Row>
+			<BuildingType>BUILDING_MISSILE_BASE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MISSILE_BASE</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+
+		<!--海军基地-->
+		<Row>
+			<BuildingType>BUILDING_ZXZCC</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_ZXZCC</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_HILL_FORT</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_WATCH</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_CLOACA</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_AUTOFACTORY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_EE_BASTION</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_XCOM_HEADQUARTERS</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_XCOM_HEADQUARTERS</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>10</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_TITANIUM_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>25</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FINANCIAL_NETWORK</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK2</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SCIENCE_NETWORK</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_DRONE_CONTROL</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>16</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_SANCTUARY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_MINEFIELD</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+	</Building_ResourceQuantityRequirements>
+
+
+
+
+
+
+
+
+
+	<!--建造倾向-->
+
+
+	<Building_Flavors>
+
+		<!--卫生局-->
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>212</Flavor>
+		</Row>
+
+		<!--食品市场-->
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>24</Flavor>
+		</Row>
+
+
+		<!--植物油精炼厂-->
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>54</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+		
+		<!--电冶金厂-->
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+		
+
+		<!--监禁所-->
+		<Row>
+			<BuildingType>BUILDING_LOCKUP</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LOCKUP</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>65</Flavor>	
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LOCKUP</BuildingType>
+			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+			<Flavor>845</Flavor>
+		</Row>
+		
+		<!--寺院-->
+		<Row>
+			<BuildingType>BUILDING_CLOISTER</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
+
+
+		<!--庄园-->
+		<Row>
+			<BuildingType>BUILDING_JAIL</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_JAIL</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>59</Flavor>
+		</Row>
+		
+		<!--自然博物馆-->
+
+		<Row>
+			<BuildingType>BUILDING_AQUARIUM</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>75</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AQUARIUM</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>55</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AQUARIUM</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>65</Flavor>
+		</Row>
+		
+
+		<!--火器坊-->
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>75</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+		
+
+		<!--出版社-->
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>65</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>65</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>65</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>265</Flavor>
+		</Row>
+
+
+
+		<!--波兰城堡-->
+		<Row>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>65</Flavor>
+		</Row>
+
+		
+		
+		<!--乡村小屋-->
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<FlavorType>FLAVOR_I_LAND_TRADE_ROUTE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+
+		
+		<!--私人药店-->
+		<Row>
+			<BuildingType>BUILDING_PRIVATE_PHARMACY</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>550</Flavor>
+		</Row>
+		
+		
+		<!--蓄水池-->
+		<Row>
+			<BuildingType>BUILDING_CISTERN</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CISTERN</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		
+	
+		
+
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_MEDICAL_COMPANY</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		
+		
+		
+		<!--酿酒坊-->
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		
+		
+		
+		<!--炼金术-->
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+
+		<!--烟熏室-->
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		
+		
+		<!--葡萄园-->
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<!--地牢-->
+		<Row>
+			<BuildingType>BUILDING_DUNGEON</BuildingType>
+			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+
+
+
+
+		<!--沙漠基地-->
+
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+
+		<!--布厂-->
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+
+		<!--炸药厂-->
+		<Row>
+			<BuildingType>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>55</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		
+		
+		
+		
+		
+		
+
+		<!--火药铺-->
+		<Row>
+			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>18</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+
+
+
+		<!--生物制剂工厂-->
+
+		<Row>
+			<BuildingType>BUILDING_BIOLOGICAL_FACTORIES</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BIOLOGICAL_FACTORIES</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>250</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BIOLOGICAL_FACTORIES</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		
+		
+		
+
+		<!--矿业公司-->
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>18</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+
+		<!--油井-->
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+		
+		
+		
+		
+		
+
+		<!--草药-->
+		<Row>
+			<BuildingType>BUILDING_HERBALIST</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_HERBALIST</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+
+
+
+
+
+		<!--公共浴室-->
+		<Row>
+			<BuildingType>BUILDING_BALNEAE</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BALNEAE</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_BALNEAE</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		
+		
+
+
+
+		<!--下水道-->
+		<Row>
+			<BuildingType>BUILDING_CLOACA</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOACA</BuildingType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		<!--山寨-->
+		<Row>
+			<BuildingType>BUILDING_HILL_FORT</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		
+		<!--水井-->
+		<Row>
+			<BuildingType>BUILDING_WELL</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_WELL</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>19</Flavor>
+		</Row>
+		
+		
+		<!--Carpenter-->
+		<Row>
+			<BuildingType>BUILDING_CARPENTER</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		
+
+
+		<Row>
+			<BuildingType>BUILDING_CARPENTER</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CARPENTER</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+
+		<!--Palisade-->
+		<Row>
+			<BuildingType>BUILDING_PALISADE</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_TITANIUM_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_TITANIUM_FACTORY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK2</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>55</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK</BuildingType>
+			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+			<Flavor>62</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FINANCIAL_NETWORK</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SCIENCE_NETWORK</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_AUTOFACTORY</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>70</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_EE_BASTION</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_XCOM_HEADQUARTERS</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_XCOM_HEADQUARTERS</BuildingType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MINEFIELD</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MINEFIELD</BuildingType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+
+		
+		<Row>
+			<BuildingType>BUILDING_DRONE_CONTROL</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_DRONE_CONTROL</BuildingType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MATRIX</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_MATRIX</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>55</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_UNDERGROUND</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_UNDERGROUND</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_ECITY</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>110</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>180</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>180</Flavor>
+		</Row>
+	
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>155</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>155</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_VR_TRAINING</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK</BuildingType>
+			<FlavorType>FLAVOR_AIR</FlavorType>
+			<Flavor>120</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>120</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_NAVAL_BASE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_NAVAL_BASE</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+	
+		<Row>
+			<BuildingType>BUILDING_NAVAL_BASE</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			<FlavorType>FLAVOR_AIR</FlavorType>
+			<Flavor>120</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MISSILE_BASE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_MISSILE_BASE</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>55</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_ZXZCC</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ZXZCC</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_ZXZCC</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>370</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_QUANTUM_LAB</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>280</Flavor>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+
+
+
+	</Building_Flavors>
+
+
+
+
+
+
+
+
+
+
+	<!--*********************建筑百分比提升********************-->
+	<Building_YieldModifiers>
+
+
+		
+
+		<Row>
+			<BuildingType>BUILDING_AQUARIUM</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_AQUARIUM</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>15</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_BIOLOGICAL_FACTORIES</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>25</Yield>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_BALNEAE</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_WELL</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		<Row>
+			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>25</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_QUANTUM_LAB</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>45</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Building_YieldModifiers>
+
+	
+	
+
+	<!--*********************建筑人口提升********************-->
+
+	<Building_YieldChangesPerPop>
+
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-20</Yield>
+		</Row>
+	
+
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		
+
+		<Row>
+			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+
+		
+		
+		<Row>
+			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>25</Yield>
+		</Row>
+		
+		
+		<Row>
+			<BuildingType>BUILDING_ECITY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>25</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_DRONE_CONTROL</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_HERBALIST</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>10</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_TITANIUM_FACTORY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_AUTOFACTORY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>50</Yield>
+		</Row>
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-50</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-25</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>25</Yield>
+		</Row>
+
+	</Building_YieldChangesPerPop>
+
+
+	<!--*********************建筑提供资源********************-->
+	
+	
+	
+	<Building_ResourceQuantity>
+
+
+		<!--微波输电-->
+
+		<Row>
+			<BuildingType>BUILDING_SUPERCONDUCTING_GRID</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>20</Quantity>
+		</Row>
+
+		
+		
+
+		<!--食品市场-->
+
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+
+		<!--植物油厂-->
+
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+
+
+
+		<!--波兰城堡-->
+
+		<Row>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Quantity>4</Quantity>
+		</Row>
+
+		
+		
+
+		<!--乡村小屋-->
+
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>3</Quantity>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+			<ResourceType>RESOURCE_LUMBER</ResourceType>
+			<Quantity>7</Quantity>
+		</Row>
+
+		<!--家具厂-->
+		<Row>
+			<BuildingType>BUILDING_MINGING_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_LUMBER</ResourceType>
+			<Quantity>8</Quantity>
+		</Row>
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
+			<Quantity>8</Quantity>
+		</Row>
+		
+
+
+
+		<Row>
+			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
+			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Quantity>6</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Quantity>2</Quantity>
+		</Row>
+		
+		
+	
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Quantity>6</Quantity>
+		</Row>
+
+
+		<!--木工坊-->
+		<Row>
+			<BuildingType>BUILDING_CARPENTER</BuildingType>
+			<ResourceType>RESOURCE_LUMBER</ResourceType>
+			<Quantity>6</Quantity>
+		</Row>
+
+
+		<!--地热发电厂-->
+		<Row>
+		<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+		<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+		<Quantity>20</Quantity>
+	    </Row>
+
+
+
+		
+		
+		
+		
+	</Building_ResourceQuantity>
+
+
+
+
+	<!--*********************经验********************-->
+	<Building_DomainFreeExperiences>
+
+		
+		
+	
+
+		<Row>
+			<BuildingType>BUILDING_NAVAL_BASE</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Experience>15</Experience>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VR_TRAINING</BuildingType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Experience>15</Experience>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VR_TRAINING</BuildingType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Experience>15</Experience>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VR_TRAINING</BuildingType>
+			<DomainType>DOMAIN_AIR</DomainType>
+			<Experience>15</Experience>
+		</Row>
+
+
+
+	</Building_DomainFreeExperiences>
+
+
+	<!--*********************建筑直接提升********************-->
+
+
+
+	<Building_YieldChanges>
+		<!--食品市场-->
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>6</Yield>
+		</Row>
+
+		<!--粮油厂-->
+		<Row>
+			<BuildingType>BUILDING_FOOD_REFINERIES</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>6</Yield>
+		</Row>
+		
+		
+		
+		<!--寺院-->
+		<Row>
+			<BuildingType>BUILDING_CLOISTER</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOISTER</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+		<!--庄园-->
+		<Row>
+			<BuildingType>BUILDING_JAIL</BuildingType>
+			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		<!--出版社-->
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PUBLISHER</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+		<!--波兰城堡-->
+
+		<Row>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+		
+		<!--乡村小屋-->
+
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+
+		<!--私人药店-->
+
+		<Row>
+			<BuildingType>BUILDING_PRIVATE_PHARMACY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+		<!--蓄水池-->
+
+		<Row>
+			<BuildingType>BUILDING_CISTERN</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+	
+
+		
+		<!--熏制室 -->
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<!--酒坊 -->
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+		<!--炼金术 -->
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+		
+
+		<!--葡萄园  -->
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+		<!--沙漠改造区  -->
+
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<!--木工坊  -->
+		<Row>
+			<BuildingType>BUILDING_CARPENTER</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>8</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_ECITY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>25</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+
+
+	
+		<Row>
+			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_HERBALIST</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_WELL</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_XCOM_HEADQUARTERS</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK2</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FINANCIAL_NETWORK</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>50</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_SCIENCE_NETWORK</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>50</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_SANCTUARY</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Building_YieldChanges>
+
+
+
+	
+
+
+
+
+
+
+	<Building_TerrainYieldChanges>
+
+
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_DESERT_TRANSFORMING_BASE</BuildingType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>4</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_TerrainYieldChanges>
+
+
+
+	<Building_ResourceQuantity>
+		<!--东印度公司 -->
+
+		<Delete BuildingType="BUILDING_NATIONAL_TREASURY"/>
+		
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_AUTOFACTORY</BuildingType>
+			<ResourceType>RESOURCE_CONSUMER</ResourceType>
+			<Quantity>10</Quantity>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_TITANIUM_FACTORY</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Quantity>20</Quantity>
+		</Row>
+
+		
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>50</Quantity>
+		</Row>
+
+	</Building_ResourceQuantity>
+
+
+	<Building_UnitCombatProductionModifiers>
+
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+			<Modifier>20</Modifier>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+			<Modifier>20</Modifier>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FIREARM_WORKSHOP</BuildingType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+			<Modifier>20</Modifier>
+		</Row>
+		
+		
+	
+	</Building_UnitCombatProductionModifiers>
+	
+	
+
+
+
+
+
+
+	<Building_ImprovementYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_MINING_COMPANY</BuildingType>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		
+		
+		<Row>
+			<BuildingType>BUILDING_ORE_REFINERIES</BuildingType>
+			<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_VINYARD</BuildingType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_JAIL</BuildingType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_ImprovementYieldChanges>
+
+
+
+
+
+
+
+
+
+
+	<Building_YieldChangesPerPopInEmpire>
+	<Row>
+		<BuildingType>BUILDING_FINANCIAL_NETWORK</BuildingType>
+		<YieldType>YIELD_GOLD</YieldType>
+		<Yield>25</Yield>
+	</Row>
+		
+	<Row>
+		<BuildingType>BUILDING_DEFENSE_NETWORK2</BuildingType>
+		<YieldType>YIELD_PRODUCTION</YieldType>
+		<Yield>25</Yield>
+	</Row>
+
+	<Row>
+		<BuildingType>BUILDING_SCIENCE_NETWORK</BuildingType>
+		<YieldType>YIELD_SCIENCE</YieldType>
+		<Yield>25</Yield>
+	</Row>
+	
+	</Building_YieldChangesPerPopInEmpire>
+
+
+	<Building_ResourceQuantityFromPOP>
+		
+	<Row>
+		<BuildingType>BUILDING_SUPERCONDUCTING_GRID</BuildingType>
+		<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+		<Modifier>25</Modifier>
+	</Row>
+
+	</Building_ResourceQuantityFromPOP>
+
+
+</GameData>

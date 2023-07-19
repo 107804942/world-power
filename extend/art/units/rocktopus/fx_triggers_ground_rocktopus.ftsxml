@@ -1,0 +1,716 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="2000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="2040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="2020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1500">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1520">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1540">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1560">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1580">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1600">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1620">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1640">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1800">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1110">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1450">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1120">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="2440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1140">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+    </event_track>
+    <event_track ec="1180">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+    </event_track>
+    <event_track ec="1160">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+    </event_track>
+    <event_track ec="1130">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+      <track id="9" name="Effect" />
+    </event_track>
+    <event_track ec="2100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+      <track id="7" name="Effect" />
+      <track id="8" name="Effect" />
+    </event_track>
+    <event_track ec="1151">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1150">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1280">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1285">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1290">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="2200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="2220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerSound" id="1" time="1.368518" duration="0" repeat="0" ec="1040" track="1" event="AS3D_UNIT_ROCKTOPUS_IDLE_MOVEMENT" bone="" tier="-1" />
+	  
+    <trigger type="FTimedTriggerSound" id="2" time="1.381482" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="3" time="0.0148148146" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="4" time="0.281481445" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+	  <trigger type="FTimedTriggerEffect" id="209" time="0" duration="0.6666667" repeat="0" ec="1110" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+	  <trigger type="FTimedTriggerEffect" id="210" time="0" duration="0.6666667" repeat="0" ec="1110" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+	  <trigger type="FTimedTriggerEffect" id="211" time="0" duration="0.6666667" repeat="0" ec="1110" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+	  <trigger type="FTimedTriggerEffect" id="212" time="0" duration="0.6666667" repeat="0" ec="1110" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+	  <trigger type="FTimedTriggerEffect" id="213" time="0" duration="0.6666667" repeat="0" ec="1110" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+	  <trigger type="FTimedTriggerEffect" id="214" time="0" duration="0.6666667" repeat="0" ec="1110" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+	  <trigger type="FTimedTriggerSound" id="70" time="1.04259229" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="71" time="1.03703713" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="79" time="1.0703702" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="80" time="0.6500001" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="81" time="0.6185186" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="82" time="0.629629731" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="107" time="1.04259241" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_ATTACK" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="108" time="0.6370369" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_ATTACK" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="10" time="0.122222222" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+	  
+	
+
+	  
+    <trigger type="FTimedTriggerSound" id="5" time="0" duration="1" repeat="0" ec="1120" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_LOOP" bone="" tier="0" />
+	  
+    <trigger type="FTimedTriggerSound" id="6" time="1.381482" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="7" time="0.281481445" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="8" time="1.21481478" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="9" time="0.122222222" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+	  
+ 
+	  
+    <trigger type="FTimedTriggerSound" id="11" time="0" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_STOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="12" time="0.281481475" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+	  
+    <trigger type="FTimedTriggerSound" id="13" time="0" duration="0" repeat="0" ec="1150" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_STOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="14" time="0.5703703" duration="0" repeat="0" ec="1150" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="15" time="1.401852" duration="0" repeat="0" ec="1150" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="16" time="0.281481475" duration="0" repeat="0" ec="1150" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="17" time="0.1018518" duration="0" repeat="0" ec="1150" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="18" time="0.418518424" duration="0" repeat="0" ec="1150" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+	  
+	  
+    <trigger type="FTimedTriggerSound" id="19" time="0" duration="0" repeat="0" ec="1151" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_STOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="20" time="0.1018518" duration="0" repeat="0" ec="1151" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="21" time="0.281481475" duration="0" repeat="0" ec="1151" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="22" time="0.418518424" duration="0" repeat="0" ec="1151" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="23" time="0.5703703" duration="0" repeat="0" ec="1151" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+	  
+	  
+    <trigger type="FTimedTriggerSound" id="24" time="0.0166666657" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="25" time="0.124074072" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="26" time="0.281481445" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="27" time="1.381482" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="28" time="1.47962964" duration="0" repeat="0" ec="1160" track="1" event="AS3D_IMPACT_ACID_CITY" bone="" tier="0" />
+	  <trigger type="FTimedTriggerEffect" id="75" time="0.6341449" duration="0.5" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_R" />
+	  <trigger type="FTimedTriggerSound" id="89" time="1.0444442" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="90" time="0.629629731" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="91" time="0.6185186" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="92" time="1.03703713" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="93" time="1.0703702" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="94" time="0.6500001" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="109" time="0.6370369" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_ATTACK" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="110" time="1.03518546" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_ROCKTOPUS_ATTACK" bone="" tier="0" />
+	  <trigger type="FTimedTriggerEffect" id="77" time="1.03994238" duration="0.35" repeat="0" ec="1160" track="7" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_L" />
+	  <trigger type="FTimedTriggerEffect" id="179" time="0" duration="2" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+	  <trigger type="FTimedTriggerEffect" id="246" time="0" duration="2" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+	  <trigger type="FTimedTriggerEffect" id="247" time="0" duration="2" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+	  <trigger type="FTimedTriggerEffect" id="248" time="0" duration="2" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+	  <trigger type="FTimedTriggerEffect" id="249" time="0" duration="2" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+	  <trigger type="FTimedTriggerEffect" id="250" time="0" duration="2" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+	  <trigger type="FTimedTriggerEffect" id="251" time="0" duration="2" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+
+
+
+	  <trigger type="FTimedTriggerSound" id="111" time="0.631481349" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_ATTACK" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="112" time="1.04259229" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_ATTACK" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="95" time="0.6500001" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="96" time="1.03703713" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="97" time="1.0703702" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="98" time="1.0444442" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="99" time="0.6185186" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="100" time="0.629629731" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="29" time="0.0148148136" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="30" time="0.122222222" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="31" time="0.281481445" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="32" time="1.381482" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+	  <trigger type="FTimedTriggerEffect" id="76" time="0.6341449" duration="0.5" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_R" />
+	  <trigger type="FTimedTriggerEffect" id="78" time="1.04603994" duration="0.35" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_L" />
+	  <trigger type="FTimedTriggerEffect" id="252" time="0" duration="2" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+	  <trigger type="FTimedTriggerEffect" id="253" time="0" duration="2" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+	  <trigger type="FTimedTriggerEffect" id="254" time="0" duration="2" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+	  <trigger type="FTimedTriggerEffect" id="255" time="0" duration="2" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+	  <trigger type="FTimedTriggerEffect" id="256" time="0" duration="2" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+	  <trigger type="FTimedTriggerEffect" id="257" time="0" duration="2" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+	  <trigger type="FTimedTriggerEffect" id="180" time="0" duration="2" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+	  
+	  
+
+	  <trigger type="FTimedTriggerSound" id="33" time="0.0111111114" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_ROCKTOPUS_IMPACT_$(WEAPON)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="34" time="0.09074071" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_ROCKTOPUS_DEATH_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="35" time="0.151851848" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="36" time="1.20185137" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_ROCKTOPUS_BODY_FALL_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="37" time="1.20555544" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_ROCKTOPUS_DEATH_IMPACT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="38" time="0.5333343" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="39" time="0.044445347" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+	  
+	  
+    <trigger type="FTimedTriggerSound" id="40" time="0.0148148136" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="41" time="0.0148148136" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="42" time="0" duration="1" repeat="0" ec="1400" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="43" time="0" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_STOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="44" time="0.281481475" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="45" time="0" duration="1" repeat="0" ec="1450" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="46" time="0.281481475" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="47" time="0.0166666675" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="48" time="0.281481475" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="49" time="0.137037039" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="50" time="0.283333331" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="51" time="0.137037039" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="52" time="0.0166666675" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="53" time="0.153703719" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="54" time="0.153703719" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="55" time="0.112962961" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_ROCKTOPUS_IDLE_MOVEMENT" bone="" tier="0" />
+  
+    <trigger type="FTimedTriggerSound" id="60" time="0.0111111114" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_ROCKTOPUS_IMPACT_$(WEAPON)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="61" time="0.044445347" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="62" time="0.09074071" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_ROCKTOPUS_DEATH_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="63" time="0.151851848" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="64" time="0.5333343" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="65" time="1.20185137" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_ROCKTOPUS_BODY_FALL_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="66" time="1.20555544" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_ROCKTOPUS_DEATH_IMPACT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="67" time="0" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_ROCKTOPUS_RUN_STOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="68" time="0.281481475" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+	  
+	  
+    <trigger type="FTimedTriggerEffect" id="72" time="0.643807054" duration="0.5" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_L" />
+    <trigger type="FTimedTriggerEffect" id="73" time="0.986802" duration="0.35" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_R" />
+	  <trigger type="FTimedTriggerSound" id="56" time="0.124074072" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="57" time="0.0166666657" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="58" time="0.281481445" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_MOVEMENT" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="59" time="1.381482" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="101" time="0.9666667" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="102" time="1.01851857" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="103" time="0.9814816" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="104" time="0.6296297" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_LAUNCH_SWEETENER" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="105" time="0.6185186" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_BREATH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="106" time="0.6574075" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+	  <trigger type="FTimedTriggerSound" id="113" time="0.979629636" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_ROCKTOPUS_ATTACK" bone="" tier="0" />
+	  <trigger type="FTimedTriggerEffect" id="197" time="0" duration="2" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+	  
+	  
+    <trigger type="FTimedTriggerSound" id="83" time="1.2055558" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="84" time="0.688888967" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="85" time="0.916666746" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_SWORD_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="86" time="0.0148148146" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="87" time="0.6907407" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="88" time="0.9166667" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_TENTACLES" bone="" tier="0" />
+  
+  
+    <trigger type="FTimedTriggerEffect" id="114" time="0" duration="5.6" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="115" time="0" duration="5.6" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="116" time="0" duration="5.6" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="117" time="0" duration="5.6" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="119" time="0" duration="5.6" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="118" time="0" duration="5.6" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="126" time="0" duration="1.06666672" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="128" time="0" duration="1.06666672" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="129" time="0" duration="1.06666672" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="130" time="0" duration="1.06666672" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="131" time="0" duration="1.06666672" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="132" time="0" duration="1.06666672" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="142" time="1.25120735" duration="0.3" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_ROCKTOPUS_HUGE_DEATH_IMPACT" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="144" time="0" duration="5.6" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="145" time="0" duration="5.6" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="146" time="0" duration="5.6" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="147" time="0" duration="5.6" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="148" time="0" duration="5.6" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="149" time="0" duration="5.6" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="159" time="1.26663768" duration="0.1" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_ROCKTOPUS_DEATHSQUIRT_02" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="160" time="1.29808366" duration="0.1" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_ROCKTOPUS_DEATHSQUIRT_02" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="143" time="1.21739089" duration="0.3" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_ROCKTOPUS_HUGE_DEATH_IMPACT" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="162" time="1.30663431" duration="0.15" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_ROCKTOPUS_DEATHSQUIRT_03" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="163" time="0.186097562" duration="0.51" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Tentical_2_H" />
+    <trigger type="FTimedTriggerTransfer" id="165" time="0.7631513" duration="0" repeat="0" ec="1130" track="3" refid="164" speed="0" tangent.x="0" tangent.y="-0.258819133" tangent.z="0.9659258" />
+    <trigger type="FTimedTriggerEffect" id="164" time="0.695843" duration="0.07" repeat="0" ec="1130" track="8" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_PROJECTILE_01" />
+    <trigger type="FTimedTriggerEffect" id="166" time="0.495356858" duration="0.395" repeat="0" ec="1130" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Tentical_10_F" />
+    <trigger type="FTimedTriggerEffect" id="167" time="0.891785741" duration="0.07" repeat="0" ec="1130" track="7" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_PROJECTILE_01" />
+    <trigger type="FTimedTriggerTransfer" id="168" time="0.958305538" duration="0" repeat="0" ec="1130" track="3" refid="167" speed="0" tangent.x="0" tangent.y="-6.10351563E-05" tangent.z="-0.000122070313" />
+    <trigger type="FTimedTriggerEffect" id="169" time="0.63526845" duration="0.533" repeat="0" ec="1130" track="9" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Tentical_1_G" />
+    <trigger type="FTimedTriggerEffect" id="170" time="1.1676507" duration="0.065" repeat="0" ec="1130" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_PROJECTILE_02" />
+    <trigger type="FTimedTriggerTransfer" id="171" time="1.23072672" duration="0" repeat="0" ec="1130" track="3" refid="170" speed="0" tangent.x="0" tangent.y="-0.258819133" tangent.z="0.965925753" />
+    <trigger type="FTimedTriggerEffect" id="69" time="0.6341449" duration="0.5" repeat="0" ec="1100" track="8" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_R" />
+    <trigger type="FTimedTriggerEffect" id="74" time="1.03994238" duration="0.35" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="FX_Muzzle_Udder_L" />
+    <trigger type="FTimedTriggerEffect" id="172" time="0" duration="2" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="174" time="0" duration="1" repeat="0" ec="1120" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="175" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="176" time="0" duration="0.6666667" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="177" time="0" duration="2.9333334" repeat="0" ec="1150" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="178" time="0" duration="2.9333334" repeat="0" ec="1151" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+
+    <trigger type="FTimedTriggerEffect" id="182" time="0" duration="0.5" repeat="0" ec="1280" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="183" time="0" duration="1" repeat="0" ec="1290" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="184" time="0" duration="1" repeat="0" ec="1400" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="185" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="186" time="0" duration="0.6666667" repeat="0" ec="1440" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="187" time="0.00249376567" duration="1" repeat="0" ec="1450" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="188" time="0" duration="1" repeat="0" ec="1500" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="189" time="0" duration="5.6" repeat="0" ec="1520" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="190" time="0" duration="5.6" repeat="0" ec="1540" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="191" time="0" duration="1" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="192" time="0" duration="1" repeat="0" ec="1580" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="193" time="0" duration="1" repeat="0" ec="1600" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="194" time="0" duration="4.666667" repeat="0" ec="1620" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="195" time="0" duration="1" repeat="0" ec="1640" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="196" time="0" duration="1" repeat="0" ec="1800" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+  
+    <trigger type="FTimedTriggerEffect" id="200" time="0" duration="0.6666667" repeat="0" ec="2440" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="202" time="0" duration="3.00000024" repeat="0" ec="1285" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+ 
+    <trigger type="FTimedTriggerEffect" id="221" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="222" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="223" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="224" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="225" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="226" time="0" duration="2" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="234" time="0" duration="2.9333334" repeat="0" ec="1150" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="235" time="0" duration="2.9333334" repeat="0" ec="1150" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="236" time="0" duration="2.9333334" repeat="0" ec="1150" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="237" time="0" duration="2.9333334" repeat="0" ec="1150" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="238" time="0" duration="2.9333334" repeat="0" ec="1150" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="239" time="0" duration="2.9333334" repeat="0" ec="1150" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="240" time="0" duration="2.9333334" repeat="0" ec="1151" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="241" time="0" duration="2.9333334" repeat="0" ec="1151" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="242" time="0" duration="2.9333334" repeat="0" ec="1151" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="243" time="0" duration="2.9333334" repeat="0" ec="1151" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="244" time="0" duration="2.9333334" repeat="0" ec="1151" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="245" time="0" duration="2.9333334" repeat="0" ec="1151" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+ 
+    <trigger type="FTimedTriggerEffect" id="138" time="0" duration="5.6" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="139" time="0" duration="1.06666672" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="150" time="0" duration="5.6" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="203" time="0" duration="2" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="204" time="0" duration="2" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="205" time="0" duration="2" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="206" time="0" duration="2" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="207" time="0" duration="2" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="208" time="0" duration="2" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="173" time="0" duration="0.6666667" repeat="0" ec="1110" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="215" time="0" duration="1" repeat="0" ec="1120" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="216" time="0" duration="1" repeat="0" ec="1120" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="217" time="0" duration="1" repeat="0" ec="1120" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="218" time="0" duration="1" repeat="0" ec="1120" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="219" time="0" duration="1" repeat="0" ec="1120" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="220" time="0" duration="1" repeat="0" ec="1120" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="227" time="0" duration="0.6666667" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="228" time="0" duration="0.6666667" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="229" time="0" duration="0.6666667" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="230" time="0" duration="0.6666667" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="232" time="0" duration="0.6666667" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="233" time="0" duration="0.6666667" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+ 
+    <trigger type="FTimedTriggerEffect" id="158" time="1.26506567" duration="0.1" repeat="0" ec="1200" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="258" time="0" duration="0.5" repeat="0" ec="1280" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="263" time="0" duration="0.5" repeat="0" ec="1280" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="264" time="0" duration="0.5" repeat="0" ec="1280" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="265" time="0" duration="0.5" repeat="0" ec="1280" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="266" time="0" duration="0.5" repeat="0" ec="1280" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="267" time="0" duration="0.5" repeat="0" ec="1280" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="268" time="0" duration="3.00000024" repeat="0" ec="1285" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="269" time="0" duration="3.00000024" repeat="0" ec="1285" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="270" time="0" duration="3.00000024" repeat="0" ec="1285" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="271" time="0" duration="3.00000024" repeat="0" ec="1285" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="272" time="0" duration="3.00000024" repeat="0" ec="1285" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="273" time="0" duration="3.00000024" repeat="0" ec="1285" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="274" time="0" duration="1" repeat="0" ec="1290" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="275" time="0" duration="1" repeat="0" ec="1290" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="276" time="0" duration="1" repeat="0" ec="1290" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="277" time="0" duration="1" repeat="0" ec="1290" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="278" time="0" duration="1" repeat="0" ec="1290" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="279" time="0" duration="1" repeat="0" ec="1290" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="280" time="0" duration="1" repeat="0" ec="1400" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="281" time="0" duration="1" repeat="0" ec="1400" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="282" time="0" duration="1" repeat="0" ec="1400" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="283" time="0" duration="1" repeat="0" ec="1400" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="284" time="0" duration="1" repeat="0" ec="1400" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="285" time="0" duration="1" repeat="0" ec="1400" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="286" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="287" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="288" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="289" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="290" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="291" time="0" duration="0.6666667" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="292" time="0" duration="0.6666667" repeat="0" ec="1440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="293" time="0" duration="0.6666667" repeat="0" ec="1440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="294" time="0" duration="0.6666667" repeat="0" ec="1440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="295" time="0" duration="0.6666667" repeat="0" ec="1440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="296" time="0" duration="0.6666667" repeat="0" ec="1440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="297" time="0" duration="0.6666667" repeat="0" ec="1440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="298" time="0" duration="1" repeat="0" ec="1450" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="299" time="0" duration="1" repeat="0" ec="1450" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="300" time="0" duration="1" repeat="0" ec="1450" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="301" time="0" duration="1" repeat="0" ec="1450" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="302" time="0" duration="1" repeat="0" ec="1450" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="303" time="0" duration="1" repeat="0" ec="1450" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="304" time="0" duration="1" repeat="0" ec="1500" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="305" time="0" duration="1" repeat="0" ec="1500" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="306" time="0" duration="1" repeat="0" ec="1500" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="307" time="0" duration="1" repeat="0" ec="1500" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="308" time="0" duration="1" repeat="0" ec="1500" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="309" time="0" duration="1" repeat="0" ec="1500" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="310" time="0" duration="5.6" repeat="0" ec="1520" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="311" time="0" duration="5.6" repeat="0" ec="1520" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="312" time="0" duration="5.6" repeat="0" ec="1520" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="313" time="0" duration="5.6" repeat="0" ec="1520" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="314" time="0" duration="5.6" repeat="0" ec="1520" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="315" time="0" duration="5.6" repeat="0" ec="1520" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="316" time="0" duration="5.6" repeat="0" ec="1540" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="317" time="0" duration="5.6" repeat="0" ec="1540" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="318" time="0" duration="5.6" repeat="0" ec="1540" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="319" time="0" duration="5.6" repeat="0" ec="1540" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="320" time="0" duration="5.6" repeat="0" ec="1540" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="321" time="0" duration="5.6" repeat="0" ec="1540" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="322" time="0" duration="1" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="323" time="0" duration="1" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="324" time="0" duration="1" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="325" time="0" duration="1" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="326" time="0" duration="1" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="327" time="0" duration="1" repeat="0" ec="1560" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="333" time="0" duration="1" repeat="0" ec="1580" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="334" time="0" duration="1" repeat="0" ec="1580" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="335" time="0" duration="1" repeat="0" ec="1580" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="336" time="0" duration="1" repeat="0" ec="1580" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="337" time="0" duration="1" repeat="0" ec="1580" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="338" time="0" duration="1" repeat="0" ec="1580" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="339" time="0" duration="1" repeat="0" ec="1600" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="340" time="0" duration="1" repeat="0" ec="1600" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="341" time="0" duration="1" repeat="0" ec="1600" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="342" time="0" duration="1" repeat="0" ec="1600" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="343" time="0" duration="1" repeat="0" ec="1600" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="344" time="0" duration="1" repeat="0" ec="1600" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="345" time="0" duration="4.666667" repeat="0" ec="1620" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="346" time="0" duration="4.666667" repeat="0" ec="1620" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="347" time="0" duration="4.666667" repeat="0" ec="1620" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="348" time="0" duration="4.666667" repeat="0" ec="1620" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="349" time="0" duration="4.666667" repeat="0" ec="1620" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="350" time="0" duration="4.666667" repeat="0" ec="1620" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="351" time="0" duration="1" repeat="0" ec="1640" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="352" time="0" duration="1" repeat="0" ec="1640" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="353" time="0" duration="1" repeat="0" ec="1640" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="354" time="0" duration="1" repeat="0" ec="1640" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="355" time="0" duration="1" repeat="0" ec="1640" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="356" time="0" duration="1" repeat="0" ec="1640" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="357" time="0" duration="1" repeat="0" ec="1800" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="358" time="0.00263852254" duration="1" repeat="0" ec="1800" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="359" time="0" duration="1" repeat="0" ec="1800" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="360" time="0" duration="1" repeat="0" ec="1800" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="361" time="0" duration="1" repeat="0" ec="1800" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="362" time="0" duration="1" repeat="0" ec="1800" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="363" time="0" duration="5.6" repeat="0" ec="2000" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="364" time="0" duration="5.6" repeat="0" ec="2000" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="365" time="0" duration="5.6" repeat="0" ec="2000" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="366" time="0" duration="5.6" repeat="0" ec="2000" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="367" time="0" duration="5.6" repeat="0" ec="2000" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="368" time="0" duration="5.6" repeat="0" ec="2000" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="369" time="0" duration="1.06666672" repeat="0" ec="2020" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="370" time="0" duration="1.06666672" repeat="0" ec="2020" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="371" time="0" duration="1.06666672" repeat="0" ec="2020" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="372" time="0" duration="1.06666672" repeat="0" ec="2020" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="373" time="0" duration="1.06666672" repeat="0" ec="2020" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="374" time="0" duration="1.06666672" repeat="0" ec="2020" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="375" time="0" duration="5.6" repeat="0" ec="2040" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="376" time="0" duration="5.6" repeat="0" ec="2040" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="377" time="0" duration="5.6" repeat="0" ec="2040" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="378" time="0" duration="5.6" repeat="0" ec="2040" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="379" time="0" duration="5.6" repeat="0" ec="2040" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="380" time="0" duration="5.6" repeat="0" ec="2040" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="381" time="0" duration="2" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="382" time="0" duration="2" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="383" time="0" duration="2" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="384" time="0" duration="2" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="385" time="0" duration="2" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="386" time="0" duration="2" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="387" time="0" duration="0.6666667" repeat="0" ec="2440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_5" />
+    <trigger type="FTimedTriggerEffect" id="388" time="0" duration="0.6666667" repeat="0" ec="2440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_6" />
+    <trigger type="FTimedTriggerEffect" id="389" time="0" duration="0.6666667" repeat="0" ec="2440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_1" />
+    <trigger type="FTimedTriggerEffect" id="390" time="0" duration="0.6666667" repeat="0" ec="2440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_2" />
+    <trigger type="FTimedTriggerEffect" id="391" time="0" duration="0.6666667" repeat="0" ec="2440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_3" />
+    <trigger type="FTimedTriggerEffect" id="392" time="0" duration="0.6666667" repeat="0" ec="2440" track="6" event="ART_DEF_VEFFECT_MECH_EYE_GLOW_GREEN" bone="Rock_4" />
+    <trigger type="FTimedTriggerEffect" id="140" time="0" duration="5.6" repeat="0" ec="2000" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="141" time="0" duration="1.06666672" repeat="0" ec="2020" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerEffect" id="151" time="0" duration="5.6" repeat="0" ec="2040" track="6" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="ROC_MAIN" />
+    <trigger type="FTimedTriggerSound" id="123" time="1.826087" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_ROCKTOPUS_HEAVY_AURA" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="122" time="4.1534524" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_ROCKTOPUS_HEAVY_PULSE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="125" time="0" duration="0" repeat="0" ec="1040" track="1" event="AS3D_UNIT_ROCKTOPUS_HEAVY_AURA" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="124" time="4.1534524" duration="0" repeat="0" ec="1040" track="1" event="AS3D_UNIT_ROCKTOPUS_HEAVY_PULSE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="120" time="0.71111095" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="121" time="1.16851842" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_ACID_SPLASH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="127" time="0" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_ROCKTOPUS_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="133" time="1.25120735" duration="0.3" repeat="0" ec="1200" track="6" event="ART_DEF_VEFFECT_ROCTOPUS_DEATHIMPACT_$(BASETERRAIN)" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="134" time="1.25120735" duration="0.3" repeat="0" ec="2200" track="6" event="ART_DEF_VEFFECT_ROCTOPUS_DEATHIMPACT_$(BASETERRAIN)" bone="point_WORLD01" />
+    <trigger type="FTimedTriggerEffect" id="161" time="1.3295306" duration="0.1" repeat="0" ec="2200" track="5" event="ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ" bone="point_WORLD01" />
+  </triggers>
+</trigger_system>

@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trigger_system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1120">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1160">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1280">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1520">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1560">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1600">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1640">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1800">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="2000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="2040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="2200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1290">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1140">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1500">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1540">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1580">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1620">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="2020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="2100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="2220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1285">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+    </event_track>
+    <event_track ec="1450">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1180">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1720">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1725">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1730">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1700">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1705">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1710">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1110">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1130">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+
+    <trigger type="FTimedTriggerSound" id="24" time="0.900000036" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="25" time="0.40925926" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="26" time="0.3082962" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="27" time="0.684222162" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN" bone="" tier="-1" />
+
+    <trigger type="FTimedTriggerSound" id="51" time="0" duration="1.07" repeat="0" ec="1120" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="52" time="0" duration="1.07" repeat="0" ec="1120" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="53" time="0" duration="1.07" repeat="0" ec="1120" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_LOOP_FIRE" bone="" tier="-1" />
+
+    <trigger type="FTimedTriggerSound" id="67" time="0.00185185182" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="68" time="0.0277777612" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_CHARGE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="69" time="0.287037164" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="70" time="0.3222224" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_IMPACT_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="71" time="0.3925926" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="72" time="0.9148149" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="73" time="0.9555558" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="74" time="0.9944445" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+
+    <trigger type="FTimedTriggerSound" id="97" time="0.269407272" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SIEGE_04S_GUN" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="98" time="0" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_STOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="99" time="0.6694073" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SIEGE_04S_GUN" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="100" time="0.3925926" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="101" time="0.6740741" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="102" time="0" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="-1" />
+
+    <trigger type="FTimedTriggerSound" id="125" time="0.937037" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_CHARGE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="126" time="0.9148149" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+
+    <trigger type="FTimedTriggerSound" id="129" time="1.588889" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="130" time="0.3240742" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_IMPACT_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="131" time="0" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="132" time="1.6240741" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="133" time="0.394444466" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="134" time="1.35925925" duration="0" repeat="0" ec="1160" track="1" event="AS3D_IMPACT_LASERLG_CITY" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="135" time="0.0277777817" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_CHARGE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="136" time="0.287037164" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="160" time="0.9148149" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="161" time="0.0277777612" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_CHARGE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="162" time="0.9555558" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="163" time="0.00185185182" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="164" time="0.9944445" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="165" time="0.3925926" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="166" time="0.287037164" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_MISSILE_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="167" time="0.3222224" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SIEGE_04S_IMPACT_SWEETENER" bone="" tier="-1" />
+
+
+
+  
+
+
+
+    <trigger type="FTimedTriggerSound" id="187" time="0.198148161" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_EXPLOSION_02" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="188" time="0.00555555569" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_IMPACT_$(WEAPON)" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="189" time="0.07222219" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_EXPLOSION_01" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="190" time="1.51606512" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_CRASH" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="191" time="0.9833334" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_POWER_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="192" time="0.470370352" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_RATTLE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="193" time="1.41666687" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_FALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="194" time="0.6314815" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_03S_METAL_LARGE_FALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="195" time="0.401250124" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_CRASH" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="196" time="2.15680575" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_CRASH" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="197" time="0.04444444" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SIEGE_04S_DEATH" bone="" tier="-1" />
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="224" time="0.179629624" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_SIEGE_04S_PANEL" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="225" time="0.429629624" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_SIEGE_04S_HYDRAULIC" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="226" time="0" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_UP" bone="" tier="-1" />
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="239" time="0.00185185182" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_DOWN" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="240" time="0.429629624" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_SIEGE_04S_HYDRAULIC" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="241" time="0.179629624" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_SIEGE_04S_PANEL" bone="" tier="-1" />
+
+    <trigger type="FTimedTriggerSound" id="248" time="9.313226E-09" duration="1.07" repeat="0" ec="1400" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_LOOP_FIRE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="249" time="9.313226E-09" duration="1.07" repeat="0" ec="1400" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="250" time="9.313226E-09" duration="1.07" repeat="0" ec="1400" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_LOOP" bone="" tier="-1" />
+
+
+
+    <trigger type="FTimedTriggerSound" id="277" time="0.00555555569" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_STOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="278" time="0" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_STOP_2" bone="" tier="0" />
+
+    <trigger type="FTimedTriggerSound" id="285" time="0" duration="1.07" repeat="0" ec="1450" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="286" time="0" duration="1.07" repeat="0" ec="1450" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="287" time="0" duration="1.07" repeat="0" ec="1450" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_LOOP_FIRE" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="301" time="0.05185185" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="302" time="0.138888881" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="303" time="0.290740728" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_START" bone="" tier="0" />
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="322" time="0.138888881" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="323" time="0.290740728" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_START" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="324" time="0.05185185" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="325" time="0" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_STOP" bone="" tier="-1" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="332" time="0.461111069" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="333" time="0.290740728" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_START" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="334" time="0.05185185" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+
+
+
+    <trigger type="FTimedTriggerSound" id="341" time="0" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_STOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="342" time="0.05185185" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="343" time="0.138888881" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_UP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="344" time="0.290740728" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_START" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="357" time="0.05185185" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="358" time="0.138888881" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="359" time="0.290740728" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_START" bone="" tier="0" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="366" time="0.05185185" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="367" time="0.138888881" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_SIEGE_04S_SERVO_LARGE_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="368" time="0.290740728" duration="0" repeat="0" ec="1800" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_START" bone="" tier="0" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="387" time="0" duration="3" repeat="0" ec="2040" track="1" event="AS3D_UNIT_SIEGE_04S_HOVER_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="388" time="0.212962955" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_SIEGE_04S_FIDGET" bone="" tier="0" />
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="397" time="0" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SIEGE_04S_ATTACK_HOVER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="398" time="0.8547327" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="399" time="0.136214152" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="400" time="0.2306585" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="401" time="0.467695624" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="402" time="1.01028812" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SIEGE_04S_GUN_SWEETENER" bone="" tier="-1" />
+
+    <trigger type="FTimedTriggerSound" id="424" time="0.800000131" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_CRASH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="425" time="0.6222222" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_POWER_DOWN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="426" time="0.599999845" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_FALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="427" time="0.448148131" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_EXPLOSION_02" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="428" time="0.188888893" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_EXPLOSION_01" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="429" time="0.0833333358" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_DEATH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="430" time="0.008657403" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_METAL_LARGE_CRASH" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="431" time="0" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SIEGE_04S_IMPACT_$(WEAPON)" bone="" tier="-1" />
+
+
+
+    <trigger type="FTimedTriggerSound" id="452" time="0.00555555569" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_STOP" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="453" time="0" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_SIEGE_04S_RUN_STOP_2" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="246" time="0" duration="1.33333337" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="221" time="0" duration="4" repeat="0" ec="1000" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="225" time="0" duration="0.6666667" repeat="0" ec="1020" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="244" time="0" duration="1.33333337" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="249" time="0" duration="0.6666667" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="250" time="0" duration="4" repeat="0" ec="1285" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="245" time="0" duration="1.06666672" repeat="0" ec="1120" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="292" time="0" duration="4" repeat="0" ec="2000" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="254" time="0" duration="1.26666677" repeat="0" ec="1440" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="253" time="0" duration="1.80000007" repeat="0" ec="1420" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="291" time="0" duration="1.33333337" repeat="0" ec="1800" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="255" time="0" duration="1.06666672" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="252" time="0" duration="1.06666672" repeat="0" ec="1400" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="256" time="0" duration="1.33333337" repeat="0" ec="1500" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="284" time="0" duration="4" repeat="0" ec="1520" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="290" time="0" duration="1.33333337" repeat="0" ec="1640" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="289" time="0" duration="4" repeat="0" ec="1620" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="288" time="0" duration="1.33333337" repeat="0" ec="1600" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="287" time="0" duration="1.33333337" repeat="0" ec="1580" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="251" time="0" duration="0.6666667" repeat="0" ec="1290" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="296" time="0" duration="1.26666677" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="295" time="0" duration="1.33333337" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="294" time="0" duration="4" repeat="0" ec="2040" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="293" time="0" duration="0.6666667" repeat="0" ec="2020" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="286" time="0" duration="1.33333337" repeat="0" ec="1560" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="285" time="0" duration="4" repeat="0" ec="1540" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+
+    <trigger type="FTimedTriggerAction" id="34" time="0.4165848" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="64" time="0.461090863" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="65" time="0.550125062" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="67" time="0.723130047" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="68" time="0.79452014" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="69" time="1.00607049" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="94" time="0.9024449" duration="0.09" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_L" />
+
+    <trigger type="FTimedTriggerAction" id="138" time="0.3053193" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="143" time="0.328766048" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="144" time="0.421512455" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="145" time="0.452404946" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="146" time="0.4930289" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="147" time="0.801087856" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="95" time="0.3888889" duration="0.06" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_L" />
+
+    <trigger type="FTimedTriggerAction" id="63" time="0.173533767" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="77" time="0.196993977" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="78" time="0.27813682" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="80" time="0.3071142" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="82" time="0.529601038" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="83" time="0.8931258" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="84" time="1.12899339" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="85" time="1.16303837" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="86" time="1.19684637" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="97" time="0.239184171" duration="0.05" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_L" />
+
+    <trigger type="FTimedTriggerEffect" id="8" time="0.848867" duration="0.07" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="12" time="0.139607534" duration="0.21" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="15" time="0.308" duration="0.3" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="16" time="0.6876297" duration="0.15" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="3" time="0" duration="1.06666672" repeat="0" ec="1120" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="19" time="0" duration="1.06666672" repeat="0" ec="1400" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="24" time="0" duration="1.80000007" repeat="0" ec="1110" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="point_WORLD" />
+
+    <trigger type="FTimedTriggerEffect" id="32" time="0" duration="4" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="35" time="0" duration="4" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="37" time="0" duration="4" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="38" time="0" duration="4" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="36" time="0" duration="4" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="39" time="0" duration="4" repeat="0" ec="2000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="40" time="0" duration="4" repeat="0" ec="2000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="41" time="0" duration="4" repeat="0" ec="2000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="42" time="0" duration="4" repeat="0" ec="2000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="43" time="0.00185185182" duration="4" repeat="0" ec="2000" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="46" time="0" duration="4" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="47" time="0" duration="4" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="48" time="0" duration="4" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="49" time="0" duration="4" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="50" time="0" duration="4" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="226" time="1.14074028" duration="2.85925961" repeat="0" ec="1040" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="51" time="0" duration="4" repeat="0" ec="1040" track="5" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="52" time="0" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="53" time="0" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="54" time="0" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="55" time="0" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="56" time="0" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="57" time="0" duration="0.6666667" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="58" time="0" duration="0.6666667" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="59" time="0" duration="0.6666667" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="61" time="0" duration="0.6666667" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="66" time="0" duration="0.6666667" repeat="0" ec="1020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="70" time="0" duration="0.6666667" repeat="0" ec="2020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="71" time="0" duration="0.6666667" repeat="0" ec="2020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="72" time="0" duration="0.6666667" repeat="0" ec="2020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="73" time="0" duration="0.6666667" repeat="0" ec="2020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="74" time="0" duration="0.6666667" repeat="0" ec="2020" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="75" time="1.14259231" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="76" time="1.14259243" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="79" time="1.14074087" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="81" time="1.144444" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="87" time="1.14259231" duration="4" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="91" time="1.29814768" duration="2.45" repeat="0" ec="2040" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="88" time="1.29814768" duration="2.45" repeat="0" ec="2040" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="33" time="0" duration="1.06666672" repeat="0" ec="1120" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="23" time="1.594446" duration="0.205554843" repeat="0" ec="1110" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="93" time="1.59444439" duration="0.205555677" repeat="0" ec="1110" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="98" time="0" duration="1.06666672" repeat="0" ec="1400" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="99" time="1.59629738" duration="0.205554843" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="100" time="1.59444439" duration="0.205555677" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="101" time="0" duration="1.06666672" repeat="0" ec="1450" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="102" time="0" duration="1.06666672" repeat="0" ec="1450" track="4" event="ART_DEF_VEFFECT_ENGINE_FIRE_SIEGE04S" bone="FX_Exhaust_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="103" time="0.444444448" duration="0.08" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="104" time="0.6685185" duration="0.15" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="105" time="0.277777761" duration="0.1" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_R" />
+    <trigger type="FTimedTriggerAction" id="106" time="0.7251619" duration="0" repeat="0" ec="1140" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="107" time="1.07251728" duration="0.15" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="108" time="0.47251755" duration="0.1" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_MECH_GUN_MUZZLE" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="4" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="5" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="11" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="13" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="14" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="17" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="18" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="21" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="109" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="110" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="111" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="112" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="115" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="118" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="120" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="122" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="123" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="124" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="125" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="126" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="130" time="0" duration="2.66666675" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="132" time="0" duration="2.66666675" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="133" time="0" duration="2.66666675" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="135" time="0" duration="2.66666675" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="136" time="0" duration="2.66666675" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="151" time="0" duration="2.66666675" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="152" time="0" duration="2" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="153" time="0.00185185182" duration="2" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="154" time="0" duration="2" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="155" time="0" duration="2" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="156" time="0" duration="2" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="165" time="0" duration="2" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="166" time="0" duration="0.6666667" repeat="0" ec="1280" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="167" time="0" duration="0.6666667" repeat="0" ec="1280" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="168" time="0" duration="0.6666667" repeat="0" ec="1280" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="169" time="0" duration="0.6666667" repeat="0" ec="1280" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="172" time="0" duration="0.6666667" repeat="0" ec="1280" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="173" time="0" duration="4" repeat="0" ec="1285" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="174" time="0" duration="4" repeat="0" ec="1285" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="175" time="0" duration="4" repeat="0" ec="1285" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="176" time="0" duration="4" repeat="0" ec="1285" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="177" time="0" duration="4" repeat="0" ec="1285" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="178" time="0" duration="0.6666667" repeat="0" ec="1290" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="179" time="0" duration="0.6666667" repeat="0" ec="1290" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="180" time="0" duration="0.6666667" repeat="0" ec="1290" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="181" time="0" duration="0.6666667" repeat="0" ec="1290" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="182" time="0" duration="0.6666667" repeat="0" ec="1290" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="183" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="184" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="185" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="186" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="187" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="188" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="189" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="190" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="191" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="192" time="0" duration="1.06666672" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="193" time="0" duration="1.80000007" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="194" time="0" duration="1.80000007" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="195" time="0" duration="1.80000007" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="196" time="0" duration="1.80000007" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="197" time="0" duration="1.80000007" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="198" time="1.59444427" duration="0.205555677" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="200" time="1.59444439" duration="0.205555677" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="199" time="1.5944438" duration="0.205555677" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="201" time="1.594444" duration="0.205555677" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="202" time="1.59444451" duration="0.205555677" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="203" time="0" duration="1.26666677" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="204" time="0.00555555569" duration="1.26666677" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="205" time="0.00740740728" duration="1.26666677" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="206" time="0" duration="1.26666677" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="207" time="0" duration="1.26666677" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="208" time="0.00185185182" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="209" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="210" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="211" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="212" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="213" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="214" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="215" time="0.00185185182" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="216" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="217" time="0" duration="1.06666672" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="218" time="0" duration="1.33333337" repeat="0" ec="1500" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="219" time="0" duration="1.33333337" repeat="0" ec="1500" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="222" time="0" duration="1.33333337" repeat="0" ec="1500" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="223" time="0" duration="1.33333337" repeat="0" ec="1500" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="224" time="0" duration="1.33333337" repeat="0" ec="1500" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="228" time="0" duration="4" repeat="0" ec="1520" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="229" time="0" duration="4" repeat="0" ec="1520" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="230" time="0" duration="4" repeat="0" ec="1520" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="231" time="0" duration="4" repeat="0" ec="1520" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="233" time="0" duration="4" repeat="0" ec="1520" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="242" time="0" duration="4" repeat="0" ec="1540" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="243" time="0" duration="4" repeat="0" ec="1540" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="257" time="0" duration="4" repeat="0" ec="1540" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="258" time="0" duration="4" repeat="0" ec="1540" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="259" time="0" duration="4" repeat="0" ec="1540" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="260" time="0" duration="1.33333337" repeat="0" ec="1560" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="261" time="0" duration="1.33333337" repeat="0" ec="1560" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="262" time="0.00185185182" duration="1.33333337" repeat="0" ec="1560" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="263" time="0" duration="1.33333337" repeat="0" ec="1560" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="264" time="0" duration="1.33333337" repeat="0" ec="1560" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="265" time="0" duration="1.33333337" repeat="0" ec="1580" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="266" time="0" duration="1.33333337" repeat="0" ec="1580" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="268" time="0" duration="1.33333337" repeat="0" ec="1580" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="269" time="0" duration="1.33333337" repeat="0" ec="1580" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="270" time="0" duration="1.33333337" repeat="0" ec="1580" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="271" time="0" duration="1.33333337" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="272" time="0" duration="1.33333337" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="273" time="0" duration="1.33333337" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="274" time="0" duration="1.33333337" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="275" time="0" duration="1.33333337" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="276" time="0" duration="4" repeat="0" ec="1620" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="277" time="0" duration="4" repeat="0" ec="1620" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="278" time="0" duration="4" repeat="0" ec="1620" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="279" time="0.00185185182" duration="4" repeat="0" ec="1620" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="280" time="0" duration="4" repeat="0" ec="1620" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="281" time="0" duration="1.33333337" repeat="0" ec="1640" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="282" time="0" duration="1.33333337" repeat="0" ec="1640" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="283" time="0" duration="1.33333337" repeat="0" ec="1640" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="298" time="0" duration="1.33333337" repeat="0" ec="1640" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="301" time="0" duration="1.33333337" repeat="0" ec="1640" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="302" time="0" duration="1.33333337" repeat="0" ec="1800" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="303" time="0" duration="1.33333337" repeat="0" ec="1800" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="304" time="0" duration="1.33333337" repeat="0" ec="1800" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="305" time="0.00185185182" duration="1.33333337" repeat="0" ec="1800" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="306" time="0" duration="1.33333337" repeat="0" ec="1800" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="307" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="310" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="311" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="312" time="0" duration="1.26666677" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="313" time="0" duration="1.26666677" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="314" time="0" duration="1.26666677" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="315" time="0" duration="1.26666677" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="316" time="0" duration="1.26666677" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="318" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="319" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="321" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="322" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="323" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="324" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="325" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="326" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="327" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="328" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="329" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="330" time="0" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="331" time="0.00185185182" duration="1.06666672" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="248" time="0" duration="2" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerEffect" id="239" time="0.137037" duration="0.46" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_BARREL_ENERGY_S04S" bone="Point_PROJECTILE04" />
+    <trigger type="FTimedTriggerEffect" id="20" time="0.2740738" duration="0.06" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_L" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="240" time="0.7684424" duration="0.58" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_BARREL_ENERGY_S04S" bone="Point_PROJECTILE04" />
+    <trigger type="FTimedTriggerEffect" id="341" time="0.9388889" duration="0.065" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="Point_PROJECTILE02" />
+    <trigger type="FTimedTriggerEffect" id="241" time="0.916666269" duration="0.06" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_FRONT_MUZZ" bone="Point_GunTop" />
+    <trigger type="FTimedTriggerTransfer" id="9" time="0.361111134" duration="0" repeat="0" ec="1180" track="3" refid="22" speed="0" tangent.x="0.00280181272" tangent.y="-0.7647272" tangent.z="0.6443482" />
+    <trigger type="FTimedTriggerEffect" id="7" time="0.27407375" duration="0.06" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_R" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="22" time="0.301851869" duration="0.065" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="Point_PROJECTILE01" />
+    <trigger type="FTimedTriggerTransfer" id="234" time="0.9925926" duration="0" repeat="0" ec="1180" track="3" refid="341" speed="0" tangent.x="0.0025656072" tangent.y="-0.7931775" tangent.z="0.6089852" />
+    <trigger type="FTimedTriggerEffect" id="235" time="0.909258664" duration="0.06" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_L" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="236" time="0.907407343" duration="0.06" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_R" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="237" time="0.2870365" duration="0.06" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_FRONT_MUZZ" bone="Point_GunTop" />
+    <trigger type="FTimedTriggerEffect" id="6" time="0.137037" duration="0.46" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_BARREL_ENERGY_S04S" bone="Point_PROJECTILE04" />
+    <trigger type="FTimedTriggerEffect" id="89" time="0.287036538" duration="0.06" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_FRONT_MUZZ" bone="Point_GunTop" />
+    <trigger type="FTimedTriggerEffect" id="90" time="0.7684424" duration="0.58" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_BARREL_ENERGY_S04S" bone="Point_PROJECTILE04" />
+    <trigger type="FTimedTriggerEffect" id="92" time="0.916666269" duration="0.06" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_FRONT_MUZZ" bone="Point_GunTop" />
+    <trigger type="FTimedTriggerEffect" id="96" time="0.275925726" duration="0.06" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_L" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="157" time="0.27407375" duration="0.06" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_R" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="159" time="0.301851869" duration="0.065" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="Point_PROJECTILE01" />
+    <trigger type="FTimedTriggerEffect" id="247" time="0" duration="2.66666675" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_LOW_$(BASETERRAIN)" bone="FX_Point_Hover_Dust" />
+    <trigger type="FTimedTriggerTransfer" id="161" time="0.3462963" duration="0" repeat="0" ec="1160" track="3" refid="159" speed="0" tangent.x="0.00267156959" tangent.y="-0.783615649" tangent.z="0.6212402" />
+    <trigger type="FTimedTriggerEffect" id="163" time="0.9074068" duration="0.06" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_L" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="238" time="0.907407343" duration="0.06" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_R" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="332" time="0.9388889" duration="0.065" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="Point_PROJECTILE02" />
+    <trigger type="FTimedTriggerTransfer" id="333" time="0.9907408" duration="0" repeat="0" ec="1160" track="1" refid="332" speed="0" tangent.x="0.00252423482" tangent.y="-0.798701465" tangent.z="0.6017222" />
+    <trigger type="FTimedTriggerEffect" id="338" time="1.42214584" duration="0.58" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_BARREL_ENERGY_S04S" bone="Point_PROJECTILE03" />
+    <trigger type="FTimedTriggerEffect" id="337" time="1.58333278" duration="0.06" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_FRONT_MUZZ" bone="Point_GunTop" />
+    <trigger type="FTimedTriggerEffect" id="334" time="1.56851792" duration="0.06" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_L" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="335" time="1.56666648" duration="0.06" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_R" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="336" time="1.598148" duration="0.066" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="Point_PROJECTILE04" />
+    <trigger type="FTimedTriggerTransfer" id="339" time="1.6481483" duration="0" repeat="0" ec="1160" track="1" refid="336" speed="0" tangent.x="0.00249087578" tangent.y="-0.8057481" tangent.z="0.5922532" />
+
+    <trigger type="FTimedTriggerSound" id="162" time="0.188888893" duration="0" repeat="0" ec="2200" track="1" event="ART_DEF_VEFFECT_ROCKET_ARTILLERY_EXPLOSION_DEATH" bone="" tier="0" />
+
+    <trigger type="FTimedTriggerEffect" id="308" time="0.0307925325" duration="0" repeat="0" ec="1200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="309" time="0.198148161" duration="0" repeat="0" ec="1200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_MG_Bone_R" />
+    <trigger type="FTimedTriggerEffect" id="317" time="1.51926613" duration="0" repeat="0" ec="1200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="320" time="0.869442046" duration="0" repeat="0" ec="1200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="343" time="0.988190234" duration="0" repeat="0" ec="1200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="60" time="0.5385371" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_MECHINFANTRY_EXPLOSION_DEATH" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="344" time="0.169251233" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_AIR_DEATH_02" bone="FX_Exhaust_Bone_R" />
+
+    <trigger type="FTimedTriggerSound" id="347" time="0.07222219" duration="0" repeat="0" ec="1200" track="1" event="ART_DEF_VEFFECT_ROCKET_ARTILLERY_EXPLOSION_DEATH" bone="" tier="0" />
+
+    <trigger type="FTimedTriggerEffect" id="353" time="0.113734961" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_MECHINFANTRY_EXPLOSION_DEATH" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="127" time="0.6348675" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_MECHINFANTRY_EXPLOSION_DEATH" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="128" time="1.08593285" duration="0" repeat="0" ec="1200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="170" time="0.7805531" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="355" time="1.65856028" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="356" time="1.410007" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="357" time="0.849301338" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="358" time="1.37667346" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="359" time="3.11759019" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="360" time="2.84721971" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="361" time="3.07111788" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="362" time="2.145192" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="363" time="2.62111855" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="364" time="2.65445065" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="365" time="2.37314534" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_SM" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="367" time="2.32129359" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_SM" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="366" time="3.156709" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_SM" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="368" time="0.3203703" duration="2.614815" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A02" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="369" time="0.7185185" duration="2.614815" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A01" bone="Point_PROJECTILE02" />
+    <trigger type="FTimedTriggerEffect" id="370" time="0.5604222" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="371" time="0.4759259" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="372" time="0.6348675" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_SM" bone="Point_VentFrontRight02" />
+    <trigger type="FTimedTriggerEffect" id="373" time="0.7805531" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="374" time="0.849301338" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="375" time="0.869442046" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="376" time="0.988190234" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="377" time="1.08593285" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="117" time="0.7962964" duration="0" repeat="0" ec="2200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_Main" />
+    <trigger type="FTimedTriggerEffect" id="116" time="0.605555534" duration="0" repeat="0" ec="2200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_Main" />
+    <trigger type="FTimedTriggerEffect" id="139" time="0.0727303848" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_MECHINFANTRY_EXPLOSION_DEATH" bone="Rigging_Gun_InvRot" />
+    <trigger type="FTimedTriggerEffect" id="140" time="0.1869489" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_AIR_DEATH_02" bone="Point_Main" />
+    <trigger type="FTimedTriggerEffect" id="141" time="0.3444445" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_MECHINFANTRY_EXPLOSION_DEATH" bone="FX_MG_Bone_L" />
+    <trigger type="FTimedTriggerEffect" id="142" time="0.498059928" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_AIR_DEATH_02" bone="Point_GunArm" />
+    <trigger type="FTimedTriggerEffect" id="113" time="0.677777767" duration="0" repeat="0" ec="2200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="31" time="0.1981482" duration="0" repeat="0" ec="2200" track="5" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="Point_Main" />
+    <trigger type="FTimedTriggerEffect" id="382" time="0.0907407" duration="1.07592607" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A01" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="383" time="0.5259259" duration="0.6407409" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_IDLE_DEATH_SMOKE_MECH_A01" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="384" time="0.129629627" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_MECHINFANTRY_EXPLOSION_DEATH" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="385" time="0.529541433" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_AIR_DEATH_02" bone="Point_ThrustMidLeft" />
+
+    <trigger type="FTimedTriggerEffect" id="433" time="0.138888851" duration="0.46" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_BARREL_ENERGY_S04S" bone="Point_PROJECTILE04" />
+    <trigger type="FTimedTriggerEffect" id="434" time="0.287036538" duration="0.06" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_FRONT_MUZZ" bone="Point_GunTop" />
+    <trigger type="FTimedTriggerEffect" id="435" time="0.7684424" duration="0.58" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_BARREL_ENERGY_S04S" bone="Point_PROJECTILE04" />
+    <trigger type="FTimedTriggerEffect" id="436" time="0.916666269" duration="0.06" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_FRONT_MUZZ" bone="Point_GunTop" />
+    <trigger type="FTimedTriggerEffect" id="437" time="0.2759257" duration="0.06" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_L" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="438" time="0.301851869" duration="0.065" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="Point_PROJECTILE01" />
+    <trigger type="FTimedTriggerEffect" id="439" time="0.9074068" duration="0.06" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_L" bone="Point_GunVentLeft" />
+    <trigger type="FTimedTriggerEffect" id="440" time="0.9388889" duration="0.065" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="Point_PROJECTILE02" />
+    <trigger type="FTimedTriggerEffect" id="441" time="0.909258842" duration="0.06" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_R" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerEffect" id="442" time="0.27407375" duration="0.06" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE_VENT_EXHAUST_R" bone="Point_GunVentRight" />
+    <trigger type="FTimedTriggerTransfer" id="443" time="0.9907408" duration="0" repeat="0" ec="1130" track="3" refid="440" speed="0" tangent.x="0.00255003548" tangent.y="-0.795814157" tangent.z="0.605535567" />
+    <trigger type="FTimedTriggerTransfer" id="444" time="0.3462963" duration="0" repeat="0" ec="1130" track="3" refid="438" speed="0" tangent.x="0.00269890972" tangent.y="-0.7834822" tangent.z="0.621408463" />
+    <trigger type="FTimedTriggerEffect" id="445" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="446" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="447" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="448" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="449" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+    <trigger type="FTimedTriggerEffect" id="450" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_MAIN" bone="Point_MainShake" />
+    <trigger type="FTimedTriggerEffect" id="451" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_R" bone="Point_ThrustMidRight" />
+    <trigger type="FTimedTriggerEffect" id="452" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_F_L" bone="Point_ThrustMidLeft" />
+    <trigger type="FTimedTriggerEffect" id="453" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_R" bone="Point_ThrustBackRight" />
+    <trigger type="FTimedTriggerEffect" id="454" time="0" duration="2" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_HOVER_GLOW_S04S_B_L" bone="Point_ThrustBackLeft" />
+
+  </triggers>
+</trigger_system>

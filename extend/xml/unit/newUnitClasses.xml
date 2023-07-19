@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/23 19:41:43 -->
+<GameData>
+	<Units>
+		
+		
+		<!--************ 民兵****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_LIQUIDMETAL" />
+			<Where Type="UNIT_MILITIA_MODERN" />
+		</Update>
+		<!--************ 伞兵****************-->
+		<!--<Update>
+			<Set ObsoleteTech="TECH_GRID_COMPUTING" />
+			<Where Type="UNIT_PARATROOPER" />
+		</Update>
+		<Update>
+			<Set ObsoleteTech="TECH_GRID_COMPUTING" />
+			<Where Type="UNIT_EGYPT_UNIT777" />
+		</Update>-->
+		<!--************ 机械化步兵****************-->
+
+		<Update>
+			<Set ObsoleteTech="TECH_COGNITIVE" />
+			<Where Type="UNIT_MECHANIZED_INFANTRY" />
+		</Update>
+		<!--************现代装甲****************-->
+
+		<Update>
+			<Set ObsoleteTech="TECH_APPLIEDGRAVITONICS" />
+			<Where Type="UNIT_MODERN_ARMOR" />
+		</Update>
+
+		<!--************反坦克****************-->
+
+		<Update>
+			<Set ObsoleteTech="TECH_NANOTECHNOLOGY" />
+			<Where Type="UNIT_ATGM_VEHICLE" />
+		</Update>
+
+
+		<!--************火箭炮****************-->
+
+		<Update>
+			<Set ObsoleteTech="TECH_HOMO_SUPERIOR" />
+			<Where Type="UNIT_ROCKET_ARTILLERY" />
+		</Update>
+		<!--************攻城炮****************-->
+
+		<Update>
+			<Set ObsoleteTech="TECH_MECHANICAL_ENGINEERING" />
+			<Where Type="UNIT_SELF_PROPELLED_ARTILLERY" />
+		</Update>
+
+		<!--************防空炮****************-->
+
+		<Update>
+			<Set ObsoleteTech="TECH_GRID_COMPUTING" />
+			<Where Type="UNIT_SAM_INFANTRY" />
+		</Update>
+
+		<!--************直升机****************-->
+
+		<Update>
+			<Set ObsoleteTech="TECH_ORBITAL_SUSPENSION" />
+			<Where Type="UNIT_ATTACK_HELICOPTER" />
+		</Update>
+
+	
+
+	
+
+
+		<!--************驱逐舰****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_PLASMA_PROPULSION" />
+			<Where Type="UNIT_MODERN_DESTROYER" />
+		</Update>
+		<Update>
+			<Set ObsoleteTech="TECH_PLASMA_PROPULSION" />
+			<Where Type="UNIT_CHINESE_052D" />
+		</Update>
+		<Update>
+			<Set ObsoleteTech="TECH_PLASMA_PROPULSION" />
+			<Where Type="UNIT_KOREAN_SEJONG_CLASS" />
+		</Update>
+		
+		
+		
+		<!--************潜艇****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_CYBERNETICS" />
+			<Where Type="UNIT_SSBN" />
+		</Update>
+
+
+		<!--************巡洋舰****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_CYBERNETICS" />
+			<Where Type="UNIT_MISSILE_CRUISER" />
+		</Update>
+		<Update>
+			<Set ObsoleteTech="TECH_CYBERNETICS" />
+			<Where Type="UNIT_KIROV_BATTLECRUISER" />
+		</Update>
+
+		<Update>
+			<Set ObsoleteTech="TECH_CYBERNETICS" />
+			<Where Type="UNIT_FRANCE_MISTRAL" />
+		</Update>
+
+
+		<!--************武库舰****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_PLASMA_PROPULSION" />
+			<Where Type="UNIT_FUTURE_BATTLESHIP" />
+		</Update>
+
+
+
+		<!--************航母****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_MECHANICAL_ENGINEERING" />
+			<Where Type="UNIT_SUPER_CARRIER" />
+		</Update>
+
+		<Update>
+			<Set ObsoleteTech="TECH_MECHANICAL_ENGINEERING" />
+			<Where Type="UNIT_AMERICAN_NIMITZ" />
+		</Update>
+
+
+		<!--************舰载飞机****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_SPACE_COLONIZATION" />
+			<Where Type="UNIT_CARRIER_FIGHTER_ADV" />
+		</Update>
+		<Update>
+			<Set ObsoleteTech="TECH_SPACE_COLONIZATION" />
+			<Where Type="UNIT_CARRIER_FIGHTER_ENGLISH_HARRIER_ADV" />
+		</Update>
+
+		<!--************战斗机****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_SPACE_COLONIZATION" />
+			<Where Type="UNIT_JET_FIGHTER" />
+		</Update>
+
+		<Update>
+			<Set ObsoleteTech="TECH_SPACE_COLONIZATION" />
+			<Where Type="UNIT_SWEDISH_JAS39_FIGHTER" />
+		</Update>
+
+		<!--***********轰炸机****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_SPACE_COLONIZATION" />
+			<Where Type="UNIT_STEALTH_BOMBER" />
+		</Update>
+
+		<!--***********歼击机****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_SPACE_COLONIZATION" />
+			<Where Type="UNIT_STEALTH_ATTACK_AIRCRAFT" />
+		</Update>
+		
+		
+		<!--***********导弹****************-->
+		<Update>
+			<Set ObsoleteTech="TECH_APPLIEDGRAVITONICS" />
+			<Where Type="UNIT_GUIDED_MISSILE" />
+		</Update>
+
+
+
+	
+	</Units>
+
+
+	<!--************ 文明独特单位**********************************-->
+
+
+	<Civilization_UnitClassOverrides>
+
+	
+
+		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
+		<Delete UnitType="UNIT_DANISH_ABSALON"/>
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+		<Delete UnitType="UNIT_PERSIAN_MINISUB"/>
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+
+		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
+		<Delete UnitClassType="UNITCLASS_NAVAL_MILITIA"/>
+
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_AMERICA</CivilizationType>
+			<UnitClassType>UNITCLASS_MODERN_DESTROYER</UnitClassType>
+			<UnitType>UNIT_DDG1000</UnitType>
+		</Row>
+
+
+		<!--************ 禁止城邦野蛮人建造**********************************	-->
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_MONK</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_MONK</UnitClassType>
+			<UnitType/>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_IRON_BUDDHA</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_IRON_BUDDHA</UnitClassType>
+			<UnitType/>
+		</Row>
+		
+		
+		
+		
+		<!--<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_HUGE_BOMB</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_HUGE_BOMB</UnitClassType>
+			<UnitType/>
+		</Row>-->
+
+	
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_HORSE_ARTILLERY</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_HORSE_ARTILLERY</UnitClassType>
+			<UnitType/>
+		</Row>
+		
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_GLADIATOR</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_GLADIATOR</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_SUI_FLEET</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_SUI_FLEET</UnitClassType>
+			<UnitType/>
+		</Row>
+		
+		
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_ERALY_DOCTOR</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_ERALY_DOCTOR</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
+			<UnitType/>
+		</Row>
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_HITTITE_WAR_CHARIOT</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_HITTITE_WAR_CHARIOT</UnitClassType>
+			<UnitType/>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_ALIEN_SIEGE_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_ALIEN_SIEGE_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_HOVER_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_HOVER_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<!--<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_EXPLORATION</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_EXPLORATION</UnitClassType>
+			<UnitType/>
+		</Row>-->
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_STURMTIGER</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_STURMTIGER</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_SPACESHIP</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_SPACESHIP</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_P1500</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_P1500</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_ANTIMATTER_EXPLOSION</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_ANTIMATTER_EXPLOSION</UnitClassType>
+			<UnitType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALCARRIER03S</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALCARRIER03S</UnitClassType>
+			<UnitType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_GOLEM</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_GOLEM</UnitClassType>
+			<UnitType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_LEVDESTROYER</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_LEVDESTROYER</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_SIEGE04H</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_SIEGE04H</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_ANGEL</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_ANGEL</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_GHOST</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_GHOST</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALCARRIER03P</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALCARRIER03P</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_SUPER_ROCKET</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_SUPER_ROCKET</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALCARRIER02</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALCARRIER02</UnitClassType>
+			<UnitType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALFIGHTER04P</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVALFIGHTER04P</UnitClassType>
+			<UnitType/>
+		</Row>
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_BEAM_JUMPER</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_BEAM_JUMPER</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVAL_MONSTER</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_NAVAL_MONSTER</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_CHINA_FIRE_CANNON</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_CHINA_FIRE_CANNON</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_BLIALI</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_BLIALI</UnitClassType>
+			<UnitType/>
+		</Row>
+	</Civilization_UnitClassOverrides>
+	
+	
+	
+	
+	
+	<UnitClasses>
+		<!-- 桨帆船 -->
+		<Delete Type="UNITCLASS_NAVAL_MILITIA"/>
+		<!-- 炮艇 -->
+		<Delete Type="UNITCLASS_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete Type="UNITCLASS_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete Type="UNITCLASS_LITTORAL_COMBAT_SHIP"/>
+			
+		<!-- 核火箭筒 -->
+		<Delete Type="UNITCLASS_BAZOOKA"/>
+
+
+		<!--************************************卫士********************************-->
+		<Update>
+			<Set MaxPlayerInstances="3"/>
+			<Where Type="UNITCLASS_CHINESE_WEISHI" />
+		</Update>
+		
+	
+
+		<!--************************************陆军远程********************************-->
+
+		<!--<Row>
+			<Type>UNITCLASS_SAND_WORM</Type>
+			<Description>TXT_KEY_UNIT_SAND_WORM</Description>
+			<DefaultUnit>UNIT_SAND_WORM</DefaultUnit>
+		</Row>-->
+
+
+		<Row>
+			<Type>UNITCLASS_ZOMBIE</Type>
+			<Description>TXT_KEY_UNIT_ZOMBIE</Description>
+			<DefaultUnit>UNIT_ZOMBIE</DefaultUnit>
+		</Row>
+
+
+		<!--<Row>
+			<Type>UNITCLASS_HUGE_BOMB</Type>
+			<Description>TXT_KEY_UNIT_HUGE_BOMB</Description>
+			<DefaultUnit>UNIT_HUGE_BOMB</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>-->
+		
+		
+		
+		<Row>
+			<Type>UNITCLASS_HORSE_ARTILLERY</Type>
+			<Description>TXT_KEY_UNIT_HORSE_ARTILLERY</Description>
+			<DefaultUnit>UNIT_HORSE_ARTILLERY_MOVE</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_GLADIATOR</Type>
+			<Description>TXT_KEY_UNIT_GLADIATOR</Description>
+			<DefaultUnit>UNIT_GLADIATOR</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_CHINA_FIRE_CANNON</Type>
+			<Description>TXT_KEY_CIV5_CHINA_FIRE_CANNON_HEADING</Description>
+			<DefaultUnit>UNIT_CHINA_FIRE_CANNON</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		
+		
+		
+		<Row>
+			<Type>UNITCLASS_ERALY_DOCTOR</Type>
+			<Description>TXT_KEY_UNIT_ERALY_DOCTOR</Description>
+			<DefaultUnit>UNIT_ERALY_DOCTOR</DefaultUnit>
+			<MaxPlayerInstances>3</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_MODERN_DOCTOR</Type>
+			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
+			<DefaultUnit>UNIT_MODERN_DOCTOR</DefaultUnit>
+			<MaxPlayerInstances>4</MaxPlayerInstances>
+		</Row>
+		
+		
+		<Row>
+			<Type>UNITCLASS_BLIALI</Type>
+			<Description>TXT_KEY_UNIT_BLIALI</Description>
+			<DefaultUnit>UNIT_BLIALI</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		
+		
+		<Row>
+			<Type>UNITCLASS_SUPER_ROCKET</Type>
+			<Description>TXT_KEY_UNIT_SUPER_ROCKET</Description>
+			<DefaultUnit>UNIT_SUPER_ROCKET</DefaultUnit>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_FW_HOVERTANK</Type>
+			<Description>TXT_KEY_UNIT_FW_HOVERTANK</Description>
+			<DefaultUnit>UNIT_FW_HOVERTANK</DefaultUnit>
+		</Row>
+
+
+		<Row>
+			<Type>UNITCLASS_SABR</Type>
+			<Description>TXT_KEY_UNIT_SABR</Description>
+			<DefaultUnit>UNIT_SABR</DefaultUnit>
+		</Row>
+
+
+		<!--************************************飞机********************************-->
+
+
+
+		<Row>
+			<Type>UNITCLASS_SATELLITE_SOLAR</Type>
+			<Description>TXT_KEY_UNIT_SATELLITE_SOLAR</Description>
+			<DefaultUnit>UNIT_SATELLITE_SOLAR</DefaultUnit>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<!--<MaxPlayerInstances>1</MaxPlayerInstances>-->
+		</Row>
+
+
+
+		<Row>
+			<Type>UNITCLASS_CARRIER_FIGHTER_STORM</Type>
+			<Description>TXT_KEY_UNIT_CARRIER_FIGHTER_STORM</Description>
+			<DefaultUnit>UNIT_CARRIER_FIGHTER_STORM</DefaultUnit>
+		</Row>
+		
+		
+		<Row>
+			<Type>UNITCLASS_CARRIER_FIGHTER_FUTURE</Type>
+			<Description>TXT_KEY_UNIT_CARRIER_FIGHTER_FUTURE</Description>
+			<DefaultUnit>UNIT_CARRIER_FIGHTER_FUTURE</DefaultUnit>
+		</Row>
+		
+		
+		<Row>
+		<Type>UNITCLASS_SUPER_MISSILE</Type>
+		<Description>TXT_KEY_UNIT_SUPER_MISSILE</Description>
+		<DefaultUnit>UNIT_SUPER_MISSILE</DefaultUnit>
+	</Row>
+	<Row>
+		<Type>UNITCLASS_AIRFIGHTER04P</Type>
+		<Description>TXT_KEY_UNIT_AIRFIGHTER04P</Description>
+		<DefaultUnit>UNIT_AIRFIGHTER04P</DefaultUnit>
+	</Row>
+
+	<Row>
+		<Type>UNITCLASS_AIRFIGHTER03P</Type>
+		<Description>TXT_KEY_UNIT_AIRFIGHTER03P</Description>
+		<DefaultUnit>UNIT_AIRFIGHTER03P</DefaultUnit>
+	</Row>
+
+	<Row>
+		<Type>UNITCLASS_FW_DRONE_FIGHTER_2</Type>
+		<Description>TXT_KEY_UNIT_FW_DRONE_FIGHTER_2</Description>
+		<DefaultUnit>UNIT_FW_DRONE_FIGHTER_2</DefaultUnit>
+	</Row>
+
+
+		<!--***********************************铁浮屠********************************-->
+		<Row>
+			<Type>UNITCLASS_IRON_BUDDHA</Type>
+			<Description>TXT_KEY_UNIT_IRON_BUDDHA</Description>
+			<DefaultUnit>UNIT_IRON_BUDDHA</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		
+		<!--***********************************武僧********************************-->
+		<Row>
+			<Type>UNITCLASS_MONK</Type>
+			<Description>TXT_KEY_UNIT_MONK</Description>
+			<DefaultUnit>UNIT_MONK</DefaultUnit>
+		</Row>
+
+		<!--************************************堡垒********************************-->
+
+		<Row>
+			<Type>UNITCLASS_CITADEL_FUTURE</Type>
+			<Description>TXT_KEY_UNIT_CITADEL_FUTURE</Description>
+			<DefaultUnit>UNIT_CITADEL_FUTURE</DefaultUnit>
+		</Row>
+
+		<!--************************************五牙********************************-->
+		<Row>
+			<Type>UNITCLASS_SUI_FLEET</Type>
+			<Description>TXT_KEY_UNIT_SUI_FLEET</Description>
+			<DefaultUnit>UNIT_SUI_FLEET</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<!--************************************赫梯战车********************************-->
+		<Row>
+			<Type>UNITCLASS_HITTITE_WAR_CHARIOT</Type>
+			<Description>TXT_KEY_UNIT_HITTITE_WAR_CHARIOT</Description>
+			<DefaultUnit>UNIT_HITTITE_WAR_CHARIOT</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<!--************************************海怪********************************-->
+		<Row>
+			<Type>UNITCLASS_NAVAL_MONSTER</Type>
+			<Description>TXT_KEY_UNIT_NAVAL_MONSTER</Description>
+			<DefaultUnit>UNIT_NAVAL_MONSTER</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<!--************************************乌尔班********************************-->
+
+		<Row>
+			<Type>UNITCLASS_URBAN_CANNON</Type>
+			<Description>TXT_KEY_UNIT_URBAN_CANNON</Description>
+			<DefaultUnit>UNIT_URBAN_CANNON</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+		<!--************************************浮石章鱼********************************-->
+		<Row>
+			<Type>UNITCLASS_HOVER_WORM</Type>
+			<Description>TXT_KEY_UNIT_HOVER_WORM</Description>
+			<DefaultUnit>UNIT_HOVER_WORM</DefaultUnit>
+		</Row>
+
+
+
+
+		<!--************************************蠕虫********************************-->
+		<Row>
+			<Type>UNITCLASS_ALIEN_SIEGE_WORM</Type>
+			<Description>TXT_KEY_UNIT_ALIEN_SIEGE_WORM</Description>
+			<DefaultUnit>UNIT_ALIEN_SIEGE_WORM</DefaultUnit>
+		</Row>
+
+		<!--************************************天使机甲********************************-->
+		<Row>
+			<Type>UNITCLASS_ANGEL</Type>
+			<Description>TXT_KEY_UNIT_ANGEL</Description>
+			<DefaultUnit>UNIT_ANGEL</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<!--************************************幽灵********************************-->
+		<Row>
+			<Type>UNITCLASS_GHOST</Type>
+			<Description>TXT_KEY_UNIT_GHOST</Description>
+			<DefaultUnit>UNIT_GHOST</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+		<!--<Row>
+			<Type>UNITCLASS_LEVTANK</Type>
+			<Description>TXT_KEY_UNIT_LEVTANK</Description>
+			<DefaultUnit>UNIT_LEVTANK</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>-->
+		<!--<Row>
+			<Type>UNITCLASS_EXPLORATION</Type>
+			<Description>TXT_KEY_UNIT_EXPLORATION</Description>
+			<DefaultUnit>UNIT_EXPLORATION</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>-->
+
+		<Row>
+			<Type>UNITCLASS_STURMTIGER</Type>
+			<Description>TXT_KEY_UNIT_STURMTIGER</Description>
+			<DefaultUnit>UNIT_STURMTIGER</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+		<Row>
+			<Type>UNITCLASS_SPACESHIP</Type>
+			<Description>TXT_KEY_UNIT_SPACESHIP</Description>
+			<DefaultUnit>UNIT_SPACESHIP</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+		<Row>
+			<Type>UNITCLASS_P1500</Type>
+			<Description>TXT_KEY_UNIT_P1500</Description>
+			<DefaultUnit>UNIT_P1500</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_LEVDESTROYER</Type>
+			<Description>TXT_KEY_UNIT_LEVDESTROYER</Description>
+			<DefaultUnit>UNIT_LEVDESTROYER</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_SIEGE04H</Type>
+			<Description>TXT_KEY_UNIT_SIEGE04H</Description>
+			<DefaultUnit>UNIT_SIEGE04H</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+
+		<Row>
+			<Type>UNITCLASS_ANTIMATTER_EXPLOSION</Type>
+			<Description>TXT_KEY_UNIT_ANTIMATTER_EXPLOSION</Description>
+			<DefaultUnit>UNIT_ANTIMATTER_EXPLOSION</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_GOLEM</Type>
+			<Description>TXT_KEY_UNIT_GOLEM</Description>
+			<DefaultUnit>UNIT_GOLEM</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_NAVALCARRIER03S</Type>
+			<Description>TXT_KEY_UNIT_NAVALCARRIER03S</Description>
+			<DefaultUnit>UNIT_NAVALCARRIER03S</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+
+		<Row>
+			<Type>UNITCLASS_NAVALCARRIER03P</Type>
+			<Description>TXT_KEY_UNIT_NAVALCARRIER03P</Description>
+			<DefaultUnit>UNIT_NAVALCARRIER03P</DefaultUnit>
+			<MaxPlayerInstances>1</MaxPlayerInstances>
+		</Row>
+
+		<!--************************************海军单位********************************-->
+		<Row>
+			<Type>UNITCLASS_NAVALCARRIER02</Type>
+			<Description>TXT_KEY_UNIT_NAVALCARRIER02</Description>
+			<DefaultUnit>UNIT_NAVALCARRIER02</DefaultUnit>
+			<MaxPlayerInstances>20</MaxPlayerInstances>
+		</Row>
+		
+
+
+		<Row>
+			<Type>UNITCLASS_NAVALFIGHTER04P</Type>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER04P</Description>
+			<DefaultUnit>UNIT_NAVALFIGHTER04P</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_NAVALFIGHTER03P</Type>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER03P</Description>
+			<DefaultUnit>UNIT_NAVALFIGHTER03P</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_NAVALFIGHTER03H</Type>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER03H</Description>
+			<DefaultUnit>UNIT_NAVALFIGHTER03H</DefaultUnit>
+		</Row>
+
+
+		<Row>
+			<Type>UNITCLASS_NAVALFIGHTER04S</Type>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER04S</Description>
+			<DefaultUnit>UNIT_NAVALFIGHTER04S</DefaultUnit>
+		</Row>
+
+
+
+		<!--************************************步兵系单位********************************-->
+		<Row>
+			<Type>UNITCLASS_RANGEDMARINE04P</Type>
+			<Description>TXT_KEY_UNIT_RANGEDMARINE04P</Description>
+			<DefaultUnit>UNIT_RANGEDMARINE04P</DefaultUnit>
+			<MaxPlayerInstances>10</MaxPlayerInstances>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_FW_AUTOMATON</Type>
+			<Description>TXT_KEY_UNIT_FW_AUTOMATON</Description>
+			<DefaultUnit>UNIT_FW_AUTOMATON</DefaultUnit>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_CARVR</Type>
+			<Description>TXT_KEY_UNIT_CARVR</Description>
+			<DefaultUnit>UNIT_CARVR</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_CNDR</Type>
+			<Description>TXT_KEY_UNIT_CNDR</Description>
+			<DefaultUnit>UNIT_CNDR</DefaultUnit>
+		</Row>
+
+
+		<Row>
+			<Type>UNITCLASS_FW_ROBOT_INFANTRY</Type>
+			<Description>TXT_KEY_UNIT_FW_ROBOT_INFANTRY</Description>
+			<DefaultUnit>UNIT_FW_ROBOT_INFANTRY</DefaultUnit>
+		</Row>
+
+
+		<Row>
+			<Type>UNITCLASS_RANGEDMARINE03S</Type>
+			<Description>TXT_KEY_UNIT_RANGEDMARINE03S</Description>
+			<DefaultUnit>UNIT_RANGEDMARINE03S</DefaultUnit>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_MARINE03S</Type>
+			<Description>TXT_KEY_UNIT_MARINE03S</Description>
+			<DefaultUnit>UNIT_MARINE03S</DefaultUnit>
+		</Row>
+
+
+		<Row>
+			<Type>UNITCLASS_MARINE02</Type>
+			<Description>TXT_KEY_UNIT_MARINE02</Description>
+			<DefaultUnit>UNIT_MARINE02</DefaultUnit>
+		</Row>
+
+
+
+		<Row>
+			<Type>UNITCLASS_FW_RAILGUN_TANK</Type>
+			<Description>TXT_KEY_UNIT_FW_RAILGUN_TANK</Description>
+			<DefaultUnit>UNIT_FW_RAILGUN_TANK</DefaultUnit>
+		</Row>
+
+
+
+
+
+		<!--************************************坦克系单位********************************-->
+		<Row>
+			<Type>UNITCLASS_FW_BATTLESUIT</Type>
+			<Description>TXT_KEY_UNIT_FW_BATTLESUIT</Description>
+			<DefaultUnit>UNIT_FW_BATTLESUIT</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_AEGIS</Type>
+			<Description>TXT_KEY_UNIT_AEGIS</Description>
+			<DefaultUnit>UNIT_AEGIS</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_BATTLESUIT</Type>
+			<Description>TXT_KEY_UNIT_BATTLESUIT</Description>
+			<DefaultUnit>UNIT_BATTLESUIT</DefaultUnit>
+		</Row>
+
+		<Row>
+			<Type>UNITCLASS_BEAM_JUMPER</Type>
+			<Description>TXT_KEY_UNIT_BEAM_JUMPER</Description>
+			<DefaultUnit>UNIT_BEAM_JUMPER</DefaultUnit>
+		</Row>
+		<Row>
+			<Type>UNITCLASS_FW_VERTOL</Type>
+			<Description>TXT_KEY_UNIT_FW_VERTOL</Description>
+			<DefaultUnit>UNIT_FW_VERTOL</DefaultUnit>
+		</Row>
+
+
+
+	</UnitClasses>
+	
+</GameData>

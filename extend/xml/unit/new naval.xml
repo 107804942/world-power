@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/23 20:48:10 -->
+<GameData>
+
+
+	
+	<Units>
+		<!-- 桨帆船 -->
+		<Delete Class="UNITCLASS_NAVAL_MILITIA"/>
+		<!-- 炮艇 -->
+		<Delete Class="UNITCLASS_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete Class="UNITCLASS_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete Class="UNITCLASS_LITTORAL_COMBAT_SHIP"/>
+
+		
+		
+		
+		
+
+		<Delete Type="UNIT_CHINESE_052D"/>
+
+		<Row>
+			<Class>UNITCLASS_MODERN_DESTROYER</Class>
+			<Type>UNIT_CHINESE_052D</Type>
+			<PrereqTech>TECH_ROBOTICS</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Combat>350</Combat>
+			<RangedCombat>350</RangedCombat>
+			<Cost>1250</Cost>
+			<Moves>11</Moves>
+			<Range>1</Range>
+			<AirInterceptRange>1</AirInterceptRange>
+			<HurryCostModifier>50</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_NAVALMELEE</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CHINESE_055</Description>
+			<Civilopedia>TXT_KEY_UNIT_CHINESE_055_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_NAVALMELEE_SHIPS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>80</AdvancedStartCost>
+			<MinAreaSize>16</MinAreaSize>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_055DESTROYER</UnitArtInfo>
+			<UnitFlagIconOffset>120</UnitFlagIconOffset>
+			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>24</PortraitIndex>
+			<MoveRate>BOAT</MoveRate>
+			<ExtraMaintenanceCost>22</ExtraMaintenanceCost>
+			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+		</Row>
+
+		<Row>
+			<Class>UNITCLASS_MODERN_DESTROYER</Class>
+			<Type>UNIT_DDG1000</Type>
+			<PrereqTech>TECH_ROBOTICS</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Combat>330</Combat>
+			<RangedCombat>330</RangedCombat>
+			<ObsoleteTech>TECH_CYBERNETICS</ObsoleteTech>
+			<Cost>1350</Cost>
+			<Moves>11</Moves>
+			<Range>2</Range>
+			<AirInterceptRange>3</AirInterceptRange>
+			<HurryCostModifier>50</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_NAVALMELEE</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_DDG1000</Description>
+			<Civilopedia>TXT_KEY_UNIT_DDG1000_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_NAVALMELEE_SHIPS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>80</AdvancedStartCost>
+			<MinAreaSize>16</MinAreaSize>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_DDG1000</UnitArtInfo>
+			<UnitFlagIconOffset>8</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>49</PortraitIndex>
+			<MoveRate>BOAT</MoveRate>
+			<ExtraMaintenanceCost>250</ExtraMaintenanceCost>
+			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+		</Row>
+		
+		
+	
+
+		
+
+
+
+
+
+
+		<!--****************驱逐舰****************-->
+
+		<Row>
+			<Class>UNITCLASS_NAVALFIGHTER03H</Class>
+			<Type>UNIT_NAVALFIGHTER03H</Type>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Combat>540</Combat>
+			<Cost>3700</Cost>
+			<Moves>11</Moves>
+			<AirInterceptRange>3</AirInterceptRange>
+			<HurryCostModifier>60</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_NAVALMELEE</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER03H</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_NAVALFIGHTER03H_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_NAVALFIGHTER03H_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<AdvancedStartCost>60</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER03S</UnitArtInfo>
+			<UnitFlagIconOffset>7</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>42</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<MoveRate>BOAT</MoveRate>
+			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<ExtraMaintenanceCost>260</ExtraMaintenanceCost>
+		</Row>
+
+
+		<!--****************巡洋舰****************-->
+
+		<Row>
+			<Class>UNITCLASS_NAVALFIGHTER04S</Class>
+			<Type>UNIT_NAVALFIGHTER04S</Type>
+			<BaseSightRange>4</BaseSightRange>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
+			<Combat>700</Combat>
+			<RangedCombat>540</RangedCombat>
+			<Cost>4400</Cost>
+			<Moves>10</Moves>
+			<Range>4</Range>
+			<HurryCostModifier>85</HurryCostModifier>
+			<AirInterceptRange>4</AirInterceptRange>
+			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER04S</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_NAVALFIGHTER04S_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_NAVALFIGHTER04S_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_NAVAL_RANGED_CRUISER_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<AdvancedStartCost>110</AdvancedStartCost>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>4</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04S</UnitArtInfo>
+			<UnitFlagIconOffset>27</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<ExtraMaintenanceCost>300</ExtraMaintenanceCost>
+		</Row>
+
+		<!--****************战列舰****************-->
+
+		<Row>
+			<Class>UNITCLASS_NAVALFIGHTER03P</Class>
+			<Type>UNIT_NAVALFIGHTER03P</Type>
+			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+			<BaseSightRange>3</BaseSightRange>
+			<Combat>960</Combat>
+			<RangedCombat>960</RangedCombat>
+			<Cost>7600</Cost>
+			<Moves>8</Moves>
+			<Range>5</Range>
+			<HurryCostModifier>200</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER03P</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_NAVALFIGHTER03P_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_BATTLESHIPS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>60</AdvancedStartCost>
+			<MinAreaSize>16</MinAreaSize>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04SP</UnitArtInfo>
+			<UnitFlagIconOffset>113</UnitFlagIconOffset>
+			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>60</PortraitIndex>
+			<MoveRate>BOAT</MoveRate>
+			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
+			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+		</Row>
+
+
+
+
+		<!--****************航母****************-->
+
+		<Row>
+			<Class>UNITCLASS_NAVALCARRIER02</Class>
+			<Type>UNIT_NAVALCARRIER02</Type>
+			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+			<BaseSightRange>4</BaseSightRange>
+			<Combat>700</Combat>
+			<Cost>8000</Cost>
+			<Moves>9</Moves>
+			<HurryCostModifier>200</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_NAVALCARRIER02</Description>
+			<Civilopedia>TXT_KEY_UNIT_NAVALCARRIER02_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_AIRCRAFT_CARRIERS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CARRIER_UNIT_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>120</AdvancedStartCost>
+			<MinAreaSize>10</MinAreaSize>
+			<XPValueAttack>11</XPValueAttack>
+			<XPValueDefense>10</XPValueDefense>
+			<SpecialCargo>SPECIALUNIT_FIGHTER</SpecialCargo>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03P</UnitArtInfo>
+			<UnitFlagIconOffset>3</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<MoveRate>BOAT</MoveRate>
+			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
+		</Row>
+
+		<!--****************潜艇****************-->
+		<Row>
+			<Class>UNITCLASS_NAVALFIGHTER04P</Class>
+			<Type>UNIT_NAVALFIGHTER04P</Type>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
+			<BaseSightRange>6</BaseSightRange>
+			<Combat>580</Combat>
+			<RangedCombat>470</RangedCombat>
+			<Cost>3500</Cost>
+			<Moves>10</Moves>
+			<Range>3</Range>
+			<HurryCostModifier>110</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_SUBMARINE</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER04P</Description>
+			<Civilopedia>TXT_KEY_UNIT_NAVALFIGHTER04P_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_NAVALFIGHTER04P_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SSBN_HELP</Help>
+			<ProjectPrereq>PROJECT_MANHATTAN_PROJECT</ProjectPrereq>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>80</AdvancedStartCost>
+			<MinAreaSize>20</MinAreaSize>
+			<XPValueAttack>6</XPValueAttack>
+			<XPValueDefense>6</XPValueDefense>
+			<SpecialCargo>SPECIALUNIT_NUKE</SpecialCargo>
+			<RangeAttackOnlyInDomain>true</RangeAttackOnlyInDomain>
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<UnitArtInfo>ART_DEF_UNIT_SUB04S</UnitArtInfo>
+			<UnitFlagIconOffset>29</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>114</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<MoveRate>SUB</MoveRate>
+			<ExtraMaintenanceCost>180</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+	</Units>
+
+
+
+	<Unit_ClassUpgrades>
+
+	<Delete UnitType="UNIT_NAVAL_MILITIA"/>
+		<!-- 桨帆船 -->
+		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
+		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
+
+		<!-- 炮艇 -->
+		<Delete UnitType="UNIT_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete UnitType="UNIT_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
+
+
+
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<UnitClassType>UNITCLASS_NAVALCARRIER02</UnitClassType>
+		</Row>
+		
+	</Unit_ClassUpgrades>
+	
+	
+	
+
+	<Unit_FreePromotions>
+		
+	
+
+		<!-- 桨帆船 -->
+		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
+		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
+
+		<!-- 炮艇 -->
+		<Delete UnitType="UNIT_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete UnitType="UNIT_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
+		
+		
+		<Row>
+			<UnitType>UNIT_JAPANESE_BATTLESHIP</UnitType>
+			<PromotionType>PROMOTION_JAPANESE_BATTLESHIP</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<PromotionType>PROMOTION_MARCH</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<PromotionType>PROMOTION_CARGO_II</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<PromotionType>PROMOTION_EXTRA_SIGHT_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<PromotionType>PROMOTION_INVISIBLE_DESTROYER</PromotionType>
+		</Row>
+
+
+
+		
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
+		</Row>
+	
+
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<PromotionType>PROMOTION_CARGO_VI</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
+		</Row>
+
+		
+
+
+		
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<PromotionType>PROMOTION_NAVAL_RANGED_CRUISER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_FRANCE_MISTRAL</UnitType>
+			<PromotionType>PROMOTION_FRANCE</PromotionType>
+		</Row>
+		
+
+
+	</Unit_FreePromotions>
+
+
+
+
+	<Unit_ResourceQuantityRequirements>
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>18</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>15</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		
+
+
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>12</Cost>
+		</Row>
+
+
+
+		
+		
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>28</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>6</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>18</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>14</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>16</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>7</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>15</Cost>
+		</Row>
+	</Unit_ResourceQuantityRequirements>
+
+	<Unit_AITypes>
+
+		<!-- 桨帆船 -->
+		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
+		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
+
+		<!-- 炮艇 -->
+		<Delete UnitType="UNIT_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete UnitType="UNIT_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
+	
+
+
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+		</Row>
+
+
+		
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitAIType>UNITAI_CARRIER_SEA</UnitAIType>
+		</Row>
+
+	</Unit_AITypes>
+
+
+	<Unit_Flavors>
+
+		<!-- 桨帆船 -->
+		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
+		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
+
+		<!-- 炮艇 -->
+		<Delete UnitType="UNIT_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete UnitType="UNIT_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
+
+
+	
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>110</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>130</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<FlavorType>FLAVOR_NUKE</FlavorType>
+			<Flavor>12</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>250</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
+			<Flavor>500</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>340</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>240</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>240</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>150</Flavor>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>185</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>185</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>95</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>95</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
+			<Flavor>95</Flavor>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>90</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
+			<Flavor>65</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
+			<Flavor>15</Flavor>
+		</Row>
+		
+		
+		
+
+	</Unit_Flavors>
+
+
+
+	<Units>
+
+
+		
+		<Update>
+			<Set UnitArtInfo="ART_DEF_UNIT_JAPAN_BATTLESHIP"/>
+			<Where Type="UNIT_JAPANESE_BATTLESHIP" />
+		</Update>
+		
+		<Update>
+			<Set UnitArtInfo="ART_DEF_UNIT_DESTROYER_CLASS"/>
+			<Where Type="UNIT_JAPANESE_DESTROYER" />
+		</Update>
+
+		<Update>
+			<Set UnitArtInfo="ART_DEF_UNIT_052" />
+			<Where Type="UNIT_MODERN_DESTROYER" />
+		</Update>
+
+
+
+		<Update>
+			<Set UnitArtInfo="ART_DEF_UNIT_TYPE_212_SUBMARINE888" />
+			<Where Type="UNIT_NUCLEAR_SUBMARINE" />
+		</Update>
+
+
+
+
+
+
+		<Update>
+			<Set   UnitArtInfo="ART_DEF_UNIT_BATTLESHIP_CLASS" />
+			<Where Type="UNIT_HEAVY_CRUISER" />
+		</Update>
+
+
+		<Update>
+			<Set   UnitArtInfo="ART_DEF_UNIT_IOWA_CLASS_BATTLESHIP888"/>
+			<Where Type="UNIT_GREEK_ARMORED_CRUISER" />
+		</Update>
+
+		<Update>
+			<Set   UnitArtInfo="ART_DEF_UNIT_LITTORIO_CLASS"/>
+			<Where Type="UNIT_SPANISH_CANARIAS" />
+		</Update>
+
+
+		<Update>
+			<Set PrereqTech="TECH_MARINE_ENGINEERING"  UnitArtInfo="ART_DEF_UNIT_ADMIRAL_CLASS_BATTLECRUISER888"/>
+			<Where Type="UNIT_DREADNOUGHT" />
+		</Update>
+
+
+		<Update>
+			<Set PrereqTech="TECH_MARINE_ENGINEERING" />
+			<Where Type="UNIT_BRAZILIAN_MINAS_GERAES" />
+		</Update>
+
+
+		<Update>
+			<Set   UnitFlagAtlas="UNIT_FLAG_ATLAS_2" UnitFlagIconOffset="36"   UnitArtInfo="ART_DEF_UNIT_USA_ARSENALSHIP"/>
+			<Where Type="UNIT_FUTURE_BATTLESHIP" />
+		</Update>
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_LIAONING_CARRIER" PrereqTech="TECH_MILITARY_OCEANOGRAPHY"/>
+			<Where Type="UNIT_NUCLEAR_CARRIER" />
+		</Update>
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_AMERICAN_FORD"  PrereqTech="TECH_MILITARY_OCEANOGRAPHY"/>
+			<Where Type="UNIT_AMERICAN_NIMITZ" />
+		</Update>
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_STORMCARRIER" />
+			<Where Type="UNIT_SUPER_CARRIER" />
+		</Update>
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_KIROV_BATTLECRUISER" />
+			<Where Type="UNIT_KIROV_BATTLECRUISER" />
+		</Update>
+
+
+		<Update>
+			<Set   PrereqTech="TECH_CARTOGRAPHY" />
+			<Where Type="UNIT_VENETIAN_GALLEASS" />
+		</Update>
+		<Update>
+			<Set   PrereqTech="TECH_CARTOGRAPHY" />
+			<Where Type="UNIT_KOREAN_TURTLE_SHIP" />
+		</Update>
+	
+
+		<Update>
+			<Set  IconAtlas="ROBOT_ICON_ATLAS3"  PortraitIndex="232"/>
+			<Where Type="UNIT_SONGHAI_EXPEDITION_FLEET" />
+		</Update>
+
+
+
+
+		<Update>
+			<Set   PrereqTech="TECH_NAUTICAL_SCIENCE" />
+			<Where Class="UNITCLASS_SHIP_OF_THE_LINE" />
+		</Update>
+
+	</Units>
+	
+	
+</GameData>

@@ -1,0 +1,18 @@
+<Asset>
+	<Mesh file="Canal_Bent_Base_60.gr2" source="Max" />
+	<Texture file="Canal_Base_B.dds" source="Max" />
+	<Texture file="Canal_Base_B_SREF.dds" source="Max" />
+	<Texture file="Water_B.dds" source="Max" />
+	<Texture file="Water_H.dds" source="Max" />
+	<DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+	<BoneUsage>
+		<Bone name="FX_Fire" />
+		<Bone name="FX_Fire001" />
+		<Bone name="FX_Fire002" />
+		<Bone name="FX_Fire003" />
+	</BoneUsage>
+	<TimedTrigger file="fx_triggers_Canal.ftsxml" source="Tool" model="Canal_Bent_Base_" state="0,1,2,3" />
+	<TimedTrigger file="fx_triggers_Canal_01.ftsxml" source="Tool" model="Canal_Bent_Base_" state="0,1,2,3" />
+	<TimedTrigger file="fx_triggers_Canal_02.ftsxml" source="Tool" model="Canal_Bent_Base_" state="0,1,2,3" />
+	<TimedTrigger file="fx_triggers_Canal_03.ftsxml" source="Tool" model="Canal_Bent_Base_" state="0,1,2,3" />
+</Asset>

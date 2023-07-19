@@ -1,0 +1,1530 @@
+<statemachine fsm="FGrannyStateMachine" default_state="2">
+  <states>
+    <state id="1" type="FGrannyState" x="-400" y="-64" name="IDLE_LOOP" asset="IDLE_GRAPH.dge" action="1000" sockets="7" />
+    <state id="2" type="FGrannyState" x="-688" y="-352" name="IDLE_CHOOSER_DUMMY" asset="" action="0" sockets="2" />
+    <state id="3" type="FGrannyState" x="144" y="-528" name="FIDGETS_GRAPH" asset="FIDGETS_GRAPH.dge" action="1000" sockets="7" />
+    <state id="4" type="FGrannyState" x="-880" y="1024" name="START_RUNNING" asset="START_RUN_CHARGE_SHUFFLE.dge" action="10000" sockets="1" />
+    <state id="5" type="FGrannyState" x="-496" y="-384" name="TRANSITIONS_FOR_IDLES" asset="TRANSITIONS_FOR_IDLES.dge" action="0" sockets="1" />
+    <state id="6" type="FGrannyState" x="-208" y="-400" name="IDLE_TRANSITIONS_OR_FIDGET_DUMMY" asset="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge" action="0" sockets="2" />
+    <state id="7" type="FGrannyState" x="-1024" y="-48" name="ENTER_FORTIFY" asset="ENTER_FORTIFY.dge" action="0" sockets="1" />
+    <state id="8" type="FGrannyState" x="688" y="-272" name="ENTER_COMBAT_READY" asset="ENTER_COMBAT_READY_GRAPH.dge" action="0" sockets="1" />
+    <state id="10" type="FGrannyState" x="-560" y="-16" name="LEAVE_FORTIFY" asset="FORTIFY_LEAVE_GRAPH.dge" action="0" sockets="3" />
+    <state id="11" type="FGrannyState" x="128" y="576" name="LEAVE_COMBAT_READY" asset="LEAVE_COMBAT_READY.dge" action="0" sockets="2" />
+    <state id="12" type="FGrannyState" x="448" y="64" name="COMBAT_READY_LOOP" asset="COMBAT_READY_GRAPH.dge" action="1600" sockets="6" />
+    <state id="13" type="FGrannyState" x="-256" y="1664" name="DEATHS" asset="DEATH_GRAPH.dge" action="0" sockets="1" />
+    <state id="14" type="FGrannyState" x="1184" y="528" name="ATTACKS" asset="MELEE_ATTACKS.dge" action="1100" sockets="6" />
+    <state id="15" type="FGrannyState" x="672" y="1472" name="ENTER_BOMBARD_DEFEND" asset="ENTER_BOMBARD_DEFEND_GRAPH.dge" action="0" sockets="1" />
+    <state id="17" type="FGrannyState" x="-1296" y="1984" name="RUNNING_LOOP" asset="RUN_CHARGE_SHUFFLE_LOOP.dge" action="1400" sockets="7" />
+    <state id="18" type="FGrannyState" x="576" y="1008" name="BOMBARD_DEFEND_LOOP" asset="BOMBARD_DEFEND_LOOP_GRAPH.dge" action="1280" sockets="4" />
+    <state id="20" type="FGrannyState" x="1024" y="-112" name="ATTACK_TRANS_COMBAT_READY_DUMMY" asset="COMBAT_READY_GRAPH.dge" action="0" sockets="1" />
+    <state id="21" type="FGrannyState" x="-256" y="1840" name="DEATH_FINAL" asset="DEATH_FINAL_GRAPH.dge" action="1200" sockets="0" />
+    <state id="19" type="FGrannyState" x="1072" y="752" name="LEAVE_BOMBARD_DEFEND_GOTO_IDLE" asset="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge" action="0" sockets="1" />
+    <state id="25" type="FGrannyState" x="-1216" y="800" name="STRAIGHT_INTO_RUNS" asset="ATTACK_TO_RUN_CHARGE_SHUFFLE.dge" action="10000" sockets="1" />
+    <state id="27" type="FGrannyState" x="-1072" y="976" name="ATTACK_CITY_TO_RUN" asset="ATTACK_CITY_TO_RUN_CHARGE_SHUFFLE.dge" action="10000" sockets="1" />
+    <state id="22" type="FGrannyState" x="-1056" y="512" name="FORTIFY_LOOP" asset="FORTIFY_GRAPH.dge" action="1500" sockets="6" />
+    <state id="9" type="FGrannyState" x="-336" y="1024" name="STOP_RUNNING" asset="STOP_RUNNING.dge" action="0" sockets="3" />
+    <state id="16" type="FGrannyState" x="-1296" y="384" name="FORTIFY_FIDGET" asset="FORTIFY_FIDGET_GRAPH.dge" action="0" sockets="6" />
+    <state id="26" type="FGrannyState" x="-528" y="1008" name="STOP_SHUFFLE" asset="SHUFFLE_STOP_GRAPH.dge" action="0" sockets="3" />
+    <state id="23" type="FGrannyState" x="-1968" y="992" name="RUNS_SHUFFLE_SWITCH" asset="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge" action="10000" sockets="2" />
+    <state id="24" type="FGrannyState" x="-1840" y="1792" name="RUNS_SHUFFLE_SWITCH_RETURN" asset="RUN_CHARGE_SHUFFLE_LOOP.dge" action="10000" sockets="1" />
+    <state id="28" type="FGrannyState" x="368" y="1424" name="ENTER_ESCAVATE" asset="ESCAVATE_ENTER_GRAPH.dge" action="1905" sockets="1" />
+    <state id="29" type="FGrannyState" x="1040" y="1200" name="ESCAVATE_LOOP" asset="ESCAVATE_LOOP_GRAPH.dge" action="1905" sockets="2" />
+    <state id="30" type="FGrannyState" x="1312" y="816" name="LEAVE_DIG_TO_IDLE" asset="ESCAVATE_LEAVE_GRAPH.dge" action="0" sockets="1" />
+  </states>
+  <sockets>
+    <socket from="1" too="4" bidirectional="0" order="0" conditions="14">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.290133" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.373711" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.441368" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.4693888" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.553258" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.602522" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.627413" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.6528816" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.6764285" desc="" path="2" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.7447826" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.795591" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.825827" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.854493" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.9062201" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="1" too="7" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.342473" desc="" method="1" path="4" value="1500" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.568392" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.872634" desc="" path="2" value="0" />
+      </conditions>
+    </socket>
+    <socket from="1" too="28" bidirectional="0" order="0" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.3209484" desc="" method="1" path="4" value="1960" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.3407139" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.359649956" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.380551547" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.399433047" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.458194256" desc="" method="1" path="4" value="1950" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.477959752" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.49689582" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5177974" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.5366789" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.570403636" desc="" method="1" path="4" value="1940" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.590169132" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.6091052" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.6300068" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.6488883" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.672907948" desc="" method="1" path="4" value="1930" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.692673445" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.7116095" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.7325112" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.7513926" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.7916973" desc="" method="1" path="4" value="1920" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.8114629" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.830399" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.851300538" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.870182037" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.8996848" desc="" method="1" path="4" value="1905" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.924718142" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.94479394" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.964393" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="1" too="6" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionEventRandomPathOption" order="0.477227" desc="" path="1" value="1" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionRandomRoll" order="0.630218" desc="" value="0.0001" invert="0" />
+      </conditions>
+    </socket>
+    <socket from="1" too="8" bidirectional="0" order="0" conditions="24">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0204794" desc="" method="1" path="4" value="1600" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.0646505" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.11414253" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.163920432" desc="" path="0" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.219158247" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.257344067" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.332447" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.381763458" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.41256687" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.4345344" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.457639247" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.48191312" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.501653552" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5236211" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5467259" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5709998" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.640591264" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.660700858" desc="" method="1" path="4" value="1800" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.702657938" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.7398773" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.781467" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.817935" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.864086" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.907651" desc="" path="3" value="0" />
+      </conditions>
+    </socket>
+    <socket from="1" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.749965" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.818137" desc="" path="3" value="7" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.847707" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="1" too="15" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionEventSetPathOption" order="0.740763" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.770682" desc="" path="3" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.799059" desc="" method="1" path="4" value="1280" />
+      </conditions>
+    </socket>
+    <socket from="2" too="1" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionEventRandomPathOption" order="0.256785" desc="" path="0" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionCheckPathOption" order="0.4303775" desc="" method="6" path="4" value="1500" />
+      </conditions>
+    </socket>
+    <socket from="2" too="7" bidirectional="0" order="0" conditions="4">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.282129735" desc="" method="1" path="4" value="1500" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.408839732" desc="" path="0" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.575852752" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.7310257" desc="" path="2" value="0" />
+      </conditions>
+    </socket>
+    <socket from="3" too="4" bidirectional="0" order="0" conditions="14">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.132047" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.147823408" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.181911" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.227026" desc="" path="2" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.571075" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.612274" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.630676031" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.651087" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.684543" desc="" path="2" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.76453" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.846239" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.866612" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.892252" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.9290795" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="3" too="7" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.163506" desc="" method="1" path="4" value="1500" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.270131" desc="" path="2" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.443313" desc="" path="6" value="0" />
+      </conditions>
+    </socket>
+    <socket from="3" too="28" bidirectional="0" order="0" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.144641" desc="" method="1" path="4" value="1960" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.185120717" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.214498162" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.237818778" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.260454178" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.3124167" desc="" method="1" path="4" value="1950" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.333671659" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.36304912" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.3863697" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.4090051" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.454512984" desc="" method="1" path="4" value="1940" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.475767851" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.505145252" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.528465867" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.551101267" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.574910641" desc="" method="1" path="4" value="1930" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.594116569" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.623493969" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.6468145" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.6694499" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.695512831" desc="" method="1" path="4" value="1920" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.716767669" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.7461451" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.769465744" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.792101145" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.829130769" desc="" method="1" path="4" value="1905" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.850467443" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.8798451" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.903165638" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="3" too="1" bidirectional="0" order="0" conditions="6">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.121839" desc="" method="1" path="4" value="1000" />
+        <condition type="FFSMConditionCheckPathOption" order="0.249985" desc="" method="1" path="0" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.369173" desc="" ec="1040" />
+        <condition type="FFSMConditionOrOperator" order="0.465699" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.654088" desc="" method="1" path="0" value="1" />
+        <condition type="FFSMConditionECComplete" order="0.761211" desc="" ec="2040" />
+      </conditions>
+    </socket>
+    <socket from="3" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.1104" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.871358" desc="" path="3" value="8" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.927049339" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="3" too="15" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionEventSetPathOption" order="0.899169" desc="" path="3" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.938097" desc="" method="1" path="4" value="1280" />
+      </conditions>
+    </socket>
+    <socket from="3" too="8" bidirectional="0" order="0" conditions="17">
+      <conditions>
+        <condition type="FFSMConditionEventSetPathOption" order="0.0585053042" desc="" path="2" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.109573387" desc="" method="1" path="4" value="1600" />
+        <condition type="FFSMConditionOrOperator" order="0.160736144" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.2095487" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.283623546" desc="" path="2" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.3226348" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.3717278" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4253818" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4844868" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.552161" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.601254" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.654908" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.714013" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.770374" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.807877" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.854028" desc="" path="2" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.897593" desc="" path="3" value="0" />
+      </conditions>
+    </socket>
+    <socket from="4" too="17" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionCheckStateTime" order="0.441219032" desc="" method="5" value="0.15" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5072917" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="5" too="1" bidirectional="0" order="0" conditions="7">
+      <conditions>
+        <condition type="FFSMConditionECComplete" order="0.141135" desc="" ec="1020" />
+        <condition type="FFSMConditionCheckPathOption" order="0.274298" desc="" method="1" path="0" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.375945" desc="" path="0" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.500767" desc="" />
+        <condition type="FFSMConditionECComplete" order="0.624615" desc="" ec="2020" />
+        <condition type="FFSMConditionCheckPathOption" order="0.72646" desc="" method="1" path="0" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.832588" desc="" path="0" value="0" />
+      </conditions>
+    </socket>
+    <socket from="6" too="5" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.514575" desc="" method="1" path="1" value="0" />
+      </conditions>
+    </socket>
+    <socket from="6" too="3" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.488709" desc="" method="1" path="1" value="1" />
+      </conditions>
+    </socket>
+    <socket from="7" too="22" bidirectional="0" order="0" conditions="5">
+      <conditions>
+        <condition type="FFSMConditionECComplete" order="0.136723" desc="" ec="1500" />
+        <condition type="FFSMConditionCheckPathOption" order="0.236609" desc="" method="1" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.380978" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.604666" desc="" method="1" path="6" value="1" />
+        <condition type="FFSMConditionCheckStateTime" order="0.696039" desc="" method="5" value="0.15" />
+      </conditions>
+    </socket>
+    <socket from="8" too="12" bidirectional="0" order="0" conditions="5">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.160477" desc="" method="1" path="3" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.303155" desc="" ec="1600" />
+        <condition type="FFSMConditionOrOperator" order="0.495025" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.658351" desc="" method="1" path="3" value="1" />
+        <condition type="FFSMConditionCheckStateTime" order="0.806381" desc="" method="5" value="0.2" />
+      </conditions>
+    </socket>
+    <socket from="10" too="1" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionECComplete" order="0.157708" desc="" ec="1580" />
+        <condition type="FFSMConditionCheckPathOption" order="0.319092" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.589135" desc="" path="0" value="0" />
+      </conditions>
+    </socket>
+    <socket from="10" too="12" bidirectional="0" order="0" conditions="6">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.171936" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.289844" desc="" method="1" path="0" value="1" />
+        <condition type="FFSMConditionECComplete" order="0.426481" desc="" ec="1560" />
+        <condition type="FFSMConditionOrOperator" order="0.577995" desc="" />
+        <condition type="FFSMConditionCheckStateTime" order="0.672795" desc="" method="5" value="0.2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.87973" desc="" method="1" path="1" value="2" />
+      </conditions>
+    </socket>
+    <socket from="10" too="4" bidirectional="0" order="0" conditions="14">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0280133" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.0794417" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.123671696" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.175714269" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.2629737" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.3339837" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.40739876" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4760037" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5056587" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.5981537" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.671885669" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.7556425" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.8135897" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.889409661" desc="" path="1" value="2" />
+      </conditions>
+    </socket>
+    <socket from="11" too="1" bidirectional="0" order="0" conditions="7">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.229899" desc="" method="1" path="5" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.353017" desc="" ec="1640" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.444406" desc="" path="0" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.570442" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.669697" desc="" method="1" path="5" value="1" />
+        <condition type="FFSMConditionECComplete" order="0.751188" desc="" ec="1800" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.830513" desc="" path="0" value="0" />
+      </conditions>
+    </socket>
+    <socket from="11" too="7" bidirectional="0" order="0" conditions="4">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.600843" desc="" method="1" path="5" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.741014" desc="" method="1" path="4" value="1500" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.794301" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.878347" desc="" path="2" value="2" />
+      </conditions>
+    </socket>
+    <socket from="12" too="11" bidirectional="0" order="0" conditions="12">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.04235115" desc="" method="1" path="4" value="1000" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.12032111" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.16578643" desc="" path="5" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.22008346" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.310690433" desc="" method="1" path="4" value="1800" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.383949339" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4653831" desc="" path="5" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5140722" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.5667065" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.645732" desc="" method="1" path="4" value="1500" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.730233" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.851752" desc="" path="5" value="2" />
+      </conditions>
+    </socket>
+    <socket from="12" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.7339951" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.824504" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.892264" desc="" path="3" value="5" />
+      </conditions>
+    </socket>
+    <socket from="12" too="28" bidirectional="0" order="0" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0301628187" desc="" method="1" path="4" value="1960" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.07405437" desc="" path="3" value="4" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.123873092" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.165477246" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.187358513" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.226295546" desc="" method="1" path="4" value="1950" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.239975408" desc="" path="3" value="4" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.26210466" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.2835722" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.3060395" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.322043657" desc="" method="1" path="4" value="1940" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.3435437" desc="" path="3" value="4" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.369531751" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.3964377" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.416122377" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.444035" desc="" method="1" path="4" value="1930" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.487926543" desc="" path="3" value="4" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.537745237" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5793494" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.6012307" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.6319779" desc="" method="1" path="4" value="1920" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.675869465" desc="" path="3" value="4" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.725688159" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.7672923" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.7891736" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.8069063" desc="" method="1" path="4" value="1905" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.850042343" desc="" path="3" value="4" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.899861038" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.941465139" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="12" too="15" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.501945" desc="" method="1" path="4" value="1280" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.532342" desc="" path="3" value="4" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.568227" desc="" path="6" value="1" />
+      </conditions>
+    </socket>
+    <socket from="12" too="25" bidirectional="0" order="0" conditions="17">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.167519" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.208441" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.232027" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.266696" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.286828" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.335749" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.44201" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.519491" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.567349" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.630894959" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.6454722" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.663492" desc="" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.690111" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.725201" desc="" path="1" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.775073" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.816567" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.848578" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="12" too="14" bidirectional="0" order="0" conditions="19">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.03135471" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.079686746" desc="" path="2" value="0" useweights="1">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.122069448" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.164186031" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.2311906" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.297357023" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.337603927" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.3762624" desc="" path="2" value="0" useweights="1">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.415278256" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.453332931" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.4926446" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.562486649" desc="" path="1" value="4" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.607955158" desc="" path="2" value="0" useweights="1">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.64906925" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.693456" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.749970853" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.801983" desc="" path="1" value="3" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.864554" desc="" path="2" value="0" useweights="1">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.912530065" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="13" too="21" bidirectional="0" order="0" conditions="5">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.16429" desc="" method="1" path="6" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.338104" desc="" ec="1200" />
+        <condition type="FFSMConditionOrOperator" order="0.5" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.619048" desc="" method="1" path="6" value="1" />
+        <condition type="FFSMConditionECComplete" order="0.759525" desc="" ec="2200" />
+      </conditions>
+    </socket>
+    <socket from="14" too="13" bidirectional="0" order="0" conditions="9">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.16993" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionCheckPathOption" order="0.215794" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.309599" desc="" path="3" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.387644" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.452245" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.651693046" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionCheckPathOption" order="0.698529" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.775684" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.847707" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="14" too="15" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.621276" desc="" method="1" path="4" value="1280" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.654799" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.689083" desc="" path="3" value="3" />
+      </conditions>
+    </socket>
+    <socket from="14" too="28" bidirectional="0" order="0" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.01021515" desc="" method="1" path="4" value="1960" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.03205948" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.0503775962" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.08466146" desc="" path="3" value="3" />
+        <condition type="FFSMConditionOrOperator" order="0.109837316" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.140612721" desc="" method="1" path="4" value="1950" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.185870528" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.219013423" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.253297269" desc="" path="3" value="3" />
+        <condition type="FFSMConditionOrOperator" order="0.278473079" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.317797273" desc="" method="1" path="4" value="1940" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.363055229" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.396198034" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.430481851" desc="" path="3" value="3" />
+        <condition type="FFSMConditionOrOperator" order="0.455657721" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5004816" desc="" method="1" path="4" value="1930" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.545739651" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.578882456" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.613166332" desc="" path="3" value="3" />
+        <condition type="FFSMConditionOrOperator" order="0.638342142" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.682714641" desc="" method="1" path="4" value="1920" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.7279727" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.761115551" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.7953994" desc="" path="3" value="3" />
+        <condition type="FFSMConditionOrOperator" order="0.820575237" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.850074768" desc="" method="1" path="4" value="1905" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.895332634" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.9284755" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.9627597" desc="" path="3" value="3" />
+      </conditions>
+    </socket>
+    <socket from="14" too="25" bidirectional="0" order="0" conditions="17">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0426751" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.0913782" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.131938" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.199126" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.228299" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.267496" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.305242" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.344607" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.389998" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.442405" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.473588" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.513057" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.608358" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.678486" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.735702" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.830799" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.897512" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="14" too="27" bidirectional="0" order="0" conditions="17">
+      <conditions>
+        <condition type="FFSMConditionEventSetPathOption" order="0.0486957" desc="" path="4" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.0914616" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionCheckPathOption" order="0.170601" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.236077" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.287679" desc="" path="1" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.340796" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.402921" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.452073" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.523206" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.600141" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.620684266" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.643619" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.681998" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.715143" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.807992" desc="" path="6" value="0" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.845288" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.878177" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="14" too="20" bidirectional="0" order="0" conditions="19">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.069051" desc="" method="1" path="2" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.138899" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.220292" desc="" ec="1100" />
+        <condition type="FFSMConditionOrOperator" order="0.260924" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.327321" desc="" method="1" path="2" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.364938825" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.4036545" desc="" ec="2100" />
+        <condition type="FFSMConditionOrOperator" order="0.4413581" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.479354233" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionECComplete" order="0.52170074" desc="" ec="1160" />
+        <condition type="FFSMConditionOrOperator" order="0.5657563" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.6037525" desc="" method="1" path="1" value="4" />
+        <condition type="FFSMConditionECComplete" order="0.646099" desc="" ec="1130" />
+        <condition type="FFSMConditionOrOperator" order="0.698504746" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.734035" desc="" method="1" path="1" value="3" />
+        <condition type="FFSMConditionECComplete" order="0.798149347" desc="" ec="1180" />
+        <condition type="FFSMConditionOrOperator" order="0.852193" desc="" />
+        <condition type="FFSMConditionECComplete" order="0.901598" desc="" ec="1140" />
+        <condition type="FFSMConditionCheckPathOption" order="0.936259" desc="" method="1" path="1" value="2" />
+      </conditions>
+    </socket>
+    <socket from="15" too="18" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionECComplete" order="0.439578" desc="" ec="1280" />
+      </conditions>
+    </socket>
+    <socket from="17" too="23" bidirectional="0" order="0" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionEventRandomPathOption" order="0.056281615" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionCheckPathOption" order="0.10140007" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.135095671" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.1722449" desc="" path="2" value="2" />
+        <condition type="FFSMConditionOrOperator" order="0.212586612" desc="" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.256521344" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionCheckPathOption" order="0.293536276" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.327231884" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.364381135" desc="" path="2" value="2" />
+        <condition type="FFSMConditionOrOperator" order="0.395467341" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.433490783" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionCheckPathOption" order="0.4732753" desc="" method="1" path="1" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.512588561" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.547466934" desc="" path="2" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.5976603" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.6318665" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionCheckPathOption" order="0.658980131" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.680833757" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.709591448" desc="" path="2" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.7388229" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.7605646" desc="" method="1" path="1" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.7876191" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.8098466" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.833776355" desc="" path="2" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.859222531" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.88052094" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.908018768" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.930246234" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.954176" desc="" path="2" value="0" />
+      </conditions>
+    </socket>
+    <socket from="17" too="9" bidirectional="0" order="0" conditions="34">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0267928559" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.0498174131" desc="" method="1" path="4" value="1500" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.0753673762" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.103252575" desc="" path="0" value="0" useweights="1">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.146871388" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.179518014" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.209409475" desc="" method="1" path="4" value="1000" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.265585333" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.284724265" desc="" path="0" value="0" useweights="1">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.3052644" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.325665474" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.3512378" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.372751445" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.3994482" desc="" path="0" value="1" useweights="0">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.445446461" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.465847522" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.484824479" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5041427" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.520951748" desc="" path="0" value="1" useweights="0">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.5374114" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5563884" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.571180463" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.588535249" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.6065276" desc="" path="0" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.626478" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.6436792" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.6628562" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.688244164" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.7099614" desc="" path="0" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.7365471" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.759327352" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.7977992" desc="" method="1" path="4" value="1600" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.8274063" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.8457592" desc="" path="0" value="1" useweights="0">
+          <weights />
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="17" too="15" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.299834" desc="" method="1" path="4" value="1280" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.331452" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.38903" desc="" path="3" value="2" />
+      </conditions>
+    </socket>
+    <socket from="17" too="26" bidirectional="0" order="1" conditions="34">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0473007" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.069774" desc="" method="1" path="4" value="1000" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.11574" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.144143954" desc="" path="0" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.178997" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.210394" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.247878" desc="" method="1" path="4" value="1500" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.286241949" desc="" path="6" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.3174569" desc="" path="0" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.362201244" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.38370043" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.405614555" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.426608" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.4514247" desc="" path="0" value="1" useweights="0">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.503123164" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5246224" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5465365" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5675299" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5923466" desc="" path="0" value="1" useweights="0">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.6260846" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.642856" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.664667845" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.682010949" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.698310554" desc="" path="0" value="1" useweights="0">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.711453" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.751793" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.772571" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.795866" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.830202937" desc="" path="0" value="1" useweights="0">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.855438" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.878422" desc="" method="1" path="1" value="2" />
+        <condition type="FFSMConditionCheckPathOption" order="0.903089" desc="" method="1" path="4" value="1600" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.922427" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.9609807" desc="" path="0" value="1" useweights="0">
+          <weights>
+            <weight v="1" w="0.4" />
+            <weight v="0" w="0.6" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="17" too="14" bidirectional="0" order="2" conditions="4">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.457574" desc="" method="1" path="4" value="1140" />
+        <condition type="FFSMConditionCheckPathOption" order="0.543382" desc="" method="6" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.591589" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.636305" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="17" too="13" bidirectional="0" order="4" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.358614028" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.451358" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.597742" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="17" too="28" bidirectional="0" order="5" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.07826332" desc="" method="1" path="4" value="1960" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.10012392" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.122889318" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.151752919" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.188637316" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.224864572" desc="" method="1" path="4" value="1950" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.246159941" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.268925339" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.297788978" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.351654738" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.3815402" desc="" method="1" path="4" value="1940" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4034008" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4261662" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.455029815" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.484197348" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5268869" desc="" method="1" path="4" value="1930" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.54874754" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.571512938" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.600376546" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.6547834" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.687655449" desc="" method="1" path="4" value="1920" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.709516048" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.732281446" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.761145055" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.812112331" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.855321765" desc="" method="1" path="4" value="1905" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.877182364" desc="" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.899947762" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.9288114" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="18" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionEventSetPathOption" order="0.427491" desc="" path="3" value="4" />
+        <condition type="FFSMConditionCheckPathOption" order="0.646347" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.847707" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="18" too="25" bidirectional="0" order="0" conditions="17">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0925945" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.127222" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.162405" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.184552953" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.200881" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.215628" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.277013" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.337326" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.393514" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.442358" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.4855619" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.540139" desc="" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.630895" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionCheckPathOption" order="0.718135" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.768615" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.867166" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.9092729" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="18" too="8" bidirectional="0" order="0" conditions="19">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.030485" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.058143" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.08711" desc="" path="2" value="3" />
+        <condition type="FFSMConditionOrOperator" order="0.1086211" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.131336242" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.157812208" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.1869762" desc="" path="3" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.21076031" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.244108886" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.2709966" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.301601171" desc="" path="3" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.333521247" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.374257267" desc="" method="1" path="4" value="1600" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.408463776" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4371435" desc="" path="3" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.478833973" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5056556" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5280251" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.557189047" desc="" path="3" value="1" />
+      </conditions>
+    </socket>
+    <socket from="18" too="19" bidirectional="0" order="5" conditions="10">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.121444" desc="" method="6" path="4" value="1600" />
+        <condition type="FFSMConditionCheckPathOption" order="0.205591" desc="" method="6" path="4" value="1120" />
+        <condition type="FFSMConditionCheckPathOption" order="0.30097273" desc="" method="6" path="4" value="1160" />
+        <condition type="FFSMConditionCheckPathOption" order="0.402846366" desc="" method="6" path="4" value="1130" />
+        <condition type="FFSMConditionCheckPathOption" order="0.468203" desc="" method="6" path="4" value="1180" />
+        <condition type="FFSMConditionCheckPathOption" order="0.557161" desc="" method="6" path="4" value="1100" />
+        <condition type="FFSMConditionCheckPathOption" order="0.659358" desc="" method="6" path="4" value="1400" />
+        <condition type="FFSMConditionCheckPathOption" order="0.741517" desc="" method="6" path="4" value="1450" />
+        <condition type="FFSMConditionCheckPathOption" order="0.804581" desc="" method="6" path="4" value="1280" />
+        <condition type="FFSMConditionCheckPathOption" order="0.898527" desc="" method="6" path="4" value="1200" />
+      </conditions>
+    </socket>
+    <socket from="20" too="12" bidirectional="0" order="0" conditions="0" />
+    <socket from="19" too="1" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionECComplete" order="0.026525" desc="" ec="1290" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.064256" desc="" path="0" value="0" />
+      </conditions>
+    </socket>
+    <socket from="25" too="17" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionCheckStateTime" order="0.206889" desc="" method="5" value="0.2" />
+      </conditions>
+    </socket>
+    <socket from="27" too="17" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionCheckStateTime" order="0.0965377" desc="" method="5" value="0.1" />
+      </conditions>
+    </socket>
+    <socket from="22" too="4" bidirectional="0" order="0" conditions="14">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0568186" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.108247" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.152477" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.20451957" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.291779" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.362789" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.436204076" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.504809" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.534464" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.626959" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.700691" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.7844478" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.842395" desc="" path="2" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.918215" desc="" path="1" value="2" />
+      </conditions>
+    </socket>
+    <socket from="22" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.439796" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.521544" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5843" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="22" too="28" bidirectional="0" order="0" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.04928843" desc="" method="1" path="4" value="1960" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.08277694" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.112645246" desc="" path="3" value="5" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.141260654" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.176025659" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.209538952" desc="" method="1" path="4" value="1950" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.243027508" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.272895783" desc="" path="3" value="5" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.301511228" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.336276233" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.358311564" desc="" method="1" path="4" value="1940" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.380287975" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.410156339" desc="" path="3" value="5" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.438771784" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.4735368" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.495027065" desc="" method="1" path="4" value="1930" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.528515637" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.558383942" desc="" path="3" value="5" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.586999357" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.621764362" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.644820452" desc="" method="1" path="4" value="1920" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.678308964" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.708177269" desc="" path="3" value="5" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.7367927" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.7715577" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.7947066" desc="" method="1" path="4" value="1905" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.8506737" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.906222641" desc="" path="3" value="5" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.9497903" desc="" path="6" value="0" />
+      </conditions>
+    </socket>
+    <socket from="22" too="16" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionRandomRoll" order="0.528226" desc="" value="0.0001" invert="0" />
+      </conditions>
+    </socket>
+    <socket from="22" too="15" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.450585" desc="" method="1" path="4" value="1280" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.58676" desc="" path="3" value="5" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.715467" desc="" path="6" value="1" />
+      </conditions>
+    </socket>
+    <socket from="22" too="10" bidirectional="0" order="0" conditions="24">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.029371" desc="" method="1" path="4" value="1000" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.06668655" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.123808324" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.179022267" desc="" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.205326915" desc="" path="0" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.238252223" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.281776" desc="" path="3" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.309299052" desc="" method="1" path="4" value="1600" />
+        <condition type="FFSMConditionOrOperator" order="0.348712862" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.385797143" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4239378" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.4525351" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.507416546" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.546993732" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.5734091" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.615261853" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.665799" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.7053762" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.731791556" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.7736443" desc="" path="3" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.807315" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.85252" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.908498" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.954993" desc="" path="3" value="0" />
+      </conditions>
+    </socket>
+    <socket from="9" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.151139" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.351595" desc="" path="3" value="3" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="9" too="1" bidirectional="0" order="0" conditions="7">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.274576932" desc="" method="1" path="0" value="0" />
+        <condition type="FFSMConditionCheckPathOption" order="0.3160665" desc="" method="1" path="6" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.406880975" desc="" ec="1440" />
+        <condition type="FFSMConditionOrOperator" order="0.468703955" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5040097" desc="" method="1" path="0" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5343441" desc="" method="1" path="6" value="0" />
+        <condition type="FFSMConditionECComplete" order="0.6251586" desc="" ec="2440" />
+      </conditions>
+    </socket>
+    <socket from="9" too="12" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.222606" desc="" method="1" path="6" value="1" />
+        <condition type="FFSMConditionCheckStateTime" order="0.262888" desc="" method="5" value="0.15" />
+      </conditions>
+    </socket>
+    <socket from="16" too="10" bidirectional="0" order="0" conditions="24">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.029371" desc="" method="1" path="4" value="1000" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.0647821054" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.10189344" desc="" path="3" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.136205763" desc="" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.173927888" desc="" path="0" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.202304676" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.235954538" desc="" path="3" value="1" />
+        <condition type="FFSMConditionCheckPathOption" order="0.26710397" desc="" method="1" path="4" value="1600" />
+        <condition type="FFSMConditionOrOperator" order="0.300250322" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.332109839" desc="" method="1" path="4" value="1100" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.359918565" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.399210751" desc="" path="3" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.441599935" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.482471734" desc="" method="1" path="4" value="1130" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.524397731" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.568238735" desc="" path="3" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.6198812" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.660753" desc="" method="1" path="4" value="1160" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.702679" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.74652" desc="" path="3" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.773995" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.815562" desc="" method="1" path="4" value="1180" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.860385" desc="" path="3" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.893196" desc="" path="1" value="2" />
+      </conditions>
+    </socket>
+    <socket from="16" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.458206" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.519743" desc="" path="3" value="9" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5843" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="16" too="28" bidirectional="0" order="0" conditions="29">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.10245087" desc="" method="1" path="4" value="1960" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.127029538" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.1699469" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.200569779" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.218713447" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.238474876" desc="" method="1" path="4" value="1950" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.263053536" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.305970877" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.336593747" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.362182677" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.38194415" desc="" method="1" path="4" value="1940" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.406522751" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.449440151" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.480063" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.497608781" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5173702" desc="" method="1" path="4" value="1930" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.541948855" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.5848662" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.6154891" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.651783764" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.671545148" desc="" method="1" path="4" value="1920" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.696123838" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.739041269" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.769664168" desc="" path="6" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.813784063" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.8335455" desc="" method="1" path="4" value="1905" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.858124137" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.9010415" desc="" path="5" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.9316644" desc="" path="6" value="0" />
+      </conditions>
+    </socket>
+    <socket from="16" too="4" bidirectional="0" order="0" conditions="14">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.03786636" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.07271797" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.112822227" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.140680924" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.207198" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.244412" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.287816" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.329186" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.370634884" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+        <condition type="FFSMConditionOrOperator" order="0.475403" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.503015" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.613366" desc="" path="1" value="2" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.658928" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.766428649" desc="" path="6" value="1" useweights="0">
+          <weights>
+            <weight v="0" w="0.5" />
+            <weight v="1" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="16" too="15" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.529227" desc="" method="1" path="4" value="1280" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.679939" desc="" path="3" value="6" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.824861" desc="" path="6" value="1" />
+      </conditions>
+    </socket>
+    <socket from="16" too="7" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionECComplete" order="0.271341" desc="" ec="1540" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.449966" desc="Chooses whether to play Fortify(0) or Fortify Idle (1)" path="6" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.632883" desc="Chooses whether to play Fortify(0) or Fortify Idle (1)" path="2" value="3" />
+      </conditions>
+    </socket>
+    <socket from="26" too="1" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionCheckStateTime" order="0.0499262" desc="" method="5" value="0.15" />
+        <condition type="FFSMConditionCheckPathOption" order="0.15823" desc="" method="1" path="6" value="0" />
+      </conditions>
+    </socket>
+    <socket from="26" too="12" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.222606" desc="" method="1" path="6" value="1" />
+        <condition type="FFSMConditionCheckStateTime" order="0.263106" desc="" method="5" value="0.15" />
+      </conditions>
+    </socket>
+    <socket from="26" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.330718" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.370627" desc="" path="3" value="3" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.413405" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="23" too="13" bidirectional="0" order="0" conditions="3">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.094662" desc="" method="1" path="4" value="1200" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.214523688" desc="" path="3" value="2" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.244148254" desc="" path="6" value="0" useweights="1">
+          <weights>
+            <weight v="1" w="0.5" />
+            <weight v="0" w="0.5" />
+          </weights>
+        </condition>
+      </conditions>
+    </socket>
+    <socket from="23" too="24" bidirectional="0" order="0" conditions="11">
+      <conditions>
+        <condition type="FFSMConditionCheckStateTime" order="0.0826173" desc="" method="5" value="0.15" />
+        <condition type="FFSMConditionCheckPathOption" order="0.16273" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.226313" desc="" path="1" value="2" />
+        <condition type="FFSMConditionOrOperator" order="0.407117" desc="" />
+        <condition type="FFSMConditionCheckStateTime" order="0.457837" desc="" method="5" value="0.15" />
+        <condition type="FFSMConditionCheckPathOption" order="0.527721" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.567773" desc="" path="1" value="1" />
+        <condition type="FFSMConditionOrOperator" order="0.692281" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.738645" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionCheckStateTime" order="0.777451" desc="" method="5" value="0.15" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.834996" desc="" path="1" value="0" />
+      </conditions>
+    </socket>
+    <socket from="24" too="17" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionEventSetPathOption" order="0.446212" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="28" too="29" bidirectional="0" order="0" conditions="1">
+      <conditions>
+        <condition type="FFSMConditionECComplete" order="0.677233756" desc="" ec="1910" />
+      </conditions>
+    </socket>
+    <socket from="29" too="25" bidirectional="0" order="0" conditions="17">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.06246391" desc="" method="1" path="4" value="1450" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.09694129" desc="" path="1" value="3" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.132274419" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.154422373" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.170750409" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.1854974" desc="" />
+        <condition type="FFSMConditionCheckPathOption" order="0.246882409" desc="" method="1" path="4" value="1400" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.307195485" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.3633834" desc="" path="1" value="0" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.4122274" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionEventSetPathOption" order="0.4554314" desc="" path="4" value="0" />
+        <condition type="FFSMConditionOrOperator" order="0.510008454" desc="" />
+        <condition type="FFSMConditionEventRandomPathOption" order="0.6007644" desc="" path="6" value="1" useweights="0">
+          <weights />
+        </condition>
+        <condition type="FFSMConditionCheckPathOption" order="0.6880044" desc="" method="1" path="4" value="1120" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.738484561" desc="" path="2" value="3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.8370354" desc="" path="1" value="1" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.8791423" desc="" path="4" value="0" />
+      </conditions>
+    </socket>
+    <socket from="29" too="30" bidirectional="0" order="0" conditions="14">
+      <conditions>
+        <condition type="FFSMConditionCheckPathOption" order="0.0944200754" desc="" method="6" path="4" value="1600" />
+        <condition type="FFSMConditionCheckPathOption" order="0.178566933" desc="" method="6" path="4" value="1120" />
+        <condition type="FFSMConditionCheckPathOption" order="0.228457823" desc="" method="6" path="4" value="1130" />
+        <condition type="FFSMConditionCheckPathOption" order="0.276428938" desc="" method="6" path="4" value="1160" />
+        <condition type="FFSMConditionCheckPathOption" order="0.329053581" desc="" method="6" path="4" value="1180" />
+        <condition type="FFSMConditionCheckPathOption" order="0.383169234" desc="" method="6" path="4" value="1100" />
+        <condition type="FFSMConditionCheckPathOption" order="0.472174257" desc="" method="6" path="4" value="1400" />
+        <condition type="FFSMConditionCheckPathOption" order="0.5410612" desc="" method="6" path="4" value="1450" />
+        <condition type="FFSMConditionCheckPathOption" order="0.6476082" desc="" method="6" path="4" value="1905" />
+        <condition type="FFSMConditionCheckPathOption" order="0.696650743" desc="" method="6" path="4" value="1920" />
+        <condition type="FFSMConditionCheckPathOption" order="0.768987954" desc="" method="6" path="4" value="1930" />
+        <condition type="FFSMConditionCheckPathOption" order="0.8389591" desc="" method="6" path="4" value="1940" />
+        <condition type="FFSMConditionCheckPathOption" order="0.898534954" desc="" method="6" path="4" value="1950" />
+        <condition type="FFSMConditionCheckPathOption" order="0.9534509" desc="" method="6" path="4" value="1960" />
+      </conditions>
+    </socket>
+    <socket from="30" too="1" bidirectional="0" order="0" conditions="2">
+      <conditions>
+        <condition type="FFSMConditionCheckStateTime" order="0.03783656" desc="" method="5" value="0.3" />
+        <condition type="FFSMConditionEventSetPathOption" order="0.06499987" desc="" path="0" value="0" />
+      </conditions>
+    </socket>
+  </sockets>
+</statemachine>

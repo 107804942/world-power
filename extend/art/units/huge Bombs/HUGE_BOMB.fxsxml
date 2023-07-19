@@ -1,0 +1,38 @@
+<Asset>
+	<Mesh file="HUGE_BOMB.gr2"/>
+	<TimedTrigger file="fx_triggers_HUGE_BOMB.ftsxml"/>
+	<Texture file="SMAN_MOAB_diff.dds"/>
+	<Texture file="SMAN_MOAB_sref.dds"/>
+	
+	<Animation file="AtomicBomb_Run.gr2" ec="1400"/>
+	<Animation file="AtomicBomb_Idle.gr2" ec="1000"/>
+	<Animation file="AtomicBomb_Attack_Air.gr2" ec="1100"/>
+	<Animation file="AtomicBomb_Bombardment.gr2" ec="1180"/>
+	<Animation file="AtomicBomb_DeathA.gr2" ec="1200"/>
+	<Animation file="AtomicBomb_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="AtomicBomb_DeathB.gr2" ec="2200"/>
+	<Animation file="AtomicBomb_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Irradiance.dds"/>
+	<Texture file="AtomicBomb_DIFF.dds"/>
+	<Texture file="AtomicBomb_SREF.dds"/>	
+	<StateMachine file="AIRPLANE_STATE_01.fsmxml"/>
+	<AnimGraph file="RUNNING_LOOP_GRAPH.dge"/>
+	<AnimGraph file="PLANES_DEATH.dge"/>
+	<AnimGraph file="PLANES_ATTACK_02.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="IDLE_A_GRAPH.dge"/>
+	<BoneUsage>
+		<Bone name="fx_WingTrail_R"/>
+		<Bone name="fx_PROJECTILE_01"/>
+		<Bone name="fx_WingTrail_L"/>
+		<Bone name="bone_FRONT"/>
+		<Bone name="bone_BODY"/>
+		<Bone name="bone_TAIL"/>
+		<Bone name="bone_TAIL_end"/>
+		<Bone name="bone_WING_L"/>
+		<Bone name="bone_MG_front"/>
+	</BoneUsage>
+</Asset>
+

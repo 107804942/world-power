@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<glyphgen>
+    <textures width="256" height="256">
+        <texture name="" src="HNRFontIconAtlas.dds" allowcolor="1" alloweffects="1" inuse="1" />
+    </textures>
+    <styles count="1">
+        <style name="">
+            <layers count="1">
+                <layer tex="" />
+            </layers>
+        </style>
+    </styles>
+    <glyphs fudgeadv="0" ascadj="-6" spacing="0" count="79" height="0" ascent="0" descent="0">
+        <glyph ch="1" u="0" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="2" u="22" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="3" u="44" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="4" u="66" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="5" u="88" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="6" u="110" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="7" u="132" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="8" u="154" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="9" u="176" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="10" u="198" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="11" u="220" v="0" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="12" u="0" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="13" u="22" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="14" u="44" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="15" u="66" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="16" u="88" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="17" u="110" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="18" u="132" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="19" u="154" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="20" u="176" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="21" u="198" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="22" u="220" v="22" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="23" u="0" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="24" u="22" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="25" u="44" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="26" u="66" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="27" u="88" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="28" u="110" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="29" u="132" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="30" u="154" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="31" u="176" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="32" u="198" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="33" u="220" v="44" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="34" u="0" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="35" u="22" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="36" u="44" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="37" u="66" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="38" u="88" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="39" u="110" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="40" u="132" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="41" u="154" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="42" u="176" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="43" u="198" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="44" u="220" v="66" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="45" u="0" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="46" u="22" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="47" u="44" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="48" u="66" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="49" u="88" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="50" u="110" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="51" u="132" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="52" u="154" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="53" u="176" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="54" u="198" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="55" u="220" v="88" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="56" u="0" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="57" u="22" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="58" u="44" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="59" u="66" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="60" u="88" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="61" u="110" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="62" u="132" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="63" u="154" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="64" u="176" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="65" u="198" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="66" u="220" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="67" u="0" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="68" u="22" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="69" u="44" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="70" u="66" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="71" u="88" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="72" u="110" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="73" u="132" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="74" u="154" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="75" u="176" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="76" u="198" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="77" u="220" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="78" u="0" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+        <glyph ch="79" u="22" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+    </glyphs>
+    <imports count="79">
+        <import ch="1" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\000 bullet point.png" originx="0" originy="22" />
+        <import ch="2" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\001 science.png" originx="0" originy="22" />
+        <import ch="3" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\002 gold.png" originx="0" originy="22" />
+        <import ch="4" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\003 hammer.png" originx="0" originy="22" />
+        <import ch="5" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\004 food.png" originx="0" originy="22" />
+        <import ch="6" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\005 culture.png" originx="0" originy="22" />
+        <import ch="7" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\006 move.png" originx="0" originy="22" />
+        <import ch="8" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\006 range.png" originx="0" originy="22" />
+        <import ch="9" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\006 strength.png" originx="0" originy="22" />
+        <import ch="10" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\101 Iron.png" originx="0" originy="22" />
+        <import ch="11" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\102 Horse.png" originx="0" originy="22" />
+        <import ch="12" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\103 Coal.png" originx="0" originy="22" />
+        <import ch="13" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\104 Oil.png" originx="0" originy="22" />
+        <import ch="14" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\105 Aliminum.png" originx="0" originy="22" />
+        <import ch="15" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\106 Uranium.png" originx="0" originy="22" />
+        <import ch="16" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\107 Wheat.png" originx="0" originy="22" />
+        <import ch="17" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\108 Cows.png" originx="0" originy="22" />
+        <import ch="18" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\109 Deer.png" originx="0" originy="22" />
+        <import ch="19" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\110 Fish.png" originx="0" originy="22" />
+        <import ch="20" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\111 Whale.png" originx="0" originy="22" />
+        <import ch="21" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\112 Bananas.png" originx="0" originy="22" />
+        <import ch="22" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\113 Gold.png" originx="0" originy="22" />
+        <import ch="23" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\114 Diamond.png" originx="0" originy="22" />
+        <import ch="24" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\115 Marble.png" originx="0" originy="22" />
+        <import ch="25" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\116 Elephant.png" originx="0" originy="22" />
+        <import ch="26" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\117 Dye.png" originx="0" originy="22" />
+        <import ch="27" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\118 Spices.png" originx="0" originy="22" />
+        <import ch="28" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\119 Silk.png" originx="0" originy="22" />
+        <import ch="29" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\120 Sugar.png" originx="0" originy="22" />
+        <import ch="30" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\121 Cotton.png" originx="0" originy="22" />
+        <import ch="31" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\200 Happiness.png" originx="0" originy="22" />
+        <import ch="32" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\201 Happiness.png" originx="0" originy="22" />
+        <import ch="33" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\202 Happiness.png" originx="0" originy="22" />
+        <import ch="34" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\203 Happiness.png" originx="0" originy="22" />
+        <import ch="35" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\204 GoldenAge.png" originx="0" originy="22" />
+        <import ch="36" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\300 Plus.png" originx="0" originy="22" />
+        <import ch="37" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\301 minus.png" originx="0" originy="22" />
+        <import ch="38" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\302 dot.png" originx="0" originy="22" />
+        <import ch="39" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\302 L.png" originx="0" originy="22" />
+        <import ch="222" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\303 pearl.png" originx="0" originy="22" />
+        <import ch="223" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\304 Incense.png" originx="0" originy="22" />
+        <import ch="224" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\305 Wine.png" originx="0" originy="22" />
+        <import ch="225" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\306 Silver.png" originx="0" originy="22" />
+        <import ch="226" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\307 Furs.png" originx="0" originy="22" />
+        <import ch="227" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\308 Citizen.png" originx="0" originy="22" />
+        <import ch="228" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\309 GreatPerson.png" originx="0" originy="22" />
+        <import ch="777" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\310 Raised.png" originx="0" originy="22" />
+        <import ch="778" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\311 Resistance.png" originx="0" originy="22" />
+        <import ch="779" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\312 Trade.png" originx="0" originy="22" />
+        <import ch="780" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\314 Blocked.png" originx="0" originy="22" />
+        <import ch="781" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\315 puppet.png" originx="0" originy="22" />
+        <import ch="782" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\316 occupation.png" originx="0" originy="22" />
+        <import ch="783" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\317 friendship.png" originx="0" originy="22" />
+        <import ch="784" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\318 Capital.png" originx="0" originy="22" />
+        <import ch="785" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\319 lock.png" originx="0" originy="22" />
+        <import ch="790" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\320.png" originx="0" originy="22" />
+        <import ch="800" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\321.png" originx="0" originy="22" />
+        <import ch="801" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\322.png" originx="0" originy="22" />
+        <import ch="802" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\323TradeGold.png" originx="0" originy="22" />
+        <import ch="803" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\324TradeWhite.png" originx="0" originy="22" />
+        <import ch="804" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\325Team.png" originx="0" originy="22" />
+        <import ch="805" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\326Team.png" originx="0" originy="22" />
+        <import ch="806" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\327Team.png" originx="0" originy="22" />
+        <import ch="807" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\328Team.png" originx="0" originy="22" />
+        <import ch="808" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\329Team.png" originx="0" originy="22" />
+        <import ch="809" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\330Team.png" originx="0" originy="22" />
+        <import ch="810" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\331Team.png" originx="0" originy="22" />
+        <import ch="811" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\332Team.png" originx="0" originy="22" />
+        <import ch="812" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\333Team.png" originx="0" originy="22" />
+        <import ch="813" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\334Team.png" originx="0" originy="22" />
+        <import ch="814" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\335Team.png" originx="0" originy="22" />
+        <import ch="815" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\336Team.png" originx="0" originy="22" />
+        <import ch="816" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\337Team.png" originx="0" originy="22" />
+        <import ch="817" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\338Team.png" originx="0" originy="22" />
+        <import ch="818" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\339Team.png" originx="0" originy="22" />
+        <import ch="819" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\340Team.png" originx="0" originy="22" />
+        <import ch="820" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\341Team.png" originx="0" originy="22" />
+        <import ch="821" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\342Team.png" originx="0" originy="22" />
+        <import ch="822" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\343CityState.png" originx="0" originy="22" />
+    </imports>
+    <toolonly>
+        <metainfo pt="0.000000" width="256" height="256" alphabias="64" maxsize="256" bestfit="0" pow2="1" freetype="2" fontsrc="" />
+        <glyphsets>
+            <set name="GlyphSetAscii" />
+        </glyphsets>
+    </toolonly>
+</glyphgen>

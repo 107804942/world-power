@@ -1,0 +1,87 @@
+<Asset>
+	<Mesh file="Siege04S.gr2"/>
+	<Animation file="Siege04S_IdleA.gr2" ec="1000, 2000"/>
+	<Animation file="Siege04S_IdleA_Trans_IdleB.gr2" ec="1020, 2020"/>
+	<Animation file="Siege04S_FidgetA.gr2" ec="1040"/>
+	<Animation file="Siege04S_FidgetB.gr2" ec="2040"/>
+	<Animation file="Siege04S_Fortify.gr2" ec="1500"/>
+	<Animation file="Siege04S_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="Siege04S_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="Siege04S_Fortify_Idle_Trans_Combat_Ready_Idle.gr2" ec="1560"/>
+	<Animation file="Siege04S_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="Siege04S_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Siege04S_Combat_Ready_Idle.gr2" ec="1620"/>
+	<Animation file="Siege04S_AttackA.gr2" ec="1100, 2100, 1140"/>
+	<Animation file="Siege04S_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640, 1800"/>
+	<Animation file="Siege04S_Bombardment.gr2" ec="1180"/>
+	<Animation file="Siege04S_Attack_City.gr2" ec="1160"/>
+	<Animation file="Siege04S_Run.gr2" ec="1400, 1120, 1450"/>
+	<Animation file="Siege04S_Stop_Run.gr2" ec="1440, 2440"/>
+	<Animation file="Siege04S_Attack_Air.gr2" ec="1130"/>
+	<Animation file="Siege04S_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Siege04S_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Siege04S_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Siege04S_DeathA.gr2" ec="1200"/>
+	<Animation file="Siege04S_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="Siege04S_DeathB.gr2" ec="2200"/>
+	<Animation file="Siege04S_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Siege04S_DIFF.dds"/>
+	<Texture file="Siege04S_SREF.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Irradiance.dds"/>
+	<BoneUsage>
+		<Bone name="bone_L_Lower_Flap"/>
+		<Bone name="Point_GunBarrell"/>
+		<Bone name="FX_Point_Hover_Dust"/>
+		<Bone name="FX_MG_Bone_L"/>
+		<Bone name="FX_MG_Bone_R"/>
+		<Bone name="FX_Exhaust_Bone_L"/>
+		<Bone name="point_WORLD"/>
+		<Bone name="Point_MainShake"/>
+		<Bone name="Point_ThrustMidLeft"/>
+		<Bone name="Point_ThrustBackLeft"/>
+		<Bone name="Point_ThrustBackRight"/>
+		<Bone name="Point_ThrustMidRight"/>
+		<Bone name="FX_Exhaust_Bone_R"/>
+		<Bone name="Point_PROJECTILE04"/>
+		<Bone name="Point_GunVentLeft"/>
+		<Bone name="Point_PROJECTILE02"/>
+		<Bone name="Point_GunTop"/>
+		<Bone name="Point_GunVentRight"/>
+		<Bone name="Point_PROJECTILE01"/>
+		<Bone name="Point_PROJECTILE03"/>
+		<Bone name="Point_Main"/>
+		<Bone name="Rigging_ConstraintTarget"/>
+		<Bone name="Rigging_Gun_InvRot"/>
+		<Bone name="Point_GunArm"/>
+		<Bone name="Point_VentFrontRight02"/>
+	</BoneUsage>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge"/>
+	<AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="ENTER_FORTIFY.dge"/>
+	<AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="DEATH_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_GRAPH.dge"/>
+	<AnimGraph file="TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="STOP_RUNNING.dge"/>
+	<AnimGraph file="IDLE_GRAPH.dge"/>
+	<AnimGraph file="FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="MELEE_ATTACKS.dge"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_LOOP.dge"/>
+	<AnimGraph file="ATTACK_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="ATTACK_CITY_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="START_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="SHUFFLE_STOP_GRAPH.dge"/>
+	<StateMachine file="1_OMNI_STATE_01.fsmxml"/>
+	<TimedTrigger file="FX_Triggers_Siege04S.ftsxml"/>
+</Asset>
+

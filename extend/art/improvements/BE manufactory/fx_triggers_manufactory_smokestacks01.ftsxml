@@ -1,0 +1,20 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="2" time="0.00185185182" duration="66.66482" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_BUILDING_SMOKE_02" bone="BONE_FXSmokeStack04" />
+    <trigger type="FTimedTriggerEffect" id="3" time="22.0571747" duration="0.3" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_MANUFACTORY_SLAG_POURING" bone="BONE_FXSlagEmitter" />
+    <trigger type="FTimedTriggerEffect" id="4" time="0" duration="2.5" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_MANUFACTORY_SLAG_POURING" bone="BONE_FXSlagEmitter" />
+    <trigger type="FTimedTriggerEffect" id="5" time="65.82865" duration="0.2" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_MANUFACTORY_SLAG_POURING" bone="BONE_FXSlagEmitter" />
+    <trigger type="FTimedTriggerEffect" id="6" time="18.8000031" duration="2.5" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_MANUFACTORY_SLAG_POURING" bone="BONE_FXSlagEmitter" />
+    <trigger type="FTimedTriggerEffect" id="7" time="39.657177" duration="1.5" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_MANUFACTORY_SLAG_POURING" bone="BONE_FXSlagEmitter" />
+    <trigger type="FTimedTriggerEffect" id="8" time="65.3143539" duration="0.2" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_MANUFACTORY_SLAG_POURING" bone="BONE_FXSlagEmitter" />
+    <trigger type="FTimedTriggerEffect" id="1" time="0.00185185182" duration="66.66482" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_BUILDING_SMOKE_02" bone="BONE_FXSmokeStack05" />
+  </triggers>
+</trigger_system>

@@ -1,0 +1,488 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+	<event_tracks>
+		<event_track ec="1000">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1040">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1120">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1160">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Effect" />
+			<track id="6" name="Effect" />
+		</event_track>
+		<event_track ec="1200">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1280">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1400">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1440">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1520">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1560">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1600">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Sound" />
+		</event_track>
+		<event_track ec="1640">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Sound" />
+		</event_track>
+		<event_track ec="1800">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="2000">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="2040">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="2200">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1290">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1020">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1100">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Effect" />
+			<track id="6" name="Effect" />
+		</event_track>
+		<event_track ec="1140">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Effect" />
+			<track id="6" name="Effect" />
+		</event_track>
+		<event_track ec="1220">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1420">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1500">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Sound" />
+		</event_track>
+		<event_track ec="1540">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1580">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Sound" />
+		</event_track>
+		<event_track ec="1620">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="2020">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="2100">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Effect" />
+			<track id="6" name="Effect" />
+		</event_track>
+		<event_track ec="2220">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1285">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1110">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1180">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Effect" />
+			<track id="6" name="Effect" />
+		</event_track>
+		<event_track ec="2440">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1450">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+		</event_track>
+		<event_track ec="1130">
+			<track id="1" name="Sound" />
+			<track id="2" name="Effect" />
+			<track id="3" name="Transfer" />
+			<track id="4" name="Action" />
+			<track id="5" name="Effect" />
+			<track id="6" name="Effect" />
+		</event_track>
+	</event_tracks>
+	<triggers>
+		<trigger type="FTimedTriggerEffect" id="1" time="0.0238615" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="Base HumanSpine1" />
+		<trigger type="FTimedTriggerEffect" id="2" time="0.00740741" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_BLUNT_HIT_MD" bone="Base HumanSpine2" />
+		<trigger type="FTimedTriggerSound" id="33" time="0.054826837" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="31" time="0" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_IMPACT_$(WEAPON)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="35" time="0.39973557" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_BODY_FALL_$(TERRAIN)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="23" time="0.112010807" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="34" time="0.3338697" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_CLUB_DROP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="87" time="0.03333333" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_DEATH_MASK" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="40" time="0.148148119" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="-1" />
+		<trigger type="FTimedTriggerTransfer" id="115" time="0.2373716" duration="0" repeat="0" ec="1160" track="3" refid="82" speed="0" tangent.x="0.0049994993" tangent.y="-0.9836384" tangent.z="0.180085" />
+		<trigger type="FTimedTriggerEffect" id="16" time="0.262962967" duration="0.07" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile01" />
+		<trigger type="FTimedTriggerTransfer" id="7" time="0.3182922" duration="0" repeat="0" ec="2100" track="3" refid="16" speed="0" tangent.x="0.00590755139" tangent.y="-0.9999392" tangent.z="0.009317536" />
+		<trigger type="FTimedTriggerTransfer" id="4" time="0.354687661" duration="0" repeat="0" ec="1100" track="3" refid="3" speed="0" tangent.x="0.005457235" tangent.y="-0.9999479" tangent.z="0.008625452" />
+		<trigger type="FTimedTriggerSound" id="8" time="0.08518505" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="104" time="0.7666668" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="106" time="0.03703701" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="107" time="0.340740532" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_ACTIVATE_DOOR" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="108" time="0.08148148" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_EXPLOSION" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="32" time="0.420370579" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="122" time="0.472222239" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="123" time="0.118518531" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="124" time="0.3425923" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_ACTIVATE_DOOR" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="125" time="0.38148123" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_ACTIVATE_DOOR" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="5" time="0.30437845" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="56" time="0.205555558" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="67" time="0.446296245" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="69" time="0.3046061" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="75" time="0.11016164" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="78" time="0.874074" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="79" time="0.159259245" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="97" time="0.714814961" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="131" time="0.253703684" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="132" time="0.08703699" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="133" time="0.388888925" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="134" time="0.155555591" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="135" time="0.181481481" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="136" time="0.407407463" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="137" time="0.376828253" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="138" time="0.387037128" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="139" time="0.1500001" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="140" time="0.13979128" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="141" time="0.2037037" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="142" time="0.0425925925" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="144" time="0.140740573" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE_LARGE" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="145" time="0.394444376" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE" bone="" tier="-1" />
+		<trigger type="FTimedTriggerTransfer" id="151" time="0.431950241" duration="0" repeat="0" ec="1130" track="3" refid="70" speed="0" tangent.x="0" tangent.y="-0.8703558" tangent.z="0.4924233" />
+		<trigger type="FTimedTriggerSound" id="153" time="0.95555675" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_PANEL" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="154" time="0.975925267" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_AMMO_LOAD" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="157" time="0.5154779" duration="0" repeat="0" ec="1160" track="1" event="AS3D_IMPACT_LASERLG_CITY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="41" time="0.372222364" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04P_GUN_MOVE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="44" time="0.193738386" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerEffect" id="160" time="0.621705" duration="0.035" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile_baz" />
+		<trigger type="FTimedTriggerTransfer" id="167" time="0.813290358" duration="0" repeat="0" ec="2100" track="3" refid="58" speed="0" tangent.x="-0.0005640627" tangent.y="-0.9803001" tangent.z="0.197513059" />
+		<trigger type="FTimedTriggerSound" id="170" time="0.262962818" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="18" time="0.157407388" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="86" time="0.557407439" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="94" time="0.5407409" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="117" time="0.125925913" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="156" time="0.415714562" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="176" time="0.357407361" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="177" time="0.0166666489" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="178" time="0.346296281" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="179" time="0.427777737" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="180" time="0.127777755" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="181" time="0.0351851955" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="182" time="0.246296287" duration="0" repeat="0" ec="1120" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="183" time="1.43148112" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="184" time="1.46111071" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="185" time="1.490741" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="186" time="0.0611111261" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="187" time="0.0166666489" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="188" time="0.0351851955" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="189" time="0.09259258" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="190" time="0.5777779" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="191" time="0.5888889" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="193" time="0.07962952" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="194" time="0.157407388" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="195" time="0.125925913" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="196" time="0.72407335" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_AMMO_LOAD" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="198" time="0.7388898" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_PANEL" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="199" time="1.12407422" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="200" time="1.11111164" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="201" time="1.09629667" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="202" time="0.199294031" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="203" time="0.359259367" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04P_GUN_MOVE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="205" time="0.7388898" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_PANEL" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="206" time="0.72407335" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_AMMO_LOAD" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="207" time="1.09629667" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="208" time="1.12407422" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="209" time="1.11111164" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="26" time="0.0212005" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_IMPACT_$(WEAPON)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="210" time="0.0296296272" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_SUPREMACY_PURITY_VOX_SWEETENER" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="92" time="0.111111112" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_EXPLOSION" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="211" time="0.161111116" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="29" time="0.39908886" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_CLUB_DROP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="28" time="0.405616343" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="30" time="0.4924709" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_BODY_FALL_$(TERRAIN)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="212" time="0.201851845" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="213" time="0.240740746" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="74" time="0.351851761" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="214" time="0.220370367" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="215" time="0.0500000268" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="216" time="0.0203703735" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="217" time="0.0944444463" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="218" time="0.0944444463" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="219" time="0.194444448" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="220" time="0.0222222246" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="221" time="0.155555561" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="222" time="0.201851845" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="223" time="0.224074051" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_MOVE_SUIT" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="224" time="0.525926" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="225" time="0.5481482" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_SERVO" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="227" time="0.3555556" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="228" time="0.0944444463" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="229" time="0.0537037" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="230" time="0.3" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="231" time="0.415714562" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="232" time="0.427777737" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="233" time="0.357407361" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="234" time="0.346296281" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="235" time="0.246296287" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="236" time="0.127777755" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOTSTEP_SWEETENER_2" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="237" time="0.112010807" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_FOOT_$(TERRAIN)" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="238" time="0.0351851955" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="239" time="0.0166666489" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="240" time="0.194444448" duration="0" repeat="0" ec="1400" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY_RUN" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="11" time="0.7407408" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="12" time="0.779629767" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="17" time="0.242592588" duration="0" repeat="0" ec="1450" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="19" time="0.450000077" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="20" time="0.264814824" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="21" time="0.1425926" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="22" time="0.5222223" duration="0" repeat="0" ec="1500" track="5" event="AS3D_UNIT_RANGED_MARINE_04SP_AMMO_BOX_DROP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="24" time="1.76111114" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN_FIDGET" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="25" time="0.268518448" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET_FIDGET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="27" time="1.175926" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE_FIDGET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="37" time="1.15555561" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG_FIDGET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="38" time="1.83888888" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY_FIDGET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="39" time="0.394444436" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE_FIDGET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="43" time="1.80370343" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP_FIDGET" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="45" time="0.248148158" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN_FIDGET" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="46" time="0.488888949" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="47" time="0.1425926" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="49" time="0.8148148" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE_LARGE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="50" time="0.7796295" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="51" time="0.2851852" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="52" time="0.5018519" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="55" time="0.222222239" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="57" time="0.125925928" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_DOWN" bone="" tier="-1" />
+		<trigger type="FTimedTriggerSound" id="61" time="0.424074084" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="63" time="0.177777767" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="68" time="0.02037037" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_SUPREMACY_PURITY_VOX_SWEETENER" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="48" time="0.244444445" duration="0" repeat="0" ec="1580" track="5" event="AS3D_UNIT_RANGED_MARINE_04SP_AMMO_BOX_CLOSE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="71" time="0.438888848" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="72" time="0.42037037" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="73" time="0.75000006" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="76" time="0.7314815" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="80" time="0.238888919" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="85" time="0.561111152" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="88" time="0.09259259" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="89" time="0.4574075" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="90" time="0.112962961" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="91" time="0.7685187" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="93" time="0.6333333" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="98" time="0.09259259" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="99" time="0.112962961" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="101" time="0.59629637" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="102" time="0.622222245" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="112" time="0.6444445" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="113" time="0.175925955" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="114" time="0.3537037" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="116" time="0.6777779" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="120" time="0.890740633" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE_LARGE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="121" time="0.344444454" duration="0" repeat="0" ec="1600" track="5" event="AS3D_UNIT_RANGED_MARINE_04SP_AMMO_BOX_DROP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="126" time="0.748148" duration="0" repeat="0" ec="1600" track="5" event="AS3D_UNIT_RANGED_MARINE_04SP_ANTENNA_UP_SHORT" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="146" time="0.770370364" duration="0" repeat="0" ec="1600" track="5" event="AS3D_UNIT_RANGED_MARINE_04SP_PANEL" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="147" time="0.09259259" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="148" time="0.112962961" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="149" time="0.238888919" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="152" time="0.42037037" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="155" time="0.438888848" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="197" time="0.4574075" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="204" time="0.561111152" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="226" time="0.6333333" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FOLEY" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="241" time="0.7314815" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="242" time="0.75000006" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_LEG_HYDRAULIC_UP" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="243" time="0.7685187" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="244" time="0.244444445" duration="0" repeat="0" ec="1640" track="5" event="AS3D_UNIT_RANGED_MARINE_04SP_AMMO_BOX_CLOSE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="245" time="0.9537037" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="246" time="0.9277778" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="247" time="0.0148148146" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_SUPREMACY_PURITY_VOX_SWEETENER" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="248" time="0.1574074" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RATCHET_FOLEY_LONG" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="249" time="0.185185179" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATCHET" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="250" time="0.007407384" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="251" time="0.283333331" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="252" time="0.7111111" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_RUN_RATTLE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="253" time="0.731481433" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_MARINE_04SP_LEG_HYDRAULIC" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="15" time="1.2518518" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE_LARGE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="36" time="1.2518518" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE_LARGE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="42" time="1.34259284" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_CHARGE_LARGE" bone="" tier="0" />
+		<trigger type="FTimedTriggerEffect" id="3" time="0.3055557" duration="0.06" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile01" />
+		<trigger type="FTimedTriggerEffect" id="70" time="0.37962997" duration="0.065" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile_baz" />
+		<trigger type="FTimedTriggerEffect" id="82" time="0.201198831" duration="0.05" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile_baz" />
+		<trigger type="FTimedTriggerEffect" id="58" time="0.766906" duration="0.06" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile_baz" />
+		<trigger type="FTimedTriggerEffect" id="14" time="0.775806546" duration="0" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_SP_MUZZLEFLASH_RM04SP" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="10" time="0.6014933" duration="0.25" repeat="0" ec="2100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="158" time="0.6166669" duration="0" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_SP_MUZZLEFLASH_RM04SP" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="159" time="0.4518519" duration="0.25" repeat="0" ec="1100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerTransfer" id="9" time="0.6468273" duration="0" repeat="0" ec="1100" track="3" refid="160" speed="0" tangent.x="-0.0007292707" tangent.y="-0.9801306" tangent.z="0.1983518" />
+		<trigger type="FTimedTriggerEffect" id="84" time="0.220158592" duration="0.25" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_ACCENT_LG" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="59" time="0.301851779" duration="0" repeat="0" ec="1100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_MUZZLE_FLASH" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="100" time="0.07463334" duration="0.02" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_L" bone="FX_Rifle_Vents_L" />
+		<trigger type="FTimedTriggerEffect" id="105" time="0.07463324" duration="0.02" repeat="0" ec="1100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_R" bone="FX_Rifle_Vents_R" />
+		<trigger type="FTimedTriggerEffect" id="13" time="0.375926167" duration="0" repeat="0" ec="1130" track="5" event="ART_DEF_VEFFECT_SP_MUZZLEFLASH_RM04SP" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="119" time="0.216666743" duration="0.25" repeat="0" ec="1130" track="6" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="129" time="0.621705" duration="0.085" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile_baz" />
+		<trigger type="FTimedTriggerEffect" id="130" time="0.6166669" duration="0" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_SP_MUZZLEFLASH_RM04SP" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="143" time="0.4518519" duration="0.25" repeat="0" ec="1140" track="6" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="150" time="0.220158592" duration="0.25" repeat="0" ec="1140" track="4" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_ACCENT_LG" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="161" time="0.301851779" duration="0" repeat="0" ec="1140" track="6" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_MUZZLE_FLASH" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="162" time="0.3055557" duration="0.09" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile01" />
+		<trigger type="FTimedTriggerEffect" id="163" time="0.07463334" duration="0.02" repeat="0" ec="1140" track="4" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_L" bone="FX_Rifle_Vents_L" />
+		<trigger type="FTimedTriggerEffect" id="164" time="0.07463324" duration="0.02" repeat="0" ec="1140" track="6" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_R" bone="FX_Rifle_Vents_R" />
+		<trigger type="FTimedTriggerEffect" id="165" time="0.196296513" duration="0" repeat="0" ec="1160" track="5" event="ART_DEF_VEFFECT_SP_MUZZLEFLASH_RM04SP" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="173" time="0.0444445275" duration="0.25" repeat="0" ec="1160" track="6" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerTransfer" id="174" time="0.2388733" duration="0" repeat="0" ec="1180" track="3" refid="175" speed="0" tangent.x="0.004999494" tangent.y="-0.983638346" tangent.z="0.180085137" />
+		<trigger type="FTimedTriggerEffect" id="175" time="0.201198831" duration="0.05" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile_baz" />
+		<trigger type="FTimedTriggerEffect" id="254" time="0.196296513" duration="0" repeat="0" ec="1180" track="5" event="ART_DEF_VEFFECT_SP_MUZZLEFLASH_RM04SP" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="257" time="0.0444445275" duration="0.25" repeat="0" ec="1180" track="6" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT" bone="FX_Muzzel_Flash_baz" />
+		<trigger type="FTimedTriggerEffect" id="166" time="0.7129633" duration="0.1" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_DROMON_FLAME_TRAIL" bone="Point_projectile02" />
+		<trigger type="FTimedTriggerEffect" id="258" time="0.259259075" duration="0" repeat="0" ec="2100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_MUZZLE_FLASH" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="259" time="0.62015903" duration="0.25" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_ACCENT_LG" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="260" time="0.478337139" duration="0.02" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_L" bone="FX_Rifle_Vents_L" />
+		<trigger type="FTimedTriggerEffect" id="261" time="0.0375961922" duration="0.02" repeat="0" ec="2100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_R" bone="FX_Rifle_Vents_R" />
+		<trigger type="FTimedTriggerEffect" id="262" time="0.7055559" duration="0" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_MUZZLE_FLASH" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="263" time="0.179417789" duration="0.2" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_MARINE04SP_ACCENT_LG" bone="FX_Muzzel_Flash" />
+		<trigger type="FTimedTriggerEffect" id="265" time="0.0375961922" duration="0.02" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_L" bone="FX_Rifle_Vents_L" />
+		<trigger type="FTimedTriggerEffect" id="264" time="0.4783372" duration="0.02" repeat="0" ec="2100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_M04SP_ACCENT_ARC_R" bone="FX_Rifle_Vents_R" />
+		<trigger type="FTimedTriggerEffect" id="266" time="0.00302816951" duration="0" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="Base HumanRibcage02" />
+		<trigger type="FTimedTriggerEffect" id="267" time="0.126639247" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_BLUNT_HIT_SM" bone="Base HumanRibcage02" />
+		<trigger type="FTimedTriggerSound" id="6" time="0.6148148" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="54" time="0.6259259" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="64" time="0.30993402" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_GUN_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerSound" id="65" time="0.6851852" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_RANGED_MARINE_04SP_MISSILE_FIRE" bone="" tier="0" />
+		<trigger type="FTimedTriggerEffect" id="60" time="0.6162972" duration="0.3" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Bottom" />
+		<trigger type="FTimedTriggerEffect" id="118" time="0.37575826" duration="0.3" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Bottom" />
+		<trigger type="FTimedTriggerEffect" id="128" time="0.6173359" duration="0.3" repeat="0" ec="1140" track="4" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Top" />
+		<trigger type="FTimedTriggerEffect" id="127" time="0.6162973" duration="0.3" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Bottom" />
+		<trigger type="FTimedTriggerEffect" id="53" time="0.6168165" duration="0.3" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Top" />
+		<trigger type="FTimedTriggerEffect" id="110" time="0.37575835" duration="0.3" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Top" />
+		<trigger type="FTimedTriggerEffect" id="172" time="0.196262747" duration="0.3" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Top" />
+		<trigger type="FTimedTriggerEffect" id="171" time="0.196621761" duration="0.3" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Bottom" />
+		<trigger type="FTimedTriggerEffect" id="255" time="0.1966219" duration="0.3" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Top" />
+		<trigger type="FTimedTriggerEffect" id="256" time="0.196262524" duration="0.3" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Bottom" />
+		<trigger type="FTimedTriggerEffect" id="62" time="0.767438769" duration="0.3" repeat="0" ec="2100" track="6" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Top" />
+		<trigger type="FTimedTriggerEffect" id="77" time="0.7678881" duration="0.3" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_SP_CYAN_RM04SP_ACCENT_ARC" bone="fx_Discharge_Bottom" />
+	</triggers>
+</trigger_system>

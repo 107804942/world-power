@@ -1,0 +1,16 @@
+<Asset>
+  <Mesh file="Terrascape_PL.gr2" source="Max" />
+  <Texture file="Terraform_Decal_SREF.dds" source="Max" />
+  <Texture file="Terrascape_DIFF.dds" source="Max" />
+  <Texture file="Terrascape_SREF.dds" source="Max" />
+  <Texture file="terrascape_HB_Decal_DIFF.dds" source="Max" />
+  <Texture file="terrascape_HB_Decal_H.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <Texture file="Unit_Environment_Sharp.dds" source="Max" />
+  <DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+  <TimedTrigger file="FX_Triggers_ImprovementPLSmoke.ftsxml" source="Tool" model="Object04" state="0,1,2,3"/>
+  <BoneUsage>
+    <Bone name="BONE_FXPillageSmoke" />    
+  </BoneUsage>
+</Asset>

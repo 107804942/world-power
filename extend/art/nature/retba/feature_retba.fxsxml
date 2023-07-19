@@ -1,0 +1,6 @@
+<Asset>
+	<Mesh file="feature_retba.gr2" source="Max" />
+	<Texture file="retba_ground_diff.dds" source="Max" />
+	<Texture file="retba_ground_h.dds" source="Max" />
+	<Texture file="kilimanjaro_ground_sref.dds" source="Max" />
+</Asset>

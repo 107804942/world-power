@@ -1,0 +1,15 @@
+<Asset>
+	<Mesh file="Mbanza_PL.gr2" source="Max" />
+	<Texture file="FX_Blk_Blk4x4.dds" source="Max" />
+	<Texture file="DIS_Mbanza_Base_B.dds" source="Max" />
+	<Texture file="DIS_Mbanza_Base_N.dds" source="Max" />
+	<Texture file="Wonder_grnd_diff.dds" source="Max" />
+	<Texture file="Religious_Landmark_SREF.dds" source="Max" />
+	<Texture file="Unit_Environment_Dull.dds" source="Max" />
+	<Texture file="Unit_Environment_Sharp.dds" source="Max" />
+	<DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+	<BoneUsage>
+		<Bone name="FX_PillagedSmoke" />
+	</BoneUsage>
+	<TimedTrigger file="FX_Triggers_Holy_Site_PIL.ftsxml" source="Tool" model="Box01" state="0,1,2,3"/>
+</Asset>

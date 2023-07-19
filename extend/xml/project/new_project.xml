@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/21 17:43:32 -->
+<GameData>
+	
+	<!--<PostDefines>
+		<Row Name="KEYHOLE_PROJECT">
+			<Key>PROJECT_KEYHOLE_PROJECT</Key>
+			<Table>Projects</Table>
+		</Row>
+	</PostDefines>-->
+
+	<Processes>
+
+
+		
+		<Update>
+			<Set TechPrereq="TECH_WRITING"/>
+			<Where Type="PROCESS_RESEARCH" />
+		</Update>
+
+		<Update>
+			<Set TechPrereq="TECH_CURRENCY"/>
+			<Where Type="PROCESS_WEALTH" />
+		</Update>
+		
+		
+		<Row>
+			<Type>PROCESS_HEALTH</Type>
+			<Description>TXT_KEY_PROCESS_HEALTH</Description>
+			<Help>TXT_KEY_PROCESS_HEALTH_HELP</Help>
+			<Strategy>TXT_KEY_PROCESS_HEALTH_STRATEGY</Strategy>
+			<TechPrereq>TECH_MODERN_SANITATION</TechPrereq>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>37</PortraitIndex>
+		</Row>
+
+
+		<Row>
+			<Type>PROCESS_DEFENSE</Type>
+			<Description>TXT_KEY_PROCESS_DEFENSE</Description>
+			<Help>TXT_KEY_PROCESS_DEFENSE_HELP</Help>
+			<Strategy>TXT_KEY_PROCESS_DEFENSE_STRATEGY</Strategy>
+			<TechPrereq>TECH_PHYSICS</TechPrereq>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>27</PortraitIndex>
+			<DefenseValue>10</DefenseValue>			
+		</Row>
+		
+		<Row>
+			<Type>PROCESS_GATHER</Type>
+			<Description>TXT_KEY_PROCESS_GATHER</Description>
+			<Help>TXT_KEY_PROCESS_GATHER_HELP</Help>
+			<Strategy>TXT_KEY_PROCESS_GATHER_STRATEGY</Strategy>
+			<TechPrereq>TECH_ADVANCED_AGRICULTURE</TechPrereq>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>51</PortraitIndex>
+		</Row>
+		
+		<Row>
+			<Type>PROCESS_CULTURE</Type>
+			<Description>TXT_KEY_PROCESS_CULTURE</Description>
+			<Help>TXT_KEY_PROCESS_CULTURE_HELP</Help>
+			<Strategy>TXT_KEY_PROCESS_CULTURE_STRATEGY</Strategy>
+			<TechPrereq>TECH_LITERATURE</TechPrereq>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>52</PortraitIndex>
+		</Row>
+
+
+
+		<Row>
+			<Type>PROCESS_FAITH</Type>
+			<Description>TXT_KEY_PROCESS_FAITH</Description>
+			<Help>TXT_KEY_PROCESS_FAITH_HELP</Help>
+			<Strategy>TXT_KEY_PROCESS_FAITH_STRATEGY</Strategy>
+			<TechPrereq>TECH_DIVINE_RIGHT</TechPrereq>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>87</PortraitIndex>
+		</Row>
+
+
+		<Row>
+			<Type>PROCESS_TOURISM</Type>
+			<Description>TXT_KEY_PROCESS_TOURISM</Description>
+			<Help>TXT_KEY_PROCESS_TOURISM_HELP</Help>
+			<Strategy>TXT_KEY_PROCESS_TOURISM_STRATEGY</Strategy>
+			<TechPrereq>TECH_CITY_SCAPE</TechPrereq>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>76</PortraitIndex>
+		</Row>
+
+
+		<Row>
+			<Type>PROCESS_GOLDEN_AGE</Type>
+			<Description>TXT_KEY_PROCESS_GOLDEN_AGE</Description>
+			<Help>TXT_KEY_PROCESS_GOLDEN_AGE_HELP</Help>
+			<Strategy>TXT_KEY_PROCESS_GOLDEN_AGE_STRATEGY</Strategy>
+			<TechPrereq>TECH_FEUDALISM</TechPrereq>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>75</PortraitIndex>
+		</Row>
+
+	</Processes>
+	
+	<Process_ProductionYields>
+
+		<Row>
+			<ProcessType>PROCESS_HEALTH</ProcessType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+
+		<Row> 
+			<ProcessType>PROCESS_GOLDEN_AGE</ProcessType>
+			<YieldType>YIELD_GOLDEN_AGE_POINTS</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<ProcessType>PROCESS_TOURISM</ProcessType>
+			<YieldType>YIELD_TOURISM</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		
+		<Row>
+			<ProcessType>PROCESS_GATHER</ProcessType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		<Row>
+			<ProcessType>PROCESS_CULTURE</ProcessType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<ProcessType>PROCESS_FAITH</ProcessType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Update>
+			<Set Yield="5"/>
+			<Where ProcessType="PROCESS_RESEARCH"/>
+		</Update>
+
+		<Update>
+			<Set Yield="5"/>
+			<Where ProcessType="PROCESS_WEALTH"/>
+		</Update>
+
+	</Process_ProductionYields>
+
+	<Process_Flavors>
+
+		<Row>
+			<ProcessType>PROCESS_GATHER</ProcessType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+
+		<Row>
+			<ProcessType>PROCESS_CULTURE</ProcessType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+
+		<Row>
+			<ProcessType>PROCESS_DEFENSE</ProcessType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>45</Flavor>
+		</Row>
+
+		<Row>
+			<ProcessType>PROCESS_FAITH</ProcessType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+
+
+
+		<Row>
+			<ProcessType>PROCESS_GOLDEN_AGE</ProcessType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<ProcessType>PROCESS_GOLDEN_AGE</ProcessType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>20</Flavor>
+		</Row>
+		
+		<Row>
+			<ProcessType>PROCESS_TOURISM</ProcessType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+	    <Row>
+			<ProcessType>PROCESS_TOURISM</ProcessType>
+			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+
+		
+	</Process_Flavors>
+
+
+
+
+	
+
+	<Projects>
+
+		<Row>
+			<Type>PROJECT_BLIALI</Type>
+			<Description>TXT_KEY_PROJECT_BLIALI</Description>
+			<Help>TXT_KEY_PROJECT_BLIALI_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_BLIALI_PEDIA</Civilopedia>
+			<TechPrereq>TECH_STONE_TOOLS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>40</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+		<Row>
+			<Type>PROJECT_HORSE_ARTILLERY</Type>
+			<Description>TXT_KEY_PROJECT_HORSE_ARTILLERY</Description>
+			<Help>TXT_KEY_PROJECT_HORSE_ARTILLERY_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_HORSE_ARTILLERY_PEDIA</Civilopedia>
+			<TechPrereq>TECH_GUNPOWDER</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>100</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+		<Row>
+			<Type>PROJECT_GLADIATOR</Type>
+			<Description>TXT_KEY_PROJECT_GLADIATOR</Description>
+			<Help>TXT_KEY_PROJECT_GLADIATOR_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_GLADIATOR_PEDIA</Civilopedia>
+			<TechPrereq>TECH_MANIPULAR_SYSTEM</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>60</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+		<Row>
+			<Type>PROJECT_IRON_BUDDHA</Type>
+			<Description>TXT_KEY_PROJECT_IRON_BUDDHA</Description>
+			<Help>TXT_KEY_PROJECT_IRON_BUDDHA_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_IRON_BUDDHA_PEDIA</Civilopedia>
+			<TechPrereq>TECH_FEUDALISM</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>100</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+
+		<Row>
+			<Type>PROJECT_CHINA_FIRE_CANNON</Type>
+			<Description>TXT_KEY_PROJECT_CHINA_FIRE_CANNON</Description>
+			<Help>TXT_KEY_PROJECT_CHINA_FIRE_CANNON_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_CHINA_FIRE_CANNON_PEDIA</Civilopedia>
+			<TechPrereq>TECH_MILITARY_ORDERS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>260</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+		<Row>
+			<Type>PROJECT_SUI_FLEET</Type>
+			<Description>TXT_KEY_PROJECT_SUI_FLEET</Description>
+			<Help>TXT_KEY_PROJECT_SUI_FLEET_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_SUI_FLEET_PEDIA</Civilopedia>
+			<TechPrereq>TECH_MILITARY_ORDERS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>260</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+		
+		
+
+		<Row>
+			<Type>PROJECT_HITTITE_WAR_CHARIOT</Type>
+			<Description>TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT</Description>
+			<Help>TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT_PEDIA</Civilopedia>
+			<TechPrereq>TECH_BRONZE_WORKING</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>40</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+		
+		<Row>
+			<Type>PROJECT_URBAN_CANNON</Type>
+			<Description>TXT_KEY_PROJECT_URBAN_CANNON</Description>
+			<Help>TXT_KEY_PROJECT_URBAN_CANNON_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_URBAN_CANNON_PEDIA</Civilopedia>
+			<TechPrereq>TECH_MILITARY_ORDERS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>180</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		 </Row>
+
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROJECT_ADV_MECH</Description>
+				<Help>TXT_KEY_PROJECT_ADV_MECH_HELP</Help>
+				<Civilopedia>TXT_KEY_PROJECT_ADV_MECH_PEDIA</Civilopedia>
+				<TechPrereq>TECH_AUTONOMOUS_SYSTEMS</TechPrereq>
+				<MaxGlobalInstances>1</MaxGlobalInstances>
+				<MaxTeamInstances>1</MaxTeamInstances>
+				<Cost>2000</Cost>
+				<PortraitIndex>29</PortraitIndex>
+				<IconAtlas>SPBalance_ATLAS</IconAtlas>
+			</Set>
+			<Where Type="PROJECT_ADV_MECH"/>
+		</Update>
+
+
+
+
+		<Row>
+			<Type>PROJECT_P1500</Type>
+			<Description>TXT_KEY_PROJECT_P1500</Description>
+			<Help>TXT_KEY_PROJECT_P1500_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_P1500_PEDIA</Civilopedia>
+			<TechPrereq>TECH_BLITZKRIEG</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>480</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+		<Row>
+			<Type>PROJECT_NAVALCARRIER03S</Type>
+			<Description>TXT_KEY_PROJECT_NAVALCARRIER03S</Description>
+			<Help>TXT_KEY_PROJECT_NAVALCARRIER03S_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_NAVALCARRIER03S_PEDIA</Civilopedia>
+			<TechPrereq>TECH_CYBERNETICS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>2000</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>PROJECT_LEVDESTROYER</Type>
+			<Description>TXT_KEY_PROJECT_LEVDESTROYER</Description>
+			<Help>TXT_KEY_PROJECT_LEVDESTROYER_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_LEVDESTROYER_PEDIA</Civilopedia>
+			<TechPrereq>TECH_ORBITAL_SUSPENSION</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>2000</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+		
+		<!--<Row>
+			<Type>PROJECT_LEVTANK</Type>
+			<Description>TXT_KEY_PROJECT_LEVTANK</Description>
+			<Help>TXT_KEY_PROJECT_LEVTANK_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_LEVTANK_PEDIA</Civilopedia>
+			<TechPrereq>TECH_EARTH</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>900</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>-->
+
+
+
+		<Row>
+			<Type>PROJECT_GHOST</Type>
+			<Description>TXT_KEY_PROJECT_GHOST</Description>
+			<Help>TXT_KEY_PROJECT_GHOST_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_GHOST_PEDIA</Civilopedia>
+			<TechPrereq>TECH_ENERGY_THEORY</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>900</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+		<Row>
+			<Type>PROJECT_SIEGE04H</Type>
+			<Description>TXT_KEY_PROJECT_SIEGE04H</Description>
+			<Help>TXT_KEY_PROJECT_SIEGE04H_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_SIEGE04H_PEDIA</Civilopedia>
+			<TechPrereq>TECH_PARTICLE_PHYSICS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>2000</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+
+
+		<Row>
+			<Type>PROJECT_ANGEL</Type>
+			<Description>TXT_KEY_PROJECT_ANGEL</Description>
+			<Help>TXT_KEY_PROJECT_ANGEL_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_ANGEL_PEDIA</Civilopedia>
+			<TechPrereq>TECH_GRID_COMPUTING</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>1000</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<Type>PROJECT_ANTIMATTER</Type>
+			<Description>TXT_KEY_PROJECT_ANTIMATTER</Description>
+			<Help>TXT_KEY_PROJECT_ANTIMATTER_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_ANTIMATTER_PEDIA</Civilopedia>
+			<TechPrereq>TECH_NEW_ENERGY</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>2000</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Type>PROJECT_NAVALCARRIER03P</Type>
+			<Description>TXT_KEY_PROJECT_NAVALCARRIER03P</Description>
+			<Help>TXT_KEY_PROJECT_NAVALCARRIER03P_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_NAVALCARRIER03P_PEDIA</Civilopedia>
+			<TechPrereq>TECH_PLASMA_PROPULSION</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>1500</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+		<Row>
+			<Type>PROJECT_STURMTIGER</Type>
+			<Description>TXT_KEY_PROJECT_STURMTIGER</Description>
+			<Help>TXT_KEY_PROJECT_STURMTIGER_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_STURMTIGER_PEDIA</Civilopedia>
+			<TechPrereq>TECH_ELECTRONICS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>480</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+		<Row>
+			<Type>PROJECT_SPACESHIP</Type>
+			<Description>TXT_KEY_PROJECT_SPACESHIP</Description>
+			<Help>TXT_KEY_PROJECT_SPACESHIP_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_SPACESHIP_PEDIA</Civilopedia>
+			<TechPrereq>TECH_EARTH</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>20000</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
+		<!--<Row>
+			<Type>PROJECT_HUGE_BOMB</Type>
+			<Description>TXT_KEY_PROJECT_HUGE_BOMB</Description>
+			<Help>TXT_KEY_PROJECT_HUGE_BOMB_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_HUGE_BOMB_PEDIA</Civilopedia>
+			<TechPrereq>TECH_ADVANCED_BALLISTICS</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>800</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>-->
+
+
+		<Update>
+			<Set TechPrereq="NULL" Cost="-1"/>
+			<Where Type="PROJECT_BAZOOKA_TRAINING"/>
+		</Update>
+
+		<Update>
+			<Set TechPrereq="TECH_NAUTICAL_SCIENCE"/>
+			<Where Type="PROJECT_ZHENGHE_FLEET"/>
+		</Update>
+		<Update>
+			<Set TechPrereq="TECH_BLITZKRIEG"/>
+			<Where Type="PROJECT_SUPER_HEAVY_TANK"/>
+		</Update>
+		<Update>
+			<Set TechPrereq="TECH_COMBINED_ARMS"/>
+			<Where Type="PROJECT_ELITE_SNIPER_TRAINING"/>
+		</Update>
+
+		<Update>
+			<Set TechPrereq="TECH_BLITZKRIEG"/>
+			<Where Type="PROJECT_PROTOTYPE_STEALTH_BOMBER"/>
+		</Update>
+
+		<Update>
+			<Set TechPrereq="TECH_NUCLEAR_FUSION"/>
+			<Where Type="PROJECT_TASKFORCE141"/>
+		</Update>
+
+		
+
+
+
+	</Projects>
+
+	<Project_Flavors>
+
+	
+
+
+		<Delete ProjectType="PROJECT_BAZOOKA_TRAINING"/>
+
+
+		<Row>
+			<ProjectType>PROJECT_BLIALI</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>700</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_BLIALI</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>700</Flavor>
+		</Row>
+		
+		
+		<Row>
+			<ProjectType>PROJECT_IRON_BUDDHA</ProjectType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_IRON_BUDDHA</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		
+		
+		
+		<Row>
+			<ProjectType>PROJECT_SPACESHIP</ProjectType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_SPACESHIP</ProjectType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_SPACESHIP</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_SPACESHIP</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_SPACESHIP</ProjectType>
+			<FlavorType>FLAVOR_USE_NUKE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_SPACESHIP</ProjectType>
+			<FlavorType>FLAVOR_NUKE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		
+		
+		
+		<Row>
+			<ProjectType>PROJECT_GLADIATOR</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_GLADIATOR</ProjectType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_CHINA_FIRE_CANNON</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_CHINA_FIRE_CANNON</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		
+		
+		
+		<Row>
+			<ProjectType>PROJECT_SUI_FLEET</ProjectType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		
+		
+		<Row>
+			<ProjectType>PROJECT_HITTITE_WAR_CHARIOT</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_HITTITE_WAR_CHARIOT</ProjectType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+
+		<Row>
+			<ProjectType>PROJECT_URBAN_CANNON</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>320</Flavor>
+		</Row>
+		
+		
+		<!--<Row>
+			<ProjectType>PROJECT_EXPLORATION_TRAINING</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>320</Flavor>
+		</Row>-->
+
+		
+		
+		<Row>
+			<ProjectType>PROJECT_STURMTIGER</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_STURMTIGER</ProjectType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_P1500</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+
+		<Row>
+			<ProjectType>PROJECT_P1500</ProjectType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		
+
+		<Row>
+			<ProjectType>PROJECT_LEVDESTROYER</ProjectType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_LEVDESTROYER</ProjectType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_LEVDESTROYER</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_ANGEL</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_NAVALCARRIER03S</ProjectType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_NAVALCARRIER03S</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_NAVALCARRIER03S</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		
+		
+		
+		
+
+		<!--<Row>
+			<ProjectType>PROJECT_LEVTANK</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>-->
+		
+		<Row>
+			<ProjectType>PROJECT_GHOST</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>900</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_SIEGE04H</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_SIEGE04H</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+
+
+
+
+		<Row>
+			<ProjectType>PROJECT_NAVALCARRIER03P</ProjectType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+	
+		<Row>
+			<ProjectType>PROJECT_NAVALCARRIER03P</ProjectType>
+			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_NAVALCARRIER03P</ProjectType>
+			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+
+
+		
+		<!--<Row>
+			<ProjectType>PROJECT_KEYHOLE_PROJECT</ProjectType>
+			<FlavorType>FLAVOR_RECON</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>-->
+
+
+
+
+
+		<Row>
+			<ProjectType>PROJECT_ANTIMATTER</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_ANTIMATTER</ProjectType>
+			<FlavorType>FLAVOR_AIR</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
+
+
+
+
+
+		<Row>
+			<ProjectType>PROJECT_HORSE_ARTILLERY</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_HORSE_ARTILLERY</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+
+
+
+		<!--<Row>
+			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
+			<FlavorType>FLAVOR_AIR</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
+			<FlavorType>FLAVOR_USE_NUKE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
+			<FlavorType>FLAVOR_NUKE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>-->
+	</Project_Flavors>
+
+
+
+
+
+
+
+	
+
+	</GameData>

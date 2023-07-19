@@ -1,0 +1,19 @@
+<Asset>
+  <Mesh file="PuritySettlement_PL.gr2" source="Max" />
+  <Texture file="PuritySettlement_DIFF.dds" source="Max" />
+  <Texture file="PuritySettlement_DecalD.dds" source="Max" />
+  <Texture file="PuritySettlement_DecalH.dds" source="Max" />
+  <Texture file="PuritySettlement_PL_DIFF.dds" source="Max" />
+  <Texture file="PuritySettlement_PL_DecalD.dds" source="Max" />
+  <Texture file="PuritySettlement_PL_DecalH.dds" source="Max" />
+  <Texture file="PuritySettlement_PL_SREF.dds" source="Max" />
+  <Texture file="PuritySettlement_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <BoneUsage>
+    <Bone name="BONE_FXPillageSmoke" />
+  </BoneUsage>
+  <TimedTrigger file="FX_Triggers_ImprovementPLSmoke.ftsxml" source="Tool" model="PL_PuritySettlement04" state="3" />
+  <DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+</Asset>

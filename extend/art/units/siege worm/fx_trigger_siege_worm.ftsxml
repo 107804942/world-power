@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trigger_system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1160">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1480">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1800">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1580">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1520">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1620">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1500">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1120">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1540">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1640">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1140">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="5" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1460">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1560">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1290">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1285">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1280">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1600">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1110">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1450">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1180">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="3100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1660">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1680">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="4100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+    <event_track ec="1300">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1650">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1130">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+      <track id="5" name="Effect" />
+      <track id="6" name="Effect" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerSound" id="0" time="5.717483" duration="0" repeat="0" ec="1000" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="1" time="5.04776859" duration="0" repeat="0" ec="1000" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="2" time="0" duration="0" repeat="0" ec="1000" track="1" event="AS3D_UNIT_WORM_IDLE_MOVE_6S" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="3" time="2.573323" duration="0" repeat="0" ec="1000" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="4" time="5.993487" duration="0" repeat="0" ec="1000" track="1" event="AS3D_UNIT_WORM_IDLE_MOVE_4S" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="5" time="11.3524923" duration="0" repeat="0" ec="1000" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="6" time="10.9917574" duration="0" repeat="0" ec="1000" track="1" event="AS3D_UNIT_WORM_IDLE_MOVE_6S" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="7" time="3.57564783" duration="2.08" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="8" time="4.554841" duration="0" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="9" time="8.31955051" duration="2.14" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="10" time="10.1407347" duration="0" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="11" time="11.5756445" duration="4.1" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="12" time="12.9395151" duration="0" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="13" time="13.7443972" duration="0" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="14" time="15.1834183" duration="0" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="15" time="0.837299645" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="16" time="0.748675168" duration="4.55" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="17" time="3.07922721" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="18" time="8.376822" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="19" time="3.9038012" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="20" time="4.96775" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="21" time="6.08174467" duration="4.2" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="22" time="8.995801" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="23" time="9.616344" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="24" time="10.8012552" duration="5.2" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="25" time="14.3297625" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="26" time="10.7458363" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="27" time="12.2992706" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="28" time="15.8175669" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="29" time="9.919352" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="30" time="5.1600585" duration="0" repeat="0" ec="1000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="31" time="0.7851852" duration="0" repeat="0" ec="1040" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="32" time="0.07222222" duration="0.1" repeat="0" ec="1040" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="33" time="5.714815" duration="0.27" repeat="0" ec="1040" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="34" time="0.548889" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="35" time="0.643333554" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="36" time="0.5997353" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="37" time="0.7666667" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="38" time="0.820370436" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="39" time="0.7407406" duration="0.23" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="40" time="0.7645738" duration="0" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="41" time="0" duration="1.25" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerAction" id="42" time="0.7693042" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="43" time="0.605555654" duration="0.19" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+    <trigger type="FTimedTriggerAction" id="44" time="0.7475561" duration="0" repeat="0" ec="1100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="45" time="0.605038047" duration="0.19" repeat="0" ec="1100" track="5" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+    <trigger type="FTimedTriggerEffect" id="46" time="0.6034814" duration="0.19" repeat="0" ec="1100" track="6" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerSound" id="47" time="0.298148155" duration="0" repeat="0" ec="1110" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="48" time="0.6870371" duration="0" repeat="0" ec="1110" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="49" time="0.348148137" duration="0" repeat="0" ec="1110" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="50" time="0.6936835" duration="0" repeat="0" ec="1110" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="51" time="0.3007426" duration="0.6992574" repeat="0" ec="1110" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="52" time="0.782425761" duration="0" repeat="0" ec="1110" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="53" time="0.688118756" duration="0.311881244" repeat="0" ec="1110" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="54" time="0.9071781" duration="0.0928218961" repeat="0" ec="1110" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="55" time="0.71064353" duration="0" repeat="0" ec="1110" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="56" time="0.991584241" duration="0" repeat="0" ec="1110" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="57" time="0" duration="1" repeat="0" ec="1120" track="1" event="AS3D_UNIT_WORM_RUN_LOOP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="58" time="0" duration="1" repeat="0" ec="1120" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="59" time="0" duration="0.085" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="60" time="0.6270149" duration="0.372985125" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="61" time="0.6219812" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="62" time="0.8241236" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="63" time="0.8473637" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="64" time="0.594828844" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="65" time="0.805833042" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="66" time="0.00429644948" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="67" time="0.787169755" duration="0" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="68" time="0" duration="0" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="69" time="0" duration="0.9986111" repeat="0" ec="1120" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="70" time="0" duration="1" repeat="0" ec="1120" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="71" time="0" duration="1" repeat="0" ec="1120" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="72" time="0" duration="0.55" repeat="0" ec="1120" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="73" time="0.439629734" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="74" time="1.35740733" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="75" time="0.6129629" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="76" time="0.924074054" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="77" time="0.361851931" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="78" time="0" duration="2.66666675" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA04" />
+    <trigger type="FTimedTriggerEffect" id="79" time="0.3590369" duration="1.56" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB04" />
+    <trigger type="FTimedTriggerEffect" id="80" time="0.459259272" duration="1.81" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC04" />
+    <trigger type="FTimedTriggerEffect" id="81" time="0.459259272" duration="1.81" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+    <trigger type="FTimedTriggerAction" id="82" time="0.716" duration="0" repeat="0" ec="1130" track="4" action="0" />
+    <trigger type="FTimedTriggerAction" id="83" time="0.628" duration="0" repeat="0" ec="1130" track="4" action="0" />
+    <trigger type="FTimedTriggerAction" id="84" time="1.65874076" duration="0" repeat="0" ec="1130" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="85" time="1.83911085" duration="0" repeat="0" ec="1130" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="86" time="2.01518464" duration="0" repeat="0" ec="1130" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="87" time="0.990740657" duration="0" repeat="0" ec="1130" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="88" time="1.11111069" duration="0" repeat="0" ec="1130" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="89" time="1.23518479" duration="0" repeat="0" ec="1130" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="90" time="0" duration="2.66666675" repeat="0" ec="1130" track="5" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+    <trigger type="FTimedTriggerEffect" id="91" time="0.3590369" duration="1.56" repeat="0" ec="1130" track="6" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="92" time="0" duration="1" repeat="0" ec="1140" track="1" event="AS3D_UNIT_WORM_RUN_LOOP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="93" time="0" duration="1" repeat="0" ec="1140" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="94" time="0" duration="0.085" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="95" time="0.00429644948" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="96" time="0.594828844" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="97" time="0.6219812" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="98" time="0.6270149" duration="0.372985125" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="99" time="0.787169755" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="100" time="0.805833042" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="101" time="0.8241236" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="102" time="0.8473637" duration="0" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="103" time="0" duration="0" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="104" time="0" duration="0.55" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="105" time="0" duration="1" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="106" time="0" duration="1" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="107" time="0" duration="0.9986111" repeat="0" ec="1140" track="5" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="108" time="0.7277778" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_WORM_ACID_BREATH" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="109" time="2.216667" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_WORM_ACID_PUDDLE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="110" time="1.38148177" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_WORM_ACID_PUDDLE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="111" time="1.51481509" duration="0" repeat="0" ec="1160" track="1" event="AS3D_IMPACT_ACID_CITY" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="112" time="0.646284759" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="113" time="0.583333135" duration="0.37" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerEffect" id="114" time="0.6000001" duration="0.36" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+    <trigger type="FTimedTriggerEffect" id="115" time="0.5648154" duration="0.38" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+    <trigger type="FTimedTriggerEffect" id="116" time="0.761110961" duration="0.655" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_MIASMA_SPRAY_WORM" bone="SB_WormBody04" />
+    <trigger type="FTimedTriggerEffect" id="117" time="0.7314813" duration="2.13518548" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_MIASMA_WORM_CITY" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerAction" id="118" time="1.23518479" duration="0" repeat="0" ec="1160" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="119" time="1.11111069" duration="0" repeat="0" ec="1160" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="120" time="0.990740657" duration="0" repeat="0" ec="1160" track="4" action="1" />
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="121" time="0.7574075" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_WORM_ACID_BREATH" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="122" time="1.38888907" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_WORM_ACID_PUDDLE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="123" time="2.21666718" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_WORM_ACID_PUDDLE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="124" time="0.6481366" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="125" time="0.5648154" duration="0.38" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+    <trigger type="FTimedTriggerEffect" id="126" time="0.583333135" duration="0.37" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerEffect" id="127" time="0.6000001" duration="0.36" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+    <trigger type="FTimedTriggerEffect" id="128" time="0.761110961" duration="0.655" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_MIASMA_SPRAY_WORM" bone="SB_WormBody04" />
+    <trigger type="FTimedTriggerAction" id="129" time="0.990740657" duration="0" repeat="0" ec="1180" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="130" time="1.11111069" duration="0" repeat="0" ec="1180" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="131" time="1.23518479" duration="0" repeat="0" ec="1180" track="4" action="1" />
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="132" time="0.00740740774" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_WORM_IMPACT_$(WEAPON)" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="133" time="0.6499695" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_WORM_BODY_FALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="134" time="0.03298717" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_WORM_DEATH_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="135" time="1.35737717" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_WORM_BODY_FALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="136" time="0.25444445" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_ARMOR_DEATH_SM_$(WEAPON)" bone="SB_TentacleC01" />
+    <trigger type="FTimedTriggerEffect" id="137" time="0.0411229543" duration="0.74" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="138" time="0.01" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_ARMOR_DEATH_SM_$(WEAPON)" bone="SB_WormBody04" />
+    <trigger type="FTimedTriggerEffect" id="139" time="1.192997" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleC04" />
+    <trigger type="FTimedTriggerEffect" id="140" time="0.781886935" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="SB_TentacleA" />
+    <trigger type="FTimedTriggerEffect" id="141" time="0.680034935" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="SB_WormBody04" />
+    <trigger type="FTimedTriggerEffect" id="142" time="0.8929975" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleB04" />
+    <trigger type="FTimedTriggerEffect" id="143" time="1.100405" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleC01" />
+    <trigger type="FTimedTriggerEffect" id="144" time="0.848553061" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleB01" />
+    <trigger type="FTimedTriggerEffect" id="145" time="0.8781827" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleA02" />
+    <trigger type="FTimedTriggerEffect" id="146" time="0.9152198" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleA05" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="147" time="0" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="148" time="0.2888889" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="149" time="0.211111113" duration="0" repeat="0" ec="1280" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="150" time="0.183333367" duration="0.17" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="151" time="0.6240741" duration="0.23" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="152" time="0.214947492" duration="0" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="153" time="0.300132722" duration="0" repeat="0" ec="1280" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="154" time="0.4962963" duration="0.5037037" repeat="0" ec="1280" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="155" time="0.5112437" duration="0" repeat="0" ec="1280" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="156" time="0.8093921" duration="0" repeat="0" ec="1280" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="157" time="0.0185185187" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="158" time="0.0981481448" duration="0" repeat="0" ec="1290" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="159" time="0.00183262059" duration="1" repeat="0" ec="1400" track="1" event="AS3D_UNIT_WORM_RUN_LOOP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="160" time="0" duration="1" repeat="0" ec="1400" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="161" time="0" duration="0.085" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="162" time="0.00429644948" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="163" time="0.594828844" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="164" time="0.6219812" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="165" time="0.6270149" duration="0.372985125" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="166" time="0.787169755" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="167" time="0.805833042" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="168" time="0.8241236" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="169" time="0.8473637" duration="0" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="170" time="0" duration="0" repeat="0" ec="1400" track="3" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="171" time="0" duration="0.55" repeat="0" ec="1400" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="172" time="0" duration="1" repeat="0" ec="1400" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="173" time="0" duration="1" repeat="0" ec="1400" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="174" time="0" duration="0.9986111" repeat="0" ec="1400" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="175" time="0.00183262059" duration="1" repeat="0" ec="1420" track="1" event="AS3D_UNIT_WORM_RUN_LOOP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="176" time="0.3007426" duration="0.6992574" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="177" time="0.691831648" duration="0" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="178" time="0.782425761" duration="0" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="179" time="0.688118756" duration="0.311881244" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="180" time="0.71064353" duration="0" repeat="0" ec="1420" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="181" time="0.9071781" duration="0.0928218961" repeat="0" ec="1420" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="182" time="0.991584241" duration="0" repeat="0" ec="1420" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="183" time="0" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="184" time="0.00183262059" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_WORM_RUN_LOOP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="185" time="0.122222222" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="186" time="0" duration="0.51" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="187" time="0.0203703716" duration="0.65" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="188" time="0.152129278" duration="0" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="189" time="0.6169441" duration="0" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="190" time="0" duration="1.18" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="191" time="0.6169441" duration="0" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="192" time="1.026203" duration="0" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="193" time="0.00370370364" duration="0.7" repeat="0" ec="1440" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="194" time="0.268795818" duration="0" repeat="0" ec="1440" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="195" time="0.465092242" duration="0" repeat="0" ec="1440" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="196" time="0.6169441" duration="0" repeat="0" ec="1440" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="197" time="0.00183262059" duration="1" repeat="0" ec="1450" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="198" time="0" duration="0.085" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="199" time="0.00429644948" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="200" time="0.594828844" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="201" time="0.6219812" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="202" time="0.6270149" duration="0.372985125" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="203" time="0.787169755" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="204" time="0.805833042" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="205" time="0.8241236" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="206" time="0.8473637" duration="0" repeat="0" ec="1450" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="207" time="0" duration="0" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="208" time="0" duration="0.55" repeat="0" ec="1450" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="209" time="0" duration="1" repeat="0" ec="1450" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="210" time="0" duration="1" repeat="0" ec="1450" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="211" time="0" duration="0.9986111" repeat="0" ec="1450" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="212" time="0.425642431" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="213" time="1.32021" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="214" time="0.272222221" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="215" time="1.31766117" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="216" time="0.283003569" duration="0" repeat="0" ec="1500" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="217" time="0.3077506" duration="0.82" repeat="0" ec="1500" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="218" time="0.732720256" duration="0.57" repeat="0" ec="1500" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="219" time="10.9007921" duration="0" repeat="0" ec="1520" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="220" time="0.272222221" duration="0" repeat="0" ec="1520" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="221" time="17.7682972" duration="2.69837" repeat="0" ec="1520" track="2" event="ART_DEF_VEFFECT_DUST_WAKE_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="222" time="8.658539" duration="7.7" repeat="0" ec="1520" track="3" event="ART_DEF_VEFFECT_DUST_WAKE_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="223" time="0" duration="3.3" repeat="0" ec="1520" track="4" event="ART_DEF_VEFFECT_DUST_WAKE_$(TERRAIN)" bone="WORLD_CENTER" />
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="224" time="0.272222221" duration="0" repeat="0" ec="1540" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="225" time="1.33782065" duration="1.28" repeat="0" ec="1540" track="2" event="ART_DEF_VEFFECT_DUST_WAKE_$(TERRAIN)" bone="FX_Drill_01" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="226" time="0.0574074052" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="227" time="1.2740742" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="228" time="0.0314814821" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="229" time="1.35925913" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_WORM_COMBAT_READY_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="230" time="1.12867367" duration="0" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="231" time="0.002150538" duration="0.597" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="232" time="0.31336" duration="0" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="233" time="0.5305643" duration="0" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="234" time="1.28799331" duration="0" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="235" time="1.14291489" duration="0.582" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="236" time="0.5305643" duration="0" repeat="0" ec="1560" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="237" time="0.144086" duration="0.54" repeat="0" ec="1560" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="238" time="0" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="239" time="0.231320426" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_WORM_ENTER_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="240" time="0.00215053768" duration="0.52" repeat="0" ec="1580" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="241" time="0.31336" duration="0" repeat="0" ec="1580" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="242" time="0.234408587" duration="0.46" repeat="0" ec="1580" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="243" time="0.5305643" duration="0" repeat="0" ec="1580" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="244" time="0.214814767" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_WORM_COMBAT_READY_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="245" time="0" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="246" time="0.122980982" duration="0" repeat="0" ec="1600" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="247" time="0.3111112" duration="0" repeat="0" ec="1600" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="248" time="0.130011827" duration="0.73" repeat="0" ec="1600" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="249" time="0.122222193" duration="0" repeat="0" ec="1600" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerSound" id="250" time="1.07068" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="251" time="0" duration="0" repeat="0" ec="1640" track="1" event="AS3D_UNIT_WORM_COMBAT_READY_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="252" time="0.448530376" duration="0.8181364" repeat="0" ec="1640" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="253" time="1.16523278" duration="0" repeat="0" ec="1640" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="254" time="1.19386613" duration="0" repeat="0" ec="1640" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="255" time="0" duration="0" repeat="0" ec="1650" track="1" event="AS3D_UNIT_WORM_COMBAT_READY_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="256" time="0.6888887" duration="0.5" repeat="0" ec="1650" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="257" time="0.627777636" duration="0" repeat="0" ec="1650" track="1" event="AS3D_UNIT_WORM_ENTER_DIRT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="258" time="0.648907065" duration="0" repeat="0" ec="1650" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="259" time="0" duration="1.1" repeat="0" ec="1650" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="260" time="1.09615564" duration="0" repeat="0" ec="1650" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="261" time="0.68508935" duration="0.47" repeat="0" ec="1650" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerEffect" id="262" time="3.11429572" duration="0" repeat="0" ec="1800" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="263" time="3.13942575" duration="0" repeat="0" ec="1800" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="264" time="2.22260356" duration="1.08" repeat="0" ec="1800" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="265" time="8.300991" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="266" time="12.6925249" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="267" time="0.5851852" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_IDLE_MOVE_6S" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="268" time="0.629629731" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="269" time="0.5925926" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="270" time="12.8182421" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_IDLE_MOVE_4S" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="271" time="7.26395464" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="272" time="7.303956" duration="0" repeat="0" ec="2000" track="1" event="AS3D_UNIT_WORM_IDLE_MOVE_4S" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="273" time="2.303615" duration="4.23" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="274" time="9.3087635" duration="0" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="275" time="10.4016867" duration="0" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="276" time="9.20105" duration="2.61" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="277" time="14.6625891" duration="1.45" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="278" time="15.0267124" duration="0" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="279" time="15.4786062" duration="0" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="280" time="2.86004758" duration="0" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="281" time="4.017072" duration="0" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="282" time="5.66996527" duration="0" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="283" time="3.953413" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="284" time="10.0267115" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="285" time="0.5897435" duration="5.73" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="286" time="0.6308852" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="287" time="10.7222013" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="288" time="11.3109884" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="289" time="12.8548965" duration="3.2" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="290" time="14.4113283" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="291" time="15.4914274" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="292" time="15.9401474" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_05" />
+    <trigger type="FTimedTriggerEffect" id="293" time="2.64762926" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="294" time="5.621247" duration="0" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="295" time="7.265156" duration="4.53" repeat="0" ec="2000" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="296" time="0.629629731" duration="0" repeat="0" ec="2040" track="1" event="AS3D_UNIT_WORM_IDLE_VOX" bone="" tier="-1" />
+    <trigger type="FTimedTriggerEffect" id="297" time="0.6365591" duration="0.77" repeat="0" ec="2040" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="298" time="3.4387095" duration="0.41" repeat="0" ec="2040" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+
+
+
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="299" time="0.6648149" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="300" time="0.860846341" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="301" time="0.5962963" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="302" time="0.986772358" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="303" time="0.948848963" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="304" time="0.9481482" duration="0.19" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="305" time="1.08888888" duration="0.14" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="306" time="1.14444458" duration="0.13" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="307" time="1.14444458" duration="0.13" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_GUNSHIP_AIRWAKE_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="308" time="1.08888888" duration="0.14" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_GUNSHIP_AIRWAKE_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="309" time="0.9481482" duration="0.19" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_GUNSHIP_AIRWAKE_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="310" time="0" duration="1.6" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerAction" id="311" time="0.675882" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="312" time="1.1918087" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="313" time="0.9881053" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="314" time="1.07329059" duration="0" repeat="0" ec="2100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="315" time="0.392485" duration="1.2" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+    <trigger type="FTimedTriggerEffect" id="316" time="0.575224459" duration="0.24" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerEffect" id="317" time="0.955486" duration="0.65" repeat="0" ec="2100" track="5" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerEffect" id="318" time="0.394431561" duration="1.1" repeat="0" ec="2100" track="6" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="319" time="0.02962963" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_WORM_DEATH_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="320" time="0" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_WORM_IMPACT_$(WEAPON)" bone="" tier="-1" />
+    <trigger type="FTimedTriggerSound" id="321" time="1.35926092" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_WORM_BODY_FALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="322" time="1.094446" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_WORM_BODY_FALL" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="323" time="0" duration="1.19" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="324" time="0.121111095" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_ARMOR_DEATH_SM_$(WEAPON)" bone="SB_WormBody04" />
+    <trigger type="FTimedTriggerEffect" id="325" time="1.09629619" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="326" time="1.35410845" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleA04" />
+    <trigger type="FTimedTriggerEffect" id="327" time="1.433738" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerEffect" id="328" time="1.30966485" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleA01" />
+    <trigger type="FTimedTriggerEffect" id="329" time="1.33003473" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_IMPACT_SIDE_$(TERRAIN)" bone="SB_TentacleC04" />
+    <trigger type="FTimedTriggerAction" id="330" time="1.12969279" duration="0" repeat="0" ec="2200" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="331" time="1.16723549" duration="0" repeat="0" ec="2200" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="332" time="1.19453931" duration="0" repeat="0" ec="2200" track="4" action="1" />
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="333" time="0.0204603579" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_WORM_RUN_LOOP" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="334" time="0.00183262059" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_WORM_RUN_LOOP_$(TERRAIN)" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="335" time="0.0179028139" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_WORM_EMERGE" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="336" time="0" duration="0.51" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_01" />
+    <trigger type="FTimedTriggerEffect" id="337" time="0.0203703716" duration="0.65" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="338" time="0.152129278" duration="0" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="339" time="0.6169441" duration="0" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_04" />
+    <trigger type="FTimedTriggerEffect" id="340" time="0" duration="1.18" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="341" time="0.6169441" duration="0" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="342" time="1.026203" duration="0" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_03" />
+    <trigger type="FTimedTriggerEffect" id="343" time="0.00370370364" duration="0.7" repeat="0" ec="2440" track="4" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="344" time="0.268795818" duration="0" repeat="0" ec="2440" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="345" time="0.465092242" duration="0" repeat="0" ec="2440" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+    <trigger type="FTimedTriggerEffect" id="346" time="0.6169441" duration="0" repeat="0" ec="2440" track="4" event="ART_DEF_VEFFECT_DRILL_HOLES_$(TERRAIN)" bone="FX_Drill_02" />
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="347" time="0.534920335" duration="0" repeat="0" ec="3100" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="348" time="0.412962854" duration="0" repeat="0" ec="3100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="349" time="0.324073941" duration="0" repeat="0" ec="3100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="350" time="0.885185063" duration="0" repeat="0" ec="3100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="351" time="0.91825366" duration="0" repeat="0" ec="3100" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="352" time="0.7981481" duration="0.06" repeat="0" ec="3100" track="2" event="ART_DEF_VEFFECT_GUNSHIP_AIRWAKE_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="353" time="0.257142961" duration="1.03" repeat="0" ec="3100" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="354" time="0.939880967" duration="0.22" repeat="0" ec="3100" track="4" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+    <trigger type="FTimedTriggerAction" id="355" time="0.716666758" duration="0" repeat="0" ec="3100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="356" time="0.757407367" duration="0" repeat="0" ec="3100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="357" time="0.8592593" duration="0" repeat="0" ec="3100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="358" time="0.4065477" duration="0.375" repeat="0" ec="3100" track="4" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+    <trigger type="FTimedTriggerEffect" id="359" time="0.5791003" duration="0.285" repeat="0" ec="3100" track="5" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerEffect" id="360" time="0.940211535" duration="0.24" repeat="0" ec="3100" track="5" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerEffect" id="361" time="0.9131614" duration="0.25" repeat="0" ec="3100" track="6" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+    <trigger type="FTimedTriggerEffect" id="362" time="0.387235373" duration="0.41" repeat="0" ec="3100" track="6" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+
+
+
+
+
+
+    <trigger type="FTimedTriggerSound" id="363" time="0.324073941" duration="0" repeat="0" ec="4100" track="1" event="AS3D_UNIT_WORM_ATTACK_VOX" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="364" time="0.534920335" duration="0" repeat="0" ec="4100" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="365" time="0.8793648" duration="0" repeat="0" ec="4100" track="1" event="AS3D_UNIT_WORM_SWING" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="366" time="0.537036836" duration="0.1" repeat="0" ec="4100" track="2" event="ART_DEF_VEFFECT_SIEGE04S_AIRWAKE_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="367" time="0.56272167" duration="0" repeat="0" ec="4100" track="2" event="ART_DEF_VEFFECT_IMPACT_$(TERRAIN)" bone="FX_Drill_06" />
+    <trigger type="FTimedTriggerEffect" id="368" time="0.2195768" duration="1.35" repeat="0" ec="4100" track="3" event="ART_DEF_VEFFECT_DRILL_IN_$(TERRAIN)" bone="WORLD_CENTER" />
+    <trigger type="FTimedTriggerEffect" id="369" time="0.3755953" duration="0.2" repeat="0" ec="4100" track="4" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleB05" />
+    <trigger type="FTimedTriggerAction" id="370" time="0.5875048" duration="0" repeat="0" ec="4100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="371" time="0.57268995" duration="0" repeat="0" ec="4100" track="4" action="1" />
+    <trigger type="FTimedTriggerAction" id="372" time="0.5523196" duration="0" repeat="0" ec="4100" track="4" action="1" />
+    <trigger type="FTimedTriggerEffect" id="373" time="0.400859743" duration="0.17" repeat="0" ec="4100" track="5" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleC05" />
+    <trigger type="FTimedTriggerEffect" id="374" time="0.400000036" duration="0.18" repeat="0" ec="4100" track="6" event="ART_DEF_VEFFECT_TANK_MUZBLAST_01" bone="SB_TentacleA05" />
+  </triggers>
+</trigger_system>

@@ -1,0 +1,10 @@
+<Asset>
+  <Mesh file="KrakenNestOCEAN_DS.gr2" source="Max" />
+  <Texture file="Dig_Site_props_DIFF.dds" source="Max" />
+  <Texture file="Dig_Site_props_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <Texture file="KrakenNestOCEAN_DS_DIFF.dds" source="Max" />
+  <Texture file="KrakenNestOCEAN_DS_SREF.dds" source="Max" />
+</Asset>

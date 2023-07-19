@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context ID="AtlasFontsPreview" ColorSet="Beige_Black" Font="TwCenMT20" FontStyle="Shadow" >
+  <Label Anchor="C,C" Offset="0,0" ID="Preview"/>
+</Context>

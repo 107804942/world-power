@@ -1,0 +1,4111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/26 22:22:44 -->
+<GameData>
+
+	<!-- 载货量图标 -->
+	<IconFontTextures>
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_CARGOSPACE</IconFontTexture>
+			<IconFontTextureFile>airstrike</IconFontTextureFile>
+		</Row>
+	</IconFontTextures>
+	<IconFontMapping>
+		<Row>
+			<IconName>ICON_CARGOSPACE</IconName>
+			<IconMapping>1</IconMapping>
+			<IconFontTexture>ICON_FONT_TEXTURE_CARGOSPACE</IconFontTexture>
+		</Row>
+
+	</IconFontMapping>
+
+	
+	
+	
+	
+	<!-- 额外胜利 -->
+	<IconFontTextures>
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_EVC</IconFontTexture>
+			<IconFontTextureFile>EVCFontIcons</IconFontTextureFile>
+		</Row>
+	</IconFontTextures>
+	<IconFontMapping>
+		<Row>
+			<IconName>ICON_VICTORY_RELIGIOUS</IconName>
+			<IconMapping>1</IconMapping>
+			<IconFontTexture>ICON_FONT_TEXTURE_EVC</IconFontTexture>
+		</Row>
+		<Row>
+			<IconName>ICON_VICTORY_ECONOMIC</IconName>
+			<IconMapping>2</IconMapping>
+			<IconFontTexture>ICON_FONT_TEXTURE_EVC</IconFontTexture>
+		</Row>
+	</IconFontMapping>
+	
+	
+	
+	
+	<IconTextureAtlases>
+		<Row>
+			<Atlas>MOP_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>MOP_AC_UnitFlagAtlas.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>UNIT_EGYPT_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>MamlukFlag.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>MONK_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Flag_MONK.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+
+		<Row>
+			<Atlas>BLIALI_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Slinger_Flag.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		
+		
+
+		<Row>
+			<Atlas>UNITS_ZWEI_FREIKORPS_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Unit_Freikorps_Flag_32.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>SAS_BOMBARDE_FLAG</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>SasBombardFlag.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		
+		
+		<Row>
+			<Atlas>GLAD_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Gladiator_Flag_32.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>UNITS_ZWEI_FREIKORPS_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Unit_Freikorps_Flag_32.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>BeyondEarthUnitFlagAtlas.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>WONDER_UNIT_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>UnitPortraits256_DLC_WonderPack.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>WONDER_UNIT_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>UnitPortraits128_DLC_WonderPack.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>WONDER_UNIT_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>UnitPortraits80_DLC_WonderPack.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>WONDER_UNIT_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>UnitPortraits64_DLC_WonderPack.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>WONDER_UNIT_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>UnitPortraits45_DLC_WonderPack.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>UNITS_HELIOS_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>HeliosIcon_32.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+		<!--    Improvements / Unit Action Atlas    -->
+		<Row>
+			<Atlas>ROG_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>rog_Improvement_Atlas_256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>ROG_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>rog_Improvement_Atlas_064.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROG_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>rog_Improvement_Atlas_045.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Atlas>ROG_UU_FLAG_ATLAS3</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>ROG_UU_Flag_Atlas_3.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>5</IconsPerColumn>
+		</Row>
+
+		
+		
+		
+
+		<Row>
+		<Atlas>RFEMOD_FLAG_ATLAS</Atlas>
+		<IconSize>32</IconSize>
+		<Filename>RFEmod_flag_atlas_32.dds</Filename>
+		<IconsPerRow>8</IconsPerRow>
+		<IconsPerColumn>2</IconsPerColumn>
+	     </Row>
+
+
+		<Row>
+			<Atlas>MORE_NEW_PROMOS_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>MoreNewPromos-256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>MORE_NEW_PROMOS_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>MoreNewPromos-64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>MORE_NEW_PROMOS_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>MoreNewPromos-45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>MORE_NEW_PROMOS_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>MoreNewPromos-32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+
+
+		
+
+	
+
+		<Row>
+			<Atlas>ATLAS_DOOMGUY_FLAG</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>doomguy_unitflagatlas32.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+
+
+
+
+
+
+		
+		
+
+
+
+		<!--   新资源贴图    -->
+		<Row>
+			<Atlas>NEW_RESOURCE_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>NEW_Resources_Atlas_045.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEW_RESOURCE_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>NEW_Resources_Atlas_064.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEW_RESOURCE_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>NEW_Resources_Atlas_080.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEW_RESOURCE_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>NEW_Resources_Atlas_256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		
+		
+
+		<Row>
+			<Atlas>TECH_ATLAS_DLC_03</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>TechnologyAtlas256_Polynesia.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>TECH_ATLAS_DLC_03</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>TechnologyAtlas214_Polynesia.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>TECH_ATLAS_DLC_03</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>TechnologyAtlas128_Polynesia.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>TECH_ATLAS_DLC_03</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>TechnologyAtlas80_Polynesia.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>TECH_ATLAS_DLC_03</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>TechnologyAtlas64_Polynesia.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>TECH_ATLAS_DLC_03</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>TechnologyAtlas45_Polynesia.dds</Filename>
+			<IconsPerRow>3</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>SP_UNIT_ACTION_ATLAS2</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>UEDACTION64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+
+		<Row>
+			<Atlas>SP_UNIT_ACTION_ATLAS2</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>UEDACTION45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+
+
+
+		
+
+	
+
+	<Row>
+		<Atlas>TECH_ATLAS_DLC_07</Atlas>
+		<IconSize>256</IconSize>
+		<Filename>TechnologyAtlas256_DLC_07.dds</Filename>
+		<IconsPerRow>3</IconsPerRow>
+		<IconsPerColumn>3</IconsPerColumn>
+	</Row>
+	<Row>
+		<Atlas>TECH_ATLAS_DLC_07</Atlas>
+		<IconSize>214</IconSize>
+		<Filename>TechnologyAtlas214_DLC_07.dds</Filename>
+		<IconsPerRow>3</IconsPerRow>
+		<IconsPerColumn>3</IconsPerColumn>
+	</Row>
+	<Row>
+		<Atlas>TECH_ATLAS_DLC_07</Atlas>
+		<IconSize>128</IconSize>
+		<Filename>TechnologyAtlas128_DLC_07.dds</Filename>
+		<IconsPerRow>3</IconsPerRow>
+		<IconsPerColumn>3</IconsPerColumn>
+	</Row>
+	<Row>
+		<Atlas>TECH_ATLAS_DLC_07</Atlas>
+		<IconSize>80</IconSize>
+		<Filename>TechnologyAtlas80_DLC_07.dds</Filename>
+		<IconsPerRow>3</IconsPerRow>
+		<IconsPerColumn>3</IconsPerColumn>
+	</Row>
+	<Row>
+		<Atlas>TECH_ATLAS_DLC_07</Atlas>
+		<IconSize>64</IconSize>
+		<Filename>TechnologyAtlas64_DLC_07.dds</Filename>
+		<IconsPerRow>3</IconsPerRow>
+		<IconsPerColumn>3</IconsPerColumn>
+	</Row>
+	<Row>
+		<Atlas>TECH_ATLAS_2</Atlas>
+		<IconSize>45</IconSize>
+		<Filename>TechnologyAtlas45_DLC_07.dds</Filename>
+		<IconsPerRow>3</IconsPerRow>
+		<IconsPerColumn>3</IconsPerColumn>
+	</Row>
+	
+		
+		
+
+	<Row>
+		<Atlas>CIVIL_WAR_RESOURCE_ATLAS_EXP2</Atlas>
+		<IconSize>214</IconSize>
+		<Filename>EE_Flintlock_214.dds</Filename>
+		<IconsPerRow>1</IconsPerRow>
+		<IconsPerColumn>1</IconsPerColumn>
+	</Row>
+	<Row>
+		<Atlas>CIVIL_WAR_RESOURCE_ATLAS_EXP2</Atlas>
+		<IconSize>128</IconSize>
+		<Filename>EE_Flintlock_128.dds</Filename>
+		<IconsPerRow>1</IconsPerRow>
+		<IconsPerColumn>1</IconsPerColumn>
+	</Row>
+	<Row>
+		<Atlas>ENLIGHTENMENT_UNIT_FLAG_ATLAS</Atlas>
+		<IconSize>32</IconSize>
+		<Filename>Enlightenment_UnitFlags_32.dds</Filename>
+		<IconsPerRow>4</IconsPerRow>
+		<IconsPerColumn>3</IconsPerColumn>
+	</Row>
+
+
+	
+
+		<!--    Unit Flag Atlas    -->
+		<Row>
+			<Atlas>WAW_IMPROVEMENTS_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>WorldAtWarImprovementsFlagAtlas032.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+
+
+		<!--    Unit Action Atlas    -->
+		<Row>
+			<Atlas>WAW_IMPROVEMENTS_ACTION_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>WorldAtWarImprovementActionsAtlas045.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>WAW_IMPROVEMENTS_ACTION_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>WorldAtWarImprovementActionsAtlas064.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+
+
+
+		<!--    Unit Action Atlas    -->
+		<Row>
+			<Atlas>CANAL_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>Canal_SV_45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CANAL_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>Canal_SV_64.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+
+
+
+
+		
+
+		
+
+		<Row>
+			<Atlas>UNIT_T_800_TERMINATOR_FLAG</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Flag_T800.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+
+
+
+		<Row>
+			<Atlas>COASTAL_CANON_FLAG</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Flag_CoastalArt.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>UNIT_FGM_148_JAVELIN_SCHUETZE_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FGM_148_JAVELIN_SCHUETZE_Flag.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+
+
+
+
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>4ROBOT256.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>4ROBOT214.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>4ROBOT128.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>4ROBOT80.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>4ROBOT64.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>4ROBOT45.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>4ROBOT32.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS5</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>5ROBOT256.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS5</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>5ROBOT214.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS5</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>5ROBOT128.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS5</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>5ROBOT80.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS5</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>5ROBOT64.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS5</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>5ROBOT45.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS5</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>5ROBOT32.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS3</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>3ROBOT256.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS3</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>3ROBOT214.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS3</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>3ROBOT128.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS3</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>3ROBOT80.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS3</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>3ROBOT64.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS3</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>3ROBOT45.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS3</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>3ROBOT32.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>16</IconsPerColumn>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS2</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>2ROBOT256.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS2</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>2ROBOT214.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS2</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>2ROBOT128.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS2</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>2ROBOT80.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS2</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>2ROBOT64.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS2</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>2ROBOT45.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS2</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>2ROBOT32.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>ROBOT256.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>ROBOT214.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>ROBOT128.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>ROBOT80.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>ROBOT64.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>ROBOT45.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ROBOT_ICON_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>ROBOT32.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+		
+
+
+
+
+		<Row>
+			<Atlas>THIRD_ARMY_INFANTRY_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>HelghastThirdArmyInfantryFlags.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>THIRD_ARMY_APC_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>HelghastThirdArmyAPCFlags.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<Atlas>BF2142_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>BF2142PACFlagAtlas.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+
+
+		<Row>
+			<Atlas>IRON_BUDDHA_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FlagMingghan32.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+		
+	
+		
+	
+
+
+	
+		
+		
+
+
+		<Row>
+			<Atlas>UNIT_FLAG_ATLAS_2</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>UnitFlagAtlasWhiteTwo.dds</Filename>
+			<IconsPerRow>16</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+	
+
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>FWPromotionIconAtlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>FWPromotionIconAtlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>FWPromotionIconAtlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FWPromotionIconAtlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+	
+
+
+	
+
+
+		<Row>
+			<Atlas>SMAN_EXOTIC_UNIT_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>ExoticUnitFlagAtlas032.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>TTMOD_UNIT_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>TTOmod_flag_atlas_32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+
+
+
+		<Row>
+			<Atlas>FA_UNIT_FLAG_ATLAS_A</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>ArmyUnitFlagAtlasA032.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+		<Row>
+			<Atlas>CHINA_FIRE_CANNON_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Flag_New_Chariot.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<Atlas>SUI_UNIT_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>DjongFlag_032.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<Atlas>UNIT_MOD_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>UnitModFlagAtlasWhite.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FLAG_ATLAS_BE</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Atlas3.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BETECH</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>techatlas2.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BETECH2</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>techatlas.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BETECH</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>techatlas256.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BETECH</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>techatlas64.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BETECH</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>techatlas32.dds</Filename>
+			<IconsPerRow>2</IconsPerRow>
+			<IconsPerColumn>2</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BEUNIT</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>Atlas.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BEUNIT</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>Atlas128.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BEUNIT</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>Atlas64.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BEUNIT</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>Atlas32.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BEUNIT</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Atlas16.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>ATLAS_BEUNIT</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>Atlas80.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>SOVIET_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>ART/SovietUnitFlagAtlas.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FLAG_ATLAS_FUTURE</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FutureIcons1.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FLAG_ATLAS_FUTURE_2</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FutureIcons2.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FLAG_ATLAS_FUTURE_3</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FutureIcons3.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FLAG_ATLAS_FUTURE_4</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FutureIcons4.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FLAG_ATLAS_FUTURE_5</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FutureIcons5.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+
+	
+		<Row>
+			<Atlas>FLAG_ATLAS_FUTURE_8</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>FutureIcons8.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+		
+		<Row>
+			<Atlas>SMAN_IEUP_FLAG_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>InfoEraUnitPackFlagAtlas032.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+		
+
+
+
+		
+
+		
+		
+
+	
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_JAEGERS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>Jaeger256.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_JAEGERS</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>Jaeger214.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_JAEGERS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>Jaeger128.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_JAEGERS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>Jaeger80.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_JAEGERS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>Jaeger64.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_JAEGERS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>Jaeger45.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CIV_COLOR_ATLAS_JAEGERS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Jaeger32.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>VALERY_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>PromoIconAtlasx256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>VALERY_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>PromoIconAtlasx45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>VALERY_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>PromoIconAtlasx64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>VALERY_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>PromoIconAtlasx32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		
+	
+
+		<Row>
+			<Atlas>FW_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>Future2IconAtlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FW_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>Future2IconAtlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FW_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>Future2IconAtlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FW_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>Future2IconAtlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FW_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>48</IconSize>
+			<Filename>Future2IconAtlas48.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FW_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>Future2IconAtlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>FW_IMPROVEMENTS_ATLAS</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>Future2IconAtlas32.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+
+
+
+	</IconTextureAtlases>
+
+
+
+	<IconFontTextures>
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconFontTextureFile>FontIcons_Promotions6</IconFontTextureFile>
+		</Row>
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_SAFFRON</IconFontTexture>
+			<IconFontTextureFile>SaffronFontIcon_22</IconFontTextureFile>
+		</Row>
+		
+		
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_FOIEGRAS</IconFontTexture>
+			<IconFontTextureFile>foiegras_fonticons</IconFontTextureFile>
+		</Row>
+		
+
+		<!-- Group -->
+		<InsertOrAbort>
+			<IconFontTexture>ICON_FONT_TEXTURE_GROUP2</IconFontTexture>
+			<IconFontTextureFile>FontIcons_Group2</IconFontTextureFile>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconFontTextureFile>FontIcons_Promotions_New2</IconFontTextureFile>
+		</InsertOrAbort>
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconFontTextureFile>FontIcons_Promotions2</IconFontTextureFile>
+		</Row>
+
+		<!-- Group -->
+
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_RESOURCES</IconFontTexture>
+			<IconFontTextureFile>fonticons_new_Resources</IconFontTextureFile>
+		</Row>
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_RASPBERRYZ</IconFontTexture>
+			<IconFontTextureFile>raspberry-fonticon</IconFontTextureFile>
+		</Row>
+
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconFontTextureFile>HNRFontIconAtlas</IconFontTextureFile>
+		</Row>
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_TITANIUM</IconFontTexture>
+			<IconFontTextureFile>titanium-fonticons</IconFontTextureFile>
+		</Row>
+
+
+	
+
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_CUSTOM_EXAMPLE</IconFontTexture>
+			<IconFontTextureFile>CustomFontIcons</IconFontTextureFile>
+		</Row>
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconFontTextureFile>CityIcons</IconFontTextureFile>
+		</Row>
+
+
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_PLAGUE_ICONS</IconFontTexture>
+			<IconFontTextureFile>PlagueFontIcons_22</IconFontTextureFile>
+		</Row>
+
+
+		
+		
+
+
+		<InsertOrAbort>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconFontTextureFile>FontIcons_Promotions3</IconFontTextureFile>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS4</IconFontTexture>
+			<IconFontTextureFile>FontIcons_Promotions4</IconFontTextureFile>
+		</InsertOrAbort>
+
+
+		<InsertOrAbort>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconFontTextureFile>FontIcons_Promotions5</IconFontTextureFile>
+		</InsertOrAbort>
+		
+	</IconFontTextures>
+
+
+
+
+
+
+	<IconFontMapping>
+
+		<InsertOrAbort>
+			<IconName>ICON_GREAT_DOCTOR</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>10</IconMapping>
+		</InsertOrAbort>
+		
+		
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ELITE_UNIT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CUSTOM_EXAMPLE</IconFontTexture>
+			<IconMapping>82</IconMapping>
+		</InsertOrAbort>
+		
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_GROUP_EXTRA</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>106</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ELITE_EXTRA</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>111</IconMapping>
+		</InsertOrAbort>
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_SIGHT_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>72</IconMapping>
+		</InsertOrAbort>
+		
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_00_6</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS4</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_00_28</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS4</IconFontTexture>
+			<IconMapping>29</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_00_37</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS4</IconFontTexture>
+			<IconMapping>38</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_01_9</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>98</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_01_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>91</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_01_19</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>108</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_01_20</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>54</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_01_23</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</InsertOrAbort>
+		
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_PROMOMUC_01_26</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>73</IconMapping>
+		</InsertOrAbort>
+		
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_0</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_4</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_7</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_8</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>9</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_9</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>10</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_11</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_12</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</InsertOrAbort>
+
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_13</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_14</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>15</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_15</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>16</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_16</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>17</IconMapping>
+		</InsertOrAbort>
+
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_18</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>10</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_19</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>20</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_29</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</InsertOrAbort>
+		
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_22</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>23</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_24</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>24</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_25</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>25</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_26</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>26</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_27</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>27</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_28</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_40</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>42</IconMapping>
+		</InsertOrAbort>
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_41</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>43</IconMapping>
+		</InsertOrAbort>
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_42</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>11</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_43</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>44</IconMapping>
+		</InsertOrAbort>
+
+
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_44</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_45</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_46</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_47</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_51</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</InsertOrAbort>
+		
+		
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_49</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>39</IconMapping>
+		</InsertOrAbort>
+		
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_50</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>40</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_52</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>41</IconMapping>
+		</InsertOrAbort>
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_54</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>43</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_61</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>45</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_62</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>46</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MAIN_ROBOT_PROMO_63</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>47</IconMapping>
+		</InsertOrAbort>
+
+
+		
+		
+		
+		
+		
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_37</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>28</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_58</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>30</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>31</IconMapping>
+		</InsertOrAbort>
+	
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_5</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>33</IconMapping>
+		</InsertOrAbort>
+		
+	
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_32</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>44</IconMapping>
+		</InsertOrAbort>
+	
+
+	
+
+		
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_26</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>48</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_41</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>49</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_6</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>50</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_7</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>51</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_8</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>52</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_25</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>53</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_4</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>55</IconMapping>
+		</InsertOrAbort>
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS0</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>56</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>57</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_12</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>57</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>58</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS4</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>60</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS5</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>61</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS6</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>62</IconMapping>
+		</InsertOrAbort>
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS8</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>64</IconMapping>
+		</InsertOrAbort>
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS10</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>66</IconMapping>
+		</InsertOrAbort>
+		
+		
+		
+	   <InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS12</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>68</IconMapping>
+		</InsertOrAbort>
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS22</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>71</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_MORE_NEW_PROMOS_ATLAS23</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>72</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_57</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>75</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_42</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>76</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_20</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>77</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_SMETAL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>80</IconMapping>
+		</InsertOrAbort>
+
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_49</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>71</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_50</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>86</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_51</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>87</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_52</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>88</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_24</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>117</IconMapping>
+		</InsertOrAbort>	
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_13</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>118</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_14</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>50</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_15</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>51</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_16</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>52</IconMapping>
+		</InsertOrAbort>
+
+
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_28</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>74</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_29</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>75</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_30</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>76</IconMapping>
+		</InsertOrAbort>
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_60</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>119</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_62</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>120</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VALERY_ATLAS_63</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS3</IconFontTexture>
+			<IconMapping>121</IconMapping>
+		</InsertOrAbort>
+
+
+
+
+		<!--vp00 -->
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_4</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</InsertOrAbort>
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_5</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_6</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_7</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_9</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_11</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_12</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_13</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_14</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>9</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_16</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_17</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_18</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_19</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>15</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_20</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>16</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_21</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>17</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_22</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>18</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_23</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>19</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_24</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>20</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_27</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>21</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_36</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>22</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_38</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>23</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_39</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>24</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_40</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>25</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_41</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>26</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_42</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>27</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_43</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>28</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_44</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>29</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_45</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>30</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_46</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>31</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_47</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>32</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_51</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>33</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_53</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>34</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_54</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>35</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_58</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>36</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_59</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>37</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_60</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>38</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_61</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>39</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_62</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>40</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP00_63</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>41</IconMapping>
+		</InsertOrAbort>
+
+
+		  <!--vp01 -->
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>45</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_5</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>46</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_7</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>47</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_10</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>48</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_11</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>49</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_12</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>50</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_13</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>51</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_14</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>52</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_15</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>53</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_16</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>54</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_17</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>55</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_18</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>56</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_20</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>57</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_21</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>58</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_22</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>59</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_28</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>60</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_29</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>61</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_30</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>62</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_47</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>63</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_55</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>64</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_56</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>65</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_58</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>66</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_59</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>67</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_61</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>68</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP01_62</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>69</IconMapping>
+		</InsertOrAbort>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--vp02 -->
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_0</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>78</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>79</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>80</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>81</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_4</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>82</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_5</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>83</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_6</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>84</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_7</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>85</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_8</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>86</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_9</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>87</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_10</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>88</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_12</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>89</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_15</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>90</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_17</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>70</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_20</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>91</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_21</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>92</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_23</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>93</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_26</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>94</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_31</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>95</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_41</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>96</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_56</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>97</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_57</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>98</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_58</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>99</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_61</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>100</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_62</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>101</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP02_63</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>102</IconMapping>
+		</InsertOrAbort>
+
+
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_8</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>103</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_9</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>104</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_10</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>105</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_16</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>106</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_18</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>107</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_19</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>108</IconMapping>
+		</InsertOrAbort>
+		
+		
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_23</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>114</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_34</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>109</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_47</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>110</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_54</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>111</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_55</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>112</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_56</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>113</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_VP03_59</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>115</IconMapping>
+		</InsertOrAbort>
+
+
+
+
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ROBOT_PROMO_23</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>116</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ROBOT_PROMO_25</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>117</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ROBOT_PROMO_26</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>118</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ROBOT_PROMO_45</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>119</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ROBOT_PROMO_46</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>120</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_ROBOT_PROMO_54</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>121</IconMapping>
+		</InsertOrAbort>
+		
+		<InsertOrAbort>
+			<IconName>ICON_SPY_PROMOTION</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
+			<IconMapping>73</IconMapping>
+		</InsertOrAbort>
+		<!--LV -->
+		<Row>
+			<IconName>ICON_LV</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>31</IconMapping>
+		</Row>
+
+		<!--HP -->
+		<Row>
+			<IconName>ICON_HP</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>40</IconMapping>
+		</Row>
+		
+		<!--ICON_PLAGUE -->
+		<!--<Row>
+			<IconName>ICON_PLAGUE</IconName>	
+			<IconFontTexture>ICON_FONT_TEXTURE_PLAGUE_ICONS</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row> -->
+
+		<!--ICON_PLAGUE2 -->
+		<Row>
+			<IconName>ICON_PLAGUE2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>38</IconMapping>
+		</Row>
+
+		<!--ICON_ICON_HEALTH -->
+		<!--<Row>
+			<IconName>ICON_HEALTH</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>19</IconMapping>
+		</Row>-->
+		
+		
+		<!--人力图标替换 -->
+		<Update>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CUSTOM_EXAMPLE" IconMapping="80"/>
+			<Where IconName="ICON_RES_MANPOWER"/>
+		</Update>
+
+
+		<!-- Promotion -->
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ACCURACY_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ACCURACY_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ACCURACY_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AMBUSH_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AMBUSH_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AMBUSH_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BARRAGE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BARRAGE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BARRAGE_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>9</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AMPHIBIOUS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>10</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BLITZ</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>11</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BOMBARDMENT_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BOMBARDMENT_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BOMBARDMENT_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COVER_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>15</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COVER_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>16</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COVER_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>17</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_DOGFIGHTING_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>18</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_DOGFIGHTING_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>19</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_DOGFIGHTING_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>20</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_EMBARKATION</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>21</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_LOGISTICS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>22</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_DRILL_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>23</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_DRILL_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>24</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_DRILL_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>25</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HUNTDOWN_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>26</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HUNTDOWN_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>27</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HUNTDOWN_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>28</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SHOCK_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>29</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SHOCK_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>30</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SHOCK_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>31</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_INSTA_HEAL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>32</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MARCH</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>33</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FORMATION_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>34</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FORMATION_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>35</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FORMATION_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>36</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_INTERCEPTION_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>37</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_INTERCEPTION_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>38</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_INTERCEPTION_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>39</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SIEGE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>40</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SIEGE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>41</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SIEGE_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>42</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_EVASION</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>43</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SENTRY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>44</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SURVIVALISM_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>45</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SURVIVALISM_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>46</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SURVIVALISM_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>47</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_TARGETING_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>48</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_TARGETING_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>49</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_TARGETING_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>50</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SCOUTING_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>51</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SCOUTING_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>52</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SCOUTING_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>53</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_VOLLEY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>54</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_WOODSMAN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>55</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BOARDING_PARTY_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>56</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BOARDING_PARTY_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>57</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BOARDING_PARTY_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>58</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COASTAL_RAIDER_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>59</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COASTAL_RAIDER_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>60</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COASTAL_RAIDER_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>61</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SORTIE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>62</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SORTIE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>63</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AMBITION</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>64</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ENEMY_BLADE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>65</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_EVIL_SPIRITS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>66</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CHARGE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>67</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CHARGE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>68</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CHARGE_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>69</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ARMOR_PLATING_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>70</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ARMOR_PLATING_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>71</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ARMOR_PLATING_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>72</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_LIGHTNING_WARFARE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>73</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SAPPER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>74</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HEROISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>75</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_INVULNERABIILITY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>76</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MYSTIC_BLADE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>77</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FLIGHT_DECK_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>78</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FLIGHT_DECK_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>79</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FLIGHT_DECK_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>80</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_WOLFPACK_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>81</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_WOLFPACK_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>82</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_WOLFPACK_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>83</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AMMUNITION_SUPPLY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>84</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_OUTFLANK</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>85</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_RECRUITMENT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>86</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_RESTLESSNESS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>87</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SNEAK_ATTACK</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>88</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ALTITUDE_TRAINING</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>89</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_DESERT_WARRIOR</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>90</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_GOLDEN_AGE_POINTS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>91</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_GOODY_HUT_PICKER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>92</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FREE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>93</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_PARADROP_PILLAGE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>94</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FREE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>95</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_PARADROP_MOBILITY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>96</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COLLATERAL_DAMAGE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>97</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COLLATERAL_DAMAGE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>98</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COLLATERAL_DAMAGE_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>99</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_EXTENDED_PARADROP</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>100</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_TRADE_MISSION_BONUS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>101</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_BUFFALO_CHEST</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>102</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HOMELAND_GUARDIAN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>103</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SELL_EXOTIC_GOODS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>104</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SPACE_ELEVATOR</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>105</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_GROUP</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>106</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_RANGE_REDUCE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>107</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_COMBAT_REDUCE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>108</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MOBILITY_REDUCE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>109</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SIGHT_REDUCE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>110</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ELITE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>111</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_NEGATIVE_ATTRIBUTES</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>112</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ABILITY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>113</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ATTRIBUTES</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>114</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SUPPLY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>115</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MEDIC</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>116</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MOBILITY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>117</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_RANGE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>118</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_INDIRECT_FIRE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>119</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_REPAIR</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>120</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_REPAIR_II</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS2</IconFontTexture>
+			<IconMapping>121</IconMapping>
+		</InsertOrAbort>
+		
+		
+		
+		<!-- Promotion - New -->
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_INFANTRY_COMBAT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_GUNPOWDER_INFANTRY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ANTI_MOUNTED</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ANTI_TANK</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ARCHERY_COMBAT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CITY_SIEGE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SPLASH_DAMAGE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SPECIAL_FORCES</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_PENETRATION</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>9</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MORAL_WEAKEN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>10</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MOVEMENT_LOST</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>11</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MILITIA_COMBAT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_KNIGHT_COMBAT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_TANK_COMBAT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HITANDRUN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>15</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HELI_ATTACK</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>16</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_NAVALMELEE_COMBAT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>17</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_NAVAL_HIT_AND_RUN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>18</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_NAVAL_CAPITAL_SHIP</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>19</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_LOSE_SUPPLY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>20</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FIGHTER_SIEGE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>21</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FIGHTER_SIEGE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>22</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SUBMARINE_COMBAT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>23</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARRIER_UNIT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>24</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ANTI_AIR_II</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>25</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AIR_ATTACK</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>26</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_STRATEGIC_BOMBER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>27</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARRIER_FIGHTER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>28</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_NAVAL_RANGED_SHIP</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>29</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_ANTI_AIR_III</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>30</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_PARADROP</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>31</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_GREAT_GENERAL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>32</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CAN_MOVE_AFTER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>33</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_EVASION_I</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>34</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_EMP_ATTACK</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>35</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARRIER_SUPPLY_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>36</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARRIER_SUPPLY_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>37</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_MISSILE_CARRIER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>38</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CHARGE_NEW_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>39</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CHARGE_NEW_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>40</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CHARGE_NEW_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>41</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CLUSTER_ROCKET_II</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>42</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FIRESUPPORT_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>43</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FIRESUPPORT_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>44</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SUNDER_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>45</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SUNDER_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>46</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SUNDER_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>47</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HUNTDOWN_NEW_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>48</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HUNTDOWN_NEW_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>49</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HUNTDOWN_NEW_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>50</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARGO_I</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>51</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARGO_II</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>52</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARGO_IV</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>53</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARGO_VI</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>54</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CARGO_IX</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>55</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CQB_COMBAT_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>56</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_CQB_COMBAT_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>57</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_FASTER_HEAL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>58</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AIR_TARGETING_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>59</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AIR_TARGETING_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>60</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_AIR_TARGETING_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>61</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_GREEN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>62</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SIGEL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>63</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HUGER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>64</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_SICKLES</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>65</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_PROMOTION_NEW_HOWARD</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>66</IconMapping>
+		</InsertOrAbort>
+		
+		
+		
+		
+
+		<!-- Group -->
+		<InsertOrAbort>
+			<IconName>ICON_SGM_GROUP_FIX_ON</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_GROUP2</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_SGM_GROUP_FIX_ACT_ON</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_GROUP2</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_SGM_GROUP_FIX_ALL_ON</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_GROUP2</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_SGM_GROUP_FIX_OFF</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_GROUP2</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_SGM_GROUP_FIX_ACT_OFF</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_GROUP2</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>ICON_SGM_GROUP_FIX_ALL_OFF</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_GROUP2</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</InsertOrAbort>
+		<!-- Group -->
+
+
+		<InsertOrAbort>
+			<IconName>PROMOTION_CHARGE_1</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>45</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>PROMOTION_CHARGE_2</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>46</IconMapping>
+		</InsertOrAbort>
+		<InsertOrAbort>
+			<IconName>PROMOTION_CHARGE_3</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_PROMOTIONS2</IconFontTexture>
+			<IconMapping>47</IconMapping>
+		</InsertOrAbort>
+
+
+
+
+
+
+		<Row>
+			<IconName>ICON_RES_SAFFRON</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_SAFFRON</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+
+
+
+		<Row>
+			<IconName>ICON_RES_TNT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_RESOURCES</IconFontTexture>
+			<IconMapping>57</IconMapping>
+		</Row>
+		
+		
+
+		<Row>
+			<IconName>ICON_RES_GUNPOWDER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_RESOURCES</IconFontTexture>
+			<IconMapping>56</IconMapping>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<IconName>ICON_RES_HARDWOOD</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_RESOURCES</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_RES_SULFUR</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_RESOURCES</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</Row>
+
+
+
+
+		<Row>
+			<IconName>ICON_FRU_RASPBERRY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_NEW_RESOURCES</IconFontTexture>
+			<IconMapping>25</IconMapping>
+		</Row>
+
+
+
+		<Row>
+			<IconName>ICON_RES_MANGO</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_CACAO</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_FLAX</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</Row>
+
+
+
+		<Row>
+			<IconName>ICON_RES_POPPY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_ALOEVERA</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_RES_TIN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_RES_BARLEY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>11</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_WILDBERRIES</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_LUMBER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_MAHOGANY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_MANGANESE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>15</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_COCONUT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>18</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_RUBBER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>19</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_RES_CORN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>21</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_APPLE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>22</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_BLUEBERRY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>23</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_EMERALD</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>24</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_RES_LAVENDER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>26</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_LEAD</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>27</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_NICKEL</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>28</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_OATS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>29</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_PEANUT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>30</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_PINEAPPLE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>31</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_PLATINUM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>32</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_POTATOE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>33</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_RUBY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>34</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_SAPPHIRE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>35</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_SOYBEAN</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>36</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_RES_SUNFLOWER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>37</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_RES_CLAY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_HNR</IconFontTexture>
+			<IconMapping>39</IconMapping>
+		</Row>
+
+
+		<Row>
+			<IconName>ICON_RES_TITANIUM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_TITANIUM</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_UPANEL_HP</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS6</IconFontTexture>
+			<IconMapping>11</IconMapping>
+		</Row>
+	
+	</IconFontMapping>
+		
+		
+		
+		
+		
+		
+	
+
+
+
+
+
+
+	<IconTextureAtlases>
+	<!-- New Unit Promotion -->
+	<InsertOrAbort>
+		<Atlas>GROUP_PROMOTION_ATLAS2</Atlas>
+		<IconSize>32</IconSize>
+		<Filename>PromotionsUnionSquare32_Exp2_CivilWar.dds</Filename>
+		<IconsPerRow>5</IconsPerRow>
+		<IconsPerColumn>5</IconsPerColumn>
+	</InsertOrAbort>
+	<InsertOrAbort>
+		<Atlas>GROUP_PROMOTION_ATLAS2</Atlas>
+		<IconSize>45</IconSize>
+		<Filename>Promotions45_Exp2_CivilWar.dds</Filename>
+		<IconsPerRow>5</IconsPerRow>
+		<IconsPerColumn>5</IconsPerColumn>
+	</InsertOrAbort>
+	<InsertOrAbort>
+		<Atlas>GROUP_PROMOTION_ATLAS2</Atlas>
+		<IconSize>64</IconSize>
+		<Filename>Promotions64_Exp2_CivilWar.dds</Filename>
+		<IconsPerRow>5</IconsPerRow>
+		<IconsPerColumn>5</IconsPerColumn>
+	</InsertOrAbort>
+	<InsertOrAbort>
+		<Atlas>GROUP_PROMOTION_ATLAS2</Atlas>
+		<IconSize>256</IconSize>
+		<Filename>PromotionsUnion256_Exp2_CivilWar.dds</Filename>
+		<IconsPerRow>5</IconsPerRow>
+		<IconsPerColumn>5</IconsPerColumn>
+	</InsertOrAbort>
+	</IconTextureAtlases>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--宗教图标替换-->
+
+	<IconTextureAtlases>
+		<!--Define all sizes of the icon atlas (16, 24, 32, 48, 64, 80, 128, 214, and 256).-->
+		<!--Conventionally, only up to 128 seemed to be needed, but for whatever reason the mod would not function without 214 and 256.-->
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>16</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored16_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>24</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored24_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored32_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>48</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored48_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored64_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored80_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored128_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored214_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CALYPSO_RELIGIONS_ATLAS_MOD_BASIC</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>CalypsoReligiousSymbolsColored256_basic.dds</Filename>
+			<IconsPerRow>5</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+	</IconTextureAtlases>
+	<IconFontTextures>
+		<!--Define the modded font icons file.-->
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconFontTextureFile>CalypsoReligiousSymbolsFontIcons_basic</IconFontTextureFile>
+		</Row>
+	</IconFontTextures>
+	<IconFontMapping>
+		<!--Direct each modded icon to its respective spot on the mod's font icon file.-->
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_PANTHEON</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_BUDDHISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_CHRISTIANITY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_CONFUCIANISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_HINDUISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_ISLAM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_JUDAISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_SHINTO</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>8</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_SIKHISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>9</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_TAOISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>10</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_TENGRIISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>11</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_ZOROASTRIANISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>12</IconMapping>
+		</Row>
+		<!--Direct the scenario religions to their font icons.-->
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_ORTHODOXY</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>13</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CALYPSO_RELIGION_PROTESTANTISM</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC</IconFontTexture>
+			<IconMapping>14</IconMapping>
+		</Row>
+		<!--Even though the font icons for each religion have been redirected and will now be featured when hovering over cities, religious icons already used in game text will not be changed. This only applies to the Papal Primacy scenario belief, which uses the Christianity font icon. Updating the base icon fixes that.-->
+		<Update>
+			<Where IconName="ICON_RELIGION_CHRISTIANITY"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="2"/>
+		</Update>
+		<!--Update the rest just because it's good practice.-->
+		<!--Actually, this makes sure that if anyone runs this mod with another mod that has text that uses base game religious font icons, these will be replaced accordingly.-->
+		<Update>
+			<Where IconName="ICON_RELIGION_PANTHEON"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="7"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_BUDDHISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="1"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_CONFUCIANISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="3"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_HINDUISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="4"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_ISLAM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="5"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_JUDAISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="6"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_SHINTO"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="8"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_SIKHISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="9"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_TAOISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="10"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_TENGRIISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="11"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_ZOROASTRIANISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="12"/>
+		</Update>
+		<!--It's unlikely somebody makes and uses a mod with the Renaissance Scenario that also features something new that uses the other scenario font icons, but you never know.-->
+		<Update>
+			<Where IconName="ICON_RELIGION_ORTHODOXY"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="13"/>
+		</Update>
+		<Update>
+			<Where IconName="ICON_RELIGION_PROTESTANTISM"/>
+			<Set IconFontTexture="ICON_FONT_TEXTURE_CALYPSO_RELIGION_MOD_BASIC" IconMapping="14"/>
+		</Update>
+
+
+		<Row>
+			<IconName>ICON_RES_FOIEGRAS</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_FOIEGRAS</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+	</IconFontMapping>
+</GameData>

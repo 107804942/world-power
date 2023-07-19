@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+
+
+	<Audio_2DSounds>
+
+
+		<!--定向能量炮-->
+
+		<Row>
+			<ScriptID>AS2D_BIRTH_SIEGE01</ScriptID>
+			<SoundID>SND_BUILD_SIEGE01</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS2D_SELECT_SIEGE01</ScriptID>
+			<SoundID>SND_SELECT_SIEGE01</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+
+		<!--悬浮攻城炮-->
+
+		<Row>
+			<ScriptID>AS2D_BUILD_FW_HOVERTANK</ScriptID>
+			<SoundID>SND_BUILD_FW_HOVERTANK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS2D_SELECT_FW_HOVERTANK</ScriptID>
+			<SoundID>SND_SELECT_FW_HOVERTANK</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<!--机动橇-->	
+		
+           <Row>
+			<ScriptID>AS2D_BUILD_REAPER_DRONE</ScriptID>
+			<SoundID>SND_BUILD_REAPER_DRONE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS2D_SELECT_REAPER_DRONE</ScriptID>
+			<SoundID>SND_SELECT_REAPER_DRONE</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<!--粒子炮战舰-->	
+		
+           <Row>
+			<ScriptID>AS2D_SELECT_PARTICLE_CANNON</ScriptID>
+			<SoundID>SND_SELECT_PARTICLE_CANNON</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+		<Row>
+			<ScriptID>AS2D_BUILD_PARTICLE_CANNON</ScriptID>
+			<SoundID>SND_BUILD_PARTICLE_CANNON</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+   <!--星际战舰粒子炮-->	
+		
+            <Row>
+			<ScriptID>AS2D_SELECT_SIEGE04H</ScriptID>
+			<SoundID>SND_SELECT_SIEGE04H</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_SIEGE04H</ScriptID>
+			<SoundID>SND_BUILD_SIEGE04H</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<!--星际战舰-->
+		<Row>
+			<ScriptID>AS2D_SELECT_SPACESHIP</ScriptID>
+			<SoundID>SND_SELECT_SPACESHIP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_SPACESHIP</ScriptID>
+			<SoundID>SND_BUILD_SPACESHIP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+		<!--cndr-->
+		<Row>
+			<ScriptID>AS2D_SELECT_CNDR</ScriptID>
+			<SoundID>SND_SELECT_CNDR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_CNDR</ScriptID>
+			<SoundID>SND_BUILD_CNDR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+		<!--幽灵特战-->
+		<Row>
+			<ScriptID>AS2D_SELECT_GHOST</ScriptID>
+			<SoundID>SND_SELECT_GHOST</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_GHOST</ScriptID>
+			<SoundID>SND_BUILD_GHOST</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+		<!--机甲巨兵-->
+		<Row>
+			<ScriptID>AS2D_SELECT_AEGIS</ScriptID>
+			<SoundID>SND_SELECT_AEGIS</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_AEGIS</ScriptID>
+			<SoundID>SND_BUILD_AEGIS</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+
+		<!--战争机器-->
+		<Row>
+			<ScriptID>AS2D_SELECT_FW_AUTOMATON</ScriptID>
+			<SoundID>SND_SELECT_FW_AUTOMATON</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_FW_AUTOMATON</ScriptID>
+			<SoundID>SND_BUILD_FW_AUTOMATON</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+		<!--动力装甲-->
+		<Row>
+			<ScriptID>AS2D_SELECT_FW_BATTLESUIT</ScriptID>
+			<SoundID>SND_SELECT_FW_BATTLESUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_FW_BATTLESUIT</ScriptID>
+			<SoundID>SND_BUILD_FW_BATTLESUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+		<!--圣盾-->
+		<Row>
+			<ScriptID>AS2D_SELECT_BATTLESUIT</ScriptID>
+			<SoundID>SND_SELECT_BATTLESUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_BATTLESUIT</ScriptID>
+			<SoundID>SND_BUILD_BATTLESUIT</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+	
+		<!--电磁炮驱逐舰-->
+		<Row>
+			<ScriptID>AS2D_SELECT_NAVALFIGHTER03S</ScriptID>
+			<SoundID>SND_SELECT_NAVALFIGHTER03S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_NAVALFIGHTER03S</ScriptID>
+			<SoundID>SND_BUILD_NAVALFIGHTER03S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+
+
+
+
+
+
+
+
+		<!--sabr-->
+		<Row>
+			<ScriptID>AS2D_SELECT_SABR</ScriptID>
+			<SoundID>SND_SELECT_SABR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_SABR</ScriptID>
+			<SoundID>SND_BUILD_SABR</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<!--泰坦战舰-->
+		<Row>
+			<ScriptID>AS2D_SELECT_NAVALFIGHTER03P</ScriptID>
+			<SoundID>SND_SELECT_NAVALFIGHTER03P</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_NAVALFIGHTER03P</ScriptID>
+			<SoundID>SND_BUILD_NAVALFIGHTER03P</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<!--angel-->
+		<Row>
+			<ScriptID>AS2D_SELECT_ANGEL</ScriptID>
+			<SoundID>SND_SELECT_ANGEL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_ANGEL</ScriptID>
+			<SoundID>SND_BUILD_ANGEL</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+		<!--反物质-->
+		<Row>
+			<ScriptID>AS2D_SELECT_ANTIMATTER_EXPLOSION</ScriptID>
+			<SoundID>SND_SELECT_ANTIMATTER_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_ANTIMATTER_EXPLOSION</ScriptID>
+			<SoundID>SND_BUILD_ANTIMATTER_EXPLOSION</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<!--利维坦-->
+		<Row>
+			<ScriptID>AS2D_SELECT_SUBMARINE_04S</ScriptID>
+			<SoundID>SND_SELECT_SUBMARINE_04S</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>70</MaxVolume>
+			<MinVolume>70</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+
+		<!--大海怪-->
+		<Row>
+			<ScriptID>AS2D_SELECT_NAVAL_MONSTER</ScriptID>
+			<SoundID>SND_SELECT_NAVAL_MONSTER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_NAVAL_MONSTER</ScriptID>
+			<SoundID>SND_BUILD_NAVAL_MONSTER</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+		<!--章鱼-->
+		<Row>
+			<ScriptID>AS2D_SELECT_HOVER_WORM</ScriptID>
+			<SoundID>SND_SELECT_HOVER_WORM</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<Row>
+			<ScriptID>AS2D_BUILD_HOVER_WORM</ScriptID>
+			<SoundID>SND_BUILD_HOVER_WORM</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+		<!--幻像-->
+		<Row>
+			<ScriptID>AS2D_BUILD_RANGEDMARINE04SP</ScriptID>
+			<SoundID>SND_SELECT_RANGEDMARINE04SP</SoundID>
+			<SoundType>GAME_SFX</SoundType>
+			<MaxVolume>100</MaxVolume>
+			<MinVolume>100</MinVolume>
+			<IsMusic>1</IsMusic>
+		</Row>
+
+
+
+	</Audio_2DSounds>
+
+     <Audio_Sounds>
+
+		 <!--幻像-->
+		 <Row>
+			 <SoundID>SND_SELECT_RANGEDMARINE04SP</SoundID>
+			 <Filename>SelectRangedMarine04SP</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+		 
+		  
+		 <!--章鱼-->
+		 <Row>
+			 <SoundID>SND_SELECT_HOVER_WORM</SoundID>
+			 <Filename>SelectRocktopus</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_HOVER_WORM</SoundID>
+			 <Filename>BirthRocktopus</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+		 <!--大海怪-->
+		 <Row>
+			 <SoundID>SND_SELECT_NAVAL_MONSTER</SoundID>
+			 <Filename>SelectKraken</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_NAVAL_MONSTER</SoundID>
+			 <Filename>BirthKraken</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+		 <!--利维坦-->
+		 <Row>
+			 <SoundID>SND_SELECT_SUBMARINE_04S</SoundID>
+			 <Filename>SelectSubmarine03S</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 
+		 
+		 
+		 
+		 
+
+		 <!--反物质炸弹-->
+		 <Row>
+			 <SoundID>SND_SELECT_ANTIMATTER_EXPLOSION</SoundID>
+			 <Filename>ra2nukeSelect</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_ANTIMATTER_EXPLOSION</SoundID>
+			 <Filename>ra2nukeSelect</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 
+		 
+		 
+		 <!--定向能量炮-->
+		 <Row>
+			 <SoundID>SND_SELECT_SIEGE01</SoundID>
+			 <Filename>selectsiege01</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_SIEGE01</SoundID>
+			 <Filename>birthsiege01</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 
+		 
+		 
+
+		 <!--悬浮攻城炮-->
+		 <Row>
+			 <SoundID>SND_SELECT_FW_HOVERTANK</SoundID>
+			 <Filename>selectsiege03s</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_FW_HOVERTANK</SoundID>
+			 <Filename>birthsiege03s</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 
+		 <!--CNDR-->
+		 <Row>
+			 <SoundID>SND_SELECT_CNDR</SoundID>
+			 <Filename>selectcndr</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_CNDR</SoundID>
+			 <Filename>selectcndr</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+<!--机动橇-->
+                          <Row>
+			<SoundID>SND_SELECT_REAPER_DRONE</SoundID>
+			<Filename>SelectAutosled</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		 <Row>
+			 <SoundID>SND_BUILD_REAPER_DRONE</SoundID>
+			 <Filename>BirthAutosled</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+<!--粒子炮战舰-->
+                          <Row>
+			<SoundID>SND_SELECT_PARTICLE_CANNON</SoundID>
+			<Filename>SelectNavalFighter04HS</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		 <Row>
+			 <SoundID>SND_BUILD_PARTICLE_CANNON</SoundID>
+			 <Filename>BirthNavalFighter04HS</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+<!--星际战舰粒子炮-->
+                          <Row>
+			<SoundID>SND_SELECT_SIEGE04H</SoundID>
+			<Filename>SelectSatellite</Filename>
+			<LoadType>DynamicResident</LoadType>
+		</Row>
+		 <Row>
+			 <SoundID>SND_BUILD_SIEGE04H</SoundID>
+			 <Filename>BirthSatellite</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+ <!--星际战舰-->
+		 <Row>
+			 <SoundID>SND_SELECT_SPACESHIP</SoundID>
+			 <Filename>SelectSatellite</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_SPACESHIP</SoundID>
+			 <Filename>BirthSatellite</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+
+
+		 <!--幽灵特战队-->
+		 <Row>
+			 <SoundID>SND_SELECT_GHOST</SoundID>
+			 <Filename>selectexplorer</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_GHOST</SoundID>
+			 <Filename>selectexplorer</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 
+		 <!--机甲巨兵-->
+		 <Row>
+			 <SoundID>SND_SELECT_AEGIS</SoundID>
+			 <Filename>selectaegis</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_AEGIS</SoundID>
+			 <Filename>selectaegis</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+		 <!--行星切割炮-->
+		 <!--	 <Row>
+			 <SoundID>SND_SELECT_LEVTANK</SoundID>
+			 <Filename>selectsiege03p</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_LEVTANK</SoundID>
+			 <Filename>selectsiege03p</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>-->
+
+
+
+
+
+		 <!--战争机器-->
+		 <Row>
+			 <SoundID>SND_SELECT_FW_AUTOMATON</SoundID>
+			 <Filename>selectcavalry03p</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_FW_AUTOMATON</SoundID>
+			 <Filename>selectcavalry03p</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+
+		 <!--动力装甲-->
+		 <Row>
+			 <SoundID>SND_SELECT_FW_BATTLESUIT</SoundID>
+			 <Filename>selectangel</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_FW_BATTLESUIT</SoundID>
+			 <Filename>selectangel</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <!--圣盾-->
+		 <Row>
+			 <SoundID>SND_SELECT_BATTLESUIT</SoundID>
+			 <Filename>selectbattlesuit</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_BATTLESUIT</SoundID>
+			 <Filename>selectbattlesuit</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+		 <!--泰坦战舰-->
+		 <Row>
+			 <SoundID>SND_SELECT_NAVALFIGHTER03P</SoundID>
+			 <Filename>SelectNavalFighter04SP</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_NAVALFIGHTER03P</SoundID>
+			 <Filename>BirthNavalFighter04SP</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+
+
+
+		 <!--电磁炮驱逐舰-->
+		 <Row>
+			 <SoundID>SND_SELECT_NAVALFIGHTER03S</SoundID>
+			 <Filename>selectnavalfighter03s</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_NAVALFIGHTER03S</SoundID>
+			 <Filename>birthnavalfighter03s</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+
+
+
+
+
+		 <!--SABR-->
+		 <Row>
+			 <SoundID>SND_SELECT_SABR</SoundID>
+			 <Filename>selectsabr</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_SABR</SoundID>
+			 <Filename>birthsabr</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+
+		 <!--ANGEL-->
+		 <Row>
+			 <SoundID>SND_SELECT_ANGEL</SoundID>
+			 <Filename>selectangel</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+		 <Row>
+			 <SoundID>SND_BUILD_ANGEL</SoundID>
+			 <Filename>birthangel</Filename>
+			 <LoadType>DynamicResident</LoadType>
+		 </Row>
+
+	 </Audio_Sounds>
+
+
+
+
+
+
+	<UnitGameplay2DScripts>
+
+		<Row>
+			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
+			<SelectionSound>AS2D_SELECT_CHARIOT_ARCHER</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_CHARIOT_ARCHER</FirstSelectionSound>
+		</Row>
+		<Row>
+			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
+			<SelectionSound>AS2D_SELECT_CANNON</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_CANNON</FirstSelectionSound>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_GLADIATOR</UnitType>
+			<SelectionSound>AS2D_SELECT_LONGSWORDSMAN</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_LONGSWORDSMAN</FirstSelectionSound>
+		</Row>
+
+		<Delete UnitType="UNIT_SATELLITE_ORBITAL_STRIKE"/>
+		<!--喷火-->
+		<Row>
+			<UnitType>UNIT_CHINA_FIRE_CANNON</UnitType>
+			<SelectionSound>AS2D_SELECT_CANNON</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_CANNON</FirstSelectionSound>
+		</Row>
+
+
+		<!--五牙-->
+		<Row>
+			<UnitType>UNIT_SUI_FLEET</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
+		</Row>
+
+		<!--大海怪-->
+		<Row>
+			<UnitType>UNIT_NAVAL_MONSTER</UnitType>
+			<SelectionSound>AS2D_SELECT_NAVAL_MONSTER</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_NAVAL_MONSTER</FirstSelectionSound>
+		</Row>
+
+
+		<!--乌尔班-->
+		<Row>
+			<UnitType>UNIT_URBAN_CANNON</UnitType>
+			<SelectionSound>AS2D_SELECT_CANNON</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_CANNON</FirstSelectionSound>
+		</Row>
+
+		<!--上帝之杖-->
+		<Row>
+			<UnitType>UNIT_SATELLITE_ORBITAL_STRIKE</UnitType>
+			<SelectionSound>AS2D_SELECT_SPACESHIP</SelectionSound>
+			<FirstSelectionSound>AS2D_SELECT_SPACESHIP</FirstSelectionSound>
+		</Row>
+
+		<!--反物质炸弹-->
+		<Row>
+			<UnitType>UNIT_ANTIMATTER_EXPLOSION</UnitType>
+			<SelectionSound>AS2D_SELECT_ANTIMATTER_EXPLOSION</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_ANTIMATTER_EXPLOSION</FirstSelectionSound>
+		</Row>
+
+
+		<!--质量发射器-->
+		<Row>
+			<UnitType>UNIT_CITADEL_FUTURE</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
+		</Row>
+
+		<!--悬浮攻城炮-->
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<SelectionSound>AS2D_SELECT_FW_HOVERTANK</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_FW_HOVERTANK</FirstSelectionSound>
+		</Row>
+		<!--星际战舰-->
+		<Row>
+			<UnitType>UNIT_SPACESHIP</UnitType>
+			<SelectionSound>AS2D_SELECT_SPACESHIP</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_SPACESHIP</FirstSelectionSound>
+		</Row>
+
+
+		<!--粒子炮战舰-->
+
+
+		<Delete UnitType="UNIT_PARTICLE_CANNON"/>
+
+		<Row>
+			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
+			<SelectionSound>AS2D_SELECT_PARTICLE_CANNON</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_PARTICLE_CANNON</FirstSelectionSound>
+		</Row>
+
+
+
+		<!--星际战舰粒子炮-->
+		<Row>
+			<UnitType>UNIT_SIEGE04H</UnitType>
+			<SelectionSound>AS2D_SELECT_SIEGE04H</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_SIEGE04H</FirstSelectionSound>
+		</Row>
+
+
+
+
+
+
+		<!--幽灵特战队-->
+		<Row>
+			<UnitType>UNIT_GHOST</UnitType>
+			<SelectionSound>AS2D_BUILD_GHOST</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_GHOST</FirstSelectionSound>
+		</Row>
+
+
+
+
+		<!--CNDR-->
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<SelectionSound>AS2D_SELECT_CNDR</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_CNDR</FirstSelectionSound>
+		</Row>
+
+
+		<!--AESIG-->
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<SelectionSound>AS2D_SELECT_AEGIS</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_AEGIS</FirstSelectionSound>
+		</Row>
+
+
+
+
+		<!--悬浮毁灭者-->
+		<Row>
+			<UnitType>UNIT_LEVDESTROYER</UnitType>
+			<SelectionSound>AS2D_SELECT_SPACESHIP</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_SPACESHIP</FirstSelectionSound>
+		</Row>
+
+
+		<!--战争机器-->
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<SelectionSound>AS2D_SELECT_FW_AUTOMATON</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_FW_AUTOMATON</FirstSelectionSound>
+		</Row>
+
+
+		<!--动力装甲-->
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<SelectionSound>AS2D_SELECT_FW_BATTLESUIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_FW_BATTLESUIT</FirstSelectionSound>
+		</Row>
+		<!--圣盾-->
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<SelectionSound>AS2D_SELECT_BATTLESUIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_BATTLESUIT</FirstSelectionSound>
+		</Row>
+
+
+		<!--重型机甲-->
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<SelectionSound>AS2D_SELECT_MECH</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_MECH</FirstSelectionSound>
+		</Row>
+
+		<!--变压器-->
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<SelectionSound>AS2D_SELECT_MECH</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_MECH</FirstSelectionSound>
+		</Row>
+
+		<!--电磁炮驱逐舰-->
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<SelectionSound>AS2D_SELECT_NAVALFIGHTER03S</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_NAVALFIGHTER03S</FirstSelectionSound>
+		</Row>
+
+
+
+		<!--SABR-->
+
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<SelectionSound>AS2D_SELECT_SABR</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_SABR</FirstSelectionSound>
+		</Row>
+
+
+
+
+		<!--泰坦战舰-->
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<SelectionSound>AS2D_SELECT_NAVALFIGHTER03P</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_NAVALFIGHTER03P</FirstSelectionSound>
+		</Row>
+
+
+
+		<!--ANGEL-->
+
+		<Row>
+			<UnitType>UNIT_ANGEL</UnitType>
+			<SelectionSound>AS2D_SELECT_ANGEL</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_ANGEL</FirstSelectionSound>
+		</Row>
+
+		<!--FW_VERTOL-->
+
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_HELICOPTER_GUNSHIP</FirstSelectionSound>
+		</Row>
+
+
+
+		<!--p1500-->
+		<Row>
+			<UnitType>UNIT_P1500</UnitType>
+			<SelectionSound>AS2D_SELECT_TANK</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_TANK</FirstSelectionSound>
+		</Row>
+
+
+
+		<!--SUPER_MISSILE-->
+		<Row>
+			<UnitType>UNIT_SUPER_MISSILE</UnitType>
+			<SelectionSound>AS2D_SELECT_GUIDED_MISSILE</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_GUIDED_MISSILE</FirstSelectionSound>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<SelectionSound>AS2D_SELECT_SIEGE01</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_SIEGE01</FirstSelectionSound>
+		</Row>
+
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<SelectionSound>AS2D_SELECT_BATTLESHIP</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_BATTLESHIP</FirstSelectionSound>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<SelectionSound>AS2D_SELECT_CARRIER</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_CARRIER</FirstSelectionSound>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<SelectionSound>AS2D_SELECT_INFANTRY</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_INFANTRY</FirstSelectionSound>
+		</Row>
+
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<SelectionSound>AS2D_SELECT_MOBILE_SAM</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_MOBILE_SAM</FirstSelectionSound>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<SelectionSound>AS2D_SELECT_NAVALFIGHTER03S</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_NAVALFIGHTER03S</FirstSelectionSound>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<SelectionSound>AS2D_SELECT_CARRIER</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_CARRIER</FirstSelectionSound>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<SelectionSound>AS2D_SELECT_SUBMARINE_04S</SelectionSound>
+			<FirstSelectionSound>AS2D_SELECT_SUBMARINE_04S</FirstSelectionSound>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<SelectionSound>AS2D_SELECT_JET_FIGHTER</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_JET_FIGHTER</FirstSelectionSound>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<SelectionSound>AS2D_SELECT_STEALTH_BOMBER</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_STEALTH_BOMBER</FirstSelectionSound>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<SelectionSound>AS2D_SELECT_JET_FIGHTER</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_JET_FIGHTER</FirstSelectionSound>
+		</Row>
+
+
+
+
+
+		<!-- 医学家 -->
+	
+		<Row>
+			<UnitType>UNIT_ERALY_DOCTOR</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
+		</Row>
+
+		<!-- 铁浮图-->
+
+		<Row>
+			<UnitType>UNIT_IRON_BUDDHA</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
+		</Row>
+
+
+		<!-- 章鱼-->
+
+		<Row>
+			<UnitType>UNIT_HOVER_WORM</UnitType>
+			<SelectionSound>AS2D_SELECT_HOVER_WORM</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_HOVER_WORM</FirstSelectionSound>
+		</Row>
+
+
+		<!-- 投石-->
+
+		<Row>
+			<UnitType>UNIT_BLIALI</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
+		</Row>
+		
+		<!-- 幻像-->
+
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<SelectionSound>AS2D_BUILD_RANGEDMARINE04SP</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_RANGEDMARINE04SP</FirstSelectionSound>
+		</Row>
+		
+
+
+		<!-- 桨帆船 -->
+		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
+		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
+
+		<!-- 炮艇 -->
+		<Delete UnitType="UNIT_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete UnitType="UNIT_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
+
+		<!-- 加拿大空军 -->
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+
+
+		<Delete UnitType="UNIT_BAZOOKA"/>
+		<Delete UnitType="UNIT_SHOSHONE_PATHFINDER"/>
+		
+		<Delete UnitType="UNIT_BAZOOKA"/>
+		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
+		<Delete UnitType="UNIT_ASSYRIAN_SCUD_MISSILE"/>
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+	</UnitGameplay2DScripts>
+
+</GameData>

@@ -1,0 +1,17 @@
+<Asset>
+  <Mesh file="BargeAlgae_HB.gr2" source="Max" />
+  <Texture file="Barge_CN_DIFF.dds" source="Max" />
+  <Texture file="Barge_CN_SREF.dds" source="Max" />
+  <Texture file="Barge_PL_DIFF.dds" source="Max" />
+  <Texture file="Barge_PL_SREF.dds" source="Max" />
+  <Texture file="HBKit_DIFF.dds" source="Max" />
+  <Texture file="HBKit_SREF.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <TimedTrigger file="FX_Triggers_BargeAlgaeHB.ftsxml" source="Tool" model="HB_BargeAlgae" state="1" />
+  <DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+  <BoneUsage>
+    <Bone name="FX_AlgaeHB" />
+  </BoneUsage>
+</Asset>

@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/23 20:26:21 -->
+<GameData>
+	
+
+
+
+
+	<!--************************************单位********************************-->
+	<Units>
+
+		
+
+		<!--太阳能卫星-->
+		<Row>
+			<Class>UNITCLASS_SATELLITE_SOLAR</Class>
+			<Type>UNIT_SATELLITE_SOLAR</Type>
+			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
+			<Cost>2300</Cost>
+			<Moves>2</Moves>
+			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_SPACESHIP_PART</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SATELLITE_SOLAR</Description>
+			<Civilopedia>TXT_KEY_UNIT_SATELLITE_SOLAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SATELLITEUNITS_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SATELLITE_SOLAR_HELP</Help>
+			<AdvancedStartCost>-1</AdvancedStartCost>
+			<CombatLimit>0</CombatLimit>
+			<UnitArtInfo>ART_DEF_UNIT_SS_STASIS_CHAMBER</UnitArtInfo>
+			<UnitFlagIconOffset>85</UnitFlagIconOffset>
+			<PortraitIndex>117</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<MoveRate>QUADRUPED</MoveRate>
+			<ExtraMaintenanceCost>19</ExtraMaintenanceCost>
+			<ProjectPrereq>PROJECT_APOLLO_PROGRAM</ProjectPrereq>
+		</Row>
+		
+
+
+		<!--战机-->
+		<Row>
+			<Class>UNITCLASS_AIRFIGHTER03P</Class>
+			<Type>UNIT_AIRFIGHTER03P</Type>
+			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<RangedCombat>660</RangedCombat>
+			<Cost>2600</Cost>
+			<Moves>3</Moves>
+			<Immobile>true</Immobile>
+			<Range>35</Range>
+			<AirInterceptRange>35</AirInterceptRange>
+			<HurryCostModifier>125</HurryCostModifier>
+			<Special>SPECIALUNIT_STEALTH</Special>
+			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
+			<Domain>DOMAIN_AIR</Domain>
+			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_AIRFIGHTER03P</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_AIRFIGHTER03P_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_AIR_FIGHTERS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_ANTI_AIR_II_HELP</Help>
+			<RangeAttackOnlyInDomain>true</RangeAttackOnlyInDomain>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>100</AdvancedStartCost>
+			<AirUnitCap>1</AirUnitCap>
+			<RangedCombatLimit>100</RangedCombatLimit>
+			<CombatLimit>0</CombatLimit>
+			<XPValueAttack>6</XPValueAttack>
+			<XPValueDefense>6</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_REJETFIGHT</UnitArtInfo>
+			<UnitFlagIconOffset>17</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>22</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<MoveRate>AIR_REBASE</MoveRate>
+			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
+		</Row>
+
+
+
+		<!--歼击机-->
+		<Row>
+			<Class>UNITCLASS_AIRFIGHTER04P</Class>
+			<Type>UNIT_AIRFIGHTER04P</Type>
+			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<RangedCombat>550</RangedCombat>
+			<Cost>2600</Cost>
+			<Moves>3</Moves>
+			<Immobile>true</Immobile>
+			<Range>30</Range>
+			<Special>SPECIALUNIT_STEALTH</Special>
+			<HurryCostModifier>125</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_ARCHER</CombatClass>
+			<Domain>DOMAIN_AIR</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_AIRFIGHTER04P</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_AIRFIGHTER04P_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_AIR_ATTACK_AIRCRAFTS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_AIR_ATTACK_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>120</AdvancedStartCost>
+			<AirUnitCap>1</AirUnitCap>
+			<RangedCombatLimit>100</RangedCombatLimit>
+			<CombatLimit>0</CombatLimit>
+			<XPValueAttack>6</XPValueAttack>
+			<XPValueDefense>6</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_F53</UnitArtInfo>
+			<UnitFlagIconOffset>37</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>48</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<MoveRate>AIR_REBASE</MoveRate>
+			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
+		</Row>
+
+
+
+
+
+
+
+		<!--轰炸机-->
+		<Row>
+			<Class>UNITCLASS_FW_DRONE_FIGHTER_2</Class>
+			<Type>UNIT_FW_DRONE_FIGHTER_2</Type>
+			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<RangedCombat>780</RangedCombat>
+			<Cost>6300</Cost>
+			<Moves>2</Moves>
+			<Immobile>true</Immobile>
+			<Range>50</Range>
+			<Special>SPECIALUNIT_STEALTH</Special>
+			<CombatClass>UNITCOMBAT_ARCHER</CombatClass>
+			<Domain>DOMAIN_AIR</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_FW_DRONE_FIGHTER_2</Description>
+			<Civilopedia>TXT_KEY_UNIT_FW_DRONE_FIGHTER_2_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_AIR_STRATEGIC_BOMBERS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_STRATEGIC_BOMBER_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>160</AdvancedStartCost>
+			<AirUnitCap>1</AirUnitCap>
+			<RangedCombatLimit>100</RangedCombatLimit>
+			<CombatLimit>0</CombatLimit>
+			<XPValueAttack>7</XPValueAttack>
+			<XPValueDefense>7</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_FW_DRONE_FIGHTER_2</UnitArtInfo>
+			<UnitFlagIconOffset>21</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>71</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<MoveRate>AIR_REBASE</MoveRate>
+			<ExtraMaintenanceCost>190</ExtraMaintenanceCost>
+			<HurryCostModifier>220</HurryCostModifier>
+		</Row>
+
+
+
+
+
+
+
+		<!--舰载机-->
+
+		
+		<Row>
+			<Class>UNITCLASS_CARRIER_FIGHTER_STORM</Class>
+			<Type>UNIT_CARRIER_FIGHTER_STORM</Type>
+			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+			<RangedCombat>530</RangedCombat>
+			<Cost>-1</Cost>
+			<Moves>4</Moves>
+			<Immobile>true</Immobile>
+			<Range>30</Range>
+			<AirInterceptRange>20</AirInterceptRange>
+			<HurryCostModifier>100</HurryCostModifier>
+			<PurchaseOnly>true</PurchaseOnly>
+			<Special>SPECIALUNIT_FIGHTER</Special>
+			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
+			<Domain>DOMAIN_AIR</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CARRIER_FIGHTER_STORM</Description>
+			<Civilopedia>TXT_KEY_UNIT_CARRIER_FIGHTER_STORM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_AIRCRAFT_CARRIERS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>50</AdvancedStartCost>
+			<AirUnitCap>1</AirUnitCap>
+			<RangedCombatLimit>100</RangedCombatLimit>
+			<CombatLimit>0</CombatLimit>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_RSTEALTHBOMBER2</UnitArtInfo>
+			<UnitFlagIconOffset>5</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>217</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<MoveRate>AIR_REBASE</MoveRate>
+			<ShowInPedia>false</ShowInPedia>
+			<ExtraMaintenanceCost>170</ExtraMaintenanceCost>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<Row>
+			<Class>UNITCLASS_CARRIER_FIGHTER_FUTURE</Class>
+			<Type>UNIT_CARRIER_FIGHTER_FUTURE</Type>
+			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<RangedCombat>480</RangedCombat>
+			<Cost>-1</Cost>
+			<Moves>4</Moves>
+			<Immobile>true</Immobile>
+			<Range>25</Range>
+			<AirInterceptRange>20</AirInterceptRange>
+			<HurryCostModifier>100</HurryCostModifier>
+			<PurchaseOnly>true</PurchaseOnly>
+			<Special>SPECIALUNIT_FIGHTER</Special>
+			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
+			<Domain>DOMAIN_AIR</Domain>
+			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_CARRIER_FIGHTER_FUTURE</Description>
+			<Civilopedia>TXT_KEY_UNIT_CARRIER_FIGHTER_FUTURE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_AIRCRAFT_CARRIERS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>50</AdvancedStartCost>
+			<AirUnitCap>1</AirUnitCap>
+			<RangedCombatLimit>100</RangedCombatLimit>
+			<CombatLimit>0</CombatLimit>
+			<XPValueAttack>4</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_F52</UnitArtInfo>
+			<UnitFlagIconOffset>5</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>23</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<MoveRate>AIR_REBASE</MoveRate>
+			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
+		</Row>
+		
+		
+		<Row>
+			<Class>UNITCLASS_SUPER_MISSILE</Class>
+			<Type>UNIT_SUPER_MISSILE</Type>
+			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<RangedCombat>420</RangedCombat>
+			<Cost>-1</Cost>
+			<Moves>2</Moves>
+			<Immobile>true</Immobile>
+			<Range>18</Range>
+			<Special>SPECIALUNIT_MISSILE</Special>
+			<Domain>DOMAIN_AIR</Domain>
+			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SUPER_MISSILE</Description>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_SUPER_MISSILE_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SUPER_MISSILE_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_GUIDED_MISSILE</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
+			<Suicide>true</Suicide>
+			<AdvancedStartCost>40</AdvancedStartCost>
+			<AirUnitCap>1</AirUnitCap>
+			<RangedCombatLimit>100</RangedCombatLimit>
+			<CombatLimit>0</CombatLimit>
+			<XPValueDefense>2</XPValueDefense>
+			<UnitFlagAtlas>RFEMOD_FLAG_ATLAS</UnitFlagAtlas>
+			<UnitArtInfo>ART_DEF_UNIT_GUIDED_MISSILE</UnitArtInfo>
+			<UnitFlagIconOffset>5</UnitFlagIconOffset>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>65</PortraitIndex>
+			<MoveRate>AIR_REBASE</MoveRate>
+			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
+		</Row>
+
+	</Units>
+
+
+
+	<!--************************************晋升********************************-->
+	<Unit_FreePromotions>
+		
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<PromotionType>PROMOTION_CARRIER_FIGHTER</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<PromotionType>PROMOTION_HIGH_EXPLOSIVES</PromotionType>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<UnitType>UNIT_SATELLITE_SOLAR</UnitType>
+			<PromotionType>PROMOTION_SATELLITE_UNIT</PromotionType>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<PromotionType>PROMOTION_CARRIER_FIGHTER</PromotionType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<PromotionType>PROMOTION_STRATEGIC_BOMBER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<PromotionType>PROMOTION_EVASION_II</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<PromotionType>PROMOTION_EVASION_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<PromotionType>PROMOTION_AIR_ATTACK</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_SUPER_MISSILE</UnitType>
+			<PromotionType>PROMOTION_NO_CASUALTIES</PromotionType>
+		</Row>
+
+
+
+
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+		<Delete UnitType="UNIT_ASSYRIAN_SCUD_MISSILE"/>
+	</Unit_FreePromotions>
+
+
+
+	<!--************************************资源消耗********************************-->
+	<Unit_ResourceQuantityRequirements>
+		
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+		
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>4</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+             <Cost>3</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>20</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<ResourceType>RESOURCE_URANIUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>2</Cost>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+	</Unit_ResourceQuantityRequirements>
+
+
+
+	<!--************************************ai********************************-->
+	
+	
+	
+	<Unit_AITypes>
+
+
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+		
+		
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
+			<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_SUPER_MISSILE</UnitType>
+			<UnitAIType>UNITAI_MISSILE_AIR</UnitAIType>
+		</Row>
+		
+		
+		
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARRIER_FIGHTER_FUTURE</UnitType>
+			<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
+		</Row>
+		
+		
+		
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitAIType>UNITAI_CITY_BOMBARD</UnitAIType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<UnitAIType>UNITAI_RANGED</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<UnitAIType>UNITAI_CITY_SPECIAL</UnitAIType>
+		</Row>
+
+	</Unit_AITypes>
+
+
+
+	<!--************************************倾向********************************-->
+	<Unit_Flavors>
+		
+        <Delete UnitType="UNIT_ASSYRIAN_SCUD_MISSILE"/>
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+
+		<Row>
+			<UnitType>UNIT_SATELLITE_SOLAR</UnitType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>999</Flavor>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<FlavorType>FLAVOR_AIR</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<FlavorType>FLAVOR_NUKE</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		
+		
+		
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<FlavorType>FLAVOR_AIR</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<FlavorType>FLAVOR_RANGED</FlavorType>
+			<Flavor>105</Flavor>
+		</Row>
+
+
+		<Row>
+		<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+		<FlavorType>FLAVOR_AIR</FlavorType>
+		<Flavor>45</Flavor>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+		<FlavorType>FLAVOR_ANTIAIR</FlavorType>
+		<Flavor>65</Flavor>
+	</Row>
+
+	</Unit_Flavors>
+
+
+
+
+
+
+	<Units>
+
+		<Update>
+			<Set  RangedCombat="220"/>
+			<Where Type="UNIT_GUIDED_MISSILE" />
+		</Update>
+
+		<Update>
+			<Set  Cost="2800"/>
+			<Where Type="UNIT_ATOMIC_BOMB" />
+		</Update>
+
+		<Update>
+			<Set  Cost="5000"/>
+			<Where Type="UNIT_NUCLEAR_MISSILE" />
+		</Update>
+		
+		<Update>
+			<Set  Cost="7000"/>
+			<Where Type="UNIT_ICBM_MISSILE" />
+		</Update>
+
+
+		
+	<Delete Type="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+		
+
+
+	<Update>
+		<Set  UnitArtInfo="ART_DEF_UNIT_F-14" IconAtlas="ROBOT_ICON_ATLAS2" PortraitIndex="49"  />
+		<Where Type="UNIT_ATTACK_AIRCRAFT" />
+	</Update>
+
+	<Update>
+		<Set  UnitArtInfo="ART_DEF_UNIT_PAKFA_T50" />
+		<Where Type="UNIT_JET_FIGHTER" />
+	</Update>
+	<Update>
+		<Set  UnitArtInfo="ART_DEF_UNIT_B1_LANCER888" Range="30"/>
+		<Where Type="UNIT_JET_BOMBER" />
+	</Update>
+
+	<Update>
+		<Set  UnitArtInfo="ART_DEF_UNIT_RSTEALTHBOMBER" Range="40"/>
+		<Where Type="UNIT_STEALTH_BOMBER" />
+	</Update>
+		
+	<Update>
+		<Set PrereqTech="TECH_RADAR"/>
+		<Where Type="UNIT_JAPANESE_ZERO" />
+	</Update>
+		
+	</Units>
+
+
+	<Unit_ClassUpgrades>
+
+
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+		
+	</Unit_ClassUpgrades>
+	
+</GameData>

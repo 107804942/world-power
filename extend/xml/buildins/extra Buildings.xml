@@ -1,0 +1,2143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2020/3/17 16:40:55 -->
+<GameData>
+
+
+
+		<Buildings>
+
+			<!-- ***************************原有建筑属性调整***************************-->
+
+			<Update>
+				<Set  PrereqTech="TECH_SAILING"/>
+				<Where Type="BUILDING_WOOD_DOCK" />
+			</Update>
+
+			<Update>
+				<Set  IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="229"/>
+				<Where Type="BUILDING_MAYA_BALLCOURT" />
+			</Update>
+
+			<Update>
+				<Set  IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="201"/>
+				<Where Type="BUILDING_ARABIA_ISIAMIC_UNIVERSITY" />
+			</Update>
+			
+			<Update>
+				<Set  PrereqTech="TECH_SOLAR_POWER"/>
+				<Where Type="BUILDING_SOLAR_PLANT" />
+			</Update>
+			<Update>
+				<Set  PrereqTech="TECH_SOLAR_POWER"/>
+				<Where Type="BUILDING_SPAIN_SOLAR10" />
+			</Update>
+			<Update>
+				<Set  PrereqTech="TECH_SOLAR_POWER"/>
+				<Where Type="BUILDING_DUTCH_DTP" />
+			</Update>
+
+
+
+			<Update>
+				<Set  PrereqTech="TECH_CITY_SCAPE"/>
+				<Where Type="BUILDING_STADIUM" />
+			</Update>
+
+			<Update>
+				<Set  PrereqTech="TECH_CITY_SCAPE"/>
+				<Where Type="BUILDING_BRAZIL_SCOCCER_FIELD" />
+			</Update>
+	
+			
+
+			<Update>
+				<Set IconAtlas="BW_ATLAS_1" PortraitIndex="32" PrereqTech="TECH_CONSTRUCTION"/>
+				<Where Type="BUILDING_WALLS" />
+			</Update>
+			<Update>
+				<Set    PrereqTech="TECH_CONSTRUCTION"/>
+				<Where Type="BUILDING_WALLS_OF_BABYLON" />
+			</Update>
+
+			<Update>
+				<Set    AllowsRangeStrike="true" ExtraCityHitPoints="0"/>
+				<Where Type="BUILDING_ARMORY" />
+			</Update>
+			
+			<Update>
+				<Set    AllowsRangeStrike="true" ExtraCityHitPoints="0"/>
+				<Where Type="BUILDING_IKANDA" />
+			</Update>
+			<Update>
+				<Set    AllowsRangeStrike="true" ExtraCityHitPoints="0"/>
+				<Where Type="BUILDING_BARRACKS" />
+			</Update>
+			
+
+			<Update>
+				<Set   AllowsRangeStrike="true" PrereqTech="TECH_FORTIFICATION"/>
+				<Where Type="BUILDING_ARSENAL" />
+			</Update>
+
+			<Update>
+				<Set    AllowsRangeStrike="true" ExtraAttacks="1"/>
+				<Where Type="BUILDING_MILITARY_BASE" />
+			</Update>
+			
+		
+			
+			<Update>
+				<Set  AllowsRangeStrike="true"/>
+				<Where Type="BUILDING_SHIPYARD" />
+			</Update>
+
+			<Update>
+				<Set   AllowsRangeStrike="true" />
+				<Where Type="BUILDING_MILITARY_ACADEMY" />
+			</Update>
+
+
+
+			<Update>
+				<Set    PrereqTech="TECH_CORPORATION"/>
+				<Where Type="BUILDING_FINANCE_COMPANY" />
+			</Update>
+
+
+			<Update>
+				<Set    PrereqTech="TECH_CORPORATION"/>
+				<Where Type="BUILDING_NATIONAL_FINANCE" />
+			</Update>
+
+			<Update>
+				<Set    PrereqTech="TECH_CORPORATION"/>
+				<Where Type="BUILDING_PROCURATORATE" />
+			</Update>
+
+			<Update>
+				<Set    PrereqTech="TECH_DRAMA"/>
+				<Where Type="BUILDING_CARTHAGINIAN_AGORA" />
+			</Update>
+
+
+			<Update>
+				<Set    PrereqTech="TECH_COMBUSTION"/>
+				<Where Type="BUILDING_MOTHERLAND_CALLS" />
+			</Update>
+
+			<Update>
+				<Set    NukeModifier="-50"/>
+				<Where Type="BUILDING_BOMB_SHELTER" />
+			</Update>
+
+			<Update>
+				<Set    PrereqTech="TECH_WOOD_WORKING"/>
+				<Where Type="BUILDING_CARAVANSARY" />
+			</Update>
+			<Update>
+				<Set    PrereqTech="TECH_WOOD_WORKING"/>
+				<Where Type="BUILDING_NATIONAL_CARAVANSARY" />
+			</Update>
+
+
+
+			<Update>
+				<Set    PrereqTech="TECH_LITERATURE"/>
+				<Where Type="BUILDING_ACADEMY" />
+			</Update>
+			<Update>
+				<Set    PrereqTech="TECH_LITERATURE"/>
+				<Where Type="BUILDING_WAT" />
+			</Update>
+			<Update>
+				<Set    PrereqTech="TECH_LITERATURE"/>
+				<Where Type="BUILDING_NATIONAL_COLLEGE" />
+			</Update>
+
+
+			<Update>
+				<Set    PrereqTech="TECH_ADVANCED_AGRICULTURE"/>
+				<Where Type="BUILDING_AQUEDUCT" />
+			</Update>
+			<Update>
+				<Set    PrereqTech="TECH_ADVANCED_AGRICULTURE"/>
+				<Where Type="BUILDING_BASILICA_CISTERN" />
+			</Update>
+			
+			
+
+
+			<Update>
+				<Set    PrereqTech="TECH_DRAMA"/>
+				<Where Type="BUILDING_AMPHITHEATER" />
+			</Update>
+			
+			
+			<Update>
+				<Set    PrereqTech="TECH_DRAMA"/>
+				<Where Type="BUILDING_NATIONAL_THEATRE" />
+			</Update>
+
+
+
+			<Update>
+				<Set    PrereqTech="TECH_WOOD_WORKING"/>
+				<Where Type="BUILDING_BAZAAR" />
+			</Update>
+
+
+			<Update>
+				<Set    PrereqTech="TECH_WOOD_WORKING"/>
+				<Where Type="BUILDING_VENICE_FONDACO" />
+			</Update>
+
+
+			<Update>
+				<Set  PrereqTech="TECH_REFINING"/>
+				<Where BuildingClass="BUILDINGCLASS_OIL_REFINERY" />
+			</Update>
+
+			<Update>
+				<Set  Cost="480"/>
+				<Where BuildingClass="BUILDINGCLASS_GARMENT_WORKSHOP" />
+			</Update>
+			
+			
+
+			<Delete Type="BUILDING_STELE"/>
+			<Delete Type="BUILDING_MONUMENT"/>
+			<Delete Type="BUILDING_BURIAL_TOMB"/>
+			<Delete Type="BUILDING_MUD_PYRAMID_MOSQUE"/>
+			<Delete Type="BUILDING_SHRINE"/>
+			<Delete Type="BUILDING_MAYA_PYRAMID"/>
+			<Delete Type="BUILDING_CANDI"/>
+
+
+
+
+			<!--卫生局-->
+			<Row>
+				<Type>BUILDING_HEALTH_BUREAU</Type>
+				<BuildingClass>BUILDINGCLASS_HEALTH_BUREAU</BuildingClass>
+				<Cost>480</Cost>
+				<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
+				<Help>TXT_KEY_BUILDING_HEALTH_BUREAU_HELP</Help>
+				<Description>TXT_KEY_BUILDING_HEALTH_BUREAU</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_HEALTH_BUREAU_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<ConquestProb>66</ConquestProb>
+				<PortraitIndex>27</PortraitIndex>
+			</Row>
+	
+			
+			
+
+			<!--食品市场-->
+			<Row>
+				<Type>BUILDING_SMALL_MARKET</Type>
+				<BuildingClass>BUILDINGCLASS_SMALL_MARKET</BuildingClass>
+				<Cost>480</Cost>
+				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+				<Help>TXT_KEY_BUILDING_SMALL_MARKET_HELP</Help>
+				<Description>TXT_KEY_BUILDING_SMALL_MARKET</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_SMALL_MARKET_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<ConquestProb>66</ConquestProb>
+				<PortraitIndex>1</PortraitIndex>
+				<PopulationChange>1</PopulationChange>		
+		     </Row>
+
+
+
+			<!--粮油精炼厂-->
+			<Row>
+				<Type>BUILDING_FOOD_REFINERIES</Type>
+				<BuildingClass>BUILDINGCLASS_FOOD_REFINERIES</BuildingClass>
+				<Cost>450</Cost>
+				<GoldMaintenance>4</GoldMaintenance>
+				<PrereqTech>TECH_REFINING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_FOOD_REFINERIES_HELP</Help>
+				<Description>TXT_KEY_BUILDING_FOOD_REFINERIES</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_FOOD_REFINERIES_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<ConquestProb>66</ConquestProb>
+				<PortraitIndex>19</PortraitIndex>
+			</Row>
+
+			<!--矿石精炼厂-->
+			<Row>
+				<Type>BUILDING_ORE_REFINERIES</Type>
+				<BuildingClass>BUILDINGCLASS_ORE_REFINERIES</BuildingClass>
+				<Cost>520</Cost>
+				<GoldMaintenance>4</GoldMaintenance>
+				<PrereqTech>TECH_REFINING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_ORE_REFINERIES_HELP</Help>
+				<Description>TXT_KEY_BUILDING_ORE_REFINERIES</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_ORE_REFINERIES_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<ConquestProb>66</ConquestProb>
+				<PortraitIndex>0</PortraitIndex>
+				<FoodKept>-5</FoodKept>
+			</Row>
+			
+
+
+			<!--监禁所-->
+			<Row>
+				<Type>BUILDING_LOCKUP</Type>
+				<BuildingClass>BUILDINGCLASS_LOCKUP</BuildingClass>
+				<Cost>300</Cost>
+				<GoldMaintenance>4</GoldMaintenance>
+				<PrereqTech>TECH_ADMINISTRATION</PrereqTech>
+				<Help>TXT_KEY_BUILDING_LOCKUP_HELP</Help>
+				<Description>TXT_KEY_BUILDING_LOCKUP</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_LOCKUP_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<EspionageModifier>-15</EspionageModifier>
+				<Happiness>-2</Happiness>
+				<ConquestProb>100</ConquestProb>
+				<PortraitIndex>247</PortraitIndex>
+			</Row>
+
+
+			<!--寺院-->
+			<Row>
+				<Type>BUILDING_CLOISTER</Type>
+				<BuildingClass>BUILDINGCLASS_CLOISTER</BuildingClass>
+				<Cost>50</Cost>
+				<GoldMaintenance>3</GoldMaintenance>
+				<PrereqTech>TECH_THEOLOGY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_CLOISTER_DESC</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_CLOISTER_TEXT</Civilopedia>
+				<Help>TXT_KEY_BUILDING_CLOISTER_HELP</Help>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<ConversionModifier>-10</ConversionModifier>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<Happiness>1</Happiness>
+				<PortraitIndex>57</PortraitIndex>
+			</Row>
+
+
+			
+
+			<!--自然博物馆-->
+			<Row>
+				<Type>BUILDING_AQUARIUM</Type>
+				<BuildingClass>BUILDINGCLASS_AQUARIUM</BuildingClass>
+				<Cost>330</Cost>
+				<PrereqTech>TECH_NATURAL_HISTORY</PrereqTech>
+				<GoldMaintenance>3</GoldMaintenance>
+				<Help>TXT_KEY_BUILDING_AQUARIUM_HELP</Help>
+				<Description>TXT_KEY_BUILDING_AQUARIUM</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_AQUARIUM_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<ConquestProb>66</ConquestProb>
+				<Happiness>2</Happiness>
+				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+				<SpecialistCount>1</SpecialistCount>
+				<PortraitIndex>109</PortraitIndex>
+			</Row>
+
+			<!--出版社-->
+			<Row>
+				<Type>BUILDING_PUBLISHER</Type>
+				<BuildingClass>BUILDINGCLASS_PUBLISHER</BuildingClass>
+				<Cost>290</Cost>
+				<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+				<Help>TXT_KEY_BUILDING_PUBLISHER_HELP</Help>
+				<Description>TXT_KEY_BUILDING_PUBLISHER</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_PUBLISHER_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<ConquestProb>70</ConquestProb>
+				<SpecialistCount>1</SpecialistCount>
+				<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
+				<GreatWorkCount>1</GreatWorkCount>
+				<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+				<GreatPeopleRateChange>1</GreatPeopleRateChange>
+				<PortraitIndex>246</PortraitIndex>
+			</Row>
+
+
+			<!--庄园-->
+			<Row>
+				<Type>BUILDING_JAIL</Type>
+				<BuildingClass>BUILDINGCLASS_JAIL</BuildingClass>
+				<Cost>300</Cost>
+				<GoldMaintenance>4</GoldMaintenance>
+				<PrereqTech>TECH_SOVEREIGNTY</PrereqTech>
+				<Help>TXT_KEY_BUILDING_JAIL_HELP</Help>
+				<Description>TXT_KEY_BUILDING_JAIL</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_JAIL_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+				<GreatWorkCount>1</GreatWorkCount>
+				<ConquestProb>80</ConquestProb>
+				<PortraitIndex>28</PortraitIndex>
+				<Happiness>2</Happiness>
+				<GreatPeopleRateModifier>15</GreatPeopleRateModifier>
+			</Row>
+
+			<!--火器坊-->
+			<Row>
+				<Type>BUILDING_FIREARM_WORKSHOP</Type>
+				<BuildingClass>BUILDINGCLASS_FIREARM_WORKSHOP</BuildingClass>
+				<Cost>350</Cost>
+				<GoldMaintenance>2</GoldMaintenance>
+				<PrereqTech>TECH_IMPERIALISM</PrereqTech>
+				<Help>TXT_KEY_BUILDING_FIREARM_WORKSHOP_HELP</Help>
+				<Description>TXT_KEY_BUILDING_FIREARM_WORKSHOP</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_FIREARM_WORKSHOP_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<SpecialistCount>1</SpecialistCount>
+				<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+				<GreatPeopleRateChange>1</GreatPeopleRateChange>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<ConquestProb>55</ConquestProb>
+				<PortraitIndex>126</PortraitIndex>
+			</Row>
+			
+			
+			<!--波兰城堡-->
+			<Row>
+				<Type>BUILDING_POLAND_BARBICAN</Type>
+				<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
+				<Cost>80</Cost>
+				<PrereqTech>TECH_ENGINEERING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_POLAND_BARBICAN_HELP</Help>
+				<Description>TXT_KEY_BUILDING_POLAND_BARBICAN</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_POLAND_BARBICAN_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>CASTLE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<Defense>5000</Defense>
+				<ExtraCityHitPoints>50</ExtraCityHitPoints>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<ArtInfoCulturalVariation>true</ArtInfoCulturalVariation>
+				<DisplayPosition>1</DisplayPosition>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>235</PortraitIndex>
+				<!--<TrainedFreePromotion>PROMOTION_UNIT_POLAND_BARBICAN</TrainedFreePromotion>--> 
+				<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+				<TechEnhancedTourism>2</TechEnhancedTourism>
+			</Row>
+
+
+			<!--乡村小屋-->
+			<Row>
+				<Type>BUILDING_LODGE</Type>
+				<BuildingClass>BUILDINGCLASS_CARAVANSARY</BuildingClass>
+				<FreeStartEra>ERA_INDUSTRIAL</FreeStartEra>
+				<Cost>25</Cost>
+				<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
+				<Help>TXT_KEY_BUILDING_LODGE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_LODGE_DESC</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_LODGE_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_CARAVANSARY</ArtDefineTag>
+				<!--<ExtraLuxuries>true</ExtraLuxuries>-->
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<TradeRouteLandGoldBonus>600</TradeRouteLandGoldBonus>
+				<TradeRouteRecipientBonus>6</TradeRouteRecipientBonus>
+				<TradeRouteTargetBonus>6</TradeRouteTargetBonus>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>227</PortraitIndex>
+			</Row>
+
+
+			<!--私人药店-->
+
+			<Row>
+				<Type>BUILDING_PRIVATE_PHARMACY</Type>
+				<BuildingClass>BUILDINGCLASS_PRIVATE_PHARMACY</BuildingClass>
+				<Cost>190</Cost>
+				<PrereqTech>TECH_ALCHEMY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_PRIVATE_PHARMACY</Description>
+				<Civilopedia>TXT_KEY_BUILDING_PRIVATE_PHARMACY_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_PRIVATE_PHARMACY_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>80</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>185</PortraitIndex>
+			</Row>
+
+
+
+			<!--生物制剂工厂-->
+
+			<Row>
+				<Type>BUILDING_BIOLOGICAL_FACTORIES</Type>
+				<BuildingClass>BUILDINGCLASS_BIOLOGICAL_FACTORIES</BuildingClass>
+				<Cost>820</Cost>
+				<GoldMaintenance>8</GoldMaintenance>
+				<PrereqTech>TECH_COMPUTERS</PrereqTech>
+				<Description>TXT_KEY_BUILDING_BIOLOGICAL_FACTORIES</Description>
+				<Civilopedia>TXT_KEY_BUILDING_BIOLOGICAL_FACTORIES_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_BIOLOGICAL_FACTORIES_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>184</PortraitIndex>
+			</Row>
+			
+			
+			
+
+
+			<!--蓄水池-->
+			<Row>
+				<Type>BUILDING_CISTERN</Type>
+				<BuildingClass>BUILDINGCLASS_CISTERN</BuildingClass>
+				<Cost>30</Cost>
+				<GoldMaintenance>2</GoldMaintenance>
+				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+				<Description>TXT_KEY_BUILDING_CISTERN</Description>
+				<Help>TXT_KEY_BUILDING_CISTERN_HELP</Help>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Civilopedia>TXT_KEY_BUILDING_CISTERN_TEXT</Civilopedia>
+				<ArtDefineTag>ART_DEF_BUILDING_HOSPITAL</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<FoodKept>10</FoodKept>
+				<AddsFreshWater>true</AddsFreshWater>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>20</PortraitIndex>
+			</Row>
+
+
+
+
+
+
+			<!--跨国制药公司-->
+			<Row>
+				<Type>BUILDING_MEDICAL_COMPANY</Type>
+				<BuildingClass>BUILDINGCLASS_MEDICAL_COMPANY</BuildingClass>
+				<Cost>600</Cost>
+				<GoldMaintenance>10</GoldMaintenance>
+				<PrereqTech>TECH_GENETIC_ENGEERING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_MEDICAL_COMPANY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_MEDICAL_COMPANY</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MEDICAL_COMPANY_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITYSIZE_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>150</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>53</PortraitIndex>
+			</Row>
+			
+			
+			<!--粮酒坊-->
+			<Row>
+				<Type>BUILDING_BREWER</Type>
+				<BuildingClass>BUILDINGCLASS_BREWER</BuildingClass>
+				<Cost>120</Cost>
+				<GoldMaintenance>2</GoldMaintenance>
+				<PrereqTech>TECH_GUILDS</PrereqTech>
+				<Description>TXT_KEY_BUILDING_BREWER</Description>
+				<Civilopedia>TXT_KEY_BUILDING_BREWER_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_BREWER_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>ART_DEF_BUILDING_MARKET</ArtDefineTag>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<Happiness>2</Happiness>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>11</PortraitIndex>
+			</Row>
+			
+			
+		
+			
+			<!--炼金术-->
+
+			<Row>
+				<Type>BUILDING_ALCHEMIST</Type>
+				<BuildingClass>BUILDINGCLASS_ALCHEMIST</BuildingClass>
+				<Cost>160</Cost>
+				<GoldMaintenance>1</GoldMaintenance>
+				<PrereqTech>TECH_ALCHEMY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_ALCHEMIST</Description>
+				<Civilopedia>TXT_KEY_BUILDING_ALCHEMIST_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_ALCHEMIST_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>51</PortraitIndex>
+			</Row>
+
+			<!--烟熏室-->
+			<Row>
+				<Type>BUILDING_SMOKEHOUSE</Type>
+				<BuildingClass>BUILDINGCLASS_SMOKEHOUSE</BuildingClass>
+				<Cost>120</Cost>
+				<GoldMaintenance>1</GoldMaintenance>
+				<PrereqTech>TECH_ALCHEMY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_SMOKEHOUSE</Description>
+				<Civilopedia>TXT_KEY_BUILDING_SMOKEHOUSE_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_SMOKEHOUSE_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>ART_DEF_BUILDING_MARKET</ArtDefineTag>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>26</PortraitIndex>
+			</Row>
+			<!--葡萄园-->
+
+			<Row>
+				<Type>BUILDING_VINYARD</Type>
+				<BuildingClass>BUILDINGCLASS_VINYARD</BuildingClass>
+				<Cost>120</Cost>
+				<GoldMaintenance>1</GoldMaintenance>
+				<PrereqTech>TECH_ALCHEMY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_VINYARD</Description>
+				<Civilopedia>TXT_KEY_BUILDING_VINYARD_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_VINYARD_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>ART_DEF_BUILDING_MARKET</ArtDefineTag>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<Happiness>1</Happiness>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>24</PortraitIndex>
+			</Row>
+
+			<!--地牢-->
+			<Row>
+				<Type>BUILDING_DUNGEON</Type>
+				<BuildingClass>BUILDINGCLASS_DUNGEON</BuildingClass>
+				<Cost>120</Cost>
+				<GoldMaintenance>2</GoldMaintenance>
+				<PrereqTech>TECH_FEUDALISM</PrereqTech>
+				<Description>TXT_KEY_BUILDING_DUNGEON</Description>
+				<Civilopedia>TXT_KEY_BUILDING_DUNGEON_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_DUNGEON_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>COLESSEUM</ArtDefineTag>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>66</ConquestProb>
+				<Defense>2000</Defense>
+				<ExtraCityHitPoints>25</ExtraCityHitPoints>
+				<HurryCostModifier>25</HurryCostModifier>
+				<Espionage>1</Espionage>
+				<EspionageModifier>-10</EspionageModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>47</PortraitIndex>
+			</Row>
+			
+			
+
+			<!--沙漠改造基地-->
+			<Row>
+				<Type>BUILDING_DESERT_TRANSFORMING_BASE</Type>
+				<BuildingClass>BUILDINGCLASS_DESERT_TRANSFORMING_BASE</BuildingClass>
+				<Cost>500</Cost>
+				<GoldMaintenance>5</GoldMaintenance>
+				<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
+				<Description>TXT_KEY_BUILDING_DESERT_TRANSFORMING_BASE</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_DESERT_TRANSFORMING_BASE_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_DESERT_TRANSFORMING_BASE_HELP</Help>
+				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
+				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+				<SpecialistCount>1</SpecialistCount>
+				<FoodKept>10</FoodKept>
+				<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>100</HurryCostModifier>
+				<ConquestProb>55</ConquestProb>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>56</PortraitIndex>
+			</Row>
+			
+			
+			<!--布厂-->
+			<Row>
+				<Type>BUILDING_CLOTH_MILL</Type>
+				<BuildingClass>BUILDINGCLASS_CLOTH_MILL</BuildingClass>
+				<Cost>280</Cost>
+				<GoldMaintenance>2</GoldMaintenance>
+				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_CLOTH_MILL_HELP</Help>
+				<Description>TXT_KEY_BUILDING_CLOTH_MILL</Description>
+				<Civilopedia>TXT_KEY_BUILDING_CLOTH_MILL_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>FORGE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>94</PortraitIndex>
+			</Row>
+
+
+
+			<!--称重房-->
+			<Row>
+				<Type>BUILDING_WEIGH_HOUSE</Type>
+				<BuildingClass>BUILDINGCLASS_WEIGH_HOUSE</BuildingClass>
+				<Cost>250</Cost>
+				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_WEIGH_HOUSE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_WEIGH_HOUSE</Description>
+				<Civilopedia>TXT_KEY_BUILDING_WEIGH_HOUSE_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>FORGE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<TradeRouteSeaGoldBonus>100</TradeRouteSeaGoldBonus>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>234</PortraitIndex>
+			</Row>
+
+
+			
+			<!--炸药厂-->
+			<Row>
+				<Type>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</Type>
+				<BuildingClass>BUILDINGCLASS_EXPLOSIVE_MATERIAL_FACTORY</BuildingClass>
+				<Cost>280</Cost>
+				<GoldMaintenance>3</GoldMaintenance>
+				<FoodKept>-5</FoodKept>
+				<Happiness>-1</Happiness>
+				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_EXPLOSIVE_MATERIAL_FACTORY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_EXPLOSIVE_MATERIAL_FACTORY</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_EXPLOSIVE_MATERIAL_FACTORY_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_FACTORY</ArtDefineTag>
+				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+				<SpecialistCount>1</SpecialistCount>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>97</PortraitIndex>
+			</Row>
+
+
+
+			<!--火药库-->
+			<Row>
+				<Type>BUILDING_GUN_POWDER_HOUSE</Type>
+				<BuildingClass>BUILDINGCLASS_GUN_POWDER_HOUSE</BuildingClass>
+				<Cost>120</Cost>
+				<GoldMaintenance>3</GoldMaintenance>
+				<PrereqTech>TECH_CHEMISTRY</PrereqTech>
+				<Help>TXT_KEY_BUILDING_GUN_POWDER_HOUSE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_GUN_POWDER_HOUSE</Description>
+				<Civilopedia>TXT_KEY_BUILDING_GUN_POWDER_HOUSE_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>NONE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>75</HurryCostModifier>
+				<NeverCapture>true</NeverCapture>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>21</PortraitIndex>
+			</Row>
+
+
+			
+
+
+			<!--矿业公司-->
+			<Row>
+				<Type>BUILDING_MINING_COMPANY</Type>
+				<BuildingClass>BUILDINGCLASS_MINING_COMPANY</BuildingClass>
+				<Cost>750</Cost>
+				<GoldMaintenance>8</GoldMaintenance>
+				<Happiness>-2</Happiness>
+				<FoodKept>-3</FoodKept>
+				<PrereqTech>TECH_SUBTERRANEAN_EXPLORE</PrereqTech>
+				<Help>TXT_KEY_BUILDING_MINING_COMPANY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_MINING_COMPANY</Description>
+				<Civilopedia>TXT_KEY_BUILDING_MINING_COMPANY_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>NONE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>75</HurryCostModifier>
+				<NeverCapture>true</NeverCapture>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>67</PortraitIndex>
+			</Row>
+			
+			
+	
+
+			<!--超深油井-->
+			<Row>
+				<Type>BUILDING_OIL_WELL</Type>
+				<BuildingClass>BUILDINGCLASS_OIL_WELL</BuildingClass>
+				<Cost>750</Cost>
+				<GoldMaintenance>6</GoldMaintenance>
+				<PrereqTech>TECH_SUBTERRANEAN_EXPLORE</PrereqTech>
+				<Help>TXT_KEY_BUILDING_OIL_WELL_HELP</Help>
+				<Description>TXT_KEY_BUILDING_OIL_WELL</Description>
+				<Civilopedia>TXT_KEY_BUILDING_OIL_WELL_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>NONE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>75</HurryCostModifier>
+				<NeverCapture>true</NeverCapture>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>82</PortraitIndex>
+			</Row>
+
+
+
+			<!--瞭望塔-->
+			<Row>
+				<Type>BUILDING_WATCH</Type>
+				<BuildingClass>BUILDINGCLASS_WATCH</BuildingClass>
+				<Cost>125</Cost>
+				<GoldMaintenance>4</GoldMaintenance>
+				<PrereqTech>TECH_CARTOGRAPHY</PrereqTech>
+				<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
+				<Help>TXT_KEY_BUILDING_WATCH_HELP</Help>
+				<Description>TXT_KEY_BUILDING_WATCH</Description>
+				<Civilopedia>TXT_KEY_BUILDING_WATCH_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>NONE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<NeverCapture>true</NeverCapture>
+				<Defense>2500</Defense>
+				<ExtraCityHitPoints>20</ExtraCityHitPoints>
+				<AllowsRangeStrike>1</AllowsRangeStrike>
+				<ConquestProb>66</ConquestProb>
+				<NukeImmune>false</NukeImmune>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>79</PortraitIndex>
+			</Row>
+
+			
+			
+			
+			
+			
+
+			<!--草药-->
+			<Row>
+				<Type>BUILDING_HERBALIST</Type>
+				<BuildingClass>BUILDINGCLASS_HERBALIST</BuildingClass>
+				<Cost>100</Cost>
+				<GoldMaintenance>2</GoldMaintenance>
+				<PrereqTech>TECH_NATURAL_MEDICINE</PrereqTech>
+				<Description>TXT_KEY_BUILDING_HERBALIST</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_HERBALIST_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_HERBALIST_HELP</Help>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>25</PortraitIndex>
+			</Row>
+
+
+			<!--公共浴室-->
+
+			<Row>
+				<Type>BUILDING_BALNEAE</Type>
+				<BuildingClass>BUILDINGCLASS_BALNEAE</BuildingClass>
+				<Cost>100</Cost>
+				<GoldMaintenance>2</GoldMaintenance>
+				<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_BALNEAE</Description>
+				<Civilopedia>TXT_KEY_BUILDING_BALNEAE_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_BALNEAE_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<Happiness>2</Happiness>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>17</PortraitIndex>
+			</Row>
+
+
+
+	
+
+
+			<!--下水道-->
+			<Row>
+				<Type>BUILDING_CLOACA</Type>
+				<BuildingClass>BUILDINGCLASS_CLOACA</BuildingClass>
+				<Cost>100</Cost>
+				<GoldMaintenance>1</GoldMaintenance>
+				<PrereqTech>TECH_ENGINEERING</PrereqTech>
+				<Description>TXT_KEY_BUILDING_CLOACA</Description>
+				<Civilopedia>TXT_KEY_BUILDING_CLOACA_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_CLOACA_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<NukeImmune>false</NukeImmune>
+				<ConquestProb>50</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<Happiness>1</Happiness>
+				<!--<FoodKept>5</FoodKept>-->
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>22</PortraitIndex>
+			</Row>
+
+			<!--护城河-->
+
+			<Row>
+				<Type>BUILDING_HILL_FORT</Type>
+				<BuildingClass>BUILDINGCLASS_HILL_FORT</BuildingClass>
+				<Cost>30</Cost>
+				<GoldMaintenance>0</GoldMaintenance>
+				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
+				<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
+				<Description>TXT_KEY_BUILDING_HILL_FORT</Description>
+				<Civilopedia>TXT_KEY_BUILDING_HILL_FORT_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_HILL_FORT_HELP</Help>
+				<MinAreaSize>-1</MinAreaSize>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<NeverCapture>true</NeverCapture>
+				<HurryCostModifier>25</HurryCostModifier>
+				<AllowsRangeStrike>1</AllowsRangeStrike>
+				<Defense>1000</Defense>
+				<ExtraCityHitPoints>25</ExtraCityHitPoints>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>18</PortraitIndex>
+			</Row>
+
+
+	
+			
+
+			<!--水井-->
+			<Row>
+				<Type>BUILDING_WELL</Type>
+				<BuildingClass>BUILDINGCLASS_WELL</BuildingClass>
+				<Cost>20</Cost>
+				<ObsoleteTech>TECH_INDUSTRIALIZATION</ObsoleteTech>
+				<PrereqTech>TECH_AGRICULTURE</PrereqTech>
+				<Description>TXT_KEY_BUILDING_WELL</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_WELL_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_WELL_HELP</Help>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>10</PortraitIndex>
+			</Row>
+
+			<!--木工坊-->
+			<Row>
+				<Type>BUILDING_CARPENTER</Type>
+				<BuildingClass>BUILDINGCLASS_CARPENTER</BuildingClass>
+				<GoldMaintenance>2</GoldMaintenance>
+				<Cost>30</Cost>
+				<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+				<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
+				<Help>TXT_KEY_BUILDING_CARPENTER_HELP</Help>
+				<Description>TXT_KEY_BUILDING_CARPENTER</Description>
+				<Civilopedia>TXT_KEY_BUILDINGS_CARPENTER_DESC</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<EnhancedYieldTech>TECH_MACHINERY</EnhancedYieldTech>
+				<ArtDefineTag>ART_DEF_BUILDING_FORGE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>41</PortraitIndex>
+			</Row>
+
+
+			<!--木栅栏-->
+			<Row>
+				<Type>BUILDING_PALISADE</Type>
+				<BuildingClass>BUILDINGCLASS_PALISADE</BuildingClass>
+				<Cost>20</Cost>
+				<PrereqTech>TECH_WOOD_WORKING</PrereqTech>
+				<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
+				<Help>TXT_KEY_BUILDING_PALISADE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_PALISADE</Description>
+				<Civilopedia>TXT_KEY_BUILDING_PALISADE_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<Defense>500</Defense>
+				<ExtraCityHitPoints>25</ExtraCityHitPoints>
+				<HurryCostModifier>25</HurryCostModifier>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>91</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			</Row>
+			
+
+			<Row>
+				<Type>BUILDING_SHRINE</Type>
+				<BuildingClass>BUILDINGCLASS_SHRINE</BuildingClass>
+				<PrereqTech>TECH_MYSTICISM</PrereqTech>
+				<Cost>20</Cost>
+				<GoldMaintenance>1</GoldMaintenance>
+				<Description>TXT_KEY_BUILDING_SHRINE</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_SHRINE_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>TEMPLE</ArtDefineTag>
+				<ConquestProb>100</ConquestProb>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>EXPANSION_BW_ATLAS_1</IconAtlas>
+				<PortraitIndex>9</PortraitIndex>
+			</Row>
+			<Row>
+				<Type>BUILDING_MAYA_PYRAMID</Type>
+				<BuildingClass>BUILDINGCLASS_SHRINE</BuildingClass>
+				<PrereqTech>TECH_MYSTICISM</PrereqTech>
+				<Cost>20</Cost>
+				<Description>TXT_KEY_BUILDING_MAYA_PYRAMID</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MAYA_PYRAMID_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>TEMPLE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>EXPANSION_BW_ATLAS_1</IconAtlas>
+				<ConquestProb>100</ConquestProb>
+				<PortraitIndex>7</PortraitIndex>
+			</Row>
+			<Row>
+				<Type>BUILDING_CANDI</Type>
+				<BuildingClass>BUILDINGCLASS_SHRINE</BuildingClass>
+				<PrereqTech>TECH_MYSTICISM</PrereqTech>
+				<Cost>20</Cost>
+				<!--<Help>TXT_KEY_BUILDING_CANDI_HELP</Help>-->
+				<Description>TXT_KEY_BUILDING_CANDI_DESC</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_CANDI_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>EXPANSION2_BUILDING_ATLAS</IconAtlas>
+				<PortraitIndex>0</PortraitIndex>
+			</Row>
+			<Row>
+				<Type>BUILDING_MUD_PYRAMID_MOSQUE</Type>
+				<BuildingClass>BUILDINGCLASS_SHRINE</BuildingClass>
+				<PrereqTech>TECH_MYSTICISM</PrereqTech>
+				<Cost>20</Cost>
+				<Help>TXT_KEY_BUILDING_MUD_PYRAMID_MOSQUE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_MUD_PYRAMID_MOSQUE_DESC</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDING_MUD_PYRAMID_MOSQUE_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>MUD_PYRAMID_MOSQUE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>BW_ATLAS_1</IconAtlas>
+				<PortraitIndex>60</PortraitIndex>
+			</Row>
+
+
+
+
+
+
+			<Row>
+				<Type>BUILDING_MONUMENT</Type>
+				<BuildingClass>BUILDINGCLASS_MONUMENT</BuildingClass>
+				<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
+				<Cost>25</Cost>
+				<GoldMaintenance>1</GoldMaintenance>
+				<Help>TXT_KEY_CULTURAL_BUILDING_OBSOLETE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_MONUMENT_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_MONUMENT_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>MONUMENT</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>40</HurryCostModifier>
+				<IconAtlas>BW_ATLAS_1</IconAtlas>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>21</PortraitIndex>
+				<ObsoleteTech>TECH_ARCHAEOLOGY</ObsoleteTech>
+				<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
+				<TechEnhancedTourism>1</TechEnhancedTourism>
+			</Row>
+			<Row>
+				<Type>BUILDING_STELE</Type>
+				<BuildingClass>BUILDINGCLASS_MONUMENT</BuildingClass>
+				<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
+				<Cost>25</Cost>
+				<Help>TXT_KEY_BUILDING_STELE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_STELE</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_STELE_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>MONUMENT</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>40</HurryCostModifier>
+				<IconAtlas>EXPANSION_BW_ATLAS_1</IconAtlas>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>10</PortraitIndex>
+				<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
+				<TechEnhancedTourism>1</TechEnhancedTourism>
+			</Row>
+			<Row>
+				<Type>BUILDING_BURIAL_TOMB</Type>
+				<BuildingClass>BUILDINGCLASS_MONUMENT</BuildingClass>
+				<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
+				<Cost>25</Cost>
+				<Help>TXT_KEY_BUILDING_BURIAL_TOMB_HELP</Help>
+				<Description>TXT_KEY_BUILDING_BURIAL_TOMB_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_BURIAL_TOMB_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>BURIAL_TOMB</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<NeverCapture>true</NeverCapture>
+				<Happiness>2</Happiness>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>BW_ATLAS_1</IconAtlas>
+				<PortraitIndex>55</PortraitIndex>
+				<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
+				<TechEnhancedTourism>1</TechEnhancedTourism>
+			</Row>
+
+
+			<!--棱堡-->
+			<Row>
+				<Type>BUILDING_EE_BASTION</Type>
+				<BuildingClass>BUILDINGCLASS_EE_BASTION</BuildingClass>
+				<Cost>260</Cost>
+				<PrereqTech>TECH_FORTIFICATION</PrereqTech>
+				<Help>TXT_KEY_BUILDING_EE_BASTION_HELP</Help>
+				<Description>TXT_KEY_BUILDING_EE_BASTION</Description>
+				<Civilopedia>TXT_KEY_BUILDING_EE_BASTION_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>CASTLE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<GoldMaintenance>4</GoldMaintenance>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<Defense>5000</Defense>
+				<ExtraCityHitPoints>50</ExtraCityHitPoints>
+				<HurryCostModifier>40</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>111</PortraitIndex>
+				<ObsoleteTech>TECH_LARGE_CALIBRE</ObsoleteTech>
+				<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
+				<TechEnhancedTourism>2</TechEnhancedTourism>
+			</Row>
+
+
+
+
+			<Row>
+				<Type>BUILDING_NAVAL_BASE</Type>
+				<BuildingClass>BUILDINGCLASS_NAVAL_BASE</BuildingClass>
+				<Cost>1200</Cost>
+				<PrereqTech>TECH_MILITARY_OCEANOGRAPHY</PrereqTech>
+				<GoldMaintenance>8</GoldMaintenance>
+				<Help>TXT_KEY_BUILDING_NAVAL_BASE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_NAVAL_BASE_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_NAVAL_BASE_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_NAVAL_BASE</ArtDefineTag>
+				<Water>true</Water>
+				<MinAreaSize>-1</MinAreaSize>
+				<NeverCapture>true</NeverCapture>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<Defense>2500</Defense>
+				<ExtraCityHitPoints>25</ExtraCityHitPoints>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>15</PortraitIndex>
+			</Row>
+			
+
+			<Row>
+				<Type>BUILDING_ZXZCC</Type>
+				<BuildingClass>BUILDINGCLASS_ZXZCC</BuildingClass>
+				<Cost>1200</Cost>
+				<GoldMaintenance>10</GoldMaintenance>
+				<PrereqTech>TECH_MILITARY_OCEANOGRAPHY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_ZXZCC</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_ZXZCC_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_ZXZCC_HELP</Help>
+				<ArtDefineTag>ART_DEF_BUILDING_SEAPORT</ArtDefineTag>
+				<Water>true</Water>
+				<MinAreaSize>10</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<Defense>2500</Defense>
+				<ExtraCityHitPoints>25</ExtraCityHitPoints>
+				<NeverCapture>true</NeverCapture>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>91</PortraitIndex>
+			</Row>
+
+			<Row>
+				<Type>BUILDING_MILITARY_AIRBASE</Type>
+				<BuildingClass>BUILDINGCLASS_MILITARY_AIRBASE</BuildingClass>
+				<Cost>1000</Cost>
+				<GoldMaintenance>10</GoldMaintenance>
+				<PrereqTech>TECH_ELECTRONICS</PrereqTech>
+				<Help>TXT_KEY_BUILDING_MILITARY_AIRBASE_HELP</Help>
+				<Description>TXT_KEY_BUILDING_MILITARY_AIRBASE</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MILITARY_AIRBASE_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_SEAPORT</ArtDefineTag>
+				<NukeImmune>true</NukeImmune>
+				<MinAreaSize>-1</MinAreaSize>
+				<AirModifier>3</AirModifier>
+				<ConquestProb>66</ConquestProb>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<Defense>2500</Defense>
+				<ExtraCityHitPoints>25</ExtraCityHitPoints>
+				<HurryCostModifier>50</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>35</PortraitIndex>
+			</Row>
+
+			<Row>
+				<Type>BUILDING_MISSILE_BASE</Type>
+				<BuildingClass>BUILDINGCLASS_MISSILE_BASE</BuildingClass>
+				<Cost>1200</Cost>
+				<GoldMaintenance>8</GoldMaintenance>
+				<PrereqTech>TECH_ADVANCED_BALLISTICS</PrereqTech>
+				<Description>TXT_KEY_BUILDING_MISSILE_BASE</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MISSILE_BASE_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_MISSILE_BASE_HELP</Help>
+				<ArtDefineTag>ART_DEF_BUILDING_MISSILE_BASE</ArtDefineTag>
+				<RangedStrikeModifier>25</RangedStrikeModifier>
+				<MinAreaSize>10</MinAreaSize>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<Defense>3000</Defense>
+				<ExtraCityHitPoints>35</ExtraCityHitPoints>
+				<HurryCostModifier>25</HurryCostModifier>
+				<NeverCapture>true</NeverCapture>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>84</PortraitIndex>
+				<NukeInterceptionChance>30</NukeInterceptionChance>				
+			</Row>
+
+
+			<!--*********************************************未来时代*******************************************************-->
+
+			<Update>
+				<Set  Cost="3300"/>
+				<Where Type="BUILDING_FUTURE_FACTORY" />
+			</Update>
+
+			<!--量子实验室-->
+			<Row>
+				<Type>BUILDING_QUANTUM_LAB</Type>
+				<BuildingClass>BUILDINGCLASS_QUANTUM_LAB</BuildingClass>
+				<Cost>2900</Cost>
+				<GoldMaintenance>20</GoldMaintenance>
+				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
+				<Help>TXT_KEY_BUILDING_QUANTUM_LAB_HELP</Help>
+				<Description>TXT_KEY_BUILDING_QUANTUM_LAB</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_QUANTUM_LAB_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITYSIZE_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>160</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>115</PortraitIndex>
+				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+				<SpecialistCount>3</SpecialistCount>
+			</Row>
+
+
+			<!--改造实验室-->
+
+			<Row>
+				<Type>BUILDING_GENE_THERAPY</Type>
+				<BuildingClass>BUILDINGCLASS_GENE_THERAPY</BuildingClass>
+				<Cost>2900</Cost>
+				<GoldMaintenance>20</GoldMaintenance>
+				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
+				<Help>TXT_KEY_BUILDING_GENE_THERAPY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_GENE_THERAPY</Description>
+				<Civilopedia>TXT_KEY_BUILDING_GENE_THERAPY_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_PUBLIC_HEALTH_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_GENE_THERAPY</ArtDefineTag>
+				<FoodKept>35</FoodKept>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>160</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>30</PortraitIndex>
+			</Row>
+
+
+
+
+			<!--VR-->
+
+			<Row>
+				<Type>BUILDING_VR_TRAINING</Type>
+				<BuildingClass>BUILDINGCLASS_VR_TRAINING</BuildingClass>
+				<Cost>3100</Cost>
+				<GoldMaintenance>30</GoldMaintenance>
+				<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
+				<Help>TXT_KEY_BUILDING_VR_TRAINING_HELP</Help>
+				<Description>TXT_KEY_BUILDING_VR_TRAINING_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_VR_TRAINING_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>66</ConquestProb>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>96</PortraitIndex>
+			</Row>
+
+			<!--机密网络-->
+			<Row>
+				<Type>BUILDING_DEFENSE_NETWORK</Type>
+				<BuildingClass>BUILDINGCLASS_DEFENSE_NETWORK</BuildingClass>
+				<Cost>3100</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_SUPERCONDUCTOR</PrereqTech>
+				<Help>TXT_KEY_BUILDING_DEFENSE_NETWORK_HELP</Help>
+				<Description>TXT_KEY_BUILDING_DEFENSE_NETWORK</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_DEFENSE_NETWORK_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_DEFENSE_NETWORK</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<Defense>5000</Defense>
+				<ExtraCityHitPoints>50</ExtraCityHitPoints>
+				<AirModifier>3</AirModifier>
+				<Airlift>true</Airlift>
+				<PortraitIndex>90</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<HurryCostModifier>50</HurryCostModifier>
+				<NeverCapture>true</NeverCapture>
+			</Row>
+
+			<!--地下城市-->
+			<Row>
+				<Type>BUILDING_UNDERGROUND</Type>
+				<BuildingClass>BUILDINGCLASS_UNDERGROUND</BuildingClass>
+				<Cost>3100</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_UNDERGROUND_HELP</Help>
+				<Description>TXT_KEY_BUILDING_UNDERGROUND</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_UNDERGROUND_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_UNDERGROUND</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<Defense>2500</Defense>
+				<ExtraCityHitPoints>150</ExtraCityHitPoints>
+				<NukeModifier>-25</NukeModifier> 
+				<PortraitIndex>103</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<HurryCostModifier>50</HurryCostModifier>
+				<ConquestProb>66</ConquestProb>
+				<ReduceDamageValue>-33</ReduceDamageValue>
+			</Row>
+
+
+			<!--矩阵防御炮-->
+			<Row>
+				<Type>BUILDING_MATRIX</Type>
+				<BuildingClass>BUILDINGCLASS_MATRIX</BuildingClass>
+				<Cost>3100</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
+				<Help>TXT_KEY_BUILDING_MATRIX_HELP</Help>
+				<Description>TXT_KEY_BUILDING_MATRIX</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MATRIX_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_MATRIX</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<Defense>7000</Defense>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<ExtraCityHitPoints>50</ExtraCityHitPoints>
+				<PortraitIndex>16</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<HurryCostModifier>50</HurryCostModifier>
+				<ConquestProb>100</ConquestProb>
+				<NukeInterceptionChance>30</NukeInterceptionChance>
+				<LandTileDamage>5</LandTileDamage>
+				<LandTileTurnDamage>5</LandTileTurnDamage>
+				<LandTileMovementReduce>1</LandTileMovementReduce> 
+			</Row>
+
+
+
+			<!--星际基地-->
+			<Row>
+				<Type>BUILDING_FW_BIOMOD_TANK</Type>
+				<BuildingClass>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClass>
+				<Cost>3100</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
+				<Help>TXT_KEY_BUILDING_FW_BIOMOD_TANK_HELP</Help>
+				<Description>TXT_KEY_BUILDING_FW_BIOMOD_TANK_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_FW_BIOMOD_TANK_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_FW_BIOMOD_TANK</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<NeverCapture>true</NeverCapture>
+				<HurryCostModifier>100</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>130</PortraitIndex>
+				<Defense>7000</Defense>
+				<ExtraCityHitPoints>50</ExtraCityHitPoints>
+				<MilitaryProductionModifier>15</MilitaryProductionModifier>
+			</Row>
+
+
+
+
+			<!--智慧城市-->
+			<Row>
+				<Type>BUILDING_ECITY</Type>
+				<BuildingClass>BUILDINGCLASS_ECITY</BuildingClass>
+				<Cost>2700</Cost>
+				<PrereqTech>TECH_COGNITIVE</PrereqTech>
+				<Help>TXT_KEY_BUILDING_ECITY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_ECITY</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_ECITY_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_FINANCE_COMPANY</ArtDefineTag>
+				<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+				<SpecialistCount>3</SpecialistCount>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>150</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>133</PortraitIndex>
+			</Row>
+			<!--超级计算机中心-->
+			<Row>
+				<Type>BUILDING_FW_SERVER_HUB</Type>
+				<BuildingClass>BUILDINGCLASS_FW_SERVER_HUB</BuildingClass>
+				<Cost>2500</Cost>
+				<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
+				<Description>TXT_KEY_BUILDING_FW_SERVER_HUB_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_FW_SERVER_HUB_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_FW_SERVER_HUB_HELP</Help>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+				<SpecialistCount>2</SpecialistCount>
+				<ConquestProb>100</ConquestProb>
+				<HurryCostModifier>120</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>119</PortraitIndex>
+				<GoldMaintenance>5</GoldMaintenance>
+			</Row>
+
+			<!--生物工厂-->
+			<Row>
+				<Type>BUILDING_FW_MYCOPROTEIN_VATS</Type>
+				<BuildingClass>BUILDINGCLASS_FW_MYCOPROTEIN_VATS</BuildingClass>
+				<Cost>2500</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
+				<Help>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_HELP</Help>
+				<Description>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>50</ConquestProb>
+				<HurryCostModifier>0</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>21</PortraitIndex>
+			</Row>
+
+
+			<!--地热发电厂-->
+			<Row>
+				<Type>BUILDING_FW_GEOTHERMAL_PLANT</Type>
+				<BuildingClass>BUILDINGCLASS_FW_GEOTHERMAL_PLANT</BuildingClass>
+				<Cost>3100</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
+				<Help>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_HELP</Help>
+				<Description>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_FW_HYDRO_PLANT</ArtDefineTag>
+				<NearbyMountainRequired>true</NearbyMountainRequired>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>66</ConquestProb>
+				<Happiness>-4</Happiness>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<HurryCostModifier>40</HurryCostModifier>
+				<PortraitIndex>123</PortraitIndex>
+			</Row>
+
+
+
+
+			<!--电子人工厂-->
+			<Row>
+				<Type>BUILDING_FW_TELEPRESENCE_HUB</Type>
+				<BuildingClass>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClass>
+				<Cost>3400</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+				<Help>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_HELP</Help>
+				<Description>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>75</ConquestProb>
+				<HurryCostModifier>75</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>112</PortraitIndex>
+			</Row>
+
+
+			<!---战争机器工厂-->
+			<Row>
+				<Type>BUILDING_WAR_MACHINE_FACTORY</Type>
+				<BuildingClass>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClass>
+				<Cost>3400</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
+				<Help>TXT_KEY_BUILDING_WAR_MACHINE_FACTORY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_WAR_MACHINE_FACTORY_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_WAR_MACHINE_FACTORY_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<Defense>2500</Defense>
+				<ConquestProb>75</ConquestProb>
+				<HurryCostModifier>75</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>19</PortraitIndex>
+			</Row>
+
+
+
+			<!--自动工厂-->
+			<Row>
+				<Type>BUILDING_AUTOFACTORY</Type>
+				<BuildingClass>BUILDINGCLASS_AUTOFACTORY</BuildingClass>
+				<Description>TXT_KEY_BUILDING_AUTOFACTORY</Description>
+				<Help>TXT_KEY_WONDER_AUTOFACTORY_HELP</Help>
+				<Civilopedia>TXT_KEY_WONDER_AUTOFACTORY_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Cost>3400</Cost>
+				<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
+				<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+				<GreatPeopleRateChange>1</GreatPeopleRateChange>
+				<SpecialistCount>3</SpecialistCount>
+				<TradeRouteLandGoldBonus>1300</TradeRouteLandGoldBonus>
+				<TradeRouteSeaGoldBonus>1300</TradeRouteSeaGoldBonus>
+				<TradeRouteRecipientBonus>13</TradeRouteRecipientBonus>
+				<TradeRouteTargetBonus>13</TradeRouteTargetBonus>
+				<NukeImmune>true</NukeImmune>
+				<HurryCostModifier>120</HurryCostModifier>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>60</ConquestProb>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>75</PortraitIndex>
+			</Row>
+
+
+
+			<!---XCOM司令部-->
+			<Row>
+				<Type>BUILDING_XCOM_HEADQUARTERS</Type>
+				<BuildingClass>BUILDINGCLASS_XCOM_HEADQUARTERS</BuildingClass>
+				<Cost>3000</Cost>
+				<PrereqTech>TECH_SDI</PrereqTech>
+				<Help>TXT_KEY_BUILDING_XCOM_HEADQUARTERS_HELP</Help>
+				<Description>TXT_KEY_BUILDING_XCOM_HEADQUARTERS</Description>
+				<Civilopedia>TXT_KEY_BUILDING_XCOM_HEADQUARTERS_QUOTE</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>CASTLE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<GoldMaintenance>50</GoldMaintenance>
+				<AllowsRangeStrike>true</AllowsRangeStrike>
+				<Defense>5000</Defense>
+				<ExtraCityHitPoints>100</ExtraCityHitPoints>
+				<HurryCostModifier>40</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>26</PortraitIndex>
+			</Row>
+
+
+
+
+
+
+
+			<!---外星开采站-->
+			<Row>
+				<Type>BUILDING_PLANET_MINE</Type>
+				<BuildingClass>BUILDINGCLASS_PLANET_MINE</BuildingClass>
+				<Description>DESC_PLANET_MINE</Description>
+				<Help>HELP_PLANET_MINE</Help>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Civilopedia>PEDIA_PLANET_MINE</Civilopedia>
+				<Cost>4300</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<HurryCostModifier>40</HurryCostModifier>
+				<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
+				<NukeImmune>true</NukeImmune>
+				<NeverCapture>true</NeverCapture>
+				<MinAreaSize>-1</MinAreaSize>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>100</PortraitIndex>
+			</Row>
+
+			<!---超合金铸造厂-->
+			<Row>
+				<Type>BUILDING_TITANIUM_FACTORY</Type>
+				<BuildingClass>BUILDINGCLASS_TITANIUM_FACTORY</BuildingClass>
+				<Description>DESC_TITANIUM_FACTORY</Description>
+				<Help>HELP_TITANIUM_FACTORY</Help>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Civilopedia>PEDIA_TITANIUM_FACTORY</Civilopedia>
+				<Cost>4200</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<HurryCostModifier>40</HurryCostModifier>
+				<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
+				<NukeImmune>true</NukeImmune>
+				<NeverCapture>true</NeverCapture>
+				<MinAreaSize>-1</MinAreaSize>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>18</PortraitIndex>
+			</Row>
+
+
+
+
+			<!---机密网络-->
+			<Row>
+				<Type>BUILDING_DEFENSE_NETWORK2</Type>
+				<BuildingClass>BUILDINGCLASS_DEFENSE_NETWORK2</BuildingClass>
+				<Description>DESC_DEFENSE_NETWORK2</Description>
+				<Help>HELP_DEFENSE_NETWORK2</Help>
+				<Strategy>STR_DEFENSE_NETWORK2</Strategy>
+				<Civilopedia>PEDIA_DEFENSE_NETWORK2</Civilopedia>
+				<Cost>6000</Cost>
+				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>
+				<EspionageModifier>-50</EspionageModifier>
+				<Espionage>true</Espionage>
+				<HurryCostModifier>140</HurryCostModifier>
+				<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
+				<NukeImmune>true</NukeImmune>
+				<NeverCapture>true</NeverCapture>
+				<MinAreaSize>-1</MinAreaSize>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>120</PortraitIndex>
+			</Row>
+			
+			<!---金融网络-->
+			<Row>
+				<Type>BUILDING_FINANCIAL_NETWORK</Type>
+				<BuildingClass>BUILDINGCLASS_FINANCIAL_NETWORK</BuildingClass>
+				<Description>DESC_FINANCIAL_NETWORK</Description>
+				<Help>HELP_FINANCIAL_NETWORK</Help>
+				<Strategy>STR_FINANCIAL_NETWORK</Strategy>
+				<Civilopedia>PEDIA_FINANCIAL_NETWORK</Civilopedia>
+				<Cost>6000</Cost>
+				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>
+				<HurryCostModifier>140</HurryCostModifier>
+				<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
+				<NukeImmune>true</NukeImmune>
+				<NeverCapture>true</NeverCapture>
+				<MinAreaSize>-1</MinAreaSize>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>122</PortraitIndex>
+			</Row>
+
+
+
+			<!---科研网络-->
+			<Row>
+				<Type>BUILDING_SCIENCE_NETWORK</Type>
+				<BuildingClass>BUILDINGCLASS_SCIENCE_NETWORK</BuildingClass>
+				<Description>DESC_SCIENCE_NETWORK</Description>
+				<Help>HELP_SCIENCE_NETWORK</Help>
+				<Strategy>STR_SCIENCE_NETWORK</Strategy>
+				<Civilopedia>PEDIA_SCIENCE_NETWORK</Civilopedia>
+				<Cost>6000</Cost>
+				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>
+				<HurryCostModifier>140</HurryCostModifier>
+				<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
+				<NukeImmune>true</NukeImmune>
+				<NeverCapture>true</NeverCapture>
+				<MinAreaSize>-1</MinAreaSize>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>121</PortraitIndex>
+			</Row>
+
+
+
+			<!---阿玛塞尔纤维-->
+			<Row>
+				<Type>BUILDING_FORCE_FIELD</Type>
+				<Description>TXT_KEY_BUILDING_FORCE_FIELD</Description>
+				<Help>TXT_KEY_WONDER_FORCE_FIELD_HELP</Help>
+				<Civilopedia>TXT_KEY_WONDER_FORCE_FIELD_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<GoldMaintenance>50</GoldMaintenance>
+				<Cost>4000</Cost>
+				<ConquestProb>100</ConquestProb>
+				<NukeImmune>true</NukeImmune>
+				<HurryCostModifier>40</HurryCostModifier>
+				<MinAreaSize>-1</MinAreaSize>
+				<HealRateChange>200</HealRateChange>
+				<ExtraCityHitPoints>100</ExtraCityHitPoints>
+				<BuildingClass>BUILDINGCLASS_FORCE_FIELD</BuildingClass>
+				<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
+				<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+				<SpecialistCount>1</SpecialistCount>
+				<GreatPeopleRateChange>4</GreatPeopleRateChange>
+				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>125</PortraitIndex>
+				<ExtraDamageHeal>150</ExtraDamageHeal>
+			</Row>
+
+
+
+
+	
+			<!---智能水雷区-->
+			<Row>
+				<Type>BUILDING_MINEFIELD</Type>
+				<BuildingClass>BUILDINGCLASS_MINEFIELD</BuildingClass>
+				<Cost>3300</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_ARTIFICIAL_INTELLIGENCE</PrereqTech>
+				<Description>TXT_KEY_BUILDING_MINEFIELD</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MINEFIELD_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_MINEFIELD_HELP</Help>
+				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
+				<MinAreaSize>10</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<Water>true</Water>
+				<NukeImmune>true</NukeImmune>
+				<Defense>5000</Defense>
+				<ExtraCityHitPoints>50</ExtraCityHitPoints>
+				<HurryCostModifier>40</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>48</PortraitIndex>
+				<WaterTileDamage>7</WaterTileDamage>
+				<WaterTileMovementReduce>1</WaterTileMovementReduce>
+			</Row>
+
+
+
+
+
+
+
+
+
+			<!---激光星链-->
+			<Row>
+				<Type>BUILDING_DRONE_CONTROL</Type>
+				<BuildingClass>BUILDINGCLASS_DRONE_CONTROL</BuildingClass>
+				<Cost>4000</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
+				<Description>TXT_KEY_BUILDING_DRONE_CONTROL_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_DRONE_CONTROL_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_DRONE_CONTROL_HELP</Help>
+				<ArtDefineTag>COLESSEUM</ArtDefineTag>
+				<NukeImmune>true</NukeImmune>
+				<MinAreaSize>-1</MinAreaSize>
+				<ConquestProb>100</ConquestProb>
+				<Defense>5000</Defense>
+				<HurryCostModifier>140</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<NeverCapture>true</NeverCapture>
+				<PortraitIndex>140</PortraitIndex>
+				<RangedStrikeModifier>20</RangedStrikeModifier> 
+			</Row>
+
+
+
+			<!---人造生态圈-->
+			<Row>
+				<Type>BUILDING_FW_SANCTUARY</Type>
+				<BuildingClass>BUILDINGCLASS_FW_SANCTUARY</BuildingClass>
+				<Cost>3300</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
+				<Help>TXT_KEY_BUILDING_FW_SANCTUARY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_FW_SANCTUARY_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_FW_SANCTUARY_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<ArtDefineTag>ART_DEF_BUILDING_FW_GARDEN</ArtDefineTag>
+				<LandmarksTourismPercent>33</LandmarksTourismPercent>
+				<GreatWorksTourismModifier>33</GreatWorksTourismModifier>
+				<MinAreaSize>-1</MinAreaSize>
+				<Happiness>2</Happiness>
+				<NukeImmune>true</NukeImmune>
+				<ConquestProb>50</ConquestProb>
+				<HurryCostModifier>40</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>118</PortraitIndex>
+			</Row>
+
+			<!---生态学工厂-->
+		<Row>
+			<Type>BUILDING_FW_BIOFACTORY</Type>
+			<BuildingClass>BUILDINGCLASS_FW_BIOFACTORY</BuildingClass>
+			<Cost>3300</Cost>
+			<GoldMaintenance>50</GoldMaintenance>
+			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
+			<Help>TXT_KEY_BUILDING_FW_BIOFACTORY_HELP</Help>
+			<Description>TXT_KEY_BUILDING_FW_BIOFACTORY_DESC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FW_BIOFACTORY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<NeverCapture>true</NeverCapture>
+			<HurryCostModifier>50</HurryCostModifier>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>40</PortraitIndex>
+		</Row>
+
+
+
+			<!---钍反应堆-->
+		<Row>
+			<Type>BUILDING_THORIUM_REACTOR</Type>
+			<BuildingClass>BUILDINGCLASS_THORIUM_REACTOR</BuildingClass>
+			<Cost>5000</Cost>
+			<GoldMaintenance>50</GoldMaintenance>
+			<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
+			<Help>TXT_KEY_BUILDING_THORIUM_REACTOR_HELP</Help>
+			<Description>TXT_KEY_BUILDING_THORIUM_REACTOR_DESC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THORIUM_REACTOR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+			<MinAreaSize>-1</MinAreaSize>
+			<NukeImmune>true</NukeImmune>
+			<Happiness>-10</Happiness>
+			<FoodKept>-20</FoodKept>
+			<NeverCapture>true</NeverCapture>
+			<HurryCostModifier>50</HurryCostModifier>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>117</PortraitIndex>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+		</Row>
+
+
+			<!---无损微波-->
+			<Row>
+				<Type>BUILDING_SUPERCONDUCTING_GRID</Type>
+				<BuildingClass>BUILDINGCLASS_SUPERCONDUCTING_GRID</BuildingClass>
+				<Cost>5000</Cost>
+				<GoldMaintenance>50</GoldMaintenance>
+				<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+				<Help>TXT_KEY_BUILDING_SUPERCONDUCTING_GRID_HELP</Help>
+				<Description>TXT_KEY_BUILDING_SUPERCONDUCTING_GRID_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_SUPERCONDUCTING_GRID_PEDIA</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<MinAreaSize>-1</MinAreaSize>
+				<NukeImmune>true</NukeImmune>
+				<NeverCapture>true</NeverCapture>
+				<HurryCostModifier>50</HurryCostModifier>
+				<PortraitIndex>90</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			</Row>
+			
+		</Buildings>
+
+
+
+
+
+	<Building_ClassesNeededInCity>
+
+
+		<Delete BuildingType="BUILDING_ART_GALLERY"/>
+		<Delete BuildingType="BUILDING_FRENCH_SALON"/>
+
+		<Row>
+			<BuildingType>BUILDING_SUPERCONDUCTING_GRID</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+		</Row>
+		
+		
+
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SMALL_MARKET</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_AQUARIUM</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_BIOLOGICAL_FACTORIES</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_BREWER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_SMOKEHOUSE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MARKET</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_OIL_WELL</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
+		</Row>
+
+	
+
+		<Row>
+			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_EE_BASTION</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_XCOM_HEADQUARTERS</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_AUTOFACTORY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_TITANIUM_FACTORY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK2</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_FINANCIAL_NETWORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_SCIENCE_NETWORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MINEFIELD</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_NAVAL_BASE</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_SATELLITE_NET</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_ECITY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FINANCE_COMPANY</BuildingClassType>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DEFENSE_NETWORK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_NAVAL_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_ZXZCC</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_QUANTUM_LAB</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_SMALL</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_MEDICAL_COMPANY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MEDICAL_COMPANY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MEDICAL_LAB</BuildingClassType>
+		</Row>
+
+
+	</Building_ClassesNeededInCity>
+
+
+
+
+
+</GameData>

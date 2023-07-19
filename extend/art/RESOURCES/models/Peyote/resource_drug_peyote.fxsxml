@@ -1,0 +1,6 @@
+<Asset>
+  <Mesh file="Resource_Drug_Peyote.gr2" source="Max" />
+  <Texture file="Generic_Grey_8.dds" source="Max" />
+  <Texture file="Plant_Resource_Shadows.dds" source="Max" />
+  <Texture file="Resource_Drug_Peyote_DIFF.dds" source="Max" />
+</Asset>

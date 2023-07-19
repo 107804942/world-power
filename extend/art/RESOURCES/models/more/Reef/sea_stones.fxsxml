@@ -1,0 +1,14 @@
+<Asset>
+  <Mesh file="Sea_Stones.gr2" source="Max" />
+  <Texture file="Sea_Stones_DIFF.dds" source="Max" />
+  <Texture file="Sea_Stones_SREF.dds" source="Max" />
+  <Texture file="Sea_Stones_Decal_D.dds" source="Max" />
+  <Texture file="Sea_Stones_Decal_H.dds" source="Max" />
+  <Texture file="Sea_Stones_rock_D.dds" source="Max" />
+  <Texture file="Sea_Stones_rock_S.dds" source="Max" />
+  <Texture file="CityBase_SREF.dds" source="Max" />
+  <Texture file="Sea_Stones_Grey_8.dds" source="Max" />
+  <Texture file="Resource_Irradiance.dds" source="Max" />
+  <Texture file="resource_Environment_Sharp.dds" source="Max" />
+  <Texture file="resources_Environment_Dull.dds" source="Max" />
+</Asset>

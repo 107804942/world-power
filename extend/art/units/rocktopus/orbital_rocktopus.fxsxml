@@ -1,0 +1,60 @@
+<Asset>
+	<Mesh file="Orbital_Rocktopus.gr2"/>
+	<Animation file="Orbital_Rocktopus_Orbit_Idle.gr2" ec="1000, 2000, 1140, 1440, 1450, 1120, 1400, 1520, 1540"/>
+	<Animation file="Orbital_Rocktopus_Orbit_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Orbital_Rocktopus_Orbit_Combat_Ready_Idle.gr2" ec="1620, 1040, 2040"/>
+	<Animation file="Orbital_Rocktopus_Orbit_Combat_Ready_Trans_Idle.gr2" ec="1640"/>
+	<Animation file="Orbital_Rocktopus_Orbit_Fidget.gr2" ec="1040, 2040"/>
+	<Animation file="Orbital_Rocktopus_Bombardment.gr2" ec="1100, 1180"/>
+	<Animation file="Orbital_Rocktopus_Attack_City.gr2" ec="2100, 1160"/>
+	<Animation file="Orbital_Rocktopus_Attack_Air.gr2" ec="1130"/>
+	<Animation file="Orbital_Rocktopus_Enter_Orbit.gr2" ec="1150"/>
+	<Animation file="Orbital_Rocktopus_Leave_Orbit.gr2" ec="1151"/>
+	<Animation file="Orbital_Rocktopus_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Orbital_Rocktopus_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Orbital_Rocktopus_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Orbital_Rocktopus_Death_Orbit.gr2" ec="1200, 2200"/>
+	<Animation file="Orbital_Rocktopus_Death_Orbit_Idle.gr2" ec="1220, 2220"/>
+	<Texture file="Rocktopus_DIFF.dds"/>
+	<Texture file="Rocktopus_SREF.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Irradiance.dds"/>
+	<AnimGraph file="ORBITAL_EXIT_FIDGET.dge"/>
+	<AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<AnimGraph file="ORBITAL_FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_LAYER_GRAPH.dge"/>
+	<AnimGraph file="ENTER_LAYER_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="ORBITAL_LEAVE_COMBAT_READY.dge"/>
+	<TimedTrigger file="FX_Triggers_Orbital_Rocktopus.ftsxml"/>
+	<AnimGraph file="COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="DEATH_GRAPH.dge"/>
+	<AnimGraph file="ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<StateMachine file="ROCKTOPUS_ORBITAL.fsmxml"/>
+	<AnimGraph file="ORBITAL_ATTACKS.dge"/>
+	<AnimGraph file="IDLE_A_GRAPH.dge"/>
+	<BoneUsage>
+		<Bone name="FX_PROJECTILE_01"/>
+		<Bone name="FX_PROJECTILE_02"/>
+		<Bone name="ROC_MAIN"/>
+		<Bone name="Rock_1"/>
+		<Bone name="Rock_2"/>
+		<Bone name="Rock_3"/>
+		<Bone name="Rock_4"/>
+		<Bone name="Rock_5"/>
+		<Bone name="Rock_6"/>
+		<Bone name="FX_PROJECTILE_03"/>
+		<Bone name="FX_Muzzle_01"/>
+		<Bone name="FX_Muzzle_03"/>
+		<Bone name="FX_PROJECTILE_05"/>
+		<Bone name="FX_Muzzle_05"/>
+		<Bone name="FX_PROJECTILE_04"/>
+		<Bone name="FX_Muzzle_02"/>
+		<Bone name="FX_Muzzle_04"/>
+	</BoneUsage>
+</Asset>
+

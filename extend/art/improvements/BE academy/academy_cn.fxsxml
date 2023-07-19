@@ -1,0 +1,12 @@
+<Asset>
+  <Mesh file="Academy_CN.gr2" source="Max" />
+  <Texture file="Generic_Grey_8.dds" source="Max" />
+  <Texture file="Academy_CN_DIFF.dds" source="Max" />
+  <Texture file="Academy_CN_DecalD.dds" source="Max" />
+  <Texture file="Academy_CN_DecalH.dds" source="Max" />
+  <Texture file="Academy_CN_SREF.dds" source="Max" />
+  <Texture file="Academy_DIFF.tga" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+</Asset>

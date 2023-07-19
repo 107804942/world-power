@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<HandicapInfos>
+		<Row>
+			<Type>HANDICAP_IMPOSSIBLE</Type>
+			<Description>TXT_KEY_HANDICAP_IMPOSSIBLE</Description>
+			<Help>TXT_KEY_HANDICAP_IMPOSSIBLE_HELP</Help>
+			<StartingLocPercent>50</StartingLocPercent>
+			<AdvancedStartPointsMod>75</AdvancedStartPointsMod>
+			<HappinessDefault>9</HappinessDefault>
+			<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
+			<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
+			<Gold>0</Gold>
+			<GoldFreeUnits>0</GoldFreeUnits>
+			<ProductionFreeUnits>5</ProductionFreeUnits>
+			<ProductionFreeUnitsPopulationPercent>100</ProductionFreeUnitsPopulationPercent>
+			<ProductionFreeUnitsPerCity>2</ProductionFreeUnitsPerCity>
+			<RouteCostPercent>100</RouteCostPercent>
+			<UnitCostPercent>100</UnitCostPercent>
+			<BuildingCostPercent>100</BuildingCostPercent>
+			<ResearchPercent>100</ResearchPercent>
+			<PolicyPercent>100</PolicyPercent>
+			<ImprovementCostPercent>100</ImprovementCostPercent>
+			<CityProductionNumOptionsConsidered>2</CityProductionNumOptionsConsidered>
+			<TechNumOptionsConsidered>2</TechNumOptionsConsidered>
+			<PolicyNumOptionsConsidered>2</PolicyNumOptionsConsidered>
+			<!--<InflationPercent>100</InflationPercent>-->
+			<AttitudeChange>-11</AttitudeChange>
+			<NoTechTradeModifier>10</NoTechTradeModifier>
+			<BarbCampGold>25</BarbCampGold>
+			<BarbSpawnMod>0</BarbSpawnMod>
+			<BarbarianBonus>0</BarbarianBonus>
+			<AIBarbarianBonus>80</AIBarbarianBonus>
+			<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
+			<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
+			<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
+			<AIStartingUnitMultiplier>4</AIStartingUnitMultiplier>
+			<AIStartingDefenseUnits>4</AIStartingDefenseUnits>
+			<AIStartingWorkerUnits>4</AIStartingWorkerUnits>
+			<AIStartingExploreUnits>3</AIStartingExploreUnits>
+			<AIDeclareWarProb>300</AIDeclareWarProb>
+			<AIWorkRateModifier>600</AIWorkRateModifier>
+			<AIUnhappinessPercent>30</AIUnhappinessPercent>
+			<AIGrowthPercent>33</AIGrowthPercent>
+			<AITrainPercent>33</AITrainPercent>
+			<AIWorldTrainPercent>50</AIWorldTrainPercent>
+			<AIConstructPercent>25</AIConstructPercent>
+			<AIWorldConstructPercent>50</AIWorldConstructPercent>
+			<AICreatePercent>50</AICreatePercent>
+			<AIWorldCreatePercent>50</AIWorldCreatePercent>
+			<AIBuildingCostPercent>20</AIBuildingCostPercent>
+			<AIUnitCostPercent>20</AIUnitCostPercent>
+			<AIUnitSupplyPercent>75</AIUnitSupplyPercent>
+			<AIUnitUpgradePercent>5</AIUnitUpgradePercent>
+			<!--<AIInflationPercent>80</AIInflationPercent>-->
+			<AIPerEraModifier>-12</AIPerEraModifier>
+			<AIAdvancedStartPercent>200</AIAdvancedStartPercent>
+			<IconAtlas>DIFFICULTY_9</IconAtlas>
+			<PortraitIndex>8</PortraitIndex>
+			<AIFreeXP>700</AIFreeXP>
+			<AIFreeXPPercent>100</AIFreeXPPercent>
+		</Row>
+	</HandicapInfos>
+
+
+	<HandicapInfo_AIFreeTechs>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<TechType>TECH_AGRICULTURE</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<TechType>TECH_FISHERY</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<TechType>TECH_HUNTING</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<TechType>TECH_STONE_TOOLS</TechType>
+		</Row>
+
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<TechType>TECH_BRONZE_WORKING</TechType>
+		</Row>
+
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<TechType>TECH_MINING</TechType>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<HandicapType>HANDICAP_DEITY</HandicapType>
+			<TechType>TECH_AGRICULTURE</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_DEITY</HandicapType>
+			<TechType>TECH_FISHERY</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_DEITY</HandicapType>
+			<TechType>TECH_HUNTING</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_DEITY</HandicapType>
+			<TechType>TECH_STONE_TOOLS</TechType>
+		</Row>
+
+
+	</HandicapInfo_AIFreeTechs>
+
+	<HandicapInfo_Goodies>
+
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_POPULATION</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_CULTURE</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_PANTHEON_FAITH</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_PROPHET_FAITH</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_GOLD</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_MAP</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_TECH</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_REVEAL_NEARBY_BARBS</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
+			<GoodyType>GOODY_UPGRADE_UNIT</GoodyType>
+		</Row>
+	</HandicapInfo_Goodies>
+
+
+	<IconTextureAtlases>
+
+		<Row>
+			<Atlas>DIFFICULTY_9</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>difficultyicons.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>DIFFICULTY_9</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>difficultyicons128.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+
+		<Row>
+			<Atlas>DIFFICULTY_9</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>difficultyicons256.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>4</IconsPerColumn>
+		</Row>
+	</IconTextureAtlases>
+
+
+	<UnitPromotions>
+
+
+		<Row>
+			<Type>PROMOTION_DIFFICULTY_9</Type>
+			<Description>TXT_KEY_PROMOTION_DIFFICULTY_9</Description>
+			<Help>TXT_KEY_PROMOTION_DIFFICULTY_9_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>11</OrderPriority>
+			<MaxHitPointsModifier>400</MaxHitPointsModifier>
+			<PortraitIndex>26</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<ShowInPedia>0</ShowInPedia>
+			<AttackMod>50</AttackMod>
+			<CityAttack>100</CityAttack>
+			<PediaEntry>TXT_KEY_PROMOTION_DIFFICULTY_9</PediaEntry>
+		</Row>
+
+
+
+
+		<Row>
+			<Type>PROMOTION_AI_ATTACK_CITY</Type>
+			<Description>TXT_KEY_PROMOTION_AI_ATTACK_CITY</Description>
+			<Help>TXT_KEY_PROMOTION_AI_ATTACK_CITY_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<ShowInPedia>0</ShowInPedia>
+			<PediaEntry>TXT_KEY_PROMOTION_AI_ATTACK_CITY</PediaEntry>
+			<CityAttack>150</CityAttack>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<VisibilityChange>5</VisibilityChange>
+		</Row>
+
+	</UnitPromotions>
+
+
+
+	<Policies>
+
+		<Row>
+			<Type>POLICY_DIFFICULTY_9</Type>
+			<Description>TXT_KEY_POLICY_DIFFICULTY_9</Description>
+			<ExtraHappinessPerCity>5</ExtraHappinessPerCity>
+			<Dummy>1</Dummy>
+			<WonderProductionModifier>33</WonderProductionModifier>
+			<WorkerSpeedModifier>50</WorkerSpeedModifier>
+			<CulturePerCity>2</CulturePerCity>
+		</Row>
+
+
+
+		<Row>
+			<Type>POLICY_AI_REDUCE</Type>
+			<Description>TXT_KEY_POLICY_AI_REDUCE</Description>
+			<WonderProductionModifier>33</WonderProductionModifier>
+			<WorkerSpeedModifier>33</WorkerSpeedModifier>
+			<CulturePerCity>2</CulturePerCity>
+			<Dummy>1</Dummy>
+			<StealTechFasterModifier>100</StealTechFasterModifier>
+		</Row>
+
+	</Policies>
+
+
+
+	<Policy_TerrainYieldChanges>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+	</Policy_TerrainYieldChanges>
+
+
+	<Policy_FeatureYieldChanges>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+	</Policy_FeatureYieldChanges>
+
+
+
+
+	<Policy_SpecialistYieldChanges>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Policy_SpecialistYieldChanges>
+
+
+
+
+	<Policy_CityYieldChanges>
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<!--<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>-->
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>30</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>30</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>8</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>20</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>20</Yield>
+		</Row>
+
+	</Policy_CityYieldChanges>
+
+
+	<Policy_FreePromotions>
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+		</Row>
+	</Policy_FreePromotions>
+
+
+	<UnitPromotions_UnitCombats>
+
+
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_AI_ATTACK_CITY</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
+	</UnitPromotions_UnitCombats>
+
+	<Language_zh_CN>
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9">
+			<Text>军备竞赛</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9_HELP">
+			<Text>HP最大值+400%,[ICON_STRENGTH]攻击力+50%。</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE">
+			<Text>世界霸主</Text>
+		</Row>
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_HELP">
+			<Text>世界霸主，适合追求极致挑战的玩家。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_DIFFICULTY_9">
+			<Text>世界霸主</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_POLICY_AI_REDUCE">
+			<Text>战备</Text>
+		</Row>
+	</Language_zh_CN>
+
+
+	<Language_en_US>
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9">
+			<Text>军备竞赛</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9_HELP">
+			<Text>HP最大值+400%,[ICON_STRENGTH]攻击力+50%。</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_POLICY_AI_REDUCE">
+			<Text>战备</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE">
+			<Text>世界霸主</Text>
+		</Row>
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_HELP">
+			<Text>世界霸主，适合追求极致挑战的玩家。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_DIFFICULTY_9">
+			<Text>世界霸主</Text>
+		</Row>
+	</Language_en_US>
+
+
+
+
+
+</GameData>

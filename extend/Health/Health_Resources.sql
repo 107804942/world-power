@@ -1,0 +1,51 @@
+
+
+--------------------------------------------------------------------------------------------------
+--Resources
+--------------------------------------------------------------------------------------------------
+INSERT INTO Resource_YieldChanges (ResourceType,	YieldType,			Yield)
+SELECT 'RESOURCE_FISH',								'YIELD_HEALTH',		0 UNION ALL	
+SELECT 'RESOURCE_INCENSE',							'YIELD_HEALTH',		1 UNION ALL
+SELECT 'RESOURCE_SULFUR',							'YIELD_HEALTH',		2 UNION ALL	
+SELECT 'RESOURCE_SAFFRON',							'YIELD_HEALTH',		2 UNION ALL		
+SELECT 'RESOURCE_URANIUM',							'YIELD_DISEASE',		3;	
+
+
+
+
+INSERT INTO Improvement_ResourceType_Yields (ResourceType,	ImprovementType,					YieldType,				Yield)
+SELECT 'RESOURCE_IRON',										'IMPROVEMENT_MINE',					'YIELD_DISEASE',		2 UNION ALL	--Ã˙
+SELECT 'RESOURCE_COAL',										'IMPROVEMENT_MINE',					'YIELD_DISEASE',		2 UNION ALL	--√∫
+SELECT 'RESOURCE_ALUMINUM',									'IMPROVEMENT_MINE',					'YIELD_DISEASE',		2 UNION ALL	--¬¡
+SELECT 'RESOURCE_URANIUM',									'IMPROVEMENT_MINE',					'YIELD_DISEASE',		4 UNION ALL	--”À
+SELECT 'RESOURCE_OIL',										'IMPROVEMENT_WELL',					'YIELD_DISEASE',		2 UNION ALL	-- Ø”Õ
+SELECT 'RESOURCE_OIL',										'IMPROVEMENT_OFFSHORE_PLATFORM',	'YIELD_DISEASE',		2 UNION ALL	-- Ø”Õ
+SELECT 'RESOURCE_NUTMEG',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --»‚∂πﬁ¢
+SELECT 'RESOURCE_CLOVES',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --∂°œ„
+SELECT 'RESOURCE_PEPPER',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --∫˙Ω∑
+SELECT 'RESOURCE_COCOA',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --ø…ø…
+SELECT 'RESOURCE_SALT',										'IMPROVEMENT_MINE',					'YIELD_HEALTH',			1 UNION ALL	    --—Œ
+SELECT 'RESOURCE_BANANA',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --œ„Ω∂
+SELECT 'RESOURCE_SPICES',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --œ„¡œ
+SELECT 'RESOURCE_SUGAR',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --’·Ã«
+SELECT 'RESOURCE_WINE',										'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --∆œÃ—æ∆
+SELECT 'RESOURCE_CITRUS',									'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',			1 UNION ALL	    --∏ÃÈŸ
+SELECT 'RESOURCE_TRUFFLES',									'IMPROVEMENT_CAMP',					'YIELD_HEALTH',			1 UNION ALL     --À…¬∂
+SELECT 'RESOURCE_WHEAT',									'IMPROVEMENT_FARM',					'YIELD_HEALTH',			1 UNION ALL	    --–°¬Û
+--SELECT 'RESOURCE_COW',									'IMPROVEMENT_PASTURE',				'YIELD_HEALTH',			1 UNION ALL	    --≈£»∫
+--SELECT 'RESOURCE_SHEEP',									'IMPROVEMENT_PASTURE',				'YIELD_HEALTH',			1 UNION ALL	    --√‡—Ú
+--SELECT 'RESOURCE_DEER',									'IMPROVEMENT_CAMP',					'YIELD_HEALTH',			1 UNION ALL	    --¬π
+--SELECT 'RESOURCE_BISON',									'IMPROVEMENT_CAMP',					'YIELD_HEALTH',			1 UNION ALL	    --ÍÛ≈£
+SELECT 'RESOURCE_WHALE',									'IMPROVEMENT_FISHING_BOATS',		'YIELD_HEALTH',			1 UNION ALL	    --æ®”„
+SELECT 'RESOURCE_CRAB',										'IMPROVEMENT_FISHING_BOATS',		'YIELD_HEALTH',			1 UNION ALL     --Û¶–∑
+SELECT 'RESOURCE_RASPBERRYZ',								'IMPROVEMENT_PLANTATION',			'YIELD_HEALTH',		    1 UNION ALL	    --Ω¨π˚
+SELECT 'RESOURCE_LAVENDER',									'IMPROVEMENT_PLANTATION',		    'YIELD_HEALTH',			1 UNION ALL	    --ﬁπ“¬≤›
+SELECT 'RESOURCE_TEA',										'IMPROVEMENT_PLANTATION',		    'YIELD_HEALTH',			1 UNION ALL     --≤Ë“∂
+SELECT 'RESOURCE_PEARLS',									'IMPROVEMENT_FISHING_BOATS',		'YIELD_HEALTH',			1;              --’‰÷È
+
+-----------------------------------------------------------------------------------------------------
+--INSERT INTO Resource_Flavors (ResourceType, FlavorType, Flavor)
+--SELECT	ResourceType, 'FLAVOR_GROWTH', ROUND(Yield*5, 0)
+--FROM Improvement_ResourceType_Yields
+--WHERE YieldType = 'YIELD_HEALTH';
+

@@ -1,0 +1,87 @@
+<Asset>
+	<Mesh file="Typhoon.gr2"/>
+	<Animation file="Sub04S_IdleA.gr2" ec="1000, 2000"/>
+	<Animation file="Sub04S_FidgetA.gr2" ec="1040, 2040"/>
+	<Animation file="Sub04S_IdleA_Trans_IdleB.gr2" ec="1020, 2020"/>
+	<Animation file="Sub04S_Fortify.gr2" ec="1500"/>
+	<Animation file="Sub04S_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="Sub04S_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="Sub04S_Fortify_Idle_Trans_Combat_Ready_Idle.gr2" ec="1560"/>
+	<Animation file="Sub04S_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="Sub04S_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Sub04S_Combat_Ready_Idle.gr2" ec="1620, 1450"/>
+	<Animation file="Sub04S_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640"/>
+	<Animation file="Sub04S_Run.gr2" ec="1400, 1120"/>
+	<Animation file="Sub04S_Stop_Run.gr2" ec="1440, 2440"/>
+	<Animation file="Sub04S_AttackA.gr2" ec="1100, 1140, 2100"/>
+	<Animation file="Sub04S_Bombardment.gr2" ec="1180"/>
+	<Animation file="Sub04S_AttackCity.gr2" ec="1160"/>
+	<Animation file="Sub04S_AntiAir_Attack.gr2" ec="1130"/>
+	<Animation file="Sub04S_Victory.gr2" ec="1800"/>
+	<Animation file="Sub04S_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Sub04S_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Sub04S_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Sub04S_DeathA.gr2" ec="1200"/>
+	<Animation file="Sub04S_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="Sub04S_DeathB.gr2" ec="2200"/>
+	<Animation file="Sub04S_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Sunlight_Irradiance.dds"/>
+	<Texture file="Sub04S_Diff.dds"/>
+	<Texture file="Sub04S_Diff_DMG.dds"/>
+	<Texture file="Sub04S_SREF.dds"/>
+	<Texture file="Sub04S_SREF_DMG.dds"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge"/>
+	<AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="ENTER_FORTIFY.dge"/>
+	<AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="DEATH_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_GRAPH.dge"/>
+	<AnimGraph file="TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="STOP_RUNNING.dge"/>
+	<AnimGraph file="IDLE_GRAPH.dge"/>
+	<AnimGraph file="FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="MELEE_ATTACKS.dge"/>
+	<StateMachine file="1_OMNI_STATE_01.fsmxml"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_LOOP.dge"/>
+	<AnimGraph file="ATTACK_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="ATTACK_CITY_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="START_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="SHUFFLE_STOP_GRAPH.dge"/>
+	<TimedTrigger file="fx_triggers_typhoon.ftsxml"/>
+	<BoneUsage>
+		<Bone name="FX_Projectile_Torpedo_L01"/>
+		<Bone name="FX_Muzzle_Torpedo_L01"/>
+		<Bone name="FX_Muzzle_Torpedo_R01"/>
+		<Bone name="FX_Projectile_Torpedo_R01"/>
+		<Bone name="World"/>
+		<Bone name="FX_Exp_FrontLeft"/>
+		<Bone name="FX_Exp_FrontRight"/>
+		<Bone name="Bone_Prop_01"/>
+		<Bone name="FX_Exp_BackRight"/>
+		<Bone name="FX_Cockpit"/>
+		<Bone name="FX_Exp_BackLeft"/>
+		<Bone name="bone_Door_MissTurret_R01"/>
+		<Bone name="Bone_Root"/>
+		<Bone name="FX_Muzzle_AntiAir_L03"/>
+		<Bone name="FX_Muzzle_AntiAir_R02"/>
+		<Bone name="FX_Muzzle_AntiAir_R01"/>
+		<Bone name="FX_Projectile_AntiAir_R02"/>
+		<Bone name="FX_Projectile_AntiAir_L03"/>
+		<Bone name="FX_Muzzle_AntiAir_L01"/>
+		<Bone name="FX_Projectile_AntiAir_L01"/>
+		<Bone name="FX_Projectile_AntiAir_L02"/>
+		<Bone name="FX_Muzzle_AntiAir_L02"/>
+		<Bone name="FX_Projectile_AntiAir_R01"/>
+	</BoneUsage>
+</Asset>
+

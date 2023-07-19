@@ -1,0 +1,87 @@
+<Asset>
+	<Mesh file="Ground_Rocktopus.gr2"/>
+	<Animation file="Ground_Rocktopus_IdleA.gr2" ec="1000"/>
+	<Animation file="Ground_Rocktopus_FidgetA.gr2" ec="1040"/>
+	<Animation file="Ground_Rocktopus_IdleA_Trans_IdleB.gr2" ec="1020"/>
+	<Animation file="Ground_Rocktopus_IdleB.gr2" ec="2000"/>
+	<Animation file="Ground_Rocktopus_FidgetB.gr2" ec="2040"/>
+	<Animation file="Ground_Rocktopus_IdleB_Trans_IdleA.gr2" ec="2020"/>
+	<Animation file="Ground_Rocktopus_Fortify.gr2" ec="1500"/>
+	<Animation file="Ground_Rocktopus_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="Ground_Rocktopus_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="Ground_Rocktopus_Fortify_Idle_Trans_Combat_Ready_Idle.gr2" ec="1560"/>
+	<Animation file="Ground_Rocktopus_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="Ground_Rocktopus_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Ground_Rocktopus_Combat_Ready_Idle.gr2" ec="1620"/>
+	<Animation file="Ground_Rocktopus_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640, 1800"/>
+	<Animation file="Ground_Rocktopus_Run.gr2" ec="1400, 1450, 1120"/>
+	<Animation file="Ground_Rocktopus_Stop_Run.gr2" ec="1440, 2440, 1140"/>
+	<Animation file="Ground_Rocktopus_AttackA.gr2" ec="1100, 1180, 1160"/>
+	<Animation file="Ground_Rocktopus_AttackB.gr2" ec="2100"/>
+	<Animation file="Ground_Rocktopus_Attack_Air.gr2" ec="1130"/>
+	<Animation file="Ground_Rocktopus_Leave_Ground.gr2" ec="1150"/>
+	<Animation file="Ground_Rocktopus_Enter_Ground.gr2" ec="1151"/>
+	<Animation file="Ground_Rocktopus_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Ground_Rocktopus_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Ground_Rocktopus_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Ground_Rocktopus_DeathA.gr2" ec="1200"/>
+	<Animation file="Ground_Rocktopus_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="Ground_Rocktopus_DeathB.gr2" ec="2200"/>
+	<Animation file="Ground_Rocktopus_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Rocktopus_DIFF.dds"/>
+	<Texture file="Rocktopus_SREF.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Irradiance.dds"/>
+	<AnimGraph file="LEAVE_LAYER_GRAPH.dge"/>
+	<AnimGraph file="ENTER_LAYER_GRAPH.dge"/>
+	<StateMachine file="2_OMNI_STATE_GROUND_ROCKTOPUS.fsmxml"/>
+	<AnimGraph file="SHUFFLE_STOP_GRAPH.dge"/>
+	<AnimGraph file="START_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="ATTACK_CITY_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="ATTACK_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_LOOP.dge"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge"/>
+	<AnimGraph file="MELEE_ATTACKS.dge"/>
+	<AnimGraph file="FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="IDLE_GRAPH.dge"/>
+	<AnimGraph file="STOP_RUNNING.dge"/>
+	<AnimGraph file="TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="FORTIFY_GRAPH.dge"/>
+	<AnimGraph file="COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="DEATH_GRAPH.dge"/>
+	<AnimGraph file="ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="ENTER_FORTIFY.dge"/>
+	<AnimGraph file="FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<TimedTrigger file="FX_Triggers_Ground_Rocktopus.ftsxml"/>
+	<BoneUsage>
+		<Bone name="FX_Muzzle_Udder_L"/>
+		<Bone name="FX_Muzzle_Udder_R"/>
+		<Bone name="Rock_1"/>
+		<Bone name="Rock_2"/>
+		<Bone name="Rock_3"/>
+		<Bone name="Rock_4"/>
+		<Bone name="Rock_6"/>
+		<Bone name="Rock_5"/>
+		<Bone name="ROC_MAIN"/>
+		<Bone name="point_WORLD01"/>
+		<Bone name="Pod_B"/>
+		<Bone name="Pod_E"/>
+		<Bone name="Tentical_2_A"/>
+		<Bone name="Tentical_9_A"/>
+		<Bone name="Tentical_5_A"/>
+		<Bone name="FX_PROJECTILE_01"/>
+		<Bone name="Tentical_2_H"/>
+		<Bone name="Tentical_10_F"/>
+		<Bone name="Tentical_1_G"/>
+		<Bone name="FX_PROJECTILE_02"/>
+	</BoneUsage>
+</Asset>
+

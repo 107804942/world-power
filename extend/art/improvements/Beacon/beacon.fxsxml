@@ -1,0 +1,24 @@
+<Asset>
+  <Mesh file="Beacon.gr2" source="Max" />
+  <Animation file="Beacon_Idle.gr2" name="Idle" ec="1000" source="Max" layer="None" />
+  <Animation file="Beacon_Activated_Idle.gr2" name="Activated_Idle" ec="2000" source="Max" layer="None" />
+  <Animation file="Beacon_Activate.gr2" name="Activate" ec="1990" source="Max" layer="None" />
+  <Texture file="MasterControl_FX_BASE.dds" source="Max" />
+  <Texture file="MasterControl_FX_MASK.dds" source="Max" />
+  <Texture file="Beacon.dds" source="Max" />
+  <Texture file="Beacon_SREF.dds" source="Max" />
+  <Texture file="FX_UV_TopToBottom_Slow02.dds" source="Max" />
+  <Texture file="Building_Environment_Dull.dds" source="Max" />
+  <Texture file="Building_Environment_Sharp.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <Texture file="Beacon.dds" source="Max" />
+  <Texture file="Beacon_SREF.dds" source="Max" />
+  <Texture file="Building_Sunlight_Irradiance.dds" source="Max" />
+  <BoneUsage>
+    <Bone name="World" />
+    <Bone name="Body" />
+    <Bone name="FX_Bone_01" />
+  </BoneUsage>
+  <DecisionTree file="LandmarkDecisionTree.ddtxml" source="Tool" />
+  <TimedTrigger file="FX_Triggers_Beacon.ftsxml" source="Tool" state="0,1,2,3" model="World" />
+</Asset>

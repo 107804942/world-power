@@ -1,0 +1,84 @@
+<Asset>
+	<Mesh file="AutoSled.gr2"/>
+	<Animation file="AutoSled_Aim_L.gr2" ec="1700"/>
+	<Animation file="AutoSled_Aim_R.gr2" ec="1705"/>
+	<Animation file="AutoSled_Aim_Center.gr2" ec="1710"/>
+	<Animation file="AutoSled_IdleA.gr2" ec="1000"/>
+	<Animation file="AutoSled_FidgetA.gr2" ec="1040"/>
+	<Animation file="AutoSled_IdleA_Trans_IdleB.gr2" ec="1020"/>
+	<Animation file="AutoSled_IdleB.gr2" ec="2000"/>
+	<Animation file="AutoSled_FidgetB.gr2" ec="2040"/>
+	<Animation file="AutoSled_IdleB_Trans_IdleA.gr2" ec="2020"/>
+	<Animation file="AutoSled_Fortify.gr2" ec="1500"/>
+	<Animation file="AutoSled_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="AutoSled_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="AutoSled_Fortify_Idle_Trans_Combat_Ready_Idle.gr2" ec="1560"/>
+	<Animation file="AutoSled_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="AutoSled_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="AutoSled_Combat_Ready_Idle.gr2" ec="1620"/>
+	<Animation file="AutoSled_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640"/>
+	<Animation file="AutoSled_Charge_Run.gr2" ec="1120"/>
+	<Animation file="AutoSled_Run_Hover.gr2" ec="1400"/>
+	<Animation file="AutoSled_Stop_Run.gr2" ec="1440, 1140"/>
+	<Animation file="AutoSled_AttackA.gr2" ec="1100"/>
+	<Animation file="AutoSled_AttackB.gr2" ec="2100"/>
+	<Animation file="AutoSled_Attack_City.gr2" ec="1160, 1180"/>
+	<Animation file="AutoSled_Attack_Air.gr2" ec="1130"/>
+	<Animation file="AutoSled_Victory.gr2" ec="1800"/>
+	<Animation file="AutoSled_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="AutoSled_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="AutoSled_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="AutoSled_DeathA.gr2" ec="1200"/>
+	<Animation file="AutoSled_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="AutoSled_DeathB.gr2" ec="2200"/>
+	<Animation file="AutoSled_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Sunlight_Irradiance.dds"/>
+	<Texture file="Marine04SP_DIFF.dds"/>
+	<Texture file="Marine04SP_SREF.dds"/>
+	<Texture file="AutoSled_SREF.dds"/>
+	<Texture file="Autosled_DIFF.dds"/>
+	<AnimGraph file="AIM_FORTIFY_GRAPH.dge"/>
+	<AnimGraph file="AIM_IDLE_GRAPH.dge"/>
+	<AnimGraph file="AIM_MELEE_ATTACKS.dge"/>
+	<AnimGraph file="AIM_FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="AIM_ENTER_FORTIFY.dge"/>
+	<AnimGraph file="AIM_ATTACK_CITY_TO_RUN.dge"/>
+	<AnimGraph file="AIM_ATTACK_TO_RUN_GRAPH.dge"/>
+	<AnimGraph file="AIM_LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="AIM_DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="AIM_BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="AIM_RUNNING_LOOP.dge"/>
+	<AnimGraph file="AIM_ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="AIM_DEATH_GRAPH.dge"/>
+	<AnimGraph file="AIM_LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="AIM_ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="AIM_FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="AIM_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="AIM_TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="AIM_STOP_RUNNING.dge"/>
+	<AnimGraph file="AIM_START_RUNNING.dge"/>
+	<AnimGraph file="AIM_FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="AIM_IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<StateMachine file="MECHANIZED_AIM_STATE_01.fsmxml"/>
+	<TimedTrigger file="FX_Triggers_Autosled.ftsxml"/>
+	<BoneUsage>
+		<Bone name="Bone_ThrusterR"/>
+		<Bone name="bone_turretPlatform"/>
+		<Bone name="Bone_ThrusterL"/>
+		<Bone name="bone_main"/>
+		<Bone name="WORLD_center"/>
+		<Bone name="tank_bone_turret"/>
+		<Bone name="FX_Muzzel_Flash"/>
+		<Bone name="tank_bone_gun"/>
+		<Bone name="Bone_Can"/>
+		<Bone name="FX_Rifle_Vents_R01"/>
+		<Bone name="FX_Rifle_Vents_L01"/>
+		<Bone name="FX_Muzzel_Flash01"/>
+		<Bone name="FX_Thrust_Bone_01"/>
+		<Bone name="FX_Thrust_Bone_02"/>
+		<Bone name="FX_Thrust_Bone_03"/>
+	</BoneUsage>
+</Asset>
+

@@ -1,0 +1,59 @@
+<Asset>
+	<Mesh file="WW1HorseArtillery.gr2"/>
+	<Animation file="HorseArtillery_Idle.gr2" ec="1000, 1020, 1440, 1450, 1800, 2000, 2020, 2440"/>
+	<Animation file="HorseArtillery_Fidget.gr2" ec="1040, 2040"/>
+	<Animation file="HorseArtillery_Fortify.gr2" ec="1500"/>
+	<Animation file="HorseArtillery_Fortify_Idle.gr2" ec="1285, 1290, 1520, 1540, 1560, 1580, 1600, 1620, 1640"/>
+	<Animation file="HorseArtillery_Run.gr2" ec="1120, 1140, 1400, 1460, 1480"/>
+	<Animation file="HorseArtillery_Attack.gr2" ec="1100, 1160, 1180, 2100"/>
+	<Animation file="HorseArtillery_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="HorseArtillery_DeathA.gr2" ec="1200"/>
+	<Animation file="HorseArtillery_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="HorseArtillery_DeathB.gr2" ec="2200"/>
+	<Animation file="HorseArtillery_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="brigw1.dds"/>
+	<Texture file="no_gloss.dds"/>
+	<Texture file="Limber_diff.dds"/>
+	<Texture file="Limber_sref.dds"/>
+	<Texture file="QF_13_pounder_diff.dds"/>
+	<Texture file="QF_13_pounder_sref.dds"/>
+	<Texture file="cavalry_diff.dds"/>
+	<Texture file="cavalry_sref.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Irradiance.dds"/>
+	<BoneUsage>
+		<Bone name="MD NonAccum"/>
+		<Bone name="Dummy_Chariot Body"/>
+		<Bone name="BIP Spine"/>
+		<Bone name="BIP01 Spine"/>
+	</BoneUsage>
+	<TimedTrigger file="fx_triggers_horse_artillery.ftsxml"/>
+	<AnimGraph file="IDLE_OFFSET_CONTINUE_TRUE_GRAPH.dge"/>
+	<AnimGraph file="SHUFFLE_STOP_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="MELEE_ATTACKS.dge"/>
+	<AnimGraph file="MOUNTED_RUNNING_LOOP.dge"/>
+	<AnimGraph file="ENTER_FORTIFY.dge"/>
+	<AnimGraph file="LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="DEATH_GRAPH.dge"/>
+	<AnimGraph file="LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="FORTIFY_GRAPH.dge"/>
+	<AnimGraph file="TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="STOP_RUNNING.dge"/>
+	<AnimGraph file="IDLE_GRAPH.dge"/>
+	<AnimGraph file="FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_LOOP.dge"/>
+	<AnimGraph file="RUN_CHARGE_SHUFFLE_TO_SHUFFLE_RUN_CHARGE.dge"/>
+	<AnimGraph file="ATTACK_CITY_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="ATTACK_TO_RUN_CHARGE_SHUFFLE.dge"/>
+	<AnimGraph file="START_RUN_CHARGE_SHUFFLE.dge"/>
+	<StateMachine file="1_OMNI_MOUNTED_STATE_01.fsmxml"/>
+</Asset>
+

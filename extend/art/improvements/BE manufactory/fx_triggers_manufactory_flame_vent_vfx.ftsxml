@@ -1,0 +1,17 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="1" time="41.32385" duration="1.7" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_PETROLEUM_WELL_FIRE_SM" bone="BONE_FXGasFlare" />
+    <trigger type="FTimedTriggerEffect" id="2" time="22.82857" duration="0.1" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_PETROLEUM_WELL_FIRE_SM" bone="BONE_FXGasFlare" />
+    <trigger type="FTimedTriggerEffect" id="3" time="1.42011034" duration="1.9" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_PETROLEUM_WELL_FIRE_SM" bone="BONE_FXGasFlare" />
+    <trigger type="FTimedTriggerEffect" id="7" time="66.3238144" duration="0.2" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_PETROLEUM_WELL_FIRE_SM" bone="BONE_FXGasFlare" />
+    <trigger type="FTimedTriggerEffect" id="4" time="21.1237869" duration="1.5" repeat="0" ec="1000" track="2" event="ART_DEF_VEFFECT_PETROLEUM_WELL_FIRE_SM" bone="BONE_FXGasFlare" />
+  </triggers>
+</trigger_system>

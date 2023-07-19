@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/19 19:13:24 -->
+<GameData>
+
+	<BuildingClasses>
+
+		<!-- 微波输电-->
+		<Row>
+			<Type>BUILDINGCLASS_SUPERCONDUCTING_GRID</Type>
+			<DefaultBuilding>BUILDING_SUPERCONDUCTING_GRID</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SUPERCONDUCTING_GRID</Description>
+		</Row>
+
+
+
+
+		<!-- 卫生局-->
+		<Row>
+			<Type>BUILDINGCLASS_HEALTH_BUREAU</Type>
+			<DefaultBuilding>BUILDING_HEALTH_BUREAU</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HEALTH_BUREAU</Description>
+		</Row>
+	
+
+		<!-- 食品市场-->
+		<Row>
+			<Type>BUILDINGCLASS_SMALL_MARKET</Type>
+			<DefaultBuilding>BUILDING_SMALL_MARKET</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SMALL_MARKET</Description>
+		</Row>
+		
+		
+		
+		<!-- 电化冶金-->
+		<Row>
+			<Type>BUILDINGCLASS_ORE_REFINERIES</Type>
+			<DefaultBuilding>BUILDING_ORE_REFINERIES</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ORE_REFINERIES</Description>
+		</Row>
+
+		<!-- 粮油工厂-->
+		<Row>
+			<Type>BUILDINGCLASS_FOOD_REFINERIES</Type>
+			<DefaultBuilding>BUILDING_FOOD_REFINERIES</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FOOD_REFINERIES</Description>
+		</Row>
+		
+		<!-- 监禁所-->
+		<Row>
+			<Type>BUILDINGCLASS_LOCKUP</Type>
+			<DefaultBuilding>BUILDING_LOCKUP</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_LOCKUP</Description>
+		</Row>
+		
+		
+		<!-- 寺院-->
+		<Row>
+			<Type>BUILDINGCLASS_CLOISTER</Type>
+			<DefaultBuilding>BUILDING_CLOISTER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CLOISTER</Description>
+		</Row>
+		
+
+
+		<!-- 水族馆-->
+		<Row>
+			<Type>BUILDINGCLASS_AQUARIUM</Type>
+			<DefaultBuilding>BUILDING_AQUARIUM</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_AQUARIUM</Description>
+		</Row>
+
+
+
+
+		<!-- 火器坊-->
+		<Row>
+			<Type>BUILDINGCLASS_FIREARM_WORKSHOP</Type>
+			<DefaultBuilding>BUILDING_FIREARM_WORKSHOP</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FIREARM_WORKSHOP</Description>
+		</Row>
+		
+		
+		<!-- 监禁所-->
+		<Row>
+			<Type>BUILDINGCLASS_JAIL</Type>
+			<DefaultBuilding>BUILDING_JAIL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_JAIL</Description>
+		</Row>
+		
+		
+		<!-- 出版社-->
+		<Row>
+			<Type>BUILDINGCLASS_PUBLISHER</Type>
+			<DefaultBuilding>BUILDING_PUBLISHER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PUBLISHER</Description>
+		</Row>
+
+		<!-- 波兰城堡-->
+		<Row>
+			<Type>BUILDINGCLASS_POLAND_BARBICAN</Type>
+			<DefaultBuilding>BUILDING_POLAND_BARBICAN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_POLAND_BARBICAN</Description>
+		</Row>
+		
+		
+		<!-- 私人药店-->
+		<Row>
+			<Type>BUILDINGCLASS_PRIVATE_PHARMACY</Type>
+			<DefaultBuilding>BUILDING_PRIVATE_PHARMACY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PRIVATE_PHARMACY</Description>
+		</Row>
+
+		<!-- 蓄水池-->
+		<Row>
+			<Type>BUILDINGCLASS_CISTERN</Type>
+			<DefaultBuilding>BUILDING_CISTERN</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CISTERN</Description>
+		</Row>
+
+		<!-- 医药公司-->
+		<Row>
+			<Type>BUILDINGCLASS_MEDICAL_COMPANY</Type>
+			<DefaultBuilding>BUILDING_MEDICAL_COMPANY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MEDICAL_COMPANY</Description>
+		</Row>
+
+		<!--生物制剂工厂-->
+		<Row>
+			<Type>BUILDINGCLASS_BIOLOGICAL_FACTORIES</Type>
+			<DefaultBuilding>BUILDING_BIOLOGICAL_FACTORIES</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BIOLOGICAL_FACTORIES</Description>
+		</Row>
+		
+		
+		<!-- 粮酒坊-->
+		<Row>
+			<Type>BUILDINGCLASS_BREWER</Type>
+			<DefaultBuilding>BUILDING_BREWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BREWER</Description>
+		</Row>
+		
+	
+
+		<!-- 炼金术-->
+		<Row>
+			<Type>BUILDINGCLASS_ALCHEMIST</Type>
+			<DefaultBuilding>BUILDING_ALCHEMIST</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ALCHEMIST</Description>
+		</Row>
+		
+		
+		<!-- 烟熏室-->
+		<Row>
+			<Type>BUILDINGCLASS_SMOKEHOUSE</Type>
+			<DefaultBuilding>BUILDING_SMOKEHOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SMOKEHOUSE</Description>
+		</Row>
+		<!-- 葡萄园-->
+		<Row>
+			<Type>BUILDINGCLASS_VINYARD</Type>
+			<DefaultBuilding>BUILDING_VINYARD</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_VINYARD</Description>
+		</Row>
+		<!-- 地牢-->
+
+		<Row>
+			<Type>BUILDINGCLASS_DUNGEON</Type>
+			<DefaultBuilding>BUILDING_DUNGEON</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DUNGEON</Description>
+		</Row>
+
+
+		<!--战争机器工厂-->
+		<Row>
+			<Type>BUILDINGCLASS_WAR_MACHINE_FACTORY</Type>
+			<DefaultBuilding>BUILDING_WAR_MACHINE_FACTORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WAR_MACHINE_FACTORY</Description>
+		</Row>
+
+		
+
+		<!--沙漠改造基地-->
+		<Row>
+			<Type>BUILDINGCLASS_DESERT_TRANSFORMING_BASE</Type>
+			<DefaultBuilding>BUILDING_DESERT_TRANSFORMING_BASE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DESERT_TRANSFORMING_BASE</Description>
+		</Row>
+		
+		<!--布厂-->
+		<Row>
+			<Type>BUILDINGCLASS_CLOTH_MILL</Type>
+			<DefaultBuilding>BUILDING_CLOTH_MILL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CLOTH_MILL</Description>
+		</Row>
+		<!--称重房-->
+		<Row>
+			<Type>BUILDINGCLASS_WEIGH_HOUSE</Type>
+			<DefaultBuilding>BUILDING_WEIGH_HOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WEIGH_HOUSE</Description>
+		</Row>
+		
+		
+		<!--炸药厂-->
+		<Row>
+			<Type>BUILDINGCLASS_EXPLOSIVE_MATERIAL_FACTORY</Type>
+			<DefaultBuilding>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_EXPLOSIVE_MATERIAL_FACTORY</Description>
+		</Row>
+		
+		<!--火药铺-->
+		<Row>
+			<Type>BUILDINGCLASS_GUN_POWDER_HOUSE</Type>
+			<DefaultBuilding>BUILDING_GUN_POWDER_HOUSE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GUN_POWDER_HOUSE</Description>
+		</Row>
+		
+		
+		<!--矿业公司-->
+		<Row>
+			<Type>BUILDINGCLASS_MINING_COMPANY</Type>
+			<DefaultBuilding>BUILDING_MINING_COMPANY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MINING_COMPANY</Description>
+		</Row>
+
+
+		<!--深井-->
+		<Row>
+			<Type>BUILDINGCLASS_OIL_WELL</Type>
+			<DefaultBuilding>BUILDING_OIL_WELL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_OIL_WELL</Description>
+		</Row>
+		
+		
+		
+		
+		<!--瞭望塔-->
+		<Row>
+			<Type>BUILDINGCLASS_WATCH</Type>
+			<DefaultBuilding>BUILDING_WATCH</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WATCH</Description>
+		</Row>
+
+
+		<!--草药铺-->
+		<Row>
+			<Type>BUILDINGCLASS_HERBALIST</Type>
+			<DefaultBuilding>BUILDING_HERBALIST</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HERBALIST</Description>
+		</Row>
+		
+		<!--公共浴室-->
+
+		<Row>
+			<Type>BUILDINGCLASS_BALNEAE</Type>
+			<DefaultBuilding>BUILDING_BALNEAE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BALNEAE</Description>
+		</Row>
+	
+		<!--下水道-->
+		<Row>
+			<Type>BUILDINGCLASS_CLOACA</Type>
+			<DefaultBuilding>BUILDING_CLOACA</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CLOACA</Description>
+		</Row>
+		<!--山寨-->
+		<Row>
+			<Type>BUILDINGCLASS_HILL_FORT</Type>
+			<DefaultBuilding>BUILDING_HILL_FORT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HILL_FORT</Description>
+		</Row>
+		<!--水井-->
+
+		<Row>
+			<Type>BUILDINGCLASS_WELL</Type>
+			<DefaultBuilding>BUILDING_WELL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_WELL</Description>
+		</Row>
+		<!--木工坊-->
+		<Row>
+			<Type>BUILDINGCLASS_CARPENTER</Type>
+			<DefaultBuilding>BUILDING_CARPENTER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CARPENTER</Description>
+		</Row>
+		<!--木栅栏-->
+		<Row>
+			<Type>BUILDINGCLASS_PALISADE</Type>
+			<DefaultBuilding>BUILDING_PALISADE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_PALISADE</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_QUANTUM_LAB</Type>
+			<DefaultBuilding>BUILDING_QUANTUM_LAB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_QUANTUM_LAB</Description>
+		</Row>
+		
+		
+		<Row>
+			<Type>BUILDINGCLASS_GENE_THERAPY</Type>
+			<DefaultBuilding>BUILDING_GENE_THERAPY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GENE_THERAPY</Description>
+		</Row>
+
+	
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_ECITY</Type>
+			<DefaultBuilding>BUILDING_ECITY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ECITY</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_FW_GEOTHERMAL_PLANT</Type>
+			<DefaultBuilding>BUILDING_FW_GEOTHERMAL_PLANT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_FW_SERVER_HUB</Type>
+			<DefaultBuilding>BUILDING_FW_SERVER_HUB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_SERVER_HUB</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_FW_MYCOPROTEIN_VATS</Type>
+			<DefaultBuilding>BUILDING_FW_MYCOPROTEIN_VATS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_VR_TRAINING</Type>
+			<DefaultBuilding>BUILDING_VR_TRAINING</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_VR_TRAINING</Description>
+		</Row>
+	
+		
+		<Row>
+			<Type>BUILDINGCLASS_DEFENSE_NETWORK</Type>
+			<DefaultBuilding>BUILDING_DEFENSE_NETWORK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MILITARY_BASE</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_BIOMOD_TANK</Type>
+			<DefaultBuilding>BUILDING_FW_BIOMOD_TANK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_BIOMOD_TANK</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_UNDERGROUND</Type>
+			<DefaultBuilding>BUILDING_UNDERGROUND</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_UNDERGROUND</Description>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_MATRIX</Type>
+			<DefaultBuilding>BUILDING_MATRIX</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MATRIX</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_FW_TELEPRESENCE_HUB</Type>
+			<DefaultBuilding>BUILDING_FW_TELEPRESENCE_HUB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_NAVAL_BASE</Type>
+			<DefaultBuilding>BUILDING_NAVAL_BASE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NAVAL_BASE</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_MILITARY_AIRBASE</Type>
+			<DefaultBuilding>BUILDING_MILITARY_AIRBASE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MILITARY_AIRBASE</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_MISSILE_BASE</Type>
+			<DefaultBuilding>BUILDING_MISSILE_BASE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MISSILE_BASE</Description>
+		</Row>
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_ZXZCC</Type>
+			<DefaultBuilding>BUILDING_ZXZCC</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ZXZCC</Description>
+		</Row>
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_ANGELNET_DUMMY</Type>
+			<DefaultBuilding>BUILDING_FW_ANGELNET_DUMMY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_ANGELNET_DUMMY</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_FORCE_FIELD</Type>
+			<Description>TXT_KEY_BUILDING_FORCE_FIELD</Description>
+			<DefaultBuilding>BUILDING_FORCE_FIELD</DefaultBuilding>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_MINEFIELD</Type>
+			<DefaultBuilding>BUILDING_MINEFIELD</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MINEFIELD</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_BIOFACTORY</Type>
+			<DefaultBuilding>BUILDING_FW_BIOFACTORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_BIOFACTORY</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_THORIUM_REACTOR</Type>
+			<DefaultBuilding>BUILDING_THORIUM_REACTOR</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_THORIUM_REACTOR</Description>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_FW_SANCTUARY</Type>
+			<DefaultBuilding>BUILDING_FW_SANCTUARY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FW_SANCTUARY</Description>
+		</Row>
+
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_DRONE_CONTROL</Type>
+			<DefaultBuilding>BUILDING_DRONE_CONTROL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DRONE_CONTROL</Description>
+		</Row>
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_SATELLITE_DEFENSE_ARRAY</Type>
+			<DefaultBuilding>BUILDING_SATELLITE_DEFENSE_ARRAY</DefaultBuilding>
+			<Description>DESC_SATELLITE_DEFENSE_ARRAY</Description>
+		</Row>
+
+
+
+
+		<Row>
+			<Type>BUILDINGCLASS_DEFENSE_NETWORK2</Type>
+			<DefaultBuilding>BUILDING_DEFENSE_NETWORK2</DefaultBuilding>
+			<Description>DESC_DEFENSE_NETWORK2</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_FINANCIAL_NETWORK</Type>
+			<DefaultBuilding>BUILDING_FINANCIAL_NETWORK</DefaultBuilding>
+			<Description>DESC_FINANCIAL_NETWORK</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_SCIENCE_NETWORK</Type>
+			<DefaultBuilding>BUILDING_SCIENCE_NETWORK</DefaultBuilding>
+			<Description>DESC_SCIENCE_NETWORK</Description>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_PLANET_MINE</Type>
+			<DefaultBuilding>BUILDING_PLANET_MINE</DefaultBuilding>
+			<Description>DESC_PLANET_MINE</Description>
+		</Row>
+
+
+		<Row>
+			<Type>BUILDINGCLASS_TITANIUM_FACTORY</Type>
+			<DefaultBuilding>BUILDING_TITANIUM_FACTORY</DefaultBuilding>
+			<Description>DESC_TITANIUM_FACTORY</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_EE_BASTION</Type>
+			<DefaultBuilding>BUILDING_EE_BASTION</DefaultBuilding>
+			<Description>DESC_EE_BASTION</Description>
+		</Row>
+
+		<Row>
+			<Type>BUILDINGCLASS_XCOM_HEADQUARTERS</Type>
+			<DefaultBuilding>BUILDING_XCOM_HEADQUARTERS</DefaultBuilding>
+			<Description>DESC_XCOM_HEADQUARTERS</Description>
+		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_AUTOFACTORY</Type>
+			<DefaultBuilding>BUILDING_AUTOFACTORY</DefaultBuilding>
+			<Description>DESC_AUTOFACTORY</Description>
+		</Row>
+
+	
+
+	</BuildingClasses>
+
+
+	<Civilization_BuildingClassOverrides>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ANCIENT_CITY</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ANCIENT_CITY</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ROCKEFELLER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ROCKEFELLER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_INTELLIGENCE_BUREAU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_INTELLIGENCE_BUREAU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FOREIGN_OFFICE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FOREIGN_OFFICE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KGB</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KGB</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_AP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_AP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KARRUPP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KARRUPP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KARLSTEJN</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KARLSTEJN</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_THE_CAPITOL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_THE_CAPITOL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WASHION_TOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WASHION_TOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_BEILUN_TOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_BEILUN_TOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SANKORE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SANKORE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_POLAND</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+		</Row>
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_IROQUOIS</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_COOKED_MEDICINE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_COOKED_MEDICINE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GUIGU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GUIGU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PEOPLES_HALL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PEOPLES_HALL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SOVIET_PALACE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SOVIET_PALACE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+
+	
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PROMETHEUS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PROMETHEUS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_POSEIDON_TEMPLE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_POSEIDON_TEMPLE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WHITE_HOUSE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_WHITE_HOUSE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_DZIMBABWE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_DZIMBABWE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PUMA_PUMKU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PUMA_PUMKU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MAGINOT_LINE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MAGINOT_LINE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_BURJALARAB</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_BURJALARAB</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PONTE_VECCHIO</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PONTE_VECCHIO</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PONTDUGARD</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PONTDUGARD</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LIBERATION_GATE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LIBERATION_GATE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		
+		
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_HELIOS_BUILDING</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_HELIOS_BUILDING</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KING_SOLOMON</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KING_SOLOMON</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ULUGH_BEG</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ULUGH_BEG</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_REGISTAN</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_REGISTAN</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MONT_SAINT_MICHEL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MONT_SAINT_MICHEL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TORRE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TORRE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_DIABLO</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_DIABLO</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_BLETCHLEY_PARK</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_BLETCHLEY_PARK</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_HELIOS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_HELIOS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_MOON_BASE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_MOON_BASE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_SKYNET</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_SKYNET</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_SKYCITY</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_SKYCITY</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_VIRTUAL_IDOL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_VIRTUAL_IDOL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SATELLITE_NET</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SATELLITE_NET</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_US_BANK_TOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_US_BANK_TOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LEP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LEP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_NATIONAL_HOSPITAL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_NATIONAL_HOSPITAL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TECHNOMART</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_TECHNOMART</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_VERSAILLES</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_VERSAILLES</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MALBORK</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MALBORK</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SUMMER_PALACE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SUMMER_PALACE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SMITHSONIAN</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SMITHSONIAN</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FASIL_GHEBBI</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FASIL_GHEBBI</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CRYSTAL_PALACE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CRYSTAL_PALACE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KRONBORG</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KRONBORG</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_ULTIMATOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_ULTIMATOWER</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SPACE_FORTRESS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SPACE_FORTRESS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FOLDING_MACHINE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FOLDING_MACHINE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_INTERSTATE_HIGHWAY_SYSTEM</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_INTERSTATE_HIGHWAY_SYSTEM</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_MARKOV</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_FW_MARKOV</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KNOSSOS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KNOSSOS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LASCAUX_CAVES</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LASCAUX_CAVES</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ARCHIMEDES</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ARCHIMEDES</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SPHINX</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SPHINX</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MALTA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MALTA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MEROE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MEROE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ZHENGGUOQU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ZHENGGUOQU</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SILKROAD</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SILKROAD</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SKARABRAE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SKARABRAE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PALMYRA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_PALMYRA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_YUEYANG</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_YUEYANG</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LEONOARDOS_WORKSHOP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_LEONOARDOS_WORKSHOP</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ABUSIMBEL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ABUSIMBEL</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_RUSHMORE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_RUSHMORE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KAMUTHI</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KAMUTHI</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SATELLITE_SOLAR</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_SATELLITE_SOLAR</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_DIONYSUS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_DIONYSUS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GLOBALCNIEMA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_GLOBALCNIEMA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ISHTARGATE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_ISHTARGATE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KRAK_DES_CHEVALIERS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_KRAK_DES_CHEVALIERS</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CITADEL_OF_CARCASSONNE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CITADEL_OF_CARCASSONNE</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+
+
+
+		
+		
+		
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_OSARAGI</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_OSARAGI</BuildingClassType>
+			<BuildingType/>
+		</Row>
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MONASTERY_OF_METEORA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_MONASTERY_OF_METEORA</BuildingClassType>
+			<BuildingType/>
+		</Row>
+	</Civilization_BuildingClassOverrides>
+	
+	
+	
+	
+
+
+
+
+</GameData>

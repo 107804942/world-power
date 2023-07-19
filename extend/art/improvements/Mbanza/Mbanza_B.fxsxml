@@ -1,0 +1,11 @@
+<Asset>
+  <Mesh file="Mbanza_B.gr2" source="Max" />
+  <Texture file="FX_Blk_Blk4x4.dds" source="Max" />
+  <Texture file="wonder_grnd_h.dds" source="Max" />
+  <Texture file="DIS_Mbanza_Base_B.dds" source="Max" />
+  <Texture file="DIS_Mbanza_Base_N.dds" source="Max" />
+  <Texture file="Wonder_grnd_diff.dds" source="Max" />
+  <Texture file="Unit_Environment_Dull.dds" source="Max" />
+  <Texture file="Unit_Environment_Sharp.dds" source="Max" />
+  <Texture file="Unit_Irradiance.dds" source="Max" />
+</Asset>

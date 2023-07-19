@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisEffectArtInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Civ5ArtDefines_VisEffects.xsd">
+   
+  <!-- Expansion 2 effects  -->
+  
+  <!--  _______ Siege Tower Death Explosion  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SIEGE_TOWER_DEATH</Name>
+    <Transform>
+      <Translation x="0.0" y="3.0" z="8.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.9</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+	  <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_BLUNT_FLASH_HIT_MD</Name>
+      </ParticleEffect>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_EXP_WOODDEATH_01B</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Siege Tower Hit _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_HAMMER_SIEGE_TOWER_HIT</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="90.0"/>
+      <Scale>1.3</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_HAMMER_HIT</Name>
+      </ParticleEffect>
+	  <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_BLUNT_FLASH_HIT_MD</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Pracinha Firing Muzzle Blast _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_PRACINHA_MUZBLAST_01</Name>
+    <Transform>
+      <Translation x="7.4" y="0.9" z="0.0"/>
+      <Rotation x="0.0" y="-90.0" z="0.0"/>
+      <Scale>1.2</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_FX_MECHINFANTRY_MUZBLAST_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Bazooka Firing Smoke  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BAZOOKA_LAUNCH_SMOKE</Name>
+    <Transform>
+      <Translation x="0.0" y="9.0" z="0.0"/>
+      <Rotation x="-90.0" y="0.0" z="0.0"/>
+      <Scale>0.3</Scale>
+    </Transform>
+    <fBaseDuration>0.4</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_ROCKET_LAUNCH_SMOKE_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Bazooka Firing Smoke Front  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BAZOOKA_LAUNCH_SMOKE_FRONT</Name>
+    <Transform>
+      <Translation x="0.0" y="-7.7" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.20</Scale>
+    </Transform>
+    <fBaseDuration>0.4</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_ROCKET_LAUNCH_SMOKE_FRONT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Bazooka Rocket Projectile  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BAZOOKA_ROCKET_PROJECTILE</Name>
+    <Transform>
+      <Translation x="0.0" y="10.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="-90.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.001</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_TRAIL_ROCKET_PROJ</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_PROJ_ROCKET_ARTILLERY</Name>
+        <!--<Animation>1000</Animation>-->
+      </ModelEffect>
+    </ModelEffects>
+    <ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Atomic Bomb Explosion animated Bones_______ -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ATOMIC_BOMB_01_NEW</Name>
+    <Transform>
+      <Translation x="0.0" y="-4.0" z="14.5"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>2.7</Scale>
+    </Transform>
+    <fBaseDuration>9.3</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_ATOMIC_BOMB_DOME_BONES</Name>
+        <Animation>1000</Animation>
+      </ModelEffect>
+    </ModelEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_UNIT_ATOMIC_BOMB_ATOMIC_BOMB_ATTACK_KABOOM</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Rotating Axe impact _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ROTATING_AXE_IMPACT</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Rotating Axe Projectile  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ROTATING_AXE_PROJECTILE</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.001</fBaseDuration>
+    <fBaseDurationScale>0.1</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_ROTATING_AXE</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_ROTATING_AXE</Name>
+		<Animation>1000</Animation>
+      </ModelEffect>
+    </ModelEffects> 
+	<ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_ROTATING_AXE_IMPACT</Name>
+      </ChildEffect>
+    </ChildEffects>    
+  </VisEffectArtInfo>  
+  <!--  _______ Static Zulu Spear  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_IMPI_SPEAR</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.02</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_IMPI_SPEAR</Name>
+      </ModelEffect>
+    </ModelEffects>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_STR_ARROW_TRAIL_03</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+	<ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_PROJ_ARROW_IMPACT</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Casimir Torch  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_CASIMIR_TORCH</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="-5.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>4.9</Scale>
+    </Transform>
+    <fBaseDuration>0.001</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_CASIMIR_TORCH</Name>
+      </ParticleEffect>
+    </ParticleEffects>     
+  </VisEffectArtInfo>
+  <!--  _______ Almansur Fire  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ALMANSUR_FIRE</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="-5.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>4.9</Scale>
+    </Transform>
+    <fBaseDuration>0.001</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_ALMANSUR_FIRE</Name>
+      </ParticleEffect>
+    </ParticleEffects>     
+  </VisEffectArtInfo>
+  <!--  _______ Broadway light_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BROADWAY_LIGHTS</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_BROADWAY_LIGHTS</Name>
+      </ModelEffect>
+    </ModelEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Explorer Rifle Firing Smoke  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_EXPLORER_RIFLE_SMOKE</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="8.5"/>
+      <Rotation x="0.0" y="-90.0" z="0.0"/>
+      <Scale>1.3</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_RIFLE_SMOKE</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Civil War Rifle Firing Smoke  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_CIVIL_WAR_RIFLE_SMOKE</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="7.0"/>
+      <Rotation x="0.0" y="-90.0" z="0.0"/>
+      <Scale>1.3</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_RIFLE_SMOKE</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ XCOM drop Skyranger Animation Effect_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_XCOM_DROP</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>0.4</Scale>
+    </Transform>
+    <fBaseDuration>2</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_XCOM_DROP</Name>
+        <Animation>1000</Animation>
+      </ModelEffect>
+    </ModelEffects>
+  </VisEffectArtInfo>  
+  <!--  _______ XCOM trooper 01 Animation Effect_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_XCOM_TROOPER_01</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>3.7</Scale>
+    </Transform>
+    <fBaseDuration>2.56</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_XCOM_TROOPER_01</Name>
+        <Animation>1000</Animation>
+      </ModelEffect>
+    </ModelEffects>
+  </VisEffectArtInfo>
+  <!--  _______ XCOM trooper 02 Animation Effect_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_XCOM_TROOPER_02</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>3.7</Scale>
+    </Transform>
+    <fBaseDuration>3.26</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_XCOM_TROOPER_02</Name>
+        <Animation>1000</Animation>
+      </ModelEffect>
+    </ModelEffects>
+  </VisEffectArtInfo>
+  <!--  _______ XCOM trooper 03 Animation Effect_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_XCOM_TROOPER_03</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>3.7</Scale>
+    </Transform>
+    <fBaseDuration>3.13</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_XCOM_TROOPER_03</Name>
+        <Animation>1000</Animation>
+      </ModelEffect>
+    </ModelEffects>
+  </VisEffectArtInfo>  
+  <!--  _______ XCOM Projectile Trail _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_PLASMA_RIFLE_PROJ</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>9.05</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>3.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_PLASMA_RIFLE_TRAIL</Name>        
+      </ParticleEffect>
+    </ParticleEffects>
+    <ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_PLASMA_RIFLE_IMPACT</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+  <!--  _______ XCOM Projectile Impact _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_PLASMA_RIFLE_IMPACT</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>1.55</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>3.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_PLASMA_RIFLE_IMPACT</Name>        
+      </ParticleEffect>
+    </ParticleEffects>    
+  </VisEffectArtInfo>
+  <!--  _______ XCOM Jetpack Trail _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_JETPACK_TRAIL</Name>
+    <Transform>
+      <Translation x="35.0" y="5.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="75.0"/>
+      <Scale>0.35</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_JETPACK_TRAIL</Name>        
+      </ParticleEffect>
+    </ParticleEffects>    
+  </VisEffectArtInfo>
+  <!--  _______ XCOM Jetpack Trail Small _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_JETPACK_TRAIL_SM</Name>
+    <Transform>
+      <Translation x="10.0" y="12.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="75.0"/>
+      <Scale>0.20</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_JETPACK_TRAIL</Name>        
+      </ParticleEffect>
+    </ParticleEffects>    
+  </VisEffectArtInfo>
+  <!--  _______ XCOM Jetpack Dust kickup _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_DUST_KICKUP</Name>
+    <Transform>
+      <Translation x=".0" y=".0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z=".0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_DUST_KICKUP</Name>        
+      </ParticleEffect>
+    </ParticleEffects>    
+  </VisEffectArtInfo>
+  <!--  _______ XCOM Skyranger Engine _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SKYRANGER_ENGINE</Name>
+    <Transform>
+      <Translation x="0.0" y="-300.0" z="0.0"/>
+      <Rotation x="-90.0" y="0.0" z="0.0"/>
+      <Scale>0.9</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_SKYRANGER_ENGINE</Name>
+      </ParticleEffect>
+    </ParticleEffects> 
+	<ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_JET_ENGINE_FIRE</Name>
+      </ModelEffect>
+    </ModelEffects>	
+  </VisEffectArtInfo>
+  <!--  _______ XCOM Skyranger Engine LG _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SKYRANGER_ENGINE_LG</Name>
+    <Transform>
+      <Translation x="0.0" y="-300.0" z="0.0"/>
+      <Rotation x="-90.0" y="0.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_SKYRANGER_ENGINE</Name>        
+      </ParticleEffect>
+    </ParticleEffects>    
+  </VisEffectArtInfo>
+  <!--  _______ Syranger Air Wake DIRT  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SKYRANGER_AIRWAKE_DIRT</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="30.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.3</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_GUNSHIP_AIRWAKE_DIRT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______  Caravan truck movement Wide Dust Trail Medium  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_TRUCK_DUST_TRAIL_MD</Name>
+    <Transform>
+      <Translation x="0.0" y="-3.0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>2.1</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_DUST_TRAIL_WIDE_MD</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______  Caravan truck movement Kicked Up Dirt Trail Small  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_TRUCK_DIRT_TRAIL_MD</Name>
+    <Transform>
+      <Translation x="0.0" y="5.5" z="-1.5"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>1.7</Scale>
+    </Transform>
+    <fBaseDuration>0.001</fBaseDuration>
+    <fBaseDurationScale>0.01</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_DIRT_TRAIL_MD</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Mining Spark Archaeologist_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ARCHAEOLOGIST_MINING_SPARK</Name>
+    <Transform>
+      <Translation x="-5.0" y="0.0" z="-1.0"/>
+      <Rotation x="0.0" y="95.0" z="90.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_MINING_SPARK</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Archaeologist Shoveling Dirt 01_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ARCHAEOLOGIST_SHOVELING_DIRT_01</Name>
+    <Transform>
+      <Translation x="-7.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="180.0"/>
+      <Scale>1.6</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_SHOVELING_DIRT_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Archaeologist Shoveling Dirt 02_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ARCHAEOLOGIST_SHOVELING_DIRT_02</Name>
+    <Transform>
+      <Translation x="-7.0" y="0.0" z="0.0"/>
+      <Rotation x="-35.0" y="0.0" z="170.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_SHOVELING_DIRT_02</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Explorer Shoveling Dirt 01_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_EXPLORER_SHOVELING_DIRT_01</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="6.0"/>
+      <Rotation x="0.0" y="90.0" z="180.0"/>
+      <Scale>1.6</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_SHOVELING_DIRT_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Explorer Shoveling Dirt 02_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_EXPLORER_SHOVELING_DIRT_02</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="6.0"/>
+      <Rotation x="0.0" y="0.0" z="00.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_SHOVELING_DIRT_02</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Lake Victoria  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_LAKE_VICTORIA</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="-0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.001</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>    
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_LAKE_VICTORIA_01</Name>
+        <!--<Animation>1000</Animation>-->
+      </ModelEffect>
+    </ModelEffects>    
+  </VisEffectArtInfo>
+  <!--  _______ Arrow Impact _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_PROJ_ARROW_IMPACT</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_ARROW_MISS</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ SLING Rock Impact on city _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_CITY</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="4.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_FLAMING_BOULDER_CITY</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ SLING Rock Impact on Dirt _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_DIRT</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_BOULDER_DIRT</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ SLING Rock Impact on Snow _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_SNOW</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_BOULDER_SNOW</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ SLING Rock Impact on Sand _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_SAND</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_BOULDER_SAND</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ SLING Rock Impact on Mud _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_MUD</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_BOULDER_MUD</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Catapult Rock Impact on Leaves _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_LEAVES</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_BOULDER_LEAVES</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Catapult Rock Impact on Air _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_AIR</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="20.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_BOULDER_DIRT</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Catapult Rock Impact on Water _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SLING_ROCK_IMPACT_WATER</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="4.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_AXE_HIT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <SoundEffects>
+      <SoundEffect>
+        <Name>AS3D_IMPACT_BOULDER_WATER</Name>
+      </SoundEffect>
+    </SoundEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Atlatl with trail   _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ATLATL</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="90.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.025</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_ATLATL</Name>
+      </ModelEffect>
+    </ModelEffects>
+	<ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_STR_ARROW_TRAIL_03</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+	<ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_PROJ_ARROW_IMPACT</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Gunship Machine Mini Gun Hit DIRT  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_SMALL_BULLET_HIT_DIRT</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="5.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>0.3</Scale>
+    </Transform>
+    <fBaseDuration>40.00</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>      
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_DIRT_IMPACT_SM</Name>
+      </ParticleEffect>
+    </ParticleEffects>    
+  </VisEffectArtInfo>
+
+
+  <!--  _______ New Effects Start _______   -->
+
+
+
+
+  <!--  _______ laser and plasma effects _______   -->
+ 
+
+ <!--  _______ Blue beam rifle v1_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BEAM_RIFLE_BLUE_V1</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="180.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_BEAM_RIFLE_BLUE</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BEAM_RIFLE_BLUE_V2</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="-90.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_BEAM_RIFLE_BLUE</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ Blue plasma _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_PLASMA_RIFLE_BLUE_PULSE</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>0.25</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_PLASMA_RIFLE_BLUE_PULSE</Name>        
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ laser blast red _______  -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_LASER_BLAST_RED</Name>
+    <Transform>
+      <Translation x="0.3" y="0.3" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="0.0"/>
+      <Scale>4.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_MECH_EYE_GLOW_RED</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+  <!--  _______ laser blast green _______  -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_LASER_BLAST_GREEN</Name>
+    <Transform>
+      <Translation x="0.3" y="0.3" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="0.0"/>
+      <Scale>1.5</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_MECH_EYE_GLOW_GREEN</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+
+  <!--  _______ Annihilation RAY _______  -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ANNIHILATION_RAY</Name>
+    <Transform>
+      <Translation x="0.3" y="0.3" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="0.0"/>
+      <Scale>1.75</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_ANNIHILATION_RAY_TRAIL</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_ANNIHILATION_RAY_IMPACT</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+
+  <!--  _______ Annihilation RAY Impact _______  -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ANNIHILATION_RAY_IMPACT</Name>
+    <Transform>
+      <Translation x="0.3" y="0.3" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="0.0"/>
+      <Scale>20.75</Scale>
+    </Transform>
+    <fBaseDuration>0.7</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_ANNIHILATION_RAY_IMPACT</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+
+
+
+
+
+ 
+
+
+	<!-- WH40K-Effects -->
+
+  <!--  _______ ork torch  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ORK_TORCH_PROJECTILE</Name>
+    <Transform>
+      <Translation x="0.8" y="0.0" z="-3.3"/>
+      <Rotation x="0.0" y="90.0" z="0.0"/>
+      <Scale>0.06</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>0.5</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_PROJ_TORCH_HAND</Name>
+      </ModelEffect>
+    </ModelEffects>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_FIRE_ARROW_SM</Name>
+      </ParticleEffect>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_STR_ARROW_FIRE_TRAIL_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_FIRE_ARROW_IMPACT_$(TERRAIN)</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+
+
+  <!--  _______ Ork Grenade  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ORK_GRENADE</Name>
+    <Transform>
+      <Translation x="0.8" y="0.0" z="-3.3"/>
+      <Rotation x="0.0" y="90.0" z="0.0"/>
+      <Scale>0.05</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>0.5</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_ORK_GRENADE</Name>
+      </ModelEffect>
+    </ModelEffects>
+    <ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+
+
+
+  <!--  _______ Ork Grenade Launch  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ORK_GRENADE_LAUNCHER</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="90.0"/>
+      <Scale>0.005</Scale>
+    </Transform>
+    <fMovementSpeed>3.0</fMovementSpeed>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_STR_BROWN_TRAIL_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_ROCK_SLINGER</Name>
+      </ModelEffect>
+    </ModelEffects>
+    <ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+
+
+  <!--  _______ ork sword trail  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_UNIT_ORK_SWORD_TRAIL_01</Name>
+    <Transform>
+      <Translation x="1.5" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="90.0"/>
+      <Scale>0.07</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_STR_SWORD_TRAIL_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ORK_BLASTER_01</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>0.03</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>2.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_FX_MECHINFANTRY_MUZBLAST_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+    <!--  _______ ORK Machine Gun _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ORK_MACHINEGUN_01</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>0.09</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_FX_ANTI_AIR_MUZBLAST_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+  <!--  _______ Ork Death (small)  _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_ORK_DEATH_SM</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="2.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>0.02</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_BLUNT_FLASH_HIT_MD</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+
+
+
+
+  <!--  _______ Glow Effects EFFECTS _______   -->
+
+
+
+
+  <!--  _______ BIOLUMINESCENT GLOW 1 _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BIOLUMINESCENT_1</Name>
+    <FOWMask>3</FOWMask>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>5.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_BIOLUMINESCENT_1</Name>
+      </ModelEffect>
+    </ModelEffects>
+  </VisEffectArtInfo>
+  <!--  _______ BIOLUMINESCENT GLOW 2 _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_BIOLUMINESCENT_2</Name>
+    <FOWMask>3</FOWMask>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="180.0"/>
+      <Scale>1.0</Scale>
+    </Transform>
+    <fBaseDuration>5.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_BIOLUMINESCENT_2</Name>
+      </ModelEffect>
+    </ModelEffects>
+  </VisEffectArtInfo>
+
+  <!--  _______ Ghost Pirate _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_GHOST_PIRATE_GLOW</Name>
+    <Transform>
+      <Translation x="0.0" y="-3.0" z="0.0"/>
+      <Rotation x="0.0" y="90.0" z="90.0"/>
+      <Scale>4.0</Scale>
+    </Transform>
+    <fBaseDuration>1.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_GLITTERING_URANIUM_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+
+  <!--  _______ radiation glow effects _______   -->
+
+
+  <!--  _______ Ghoul glow _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_FERAL_GHOUL_GLOW_GLITTER_1</Name>
+    <Transform>
+      <Translation x="0.0" y="-3.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>4.0</Scale>
+    </Transform>
+    <fBaseDuration>1.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_GLITTERING_URANIUM_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+ 
+ <!--  _______ Misc Effects _______   -->
+
+
+  <!--  _______ Ghost Pirate mist_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_GHOST_PIRATE_MIST</Name>
+    <Transform>
+      <Translation x="0.0" y="-3.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>4.0</Scale>
+    </Transform>
+    <fBaseDuration>1.1</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_FUJI_CLOUDS</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+
+  <!--  _______ CLOUD unit_______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_CLOUD_1</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="90.0" y="0.0" z="0.0"/>
+      <Scale>20.0</Scale>
+    </Transform>
+    <fBaseDuration>0.1</fBaseDuration>
+    <fBaseDurationScale>50.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_FUJI_CLOUDS</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+  </VisEffectArtInfo>
+
+  <!--  _______ cloud lightning _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_CLOUD_LIGHTNING_1</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="90.0" y="180.0" z="0.0"/>
+      <Scale>5.5</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ModelEffects>
+      <ModelEffect>
+        <Name>ART_DEF_MEFFECT_LIGHTNING_1</Name>
+      </ModelEffect>
+    </ModelEffects>
+    <ChildEffects>
+      <ChildEffect trigger="ProjectileEnd">
+        <Name>ART_DEF_VEFFECT_CLOUD_LIGHTNING_IMPACT_1</Name>
+      </ChildEffect>
+    </ChildEffects>
+  </VisEffectArtInfo>
+
+  <!--  _______ cloud lightning impact _______   -->
+  <VisEffectArtInfo>
+    <Name>ART_DEF_VEFFECT_CLOUD_LIGHTNING_IMPACT_1</Name>
+    <Transform>
+      <Translation x="0.0" y="0.0" z="0.0"/>
+      <Rotation x="0.0" y="0.0" z="0.0"/>
+      <Scale>0.23</Scale>
+    </Transform>
+    <fBaseDuration>0.01</fBaseDuration>
+    <fBaseDurationScale>1.0</fBaseDurationScale>
+    <ParticleEffects>
+      <ParticleEffect>
+        <Name>ART_DEF_PEFFECT_EXP_TANK_HIT_01</Name>
+      </ParticleEffect>
+    </ParticleEffects>
+
+  </VisEffectArtInfo>
+
+</VisEffectArtInfos>

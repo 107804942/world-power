@@ -1,0 +1,7 @@
+<Asset>
+  <Mesh file="Resource_Saffron.gr2" source="Max" />
+  <Texture file="Generic_Grey_8.dds" source="Max" />
+  <Texture file="Plant_Resource_Shadows.dds" source="Max" />
+  <Texture file="Saffron_DIFF.dds" source="Max" />
+  <Texture file="Saffron_SREF.dds" source="Max" />
+</Asset>

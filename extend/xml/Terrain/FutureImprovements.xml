@@ -1,0 +1,1772 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GameData>
+
+	
+	
+
+		<Improvements>
+
+			<!--*******************阿基米德********************* -->
+
+			<Row>
+				<Type>IMPROVEMENT_BEACON</Type>
+				<Description>TXT_KEY_IMPROVEMENT_BEACON</Description>
+				<Civilopedia>TXT_KEY_IMPROVEMENT_BEACON_TEXT</Civilopedia>
+				<Help>TXT_KEY_IMPROVEMENT_BEACON_HELP</Help>
+				<!--<ArtDefineTag>ART_DEF_IMPROVEMENT_KIBBUTZ</ArtDefineTag>-->
+				<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
+				<PortraitIndex>22</PortraitIndex>
+				<NoTwoAdjacent>1</NoTwoAdjacent>
+				<OutsideBorders>0</OutsideBorders>
+				<!--<DefenseModifier>300</DefenseModifier>-->
+				<ImprovementResource>RESOURCE_ELECTRICITY</ImprovementResource>
+				<ImprovementResourceQuantity>-20</ImprovementResourceQuantity>
+				<BuildableOnResources>0</BuildableOnResources>
+				<DestroyedWhenPillaged>false</DestroyedWhenPillaged>
+				<RequiresFlatlands>true</RequiresFlatlands>
+				<GraphicalOnly>true</GraphicalOnly>
+				<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+			</Row>
+
+
+			<!--*******************沙漠改造********************* -->
+
+
+			<Row>
+				<Type>IMPROVEMENT_SAND_BASE</Type>
+				<Description>TXT_KEY_IMPROVEMENT_SAND_BASE</Description>
+				<Civilopedia>TXT_KEY_IMPROVEMENT_SAND_BASE_TEXT</Civilopedia>
+				<Help>TXT_KEY_IMPROVEMENT_SAND_BASE_HELP</Help>
+				<ArtDefineTag>ART_DEF_IMPROVEMENT_KIBBUTZ</ArtDefineTag>
+				<PortraitIndex>21</PortraitIndex>
+				<NoTwoAdjacent>0</NoTwoAdjacent>
+				<OutsideBorders>0</OutsideBorders>
+				<BuildableOnResources>0</BuildableOnResources>
+				<RequiresFlatlands>1</RequiresFlatlands>
+				<AddsFreshWater>1</AddsFreshWater>
+				<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+				<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+			</Row>	
+			
+
+	
+
+		<!--*******************商站********************* -->
+
+
+		<Row>
+			<Type>IMPROVEMENT_LATIFUNDIUM</Type>
+			<Description>TXT_KEY_IMPROVEMENT_LATIFUNDIUM</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LATIFUNDIUM_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_LATIFUNDIUM_HELP</Help>
+			<!--<ArtDefineTag>ART_DEF_IMPROVEMENT_KIBBUTZ</ArtDefineTag>-->
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_MBANZA</ArtDefineTag>			
+			<PortraitIndex>17</PortraitIndex>
+			<NoTwoAdjacent>1</NoTwoAdjacent>
+			<OutsideBorders>0</OutsideBorders>
+			<BuildableOnResources>0</BuildableOnResources>
+			<RequiresFlatlands>0</RequiresFlatlands>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+			
+			
+			
+
+
+
+		<!--*******************石阵********************* -->
+
+
+		<Row>
+			<Type>IMPROVEMENT_CAIRN</Type>
+			<Description>TXT_KEY_IMPROVEMENT_CAIRN</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_CAIRN_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_CAIRN_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SILUMGAR_NECROPOLIS</ArtDefineTag>
+			<!--<ArtDefineTag>ART_DEF_IMPROVEMENT_MONOLITH_ASIA</ArtDefineTag>-->  
+			<PortraitIndex>15</PortraitIndex>
+			<NoTwoAdjacent>1</NoTwoAdjacent>
+			<OutsideBorders>0</OutsideBorders>
+			<BuildableOnResources>0</BuildableOnResources>
+			<RequiresFlatlands>0</RequiresFlatlands>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+			
+
+
+			<!--*******************人造绿洲********************* -->
+
+		<Row>
+			<Type>IMPROVEMENT_TERRASCAPE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_TERRASCAPE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_TERRASCAPE_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_TERRASCAPE_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRASCAPE</ArtDefineTag>
+			<PillageGold>200</PillageGold>
+			<PortraitIndex>11</PortraitIndex>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+		<!--*******************工厂********************* -->
+
+		<Row>
+			<Type>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_BE_MANUFACTORY</ArtDefineTag>
+			<RequiresFlatlands>true</RequiresFlatlands>
+			<PillageGold>100</PillageGold>
+			<NoTwoAdjacent>true</NoTwoAdjacent>
+			<PortraitIndex>4</PortraitIndex>
+			<ImprovementResource>RESOURCE_ELECTRICITY</ImprovementResource>
+			<ImprovementResourceQuantity>-1</ImprovementResourceQuantity>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+		<!--*******************生态城市********************* -->
+		<Row>
+			<Type>IMPROVEMENT_FW_ARCOLOGY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FW_ARCOLOGY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FW_ARCOLOGY_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_FW_ARCOLOGY_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FW_ARCOLOGY</ArtDefineTag>
+			<NoTwoAdjacent>true</NoTwoAdjacent>
+			<DefenseModifier>50</DefenseModifier>
+			<PillageGold>150</PillageGold>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<PortraitIndex>24</PortraitIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+		<!--******************防御点********************* -->
+		<Row>
+			<Type>IMPROVEMENT_FW_CORE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FW_CORE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FW_CORE_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_FW_CORE_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FW_CORE</ArtDefineTag>
+			<NoTwoAdjacent>true</NoTwoAdjacent>
+			<DefenseModifier>150</DefenseModifier>
+			<Permanent>true</Permanent>
+			<BuildableOnResources>true</BuildableOnResources>
+			<PortraitIndex>16</PortraitIndex>
+			<NearbyEnemyDamage>20</NearbyEnemyDamage>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+		</Row>
+
+
+		<!--******************地雷********************* -->
+			<!--<Row>
+			<Type>IMPROVEMENT_LANDMINE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_LANDMINE</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LANDMINE_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_LANDMINE_TEXT</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_LANDMINE</ArtDefineTag>
+			<PortraitIndex>187</PortraitIndex>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<DefenseModifier>10</DefenseModifier>
+			<OutsideBorders>true</OutsideBorders>
+			<InAdjacentFriendly>true</InAdjacentFriendly>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+		</Row>-->
+
+
+		 <!--******************发电机********************* -->
+
+		<Row>
+			<Type>IMPROVEMENT_FW_GENERATOR</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FW_GENERATOR</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FW_GENERATOR_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_FW_GENERATOR_HELP</Help>
+			<NoTwoAdjacent>true</NoTwoAdjacent>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FW_GENERATOR</ArtDefineTag>
+			<PortraitIndex>20</PortraitIndex>
+			<PillageGold>100</PillageGold>
+			<ImprovementResource>RESOURCE_ELECTRICITY</ImprovementResource>
+			<ImprovementResourceQuantity>6</ImprovementResourceQuantity>	
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+
+			<!--******************通信列阵********************* -->
+		<Row>
+			<Type>IMPROVEMENT_FW_COMM_ARRAY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FW_COMM_ARRAY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FW_COMM_ARRAY_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_FW_COMM_ARRAY_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_BE_ARRAY</ArtDefineTag>
+			<NoTwoAdjacent>true</NoTwoAdjacent>
+			<PillageGold>120</PillageGold>
+			<PortraitIndex>0</PortraitIndex>
+			<ImprovementResource>RESOURCE_ELECTRICITY</ImprovementResource>
+			<ImprovementResourceQuantity>-2</ImprovementResourceQuantity>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+
+		<!--******************研究所********************* -->
+		<Row>
+			<Type>IMPROVEMENT_BE_ACADEMY</Type>
+			<Description>TXT_KEY_IMPROVEMENT_BE_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_BE_ACADEMY_TEXT</Civilopedia>
+			<Help>TXT_KEY_IMPROVEMENT_BE_ACADEMY_HELP</Help>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_BE_ACADEMY</ArtDefineTag>
+			<NoTwoAdjacent>true</NoTwoAdjacent>
+			<PillageGold>30</PillageGold>
+			<PortraitIndex>22</PortraitIndex>
+			<ImprovementResource>RESOURCE_ELECTRICITY</ImprovementResource>
+			<ImprovementResourceQuantity>-2</ImprovementResourceQuantity>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
+		</Row>
+	</Improvements>
+	
+	
+
+	<!--*******************直接产出********************* -->
+
+
+
+	<Improvement_RouteYieldChanges>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
+			<RouteType>ROUTE_ROAD</RouteType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
+			<RouteType>ROUTE_RAILROAD</RouteType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<RouteType>ROUTE_ROAD</RouteType>  
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<RouteType>ROUTE_RAILROAD</RouteType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Improvement_RouteYieldChanges>
+	
+	
+	
+	
+	
+	
+	
+	
+	<Improvement_Yields>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-5</Yield>
+		</Row>
+		<!--<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>-5</Yield>
+		</Row>-->
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>	
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>	
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>6</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>4</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>-3</Yield>
+		</Row>
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-4</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>5</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>7</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-3</Yield>
+		</Row>
+
+	
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-3</Yield>
+		</Row>
+
+	
+	</Improvement_Yields>
+
+
+
+	<!--*******************关联地形*********************-->
+	
+	<Improvement_ValidTerrains>
+		<Row>
+			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<TerrainType>TERRAIN_HILL</TerrainType>
+		</Row>
+	
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<TerrainType>TERRAIN_HILL</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+		</Row>
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+	
+		<!--<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>-->
+	
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+		</Row>
+
+
+		<!--<Row>
+			<ImprovementType>IMPROVEMENT_LANDMINE</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LANDMINE</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LANDMINE</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LANDMINE</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_LANDMINE</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+		</Row>-->
+		
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_BEACON</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_BEACON</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+	
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+		</Row>	
+	</Improvement_ValidTerrains>
+
+
+
+	<!--*******************关联地貌********************* -->
+	<Improvement_ValidFeatures>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+		</Row>
+	
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+		</Row>
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+		</Row>
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+		</Row>
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+		</Row>
+	</Improvement_ValidFeatures>
+
+
+
+
+	<!--*******************科技加成********************* -->
+	<Improvement_TechYieldChanges>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_HOLY_SITE</ImprovementType>
+			<TechType>TECH_EPHEMERIDES</TechType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<TechType>TECH_FERTILIZER</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+			<TechType>TECH_ECOLOGY</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<TechType>TECH_DIGITAL_SOCIETY</TechType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+	
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<TechType>TECH_NEW_ENERGY</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+	</Improvement_TechYieldChanges>
+
+
+
+
+	<!--*******************政策加成********************* -->
+	<Policy_ImprovementYieldChanges>
+
+		<Row>
+			<PolicyType>POLICY_FREE_THOUGHT</PolicyType>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	
+		<Row>
+			<PolicyType>POLICY_FREE_THOUGHT</PolicyType>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+	</Policy_ImprovementYieldChanges>
+
+
+
+	<!--*******************临近城市********************* -->
+	<Improvement_AdjacentCityYields>
+
+			<Row>
+				<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+				<YieldType>YIELD_FOOD</YieldType>
+				<Yield>1</Yield>
+			</Row>
+		
+	</Improvement_AdjacentCityYields>
+
+
+
+	<!--*******************丘陵加成********************* -->
+
+	<!--<Improvement_HillsYields>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Improvement_HillsYields>-->
+
+	<!--*******************临近山脉********************* -->
+	<Improvement_AdjacentMountainYieldChanges>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Improvement_AdjacentMountainYieldChanges>
+	
+	
+	
+	
+
+	<!--*******************海岸加成********************* -->
+	<Improvement_CoastalLandYields>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	
+	</Improvement_CoastalLandYields>
+
+
+
+	<!--*******************淡水加成********************* -->
+	<Improvement_TechFreshWaterYieldChanges>
+		<Row>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<TechType>TECH_TRANSCENDENTAL_MATH</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Improvement_TechFreshWaterYieldChanges>
+	
+		
+
+	
+
+
+	<Builds>
+
+
+		<Row>
+			<Type>BUILD_FW_GENERATOR</Type>
+			<Time>1100</Time>
+			<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
+			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
+			<Description>TXT_KEY_BUILD_FW_GENERATOR</Description>
+			<Help>TXT_KEY_BUILD_FW_GENERATOR_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_FW_GENERATOR_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_Z</HotKey>
+			<OrderPriority>98</OrderPriority>
+			<IconIndex>21</IconIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+		<!--*******************阿基米德********************* -->
+
+		
+		<Row>
+			<Type>BUILD_BEACON</Type>
+			<Time>1100</Time>
+			<PrereqTech>TECH_SDI</PrereqTech>
+			<ImprovementType>IMPROVEMENT_BEACON</ImprovementType>
+			<Description>TXT_KEY_BUILD_BEACON</Description>
+			<Help>TXT_KEY_BUILD_BEACON_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_BEACON_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_Z</HotKey>
+			<OrderPriority>25</OrderPriority>
+			<IconIndex>22</IconIndex>
+			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+		<!--*******************沙漠改造********************* -->
+		<Row>
+			<Type>BUILD_SAND_BASE</Type>
+			<Time>700</Time>
+			<PrereqTech>TECH_ENGINEERING</PrereqTech>
+			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
+			<Description>TXT_KEY_BUILD_SAND_BASE</Description>
+			<Help>TXT_KEY_BUILD_SAND_BASE_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_SAND_BASE_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_M</HotKey>
+			<OrderPriority>25</OrderPriority>
+			<IconIndex>21</IconIndex>
+			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+
+		<!--*******************商站********************* -->
+		<Row>
+			<Type>BUILD_LATIFUNDIUM</Type>
+			<Time>700</Time>
+			<PrereqTech>TECH_CARTOGRAPHY</PrereqTech>
+			<ImprovementType>IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+			<Description>TXT_KEY_BUILD_LATIFUNDIUM</Description>
+			<Help>TXT_KEY_BUILD_LATIFUNDIUM_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_LATIFUNDIUM_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_M</HotKey>
+			<OrderPriority>25</OrderPriority>
+			<IconIndex>17</IconIndex>
+			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+		<!--*******************石祭坛********************* -->
+		<Row>
+			<Type>BUILD_CAIRN</Type>
+			<Time>400</Time>
+			<PrereqTech>TECH_MYSTICISM</PrereqTech>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
+			<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+			<Description>TXT_KEY_BUILD_CAIRN</Description>
+			<Help>TXT_KEY_BUILD_CAIRN_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_CAIRN_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_M</HotKey>
+			<OrderPriority>98</OrderPriority>
+			<IconIndex>15</IconIndex>
+			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+		<Row>
+			<Type>BUILD_TERRASCAPE</Type>
+			<Time>1100</Time>
+			<PrereqTech>TECH_MASS</PrereqTech>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<Description>TXT_KEY_BUILD_TERRASCAPE</Description>
+			<Help>TXT_KEY_BUILD_TERRASCAPE_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_TERRASCAPE_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_M</HotKey>
+			<OrderPriority>40</OrderPriority>
+			<IconIndex>12</IconIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+
+
+		
+		<Row>
+			<Type>BUILD_FW_COMM_ARRAY</Type>
+			<PrereqTech>TECH_PLANETARY_NETWORKS</PrereqTech>
+			<Time>1100</Time>
+			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
+			<Description>TXT_KEY_BUILD_FW_COMM_ARRAY</Description>
+			<Help>TXT_KEY_BUILD_FW_COMM_ARRAY_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_FW_COMM_ARRAY_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_Z</HotKey>
+			<OrderPriority>98</OrderPriority>
+			<IconIndex>1</IconIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+		<Row>
+			<Type>BUILD_BE_ACADEMY</Type>
+			<PrereqTech>TECH_COGNITIVE</PrereqTech>
+			<Time>1100</Time>
+			<ImprovementType>IMPROVEMENT_BE_ACADEMY</ImprovementType>
+			<Description>TXT_KEY_BUILD_BE_ACADEMY</Description>
+			<Help>TXT_KEY_BUILD_BE_ACADEMY_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_BE_ACADEMY_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_Z</HotKey>
+			<OrderPriority>98</OrderPriority>
+			<IconIndex>23</IconIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+		<Row>
+			<Type>BUILD_FW_INDUSTRIAL_COMPLEX</Type>
+			<PrereqTech>TECH_ARTIFICIAL_INTELLIGENCE</PrereqTech>
+			<Time>1100</Time>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<Description>TXT_KEY_BUILD_FW_INDUSTRIAL_COMPLEX</Description>
+			<Help>TXT_KEY_BUILD_FW_INDUSTRIAL_COMPLEX_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_FW_INDUSTRIAL_COMPLEX_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_Z</HotKey>
+			<OrderPriority>98</OrderPriority>
+			<IconIndex>5</IconIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+
+		<Row>
+			<Type>BUILD_FW_ARCOLOGY</Type>
+			<PrereqTech>TECH_MATTERTRANSMISSION</PrereqTech>
+			<Time>1100</Time>
+			<ImprovementType>IMPROVEMENT_FW_ARCOLOGY</ImprovementType>
+			<Description>TXT_KEY_BUILD_FW_ARCOLOGY</Description>
+			<Help>TXT_KEY_BUILD_FW_ARCOLOGY_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_FW_ARCOLOGY_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_Z</HotKey>
+			<OrderPriority>98</OrderPriority>
+			<IconIndex>25</IconIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+
+		<Row>
+			<Type>BUILD_FW_CORE</Type>
+			<Time>1000</Time>
+			<PrereqTech>TECH_PROBABILITYMECHANICS</PrereqTech>
+			<ImprovementType>IMPROVEMENT_FW_CORE</ImprovementType>
+			<Description>TXT_KEY_BUILD_FW_CORE</Description>
+			<Help>TXT_KEY_BUILD_FW_CORE_HELP</Help>
+			<Recommendation>TXT_KEY_BUILD_FW_CORE_REC</Recommendation>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_Z</HotKey>
+			<OrderPriority>98</OrderPriority>
+			<IconIndex>17</IconIndex>
+			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
+		</Row>
+		
+		
+		
+	</Builds>
+	
+	
+	
+	
+	
+	<BuildFeatures>
+		<Update>
+			<Set Time="500"/>
+			<Where BuildType="BUILD_SCRUB_FALLOUT"/>
+		</Update>
+
+		<Row>
+			<BuildType>BUILD_SAND_BASE</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_SAND_BASE</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_SAND_BASE</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+		
+		
+		
+		
+
+		<Row>
+			<BuildType>BUILD_LATIFUNDIUM</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_LATIFUNDIUM</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>500</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_LATIFUNDIUM</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+		
+
+		<Row>
+			<BuildType>BUILD_FW_INDUSTRIAL_COMPLEX</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_INDUSTRIAL_COMPLEX</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_INDUSTRIAL_COMPLEX</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_ARCOLOGY</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_ARCOLOGY</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_ARCOLOGY</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+
+
+
+
+		<Row>
+			<BuildType>BUILD_FW_CORE</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_CORE</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_CORE</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+
+
+
+		<Row>
+			<BuildType>BUILD_BE_ACADEMY</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_BE_ACADEMY</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_BE_ACADEMY</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+
+
+
+
+
+		<!--<Row>
+			<BuildType>BUILD_LANDMINE</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_DYNAMITE</PrereqTech>
+			<Time>300</Time>
+		</Row>
+		<Row>
+			<BuildType>BUILD_LANDMINE</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_DYNAMITE</PrereqTech>
+			<Time>300</Time>
+		</Row>-->
+
+		<Row>
+			<BuildType>BUILD_FW_GENERATOR</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_GENERATOR</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_GENERATOR</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+		</Row>
+		
+		<Row>
+			<BuildType>BUILD_FW_COMM_ARRAY</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_COMM_ARRAY</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>700</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_FW_COMM_ARRAY</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+		</Row>
+
+
+
+
+
+		<Row>
+			<BuildType>BUILD_CAIRN</BuildType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<Time>400</Time>
+			<Production>20</Production>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_CAIRN</BuildType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<Time>600</Time>
+			<Remove>true</Remove>
+		</Row>
+		<Row>
+			<BuildType>BUILD_CAIRN</BuildType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<Time>600</Time>
+		</Row>
+		
+		
+		
+	</BuildFeatures>
+	
+	<Unit_Builds>
+
+		<!-- 桨帆船 -->
+		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
+		<!-- 炮艇 -->
+		<Delete UnitType="UNIT_MONITOR_SHIP"/>
+		<!-- 护卫舰 -->
+		<Delete UnitType="UNIT_CORVETTE"/>
+		<!-- 滨海战斗舰 -->
+		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
+
+		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
+		
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_SAND_BASE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_SAND_BASE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_BEACON</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_BEACON</BuildType>
+		</Row>
+		
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>
+
+
+
+	
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_LATIFUNDIUM</BuildType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_CAIRN</BuildType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_TERRASCAPE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_FW_GENERATOR</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_FW_COMM_ARRAY</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_FW_INDUSTRIAL_COMPLEX</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_FW_ARCOLOGY</BuildType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_BE_ACADEMY</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
+			<BuildType>BUILD_FW_CORE</BuildType>
+		</Row>
+
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_LATIFUNDIUM</BuildType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_CAIRN</BuildType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_TERRASCAPE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FW_GENERATOR</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FW_COMM_ARRAY</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FW_INDUSTRIAL_COMPLEX</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FW_ARCOLOGY</BuildType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_BE_ACADEMY</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WORKER</UnitType>
+			<BuildType>BUILD_FW_CORE</BuildType>
+		</Row>
+		
+		
+		
+
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<BuildType>BUILD_CITADEL</BuildType>
+		</Row>
+		
+
+		
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<BuildType>BUILD_ROAD</BuildType>
+		</Row>
+		
+		
+
+
+		<!--<Row>
+			<UnitType>UNIT_GREAT_WAR_INFANTRY</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_ZULU_BOER_COMMANDO</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_FRENCH_FOREIGNLEGION</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BERBER_CAVALRY</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ETHIOPIAN_MEHAL_SEFARI</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_INFANTRY</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+
+
+
+
+
+		<Row>
+			<UnitType>UNIT_MOTORISED_INFANTRY</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_ASSYRIAN_BMP</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MECHANIZED_INFANTRY</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_MARINE03S</UnitType>
+			<BuildType>BUILD_LANDMINE</BuildType>
+		</Row>-->
+
+
+
+	</Unit_Builds>
+
+
+	<Policy_ImprovementYieldChanges>
+		
+		
+		
+		<Row>
+		<PolicyType>POLICY_MARITIME_INFRASTRUCTURE</PolicyType>
+		<ImprovementType>IMPROVEMENT_CAIRN</ImprovementType>
+		<YieldType>YIELD_CULTURE</YieldType>
+		<Yield>1</Yield>
+		</Row>
+		
+		
+		
+	</Policy_ImprovementYieldChanges>
+
+
+	<!-- ************************原版调整********************************************-->
+
+	<ArtDefine_Landmarks>
+		<Update>
+			<Set Scale="1.20"/>
+			<Where ImprovementType="ART_DEF_IMPROVEMENT_FORT"/>
+		</Update>
+	</ArtDefine_Landmarks>
+
+
+	<Improvements>
+		<Update>
+			<Set ArtDefineTag="ART_DEF_IMPROVEMENT_BARGE"/>
+			<Where Type="IMPROVEMENT_GAS_RIG_MOD" />
+		</Update>
+
+
+		<Update>
+			<Set ArtDefineTag="ART_DEF_IMPROVEMENT_KURGAN"/>
+			<Where Type="IMPROVEMENT_MAYA_ALTAR" />
+		</Update>
+
+
+
+		<Update>
+			<Set  IconAtlas="TERRAIN_ATLAS" PortraitIndex="35" ArtDefineTag="ART_DEF_IMPROVEMENT_FORT"/>
+			<Where Type="IMPROVEMENT_CITADEL" />
+		</Update>
+	</Improvements>
+
+
+
+
+	<Improvement_TechYieldChanges>
+
+		<Delete ImprovementType="IMPROVEMENT_LUMBERMILL"/>
+
+		
+		<Row>
+			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
+			<TechType>TECH_BIOLOGY</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+		
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<TechType>TECH_MANUFACTURING</TechType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_WELL</ImprovementType>
+			<TechType>TECH_SUBTERRANEAN_EXPLORE</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
+			<TechType>TECH_SUBTERRANEAN_EXPLORE</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
+			<TechType>TECH_NATURAL_MEDICINE</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_TERRACE_FARM</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_POLDER</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_FISHERY_MOD</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
+			<TechType>TECH_SOCIAL_DYNAMICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
+			<TechType>TECH_PROBABILITYMECHANICS</TechType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementType>
+			<TechType>TECH_PROBABILITYMECHANICS</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FISHFARM_MOD</ImprovementType>
+			<TechType>TECH_PROBABILITYMECHANICS</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<TechType>TECH_MECHANICAL_ENGINEERING</TechType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		
+	</Improvement_TechYieldChanges>
+
+
+
+	<Builds>
+
+
+		<!--**********************************建造设施设定******************************-->
+		<Update>
+			<Set PrereqTech="TECH_GUNPOWDER" Time="900" IconIndex="51" IconAtlas="UNIT_ACTION_ATLAS" />
+			<Where Type="BUILD_CITADEL" />
+		</Update>
+
+		<Update>
+			<Set PrereqTech="TECH_MINING"/>
+			<Where Type="BUILD_MINE"/>
+		</Update>
+		<Update>
+			<Set PrereqTech="TECH_FORTIFICATION" />
+			<Where Type="BUILD_COASTAL_FORT" />
+		</Update>
+
+
+		<Update>
+			<Set  PrereqTech="TECH_STONE_TOOLS"/>
+			<Where Type="BUILD_QUARRY"/>
+		</Update>
+
+
+		<Update>
+			<Set  PrereqTech="TECH_WOOD_WORKING" />
+			<Where Type="BUILD_LUMBERMILL"/>
+		</Update>
+
+
+		<Update>
+			<Set  PrereqTech="TECH_WOOD_WORKING"/>
+			<Where Type="BUILD_BRAZILWOOD_CAMP"/>
+		</Update>
+
+
+
+		<Update>
+			<Set PrereqTech="TECH_POTTERY" />
+			<Where Type="BUILD_PLANTATION" />
+		</Update>
+	</Builds>
+
+
+
+
+	<IconTextureAtlases>
+		<Row>
+			<Atlas>CANAL_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>Canal_SV.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CANAL_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>Canal_SV_64.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CANAL_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>Canal_SV_45.dds</Filename>
+			<IconsPerRow>1</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
+	</IconTextureAtlases>
+
+	
+
+
+
+
+
+</GameData>

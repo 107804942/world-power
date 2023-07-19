@@ -1,0 +1,10 @@
+<Asset>
+  <Mesh file="lumi_bay.gr2" source="Max" />
+  <BoneUsage>
+    <Bone name="Glow_01" />
+    <Bone name="Glow_02" />
+  </BoneUsage>
+  <TimedTrigger file="fx_triggers_lumi_bay_1.ftsxml" source="Tool" model="Glow_01" state="0,1,2,3" />
+  <TimedTrigger file="fx_triggers_lumi_bay_2.ftsxml" source="Tool" model="Glow_02" state="0,1,2,3" />
+  <DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+</Asset>

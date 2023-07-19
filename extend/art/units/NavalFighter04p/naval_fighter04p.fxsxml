@@ -1,0 +1,112 @@
+<Asset>
+	<Mesh file="Naval_Fighter04P.gr2"/>
+	<Animation file="Naval_Fighter04P_Aim_Left.gr2" ec="1700"/>
+	<Animation file="Naval_Fighter04P_Aim_Right.gr2" ec="1705"/>
+	<Animation file="Naval_Fighter04P_Aim_Center.gr2" ec="1710"/>
+	<Animation file="Naval_Fighter04P_IdleA.gr2" ec="1000"/>
+	<Animation file="Naval_Fighter04P_FidgetA.gr2" ec="1040"/>
+	<Animation file="Naval_Fighter04P_IdleA_Trans_IdleB.gr2" ec="1020"/>
+	<Animation file="Naval_Fighter04P_IdleB.gr2" ec="2000"/>
+	<Animation file="Naval_Fighter04P_FidgetB.gr2" ec="2040"/>
+	<Animation file="Naval_Fighter04P_IdleB_Trans_IdleA.gr2" ec="2020"/>
+	<Animation file="Naval_Fighter04P_Fortify.gr2" ec="1500"/>
+	<Animation file="Naval_Fighter04P_Fortify_Idle.gr2" ec="1520"/>
+	<Animation file="Naval_Fighter04P_Fortify_Idle_Fidget.gr2" ec="1540"/>
+	<Animation file="Naval_Fighter04P_Fortify_Idle_Trans_Combat_Ready_Idle.gr2" ec="1560"/>
+	<Animation file="Naval_Fighter04P_Fortify_Idle_Trans_IdleA.gr2" ec="1580"/>
+	<Animation file="Naval_Fighter04P_Combat_Ready.gr2" ec="1600"/>
+	<Animation file="Naval_Fighter04P_Combat_Ready_Idle.gr2" ec="1620"/>
+	<Animation file="Naval_Fighter04P_Combat_Ready_Idle_Trans_IdleA.gr2" ec="1640, 1800"/>
+	<Animation file="Naval_Fighter04P_Run.gr2" ec="1400, 1120"/>
+	<Animation file="Naval_Fighter04P_Stop_Run.gr2" ec="1440, 1140"/>
+	<Animation file="Naval_Fighter04P_AttackAStarBoardRight.gr2" ec="1100"/>
+	<Animation file="Naval_Fighter04P_AttackCity.gr2" ec="1160, 2160"/>
+	<Animation file="Naval_Fighter04P_Bombardment.gr2" ec="1180, 2180"/>
+	<Animation file="Naval_Fighter04P_AttackBPortLeft.gr2" ec="2100"/>
+	<Animation file="Naval_Fighter04P_AntiAir_Attack.gr2" ec="1130"/>
+	<Animation file="Naval_Fighter04P_Bombard_Defense.gr2" ec="1280"/>
+	<Animation file="Naval_Fighter04P_Bombard_Defense_Idle.gr2" ec="1285"/>
+	<Animation file="Naval_Fighter04P_Bombard_Defense_Idle_Trans_IdleA.gr2" ec="1290"/>
+	<Animation file="Naval_Fighter04P_DeathA.gr2" ec="1200"/>
+	<Animation file="Naval_Fighter04P_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="Naval_Fighter04P_DeathB.gr2" ec="2200"/>
+	<Animation file="Naval_Fighter04P_DeathB_Idle.gr2" ec="2220"/>
+	<Texture file="Naval_Fighter04P_DIFF.dds"/>
+	<Texture file="Naval_Fighter04P_DMG_DIFF.dds"/>
+	<Texture file="Naval_Fighter04P_DMG_SREF.dds"/>
+	<Texture file="Naval_Fighter04P_SREF.dds"/>
+	<Texture file="Unit_Environment_Dull.dds"/>
+	<Texture file="Unit_Environment_Sharp.dds"/>
+	<Texture file="Unit_Sunlight_Irradiance.dds"/>
+	<BoneUsage>
+		<Bone name="World_Center"/>
+		<Bone name="bone_FrontCap_02"/>
+		<Bone name="FX_Muzzel_Rapid_L_01"/>
+		<Bone name="FX_Muzzel_Rapid_B_01"/>
+		<Bone name="FX_Muzzel_Rapid_R_01"/>
+		<Bone name="FX_Muzzel_Rapid_L_02"/>
+		<Bone name="FX_Muzzel_Rapid_R_02"/>
+		<Bone name="FX_Explosion_02"/>
+		<Bone name="FX_Explosion_03"/>
+		<Bone name="FX_Explosion_00"/>
+		<Bone name="FX_MUZZ_R_01"/>
+		<Bone name="FX_Missile_R_01"/>
+		<Bone name="FX_Muzzel_Rapid_B_02"/>
+		<Bone name="FX_MUZZ_R_04"/>
+		<Bone name="FX_Missile_R_04"/>
+		<Bone name="FX_Missile_R_02"/>
+		<Bone name="FX_MUZZ_R_02"/>
+		<Bone name="FX_Missile_R_03"/>
+		<Bone name="FX_MUZZ_R_03"/>
+		<Bone name="FX_MUZZ_R_05"/>
+		<Bone name="FX_Missile_R_05"/>
+		<Bone name="FX_MUZZ_L_01"/>
+		<Bone name="FX_MUZZ_L_03"/>
+		<Bone name="FX_MUZZ_L_04"/>
+		<Bone name="FX_Missile_L_01"/>
+		<Bone name="FX_MUZZ_L_05"/>
+		<Bone name="FX_Missile_L_03"/>
+		<Bone name="FX_MUZZ_L_02"/>
+		<Bone name="FX_Missile_L_04"/>
+		<Bone name="FX_Missile_L_05"/>
+		<Bone name="FX_Missile_L_02"/>
+		<Bone name="FX_Muzzel_Front_Cannon01"/>
+		<Bone name="FX_Muzzel_Front_Cannon02"/>
+		<Bone name="bone_FrontGun_02"/>
+		<Bone name="bone_Rapid_gun_R_01"/>
+		<Bone name="FX_Explosion_05"/>
+		<Bone name="FX_Explosion_04"/>
+		<Bone name="bone_MissTurret_R_05"/>
+		<Bone name="FX_Explosion_01"/>
+		<Bone name="bone_Rapid_gun_L_01"/>
+		<Bone name="bone_FrontCap_01"/>
+		<Bone name="FX_VENT_FrontGun_R_01"/>
+		<Bone name="FX_VENT_FrontGun_L_02"/>
+		<Bone name="FX_VENT_FrontGun_R_02"/>
+		<Bone name="FX_VENT_FrontGun_L_01"/>
+	</BoneUsage>
+	<TimedTrigger file="FX_Triggers_Naval_Fighter04P.ftsxml"/>
+	<AnimGraph file="AIM_MODERN_SHIP_ATTACKS.dge"/>
+	<AnimGraph file="AIM_FIDGETS_GRAPH.dge"/>
+	<AnimGraph file="AIM_START_RUNNING.dge"/>
+	<AnimGraph file="AIM_STOP_RUNNING.dge"/>
+	<AnimGraph file="AIM_TRANSITIONS_FOR_IDLES.dge"/>
+	<AnimGraph file="AIM_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="AIM_FORTIFY_LEAVE_GRAPH.dge"/>
+	<AnimGraph file="AIM_ENTER_COMBAT_READY_GRAPH.dge"/>
+	<AnimGraph file="AIM_LEAVE_COMBAT_READY.dge"/>
+	<AnimGraph file="AIM_DEATH_GRAPH.dge"/>
+	<AnimGraph file="AIM_ENTER_BOMBARD_DEFEND_GRAPH.dge"/>
+	<AnimGraph file="AIM_RUNNING_LOOP.dge"/>
+	<AnimGraph file="AIM_BOMBARD_DEFEND_LOOP_GRAPH.dge"/>
+	<AnimGraph file="AIM_DEATH_FINAL_GRAPH.dge"/>
+	<AnimGraph file="AIM_LEAVE_BOMBARD_DEFEND_TRANS_IDLE_A_GRAPH.dge"/>
+	<AnimGraph file="AIM_ATTACK_TO_RUN_GRAPH.dge"/>
+	<AnimGraph file="AIM_ATTACK_CITY_TO_RUN.dge"/>
+	<AnimGraph file="AIM_ENTER_FORTIFY.dge"/>
+	<AnimGraph file="AIM_FORTIFY_FIDGET_GRAPH.dge"/>
+	<AnimGraph file="AIM_IDLE_GRAPH.dge"/>
+	<AnimGraph file="AIM_FORTIFY_GRAPH.dge"/>
+	<StateMachine file="MODERN_SHIP_AIM_STATE_01.fsmxml"/>
+</Asset>
+

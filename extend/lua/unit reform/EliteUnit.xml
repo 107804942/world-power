@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<Context ColorSet="Beige_Black_Alpha" Font="TwCenMT16" FontStyle="Shadow">
+
+
+	<Instance Name="EliteUnit">
+		<Stack ID="Unit" Padding="0" StackGrowth="Right">
+			<Box Size="30,32" Color="Black,0">
+				<Label ID="Move" Anchor="C,C" String="[ICON_MOVES]"/>
+			</Box>
+			<Box Size="370,32" Color="Black,0">
+				<TextButton ID="Name" Anchor="L,C" String="Llanfairpwllgwyngyll" Font="TwCenMT20" WrapWidth="360"/>
+			</Box>
+			<Box Size="40,32" Color="Black,0">
+				<Label ID="BaseCombatStrength" Anchor="R,C" String="99" Color0="255.77.105.255" Color1="0.0.0.128" Color2="255.255.200.255" Font="TwCenMT20" FontStyle="Stroke"/>
+			</Box>
+			<Box Size="130,32" Color="Black,0">
+				<Label ID="BaseRangedCombatStrength" Anchor="C,C" String="Llanfairpwllgwyngyll" Font="TwCenMT20" WrapWidth="120"/>
+			</Box>
+		</Stack>
+	</Instance>
+
+	<Grid Size="695,653" Anchor="C,C" Offset="0,42" Style="Grid9DetailFive140" ConsumeMouse="1">
+		<!-- Panel Header Text -->
+		<Label String="TXT_KEY_CH_ELITEUNIT" Anchor="C,T" Offset="0,19" Font="TwCenMT20" Color0="30,50,80,255" Color1="133,184,186,255" Color2="133,184,186,255" FontStyle="SoftShadow"  />
+
+		<Box Style="PopupLeftSideTreatment"/>
+		<Box Style="PopupRightSideTreatment"/>
+
+		<Image Anchor="C,T" AnchorSide="I,O" Size="256,64" Offset="0,-14"  Texture="Top512IconTrim.dds" >
+			<Image ID="EliteIcon" Size="64,64" Anchor="C,C" Offset="0,0" Texture="Elite_Icon64.dds" />
+		</Image>
+
+
+		<Box Size="695,625" Anchor="C,C" Offset="0,42" Color="White,0">
+			<Box Anchor="L,T" Size="677,450" Offset="19,13" Color="White,0" ID="ProductionPanel">
+				<Box Anchor="L,T" Size="665,32" Offset="10,2" Color="White,0">
+					<Stack Padding="0" StackGrowth="Right">
+						<Box Size="30,32" Color="Black,0">
+							<TextButton ID="SortMove" Anchor="C,C" String="[ICON_MOVES]" ToolTip="TXT_KEY_CH_SORT_MOVES_TT"/>
+						</Box>
+						<Box Size="370,32" Color="Black,0">
+							<TextButton ID="SortName" Anchor="L,C" Font="TwCenMT22" String="TXT_KEY_CH_ELITE_NAME" WrapWidth="360" ToolTip="TXT_KEY_CH_SORT_ELITE_NAME_TT"/>
+						</Box>
+						<Box Size="40,32" Color="Black,0">
+							<TextButton ID="SortBaseCombatStrength" Anchor="R,C" String="[ICON_STRENGTH]" ToolTip="TXT_KEY_CH_SORT_STRENGTH_TT"/>
+						</Box>
+						<Box Size="130,32" Color="Black,0">
+							<TextButton ID="SortBaseRangedCombatStrength" Anchor="C,C" Font="TwCenMT20" String="[ICON_RANGE_STRENGTH]" WrapWidth="120" ToolTip="TXT_KEY_CH_RANGE_STRENGTH_TT"/>
+						</Box>
+					</Stack>
+				</Box>
+				<Image Anchor="C,T" Offset="-10,32" Texture="HorizontalTrim.dds" Size="676,5" />
+				<ScrollPanel Anchor="L,T" ID="EliteScrollPanel" Vertical="1" Size="665,440" Offset="0,37" AutoScrollBar="1">
+					<!-- Scroll Controls -->
+					<ScrollBar  Anchor="R,T" Offset="0,18" Length="404" Style="VertSlider"/>
+					<UpButton   Anchor="R,T" Offset="0,0" Style="ScrollBarUp"/>
+					<DownButton Anchor="R,B" Offset="0,0" Style="ScrollBarDown"/>
+					<Stack ID="EliteStack" StackGrowth="Bottom" Offset="10,0" Padding="0" />
+				</ScrollPanel>
+			</Box>
+			<Image Anchor="C,B" Offset="0,130" Texture="HorizontalTrim.dds" Size="676,5" />
+		</Box>
+
+		<Box Anchor="C,B" AnchorSide="I,I" Offset="0,54" Size="680,56" Color="255,255,255,0" >
+			<GridButton Anchor="C,B" Style="SmallButton" Size="150,32"  Offset="0,0" StateOffsetIncrement="0,0" ID="CloseButton">
+				<Label Anchor="C,C"  Offset="0,0"  String="TXT_KEY_CLOSE" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" />
+			</GridButton>
+		</Box>
+	</Grid>
+</Context>

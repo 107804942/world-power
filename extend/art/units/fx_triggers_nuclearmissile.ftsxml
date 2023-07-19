@@ -1,0 +1,49 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+      <track id="4" name="Action"/>
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="1" time="0" duration="1" repeat="0" ec="1400" track="2" tier="0" event="ART_DEF_VEFFECT_NUCLEAR_MISSILE_TRAIL" bone="Bone_MainBody"/>
+    <trigger type="FTimedTriggerEffect" id="2" time="0" duration="1" repeat="0" ec="1420" track="2" tier="0" event="ART_DEF_VEFFECT_NUCLEAR_MISSILE_TRAIL" bone="Bone_MainBody"/>
+    <trigger type="FTimedTriggerEffect" id="3" time="0.00185185182" duration="0" repeat="0" ec="1200" track="2" tier="0" event="ART_DEF_VEFFECT_AIR_DEATH_01" bone="Bone_MainBody"/>
+    <trigger type="FTimedTriggerAction" id="4" time="0" duration="0" repeat="0" ec="1100" track="4" tier="0" action="1"/>
+    <trigger type="FTimedTriggerSound" id="5" time="0.00740740728" duration="0" repeat="0" ec="1200" track="1" tier="-1" event="AS3D_UNIT_NUCLEAR_MISSILE_EXPLOSION200_POUND" bone=""/>
+    <trigger type="FTimedTriggerSound" id="6" time="0" duration="0" repeat="0" ec="1420" track="1" tier="-1" event="AS3D_UNIT_NUCLEAR_MISSILE_NUCLEAR_MISSILE_LAUNCH" bone=""/>
+    <trigger type="FTimedTriggerSound" id="7" time="0" duration="1" repeat="0" ec="1400" track="1" tier="-1" event="AS3D_UNIT_NUCLEAR_MISSILE_NUCLEAR_MISSILE_RUN" bone=""/>
+  </triggers>
+</trigger_system>

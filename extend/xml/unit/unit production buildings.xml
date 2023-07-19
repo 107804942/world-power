@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2021/2/23 20:48:37 -->
+<GameData>
+
+	<Unit_BuildingClassRequireds>
+
+
+		<Delete UnitType="UNIT_XCOM_SQUAD"/>
+		<Delete UnitType="UNIT_BAZOOKA"/>
+		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+		<Delete UnitType="UNIT_PERSIAN_MINISUB"/>
+		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+
+
+		<Row>
+			<UnitType>UNIT_URBAN_CANNON</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_CHINA_FIRE_CANNON</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_SUI_FLEET</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WOOD_DOCK</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_HITTITE_WAR_CHARIOT</UnitType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_GLADIATOR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+		</Row>
+
+
+	
+		<Row>
+			<UnitType>UNIT_XCOM_SQUAD</UnitType>
+			<BuildingClassType>BUILDINGCLASS_XCOM_HEADQUARTERS</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SATELLITE_SOLAR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_SPACESHIP_FACTORY</BuildingClassType>
+		</Row>
+
+	
+
+
+		<Row>
+			<UnitType>UNIT_GOLEM</UnitType>
+			<BuildingClassType>BUILDINGCLASS_SPACE_FORTRESS</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_IRON_BUDDHA</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
+		</Row>
+
+
+	</Unit_BuildingClassRequireds>
+	
+	
+	<!--*****兵工厂****-->
+	<Unit_BuildingClassRequireds>
+
+
+
+		<Row>
+			<UnitType>UNIT_P1500</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_STURMTIGER</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
+		</Row>
+	</Unit_BuildingClassRequireds>
+
+
+
+
+	
+
+
+	<!--*****星际基地****-->
+
+	<Unit_BuildingClassRequireds>
+		<Delete UnitType="UNIT_PARTICLE_CANNON"/>
+		<Delete UnitType="UNIT_MECH"/>
+		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
+		
+		<Row>
+			<UnitType>UNIT_SPACESHIP</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_SPACESHIP</UnitType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SPACESHIP</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		
+
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_ROCKET</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARVR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AEGIS</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BEAM_JUMPER</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_BATTLESUIT</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+		
+		
+	
+
+
+
+
+		<Row>
+			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_LEVDESTROYER</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_LEVDESTROYER</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SIEGE04H</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_SIEGE04H</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_GHOST</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_ANGEL</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ANGEL</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_MECH</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_MECH</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_GOLEM</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_GOLEM</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_ANTIMATTER_EXPLOSION</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+
+
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+
+	</Unit_BuildingClassRequireds>
+
+
+
+
+	<!--*****重型造船厂****-->
+	<Unit_BuildingClassRequireds>
+
+
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_CHINESE_052D" />
+		</Update>
+
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_MODERN_DESTROYER" />
+		</Update>
+
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_KOREAN_SEJONG_CLASS" />
+		</Update>
+
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_NUCLEAR_SUBMARINE" />
+		</Update>
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_PERSIAN_MINISUB" />
+		</Update>
+
+
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_MISSILE_CRUISER" />
+		</Update>
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT__KIROV_BATTLECRUISER" />
+		</Update>
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_FRANCE_MISTRAL" />
+		</Update>
+
+		<Update>
+			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
+			<Where UnitType="UNIT_FUTURE_BATTLESHIP" />
+		</Update>
+
+		
+		<Row>
+			<UnitType>UNIT_DDG1000</UnitType>
+			<BuildingClassType>BUILDINGCLASS_ZXZCC</BuildingClassType>
+		</Row>
+		
+
+		
+		
+
+	</Unit_BuildingClassRequireds>
+
+
+
+
+</GameData>
