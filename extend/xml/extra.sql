@@ -14,9 +14,19 @@ ROG_GlobalUserSettings (
 	Type 				text 			default null,
 	Value 				integer 		default 0);
 
+
 INSERT INTO ROG_GlobalUserSettings
-		(Type,							Value)
-VALUES	('WORLD_POWER_PATCH',	1); 
+		(Type,				Value)
+VALUES	('WORLD_POWER_PATCH',	0); 
+
+
+UPDATE ROG_GlobalUserSettings
+SET Value = 1
+WHERE Type IN ('WORLD_POWER_PATCH')
+AND EXISTS (SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_KGB');
+
+
+
 
 
 INSERT  INTO IconFontMapping(IconName,IconFontTexture,IconMapping)VALUES 

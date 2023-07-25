@@ -560,6 +560,7 @@
     <Folder Include="extend\art\nature\retba" />
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
+    <Folder Include="extend\art\Notification" />
     <Folder Include="extend\art\YieldAtlas" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
     <Folder Include="extend\art\RESOURCES\models\more\Barley" />
@@ -4183,6 +4184,46 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\nature\salar\sv_Salar_S.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\CrimesNotificationAtlas_80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\CrimesNotificationGlowingAtlas_80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\instantyieldnotification80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\instantyieldnotificationglow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\notificationcityeventglow.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\notificationcityeventorange.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\notificationeventglow.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\notificationeventorange.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\notificationMPdiplo128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\Notification\notificationMPdiploglow128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -16058,10 +16099,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="extend\lua\PuppetCityPopup.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\lua\SpuerUi\GameInfoActualCache.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -20783,6 +20820,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\xml\wonder\extra wonder.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Lua Script1.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
