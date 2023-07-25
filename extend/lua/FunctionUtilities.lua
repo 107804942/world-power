@@ -626,26 +626,6 @@ end
 
 
 
-------临海城市
-function IsCoastal(pCity)
- local NumOceanPlot=0
- for i = 0, 5 do
-			local adjPlot = Map.PlotDirection( pCity:GetX(), pCity:GetY(), i)
-			if adjPlot ~= nil  then	
-			if adjPlot:GetTerrainType() == TerrainTypes.TERRAIN_COAST
-			or adjPlot:GetTerrainType() == TerrainTypes.TERRAIN_OCEAN  then
-			NumOceanPlot = NumOceanPlot + 1
-					          end
-					       end
-					   end
-			if NumOceanPlot == 0 then
-		return false
-	else
-		return true
-	end
-end
-
-
 
 
 ------天使机甲
@@ -675,6 +655,36 @@ function NotEnemyAngelPlot(pUnit,plot)
 		return false
 	end
 end
+
+
+
+function GetBonusEffect(Unit)
+      local tUnits  ={}
+      local iTileRadius = GameDefines["GREAT_GENERAL_MAX_RANGE"]
+      for iShiftX = -iTileRadius, iTileRadius do
+	  for iShiftY = -iTileRadius, iTileRadius do
+	  local pTargetPlot = Map.PlotXYWithRangeCheck(Unit:GetX(), Unit:GetY(), iShiftX, iShiftY, iTileRadius)
+      if pTargetPlot ~= nil  then
+      unitCount = pTargetPlot:GetNumUnits()
+      if unitCount > 0 then
+      for i = 0, unitCount-1, 1 do
+      local pFoundUnit = pTargetPlot:GetUnit(i)
+      if pFoundUnit:GetOwner()==Unit:GetOwner() and pFoundUnit:GetDomainType()== Unit:GetDomainType() then
+	  if Map.PlotDistance(pFoundUnit:GetX(), pFoundUnit:GetY(), Unit:GetX(), Unit:GetY()) <= GameDefines["GREAT_GENERAL_RANGE"] + pFoundUnit:GetAuraRange() then
+	  table.insert(tUnits, {AuraEffectChange=pFoundUnit:GetAuraEffect(), Unit=pFoundUnit})
+	                    end
+	                 end
+	              end
+	           end
+	        end
+	     end
+	  end
+	  if #tUnits > 0 then
+	  table.sort(tUnits, function(x,y) return (x.AuraEffectChange > y.AuraEffectChange) end)
+	  end
+	  return  tUnits[1].AuraEffectChange 	     
+end
+
 
 
 

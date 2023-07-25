@@ -320,6 +320,22 @@ local function GetresourceString( iterator )
 end
 -------end
 
+
+----新增
+	local function GetSpecialistStringSpecial( tag, s, iterator )
+	local tip = ""
+	for row in iterator do
+		if (row[tag] or 0) ~=0 then
+			tip = format( s, tip, row[tag], GameInfo.Specialists[ row.SpecialistType].Description or "?" )
+		end
+	end
+	return tip
+end
+local function GetSpecialistString( iterator )
+	return GetSpecialistStringSpecial( "Modifier", "%s %+i%s", iterator )
+end
+-------end
+
 local negativeOrPositiveTextColor = { [true] = "[COLOR_POSITIVE_TEXT]", [false] = "[COLOR_WARNING_TEXT]" }
 
 local function TextColor( c, s )
@@ -1547,7 +1563,6 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-
 	-- 全局资源加成
 	for resource in GameInfo.Resources() do
 		thisBuildingAndResourceTypes.ResourceType = resource.Type or -1
@@ -1557,8 +1572,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-
-		-- 全国改良设施产出
+	-- 全国改良设施产出
 	for Improvement in GameInfo.Improvements() do
 		tip = GetYieldString( GameInfo.Building_ImprovementYieldChangesGlobal{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
 		if tip ~= "" then
@@ -1566,8 +1580,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-
-			-- 本地改良设施资源产出
+	-- 本地改良设施资源产出
 	--for Improvement in GameInfo.Improvements() do
 		--tip = GetresourceString( GameInfo.Building_ImprovementResourcesQuantity{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
 		--if tip ~= "" then
@@ -1579,20 +1592,18 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	for feature in GameInfo.Features() do
 		tip = GetYieldString( GameInfo.Building_FeatureYieldChangesGlobal{ BuildingType = buildingType, FeatureType = feature.Type } )
 		if tip ~= "" then
-			insert( tips, ResourceColor( L("TXT_KEY_CITYVIEW_GLOBAL_EACH"..feature.Description) ) .. ":" .. tip )
+			insert( tips, L"TXT_KEY_CITYVIEW_GLOBAL_EACH"..ResourceColor(L(feature.Description) ) .. ":" .. tip )
 		end
 	end
 
 	for terrain in GameInfo.Terrains() do
 			tip = GetYieldString( GameInfo.Building_TerrainYieldChangesGlobal{ BuildingType = buildingType, TerrainType = terrain.Type } )
 			if tip ~= "" then
-				insert( tips, ResourceColor( L("TXT_KEY_CITYVIEW_GLOBAL_EACH"..terrain.Description) ) .. ":" .. tip )
-			end
+			insert( tips, L"TXT_KEY_CITYVIEW_GLOBAL_EACH"..ResourceColor(L(terrain.Description) ) .. ":" .. tip )
 		end
+	end
 
-
-
-		--本地改良设施产出
+	--本地改良设施产出
 	for Improvement in GameInfo.Improvements() do
 		tip = GetYieldString( GameInfo.Building_ImprovementYieldChanges{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
 		if tip ~= "" then
@@ -1633,13 +1644,16 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-		--本地专家产出 Specialist Yields enhanced by Building
+	--本地专家产出 Specialist Yields enhanced by Building
 	for specialist in GameInfo.Specialists() do
 		tip = GetYieldString( GameInfo.Building_SpecialistYieldChangesLocal{ BuildingType = buildingType, SpecialistType = specialist.Type } )
 		if tip ~= "" then
 			insert( tips, L"TXT_KEY_LOCAL_SPECIALIST" ..UnitColor( L(specialist.Description) ) .. ":" .. tip )
 		end
 	end
+
+
+
 
 	-- River Yields enhanced by Building
 	tip = GetYieldString( GameInfo.Building_RiverPlotYieldChanges( thisBuildingType ) )
@@ -1706,6 +1720,16 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			insert( tips, L("{1: plural 2?{1} ;}{TXT_KEY_FREE} {2}", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
 		end
 	end
+
+
+	-- 新增free units
+	for row in GameInfo.Building_FreeSpecUnits( thisBuildingType ) do
+		item = GameInfo.Units[ row.UnitType ]
+		if item and (row.NumUnits or 0) > 0 then
+			insert( tips, L("{1: plural 2?{1} ;}{TXT_KEY_FREE} {2}", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
+		end
+	end
+
 	-- free units (Truly)
 	if GameInfo.Building_FreeUnits_Truly then
 	    for row in GameInfo.Building_FreeUnits_Truly( thisBuildingType ) do
@@ -1784,6 +1808,14 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
+
+	-- 新增指定专家速率加成
+	for row in GameInfo.Building_SpecificGreatPersonRateModifier( thisBuildingType ) do
+	    item = GameInfo.Specialists[ row.SpecialistType ]
+		if item and (row.Modifier or 0) ~= 0 then
+			insert( tips, L("TXT_KEY_LOCAL_SPECIALIST")..L(item.Description) .. ":" .."".."+" ..row.Modifier.."%".."[ICON_GREAT_PEOPLE]"  )
+		end
+	end
 
 
 
@@ -1922,7 +1954,23 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 		
 
-	
+			-- Other Building Yields enhanced by this Building   建筑对全局其他建筑产出基础加成
+			local buildingClassTypes2 = {}
+			for row in GameInfo.BuildingClasses() do
+				if GameInfo.Building_BuildingClassLocalYieldChanges{ BuildingType = buildingType, BuildingClassType = row.Type }()
+				then
+					insert( buildingClassTypes2, row.Type )
+				end
+			end
+			local condition = { BuildingType = buildingType }
+			for _, buildingClassType in pairs( buildingClassTypes2 ) do
+				condition.BuildingClassType = buildingClassType
+				tip = GetYieldStringSpecial( "YieldChange", "%s %+i%s", GameInfo.Building_BuildingClassLocalYieldChanges( condition ) )
+				local enhancedBuilding = GetCivBuilding( activeCivilizationType, buildingClassType )
+				if enhancedBuilding and #tip > 0 then
+					insert( tips, "[ICON_BULLET]" ..L"TXT_KEY_SV_ICONS_LOCAL".." ".. BuildingColor( L(enhancedBuilding.Description) ) .. tip )
+				end
+			end
 
 	
 
@@ -2238,6 +2286,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	if building.Mountain then
 		insert( terrains, L"TXT_KEY_TERRAIN_MOUNTAIN" .. "[ICON_RANGE_STRENGTH]1" )
 	end
+
+	if building.AnyWater==1 then  --新增
+		insert( terrains, L"TXT_KEY_BUILDING_NEED_ANY_WATER" )
+	end
+
 	if building.NearbyMountainRequired then
 		insert( terrains, L"TXT_KEY_TERRAIN_MOUNTAIN" .. "[ICON_RANGE_STRENGTH]2" )
 	end
@@ -3334,6 +3387,9 @@ if Game then
 		if IsCiv5 then
 			-- City Culture modifier
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_CITY_MOD", city:GetCultureRateModifier())
+
+			---新增杰作数量对全局文化魅力加成
+			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_GREAT_WORK_MOD", cityOwner and cityOwner:GetYieldModifierFromNumGreakWork(YieldTypes.YIELD_CULTURE) or 0)
 
 			-- Culture Wonders modifier
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_WONDER_BONUS", city:GetNumWorldWonders() > 0 and cityOwner and cityOwner:GetCultureWonderMultiplier() or 0 )

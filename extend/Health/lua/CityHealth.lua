@@ -7,7 +7,7 @@ include( "Plague_UI.lua" );
 include( "Health_Events.lua" );
 
 ------------------------------------------------------------------
-local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)
+--local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)
 
 --local plagueThreshold		   = 150
 --if Game then plagueThreshold = (GameDefines["HEALTH_PLAGUE_MIN_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 150) end
@@ -143,7 +143,9 @@ function GetCityRiskString(pCity)
 
 	local totalHealth, totalDisease = Players[pCity:GetOwner()]:GetCityHealthTotal(pCity, true)
 
-	if (not bAbandonCity) or totalHealth-totalDisease >= 0  then  ---无瘟疫风险
+	--if (not bAbandonCity) or totalHealth-totalDisease >= 0  then  ---无瘟疫风险
+
+		if  totalHealth-totalDisease >= 0  then  ---无瘟疫风险
 		strRisk = "TXT_KEY_CH_RISK_NONE"
 	end
 

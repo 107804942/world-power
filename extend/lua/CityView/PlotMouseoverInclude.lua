@@ -614,13 +614,20 @@ function GetYieldString(plot)
 		strYield = strYield .. "[ICON_TOURISM] " .. iNumTourism .. " ";
 	end
 
-	-- PLAGUE MOD (Health Yield)
+	-- DISEASE
+	local iNumDisease = plot:CalculateYield(11, true); 
+	if (iNumDisease ~= 0) then
+		strYield = strYield .. "[ICON_DISEASE] " .. iNumDisease .. " ";
+	end
+
+	---HEALTH
 	local iNumHealth = plot:CalculateYield(10, true); 
-	--CalculateHealthYield(plot);
 	if (iNumHealth ~= 0) then
 		strYield = strYield .. "[ICON_HEALTH] " .. iNumHealth .. " ";
 	end
 	--END
+
+
 	
 	-- Happiness (should probably be calculated in CvPlayer)
 	local featureType = plot:GetFeatureType();

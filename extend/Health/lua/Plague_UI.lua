@@ -1,12 +1,10 @@
-include ("Health_Events.lua")
-
---------------------------------------------------------------------
 PlayerClass		 = getmetatable(Players[0]).__index
 LuaEvents.Player = LuaEvents.Player		or function(player)	 end
 LuaEvents.City	 = LuaEvents.City		or function(city)	 end
---------------------------------------------------------------------
---local plagueThreshold = GameDefines["PLAGUE_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 100
-local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)
+
+
+--local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)
+
 local gHandicap			= (PreGame.GetHandicap(0) > 0) and PreGame.GetHandicap(0) or 1
 --（DUEL 0.4 、TINY 0.56、SMALL 0.66、STANDARD 0.8 、LARGE 1.04 、HUGE 1.28）
 local insert			= table.insert 
@@ -70,9 +68,9 @@ LuaEvents.City.Add( GetCityPlagueInfo )
 --=======================================================================================================================
 -- GAME DEFINES
 --=======================================================================================================================
-local defineCIDHealthDiseaseConnectionMod	   = GameDefines["HEALTH_DISEASE_CITY_CONNECTION_MODIFIER"] 
+local defineCIDHealthDiseaseConnectionMod	   = GameDefines["HEALTH_DISEASE_CITY_CONNECTION_MODIFIER"] ----城市连接加成
 local defineCIDHealthDiseasePerPop		 	   = GameDefines["HEALTH_DISEASE_PER_POPULATION"] 
-local defineCIDHealthDiseaseTradeRoutesMod	   = GameDefines["HEALTH_DISEASE_TRADE_ROUTE_MODIFIER"] 
+local defineCIDHealthDiseaseTradeRoutesMod	   = GameDefines["HEALTH_DISEASE_TRADE_ROUTE_MODIFIER"]   ----贸易路线加成
 local defineCIDHealthPlagueMinThreshold		   = 150
 if Game then defineCIDHealthPlagueMinThreshold = (GameDefines["HEALTH_PLAGUE_MIN_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 150) end
 
@@ -105,7 +103,7 @@ function Player.GetCityHealthTotal(player, city, returnsDisease, isBase)
 	local totalDiseaseLessMods = 0
 	if returnsDisease then 
 		totalDisease = totalDisease + city:GetYieldRate(yieldDiseaseID)
-		totalDisease = totalDisease + player:GetCityDiseaseFromPopulation(city) 
+		--totalDisease = totalDisease + player:GetCityDiseaseFromPopulation(city) 
 		totalDiseaseLessMods = totalDisease
 		if (not isBase) then
 			totalDisease = totalDisease + player:GetCityDiseaseFromConnections(city, totalDiseaseLessMods)
@@ -122,31 +120,6 @@ function Player.GetCityHealthTotal(player, city, returnsDisease, isBase)
 end
 
 
-
-
---城市富余健康度对食物加成
---Player:GetCityExcessHealthBonusFood
-function Player.GetCityExcessHealthBonusFood(player, city)
-	local excessHealthBonus = 0
-	for row in GameInfo.Building_HealthMods("HealthToFoodMod <> 0") do
-		if (((not row.IsLocal) and player:HasBuilding(GameInfoTypes[row.BuildingType])) or city:HasBuilding(GameInfoTypes[row.BuildingType])) then
-			excessHealthBonus = excessHealthBonus + row.HealthToFoodMod
-		end
-	end
-	for row in GameInfo.Policy_HealthMods("HealthToFoodMod <> 0") do
-		if player:HasPolicy(GameInfoTypes[row.PolicyType]) then
-			excessHealthBonus = excessHealthBonus + row.HealthToFoodMod
-		end
-	end
-	for row in GameInfo.Trait_HealthMods("HealthToFoodMod <> 0") do
-		if player:HasTrait(GameInfoTypes[row.TraitType]) then
-			excessHealthBonus = excessHealthBonus + row.HealthToFoodMod
-		end
-	end
-	return excessHealthBonus
-end
-
-
 -- ********************************************************
 -- 疾病点数
 -- ********************************************************	
@@ -154,22 +127,9 @@ end
 function Player.GetCityDiseaseFromConnections(player, city, diseaseConnections)
 	local capital = player:GetCapitalCity()
 	if (capital:HasPlague() and player:IsCapitalConnectedToCity(city) and (not city:IsCapital())) then
+
 		diseaseConnections = ((diseaseConnections*defineCIDHealthDiseaseConnectionMod)/100)
-		for row in GameInfo.Building_HealthMods("DiseaseConnectionMod <> 0") do
-			if (((not row.IsLocal) and player:HasBuilding(GameInfoTypes[row.BuildingType])) or city:HasBuilding(GameInfoTypes[row.BuildingType])) then
-				diseaseConnections = diseaseConnections + ((diseaseConnections*row.DiseaseConnectionMod)/100)
-			end
-		end
-		for row in GameInfo.Policy_HealthMods("DiseaseConnectionMod <> 0") do
-			if player:HasPolicy(GameInfoTypes[row.PolicyType]) then
-				diseaseConnections = diseaseConnections + ((diseaseConnections*row.DiseaseConnectionMod)/100)
-			end
-		end
-		for row in GameInfo.Trait_HealthMods("DiseaseConnectionMod <> 0") do
-			if player:HasTrait(GameInfoTypes[row.TraitType]) then
-				diseaseConnections = diseaseConnections + ((diseaseConnections*row.DiseaseConnectionMod)/100)
-			end
-		end
+
 		return mathMax(ceil(diseaseConnections),0)
 	else
 		return 0
@@ -180,28 +140,9 @@ end
 function Player.GetCityDiseaseFromPopulation(player, city)
 
    local pop =city:GetPopulation()
-   if pop<=30 then defineCIDHealthDiseasePerPop = 0.6
-   elseif pop >30 and pop<=60 then defineCIDHealthDiseasePerPop = 0.8
-   elseif pop >60 and pop<=100 then defineCIDHealthDiseasePerPop = 1.25
-   elseif pop >100  then defineCIDHealthDiseasePerPop = 1.5
-   end
 
-	local diseasePopulation = (city:GetPopulation()*defineCIDHealthDiseasePerPop)
-	for row in GameInfo.Building_HealthMods("DiseasePopMod <> 0") do
-		if (((not row.IsLocal) and player:HasBuilding(GameInfoTypes[row.BuildingType])) or city:HasBuilding(GameInfoTypes[row.BuildingType])) then
-			diseasePopulation = diseasePopulation + ((diseasePopulation*row.DiseasePopMod)/100)
-		end
-	end
-	for row in GameInfo.Policy_HealthMods("DiseasePopMod <> 0") do
-		if player:HasPolicy(GameInfoTypes[row.PolicyType]) then
-			diseasePopulation = diseasePopulation + ((diseasePopulation*row.DiseasePopMod)/100)
-		end
-	end
-	for row in GameInfo.Trait_HealthMods("DiseasePopMod <> 0") do
-		if player:HasTrait(GameInfoTypes[row.TraitType]) then
-			diseasePopulation = diseasePopulation + ((diseasePopulation*row.DiseasePopMod)/100)
-		end
-	end
+	--local diseasePopulation = (city:GetPopulation()*defineCIDHealthDiseasePerPop)
+	local diseasePopulation = city:GetYieldPerPopTimes100(yieldDiseaseID) * pop / 100
 
 	return mathMax(ceil(diseasePopulation),0)
 end
@@ -211,22 +152,7 @@ function Player.GetNumDiseaseFromTradeRoute(player, city)
 	local numDisease = 0
 	local totalHealth, totalDisease = player:GetCityHealthTotal(city, true, true)
 	numDisease = numDisease + ((totalDisease*defineCIDHealthDiseaseTradeRoutesMod)/100)
-	for row in GameInfo.Building_HealthMods("DiseaseTRMod <> 0") do
-		if (((not row.IsLocal) and player:HasBuilding(GameInfoTypes[row.BuildingType])) or city:HasBuilding(GameInfoTypes[row.BuildingType])) then
-			numDisease = numDisease + ((numDisease*row.DiseaseTRMod)/100)
-		end
-	end
-	for row in GameInfo.Policy_HealthMods("DiseaseTRMod <> 0") do
-		if player:HasPolicy(GameInfoTypes[row.PolicyType]) then
-			numDisease = numDisease + ((numDisease*row.DiseaseTRMod)/100)
-		end
-	end
 
-	for row in GameInfo.Trait_HealthMods("DiseaseTRMod <> 0") do
-		if player:HasTrait(GameInfoTypes[row.TraitType]) then
-			numDisease = numDisease + ((numDisease*row.DiseaseTRMod)/100)
-		end
-	end
 	return mathMax(ceil(numDisease),0)
 end
 
@@ -312,18 +238,22 @@ function Player.GetCityHealthTT(player, city)
 	end
 
 
-	--Modifier
-	local diseaseModifier = city:GetYieldRateModifier(yieldDiseaseID) + player:GetYieldRateModifier(yieldDiseaseID)
-	if diseaseModifier ~= 0 then
-		if diseaseModifier > 0 then diseaseModifier = "+" .. diseaseModifier end
-		toolTipDisease = toolTipDisease .. convertTextKey("TXT_KEY_CITYVIEW_DISEASE_TT_FROM_MODIFIERS", diseaseModifier)
-	end
+	--Modifier 百分比加成明细
+	--local diseaseModifier = city:GetYieldRateModifier(yieldDiseaseID) + player:GetYieldRateModifier(yieldDiseaseID)
+	--if diseaseModifier ~= 0 then
+		--if diseaseModifier > 0 then diseaseModifier = "+" .. diseaseModifier end
+		--toolTipDisease = toolTipDisease .. convertTextKey("TXT_KEY_CITYVIEW_DISEASE_TT_FROM_MODIFIERS", diseaseModifier)
+	---end
 
    -- Puppet modifier
 		local puppetMod = city:IsPuppet() and GameDefines.PUPPET_DISEASE_MODIFIER or 0
 		if puppetMod ~= 0 then
 			toolTipDisease = toolTipDisease .. convertTextKey("TXT_KEY_CITYVIEW_DISEASE_TT_FROM_PUPPET",puppetMod) 
 		end
+
+	if city:GetYieldModifierTooltip(yieldDiseaseID)~= "" then
+	   toolTipDisease = toolTipDisease .. city:GetYieldModifierTooltip(yieldDiseaseID)
+	end
 
 -- ********************************************************
 -- 健康度明细
@@ -413,18 +343,21 @@ function Player.GetCityHealthTT(player, city)
 		toolTipHealth = toolTipHealth .. "[NEWLINE][ICON_BULLET]";
 		toolTipHealth = toolTipHealth .. convertTextKey("TXT_KEY_HEALTH_FROM_CRIME", healthCrime);
 	end
-	local healthCrimeMod = city:GetYieldModifierFromCrime(yieldHealthID)
-	if healthCrimeMod ~= 0 then
-		toolTipHealth = toolTipHealth .. "[NEWLINE][ICON_BULLET]";
-		toolTipHealth = toolTipHealth .. convertTextKey("TXT_KEY_HEALTH_FROM_CRIME", healthCrimeMod .. "%");
-	end
+
+	--Modifier  百分比加成项目
+
+	--local healthCrimeMod = city:GetYieldModifierFromCrime(yieldHealthID)
+	--if healthCrimeMod ~= 0 then
+		--toolTipHealth = toolTipHealth .. "[NEWLINE][ICON_BULLET]";
+		--toolTipHealth = toolTipHealth .. convertTextKey("TXT_KEY_HEALTH_FROM_CRIME", healthCrimeMod .. "%");
+	--end
 
 	--Modifier
-	local healthModifier = city:GetYieldRateModifier(yieldHealthID) + player:GetYieldRateModifier(yieldHealthID)
-	if healthModifier ~= 0 then
-		if healthModifier > 0 then healthModifier = "+" .. healthModifier end
-		toolTipHealth = toolTipHealth .. convertTextKey("TXT_KEY_CITYVIEW_HEALTH_TT_FROM_MODIFIERS", healthModifier)
-	end
+	--local healthModifier = city:GetYieldRateModifier(yieldHealthID) + player:GetYieldRateModifier(yieldHealthID)
+	--if healthModifier ~= 0 then
+		--if healthModifier > 0 then healthModifier = "+" .. healthModifier end
+		--toolTipHealth = toolTipHealth .. convertTextKey("TXT_KEY_CITYVIEW_HEALTH_TT_FROM_MODIFIERS", healthModifier)
+	--end
 
 	-- Puppet modifier
 		local puppetMod = city:IsPuppet() and GameDefines.PUPPET_HEALTH_MODIFIER or 0
@@ -432,6 +365,9 @@ function Player.GetCityHealthTT(player, city)
 		toolTipHealth = toolTipHealth .. convertTextKey("TXT_KEY_CITYVIEW_HEALTH_TT_FROM_PUPPET",puppetMod) 
 	end
 
+	if city:GetYieldModifierTooltip(yieldHealthID)~= "" then
+	   toolTipHealth = toolTipHealth .. city:GetYieldModifierTooltip(yieldHealthID)
+	end
 
 	----------------------------------------------------------------------------------------------------------
 	local plagueCounter, plagueThreshold, plagueTurns = player:GetCityPlagueCounterDetails(city, true, true)
@@ -451,7 +387,7 @@ function Player.GetCityHealthTT(player, city)
 		toolTipPlagueSentiment = toolTipPlagueSentiment .. "[NEWLINE][NEWLINE]" .. convertTextKey("TXT_KEY_CITYVIEW_HEALTH_PLAGUE_TURNS_TEXT_TT", plagueTurnsHL, BreakTurn)
 	end
 
-	---------------------------------------------------转化-------------------------------------------------------
+	---------------------------------------------------健康度转化为其他产出-------------------------------------------------------
 	local toolTipHealthToOtherYield="" 
 	local FoodChange = city:GetYieldFromHealth(YieldTypes.YIELD_FOOD)
 	if FoodChange ~= 0 then
@@ -532,8 +468,6 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- PLAGUE
 ------------------------------------------------------------------------------------------------------------------------
-
-
 --Player:GetCityPlagueCounterDetails  瘟疫的计数细节（累计进度，爆发阈值，瘟疫回合数）
 function Player.GetCityPlagueCounterDetails(player, city, resturnsThreshold, returnsTurns)
 	local totalHealth, totalDisease = player:GetCityHealthTotal(city, true)--总健康度（基础健康度产出加上信条中信仰对健康度的转换数值，如25则增加25%）
@@ -570,117 +504,6 @@ function Player.GetCityPlagueCounterDetails(player, city, resturnsThreshold, ret
 	return plagueCounter, plagueThreshold, plagueTurns
 end
 
---------------------------------------------------------------------
-function GetHappinessMod(pPlayer)
-	local iHealth = 0
-	if pPlayer:IsGoldenAge() then
-		iHealth = 10
-	elseif pPlayer:IsEmpireUnhappy() then
-		local iUnhappy = pPlayer:GetExcessHappiness()
-		iHealth = (iUnhappy < -15) and -15 or iUnhappy
-	end
-	return iHealth;
-end
-
---------------------------------------------------------------------
-function GetTechMod(pPlayer)
-	local pTeam = Teams[pPlayer:GetTeam()]
-	local iHealth = 0
-	for row in GameInfo.Technology_Health() do
-		local iYield = row.Yield
-		local techInfo = GameInfo.Technologies[row.TechType]
-		if techInfo then
-			if ( pTeam:IsHasTech(techInfo.ID) ) then
-				iHealth = iHealth + iYield
-			end
-		end
-	end
-	return iHealth;
-end
---------------------------------------------------------------------
-function GetEmpirePolicyMod(pPlayer)
-	local iHealth = 0
-	for row in GameInfo.PolicyBranch_Health() do
-		local iYield = row.Yield
-		local branchInfo = GameInfo.PolicyBranchTypes[row.PolicyBranchType]
-		if branchInfo then
-			for row in GameInfo.Policies("PolicyBranchType='" .. branchInfo.Type .. "'") do
-				if pPlayer:HasPolicy(row.ID) and not pPlayer:IsPolicyBlocked(row.ID) then 
-					iHealth = iHealth + iYield
-				end
-			end
-		end
-	end
-
-	for row in GameInfo.Policy_YieldModifiers(condition) do
-		local policyInfo = GameInfo.Policies[row.PolicyType]
-		if policyInfo then
-			if pPlayer:HasPolicy(policyInfo.ID) and not pPlayer:IsPolicyBlocked(policyInfo.ID) then 
-				iHealth = iHealth + row.Yield
-			end
-		end
-	end
-
-	for row in GameInfo.Policy_BuildingClassYieldModifiers(condition) do
-		local policyInfo = GameInfo.Policies[row.PolicyType]
-		if policyInfo then
-			if pPlayer:HasPolicy(policyInfo.ID) and not pPlayer:IsPolicyBlocked(policyInfo.ID) then 
-				local classInfo = GameInfo.BuildingClasses[row.BuildingClassType]
-				if classInfo then
-					local iBonus = row.YieldMod * pPlayer:GetBuildingClassCount(classInfo.ID)
-					iBonus = iBonus < 10 and iBonus or 10
-					iHealth = iHealth + iBonus
-				end
-			end
-		end
-	end
-
-	return iHealth;
-end
---------------------------------------------------------------------
-function GetEmpireBuildingMod(pPlayer)
-	local iHealth = 0
-	--for row in GameInfo.Building_YieldModifiers(condition) do
-	for row in GameInfo.Building_GlobalYieldModifiers(condition) do
-		local buildingInfo = GameInfo.Buildings[row.BuildingType]
-		if buildingInfo then
-			iHealth = iHealth + (pPlayer:CountNumBuildings(buildingInfo.ID) * row.Yield)
-		end
-	end
-	return iHealth;
-end
---------------------------------------------------------------------
-function GetEmpireTradeMod(pPlayer)
-	local iHealth = 0
-	local routes = pPlayer:GetTradeRoutes()	
-	for i,v in ipairs(routes) do
-		if v.FromID ~= v.ToID then
-			iHealth = iHealth - 1
-		end
-	end
-	return iHealth;
-end
---------------------------------------------------------------------
-
-function GetEmpireReligionMod(pPlayer)
-	local iHealth = 0
-	
-	if pPlayer:HasCreatedReligion() then
-	local eReligion = pPlayer:GetReligionCreatedByPlayer()
-				for row in GameInfo.Belief_YieldChangePerForeignCity(condition) do
-
-				if  pPlayer:HasBelief(GameInfo.Beliefs{Type=row.BeliefType}().ID)  then
-
-					--if row.BeliefType == belief.Type then
-						local iBonus = (Game.GetNumCitiesFollowing(eReligion) * row.Yield)
-						iBonus = (iBonus < 20) and iBonus or 20
-						iHealth = iHealth + iBonus
-					--end
-				end
-			end
-		end
-	return iHealth;
-end
 
 
 --------------------------------------------------------------------

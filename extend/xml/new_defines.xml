@@ -228,21 +228,7 @@
 		    <ShowInPedia>0</ShowInPedia>
 		</Row>
 
-		<Row>
-			<Type>PROMOTION_GENERAL_2</Type>
-			<Description>TXT_KEY_PROMOTION_GENERAL_2</Description>
-			<Help>TXT_KEY_PROMOTION_GENERAL_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_GENERAL_2</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<AuraRangeChange>2</AuraRangeChange>
-			<AuraEffectChange>20</AuraEffectChange>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
-		</Row>
+
 	</UnitPromotions>
 	
 	
@@ -590,9 +576,6 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>2</Yield>
 		</Row>
-		
-
-
 	</SpecialistYields>
 
 
@@ -600,14 +583,10 @@
 
 
 	<GameOptions>
-
-
-		
 		<Update>
 			<Where Type="GAMEOPTION_PLAGUE_DESTROYS_CITIES"/>
 			<Set Default="1"/>
 		</Update>
-
 		<Update>
 			<Where Type="GAMEOPTION_POLICY_SAVING"/>
 			<Set Default="1"/>
@@ -617,67 +596,51 @@
 			<Where Type="GAMEOPTION_PROMOTION_SAVING"/>
 			<Set Default="1"/>
 		</Update>
-
-
-		
 		<Update>
 			<Where Type="GAMEOPTION_NO_BARBARIANS"/>
 			<Set Default="1"/>
-		</Update>
-		
+		</Update>		
 	</GameOptions>
 
+	
+	
 	<Defines>
 		<Update>
 			<Where Name="AIR_UNIT_REBASE_RANGE_MULTIPLIER"/>
 			<Set Value="200"/>
 		</Update>
-
 		<Update>
 			<Where Name="PILLAGE_HEAL_AMOUNT"/>
 			<Set Value="20"/>
 		</Update>
-
-
 		<Update>
 			<Where Name="CIRCUMNAVIGATE_FREE_MOVES"/>
 			<Set Value="1"/>
 		</Update>
-		
-
 		<Update>
 			<Where Name="INSTA_HEAL_RATE"/>
 			<Set Value="50"/>
 		</Update>
-
-
 		<Update>
 			<Where Name="MAX_HIT_POINTS"/>
 			<Set Value="100"/>
 		</Update>
-
 		<Update>
 			<Where Name="MAX_CITY_HIT_POINTS"/>
 			<Set Value="250"/>
 		</Update>
-
 		<Update>
 			<Where Name="CITY_UNIT_LIMIT"/>
 			<Set Value="2"/>
 		</Update>
-
 		<Update>
 			<Set Value="25" />
 			<Where Name="HILLS_EXTRA_DEFENSE" />
 		</Update>
-
 		<Update>
 			<Set Value="0" />
 			<Where Name="FLAT_LAND_EXTRA_DEFENSE" />
 		</Update>
-
-
-
 		<Update>
 			<Set Value="100"/>
 			<Where Name="NONCOMBAT_UNIT_RANGED_DAMAGE"/>

@@ -79,8 +79,8 @@ UPDATE SPNewEffectControler SET Enabled = 1 WHERE Type = 'SP_DELETE_ALL_STRATEGI
 
 
 ---大军和海军上将免疫溅射
-INSERT  INTO Unit_FreePromotions(UnitType,PromotionType)
-SELECT  Type, 'PROMOTION_ANTI_SPLASH' FROM Units WHERE Class= 'UNITCLASS_GREAT_GENERAL'OR Class= 'UNITCLASS_GREAT_ADMIRAL';
+--INSERT  INTO Unit_FreePromotions(UnitType,PromotionType)
+--SELECT  Type, 'PROMOTION_ANTI_SPLASH' FROM Units WHERE Class= 'UNITCLASS_GREAT_GENERAL'OR Class= 'UNITCLASS_GREAT_ADMIRAL';
 
 
 
@@ -177,7 +177,7 @@ INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
 SELECT 'PROMOTION_GENERAL_1', Type  FROM Units WHERE Class ='UNITCLASS_GREAT_GENERAL';
 
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_GENERAL_2', Type  FROM Units WHERE Class ='UNITCLASS_GREAT_GENERAL';
+SELECT 'PROMOTION_PEOPLES_HALL', Type  FROM Units WHERE Class ='UNITCLASS_GREAT_GENERAL';
 
 
 ---堡垒增强

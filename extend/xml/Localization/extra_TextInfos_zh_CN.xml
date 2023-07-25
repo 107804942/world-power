@@ -185,7 +185,9 @@
 			<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS" >
 				<Text>间谍数量加成</Text>
 			</Row>
-			
+			<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY" >
+				<Text>间谍加成</Text>
+			</Row>
 			
 
 			<Row Tag="TXT_KEY_EUPANEL_UNITCLASS_NEAR" >
@@ -1570,12 +1572,7 @@
 			<Text>攻城+50%[ICON_STRENGTH]战斗力</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_PENETRATES">
-			<Text>贯穿火力</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_PENETRATES_HELP">
-			<Text>溅射伤害对同地格所有单位有效。</Text>
-		</Row>
+
 		
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_3">
 			<Text>重甲三级</Text>
@@ -2686,7 +2683,7 @@
 			<Text>[ICON_RES_ELECTRICITY]地热发电厂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_HELP">
-			<Text>这座城市必须建在一座山的旁边，建成后提供20[ICON_RES_ELECTRICITY]电力，消耗5人力资源。</Text>
+			<Text>这座城市必须建在一座山的旁边，建成后提供30[ICON_RES_ELECTRICITY]电力，消耗5人力资源。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_PEDIA">
@@ -4387,9 +4384,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_EQUICK">
 			<Text>火力覆盖</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_EQUICK_HELP">
-			<Text>战术机器人学解锁，陆军AOE单位获得晋升：远程攻击力+10%，溅射伤害将对同格所有单位生效。</Text>
-		</Row>
+			<Row Tag="TXT_KEY_PROMOTION_EQUICK_HELP">
+				<Text>战术机器人学解锁，陆军AOE单位获得晋升：远程攻击力+20%。</Text>
+			</Row>
 
 
 		<Row Tag="TXT_KEY_BUILDING_MINEFIELD">
@@ -4950,7 +4947,7 @@
 		</Row>
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_FORCE_FIELD_HELP">
-			<Text>强大的防御材料，城市+100HP上限，每回合能额外恢复150生命值。建成后城市立即恢复200HP。</Text>
+			<Text>强大的防御材料，城市+100生命值上限，每回合能额外恢复150生命值。建成后城市立即恢复200点生命值。</Text>
 		</Row>
 		
 		
@@ -5483,7 +5480,7 @@
 			<Text>史密森学会</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SMITHSONIAN_HELP">
-			<Text>拥有两个艺术品槽位，本城免费赠送博物馆,额外赠送一个大文学家。[NEWLINE][NEWLINE]全国所有杰作的[ICON_RESEARCH]科研产出+8。</Text>
+			<Text>拥有两个艺术品槽位，所有城市赠送博物馆。[NEWLINE][NEWLINE]全国所有杰作的[ICON_RESEARCH]科研产出+8。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SMITHSONIAN_QUOTE">
 			<Text>
@@ -5652,32 +5649,32 @@
 				[NEWLINE]军事理论家对于这个高灵活性的轨道单位的评价非常高。除此之外，浮石章鱼还有着不可否认的美丽姿态。如同它在地球上的祖先一样，当它在徐徐向上升空时，触手会如羽翼一般启心，看上去高雅而柔弱。但是与水母不同的是，浮石章鱼并不能算是生物，因为它甚至能够在真空以及外太空的严酷的辐射环境下生存。在很多方面上来讲，它都比它爬过的岩石要坚固许多。
 			</Text>
 		</Row>
-	
 
 
 
 
 
-		<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE">
-			<Text>人造绿洲</Text>
-		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_TEXT">
-			<Text>绿洲是浩瀚沙漠中的片片沃土，出现於终年淡水源不断之处。绿洲大小不一，从小泉水周围1公顷(15亩)左右到大面积有天然水或灌溉的土地，它就像是沙漠瀚海上美丽的珍珠，镶嵌在沙漠里，闪烁着神奇的色彩。随着科技进步，人类已经能够建造出类似天然绿洲一样的人工景观。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_HELP">
-			<Text>该景观为所建成地块提供6食物及1科研产出。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_TERRASCAPE">
-			<Text>人造绿洲</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_TERRASCAPE_HELP">
-			<Text>建造一个绿洲，提高地块食物和科研产出。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_TERRASCAPE_REC">
-			<Text>
-				该景观可以增加地块的食物和科研产出。
-			</Text>
-		</Row>
+
+			<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE">
+				<Text>人造绿洲</Text>
+			</Row>
+			<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_TEXT">
+				<Text>绿洲是浩瀚沙漠中的片片沃土，出现於终年淡水源不断之处。绿洲大小不一，从小泉水周围1公顷(15亩)左右到大面积有天然水或灌溉的土地，它就像是沙漠瀚海上美丽的珍珠，镶嵌在沙漠里，闪烁着神奇的色彩。随着科技进步，人类已经能够建造出类似天然绿洲一样的人工景观。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_HELP">
+				<Text>该景观为所建成地块提供6[ICON_FOOD]食物及1[ICON_RESEARCH]科研产出。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BUILD_TERRASCAPE">
+				<Text>人造绿洲</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BUILD_TERRASCAPE_HELP">
+				<Text>建造一个绿洲，提高地块[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BUILD_TERRASCAPE_REC">
+				<Text>
+					该景观可以增加地块的[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。
+				</Text>
+			</Row>
 
 
 
@@ -6622,11 +6619,11 @@
 		<Row Tag="TXT_KEY_BUILDING_BALNEAE">
 			<Text>[ICON_HEALTH][ICON_HAPPINESS_1]公共浴室</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_BALNEAE_HELP">
-			<Text>
-				+2[ICON_HAPPINESS_1]快乐,+5%[ICON_CULTURE]文化。
-			</Text>
-		</Row>
+			<Row Tag="TXT_KEY_BUILDING_BALNEAE_HELP">
+				<Text>
+					+2[ICON_HAPPINESS_1]快乐,+5%[ICON_HEALTH]健康度。
+				</Text>
+			</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_BALNEAE_PEDIA">
 			<Text>
@@ -7281,7 +7278,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_HELP">
 			<Text>
-				本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力，执行传教任务时，你的所有单位立即恢复20点生命值。获得3个武僧，并且解锁武僧专属晋升无影拳。
+				本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力，执行传教任务时，你的所有单位立即恢复20点生命值。获得3个武僧。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_PEDIA">
@@ -8778,34 +8775,6 @@
 
 
 
-		<Row Tag="TXT_KEY_PROMOTION_FIST_1">
-			<Text>迷魂幕</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIST_1_HELP">
-			<Text>单位视野+2，获得隐身能力并且可看见隐身单位。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIST_2">
-			<Text>穿心掌</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIST_2_HELP">
-			<Text>基础[ICON_STRENGTH]战斗力+10。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_FIST_3">
-			<Text>蛇形拳</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIST_3_HELP">
-			<Text>基础[ICON_STRENGTH]战斗力+10。</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_PROMOTION_FIST_4">
-			<Text>无影拳</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FIST_4_HELP">
-			<Text>+1移动力，+1攻击次数。</Text>
-		</Row>
-
 
 
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION">
@@ -9006,25 +8975,7 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_PROMETHEUS">
-			<Text>普罗米修斯</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_PROMETHEUS_PEDIA">
-			<Text>
-				古语有云：人类只是足够像人，才能离开地球，人类只是足够像猿，才能谋求生存。事实上“播种”时就已存在的人类基因组在近2000年后几乎没有变化，而且很大程度上受环境恶化和令人不快的选择压力的制约。外星移民后一般殖民者基因组都有很多不健康的遗传编码，具有致病倾向，且非常脆弱，容易受到新世界大量辐射的伤害。
-				[NEWLINE]基因组医学在理论上已十分完备，但由于各种原因（最常见的是宗教禁忌和资源缺乏的政治禁令）没有在旧地球上大规模尝试，但在新世界，每次有关该星球生命的新发现和新医药的实现，人类基因组的问题就会被重新提起。随着基因信息理论的成熟，一个新的可能性出现了：创造一个最佳的人类基因组，免受疾病的困扰和缺陷的限制。
-				[NEWLINE]普罗米修斯的构想是创造出一个新的人类基因型。它和人类遗传学兼容，但是会移除有问题的基因，换上更优的蛋白质序列。这一举措不仅能弥补“大灾变＂的损失，也能扫清人类进化的障碍-死端序列、错误编码、隐藏的致病雷区。最后的产物将看起来像人类，却比人类更优秀。
-				[NEWLINE]这个想法自然引起了社会上很大的争论。争论的中心在于“人性”的概念和“人生”的意义。基因上具有人类表征的假定新生物是否还是一个人？（由于在此难以解释的复杂原因，这个问题被人们称为“鸭子主义”）。既然这个生物不受其模版的限制所限，在某种意义上是否要“好”于人类？这个问题在很多范畴里仍然悬而未决。但普罗米修斯被创造出来了。
-				[NEWLINE]全无DNA非编码序列和退化表型（或恢复功能的退化表型；普罗米修斯有一个能够工作的盲肠），普罗米修斯是一种优美、深奥的生物，不但每个个体都分享共同的基础，而且从细胞层面到整体层面普罗米修斯都非常完美。普罗米修斯行动极其优雅，并能看见这世界里旧人类看不到的色彩，他成长得轻松且缓慢，在漫长的生命中都能保持状态，当生命走到尽头时，留下的遗产是区区旧人类难以企及的。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_PROMETHEUS_QUOTE">
-			<Text>
-				[NEWLINE]“安纳西看了看这个男人的基因组，说：“一团糟！真是一团糟！谁这样了还能活？”他拿起了一把扫帚清扫基因组。当这个人醒来时，他感觉好多了。”[NEWLINE]        ——《大叔的新奇故事》[NEWLINE]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_PROMETHEUS_HELP">
-			<Text>消除所有城市中[ICON_CITIZEN]人口数量带来的基础[ICON_HEALTH]健康度惩罚。</Text>
-		</Row>
+	
 
 
 
@@ -9184,12 +9135,12 @@
 
 
 
-		<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL">
-			<Text>战争狂热</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL_HELP">
-			<Text>单位剩余血量越低则战斗力越高。攻击城市时获得相对于城市损害400%的[ICON_GOLD]金钱。</Text>
-		</Row>
+			<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL">
+				<Text>战争狂热</Text>
+			</Row>
+			<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL_HELP">
+				<Text>单位剩余血量越低则战斗力越高。攻击城市时获得相对于城市损害400%的[ICON_GOLD]金钱。大军事家的光环效果增益提升20%，且范围+2。</Text>
+			</Row>
 
 
 
@@ -9991,12 +9942,12 @@
 		<Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_BUREAU">
 			<Text>情报局</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_BUREAU_HELP">
-			<Text>
-				单位+15%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。
-				[NEWLINE]只能在巨型城市建造。
-			</Text>
-		</Row>
+			<Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_BUREAU_HELP">
+				<Text>
+					与有我方间谍驻扎的文明的单位作战时+25%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。
+					[NEWLINE]只能在巨型城市建造。
+				</Text>
+			</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_INTELLIGENCE_BUREAU_TEXT">
 			<Text>
 				很多国家事务需要谨慎处理，而其中有些事务的实际解决方法也可能有悖于国家及其领导层的公开形象。因此，统治者需要一小群人士来处理这些事务。他们都是经受严格培训的专业人士，能够谨慎妥善地处理国家机密事务。
@@ -10073,12 +10024,12 @@
 			<Text>洛克菲勒中心</Text>
 		</Row>
 		<!-- Help tags -->
-		<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_HELP">
-			<Text>
-				本城[ICON_CULTURE]文化+33%，本地[ICON_GREAT_MERCHANT]商业家+2[ICON_GOLD]金钱，[ICON_GOLD]金钱+33%，每5人口+1[ICON_GOLD]金钱。
-				[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，城市将[ICON_PRODUCTION]产能转换为其他产出时的转换率+20%(健康度除外)。
-			</Text>
-		</Row>
+			<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_HELP">
+				<Text>
+					本城[ICON_CULTURE]文化+33%，本地[ICON_GREAT_MERCHANT]商业家+2[ICON_GOLD]金钱，[ICON_GOLD]金钱+33%，每5人口+1[ICON_GOLD]金钱。
+					[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，城市出售建筑时，本城获得相当于其[ICON_PRODUCTION]产能数值100%的一次性[ICON_PRODUCTION]产能，其余城市则获得其25%的一次性[ICON_PRODUCTION]产能。
+				</Text>
+			</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_QUOTE">
 			<Text>
@@ -10485,12 +10436,7 @@
 
 		
 		
-		<Row Tag="TXT_KEY_PROMOTION_GENERAL_2">
-			<Text>光环增强</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_GENERAL_2_HELP">
-			<Text>军事家的光环范围增加。</Text>
-		</Row>
+	
 		
 		
 		<Row Tag="TXT_KEY_PROMOTION_HORSE_ARTILLERY_MOVE">

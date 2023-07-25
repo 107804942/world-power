@@ -5,11 +5,13 @@
 --------------------------------------------------------------------------------------------------
 --GameOptions
 --------------------------------------------------------------------------------------------------
-INSERT INTO GameOptions (Type,				Description,									Help,										 SupportsMultiplayer)	
-SELECT 'GAMEOPTION_PLAGUE_DISABLED',		'TXT_KEY_GAMEOPTION_PLAGUE_DISABLED',			'TXT_KEY_GAMEOPTION_PLAGUE_DISABLED_HELP',			0 UNION ALL
-SELECT 'GAMEOPTION_PLAGUE_DESTROYS_CITIES',	'TXT_KEY_GAMEOPTION_PLAGUE_DESTROYS_CITIES',	'TXT_KEY_GAMEOPTION_PLAGUE_DESTROYS_CITIES_HELP',	 0 ;
+--INSERT INTO GameOptions (Type,				Description,									Help,										 SupportsMultiplayer)	
+--SELECT 'GAMEOPTION_PLAGUE_DISABLED',		'TXT_KEY_GAMEOPTION_PLAGUE_DISABLED',			'TXT_KEY_GAMEOPTION_PLAGUE_DISABLED_HELP',			0 UNION ALL
+--SELECT 'GAMEOPTION_PLAGUE_DESTROYS_CITIES',	'TXT_KEY_GAMEOPTION_PLAGUE_DESTROYS_CITIES',	'TXT_KEY_GAMEOPTION_PLAGUE_DESTROYS_CITIES_HELP',	 0 ;
 
 
+UPDATE Yields SET GoldenAgeYieldMod = 20 WHERE Type = 'YIELD_HEALTH';
+--UPDATE Yields SET GoldenAgeYield = 1 ,GoldenAgeYieldThreshold= 1 WHERE Type = 'YIELD_HEALTH';
 
 
 INSERT INTO Defines(Name,									Value)

@@ -122,7 +122,7 @@
 			<Type>UNIT_MONK</Type>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
-			<Combat>26</Combat>
+			<Combat>32</Combat>
 			<Cost>160</Cost>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PurchaseOnly>true</PurchaseOnly>
@@ -140,7 +140,7 @@
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
 			<MoveAfterPurchase>true</MoveAfterPurchase>
-			<ObsoleteTech>TECH_MOBILIZATION_T</ObsoleteTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!--<GoodyHutUpgradeUnitClass>UNITCLASS_MUSKETMAN</GoodyHutUpgradeUnitClass>-->
 			<AdvancedStartCost>20</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
@@ -543,7 +543,7 @@
 			<Type>UNIT_RANGEDMARINE03S</Type>
 			<BaseSightRange>3</BaseSightRange>
 			<HurryCostModifier>33</HurryCostModifier>
-			<PrereqTech>TECH_COGNITIVE</PrereqTech>
+			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<Combat>220</Combat>
 			<Cost>1400</Cost>
 			<Moves>4</Moves>
@@ -621,7 +621,7 @@
 
 		<Row>
 			<UnitType>UNIT_MONK</UnitType>
-			<UnitClassType>UNITCLASS_GREAT_WAR_INFANTRY</UnitClassType>
+			<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>
 		</Row>
 		
 	</Unit_ClassUpgrades>

@@ -1388,10 +1388,6 @@ VALUES	('FEATURE_LAKE_VICTORIA',	'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 
 
 
-
-
-
-
 --=======================================================================================================================
 -- 新自然奇观
 --=======================================================================================================================
@@ -1517,7 +1513,6 @@ INSERT INTO ArtDefine_StrategicView SELECT * FROM Feature_ArtDefine_StrategicVie
 DROP TABLE Feature_ArtDefine_StrategicView;
 
 
-
 --=======================================================================================================================
 -- VOLCANOS
 --=======================================================================================================================
@@ -1535,13 +1530,11 @@ UPDATE Features SET TilesPerVolcano = 160 WHERE Type = 'FEATURE_NEW_VOLCANO';
 UPDATE Features SET TurnDamage = 60 WHERE Type = 'FEATURE_NEW_VOLCANO';
 
 
-INSERT INTO Feature_YieldChanges
-		(FeatureType,				YieldType,				Yield)
-VALUES	('FEATURE_NEW_VOLCANO',	'YIELD_SCIENCE',		2);
+INSERT INTO Feature_YieldChanges(FeatureType,YieldType,	Yield)
+VALUES	('FEATURE_NEW_VOLCANO',	'YIELD_SCIENCE',		4);
 
 
-INSERT OR REPLACE INTO Plot_AdjacentFeatureYieldChanges 
-		(FeatureType,				PlotType,			YieldType,				Yield,	IgnoreNaturalWonderPlots)
+INSERT OR REPLACE INTO Plot_AdjacentFeatureYieldChanges (FeatureType,PlotType,YieldType,Yield,	IgnoreNaturalWonderPlots)
 VALUES	('FEATURE_NEW_VOLCANO',	'PLOT_LAND',		'YIELD_FOOD',			1,		1),
 		('FEATURE_NEW_VOLCANO',	'PLOT_HILLS',		'YIELD_FOOD',			1,		1),
 		('FEATURE_NEW_VOLCANO',	'PLOT_LAND',		'YIELD_TOURISM',		1,		1),

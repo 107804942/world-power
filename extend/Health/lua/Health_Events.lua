@@ -25,9 +25,9 @@ if Game then defineCIDHealthPlagueMinThreshold = (GameDefines["HEALTH_PLAGUE_MIN
 --=======================================================================================================================
 -- USER SETTINGS
 --=======================================================================================================================
-local bNoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  ---关闭健康度效果
+--local bNoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  ---关闭健康度效果
 
-local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  ---城市人口减少效果
+--local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  ---城市人口减少效果
 
 
 --=======================================================================================================================
@@ -83,36 +83,41 @@ end
 
 
 
-if not bNoPlagues then  --确认开启健康度系统
+--if not bNoPlagues then  --确认开启健康度系统
 
 
 --------------------------------------------------------------------
 --杀死人口
 function KillPopulation(player,city)
     local plagueID=city:GetPlagueType()
+	local pop=0
 	local bNotify = false
 
 		if city:GetPopulation() > 2 and city:GetPopulation() <= 20 then
 	    city:ChangePopulation(-1, true)
-		city:SetFood(0)
+		--city:SetFood(0)
+		pop= 1
 		bNotify = true
 		end
 
 		if city:GetPopulation() > 20 and city:GetPopulation() <= 40 then
 	    city:ChangePopulation(-2, true)
-		city:SetFood(0)
+		--city:SetFood(0)
+		pop= 2
 		bNotify = true
 		end
 
 		if city:GetPopulation() > 40 and city:GetPopulation() <= 60 then
 	    city:ChangePopulation(-3, true)
-		city:SetFood(0)
+		--city:SetFood(0)
+		pop= 3
 		bNotify = true
 		end
 
         if city:GetPopulation() > 60 then
 	    city:ChangePopulation(-5, true)
-		city:SetFood(0)
+		--city:SetFood(0)
+		pop= 5
 		bNotify = true
 		end
 
@@ -122,8 +127,8 @@ function KillPopulation(player,city)
 	then
 	    local plague = GameInfo.Plagues[plagueID]
 		local heading = Locale.ConvertTextKey("TXT_KEY_PLAGUE_DEATH_SHORT")
-		local text = Locale.ConvertTextKey("TXT_KEY_PLAGUE_DEATH",plague.IconString, plague.Description,city:GetName())
-    	player:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, city:GetX(),city:GetY());
+		local text = Locale.ConvertTextKey("TXT_KEY_PLAGUE_DEATH",plague.IconString, plague.Description,city:GetName(), pop)
+    	player:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, city:GetX(),city:GetY());
 	end
 end
 
@@ -212,7 +217,6 @@ end
 GameEvents.CityCanTrain.Add(Health_CityCanTrain)
 
 
-
 --------------------------------------------------------------------
 ---对单位造成伤害
 function DiseaseUnits(city)
@@ -253,8 +257,8 @@ function Health_PlagueEnds(city)
 	local plague = GameInfo.Plagues[plagueID]
 	local heading = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION_SHORT")
 	local text = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION",plague.IconString,plague.Description,city:GetName())
-	--player:AddNotification(NotificationTypes.NOTIFICATION_PLAGUE, text, heading, iX, iY)
-	player:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, iX, iY) 
+	player:AddNotification(NotificationTypes.NOTIFICATION_INSTANT_YIELD, text, heading, iX, iY)
+	Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
 	end
 
 	city:SetAdditionalFood(0)
@@ -278,13 +282,12 @@ function Health_PlagueBegins(city)
 	local plague = GameInfo.Plagues[plagueID]
 	local heading = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_NOTIFICATION_SHORT")
 	local text = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_NOTIFICATION",plague.IconString,plague.Description, city:GetName())
-	--player:AddNotification(NotificationTypes.NOTIFICATION_PLAGUE, text, heading, iX,iY);
-	player:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, iX, iY) 
+	player:AddNotification(NotificationTypes.NOTIFICATION_PLAGUE, text, heading, iX,iY);
+	--player:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, iX, iY) 
 	end
 
 	Events.AudioPlay2DSound("AS2D_PLAGUE")
 end
-
 
 ------------------------------------------------------------------------------------------------------------------------
 -- DOCTOR
@@ -312,7 +315,6 @@ local CUSTOM_MISSION_ACTION_AND_DONE = 3
 
   return true
 end
-
 
 
 function GREAT_DOCTOR_MissionPossible(playerID, unitID, missionID, data1, data2, _, _, plotX, plotY, bTestVisible)
@@ -526,7 +528,7 @@ end
 -- Health_CurePlagueMission
 function Health_CurePlagueMission(playerID, unit, city)
 	local player = Players[playerID]  
-		if (player:IsHuman() and city:HasPlague()) then
+	if player:IsHuman() and city:HasPlague() then
 		-- notification
 	   Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
 	   end
@@ -752,9 +754,9 @@ function CitySetDoctor(iPlayer)
 	   end
 	end
 end-------------Function End
-GameEvents.PlayerDoTurn.Add(CitySetDoctor)
+GameEvents.PlayerDoneTurn.Add(CitySetDoctor)
 
-end
+--end
 
 
 

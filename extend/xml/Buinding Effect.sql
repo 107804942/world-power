@@ -78,8 +78,7 @@ VALUES ('BUILDING_ANCIENT_CITY', 'FLAVOR_GOLD',750),
 
 	   ('BUILDING_NAVAL_ACADEMY', 'FLAVOR_NAVAL',999),
        ('BUILDING_NAVAL_ACADEMY', 'FLAVOR_MILITARY_TRAINING',999),
-	   ('BUILDING_NAVAL_ACADEMY', 'FLAVOR_OFFENSE',999),
-	    
+	   ('BUILDING_NAVAL_ACADEMY', 'FLAVOR_OFFENSE',999),    
 	   ('BUILDING_KARLSTEJN', 'FLAVOR_WONDER',888),
        ('BUILDING_KARLSTEJN', 'FLAVOR_GOLD',888),
        ('BUILDING_KARLSTEJN', 'FLAVOR_CULTURE',888),
@@ -352,8 +351,6 @@ VALUES ('BUILDING_ANCIENT_CITY', 'FLAVOR_GOLD',750),
 	   ('BUILDING_DIABLO', 'FLAVOR_SCIENCE',999),
 	   ('BUILDING_DIABLO', 'FLAVOR_WONDER',940),
 	   
-	   ('BUILDING_PROMETHEUS', 'FLAVOR_GROWTH',500),
-	   ('BUILDING_PROMETHEUS', 'FLAVOR_WONDER',500),
 
 	   ('BUILDING_CENTERS', 'FLAVOR_GROWTH',486),
 
@@ -435,7 +432,7 @@ VALUES ('BUILDING_ANCIENT_CITY', 'UNIT_SETTLER', 1),
 	   ('BUILDING_MONASTERY_OF_METEORA', 'UNIT_MISSIONARY', 2),
 	   ('BUILDING_KRAK_DES_CHEVALIERS', 'UNIT_GREAT_GENERAL', 1),
 	   ('BUILDING_YUEYANG', 'UNIT_SWORDSMAN', 3),
-       ('BUILDING_SMITHSONIAN', 'UNIT_WRITER', 1),
+       --('BUILDING_SMITHSONIAN', 'UNIT_WRITER', 1),
 	   ('BUILDING_US_BANK_TOWER', 'UNIT_CARGO_SHIP', 1),
 	   ('BUILDING_FOLDING_MACHINE',  'UNIT_SCIENTIST', 2);
 
@@ -608,8 +605,8 @@ VALUES('BUILDING_SMITHSONIAN', 'YIELD_SCIENCE',8),
 ------------------------------------------------------------------------------------------------------------------------
 --×ª»»
 ------------------------------------------------------------------------------------------------------------------------
-INSERT  INTO Building_YieldFromProcessModifierGlobal(BuildingType,YieldType,Yield)
-SELECT  'BUILDING_ROCKEFELLER', Type, 20 FROM Yields WHERE Type !='YIELD_HEALTH';
+--INSERT  INTO Building_YieldFromProcessModifierGlobal(BuildingType,YieldType,Yield)
+--SELECT  'BUILDING_ROCKEFELLER', Type, 20 FROM Yields WHERE Type !='YIELD_HEALTH';
 
 INSERT  INTO Building_YieldFromProcessModifierGlobal(BuildingType,YieldType,Yield)
 SELECT  'BUILDING_TECHNOMART', Type, 30 FROM Yields WHERE Type !='YIELD_HEALTH';

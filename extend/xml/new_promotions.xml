@@ -935,8 +935,8 @@
 			<PediaType>PEDIA_SHARED</PediaType>
 			<OrderPriority>11</OrderPriority>
 			<CannotBeChosen>true</CannotBeChosen>
-			<AttackMod>15</AttackMod>
-			<DefenseMod>15</DefenseMod>
+			<NumSpyStayDefenseMod>25</NumSpyStayDefenseMod>
+			<NumSpyStayAttackMod>25</NumSpyStayAttackMod>
 			<ExperiencePercent>100</ExperiencePercent>
 			<EnemyHealChange>25</EnemyHealChange>
 			<NeutralHealChange>25</NeutralHealChange>
@@ -1572,71 +1572,6 @@
 
 
 
-
-
-		<Row>
-			<Type>PROMOTION_FIST_1</Type>
-			<Description>TXT_KEY_PROMOTION_FIST_1</Description>
-			<Help>TXT_KEY_PROMOTION_FIST_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<VisibilityChange>2</VisibilityChange>
-			<Invisible>INVISIBLE_SUBMARINE</Invisible>
-			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<PediaEntry>TXT_KEY_PROMOTION_FIST_1</PediaEntry>
-		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_FIST_2</Type>
-			<Description>TXT_KEY_PROMOTION_FIST_2</Description>
-			<Help>TXT_KEY_PROMOTION_FIST_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaEntry>TXT_KEY_PROMOTION_FIST_2</PediaEntry>
-		</Row>
-
-		<Row>
-			<Type>PROMOTION_FIST_3</Type>
-			<Description>TXT_KEY_PROMOTION_FIST_3</Description>
-			<Help>TXT_KEY_PROMOTION_FIST_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaEntry>TXT_KEY_PROMOTION_FIST_3</PediaEntry>
-		</Row>
-
-		<Row>
-			<Type>PROMOTION_FIST_4</Type>
-			<Description>TXT_KEY_PROMOTION_FIST_4</Description>
-			<Help>TXT_KEY_PROMOTION_FIST_4_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
-			<MovesChange>1</MovesChange>
-			<ExtraAttacks>1</ExtraAttacks>
-			<PediaEntry>TXT_KEY_PROMOTION_FIST_4</PediaEntry>
-		</Row>
-
-
 		<Row>
 			<Type>PROMOTION_GUN_2</Type>
 			<Description>TXT_KEY_PROMOTION_GUN_2</Description>
@@ -1821,26 +1756,7 @@
 		</Row>
 
 
-		<Row>
-			<PromotionType>PROMOTION_FIST_1</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_FIST_2</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_FIST_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_FIST_4</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
+	
 
 
 		<Row>
@@ -2380,11 +2296,6 @@
 	<UnitPromotions>
 
 
-		<Update>
-			<Set PromotionPrereqOr7="PROMOTION_PENETRATES"/>
-			<Where Type="PROMOTION_LOGISTICS" />
-		</Update>
-
 
 		<Row>
 			<Type>PROMOTION_INVISIBLE_DESTROYER</Type>
@@ -2553,45 +2464,7 @@
 
 
 
-		<Row>
-			<Type>PROMOTION_PENETRATES_FIX</Type>
-			<Description>TXT_KEY_PROMOTION_PENETRATES</Description>
-			<Help>TXT_KEY_PROMOTION_PENETRATES_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>2</OrderPriority>
-			<PortraitIndex>55</PortraitIndex>
-			<IconAtlas>promoVP_atlas_01</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_PENETRATES</PediaEntry>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<SplashDamagePercent>-100</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-		</Row>
-
-		<Row>
-			<Type>PROMOTION_PENETRATES</Type>
-			<Description>TXT_KEY_PROMOTION_PENETRATES</Description>
-			<PromotionPrereqOr1>PROMOTION_LAND_TARGETING_3</PromotionPrereqOr1>
-			<Help>TXT_KEY_PROMOTION_PENETRATES_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>2</OrderPriority>
-			<PortraitIndex>55</PortraitIndex>
-			<IconAtlas>promoVP_atlas_01</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_PENETRATES</PediaEntry>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<SplashDamagePercent>100</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>100</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-		</Row>
-
-
+	
 
 		
 
@@ -2681,10 +2554,7 @@
 			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
 		</Row>
 
-		<Row>
-			<PromotionType>PROMOTION_PENETRATES</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
+
 
 		<Row>
 			<PromotionType>PROMOTION_LAND_TARGETING_1</PromotionType>
@@ -5195,9 +5065,12 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_PEOPLES_HALL</PediaEntry>
 			<OrderPriority>11</OrderPriority>
-			<ShowInPedia>0</ShowInPedia>
 			<CityAttackPlunderModifier>400</CityAttackPlunderModifier>
 			<StrongerDamaged>1</StrongerDamaged>
+			<AuraRangeChange>2</AuraRangeChange>
+			<AuraEffectChange>20</AuraEffectChange>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<ShowInPedia>0</ShowInPedia>
 		</Row>
 
 

@@ -182,26 +182,6 @@ function( wParam, lParam )
 end
 
 
---InterfaceModeMessageHandler[InterfaceModeTypes.INTERFACEMODE_PURCHASE_PLOT][MouseEvents.LButtonDown] = 
---function( wParam, lParam )
-	--local hexX, hexY = UI.GetMouseOverHex();
-	--local plot = Map.GetPlot( hexX, hexY );
-	--local plotX = plot:GetX();
-	--local plotY = plot:GetY();
-	--local bShift = UIManager:GetShift();
-	--local bAlt = UIManager:GetAlt();
-	--local bCtrl = UIManager:GetControl();
-	--local activePlayerID = Game.GetActivePlayer();
-	--local pHeadSelectedCity = UI.GetHeadSelectedCity();
-	--if pHeadSelectedCity then
-		--if (plot:GetOwner() ~= activePlayerID) then
-			--Events.AudioPlay2DSound("AS2D_INTERFACE_BUY_TILE");		
-		--end
-		--Network.SendCityBuyPlot(pHeadSelectedCity:GetID(), plotX, plotY);
-	--end
-	--return true;
---end
---
 ----------------------------------------------------------------        
 ----------------------------------------------------------------        
 InterfaceModeMessageHandler[InterfaceModeTypes.INTERFACEMODE_PURCHASE_PLOT][MouseEvents.RButtonUp] = 
@@ -1294,14 +1274,6 @@ function OnCityViewUpdate()
 
 					local gp = GameInfo.Units[ unitClass.DefaultUnit ];
 
-					--------------------------------------新增按照时代区分大医学家--------------------------------------
-					if pPlayer:GetCurrentEra()>=GameInfo.Eras["ERA_INDUSTRIAL"].ID then
-					if gp.ID ==GameInfo.Units["UNIT_GREAT_DOCTOR"].ID then
-					gp = GameInfo.Units["UNIT_MODERN_GREAT_DOCTOR"];
-					   end 
-					end 
-						---------------------------------------end-------------------------------------
-
 					local portraitOffset, portraitAtlas = UI.GetUnitPortraitIcon(gp.ID, pCity:GetOwner());
 					local labelText = Locale.ConvertTextKey(unitClass.Description);
 					controlTable.GreatPersonLabel:SetText(labelText);
@@ -1312,13 +1284,17 @@ function OnCityViewUpdate()
 					strToolTipText = strToolTipText .. ": " .. tostring(iProgress) .. "/" .. tostring(threshold);					
 					local iCount = pCity:GetSpecialistCount( pSpecialistInfo.ID );
 					local iGPPChange = pSpecialistInfo.GreatPeopleRateChange * iCount * 100;
+
+
 					for building in GameInfo.Buildings{SpecialistType = pSpecialistInfo.Type} do
 				        local buildingID = building.ID;
 						if (pCity:IsHasBuilding(buildingID)) then
 							iGPPChange = iGPPChange + building.GreatPeopleRateChange * 100;
 						end
 					end
+
 					if iGPPChange > 0 then
+					iGPPChange=iGPPChange+pCity:GetGreatPersonPointFromReligion(pSpecialistInfo.ID) * 100  ---新增
 						-- Generic GP mods
 						local iPlayerMod = pPlayer:GetGreatPeopleRateModifier();
 						local iPolicyMod = pPlayer:GetPolicyGreatPeopleRateModifier();
@@ -1328,6 +1304,7 @@ function OnCityViewUpdate()
 							pWorldCongress = Game.GetActiveLeague();
 						end
 						local iCityMod = pCity:GetGreatPeopleRateModifier();
+						iCityMod = iCityMod + pCity:GetSpecialistCityModifier(pSpecialistInfo.ID); ---新增
 						local iGoldenAgeMod = 0;
 						local bGoldenAge = (pPlayer:GetGoldenAgeTurns() > 0);
 						
@@ -1377,23 +1354,14 @@ function OnCityViewUpdate()
 							if (pWorldCongress ~= nil and pWorldCongress:GetScienceyGreatPersonRateModifier() ~= 0) then
 								iWorldCongressMod = iWorldCongressMod + pWorldCongress:GetScienceyGreatPersonRateModifier();
 							end
-
-
 							----------------------------------------新增大医学家----------------------------------------
 						elseif (pSpecialistInfo.GreatPeopleUnitClass == "UNITCLASS_GREAT_DOCTOR") then
 							iPlayerMod = iPlayerMod; 
 							iPolicyMod = iPolicyMod;
-							--if (pWorldCongress ~= nil and pWorldCongress:GetGreatDoctorPersonRateModifier() ~= 0) then
-								--iWorldCongressMod = iWorldCongressMod + pWorldCongress:GetGreatDoctorPersonRateModifier();
-							--end
+							if (pWorldCongress ~= nil and pWorldCongress:GetGreatDoctorPersonRateModifier() ~= 0) then
+								iWorldCongressMod = iWorldCongressMod + pWorldCongress:GetGreatDoctorPersonRateModifier();
+							end
 
-
-						--elseif (pSpecialistInfo.GreatPeopleUnitClass == "UNITCLASS_GREAT_DOCTOR") then
-							--iPlayerMod = iPlayerMod + pPlayer:GetGreatDoctorRateModifier();
-							--iPolicyMod = iPolicyMod + pPlayer:GetPolicyGreatDoctorRateModifier();
-							--if (pWorldCongress ~= nil and pWorldCongress:GetGreatDoctorPersonRateModifier() ~= 0) then
-								--iWorldCongressMod = iWorldCongressMod + pWorldCongress:GetGreatDoctorPersonRateModifier();
-							--end
 							----------------------------------------end----------------------------------------
 
 						end
@@ -3567,6 +3535,98 @@ return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_AIR_TEXT_TT",AIRTotal)
 end	
 
 
+
+
+--------------------------------------------------------SP City Copy Focus (used to be copy capital but I think copying current city is better!)----------------------------------------------------------------
+function OnCopyCapitalFocus()
+    print ("Copy Capital Focus pressed!")
+    local player = Players[Game.GetActivePlayer()]
+	if player:IsHuman() and UI.IsCityScreenUp() then --Only Effective for Human Players	
+		local CurrentCity = UI.GetHeadSelectedCity()
+
+		if not UI.IsCityScreenViewingMode() then
+			local CapitalFocusType = CurrentCity:GetFocusType()
+						
+			print ("Current City Focus"..CapitalFocusType)
+			for city in player:Cities() do
+				if not city:IsPuppet() and not city:IsResistance() then
+					city:SetFocusType(CapitalFocusType)
+					print ("Current City Focus Copied!")
+				end
+			end
+		end
+	end	
+end
+Controls.BTNCopyCapitalFocus:RegisterCallback( Mouse.eLClick, OnCopyCapitalFocus);
+
+
+
+
+--------------------------------------------------------SP City Copy Order (used to be copy capital but I think copying current city is better!----------------------------------------------------------------
+function OnCopyCapitalOrder()
+    print ("Copy Capital Order pressed!")
+    local player = Players[Game.GetActivePlayer()]
+	if player:IsHuman() and UI.IsCityScreenUp() then --Only Effective for Human Players	
+			local CurrentCity = UI.GetHeadSelectedCity()
+		
+
+		if not UI.IsCityScreenViewingMode() then
+			
+			local CapitalUnitProduction = CurrentCity:GetProductionUnit()
+			local CapitalBuildingProduction = CurrentCity:GetProductionBuilding()
+			local CapitalProcessProduction = CurrentCity:GetProductionProcess()
+			
+			
+			print ("Current Process"..CapitalProcessProduction )
+			print ("Current Building"..CapitalBuildingProduction )
+			print ("Current Unit"..CapitalUnitProduction )
+			
+			
+			for city in player:Cities() do
+				if not city:IsPuppet() and not city:IsResistance() then
+			
+					if CapitalUnitProduction ~= -1 then 
+						if city:CanTrain(CapitalUnitProduction) then
+							city:PushOrder (OrderTypes.ORDER_TRAIN, CapitalUnitProduction, -1, 0, false, false)
+							print ("Current Unit Copied!")
+						end	
+				
+					elseif CapitalBuildingProduction ~= -1 then
+						if city:CanConstruct(CapitalBuildingProduction) then
+							city:PushOrder (OrderTypes.ORDER_CONSTRUCT, CapitalBuildingProduction, -1, 0, false, false)
+							print ("Current Building Copied!")
+						end	
+						
+					elseif 	CapitalProcessProduction ~= -1 then
+						city:PushOrder (OrderTypes.ORDER_MAINTAIN, CapitalProcessProduction, -1, 0, false, false)
+						print ("Current Process Copied!") 
+					end					
+					
+				end
+			end
+		end
+	end	
+end
+Controls.BTNCopyCapitalOrder:RegisterCallback( Mouse.eLClick, OnCopyCapitalOrder);
+
+
+--------------------------------------------------------SP Clear All Orders----------------------------------------------------------------
+function OnClearAllOrder()
+    print ("Copy Capital Focus pressed!")
+    local player = Players[Game.GetActivePlayer()]
+	if player:IsHuman() and UI.IsCityScreenUp() then --Only Effective for Human Players	
+
+		if not UI.IsCityScreenViewingMode() then
+			for city in player:Cities() do
+				if not city:IsPuppet() and not city:IsResistance() then
+					city:ClearOrderQueue()
+					print ("City Order Cleared!")
+				end
+			end
+		end
+	end	
+end
+Controls.BTNClearAllProduction:RegisterCallback( Mouse.eLClick, OnClearAllOrder);
 
 
 --==========================================================================================================================

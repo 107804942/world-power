@@ -25,15 +25,15 @@ SELECT 'FEATURE_FOREST',							'YIELD_HEALTH',			1,		1;          --森林
 
 --地形
 INSERT INTO Terrain_Yields (TerrainType,		YieldType,				Yield,	OnlyAdjacentCity)
-SELECT 'TERRAIN_GRASS',						        'YIELD_HEALTH',			0,		0 UNION ALL	 --草原
-SELECT 'TERRAIN_PLAINS',						    'YIELD_HEALTH',			0,		0 UNION ALL	 --平原
+--SELECT 'TERRAIN_GRASS',						        'YIELD_HEALTH',			0,		0 UNION ALL	 --草原
+--SELECT 'TERRAIN_PLAINS',						    'YIELD_HEALTH',			0,		0 UNION ALL	 --平原
 SELECT 'TERRAIN_DESERT',						    'YIELD_DISEASE',		1,		0 UNION ALL	 --荒漠
 SELECT 'TERRAIN_TUNDRA',						    'YIELD_DISEASE',		1,		0 UNION ALL	 --冻土
-SELECT 'TERRAIN_SNOW',						        'YIELD_DISEASE',		1,		0 UNION ALL	 --雪原
-SELECT 'TERRAIN_COAST',						        'YIELD_HEALTH',			0,		0 UNION ALL	 --海滨
-SELECT 'TERRAIN_OCEAN',						        'YIELD_HEALTH',			0,		0 UNION ALL	 --大洋
-SELECT 'TERRAIN_MOUNTAIN',						    'YIELD_HEALTH',			0,		0 UNION ALL	 --山脉
-SELECT 'TERRAIN_HILL',						        'YIELD_HEALTH',			0,		0 ; 	     --丘陵
+SELECT 'TERRAIN_SNOW',						        'YIELD_DISEASE',		1,		0 ; 	 --雪原
+--SELECT 'TERRAIN_COAST',						        'YIELD_HEALTH',			0,		0 UNION ALL	 --海滨
+--SELECT 'TERRAIN_OCEAN',						        'YIELD_HEALTH',			0,		0 UNION ALL	 --大洋
+--SELECT 'TERRAIN_MOUNTAIN',						    'YIELD_HEALTH',			0,		0 UNION ALL	 --山脉
+--SELECT 'TERRAIN_HILL',						        'YIELD_HEALTH',			0,		0 ; 	     --丘陵
 
 
 --------------------------------------------------------------------------------------------------

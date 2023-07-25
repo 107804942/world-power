@@ -2,6 +2,19 @@
 -- BUILDING CLASSES
 --==========================================================================================================================
 
+
+----本地人口产出加成
+INSERT  INTO Building_YieldChangesPerPop(BuildingType,YieldType,Yield)
+VALUES('BUILDING_CITY_SIZE_TOWN', 'YIELD_DISEASE',25),
+      ('BUILDING_CITY_SIZE_SMALL', 'YIELD_DISEASE',25),
+      ('BUILDING_CITY_SIZE_MEDIUM', 'YIELD_DISEASE',25),
+	  ('BUILDING_CITY_SIZE_LARGE', 'YIELD_DISEASE',25),
+      ('BUILDING_CITY_SIZE_XL', 'YIELD_DISEASE',25),
+	  ('BUILDING_CITY_SIZE_XXL', 'YIELD_DISEASE',25),
+	  ('BUILDING_CITY_SIZE_GLOBAL', 'YIELD_DISEASE',25);
+
+
+
 ---功能性建筑
 INSERT INTO BuildingClasses (Type, DefaultBuilding,	Description)
 SELECT 'BUILDINGCLASS_LOCAL_HOSPITAL','BUILDING_LOCAL_HOSPITAL','TXT_KEY_BUILDING_LOCAL_HOSPITAL' ;   --医馆
@@ -31,7 +44,7 @@ UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 4 ,
 
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 , GreatPeopleRateChange = 2  WHERE BuildingClass = 'BUILDINGCLASS_BIOLOGICAL_FACTORIES';
 
-UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 1 , GreatPeopleRateChange = 3  WHERE BuildingClass = 'BUILDINGCLASS_HERBALIST';
+UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 1 , GreatPeopleRateChange = 1  WHERE BuildingClass = 'BUILDINGCLASS_HERBALIST';
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 , GreatPeopleRateChange = 2  WHERE BuildingClass = 'BUILDINGCLASS_LOCAL_HOSPITAL';
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 WHERE BuildingClass = 'BUILDINGCLASS_HOSPITAL';
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 WHERE BuildingClass = 'BUILDINGCLASS_MEDICAL_LAB';
@@ -39,6 +52,12 @@ UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 W
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 WHERE BuildingClass = 'BUILDINGCLASS_MEDICAL_COMPANY';  
 
 
+INSERT  INTO Building_SpecificGreatPersonRateModifier(BuildingType,SpecialistType,Modifier)VALUES
+('BUILDING_HOSPITAL', 'SPECIALIST_DOCTOR',20),
+('BUILDING_MEDCIAL_LAB', 'SPECIALIST_DOCTOR',20),
+('BUILDING_HERBALIST', 'SPECIALIST_DOCTOR',15),
+('BUILDING_COOKED_MEDICINE', 'SPECIALIST_DOCTOR',20),
+('BUILDING_PRIVATE_PHARMACY', 'SPECIALIST_DOCTOR',20);
 
 
 INSERT INTO Building_BuildingClassLocalYieldChanges(BuildingType,  BuildingClassType, YieldType, YieldChange )
@@ -139,6 +158,9 @@ SELECT 'BUILDING_PONTDUGARD',	15;
 --WHERE b.BuildingClass = h.BuildingClassType;
 
 
+---公共浴室
+INSERT  INTO Building_YieldModifiers(BuildingType,YieldType,Yield)
+VALUES('BUILDING_BALNEAE', 'YIELD_HEALTH',5);
 
 -----------------------------------------------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS BuildingClass_HealthModifiers (BuildingClassType TEXT DEFAULT NULL, Yield INTEGER DEFAULT 0);

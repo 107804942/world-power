@@ -174,22 +174,6 @@
 
 
 
-		
-
-		<!-- 普罗米修斯-->
-		<Row>
-			<Type>BUILDINGCLASS_PROMETHEUS</Type>
-			<DefaultBuilding>BUILDING_PROMETHEUS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_PROMETHEUS</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-		
-		
-		
-		
-
-
-
 		<!--波塞冬神庙-->
 		<Row>
 			<Type>BUILDINGCLASS_POSEIDON_TEMPLE</Type>
@@ -856,7 +840,7 @@
 		<Row>
 			<Type>BUILDING_INTELLIGENCE_BUREAU</Type>
 			<BuildingClass>BUILDINGCLASS_INTELLIGENCE_BUREAU</BuildingClass>
-			<Cost>900</Cost>
+			<Cost>1000</Cost>
 			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
 			<Description>TXT_KEY_BUILDING_INTELLIGENCE_BUREAU</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_INTELLIGENCE_BUREAU_TEXT</Civilopedia>
@@ -876,7 +860,7 @@
 		<Row>
 			<Type>BUILDING_FOREIGN_OFFICE</Type>
 			<BuildingClass>BUILDINGCLASS_FOREIGN_OFFICE</BuildingClass>
-			<Cost>900</Cost>
+			<Cost>1000</Cost>
 			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
 			<Description>TXT_KEY_BUILDING_FOREIGN_OFFICE</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_FOREIGN_OFFICE_TEXT</Civilopedia>
@@ -896,7 +880,7 @@
 		<Row>
 			<Type>BUILDING_KGB</Type>
 			<BuildingClass>BUILDINGCLASS_KGB</BuildingClass>
-			<Cost>3000</Cost>
+			<Cost>3200</Cost>
 			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
 			<Description>TXT_KEY_BUILDING_KGB</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_KGB_TEXT</Civilopedia>
@@ -2285,7 +2269,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
-			<FreeBuildingThisCity>BUILDINGCLASS_MUSEUM</FreeBuildingThisCity>
+			<FreeBuilding>BUILDINGCLASS_MUSEUM</FreeBuilding>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
 			<GreatWorkCount>2</GreatWorkCount>
 			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
@@ -2449,7 +2433,6 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<NeverCapture>true</NeverCapture>
-			<!--<FreeBuilding>BUILDINGCLASS_SATELLITE_SOLAR_DUMMY</FreeBuilding>-->
 			<PortraitIndex>117</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<WonderSplashImage>Helios_Splash.dds</WonderSplashImage>
@@ -2857,30 +2840,6 @@
 			<WonderSplashImage>DIABLO.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
-
-		<!--普罗米修斯-->
-
-		<Row>
-			<Type>BUILDING_PROMETHEUS</Type>
-			<BuildingClass>BUILDINGCLASS_PROMETHEUS</BuildingClass>
-			<Description>TXT_KEY_BUILDING_PROMETHEUS</Description>
-			<Help>TXT_KEY_WONDER_PROMETHEUS_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_PROMETHEUS_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_PROMETHEUS_QUOTE</Quote>
-			<Cost>19000</Cost>
-			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>137</PortraitIndex>
-			<ConquestProb>100</ConquestProb>
-			<WonderSplashImage>PROMETHEUS.dds</WonderSplashImage>
-			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-		</Row>
-
-
-
 
 
 		<!--太空基地-->
@@ -3291,28 +3250,6 @@
 			<Cost>8</Cost>
 		</Row>
 		
-		
-		
-
-		
-		
-
-		<!--普罗米-->
-		<Row>
-			<BuildingType>BUILDING_PROMETHEUS</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>20</Cost>
-		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_PROMETHEUS</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>30</Cost>
-		</Row>
-		
-		
-		
-
 
 		<!--波塞冬神庙-->
 		<Row>
@@ -4787,16 +4724,6 @@
 		</Row>
 
 
-
-
-		<Row>
-			<BuildingType>BUILDING_PROMETHEUS</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-500</Yield>
-		</Row>
-		
-		
-		
 		<!--马奇诺 -->
 		<Row>
 			<BuildingType>BUILDING_MAGINOT_LINE</BuildingType>

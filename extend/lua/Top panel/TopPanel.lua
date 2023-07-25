@@ -281,14 +281,15 @@ function UpdateData()
 			-----------------------------新增-----------------------------
 			-- PLAGUE MOD (Update for Empire Health Mod)
 			-----------------------------
-			local strHealthStr;
-			local iHealth = pPlayer:GetEmpireHealthTotal()
-			if iHealth < 0 then
-				strHealthStr = string.format("[ICON_HEALTH][COLOR:255:77:105:255]%i%%[/COLOR]", iHealth);
-			else
-				strHealthStr = string.format("[ICON_HEALTH][COLOR:255:77:105:255]+%i%%[/COLOR]", iHealth);
-			end
-			Controls.HealthString:SetText(strHealthStr);
+			--local strHealthStr;
+			--local iHealth = pPlayer:GetEmpireHealthTotal()
+			--if iHealth < 0 then
+				--strHealthStr = string.format("[ICON_HEALTH][COLOR:255:77:105:255]%i%%[/COLOR]", iHealth);
+			--else
+				--strHealthStr = string.format("[ICON_HEALTH][COLOR:255:77:105:255]+%i%%[/COLOR]", iHealth);
+			--end
+			--Controls.HealthString:SetText(strHealthStr);
+			Controls.HealthString:SetText("[ICON_HEALTH]")
 		-----------------------------end-----------------------------
 	
 			-----------------------------
@@ -1480,15 +1481,15 @@ function HealthTipHandler( control )
 	local strText = "";
 	
 	local pPlayer = Players[Game.GetActivePlayer()];
-	local health = pPlayer:GetYieldRateModifier(yieldHealthID)
+	---local health = pPlayer:GetYieldRateModifier(yieldHealthID)
 
-	strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_HEALTH_OVERALL") .. " " .. ConvertTextColor(health);
-	strText = strText .. "[NEWLINE]";
+	--strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_HEALTH_OVERALL") .. " " .. ConvertTextColor(health);
+	--strText = strText .. "[NEWLINE]";
 
 
 	-- Basic explanation of Empire Health Mod
 	if (not OptionsManager.IsNoBasicHelp()) then
-		strText = strText .. "[NEWLINE][NEWLINE]";
+		--strText = strText .. "[NEWLINE]";
 		strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_HEALTH_EXPLANATION");
 	end
 

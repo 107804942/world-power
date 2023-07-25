@@ -228,8 +228,9 @@ g_NameTable[ NotificationTypes.NOTIFICATION_CITY_REVOLT ]						= "Generic";
 g_NameTable[ NotificationTypes.NOTIFICATION_LEAGUE_PROJECT_COMPLETE ]					= "LeagueProjectComplete";
 g_NameTable[ NotificationTypes.NOTIFICATION_LEAGUE_PROJECT_PROGRESS ]					= "LeagueProjectProgress";
 
-g_NameTable[ NotificationTypes.NOTIFICATION_PLAGUE ]					= "Plague"; 			
-
+g_NameTable[ NotificationTypes.NOTIFICATION_PLAGUE ]					= "Plague";
+g_NameTable[ NotificationTypes.NOTIFICATION_INSTANT_YIELD ]					= "CityEventChoiceFin"; 
+--g_NameTable[ NotificationTypes.NOTIFICATION_ORGANIZED_CRIME ]					= "OrganizedCrime";
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 --- Actual new notification entry point
@@ -407,23 +408,9 @@ function OnNotificationAdded( Id, type, toolTip, strSummary, iGameValue, iExtraG
 			if portraitOffset ~= -1 then
 				IconHookup( portraitOffset, 80, portraitAtlas, instance.UnitImage );
 			end
-
-
---------------------------------------新增伟人--------------------------------------
-            --local iPlayer = Game.GetActivePlayer();
 		elseif type == NotificationTypes.NOTIFICATION_GREAT_PERSON_ACTIVE_PLAYER then
 			local thisUnitType = iGameValue;
 			local thisUnitInfo = GameInfo.Units[thisUnitType];
-
-			--------------------------------------新增按照时代区分大医学家--------------------------------------
-	--if Players[ePlayer]:GetCurrentEra()>=GameInfo.Eras["ERA_INDUSTRIAL"].ID then
-		--if  thisUnitType ==GameInfo.Units["UNIT_GREAT_DOCTOR"].ID then
-			--thisUnitType = GameInfo.Units["UNIT_MODERN_GREAT_DOCTOR"].ID;
-				--end 
-			--end 
-	---------------------------------------end-------------------------------------
-	
-
 			local portraitOffset, portraitAtlas = UI.GetUnitPortraitIcon(thisUnitType, ePlayer);
 			if portraitOffset ~= -1 then
 				IconHookup( portraitOffset, 80, portraitAtlas, instance.UnitImage );
@@ -434,8 +421,6 @@ function OnNotificationAdded( Id, type, toolTip, strSummary, iGameValue, iExtraG
 			else
 				instance.GreatPersonSmallCivFrame:SetHide(true);
 			end
-
---------------------------------------end--------------------------------------
 		elseif type == NotificationTypes.NOTIFICATION_WAR_ACTIVE_PLAYER then
 			local index = iGameValue;
 			if iExtraGameData == -1 then

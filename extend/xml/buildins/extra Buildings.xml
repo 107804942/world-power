@@ -1597,7 +1597,7 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>60</ConquestProb>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-				<PortraitIndex>75</PortraitIndex>
+				<PortraitIndex>76</PortraitIndex>
 			</Row>
 
 

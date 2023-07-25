@@ -2123,11 +2123,7 @@
 
 
 		<!--公共浴室-->
-		<Row>
-			<BuildingType>BUILDING_BALNEAE</BuildingType>
-			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>15</Flavor>
-		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_BALNEAE</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -2606,15 +2602,7 @@
 		</Row>
 		
 		
-		
 
-		<Row>
-			<BuildingType>BUILDING_BALNEAE</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>5</Yield>
-		</Row>
-	
-		
 		
 
 		<Row>
@@ -2895,7 +2883,7 @@
 		<Row>
 		<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
 		<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-		<Quantity>20</Quantity>
+		<Quantity>30</Quantity>
 	    </Row>
 
 

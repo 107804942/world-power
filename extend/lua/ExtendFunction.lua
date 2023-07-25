@@ -87,7 +87,6 @@ function OnPillageDamageEnemies(iPlayer, iUnit, iImprovement, iGold)
 		local iEraModifier = math.max(pPlayer:GetCurrentEra(), 1)
 					
 		local iGain1 = math.floor(10 * iGameSpeedModifier1 * iEraModifier)
-		local iGain2 = math.floor(10 * iGameSpeedModifier2 * iEraModifier)
 		local iGain3 = math.floor(15 * iGameSpeedModifier3 * iEraModifier)
 					
 		pPlayer:ChangeFaith(iGain1)
@@ -125,19 +124,7 @@ function CanHavePromotion(iPlayer, iUnit, iPromotionType)
      end
   end
 
-
-  if iPromotionType == GameInfoTypes.PROMOTION_PENETRATES then
-  if (pUnit:GetUnitCombatType()==GameInfoTypes["UNITCOMBAT_NAVALRANGED"] 
-  and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_NAVAL_CAPITAL_SHIP"].ID) 
-  and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FIRE_TARGETING_2"].ID) 
-  and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_2"].ID)) then
-	return true
-  end
-  return false
-  end
-
-
-    return true
+   return true
 end
 GameEvents.CanHavePromotion.Add(CanHavePromotion)
 
@@ -346,73 +333,10 @@ function CanHaveExtraPromotionForMonk(iPlayer, iUnit, iPromotionType)
   end
   return false
   end
-
-
-  if  iPromotionType == GameInfoTypes.PROMOTION_FIST_4 then
-  if  pUnit:GetUnitClassType() ==GameInfo.UnitClasses.UNITCLASS_MONK.ID 
-  and player:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_OSARAGI.ID) > 0 then
-	return true
-  end
-  return false
-  end
-
-  if  iPromotionType == GameInfoTypes.PROMOTION_FIST_3 then  --15力
-  if  pUnit:GetUnitClassType() ==GameInfo.UnitClasses.UNITCLASS_MONK.ID 
-  and player:HasTech(GameInfoTypes["TECH_RIFLING"])  then
-	return true
-  end
-  return false
-  end
-
-  if  iPromotionType == GameInfoTypes.PROMOTION_FIST_2 then   --10力
-  if  pUnit:GetUnitClassType() ==GameInfo.UnitClasses.UNITCLASS_MONK.ID 
-  and player:HasTech(GameInfoTypes["TECH_GUNPOWDER"])  then
-	return true
-  end
-  return false
-  end
-
-
-  if  iPromotionType == GameInfoTypes.PROMOTION_FIST_1 then
-  if  pUnit:GetUnitClassType() ==GameInfo.UnitClasses.UNITCLASS_MONK.ID and
-      player:HasBelief(GameInfo.Beliefs{Type="BELIEF_HOLY_WARRIORS"}().ID) then  
-	return true
-  end
-  return false
-  end
-
-
     return true
 end
 GameEvents.CanHavePromotion.Add(CanHaveExtraPromotionForMonk)
 
-
-
-function UnitReload(iPlayer, iUnit, ePromotion)
-	local pPlayer = Players[iPlayer]
-	local pUnit = pPlayer:GetUnitByID(iUnit)
-
-
-	if pUnit:GetUnitClassType() ==GameInfo.UnitClasses.UNITCLASS_MONK.ID  then
-
-	if ePromotion==GameInfoTypes.PROMOTION_FIST_2 then
-		pUnit:SetBaseCombatStrength(pUnit:GetBaseCombatStrength()+10)
-	end
-	if ePromotion==GameInfoTypes.PROMOTION_FIST_3 then
-		pUnit:SetBaseCombatStrength(pUnit:GetBaseCombatStrength()+10)
-	end
-
-	if pPlayer:HasBelief(GameInfo.Beliefs{Type="BELIEF_GOD_WAR"}().ID) then
-	   pUnit:SetBaseCombatStrength(pUnit:GetBaseCombatStrength()+1)
-	end
-	end
-
-	if ePromotion==GameInfoTypes.PROMOTION_PENETRATES then
-		pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_PENETRATES_FIX, true)
-	end
-
-end
-GameEvents.UnitPromoted.Add(UnitReload)
 
 -- ****************************************
 -- 贝伦塔
@@ -469,9 +393,6 @@ function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
     end
  end
 GameEvents.PlayerBuilt.Add(RemoveJungle)
-
-
-
 
 
 
@@ -821,10 +742,45 @@ end
 GameEvents.EspionageResult.Add(GUIGU_SPY)  
    
 
+-- ****************************************
+--
+-- ****************************************	
+function SoldBuildingBuff(iPlayer, iCity, iBuilding)
+	local player = Players[iPlayer]
+	local city = player:GetCityByID(iCity)
+
+	if player == nil or (not player:IsMajorCiv())   then
+		return
+	end
+
+	if  player:HasWonder(GameInfoTypes.BUILDING_ROCKEFELLER)  then
+	for row in GameInfo.Buildings("HurryCostModifier <> -1") do
+	if  row.ID == iBuilding then 
+	city:ChangeProduction(row.Cost)	
+	for Othercity in player:Cities() do  
+	if  Othercity~=city then
+	Othercity:ChangeProduction(0.25*row.Cost)	
+	                 end
+		          end	
+		      end
+		  end
+	 end 
+end 	
+GameEvents.CitySoldBuilding.Add(SoldBuildingBuff)  
 
 
-
-
+-- ****************************************
+--
+-- ****************************************	
+function EspionageCanMove(iPlayer, iCityOwner, iCity) 
+   local Player = Players[iPlayer]   
+   local otherPlayer=Players[iCityOwner]
+   if Player~= otherPlayer then 
+      return not otherPlayer:HasWonder(GameInfoTypes.BUILDING_KGB)
+   end
+   return true
+end 	
+GameEvents.EspionageCanMoveSpyTo.Add(EspionageCanMove)  
 
 
 

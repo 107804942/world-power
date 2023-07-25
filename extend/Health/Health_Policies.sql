@@ -49,15 +49,11 @@ SELECT 'POLICY_MERITOCRACY',							'BUILDINGCLASS_LIBRARY',	'YIELD_HEALTH',		2;
 
 
 
-
-
-
-
 -----------------------------------------------------------------------------------------------------
 --Tooltip Addenda
 ----------------------------------------------------------------------------------------------------- 
 UPDATE LocalizedText
-	SET Text = Text||'œ˚≥˝“Ú≥« –Œ¥¡ŸΩ¸µ≠ÀÆ¥¯¿¥µƒ[ICON_HEALTH]Ω°øµ∂»≥Õ∑£°£'
+	SET Text = Text||'Ê∂àÈô§Âõ†ÂüéÂ∏ÇÊú™‰∏¥ËøëÊ∑°Ê∞¥Â∏¶Êù•ÁöÑ[ICON_HEALTH]ÂÅ•Â∫∑Â∫¶ÊÉ©ÁΩö„ÄÇ'
 	WHERE Tag IN (SELECT Help FROM Buildings WHERE AddsFreshWater = 1);
 
 
@@ -72,7 +68,7 @@ FROM PolicyBranchTypes AS p, PolicyBranch_Health AS h
 WHERE p.Type = h.PolicyBranchType;
 
 UPDATE Language_zh_CN
-	SET Text = Text||'[NEWLINE][NEWLINE]√ø∏ˆ“—≤…ƒ…µƒ’˛≤ﬂÃ·…˝»´æ÷[ICON_HEALTH]Ω°øµ∂»'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%°£'
+	SET Text = Text||'[NEWLINE][NEWLINE]ÊØè‰∏™Â∑≤ÈááÁ∫≥ÁöÑÊîøÁ≠ñÊèêÂçá[ICON_HEALTH]ÂÅ•Â∫∑Â∫¶'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%„ÄÇ'
 	WHERE Tag IN (SELECT Key FROM Temp);
 
 DROP TABLE Temp;
@@ -85,7 +81,7 @@ FROM Policies AS p, Policy_YieldModifiers AS h
 WHERE p.Type = h.PolicyType AND h.YieldType = 'YIELD_HEALTH';
 
 UPDATE Language_zh_CN
-	SET Text = Text||'[NEWLINE]+'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%'||'»´æ÷[ICON_HEALTH]Ω°øµ∂»°£'
+	SET Text = Text||'[NEWLINE]+'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%'||'[ICON_HEALTH]ÂÅ•Â∫∑Â∫¶„ÄÇ'
 	WHERE Tag IN (SELECT Key FROM Temp);
 
 DROP TABLE Temp;
@@ -98,7 +94,7 @@ FROM Policies AS p, Policy_CapitalYieldPerPopChanges AS h
 WHERE p.Type = h.PolicyType AND h.YieldType = 'YIELD_HEALTH';
 
 UPDATE Language_zh_CN
-	SET Text = Text||'[NEWLINE][ICON_CAPITAL] ◊∂º√ø'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'[ICON_CITIZEN] –√Ò+1[ICON_HEALTH]Ω°øµ∂»°£'
+	SET Text = Text||'[NEWLINE][ICON_CAPITAL]È¶ñÈÉΩÊØè'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'[ICON_CITIZEN]Â∏ÇÊ∞ë+1[ICON_HEALTH]ÂÅ•Â∫∑Â∫¶„ÄÇ'
 	WHERE Tag IN (SELECT Key FROM Temp);
 
 DROP TABLE Temp;
@@ -118,7 +114,7 @@ UPDATE Temp SET Building = (SELECT Description FROM BuildingClasses WHERE Buildi
 UPDATE Temp SET Building = (SELECT Text FROM Language_zh_CN WHERE Building = Tag);
 
 UPDATE Language_zh_CN
-	SET Text = Text||'[NEWLINE]√ø∏ˆ'||(SELECT Building FROM Temp WHERE Tag = Temp.Key)||'+'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%'||'»´æ÷[ICON_HEALTH]Ω°øµ∂»(…œœﬁ10%)°£'
+	SET Text = Text||'[NEWLINE]ÊØè‰∏™'||(SELECT Building FROM Temp WHERE Tag = Temp.Key)||'+'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%'||'[ICON_HEALTH]ÂÅ•Â∫∑Â∫¶„ÄÇ'
 	WHERE Tag IN (SELECT Key FROM Temp);
 
 DROP TABLE Temp;
@@ -156,10 +152,10 @@ BEGIN
 	FROM BuildingClass_HealthYields AS h
 	WHERE NEW.BuildingClass = h.BuildingClassType;
 
-	INSERT INTO Building_Flavors (BuildingType, FlavorType, Flavor) 
-	SELECT	NEW.Type, 'FLAVOR_GROWTH', (h.Yield*5)
-	FROM BuildingClass_HealthYields AS h
-	WHERE NEW.BuildingClass = h.BuildingClassType;
+	--INSERT INTO Building_Flavors (BuildingType, FlavorType, Flavor) 
+	--SELECT	NEW.Type, 'FLAVOR_GROWTH', (h.Yield*5)
+	--FROM BuildingClass_HealthYields AS h
+	--WHERE NEW.BuildingClass = h.BuildingClassType;
 END;
 --------------------------------------------------------------------------------------------------
 CREATE TRIGGER HealthPlagueMod_04
@@ -171,9 +167,9 @@ BEGIN
 	FROM BuildingClass_HealthModifiers AS h
 	WHERE NEW.BuildingClass = h.BuildingClassType;
 
-	INSERT INTO Building_Flavors (BuildingType, FlavorType, Flavor) 
-	SELECT	NEW.Type, 'FLAVOR_GROWTH', (h.Yield*3)
-	FROM BuildingClass_HealthModifiers AS h
-	WHERE NEW.BuildingClass = h.BuildingClassType;
+	--INSERT INTO Building_Flavors (BuildingType, FlavorType, Flavor) 
+	--SELECT	NEW.Type, 'FLAVOR_GROWTH', (h.Yield*3)
+	--FROM BuildingClass_HealthModifiers AS h
+	--WHERE NEW.BuildingClass = h.BuildingClassType;
 END;
 -----------------------------------------------------------------------------------------------------

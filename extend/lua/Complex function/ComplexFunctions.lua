@@ -8,8 +8,6 @@ include("IconSupport.lua");
 include("InstanceManager")
 
 
-
-
 function IsUsingWP()
 	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
 	for _, mod in pairs(Modding.GetActivatedMods()) do
@@ -19,7 +17,6 @@ function IsUsingWP()
 	end
 	return false
 end
-
 
 
 local WpModActive = IsUsingWP()
@@ -33,7 +30,6 @@ local ANGEnergy =
 
 
 local BattleCruiser = GameInfoTypes["UNIT_SPACESHIP"]
-
 
 
 	local ATBTEnergy = 
@@ -414,7 +410,7 @@ local TransPortMissionButton = {
 	if  unit:GetDomainType()==DomainTypes.DOMAIN_SEA then
 		for iPlot in PlotAreaSpiralIterator(unit:GetPlot(), 20, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
 		if  iPlot:GetNumUnits() == 0  and iPlot:IsWater()  and (not iPlot:IsCity())  
-			and ((iPlot:GetOwner()== -1) 
+		and ((iPlot:GetOwner()== -1) 
 	or  (iPlot:GetOwner()~= -1 and   pPlayer== Players[iPlot:GetOwner()]) 
 	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and (not Players[iPlot:GetOwner()]:IsMajorCiv())) 
 	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and  Players[iPlot:GetOwner()]:IsMajorCiv() and pPlayer:IsAtWarWith(iPlot:GetOwner())  
@@ -774,37 +770,37 @@ function InputHandler( uiMsg, wParam, lParam )
 				--------------------------------------------------
 				if SpaceBattleCruiserSkill == 1 then
 				  local pUnit = UI.GetHeadSelectedUnit()
-						if pUnit:GetUnitType() == BattleCruiser  then
+					if pUnit:GetUnitType() == BattleCruiser  then
                     -------------------------------------------------- 
 					if pPlot:GetNumUnits()>0 and not pPlot:IsCity() then
-                       for i = 0, pPlot:GetNumUnits() - 1 do
-					   local aUnit = pPlot:GetUnit(i);
+                    for i = 0, pPlot:GetNumUnits() - 1 do
+					local aUnit = pPlot:GetUnit(i);
 
 					if aUnit:IsCombatUnit() and Teams[pPlayer:GetTeam()]:IsAtWar(Players[aUnit:GetOwner()]:GetTeam()) then
 					aUnit:Kill(true, -1)
 					num = num + 1
 					attack =attack+ 1
-									end
-								end
+						end
+					end
                                
                    if num>0 then
 	               for ePlot  in PlotAreaSpiralIterator(pPlot, 1, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
 
-					       for iVal = 0,(ePlot:GetNumUnits() - 1) do
-	                            local loopUnit = ePlot:GetUnit(iVal)
-	  	                   if   Teams[pPlayer:GetTeam()]:IsAtWar(Players[loopUnit:GetOwner()]:GetTeam()) then
-		                        loopUnit:Kill(true, -1)
-								                    end
-		    	                               	end
-                           if  ePlot:IsCity() then
-						   if  not ePlot:GetPlotCity():IsOriginalCapital() then
-						   local hexpos = ToHexFromGrid(Vector2(ePlot:GetX(),ePlot:GetY()));
-						   local cityID = ePlot:GetPlotCity():GetID()
-						   local iplay= ePlot:GetPlotCity():GetOwner()
-						   ePlot:GetPlotCity():SetPopulation(0, true)
-		                   ePlot:GetPlotCity():Kill()
-	                       Events.SerialEventCityDestroyed(hexpos, iplay, cityID, -1)
-		                   Events.SerialEventGameDataDirty()
+				   for iVal = 0,(ePlot:GetNumUnits() - 1) do
+	               local loopUnit = ePlot:GetUnit(iVal)
+	  	           if   Teams[pPlayer:GetTeam()]:IsAtWar(Players[loopUnit:GetOwner()]:GetTeam()) then
+		           loopUnit:Kill(true, -1)
+					  end
+		    	   end
+                   if  ePlot:IsCity() then
+					if  not ePlot:GetPlotCity():IsOriginalCapital() then
+					local hexpos = ToHexFromGrid(Vector2(ePlot:GetX(),ePlot:GetY()));
+					local cityID = ePlot:GetPlotCity():GetID()
+					local iplay= ePlot:GetPlotCity():GetOwner()
+					ePlot:GetPlotCity():SetPopulation(0, true)
+		            ePlot:GetPlotCity():Kill()
+	                Events.SerialEventCityDestroyed(hexpos, iplay, cityID, -1)
+		            Events.SerialEventGameDataDirty()
 						           end
 								end
 						     end
@@ -1191,13 +1187,11 @@ function OnCanParadropFrom(iPlayer, iUnit, iPlotX, iPlotY)
 end
 GameEvents.CanParadropFrom.Add(OnCanParadropFrom)
 
-
-
 -- **********************************************************************************************************************************************
 -- 浮石章鱼
 -- **********************************************************************************************************************************************
-local NoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  
-local AbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  
+--local NoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  
+--local AbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  
 
 local PlagueMissionButton = {
 		Name = "TXT_KEY_NAME_CREAT_PLAGUE",
@@ -1240,25 +1234,18 @@ local PlagueMissionButton = {
 		end
 		    local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity()
 			if 	city~=nil then
-
-			if  city:GetNumBuilding(GameInfoTypes.BUILDING_PLAGUE_BREAK)>0  then
-		    city:SetNumRealBuilding(GameInfoTypes["BUILDING_PLAGUE_BREAK_TURN"], city:GetNumBuilding(GameInfoTypes.BUILDING_PLAGUE_BREAK_TURN)+8)
 			unit:SetMoves(0)
-			Events.AudioPlay2DSound("AS2D_PLAGUE")
-			local zombie = Players[63]:InitUnit(GameInfoTypes["UNIT_ZOMBIE"], city:GetX()+1, city:GetY())
-			zombie:JumpToNearestValidPlot() 
-			else
-			if  (not NoPlagues) and AbandonCity then  --确认开启瘟疫爆发系统
-            local randomNum= city_Random(city)
-			city:SetNumRealBuilding(GameInfoTypes["BUILDING_PLAGUE_BREAK"], randomNum)
-			city:SetNumRealBuilding(GameInfoTypes["BUILDING_PLAGUE_BREAK_TURN"],8)
-			else
-			city:ChangeResistanceTurns(3)
-			end
-			unit:SetMoves(0)
-			Events.AudioPlay2DSound("AS2D_PLAGUE")
 			local zombie = Players[63]:InitUnit(GameInfoTypes["UNIT_ZOMBIE"], city:GetX()+1, city:GetY())
 			zombie:JumpToNearestValidPlot()
+
+			if  city:HasPlague() then   ----有瘟疫则延长持续
+				city:ChangePlagueTurns(city:GetPlagueTurns()+8)
+				Events.AudioPlay2DSound("AS2D_PLAGUE")
+			else
+			    city:SetPlagueCounter(0)
+			    Health_PlagueBegins(city)
+			    city:ChangeDamage(100+gCityHeal)
+			    DiseaseUnits(city)			    
 		 end
 	  end
   end
@@ -1404,11 +1391,6 @@ end
 GameEvents.CustomMissionCompleted.Add(OnLimberMissionCompleted)
 
 
-
-
-
-
-
 -- ********************************************************
 -- 
 -- ******************************************************** 
@@ -1434,7 +1416,6 @@ function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
 end
 GameEvents.UnitCanRangeAttackPlot.Add(UnitCanRangeAttackPlot)
 
-
 -- ********************************************************
 -- 
 -- ******************************************************** 
@@ -1450,7 +1431,6 @@ function BuffForNaturalWonderDiscovered(iTeam, iFeature, iX, iY, bFirst)
 	end
 end
 GameEvents.NaturalWonderDiscovered.Add(BuffForNaturalWonderDiscovered)
-
 
 -- ********************************************************
 -- 
@@ -1488,7 +1468,6 @@ pUnit:Kill(true, -1)
 	  pTargetPlot:GetPlotCity():Kill()
 	  Events.SerialEventCityDestroyed(hexpos, playerID, cityID, -1)
 	  Events.SerialEventGameDataDirty()
- 
 	  else  
 	  pTargetPlot:GetPlotCity():SetPopulation(1, true)
 	  pTargetPlot:GetPlotCity():ChangeDamage(pTargetPlot:GetPlotCity():GetMaxHitPoints())
@@ -1501,9 +1480,6 @@ pUnit:Kill(true, -1)
    end
 end
 GameEvents.NuclearDetonation.Add(NukeBuff)
-
-
-
 
 -- ********************************************************
 -- 
@@ -1668,10 +1644,9 @@ function BLETCHLEY_PARK(playerID)
 
 			 if ecity:GetOwner() ~= pPlayer:GetID() then
 
-				 science = science + math.max(0,ecity:GetYieldRateTimes100(YieldTypes.YIELD_SCIENCE) / 100)
-				 gold = gold + math.max(0,ecity:GetYieldRateTimes100(YieldTypes.YIELD_GOLD) / 100)
-				 production = production + math.max(0,ecity:GetYieldRateTimes100(YieldTypes.YIELD_PRODUCTION)/ 100) 
-				 --production = production + math.max(0,ecity:GetCurrentProductionDifferenceTimes100(false, false) / 100) 效果等同于上述产能表达式
+				 science = science + math.max(0,ecity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
+				 gold = gold + math.max(0,ecity:GetYieldRate(YieldTypes.YIELD_GOLD))
+				 production = production + math.max(0,ecity:GetYieldRate(YieldTypes.YIELD_PRODUCTION)) 
 				           end
 				        end
 				    end
@@ -1716,18 +1691,15 @@ function BLETCHLEY_PARK_SPY(iPlayer, iSpy, iResult, iCityX, iCityY)
    local Unit  = Players[63]:InitUnit(unitType, plotX, plotY)
    local Unit2 = Players[63]:InitUnit(unitType, plotX, plotY)
    local Unit3 = Players[63]:InitUnit(unitType, plotX, plotY)
-   local Unit4 = Players[63]:InitUnit(unitType, plotX, plotY)
 
    Unit:ChangeExperience(120)
    Unit2:ChangeExperience(120)
    Unit3:ChangeExperience(120)
-   Unit4:ChangeExperience(120)
 
    Unit:JumpToNearestValidPlot()
    Unit2:JumpToNearestValidPlot()
    Unit3:JumpToNearestValidPlot()
-   Unit4:JumpToNearestValidPlot()
-  
+ 
    City:ChangeDamage(50)
 
    --City:ChangeResistanceTurns(2)
@@ -1819,11 +1791,11 @@ GameEvents.PlayerDoTurn.Add(AG_BUFF)
 
 
 -- **********************************************************************************************************************************************
---  /* Current assignments of members of popupInfo
---  Data1 is the player id 
+--/* Current assignments of members of popupInfo
+--Data1 is the player id 
 --Data2 is the gift "value" (Gold/Culture/Faith/Food amount, UnitId)
 --Data3 is the friendship boost
--- Option1 is first met (unchanged)
+--Option1 is first met (unchanged)
 --Option2 is nil (unchanged)
 --Text is suffix for the TXT_KEY_ to format with
 -- **********************************************************************************************************************************************
@@ -1840,7 +1812,6 @@ function GiftBonus(iPlayer, iCS, iGold, iUnitType, iPlotX, iPlotY)
     end
 end 	
 GameEvents.PlayerGifted.Add(GiftBonus)  
-
 
 
 -- **********************************************************************************************************************************************
@@ -1973,8 +1944,6 @@ Events.SequenceGameInitComplete.Add(AI_DIFFICULTY_REDUCE)
 
 
 
-
-
 local tWonders = {}
 for row in DB.Query("SELECT ID FROM Buildings WHERE BuildingClass IN (SELECT Type FROM BuildingClasses WHERE MaxGlobalInstances = 1 OR MaxTeamInstances = 1 OR MaxPlayerInstances = 1)") do
 	tWonders[row.ID] = true
@@ -2051,20 +2020,15 @@ GameEvents.CanHavePromotion.Add(CanHaveInstaHeal)
 
 
 
-
-
 function UpdateGreatPerson(eTeam, eEra, bFirst)
        local TookSomething = 0	
 	   if  (bFirst) then
 	   for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 	   local pPlayer = Players[iPlayer]
 	   if pPlayer:IsAlive() then
-
-		
+	
 	   if pPlayer:GetTeam() == eTeam then
-
-
-		---------------------------------------
+    	---------------------------------------
 		 if pPlayer:IsMajorCiv() and (not pPlayer:IsHuman())  then
 		 local capital = pPlayer:GetCapitalCity() 
 		 local capitalX = capital:GetX()

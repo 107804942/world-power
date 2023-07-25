@@ -728,24 +728,7 @@
 			<BuildingClassType>BUILDINGCLASS_SOVIET_PALACE</BuildingClassType>
 			<BuildingType/>
 		</Row>
-		
-		
-		
 
-	
-
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_PROMETHEUS</BuildingClassType>
-			<BuildingType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_PROMETHEUS</BuildingClassType>
-			<BuildingType/>
-		</Row>
-		
-		
 
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>

@@ -272,7 +272,7 @@
 			<Text>查尔斯•让•亨利•尼科尔</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_45">
-			<Text>Carlos Chaga</Text>
+			<Text>卡洛斯·查加斯</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_46">
 			<Text>弗洛伊德</Text>
@@ -335,7 +335,7 @@
 			<Text>赫斯-拉</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_66">
-			<Text>Agnodice</Text>
+			<Text>昂格诺迪斯</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GREAT_PERSON_GREAT_DOCTOR_67">
 			<Text>Qar</Text>
@@ -532,7 +532,7 @@
 			<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当健康度不足以抵消疾病时将积累瘟疫点数，当瘟疫点数到上限时城市会爆发[ICON_PLAGUE]瘟疫。瘟疫的阈值会受政策、建筑、领袖特质等因素加成。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TEXT_TT_FOOD">
-			<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当健康度不足以抵消疾病时将积累瘟疫点数，当瘟疫点数到上限值时城市会爆发[ICON_PLAGUE]瘟疫。瘟疫的阈值会受政策、建筑、领袖特质等因素加成。富余的健康度将按照一定数值（每回合刷新）转换为其他产出。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
+			<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当[ICON_HEALTH]健康度不足以抵消疾病时将积累[ICON_PLAGUE]瘟疫点数，当瘟疫点数到上限值时城市会爆发[ICON_PLAGUE]瘟疫。[NEWLINE][ICON_PLAGUE]瘟疫的阈值会受政策、建筑、领袖特质等因素加成。富余的健康度将按照一定数值（每回合刷新）转换为其他产出。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
 		</Row>
 
 
@@ -813,19 +813,10 @@
 			<Text>未开启瘟疫：城市不会爆发[ICON_PLAGUE]瘟疫。</Text>
 		</Row>
 
-
-
-
-
-
-
-
-
-
-
 		<Row Tag="TXT_KEY_TP_HEALTH_EXPLANATION">
-			<Text>全局[ICON_HEALTH]健康度会影响每座城市的[ICON_HEALTH]健康度，[ICON_HEALTH]健康度低的城市更容易爆发[ICON_PLAGUE]疾病</Text>
+			<Text>点击可打开城市[ICON_HEALTH]健康度总览界面。</Text>
 		</Row>
+		
 		<Row Tag="TXT_KEY_TP_HEALTH_NEGATIVE">
 			<Text>[COLOR_WARNING_TEXT]{1_Percent}%[ENDCOLOR]</Text>
 		</Row>
@@ -895,13 +886,13 @@
 			<Text>{1_Num}{2_IconString} 来自城市犯罪率</Text>
 		</Row>
 
-	</Language_en_US>
+	</Language_zh_Hant_HK>
 
 
 
 
 	<!--City View Screen-->
-	<Language_en_US>
+	<Language_zh_Hant_HK>
 
 		<Row Tag="TXT_KEY_SPECIALIST_DOCTOR">
 			<Text>医学家</Text>
@@ -962,8 +953,6 @@
 
 
 
-
-
 		<Row Tag="TXT_KEY_CITIES_HEALTH_HEADING3_TITLE">
 			<Text>[COLOR_POSITIVE_TEXT]城市健康度[ENDCOLOR]</Text>
 		</Row>
@@ -987,18 +976,16 @@
 		</Row>
 		<Row Tag="TXT_KEY_CITIES_PLAGUE_HEADING3_BODY">
 			<Text>
-				[ICON_PLAGUE]瘟疫只会出现在[ICON_HEALTH]健康度耗尽的城市。瘟疫可能蔓延到附近的城市，跨越国际边界，并通过陆路和海路传播到遥远的城市。
+				[ICON_PLAGUE]瘟疫只会出现在[ICON_HEALTH]健康度耗尽的城市。瘟疫可能蔓延到附近的城市。
 				[NEWLINE]
 				[NEWLINE][COLOR_POSITIVE_TEXT]瘟疫效果[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]如果城市爆发了瘟疫，将导致额外的人口损失。
 				[NEWLINE][ICON_BULLET]使用大医学家，可以立即治愈饱受困扰的城市。
 				[NEWLINE][ICON_BULLET]受瘟疫困扰的城市无法恢复生命值，而且有几率将瘟疫传播到附近的城市。
 				[NEWLINE][ICON_BULLET]在瘟疫城市附近的单位每回合都会受到伤害。
-				[NEWLINE][ICON_BULLET]当临近瘟疫城市时，单位会染上[COLOR_NEGATIVE_TEXT]疾病[ENDCOLOR]。效果:防御力降低，降低邻近城市的健康度。
+				[NEWLINE][ICON_BULLET]当临近瘟疫城市时，单位会染上[COLOR_NEGATIVE_TEXT]疾病[ENDCOLOR]。效果:战斗力降低。
 			</Text>
 		</Row>
-
-
 
 
 		<Row Tag="TXT_KEY_CH_OVERVIEW">

@@ -3,6 +3,7 @@
 -------------------------------------------------
 include( "IconSupport" );
 include( "InstanceManager" );
+include( "FunctionUtilities" ); ---新增
 
 local g_MyCombatDataIM = InstanceManager:new( "UsCombatInfo", "Text", Controls.MyCombatResultsStack );
 local g_TheirCombatDataIM = InstanceManager:new( "ThemCombatInfo", "Text", Controls.TheirCombatResultsStack );
@@ -775,9 +776,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			
 			-- Great General bonus
 			if (pMyUnit:IsNearGreatGeneral()) then
-				iModifier = pMyPlayer:GetGreatGeneralCombatBonus() 
-			   --- + pMyUnit:GetGreatGeneralAuraBonus(); ---dll新增的光环效果
-				iModifier = iModifier + pMyPlayer:GetTraitGreatGeneralExtraBonus();
+				iModifier = GetBonusEffect(pMyUnit) ---dll新增的光环效果
 				controlTable = g_MyCombatDataIM:GetInstance();
 				if (pMyUnit:GetDomainType() == DomainTypes.DOMAIN_LAND) then
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GG_NEAR" );
@@ -1239,8 +1238,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			
 			-- Great General bonus
 			if (pMyUnit:IsNearGreatGeneral()) then
-				iModifier = pMyPlayer:GetGreatGeneralCombatBonus();
-				iModifier = iModifier + pMyPlayer:GetTraitGreatGeneralExtraBonus() ;
+				iModifier = GetBonusEffect(pMyUnit)  ---dll新增的光环效果
 				controlTable = g_MyCombatDataIM:GetInstance();
 				if (pMyUnit:GetDomainType() == DomainTypes.DOMAIN_LAND) then
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GG_NEAR" );
@@ -1599,6 +1597,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
+				-- 新增间谍对领域攻击加成
+				
+			iModifier = pMyUnit:GetNumSpyStayAttackMod();
+			if (iModifier ~= 0 and Teams[pMyUnit:GetTeam()]:HasSpyAtTeam(pTheirUnit:GetTeam()) ) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_BUFF_SPY");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 ----------------------------------------------------------------晋升对晋升的显示效果----------------------------------------------------------------
 		-- Promotions
 		local otherPromotions = {};
@@ -1710,6 +1717,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_CLASS" , unitClassType );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
+
 
 
 			-- 新增对领域攻击加成
@@ -2227,6 +2235,16 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );
 			end
 
+
+			-- 新增间谍对领域防御加成
+				
+			iModifier = pTheirUnit:GetNumSpyStayAttackMod();
+			if (iModifier ~= 0 and Teams[pTheirUnit:GetTeam()]:HasSpyAtTeam(pMyUnit:GetTeam()) ) then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_BUFF_SPY");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+			end
+
 			------新增临近敌军数量加成
 			iModifier = pTheirUnit:GetNearNumEnemyDefenseMod();
 			local bonus = pTheirUnit:GetNumEnemyAdjacent()
@@ -2355,8 +2373,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				
 				-- Great General bonus
 				if (pTheirUnit:IsNearGreatGeneral()) then
-					iModifier = pTheirPlayer:GetGreatGeneralCombatBonus();
-					iModifier = iModifier + pTheirPlayer:GetTraitGreatGeneralExtraBonus() ;
+					iModifier = GetBonusEffect(pTheirUnit) ---dll新增的光环效果
 					controlTable = g_TheirCombatDataIM:GetInstance();
 					if (pTheirUnit:GetDomainType() == DomainTypes.DOMAIN_LAND) then
 						controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GG_NEAR" );
@@ -2818,8 +2835,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		
 		-- Great General bonus
 		if (theirUnit:IsNearGreatGeneral()) then
-			iModifier = theirPlayer:GetGreatGeneralCombatBonus();
-			iModifier = iModifier + theirPlayer:GetTraitGreatGeneralExtraBonus();
+			iModifier =GetBonusEffect(theirUnit)
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			if (theirUnit:GetDomainType() == DomainTypes.DOMAIN_LAND) then
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GG_NEAR" );
