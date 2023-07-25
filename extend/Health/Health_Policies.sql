@@ -128,7 +128,7 @@ CREATE TRIGGER HealthPlagueMod_01
 AFTER INSERT ON Buildings
 WHEN 'BUILDINGCLASS_AQUEDUCT' = NEW.BuildingClass
 BEGIN
-	UPDATE Buildings SET AddsFreshWaterHealth = 1
+	UPDATE Buildings SET AddsFreshWater = 1
 	WHERE NEW.BuildingClass = 'BUILDINGCLASS_AQUEDUCT';
 END;
 --------------------------------------------------------------------------------------------------
