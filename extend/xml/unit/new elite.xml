@@ -739,6 +739,8 @@
 			<Type>UNIT_MECH</Type>
 			<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
 			<Combat>1200</Combat>
+			<RangedCombat>1200</RangedCombat>
+			<Range>1</Range>
 			<BaseSightRange>5</BaseSightRange>
 			<Cost>18000</Cost>
 			<Moves>5</Moves>
@@ -754,6 +756,7 @@
 			<Pillage>true</Pillage>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<Mechanized>true</Mechanized>
+			<UnitTechUpgrade>1</UnitTechUpgrade>
 			<AdvancedStartCost>120</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>

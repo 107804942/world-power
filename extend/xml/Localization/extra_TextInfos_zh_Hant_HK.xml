@@ -3864,13 +3864,13 @@
 
 
 
+
 		<Row Tag="TXT_KEY_PROMOTION_CAN_RANGE_ATTACK">
 			<Text>[COLOR_YELLOW]粒子束攻城巨炮[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CAN_RANGE_ATTACK_HELP">
-			<Text>当超结构科技研究完成后解锁，将末日机甲升级为远程攻击单位且基础[ICON_STRENGTH]战斗力+250</Text>
+			<Text>当超结构科技研究完成后解锁，末日机甲升基础[ICON_STRENGTH]战斗力+300</Text>
 		</Row>
-
 
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1">
 			<Text>[COLOR_YELLOW]复合材料[ENDCOLOR]</Text>

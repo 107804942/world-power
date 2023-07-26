@@ -1,7 +1,13 @@
 
 
 
+INSERT INTO Unit_TechCombatStrength 
+(UnitType, 		TechType,		CombatStrength)
+VALUES		('UNIT_MECH',		'TECH_HOMO_SUPERIOR', 1500);
 
+INSERT INTO Unit_TechRangedCombatStrength 
+(UnitType, 		TechType,		RangedCombatStrength)
+VALUES		('UNIT_MECH',		'TECH_HOMO_SUPERIOR', 1500);
 
 
 ---对领域加成
