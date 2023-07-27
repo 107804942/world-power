@@ -1572,8 +1572,25 @@ Events.SequenceGameInitComplete.Add(RemoveErrorResources);
 --Events.LoadScreenClose.Add(RemoveErrorResources)
 
 
-
-
+-- ********************************************************
+-- 
+-- ********************************************************
+function PlayerCompletedQuest(iMajor, iMinor, iQuestType, iStartTurn, iOldInfluence, iNewInfluence)
+    local pPlayer = Players[iMajor]
+	if pPlayer== nil then
+	 	return
+	         end
+        if pPlayer:HasWonder(GameInfoTypes.BUILDING_DIONYSUS) then
+	    for row in GameInfo.MinorCivilizations() do	
+				if row.Type ~=nil then 
+					if Players[row.ID]:IsMinorCiv() then
+					Players[row.ID]:ChangeMinorCivFriendshipWithMajor(iMajor,30) 
+				 end
+			 end
+		 end
+     end
+end
+GameEvents.PlayerCompletedQuest.Add(PlayerCompletedQuest) 
 
 -- ****************************************
 -- 

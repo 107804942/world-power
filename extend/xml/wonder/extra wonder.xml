@@ -1621,6 +1621,7 @@
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<Hill>1</Hill>
+			<GlobalCityStrengthMod>15</GlobalCityStrengthMod>
 			<FreePromotion>PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</FreePromotion>
 			<Quote>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>

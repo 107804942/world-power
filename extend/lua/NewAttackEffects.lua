@@ -540,10 +540,18 @@ GameEvents.UnitPrekill.Add(UnitNearIronBeddhaKilled)
 function CityRangedStrikeDamage(iPlayer,iAttCity,idefPlayer,idefUnit,iX, iY)
             local player = Players[iPlayer]
             local City  = player:GetCityByID(iAttCity)
-
-			if	player == nil or City== nil
+			local defplayer = Players[idefPlayer]
+			local defunit = defplayer:GetUnitByID(idefUnit)
+			if	player == nil or City== nil or defplayer== nil or defunit== nil
 		    then return 
 			end 
+
+			if defunit:IsDead() then
+			if player:HasWonder(GameInfoTypes.BUILDING_FW_HELIOS) then
+			City:SetMadeAttack(false)
+			   end
+			end
+
 
             if player:GetCurrentEra()>=GameInfo.Eras["ERA_INDUSTRIAL"].ID  then		
             for i = 0, 5 do

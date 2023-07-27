@@ -21,7 +21,6 @@ UPDATE Buildings SET GlobalPlotBuyCostModifier=-35 WHERE Type='BUILDING_PYRAMID'
 
 
 
-
 ---«„œÚ
 
 

@@ -6538,7 +6538,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_HELP">
 			<Text>
-				单位获得属性：[ICON_STRENGTH]防御力+33%。赠送3份[ICON_RES_FOIEGRAS]鹅肝。
+				单位获得属性：防御力+33%。赠送3份[ICON_RES_FOIEGRAS]鹅肝。所有城市[ICON_STRENGTH]城防+15%，城市攻击杀死单位时可获得一次攻击次数。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_PEDIA">
@@ -6557,7 +6557,7 @@
 			<Text>庇护</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS_HELP">
-			<Text>[ICON_STRENGTH]防御力+33%。</Text>
+			<Text>防御力+33%。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_RESOURCE_FOIEGRAS">
@@ -7047,7 +7047,7 @@
 			<Text>[NEWLINE]"音乐如同酒一般激发一个人的精神状态，而我是酒神巴克斯，是我为人类推出了这瓶光荣的酒，并使他们变得醉醺醺的。"[NEWLINE]        ——路德维希·范·贝多芬[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_DIONYSUS_HELP">
-			<Text>需开启赞助政策，建成后所有城市获得[ICON_GREAT_WRITER]露天剧场，对所有本文明已遇见[ICON_CITY_STATE]城邦的[ICON_INFLUENCE]影响力提升50。</Text>
+			<Text>需开启赞助政策，建成后所有城市获得[ICON_GREAT_WRITER]露天剧场，对所有本文明已遇见[ICON_CITY_STATE]城邦的[ICON_INFLUENCE]影响力提升50。完成城邦任务时，额外赠送30点[ICON_INFLUENCE]影响力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_DIONYSUS_PEDIA">
 			<Text>
