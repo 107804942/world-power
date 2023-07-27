@@ -4462,7 +4462,13 @@
 
 
 	<Building_ResourceQuantity>
-
+		<Row>
+			<BuildingType>BUILDING_FW_HELIOS</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>30</Quantity>
+		</Row>
+		
+		
 		<Row>
 			<BuildingType>BUILDING_PEOPLES_HALL</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>

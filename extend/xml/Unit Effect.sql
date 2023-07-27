@@ -82,6 +82,7 @@ SELECT  'PROMOTION_GOLDEN_BUFF', Type FROM UnitCombatInfos;
 UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'SPNDeleteALLUnitStrategicFlag';
 UPDATE SPNewEffectControler SET Enabled = 1 WHERE Type = 'SP_DELETE_ALL_STRATEGIC_UNIT_FLAG';
 
+UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Minor_Building_Overrides_Trigger';
 
 
 ---大军和海军上将免疫溅射

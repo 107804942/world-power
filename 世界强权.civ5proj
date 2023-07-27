@@ -247,11 +247,6 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>extend/sql/GlobalCityBombardRange.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
         <FileName>extend/xml/new_defines.xml</FileName>
       </Action>
       <Action>
@@ -772,7 +767,6 @@
     <Folder Include="extend\sound\SIEGE WORM" />
     <Folder Include="extend\sound\soldier" />
     <Folder Include="extend\sound\sub" />
-    <Folder Include="extend\sql" />
     <Folder Include="extend\xml" />
     <Folder Include="extend\xml\extra Resources" />
     <Folder Include="extend\xml\extra Resources\Art Defines" />
@@ -20642,10 +20636,6 @@
     <Content Include="extend\sound\UEDRestoration.mp3">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\sql\GlobalCityBombardRange.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\xml\art\font.xml">
       <SubType>Lua</SubType>
