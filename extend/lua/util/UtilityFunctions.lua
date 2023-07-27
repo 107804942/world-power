@@ -295,15 +295,15 @@ else
 		print("Human Player: " .. tostring(HumanPlayer:GetName()));
 		print("AI Player: " .. tostring(AIPlayer:GetName()));
 
-		local iRegressand = 200;
+		local iRegressand = 45;
 		if Game.GetGameSpeedType() == 0 then -- GAMESPEED_MARATHON
-			iRegressand = 800;
+			iRegressand = 90;
 		elseif Game.GetGameSpeedType() == 1 then -- GAMESPEED_EPIC
-			iRegressand = 400;
+			iRegressand = 60;
 		elseif Game.GetGameSpeedType() == 2 then -- GAMESPEED_STANDARD
-			iRegressand = 200;
+			iRegressand = 45;
 		elseif Game.GetGameSpeedType() == 3 then -- GAMESPEED_QUICK
-			iRegressand = 100;
+			iRegressand = 30;
 		end
 
 		local iCountBuildingID = GameInfoTypes["BUILDING_IMMIGRATION_" .. tostring(HumanPlayerID)];
@@ -455,320 +455,8 @@ else
 	end ---------function end
 end
 
-
-
-
-------------Set City Level by Distance (used in city founding or else)
-local libertyPolicyDistanceChangeLV1 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV1"];
-local libertyPolicyDistanceChangeLV2 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV2"];
-local libertyPolicyDistanceChangeLV3 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV3"];
-local libertyPolicyDistanceChangeLV4 = GameDefines["POLICY_BRANCH_LIBERTY_CITY_LEVEL_DISTANCE_LV4"];
-
 function SetCityLevelbyDistance(city)
-	if (PreGame.GetGameOption("GAMEOPTION_SP_CORRUPTION_OFF") == 1) then
-		print("Corruption System - OFF!");
-		return;
-	end
-
-	if city == nil or city:Plot() == nil or city:GetOwner() == -1 or Players[city:GetOwner()] == nil
-		or Players[city:GetOwner()]:GetCapitalCity() == nil or Players[city:GetOwner()]:GetCapitalCity():Plot() == nil
-	then
-		return;
-	end
-	local pPlayer = Players[city:GetOwner()];
-	local pCapital = pPlayer:GetCapitalCity();
-	local plot = city:Plot();
-	local cityX = city:GetX();
-	local cityY = city:GetY();
-	local pCapPlot = pCapital:Plot();
-	local CapX = pCapital:GetX()
-	local CapY = pCapital:GetY()
-
-	local WorldSizeLength = Map.GetGridSize()
-	local policyID = GameInfo.Policies["POLICY_DICTATORSHIP_PROLETARIAT"].ID
-	local policyBonusID = GameInfo.Policies["POLICY_POLICE_STATE"].ID
-
-	local DistanceLV1 = 7
-
-	local DistanceLV2 = WorldSizeLength / 8
-	if DistanceLV2 > 18 then
-		DistanceLV2 = 18
-	elseif DistanceLV2 < 14 then
-		DistanceLV2 = 14
-	end
-
-	local DistanceLV3 = WorldSizeLength / 5
-	if DistanceLV3 > 30 then
-		DistanceLV3 = 30
-	elseif DistanceLV3 < 26 then
-		DistanceLV3 = 26
-	end
-
-	local DistanceLV4 = WorldSizeLength / 3
-	if DistanceLV4 > 44 then
-		DistanceLV4 = 44
-	elseif DistanceLV4 < 36 then
-		DistanceLV4 = 36
-	end
-
-	local bAdoptLiberty = pPlayer:HasPolicyBranch(GameInfoTypes["POLICY_BRANCH_LIBERTY"]) and
-		not pPlayer:IsPolicyBranchBlocked(GameInfoTypes["POLICY_BRANCH_LIBERTY"]);
-	if bAdoptLiberty then
-		DistanceLV1 = DistanceLV1 + libertyPolicyDistanceChangeLV1;
-		DistanceLV2 = DistanceLV2 + libertyPolicyDistanceChangeLV2;
-		DistanceLV3 = DistanceLV3 + libertyPolicyDistanceChangeLV3;
-		DistanceLV4 = DistanceLV4 + libertyPolicyDistanceChangeLV4;
-		print("CityLevel is affected by POLICY_BRANCH_LIBERTY.", libertyPolicyDistanceChangeLV1,
-			libertyPolicyDistanceChangeLV2, libertyPolicyDistanceChangeLV3, libertyPolicyDistanceChangeLV4);
-	end
-	print("DistanceLV1:" .. DistanceLV1);
-	print("DistanceLV2:" .. DistanceLV2);
-	print("DistanceLV3:" .. DistanceLV3);
-	print("DistanceLV4:" .. DistanceLV4);
-
-	local bHasSpy = false;
-	local bHasSAgent = false;
-	local spies = pPlayer:GetEspionageSpies();
-	for i, v in ipairs(spies) do
-		if (v.CityX == cityX and v.CityY == cityY) then
-			bHasSpy = true;
-			if v.Rank == "TXT_KEY_SPY_RANK_2" then
-				bHasSAgent = true;
-			end
-			break;
-		end
-	end
-
-
-	if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType =
-		"TRAIT_OCEAN_MOVEMENT" } ()
-		and (GameInfo.Traits["TRAIT_OCEAN_MOVEMENT"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_OCEAN_MOVEMENT"].PrereqPolicy
-			and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_OCEAN_MOVEMENT"].PrereqPolicy])))
-	then
-		print("Lv1 up for this city!")
-		DistanceLV1 = DistanceLV2
-		DistanceLV2 = DistanceLV3
-		DistanceLV3 = DistanceLV4
-		DistanceLV4 = 999
-	elseif pPlayer:HasPolicy(policyID) then
-		print("Lv1 up for this city! - Policy Effect!")
-		DistanceLV1 = DistanceLV2
-		DistanceLV2 = DistanceLV3
-		DistanceLV3 = DistanceLV4
-		DistanceLV4 = 999
-	end
-	if GameInfo.Leader_Traits { LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType =
-		"TRAIT_WAYFINDING" } ()
-		and (GameInfo.Traits["TRAIT_WAYFINDING"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_WAYFINDING"].PrereqPolicy
-			and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_WAYFINDING"].PrereqPolicy])))
-	then
-		print("No Lv 4-5 city!")
-		DistanceLV3 = 999
-		DistanceLV4 = 999
-	end
-
-
-	if pPlayer:GetNumCities() > 0 then
-		if city:IsPuppet() then
-			if pPlayer:MayNotAnnex()
-			--[[GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_SUPER_CITY_STATE" }()
-		    and(GameInfo.Traits["TRAIT_SUPER_CITY_STATE"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_SUPER_CITY_STATE"].PrereqPolicy
-		    and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_SUPER_CITY_STATE"].PrereqPolicy])))]]
-			then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT_FULL"], 1) --puppet city has a local government with no Penalties (Venice)
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"], 0)
-				--			city:SetFocusType(3)
-				print("Special Puppet City with no Penalties!")
-			else
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"], 1) --puppet city has a local government
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT_FULL"], 0)
-			end
-
-			if not city:IsResistance() then
-				if city:GetOrderQueueLength() <= 0 or city:GetProduction() == 0 then
-					if not city:IsProductionProcess() then
-						city:PushOrder(OrderTypes.ORDER_MAINTAIN, 0, -1, 0, false, false)
-						print("Puppet City doing nothing! Let it produce Gold!")
-					end
-				end
-			end
-			print("Puppet City!")
-		else
-			city:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"], 0)
-			city:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT_FULL"], 0)
-		end
-
-		local overrideBuilding = nil;
-		local iCityHallLv1 = GameInfo.Buildings.BUILDING_CITY_HALL_LV1.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_CITY_HALL_LV1", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iCityHallLv1 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iCityHallLv2 = GameInfo.Buildings.BUILDING_CITY_HALL_LV2.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_CITY_HALL_LV2", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iCityHallLv2 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iCityHallLv3 = GameInfo.Buildings.BUILDING_CITY_HALL_LV3.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_CITY_HALL_LV3", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iCityHallLv3 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iCityHallLv4 = GameInfo.Buildings.BUILDING_CITY_HALL_LV4.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_CITY_HALL_LV4", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iCityHallLv4 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iCityHallLv5 = GameInfo.Buildings.BUILDING_CITY_HALL_LV5.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_CITY_HALL_LV5", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iCityHallLv5 = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iConstable = GameInfo.Buildings.BUILDING_CONSTABLE.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType = "BUILDINGCLASS_CONSTABLE", CivilizationType =
-			GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iConstable = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iSheriffOffice = GameInfo.Buildings.BUILDING_SHERIFF_OFFICE.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_SHERIFF_OFFICE", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iSheriffOffice = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iPoliceStation = GameInfo.Buildings.BUILDING_POLICE_STATION.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_POLICE_STATION", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iPoliceStation = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-		local iProcuratorate = GameInfo.Buildings.BUILDING_PROCURATORATE.ID;
-		overrideBuilding = GameInfo.Civilization_BuildingClassOverrides { BuildingClassType =
-		"BUILDINGCLASS_PROCURATORATE", CivilizationType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type } ();
-		if overrideBuilding ~= nil then
-			iProcuratorate = GameInfo.Buildings[overrideBuilding.BuildingType].ID;
-		end
-
-		city:SetNumRealBuilding(iCityHallLv1, 0);
-		city:SetNumRealBuilding(iCityHallLv2, 0);
-		city:SetNumRealBuilding(iCityHallLv3, 0);
-		city:SetNumRealBuilding(iCityHallLv4, 0);
-		city:SetNumRealBuilding(iCityHallLv5, 0);
-
-		city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV2"], 0);
-		city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV3"], 0);
-		city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV4"], 0);
-		city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV5"], 0);
-
-		local iCityLevel = 0;
-		if city:IsCapital() or city:IsPuppet() or bHasSAgent
-			or ((plot:GetResourceType() == GameInfoTypes.RESOURCE_NUTMEG or plot:GetResourceType() == GameInfoTypes.RESOURCE_CLOVES
-				or plot:GetResourceType() == GameInfoTypes.RESOURCE_PEPPER) and city:GetOwner() == city:GetOriginalOwner())
-		then
-		else
-			print("Annexed City, City Hall is built!")
-			local Distance = Map.PlotDistance(cityX, cityY, CapX, CapY);
-			print("City's Distance from Capital:" .. Distance);
-			if (Distance <= DistanceLV1) then
-				iCityLevel = 1;
-			elseif (Distance > DistanceLV1 and Distance <= DistanceLV2) then
-				iCityLevel = 2;
-			elseif (Distance > DistanceLV2 and Distance <= DistanceLV3) then
-				iCityLevel = 3;
-			elseif (Distance > DistanceLV3 and Distance <= DistanceLV4) then
-				iCityLevel = 4;
-			elseif (Distance > DistanceLV4) then
-				iCityLevel = 5;
-			end
-
-			-- Diplomatic Marriage (CIVILIZATION_AUSTRIA)
-			if city:IsHasBuilding(GameInfoTypes["BUILDING_OLD_CAPITAL_OF_CITYSTATE"]) then
-				iCityLevel = math.max(1, iCityLevel - 2);
-			end
-
-			-- Spy - Governor
-			if bHasSpy then
-				iCityLevel = math.max(1, iCityLevel - 1);
-			end
-		end
-
-		if iCityLevel == 0 then
-			city:SetNumRealBuilding(iConstable, 0);
-			city:SetNumRealBuilding(iSheriffOffice, 0);
-			city:SetNumRealBuilding(iPoliceStation, 0);
-			city:SetNumRealBuilding(iProcuratorate, 0);
-		elseif iCityLevel == 1 then
-			city:SetNumRealBuilding(iCityHallLv1, 1);
-			city:SetNumRealBuilding(iConstable, 0);
-			city:SetNumRealBuilding(iSheriffOffice, 0);
-			city:SetNumRealBuilding(iPoliceStation, 0);
-			city:SetNumRealBuilding(iProcuratorate, 0);
-
-			print("City lv1")
-		elseif iCityLevel == 2 then
-			city:SetNumRealBuilding(iCityHallLv2, 1);
-			if city:IsHasBuilding(iSheriffOffice) then
-				city:SetNumRealBuilding(iConstable, 1);
-			end
-			city:SetNumRealBuilding(iSheriffOffice, 0);
-			city:SetNumRealBuilding(iPoliceStation, 0);
-			city:SetNumRealBuilding(iProcuratorate, 0);
-
-			if pPlayer:HasPolicy(policyBonusID) then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV2"], 1);
-				print("Police State!")
-			end
-
-			print("City lv2")
-		elseif iCityLevel == 3 then
-			city:SetNumRealBuilding(iCityHallLv3, 1);
-			city:SetNumRealBuilding(iConstable, 0);
-			if city:IsHasBuilding(iPoliceStation) then
-				city:SetNumRealBuilding(iSheriffOffice, 1);
-			end
-			city:SetNumRealBuilding(iPoliceStation, 0);
-			city:SetNumRealBuilding(iProcuratorate, 0);
-
-			if pPlayer:HasPolicy(policyBonusID) then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV3"], 1);
-				print("Police State!")
-			end
-
-			print("City lv3")
-		elseif iCityLevel == 4 then
-			city:SetNumRealBuilding(iCityHallLv4, 1);
-			city:SetNumRealBuilding(iConstable, 0);
-			city:SetNumRealBuilding(iSheriffOffice, 0);
-			if city:IsHasBuilding(iProcuratorate) then
-				city:SetNumRealBuilding(iPoliceStation, 1);
-			end
-			city:SetNumRealBuilding(iProcuratorate, 0);
-
-			if pPlayer:HasPolicy(policyBonusID) then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV4"], 1);
-				print("Police State!")
-			end
-
-			print("City lv4")
-		elseif iCityLevel == 5 then
-			city:SetNumRealBuilding(iCityHallLv5, 1);
-			city:SetNumRealBuilding(iConstable, 0);
-			city:SetNumRealBuilding(iSheriffOffice, 0);
-			city:SetNumRealBuilding(iPoliceStation, 0);
-
-			if pPlayer:HasPolicy(policyBonusID) then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_POLICE_STATE_LV5"], 1);
-				print("Police State!")
-			end
-
-			print("City lv5")
-		end
-	end
+  -- keep for compatibility
 end -------------Function End
 
 ----------------------------------Misc----------------------------
@@ -850,7 +538,10 @@ function AIForceBuildAirEscortUnits(unitX, unitY, player)
 	end
 
 	local PlayerEra = player:GetCurrentEra()
-	local NewUnitEXP = PlayerEra * 20
+	local NewUnitEXP = PlayerEra * 15
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_DEFENSE_AIR)
 
@@ -883,6 +574,9 @@ function AIForceBuildNavalEscortUnits(unitX, unitY, player)
 
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK_SEA)
 
@@ -910,7 +604,10 @@ function AIForceBuildNavalHRUnits(unitX, unitY, player)
 	end
 
 	local PlayerEra = player:GetCurrentEra()
-	local NewUnitEXP = PlayerEra * 15
+	local NewUnitEXP = PlayerEra * 10
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ASSAULT_SEA)
 
@@ -945,7 +642,10 @@ function AIForceBuildNavalRangedUnits(unitX, unitY, player)
 	end
 
 	local PlayerEra = player:GetCurrentEra()
-	local NewUnitEXP = PlayerEra * 15
+	local NewUnitEXP = PlayerEra * 10
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ASSAULT_SEA)
 
@@ -975,6 +675,9 @@ function AIForceBuildInfantryUnits(unitX, unitY, player)
 
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK)
@@ -1004,6 +707,9 @@ function AIForceBuildLandCounterUnits(unitX, unitY, player)
 
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK)
@@ -1040,6 +746,9 @@ function AIForceBuildMobileUnits(unitX, unitY, player)
 
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 10
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_FAST_ATTACK)
 
@@ -1074,7 +783,10 @@ function AIForceBuildLandHRUnits(unitX, unitY, player)
 	end
 
 	local PlayerEra = player:GetCurrentEra()
-	local NewUnitEXP = PlayerEra * 25
+	local NewUnitEXP = PlayerEra * 20
+	if player:GetCapitalCity() ~= nil then
+		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
+	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_FAST_ATTACK)
 
@@ -1108,6 +820,9 @@ function AIConscriptMilitiaUnits(unitX, unitY, player)
 	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_DEFENSE)
+	if player:GetCapitalCity() ~= nil then
+		NewUnit:SetExperience(player:GetCapitalCity():GetProductionExperience())
+	end
 	NewUnit:JumpToNearestValidPlot()
 
 	print("AI conscript Militia reporting! We fight to the last man!")
@@ -1127,6 +842,9 @@ function AIConscriptMilitiaNavy(unitX, unitY, player)
 	end
 
 	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ESCORT_SEA)
+	if player:GetCapitalCity() ~= nil then
+		NewUnit:SetExperience(player:GetCapitalCity():GetProductionExperience())
+	end
 	NewUnit:JumpToNearestValidPlot()
 
 	print("AI conscript Militia Navy boadt! We fight to the last boat!")
@@ -1448,291 +1166,7 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 end
 
 -- MOD End   by CaptainCWB
-
--- MOD Begin by HMS
 function RemoveErrorPromotion(iPlayerID, iUnitID)
-	-- TODO(catgrep): remove this function
-	local player = Players[iPlayerID]
-	if player == nil then
-		print("No Player to RemovePromotion ")
-		return
-	end
-
-	if iUnitID == nil then
-		print("No unit to RemovePromotion")
-		return
-	end
-
-	if player:IsMinorCiv() or player:IsBarbarian() then
-		return
-	end
-
-	local unit = player:GetUnitByID(iUnitID)
-
-	if unit == nil then
-		print("No unit to RemovePromotion")
-		return
-	end
-
-
-	local unitX = unit:GetX()
-	local unitY = unit:GetY()
-
-	if unitX == nil or unitY == nil then
-		print("No Plot to Remove Promotion")
-		return
-	end
-	--Unit Type list
-	local RangedUnitID = GameInfo.UnitPromotions["PROMOTION_ARCHERY_COMBAT"].ID
-	local AntiAirID = GameInfo.UnitPromotions["PROMOTION_ANTI_AIR"].ID
-	local CitySiegeID = GameInfo.UnitPromotions["PROMOTION_CITY_SIEGE"].ID
-	local LandAOEUnitID = GameInfo.UnitPromotions["PROMOTION_SPLASH_DAMAGE"].ID
-	local FixedArtilleryID = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
-	local CounterMountedID = GameInfo.UnitPromotions["PROMOTION_ANTI_MOUNTED"].ID
-	local CounterTankID = GameInfo.UnitPromotions["PROMOTION_ANTI_TANK"].ID
-	local InfantryID = GameInfo.UnitPromotions["PROMOTION_INFANTRY_COMBAT"].ID
-	local GunpowderInfantryID = GameInfo.UnitPromotions["PROMOTION_GUNPOWDER_INFANTRY_COMBAT"].ID
-
-	local HitandRunID = GameInfo.UnitPromotions["PROMOTION_HITANDRUN"].ID
-	local HelicopterID = GameInfo.UnitPromotions["PROMOTION_HELI_ATTACK"].ID
-
-	local NavalCuiserID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_CRUISER"].ID
-	local NavalHitandRunID = GameInfo.UnitPromotions["PROMOTION_NAVAL_HIT_AND_RUN"].ID
-	local NavalRangedID = GameInfo.UnitPromotions["PROMOTION_NAVAL_RANGED_SHIP"].ID
-	local SubmarineID = GameInfo.UnitPromotions["PROMOTION_SUBMARINE_COMBAT"].ID
-
-	local CapitalShipID = GameInfo.UnitPromotions["PROMOTION_NAVAL_CAPITAL_SHIP"].ID
-	local CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_UNIT"].ID
-
-	local SSBNID = GameInfo.UnitPromotions["PROMOTION_CARGO_IX"].ID
-
-	local BomberID = GameInfo.UnitPromotions["PROMOTION_STRATEGIC_BOMBER"].ID
-	local AirAttackID = GameInfo.UnitPromotions["PROMOTION_AIR_ATTACK"].ID
-	local LandBasedFighterID = GameInfo.UnitPromotions["PROMOTION_ANTI_AIR_II"].ID
-	local CarrierFighterID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER"].ID
-
-	--Promotion List
-	local InfantryShock1ID = GameInfo.UnitPromotions["PROMOTION_SHOCK_1"].ID
-	local InfantryShock2ID = GameInfo.UnitPromotions["PROMOTION_SHOCK_2"].ID
-	local InfantryShock3ID = GameInfo.UnitPromotions["PROMOTION_SHOCK_3"].ID
-	local Cover1ID = GameInfo.UnitPromotions["PROMOTION_COVER_1"].ID
-	local Cover2ID = GameInfo.UnitPromotions["PROMOTION_COVER_2"].ID
-	local Cover3ID = GameInfo.UnitPromotions["PROMOTION_COVER_3"].ID
-
-	local AntiMounted1ID = GameInfo.UnitPromotions["PROMOTION_FORMATION_1"].ID
-	local AntiMounted2ID = GameInfo.UnitPromotions["PROMOTION_FORMATION_2"].ID
-	local AntiTank1ID = GameInfo.UnitPromotions["PROMOTION_AMBUSH_1"].ID
-	local AntiTank2ID = GameInfo.UnitPromotions["PROMOTION_AMBUSH_2"].ID
-	local CQBCombat1ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_1"].ID
-	local CQBCombat2ID = GameInfo.UnitPromotions["PROMOTION_CQB_COMBAT_2"].ID
-
-	local BlitzID = GameInfo.UnitPromotions["PROMOTION_BLITZ"].ID
-	local LogisticsID = GameInfo.UnitPromotions["PROMOTION_LOGISTICS"].ID
-
-	local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
-	local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
-	-- local CollDamageLV3ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_3"].ID
-
-	local SiegeLV1ID = GameInfo.UnitPromotions["PROMOTION_VOLLEY_1"].ID
-	local SiegeLV2ID = GameInfo.UnitPromotions["PROMOTION_VOLLEY_2"].ID
-
-	local Barrage1ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_1"].ID
-	local Barrage2ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_2"].ID
-	local Barrage3ID = GameInfo.UnitPromotions["PROMOTION_BARRAGE_3"].ID
-	local LongBowManUnitID = GameInfo.UnitPromotions["PROMOTION_RANGE_SPECIAL"].ID
-
-	local Accuracy1ID = GameInfo.UnitPromotions["PROMOTION_ACCURACY_1"].ID
-	local Accuracy2ID = GameInfo.UnitPromotions["PROMOTION_ACCURACY_2"].ID
-
-	local FlankGun1ID = GameInfo.UnitPromotions["PROMOTION_FLANK_GUN_1"].ID
-	local FlankGun2ID = GameInfo.UnitPromotions["PROMOTION_FLANK_GUN_2"].ID
-
-	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
-	local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-	-- local Sunder3ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_3"].ID
-
-	local AntiNaval1ID = GameInfo.UnitPromotions["PROMOTION_FAE_ROCKET_1"].ID
-	local AntiNaval2ID = GameInfo.UnitPromotions["PROMOTION_FAE_ROCKET_2"].ID
-	local AOEAttack1ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_1"].ID
-	local AOEAttack2ID = GameInfo.UnitPromotions["PROMOTION_CLUSTER_ROCKET_2"].ID
-	local CapitalShipArmor1ID = GameInfo.UnitPromotions["PROMOTION_ARMOR_BATTLESHIP_1"].ID
-	local CapitalShipArmor2ID = GameInfo.UnitPromotions["PROMOTION_ARMOR_BATTLESHIP_2"].ID
-
-	local NapalmBomb1ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_1"].ID
-	local NapalmBomb2ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_2"].ID
-	local NapalmBomb3ID = GameInfo.UnitPromotions["PROMOTION_NAPALMBOMB_3"].ID
-	local DestroySupply1ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_1"].ID
-	local DestroySupply2ID = GameInfo.UnitPromotions["PROMOTION_DESTROY_SUPPLY_2"].ID
-	local AirSiege1ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_1"].ID
-	local AirSiege2ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_2"].ID
-	local AirSiege3ID = GameInfo.UnitPromotions["PROMOTION_AIR_SIEGE_3"].ID
-
-	local AirBomb1ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_1"].ID
-	local AirBomb2ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_2"].ID
-	local AirBomb3ID = GameInfo.UnitPromotions["PROMOTION_AIR_BOMBARDMENT_3"].ID
-	local AirTarget1ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_1"].ID
-	local AirTarget2ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_2"].ID
-	local AirTarget3ID = GameInfo.UnitPromotions["PROMOTION_AIR_TARGETING_3"].ID
-
-	local DogFight1ID = GameInfo.UnitPromotions["PROMOTION_DOGFIGHTING_1"].ID
-	local DogFight2ID = GameInfo.UnitPromotions["PROMOTION_DOGFIGHTING_2"].ID
-	local DogFight3ID = GameInfo.UnitPromotions["PROMOTION_DOGFIGHTING_3"].ID
-	local Intercept1ID = GameInfo.UnitPromotions["PROMOTION_INTERCEPTION_1"].ID
-	local Intercept2ID = GameInfo.UnitPromotions["PROMOTION_INTERCEPTION_2"].ID
-	local Intercept3ID = GameInfo.UnitPromotions["PROMOTION_INTERCEPTION_3"].ID
-
-	local AIHitandRunID = GameInfo.UnitPromotions["PROMOTION_RANGE_REDUCE"].ID
-	local AIRangeID = GameInfo.UnitPromotions["PROMOTION_RANGE"].ID
-
-	local AISPForceID = GameInfo.UnitPromotions["PROMOTION_SPECIAL_FORCES_COMBAT"].ID
-
-	local SetUpID = GameInfo.UnitPromotions["PROMOTION_MUST_SET_UP"].ID
-
-	local MilitiaUnitID = GameInfo.UnitPromotions["PROMOTION_MILITIA_COMBAT"].ID
-
-	local CarrierSupply1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_1"].ID
-	local CarrierSupply2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_2"].ID
-	local CarrierSupply3ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID
-	local CarrierAntiAir1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_AIRFIGHT_1"].ID
-	local CarrierAntiAir2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_AIRFIGHT_2"].ID
-	local CarrierAttack1ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_1"].ID
-	local CarrierAttack2ID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_ATTACK_2"].ID
-	local DestroySupply_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_1"].ID
-	local AirTarget_CarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER_SIEGE_2"].ID
-
-	local CorpsID = GameInfo.UnitPromotions["PROMOTION_CORPS_1"].ID;
-	local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID;
-
-	-- Units with formation(anti-mounted) auto upgrade to Ambush(anti-tank). -- Longbowman and Camelarcher also update.
-	if unit:IsHasPromotion(CounterTankID) or unit:IsHasPromotion(HelicopterID) or unit:IsHasPromotion(AntiAirID) then
-		if unit:IsHasPromotion(AntiMounted1ID) then
-			unit:SetHasPromotion(AntiMounted1ID, false);
-			unit:SetHasPromotion(AntiTank1ID, true);
-		end
-		if unit:IsHasPromotion(AntiMounted2ID) then
-			unit:SetHasPromotion(AntiMounted2ID, false);
-			unit:SetHasPromotion(AntiTank2ID, true);
-		end
-	end
-
-	if unit:IsHasPromotion(CounterMountedID) or unit:IsHasPromotion(CounterTankID) then
-		unit:SetHasPromotion(InfantryShock1ID, false)
-		unit:SetHasPromotion(InfantryShock2ID, false)
-		unit:SetHasPromotion(InfantryShock3ID, false)
-		unit:SetHasPromotion(Cover1ID, false)
-		unit:SetHasPromotion(Cover2ID, false)
-		unit:SetHasPromotion(Cover3ID, false)
-		unit:SetHasPromotion(BlitzMeleeID, false)
-	end
-	if unit:IsHasPromotion(InfantryID) or unit:IsHasPromotion(GunpowderInfantryID) then
-		unit:SetHasPromotion(AntiTank1ID, false)
-		unit:SetHasPromotion(AntiTank2ID, false)
-		unit:SetHasPromotion(AntiMounted1ID, false)
-		unit:SetHasPromotion(AntiMounted2ID, false)
-		unit:SetHasPromotion(CQBCombat1ID, false)
-		unit:SetHasPromotion(CQBCombat2ID, false)
-	end
-	if unit:IsHasPromotion(RangedUnitID) then
-		unit:SetHasPromotion(SiegeLV1ID, false)
-		unit:SetHasPromotion(SiegeLV2ID, false)
-		unit:SetHasPromotion(CollDamageLV1ID, false)
-		unit:SetHasPromotion(CollDamageLV2ID, false)
-		-- unit:SetHasPromotion(CollDamageLV3ID,false)
-		unit:SetHasPromotion(BlitzID, false)
-	end
-	if unit:IsHasPromotion(CitySiegeID) then
-		unit:SetHasPromotion(FlankGun1ID, false)
-		unit:SetHasPromotion(FlankGun2ID, false)
-		unit:SetHasPromotion(Accuracy1ID, false)
-		unit:SetHasPromotion(Accuracy2ID, false)
-		unit:SetHasPromotion(Barrage1ID, false)
-		unit:SetHasPromotion(Barrage2ID, false)
-		unit:SetHasPromotion(Barrage3ID, false)
-		unit:SetHasPromotion(BlitzID, false)
-		unit:SetHasPromotion(LongBowManUnitID, false)
-	end
-	if unit:IsHasPromotion(FixedArtilleryID) then
-		unit:SetHasPromotion(AntiNaval1ID, false)
-		unit:SetHasPromotion(AntiNaval2ID, false)
-		unit:SetHasPromotion(AOEAttack1ID, false)
-		unit:SetHasPromotion(AOEAttack2ID, false)
-	end
-	if unit:IsHasPromotion(NavalRangedID) or unit:IsHasPromotion(NavalCuiserID) then
-		unit:SetHasPromotion(CapitalShipArmor1ID, false)
-		unit:SetHasPromotion(CapitalShipArmor2ID, false)
-		unit:SetHasPromotion(AOEAttack1ID, false)
-		unit:SetHasPromotion(AOEAttack2ID, false)
-		unit:SetHasPromotion(IndirectFireID, false)
-		unit:SetHasPromotion(BlitzID, false)
-	end
-	if unit:IsHasPromotion(CapitalShipID) then
-		unit:SetHasPromotion(FlankGun1ID, false)
-		unit:SetHasPromotion(FlankGun2ID, false)
-		unit:SetHasPromotion(Sunder1ID, false)
-		unit:SetHasPromotion(Sunder2ID, false)
-		-- unit:SetHasPromotion(Sunder3ID,false)
-		unit:SetHasPromotion(CollDamageLV1ID, false)
-		unit:SetHasPromotion(CollDamageLV2ID, false)
-		-- unit:SetHasPromotion(CollDamageLV3ID,false)
-		unit:SetHasPromotion(BlitzID, false)
-		unit:SetHasPromotion(LogisticsID, false)
-	end
-	if unit:IsHasPromotion(AirAttackID) then
-		unit:SetHasPromotion(DestroySupply1ID, false)
-		unit:SetHasPromotion(DestroySupply2ID, false)
-		unit:SetHasPromotion(AirSiege1ID, false)
-		unit:SetHasPromotion(AirSiege2ID, false)
-		unit:SetHasPromotion(AirSiege3ID, false)
-		unit:SetHasPromotion(NapalmBomb1ID, false)
-		unit:SetHasPromotion(NapalmBomb2ID, false)
-		unit:SetHasPromotion(NapalmBomb3ID, false)
-	end
-	if unit:IsHasPromotion(BomberID) then
-		unit:SetHasPromotion(AirBomb1ID, false)
-		unit:SetHasPromotion(AirBomb2ID, false)
-		unit:SetHasPromotion(AirBomb3ID, false)
-		unit:SetHasPromotion(AirTarget1ID, false)
-		unit:SetHasPromotion(AirTarget2ID, false)
-		unit:SetHasPromotion(AirTarget3ID, false)
-		unit:SetHasPromotion(BlitzID, false)
-		unit:SetHasPromotion(LogisticsID, false)
-	end
-	if unit:IsHasPromotion(CarrierFighterID) then
-		unit:SetHasPromotion(DogFight1ID, false)
-		unit:SetHasPromotion(DogFight2ID, false)
-		unit:SetHasPromotion(DogFight3ID, false)
-		unit:SetHasPromotion(Intercept1ID, false)
-		unit:SetHasPromotion(Intercept2ID, false)
-		unit:SetHasPromotion(Intercept3ID, false)
-	end
-	if unit:IsHasPromotion(LandBasedFighterID) or unit:IsHasPromotion(BomberID) or unit:IsHasPromotion(AirAttackID) then
-		unit:SetHasPromotion(CarrierAntiAir1ID, false)
-		unit:SetHasPromotion(CarrierAntiAir2ID, false)
-		unit:SetHasPromotion(CarrierSupply1ID, false)
-		unit:SetHasPromotion(CarrierSupply2ID, false)
-		unit:SetHasPromotion(CarrierSupply3ID, false)
-		unit:SetHasPromotion(DestroySupply_CarrierID, false)
-		unit:SetHasPromotion(AirTarget_CarrierID, false)
-		unit:SetHasPromotion(CarrierAttack1ID, false)
-		unit:SetHasPromotion(CarrierAttack2ID, false)
-	end
-
-	-- MOD Begin by CaptainCWB
-	-- Remove Corps Promotions in Record Mode without Corps Mode
-	if (PreGame.GetGameOption("GAMEOPTION_SP_RECORD_MODE") == 1
-			and PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 1)
-		or unit:GetDomainType() ~= DomainTypes.DOMAIN_LAND
-	then
-		if unit:IsHasPromotion(CorpsID) then
-			unit:SetHasPromotion(CorpsID, false);
-		end
-		if unit:IsHasPromotion(ArmeeID) then
-			unit:SetHasPromotion(ArmeeID, false);
-		end
-	end
-	-- MOD End   by CaptainCWB
+	-- keep for compatibility
 end
-
--- MOD end by HMS
-
 print("UtilityFunctions Check Pass!")

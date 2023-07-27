@@ -63,3 +63,5 @@ function UathachLoop(pPlayer, pUnit, pPlot)
 	return false
 end
 GameEvents.UnitSetXY.Add(UathachActivate)
+
+

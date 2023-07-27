@@ -1,8 +1,3 @@
--- PLAGUE MOD
-local MapModData = MapModData
-MapModData.g_Properties = MapModData.g_Properties or {}
-local g_Properties = MapModData.g_Properties
---end addition
 -------------------------------
 -- TopPanel.lua
 -------------------------------
@@ -518,12 +513,9 @@ Controls.HealthString:RegisterCallback( Mouse.eLClick, OnHealthClicked );
 ------------------------------------------------- 
 
 
-
 -------------------------------------------------
 -- TOOLTIPS
 -------------------------------------------------
-
-
 -- Tooltip init
 function DoInitTooltips()
 	Controls.SciencePerTurn:SetToolTipCallback( ScienceTipHandler );
@@ -537,6 +529,7 @@ function DoInitTooltips()
 	Controls.ResourceString:SetToolTipCallback( ResourcesTipHandler );
 	Controls.InternationalTradeRoutes:SetToolTipCallback( InternationalTradeRoutesTipHandler );
 end
+
 
 -- Science Tooltip
 local tipControlTable = {};

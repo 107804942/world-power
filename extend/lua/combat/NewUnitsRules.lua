@@ -341,19 +341,20 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 				and not pEUnit:IsHasPromotion(ArmeeID)
 				and pEUnit:GetDomainType() == DomainTypes.DOMAIN_LAND 
 
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_MECH"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_GOLEM"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_CNDR"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_GHOST"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_SIEGE04H"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_LEVDESTROYER"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_ANGEL"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03S"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_NAVAL_MONSTER"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
-		  and not  pEUnit:GetUnitType() == GameInfoTypes["UNIT_PARTICLE_CANNON"]-- SP8.0: Corps & Armee only for land units
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_MECH"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_CNDR"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_SIEGE04H"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_LEVDESTROYER"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03P"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_ANGEL"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03S"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVAL_MONSTER"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_HOVER_WORM"]
+		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_PARTICLE_CANNON"]-- SP8.0: Corps & Armee only for land units
 			then
 				table.insert(eUnitList, pEUnit);
 			end

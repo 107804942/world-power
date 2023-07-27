@@ -1589,7 +1589,7 @@ function OnCityViewUpdate()
 		end
 
 
-			-- 新增doctor
+		-- 新增doctor
 		if iNumDoctors > 0 and specialistHeadingOpen then
 			Controls.SpecialistControlBox:SetHide( false );
 			Controls.BoxODoctors:SetHide( false );
@@ -2725,214 +2725,11 @@ end
 Controls.NoAutoSpecialistCheckbox:RegisterCallback(Mouse.eLClick, OnNoAutoSpecialistCheckboxClick);
 
 
---function OnDoctorEnterCityScreen()
-	
-	--local pCity = UI.GetHeadSelectedCity();
-	
-	--if (pCity ~= nil) then
-	 --if ( not UI.GetHeadSelectedCity():IsNoAutoAssignSpecialists()) then  --自动模式
-	 --local player = Players[Game.GetActivePlayer()]  
-	--if player:IsHuman() 
-	--and UI.IsCityScreenUp() then --Only Effective for Human Players with manual-controling specialists cities	
-		--local SpecialistName = "SPECIALIST_DOCTOR" 
-		--local SpecialistsID = GameInfo.Specialists.SPECIALIST_DOCTOR.ID
-
-		--FillSpecialistsSlots (SpecialistName, SpecialistsID, buildingID, pCity)
-		--print ("Fill All Doctors slots in the city!")
-
-
-		--if (not UI.GetHeadSelectedCity():IsNoAutoAssignSpecialists()) then  --取消自动模式
-	
-	--end
---end
-	
---end
---Events.SerialEventEnterCityScreen.Add(OnDoctorEnterCityScreen);
-
-
-
-
-
-function ResetForSpecialistsSlots(iPlayer, iCity, iBuilding, bGold, bFaithOrCulture)      
-		--if iBuilding == g_iBuildingFasilGhebbiID then
-		 local pPlayer = Players[iPlayer]
-		 local pCity = pPlayer:GetCityByID(iCity)
-
-		 if   pPlayer == nil   then
-		return
-	end
-	    if  not pPlayer:IsHuman() then
-		return
-	end
-		local SpecialistName = "SPECIALIST_DOCTOR" 
-        local SpecialistsID = GameInfo.Specialists.SPECIALIST_DOCTOR.ID
-
-			for building in GameInfo.Buildings() do
-				if building.SpecialistType == SpecialistName then
-					local buildingID= building.ID
-          if iBuilding == buildingID then
-		  FillSpecialistsSlots (SpecialistName, SpecialistsID, buildingID, pCity)	
-			end
-	    end
-	end
-end
-GameEvents.CityConstructed.Add(ResetForSpecialistsSlots)
-
-
-
-function FillSpecialistsSlots (SpecialistName, SpecialistsID, buildingID, pCity)
-
-	if not UI.IsCityScreenViewingMode() then
-	
---			
---			Controls.NoAutoSpecialistCheckbox:SetCheck(true);
---			Controls.NoAutoSpecialistCheckbox2:SetCheck(true);
-			
---			Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_NO_AUTO_ASSIGN_SPECIALISTS, -1, -1, bValue);
-			print ("Switch to Manual Specialists!")
-
-			for building in GameInfo.Buildings() do
-				if building.SpecialistType == SpecialistName then
-					local buildingID= building.ID
-					
-					if pCity:IsHasBuilding(buildingID) and pCity:IsCanAddSpecialistToBuilding (buildingID) then
-					
-					----------------------------------------------------新增------------------------------------------------------
-							if pCity:GetNumSpecialistsAllowedByBuilding(buildingID) == 1 then ---允许填充的最大数量为1
-							   if pCity:GetNumSpecialistsInBuilding(buildingID) == 0 then
-							   Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-							----------------------------------------------------end------------------------------------------------------
-							  end
-							end
-
-								----------------------------------------------------新增------------------------------------------------------
-							if pCity:GetNumSpecialistsAllowedByBuilding(buildingID) == 2 then ---允许填充的最大数量为2
-
-							   if pCity:GetNumSpecialistsInBuilding(buildingID) == 0 then
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-								end
-							  if pCity:GetNumSpecialistsInBuilding(buildingID) == 1 then
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-								end
-							end
-							----------------------------------------------------end------------------------------------------------------
-
-								----------------------------------------------------新增------------------------------------------------------
-							if pCity:GetNumSpecialistsAllowedByBuilding(buildingID) == 3 then ---允许填充的最大数量为3
-
-							   if pCity:GetNumSpecialistsInBuilding(buildingID) == 0 then
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-								end
-							  if pCity:GetNumSpecialistsInBuilding(buildingID) == 1 then
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-							    Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-								end
-							  if pCity:GetNumSpecialistsInBuilding(buildingID) == 2 then
-							   Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, SpecialistsID, buildingID);
-								end
-							end
-							----------------------------------------------------end------------------------------------------------------	
-							--end
-					end	
-				end	
-			end			
-	end		
-end
-
-
-
-function ClearSpecialistsSlots (SpecialistName, SpecialistsID, buildingID, pCity)
-
-	if not UI.IsCityScreenViewingMode() then
-	
---			
---			Controls.NoAutoSpecialistCheckbox:SetCheck(true);
---			Controls.NoAutoSpecialistCheckbox2:SetCheck(true);
-			
---			Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_NO_AUTO_ASSIGN_SPECIALISTS, -1, -1, bValue);
-			--print ("Switch to Manual Specialists!")
-	
-	
-		
-	
-			for building in GameInfo.Buildings() do
-				if building.SpecialistType == SpecialistName then
-					local buildingID= building.ID
-					
-					if pCity:IsHasBuilding(buildingID) 
-					--and pCity:IsCanAddSpecialistToBuilding (buildingID) 
-					then
-					
-					----------------------------------------------------新增------------------------------------------------------
-							if  pCity:GetNumSpecialistsAllowedByBuilding(buildingID) ~= 0 then ---允许填充的最大数量不为0
-							    pCity:DoTask(TaskTypes.TASK_REMOVE_SPECIALIST,GameInfo.Specialists.SPECIALIST_DOCTOR.ID,buildingID)						
-							    pCity:DoTask(TaskTypes.TASK_REMOVE_SPECIALIST,GameInfo.Specialists.SPECIALIST_DOCTOR.ID,buildingID)
-							    pCity:DoTask(TaskTypes.TASK_REMOVE_SPECIALIST,GameInfo.Specialists.SPECIALIST_DOCTOR.ID,buildingID)
-							end
-					
-					end	
-				end	
-			end
-			
-	end
-		
-end
-
-
-
-
-
-
-
 
 ---------------------------------------------------------------
 -- Clicking on Building instances to add or remove Specialists
 ---------------------------------------------------------------
 function OnBuildingClick(iBuilding)
-	--local pCity = UI.GetHeadSelectedCity();
-	--
-	--local iNumSpecialistsAllowed = pCity:GetNumSpecialistsAllowedByBuilding(iBuilding)
-	--local iNumSpecialistsAssigned = pCity:GetNumSpecialistsInBuilding(iBuilding);
-	--
-	--if (iNumSpecialistsAllowed > 0) then
-		--
-		---- If Specialists are automated then you can't change things with them
-		--if (not pCity:IsNoAutoAssignSpecialists()) then
-			--local bValue = true;
-			--Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_NO_AUTO_ASSIGN_SPECIALISTS, -1, -1, bValue);
-			--Controls.NoAutoSpecialistCheckbox:SetCheck(true);
-		--end
-		--
-		--local iSpecialist = GameInfoTypes[GameInfo.Buildings[iBuilding].SpecialistType];
-		--
-		---- Switched to a different specialist type, so clicking on the building will grow the count
-		--if (iSpecialist ~= g_iCurrentSpecialist) then
-			--g_bCurrentSpecialistGrowth = true;
-		--end
-		--
-		---- Nobody assigned yet, so we must grow
-		--if (iNumSpecialistsAssigned == 0) then
-			--g_bCurrentSpecialistGrowth = true;
-		--end
-		--
-		---- If we can add something, add it
-		--if (g_bCurrentSpecialistGrowth and pCity:IsCanAddSpecialistToBuilding(iBuilding)) then
-			--Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_ADD_SPECIALIST, iSpecialist, iBuilding);
-			--
-		---- Can't add something, so remove what's here instead
-		--elseif (iNumSpecialistsAssigned > 0) then
-			--Game.SelectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_REMOVE_SPECIALIST, iSpecialist, iBuilding);
-			--
-			---- Start removing Specialists
-			--g_bCurrentSpecialistGrowth = false;
-		--end
-		--
-		--g_iCurrentSpecialist = iSpecialist;
-	--end
-	--
 end
 
 -- MOD by CaptainCWB - Begin
@@ -3510,28 +3307,38 @@ Controls.BTNCityAuto:RegisterCheckHandler(OnCityAutomation)
 
 
 
-
-
 --Player:GetCityGAPTooltip
 function GetLandXpTooltip(city)
 local domainLandID = GameInfo.Domains["DOMAIN_LAND"].ID
-local LANDTotal =  city:GetFreeExperience()+ city:GetDomainFreeExperience(domainLandID)+ Players[city:GetOwner()]:GetFreeExperience()
-return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_LAND_TEXT_TT",LANDTotal)
+local XP = city:GetFreeExperience()
+local XP2 = Players[city:GetOwner()]:GetFreeExperience()  
+local XP3 = city:GetSpecialistFreeExperience() 
+local XP4 = city:GetDomainFreeExperience(domainLandID)+city:GetDomainFreeExperienceFromGreatWorks(domainLandID)+city:GetDomainFreeExperienceFromGreatWorksGlobal(domainLandID) +Players[city:GetOwner()]:GetDomainFreeExperience(domainLandID)
+local XPLand = XP+ XP2+ XP3+ XP4
+return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_LAND_TEXT_TT",XPLand)
 end
 
 
 function GetSeaXpTooltip(city)
 local domainSeaID = GameInfo.Domains["DOMAIN_SEA"].ID
-local SEATotal =  city:GetFreeExperience()+ city:GetDomainFreeExperience(domainSeaID)+ Players[city:GetOwner()]:GetFreeExperience()
-return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_SEA_TEXT_TT",SEATotal)
+local XP = city:GetFreeExperience()
+local XP2 = Players[city:GetOwner()]:GetFreeExperience()  
+local XP3 = city:GetSpecialistFreeExperience() 
+local XP4 = city:GetDomainFreeExperience(domainSeaID)+city:GetDomainFreeExperienceFromGreatWorks(domainSeaID)+city:GetDomainFreeExperienceFromGreatWorksGlobal(domainSeaID) +Players[city:GetOwner()]:GetDomainFreeExperience(domainSeaID)
+local XPSea = XP+ XP2+ XP3+ XP4
+return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_SEA_TEXT_TT",XPSea)
 end	
 
 
 
 function GetAirXpTooltip(city)
 local domainAirID = GameInfo.Domains["DOMAIN_AIR"].ID
-local AIRTotal =  city:GetFreeExperience()+ city:GetDomainFreeExperience(domainAirID)+ Players[city:GetOwner()]:GetFreeExperience()
-return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_AIR_TEXT_TT",AIRTotal)
+local XP = city:GetFreeExperience()
+local XP2 = Players[city:GetOwner()]:GetFreeExperience()  
+local XP3 = city:GetSpecialistFreeExperience() 
+local XP4 = city:GetDomainFreeExperience(domainAirID)+city:GetDomainFreeExperienceFromGreatWorks(domainAirID)+city:GetDomainFreeExperienceFromGreatWorksGlobal(domainAirID) +Players[city:GetOwner()]:GetDomainFreeExperience(domainAirID)
+local XPAir = XP+ XP2+ XP3+ XP4
+return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_AIR_TEXT_TT",XPAir)
 end	
 
 

@@ -201,7 +201,17 @@
 			<Row Tag="TXT_KEY_CITY_ATTACK_CHANGE">
 				<Text>城市攻击次数:</Text>
 			</Row>
-			
+
+			<Row Tag="TXT_KEY_CITY_RANGED_ATTACK_MOD">
+				<Text>城市攻击加成:</Text>
+			</Row>
+			<Row Tag="TXT_KEY_GLOBAL_CITY_STRENGTH_MOD">
+				<Text>全局城防加成:</Text>
+			</Row>
+			<Row Tag="TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD">
+				<Text>全局城市攻击加成:</Text>
+			</Row>
+
 			<Row Tag="TXT_KEY_NUKE_INTERCEPTED">
 				<Text>{1_CIV}的核武器被{2_City}拦截！</Text>
 			</Row>
