@@ -1557,8 +1557,6 @@ function RemoveErrorResources()
 		or plot:GetResourceType()== GameInfoTypes.RESOURCE_ELECTRICITY
 		or plot:GetResourceType()== GameInfoTypes.RESOURCE_MANPOWER
 		or plot:GetResourceType()== GameInfoTypes.RESOURCE_CONSUMER
-		or plot:GetResourceType()== GameInfoTypes.RESOURCE_OTHER_MODS
-		or plot:GetResourceType()== GameInfoTypes.RESOURCE_LOAD
 		or plot:GetResourceType()== GameInfoTypes.RESOURCE_FOIEGRAS
 		or (plot:GetResourceType()== GameInfoTypes.RESOURCE_NATRUALGAS		   
 		and not (plot:GetTerrainType()==GameInfoTypes.TERRAIN_OCEAN 

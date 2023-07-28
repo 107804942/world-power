@@ -293,8 +293,6 @@ function UpdateData()
 			local pResource;
 			local bShowResource;
 			local iNumAvailable;
-			local iNumUsed;
-			local iNumTotal;
 			local iMin;
 			
 			local strResourceText = "";
@@ -317,10 +315,8 @@ function UpdateData()
 					end
 					
 					iNumAvailable = pPlayer:GetNumResourceAvailable(iResourceLoop, true);
-					iNumUsed = pPlayer:GetNumResourceUsed(iResourceLoop);
-					iNumTotal = pPlayer:GetNumResourceTotal(iResourceLoop, true);
 					
-					if pResource.Type == "RESOURCE_LOAD" or pResource.Type == "RESOURCE_OTHER_MODS" or pResource.Type == "RESOURCE_TROOPS" then
+					if pResource.Type == "RESOURCE_TROOPS" then
 						iNumAvailable = math.abs(iNumAvailable);
 						if iNumAvailable == 0 then
 							bShowResource = false;
@@ -343,7 +339,7 @@ function UpdateData()
 					end
 					
 					-- Hide Enough Resources
-					if iNumAvailable > 20 and pResource.Type ~= "RESOURCE_LOAD" and pResource.Type ~= "RESOURCE_OTHER_MODS" and pResource.Type ~= "RESOURCE_TROOPS" then
+					if iNumAvailable > 20 and pResource.Type ~= "RESOURCE_TROOPS" then
 						bShowResource = false;
 					end
 					if (bShowResource) then
@@ -637,6 +633,11 @@ function ScienceTipHandler( control )
 		if iScienceModFromHappiness ~= 0 then
 			strText = strText .. "[NEWLINE]";
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", iScienceModFromHappiness);
+		end
+
+		local iScienceModFromResource = pPlayer:GetGlobalYieldModifierFromResource(GameInfoTypes["YIELD_SCIENCE"])
+		if iScienceModFromResource ~= 0 then
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", iScienceModFromResource);
 		end
 	
 		local iScienceFromRAs = pPlayer:GetScienceFromResearchAgreementsTimes100();
@@ -1342,6 +1343,7 @@ function TourismTipHandler( control )
 		if iBonusFromNumGreakWork ~= 0 then
 			strText = strText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK", iBonusFromNumGreakWork) 
 		end
+		strText = strText .. pPlayer:GetInternationalTourismTooltip();
 		
 	--------------------------------------SP Additional Tourism boost by Extra Happiness END-----------------------------
 		
@@ -1544,7 +1546,7 @@ function ResourcesTipHandler( control )
 			    iNumUsed = pPlayer:GetNumResourceUsed(iResourceLoop);
 			    iNumTotal = pPlayer:GetNumResourceTotal(iResourceLoop, true);
 			    
-			    if pResource.Type == "RESOURCE_OTHER_MODS" or pResource.Type == "RESOURCE_LOAD" or pResource.Type == "RESOURCE_TROOPS" then
+			    if pResource.Type == "RESOURCE_TROOPS" then
 				iNumAvailable = math.abs(iNumAvailable);
 				if iNumTotal == 0 then
 					bShowResource = false;
