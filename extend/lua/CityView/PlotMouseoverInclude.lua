@@ -646,12 +646,6 @@ function GetYieldString(plot)
 			end
 		end
 	end
-
-	-- µØ¿é×ÝºáÊý×Ö
-	local ix = plot:GetX();
-	local iy = plot:GetY();
-	strYield = strYield .. "[NEWLINE]" .. ix..","..iy .. " ";
-
 	
 	return strYield;
 end

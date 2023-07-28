@@ -9,7 +9,7 @@ include( "IconSupport" );
 include( "InstanceManager" );
 include( "InfoTooltipInclude" );
 include( "CityStateStatusHelper" );
-
+include( "CorruptionUIUtils" );
 
 
 
@@ -365,7 +365,12 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.PuppetIcon:SetHide(false);
 			
 			if(isActivePlayerCity) then
-				controls.PuppetIcon:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_PUPPET_GOVERNEMENT"));
+				local estimatedLevel = city:DecideCorruptionLevelForNormalCity(city:GetCorruptionScore()) - GameInfoTypes["CORRUPTION_LV0"];
+				local tip = Locale.ConvertTextKey("TXT_KEY_CITY_PUPPET")
+				if estimatedLevel >= 0 then
+					tip = tip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYBANNER_CORRUPTION_ANNEX_PUPPET_LEVEL_PREVIEW", estimatedLevel)
+				end
+				controls.PuppetIcon:SetToolTipString(tip);
 			else
 				controls.PuppetIcon:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITY_PUPPET_OTHER"));
 			end
@@ -407,7 +412,7 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		
 		if city:GetPopulation() > 0 and cityOwner:IsHuman() and controls.CityIcon_NOUTILITY ~= nil then
 		
-			if city:IsHasBuilding(GameInfoTypes["BUILDING_NO_UTILITY_WARNING"])then
+			if not city:CanGrowNormally() then
 				controls.CityIcon_NOUTILITY:SetHide(false);
 				controls.CityIcon_NOUTILITY:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_CITY_NO_UTILITY_HELP"));
 			else

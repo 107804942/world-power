@@ -3392,9 +3392,6 @@ if Game then
 			-- City Culture modifier
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_CITY_MOD", city:GetCultureRateModifier())
 
-			---新增杰作数量对全局文化魅力加成
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_GREAT_WORK_MOD", cityOwner and cityOwner:GetYieldModifierFromNumGreakWork(YieldTypes.YIELD_CULTURE) or 0)
-
 			-- Culture Wonders modifier
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_WONDER_BONUS", city:GetNumWorldWonders() > 0 and cityOwner and cityOwner:GetCultureWonderMultiplier() or 0 )
 		end
@@ -3404,6 +3401,9 @@ if Game then
 		if puppetMod ~= 0 then
 			append( tips, L( "TXT_KEY_PRODMOD_PUPPET", puppetMod ) )
 		end
+
+		---包含杰作数量对全局文化魅力加成等
+  		insert( tips,city:GetYieldModifierTooltip( YieldTypes.YIELD_CULTURE ) )
 
 		-- Total
 		insert( tips, "----------------" )
@@ -3519,6 +3519,8 @@ if Game then
 
 			-- Puppet modifier
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_PRODMOD_PUPPET", city:IsPuppet() and GameDefines.PUPPET_FAITH_MODIFIER or 0 )
+
+			insert( tips, city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH ) )
 
 			-- Citizens breakdown
 			insert( tips, "----------------")
