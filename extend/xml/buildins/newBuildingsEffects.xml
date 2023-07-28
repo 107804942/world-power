@@ -1099,8 +1099,6 @@
 		</Row>
 
 
-
-
 		<!--****乡村小屋***-->
 		<Row>
 			<BuildingType>BUILDING_LODGE</BuildingType>
@@ -1132,7 +1130,6 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
-
 
 	</Building_ResourceYieldChanges>
 	
@@ -1833,8 +1830,8 @@
 			<Flavor>65</Flavor>
 		</Row>
 
-		
-		
+
+
 		<!--乡村小屋-->
 		<Row>
 			<BuildingType>BUILDING_LODGE</BuildingType>
@@ -1851,7 +1848,6 @@
 			<FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>
-
 		
 		<!--私人药店-->
 		<Row>
@@ -2800,8 +2796,6 @@
 			<Quantity>4</Quantity>
 		</Row>
 
-		
-		
 
 		<!--乡村小屋-->
 
@@ -2810,8 +2804,6 @@
 			<ResourceType>RESOURCE_CONSUMER</ResourceType>
 			<Quantity>3</Quantity>
 		</Row>
-
-
 
 
 		<Row>
@@ -2990,23 +2982,22 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>2</Yield>
 		</Row>
-		
-		
-		<!--乡村小屋-->
-
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		
-
+	
 		<!--私人药店-->
 
 		<Row>
 			<BuildingType>BUILDING_PRIVATE_PHARMACY</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>3</Yield>
+		</Row>
+
+
+		<!--乡村小屋-->
+
+		<Row>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
 		</Row>
 
 		<!--蓄水池-->

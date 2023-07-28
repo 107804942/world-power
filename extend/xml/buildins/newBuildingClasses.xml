@@ -4,6 +4,7 @@
 
 	<BuildingClasses>
 
+
 		<!-- 微波输电-->
 		<Row>
 			<Type>BUILDINGCLASS_SUPERCONDUCTING_GRID</Type>
@@ -497,9 +498,26 @@
 	</BuildingClasses>
 
 
-	
-	
-	
+
+
+	<Civilization_BuildingClassOverrides>
+
+		<Row>
+			<CivilizationType>CIVILIZATION_POLAND</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
+			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_IROQUOIS</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
+			<BuildingType>BUILDING_LODGE</BuildingType>
+		</Row>
+
+		
+	</Civilization_BuildingClassOverrides>
 
 
 

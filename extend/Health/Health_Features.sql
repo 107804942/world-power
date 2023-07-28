@@ -4,6 +4,11 @@
 ALTER TABLE Feature_YieldChanges ADD OnlyAdjacentCity boolean DEFAULT 0;
 ALTER TABLE Terrain_Yields       ADD OnlyAdjacentCity boolean DEFAULT 0;
 
+---°£¼°£¬¶í¹ú
+INSERT INTO Trait_TerrainYieldChanges(TraitType, TerrainType,YieldType,	Yield)
+SELECT 'TRAIT_STRATEGIC_RICHES', 'TERRAIN_DESERT',	'YIELD_HEALTH',			1 UNION ALL	
+SELECT 'TRAIT_WONDER_BUILDER', 'TERRAIN_TUNDRA',	'YIELD_HEALTH',			1;  
+
 
 --µØÃ²
 INSERT INTO Feature_YieldChanges (FeatureType,		YieldType,				Yield,	OnlyAdjacentCity)

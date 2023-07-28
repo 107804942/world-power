@@ -1076,7 +1076,19 @@
 		</Row>
 
 
+		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
+			<Text>
+				[ICON_BULLET]每座城市+4[ICON_GOLD]金钱产出+2[ICON_RES_CONSUMER]消费品+2[ICON_HAPPINESS_1]本地快乐+1工作范围。
+				[NEWLINE][ICON_BULLET]所有军事单位在境内作战时+15%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]城市自然拓展边界时，获得一次性[ICON_RESEARCH]科研产出，随时代加成。
+				[NEWLINE][ICON_BULLET]研发工业化后即可选择意识形态。冻土+1[ICON_HEALTH]健康度。
+			</Text>
+		</Replace>
 
+
+		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
+			<Text>所有城市额外+2[ICON_RES_MANPOWER]人力资源，每处沿河地块+1[ICON_GOLD]金，每处冲积平原地块+1[ICON_PRODUCTION]产能。沙漠地貌+1[ICON_HEALTH]健康度，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。</Text>
+		</Replace>
 
 	</Language_zh_Hant_HK>
 
