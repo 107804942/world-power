@@ -931,15 +931,11 @@ function OnCityViewUpdate()
 
 
 
-
-
-
-	
 	-------------------------------------------------------- ÐÂÔöPLAGUE MOD--------------------------------------------------------
 		if  pCity:HasPlague()  then
-		  local plagueID=pCity:GetPlagueType()
+		    local plagueID=pCity:GetPlagueType()
 	        local plague = GameInfo.Plagues[plagueID]
-		local iTurns = pCity:GetPlagueTurns()
+		    local iTurns = pCity:GetPlagueTurns()
 			Controls.PlagueIcon:SetHide(false);
 			Controls.PlagueIcon:SetHide(plague.IconString);
 			Controls.PlagueIcon:LocalizeAndSetToolTip("TXT_KEY_CITYBANNER_HEALTH_TEXT_TT_PLAGUE", plague.IconString, plague.Description, iTurns)

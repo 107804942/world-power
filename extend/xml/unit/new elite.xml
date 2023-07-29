@@ -1466,7 +1466,11 @@
 			<PromotionType>PROMOTION_ANTI_DAMAGE_MELEE</PromotionType>
 		</Row>
 
-
+		<Row>
+			<UnitType>UNIT_IRON_BUDDHA</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		
 		<Row>
 			<UnitType>UNIT_IRON_BUDDHA</UnitType>
 			<PromotionType>PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PromotionType>

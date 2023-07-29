@@ -1392,8 +1392,8 @@ function BuffForNaturalWonderDiscovered(iTeam, iFeature, iX, iY, bFirst)
     if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
 	 	return
 	         end
-		if pPlayer:CountNumBuildings(GameInfoTypes.BUILDING_SPHINX) > 0  then
-		pPlayer:ChangeGold(300)
+		if pPlayer:HasWonder(GameInfoTypes.BUILDING_SPHINX) then
+		pPlayer:ChangeGold(500)
 	end
 end
 GameEvents.NaturalWonderDiscovered.Add(BuffForNaturalWonderDiscovered)
@@ -1575,18 +1575,15 @@ Events.SequenceGameInitComplete.Add(RemoveErrorResources);
 -- ********************************************************
 function PlayerCompletedQuest(iMajor, iMinor, iQuestType, iStartTurn, iOldInfluence, iNewInfluence)
     local pPlayer = Players[iMajor]
+	local MinorPlayer= Players[iMinor]
 	if pPlayer== nil then
 	 	return
 	         end
+		if iNewInfluence > iOldInfluence then
         if pPlayer:HasWonder(GameInfoTypes.BUILDING_DIONYSUS) then
-	    for row in GameInfo.MinorCivilizations() do	
-				if row.Type ~=nil then 
-					if Players[row.ID]:IsMinorCiv() then
-					Players[row.ID]:ChangeMinorCivFriendshipWithMajor(iMajor,30) 
-				 end
-			 end
-		 end
-     end
+		MinorPlayer:ChangeMinorCivFriendshipWithMajor(iMajor,30) 
+        end
+	end
 end
 GameEvents.PlayerCompletedQuest.Add(PlayerCompletedQuest) 
 
@@ -1734,8 +1731,8 @@ function AG_BUFF(iPlayer)
 							pCity = pPlot:GetPlotCity()
 							if(pCity ~= nil) then
 								 local pOwner = Players[pCity:GetOwner()]
-								 local science= math.max(0,pCity:GetYieldRateTimes100(YieldTypes.YIELD_SCIENCE) / 100)
-				                 local gold= math.max(0,pCity:GetYieldRateTimes100(YieldTypes.YIELD_GOLD) / 100)
+								 local science= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
+				                 local gold= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_GOLD))
 				                 local faith= pCity:GetFaithPerTurn()
 								 local Culture= pCity:GetBaseJONSCulturePerTurn()
 								--if (not pOwner:IsMinorCiv()) then -- Not for city states
@@ -1751,14 +1748,7 @@ function AG_BUFF(iPlayer)
                      					local iTeam = Teams[iTeamID]
 			         					local iTeamTechs = iTeam:GetTeamTechs()
 			         					--local Boost = player:GetScience()
-
-										if CanGetResearch(player, iTeamID, iTeam, iTeamTechs, iPlayer) then
-									    iTeamTechs:ChangeResearchProgress(player:GetCurrentResearch(),sum*science, iPlayer)
-			                            end
-
-										if not CanGetResearch(player, iTeamID, iTeam, iTeamTechs, iPlayer)then
-									    player:ChangeOverflowResearch(sum*science)
-			        					end
+				                         ChangeResearchProcess(player, iTeamID, iTeam, iTeamTechs, iPlayer, science*sum)									
                 					 end
 		      					 end
            					 end
@@ -1834,14 +1824,7 @@ function EspionageStateResult(iPlayer, iSpy, iState, iCityX, iCityY)
 			local iTeamTechs = iTeam:GetTeamTechs()
 			local Boost = Player:GetScience()
 			Player:ChangeGold(4*Player:CalculateGoldRate()) 	
-
-			if CanGetResearch(Player, iTeamID, iTeam, iTeamTechs, iPlayer) then
-			iTeamTechs:ChangeResearchProgress(Player:GetCurrentResearch(),3*Boost, iPlayer)
-			end
-
-		    if not CanGetResearch(Player, iTeamID, iTeam, iTeamTechs, iPlayer)then
-		    Player:ChangeOverflowResearch(3*Boost)
-		    end
+			ChangeResearchProcess(Player, iTeamID, iTeam, iTeamTechs, iPlayer, 3*Boost)	
         end
     end
 end 	
@@ -1867,7 +1850,6 @@ function LOCKUP(iPlayer, iSpy, iResult, iCityX, iCityY)
          local iTeam = Teams[iTeamID]
 		 local iTeamTechs = iTeam:GetTeamTechs()
 		 local NumSciencePerTotal = 3*Player:GetScience()
-
 		 ChangeResearchProcess(Player, iTeamID, iTeam, iTeamTechs, iPlayer, NumSciencePerTotal)
    end
 
@@ -1951,7 +1933,7 @@ function AiIntoNewEra(eTeam, eEra, bFirst)
 
 		 if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
 
-		 pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1));
+		 pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
 		 pPlayer:ChangeOverflowResearch(3*pPlayer:GetScience())
 
 		 for city in pPlayer:Cities() do

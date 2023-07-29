@@ -205,17 +205,6 @@ GameEvents.PlayerDoTurn.Add(Health_PlayerDoTurn)
 
 
 
---Health_CityCanTrain
-function Health_CityCanTrain(playerID, cityID, unitID)
-	local player = Players[playerID]
-	local city = player:GetCityByID(cityID)
-	if GameInfo.Units[unitID].Food then
-		return (not city:HasPlague())
-	end
-	return true
-end
-GameEvents.CityCanTrain.Add(Health_CityCanTrain)
-
 
 --------------------------------------------------------------------
 ---对单位造成伤害

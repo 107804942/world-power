@@ -5,6 +5,20 @@
 
 
 
+--Health_CityCanTrain
+function Health_CityCanTrain(playerID, cityID, unitID)
+	local player = Players[playerID]
+	local city = player:GetCityByID(cityID)
+	if GameInfo.Units[unitID].Food then
+		return (not city:HasPlague())
+	end
+	return true
+end
+GameEvents.CityCanTrain.Add(Health_CityCanTrain)
+
+
+
+
 local UathachPromotion = GameInfoTypes["PROMOTION_NUKE_IMMUNE2"]
 local iRadius = 2
 

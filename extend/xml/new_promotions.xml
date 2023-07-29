@@ -4127,6 +4127,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<ExtraAttacks>99</ExtraAttacks>
 			<CityAttack>100</CityAttack>
+			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
