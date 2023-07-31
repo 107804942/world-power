@@ -6438,7 +6438,7 @@
 			<Text>光环增强</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GENERAL_1_HELP">
-			<Text>大军事家光环范围+1，额外提供10%[ICON_STRENGTH]战斗力。</Text>
+			<Text>大军事家光环范围+1，额外提供15%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
 
@@ -8315,7 +8315,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_1">
-			<Text>自然经济</Text>
+			<Text>外交使节</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_1_TEXT">
 			<Text>
@@ -8323,7 +8323,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_1_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]自然经济[ENDCOLOR][NEWLINE]每个奢侈资源+1[ICON_GOLD]金钱。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]外交使节[ENDCOLOR][NEWLINE]每条商路+3%城市[ICON_RESEARCH]科研产出。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_2">

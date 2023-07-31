@@ -201,7 +201,7 @@ function Knowledge_5or1(playerID)
 	local pSpyPlot = Map.GetPlot(v.CityX, v.CityY)
 	local ecity = pSpyPlot:GetPlotCity() 
 	if ecity:GetOwner() ~= player:GetID() then
-	science = science + math.max(0,ecity:GetYieldRateTimes100(YieldTypes.YIELD_SCIENCE) / 100)
+	science = science + math.max(0,ecity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
 		end
 	end
 	local iTeamID = player:GetTeam()

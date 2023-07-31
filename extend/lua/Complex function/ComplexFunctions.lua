@@ -1893,9 +1893,9 @@ function AI_DIFFICULTY_REDUCE()
 		if Player:IsAlive() and Player:IsMajorCiv() then
 	    if not Player:IsHuman()  then
 
-		if Game:GetHandicapType()>7 then
+		--if Game:GetHandicapType()>7 then
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_AI_REDUCE"].ID,true)
-		end
+		--end
 
 		if Difficult9Active then
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_DIFFICULTY_9"].ID,true)
@@ -1938,14 +1938,14 @@ function AiIntoNewEra(eTeam, eEra, bFirst)
 		 pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
 		 pPlayer:ChangeOverflowResearch(3*pPlayer:GetScience())
 
-		 for city in pPlayer:Cities() do
-	     local iCurrentBuilding = city:GetProductionBuilding();
-	     if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
-	     local prod = city:GetProductionNeeded();
-	     city:SetProduction(prod);
-	     SetInvalidateCity();
-		              end
-		           end
+		 --for city in pPlayer:Cities() do
+	    -- local iCurrentBuilding = city:GetProductionBuilding()
+	    -- if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
+	     --local prod = city:GetProductionNeeded();
+	     --city:SetProduction(prod)
+	     --SetInvalidateCity()
+		             -- end
+		          -- end
 		        end
 		     end
 		  end

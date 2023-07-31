@@ -3,6 +3,13 @@
 --==========================================================================================================================
 
 
+INSERT INTO Building_YieldFromOtherYield(BuildingType, InYieldType,InYieldValue,OutYieldType,OutYieldValue) VALUES
+('BUILDING_PONTDUGARD', 'YIELD_HEALTH',1, 'YIELD_SCIENCE',1);
+
+---全局专家产出
+INSERT INTO Building_SpecialistYieldChanges(BuildingType,	SpecialistType,	YieldType,	  Yield)
+SELECT     'BUILDING_COOKED_MEDICINE',	 'SPECIALIST_DOCTOR',	   'YIELD_SCIENCE',1;
+
 ----本地人口产出加成
 INSERT  INTO Building_YieldChangesPerPop(BuildingType,YieldType,Yield)
 VALUES('BUILDING_CITY_SIZE_TOWN', 'YIELD_DISEASE',25),
@@ -40,7 +47,7 @@ UPDATE Buildings SET AddsFreshWater = 1 WHERE BuildingClass = 'BUILDINGCLASS_PON
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR',GreatPeopleRateChange = 1  WHERE BuildingClass = 'BUILDINGCLASS_HEALTH_BUREAU';
 
 
-UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 4 , GreatPeopleRateChange = 4  WHERE BuildingClass = 'BUILDINGCLASS_COOKED_MEDICINE';
+UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 , GreatPeopleRateChange = 3  WHERE BuildingClass = 'BUILDINGCLASS_COOKED_MEDICINE';
 
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 , GreatPeopleRateChange = 2  WHERE BuildingClass = 'BUILDINGCLASS_BIOLOGICAL_FACTORIES';
 
@@ -191,10 +198,21 @@ SELECT 'BUILDINGCLASS_NATIONAL_HOSPITAL',					    100 ;   --量子生物学中心
 
 
 --INSERT INTO Building_YieldModifiers (BuildingType, YieldType, Yield) 
+
+
+
+---疾病点数
+INSERT INTO Building_GlobalYieldModifiers(BuildingType, YieldType, Yield) 
+SELECT	b.Type, 'YIELD_DISEASE', -h.Yield 
+FROM Buildings AS b,  BuildingClass_HealthModifiers AS h
+WHERE b.BuildingClass = h.BuildingClassType AND h.Yield<0 ;
+
+
+---健康点数
 INSERT INTO Building_GlobalYieldModifiers(BuildingType, YieldType, Yield) 
 SELECT	b.Type, 'YIELD_HEALTH', h.Yield 
 FROM Buildings AS b, BuildingClass_HealthModifiers AS h
-WHERE b.BuildingClass = h.BuildingClassType;
+WHERE b.BuildingClass = h.BuildingClassType AND h.Yield>0 ;
 ----------------------------------------------------------------------------------------------------------------------
 
 INSERT INTO Building_SpecialistYieldChangesLocal(BuildingType,	SpecialistType,	YieldType,	  Yield)

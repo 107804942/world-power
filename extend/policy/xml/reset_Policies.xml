@@ -551,8 +551,9 @@
 			<GridY>1</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>1</CultureCost>
-			<PortraitIndex>4</PortraitIndex>
-			<IconAtlas>POLYNESIA_POLICY_ATLAS</IconAtlas>
+			<PortraitIndex>9</PortraitIndex>
+			<!--<IconAtlas>POLYNESIA_POLICY_ATLAS</IconAtlas>-->
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLYNESIA_POLICY_A_ATLAS</IconAtlasAchieved>
 		</Row>
 		<Row>
@@ -663,9 +664,17 @@
 
 
 
-	
+
+	<Policy_TradeRouteCityYieldModifier>
 
 
+		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_1</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+
+	</Policy_TradeRouteCityYieldModifier>
 
 
 

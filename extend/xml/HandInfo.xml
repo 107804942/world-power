@@ -245,9 +245,7 @@
 		<Row>
 			<Type>POLICY_AI_REDUCE</Type>
 			<Description>TXT_KEY_POLICY_AI_REDUCE</Description>
-			<WonderProductionModifier>20</WonderProductionModifier>
 			<WorkerSpeedModifier>20</WorkerSpeedModifier>
-			<CulturePerCity>2</CulturePerCity>
 			<Dummy>1</Dummy>
 			<StealTechFasterModifier>100</StealTechFasterModifier>
 		</Row>
@@ -296,7 +294,7 @@
 
 
 
-	<Policy_SpecialistYieldChanges>
+	<!--<Policy_SpecialistYieldChanges>
 
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
@@ -319,13 +317,13 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>3</Yield>
 		</Row>
-	</Policy_SpecialistYieldChanges>
+	</Policy_SpecialistYieldChanges>-->
 
 
 
 
 	<Policy_CityYieldChanges>
-		<Row>
+		<!--<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
@@ -335,16 +333,16 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>2</Yield>
 		</Row>
-		<!--<Row>
+		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>3</Yield>
-		</Row>-->
+		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>2</Yield>
-		</Row>
+		</Row>-->
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_HEALTH</YieldType>

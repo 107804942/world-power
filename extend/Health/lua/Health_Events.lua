@@ -23,14 +23,6 @@ local defineCIDHealthPlagueMinThreshold		   = 150
 if Game then defineCIDHealthPlagueMinThreshold = (GameDefines["HEALTH_PLAGUE_MIN_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 150) end
 
 --=======================================================================================================================
--- USER SETTINGS
---=======================================================================================================================
---local bNoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  ---关闭健康度效果
-
---local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  ---城市人口减少效果
-
-
---=======================================================================================================================
 -- UTILITIES
 --=======================================================================================================================
 function CityCanMaintainHealth(iPlayer, iCity, iProcess) 
@@ -444,9 +436,8 @@ function GREAT_DOCTOR_CURE_Mission(playerID, unit)
 
     local player = Players[playerID]
     local plot = unit:GetPlot();
+	local NumUseForCureAll = load(unit, "UseForCure") or 0
 
-    if  load(unit, "UseForCure") ~= nil 
-	    and load(unit, "UseForCure") ==2  then
 	    for  Unit in player:Units() do 	
    		if   Unit ~= nil  and Unit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED)
    		then Unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
@@ -455,49 +446,20 @@ function GREAT_DOCTOR_CURE_Mission(playerID, unit)
         for city in player:Cities() do
 		Health_PlagueEnds(city)
 		end
-		Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
-	   	unit:Kill(); 
-	    end 
 
-		--------------------------------------------------------------------------------------------------------------------------------------
-	if  load(unit, "UseForCure") ~= nil 
-	    and load(unit, "UseForCure") ==1  then
-    	for Unit in player:Units() do 	
-   		if Unit ~= nil  and Unit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED)
-   		then Unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
-		   end
-		end
-        for city in player:Cities() do
-	    Health_PlagueEnds(city)
-		end
+		NumUseForCureAll=NumUseForCureAll+1
+		unit:SetMoves(0)
+		save(unit, "UseForCure", NumUseForCureAll)
 		Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
-	   	save(unit, "UseForCure", 2)
-		unit:SetMoves(0);
-	    end 
-		--------------------------------------------------------------------------------------------------------------------------------------
-	 if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_GREAT_DOCTOR"]   
-	    and  load(unit, "UseForCure") == nil 
-		then
-    	for Unit in player:Units() do 	
-   		if Unit ~= nil  and Unit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED)
-   		then Unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
-		   end
-		end
-        for city in player:Cities() do
-		Health_PlagueEnds(city)
-		end
-		Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
-	   	save(unit, "UseForCure", 1)
-		unit:SetMoves(0);
+		if NumUseForCureAll>2 then
+	   	unit:Kill(); 
 	    end 
 		--------------------------------------------------------------------------------------------------------------------------------------		
 		if player:IsHuman() then
 	    local heading = Locale.ConvertTextKey("TXT_KEY_DOCTOR_CURED_SHORT")
 		local text = Locale.ConvertTextKey("TXT_KEY_DOCTOR_CURED")
 		player:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plot:GetX(), plot:GetY());
-		   end  
-	    --end	
-   --end
+		end  
 end
 
 function GREAT_DOCTOR_CONSTRUCT_Mission(playerID, unit, city)
@@ -533,70 +495,32 @@ function Health_GrantPopulationMission(playerID, unit)
 	local plot = unit:GetPlot();
 	local unitCount = plot:GetNumUnits()  
 	if unit then
+	local NumUseForCureUnit = load(unit, "UseForCureUnit") or 0
 	--------------------------------------------------------------------------------------------------------------------------------------
-	if  load(unit, "UseForCureUnit") ~= nil 
-	and load(unit, "UseForCureUnit") ==2  then
-	    for i = 0, unitCount-1, 1 do   	
-   		local pFoundUnit = plot:GetUnit(i)
-   		if pFoundUnit ~= nil and pFoundUnit:GetOwner() == unit:GetOwner()  and pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED)
-   		then pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
-		   end
-		end
-        for pAdjacentPlot in PlotAreaSweepIterator(plot, 1, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		for iVal = 0,(pAdjacentPlot:GetNumUnits() - 1) do
-			local loopUnit = pAdjacentPlot:GetUnit(iVal)
-			 if  loopUnit:GetOwner() == unit:GetOwner()  and loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED) then
-		     loopUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false);
+		local extraRange = 2	
+	    for dx = -extraRange, extraRange - 1, 1 do
+	    for dy = -extraRange, extraRange - 1, 1 do
+        local adjPlot = Map.PlotXYWithRangeCheck(plot:GetX(), plot:GetY(), dx, dy, 1);
+		if adjPlot ~= nil then
+		unitCount = adjPlot:GetNumUnits();
+        if unitCount > 0 then
+		for i = 0, unitCount-1, 1 do
+        local pFoundUnit = adjPlot:GetUnit(i);
+        if pFoundUnit:GetOwner() == unit:GetOwner() and  pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED) then
+		pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false)
+		               end
+		            end
+		         end
 		      end
 		   end
 		end
+		NumUseForCureUnit=NumUseForCureUnit+1
+		save(unit, "UseForCureUnit", NumUseForCureUnit)
 		Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
-	   	unit:Kill(); 
-	    end 
-
-		--------------------------------------------------------------------------------------------------------------------------------------
-	if  load(unit, "UseForCureUnit") ~= nil 
-	and load(unit, "UseForCureUnit") ==1  then
-    	 for i = 0, unitCount-1, 1 do   	
-   		local pFoundUnit = plot:GetUnit(i)
-   		if pFoundUnit ~= nil and pFoundUnit:GetOwner() == unit:GetOwner()  and pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED)
-   		then pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
-		   end
+		unit:SetMoves(0)
+		if NumUseForCureUnit>2 then
+	   	unit:Kill()
 		end
-        for pAdjacentPlot in PlotAreaSweepIterator(plot, 1, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		for iVal = 0,(pAdjacentPlot:GetNumUnits() - 1) do
-			local loopUnit = pAdjacentPlot:GetUnit(iVal)
-			 if  loopUnit:GetOwner() == unit:GetOwner()  and loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED) then
-		loopUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false);
-		      end
-		   end
-		end
-		Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
-	   	save(unit, "UseForCureUnit", 2)
-		unit:SetMoves(0);
-	    end 
-		--------------------------------------------------------------------------------------------------------------------------------------
-	if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DOCTOR"].ID) 
-	    and  load(unit, "UseForCureUnit") == nil 
-		then
-    	for i = 0, unitCount-1, 1 do   	
-   		local pFoundUnit = plot:GetUnit(i)
-   		if pFoundUnit ~= nil and pFoundUnit:GetOwner() == unit:GetOwner()  and pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED)
-   		then pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
-		   end
-		end
-        for pAdjacentPlot in PlotAreaSweepIterator(plot, 1, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		for iVal = 0,(pAdjacentPlot:GetNumUnits() - 1) do
-			local loopUnit = pAdjacentPlot:GetUnit(iVal)
-			 if  loopUnit:GetOwner() == unit:GetOwner()  and loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED) then
-		loopUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false);
-		      end
-		   end
-		end
-		Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
-	   	save(unit, "UseForCureUnit", 1)
-		unit:SetMoves(0);
-	    end 
 		--------------------------------------------------------------------------------------------------------------------------------------		
 		if player:IsHuman() then
 	    local heading = Locale.ConvertTextKey("TXT_KEY_DOCTOR_CURED_UNIT_SHORT")
