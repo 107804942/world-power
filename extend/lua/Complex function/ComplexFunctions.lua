@@ -1891,12 +1891,14 @@ function AI_DIFFICULTY_REDUCE()
 	 for i=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 		local Player = Players[i]
 		if Player:IsAlive() and Player:IsMajorCiv() then
-
 	    if not Player:IsHuman()  then
+
+		if Game:GetHandicapType()>7 then
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_AI_REDUCE"].ID,true)
+		end
+
 		if Difficult9Active then
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_DIFFICULTY_9"].ID,true)
-		--Player:ChangeGold(3000)
 		       end
 		   end
 
@@ -1925,7 +1927,7 @@ end
 
 function AiIntoNewEra(eTeam, eEra, bFirst)
         local handicap = Game:GetHandicapType();
-	    if   handicap > 5 then
+	    if   handicap > 7 then
 	    for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 	    local pPlayer = Players[iPlayer]
 	   	if pPlayer:IsAlive() then

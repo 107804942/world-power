@@ -245,8 +245,8 @@
 		<Row>
 			<Type>POLICY_AI_REDUCE</Type>
 			<Description>TXT_KEY_POLICY_AI_REDUCE</Description>
-			<WonderProductionModifier>33</WonderProductionModifier>
-			<WorkerSpeedModifier>33</WorkerSpeedModifier>
+			<WonderProductionModifier>20</WonderProductionModifier>
+			<WorkerSpeedModifier>20</WorkerSpeedModifier>
 			<CulturePerCity>2</CulturePerCity>
 			<Dummy>1</Dummy>
 			<StealTechFasterModifier>100</StealTechFasterModifier>
@@ -328,12 +328,12 @@
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<!--<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
@@ -343,7 +343,7 @@
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>

@@ -102,6 +102,7 @@ INSERT INTO Resource_YieldChanges	(ResourceType,			YieldType,				Yield) VALUES
 									 ('RESOURCE_OIL',	     'YIELD_FOOD',	-4),
                                     ('RESOURCE_RASPBERRYZ',	'YIELD_GOLD',		1),
 									 ('RESOURCE_RASPBERRYZ',	'YIELD_FOOD',		2),
+									  ('RESOURCE_SULFUR',	     'YIELD_SCIENCE',	1), 
                                       ('RESOURCE_SULFUR',	     'YIELD_PRODUCTION',	2), 
 									 ('RESOURCE_BARLEY',	     'YIELD_FOOD',	1), 
 									  ('RESOURCE_BARLEY',	     'YIELD_PRODUCTION',	1), 

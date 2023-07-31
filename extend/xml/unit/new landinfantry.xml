@@ -70,13 +70,7 @@
 			<Set  UnitFlagAtlas="SMAN_EXOTIC_UNIT_FLAG_ATLAS" UnitFlagIconOffset="18"/>
 			<Where Type="UNIT_WARRIOR" />
 		</Update>
-		<Update>
-			<Set  PrereqTech="TECH_MANIPULAR_SYSTEM" />
-			<Where Type="UNIT_MILITIA_ANCIENT" />
-		</Update>
-
-
-
+	
 
 	</Units>
 

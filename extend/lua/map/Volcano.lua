@@ -47,7 +47,7 @@ Events.LoadScreenClose.Add(Volcano)
       for i = 0, unitCount-1, 1 do
       local pFoundUnit = pTargetPlot:GetUnit(i)
 	  if not IsSpaceShip(pFoundUnit) then
-	  pFoundUnit:ChangeDamage(33)
+	  pFoundUnit:ChangeDamage(50)
 	                end
 	             end
 	         end
@@ -82,7 +82,7 @@ end
       for i = 0, unitCount-1, 1 do
       local pFoundUnit = pTargetPlot:GetUnit(i)
 	  if not IsSpaceShip(pFoundUnit) then
-	  pFoundUnit:ChangeDamage(50)
+	  pFoundUnit:ChangeDamage(99)
 	                end
 	             end
 	         end

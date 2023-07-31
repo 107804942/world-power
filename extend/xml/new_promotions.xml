@@ -4313,11 +4313,11 @@
 			<Description>TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</Description>
 			<Help>TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>28</PortraitIndex>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<ShowInUnitPanel>0</ShowInUnitPanel>
 			<ShowInPedia>0</ShowInPedia>
 			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<DefenseMod>33</DefenseMod>
 			<PediaEntry>TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</PediaEntry>

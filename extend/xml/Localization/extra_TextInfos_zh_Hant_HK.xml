@@ -8863,7 +8863,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS_HELP">
 			<Text>
-				对反骑兵、反装甲单位+100%[ICON_STRENGTH]战斗力,对陆作战时+25%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+100%[ICON_STRENGTH]战斗力，无攻击次数限制。3格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
+				对反骑兵、反装甲单位+100%[ICON_STRENGTH]战斗力,对陆作战时+25%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+100%[ICON_STRENGTH]战斗力，无攻击次数限制。5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
 				[NEWLINE]当剩余生命值超过150移动力不为0时，可使用特殊冲锋技能。
 			</Text>
 		</Row>

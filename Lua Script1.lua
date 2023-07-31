@@ -4,6 +4,22 @@
 --------------------------------------------------------------
 
 
+GetEspionageSpies
+
+
+//------------------------------------------------------------------------------
+int CvLuaPlayer::lEspionageSetOutcome(lua_State* L)
+{
+	CvPlayer* pkPlayer = GetInstance(L);
+	int iSpyIndex = lua_tointeger(L, 2);
+	int iSpyResult = lua_tointeger(L, 3);
+	bool bAffectsDiplomacy = lua_toboolean(L, 4);
+	pkPlayer->GetEspionage()->SetOutcome(iSpyIndex, iSpyResult, bAffectsDiplomacy);
+
+	return 0;
+}
+#endif
+
 
 --Health_CityCanTrain
 function Health_CityCanTrain(playerID, cityID, unitID)
