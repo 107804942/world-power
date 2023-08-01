@@ -1529,12 +1529,12 @@ CREATE TABLE Feature_ArtDefine_StrategicView AS SELECT * FROM ArtDefine_Strategi
 DELETE FROM ArtDefine_StrategicView WHERE TileType = 'Feature';
 INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		Asset)
 VALUES	('ART_DEF_FEATURE_GIANTS_CAUSEWAY',	'Feature',	'sv_Causeway_C.dds'),
-        ('ART_DEF_FEATURE_MT_EVEREST',	'Feature',		'SV_MtEverest.dds'),
-		('ART_DEF_FEATURE_SALAR_A',		'Feature',		'SV_SalarA.dds'),
-		('ART_DEF_FEATURE_SALAR_B',		'Feature',		'SV_SalarB.dds'),
+        ('ART_DEF_FEATURE_MT_EVEREST',	'Feature',		'sv_Mt_Everest.dds'),
+		('ART_DEF_FEATURE_SALAR_A',		'Feature',		'sv_Salar_S.dds'),
+		('ART_DEF_FEATURE_SALAR_B',		'Feature',		'sv_Salar_B.dds'),
 		('ART_DEF_FEATURE_LUMI_BAY',	'Feature',		'SV_LumiBay.dds'),
-		('ART_DEF_FEATURE_DALLOL',		'Feature',		'SV_Dallol.dds'),
-		('ART_DEF_FEATURE_RETBA',		'Feature',		'SV_LakeRetba.dds');
+		('ART_DEF_FEATURE_DALLOL',		'Feature',		'sv_Dallol.dds'),
+		('ART_DEF_FEATURE_RETBA',		'Feature',		'sv_Retba.dds');
 
 INSERT INTO ArtDefine_StrategicView SELECT * FROM Feature_ArtDefine_StrategicView AS t
 	WHERE NOT EXISTS (SELECT 1 FROM ArtDefine_StrategicView AS a WHERE a.StrategicViewType = t.StrategicViewType);

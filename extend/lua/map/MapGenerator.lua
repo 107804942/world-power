@@ -682,6 +682,25 @@ function AddGoodies()
 
 	print("-------------------------------");
 	print("Map Generation - Adding Goodies");
+
+
+	--------------------------新增火山--------------------------
+	for feature in GameInfo.Features() do
+		local tilesPerVolcano = bWPIsActive and feature.TilesPerVolcano;
+		if bWPIsActive and feature.Volcano and tilesPerVolcano > 0 then
+			print("Placing Volcanoes");
+			local featureID = feature.ID;
+			for index, plot in Plots(Shuffle) do
+				if ( not plot:IsWater() ) then
+					if (CanPlaceVolcanoAt(feature, plot)) then
+						plot:SetFeatureType(featureID);
+						print("A Volcano has been placed");
+					end
+				end
+			end
+		end
+	end
+	------------------------------------------------------------------------------
 	
 	-- If an era setting wants no goodies, don't place any.
 	local startEra = Game.GetStartEra();
@@ -719,25 +738,6 @@ function AddGoodies()
 			end
 		end
 	end
-
-	--------------------------新增火山--------------------------
-	for feature in GameInfo.Features() do
-		local tilesPerVolcano = bWPIsActive and feature.TilesPerVolcano;
-		if bWPIsActive and feature.Volcano and tilesPerVolcano > 0 then
-			print("Placing Volcanoes");
-			local featureID = feature.ID;
-			for index, plot in Plots(Shuffle) do
-				if ( not plot:IsWater() ) then
-					if (CanPlaceVolcanoAt(feature, plot)) then
-						plot:SetFeatureType(featureID);
-						print("A Volcano has been placed");
-					end
-				end
-			end
-		end
-	end
-	------------------------------------------------------------------------------
-
 	print("-------------------------------");
 end
 

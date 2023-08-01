@@ -230,15 +230,13 @@ end
 function Health_PlagueEnds(city)
 	local player = Players[city:GetOwner()]
 	local plagueID=city:GetPlagueType()
-	local iX=city:GetX()
-	local iY=city:GetY()
 
 	 -- Notification
 	if player:IsHuman() and plagueID ~= -1 then
 	local plague = GameInfo.Plagues[plagueID]
 	local heading = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION_SHORT")
 	local text = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION",plague.IconString,plague.Description,city:GetName())
-	player:AddNotification(NotificationTypes.NOTIFICATION_INSTANT_YIELD, text, heading, iX, iY)
+	player:AddNotification(NotificationTypes.NOTIFICATION_INSTANT_YIELD, text, heading,city:GetX(),city:GetY())
 	Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
 	end
 
@@ -255,15 +253,13 @@ local cityFocusFoodID      = CityAIFocusTypes["CITY_AI_FOCUS_TYPE_FOOD"]
 function Health_PlagueBegins(city)	
     local player = Players[city:GetOwner()]
 	local plagueID= GetCityPlagueTypeToSpawn(city)
-	local iX=city:GetX()
-	local iY=city:GetY()
 	city:SetPlagueType(plagueID)
 	 -- Notification
 	if player:IsHuman() and plagueID ~= -1 then
 	local plague = GameInfo.Plagues[plagueID]
 	local heading = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_NOTIFICATION_SHORT")
 	local text = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_NOTIFICATION",plague.IconString,plague.Description, city:GetName())
-	player:AddNotification(NotificationTypes.NOTIFICATION_PLAGUE, text, heading, iX,iY);
+	player:AddNotification(NotificationTypes.NOTIFICATION_PLAGUE, text, heading, city:GetX(),city:GetY());
 	--player:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, iX, iY) 
 	end
 
