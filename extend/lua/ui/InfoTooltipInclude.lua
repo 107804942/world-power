@@ -1864,7 +1864,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	-- Yield modifiers enhanced by Policy
 	for row in GameInfo.Policy_BuildingClassYieldModifiers( thisBuildingClassType ) do
 		if row.PolicyType and (row.YieldMod or 0) ~= 0 
-		and  GameInfo.Policies[ policyType ].Dummy~=1  ---新增
+		and  GameInfo.Policies[ row.PolicyType].Dummy~=1  ---新增
 		then
 			items[row.PolicyType] = format( "%s %+i%%%s", items[row.PolicyType] or "", row.YieldMod, YieldIcons[row.YieldType] or "?" )
 		end

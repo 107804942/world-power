@@ -8402,7 +8402,7 @@
 		</Row>
 
 			<Row Tag="TXT_KEY_KNOWLEDGE_5_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]活跃的间谍每回合可为所有城市提供4%[ICON_RESEARCH]科研加成。地牢、监禁所、警察局+2[ICON_RESEARCH]科研。</Text>
+				<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]每个活跃的间谍可为城市提供4%[ICON_RESEARCH]科研加成。地牢、监禁所、警察局+2[ICON_RESEARCH]科研。</Text>
 			</Row>
 		
 		<Row Tag="TXT_KEY_KNOWLEDGE_6">
