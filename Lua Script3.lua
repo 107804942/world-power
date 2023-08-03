@@ -1,12 +1,17 @@
+ï»¿-- Lua Script3
+-- Author: 11585
+-- DateCreated: 2023/8/3 21:50:17
+--------------------------------------------------------------
 -- DateCreated: 2023
 --------------------------------------------------------------
-include("Rog_SaveUtils.lua"); MY_MOD_NAME = "ÊÀ½çÇ¿È¨";
+include("Rog_SaveUtils.lua"); MY_MOD_NAME = "ä¸–ç•Œå¼ºæƒ";
 include("PlotIterators.lua");
 include("FunctionUtilities.lua")
 include("FLuaVector.lua")
 include("IconSupport.lua");
 include("InstanceManager")
 
+--npx civ5-mod-builder --to "C:\Users\11585\Documents\My Games\Sid Meier's Civilization 5\MODS" --from "ä¸–ç•Œå¼ºæƒ.civ5proj" # run
 
 function IsUsingWP()
 	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
@@ -45,19 +50,86 @@ local BattleCruiser = GameInfoTypes["UNIT_SPACESHIP"]
 	 [18]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_18}
 
 
+	function SpaceBattleCruiserMana(iPlayer, iUnit)
+	local pPlayer = Players[iPlayer];
+	if pPlayer == nil  or pPlayer:IsBarbarian() then
+	 	return
+	         end
+	local pUnit = pPlayer:GetUnitByID(iUnit)
+	if pUnit == nil  then
+	 	return
+	        end
+			if pUnit:GetUnitType() == BattleCruiser and load(pUnit, "SpaceBattleCruiserEnergy") == nil then
+			save(pUnit, "SpaceBattleCruiserEnergy", 4)
+			pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_4, true)
+		end
+	end
+Events.SerialEventUnitCreated.Add(SpaceBattleCruiserMana)
+
+
+
 function SpaceBattleCruiserManaForHuman(iPlayer)
 		local pPlayer = Players[iPlayer]
 		if not 	pPlayer:IsHuman() then
 		return
 	         end
-		for pUnit in pPlayer:Units() do  
-		if pUnit:GetUnitType() == BattleCruiser then
-		local iSpaceBattleCruiserEnergy = load(pUnit, "SpaceBattleCruiserEnergy") or 0
-		if iSpaceBattleCruiserEnergy< 17 then
-				save(pUnit, "SpaceBattleCruiserEnergy", iSpaceBattleCruiserEnergy + 2)       
-				for i = 0, 18 do
-				pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
+        
+		if  pPlayer:HasWonder(GameInfoTypes.BUILDING_SPACE_FORTRESS) then
+
+				if pUnit:GetUnitType() == BattleCruiser and load(pUnit, "SpaceBattleCruiserEnergy") < 8 then
+
+					local city = pUnit:GetPlot():GetPlotCity() or pUnit:GetPlot():GetWorkingCity();
+					  if city == nil then 
+					      save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+					  else
+
+					   if city:GetOwner()~=iPlayer  or (not city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]))    then 
+					    save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+		                   end
+						end
+						
+					if city ~= nil and city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]) and city:GetOwner()==iPlayer then
+					 if load(pUnit, "SpaceBattleCruiserEnergy") == 7 then 
+				  	save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+					end
+					  if load(pUnit, "SpaceBattleCruiserEnergy") <7 then 
+					save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 2)
+					   end
+					end
+
+					for i = 0, 8 do
+						pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
+					end
 				end
+			end
+
+   --------------------------------------------------------------------------------------------------------------------------------------------
+           if  pPlayer:HasWonder(GameInfoTypes.BUILDING_SPACE_FORTRESS) then
+
+				if pUnit:GetUnitType() == BattleCruiser and load(pUnit, "SpaceBattleCruiserEnergy") < 18 then
+
+					local city = pUnit:GetPlot():GetPlotCity() or pUnit:GetPlot():GetWorkingCity();
+					  if city == nil then 
+					    save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+		                end
+
+						  if city ~= nil then 
+						  if city:GetOwner()~=iPlayer  or (not city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]))    then 
+					    save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+		                   end
+						end
+						
+					if city ~= nil and city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]) and city:GetOwner()==iPlayer then
+					  if load(pUnit, "SpaceBattleCruiserEnergy") == 17 then 
+				  	save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+					end
+					  if load(pUnit, "SpaceBattleCruiserEnergy") <17 then 
+					save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 2)
+					   end
+					end
+	
+					for i = 0, 18 do
+				pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
 		     end
 	     end
      end
@@ -658,9 +730,9 @@ local IronPagodaChargeButton = {
 		-- local unitx, unity = unithex.x, unithex.y
 		
 		for i = 0, 5 do
-			-- ËùÔÚµ¥Ôª¸ñÎªÖĞĞÄ£¬ÏòËÄÖÜÑÓÉì£¬°ë¾¶Îª5
+			-- æ‰€åœ¨å•å…ƒæ ¼ä¸ºä¸­å¿ƒï¼Œå‘å››å‘¨å»¶ä¼¸ï¼ŒåŠå¾„ä¸º5
 			local uniqueRange = 5
-			-- ±£Ö¤³å·æÂ·ÏßÉÏÃ»ÓĞÉ½Âö¡¢³ÇÊĞ¡¢Ë®Óò×è¸ô
+			-- ä¿è¯å†²é”‹è·¯çº¿ä¸Šæ²¡æœ‰å±±è„‰ã€åŸå¸‚ã€æ°´åŸŸé˜»éš”
 			local oPlotX, oPlotY = unit:GetX(), unit:GetY()
 			while (uniqueRange > 0) do
 				local iPlot = Map.PlotDirection(oPlotX, oPlotY, i)
@@ -938,7 +1010,7 @@ function InputHandler( uiMsg, wParam, lParam )
 				 for i = 0, 5 do
 					if isInArray(IronPagodaChargeArrayDirection[i], GetPlotKey(pPlot)) then
 						
-						-- Ëù¾­Ö®´¦µĞÈËµôÑª
+						-- æ‰€ç»ä¹‹å¤„æ•Œäººæ‰è¡€
 						for _, v in pairs(IronPagodaChargeArrayDirection[i]) do
 							local plotkey = v
 							local plotX, plotY = GetPlotXYFromKey(plotkey)
@@ -956,7 +1028,7 @@ function InputHandler( uiMsg, wParam, lParam )
 			                            local DamageOri = math.floor(3*pSUnit:GetCombatDamage(attUnitStrength, pFoundUnitStrength, pSUnit:GetDamage(), false, false, false));
 
 										    pSUnit:SetHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS, true)
-										    pFoundUnit:ChangeDamage(DamageOri) -- µĞ·½µ¥Î»µôÑª
+										    pFoundUnit:ChangeDamage(DamageOri) -- æ•Œæ–¹å•ä½æ‰è¡€
 												
 											--end
 										end
@@ -964,7 +1036,7 @@ function InputHandler( uiMsg, wParam, lParam )
 								end
 							end	
 						end
-						-- Ìú¸¡ÍÀµôÑªÊ§È¥ÒÆ¶¯Á¦
+						-- é“æµ®å± æ‰è¡€å¤±å»ç§»åŠ¨åŠ›
 						pSUnit:SetXY(pPlot:GetX(), pPlot:GetY())
 						pSUnit:SetMoves(0)
 						pSUnit:ChangeDamage(150)
@@ -1085,7 +1157,7 @@ end
 GameEvents.CanParadropFrom.Add(OnCanParadropFrom)
 
 -- **********************************************************************************************************************************************
--- ¸¡Ê¯ÕÂÓã
+-- æµ®çŸ³ç« é±¼
 -- **********************************************************************************************************************************************
 --local NoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  
 --local AbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  
@@ -1135,7 +1207,7 @@ local PlagueMissionButton = {
 			local zombie = Players[63]:InitUnit(GameInfoTypes["UNIT_ZOMBIE"], city:GetX()+1, city:GetY())
 			zombie:JumpToNearestValidPlot()
 
-			if  city:HasPlague() then   ----ÓĞÎÁÒßÔòÑÓ³¤³ÖĞø
+			if  city:HasPlague() then   ----æœ‰ç˜Ÿç–«åˆ™å»¶é•¿æŒç»­
 				city:ChangePlagueTurns(city:GetPlagueTurns()+8)
 				Events.AudioPlay2DSound("AS2D_PLAGUE")
 			else
@@ -1308,7 +1380,8 @@ function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
   end
   return false
   end
-   return true
+
+    return true
 end
 GameEvents.UnitCanRangeAttackPlot.Add(UnitCanRangeAttackPlot)
 
@@ -1401,7 +1474,7 @@ function Building_EmpireReourceAnds_Check(playerID, buildingID)
 	local condition = "BuildingType = '" .. GameInfo.Buildings[buildingID].Type .. "'";
 	for row in GameInfo.Building_EmpireResourceAnds(condition) do
 		if(player:GetNumResourceAvailable(GameInfoTypes[row.ResourceType], row.AllowsImport) <= 0) then
-			return false; -- ÁĞ³öÍæ¼ÒÎ´ÓµÓĞµÄ×ÊÔ´
+			return false; -- åˆ—å‡ºç©å®¶æœªæ‹¥æœ‰çš„èµ„æº
 		end
 	end
 
@@ -1417,10 +1490,10 @@ function Building_EmpireReourceOrs_Check(playerID, buildingID)
 	
 	local condition = "BuildingType = '" .. GameInfo.Buildings[buildingID].Type .. "'";
 	for row in GameInfo.Building_EmpireResourceOrs(condition) do
-		buildingNotInTable = false; -- ½¨ÖşĞèÒª×ÊÔ´²Å¿É½¨Ôì
+		buildingNotInTable = false; -- å»ºç­‘éœ€è¦èµ„æºæ‰å¯å»ºé€ 
 			
 		if(player:GetNumResourceAvailable(GameInfoTypes[row.ResourceType], row.AllowsImport) > 0) then
-			return true; -- ÁĞ³öÍæ¼ÒÓµÓĞµÄ×ÊÔ´
+			return true; -- åˆ—å‡ºç©å®¶æ‹¥æœ‰çš„èµ„æº
 		end
 	end
 
@@ -1435,7 +1508,7 @@ LuaEvents.Building_EmpireResources_IsInitialized(retVal);
 
 if (retVal.isInitialized == nil) then
 	LuaEvents.Building_EmpireResources_IsInitialized.Add(function (retVal) retVal.isInitialized = true; end);
-	-- ÖÃÈë´úÂë
+	-- ç½®å…¥ä»£ç 
 	GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceAnds_Check);
 	GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceOrs_Check);
 end
@@ -1477,7 +1550,7 @@ GameEvents.CityCanMaintain.Add(Processes_CanMaintain)
 
 
 -- ********************************************************
--- É¾³ıµØÍ¼´íÎó×ÊÔ´
+-- åˆ é™¤åœ°å›¾é”™è¯¯èµ„æº
 -- ********************************************************
 function RemoveErrorResources()
 	-- loop through all plots
@@ -1801,7 +1874,7 @@ end
 --==========================================================================================================================
 --GetUserSetting (DIFFICULTY_9!)
 ----------------------------------------------------------------------------------------------------------------------------
-local gHandicap				= PreGame.GetHandicap(0)  ---ÄÑ¶ÈµÈ¼¶
+local gHandicap				= PreGame.GetHandicap(0)  ---éš¾åº¦ç­‰çº§
 local Difficult				= Game:GetHandicapType()
 local info = GameInfo.HandicapInfos[PreGame.GetHandicap(0)];
 --iModifier = GameInfo.HandicapInfos[Game:GetHandicapType()].BarbarianBonus;
@@ -1978,10 +2051,3 @@ for i=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 GameEvents.PlayerDoTurn.Add(StealTech)
 
 end
-
-
-
-
-
-
-

@@ -187,32 +187,6 @@ GameEvents.GreatWorkCreated.Add(ProduceCopy)
 
 
 
-----------------------------新政策属性----------------------------
-function Knowledge_5or1(playerID)
-    local player = Players[playerID]
-    if player == nil or (not player:IsMajorCiv())
-	then return 
-	end
-
-	----------------------------情报网络----------------------------
-	if player:GetNumSpies() >= 1  and player:HasPolicy(GameInfo.Policies["POLICY_KNOWLEDGE_5"].ID) then
-	local science = 0
-	for k, v in pairs(player:GetEspionageSpies()) do
-	local pSpyPlot = Map.GetPlot(v.CityX, v.CityY)
-	local ecity = pSpyPlot:GetPlotCity() 
-	if ecity:GetOwner() ~= player:GetID() then
-	science = science + math.max(0,ecity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
-		end
-	end
-	local iTeamID = player:GetTeam()
-	local iTeam = Teams[iTeamID]
-	local iTeamTechs = iTeam:GetTeamTechs()
-	ChangeResearchProcess(player, iTeamID, iTeam, iTeamTechs, playerID, science)
-	end
-
-end
-GameEvents.PlayerDoTurn.Add(Knowledge_5or1)
-
 	
 function SLAVE_RAIDING(iPlotX, iPlotY, iPlayer) 
 	local pPlayer = Players[iPlayer]; 
@@ -609,21 +583,16 @@ function GetCultureGain(pPlayer)
 end
 
 
-function MagaBoughtPlot(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)
-    
+function MagaBoughtPlot(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)  
 	local Player = Players[iPlayer]
 	--local plot = Map.GetPlot(iPlotX, iPlotY)
 	local city = Player:GetCityByID(iCity)
-	if (Player:GetCivilizationType() == GameInfoTypes["CIVILIZATION_AMERICA"] ) then
-	
-	local iGain = 0
-
-	if bGold then
-	iGain = GetCultureGain(Player)
+	if Player:GetCivilizationType() == GameInfoTypes["CIVILIZATION_AMERICA"]  then
+	--if bGold then
+	local iGain = GetCultureGain(Player)
 	city:ChangeProduction(20*iGain)
 	Player:ChangeJONSCulture(20*iGain)
-
-	   end
+	  -- end
 	end
 end
 GameEvents.CityBoughtPlot.Add(MagaBoughtPlot)

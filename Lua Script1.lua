@@ -22,6 +22,35 @@
 
 
 
+----------------------------新政策属性----------------------------
+function Knowledge_5or1(playerID)
+    local player = Players[playerID]
+    if player == nil or (not player:IsMajorCiv())
+	then return 
+	end
+
+	----------------------------情报网络----------------------------
+	if player:GetNumSpies() >= 1  and player:HasPolicy(GameInfo.Policies["POLICY_KNOWLEDGE_5"].ID) then
+	local science = 0
+	for k, v in pairs(player:GetEspionageSpies()) do
+	local pSpyPlot = Map.GetPlot(v.CityX, v.CityY)
+	local ecity = pSpyPlot:GetPlotCity() 
+	if ecity:GetOwner() ~= player:GetID() then
+	science = science + math.max(0,ecity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
+		end
+	end
+	local iTeamID = player:GetTeam()
+	local iTeam = Teams[iTeamID]
+	local iTeamTechs = iTeam:GetTeamTechs()
+	ChangeResearchProcess(player, iTeamID, iTeam, iTeamTechs, playerID, science)
+	end
+
+end
+GameEvents.PlayerDoTurn.Add(Knowledge_5or1)
+
+
+
+
 function AddGoodies()
 
 	print("-------------------------------");
@@ -305,5 +334,88 @@ function UathachLoop(pPlayer, pUnit, pPlot)
 	return false
 end
 GameEvents.UnitSetXY.Add(UathachActivate)
+
+
+
+
+
+
+
+
+
+
+
+
+function SpaceBattleCruiserManaForHuman(iPlayer)
+		local pPlayer = Players[iPlayer]
+		if not 	pPlayer:IsHuman() then
+		return
+	         end
+        
+		if  pPlayer:HasWonder(GameInfoTypes.BUILDING_SPACE_FORTRESS) then
+
+				if pUnit:GetUnitType() == BattleCruiser and load(pUnit, "SpaceBattleCruiserEnergy") < 8 then
+
+					local city = pUnit:GetPlot():GetPlotCity() or pUnit:GetPlot():GetWorkingCity();
+					  if city == nil then 
+					    save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+		                end
+
+						  if city ~= nil then 
+						  if city:GetOwner()~=iPlayer  or (not city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]))    then 
+					    save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+		                   end
+						end
+						
+					if city ~= nil and city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]) and city:GetOwner()==iPlayer then
+					 if load(pUnit, "SpaceBattleCruiserEnergy") == 7 then 
+				  	save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+					end
+					  if load(pUnit, "SpaceBattleCruiserEnergy") <7 then 
+					save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 2)
+					   end
+					end
+
+					for i = 0, 8 do
+						pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
+					end
+				end
+			end
+
+   --------------------------------------------------------------------------------------------------------------------------------------------
+           if  pPlayer:HasWonder(GameInfoTypes.BUILDING_SPACE_FORTRESS) then
+
+				if pUnit:GetUnitType() == BattleCruiser and load(pUnit, "SpaceBattleCruiserEnergy") < 18 then
+
+					local city = pUnit:GetPlot():GetPlotCity() or pUnit:GetPlot():GetWorkingCity();
+					  if city == nil then 
+					    save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+		                end
+
+						  if city ~= nil then 
+						  if city:GetOwner()~=iPlayer  or (not city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]))    then 
+					    save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+		                   end
+						end
+						
+					if city ~= nil and city:IsHasBuilding(GameInfoTypes["BUILDING_WAR_MACHINE_FACTORY"]) and city:GetOwner()==iPlayer then
+					  if load(pUnit, "SpaceBattleCruiserEnergy") == 17 then 
+				  	save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 1)
+					end
+					  if load(pUnit, "SpaceBattleCruiserEnergy") <17 then 
+					save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") + 2)
+					   end
+					end
+	
+					for i = 0, 18 do
+				pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
+		     end
+	     end
+     end
+end
+GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
+
+
+
 
 

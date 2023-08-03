@@ -70,6 +70,15 @@ INSERT  INTO Policy_CityLoveKingDayYieldMod(PolicyType,YieldType,Yield)VALUES
 ('POLICY_GRANDEUR_4', 'YIELD_SCIENCE',25),
 ('POLICY_GRANDEUR_4', 'YIELD_GOLD',25);
 
+--情报网络
+INSERT  INTO Policy_BuildingClassYieldChanges(PolicyType,BuildingClassType ,YieldType ,YieldChange)VALUES
+('POLICY_KNOWLEDGE_5', 'BUILDINGCLASS_DUNGEON' ,'YIELD_SCIENCE',2),
+('POLICY_KNOWLEDGE_5', 'BUILDINGCLASS_LOCKUP' ,'YIELD_SCIENCE',2),
+('POLICY_KNOWLEDGE_5', 'BUILDINGCLASS_POLICE_STATION' ,'YIELD_SCIENCE',2);
+
+
+INSERT  INTO Policy_YieldModifierFromActiveSpies(PolicyType,YieldType ,Yield)VALUES
+('POLICY_KNOWLEDGE_5','YIELD_SCIENCE',4);
 
 ------------------------------------------------------------------------------------------------------------------------
 -- 碑铭主义

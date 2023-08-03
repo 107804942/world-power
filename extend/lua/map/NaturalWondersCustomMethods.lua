@@ -571,7 +571,8 @@ function NWCustomPlacement(x, y, row_number, method_number)
 			end
 		end				
 
-		pChosenPlot:SetPlotType(ePlotFlat, false, false)	
+		pChosenPlot:SetPlotType(ePlotFlat, false, false)
+		pChosenPlot:SetResourceType(-1)		
 		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_SALAR_B)
 
 

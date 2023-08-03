@@ -197,10 +197,6 @@ SELECT 'BUILDINGCLASS_PONTDUGARD',					            30 UNION ALL    --加尔桥
 SELECT 'BUILDINGCLASS_NATIONAL_HOSPITAL',					    100 ;   --量子生物学中心
 
 
---INSERT INTO Building_YieldModifiers (BuildingType, YieldType, Yield) 
-
-
-
 ---疾病点数
 INSERT INTO Building_GlobalYieldModifiers(BuildingType, YieldType, Yield) 
 SELECT	b.Type, 'YIELD_DISEASE', -h.Yield 

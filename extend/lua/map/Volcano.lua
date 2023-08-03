@@ -154,16 +154,16 @@ function DoVolcanoEvent(iPlayer)
 	local iVolcanoEvent = ROG_GetTrueRandom(1,1000)
 	local i=3
 
-	if iVolcanoEvent<=50 then
+	if iVolcanoEvent<=30 then
 	DoSmallVolcanoEvent(tPlot)
 	i=0
 
 	elseif
-	iVolcanoEvent>300 and iVolcanoEvent<330 then
+	iVolcanoEvent>300 and iVolcanoEvent<320 then
 	DoLargeVolcanoEvent(tPlot)
 	i=1
 	
-	elseif iVolcanoEvent>=980 then
+	elseif iVolcanoEvent>=990 then
 	DoSuperVolcanoEvent(tPlot)
 	i=2
 	end

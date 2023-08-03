@@ -1267,7 +1267,7 @@
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<Flat>1</Flat>
+			<!--<Flat>1</Flat>-->
 			<XBuiltTriggersIdeologyChoice>1</XBuiltTriggersIdeologyChoice>
 			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>

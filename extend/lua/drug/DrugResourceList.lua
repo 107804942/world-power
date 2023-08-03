@@ -1,10 +1,7 @@
 -- Resource Generator V4.0
 
 
---------------------------------------------------------------
-
---include( "DrugSaveUtils" ); MY_MOD_NAME = "世界强权";
-include( "Rog_SaveUtils" ); MY_MOD_NAME = "世界强权";
+include("Rog_SaveUtils"); MY_MOD_NAME = "世界强权";
 include("DrugResGenerator.lua");
 
 if load(Players[Game.GetActivePlayer()],"Resources_Generation_Completed") ~= nil then

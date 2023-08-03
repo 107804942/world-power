@@ -1683,7 +1683,7 @@
 			<UnitType>UNIT_SIEGE04H</UnitType>
 			<PromotionType>PROMOTION_SPACESHIP</PromotionType>
 		</Row>
-
+	
 
 		<Row>
 			<UnitType>UNIT_SIEGE04H</UnitType>
@@ -1791,8 +1791,14 @@
 			<UnitType>UNIT_SPACESHIP</UnitType>
 			<PromotionType>PROMOTION_AIR_RECON</PromotionType>
 		</Row>
-		
 
+		<Row>
+			<UnitType>UNIT_SPACESHIP</UnitType>
+			<PromotionType>PROMOTION_SPACE_BATTLECRUISER_MANA</PromotionType>
+		</Row>
+		
+		
+		
 		<Row>
 			<UnitType>UNIT_SPACESHIP</UnitType>
 			<PromotionType>PROMOTION_REPAIR</PromotionType>
