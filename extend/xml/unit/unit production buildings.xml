@@ -459,15 +459,7 @@
 			<Where UnitType="UNIT_FUTURE_BATTLESHIP" />
 		</Update>
 
-		
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ZXZCC</BuildingClassType>
-		</Row>
-		
 
-		
-		
 
 	</Unit_BuildingClassRequireds>
 

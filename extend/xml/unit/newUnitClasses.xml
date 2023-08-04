@@ -192,12 +192,6 @@
 		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
 		<Delete UnitClassType="UNITCLASS_NAVAL_MILITIA"/>
 
-		
-		<Row>
-			<CivilizationType>CIVILIZATION_AMERICA</CivilizationType>
-			<UnitClassType>UNITCLASS_MODERN_DESTROYER</UnitClassType>
-			<UnitType>UNIT_DDG1000</UnitType>
-		</Row>
 
 
 		<!--************ 禁止城邦野蛮人建造**********************************	-->

@@ -214,6 +214,27 @@
 
 
 
+			<!--大农场-->
+			<Row>
+				<Type>BUILDING_AMERICA_RANCH</Type>
+				<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
+				<Cost>70</Cost>
+				<ConquestProb>80</ConquestProb>
+				<GoldMaintenance>3</GoldMaintenance>
+				<PrereqTech>TECH_HORSEBACK_RIDING</PrereqTech>
+				<Description>TXT_KEY_BUILDING_AMERICA_RANCH</Description>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_AMERICA_RANCH_TEXT</Civilopedia>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+				<Help>TXT_KEY_BUILDING_AMERICA_RANCH_HELP</Help>
+				<ArtDefineTag>ART_DEF_BUILDING_STABLE</ArtDefineTag>
+				<MinAreaSize>-1</MinAreaSize>
+				<HurryCostModifier>25</HurryCostModifier>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>75</PortraitIndex>
+				<EnhancedYieldTech>TECH_INTERNET</EnhancedYieldTech>
+				<TechEnhancedTourism>2</TechEnhancedTourism>
+			</Row>
+
 
 			<!--卫生局-->
 			<Row>

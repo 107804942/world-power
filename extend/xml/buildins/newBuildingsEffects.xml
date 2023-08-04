@@ -160,6 +160,24 @@
 	<!--*********************建筑需要关联资源 ********************-->
 	<Building_LocalResourceOrs>
 
+		<!--*****大农场*****-->
+
+		<Row>
+			<BuildingType>BUILDING_AMERICA_RANCH</BuildingType>
+			<ResourceType>RESOURCE_HORSE</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AMERICA_RANCH</BuildingType>
+			<ResourceType>RESOURCE_SHEEP</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AMERICA_RANCH</BuildingType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_AMERICA_RANCH</BuildingType>
+			<ResourceType>RESOURCE_BISON</ResourceType>
+		</Row>
 		
 		<!--*****植物油工厂*****-->
 		<Row>

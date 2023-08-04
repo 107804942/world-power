@@ -22,22 +22,6 @@ local ceil					= math.ceil
 local defineCIDHealthPlagueMinThreshold		   = 150
 if Game then defineCIDHealthPlagueMinThreshold = (GameDefines["HEALTH_PLAGUE_MIN_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 150) end
 
---=======================================================================================================================
--- UTILITIES
---=======================================================================================================================
-function CityCanMaintainHealth(iPlayer, iCity, iProcess) 
-  if (iProcess == GameInfoTypes.PROCESS_HEALTH) then
-    local pPlayer = Players[iPlayer]
-
-	if (not pPlayer:IsHuman()) then
-	   return false
-	end
-  end
-  return true
-end
-GameEvents.CityCanMaintain.Add(CityCanMaintainHealth) 
-
-
 --------------------------------------------------------------------
 --健康度
 --------------------------------------------------------------------
@@ -53,7 +37,6 @@ function GetNumTurn (player,city)
 	if  city:IsHasBuilding(GameInfoTypes.BUILDING_LOCAL_HOSPITAL) then ---有医馆
 		mathcheck=mathcheck-0.25
 	end
-
 	return ceil(mathcheck*NumTurn)
 end
 
@@ -72,11 +55,6 @@ function GetHealthYieldBuff(player,city,leftHealth)
 	end
     return leftHealth
 end
-
-
-
---if not bNoPlagues then  --确认开启健康度系统
-
 
 --------------------------------------------------------------------
 --杀死人口
@@ -130,28 +108,24 @@ end
 function Health_PlayerDoTurn(playerID)
 	local player = Players[playerID]
 	if (not player:IsAlive()) then return end
-	--if (not bAbandonCity) then return end  --确认开启瘟疫爆发系统	
 	if (not player:IsMajorCiv())  then return end 
 	for city in player:Cities() do
 		local totalHealth, totalDisease = player:GetCityHealthTotal(city, true) ---健康点数与疾病点数
+		local plagueCounter, plagueThreshold, plagueTurns = player:GetCityPlagueCounterDetails(city, true, true)
+        local leftHealth = totalHealth - totalDisease
 
-
-
-		if (not city:HasPlague()) then   ---城市当前无瘟疫
-			local plagueCounter, plagueThreshold, plagueTurns = player:GetCityPlagueCounterDetails(city, true, true)
-
-			local leftHealth = totalHealth - totalDisease
-
+		if  player:IsHuman() then 
 			city:SetYieldModifierFromHealth(yieldFoodID, 0) 
 	        city:SetYieldFromHealth(yieldFoodID, 0)
 			city:SetYieldModifierFromHealth(yieldGoldID, GetHealthYieldBuff(player,city,leftHealth)) 
-			city:SetYieldFromHealth(yieldGoldID, GetHealthYieldBuff(player,city,leftHealth))
-
+			city:SetYieldFromHealth(yieldGoldID, GetHealthYieldBuff(player,city,leftHealth))	
 			if leftHealth<0 then
 	        city:SetYieldModifierFromHealth(yieldFoodID, GetHealthYieldBuff(player,city,leftHealth)) 
 	        city:SetYieldFromHealth(yieldFoodID, GetHealthYieldBuff(player,city,leftHealth))
 	        end
+        end
 
+		if (not city:HasPlague()) then   ---城市当前无瘟疫
 			----------情形1
 			if leftHealth > 0 then    --健康度富余
 				if plagueCounter > 0 then     ---已有累计进度
@@ -177,7 +151,7 @@ function Health_PlayerDoTurn(playerID)
 					--SendNotification(playerID, "NOTIFICATION_PLAGUE", Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_IMMINENT_NOTIFICATION", city:GetName(), plagueTurns), Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_IMMINENT_NOTIFICATION_SHORT", city:GetName()), false, city:GetX(), city:GetY())
 				end
 			end
-
+        -------------------------------------------------------------------------------------------------------------------
 		else
 			if city:GetPlagueTurns() == 0 then
 				Health_PlagueEnds(city)
@@ -194,8 +168,6 @@ function Health_PlayerDoTurn(playerID)
 	end
 end
 GameEvents.PlayerDoTurn.Add(Health_PlayerDoTurn)
-
-
 
 
 --------------------------------------------------------------------
@@ -230,7 +202,6 @@ end
 function Health_PlagueEnds(city)
 	local player = Players[city:GetOwner()]
 	local plagueID=city:GetPlagueType()
-
 	 -- Notification
 	if player:IsHuman() and plagueID ~= -1 then
 	local plague = GameInfo.Plagues[plagueID]
@@ -239,13 +210,10 @@ function Health_PlagueEnds(city)
 	player:AddNotification(NotificationTypes.NOTIFICATION_INSTANT_YIELD, text, heading,city:GetX(),city:GetY())
 	Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
 	end
-
 	city:SetAdditionalFood(0)
 	city:SetPlagueType(-1)
 	city:SetPlagueCounter(0)
-	--end
 end
-
 
 
 --Health_PlagueBegins
@@ -260,9 +228,7 @@ function Health_PlagueBegins(city)
 	local heading = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_NOTIFICATION_SHORT")
 	local text = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_NOTIFICATION",plague.IconString,plague.Description, city:GetName())
 	player:AddNotification(NotificationTypes.NOTIFICATION_PLAGUE, text, heading, city:GetX(),city:GetY());
-	--player:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, iX, iY) 
 	end
-
 	Events.AudioPlay2DSound("AS2D_PLAGUE")
 end
 
@@ -274,22 +240,17 @@ local CUSTOM_MISSION_NO_ACTION		 = 0
 local CUSTOM_MISSION_ACTION			 = 1
 local CUSTOM_MISSION_DONE            = 2
 local CUSTOM_MISSION_ACTION_AND_DONE = 3
-
-
  function IsHealthPlayer(player)
-
 		for city in player:Cities() do
 	    if	city:HasPlague() then
         return false
 		   end
 		end
-
 		for unit in player:Units() do 
 	    if	unit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED) then
 		return false
 		   end
 		end
-
   return true
 end
 
@@ -308,7 +269,6 @@ function GREAT_DOCTOR_MissionPossible(playerID, unitID, missionID, data1, data2,
 			return true
 		end
 
-
 	elseif missionID == GameInfoTypes["MISSION_GREAT_DOCTOR_CURE"] then
 		local unit = player:GetUnitByID(unitID)
 		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_GREAT_DOCTOR"]   then
@@ -320,14 +280,10 @@ function GREAT_DOCTOR_MissionPossible(playerID, unitID, missionID, data1, data2,
 			return true
 		end
 
-
 	end
 	return false
 end
 GameEvents.CustomMissionPossible.Add(GREAT_DOCTOR_MissionPossible)
-
-
-
 
 
 function Health_MissionPossible(playerID, unitID, missionID, data1, data2, _, _, plotX, plotY, bTestVisible)
@@ -385,28 +341,23 @@ function IsNearDiseaseUnit(unit)
 	return false
 end
 
-
 -- Health_MissionStart
 function Health_MissionStart(playerID, unitID, missionID, data1, data2, flags, turn)
 	local player = Players[playerID]
 	local unit = player:GetUnitByID(unitID)
 	local city = unit:GetPlot():GetPlotCity()
-	if missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"] then
+	if missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"]     then
 		Health_CurePlagueMission(playerID, unit, city)
 		return CUSTOM_MISSION_ACTION
-
 	elseif missionID == GameInfoTypes["MISSION_DOCTOR_CURE_UNIT"] then
 		Health_GrantPopulationMission(playerID, unit)
 		return CUSTOM_MISSION_ACTION
-
-	elseif missionID == GameInfoTypes["MISSION_CONSTRUCT_CITY"] then
+	elseif missionID == GameInfoTypes["MISSION_CONSTRUCT_CITY"]   then
 		GREAT_DOCTOR_CONSTRUCT_Mission(playerID, unit, city)
 		return CUSTOM_MISSION_ACTION
-
-	elseif missionID == GameInfoTypes["MISSION_GREAT_DOCTOR_CURE"] then
+	elseif missionID == GameInfoTypes["MISSION_GREAT_DOCTOR_CURE"]then
 		GREAT_DOCTOR_CURE_Mission(playerID, unit)
 		return CUSTOM_MISSION_ACTION
-
 	end
 	return CUSTOM_MISSION_NO_ACTION
 end
@@ -415,7 +366,7 @@ GameEvents.CustomMissionStart.Add(Health_MissionStart)
 -- Health_MissionComplete
 function Health_MissionComplete(playerID, unitID, missionID, data1, data2, flags, turn)
     local player = Players[playerID]
-    if (missionID == GameInfoTypes["MISSION_DOCTOR_CURE_UNIT"] or missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"]
+    if (missionID == GameInfoTypes["MISSION_DOCTOR_CURE_UNIT"]  or missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"]
 	or  missionID == GameInfoTypes["MISSION_GREAT_DOCTOR_CURE"] or missionID == GameInfoTypes["MISSION_CONSTRUCT_CITY"]) then 
 	return true 
 	end
@@ -427,7 +378,6 @@ GameEvents.CustomMissionCompleted.Add(Health_MissionComplete)
 ------------------------------------------------------------------------------------------------------------------------
 -- GREAT PEOPLE UTILS
 ------------------------------------------------------------------------------------------------------------------------
-
 function GREAT_DOCTOR_CURE_Mission(playerID, unit)
 
     local player = Players[playerID]
@@ -468,7 +418,7 @@ function GREAT_DOCTOR_CONSTRUCT_Mission(playerID, unit, city)
 		player:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plot:GetX(),plot:GetY());
 		Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
 	end 
-		unit:Kill();  
+		unit:Kill()
 end
 
 
@@ -568,12 +518,7 @@ function GetCityPlagueTypeToSpawn(city)
 	end
 	plagueID = plagues[Game.GetRandom(1,#plagues)]
 	return plagueID or plagueBubonicID
-
-
 end
-
-
-
 
 
 function CitySetDoctor(iPlayer)
@@ -589,8 +534,6 @@ function CitySetDoctor(iPlayer)
 	local plaguecityTAB ={}
 	local DoctorTAB ={}	
 	local GreatDoctorTAB ={}	
-	--local NumCanUse=0 	
-
 	------Auto add doctor to cure
 	for city in player:Cities() do		
 	if  city:HasPlague()  then ------城市处于瘟疫
@@ -609,10 +552,8 @@ function CitySetDoctor(iPlayer)
 	table.insert(GreatDoctorTAB, unit)
 		end
 	end
-
 	---------------------------------------------区分不同情况----------------------------------
 	if  #plaguecityTAB > 0 then  ---存在瘟疫城市（大前提）
-
 
 	if  #DoctorTAB > 0  then   ---有普通医生
 	    if  #GreatDoctorTAB == 0 then   ---无大医学家
@@ -662,10 +603,10 @@ function CitySetDoctor(iPlayer)
 	      end
 	   end
 	end
-end-------------Function End
+end
 GameEvents.PlayerDoneTurn.Add(CitySetDoctor)
 
---end
+
 
 
 

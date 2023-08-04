@@ -20,6 +20,19 @@
 --}
 --#endif
 
+--=======================================================================================================================
+-- UTILITIES
+--=======================================================================================================================
+function CityCanMaintainHealth(iPlayer, iCity, iProcess) 
+  if (iProcess == GameInfoTypes.PROCESS_HEALTH) then
+    local pPlayer = Players[iPlayer]
+	if (not pPlayer:IsHuman()) then
+	   return false
+	end
+  end
+  return true
+end
+GameEvents.CityCanMaintain.Add(CityCanMaintainHealth) 
 
 
 ----------------------------新政策属性----------------------------

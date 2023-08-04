@@ -516,7 +516,13 @@
 			<BuildingType>BUILDING_LODGE</BuildingType>
 		</Row>
 
-		
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_AMERICA</CivilizationType>
+			<BuildingClassType>BUILDINGCLASS_STABLE</BuildingClassType>
+			<BuildingType>BUILDING_AMERICA_RANCH</BuildingType>
+		</Row>
 	</Civilization_BuildingClassOverrides>
 
 

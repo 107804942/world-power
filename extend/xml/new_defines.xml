@@ -73,7 +73,6 @@
 		<Replace Name="EVENTS_GREAT_WORK_CREATED" Value="1"/>
 		<Replace Name="EVENTS_GREAT_PEOPLE_BOOST" Value="1"/>
 		<Replace Name="EVENTS_CITY_RANGE_STRIKE" Value="1"/>
-		<Replace Name="EVENTS_UNIT_DO_TURN" Value="1"/>
 		<Replace Name="EVENTS_IMPROVEMENTS_PILLAGED" Value="1"/>
 		<Replace Name="EVENTS_UNIT_CAN_RANGEATTACK" Value="1"/>
 		<Replace Name="EVENTS_UNIT_MOVE" Value="1"/>
@@ -97,15 +96,10 @@
 		<Replace Name="RELIGION_LOCAL_RELIGIONS" Value="1"/>
 		<Replace Name="EVENTS_ACQUIRE_BELIEFS" Value="1"/>
 		<Replace Name="EVENTS_RELIGION" Value="1"/>
-
 		<!--<Replace Name="TRAITS_ANY_BELIEF" Value="1"/>-->
 		
 		<!-- Fixes the very dodgy maths in the calculation of a unit's power (v19) -->
 		<Replace Name="BUGFIX_INTERCEPTOR_STRENGTH" Value="1"/>
-		<!-- Fixes the Anti-Air non-domain bonuses issue, requires BUGFIX_UNIT_POWER_CALC to be enabled -->
-		<Replace Name="BUGFIX_UNIT_POWER_CALC" Value="1"/>
-		<Replace Name="BUGFIX_UNIT_POWER_BONUS_VS_DOMAIN_ONLY" Value="1"/>
-		<Replace Name="BUGFIX_UNIT_POWER_NAVAL_CONSISTENCY" Value="1"/>
 		<Replace Name="BUGFIX_REMOVE_GHOST_ROUTES" Value="1"/>
 		
 		<Replace Name="GLOBAL_SEPARATE_GP_COUNTERS" Value="1"/>
@@ -121,7 +115,7 @@
 		<Replace Name="EVENTS_IDEOLOGIES" Value="1"/>
 		<Replace Name="EVENTS_LIBERATION" Value="1"/>
 
-		<Replace Name="EVENTS_WAR_AND_PEACE" Value="1"/>
+		<!--<Replace Name="EVENTS_WAR_AND_PEACE" Value="1"/>-->
 		<Replace Name="EVENTS_CITY" Value="1"/>
 		<Replace Name="EVENTS_PLAYER_TURN" Value="1"/>
 		<Replace Name="EVENTS_BATTLES_DAMAGE" Value="1"/>

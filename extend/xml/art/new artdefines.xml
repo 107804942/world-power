@@ -910,67 +910,6 @@
 	
 	
 
-
-	<!--DDG1000-->
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_DDG1000</Type>
-			<DamageStates>1</DamageStates>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_DDG1000</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_DDG1000</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_DDG1000</Type>
-			<Scale>0.05</Scale>
-			<Model>ddg1000.fxsxml</Model>
-			<Domain>Sea</Domain>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_DDG1000</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasLongRangedAttack>1</HasLongRangedAttack>
-			<HasStationaryMelee>1</HasStationaryMelee>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_DDG1000</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_DDG1000</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<ProjectileSpeed>4.0</ProjectileSpeed>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-
-
-
-
-
 	<!--卫士火箭炮-->
 
 	<ArtDefine_UnitInfos>

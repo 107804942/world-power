@@ -60,55 +60,7 @@
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 		</Row>
 
-		<Row>
-			<Class>UNITCLASS_MODERN_DESTROYER</Class>
-			<Type>UNIT_DDG1000</Type>
-			<PrereqTech>TECH_ROBOTICS</PrereqTech>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>330</Combat>
-			<RangedCombat>330</RangedCombat>
-			<ObsoleteTech>TECH_CYBERNETICS</ObsoleteTech>
-			<Cost>1350</Cost>
-			<Moves>11</Moves>
-			<Range>2</Range>
-			<AirInterceptRange>3</AirInterceptRange>
-			<HurryCostModifier>50</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_NAVALMELEE</CombatClass>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_DDG1000</Description>
-			<Civilopedia>TXT_KEY_UNIT_DDG1000_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_NAVALMELEE_SHIPS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>80</AdvancedStartCost>
-			<MinAreaSize>16</MinAreaSize>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_DDG1000</UnitArtInfo>
-			<UnitFlagIconOffset>8</UnitFlagIconOffset>
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>49</PortraitIndex>
-			<MoveRate>BOAT</MoveRate>
-			<ExtraMaintenanceCost>250</ExtraMaintenanceCost>
-			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-		</Row>
 		
-		
-	
-
-		
-
-
-
-
-
 
 		<!--****************驱逐舰****************-->
 
@@ -361,42 +313,7 @@
 		</Row>
 
 
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<PromotionType>PROMOTION_MARCH</PromotionType>
-		</Row>
 
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<PromotionType>PROMOTION_DESTROYER_COMBAT</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<PromotionType>PROMOTION_CARGO_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<PromotionType>PROMOTION_EXTRA_SIGHT_I</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<PromotionType>PROMOTION_INVISIBLE_DESTROYER</PromotionType>
-		</Row>
-
-
-
-		
 
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
@@ -537,20 +454,7 @@
 			<Cost>7</Cost>
 		</Row>
 		
-
-
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>8</Cost>
-		</Row>
-
+		
 
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
@@ -694,17 +598,6 @@
 		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
 	
 
-
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
-		</Row>
-
-
 		
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
@@ -762,34 +655,6 @@
 
 
 	
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>110</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
-			<Flavor>60</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>130</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
-			<Flavor>40</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_DDG1000</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>150</Flavor>
-		</Row>
-
-
-
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_NUKE</FlavorType>

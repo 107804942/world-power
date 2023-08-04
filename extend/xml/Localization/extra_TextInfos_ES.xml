@@ -5802,18 +5802,6 @@
 			<Text>对[COLOR_POSITIVE_TEXT]核攻击[ENDCOLOR]免疫,该单位不可被远程攻击</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_DDG1000">
-			<Text>朱姆沃尔特级驱逐舰</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DDG1000_HEADING">
-			<Text>朱姆沃尔特级驱逐舰</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_DDG1000_PEDIA">
-			<Text>
-				朱姆沃尔特级驱逐舰(英语:Zumwalt-class destroyer，中文:朱姆沃尔特级驱逐舰)是美国海军新一代多用途对地打击宙斯盾舰。本级舰从舰体设计、电机动力、指管通情、网络通信、侦测导航、武器系统等，无一不是超越当代、全新研发的尖端科技结晶，展现了美国海军的科技实力、财力的雄厚以及设计思想上的前瞻，是美国海军的新世代主力水面舰艇。2016年10月15日，朱姆沃尔特号驱逐舰正式服役。
-			</Text>
-		</Row>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_DESTROYER">
@@ -9056,7 +9044,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SOVIET_PALACE_HELP">
 			<Text>
-				建成后可自选一个伟人，所有工厂+15%[ICON_PRODUCTION]产能，公立学校+15%[ICON_RESEARCH]科研。提供50份[ICON_RES_MANPOWER]人力资源，提供25份[ICON_RES_IRON]铁、[ICON_RES_OIL]石油、[ICON_RES_ALUMINUM]铝、[ICON_RES_GUNPOWDER]火药、[ICON_RES_URANIUM]铀资源。每条秩序政策+2[ICON_HAPPINESS_1]快乐、+5[ICON_RESEARCH]科研、+5[ICON_PRODUCTION]产能、+5[ICON_CULTURE]文化。可根据市政厅等级提供额外[ICON_CULTURE]文化产出，单位在友方领土内+25%[ICON_STRENGTH]战斗力，所有城市防御效率+33%，只能在首都建造。
+				建成后可自选一个伟人，所有工厂+15%[ICON_PRODUCTION]产能，公立学校+15%[ICON_RESEARCH]科研。提供50份[ICON_RES_MANPOWER]人力资源，提供25份[ICON_RES_IRON]铁、[ICON_RES_OIL]石油、[ICON_RES_ALUMINUM]铝、[ICON_RES_GUNPOWDER]火药、[ICON_RES_URANIUM]铀资源。每条秩序政策+2[ICON_HAPPINESS_1]快乐、+5[ICON_RESEARCH]科研、+5[ICON_PRODUCTION]产能、+5[ICON_CULTURE]文化。可根据市政厅等级提供额外[ICON_CULTURE]文化产出，单位在友方领土内+25%[ICON_STRENGTH]战斗力，所有城市防御效率+33%。
 			</Text>
 		</Row>
 
@@ -10435,6 +10423,24 @@
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_LODGE_TEXT">
 			<Text>
 				民宿是指利用自用住宅空闲房间，结合当地人文、自然景观、生态、环境资源及农林渔牧生产活动，以家庭副业方式经营，提供旅客乡野生活的住所。民宿不同于传统的饭店旅馆，它能让人体验当地风情、感受民宿主人的热情与服务、并体验有别于以往的生活。民宿可以说是农家乐的精致版，通过地方政府统一管理，由民宿主人个体经营的一种模式，这种经营模式可以发动社区全民参与，其盈利效益非常可观。
+			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_BUILDING_AMERICA_RANCH">
+			<Text>
+				[ICON_FOOD][ICON_PRODUCTION]大农场
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AMERICA_RANCH_HELP">
+			<Text>
+				提供额外5单位[ICON_RES_HORSE]马资源。替代马厩，不会过时。[NEWLINE][NEWLINE]本城+3[ICON_PRODUCTION]产能，+3[ICON_FOOD]食物。每处[ICON_RES_BISON]野牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马+2[ICON_FOOD]食物，+2[ICON_GOLD]金钱，+2[ICON_PRODUCTION]产能。骑乘单位，移民单位，工人单位建造速率+33%。[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。[NEWLINE][NEWLINE]本城每处农场、牧场+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_AMERICA_RANCH_TEXT">
+			<Text>
+				农场，指农业生产单位、生产组织或生产企业，以从事农业生产或畜牧养殖为主，经营各种农产品和畜牧产品，"大家种有机农场"。
+				[NEWLINE]农场可以作为一个企业，由个人、家庭或社群所有和经营，或由联合体、公司所有和经营，农场的规模可以从数亩到成百上千公顷不等，在美洲，一个农场的规模大的可以大到几万公顷或几十万公顷。
 			</Text>
 		</Row>
 
