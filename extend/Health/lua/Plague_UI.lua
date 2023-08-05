@@ -3,10 +3,8 @@ LuaEvents.Player = LuaEvents.Player		or function(player)	 end
 LuaEvents.City	 = LuaEvents.City		or function(city)	 end
 
 
---local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)
-
 local gHandicap			= (PreGame.GetHandicap(0) > 0) and PreGame.GetHandicap(0) or 1
---£¨DUEL 0.4 ¡¢TINY 0.56¡¢SMALL 0.66¡¢STANDARD 0.8 ¡¢LARGE 1.04 ¡¢HUGE 1.28£©
+
 local insert			= table.insert 
 local concat			= table.concat
 local ceil				= math.ceil

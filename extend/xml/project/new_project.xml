@@ -208,10 +208,6 @@
 	</Process_Flavors>
 
 
-
-
-	
-
 	<Projects>
 
 		<Row>
@@ -379,20 +375,6 @@
 			<PortraitIndex>29</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
-		
-		<!--<Row>
-			<Type>PROJECT_LEVTANK</Type>
-			<Description>TXT_KEY_PROJECT_LEVTANK</Description>
-			<Help>TXT_KEY_PROJECT_LEVTANK_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_LEVTANK_PEDIA</Civilopedia>
-			<TechPrereq>TECH_EARTH</TechPrereq>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-			<MaxTeamInstances>1</MaxTeamInstances>
-			<Cost>900</Cost>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>-->
-
 
 
 		<Row>
@@ -503,19 +485,6 @@
 		</Row>
 
 
-		<!--<Row>
-			<Type>PROJECT_HUGE_BOMB</Type>
-			<Description>TXT_KEY_PROJECT_HUGE_BOMB</Description>
-			<Help>TXT_KEY_PROJECT_HUGE_BOMB_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_HUGE_BOMB_PEDIA</Civilopedia>
-			<TechPrereq>TECH_ADVANCED_BALLISTICS</TechPrereq>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-			<MaxTeamInstances>1</MaxTeamInstances>
-			<Cost>800</Cost>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>-->
-
 
 		<Update>
 			<Set TechPrereq="NULL" Cost="-1"/>
@@ -545,8 +514,24 @@
 			<Where Type="PROJECT_TASKFORCE141"/>
 		</Update>
 
-		
 
+
+		<Row>
+			<Type>PROJECT_COMMOM_ORGANIZED</Type>
+			<Description>TXT_KEY_PROJECT_COMMOM_ORGANIZED</Description>
+			<Help>TXT_KEY_PROJECT_COMMOM_ORGANIZED_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA</Civilopedia>
+			<TechPrereq>TECH_EXPLORATION2</TechPrereq>
+			<MaxGlobalInstances>-1</MaxGlobalInstances>
+			<MaxTeamInstances>-1</MaxTeamInstances>
+			<Cost>450</Cost>
+			<Maintenance>8</Maintenance>
+			<!--<CostScalerEra>600</CostScalerEra>-->
+			<CityMaxNum>3</CityMaxNum>
+			<CostScalerNumRepeats>1000</CostScalerNumRepeats>
+			<PortraitIndex>77</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+		</Row>
 
 
 	</Projects>
@@ -558,6 +543,17 @@
 
 		<Delete ProjectType="PROJECT_BAZOOKA_TRAINING"/>
 
+		<Row>
+			<ProjectType>PROJECT_COMMOM_ORGANIZED</ProjectType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_COMMOM_ORGANIZED</ProjectType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		
 
 		<Row>
 			<ProjectType>PROJECT_BLIALI</ProjectType>

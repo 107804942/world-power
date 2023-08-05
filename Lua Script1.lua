@@ -3,6 +3,15 @@
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------
 
+	if IsCivBE then
+		-- Affinity Level Requirement
+		for affinityPrereq in GameInfo.Project_AffinityPrereqs{ ProjectType = project.Type } do
+			local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
+			if affinityInfo then
+				insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_REQUIRED", affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "?", affinityInfo.Description or "???" ) )
+			end
+		end
+	end
 
 --GetEspionageSpies
 

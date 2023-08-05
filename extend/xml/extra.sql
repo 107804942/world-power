@@ -26,6 +26,16 @@ WHERE Type IN ('WORLD_POWER_PATCH')
 AND EXISTS (SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_KGB');
 
 
+
+INSERT INTO Project_YieldModifiers(ProjectType,YieldType, Yield)VALUES
+('PROJECT_COMMOM_ORGANIZED', 'YIELD_DISEASE',-20),
+('PROJECT_COMMOM_ORGANIZED', 'YIELD_SCIENCE',5);
+
+INSERT INTO Project_YieldChanges(ProjectType,YieldType, Yield)VALUES
+('PROJECT_COMMOM_ORGANIZED', 'YIELD_DISEASE',-5),
+('PROJECT_COMMOM_ORGANIZED', 'YIELD_PRODUCTION',10);
+
+
 ------------------------------------------------------------------------------------------------------------------------
 -- ³ÇÊÐ¹¥»÷¾àÀë
 ------------------------------------------------------------------------------------------------------------------------

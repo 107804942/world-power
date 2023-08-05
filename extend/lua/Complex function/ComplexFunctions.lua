@@ -29,10 +29,7 @@ local ANGEnergy =
 	 [4] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_4, [5] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_5}
 
 
-local BattleCruiser = GameInfoTypes["UNIT_SPACESHIP"]
-
-
-	local ATBTEnergy = 
+local ATBTEnergy = 
 	{[0] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA,   [1] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_1, 
 	 [2] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_2, [3] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_3,
 	 [4] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_4, [5] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_5, 
@@ -51,7 +48,7 @@ function SpaceBattleCruiserManaForHuman(iPlayer)
 		return
 	         end
 		for pUnit in pPlayer:Units() do  
-		if pUnit:GetUnitType() == BattleCruiser then
+		if pUnit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 		local iSpaceBattleCruiserEnergy = load(pUnit, "SpaceBattleCruiserEnergy") or 0
 		if iSpaceBattleCruiserEnergy< 17 then
 				save(pUnit, "SpaceBattleCruiserEnergy", iSpaceBattleCruiserEnergy + 2)       
@@ -93,7 +90,7 @@ GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
 function DisplayCruiserHitArrow()
 
 	local unit = UI.GetHeadSelectedUnit();
-	if unit and unit:GetUnitType() == BattleCruiser then
+	if unit and unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 		attacker = unit
 	end
 	
@@ -134,7 +131,7 @@ local SpaceBattleCruiserMissionButton = {
 			if unit:GetMoves() <= 0 then
 				return false
 			end
-				if unit:GetUnitType() == BattleCruiser then
+				if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 					return true
 				else
 					return false
@@ -164,7 +161,7 @@ function ShowNukeArrow( PlotX, PlotY )
 	--find the selected attacker
 	local unit = UI.GetHeadSelectedUnit();
 
-	if unit and unit:GetUnitType() == BattleCruiser then
+	if unit and unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 		attacker = unit
 	end
 	
@@ -189,7 +186,7 @@ function ShowNukeHitPlot()
 	local hexID = ToHexFromGrid( Vector2( pFromPlot:GetX(), pFromPlot:GetY()) );
 
 
-	if unit and unit:GetUnitType() == BattleCruiser then
+	if unit and unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 		Cruiser = unit
 	end
 	
@@ -230,7 +227,7 @@ local SpaceBattleCruiserMissionButton2 = {
 			if unit:GetMoves() <= 0 then
 				return false
 			end
-				if unit:GetUnitType() == BattleCruiser then
+				if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 					return true
 				else
 					return false
@@ -573,7 +570,7 @@ LuaEvents.UnitPanelActionAddin(PlotHitMissionButton);
 function ShowNukeArrow( PlotX, PlotY )
 	--find the selected attacker
 	local unit = UI.GetHeadSelectedUnit();
-	if unit and unit:GetUnitType() == BattleCruiser then
+	if unit and unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 		attacker = unit
 	end
 	
@@ -701,7 +698,7 @@ function InputHandler( uiMsg, wParam, lParam )
 				--------------------------------------------------
 				if SpaceBattleCruiserSkill == 1 then
 				  local pUnit = UI.GetHeadSelectedUnit()
-					if pUnit:GetUnitType() == BattleCruiser  then
+					if pUnit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"]  then
                     -------------------------------------------------- 
 					if pPlot:GetNumUnits()>0 and not pPlot:IsCity() then
                     for i = 0, pPlot:GetNumUnits() - 1 do
@@ -785,7 +782,7 @@ function InputHandler( uiMsg, wParam, lParam )
 				--------------------------------------------------------------------------------------
 				elseif SpaceBattleCruiserSkill == 2 then
 					    local pUnit = UI.GetHeadSelectedUnit()
-						if pUnit:GetUnitType() == BattleCruiser then
+						if pUnit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 
 						if pPlot~=pUnit:GetPlot()  then
 						local plotDistance = Map.PlotDistance(pUnit:GetX(),pUnit:GetY(), pPlot:GetX(), pPlot:GetY());

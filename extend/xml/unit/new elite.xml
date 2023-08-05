@@ -1555,10 +1555,6 @@
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 		
-		<!--<Row>
-			<UnitType>UNIT_CHINA_FIRE_CANNON</UnitType>
-			<PromotionType>PROMOTION_PENETRATE</PromotionType>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_CHINA_FIRE_CANNON</UnitType>

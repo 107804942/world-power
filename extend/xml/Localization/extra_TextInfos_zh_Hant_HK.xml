@@ -33,7 +33,9 @@
 		<Row Tag="TXT_KEY_EXTRA_RESOURCES_VALUE_HELP">
 			<Text>工程师+1[ICON_RES_ELECTRICITY]电力。</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_GOLD_COST_LABEL">
+			<Text>维护费：</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_AI_ATTACK_CITY">
 			<Text>战斗补偿</Text>
@@ -10482,7 +10484,20 @@
 				[NEWLINE]农场可以作为一个企业，由个人、家庭或社群所有和经营，或由联合体、公司所有和经营，农场的规模可以从数亩到成百上千公顷不等，在美洲，一个农场的规模大的可以大到几万公顷或几十万公顷。
 			</Text>
 		</Row>
-	
+
+
+		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED">
+			<Text>公共工程</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_HELP">
+			<Text>
+				本城+10[ICON_PRODUCTION]产能，+5%[ICON_PRODUCTION]产能,-5[ICON_DISEASE]疾病，-20%[ICON_DISEASE]疾病。每座城市可重复建造3次，但每次建造后会使建造成本+1000[ICON_PRODUCTION]产能。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA">
+			<Text>公共工程是行政主体为了公共利益对不动产所进行的工程活动，以及其他人为实现行政主体的意图对不动产进行的以公共利益为目的工程活动。必须具备下述条件：1.以不动产为对象。非物质的活动不是工程，不动产的范围包括按自然性质的不动产和按用途作用的不动产。2.以公共利益为目的。行政主体为了公共利益的目的而实施，具有特殊的权力。行政主体纯粹为了财政收入百的管理私产的工程，不是公共工程。3.由行政主体自己实施或他人为行政主体意图而实施。他人实施，但以行政主体因此得到利益作为工程的目的，即为行政主体的打算而进行的工程。</Text>
+		</Row>
+		
 	</Language_zh_Hant_HK>
 
 

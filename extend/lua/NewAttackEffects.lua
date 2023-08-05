@@ -1,7 +1,6 @@
 include("FLuaVector.lua")
 include("PlotIterators.lua")
 include("FunctionUtilities.lua")
-include( "UtilityFunctions.lua")
 include("Rog_SaveUtils.lua"); MY_MOD_NAME = "世界强权";
 --------------------------------------------------------------------------------------------------------------------------
 --新效果
@@ -150,16 +149,17 @@ if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FIRE_WEAPON"].ID)  
       local iTileRadius = 2
       for iShiftX = -iTileRadius, iTileRadius do
 	  for iShiftY = -iTileRadius, iTileRadius do
-	  local pTargetPlot = Map.PlotXYWithRangeCheck(iX, iY, iShiftX, iShiftY, 1)
+	  local pTargetPlot = Map.PlotXYWithRangeCheck(plotX, plotY, iShiftX, iShiftY, 1)
       if pTargetPlot ~= nil then
       local unitCount = pTargetPlot:GetNumUnits()
       if unitCount > 0 then
       for i = 0, unitCount-1, 1 do
       local pFoundUnit = pTargetPlot:GetUnit(i)
-	  if pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_SEA  
-	  and not pFoundUnit:IsImmuneNegtivePromotions() then 
+	  if pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_LAND or pFoundUnit:GetDomainType() == DomainTypes.DOMAIN_SEA  then
+	  if not pFoundUnit:IsImmuneNegtivePromotions() then 
 	  if attPlayer:IsAtWarWith(pFoundUnit:GetOwner())  then 
-	  pFoundUnit:SetHasPromotion(GameInfoTypes.PROMOTION_BURNING_EFFECT, true)		 
+	  pFoundUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_BURNING_EFFECT"].ID, true)		
+	                        end 
                          end
 				      end
 			       end

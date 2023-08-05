@@ -1,7 +1,3 @@
---==========================================================================================================================
--- DEFINES
---==========================================================================================================================
-
 --------------------------------------------------------------------------------------------------
 --GameOptions
 --------------------------------------------------------------------------------------------------
@@ -21,7 +17,7 @@ INSERT INTO Defines(Name,									Value)
 SELECT	'HEALTH_DISEASE_CITY_CONNECTION_MODIFIER',			10;
 
 INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_DISEASE_TRADE_ROUTE_MODIFIER',				10;
+SELECT	'HEALTH_DISEASE_TRADE_ROUTE_MODIFIER',				5;
 
 INSERT INTO Defines(Name,									Value)
 SELECT	'HEALTH_PLAGUE_FOOD_CONSUMPTION',					1;

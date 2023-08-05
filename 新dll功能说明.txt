@@ -493,16 +493,6 @@ ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT 0;
 
 
 
-
-
-ALTER TABLE Projects ADD COLUMN 'Maintenance' INTEGER DEFAULT 0;
-ALTER TABLE Projects ADD COLUMN 'CostScalerEra' INTEGER DEFAULT 0;
-ALTER TABLE Projects ADD COLUMN 'CostScalerNumRepeats' INTEGER DEFAULT 0;
-ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
-
-ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
-
-
 	<Table name="Project_YieldModifiers">
 		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
 		<Column name="YieldType" type="text" reference="Yields(Type)"/>
@@ -516,9 +506,17 @@ ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
 	</Table>
 
 
+ALTER TABLE Projects ADD COLUMN 'Maintenance' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CostScalerEra' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CostScalerNumRepeats' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
 
+ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
+
+
+	
 GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjectType);
 
 GetProjectCount()
 
-<Volcano>true</Volcano>
+

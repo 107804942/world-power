@@ -2747,19 +2747,16 @@ function GetHelpTextForProject( projectID )
 	local maxGlobalInstances = project and tonumber(project.MaxGlobalInstances) or 0
 	local maxTeamInstances = project and tonumber(project.MaxTeamInstances) or 0
 	local CityMaxNum = project and tonumber(project.CityMaxNum) or 0 ---新增
+	local Maintenance = project and tonumber(project.Maintenance) or 0 ---新增
 
 	-- Name & Cost
 	local productionCost = (Game and Players[Game.GetActivePlayer()]:GetProjectProductionNeeded(projectID)) or project.Cost
 	local tips = { Locale_ToUpper( project.Description or "???" ), "----------------", L"TXT_KEY_PEDIA_COST_LABEL" .. " " .. productionCost .. "[ICON_PRODUCTION]" }
 
-	if IsCivBE then
-		-- Affinity Level Requirement
-		for affinityPrereq in GameInfo.Project_AffinityPrereqs{ ProjectType = project.Type } do
-			local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
-			if affinityInfo then
-				insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_REQUIRED", affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "?", affinityInfo.Description or "???" ) )
-			end
-		end
+
+	----新增
+	if  Maintenance > 0 then
+		insert( tips, L"TXT_KEY_GOLD_COST_LABEL"..-Maintenance .."[ICON_GOLD]" )
 	end
 
 	-- Requirements?
