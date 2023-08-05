@@ -547,7 +547,7 @@ function CityRangedStrikeDamage(iPlayer,iAttCity,idefPlayer,idefUnit,iX, iY)
 			end 
 
 			if defunit:IsDead() then
-			if player:HasWonder(GameInfoTypes.BUILDING_FW_HELIOS) then
+			if player:HasWonder(GameInfoTypes.BUILDING_CITADEL_OF_CARCASSONNE) then
 			City:SetMadeAttack(false)
 			   end
 			end

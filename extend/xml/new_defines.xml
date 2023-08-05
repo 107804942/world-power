@@ -70,6 +70,7 @@
 		<Replace Name="EVENTS_CITY_BOMBARD" Value="1"/>
 		
 		<Replace Name="ROG_CORE" Value="1"/>
+		<Replace Name="VOLCANO_BREAK" Value="1"/>
 		<Replace Name="EVENTS_GREAT_WORK_CREATED" Value="1"/>
 		<Replace Name="EVENTS_GREAT_PEOPLE_BOOST" Value="1"/>
 		<Replace Name="EVENTS_CITY_RANGE_STRIKE" Value="1"/>
@@ -93,7 +94,6 @@
 		<Replace Name="EVENTS_MINORS" Value="1"/>
 		<Replace Name="EVENTS_ESPIONAGE" Value="1"/>
 		
-		<Replace Name="RELIGION_LOCAL_RELIGIONS" Value="1"/>
 		<Replace Name="EVENTS_ACQUIRE_BELIEFS" Value="1"/>
 		<Replace Name="EVENTS_RELIGION" Value="1"/>
 		<!--<Replace Name="TRAITS_ANY_BELIEF" Value="1"/>-->
@@ -120,10 +120,6 @@
 		<Replace Name="EVENTS_PLAYER_TURN" Value="1"/>
 		<Replace Name="EVENTS_BATTLES_DAMAGE" Value="1"/>
 		<Replace Name="GLOBAL_EXCLUDE_FROM_GIFTS" Value="1"/>
-		<!-- 不可被城邦赠送 -->
-		<Replace Name="GLOBAL_CS_GIFT_SHIPS" Value="1"/>
-		<!-- 城邦赠送船只 -->
-		<!--<Replace Name="EVENTS_UNIT_RANGEATTACK" Value="1"/>-->
 		<Replace Name="EVENTS_UNIT_FOUNDED" Value="1"/>
 		<Replace Name="API_EXTENSIONS" Value="1"/>
 		<Replace Name="API_LUA_EXTENSIONS" Value="1"/>

@@ -188,6 +188,8 @@
 			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
 			<MoveRate>ARTILLERY</MoveRate>
 			<ExtraMaintenanceCost>12</ExtraMaintenanceCost>
+			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
+			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
 		</Row>
 
 		<Row>
@@ -227,6 +229,8 @@
 			<ExtraMaintenanceCost>24</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
+			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
 		</Row>
 
 		<Row>
@@ -266,6 +270,8 @@
 			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
+			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
 		</Row>
 
 
@@ -305,6 +311,8 @@
 			<ExtraMaintenanceCost>150</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
+			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
 		</Row>
 
 

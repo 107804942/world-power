@@ -1,5 +1,27 @@
 -- Insert SQL Rules Here 
 
+			<Row Tag="TXT_KEY_VOLCAN_EVENT_TITLE">
+				<Text>火山爆发！</Text>
+			</Row>
+			<Row Tag="TXT_KEY_VOLCANO_EVENT_1">
+				<Text>一处火山发生了小规模喷发。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_VOLCANO_EVENT_2">
+				<Text>一处火山发生了大规模喷发。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_VOLCANO_EVENT_3">
+				<Text>一处火山发生了超大规模喷发。</Text>
+			</Row>
+
+INSERT INTO Project_YieldModifiers(ProjectType,YieldType, Yield)VALUES
+('PROJECT_BLIALI', 'YIELD_SCIENCE',300);
+
+INSERT INTO Project_YieldChanges(ProjectType,YieldType, Yield)VALUES
+('PROJECT_BLIALI', 'YIELD_PRODUCTION',300);
+
+
+
+
 	<Row Tag="TXT_KEY_KNOWLEDGE_5_HELP">
 				<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]间谍每回合可偷取所在城市100%的[ICON_RESEARCH]科研。地牢、监禁所、警察局+2[ICON_RESEARCH]科研。</Text>
 			</Row>

@@ -437,12 +437,6 @@
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
-        <Name>Volcano</Name>
-        <Description />
-        <FileName>extend/lua/map/Volcano.lua</FileName>
-      </Content>
-      <Content>
-        <Type>InGameUIAddin</Type>
         <Name>Health_Events</Name>
         <Description />
         <FileName>extend/Health/lua/Health_Events.lua</FileName>
@@ -16036,10 +16030,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\lua\map\Volcano.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
     <Content Include="extend\lua\map\MapGenerator.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -20785,6 +20775,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Lua Script3.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Lua Script4.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

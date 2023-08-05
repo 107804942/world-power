@@ -1553,12 +1553,9 @@ DROP TABLE Feature_ArtDefine_StrategicView;
 --=======================================================================================================================
 -- VOLCANOS
 --=======================================================================================================================
-ALTER TABLE Features ADD Volcano			boolean 	default 0;
 ALTER TABLE Features ADD VolcanoRange		integer 	default 0;
 ALTER TABLE Features ADD TilesPerVolcano	integer 	default 0;
 
-
-UPDATE Features SET Volcano = 1 WHERE Type = 'FEATURE_NEW_VOLCANO';
 UPDATE Features SET VolcanoRange = 9 WHERE Type = 'FEATURE_NEW_VOLCANO';
 UPDATE Features SET TilesPerVolcano = 160 WHERE Type = 'FEATURE_NEW_VOLCANO';
 

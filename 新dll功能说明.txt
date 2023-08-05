@@ -108,11 +108,6 @@ ALTER TABLE Improvements ADD WonderProductionModifier INTEGER DEFAULT 0;
 
 
 
-
-
-
-
-
 15..临近的兵种加成
 ALTER TABLE UnitPromotions ADD NearbyUnitClassBonus INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD NearbyUnitClassBonusRange INTEGER DEFAULT 0;
@@ -487,3 +482,43 @@ ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT 0;
 		<Column name="Yield" type="integer" default="0"/>
 	</Table>
 
+
+
+
+<Table name="Building_YieldFromInternalTR">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+
+
+
+ALTER TABLE Projects ADD COLUMN 'Maintenance' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CostScalerEra' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CostScalerNumRepeats' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
+
+ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
+
+
+	<Table name="Project_YieldModifiers">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+	<Table name="Project_YieldChanges">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+
+GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjectType);
+
+GetProjectCount()
+
+<Volcano>true</Volcano>

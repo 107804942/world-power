@@ -2746,6 +2746,7 @@ function GetHelpTextForProject( projectID )
 	local project = GameInfo.Projects[ projectID ]
 	local maxGlobalInstances = project and tonumber(project.MaxGlobalInstances) or 0
 	local maxTeamInstances = project and tonumber(project.MaxTeamInstances) or 0
+	local CityMaxNum = project and tonumber(project.CityMaxNum) or 0 ---新增
 
 	-- Name & Cost
 	local productionCost = (Game and Players[Game.GetActivePlayer()]:GetProjectProductionNeeded(projectID)) or project.Cost
@@ -2766,7 +2767,7 @@ function GetHelpTextForProject( projectID )
 		insert( tips, L( project.Requirements ) )
 	end
 
-	if maxGlobalInstances > 0 or maxTeamInstances > 0 then
+	if maxGlobalInstances > 0 or maxTeamInstances > 0 or CityMaxNum > 0 then
 		append( tips, "[NEWLINE]" );
 	end
 
@@ -2776,6 +2777,9 @@ function GetHelpTextForProject( projectID )
 	end
 	if maxTeamInstances > 0 then
 		append( tips, "[COLOR_YELLOW]" .. L( "TXT_KEY_NO_ACTION_TEAM_COUNT_MAX", maxTeamInstances ) .. "[ENDCOLOR]" );
+	end
+	if CityMaxNum > 0 then
+		append( tips, "[COLOR_YELLOW]" .. L( "TXT_KEY_NO_ACTION_CITY_COUNT_MAX", CityMaxNum ) .. "[ENDCOLOR]" );  ---新增
 	end
 
 	-- Pre-written Help text

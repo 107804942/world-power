@@ -10,15 +10,7 @@ include( "FLuaVector" );
 include("FunctionUtilities.lua");
 include("Rog_SaveUtils.lua"); MY_MOD_NAME = "世界强权";
 --------------------------------------------------------------------
-
-local gCityHeal				= GameDefines["CITY_HIT_POINTS_HEALED_PER_TURN"]
 local gCityHealthList		= {}
-local sort					= table.sort
-local insert				= table.insert
-local remove				= table.remove
---local floor				= math.floor
-local ceil					= math.ceil
-
 local defineCIDHealthPlagueMinThreshold		   = 150
 if Game then defineCIDHealthPlagueMinThreshold = (GameDefines["HEALTH_PLAGUE_MIN_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 150) end
 
@@ -30,14 +22,14 @@ local yieldGoldID	 = YieldTypes.YIELD_GOLD
  
 function GetNumTurn (player,city)
     local mathcheck=1    
-    local NumTurn= math.max(0,ceil(city:GetPopulation()/10)+6 )  ---初始回合数
+    local NumTurn= math.max(0,math.ceil(city:GetPopulation()/10)+6 )  ---初始回合数
 	if player~=nil and player:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CENTERS.ID) > 0 then
 	mathcheck=mathcheck-0.25
 	end
 	if  city:IsHasBuilding(GameInfoTypes.BUILDING_LOCAL_HOSPITAL) then ---有医馆
 		mathcheck=mathcheck-0.25
 	end
-	return ceil(mathcheck*NumTurn)
+	return math.ceil(mathcheck*NumTurn)
 end
 
 
@@ -144,7 +136,7 @@ function Health_PlayerDoTurn(playerID)
 					city:ChangePlagueTurns(GetNumTurn(player,city))
 					city:SetPlagueCounter(0)
 					Health_PlagueBegins(city)
-					city:ChangeDamage(100+gCityHeal)
+					city:ChangeDamage(100)
 					DiseaseUnits(city)
 
 				--elseif (plagueTurns == 5) then    ---还有5回合爆发时提醒
@@ -159,7 +151,7 @@ function Health_PlayerDoTurn(playerID)
 			else
 
 			if  totalDisease > 0 then  ---处于瘟疫中
-					city:ChangeDamage(100+gCityHeal)
+					city:ChangeDamage(100)
 					DiseaseUnits(city)
 					KillPopulation(player,city)
 			   end

@@ -1,6 +1,10 @@
+Ôªø-- Lua Script4
+-- Author: 11585
+-- DateCreated: 2023/8/5 19:06:32
+--------------------------------------------------------------
 include("PlotIterators.lua")
 include("FunctionUtilities.lua")
-include("Rog_SaveUtils.lua"); MY_MOD_NAME = " ¿ΩÁ«ø»®";
+include("Rog_SaveUtils.lua"); MY_MOD_NAME = "‰∏ñÁïåÂº∫ÊùÉ";
 --------------------------------------------------------------
 local g_VolcanoEvents = 
 	{[0] = "TXT_KEY_VOLCANO_EVENT_1",   
@@ -185,9 +189,3 @@ function DoVolcanoEvent(iPlayer)
 	end			
 end
 GameEvents.PlayerDoTurn.Add(DoVolcanoEvent)
-
-
-
-
-
-

@@ -44,6 +44,8 @@
 			<Help>TXT_KEY_FEATURE_NEW_VOLCANO_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO</ArtDefineTag>
 			<Movement>1</Movement>
+			<NoCity>true</NoCity>
+			<Volcano>true</Volcano>
 			<SeeThrough>2</SeeThrough>
 			<Impassable>true</Impassable>
 			<InfluenceCost>-2</InfluenceCost>
