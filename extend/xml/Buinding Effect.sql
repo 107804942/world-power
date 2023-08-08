@@ -377,6 +377,10 @@ VALUES ('BUILDING_ANCIENT_CITY', 'FLAVOR_GOLD',750),
 
 
 
+---大津巴布韦
+INSERT INTO Building_YieldFromConstruction(BuildingType, YieldType, Yield)
+VALUES('BUILDING_DZIMBABWE', 'YIELD_GOLD',100);
+
 
 -- 建筑来自国际贸易
 INSERT INTO Building_YieldFromInternalTR(BuildingType, YieldType, Yield)
@@ -385,7 +389,6 @@ VALUES('BUILDING_AMERICA_RANCH', 'YIELD_PRODUCTION',2);
 
 	  
 ---地形提升
-
 INSERT  INTO Building_TerrainYieldChanges(BuildingType,TerrainType,YieldType,Yield)
 SELECT 'BUILDING_FW_SKYCITY', p.Type, h.Type, 3 
 FROM Terrains AS p, Yields AS h 

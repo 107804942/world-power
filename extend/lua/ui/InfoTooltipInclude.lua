@@ -456,9 +456,9 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 	local maxGlobalInstances = unitClass and tonumber(unitClass.MaxGlobalInstances) or -1
 	local maxTeamInstances = unitClass and tonumber(unitClass.MaxTeamInstances) or -1
 	local maxPlayerInstances = unitClass and tonumber(unitClass.MaxPlayerInstances) or -1
-	local productionCost = unit.Cost
+	local productionCost = unit.Cost 
 	local rangedStrength = unit.RangedCombat
-	local unitRange = unit.Range
+	local unitRange = unit.Range 
 	local combatStrength = unit.Combat
 	local unitMoves = unit.Moves
 	local unitSight = unit.BaseSightRange
@@ -491,15 +491,6 @@ for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		end
 	end
 
-	-- BE orbital units
-	local orbitalInfo = IsCivBE and unit.Orbital and GameInfo.OrbitalUnits[ unit.Orbital ]
-
-	-- BE unit upgrades
-	local unitName = unit.Description
-	if activePlayer and IsCivBE then
-		item = GameInfo.UnitUpgrades[ activePlayer:GetBestUnitUpgrade(unit.ID) ]
-		unitName = item and item.Description or unitName
-	end
 
 	if activePlayer then
 		productionCost = activePlayer:GetUnitProductionNeeded( unitID )

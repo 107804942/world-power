@@ -90,51 +90,6 @@
 			<ExtraMaintenanceCost>7</ExtraMaintenanceCost>
 		</Row>
 
-
-
-		<!--炸弹之父-->
-		<!--<Row>
-			<Class>UNITCLASS_HUGE_BOMB</Class>
-			<Type>UNIT_HUGE_BOMB</Type>
-			<PrereqTech>TECH_ADVANCED_BALLISTICS</PrereqTech>
-			<RangedCombat>1000</RangedCombat>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<HurryCostModifier>70</HurryCostModifier>
-			<Cost>1600</Cost>
-			<Moves>2</Moves>
-			<Immobile>true</Immobile>
-			<Range>40</Range>
-			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
-			<Suicide>true</Suicide>
-			<Special>SPECIALUNIT_NUKE</Special>
-			<Domain>DOMAIN_AIR</Domain>
-			<DefaultUnitAI>UNITAI_ICBM</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_HUGE_BOMB</Description>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_HUGE_BOMB_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUGE_BOMB_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_HUGE_BOMB</Help>
-			<MilitarySupport>false</MilitarySupport>
-			<MilitaryProduction>false</MilitaryProduction>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>120</AdvancedStartCost>
-			<AirUnitCap>1</AirUnitCap>
-			<RangedCombatLimit>100</RangedCombatLimit>
-			<CombatLimit>0</CombatLimit>
-			<XPValueDefense>0</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_HUGE_BOMB2</UnitArtInfo>
-			<UnitFlagAtlas>RFEMOD_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>6</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>110</PortraitIndex>
-			<MoveRate>AIR_REBASE</MoveRate>
-			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
-			<ProjectPrereq>PROJECT_HUGE_BOMB</ProjectPrereq>
-		</Row>-->
-
-
-
-
 		<Row>
 			<Class>UNITCLASS_HORSE_ARTILLERY</Class>
 			<Type>UNIT_HORSE_ARTILLERY_MOVE</Type>
@@ -320,30 +275,26 @@
 
 		<!-- 医生 -->
 		<Row>
-			<Class>UNITCLASS_ERALY_DOCTOR</Class>
-			<Type>UNIT_ERALY_DOCTOR</Type>
+			<Class>UNITCLASS_DOCTOR</Class>
+			<Type>UNIT_DOCTOR</Type>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PrereqTech>TECH_NATURAL_MEDICINE</PrereqTech>
-			<Cost>150</Cost>
-			<Moves>3</Moves>
-			<BaseSightRange>1</BaseSightRange>
+			<Cost>30</Cost>
+			<Moves>4</Moves>
+			<BaseSightRange>3</BaseSightRange>
 			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>
 			<Domain>DOMAIN_LAND</Domain>
 			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
-			<!--<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
-			<NoMaintenance>true</NoMaintenance>-->
 			<ExtraMaintenanceCost>6</ExtraMaintenanceCost>
-			<Description>TXT_KEY_UNIT_ERALY_DOCTOR</Description>
+			<Description>TXT_KEY_UNIT_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_DOCTOR_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_HELP_DOCTOR</Help>
 			<AdvancedStartCost>10</AdvancedStartCost>
-			<!--<MoveAfterPurchase>true</MoveAfterPurchase>
-			<WorkRate>100</WorkRate>-->
 			<CombatLimit>0</CombatLimit>
 			<MoveRate>GREAT_PERSON</MoveRate>
 			<UnitArtInfo>ART_DEF_UNIT_GREAT_DOCTOR</UnitArtInfo>
-			<!--<UnitArtInfoEraVariation>true</UnitArtInfoEraVariation>-->
+			<UnitArtInfoEraVariation>true</UnitArtInfoEraVariation>
 			<UnitFlagAtlas>UNIT_FLAG_GREAT_DOCTOR_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
 			<PortraitIndex>0</PortraitIndex>
@@ -352,35 +303,32 @@
 
 
 		<Row>
-			<Class>UNITCLASS_MODERN_DOCTOR</Class>
+			<Class>UNITCLASS_DOCTOR</Class>
 			<Type>UNIT_MODERN_DOCTOR</Type>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<Cost>700</Cost>
 			<Moves>5</Moves>
-			<BaseSightRange>1</BaseSightRange>
+			<BaseSightRange>3</BaseSightRange>
 			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>
 			<Domain>DOMAIN_LAND</Domain>
-			<!--<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
-			<NoMaintenance>true</NoMaintenance>-->
-			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
+			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
 			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_DOCTOR_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_HELP_DOCTOR</Help>
 			<AdvancedStartCost>10</AdvancedStartCost>
-			<!--<MoveAfterPurchase>true</MoveAfterPurchase>
-			<WorkRate>100</WorkRate>-->
 			<MoveRate>GREAT_PERSON</MoveRate>
 			<CombatLimit>0</CombatLimit>
-			<UnitArtInfo>ART_DEF_UNIT_GREAT_DOCTOR_LATE</UnitArtInfo>
-			<!--<UnitArtInfoEraVariation>true</UnitArtInfoEraVariation>-->
+			<UnitArtInfo>ART_DEF_UNIT_GREAT_DOCTOR</UnitArtInfo>
+			<UnitArtInfoEraVariation>true</UnitArtInfoEraVariation>
 			<UnitFlagAtlas>FA_UNIT_FLAG_ATLAS_A</UnitFlagAtlas>
 			<UnitFlagIconOffset>34</UnitFlagIconOffset>
 			<PortraitIndex>3</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 		</Row>
-
+		
+		
 
 
 		<Row>
@@ -415,13 +363,6 @@
 			<ProjectPrereq>PROJECT_HITTITE_WAR_CHARIOT</ProjectPrereq>
 			<ExtraMaintenanceCost>3</ExtraMaintenanceCost>
 		</Row>
-
-
-
-
-
-
-
 
 
 
@@ -913,40 +854,6 @@
 		</Row>
 
 
-		<!--<Row>
-			<Class>UNITCLASS_EXPLORATION</Class>
-			<Type>UNIT_EXPLORATION</Type>
-			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<BaseSightRange>3</BaseSightRange>
-			<Combat>50</Combat>
-			<Cost>240</Cost>
-			<Moves>4</Moves>
-			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_EXPLORATION</Description>
-			<Civilopedia>TXT_KEY_CIV5_EXPLORATION_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_CIV5_EXPLORATION_STRATEGY</Strategy>
-			<Help>TXT_KEY_CIV5_EXPLORATION_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<ObsoleteTech>TECH_MOBILIZATION_T</ObsoleteTech>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_EE_EXPLORER</UnitArtInfo>
-			<UnitFlagAtlas>ENLIGHTENMENT_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>6</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>208</PortraitIndex>
-			<ProjectPrereq>PROJECT_EXPLORATION_TRAINING</ProjectPrereq>
-			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
-		</Row>-->
-
-
-
 		<Row>
 			<Class>UNITCLASS_STURMTIGER</Class>
 			<Type>UNIT_STURMTIGER</Type>
@@ -993,7 +900,7 @@
 			<PrereqTech>TECH_EARTH</PrereqTech>
 			<Combat>3000</Combat>
 			<RangedCombat>3000</RangedCombat>
-			<Cost>150000</Cost>
+			<Cost>80000</Cost>
 			<Moves>30</Moves>
 			<Range>20</Range>
 			<Immobile>0</Immobile>
@@ -1075,7 +982,7 @@
 			<Type>UNIT_ANTIMATTER_EXPLOSION</Type>
 			<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
 			<HurryCostModifier>-1</HurryCostModifier>
-			<Cost>80000</Cost>
+			<Cost>60000</Cost>
 			<Moves>2</Moves>
 			<Immobile>true</Immobile>
 			<Range>60</Range>
@@ -1197,7 +1104,7 @@
 			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
 			<Combat>2000</Combat>
 			<RangedCombat>2000</RangedCombat>
-			<Cost>100000</Cost>
+			<Cost>70000</Cost>
 			<Moves>8</Moves>
 			<Range>15</Range>
 			<Immobile>0</Immobile>
@@ -1273,7 +1180,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<Combat>2000</Combat>
 			<RangedCombat>1200</RangedCombat>
-			<Cost>100000</Cost>
+			<Cost>70000</Cost>
 			<MaxHitPoints>1000</MaxHitPoints>
 			<Moves>10</Moves>
 			<Range>15</Range>
@@ -2133,15 +2040,6 @@
 			<PromotionType>PROMOTION_COMBAT_TO_DEATH</PromotionType>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_HITTITE_WAR_CHARIOT</UnitType>
-			<PromotionType>PROMOTION_CORPS_1</PromotionType>
-		</Row>
-
-		<!--<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<PromotionType>PROMOTION_HUGE_BOMB</PromotionType>
-		</Row>-->
 	</Unit_FreePromotions>
 
 
@@ -2158,30 +2056,6 @@
 			<Cost>1</Cost>
 		</Row>
 
-
-		<!--<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>5</Cost>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<Cost>8</Cost>
-		</Row>
-		
-		<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-			<Cost>10</Cost>
-		</Row>
-		
-		<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
-			<Cost>8</Cost>
-		</Row>-->
 
 		<Row>
 			<UnitType>UNIT_HITTITE_WAR_CHARIOT</UnitType>
@@ -3229,15 +3103,14 @@
 
 
 		<Row>
-			<UnitType>UNIT_ERALY_DOCTOR</UnitType>
+			<UnitType>UNIT_DOCTOR</UnitType>
 			<PromotionType>PROMOTION_DOCTOR</PromotionType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
 			<PromotionType>PROMOTION_DOCTOR</PromotionType>
 		</Row>
-
-
+		
 
 		<Row>
 			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
@@ -3560,37 +3433,45 @@
 	<!--************************************倾向********************************-->
 	<Unit_Flavors>
 		<Row>
-			<UnitType>UNIT_ERALY_DOCTOR</UnitType>
+			<UnitType>UNIT_DOCTOR</UnitType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>750</Flavor>
 		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_DOCTOR</UnitType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>500</Flavor>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_DOCTOR</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>500</Flavor>
+		</Row>
+
 		<Row>
 			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>750</Flavor>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_ERALY_DOCTOR</UnitType>
-			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
-			<Flavor>500</Flavor>
-		</Row>
+
 		<Row>
 			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
 			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
 			<Flavor>500</Flavor>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_ERALY_DOCTOR</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>500</Flavor>
-		</Row>
+
 		<Row>
 			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>500</Flavor>
 		</Row>
+		
 
 	</Unit_Flavors>
 

@@ -29,6 +29,41 @@
 --}
 --#endif
 
+
+
+
+function ManyWorldWonderCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCulture)
+    local pPlayer = Players[iPlayer];
+	local pCity = pPlayer:GetCityByID(iCity)
+	if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
+	 	return
+	         end
+    
+
+	 if iBuilding == GameInfoTypes["BUILDING_DIONYSUS"] then   ---剧场
+		 for row in GameInfo.MinorCivilizations() do	
+				if row.Type ~=nil then 
+					if Teams[Players[row.ID]:GetTeam()]:IsHasMet(pPlayer:GetTeam()) then	
+					if Players[row.ID]:IsMinorCiv() then
+					Players[row.ID]:ChangeMinorCivFriendshipWithMajor(iPlayer, 50) ----增加50点关系
+					end
+				 end
+			 end
+		 end
+	 end
+
+	if pCity:IsHasBuilding(GameInfoTypes.BUILDING_DZIMBABWE) and not bGold then	 ---大津巴布韦
+	   local freegold = GameInfo.Buildings[iBuilding].Cost
+	   local bonus=GameInfo.GameSpeeds[Game.GetGameSpeedType()].ConstructPercent/100  
+	   pPlayer:ChangeGold(math.floor(freegold*bonus))
+	   end
+
+
+end
+GameEvents.CityConstructed.Add(ManyWorldWonderCompleted)
+
+
+
 --=======================================================================================================================
 -- UTILITIES
 --=======================================================================================================================

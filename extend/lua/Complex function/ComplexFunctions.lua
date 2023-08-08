@@ -1474,30 +1474,6 @@ GameEvents.CityCanMaintain.Add(Processes_CanMaintain)
 
 
 -- ********************************************************
--- É¾³ýµØÍ¼´íÎó×ÊÔ´
--- ********************************************************
-function RemoveErrorResources()
-	-- loop through all plots
-	for iPlot = 0, Map.GetNumPlots() - 1 do
-		local plot = Map.GetPlotByIndex(iPlot);
-		if plot:GetResourceType()== GameInfoTypes.RESOURCE_TROOPS
-		or plot:GetResourceType()== GameInfoTypes.RESOURCE_ELECTRICITY
-		or plot:GetResourceType()== GameInfoTypes.RESOURCE_MANPOWER
-		or plot:GetResourceType()== GameInfoTypes.RESOURCE_CONSUMER
-		or plot:GetResourceType()== GameInfoTypes.RESOURCE_FOIEGRAS
-		or (plot:GetResourceType()== GameInfoTypes.RESOURCE_NATRUALGAS		   
-		and not (plot:GetTerrainType()==GameInfoTypes.TERRAIN_OCEAN 
-		or plot:GetTerrainType()==GameInfoTypes.TERRAIN_COAST ))
-		then
-		   plot:SetResourceType(-1)
-		end
-	end
-end
-Events.SequenceGameInitComplete.Add(RemoveErrorResources);
---Events.LoadScreenClose.Add(RemoveErrorResources)
-
-
--- ********************************************************
 -- 
 -- ********************************************************
 function PlayerCompletedQuest(iMajor, iMinor, iQuestType, iStartTurn, iOldInfluence, iNewInfluence)
@@ -1880,20 +1856,6 @@ function AiIntoNewEra(eTeam, eEra, bFirst)
     end
  end
 GameEvents.TeamSetEra.Add(AiIntoNewEra)
-
-
-
-
-function Volcano_CanFound(iPlayer, iX, iY)
-	local pPlot = Map.GetPlot(iX, iY)
-	if pPlot:GetFeatureType() == FeatureTypes.FEATURE_NEW_VOLCANO then 
-		return false
-	end
-	return true
-end
-GameEvents.PlayerCanFoundCity.Add(Volcano_CanFound)
-
-
 
 
 if Difficult9Active  then

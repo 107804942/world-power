@@ -83,7 +83,6 @@ function KillPopulation(player,city)
 		bNotify = true
 		end
 
-
 	-- Notification
 	if bNotify  and player:IsHuman() and plagueID~=-1
 	then
@@ -188,8 +187,6 @@ function DiseaseUnits(city)
 end
 
 
-
-
 --Health_PlagueEnds
 function Health_PlagueEnds(city)
 	local player = Players[city:GetOwner()]
@@ -202,7 +199,7 @@ function Health_PlagueEnds(city)
 	player:AddNotification(NotificationTypes.NOTIFICATION_INSTANT_YIELD, text, heading,city:GetX(),city:GetY())
 	Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
 	end
-	city:SetAdditionalFood(0)
+	--city:SetAdditionalFood(0)
 	city:SetPlagueType(-1)
 	city:SetPlagueCounter(0)
 end
@@ -282,8 +279,7 @@ function Health_MissionPossible(playerID, unitID, missionID, data1, data2, _, _,
 	local player = Players[playerID]
 	if    missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"] then
 		local unit = player:GetUnitByID(unitID)
-		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_ERALY_DOCTOR"] 
-	    or unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_MODERN_DOCTOR"]   then
+		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_DOCTOR"] then
 			local unitPlot = Map.GetPlot(plotX, plotY)
 			local unitPlotCity = unitPlot:GetPlotCity()
 			if ((not unitPlotCity) or (not unitPlotCity:HasPlague()) ) then
@@ -293,8 +289,7 @@ function Health_MissionPossible(playerID, unitID, missionID, data1, data2, _, _,
 		end
 	elseif missionID == GameInfoTypes["MISSION_DOCTOR_CURE_UNIT"] then
 		local unit = player:GetUnitByID(unitID)
-		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_ERALY_DOCTOR"] 
-	    or unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_MODERN_DOCTOR"]   then
+		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_DOCTOR"]  then
 			local unitPlot = Map.GetPlot(plotX, plotY)
 			local unitPlotCity = unitPlot:GetPlotCity()  
 			if (not IsNearDiseaseUnit(unit) ) then

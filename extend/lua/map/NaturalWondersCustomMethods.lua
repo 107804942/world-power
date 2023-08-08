@@ -579,8 +579,9 @@ function NWCustomPlacement(x, y, row_number, method_number)
 	elseif method_number == 9 then
 		-- MT. EVEREST  ÷Èƒ¬¿ ¬Í
 		local pPlot = Map.GetPlot(x, y)
-		
-		pPlot:SetPlotType(ePlotFlat, false, false)
+	
+		--pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetPlotType(ePlotMountain, false, false)
 		pPlot:SetTerrainType(eTerrainSnow, false, false)
 		
 		-- creating Mountains around

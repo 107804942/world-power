@@ -11,7 +11,55 @@ include("FLuaVector.lua")
 include("IconSupport.lua");
 include("InstanceManager")
 
---npx civ5-mod-builder --to "C:\Users\11585\Documents\My Games\Sid Meier's Civilization 5\MODS" --from "世界强权.civ5proj" # run
+
+
+-- ********************************************************
+-- 删除地图错误资源
+-- ********************************************************
+function RemoveErrorResources()
+	-- loop through all plots
+	for iPlot = 0, Map.GetNumPlots() - 1 do
+		local plot = Map.GetPlotByIndex(iPlot);
+		if plot:GetResourceType()== GameInfoTypes.RESOURCE_TROOPS
+		or plot:GetResourceType()== GameInfoTypes.RESOURCE_ELECTRICITY
+		or plot:GetResourceType()== GameInfoTypes.RESOURCE_MANPOWER
+		or plot:GetResourceType()== GameInfoTypes.RESOURCE_CONSUMER
+		or plot:GetResourceType()== GameInfoTypes.RESOURCE_FOIEGRAS
+		or (plot:GetResourceType()== GameInfoTypes.RESOURCE_NATRUALGAS		   
+		and not (plot:GetTerrainType()==GameInfoTypes.TERRAIN_OCEAN 
+		or plot:GetTerrainType()==GameInfoTypes.TERRAIN_COAST ))
+		then
+		   plot:SetResourceType(-1)
+		end
+	end
+end
+Events.SequenceGameInitComplete.Add(RemoveErrorResources);
+--Events.LoadScreenClose.Add(RemoveErrorResources)
+
+
+
+function Volcano_CanFound(iPlayer, iX, iY)
+	local pPlot = Map.GetPlot(iX, iY)
+	if pPlot:GetFeatureType() == FeatureTypes.FEATURE_NEW_VOLCANO then 
+		return false
+	end
+	return true
+end
+GameEvents.PlayerCanFoundCity.Add(Volcano_CanFound)
+
+
+
+
+
+GameEvents.BarbariansSpawnedUnit.Add(function(iPlayer, iUnit,iPlotX, iPlotY, iUnitType) 
+	local pPlayer = Players[iPlayer]
+	local pUnit = pPlayer:GetUnitByID(iUnit)
+	if pPlayer == nil  or pUnit == nil  then
+	return
+	end
+	pUnit:Kill()
+	pPlayer:InitUnit(GameInfoTypes.UNIT_MECH, iPlotX, iPlotY)
+end) 
 
 function IsUsingWP()
 	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"

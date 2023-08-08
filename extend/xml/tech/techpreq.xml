@@ -746,7 +746,10 @@
 			<PrereqTech>TECH_SONAR</PrereqTech>
 		</Row>
 
-		
+		<Row>
+			<TechType>TECH_URBANLIZATION</TechType>
+			<PrereqTech>TECH_COMBUSTION</PrereqTech>
+		</Row>
 
 
 		<Row>

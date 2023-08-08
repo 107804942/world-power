@@ -2548,7 +2548,7 @@
 			<Text>[NEWLINE]"示巴女王所要求的一切东西，所罗门王都满足了她；另外还按照自己的意愿给予她丰富的馈赠。所以她和仆人一起返回了自己的国家。"[NEWLINE]        ——《列王纪》10章13节[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_DZIMBABWE_HELP">
-			<Text>每四人口+1[ICON_GOLD]金钱产出，[ICON_RES_SANPEDRO]圣佩德罗、[ICON_RES_TEQUILA]龙舌兰、[ICON_RES_AMBER]琥珀、[ICON_RES_JADE]玉石、[ICON_RES_LAPIS]天青石和[ICON_RES_INCENSE]熏香+5[ICON_GOLD]金钱产出，额外获得两条贸易路线,陆地商路距离+50%。沙漠地形+1[ICON_GOLD]金钱。本城每完成一个基础建筑的建造时，可获得与该建筑产能数值相等的[ICON_GOLD]金钱收益。</Text>
+			<Text>每四人口+1[ICON_GOLD]金钱产出，[ICON_RES_SANPEDRO]圣佩德罗、[ICON_RES_TEQUILA]龙舌兰、[ICON_RES_AMBER]琥珀、[ICON_RES_JADE]玉石、[ICON_RES_LAPIS]天青石和[ICON_RES_INCENSE]熏香+5[ICON_GOLD]金钱产出，额外获得两条贸易路线,陆地商路距离+50%。沙漠地形+1[ICON_GOLD]金钱。本城每完成一个基础建筑的建造时，可获得与该建筑产能数值相关的[ICON_GOLD]金钱收益。</Text>
 		</Row>
 
 
@@ -7671,7 +7671,7 @@
 			<Text>重装冲锋</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
-			<Text>对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击时若消灭敌军，则有60%几率俘获该单位；攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
+			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击时若消灭敌军，则有60%几率俘获该单位；攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
 		</Row>
 
 

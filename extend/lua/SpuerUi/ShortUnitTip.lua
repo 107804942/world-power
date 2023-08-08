@@ -171,10 +171,9 @@ function ShortUnitTip( unit )
 	    unitTip = unitTip .."[NEWLINE]".. Locale.ConvertTextKey("TXT_KEY_FLAG_UNIT_UPGRADE") .."[COLOR_YELLOW]"..Locale.ConvertTextKey(item).."[ENDCOLOR]" .." "
 	    end	
 
-
-	 local productionCost = GameInfo.Units[unit:GetUnitType()].Cost	 
-	 local city, item, resource
      local activePlayer = Players[activePlayerID]
+	 local productionCost = GameInfo.Units[unit:GetUnitType()].Cost	
+	 local city, item, resource
 	 local item
      local activeCivilization = activePlayer and GameInfo.Civilizations[ activePlayer:GetCivilizationType() ]
      local activeCivilizationType = activeCivilization and activeCivilization.Type

@@ -1806,6 +1806,7 @@
 			<GreatWorkCount>2</GreatWorkCount>
 			<FreeBuilding>BUILDINGCLASS_AMPHITHEATER</FreeBuilding>
 			<NukeImmune>true</NukeImmune>
+			<MinorCivFriendship>50</MinorCivFriendship>
 			<FreePolicies>1</FreePolicies>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>

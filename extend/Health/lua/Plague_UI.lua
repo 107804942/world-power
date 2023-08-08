@@ -42,7 +42,7 @@ function GetCityPlagueInfoForTopPlane(pCity)
 	local iCityHealthIndex=totalHealth-totalDisease
 	local plagueFinal =plagueThreshold-plagueCounter
 	if iCityHealthIndex <0 and pCity:GetPlagueType()~=-1  then
-		   plagueTurns=mathMax(0,ceil(  (plagueFinal)/(-iCityHealthIndex)  ))
+		   plagueTurns=mathMax(0,ceil((plagueFinal)/(-iCityHealthIndex)))
 		else 
 		   plagueTurns=0
 		   end

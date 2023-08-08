@@ -2,7 +2,67 @@
 -- Author: 11585
 -- DateCreated: 2023/7/31 13:23:51
 --------------------------------------------------------------
-//------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+m_iPopulationChange(0),
+	m_iMinorCivFriendship(0),
+
+
+	
+					else if (MOD_ROG_CORE && eUnitClass == GC.getInfoTypeForString("UNITCLASS_GREAT_DOCTOR", true /*bHideAssert*/))
+					{
+						eBranch = (PolicyBranchTypes)GC.getInfoTypeForString("POLICY_BRANCH_RATIONALISM", true /*bHideAssert*/);
+						iNum = kPlayer.getDoctorsFromFaith();
+					}
+	
+
+#if defined(MOD_ROG_CORE)
+			if (MOD_ROG_CORE) {
+				CvBuildingEntry* pkBuildingInfo = GC.getBuildingInfo(eBuilding);
+				int iCost = pkBuildingInfo->GetProductionCost();
+				iCost *= GC.getGame().getGameSpeedInfo().getConstructPercent();
+				iCost /= 100;
+				if (iChange > 0 && GetYieldFromConstruction(eYield) > 0)
+				{
+					iCost *= GetYieldFromConstruction(eYield) / 100;
+					doInstantYield(eYield, iCost);
+				}
+			}
+#endif
+
+
+			else if (MOD_ROG_CORE && eUnitClass == GC.getInfoTypeForString("UNITCLASS_GREAT_DOCTOR"))
+			{
+				kPlayer.incrementGeneralsFromFaith();
+			}
+
+
+
+function UnitNearIronBeddhaKilled(iPlayer, iUnit, iUnitType, iX, iY, bDelay, iByPlayer)
+
+	local pPlayer = Players[iPlayer]
+	local pUnit = pPlayer:GetUnitByID(iUnit)		
+	
+	if iPlayer == -1  then return end -- 被毁灭单位所属文明
+	if pUnit == -1  then return end -- 被毁灭单位	
+	if not pUnit:IsCombatUnit() then return end ---非战斗单位
+	--if iPlayer == iByPlayer  then return end --只能被其他文明摧毁
+	--if iByPlayer == -1   then return end
+    --local Plot =  pUnit:GetPlot()
+
+	local Plot = Map.GetPlot(iX, iY)		
+	for pAdjacentPlot in PlotAreaSweepIterator(Plot, 5, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
+		for iVal = 0,(pAdjacentPlot:GetNumUnits() - 1) do
+			 local loopUnit = pAdjacentPlot:GetUnit(iVal)
+			 if   loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_ANTI_ANTI_MOUNTED_BONUS) 
+			 and  loopUnit:GetMoves() < 6*GameDefines["MOVE_DENOMINATOR"] 
+			 and  not loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS)  then
+			   loopUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
+			   print("Unit Near IronBeddha Killed!")
+			end
+        end
+	end
+end
+GameEvents.UnitPrekill.Add(UnitNearIronBeddhaKilled)
 
 ----------------------------新政策属性----------------------------
 function Knowledge_5or1(playerID)

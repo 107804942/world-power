@@ -286,7 +286,8 @@ ALTER TABLE Buildings ADD COLUMN 'LandTileDamage' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'LandTileMovementReduce' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'LandTileTurnDamage' INTEGER DEFAULT 0;
 
-
+ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'MinorCivFriendship' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'MoveAfterCreated' INTEGER DEFAULT 0; 
 
 
@@ -511,12 +512,47 @@ ALTER TABLE Projects ADD COLUMN 'CostScalerEra' INTEGER DEFAULT 0;
 ALTER TABLE Projects ADD COLUMN 'CostScalerNumRepeats' INTEGER DEFAULT 0;
 ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
 
-ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
 
 
-	
+	<Table name="Building_YieldFromConstruction">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+	<Table name="Building_YieldFromUnitProduction">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
 GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjectType);
 
 GetProjectCount()
 
+ALTER TABLE Units ADD COLUMN 'CostScalerEra' INTEGER DEFAULT 0;
 
+
+-------------------------------------------------------------------------------------------------
+
+
+-- Increases the cost by this amount every time you build the unit
+ALTER TABLE Units ADD 'CostScalerNumRepeats' INTEGER DEFAULT 0;
+
+-- Changes City Ranged Strike during Golden Ages
+ALTER TABLE Traits ADD COLUMN 'GAGarrisonCityRangeStrikeModifier' INTEGER DEFAULT 0;
+
+-- Player enters a golden age on a declaration of war, either as attacking or defending
+ALTER TABLE Traits ADD COLUMN 'GoldenAgeOnWar' BOOLEAN DEFAULT 0;
+
+
+ALTER TABLE Policies ADD COLUMN 'DefenseBoostAllCities' INTEGER DEFAULT 0;
+
+-- New Traits - Can buy owned plots with gold
+ALTER TABLE Traits ADD COLUMN 'BuyOwnedTiles' BOOLEAN DEFAULT 0;
+
+-- Free Population
+ALTER TABLE Policies ADD COLUMN 'FreePopulation' INTEGER DEFAULT 0;
+ALTER TABLE Policies ADD COLUMN 'FreePopulationCapital' INTEGER DEFAULT 0;

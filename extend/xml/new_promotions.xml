@@ -7,16 +7,6 @@
 		<Delete Type="PROMOTION_INSTA_HEAL"/>
 
 
-		<Update>
-			<Set CombatPercent="0"/>
-			<Where Type="PROMOTION_CORPS_1" />
-		</Update>
-
-		<Update>
-			<Set CombatPercent="0"/>
-			<Where Type="PROMOTION_CORPS_2" />
-		</Update>
-
 		<Row>
 			<ID>0</ID>
 			<Type>PROMOTION_INSTA_HEAL</Type>
@@ -4254,6 +4244,7 @@
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
 			<SplashDamageFixed>1</SplashDamageFixed>
+			<MaxHitPointsModifier>100</MaxHitPointsModifier>
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>

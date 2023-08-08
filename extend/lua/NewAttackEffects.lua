@@ -318,8 +318,29 @@ end
     -- Debuff immune unit
 	    if defUnit then
 
-
-
+-- ********************************************************
+-- 铁浮图
+-- ********************************************************
+   if defUnit:IsDead() then
+      local iTileRadius = 5
+      for iShiftX = -iTileRadius, iTileRadius do
+	  for iShiftY = -iTileRadius, iTileRadius do
+	  local pTargetPlot = Map.PlotXYWithRangeCheck(plotX, plotY, iShiftX, iShiftY, iTileRadius)
+      if pTargetPlot ~= nil  then
+      unitCount = pTargetPlot:GetNumUnits()
+      if unitCount > 0 then
+      for i = 0, unitCount-1, 1 do
+      local pFoundUnit = pTargetPlot:GetUnit(i)
+      if  pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_ANTI_ANTI_MOUNTED_BONUS)  and  pFoundUnit:GetMoves() < 6*GameDefines["MOVE_DENOMINATOR"]  and  not pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS)  then
+	  pFoundUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
+	  print("Unit Near IronBeddha Killed!")
+		          end
+			   end
+			end
+		 end
+	  end  		 
+   end
+end
 
 -- ********************************************************
 -- 海怪
@@ -374,10 +395,8 @@ end
 -- ********************************************************
 -- 乌尔班效果
 -- ******************************************************** 
-	if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_URBAN"].ID) then
-	        
+	if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_URBAN"].ID) then	        
 			local textcount = 0
-
 		    local unitCount = defPlot:GetNumUnits();
 		    if unitCount > 0 then
 			for i = 0, unitCount-1, 1 do
@@ -502,38 +521,6 @@ or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFir
 	end
 end	
 GameEvents.BattleFinished.Add(ExtraAttackEffectEffect)
-
-
-
-
---****************************************************************************其他*************************************************************************************************
-
-function UnitNearIronBeddhaKilled(iPlayer, iUnit, iUnitType, iX, iY, bDelay, iByPlayer)
-
-	local pPlayer = Players[iPlayer]
-	local pUnit = pPlayer:GetUnitByID(iUnit)		
-	
-	if iPlayer == -1  then return end -- 被毁灭单位所属文明
-	if pUnit == -1  then return end -- 被毁灭单位	
-	if not pUnit:IsCombatUnit() then return end ---非战斗单位
-	--if iPlayer == iByPlayer  then return end --只能被其他文明摧毁
-	--if iByPlayer == -1   then return end
-    --local Plot =  pUnit:GetPlot()
-
-	local Plot = Map.GetPlot(iX, iY)		
-	for pAdjacentPlot in PlotAreaSweepIterator(Plot, 5, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		for iVal = 0,(pAdjacentPlot:GetNumUnits() - 1) do
-			 local loopUnit = pAdjacentPlot:GetUnit(iVal)
-			 if   loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_ANTI_ANTI_MOUNTED_BONUS) 
-			 and  loopUnit:GetMoves() < 6*GameDefines["MOVE_DENOMINATOR"] 
-			 and  not loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS)  then
-			   loopUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
-			   print("Unit Near IronBeddha Killed!")
-			end
-        end
-	end
-end
-GameEvents.UnitPrekill.Add(UnitNearIronBeddhaKilled)
 
 
 

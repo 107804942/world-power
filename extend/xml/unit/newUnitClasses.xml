@@ -284,24 +284,15 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_ERALY_DOCTOR</UnitClassType>
+			<UnitClassType>UNITCLASS_DOCTOR</UnitClassType>
 			<UnitType/>
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_ERALY_DOCTOR</UnitClassType>
+			<UnitClassType>UNITCLASS_DOCTOR</UnitClassType>
 			<UnitType/>
 		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
-			<UnitType/>
-		</Row>
+
 		
 		
 
@@ -658,18 +649,12 @@
 		
 		
 		<Row>
-			<Type>UNITCLASS_ERALY_DOCTOR</Type>
-			<Description>TXT_KEY_UNIT_ERALY_DOCTOR</Description>
-			<DefaultUnit>UNIT_ERALY_DOCTOR</DefaultUnit>
-			<MaxPlayerInstances>3</MaxPlayerInstances>
+			<Type>UNITCLASS_DOCTOR</Type>
+			<Description>TXT_KEY_UNIT_DOCTOR</Description>
+			<DefaultUnit>UNIT_DOCTOR</DefaultUnit>
+			<MaxPlayerInstances>5</MaxPlayerInstances>
 		</Row>
 
-		<Row>
-			<Type>UNITCLASS_MODERN_DOCTOR</Type>
-			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
-			<DefaultUnit>UNIT_MODERN_DOCTOR</DefaultUnit>
-			<MaxPlayerInstances>4</MaxPlayerInstances>
-		</Row>
 		
 		
 		<Row>
