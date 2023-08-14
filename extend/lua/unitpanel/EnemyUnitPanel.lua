@@ -640,8 +640,8 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			------新增临近敌军数量加成
 			iModifier = pMyUnit:GetNearNumEnemyAttackMod();
 			local bonus = pMyUnit:GetNumEnemyAdjacent()
-			if (iModifier ~= 0 ) then
-			    iModifier =iModifier*bonus	
+			iModifier =iModifier*bonus
+			if (iModifier ~= 0 ) then			    	
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
@@ -1548,8 +1548,8 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			------新增临近敌军数量加成
 			iModifier = pMyUnit:GetNearNumEnemyAttackMod();
 			local bonus = pMyUnit:GetNumEnemyAdjacent()
-			if (iModifier ~= 0 ) then
-			    iModifier =iModifier*bonus	
+			iModifier =iModifier*bonus
+			if (iModifier ~= 0 ) then		    	
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
@@ -2248,8 +2248,8 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			------新增临近敌军数量加成
 			iModifier = pTheirUnit:GetNearNumEnemyDefenseMod();
 			local bonus = pTheirUnit:GetNumEnemyAdjacent()
-			if (iModifier ~= 0 ) then
-			    iModifier =iModifier*bonus	
+			iModifier =iModifier*bonus
+			if (iModifier ~= 0 ) then			    	
 				controlTable = g_TheirCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );
@@ -3009,8 +3009,8 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			------新增临近敌军数量加成
 			iModifier = theirUnit:GetNearNumEnemyDefenseMod();
 			local bonus = theirUnit:GetNumEnemyAdjacent()
-			if (iModifier ~= 0 ) then
-			    iModifier =iModifier*bonus	
+			iModifier =iModifier*bonus	
+			if (iModifier ~= 0 ) then		    
 				controlTable = g_TheirCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );

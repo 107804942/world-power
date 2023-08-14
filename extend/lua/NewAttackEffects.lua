@@ -321,18 +321,19 @@ end
 -- ********************************************************
 -- Ìú¸¡Í¼
 -- ********************************************************
-   if defUnit:IsDead() then
+   if attUnit and defUnit:IsDead() then
       local iTileRadius = 5
       for iShiftX = -iTileRadius, iTileRadius do
 	  for iShiftY = -iTileRadius, iTileRadius do
-	  local pTargetPlot = Map.PlotXYWithRangeCheck(plotX, plotY, iShiftX, iShiftY, iTileRadius)
+	  local pTargetPlot = Map.PlotXYWithRangeCheck(defPlot:GetX(), defPlot:GetY(), iShiftX, iShiftY, iTileRadius)
       if pTargetPlot ~= nil  then
       unitCount = pTargetPlot:GetNumUnits()
       if unitCount > 0 then
       for i = 0, unitCount-1, 1 do
       local pFoundUnit = pTargetPlot:GetUnit(i)
       if  pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_ANTI_ANTI_MOUNTED_BONUS)  and  pFoundUnit:GetMoves() < 6*GameDefines["MOVE_DENOMINATOR"]  and  not pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS)  then
-	  pFoundUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
+	  --pFoundUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
+	  pFoundUnit:SetMoves(math.floor(pFoundUnit:MovesLeft() +GameDefines["MOVE_DENOMINATOR"]))
 	  print("Unit Near IronBeddha Killed!")
 		          end
 			   end

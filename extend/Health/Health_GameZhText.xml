@@ -764,7 +764,9 @@
 	<Row Tag="TXT_KEY_UNIT_DOCTOR">
 		<Text>医生</Text>
 	</Row>
-	
+	<Row Tag="TXT_KEY_UNIT_MODERN_DOCTOR">
+		<Text>现代医生</Text>
+	</Row>
 	<Row Tag="TXT_KEY_UNIT_HELP_DOCTOR">
 		<Text>
 			可用于治疗瘟疫城市，或者治疗患病单位。

@@ -5465,7 +5465,7 @@
 			<Text>马尔堡城堡</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MALBORK_HELP">
-			<Text>城墙、城堡、棱堡、军营、军械所+2[ICON_PEACE]信仰。+20[ICON_GOLDEN_AGE]黄金时代点数。处于黄金时代时所有军事单位+15%[ICON_STRENGTH]战斗力。</Text>
+			<Text>城墙、城堡、棱堡、军营、军械所+2[ICON_PEACE]信仰。+20[ICON_GOLDEN_AGE]黄金时代点数。处于黄金时代时所有军事单位+20%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MALBORK_QUOTE">
 			<Text>[NEWLINE]"城市和建筑物都是我的，但是我向你的英勇，俘虏和掠夺物，金银财宝和美丽的财富交易，你要富有，要快乐。"[NEWLINE]        ——穆罕默德[NEWLINE]</Text>
@@ -5478,12 +5478,13 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF">
-			<Text>盛世</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF_HELP">
-			<Text>处于黄金时代时单位+15%[ICON_STRENGTH]战斗力。</Text>
-		</Row>
+
+			<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF">
+				<Text>盛世</Text>
+			</Row>
+			<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF_HELP">
+				<Text>处于黄金时代时单位+20%[ICON_STRENGTH]战斗力。</Text>
+			</Row>
 
 
 		<!--Smithsonian Institute-->
@@ -7296,7 +7297,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MONASTERY_OF_METEORA_HELP">
 			<Text>
-				+3[ICON_PEACE]信仰, 森林+1[ICON_PEACE]信仰。所在城市宗教压力+100%，免费赠送[ICON_PEACE]修道院，赠送两个[ICON_PEACE]传教士。对应的专家获得如下产出：美术家、文学家+1[ICON_PEACE]信仰产出。
+				+3[ICON_PEACE]信仰, 森林+1[ICON_PEACE]信仰。所在城市宗教压力+100%，免费赠送[ICON_PEACE]修道院，赠送两个[ICON_PEACE]传教士。本城每个工作中的圣地+8%[ICON_PEACE]信仰产出。
 			</Text>
 		</Row>
 
@@ -8085,18 +8086,19 @@
 				当工人自身的正式组织力量缺乏时，工厂内外各种非正式力量与群体便成为其组织化的重要力量。底层工人在日常的工作生活中向城市帮派寻求庇护，在宏大的集体抗争浪潮中也总是很自然地被帮派组织起来。
 			</Text>
 		</Row>
-		
-		<Row Tag="TXT_KEY_INDUSTRY_3">
-			<Text>建筑公会</Text>
-		</Row>
-		<Row Tag="TXT_KEY_INDUSTRY_3_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]建筑公会[ENDCOLOR][NEWLINE]大工程师获取速率+50%。使用大工程师加速建造时，所有城市均会获得等同于该工程师一次性[ICON_PRODUCTION]产能产出的25%。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_POLICY_INDUSTRY_3_TEXT">
-			<Text>
-				工会，或称劳工总会、工人联合会。工会原意是指基于共同利益而自发组织的社会团体。这个共同利益团体诸如为同一雇主工作的员工，在某一产业领域的个人。工会组织成立的主要意图，可以与雇主谈判工资薪水、工作时限和工作条件等等。
-			</Text>
-		</Row>
+
+
+			<Row Tag="TXT_KEY_INDUSTRY_3">
+				<Text>建筑工会</Text>
+			</Row>
+			<Row Tag="TXT_KEY_INDUSTRY_3_HELP">
+				<Text>[COLOR_POSITIVE_TEXT]建筑工会[ENDCOLOR][NEWLINE]大工程师获取速率+50%。使用大工程师加速建造时，所有城市均会获得等同于该工程师一次性[ICON_PRODUCTION]建造加速产出25%的产能。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_POLICY_INDUSTRY_3_TEXT">
+				<Text>
+					工会，或称劳工总会、工人联合会。工会原意是指基于共同利益而自发组织的社会团体。这个共同利益团体诸如为同一雇主工作的员工，在某一产业领域的个人。工会组织成立的主要意图，可以与雇主谈判工资薪水、工作时限和工作条件等等。
+				</Text>
+			</Row>
 
 
 		<Row Tag="TXT_KEY_INDUSTRY_4">

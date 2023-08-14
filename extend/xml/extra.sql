@@ -27,8 +27,8 @@ AND EXISTS (SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_KGB'
 
 
 --------傀儡健康度加成
-UPDATE Defines SET Value =-100 WHERE Type='PUPPET_DISEASE_MODIFIER'; 
-UPDATE Defines SET Value = 100 WHERE Type='PUPPET_HEALTH_MODIFIER'; 
+UPDATE Defines SET Value =-100 WHERE Name='PUPPET_DISEASE_MODIFIER'; 
+UPDATE Defines SET Value = 100 WHERE Name='PUPPET_HEALTH_MODIFIER'; 
 
 ---------- 计划
 INSERT INTO Project_YieldModifiers(ProjectType,YieldType, Yield)VALUES

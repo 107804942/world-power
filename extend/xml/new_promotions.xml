@@ -5160,7 +5160,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<ShowInUnitPanel>0</ShowInUnitPanel>
 			<ShowInPedia>0</ShowInPedia>
-			<GoldenAgeMod>15</GoldenAgeMod>
+			<GoldenAgeMod>20</GoldenAgeMod>
 		</Row>
 
 

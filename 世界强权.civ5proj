@@ -57,9 +57,9 @@
       </Association>
       <Association>
         <Type>Mod</Type>
-        <Name>CIV5MPDLL</Name>
+        <Name> CIV5MPDLL</Name>
         <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>5</MinVersion>
+        <MinVersion>8</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>

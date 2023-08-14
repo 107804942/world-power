@@ -476,6 +476,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 	local city, item, resource
 
 
+
 	------------------------------------------------新增晋升显示------------------------------------------------
 for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		item = GameInfo.UnitPromotions[ row.PromotionType ]
@@ -491,6 +492,7 @@ for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		end
 	end
 
+	local unitName = unit.Description
 
 	if activePlayer then
 		productionCost = activePlayer:GetUnitProductionNeeded( unitID )
@@ -795,15 +797,7 @@ for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		insert( tips, L"TXT_KEY_PEDIA_REPLACES_LABEL".." "..format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) )--!!! row
 	end
 
-	if IsCivBE then
-		-- Affinity Level Requirements
-		for affinityPrereq in GameInfo.Unit_AffinityPrereqs( thisUnitType ) do
-			local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
-			if affinityInfo then
-				insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_REQUIRED", affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "?", affinityInfo.Description or "???" ) )
-			end
-		end
-	end
+
 
 	-- Required Policies:
 	item = unit.PolicyType and GameInfo.Policies[ unit.PolicyType ]
@@ -1601,6 +1595,15 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	--本地改良设施产出
 	for Improvement in GameInfo.Improvements() do
 		tip = GetYieldString( GameInfo.Building_ImprovementYieldChanges{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
+		if tip ~= "" then
+			insert( tips, L"TXT_KEY_LOCAL_IMPROVEMENT_YIELD" ..ResourceColor(L(Improvement.Description)) .. ":" .. tip )
+		end
+	end
+
+	--建筑对本地改良设施产出
+	for Improvement in GameInfo.Improvements() do
+		--tip = GetYieldString( GameInfo.Building_ImprovementYieldModifiers{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
+		tip = GetYieldStringSpecial( "Yield", "%s%+i%%%s", GameInfo.Building_ImprovementYieldModifiers( { BuildingType = buildingType, ImprovementType = Improvement.Type }) )
 		if tip ~= "" then
 			insert( tips, L"TXT_KEY_LOCAL_IMPROVEMENT_YIELD" ..ResourceColor(L(Improvement.Description)) .. ":" .. tip )
 		end

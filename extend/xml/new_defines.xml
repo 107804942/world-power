@@ -68,6 +68,7 @@
 		<Replace Name="SPECIALIST_RESOURCES" Value="1"/>
 		<Replace Name="GLOBAL_PROMOTIONS_REMOVAL" Value="1"/>
 		<Replace Name="EVENTS_CITY_BOMBARD" Value="1"/>
+		<Replace Name="IMPROVEMENT_FUNCTION" Value="1"/>
 		
 		<Replace Name="ROG_CORE" Value="1"/>
 		<Replace Name="VOLCANO_BREAK" Value="1"/>
@@ -137,7 +138,7 @@
 
 		<Replace Name="EVENTS_AIRLIFT" Value="1"/>
 		<Replace Name="EVENTS_PARADROPS" Value="1"/>
-		<Replace Name="EVENTS_CAN_MOVE_INTO" Value="1"/>
+		<!--<Replace Name="EVENTS_CAN_MOVE_INTO" Value="1"/>-->
 		<Replace Name="EVENTS_UNIT_ACTIONS" Value="1"/>
 		<Replace Name="EVENTS_TRADE_ROUTE_PLUNDERED" Value="1"/>
 		<Replace Name="EVENTS_UNIT_CAPTURE" Value="1"/>
