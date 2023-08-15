@@ -1549,46 +1549,6 @@ end
 GameEvents.PlayerDoneTurn.Add(BLETCHLEY_PARK)
 
 
-
-function BLETCHLEY_PARK_SPY(iPlayer, iSpy, iResult, iCityX, iCityY) 
-   local Player = Players[iPlayer]
-
-   local CityPlot = Map.GetPlot(iCityX,iCityY )
-   local City=CityPlot:GetPlotCity()
-
-   if Player == nil or (not pPlayer:IsMajorCiv()) 
-   or (not Player:HasWonder(GameInfoTypes.BUILDING_BLETCHLEY_PARK))   then
-      return
-   end
-
-   if  iResult then
-
-   local plotX = iCityX+1
-   local plotY = iCityY
-
-   local era = Players[City:GetOwner()]:GetCurrentEra()
-   local unitType = BletchleyEraUnits[era]
-
-   Players[63]:InitUnit(unitType, plotX, plotY)
-   Players[63]:InitUnit(unitType, plotX, plotY)
-   Players[63]:InitUnit(unitType, plotX, plotY)
-
-   Unit:ChangeExperience(120)
-   Unit2:ChangeExperience(120)
-   Unit3:ChangeExperience(120)
-
-   Unit:JumpToNearestValidPlot()
-   Unit2:JumpToNearestValidPlot()
-   Unit3:JumpToNearestValidPlot()
- 
-   City:ChangeDamage(50)
-   --City:ChangeResistanceTurns(2)
-   end
-end 	
- GameEvents.EspionageResult.Add(BLETCHLEY_PARK_SPY)  
-
-
-
 -- **********************************************************************************************************************************************
 --
 -- **********************************************************************************************************************************************
@@ -1773,7 +1733,6 @@ end
 --==========================================================================================================================
 --³ÇÊÐ¹¥»÷·¶Î§
 ----------------------------------------------------------------------------------------------------------------------------
-
 local gTeamRange = {}
 local gBombardTechs = {}
 local gCityRange = {}
