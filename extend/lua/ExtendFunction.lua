@@ -13,26 +13,24 @@ include("FunctionUtilities.lua");
 
 function DoSomeEffects(playerID)
     local player = Players[playerID]
-    if (not player:IsMajorCiv())
-	or (not player:IsAlive())
+    if player==nil
 	then return 
 	end
-
 	for unit in player:Units() do  
 
-	 if unit:IsHasPromotion(GameInfoTypes.PROMOTION_BURNING_EFFECT) ---猛火油柜
-		then
-		local damage = math.floor(unit:GetCurrHitPoints()*0.4)
-		local damagefinal = math.max(20,damage)
-		      unit:ChangeDamage(damagefinal)                                  
-		   end
+	if unit:IsHasPromotion(GameInfoTypes.PROMOTION_BURNING_EFFECT) ---猛火油柜
+	then
+	local damage = math.floor(unit:GetCurrHitPoints()*0.4)
+	local damagefinal = math.max(20,damage)
+		  unit:ChangeDamage(damagefinal)                                  
+	end
 
-       if  load(unit, "DoFireSelf") ~= nil    ---突击虎
-	   or  load(unit, "DoFireSupport") ~= nil then
-		   save(unit, "DoFireSelf", nil)
-		   save(unit, "DoFireSupport", nil)
-           end
-	   end
+    if  load(unit, "DoFireSelf") ~= nil    ---突击虎
+	or  load(unit, "DoFireSupport") ~= nil then
+	save(unit, "DoFireSelf", nil)
+	save(unit, "DoFireSupport", nil)
+      end
+   end
 
 end
 GameEvents.PlayerDoTurn.Add(DoSomeEffects)

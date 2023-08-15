@@ -359,12 +359,6 @@
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
-        <Name>city bomb</Name>
-        <Description />
-        <FileName>extend/lua/GlobalCityBombardRange.lua</FileName>
-      </Content>
-      <Content>
-        <Type>InGameUIAddin</Type>
         <Name>MusicButton</Name>
         <Description />
         <FileName>extend/lua/Music Changer/MusicButton.lua</FileName>
@@ -16155,10 +16149,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\drug\DrugResourceList.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\GlobalCityBombardRange.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
