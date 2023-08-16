@@ -26,6 +26,10 @@ WHERE Type IN ('WORLD_POWER_PATCH')
 AND EXISTS (SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_KGB');
 
 
+-----Óæ´¬±»ÂÓ½Ùºó´Ý»Ù
+UPDATE Improvements SET DestroyedWhenPillaged = 1 WHERE Type ='IMPROVEMENT_FISHFARM_MOD'; 
+
+
 --------¿þÀÜ½¡¿µ¶È¼Ó³É
 UPDATE Defines SET Value =-100 WHERE Name='PUPPET_DISEASE_MODIFIER'; 
 UPDATE Defines SET Value = 100 WHERE Name='PUPPET_HEALTH_MODIFIER'; 
