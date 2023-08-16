@@ -242,6 +242,7 @@
 			<CultureCost>10</CultureCost>
 			<GridX>3</GridX>
 			<GridY>1</GridY>
+			<FreePopulation>1</FreePopulation>
 			<PortraitIndex>12</PortraitIndex>
 			<IconAtlas>RAF_POLICIES</IconAtlas>
 			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
@@ -466,6 +467,7 @@
 			<GridX>5</GridX>
 			<GridY>2</GridY>
 			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<ProductionBeakerMod>50</ProductionBeakerMod>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>5</PortraitIndex>
 			<IconAtlas>RAF_POLICIES</IconAtlas>
@@ -564,6 +566,7 @@
 			<GridX>3</GridX>
 			<GridY>1</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<GreatScientistBeakerPolicyModifier>15</GreatScientistBeakerPolicyModifier>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>1</PortraitIndex>
 			<IconAtlas>SCRAMBLE_POLICY_ATLAS</IconAtlas>
@@ -606,6 +609,7 @@
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>6</PortraitIndex>
+			<ExtraSpies>1</ExtraSpies>
 			<IconAtlas>RAF_POLICIES</IconAtlas>
 			<StealTechFasterModifier>50</StealTechFasterModifier>
 			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>

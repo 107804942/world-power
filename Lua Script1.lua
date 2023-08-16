@@ -3,17 +3,172 @@
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------
 
-	if IsCivBE then
+	--if IsCivBE then
 		-- Affinity Level Requirement
-		for affinityPrereq in GameInfo.Project_AffinityPrereqs{ ProjectType = project.Type } do
-			local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
-			if affinityInfo then
-				insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_REQUIRED", affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "?", affinityInfo.Description or "???" ) )
+		--for affinityPrereq in GameInfo.Project_AffinityPrereqs{ ProjectType = project.Type } do
+			--local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
+			--if affinityInfo then
+				--insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_REQUIRED", affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "?", affinityInfo.Description or "???" ) )
+			--end
+		--end
+	--end
+
+--GetEspionageSpies
+
+
+
+function GRANDEUR_5(iPlayer, policyID) 
+	local pPlayer = Players[iPlayer]; 
+
+	if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
+	 	return
+	         end
+    if  policyID == GameInfo.Policies["POLICY_KNOWLEDGE_5"].ID then
+		pPlayer:EspionageCreateSpy()
+	 end
+					
+end
+GameEvents.PlayerAdoptPolicy.Add(GRANDEUR_5)
+
+
+
+function Knowledge_2(iPlayer, iUnit,bIsGreatPerson)
+	local pPlayer = Players[iPlayer]
+    local pUnit = pPlayer:GetUnitByID(iUnit)
+	if pPlayer == nil or (not pPlayer:IsMajorCiv()) or pUnit == nil then
+		return
+		  end
+
+	    if bIsGreatPerson  then 
+
+		if  pPlayer:HasPolicy(GameInfo.Policies["POLICY_KNOWLEDGE_2"].ID) then 	    
+		local iBoost = 0.15*pUnit:GetDiscoverAmount()
+		pPlayer:ChangeOverflowResearch(iBoost)
+	    end
+
+	end
+end
+GameEvents.ScienceDiscover.Add(Knowledge_2)
+
+
+
+function Knowledge_2(iPlayer, iUnit,bIsGreatPerson)
+	local pPlayer = Players[iPlayer]
+    local pUnit = pPlayer:GetUnitByID(iUnit)
+	if pPlayer == nil or (not pPlayer:IsMajorCiv())  or pUnit == nil then
+		return
+		  end
+		if bIsGreatPerson and pPlayer:HasPolicy(GameInfo.Policies["POLICY_INDUSTRY_3"].ID) then 	    
+		for city in pPlayer:Cities() do
+	    local plot = city:Plot()	    	    
+		local iBoost = pUnit:GetHurryProduction(plot)
+		city:ChangeProduction(0.25*iBoost)
+		end
+	end
+end
+GameEvents.ProductionDiscover.Add(Knowledge_2)
+
+
+
+
+function DoneSomeEffects(iPlayer)
+	local pPlayer = Players[iPlayer]
+
+	if pPlayer==nil  then 
+	return end 
+
+	for pUnit in pPlayer:Units() do
+--------------------------------------------------------------------------
+	if (pUnit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"]) then
+		local pPlot = pUnit:GetPlot()
+		if (pPlot ~= nil) then
+		local iNumFighters = 0
+		for iVal = 0,(pPlot:GetNumUnits() - 1) do
+		local loopUnit = pPlot:GetUnit(iVal)
+		if (loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_FUTURE"]
+		or loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"]) then
+		iNumFighters = iNumFighters + 1
+			end
+		end
+
+		if iNumFighters <= 4  then
+		pPlayer:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		pPlayer:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		end
+		if iNumFighters == 5  then
+	    pPlayer:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+			    end
 			end
 		end
 	end
+	
+end
+GameEvents.PlayerDoneTurn.Add(DoneSomeEffects)
+	
+function SLAVE_RAIDING(iPlotX, iPlotY, iPlayer) 
+	local pPlayer = Players[iPlayer]; 
 
---GetEspionageSpies
+	if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
+	 	return
+	         end
+     if pPlayer:HasPolicy(GameInfo.Policies["POLICY_SLAVE_RAIDING"].ID) then
+	    pPlayer:ChangeGold(500)
+	 end
+	  						
+end
+GameEvents.BarbariansCampCleared.Add(SLAVE_RAIDING)
+
+
+function KillPopulation(player,city)
+    local plagueID=city:GetPlagueType()
+	local pop=0
+	local bNotify = false
+	
+		if city:GetPopulation() > 2  then
+		pop=math.max(math.floor((city:GetPopulation()/10)+1),1)
+	    city:ChangePopulation(-pop, true)
+		--city:SetFood(0)
+		bNotify = true
+		end
+
+		if city:GetPopulation() > 2 and city:GetPopulation() <= 20 then
+	    city:ChangePopulation(-1, true)
+		--city:SetFood(0)
+		pop= 1
+		bNotify = true
+		end
+
+		if city:GetPopulation() > 20 and city:GetPopulation() <= 40 then
+	    city:ChangePopulation(-2, true)
+		--city:SetFood(0)
+		pop= 2
+		bNotify = true
+		end
+
+		if city:GetPopulation() > 40 and city:GetPopulation() <= 60 then
+	    city:ChangePopulation(-3, true)
+		--city:SetFood(0)
+		pop= 3
+		bNotify = true
+		end
+
+        if city:GetPopulation() > 60 then
+	    city:ChangePopulation(-5, true)
+		--city:SetFood(0)
+		pop= 5
+		bNotify = true
+		end
+
+	-- Notification
+	if bNotify  and player:IsHuman() and plagueID~=-1
+	then
+	    local plague = GameInfo.Plagues[plagueID]
+		local heading = Locale.ConvertTextKey("TXT_KEY_PLAGUE_DEATH_SHORT")
+		local text = Locale.ConvertTextKey("TXT_KEY_PLAGUE_DEATH",plague.IconString, plague.Description,city:GetName(), pop)
+    	player:AddNotification(NotificationTypes.NOTIFICATION_STARVING, text, heading, city:GetX(),city:GetY());
+	end
+end
+
 
 
 --//------------------------------------------------------------------------------
@@ -31,6 +186,42 @@
 
 
 
+function BLETCHLEY_PARK_SPY(iPlayer, iSpy, iResult, iCityX, iCityY) 
+   local Player = Players[iPlayer]
+
+   local CityPlot = Map.GetPlot(iCityX,iCityY )
+   local City=CityPlot:GetPlotCity()
+
+   if Player == nil or (not pPlayer:IsMajorCiv()) 
+   or (not Player:HasWonder(GameInfoTypes.BUILDING_BLETCHLEY_PARK))   then
+      return
+   end
+
+   if  iResult then
+
+   local plotX = iCityX+1
+   local plotY = iCityY
+
+   local era = Players[City:GetOwner()]:GetCurrentEra()
+   local unitType = BletchleyEraUnits[era]
+
+   Players[63]:InitUnit(unitType, plotX, plotY)
+   Players[63]:InitUnit(unitType, plotX, plotY)
+   Players[63]:InitUnit(unitType, plotX, plotY)
+
+   Unit:ChangeExperience(120)
+   Unit2:ChangeExperience(120)
+   Unit3:ChangeExperience(120)
+
+   Unit:JumpToNearestValidPlot()
+   Unit2:JumpToNearestValidPlot()
+   Unit3:JumpToNearestValidPlot()
+ 
+   City:ChangeDamage(50)
+   --City:ChangeResistanceTurns(2)
+   end
+end 	
+ GameEvents.EspionageResult.Add(BLETCHLEY_PARK_SPY)  
 
 function ManyWorldWonderCompleted(iPlayer, iCity, iBuilding, bGold, bFaithOrCulture)
     local pPlayer = Players[iPlayer];

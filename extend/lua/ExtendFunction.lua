@@ -18,6 +18,27 @@ function DoSomeEffects(playerID)
 	end
 	for unit in player:Units() do  
 
+	if  unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"] then
+		local pPlot = unit:GetPlot()
+		local iNumFighters = 0
+		for iVal = 0,(pPlot:GetNumUnits() - 1) do
+		local loopUnit = pPlot:GetUnit(iVal)
+		if (loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_FUTURE"]
+		or loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"]) then
+		iNumFighters = iNumFighters + 1
+			end
+		end
+
+		if iNumFighters <= 4  then
+		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		end
+		if iNumFighters == 5  then
+	    player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		end
+	end
+	
+
 	if unit:IsHasPromotion(GameInfoTypes.PROMOTION_BURNING_EFFECT) ---猛火油柜
 	then
 	local damage = math.floor(unit:GetCurrHitPoints()*0.4)
@@ -36,39 +57,6 @@ end
 GameEvents.PlayerDoTurn.Add(DoSomeEffects)
 
 
-function DoneSomeEffects(iPlayer)
-	local pPlayer = Players[iPlayer]
-
-	if pPlayer==nil  then 
-	return end 
-
-	for pUnit in pPlayer:Units() do
---------------------------------------------------------------------------
-	if (pUnit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"]) then
-		local pPlot = pUnit:GetPlot()
-		if (pPlot ~= nil) then
-		local iNumFighters = 0
-		for iVal = 0,(pPlot:GetNumUnits() - 1) do
-		local loopUnit = pPlot:GetUnit(iVal)
-		if (loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_FUTURE"]
-		or loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"]) then
-		iNumFighters = iNumFighters + 1
-			end
-		end
-
-		if iNumFighters <= 4  then
-		pPlayer:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		pPlayer:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		end
-		if iNumFighters == 5  then
-	    pPlayer:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-			    end
-			end
-		end
-	end
-	
-end
-GameEvents.PlayerDoneTurn.Add(DoneSomeEffects)
 
 
 function OnPillageDamageEnemies(iPlayer, iUnit, iImprovement, iGold)
@@ -185,36 +173,6 @@ GameEvents.GreatWorkCreated.Add(ProduceCopy)
 
 
 
-	
-function SLAVE_RAIDING(iPlotX, iPlotY, iPlayer) 
-	local pPlayer = Players[iPlayer]; 
-
-	if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
-	 	return
-	         end
-     if pPlayer:HasPolicy(GameInfo.Policies["POLICY_SLAVE_RAIDING"].ID) then
-	    pPlayer:ChangeGold(500)
-	 end
-	  						
-end
-GameEvents.BarbariansCampCleared.Add(SLAVE_RAIDING)
-
-
-
-function GRANDEUR_5(iPlayer, policyID) 
-	local pPlayer = Players[iPlayer]; 
-
-	if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
-	 	return
-	         end
-    if  policyID == GameInfo.Policies["POLICY_KNOWLEDGE_5"].ID then
-		pPlayer:EspionageCreateSpy()
-	 end
-					
-end
-GameEvents.PlayerAdoptPolicy.Add(GRANDEUR_5)
-
-
 
 function FaithCure(iPlayer, iUnit, iX, iY, bIsGreatPerson)
     local Player = Players[iPlayer]
@@ -253,41 +211,6 @@ GameEvents.FaithDiscover.Add(FaithCure)
 
 
 
-function Knowledge_2(iPlayer, iUnit,bIsGreatPerson)
-	local pPlayer = Players[iPlayer]
-    local pUnit = pPlayer:GetUnitByID(iUnit)
-	if pPlayer == nil or (not pPlayer:IsMajorCiv()) or pUnit == nil then
-		return
-		  end
-
-	    if bIsGreatPerson  then 
-
-		if  pPlayer:HasPolicy(GameInfo.Policies["POLICY_KNOWLEDGE_2"].ID) then 	    
-		local iBoost = 0.15*pUnit:GetDiscoverAmount()
-		pPlayer:ChangeOverflowResearch(iBoost)
-	    end
-
-	end
-end
-GameEvents.ScienceDiscover.Add(Knowledge_2)
-
-
-
-function Knowledge_2(iPlayer, iUnit,bIsGreatPerson)
-	local pPlayer = Players[iPlayer]
-    local pUnit = pPlayer:GetUnitByID(iUnit)
-	if pPlayer == nil or (not pPlayer:IsMajorCiv())  or pUnit == nil then
-		return
-		  end
-		if bIsGreatPerson and pPlayer:HasPolicy(GameInfo.Policies["POLICY_INDUSTRY_3"].ID) then 	    
-		for city in pPlayer:Cities() do
-	    local plot = city:Plot()	    	    
-		local iBoost = pUnit:GetHurryProduction(plot)
-		city:ChangeProduction(0.25*iBoost)
-		end
-	end
-end
-GameEvents.ProductionDiscover.Add(Knowledge_2)
 
 
 -- ****************************************

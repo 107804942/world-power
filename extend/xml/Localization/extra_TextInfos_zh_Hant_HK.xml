@@ -8040,7 +8040,7 @@
 
 		<!-- ********************************新政策******************************* -->
 		<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]奴隶生产[ENDCOLOR][NEWLINE]摧毁蛮族营地时+500[ICON_GOLD]金钱。农场，牧场，种植园，植物园+1[ICON_GOLD]金钱。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]奴隶生产[ENDCOLOR][NEWLINE]全国所有城市+1[ICON_CITIZEN]人口。农场，牧场，种植园，植物园+1[ICON_GOLD]金钱。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING">
@@ -8113,7 +8113,7 @@
 			<Text>建筑工会</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_3_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]建筑工会[ENDCOLOR][NEWLINE]大工程师获取速率+50%。使用大工程师加速建造时，所有城市均会获得等同于该工程师一次性[ICON_PRODUCTION]建造加速产出25%的产能。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]建筑工会[ENDCOLOR][NEWLINE]大工程师获取速率+50%。使用大工程师加速建造时，额外获得50%[ICON_PRODUCTION]产能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_3_TEXT">
 			<Text>
@@ -9885,7 +9885,7 @@
 			<Text>布莱奇利公园</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP">
-			<Text>获得一个免费科技，提供2[COLOR_POSITIVE_TEXT]额外[ENDCOLOR][ICON_SPY]间谍,敌方间谍工作效率-15%。从研究协定中额外获得25%科研。回合结束时，我方间谍所在非己方城市25%的[ICON_GOLD]金钱、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研产出将提供给该奇观所在城市。间谍行动完成后，将在所在城市附近招募叛军。</Text>
+			<Text>获得一个免费科技，提供2[COLOR_POSITIVE_TEXT]额外[ENDCOLOR][ICON_SPY]间谍,敌方间谍工作效率-15%。从研究协定中额外获得25%科研。回合结束时，我方间谍所在非己方城市25%的[ICON_GOLD]金钱、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研产出将提供给该奇观所在城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_BLETCHLEY_PARK_TEXT">
 			<Text>布莱切利公园位于白金汉郡的米尔顿凯恩斯，是英国政府通讯总部的中心所在地。二战期间，英国定期渗透到轴心国的秘密通讯中，最重要的是德国的恩尼格玛密码和洛伦兹密码。二战时期英国情报机构的官方历史学家写道，布莱切利生产的”超级”情报，将战争缩短了2到4年，没有它，战争的结果将是不确定的。这个地方现在是一个教育和历史景点，用来纪念和庆祝这些成就。</Text>

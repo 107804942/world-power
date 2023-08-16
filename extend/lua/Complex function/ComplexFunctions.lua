@@ -1938,7 +1938,7 @@ function UpdateGreatPerson(eTeam, eEra, bFirst)
 		 pPlayer:InitUnit(GameInfoTypes.UNIT_ENGINEER, capitalX, capitalY)
 		 pPlayer:InitUnit(GameInfoTypes.UNIT_WRITER, capitalX, capitalY)
 		 pPlayer:InitUnit(GameInfoTypes.UNIT_ARTIST, capitalX, capitalY)
-         pPlayer:ChangeOverflowResearch(2*pPlayer:GetScience())
+         pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
 		 end
 
 		     end

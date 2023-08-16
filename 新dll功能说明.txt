@@ -533,7 +533,9 @@ GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjec
 GetProjectCount()
 
 
-
+ALTER TABLE Policies ADD COLUMN 'GreatScientistBeakerPolicyModifier' INTEGER DEFAULT 0; 
+ALTER TABLE Policies ADD COLUMN 'ProductionBeakerMod' INTEGER DEFAULT 0; 
+ALTER TABLE Policies ADD COLUMN 'ExtraSpies' INTEGER DEFAULT 0;
 
 ALTER TABLE Policies ADD COLUMN 'DefenseBoostAllCities' INTEGER DEFAULT 0;
 ALTER TABLE Policies ADD COLUMN 'FreePopulation' INTEGER DEFAULT 0;
@@ -551,7 +553,23 @@ ALTER TABLE Traits ADD COLUMN 'GoldenAgeOnWar' BOOLEAN DEFAULT 0;
 
 	
 
+
+
+
 -------------------------------------------------------------------------------------------------
+		<Table name="Building_UnitTypeHealGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="UnitType" type="text" reference="Domains(Type)"/>
+		<Column name="Heal" type="integer"/>
+	</Table>
+
+
+
+	<Table name="Building_FreeSpecUnits">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="UnitType" type="text" reference="Units(Type)"/>
+		<Column name="NumUnits" type="integer"/>
+	</Table>
 
 
 -- New Traits - Can buy owned plots with gold

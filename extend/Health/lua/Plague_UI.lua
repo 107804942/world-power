@@ -184,10 +184,6 @@ end
 -- ********************************************************	
 
 
-
-----------------
--- TEXT
-----------------
 --Player:GetCityHealthTT
 function Player.GetCityHealthTT(player, city)
 	local totalHealth, totalDisease = player:GetCityHealthTotal(city, true)

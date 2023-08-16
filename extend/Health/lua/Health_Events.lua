@@ -54,32 +54,11 @@ function KillPopulation(player,city)
     local plagueID=city:GetPlagueType()
 	local pop=0
 	local bNotify = false
-
-		if city:GetPopulation() > 2 and city:GetPopulation() <= 20 then
-	    city:ChangePopulation(-1, true)
+	
+		if city:GetPopulation() > 2  then
+		pop=math.max(math.floor(city:GetPopulation()/10),1)
+	    city:ChangePopulation(-pop, true)
 		--city:SetFood(0)
-		pop= 1
-		bNotify = true
-		end
-
-		if city:GetPopulation() > 20 and city:GetPopulation() <= 40 then
-	    city:ChangePopulation(-2, true)
-		--city:SetFood(0)
-		pop= 2
-		bNotify = true
-		end
-
-		if city:GetPopulation() > 40 and city:GetPopulation() <= 60 then
-	    city:ChangePopulation(-3, true)
-		--city:SetFood(0)
-		pop= 3
-		bNotify = true
-		end
-
-        if city:GetPopulation() > 60 then
-	    city:ChangePopulation(-5, true)
-		--city:SetFood(0)
-		pop= 5
 		bNotify = true
 		end
 
@@ -175,7 +154,7 @@ function DiseaseUnits(city)
         if unitCount > 0 then
 		for i = 0, unitCount-1, 1 do
         local pFoundUnit = adjPlot:GetUnit(i);
-		if  pFoundUnit~=nil and not pFoundUnit:IsImmuePlague() then
+		if  pFoundUnit~=nil and pFoundUnit:NukeDamageLevel()== -1  and not pFoundUnit:IsImmuePlague() then
 		          pFoundUnit:ChangeDamage(50)  
 		          pFoundUnit:SetHasPromotion(GameInfoTypes.PROMOTION_PLAGUED, true) 
 				  end
