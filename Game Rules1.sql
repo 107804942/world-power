@@ -13,6 +13,10 @@
 				<Text>一处火山发生了超大规模喷发。</Text>
 			</Row>
 
+
+			本城每个采石场+1[ICON_RES_GUNPOWDER]火药。
+
+
 INSERT INTO Project_YieldModifiers(ProjectType,YieldType, Yield)VALUES
 ('PROJECT_BLIALI', 'YIELD_SCIENCE',300);
 

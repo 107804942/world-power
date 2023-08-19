@@ -262,20 +262,7 @@ GameEvents.UnitPromoted.Add(PromotedWonderBuff)
 
 
 
-function CarpenterCheck(iPlayer, iCity, iBuilding)
-if (iBuilding == GameInfoTypes.BUILDING_CARPENTER) then
-   local pPlayer = Players[iPlayer]
-   local pCity = pPlayer:GetCityByID(iCity)
-   if pCity:HasFeature(GameInfoTypes.FEATURE_FOREST)
-   or pCity:HasFeature(GameInfoTypes.FEATURE_JUNGLE)
-   then	
-   return true
-	        end     
-   return false
-	  end
-	 return true
- end
-GameEvents.CityCanConstruct.Add(CarpenterCheck)
+
 
 
 function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
@@ -472,7 +459,7 @@ function MagaBoughtPlot(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)
 	local Player = Players[iPlayer]
 	--local plot = Map.GetPlot(iPlotX, iPlotY)
 	local city = Player:GetCityByID(iCity)
-	if Player:GetCivilizationType() == GameInfoTypes["CIVILIZATION_AMERICA"]  then
+	if Player:HasTrait(GameInfoTypes["TRAIT_RIVER_EXPANSION"]) then
 	--if bGold then
 	local iGain = GetCultureGain(Player)
 	city:ChangeProduction(20*iGain)

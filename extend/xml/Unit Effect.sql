@@ -229,24 +229,6 @@ SELECT  'PROMOTION_GHOST_POWER', Type, 100  FROM Features WHERE ID !=-1;
 
 
 
-------------------------------------------------------------------------------------------------------------------------
--- 精英判定
-------------------------------------------------------------------------------------------------------------------------
-INSERT  INTO Unit_FreePromotions(UnitType,PromotionType)
-SELECT  Type, 'PROMOTION_ELITE_UNIT' FROM Units WHERE HurryCostModifier=-1 AND ProjectPrereq != 'NULL';
-
-INSERT  INTO Unit_FreePromotions(UnitType,PromotionType)
-VALUES('UNIT_GERMAN_LANDSKNECHT', 'PROMOTION_ELITE_UNIT'),
-      ('UNIT_HORSE_ARTILLERY',    'PROMOTION_ELITE_UNIT');
-
-CREATE TRIGGER FreePromotionForELITE
-AFTER INSERT ON Units
-WHEN NEW.ProjectPrereq != 'NULL' AND -1=NEW.HurryCostModifier
-BEGIN
-  INSERT INTO Unit_FreePromotions(UnitType,PromotionType )
-    VALUES(NEW.Type, 'PROMOTION_ELITE_UNIT');
-END;
-
 
 
 -----删除歼击机初始领域加成
@@ -308,10 +290,7 @@ VALUES ('PROMOTION_STURMTIGER','PROMOTION_CITADEL_DEFENSE',200);
 
 
 
---马炮对步兵
-INSERT  INTO UnitPromotions_PromotionModifiers (PromotionType,OtherPromotionType ,Modifier)
-VALUES ('PROMOTION_HORSE_ARTILLERY','PROMOTION_INFANTRY_COMBAT',50),
-       ('PROMOTION_HORSE_ARTILLERY','PROMOTION_GUNPOWDER_INFANTRY_COMBAT',50);
+
 
 
 ---超级武器对堡垒
@@ -1728,10 +1707,10 @@ SELECT Type, 'RESOURCE_GUNPOWDER',3 FROM Buildings WHERE BuildingClass='BUILDING
 
 
  -------------------------------单位升级------------------------------
---马炮
-INSERT INTO Unit_ClassUpgrades(UnitType, UnitClassType)
-VALUES ('UNIT_HORSE_ARTILLERY_MOVE','UNITCLASS_ARTILLERY');
 
+ --医生
+INSERT INTO Unit_ClassUpgrades(UnitType, UnitClassType)
+SELECT Type, 'UNITCLASS_MODERN_DOCTOR' FROM Units WHERE Class='UNITCLASS_DOCTOR';
 
  --堡垒
 INSERT INTO Unit_ClassUpgrades(UnitType, UnitClassType)

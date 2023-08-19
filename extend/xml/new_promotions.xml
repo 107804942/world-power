@@ -4023,28 +4023,6 @@
 
 
 		<Row>
-			<Type>PROMOTION_ELITE_UNIT</Type>
-			<Description>TXT_KEY_PROMOTION_ELITE_UNIT</Description>
-			<Help>TXT_KEY_PROMOTION_ELITE_UNIT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ELITE_UNIT</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<CannotBeCaptured>true</CannotBeCaptured>
-			<!--<CaptureDefeatedEnemyChance>100</CaptureDefeatedEnemyChance>-->
-			<!--<AOEDamageOnKill>99</AOEDamageOnKill>-->
-			<!--<AoEWhileFortified>50</AoEWhileFortified>-->
-		</Row>
-
-
-
-
-
-		<Row>
 			<Type>PROMOTION_IGNORE_PLOT_DAMAGE</Type>
 			<Description>TXT_KEY_PROMOTION_IGNORE_PLOT_DAMAGE</Description>
 			<Help>TXT_KEY_PROMOTION_IGNORE_PLOT_DAMAGE_HELP</Help>
@@ -4137,38 +4115,6 @@
 		</Row>
 
 
-
-		<!--*************马炮**************-->
-		<Row>
-			<Type>PROMOTION_HORSE_ARTILLERY</Type>
-			<Description>TXT_KEY_PROMOTION_HORSE_ARTILLERY</Description>
-			<Help>TXT_KEY_PROMOTION_HORSE_ARTILLERY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>23</PortraitIndex>
-			<IconAtlas>robotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<IgnoreZOC>true</IgnoreZOC>
-			<RangedAttackModifier>50</RangedAttackModifier>
-			<ExtraWithdrawal>100</ExtraWithdrawal>
-			<PediaEntry>TXT_KEY_PROMOTION_HORSE_ARTILLERY</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_HORSE_ARTILLERY_MOVE</Type>
-			<Description>TXT_KEY_PROMOTION_HORSE_ARTILLERY_MOVE</Description>
-			<Help>TXT_KEY_PROMOTION_HORSE_ARTILLERY_MOVE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<MovesChange>3</MovesChange>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<PediaEntry>TXT_KEY_PROMOTION_HORSE_ARTILLERY_MOVE</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
 
 
 

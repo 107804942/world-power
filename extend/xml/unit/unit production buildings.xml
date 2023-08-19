@@ -16,10 +16,6 @@
 			<UnitType>UNIT_URBAN_CANNON</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
-		</Row>
 
 
 		<Row>

@@ -17,6 +17,30 @@
 
 
 
+
+
+
+
+
+
+function CarpenterCheck(iPlayer, iCity, iBuilding)
+if (iBuilding == GameInfoTypes.BUILDING_CARPENTER) then
+   local pPlayer = Players[iPlayer]
+   local pCity = pPlayer:GetCityByID(iCity)
+   if pCity:HasFeature(GameInfoTypes.FEATURE_FOREST)
+   or pCity:HasFeature(GameInfoTypes.FEATURE_JUNGLE)
+   then	
+   return true
+	        end     
+   return false
+	  end
+	 return true
+ end
+GameEvents.CityCanConstruct.Add(CarpenterCheck)
+
+
+
+
 function GRANDEUR_5(iPlayer, policyID) 
 	local pPlayer = Players[iPlayer]; 
 

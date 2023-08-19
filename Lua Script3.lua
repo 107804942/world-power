@@ -12,7 +12,28 @@ include("IconSupport.lua");
 include("InstanceManager")
 
 
+function MagaBoughtPlot(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)  
+	local Player = Players[iPlayer]
+	--local plot = Map.GetPlot(iPlotX, iPlotY)
+	local city = Player:GetCityByID(iCity)
+	if Player:GetCivilizationType() == GameInfoTypes["CIVILIZATION_AMERICA"]  then
+	--if bGold then
+	local iGain = GetCultureGain(Player)
+	city:ChangeProduction(20*iGain)
+	Player:ChangeJONSCulture(20*iGain)
+	  -- end
+	end
+end
+GameEvents.CityBoughtPlot.Add(MagaBoughtPlot)
 
+-- ****************************************
+-- 获取文明ua
+-- ****************************************	
+function GetLeaderTraitType(pPlayer)
+	leaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type
+	traitType = GameInfo.Leader_Traits("LeaderType ='" .. leaderType .. "'")().TraitType
+	return GameInfo.Traits[traitType]
+end
 -- ********************************************************
 -- 删除地图错误资源
 -- ********************************************************

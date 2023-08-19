@@ -389,13 +389,14 @@ ALTER TABLE Buildings ADD COLUMN 'MoveAfterCreated' INTEGER DEFAULT 0;
 	</Table>
 
 
-		<!-- BUILDING: Allows you to define a building to grant +1 yield based on the # of tiles of terrain type in the city's working radius Yield value = divisor (so 3 = for every 3 tiles, get +1 of a yield) -->
+	<!-- BUILDING: Allows you to define a building to grant +1 yield based on the # of tiles of terrain type in the city's working radius Yield value = divisor (so 3 = for every 3 tiles, get +1 of a yield) -->
 	<Table name="Building_YieldPerXTerrainTimes100">
 		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
 		<Column name="TerrainType" type="text" reference="Terrains(Type)"/>
 		<Column name="YieldType" type="text" reference="Yields(Type)"/>
 		<Column name="Yield" type="integer"/>
 	</Table>
+
 	<Table name="Building_YieldPerXFeatureTimes100">
 		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
 		<Column name="FeatureType" type="text" reference="Features(Type)"/>
@@ -404,7 +405,13 @@ ALTER TABLE Buildings ADD COLUMN 'MoveAfterCreated' INTEGER DEFAULT 0;
 	</Table>
 
 
-
+	50.建筑对本城改良设施资源加成
+	<Table name="Building_ResourceFromImprovement">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="Value" type="integer" default="0"/>
+	</Table>
 
 
 	38.建筑对本地奇观加成   
@@ -449,7 +456,13 @@ ALTER TABLE Buildings ADD COLUMN 'MoveAfterCreated' INTEGER DEFAULT 0;
 	</Table>
 
 
-
+	本地改良对本城产出百分比加成
+	 <Table name="Building_ImprovementYieldModifiers">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
 
 	产能额外转换率
 	<Table name="Building_YieldFromProcessModifier">
@@ -528,9 +541,25 @@ ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
 	</Table>
 
 
-GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjectType);
 
-GetProjectCount()
+
+	<!-- BUILDING: Allows you to define a building to grant a yield when a city grows.  -->
+	<Table name="Building_YieldFromBirth">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+		<!-- BUILDING: Allows you to define a building to grant a yield when a city grows its borders.  -->
+	<Table name="Building_YieldFromBorderGrowth">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+
+
 
 
 ALTER TABLE Policies ADD COLUMN 'GreatScientistBeakerPolicyModifier' INTEGER DEFAULT 0; 
@@ -544,19 +573,32 @@ ALTER TABLE Traits ADD COLUMN 'GoldenAgeOnWar' BOOLEAN DEFAULT 0;
 
 
 
-    <Table name="Building_ImprovementYieldModifiers">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer"/>
-	</Table>
-
-	
-
+-- New Traits - Can buy owned plots with gold
+ALTER TABLE Traits ADD COLUMN 'BuyOwnedTiles' BOOLEAN DEFAULT 0;
 
 
 
 -------------------------------------------------------------------------------------------------
+
+
+
+	<Table name="Building_GreatPersonProgressFromConstruction">
+		<!-- BUILDING: Great Person progress in the city when a building is contructed. Bonus only granted if the constructed building at least the same era as the stated era. -->
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="GreatPersonType" type="text" reference="GreatPersons(Type)"/>
+		<Column name="EraType" type="text" reference="Eras(Type)" default="ERA_ANCIENT"/>
+		<Column name="Value" type="integer" default="0"/>
+	</Table>
+
+
+
+
+
+
+INSERT INTO Building_ResourceFromImprovement(BuildingType,ResourceType,ImprovementType,Value) 
+VALUES ('BUILDING_SILKROAD','RESOURCE_MANPOWER', 'IMPROVEMENT_FARM', 10);
+
+
 		<Table name="Building_UnitTypeHealGlobal">
 		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
 		<Column name="UnitType" type="text" reference="Domains(Type)"/>
@@ -572,7 +614,9 @@ ALTER TABLE Traits ADD COLUMN 'GoldenAgeOnWar' BOOLEAN DEFAULT 0;
 	</Table>
 
 
--- New Traits - Can buy owned plots with gold
-ALTER TABLE Traits ADD COLUMN 'BuyOwnedTiles' BOOLEAN DEFAULT 0;
 
+	GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjectType);
 
+GetProjectCount()
+
+	

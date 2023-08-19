@@ -395,21 +395,6 @@
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
 
-
-
-
-
-		<Row>
-			<Type>BUILDINGCLASS_US_BANK_TOWER</Type>
-			<DefaultBuilding>BUILDING_US_BANK_TOWER</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_US_BANK_TOWER</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-
-
-
-
-
 		<Row>
 			<Type>BUILDINGCLASS_LEP</Type>
 			<DefaultBuilding>BUILDING_LEP</DefaultBuilding>
@@ -652,15 +637,6 @@
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
-
-		<!-- 达芬奇工坊 -->
-		<Row>
-			<Type>BUILDINGCLASS_LEONOARDOS_WORKSHOP</Type>
-			<DefaultBuilding>BUILDING_LEONOARDOS_WORKSHOP</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-	
 
 		<!-- 阿布辛贝勒神庙 -->
 		<Row>
@@ -1847,34 +1823,6 @@
 
 
 
-
-
-		<!-- 达芬奇工坊 -->
-		<Row>
-			<Type>BUILDING_LEONOARDOS_WORKSHOP</Type>
-			<BuildingClass>BUILDINGCLASS_LEONOARDOS_WORKSHOP</BuildingClass>
-			<Cost>625</Cost>
-			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
-			<Help>TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP_HELP</Help>
-			<Description>TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP</Description>
-			<ArtDefineTag>NONE</ArtDefineTag>
-			<MaxStartEra>ERA_MODERN</MaxStartEra>
-			<MinAreaSize>-1</MinAreaSize>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<GreatPeopleRateChange>1</GreatPeopleRateChange>
-			<ConquestProb>100</ConquestProb>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<NukeImmune>true</NukeImmune>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>48</PortraitIndex>
-			<Quote>TXT_KEY_WONDER_LEONOARDOS_WORKSHOP_QUOTE</Quote>
-			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<WonderSplashImage>LeonardoSplash.dds</WonderSplashImage>
-		</Row>
-
-
-
-
 		<!-- 哥贝克力 -->
 		<Row>
 			<Type>BUILDING_SKARABRAE</Type>
@@ -2570,61 +2518,6 @@
 
 
 
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
-		<Row>
-			<Type>BUILDING_US_BANK_TOWER</Type>
-			<BuildingClass>BUILDINGCLASS_US_BANK_TOWER</BuildingClass>
-			<Description>TXT_KEY_BUILDING_US_BANK_TOWER</Description>
-			<Help>TXT_KEY_WONDER_US_BANK_TOWER_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_US_BANK_TOWER_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_US_BANK_TOWER_QUOTE</Quote>
-			<Cost>2150</Cost>
-			<PrereqTech>TECH_CORPORATION</PrereqTech>
-			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<SpecialistCount>2</SpecialistCount>
-			<!--<CultureRateModifier>34</CultureRateModifier>-->
-			<LandmarksTourismPercent>100</LandmarksTourismPercent>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<GreatWorksTourismModifier>100</GreatWorksTourismModifier>
-			<Water>true</Water>
-			<MinAreaSize>10</MinAreaSize>
-			<TradeRouteRecipientBonus>40</TradeRouteRecipientBonus>
-			<TradeRouteTargetBonus>40</TradeRouteTargetBonus>
-			<ConquestProb>100</ConquestProb>
-			<NumTradeRouteBonus>1</NumTradeRouteBonus>
-			<TradeRouteLandDistanceModifier>50</TradeRouteLandDistanceModifier>
-			<TradeRouteSeaDistanceModifier>50</TradeRouteSeaDistanceModifier>
-			<TradeRouteLandGoldBonus>4000</TradeRouteLandGoldBonus>
-			<TradeRouteSeaGoldBonus>4000</TradeRouteSeaGoldBonus>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>9</PortraitIndex>
-			<WonderSplashImage>US_BANK_TOWER_Splash.dds</WonderSplashImage>
-			<WonderSplashAnchor>R,B</WonderSplashAnchor>
-		</Row>
-		
-
-
-		
-		
-		
-		
-		
-	
-
 		<Row>
 			<Type>BUILDING_BLETCHLEY_PARK</Type>
 			<BuildingClass>BUILDINGCLASS_BLETCHLEY_PARK</BuildingClass>
@@ -2836,7 +2729,7 @@
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<FreeTechs>4</FreeTechs>
+			<FreeTechs>3</FreeTechs>
 			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
 			<PortraitIndex>74</PortraitIndex>
 			<WonderSplashImage>DIABLO.dds</WonderSplashImage>
@@ -3518,12 +3411,7 @@
 		</Row>
 		
 		
-		<!--达芬奇-->
-		<Row>
-			<BuildingType>BUILDING_LEONOARDOS_WORKSHOP</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>2</Cost>
-		</Row>
+
 
 
 		<Row>
@@ -3683,18 +3571,7 @@
 		</Row>
 
 
-		<Row>
-			<BuildingType>BUILDING_US_BANK_TOWER</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>10</Cost>
-		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_US_BANK_TOWER</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>8</Cost>
-		</Row>
-		
 		
 		
 		<Row>
@@ -5231,11 +5108,6 @@
 
 
 	
-		<Row>
-			<BuildingType>BUILDING_US_BANK_TOWER</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
-		</Row>
-		
 
 		<Row>
 			<BuildingType>BUILDING_LEP</BuildingType>

@@ -223,34 +223,8 @@
 			<UnitType/>
 		</Row>
 		
-		
-		
-		
-		<!--<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_HUGE_BOMB</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_HUGE_BOMB</UnitClassType>
-			<UnitType/>
-		</Row>-->
-
 	
-		
-
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_HORSE_ARTILLERY</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_HORSE_ARTILLERY</UnitClassType>
-			<UnitType/>
-		</Row>
-		
+	
 		
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
@@ -616,21 +590,7 @@
 		</Row>
 
 
-		<!--<Row>
-			<Type>UNITCLASS_HUGE_BOMB</Type>
-			<Description>TXT_KEY_UNIT_HUGE_BOMB</Description>
-			<DefaultUnit>UNIT_HUGE_BOMB</DefaultUnit>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>-->
-		
-		
-		
-		<Row>
-			<Type>UNITCLASS_HORSE_ARTILLERY</Type>
-			<Description>TXT_KEY_UNIT_HORSE_ARTILLERY</Description>
-			<DefaultUnit>UNIT_HORSE_ARTILLERY_MOVE</DefaultUnit>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>
+	
 
 		<Row>
 			<Type>UNITCLASS_GLADIATOR</Type>
@@ -657,6 +617,14 @@
 
 		
 		
+		<Row>
+			<Type>UNITCLASS_MODERN_DOCTOR</Type>
+			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
+			<DefaultUnit>UNIT_MODERN_DOCTOR</DefaultUnit>
+			<MaxPlayerInstances>5</MaxPlayerInstances>
+		</Row>
+
+
 		<Row>
 			<Type>UNITCLASS_BLIALI</Type>
 			<Description>TXT_KEY_UNIT_BLIALI</Description>

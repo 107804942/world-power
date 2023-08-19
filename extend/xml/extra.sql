@@ -26,6 +26,10 @@ WHERE Type IN ('WORLD_POWER_PATCH')
 AND EXISTS (SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_KGB');
 
 
+-----ÂòµØ
+UPDATE Traits SET BuyOwnedTiles = 1 WHERE Type ='TRAIT_RIVER_EXPANSION'; 
+
+
 -----Óæ´¬±»ÂÓ½Ùºó´Ý»Ù
 UPDATE Improvements SET DestroyedWhenPillaged = 1 WHERE Type ='IMPROVEMENT_FISHFARM_MOD'; 
 
@@ -439,6 +443,8 @@ UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=
 UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=14 WHERE Type='IMPROVEMENT_ACADEMY';
 UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=15 WHERE Type='IMPROVEMENT_CUSTOMS_HOUSE';
 UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=16 WHERE Type='IMPROVEMENT_MANUFACTORY';
+
+UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=38  WHERE Type='IMPROVEMENT_KASBAH';
 
 UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=34 WHERE Type='IMPROVEMENT_WELL';
 

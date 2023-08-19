@@ -10,7 +10,7 @@
 
 		<!-- VOLCANOS -->
 		<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO">
-			<Text>[COLOR_YELLOW]火山[ENDCOLOR]</Text>
+			<Text>火山</Text>
 		</Row>
 		<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO_HELP">
 			<Text>临近的陆地地块(自然奇观除外)+1[ICON_FOOD]食物，+1[ICON_TOURISM]魅力。</Text>
@@ -2504,7 +2504,7 @@
 			<Text>[NEWLINE]"所谓科学，包括逻辑和数学在内，都是有关时代的函数，所有科学连同它的理想和成就统统都是如此。"[NEWLINE]        ——穆尔[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_DIABLO_HELP">
-			<Text>该奇观建成时，获得4个免费科技。</Text>
+			<Text>该奇观建成时，获得3个免费科技。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_CHOOSE_IDEOLOGY_PREQ">
@@ -4695,26 +4695,6 @@
 
 
 
-
-		<Row Tag="TXT_KEY_BUILDING_US_BANK_TOWER">
-			<Text>联邦银行大厦</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_US_BANK_TOWER_HELP">
-			<Text>本城+66%[ICON_GOLD]金钱产出，全国每个世界奇观+8[ICON_GOLD]金钱产出，额外赠送一条免费的商路和一艘免费的货船。本城市100%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，从本城市出发的陆上和海上商路+40基础[ICON_GOLD]金，每处海关额外+10[ICON_GOLD]金钱。只能在沿海的巨型城市（60人口）建造。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_US_BANK_TOWER_PEDIA">
-			<Text>
-				联邦银行大厦(U.S. Bank Tower，又被称为图书馆大楼、第一州际世界中心)位于美国加州洛杉矶市中心西五街633号。它是整个北美地区在芝加哥以西最高的摩天大楼，也是加州的最高楼。这栋建筑因为地点就在洛杉矶中央图书馆的对街，因此也被称为"图书馆大楼";洛杉矶于1986年，在经历过两次灾难性的大火后，拨出一亿美金的重建经费，其中部分用来整修洛杉矶中央图书馆。洛杉矶市政府并且将领空权，卖给联邦银行大楼的兴建者，来补足图书馆的整建计划。联邦银行大楼因为曾经被第一州际银行买下，也一度被称为"第一州际世界中心"。后来因为该银行和富国银行合并，图书馆大楼的称号又重新被提起。2003年三月，大楼被US Bankcorp买下，因此重新命名为联邦银行大楼。不过洛杉矶民众，还是习惯继续将该建筑称为图书馆大楼。
-				[NEWLINE]这栋建筑顶端使用大型玻璃设计的部分，被称为"皇冠"，在夜间可以看到发光。"皇冠"会在七月四号美国独立纪念日，用红蓝两色灯光打亮，如果是圣诞节假期间，则会用红绿两色的灯光。洛杉矶湖人队进行NBA季后赛比赛时，"皇冠"会打上紫色和金色的灯(这两种颜色为湖人队的代表颜色)。2004年2月28号，皇冠被挂上两个美国银行商标的看板，每一个看板有75英尺高(23米)，被认为破坏建筑本身的美感，而引起严重争议。(1990到1997年间，第一州际银行将商标看板挂上黄冠时，也引起同样争议。)
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_US_BANK_TOWER_QUOTE">
-			<Text>[NEWLINE]“现代建筑死于密苏里州的圣路易斯城，死于1972年6月15日下午三点三十二分。”[NEWLINE]  —— 建筑评论家查尔斯</Text>
-		</Row>
-
-
-
 		<Row Tag="TXT_KEY_BUILDING_LEP">
 			<Text>地球之心高温炉</Text>
 		</Row>
@@ -6087,7 +6067,7 @@
 
 		<Row Tag="TXT_KEY_BUILDING_CARPENTER_HELP">
 			<Text>
-				本城地块范围内存在丛林或森林地块时方可建造，建成后可提高城市[ICON_PRODUCTION]产能，提供6单位[ICON_RES_HARDWOOD]木材资源。
+				+2[ICON_PRODUCTION]产能，提供6单位[ICON_RES_HARDWOOD]木材资源。本城每个锯木厂、红木林场+1[ICON_PRODUCTION]产能，每个锯木厂+1[ICON_RES_HARDWOOD]木材。
 			</Text>
 		</Row>
 
@@ -6161,7 +6141,7 @@
 			<Text>战争情报</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SPY_ADJACENCY_BUFF_HELP">
-			<Text>+15%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。</Text>
+			<Text>与有我方间谍驻扎的文明的单位作战时+25%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。</Text>
 		</Row>
 
 
@@ -6509,7 +6489,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_ALCHEMIST_HELP">
 			<Text>
-				+1[ICON_PEACE]信仰和[ICON_RESEARCH]科研。每处[ICON_RES_SULFUR]硫磺、[ICON_RES_TNT]硝石、[ICON_RES_COPPER]铜、[ICON_RES_GEMS]宝石、[ICON_RES_GOLD]黄金和[ICON_RES_SILVER]银资源+1[ICON_RESEARCH]科研。
+				+1[ICON_PEACE]信仰和[ICON_RESEARCH]科研。每处[ICON_RES_SULFUR]硫磺、[ICON_RES_TNT]硝石、[ICON_RES_COPPER]铜、[ICON_RES_GEMS]宝石、[ICON_RES_GOLD]黄金和[ICON_RES_SILVER]银资源+2[ICON_RESEARCH]科研。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_ALCHEMIST_PEDIA">
@@ -6873,21 +6853,6 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP">
-			<Text>达芬奇工坊</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_LEONOARDOS_WORKSHOP_HELP">
-			<Text>本地每种类型的专家对应的产出+2。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_LEONOARDOS_WORKSHOP_QUOTE">
-			<Text>
-				[NEWLINE]"真理只有一个，它不在宗教中，而是在科学中。"[NEWLINE]        ——达·芬奇[NEWLINE]
-			</Text>
-		</Row>
-
-
-
 		<Row Tag="TXT_KEY_BUILDING_ABUSIMBEL">
 			<Text>阿布辛贝勒神庙</Text>
 		</Row>
@@ -6998,7 +6963,7 @@
 			<Text>[ICON_WAR]火药库</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_GUN_POWDER_HOUSE_HELP">
-			<Text>提供5单位[ICON_RES_GUNPOWDER]火药资源。当全国范围内拥有已开发的[ICON_RES_TNT]硝石资源时可建造，但会消耗5[ICON_RES_TNT]硝石。本城每个采石场+1[ICON_RES_GUNPOWDER]火药。</Text>
+			<Text>提供5单位[ICON_RES_GUNPOWDER]火药资源。当全国范围内拥有已开发的[ICON_RES_TNT]硝石资源时可建造，但会消耗5[ICON_RES_TNT]硝石。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_GUN_POWDER_HOUSE_PEDIA">
@@ -7811,7 +7776,7 @@
 		<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
 			<Text>
 				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，[ICON_PIRATE]歼灭敌军有概率将其俘获。需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
-				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击与[ICON_PROMOTION_NEW_ELITE]军团晋升，且[ICON_MOVES]移动不受地形影响。
+				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：攻击可对目标相邻区域的敌方单位造成50%溅射伤害，[ICON_PIRATE]歼灭非[COLOR_YIELD_GOLD]精英单位[ENDCOLOR]敌军时，有概率将其捕获为[COLOR_POSITIVE_TEXT]己方单位[ENDCOLOR]。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]善战无前[ENDCOLOR]：发动攻击将累积[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]，当[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]到达[COLOR_POSITIVE_TEXT]100[ENDCOLOR]时，可消耗1[ICON_MOVES]移动力组建一支[ICON_PROMOTION_NEW_INFANTRY_COMBAT][COLOR_POSITIVE_TEXT]重装步兵[ENDCOLOR]/[ICON_PROMOTION_NEW_GUNPOWDER_INFANTRY][COLOR_POSITIVE_TEXT]火药步兵[ENDCOLOR]。
@@ -8540,71 +8505,6 @@
 
 
 
-
-
-
-
-		<!-- Horse Artillery -->
-		<Row Tag="TXT_KEY_COMMAND_FIRE_GUNS">
-			<Text>架设</Text>
-		</Row>
-		<Row Tag="TXT_KEY_COMMAND_LIMBER">
-			<Text>装载</Text>
-		</Row>
-		<Row Tag="TXT_KEY_MISSION_FIRE_GUNS_HELP">
-			<Text>架设大炮以攻击敌军。[COLOR_NEGATIVE_TEXT]-3[ENDCOLOR][ICON_MOVES]移动力[COLOR_POSITIVE_TEXT]，可轰炸敌人。[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_MISSION_LIMBER_HELP">
-			<Text>装载以获得更强的机动性。[COLOR_POSITIVE_TEXT]+3[ENDCOLOR][ICON_MOVES]移动力。[COLOR_NEGATIVE_TEXT]不可以轰炸敌人。[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_MISSION_FIRE_GUNS_HELP_DISABLED">
-			<Text>只有处于装运状态可执行该指令</Text>
-		</Row>
-		<Row Tag="TXT_KEY_MISSION_LIMBER_HELP_DISABLED">
-			<Text>只有处于架设状态才能使用枪械。</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_UNIT_HORSE_ARTILLERY">
-			<Text>[COLOR_YIELD_GOLD]马炮兵[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_HORSE_ARTILLERY_TEXT">
-			<Text>
-				这种用马推拖拽的炮兵单位成本很低，且速度和机动性都不错。马炮兵可以在战斗中轻易快速地部署大炮。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_HELP_HORSE_ARTILLERY">
-			<Text>这种陆军炮兵单位具备两种模式：1.不可攻击但移动力更高，并且有几率回避近战的移动模式2.+50%[ICON_RANGE_STRENGTH]远程攻击力的火炮攻击模式。这两种模式切换使用能够使得以往笨拙的炮兵变得更加灵活。能够迅速加入战场或者撤离危险地带。[NEWLINE][NEWLINE]需要马炮计划工程解锁。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNIT_HORSE_ARTILLERY_STRATEGY">
-			<Text>这种陆军炮兵单位具备两种模式：1.不可攻击但移动力更高，并且有几率回避近战的移动模式2.+50%[ICON_RANGE_STRENGTH]远程攻击力的火炮攻击模式。这两种模式切换使用能够使得以往笨拙的炮兵变得更加灵活。能够迅速加入战场或者撤离危险地带。</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_PROJECT_HORSE_ARTILLERY">
-			<Text>马炮计划</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_HORSE_ARTILLERY_HELP">
-			<Text>只有[COLOR_POSITIVE_TEXT]首个[ENDCOLOR]完成此项目的文明可以建造火炮单位：[COLOR_YIELD_GOLD]马炮兵[ENDCOLOR]。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_HORSE_ARTILLERY_PEDIA">
-			<Text>
-				大约在十六世纪时，军事家们开始意识到用马匹拖拉轻型火炮到前线作战的价值。根据欧洲历史记载，有些指挥官会将马炮兵单位与步兵单位甚至骑兵搭配使用。马炮兵单位的高机动性让军事领袖们更能应付瞬息万变的战场。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_HORSE_ARTILLERY">
-			<Text>灵活作战</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_HORSE_ARTILLERY_HELP">
-			<Text>
-				无视敌方控制区,被近战攻击时有70%几率撤退。+50%远程[ICON_STRENGTH]攻击力，对步兵系单位+50%[ICON_STRENGTH]战斗力。
-			</Text>
-		</Row>
 
 
 
@@ -9864,7 +9764,7 @@
 			<Text>克格勃</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KGB_HELP">
-			<Text>极大减少本城中外来[ICON_SPY]间谍行动效率，当你的[ICON_SPY]间谍成功操纵城邦选举或者粉碎敌方[ICON_SPY]间谍试图推翻你的政权的行动时，你将获得一次性的[ICON_RESEARCH]科研、[ICON_GOLD]金钱产出。即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。</Text>
+			<Text>极大减少本城中外来[ICON_SPY]间谍行动效率，当你的[ICON_SPY]间谍成功操纵城邦选举或者粉碎敌方[ICON_SPY]间谍试图推翻你的政权的行动时，你将获得一次性的[ICON_RESEARCH]科研、[ICON_GOLD]金钱产出。即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止新的外来间谍进入本文明拥有的城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_KGB_TEXT">
 			<Text>
@@ -9903,7 +9803,6 @@
 		<Row Tag="TXT_KEY_BUILDING_FOREIGN_OFFICE_HELP">
 			<Text>
 				在世界会议获得2个额外代表票数。当你赠予城邦礼物时，可获得更多[ICON_INFLUENCE]影响力。当你在其他文明城市中安置了外交官时，每回合可获得该城市多项产出（[ICON_CULTURE]文化、[ICON_PEACE]信仰、[ICON_RESEARCH]科研、[ICON_GOLD]金钱）的15%。若双方宣布了友好申明，则数值提升至25%。
-				[NEWLINE]只能在巨型城市建造。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_FOREIGN_OFFICE_TEXT">
@@ -9924,7 +9823,6 @@
 		<Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_BUREAU_HELP">
 			<Text>
 				与有我方间谍驻扎的文明的单位作战时+25%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。
-				[NEWLINE]只能在巨型城市建造。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_INTELLIGENCE_BUREAU_TEXT">
@@ -10405,27 +10303,6 @@
 
 		<Row Tag="TXT_KEY_PROMOTION_SEA_COMBAT_UNIT_HELP">
 			<Text>海军单位。</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_PROMOTION_ELITE_UNIT">
-			<Text>精英单位</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ELITE_UNIT_HELP">
-			<Text>该单位属于精英单位。</Text>
-		</Row>
-
-
-
-
-
-
-
-		<Row Tag="TXT_KEY_PROMOTION_HORSE_ARTILLERY_MOVE">
-			<Text>马炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_HORSE_ARTILLERY_MOVE_HELP">
-			<Text>移动力+3。</Text>
 		</Row>
 
 

@@ -717,14 +717,14 @@
 			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
 			<ResourceType>RESOURCE_SULFUR</ResourceType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
 			<ResourceType>RESOURCE_TIN</ResourceType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		
 
@@ -732,25 +732,25 @@
 			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
 			<ResourceType>RESOURCE_COPPER</ResourceType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
 			<ResourceType>RESOURCE_GEMS</ResourceType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
 			<ResourceType>RESOURCE_GOLD</ResourceType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
 			<ResourceType>RESOURCE_SILVER</ResourceType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 

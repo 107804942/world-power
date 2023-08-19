@@ -273,14 +273,7 @@ function ChangeResearchProcess(pPlayer, iTeamID, iTeam, iTeamTechs, iPlayerID, N
 
 end
 
--- ****************************************
--- 获取文明ua
--- ****************************************	
-function GetLeaderTraitType(pPlayer)
-	leaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type
-	traitType = GameInfo.Leader_Traits("LeaderType ='" .. leaderType .. "'")().TraitType
-	return GameInfo.Traits[traitType]
-end
+
 
 -- ****************************************
 -- 随机数

@@ -69,7 +69,7 @@
 		<Replace Name="GLOBAL_PROMOTIONS_REMOVAL" Value="1"/>
 		<Replace Name="EVENTS_CITY_BOMBARD" Value="1"/>
 		<Replace Name="IMPROVEMENT_FUNCTION" Value="1"/>
-		
+		<Replace Name="BUILDING_IMPROVEMENT_RESOURCES" Value="1"/>
 		<Replace Name="ROG_CORE" Value="1"/>
 		<Replace Name="VOLCANO_BREAK" Value="1"/>
 		<Replace Name="EVENTS_GREAT_WORK_CREATED" Value="1"/>
@@ -78,6 +78,7 @@
 		<Replace Name="EVENTS_IMPROVEMENTS_PILLAGED" Value="1"/>
 		<Replace Name="EVENTS_UNIT_CAN_RANGEATTACK" Value="1"/>
 		<Replace Name="EVENTS_UNIT_MOVE" Value="1"/>
+		
 
 		<Replace Name="EVENTS_TILE_SET_OWNER" Value="1"/>
 		<Replace Name="EVENTS_WLKD_DAY" Value="1"/>
@@ -132,7 +133,7 @@
 		<Replace Name="EVENTS_GOLDEN_AGE" Value="1"/>
 		<Replace Name="EVENTS_NEW_ERA" Value="1"/>
 		<Replace Name="EVENTS_UNIT_UPGRADES" Value="1"/>
-		<Replace Name="EVENTS_NW_DISCOVERY" Value="1"/>
+
 		<Replace Name="EVENTS_BARBARIANS" Value="1"/>
 		<Replace Name="EVENTS_REBASE" Value="1"/>
 
@@ -156,12 +157,13 @@
 		<Replace Name="GLOBAL_CS_NO_ALLIED_SKIRMISHES" Value="1"/>
 
 		<Replace Name="AI_GREAT_PEOPLE_CHOICES" Value="1"/>
-		<Replace Name="BUGFIX_RESEARCH_OVERFLOW" Value="1"/>
+
+		
 		<Replace Name="EVENTS_CITY_RAZING" Value="1"/>
 		<Replace Name="EVENTS_FOUND_RELIGION" Value="1"/>
 		<Replace Name="GLOBAL_ALPINE_PASSES" Value="1"/>
 		<Replace Name="GLOBAL_MOVE_AFTER_UPGRADE" Value="1"/>
-		<Replace Name="GLOBAL_CANNOT_EMBARK" Value="1"/>
+
 		<!--<Replace Name="BUILDINGS_PRO_RATA_PURCHASE" Value="1"/>
 		<Replace Name="BUILDINGS_PRO_RATA_PURCHASE_DEPRECIATION" Value="80"/>-->
 		<Replace Name="EVENTS_CIRCUMNAVIGATION" Value="80"/>
@@ -314,42 +316,7 @@
 	
 	
 
-	<Missions>
-		<!-- Horse Artillery -->
-		<Row>
-			<Type>MISSION_FIRE_GUNS</Type>
-			<Description>TXT_KEY_COMMAND_FIRE_GUNS</Description>
-			<Help>TXT_KEY_MISSION_FIRE_GUNS_HELP</Help>
-			<DisabledHelp>TXT_KEY_MISSION_FIRE_GUNS_HELP_DISABLED</DisabledHelp>
-			<HotKey>KB_U</HotKey>
-			<HotKeyPriority>2</HotKeyPriority>
-			<OrderPriority>150</OrderPriority>
-			<Visible>1</Visible>
-			<IconIndex>13</IconIndex>
-			<IconAtlas>UNIT_ACTION_ATLAS</IconAtlas>
-		</Row>
-		
-		
-		<Row>
-			<Type>MISSION_LIMBER_GUNS</Type>
-			<Description>TXT_KEY_COMMAND_LIMBER</Description>
-			<Help>TXT_KEY_MISSION_LIMBER_HELP</Help>
-			<DisabledHelp>TXT_KEY_MISSION_LIMBER_HELP_DISABLED</DisabledHelp>
-			<HotKey>KB_U</HotKey>
-			<HotKeyPriority>2</HotKeyPriority>
-			<OrderPriority>150</OrderPriority>
-			<Visible>1</Visible>
-			<IconIndex>17</IconIndex>
-			<IconAtlas>SP_UNIT_ACTION_ATLAS</IconAtlas>
-		</Row>
 
-
-
-
-		
-		
-	</Missions>
-	
 	
 	
 

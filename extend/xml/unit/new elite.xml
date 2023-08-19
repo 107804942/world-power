@@ -90,74 +90,7 @@
 			<ExtraMaintenanceCost>7</ExtraMaintenanceCost>
 		</Row>
 
-		<Row>
-			<Class>UNITCLASS_HORSE_ARTILLERY</Class>
-			<Type>UNIT_HORSE_ARTILLERY_MOVE</Type>
-			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<Combat>40</Combat>
-			<Cost>450</Cost>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<!--<FaithCost>370</FaithCost>
-			<RequiresFaithPurchaseEnabled>true</RequiresFaithPurchaseEnabled>-->
-			<Moves>3</Moves>
-			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_CITY_BOMBARD</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_HORSE_ARTILLERY</Description>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_HORSE_ARTILLERY_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HORSE_ARTILLERY_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_HORSE_ARTILLERY</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<ObsoleteTech>TECH_LARGE_CALIBRE</ObsoleteTech>
-			<AdvancedStartCost>30</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_HORSE_ARTILLERY</UnitArtInfo>
-			<UnitFlagIconOffset>43</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>36</PortraitIndex>
-			<MoveRate>QUADRUPED</MoveRate>
-			<ProjectPrereq>PROJECT_HORSE_ARTILLERY</ProjectPrereq>
-			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
-		</Row>
-
-		<Row>
-			<Class>UNITCLASS_HORSE_ARTILLERY</Class>
-			<Type>UNIT_HORSE_ARTILLERY</Type>
-			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<Combat>30</Combat>
-			<RangedCombat>80</RangedCombat>
-			<Cost>-1</Cost>
-			<Moves>3</Moves>
-			<Range>3</Range>
-			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_CITY_BOMBARD</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_HORSE_ARTILLERY</Description>
-			<ShowInPedia>false</ShowInPedia>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_HORSE_ARTILLERY_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HORSE_ARTILLERY_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_HORSE_ARTILLERY</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<ObsoleteTech>TECH_LARGE_CALIBRE</ObsoleteTech>
-			<AdvancedStartCost>30</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_RHA_CANNON</UnitArtInfo>
-			<UnitFlagIconOffset>43</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>36</PortraitIndex>
-			<ProjectPrereq>PROJECT_HORSE_ARTILLERY</ProjectPrereq>
-			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
-			<MoveRate>ARTILLERY</MoveRate>
-		</Row>
-
+	
 		<!--角斗士-->
 		<Row>
 			<Class>UNITCLASS_GLADIATOR</Class>
@@ -302,22 +235,24 @@
 		</Row>
 
 
+
 		<Row>
-			<Class>UNITCLASS_DOCTOR</Class>
+			<Class>UNITCLASS_MODERN_DOCTOR</Class>
 			<Type>UNIT_MODERN_DOCTOR</Type>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<Cost>700</Cost>
 			<Moves>5</Moves>
-			<BaseSightRange>3</BaseSightRange>
+			<BaseSightRange>1</BaseSightRange>
 			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>
 			<Domain>DOMAIN_LAND</Domain>
-			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
+			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
 			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_DOCTOR_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_HELP_DOCTOR</Help>
 			<AdvancedStartCost>10</AdvancedStartCost>
+			<MoveAfterPurchase>true</MoveAfterPurchase>
 			<MoveRate>GREAT_PERSON</MoveRate>
 			<CombatLimit>0</CombatLimit>
 			<UnitArtInfo>ART_DEF_UNIT_GREAT_DOCTOR</UnitArtInfo>
@@ -327,6 +262,8 @@
 			<PortraitIndex>3</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 		</Row>
+		
+
 		
 		
 
@@ -1403,48 +1340,7 @@
 
 
 
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<PromotionType>PROMOTION_HORSE_ARTILLERY</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-		</Row>
-
 	
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<PromotionType>PROMOTION_HORSE_ARTILLERY</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<PromotionType>PROMOTION_HORSE_ARTILLERY_MOVE</PromotionType>
-		</Row>
-
 
 
 		<Row>
@@ -2386,24 +2282,7 @@
 
 
 
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<UnitAIType>UNITAI_CITY_BOMBARD</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<UnitAIType>UNITAI_RANGED</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<UnitAIType>UNITAI_CITY_BOMBARD</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<UnitAIType>UNITAI_RANGED</UnitAIType>
-		</Row>
-
-
+	
 
 
 		<Row>
@@ -2659,80 +2538,6 @@
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
-
-
-
-
-
-
-
-		<!--<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<FlavorType>FLAVOR_USE_NUKE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<FlavorType>FLAVOR_NUKE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HUGE_BOMB</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>-->
-
-
-
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<FlavorType>FLAVOR_MOBILE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-
 
 
 
@@ -3196,48 +3001,6 @@
 		<Row>
 			<UnitType>UNIT_IRON_BUDDHA</UnitType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
-		</Row>
-
-
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
-			<Cost>2</Cost>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
-			<Cost>2</Cost>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<Cost>2</Cost>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<Cost>2</Cost>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 
 
