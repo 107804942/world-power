@@ -725,18 +725,7 @@
 
 	<UnitGameplay2DScripts>
 
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY_MOVE</UnitType>
-			<SelectionSound>AS2D_SELECT_CHARIOT_ARCHER</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_CHARIOT_ARCHER</FirstSelectionSound>
-		</Row>
-		<Row>
-			<UnitType>UNIT_HORSE_ARTILLERY</UnitType>
-			<SelectionSound>AS2D_SELECT_CANNON</SelectionSound>
-			<FirstSelectionSound>AS2D_BUILD_CANNON</FirstSelectionSound>
-		</Row>
-
-
+	
 
 		<Row>
 			<UnitType>UNIT_GLADIATOR</UnitType>

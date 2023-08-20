@@ -10,7 +10,6 @@ include("FunctionUtilities.lua");
 
 
 
-
 function DoSomeEffects(playerID)
     local player = Players[playerID]
     if player==nil

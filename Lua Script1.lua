@@ -18,7 +18,10 @@
 
 
 
-
+local BletchleyEraUnits = {[0] = GameInfoTypes.UNIT_SUMERIAN_SPEARMAN,[1] = GameInfoTypes.UNIT_SWORDSMAN,
+ [2] = GameInfoTypes.UNIT_LONGSWORDSMAN, [3] = GameInfoTypes.UNIT_MUSKETMAN, [4] = GameInfoTypes.UNIT_RIFLEMAN,
+ [5] = GameInfoTypes.UNIT_GREAT_WAR_INFANTRY, [6] = GameInfoTypes.UNIT_INFANTRY,[7] = GameInfoTypes.UNIT_MOTORISED_INFANTRY,
+ [8] = GameInfoTypes.UNIT_MECHANIZED_INFANTRY,[9] = GameInfoTypes.UNIT_FW_AUTOMATON};
 
 
 
