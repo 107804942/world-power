@@ -3979,20 +3979,7 @@
 		</Update>
 
 
-		<Row>
-			<Type>PROMOTION_JAPANESE_BATTLESHIP</Type>
-			<Description>TXT_KEY_PROMOTION_JAPANESE_BATTLESHIP</Description>
-			<Help>TXT_KEY_PROMOTION_JAPANESE_BATTLESHIP_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_JAPANESE_BATTLESHIP</PediaEntry>
-			<RangedAttackModifier>25</RangedAttackModifier>
-			<DefenseMod>25</DefenseMod>
-			<MaxHitPointsChange>100</MaxHitPointsChange>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
+
 
 
 		<Row>
@@ -4912,8 +4899,8 @@
 			<Help>TXT_KEY_PROMOTION_KGB_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<NumSpyAttackMod>5</NumSpyAttackMod>
-			<NumSpyDefenseMod>5</NumSpyDefenseMod>
+			<NumSpyAttackMod>3</NumSpyAttackMod>
+			<NumSpyDefenseMod>3</NumSpyDefenseMod>
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>SPY_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>

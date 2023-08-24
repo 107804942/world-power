@@ -3335,7 +3335,7 @@
 			<Text>谍战</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_KGB_HELP">
-			<Text>你拥有的每个间谍为你的单位+5%[ICON_STRENGTH]攻击力与[ICON_STRENGTH]防御力。</Text>
+			<Text>你拥有的每个间谍为你的单位+3%[ICON_STRENGTH]攻击力与[ICON_STRENGTH]防御力。</Text>
 		</Row>
 
 
@@ -3357,7 +3357,7 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_THORIUM_REACTOR_HELP">
-			<Text>本城市+5[ICON_PRODUCTION]产能。提供50[ICON_RES_ELECTRICITY]电力。</Text>
+			<Text>本城市+5[ICON_PRODUCTION]产能。提供50[ICON_RES_ELECTRICITY]电力。本城地块上每个发电机+5[ICON_RES_ELECTRICITY]电力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_THORIUM_REACTOR_DESC">
@@ -10314,7 +10314,7 @@
 		<!-- Help tags -->
 		<Row Tag="TXT_KEY_WONDER_ANCIENT_CITY_HELP">
 			<Text>
-				全国每座城市+1[ICON_CITIZEN]人口，所有农场、梯田、圩田+1[ICON_FOOD]食物，+1[ICON_GOLD]金钱。全国每处[ICON_RES_WHEAT]小麦、[ICON_RES_BARLEY]大麦+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱,+1[ICON_FOOD]食物。本地[ICON_GREAT_ENGINEER]工程师+1[ICON_FOOD]食物产出。建成后获得一个移民。
+				全国所有农场、梯田、圩田+1[ICON_FOOD]食物，+1[ICON_GOLD]金钱。全国每处[ICON_RES_WHEAT]小麦、[ICON_RES_BARLEY]大麦+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱,+1[ICON_FOOD]食物。
 			</Text>
 		</Row>
 		<!-- Quote tags -->
@@ -10332,12 +10332,7 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_BATTLESHIP">
-			<Text>弩级战舰</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_JAPANESE_BATTLESHIP_HELP">
-			<Text>+25%[ICON_STRENGTH]防御力和远程战斗力，生命值上限+100。</Text>
-		</Row>
+	
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
 			<Text>每回合增加1次额外攻击次数。</Text>

@@ -809,7 +809,7 @@ function InputHandler( uiMsg, wParam, lParam )
 				if IsCanTransPortPlot(pSelUnit,pPlot)  then
 				pSelUnit:SetXY(pPlot:GetX(), pPlot:GetY());
                 pSelUnit:SetMoves(0)
-				Events.AddPopupTextEvent(PositionCalculator(pPlot:GetX(), pPlot:GetY()), Locale.ConvertTextKey("TXT_KEY_ALERT_SUPER_TRANSPORT",pSelUnit:GetName()),0.1)
+				Events.AddPopupTextEvent(PositionCalculator(pPlot:GetX(), pPlot:GetY()), Locale.ConvertTextKey("TXT_KEY_ALERT_SPY_TRANSPORT",pSelUnit:GetName()),0.1)
 				Events.AudioPlay2DSound("AS2D_SPACE_TRANSPORT") 
 				end
 		
@@ -1414,6 +1414,27 @@ GameEvents.PlayerDoneTurn.Add(BLETCHLEY_PARK)
 -- **********************************************************************************************************************************************
 --
 -- **********************************************************************************************************************************************
+function Denounce_BUFF(PlayerID, OtherPlayerID)
+	local player = Players[PlayerID]
+	local otherPlayer= Players[OtherPlayerID]
+	if player == nil or otherPlayer== nil  then
+	return
+	end
+  ----------------------------------------------------------------------------------
+	 if  otherPlayer:HasWonder(GameInfoTypes.BUILDING_AP) then
+		 for row in GameInfo.MinorCivilizations() do	
+		 if row.Type ~=nil and Players[row.ID]:IsMinorCiv()  then 
+		 if Players[row.ID]:IsEverAlive() and Players[row.ID]:IsAlive() then
+					--if pPlayer:IsProtectingMinor(row.ID) then
+					Players[row.ID]:ChangeMinorCivFriendshipWithMajor(PlayerID,-80) 
+                end
+			end		
+		end
+	end
+end
+GameEvents.DoDenounce.Add(Denounce_BUFF)
+
+
 function AG_BUFF(iPlayer)
 	local player = Players[iPlayer]
 	if player == nil 
@@ -1421,27 +1442,7 @@ function AG_BUFF(iPlayer)
 	or (not player:IsAlive()) then
 	 	return
 	         end
-  ----------------------------------------------------------------------------------
-			 if  player:HasWonder(GameInfoTypes.BUILDING_AP) then
-			 for otherPlayerID = 0, 64 - 1 do
-                local otherPlayer = Players[otherPlayerID]
-                if otherPlayer:IsAlive() then
-                    --if otherPlayer:IsDenouncedPlayer(playerID) then
-					if  otherPlayer:IsDenouncingPlayer(iPlayer) then			
-			        for row in GameInfo.MinorCivilizations() do	
-				    if row.Type ~=nil and Players[row.ID]:IsMinorCiv()  then 
-					if Players[row.ID]:IsEverAlive() and Players[row.ID]:IsAlive() then
-						--if pPlayer:IsProtectingMinor(row.ID) then
-						Players[row.ID]:ChangeMinorCivFriendshipWithMajor(otherPlayerID,-80) 
-						    end
-                        end
-                    end
-                end
-			end		
-		end
-	end
 
-	----------------------------------------------------------------------------------
 	if  player:CountNumBuildings(GameInfoTypes.BUILDING_FOREIGN_OFFICE) > 0 
 	and player:GetNumSpies() >0 then
 	            local sum= 0

@@ -16,6 +16,76 @@
 --GetEspionageSpies
 
 
+	--pMinorCapital->ChangeResistanceTurns(-pMinorCapital->GetResistanceTurns());
+
+	function AG_BUFF(iPlayer)
+	local player = Players[iPlayer]
+	if player == nil 
+	or (not player:IsMajorCiv()) 
+	or (not player:IsAlive()) then
+	 	return
+	         end
+  ----------------------------------------------------------------------------------
+			 if  player:HasWonder(GameInfoTypes.BUILDING_AP) then
+			 for otherPlayerID = 0, 64 - 1 do
+                local otherPlayer = Players[otherPlayerID]
+                if otherPlayer:IsAlive() then
+                    --if otherPlayer:IsDenouncedPlayer(playerID) then
+					if  otherPlayer:IsDenouncingPlayer(iPlayer) then			
+			        for row in GameInfo.MinorCivilizations() do	
+				    if row.Type ~=nil and Players[row.ID]:IsMinorCiv()  then 
+					if Players[row.ID]:IsEverAlive() and Players[row.ID]:IsAlive() then
+						--if pPlayer:IsProtectingMinor(row.ID) then
+						Players[row.ID]:ChangeMinorCivFriendshipWithMajor(otherPlayerID,-80) 
+						    end
+                        end
+                    end
+                end
+			end		
+		end
+	end
+
+	----------------------------------------------------------------------------------
+	if  player:CountNumBuildings(GameInfoTypes.BUILDING_FOREIGN_OFFICE) > 0 
+	and player:GetNumSpies() >0 then
+	            local sum= 0
+				local agents = player:GetEspionageSpies()
+				for i,v in ipairs(agents) do
+					local iAgent = v
+					if (v.IsDiplomat) then -- Only for diplomat!
+						local pPlot = Map.GetPlot(iAgent.CityX, iAgent.CityY)
+						local pCity = nil
+						if(pPlot ~= nil) then
+							pCity = pPlot:GetPlotCity()
+							if(pCity ~= nil) then
+								 local pOwner = Players[pCity:GetOwner()]
+								 local science= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
+				                 local gold= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_GOLD))
+				                 local faith= pCity:GetFaithPerTurn()
+								 local Culture= pCity:GetBaseJONSCulturePerTurn()
+								--if (not pOwner:IsMinorCiv()) then -- Not for city states
+									if  pOwner:IsDoF(iPlayer) then -- If not friend then begins attack
+									    sum = 0.15
+										else 
+										sum = 0.25
+									    end
+					                    player:ChangeGold(gold*sum)
+	                                    player:ChangeJONSCulture(Culture*sum)
+					 					player:ChangeFaith(faith*sum)
+					 					local iTeamID = player:GetTeam()
+                     					local iTeam = Teams[iTeamID]
+			         					local iTeamTechs = iTeam:GetTeamTechs()
+			         					--local Boost = player:GetScience()
+				                         ChangeResearchProcess(player, iTeamID, iTeam, iTeamTechs, iPlayer, science*sum)									
+                					 end
+		      					 end
+           					 end
+        				end
+	 				end
+	 ----------------------------------------------------------------------------------
+
+end
+GameEvents.PlayerDoTurn.Add(AG_BUFF)
 
 
 local BletchleyEraUnits = {[0] = GameInfoTypes.UNIT_SUMERIAN_SPEARMAN,[1] = GameInfoTypes.UNIT_SWORDSMAN,

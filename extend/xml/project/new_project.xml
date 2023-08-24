@@ -223,18 +223,6 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
 
-		<Row>
-			<Type>PROJECT_HORSE_ARTILLERY</Type>
-			<Description>TXT_KEY_PROJECT_HORSE_ARTILLERY</Description>
-			<Help>TXT_KEY_PROJECT_HORSE_ARTILLERY_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_HORSE_ARTILLERY_PEDIA</Civilopedia>
-			<TechPrereq>TECH_GUNPOWDER</TechPrereq>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-			<MaxTeamInstances>1</MaxTeamInstances>
-			<Cost>100</Cost>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
 
 		<Row>
 			<Type>PROJECT_GLADIATOR</Type>
@@ -808,58 +796,6 @@
 		</Row>
 
 
-
-
-
-		<Row>
-			<ProjectType>PROJECT_HORSE_ARTILLERY</ProjectType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-		<Row>
-			<ProjectType>PROJECT_HORSE_ARTILLERY</ProjectType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-
-
-
-		<!--<Row>
-			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
-			<FlavorType>FLAVOR_RANGED</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-		<Row>
-			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
-			<FlavorType>FLAVOR_AIR</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
-			<FlavorType>FLAVOR_USE_NUKE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-		<Row>
-			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
-			<FlavorType>FLAVOR_NUKE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-		<Row>
-			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-		<Row>
-			<ProjectType>PROJECT_HUGE_BOMB</ProjectType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>-->
 	</Project_Flavors>
 
 

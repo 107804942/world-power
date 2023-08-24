@@ -569,8 +569,14 @@ ALTER TABLE Policies ADD COLUMN 'ExtraSpies' INTEGER DEFAULT 0;
 ALTER TABLE Policies ADD COLUMN 'DefenseBoostAllCities' INTEGER DEFAULT 0;
 ALTER TABLE Policies ADD COLUMN 'FreePopulation' INTEGER DEFAULT 0;
 ALTER TABLE Policies ADD COLUMN 'FreePopulationCapital' INTEGER DEFAULT 0;
+
+
+ALTER TABLE Policies ADD COLUMN 'NoResistance'  BOOLEAN DEFAULT 0;
+
+ALTER TABLE Traits ADD COLUMN 'NoResistance'  BOOLEAN DEFAULT 0;
 ALTER TABLE Traits ADD COLUMN 'GoldenAgeOnWar' BOOLEAN DEFAULT 0;
 
+ALTER TABLE Policies ADD COLUMN 'UpgradeAllTerritory' BOOLEAN DEFAULT 0;
 
 
 -- New Traits - Can buy owned plots with gold
@@ -578,8 +584,26 @@ ALTER TABLE Traits ADD COLUMN 'BuyOwnedTiles' BOOLEAN DEFAULT 0;
 
 
 
+
+
+-- Conquering a city heals all units (by X%)
+ALTER TABLE Policies ADD COLUMN 'CityCaptureHealGlobal' INTEGER DEFAULT 0;
+
+
+ALTER TABLE Policies ADD COLUMN 'OriginalCapitalCaptureTech' INTEGER DEFAULT 0;
+ALTER TABLE Policies ADD COLUMN 'OriginalCapitalCapturePolicy' INTEGER DEFAULT 0;
+ALTER TABLE Policies ADD COLUMN 'OriginalCapitalCaptureGreatPerson' INTEGER DEFAULT 0;
+
+
+
 -------------------------------------------------------------------------------------------------
 
+-- New Traits - WLTKD from GP birth
+ALTER TABLE Traits ADD COLUMN 'GPWLTKD' BOOLEAN DEFAULT 0;
+
+
+-- Allows for Unit to be purchased in puppet city
+ALTER TABLE Units ADD COLUMN 'PuppetPurchaseOverride' BOOLEAN DEFAULT 0;
 
 
 	<Table name="Building_GreatPersonProgressFromConstruction">
@@ -620,3 +644,14 @@ VALUES ('BUILDING_SILKROAD','RESOURCE_MANPOWER', 'IMPROVEMENT_FARM', 10);
 GetProjectCount()
 
 	
+	//   GameEvents.DoDenounce.Add(function(PlayerID, OtherPlayerID) end) 
+#define MOD_EVENTS_DO_DENOUNCE                      gCustomMods.isEVENTS_DO_DENOUNCE ()
+GAMEEVENT_DoDenounce
+
+#if defined(MOD_EVENTS_CITY)
+				if (MOD_EVENTS_CITY) {
+					GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityConstructed, getOwner(), GetID(), eConstructBuilding, false, false);
+				} else {
+#endif
+
+--void CvDiplomacyAI::DoDenouncePlayer(PlayerTypes ePlayer)

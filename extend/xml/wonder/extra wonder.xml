@@ -764,7 +764,7 @@
 			<PortraitIndex>61</PortraitIndex>
 			<WonderSplashImage>ANCIENT_CITY.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<GlobalPopulationChange>1</GlobalPopulationChange>
+			<!--<GlobalPopulationChange>1</GlobalPopulationChange>-->
 		</Row>
 
 		<!--洛克斐尔-->

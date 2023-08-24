@@ -65,8 +65,6 @@
 	<CustomModOptions>
 		<!--*****额外新增功能******-->
 		<Replace Name="MORE_NATURAL_WONDER" Value="1"/>
-		<Replace Name="SPECIALIST_RESOURCES" Value="1"/>
-		<Replace Name="GLOBAL_PROMOTIONS_REMOVAL" Value="1"/>
 		<Replace Name="EVENTS_CITY_BOMBARD" Value="1"/>
 		<Replace Name="IMPROVEMENT_FUNCTION" Value="1"/>
 		<Replace Name="BUILDING_IMPROVEMENT_RESOURCES" Value="1"/>
@@ -75,16 +73,13 @@
 		<Replace Name="EVENTS_GREAT_WORK_CREATED" Value="1"/>
 		<Replace Name="EVENTS_GREAT_PEOPLE_BOOST" Value="1"/>
 		<Replace Name="EVENTS_CITY_RANGE_STRIKE" Value="1"/>
-		<Replace Name="EVENTS_IMPROVEMENTS_PILLAGED" Value="1"/>
 		<Replace Name="EVENTS_UNIT_CAN_RANGEATTACK" Value="1"/>
-		<Replace Name="EVENTS_UNIT_MOVE" Value="1"/>
-		
-
-		<Replace Name="EVENTS_TILE_SET_OWNER" Value="1"/>
+		<!--<Replace Name="EVENTS_UNIT_MOVE" Value="1"/>
+		<Replace Name="EVENTS_IMPROVEMENTS_PILLAGED" Value="1"/>-->
+		<Replace Name="EVENTS_DO_DENOUNCE" Value="1"/>
+		<!--<Replace Name="EVENTS_TILE_SET_OWNER" Value="1"/>-->
 		<Replace Name="EVENTS_WLKD_DAY" Value="1"/>
 		<Replace Name="EVENTS_CITY_PUPPETED" Value="1"/>
-
-		<Replace Name="PROMOTION_COLLATERAL_DAMAGE" Value="1"/>
 		<!--*****end******-->
 		<Replace Name="PROMOTIONS_IMPROVEMENT_BONUS" Value="1"/>
 		<Replace Name="EVENTS_TILE_IMPROVEMENTS" Value="1"/>

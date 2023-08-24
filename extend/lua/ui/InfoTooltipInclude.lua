@@ -1570,12 +1570,12 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	end
 
 	-- 本地改良设施资源产出
-	--for Improvement in GameInfo.Improvements() do
-		--tip = GetresourceString( GameInfo.Building_ImprovementResourcesQuantity{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
-		--if tip ~= "" then
-			--insert( tips, L"TXT_KEY_LOCAL_IMPROVEMENT_YIELD" ..ResourceColor(L(Improvement.Description)).. ":" .. tip )
-		--end
-	--end
+	for Improvement in GameInfo.Improvements() do
+		tip = GetresourceString( GameInfo.Building_ResourceFromImprovement{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
+		if tip ~= "" then
+			insert( tips, L"TXT_KEY_LOCAL_IMPROVEMENT_YIELD" ..ResourceColor(L(Improvement.Description)).. ":" .. tip )
+		end
+	end
 
 		-- Feature Yields enhanced by Building
 	for feature in GameInfo.Features() do

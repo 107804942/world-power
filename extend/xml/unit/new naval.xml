@@ -306,14 +306,6 @@
 		<!-- 滨海战斗舰 -->
 		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
 		
-		
-		<Row>
-			<UnitType>UNIT_JAPANESE_BATTLESHIP</UnitType>
-			<PromotionType>PROMOTION_JAPANESE_BATTLESHIP</PromotionType>
-		</Row>
-
-
-
 
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>

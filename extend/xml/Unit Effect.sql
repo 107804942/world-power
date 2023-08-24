@@ -244,7 +244,7 @@ DELETE FROM UnitPromotions_Domains WHERE PromotionType = 'PROMOTION_CARRIER_FIGH
 
 
 -----删除超弩级自带的25%攻击力防御力
-DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_SP_ATTACK25' AND UnitType = 'UNIT_JAPANESE_BATTLESHIP';
+--DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_SP_ATTACK25' AND UnitType = 'UNIT_JAPANESE_BATTLESHIP';
 
 
 
