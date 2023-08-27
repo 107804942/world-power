@@ -144,7 +144,6 @@
 			<Yield>20</Yield>
 		</Row>
 
-
 	</UnitPromotions_YieldFromKills>
 
 
@@ -759,18 +758,7 @@
 	</UnitPromotions_UnitCombats>
 
 
-	<UnitPromotions_Domains>
 
-		<Delete PromotionType="PROMOTION_FAE_ROCKET_1"/>
-		<Delete PromotionType="PROMOTION_FAE_ROCKET_2"/>
-
-		<Row>
-			<PromotionType>PROMOTION_SPLASH_DAMAGE</PromotionType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>55</Modifier>
-		</Row>
-
-	</UnitPromotions_Domains>
 	<!--*****************************飞机*******************************************-->
 
 	<UnitPromotions>
@@ -952,6 +940,7 @@
 			<OrderPriority>11</OrderPriority>
 			<ShowInPedia>0</ShowInPedia>
 			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<CanParadropAnyWhere>1</CanParadropAnyWhere>
 		</Row>
 
 
@@ -4276,16 +4265,13 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>9</PortraitIndex>
 			<FreePillageMoves>true</FreePillageMoves>
+			<PillageReplenishMoves>1</PillageReplenishMoves>
+			<PillageReplenishAttck>1</PillageReplenishAttck>
+			<PillageReplenishHealth>1</PillageReplenishHealth>
 			<IconAtlas>promoMUC_atlas_01</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_PLUNDERED</PediaEntry>
 		</Row>
-
-
-
-
-
-
 
 
 

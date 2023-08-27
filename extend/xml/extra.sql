@@ -1107,7 +1107,7 @@ UPDATE UnitPromotions SET IconString2 = '[ICON_PROMOTION_NEW_SPACE_ELEVATOR]'   
 UPDATE UnitPromotions SET IconString2 = '[ICON_PROMOTION_NEW_GROUP]'               WHERE (IconAtlas = 'SP_PROMOTION_OLD_ATLAS' OR IconAtlas = 'SPPROMOTION_ATLAS') AND PortraitIndex = 20;
 UPDATE UnitPromotions SET IconString2 = '[ICON_PROMOTION_NEW_GROUP]'               WHERE IconAtlas = 'GROUP_PROMOTION_ATLAS';
 
-
+UPDATE UnitPromotions SET IconString2 = '[ICON_PROMOTION_SP10_' || CAST(PortraitIndex+1 AS TEXT)|| ']' WHERE IconAtlas = 'SP10_PROMOTION_ATLAS';
 
 --½Ç¶·Ê¿
 INSERT INTO ArtDefine_UnitInfos (Type,DamageStates,Formation) VALUES ('ART_DEF_UNIT_GLADIATOR', 1, "DefaultMelee");	

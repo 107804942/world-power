@@ -205,15 +205,12 @@ ALTER TABLE UnitPromotions ADD COLUMN 'NoResourcePunishment' BOOLEAN DEFAULT 0;
 ALTER TABLE UnitPromotions ADD 'CurrentHitPointAttackMod' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD 'CurrentHitPointDefenseMod' INTEGER DEFAULT 0;
 
-
+远程攻击击退
+ALTER TABLE UnitPromotions ADD COLUMN 'MoraleBreakChance' INTEGER DEFAULT 0;
 
 51.根据当前临近敌军设置加成
 ALTER TABLE UnitPromotions ADD 'NearNumEnemyAttackMod' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD 'NearNumEnemyDefenseMod' INTEGER DEFAULT 0;
-
-
-
-
 
 
 
@@ -596,7 +593,80 @@ ALTER TABLE Policies ADD COLUMN 'OriginalCapitalCaptureGreatPerson' INTEGER DEFA
 
 
 
+
+ALTER TABLE Policies ADD COLUMN 'AlwaysWeLoveKindDayInGoldenAge' BOOLEAN DEFAULT 0;
+
+
+----击退可造成溅射伤害
+ALTER TABLE UnitPromotions ADD  'CanDoFallBackDamage' BOOLEAN DEFAULT 0;
+
+---任意地形空降
+ALTER TABLE UnitPromotions ADD  'CanParadropAnyWhere' BOOLEAN DEFAULT 0;
+
+--掠劫相关
+ALTER TABLE UnitPromotions ADD COLUMN 'PillageReplenishMoves' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PillageReplenishAttck'  BOOLEAN DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PillageReplenishHealth' INTEGER DEFAULT 0;
+
+
+
+	<Table name="Building_YieldFromPillage">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+	<!-- BUILDING: Allows you to define a gllobal building yield earned from pillaging. Global. -->
+	<Table name="Building_YieldFromPillageGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+	<!-- BUILDING: Allows you to define a gllobal building yield earned from pillaging. Global, at player level, so be careful about using this on non-wonders! -->
+	<Table name="Building_YieldFromPillageGlobalPlayer">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+
+
+
+
+
 -------------------------------------------------------------------------------------------------
+
+INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);
+
+INSERT INTO Building_YieldFromPillageGlobal(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_CASTLE','YIELD_FAITH',100);
+
+
+INSERT INTO Building_YieldFromPillageGlobalPlayer(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
+
+
+
+
+
+	<Table name="Building_YieldFromSpyKilled">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+
+
+	<Table name="Policy_FreeBuilding">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="Count" type="integer" default="0"/>
+	</Table>
+
 
 -- New Traits - WLTKD from GP birth
 ALTER TABLE Traits ADD COLUMN 'GPWLTKD' BOOLEAN DEFAULT 0;
@@ -655,3 +725,10 @@ GAMEEVENT_DoDenounce
 #endif
 
 --void CvDiplomacyAI::DoDenouncePlayer(PlayerTypes ePlayer)
+
+
+<!-- Allows Land Units to become Cargo of Melee Ships -->
+	<Row Class="5" Name="CARGO_SHIPS" Value="0"/>
+
+	  <!-- Allows faith purchase of buildings in puppets -->
+    <Row Class="6" Name="GLOBAL_PURCHASE_FAITH_BUILDINGS_IN_PUPPETS" Value="0"/>

@@ -1679,9 +1679,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_ACCURACY_1">
 			<Text>精准一级</Text>
 		</Row>
-		<Replace Tag="TXT_KEY_PROMOTION_SPLASH_DAMAGE_HELP">
-			<Text>对目标相邻区域造成50%伤害，攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]驻防单位[ENDCOLOR]攻击力较弱，被[COLOR_NEGATIVE_TEXT]近战[ENDCOLOR]单位克制。[NEWLINE]对海军单位+100%[ICON_STRENGTH]战斗力，没有地形防御加成。</Text>
-		</Replace>
 
 
 
@@ -2480,20 +2477,7 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_BUILDING_DIABLO">
-			<Text>时态演算</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_DIABLO_PEDIA">
-			<Text>
-				数学领域的创新似乎停滞在摆动三段论及相关分支学科的出现上，导致人们对有可能进一步超越解脱过于复杂的方法不抱期望。然而，数学上的突破即将来临。[NEWLINE][NEWLINE]时态演算探讨最近的变化来确定未来的变化，具有卓越的精度。接受物理世界是由数学性质组成的，时态演算逆向通过策划生物对其环境的实时影响，来预测生物的位置。当数学应用到跟踪和可视化技术时，在目标到达之前就可以在误差范围内确定目标的未来位置。虽然对于带有混乱驱动程序的生物而言，如昆虫或较小动物，误差范围有些广，但精度随主题的复杂性而增加。对有感觉的生命形式的预测比非生命的存在更可靠，对如车辆或军事单位的有组织的或成组的工具的预测仍然更可靠。[NEWLINE][NEWLINE]近代时态演算是该领域的实验分支，探讨荒诞理论；如多远的轨迹可以预测到未来。在手术和医疗功能中利用NTC会产生神奇的效果，可预防潜在的疾病和细胞破裂之前进行修复。热情的、几乎狂热的NTC数学家结合德里斯-罗恩力学，即暗能量的物理，计算出一个阻止和控制宇宙的膨胀的假设途径。他们大胆的理论还没有其他猜想可比拟。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_DIABLO_QUOTE">
-			<Text>[NEWLINE]"所谓科学，包括逻辑和数学在内，都是有关时代的函数，所有科学连同它的理想和成就统统都是如此。"[NEWLINE]        ——穆尔[NEWLINE]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_DIABLO_HELP">
-			<Text>该奇观建成时，获得3个免费科技。</Text>
-		</Row>
+		
 
 		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_CHOOSE_IDEOLOGY_PREQ">
 			<Text>随着白宫的建成，现在可以解锁意识形态了。</Text>
@@ -4379,18 +4363,13 @@
 			<Text>消灭敌人时获得其战斗力数值20%的科研点数。</Text>
 		</Row>
 
-
-
-
-
 		<Row Tag="TXT_KEY_PROMOTION_PLUNDERED">
 			<Text>攻城掠地</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PLUNDERED_HELP">
-			<Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可获得[ICON_PEACE]信仰，[ICON_GOLD]金钱，并且额外获得1移动力与1攻击次数。</Text>
+			 <Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可额外获得一移动力与一攻击次数。</Text>
 		</Row>
-
-
+			
 		<Row Tag="TXT_KEY_PROMOTION_EQUICK">
 			<Text>火力覆盖</Text>
 		</Row>

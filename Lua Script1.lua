@@ -18,6 +18,96 @@
 
 	--pMinorCapital->ChangeResistanceTurns(-pMinorCapital->GetResistanceTurns());
 
+
+
+	function OnPillageDamageEnemies(iPlayer, iUnit, iImprovement, iGold)
+	local pPlayer = Players[iPlayer]
+	local pUnit = pPlayer:GetUnitByID(iUnit)
+	if pPlayer == nil or (not pPlayer:IsMajorCiv()) or pUnit== nil then
+	 	return
+	         end 
+	------------------------------------------------------------------
+	  if pUnit:IsHasPromotion(GameInfoTypes.PROMOTION_PLUNDERED) then
+	
+		local iGameSpeedModifier1 = GameInfo.GameSpeeds[ Game.GetGameSpeedType() ].FaithPercent / 100
+		local iGameSpeedModifier3 = GameInfo.GameSpeeds[ Game.GetGameSpeedType() ].GoldPercent / 100
+		local iEraModifier = math.max(pPlayer:GetCurrentEra(), 1)
+					
+		local iGain1 = math.floor(10 * iGameSpeedModifier1 * iEraModifier)
+		local iGain3 = math.floor(15 * iGameSpeedModifier3 * iEraModifier)
+					
+		pPlayer:ChangeFaith(iGain1)
+		pPlayer:ChangeGold(iGain3)
+		pUnit:ChangeDamage(-25)
+		pUnit:SetMoves(pUnit:MovesLeft()+GameDefines["MOVE_DENOMINATOR"])
+		pUnit:SetMadeAttack(false)
+					
+		if pPlayer:IsHuman() and pPlayer:IsTurnActive() then
+			local vUnitPosition = PositionCalculator(pUnit:GetX(), pUnit:GetY())				
+			Events.AddPopupTextEvent(vUnitPosition, "[COLOR_WHITE]+"..iGain1.." [ICON_PEACE][ENDCOLOR]", 1)
+			Events.AddPopupTextEvent(vUnitPosition, "[COLOR_YIELD_GOLD]+"..iGain3.." [ICON_GOLD][ENDCOLOR]", 1.5)
+		end
+	end
+
+
+end
+GameEvents.UnitPillageGold.Add(OnPillageDamageEnemies)
+
+
+
+function CanHaveInstaHeal(iPlayer, iUnit, iPromotionType)
+  local Player = Players[iPlayer]
+  if iPromotionType == GameInfoTypes.PROMOTION_INSTA_HEAL then
+  if Player:IsMajorCiv() and (not Player:IsHuman()) then
+  return true
+  end
+  return false
+  end
+  return true
+end
+GameEvents.CanHavePromotion.Add(CanHaveInstaHeal)
+
+
+------------------------------------------------------------------
+
+-- ****************************************
+-- 武僧
+-- ****************************************
+function CanHaveExtraPromotionForMonk(iPlayer, iUnit, iPromotionType)
+  local player = Players[iPlayer];
+  local pUnit = Players[iPlayer]:GetUnitByID(iUnit);
+
+
+  if iPromotionType == GameInfoTypes.PROMOTION_DRILL_4
+  or iPromotionType == GameInfoTypes.PROMOTION_SHOCK_4 then
+  if pUnit:GetUnitClassType() ==GameInfo.UnitClasses.UNITCLASS_MONK.ID then
+	return true
+  end
+  return false
+  end
+    return true
+end
+GameEvents.CanHavePromotion.Add(CanHaveExtraPromotionForMonk)
+
+
+	
+function OnCanParadropFrom(iPlayer, iUnit, iPlotX, iPlotY)
+
+  local pPlayer = Players[iPlayer]
+  local pUnit = pPlayer:GetUnitByID(iUnit)
+
+   local pPlot = Map.GetPlot(iPlotX, iPlotY)
+		
+		if (pUnit~=nil  and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_XCOM_WEAPON_BASE"].ID)) then
+
+		  return true
+		end
+  return false
+end
+GameEvents.CanParadropFrom.Add(OnCanParadropFrom)
+
+
+
 	function AG_BUFF(iPlayer)
 	local player = Players[iPlayer]
 	if player == nil 

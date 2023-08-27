@@ -1066,21 +1066,6 @@ GameEvents.UnitSetXY.Add(GolemActivate)
 
 
 
-function OnCanParadropFrom(iPlayer, iUnit, iPlotX, iPlotY)
-
-  local pPlayer = Players[iPlayer]
-  local pUnit = pPlayer:GetUnitByID(iUnit)
-
-   local pPlot = Map.GetPlot(iPlotX, iPlotY)
-		
-		if (pUnit~=nil  and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_XCOM_WEAPON_BASE"].ID)) then
-
-		  return true
-		end
-  return false
-end
-GameEvents.CanParadropFrom.Add(OnCanParadropFrom)
-
 -- **********************************************************************************************************************************************
 -- ¸¡Ê¯ÕÂÓã
 -- **********************************************************************************************************************************************
@@ -1358,8 +1343,6 @@ GameEvents.PlayerCompletedQuest.Add(PlayerCompletedQuest)
 -- ****************************************
 -- 
 -- ****************************************
-
-
 function BLETCHLEY_PARK(playerID) 
 	local pPlayer = Players[playerID] 
 	if pPlayer == nil or (not pPlayer:IsMajorCiv())  then
@@ -1589,9 +1572,7 @@ function LOCKUP(iPlayer, iSpy, iResult, iCityX, iCityY)
    end
    ----------------------------------------------------------------
 end 	
- GameEvents.EspionageResult.Add(LOCKUP)  
-
-
+GameEvents.EspionageResult.Add(LOCKUP)  
 
 --==========================================================================================================================
 --³ÇÊÐ¹¥»÷·¶Î§
@@ -1769,20 +1750,6 @@ GameEvents.TeamSetEra.Add(AiIntoNewEra)
 
 
 if Difficult9Active  then
-
-function CanHaveInstaHeal(iPlayer, iUnit, iPromotionType)
-  local Player = Players[iPlayer]
-  if iPromotionType == GameInfoTypes.PROMOTION_INSTA_HEAL then
-  if Player:IsMajorCiv() and (not Player:IsHuman()) then
-  return true
-  end
-  return false
-  end
-  return true
-end
-GameEvents.CanHavePromotion.Add(CanHaveInstaHeal)
-
-
 
 function UpdateGreatPerson(eTeam, eEra, bFirst)
        local TookSomething = 0	

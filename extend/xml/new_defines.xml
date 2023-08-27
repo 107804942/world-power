@@ -96,6 +96,7 @@
 		<!--<Replace Name="TRAITS_ANY_BELIEF" Value="1"/>-->
 		
 		<!-- Fixes the very dodgy maths in the calculation of a unit's power (v19) -->
+		<Replace Name="BUGFIX_UNIT_POWER_CALC" Value="1"/>
 		<Replace Name="BUGFIX_INTERCEPTOR_STRENGTH" Value="1"/>
 		<Replace Name="BUGFIX_REMOVE_GHOST_ROUTES" Value="1"/>
 		

@@ -319,16 +319,6 @@
 		
 	
 
-		<!-- 时态演算 -->
-		<Row>
-			<Type>BUILDINGCLASS_DIABLO</Type>
-			<DefaultBuilding>BUILDING_DIABLO</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_DIABLO</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-		
-	
-
 		<!-- 布利奇 -->
 		<Row>
 			<Type>BUILDINGCLASS_BLETCHLEY_PARK</Type>
@@ -686,10 +676,6 @@
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
-
-	
-		
-		
 		<!-- 环球影视-->
 
 		<Row>
@@ -2714,27 +2700,6 @@
 		</Row>
 
 
-		<!--时态演算-->
-
-		<Row>
-			<Type>BUILDING_DIABLO</Type>
-			<BuildingClass>BUILDINGCLASS_DIABLO</BuildingClass>
-			<Description>TXT_KEY_BUILDING_DIABLO</Description>
-			<Help>TXT_KEY_WONDER_DIABLO_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_DIABLO_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_DIABLO_QUOTE</Quote>
-			<Cost>17000</Cost>
-			<ConquestProb>100</ConquestProb>
-			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<FreeTechs>3</FreeTechs>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>74</PortraitIndex>
-			<WonderSplashImage>DIABLO.dds</WonderSplashImage>
-			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-		</Row>
 
 
 		<!--太空基地-->
@@ -2871,7 +2836,7 @@
 			<Quote>TXT_KEY_WONDER_FW_MARKOV_QUOTE</Quote>
 			<Cost>18000</Cost>
 			<Happiness>-50</Happiness>
-			<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
+			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
 			<MaxStartEra>ERA_FUTURE</MaxStartEra>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<GreatPeopleRateChange>10</GreatPeopleRateChange>
@@ -3462,13 +3427,18 @@
 		<Row>
 			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>18</Cost>
+			<Cost>20</Cost>
 		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>25</Cost>
+			<Cost>35</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>8</Cost>
 		</Row>
 		
 
@@ -3483,20 +3453,6 @@
 			<Cost>15</Cost>
 		</Row>
 
-
-		<Row>
-			<BuildingType>BUILDING_DIABLO</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>30</Cost>
-		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_DIABLO</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>30</Cost>
-		</Row>
-		
-		
 		
 
 		<Row>
@@ -4230,21 +4186,6 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_DIABLO</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_QUANTUM_LAB</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>6</YieldChange>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_DIABLO</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_FW_SERVER_HUB</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>4</YieldChange>
-		</Row>
-
-
-
-		<Row>
 			<BuildingType>BUILDING_MALTA</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
 			<YieldType>YIELD_FAITH</YieldType>
@@ -4709,12 +4650,7 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-500</Yield>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_DIABLO</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-500</Yield>
-		</Row>
-		
+
 		
 		<Row>
 			<BuildingType>BUILDING_FOLDING_MACHINE</BuildingType>
@@ -5073,13 +5009,6 @@
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 		
-		
-
-		<Row>
-			<BuildingType>BUILDING_DIABLO</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
-		</Row>
-
 
 
 		<Row>

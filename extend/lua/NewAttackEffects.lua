@@ -261,16 +261,6 @@ if defUnit:IsDead() then
 end
 
 
-	
--- ********************************************************
--- Ν»»χ»Ά±ΎΜεΉ¥»χ
--- ******************************************************** 
-if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STURMTIGER"].ID)  then 
-if load(attUnit, "DoFireSupport") ==nil  then
-save(attUnit, "DoFireSelf",1) 
-   end
-end
-
 
 
 -- ********************************************************
@@ -485,16 +475,11 @@ or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFir
                         if pFoundUnit~=attUnit and pFoundUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STURMTIGER"].ID)  then
 						if Players[pFoundUnit:GetOwner()] == attPlayer then
 						if Map.PlotDistance(pFoundUnit:GetX(), pFoundUnit:GetY(), defUnit:GetX(), defUnit:GetY()) <= pFoundUnit:Range() then
-                        pFoundUnit:SetMadeAttack(false)
+                        --pFoundUnit:SetMadeAttack(false)
+						pFoundUnit:ChangeMadeAttack(-1)
 						pFoundUnit:ChangeMoves(GameDefines["MOVE_DENOMINATOR"])  
-
-						save(pFoundUnit, "DoFireSupport",1) 
-
 						pFoundUnit:RangeStrike(defUnit:GetX(), defUnit:GetY())
-
-						if load(pFoundUnit, "DoFireSelf") ==nil  then
 						pFoundUnit:SetMadeAttack(false)
-						              end
 						           end         
 						       end
 						    end

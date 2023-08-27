@@ -241,7 +241,7 @@
 			<Type>UNIT_MODERN_DOCTOR</Type>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
-			<Cost>700</Cost>
+			<Cost>400</Cost>
 			<Moves>5</Moves>
 			<BaseSightRange>1</BaseSightRange>
 			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>
