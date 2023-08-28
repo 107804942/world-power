@@ -18,21 +18,12 @@ function DoSomeEffects(playerID)
 	for unit in player:Units() do  
 
 	if  unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"] then
+	    local iNumFighters = unit:GetCargo()  
 		local pPlot = unit:GetPlot()
-		local iNumFighters = 0
-		for iVal = 0,(pPlot:GetNumUnits() - 1) do
-		local loopUnit = pPlot:GetUnit(iVal)
-		if (loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_FUTURE"]
-		or loopUnit:GetUnitType() == GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"]) then
-		iNumFighters = iNumFighters + 1
-			end
-		end
-
-	if iNumFighters <= 4  then
+	    if iNumFighters <= 4  then
 		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
 		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		end
-		if iNumFighters == 5  then
+		else
 	    player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
 		end
 	end
@@ -178,42 +169,6 @@ GameEvents.FaithDiscover.Add(FaithCure)
 
 
 
-
-
-
-
--- ****************************************
--- 贝伦塔
--- ****************************************	
-function PromotedWonderBuff(iPlayer, iUnit, iPromotionType)
-  local player = Players[iPlayer]
-  local unit = player:GetUnitByID(iUnit)
-
-  if player == nil or (not player:IsMajorCiv()) then
-	 	return
-	         end
-
-  if player:HasWonder(GameInfoTypes.BUILDING_BEILUN_TOWER) then 
-  if unit:GetDomainType() ==DomainTypes.DOMAIN_SEA and unit:IsCombatUnit() then
-	   unit:ChangeDamage(-50)
-	   --unit:SetMoves(unit:MaxMoves());
-         end
-	  end
-
-  if player:HasWonder(GameInfoTypes.BUILDING_KRAK_DES_CHEVALIERS) then  
-    if unit:GetDamage() >0 and unit:GetUnitCombatType()==GameInfoTypes["UNITCOMBAT_MOUNTED"] and
-	unit:IsHasPromotion(GameInfoTypes.PROMOTION_KNIGHT_COMBAT) then
-	unit:ChangeDamage(-50) 
-           end
-	  end
-end    
-GameEvents.UnitPromoted.Add(PromotedWonderBuff)
-
-
-
-
-
-
 function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
    if iBuild == GameInfoTypes.BUILD_REMOVE_JUNGLE 
    or iBuild == GameInfoTypes.BUILD_REMOVE_FOREST then
@@ -297,34 +252,10 @@ end
 GameEvents.PlayerDoTurn.Add(JurassicParkBonus)
 
 
-
 --UI/InGame/Popups/ProductionPopup.lua
 --Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_BANNER);
 --Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_PRODUCTION);
 
-
-
--- ****************************************************************
--- 高德院
--- ****************************************************************	
-function BuffForLiberated(iPlayer, iOtherPlayer, iCity) 
-	local pPlayer = Players[iPlayer]; 
-	if pPlayer == nil or (not pPlayer:IsMajorCiv())  then
-	 	return
-	         end
-			  if pPlayer:HasWonder(GameInfoTypes.BUILDING_OSARAGI)then				
-			    for row in GameInfo.MinorCivilizations() do	
-				 if row.Type ~=nil then 
-				 if Players[row.ID]:IsMinorCiv() then
-					if Players[row.ID]:IsEverAlive() and Players[row.ID]:IsAlive() then
-					Players[row.ID]:ChangeMinorCivFriendshipWithMajor(iPlayer,50)
-					end
-				end
-			end
-		end
-	end
-end
-GameEvents.PlayerLiberated.Add(BuffForLiberated)
 
 -- ********************************************************
 --加速建造
@@ -411,7 +342,8 @@ function MagaBoughtPlot(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)
 	if Player:HasTrait(GameInfoTypes["TRAIT_RIVER_EXPANSION"]) then
 	--if bGold then
 	local iGain = GetCultureGain(Player)
-	city:ChangeProduction(20*iGain)
+	--city:ChangeProduction(20*iGain)
+	city:ChangeOverflowProduction(20*iGain)
 	Player:ChangeJONSCulture(20*iGain)
 	  -- end
 	end

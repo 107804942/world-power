@@ -362,6 +362,14 @@ VALUES ('BUILDING_ANCIENT_CITY', 'FLAVOR_GOLD',750),
       --('BUILDING_CARPENTER', 'FEATURE_FOREST', 'YIELD_PRODUCTION',2);
 
 
+----单位晋升时回血
+INSERT INTO Building_UnitTypePrmoteHealGlobal(BuildingType,UnitType,Heal)
+SELECT  'BUILDING_BEILUN_TOWER', Type, 50 FROM Units WHERE Domain ='DOMAIN_SEA'; 
+
+INSERT INTO Building_UnitTypePrmoteHealGlobal(BuildingType,UnitType,Heal)
+SELECT  'BUILDING_KRAK_DES_CHEVALIERS', Type, 50 FROM Units WHERE CombatClass ='UNITCOMBAT_MOUNTED' AND Domain ='DOMAIN_LAND'; 
+
+
 ---建筑关联改良加成
 INSERT INTO Building_ImprovementYieldModifiers(BuildingType,ImprovementType,YieldType,Yield) 
 VALUES ('BUILDING_SILKROAD', 'IMPROVEMENT_LATIFUNDIUM', 'YIELD_GOLD',10),

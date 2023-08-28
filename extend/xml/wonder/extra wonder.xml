@@ -1540,7 +1540,6 @@
 		</Row>
 
 		<!-- 高德院 -->
-
 		<Row>
 			<Type>BUILDING_OSARAGI</Type>
 			<BuildingClass>BUILDINGCLASS_OSARAGI</BuildingClass>
@@ -1557,12 +1556,13 @@
 			<NearbyMountainRequired>true</NearbyMountainRequired>
 			<Quote>TXT_KEY_BUILDING_OSARAGI_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
+			<LiberatedInfluence>50</LiberatedInfluence>
 			<ReligiousPressureModifier>300</ReligiousPressureModifier>
 			<WonderSplashImage>OSARAGI.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>152</PortraitIndex>
-		</Row>
+	    </Row>
 
 
 	
