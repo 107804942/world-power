@@ -208,7 +208,8 @@
 			<XPValueDefense>10</XPValueDefense>
 			<SpecialCargo>SPECIALUNIT_FIGHTER</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03P</UnitArtInfo>
+			<!--<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03P</UnitArtInfo>-->
+			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER02</UnitArtInfo>
 			<UnitFlagIconOffset>3</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<PortraitIndex>59</PortraitIndex>

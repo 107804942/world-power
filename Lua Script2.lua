@@ -3,12 +3,12 @@
 -- DateCreated: 2023/7/31 13:23:51
 --------------------------------------------------------------
 --------------------------------------------------------------------------------
-m_iPopulationChange(0),
-	m_iMinorCivFriendship(0),
+--m_iPopulationChange(0),
+--m_iMinorCivFriendship(0),
 
 
 	
-					else if (MOD_ROG_CORE && eUnitClass == GC.getInfoTypeForString("UNITCLASS_GREAT_DOCTOR", true /*bHideAssert*/))
+					--[[else if (MOD_ROG_CORE && eUnitClass == GC.getInfoTypeForString("UNITCLASS_GREAT_DOCTOR", true /*bHideAssert*/))
 					{
 						eBranch = (PolicyBranchTypes)GC.getInfoTypeForString("POLICY_BRANCH_RATIONALISM", true /*bHideAssert*/);
 						iNum = kPlayer.getDoctorsFromFaith();
@@ -33,7 +33,80 @@ m_iPopulationChange(0),
 			else if (MOD_ROG_CORE && eUnitClass == GC.getInfoTypeForString("UNITCLASS_GREAT_DOCTOR"))
 			{
 				kPlayer.incrementGeneralsFromFaith();
-			}
+			}]]
+
+
+					
+-- ********************************************************
+-- 乌尔班效果
+-- ******************************************************** 
+	if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_URBAN"].ID) then	        
+			local textcount = 0
+		    local unitCount = defPlot:GetNumUnits();
+		    if unitCount > 0 then
+			for i = 0, unitCount-1, 1 do
+				local pFoundUnit = defPlot:GetUnit(i)
+				if attPlayer:IsAtWarWith(pFoundUnit:GetOwner())   then
+				if   not pFoundUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID) then
+					pFoundUnit:SetMoves(0);     
+		               end
+					end
+				end
+			end
+
+			----------------------------------------------------------------------------------------------------------------------------
+			local TileRadius = 2
+	        for dx = -TileRadius, TileRadius - 1, 1 do
+	        for dy = -TileRadius, TileRadius - 1, 1 do
+            local loopPlot = Map.PlotXYWithRangeCheck(defUnit:GetX(), defUnit:GetY(), dx, dy, 1)
+			if (loopPlot ~= nil and not loopPlot:IsCity()) then
+                unitNum = loopPlot:GetNumUnits();
+                if unitNum > 0 then
+           for i = 0, unitNum-1, 1 do
+           local pFoundUnit = loopPlot:GetUnit(i);
+           if    pFoundUnit ~=defUnit and  not pFoundUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID)  then	
+	       if attPlayer:IsAtWarWith(pFoundUnit:GetOwner())   then
+
+		   local randomNumber = ROG_GetTrueRandom(1, 100)
+		   if randomNumber <=50 then
+		   textcount = textcount+1
+		   pFoundUnit:SetMoves(0)
+		                            end
+					            end
+				             end
+			              end
+		               end
+					end
+				 end
+			 end  	    
+		 -- Notification
+		    if textcount==0 then
+		    if    defPlayer:IsHuman() then
+			local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_US_URBAN_SHORT")
+			local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_US_URBAN")
+			defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC , text, heading, defUnit:GetX(), defUnit:GetY())
+		    elseif attPlayer:IsHuman() then
+			local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_ENEMY_URBAN_SHORT")
+			local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_ENEMY_URBAN")
+			attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC , text, heading, defUnit:GetX(), defUnit:GetY())
+		       end
+		    end
+		   -- Notification
+		    if textcount>0 then
+		    if    defPlayer:IsHuman() then
+			local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_US_URBAN_SHORT")
+			local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_US_URBAN2")
+			defPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC , text, heading, defUnit:GetX(), defUnit:GetY())
+		    elseif attPlayer:IsHuman() then
+			local heading = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_ENEMY_URBAN_SHORT")
+			local text = Locale.ConvertTextKey("TXT_KEY_SP_NOTIFICATION_UNIT_ENEMY_URBAN2")
+			attPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC , text, heading, defUnit:GetX(), defUnit:GetY())
+		      end
+		   end
+		end
+
+
+
 
 
 

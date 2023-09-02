@@ -5,15 +5,6 @@
 	<BuildingClasses>
 
 
-
-		<!--古城-->
-		<Row>
-			<Type>BUILDINGCLASS_ANCIENT_CITY</Type>
-			<DefaultBuilding>BUILDING_ANCIENT_CITY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_ANCIENT_CITY</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-
 		
 		<!--洛克斐尔-->
 		<Row>
@@ -611,13 +602,6 @@
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
-		<!-- 巴尔米拉 -->
-		<Row>
-			<Type>BUILDINGCLASS_PALMYRA</Type>
-			<DefaultBuilding>BUILDING_PALMYRA</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_PALMYRA</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
 
 		<!-- 岳阳楼 -->
 		<Row>
@@ -722,6 +706,15 @@
 			<Description>TXT_KEY_BUILDING_MONASTERY_OF_METEORA</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
+
+
+		<!-- 雕像-->
+		<Row>
+			<Type>BUILDINGCLASS_MOTHERLAND</Type>
+			<DefaultBuilding>BUILDING_MOTHERLAND</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MOTHERLAND</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
 		
 	</BuildingClasses>
 
@@ -731,27 +724,6 @@
 		<Delete Type="BUILDING_NATIONAL_LIBRARY"/>
 
 
-		<!--古城-->
-		<Row>
-			<Type>BUILDING_ANCIENT_CITY</Type>
-			<BuildingClass>BUILDINGCLASS_ANCIENT_CITY</BuildingClass>
-			<Description>TXT_KEY_BUILDING_ANCIENT_CITY</Description>
-			<Help>TXT_KEY_WONDER_ANCIENT_CITY_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_ANCIENT_CITY_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_ANCIENT_CITY_QUOTE</Quote>
-			<Cost>180</Cost>
-			<PrereqTech>TECH_CALENDAR</PrereqTech>
-			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>61</PortraitIndex>
-			<WonderSplashImage>ANCIENT_CITY.dds</WonderSplashImage>
-			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<!--<GlobalPopulationChange>1</GlobalPopulationChange>-->
-		</Row>
 
 		<!--洛克斐尔-->
 		<Row>
@@ -1129,7 +1101,6 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>224</PortraitIndex>
-			<FreePromotion>PROMOTION_SOVIET_FRIEND</FreePromotion>
 			<WonderSplashImage>SOVIET_PALACE.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
@@ -1285,6 +1256,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<Flat>1</Flat>
+			<FreeBuilding>BUILDINGCLASS_TEMPLE</FreeBuilding>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<PortraitIndex>104</PortraitIndex>
 			<Happiness>2</Happiness>
@@ -1294,8 +1266,30 @@
 
 
 
-		
 
+		<!--雕像-->
+		<Row>
+			<Type>BUILDING_MOTHERLAND</Type>
+			<BuildingClass>BUILDINGCLASS_MOTHERLAND</BuildingClass>
+			<Description>TXT_KEY_BUILDING_MOTHERLAND</Description>
+			<Help>TXT_KEY_WONDER_MOTHERLAND_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_MOTHERLAND_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_MOTHERLAND_QUOTE</Quote>
+			<Cost>3800</Cost>
+			<PrereqTech>TECH_MOBILIZATION_T</PrereqTech>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<InstantMilitaryIncrease>1</InstantMilitaryIncrease>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>89</PortraitIndex>
+			<FreePromotion>PROMOTION_SOVIET_FRIEND</FreePromotion>
+			<WonderSplashImage>Motherland_Splash.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,T</WonderSplashAnchor>
+		</Row>
 	
 
 		<!--马奇诺防线-->
@@ -1543,8 +1537,8 @@
 		<Row>
 			<Type>BUILDING_OSARAGI</Type>
 			<BuildingClass>BUILDINGCLASS_OSARAGI</BuildingClass>
-			<Cost>580</Cost>
-			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
+			<Cost>400</Cost>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<Description>TXT_KEY_BUILDING_OSARAGI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OSARAGI_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_OSARAGI_HELP</Help>
@@ -1701,7 +1695,7 @@
 			<GreatWorkCount>2</GreatWorkCount>
 			<PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
-			<PrereqTech>TECH_MASONRY</PrereqTech>
+			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<NukeImmune>true</NukeImmune>
@@ -1863,30 +1857,6 @@
 
 
 
-		<!-- 巴尔米拉-->
-		<Row>
-			<Type>BUILDING_PALMYRA</Type>
-			<BuildingClass>BUILDINGCLASS_PALMYRA</BuildingClass>
-			<Cost>331</Cost>
-			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			<Description>TXT_KEY_BUILDING_PALMYRA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PALMYRA_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_PALMYRA_QUOTE</Quote>
-			<Help>TXT_KEY_BUILDING_PALMYRA_HELP</Help>
-			<MinAreaSize>-1</MinAreaSize>
-			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-			<GreatPeopleRateChange>2</GreatPeopleRateChange>
-			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
-			<NukeImmune>true</NukeImmune>
-			<ConquestProb>100</ConquestProb>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>190</PortraitIndex>
-			<WonderSplashImage>PALMYRA.dds</WonderSplashImage>
-			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-		</Row>
-
-
 
 		<!-- 丝绸之路 -->
 		<Row>
@@ -1984,7 +1954,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
-			<FreeBuilding>BUILDINGCLASS_TEMPLE</FreeBuilding>
+			<FreeBuilding>BUILDINGCLASS_SHRINE</FreeBuilding>
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>151</PortraitIndex>
@@ -2919,12 +2889,7 @@
 
 
 	<Building_ResourceQuantityRequirements>
-		<!--古城-->
-		<Row>
-			<BuildingType>BUILDING_ANCIENT_CITY</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>4</Cost>
-		</Row>
+	
 
 		<!--洛克斐乐-->
 		<Row>
@@ -3158,8 +3123,17 @@
 			<Cost>6</Cost>
 		</Row>
 
-
-
+		<!--雕像-->
+		<Row>
+			<BuildingType>BUILDING_MOTHERLAND</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MOTHERLAND</BuildingType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>8</Cost>
+		</Row>
 
 		<!--帆船酒店-->
 
@@ -3671,11 +3645,6 @@
 		</Row>
 
 
-		<Row>
-			<BuildingType>BUILDING_PALMYRA</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>4</Cost>
-		</Row>
 	</Building_ResourceQuantityRequirements>
 
 
@@ -4733,12 +4702,6 @@
 		
 		
 
-		<Row>
-			<BuildingType>BUILDING_PALMYRA</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>3</Yield>
-		</Row>
-		
 		
 
 		<Row>

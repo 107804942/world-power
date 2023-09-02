@@ -41,50 +41,63 @@ local ATBTEnergy =
 	 [16]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_16, [17] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_17, 
 	 [18]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_18}
 
-
-function SpaceBattleCruiserManaForHuman(iPlayer)
-		local pPlayer = Players[iPlayer]
-		if not 	pPlayer:IsHuman() then
+function SomeUnitEffects(iPlayer)
+		local player = Players[iPlayer]
+		if player==nil then
 		return
 	         end
-		for pUnit in pPlayer:Units() do  
-		if pUnit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
-		local iSpaceBattleCruiserEnergy = load(pUnit, "SpaceBattleCruiserEnergy") or 0
+		for unit in player:Units() do  
+
+		if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
+		local iSpaceBattleCruiserEnergy = load(unit, "SpaceBattleCruiserEnergy") or 0
 		if iSpaceBattleCruiserEnergy< 17 then
-				save(pUnit, "SpaceBattleCruiserEnergy", iSpaceBattleCruiserEnergy + 2)       
+				save(unit, "SpaceBattleCruiserEnergy", iSpaceBattleCruiserEnergy + 2)       
 				for i = 0, 18 do
-				pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
+				unit:SetHasPromotion(ATBTEnergy[i], (i == load(unit, "SpaceBattleCruiserEnergy")))
 				end
-		     end
-	     end
-     end
+		    end
+	    end
+
+		if  unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"] then
+	    local iNumFighters = unit:GetCargo()
+		local iNumFightersIn =unit:CargoSpace()  
+		local pPlot = unit:GetPlot()
+	    if iNumFighters-iNumFightersIn >=2  then
+		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		else
+	    player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		   end
+	    end	
+
+   end
 end
-GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
+GameEvents.PlayerDoTurn.Add(SomeUnitEffects)
 
 
 
+local lButtonDown = false
+local rButtonDown = false
+local SpaceBattleCruiserSkill = 0
+local highlightedPlots = {}
 
-	local lButtonDown = false
-	local rButtonDown = false
-	local SpaceBattleCruiserSkill = 0;
-	local highlightedPlots = {};
-	function CheckSpaceBattleCruiserButtonValidity(unit)
+function CheckSpaceBattleCruiserButtonValidity(unit)
 		for i = 0, 7 do
 			if unit:IsHasPromotion(ATBTEnergy[i]) then
-				return false;
+				return false
 			end
 		end
-		return true;
-	end
+	return true;
+end
 
-	function CheckSpaceBattleCruiserButtonValidity2(unit)
+function CheckSpaceBattleCruiserButtonValidity2(unit)
 		for i = 0, 3 do
 			if unit:IsHasPromotion(ATBTEnergy[i]) then
-				return false;
+				return false
 			end
 		end
-		return true;
-	end
+	return true;
+end
 
 
 function DisplayCruiserHitArrow()
@@ -170,7 +183,7 @@ function ShowNukeArrow( PlotX, PlotY )
 	end
 
 	--get bombard end hex
-	if  attacker 	and (Map.PlotDistance(attacker:GetX(), attacker:GetY(), PlotX, PlotY ) <= 30 )  then
+	if  attacker and (Map.PlotDistance(attacker:GetX(), attacker:GetY(), PlotX, PlotY ) <= 30 )  then
 		Events.SpawnArrowEvent( attacker:GetX(), attacker:GetY(),PlotX, PlotY );
 	else
 		Events.RemoveAllArrowsEvent();
@@ -374,9 +387,6 @@ local TransPortMissionButton = {
 end
 }
 LuaEvents.UnitPanelActionAddin(TransPortMissionButton)
-
-
-
 
 
 
@@ -1009,63 +1019,6 @@ ContextPtr:SetInputHandler( InputHandler )
 
 
 
-	
- function AI_HITTITE_WAR_CHARIOT(iPlayer)
-    local HittiteProj = GameInfoTypes["PROJECT_HITTITE_WAR_CHARIOT"]
-    local Player = Players[iPlayer]
-	if Player==nil or Player:IsHuman() 
-	or (not Player:IsMajorCiv())
-	then 
-	return end 
-
-	    if Player:HasProject(HittiteProj) then
-
-	    for pUnit in Player:Units() do
-	    if  pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH"].ID) 
-		and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH_5"].ID) then
-		 GetUniqueFreeMeleeUnit(Player, pUnit:GetPlot())
-		 pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_0, true)
-		 pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_5, false)
-		 end
-	  end
-   end
-end	
-GameEvents.PlayerDoTurn.Add(AI_HITTITE_WAR_CHARIOT)	
-
-
-
-
--- **********************************************************************************************************************************************
--- 
--- **********************************************************************************************************************************************
-function GolemActivate(playerID, unitID, bTestAllAllies)
-	local pPlayer = Players[playerID]
-	local pUnit = pPlayer:GetUnitByID(unitID)
-	if not pUnit then return end
-	if bTestAllAllies then
-		for pUnit  in pPlayer:Units() do
-			if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]   then
-				if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
-					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
-				else
-					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
-				end
-			end
-		end
-	else
-		 if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"] then
-			if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
-				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
-			else
-				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
-			end
-		end
-	end
-end
-GameEvents.UnitSetXY.Add(GolemActivate)
-
-
-
 -- **********************************************************************************************************************************************
 -- ¸¡Ê¯ÕÂÓã
 -- **********************************************************************************************************************************************
@@ -1132,6 +1085,37 @@ local PlagueMissionButton = {
 LuaEvents.UnitPanelActionAddin(PlagueMissionButton)
 end
                     
+
+
+-- **********************************************************************************************************************************************
+-- 
+-- **********************************************************************************************************************************************
+function GolemActivate(playerID, unitID, bTestAllAllies)
+	local pPlayer = Players[playerID]
+	local pUnit = pPlayer:GetUnitByID(unitID)
+	if not pUnit then return end
+	if bTestAllAllies then
+		for pUnit  in pPlayer:Units() do
+			if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]   then
+				if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
+				else
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
+				end
+			end
+		end
+	else
+		 if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"] then
+			if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
+			else
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
+			end
+		end
+	end
+end
+GameEvents.UnitSetXY.Add(GolemActivate)
+
 
 
 

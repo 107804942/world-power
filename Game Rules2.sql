@@ -33,5 +33,3 @@ ALTER TABLE UnitPromotions ADD COLUMN 'GiveOnlyOnStartingTurn' BOOLEAN DEFAULT 0
 
 
 
--- Base damage dealth to adjacent air units after an unintercepted air sweep
-ALTER TABLE UnitPromotions ADD COLUMN 'GetGroundAttackDamage' INTEGER DEFAULT 0;

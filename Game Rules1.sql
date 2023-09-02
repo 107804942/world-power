@@ -1,6 +1,43 @@
 -- Insert SQL Rules Here 
 
 
+
+
+		<Row Tag="TXT_KEY_PROMOTION_URBAN">
+			<Text>重创</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_URBAN_HELP">
+			<Text>攻击城市时有40%的几率破坏一个城防建筑（按照兵营，军械所，木栅栏，城墙，瞭望塔，城堡的顺序），且每次攻击均可让城市陷入1回合抵抗状态，额外造成城市最大生命值5%的伤害。攻击单位时被攻击单位及其同格的敌人将在下回合无法行动,并且有50%几率对临近一格所有敌人造成同样的效果（敌军拥有人造意志晋升则无效）。</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_BUILDING_ANCIENT_CITY">
+			<Text>巴纳韦梯田</Text>
+		</Row>
+		<!-- Help tags -->
+		<Row Tag="TXT_KEY_WONDER_ANCIENT_CITY_HELP">
+			<Text>
+				全国所有农场、梯田、圩田+1[ICON_FOOD]食物，+1[ICON_GOLD]金钱。全国每处[ICON_RES_WHEAT]小麦、[ICON_RES_BARLEY]大麦+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱,+1[ICON_FOOD]食物。
+			</Text>
+		</Row>
+		<!-- Quote tags -->
+		<Row Tag="TXT_KEY_WONDER_ANCIENT_CITY_QUOTE">
+			<Text>
+				[NEWLINE]"乃知大寒岁，农者尤苦辛。"[NEWLINE] - 《村居苦寒》[NEWLINE]
+			</Text>
+		</Row>
+		<!-- Pedia tags -->
+		<Row Tag="TXT_KEY_WONDER_ANCIENT_CITY_PEDIA">
+			<Text>
+				巴纳韦梯田形成于2000至3000多年前。这些在海拔一两千米光秃秃的山上一点一点开垦出来的梯田，依山而建。面积最大的只有1/4公顷，最小的只有4平方米左右。据测量，最高的梯田海拔在1500米以上，与最低的梯田垂直距离在420米以上。为防止土壤流失，梯田外墙多用石块砌成，石墙最高可达4米，最低不到2米。
+				[NEWLINE]因其历史古老、规模庞大、灌溉方式巧妙，于1992年被世界遗产委员会列入世界文化遗产名录。巴纳韦梯田是菲律宾的标志之一，其美丽的形象印在该国的钞票上。
+			</Text>
+		</Row>
+
+
+
+
 		<!--时态演算-->
 
 		<Row>

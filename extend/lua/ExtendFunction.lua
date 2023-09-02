@@ -9,44 +9,6 @@ include("InfoTooltipInclude");
 include("FunctionUtilities.lua");
 
 
-
-function DoSomeEffects(playerID)
-    local player = Players[playerID]
-    if player==nil
-	then return 
-	end
-	for unit in player:Units() do  
-
-	if  unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"] then
-	    local iNumFighters = unit:GetCargo()  
-		local pPlot = unit:GetPlot()
-	    if iNumFighters <= 4  then
-		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		else
-	    player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		end
-	end
-	
-
-	if unit:IsHasPromotion(GameInfoTypes.PROMOTION_BURNING_EFFECT) ---猛火油柜
-	then
-	local damage = math.floor(unit:GetCurrHitPoints()*0.4)
-	local damagefinal = math.max(20,damage)
-		  unit:ChangeDamage(damagefinal)                                  
-	end
-
-
-   end
-
-end
-GameEvents.PlayerDoTurn.Add(DoSomeEffects)
-
-
-
-
-------------------------------------------------------------------
-
 function CanHavePromotion(iPlayer, iUnit, iPromotionType)
   local pUnit = Players[iPlayer]:GetUnitByID(iUnit)
 
@@ -74,8 +36,6 @@ end
 GameEvents.CanHavePromotion.Add(CanHavePromotion)
 
 
-
-
 function TourismToGold(iPlayer, iUnit, iX, iY, bIsGreatPerson)
 local pPlayer = Players[iPlayer]
 local pUnit = pPlayer:GetUnitByID(iUnit)
@@ -86,9 +46,6 @@ pPlayer:ChangeGold(3*gold)
    end
 end
 GameEvents.TourismDiscover.Add(TourismToGold)
-
-
-
 
 
 
@@ -133,42 +90,6 @@ GameEvents.GreatWorkCreated.Add(ProduceCopy)
 
 
 
-function FaithCure(iPlayer, iUnit, iX, iY, bIsGreatPerson)
-    local Player = Players[iPlayer]
-	local iTileRadius = 3
-
-	--if bIsGreatPerson then
-      if Player:HasWonder(GameInfoTypes.BUILDING_PUMA_PUMKU) then
- 
-      for iShiftX = -iTileRadius, iTileRadius do
-	  for iShiftY = -iTileRadius, iTileRadius do
-	  local pTargetPlot = Map.PlotXYWithRangeCheck(iX, iY, iShiftX, iShiftY, iTileRadius)
-      if pTargetPlot ~= nil  then
-      unitCount = pTargetPlot:GetNumUnits()
-      if unitCount > 0 then
-      for i = 0, unitCount-1, 1 do
-      local pFoundUnit = pTargetPlot:GetUnit(i)
-      if pFoundUnit:GetOwner()==iPlayer then
-	  pFoundUnit:ChangeDamage(-25) 
-	                   end
-	                end
-	             end
-	          end 
-		   end
-	    end
-	end
-
-    if Player:HasWonder(GameInfoTypes.BUILDING_OSARAGI) then
-	for unit in Player:Units() do
-	unit:ChangeDamage(-20) 
-	   end
-	end
-
- end
-GameEvents.FaithDiscover.Add(FaithCure)
-
-
-
 function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
    if iBuild == GameInfoTypes.BUILD_REMOVE_JUNGLE 
    or iBuild == GameInfoTypes.BUILD_REMOVE_FOREST then
@@ -179,8 +100,6 @@ function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
     end
  end
 GameEvents.PlayerBuilt.Add(RemoveJungle)
-
-
 
 -- ****************************************
 -- 异种研究所
@@ -252,47 +171,6 @@ end
 GameEvents.PlayerDoTurn.Add(JurassicParkBonus)
 
 
---UI/InGame/Popups/ProductionPopup.lua
---Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_BANNER);
---Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_PRODUCTION);
-
-
--- ********************************************************
---加速建造
--- ********************************************************
-local tWonders = {}
-for row in DB.Query("SELECT ID FROM Buildings WHERE BuildingClass IN (SELECT Type FROM BuildingClasses WHERE MaxGlobalInstances = 1 OR MaxTeamInstances = 1 OR MaxPlayerInstances = 1)") do
-	tWonders[row.ID] = true
-end
-
-
-
-function Palmyra(iPlayer)
-	local pPlayer = Players[iPlayer]
-	if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
-	 	return
-	         end
-	--if  policyID ~=nil  then
-	if  pPlayer:HasWonder(GameInfoTypes.BUILDING_PALMYRA)
-	and pPlayer:IsGoldenAge() then
-
-	for city in pPlayer:Cities() do
-	local iCurrentBuilding = city:GetProductionBuilding();
-	if iCurrentBuilding ~= -1 and (not tWonders[iCurrentBuilding])  then
-	local prod = city:GetProductionNeeded()
-	city:SetProduction(prod)
-	local cityID = city:GetID()
-	local playerID = city:GetOwner()
-	Events.SpecificCityInfoDirty(playerID, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_BANNER)
-	Events.SpecificCityInfoDirty(playerID, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_PRODUCTION)
-	Events.SerialEventGameDataDirty()
-             end
-          end
-       end
-   end
-GameEvents.PlayerAdoptPolicy.Add(Palmyra)
-GameEvents.PlayerAdoptPolicyBranch.Add(Palmyra)
-
 
 -- ********************************************************
 -- 阿基米德
@@ -322,8 +200,6 @@ function ARCHIMEDES(iPlayer, iUnit, iX, iY, iBuild)
 	  return true
  end
 GameEvents.PlayerCanBuild.Add(ARCHIMEDES)
-
-
 
 
 -- **********************************************************************************************************************************************
@@ -386,38 +262,9 @@ GameEvents.CircumnavigatedGlobe.Add(OnCircumnavigatedGlobe)
 LuaEvents.MagellanNotificationIdRequest()
 
 
-
-
-  
 -- ********************************************************
 -- 
 -- ********************************************************           
-function GUIGU(iPlayer, iUnit, iUnitType, iX, iY)
-local pPlayer = Players[iPlayer]
-local pUnit = pPlayer:GetUnitByID(iUnit);
-if pPlayer == nil or (not pPlayer:IsMajorCiv())   then
-	 	return
-	         end
- if pUnit == nil  then
-	 	return
-	         end
-if  pPlayer:HasWonder(GameInfoTypes.BUILDING_GUIGU) 
-and pPlayer:IsGoldenAge()  then
-local randomNumber = ROG_GetTrueRandom(1, 100)
-if randomNumber<=20 then
-pPlayer:InitUnit(pUnit:GetUnitType(), iX,iY)
-if pPlayer:IsHuman() then
-	local title = Locale.ConvertTextKey("TXT_KEY_GUIGU_HEAD");
-	local descr = Locale.ConvertTextKey("TXT_KEY_GUIGU", pUnit:GetName());
-	pPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, descr, title, iX, iY, -1)
-	     end
-	  end
-   end
-
-end
-GameEvents.GreatPersonExpended.Add(GUIGU)		  
-		  
-
 function GUIGU_SPY(iPlayer, iSpy, iResult, iCityX, iCityY) 
    local Player = Players[iPlayer]
    local tSpecialists ={}
@@ -489,7 +336,6 @@ function SoldBuildingBuff(iPlayer, iCity, iBuilding)
 	 end 
 end 	
 GameEvents.CitySoldBuilding.Add(SoldBuildingBuff)  
-
 
 -- ****************************************
 --

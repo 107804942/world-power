@@ -3,6 +3,97 @@
 -- DateCreated: 2023/8/28 21:10:48
 --------------------------------------------------------------
 
+function FaithCure(iPlayer, iUnit, iX, iY, bIsGreatPerson)
+    local Player = Players[iPlayer]
+	local iTileRadius = 3
+
+	--if bIsGreatPerson then
+      if Player:HasWonder(GameInfoTypes.BUILDING_PUMA_PUMKU) then
+ 
+      for iShiftX = -iTileRadius, iTileRadius do
+	  for iShiftY = -iTileRadius, iTileRadius do
+	  local pTargetPlot = Map.PlotXYWithRangeCheck(iX, iY, iShiftX, iShiftY, iTileRadius)
+      if pTargetPlot ~= nil  then
+      unitCount = pTargetPlot:GetNumUnits()
+      if unitCount > 0 then
+      for i = 0, unitCount-1, 1 do
+      local pFoundUnit = pTargetPlot:GetUnit(i)
+      if pFoundUnit:GetOwner()==iPlayer then
+	  pFoundUnit:ChangeDamage(-25) 
+	                   end
+	                end
+	             end
+	          end 
+		   end
+	    end
+	end
+
+    if Player:HasWonder(GameInfoTypes.BUILDING_OSARAGI) then
+	for unit in Player:Units() do
+	unit:ChangeDamage(-20) 
+	   end
+	end
+
+ end
+GameEvents.FaithDiscover.Add(FaithCure)
+
+
+
+function GUIGU(iPlayer, iUnit, iUnitType, iX, iY)
+local pPlayer = Players[iPlayer]
+local pUnit = pPlayer:GetUnitByID(iUnit);
+if pPlayer == nil or (not pPlayer:IsMajorCiv())   then
+	 	return
+	         end
+ if pUnit == nil  then
+	 	return
+	         end
+if  pPlayer:HasWonder(GameInfoTypes.BUILDING_GUIGU) 
+and pPlayer:IsGoldenAge()  then
+local randomNumber = ROG_GetTrueRandom(1, 100)
+if randomNumber<=20 then
+pPlayer:InitUnit(pUnit:GetUnitType(), iX,iY)
+if pPlayer:IsHuman() then
+	local title = Locale.ConvertTextKey("TXT_KEY_GUIGU_HEAD");
+	local descr = Locale.ConvertTextKey("TXT_KEY_GUIGU", pUnit:GetName());
+	pPlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, descr, title, iX, iY, -1)
+	     end
+	  end
+   end
+
+end
+GameEvents.GreatPersonExpended.Add(GUIGU)		  
+		  
+
+	
+ function AI_HITTITE_WAR_CHARIOT(iPlayer)
+    local HittiteProj = GameInfoTypes["PROJECT_HITTITE_WAR_CHARIOT"]
+    local Player = Players[iPlayer]
+	if Player==nil or Player:IsHuman() 
+	or (not Player:IsMajorCiv())
+	then 
+	return end 
+
+	    if Player:HasProject(HittiteProj) then
+
+	    for pUnit in Player:Units() do
+	    if  pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH"].ID) 
+		and pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH_5"].ID) then
+		 GetUniqueFreeMeleeUnit(Player, pUnit:GetPlot())
+		 pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_0, true)
+		 pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_5, false)
+		 end
+	  end
+   end
+end	
+GameEvents.PlayerDoTurn.Add(AI_HITTITE_WAR_CHARIOT)	
+
+
+
+
+
+
+
 function DoSomeEffects(playerID)
     local player = Players[playerID]
     if player==nil

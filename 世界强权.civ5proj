@@ -57,9 +57,9 @@
       </Association>
       <Association>
         <Type>Mod</Type>
-        <Name> CIV5MPDLL</Name>
+        <Name>MPDLL</Name>
         <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>8</MinVersion>
+        <MinVersion>10</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
@@ -407,12 +407,6 @@
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
-        <Name>GUIGU_Functions</Name>
-        <Description />
-        <FileName>extend/lua/GuiGu/GUIGU_Functions.lua</FileName>
-      </Content>
-      <Content>
-        <Type>InGameUIAddin</Type>
         <Name>ComplexFunctions</Name>
         <Description />
         <FileName>extend/lua/Complex function/ComplexFunctions.lua</FileName>
@@ -538,6 +532,7 @@
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
     <Folder Include="extend\art\Notification" />
+    <Folder Include="extend\art\units\M109Generic" />
     <Folder Include="extend\art\YieldAtlas" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
     <Folder Include="extend\art\RESOURCES\models\more\Barley" />
@@ -584,7 +579,6 @@
     <Folder Include="extend\art\units\Gladiator\NewFolder4\" />
     <Folder Include="extend\art\units\huge Bombs\icon" />
     <Folder Include="extend\art\units\AAS2" />
-    <Folder Include="extend\art\units\m109 2" />
     <Folder Include="extend\art\units\GX5" />
     <Folder Include="extend\art\units\enterprise" />
     <Folder Include="extend\art\units\china arsenalship" />
@@ -701,7 +695,6 @@
     <Folder Include="extend\lua\combat" />
     <Folder Include="extend\lua\Extra Victory" />
     <Folder Include="extend\lua\Archimedes" />
-    <Folder Include="extend\lua\GuiGu" />
     <Folder Include="extend\lua\Complex function" />
     <Folder Include="extend\lua\map" />
     <Folder Include="extend\lua\SpuerUi" />
@@ -1389,6 +1382,10 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\future\splash\Motherland_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\future\splash\NAVAL_ACADEMY.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -1422,10 +1419,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\future\splash\death_laser.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\DIABLO.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -1534,10 +1527,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\future\splash\OrbitalRefinery_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\PALMYRA.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -9801,19 +9790,15 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\m109 2\M109Austria2.dds">
+    <Content Include="extend\art\units\M109Generic\M109Generic.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\m109 2\M109Austria2.fxsxml">
+    <Content Include="extend\art\units\M109Generic\M109Generic.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\m109 2\M109Austria2.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\m109 2\M109SREF2.dds">
+    <Content Include="extend\art\units\M109Generic\M109Generic.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -15998,14 +15983,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\founction\MagellanNotification.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\GuiGu\GUIGU_Functions.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\GuiGu\GUIGU_Functions.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

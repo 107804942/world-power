@@ -383,7 +383,13 @@
 
 	<Units>
 
-
+		<Update>
+			<Set   UnitArtInfo="ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY109"/>
+			<Where Class="UNITCLASS_SELF_PROPELLED_ARTILLERY" />
+		</Update>
+		
+		
+		
 		<Update>
 			<Set  IconAtlas="UNIT_ATLAS_2" PortraitIndex="29"/>
 			<Where Type="UNIT_SAM_INFANTRY" />

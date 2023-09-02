@@ -12,6 +12,50 @@ include("IconSupport.lua");
 include("InstanceManager")
 
 
+
+--UI/InGame/Popups/ProductionPopup.lua
+--Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_BANNER);
+--Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_PRODUCTION);
+
+
+-- ********************************************************
+--加速建造
+-- ********************************************************
+local tWonders = {}
+for row in DB.Query("SELECT ID FROM Buildings WHERE BuildingClass IN (SELECT Type FROM BuildingClasses WHERE MaxGlobalInstances = 1 OR MaxTeamInstances = 1 OR MaxPlayerInstances = 1)") do
+	tWonders[row.ID] = true
+end
+
+
+
+function Palmyra(iPlayer)
+	local pPlayer = Players[iPlayer]
+	if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
+	 	return
+	         end
+	--if  policyID ~=nil  then
+	if  pPlayer:HasWonder(GameInfoTypes.BUILDING_PALMYRA)
+	and pPlayer:IsGoldenAge() then
+
+	for city in pPlayer:Cities() do
+	local iCurrentBuilding = city:GetProductionBuilding();
+	if iCurrentBuilding ~= -1 and (not tWonders[iCurrentBuilding])  then
+	local prod = city:GetProductionNeeded()
+	city:SetProduction(prod)
+	local cityID = city:GetID()
+	local playerID = city:GetOwner()
+	Events.SpecificCityInfoDirty(playerID, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_BANNER)
+	Events.SpecificCityInfoDirty(playerID, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_PRODUCTION)
+	Events.SerialEventGameDataDirty()
+             end
+          end
+       end
+   end
+GameEvents.PlayerAdoptPolicy.Add(Palmyra)
+GameEvents.PlayerAdoptPolicyBranch.Add(Palmyra)
+
+
+
 function MagaBoughtPlot(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)  
 	local Player = Players[iPlayer]
 	--local plot = Map.GetPlot(iPlotX, iPlotY)

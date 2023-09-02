@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2021/2/23 20:46:58 -->
 <GameData>
-
-
-
-
 	<Units>
-
 		<Delete Type="UNIT_SUPER_HOWITZER"/>
 		<Delete Type="UNIT_MECH"/>
 		<Delete Type="UNIT_PARTICLE_CANNON"/>
@@ -17,7 +12,6 @@
 		<Delete Type="UNIT_TASKFORCE_141"/>
 		<Delete Type="UNIT_CHINESE_WEISHI"/>
 		<Delete Class="UNITCLASS_BAZOOKA"/>
-
 
 
 		<!--巴利阿里投石兵-->
@@ -203,9 +197,6 @@
 		</Row>
 
 
-
-
-
 		<!-- 医生 -->
 		<Row>
 			<Class>UNITCLASS_DOCTOR</Class>
@@ -234,8 +225,6 @@
 			<IconAtlas>HEALTH_UNIT_ATLAS</IconAtlas>
 		</Row>
 
-
-
 		<Row>
 			<Class>UNITCLASS_MODERN_DOCTOR</Class>
 			<Type>UNIT_MODERN_DOCTOR</Type>
@@ -263,10 +252,6 @@
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 		</Row>
 		
-
-		
-		
-
 
 		<Row>
 			<Class>UNITCLASS_HITTITE_WAR_CHARIOT</Class>
@@ -405,7 +390,8 @@
 			<AdvancedStartCost>90</AdvancedStartCost>
 			<XPValueAttack>4</XPValueAttack>
 			<XPValueDefense>4</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_CRUSADER_ARTILLERY</UnitArtInfo>
+			<!--<UnitArtInfo>ART_DEF_UNIT_CRUSADER_ARTILLERY</UnitArtInfo>-->
+			<UnitArtInfo>ART_DEF_UNIT_PZH2000</UnitArtInfo>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<UnitFlagIconOffset>39</UnitFlagIconOffset>
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>

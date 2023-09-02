@@ -252,16 +252,6 @@
 			<Set Value="1"/>
 		</Update>
 
-		<Update>
-			<Where Name="PROMOTIONS_CROSS_OCEANS"/>
-			<Set Value="1"/>
-		</Update>
-
-		<Update>
-			<Where Name="PROMOTIONS_DEEP_WATER_EMBARKATION"/>
-			<Set Value="1"/>
-		</Update>
-
 	</CustomModOptions>
 
 
@@ -4264,6 +4254,7 @@
 			<Help>TXT_KEY_PROMOTION_PLUNDERED_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>9</PortraitIndex>
+			<MustSetUpToRangedAttack>-2</MustSetUpToRangedAttack>
 			<FreePillageMoves>true</FreePillageMoves>
 			<PillageReplenishMoves>1</PillageReplenishMoves>
 			<PillageReplenishAttck>1</PillageReplenishAttck>
@@ -4349,6 +4340,7 @@
 			<PediaType>PEDIA_SHARED</PediaType>
 			<ShowInPedia>0</ShowInPedia>
 			<RemoveAfterXTurns>2</RemoveAfterXTurns>
+			<TurnDamagePercent>15</TurnDamagePercent>
 			<PediaEntry>TXT_KEY_PROMOTION_BURNING_EFFECT</PediaEntry>
 		</Row>
 
@@ -4986,20 +4978,6 @@
 
 
 
-
-		<Row>
-			<Type>PROMOTION_CULTURE_GREAT_PEOPLE</Type>
-			<Description>TXT_KEY_PROMOTION_CULTURE_GREAT_PEOPLE</Description>
-			<Help>TXT_KEY_PROMOTION_CULTURE_GREAT_PEOPLE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CULTURE_GREAT_PEOPLE</PediaEntry>
-			<OrderPriority>11</OrderPriority>
-			<ShowInPedia>0</ShowInPedia>
-		</Row>
 
 
 

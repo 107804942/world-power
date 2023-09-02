@@ -1494,7 +1494,7 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
-			<Text>[ICON_STRENGTH]战斗力+33%。额外增加一次攻击次数，该单位4格范围内的海军单位获得火力支援，[ICON_STRENGTH]战斗力+66%。</Text>
+			<Text>[ICON_STRENGTH]战斗力+33%。额外增加一次攻击次数，该单位4格范围内的海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。</Text>
 		</Row>
 
 
@@ -2529,32 +2529,41 @@
 
 
 			<Row Tag="TXT_KEY_BUILDING_PUMA_PUMKU">
-			<Text>普马彭谷神庙</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_PEDIA">
-			<Text>
-				普马彭谷神庙( 英文名称: 又名""Puma Pumku" 或 "Puma Puncu")位于Tiwanaku古城，大约建立于距今2万年前，已经倒塌，目前该处只剩下遍地的巨石碎片，每块巨石重约几十到一百吨，被切割得非常光滑整齐，甚至能割手，要打磨就必须是金刚石。巨石上有深度一致的几毫米深得凹槽，这些凹槽形成的线是笔直的。从已经倒塌的痕迹来看，神庙的建筑结构像搭积木一样，用巨型石块建成，这些石块非常坚硬，石块间连接处就像一个凸起一个凹槽连接起来。在遗址附近有一块表面非常光滑正方形石板，经过万年没有一点破损。
-				[NEWLINE]以现代人的观念，在那个年代无法搭建起这种天衣无缝的巨石建筑。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_QUOTE">
-			<Text>[NEWLINE]"虽然吉萨金字塔是一项伟大的旷世奇观，但是与普马彭谷遗迹相比，简直就是小巫见大巫。"[NEWLINE]        ——《远古外星人》[NEWLINE]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_HELP">
-			<Text>全国每5人口+1[ICON_CULTURE]文化，+1[ICON_PEACE]信仰。你的单位执行传教任务时，可恢复临近3格内的己方单位25点生命值。</Text>
-		</Row>
+				<Text>普马彭谷神庙</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_PEDIA">
+				<Text>
+					普马彭谷神庙( 英文名称: 又名""Puma Pumku" 或 "Puma Puncu")位于Tiwanaku古城，大约建立于距今2万年前，已经倒塌，目前该处只剩下遍地的巨石碎片，每块巨石重约几十到一百吨，被切割得非常光滑整齐，甚至能割手，要打磨就必须是金刚石。巨石上有深度一致的几毫米深得凹槽，这些凹槽形成的线是笔直的。从已经倒塌的痕迹来看，神庙的建筑结构像搭积木一样，用巨型石块建成，这些石块非常坚硬，石块间连接处就像一个凸起一个凹槽连接起来。在遗址附近有一块表面非常光滑正方形石板，经过万年没有一点破损。
+					[NEWLINE]以现代人的观念，在那个年代无法搭建起这种天衣无缝的巨石建筑。
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_QUOTE">
+				<Text>[NEWLINE]"虽然吉萨金字塔是一项伟大的旷世奇观，但是与普马彭谷遗迹相比，简直就是小巫见大巫。"[NEWLINE]        ——《远古外星人》[NEWLINE]</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_HELP">
+				<Text>全国每5人口+1[ICON_CULTURE]文化，+1[ICON_PEACE]信仰。所有城市赠送神祠。</Text>
+			</Row>
+
+
+			<Row Tag="TXT_KEY_BUILDING_MOTHERLAND">
+				<Text>祖国之母</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_MOTHERLAND_PEDIA">
+				<Text>
+					[NEWLINE]乌克兰首都基辅的第聂伯河右岸，建有一座祖国母亲雕像Motherland Monument，基辅最著名的地标建筑。
+					[NEWLINE]为了纪念基辅战役，1981年在临近第聂伯河右岸的一座小山包上建起了一座高达62米的不锈钢雕像。雕像是位身着乌克兰民族服装的母亲形象，她右手高举一把利剑直指蓝天，左手拿着一面刻着苏联国徽的盾牌，象征着乌克兰人民保卫祖国的信心和决心，雕像的名字就叫做“祖国母亲”。雕塑下方的卫国战争纪念馆墙壁上刻有那次战役中阵亡的苏军将士名单。
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_MOTHERLAND_QUOTE">
+				<Text>[NEWLINE]"我们光荣的祖国万岁！我们祖国的自由和独立万岁！"[NEWLINE]        ——斯大林[NEWLINE]</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_MOTHERLAND_HELP">
+				<Text>按你所有拥有的陆地军事类型，每类单位免费增加一个，出现于建造该奇观的城市附近。单位在友方领土内+25%[ICON_STRENGTH]战斗力。</Text>
+			</Row>
 
 
 
-
-
-
-
-
-
-
-
-		<Row Tag="TXT_KEY_BUILDING_MAGINOT_LINE">
+			<Row Tag="TXT_KEY_BUILDING_MAGINOT_LINE">
 			<Text>马奇诺防线</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MAGINOT_LINE_PEDIA">
@@ -3487,14 +3496,9 @@
 
 
 
-
-
-
-		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT_HELP">
-			<Text>单位处于灼烧状态，回合结束时减少40%HP(下限20)。</Text>
-		</Row>
-
-	
+			<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT_HELP">
+				<Text>单位处于灼烧状态，每回合减少等同于最大生命值15%的生命值。</Text>
+			</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT">
 			<Text>灼烧状态</Text>
@@ -6682,7 +6686,7 @@
 			<Text>喷火器</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON_HELP">
-			<Text>攻击时可造成溅射伤害，攻击时对消耗木材的单位额外造成100%最终伤害。对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除当前生命值的40%，下限20。）若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
+			<Text>攻击时可造成溅射伤害，攻击时对消耗木材的单位额外造成100%最终伤害。对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除最大生命值的15%）若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
 		</Row>
 
 
@@ -6757,29 +6761,6 @@
 		</Row>
 
 
-
-
-
-		<Row Tag="TXT_KEY_BUILDING_PALMYRA">
-			<Text>巴尔米拉</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_PALMYRA_HELP">
-			<Text>
-				处于[ICON_GOLDEN_AGE]黄金时代时，每解锁一个政策或者解锁政策树分支时，立即完成所有城市的非奇观类建筑建造进度。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_PALMYRA_PEDIA">
-			<Text>
-				巴尔米拉(Palmyra)是叙利亚沙漠上的一片绿洲，位于大马士革的东北方，是古代最重要的文化中心之一，保存大都市的许多纪念性建筑。巴尔米拉处于1世纪-2世纪几种文化的交汇处，所以它的艺术和建筑能够把古希腊罗马的技艺与本地的传统及波斯的影响巧妙地融合在一起。
-				[NEWLINE]作为叙利亚的一张国家名片，有着2000多年历史的巴尔米拉古城被誉为"沙漠新娘"，一直是该国最值得骄傲的宝贵财富之一，1980年被联合国教科文组织列入世界文化遗产名录。这座古罗马风格的古城地处地中海东岸和幼发拉底河之间沙漠边缘的一片绿洲中，曾是古丝绸之路上连接波斯湾和东方各国以及地中海和西方各国的贸易中心，持续繁荣约300年之久。 2015年，巴尔米拉沦陷于极端组织"伊斯兰国"，在占领巴尔米拉期间，敌人炸毁了贝尔神庙等多处考古遗迹，这种行为被联合国教科文组织视为"战争罪行"。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_PALMYRA_QUOTE">
-			<Text>
-				[NEWLINE]"任何排外的文化都无法获得延续。"  ——圣雄甘地
-			</Text>
-		</Row>
 
 
 
@@ -7214,11 +7195,11 @@
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI">
 			<Text>高德院</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_OSARAGI_HELP">
-			<Text>
-				本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力，执行传教任务时，你的所有单位立即恢复20点生命值。获得3个武僧。
-			</Text>
-		</Row>
+			<Row Tag="TXT_KEY_BUILDING_OSARAGI_HELP">
+				<Text>
+					本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力，获得3个武僧。
+				</Text>
+			</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_PEDIA">
 			<Text>
 				宁静安详，历久弥坚，略显神秘，人称“大佛”的佛像坐落于镰仓市的高德院外。大佛高高耸立在佛寺游客面前，耐心地迎接信徒和旅者。一位不留名的大师以青铜铸造了镰仓大佛，自然风化后它呈现出一种柔和的绿色。
@@ -7295,22 +7276,12 @@
 		</Row>
 
 
-
-
-
-
-		<Row Tag="TXT_KEY_PROMOTION_URBAN">
-			<Text>重创</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_URBAN_HELP">
-			<Text>攻击城市时有40%的几率破坏一个城防建筑（按照兵营，军械所，木栅栏，城墙，瞭望塔，城堡的顺序），且每次攻击均可让城市陷入1回合抵抗状态，额外造成城市最大生命值5%的伤害。攻击单位时被攻击单位及其同格的敌人将在下回合无法行动,并且有50%几率对临近一格所有敌人造成同样的效果（敌军拥有人造意志晋升则无效）。</Text>
-		</Row>
-
-
-
-
-
-
+			<Row Tag="TXT_KEY_PROMOTION_URBAN">
+				<Text>重创</Text>
+			</Row>
+			<Row Tag="TXT_KEY_PROMOTION_URBAN_HELP">
+				<Text>攻击城市时有40%的几率破坏一个城防建筑（按照兵营，军械所，木栅栏，城墙，瞭望塔，城堡的顺序），且每次攻击均可让城市陷入1回合抵抗状态，额外造成城市最大生命值5%的伤害。</Text>
+			</Row>
 
 
 		<Row Tag="TXT_KEY_SPACEBASE_VISIT">
@@ -8938,7 +8909,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SOVIET_PALACE_HELP">
 			<Text>
-				建成后可自选一个伟人，所有工厂+15%[ICON_PRODUCTION]产能，公立学校+15%[ICON_RESEARCH]科研。提供50份[ICON_RES_MANPOWER]人力资源，提供25份[ICON_RES_IRON]铁、[ICON_RES_OIL]石油、[ICON_RES_ALUMINUM]铝、[ICON_RES_GUNPOWDER]火药、[ICON_RES_URANIUM]铀资源。每条秩序政策+2[ICON_HAPPINESS_1]快乐、+5[ICON_RESEARCH]科研、+5[ICON_PRODUCTION]产能、+5[ICON_CULTURE]文化。可根据市政厅等级提供额外[ICON_CULTURE]文化产出，单位在友方领土内+25%[ICON_STRENGTH]战斗力，所有城市防御效率+33%。
+				建成后可自选一个伟人，所有工厂+15%[ICON_PRODUCTION]产能，公立学校+15%[ICON_RESEARCH]科研。提供50份[ICON_RES_MANPOWER]人力资源，提供25份[ICON_RES_IRON]铁、[ICON_RES_OIL]石油、[ICON_RES_ALUMINUM]铝、[ICON_RES_GUNPOWDER]火药、[ICON_RES_URANIUM]铀资源。每条秩序政策+2[ICON_HAPPINESS_1]快乐、+5[ICON_RESEARCH]科研、+5[ICON_PRODUCTION]产能、+5[ICON_CULTURE]文化。可根据市政厅等级提供额外[ICON_CULTURE]文化产出，所有城市防御效率+33%。
 			</Text>
 		</Row>
 
@@ -9018,64 +8989,16 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_WONDER_GUIGU_HELP">
-			<Text>
-				所有专家对应的基础产出数值+2,除商业家、医学家外的专家+1[ICON_GOLD]维护费。+25%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。在黄金时代消耗伟人时，有一定几率获得一个同样的伟人。每条自由政策+8[ICON_TOURISM]魅力。每次间谍行动完成时，可一次性获得2回合的[ICON_GOLD]金钱、[ICON_RESEARCH]科研产出。且有一定几率获得一个随机类型的伟人，在城市界面可以花费文化购买随机类型的伟人(通过以上两种方式获得的伟人可以花费一定数值的文化转化为其他类型的伟人)。
-			</Text>
-		</Row>
 
-		<Row Tag="TXT_KEY_GUIGU_HEAD">
-			<Text>
-				人才引进
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GUIGU">
-			<Text>
-				{1_Name}被消耗后，你再次获得了一个同类型的伟人！
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_GUIGU_CITY">
-			<Text>
-				{1_Name}被你独特的文化魅力吸引，出现在{2_Name}附近！
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_CULYURE_BUY">
-			<Text>人才引进</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CULYURE_BUY_TT">
-			<Text>花费{1_Num}[ICON_CULTURE]文化购买随机类型的伟人。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CULYURE_BUY_DISABLED_TT">
-			<Text>花费{1_Num}[ICON_CULTURE]文化购买随机类型的伟人。[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]当前文化不足。[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CULYURE_BUY_CONFIRM">
-			<Text>确定花费{1_Num}[ICON_CULTURE]文化购买随机类型的伟人？</Text>
-		</Row>
+			<Row Tag="TXT_KEY_WONDER_GUIGU_HELP">
+				<Text>
+					所有专家对应的基础产出数值+4。+25%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。每次间谍行动完成时，可一次性获得2回合的[ICON_GOLD]金钱、[ICON_RESEARCH]科研产出，且有一定几率获得一个随机类型的伟人。
+				</Text>
+			</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_CULTURE_GREAT_PEOPLE">
-			<Text>全科人才</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_CULTURE_GREAT_PEOPLE_HELP">
-			<Text>可花费文化将其随机转化为另一种类型的伟人。</Text>
-		</Row>
 
-		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_SPECIALIST_CONVERT">
-			<Text>[COLOR_POSITIVE_TEXT]融汇贯通[ENDCOLOR] </Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_BTNNOTE_SPECIALIST_CONVERT">
-			<Text>可消耗300点[ICON_CULTURE]文化，将当前单位随机转化为另一种伟人，但不会转变为与当前相同的类型。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_TECH_DUMMY">
-			<Text>
-				免费科技
-			</Text>
-		</Row>
-
-
+	
 
 
 
@@ -9911,10 +9834,10 @@
 			</Text>
 		</Row>
 		<!-- Giant's Causeway -->
-		<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_A">
-			<Text>巨人堤(海洋)</Text>
-			<Gender>neuter:no_article</Gender>
-		</Row>
+			<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_A">
+				<Text>巨人堤</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
 		<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_B">
 			<Text>巨人堤(陆地)</Text>
 			<Gender>neuter:no_article</Gender>
@@ -10255,28 +10178,6 @@
 
 
 
-
-		<Row Tag="TXT_KEY_BUILDING_ANCIENT_CITY">
-			<Text>巴纳韦梯田</Text>
-		</Row>
-		<!-- Help tags -->
-			<Row Tag="TXT_KEY_WONDER_ANCIENT_CITY_HELP">
-				<Text>
-					全国所有农场、梯田、圩田+1[ICON_FOOD]食物，+1[ICON_GOLD]金钱。全国每处[ICON_RES_WHEAT]小麦、[ICON_RES_BARLEY]大麦+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱,+1[ICON_FOOD]食物。
-				</Text>
-			</Row>
-		<!-- Quote tags -->
-		<Row Tag="TXT_KEY_WONDER_ANCIENT_CITY_QUOTE">
-			<Text>
-				[NEWLINE]"乃知大寒岁，农者尤苦辛。"[NEWLINE] - 《村居苦寒》[NEWLINE]
-			</Text>
-		</Row>
-		<!-- Pedia tags -->
-		<Row Tag="TXT_KEY_WONDER_ANCIENT_CITY_PEDIA">
-			<Text>巴纳韦梯田形成于2000至3000多年前。这些在海拔一两千米光秃秃的山上一点一点开垦出来的梯田，依山而建。面积最大的只有1/4公顷，最小的只有4平方米左右。据测量，最高的梯田海拔在1500米以上，与最低的梯田垂直距离在420米以上。为防止土壤流失，梯田外墙多用石块砌成，石墙最高可达4米，最低不到2米。
-				[NEWLINE]因其历史古老、规模庞大、灌溉方式巧妙，于1992年被世界遗产委员会列入世界文化遗产名录。巴纳韦梯田是菲律宾的标志之一，其美丽的形象印在该国的钞票上。
-			</Text>
-		</Row>
 
 
 

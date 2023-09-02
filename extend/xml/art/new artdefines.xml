@@ -863,16 +863,6 @@
 	</ArtDefine_UnitMemberInfos>
 
 
-
-
-
-	<ArtDefine_UnitMemberInfos>
-		<Update>
-			<Set  Model="PZH20000.fxsxml"/>
-			<Where Type="ART_DEF_UNIT_MEMBER_CRUSADER_ARTILLERY"/>
-		</Update>
-	</ArtDefine_UnitMemberInfos>
-
 	<ArtDefine_UnitMemberInfos>
 		<Update>
 			<Set  Model="AAS2.fxsxml"/>
@@ -880,33 +870,126 @@
 		</Update>
 	</ArtDefine_UnitMemberInfos>
 
+
+
+
+	<!--自行火炮-->
+
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY109</Type>
+			<DamageStates>1</DamageStates>
+			<Formation>TwoBigGuns</Formation>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY109</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_ARTILLERY109</Type>
+			<Scale>0.11</Scale>
+			<Model>M109Generic.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLongRangedAttack>1</HasLongRangedAttack>
+			<HasStationaryMelee>1</HasStationaryMelee>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<ProjectileSpeed>7.0</ProjectileSpeed>
+			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<ProjectileSpeed>4.0</ProjectileSpeed>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+
+	<!--pzh2000-->
+
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_PZH2000</Type>
+			<DamageStates>1</DamageStates>
+			<Formation>TwoBigGuns</Formation>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_PZH2000</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_PZH2000</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_PZH2000</Type>
+			<Scale>0.14</Scale>
+			<Model>PZH20000.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_PZH2000</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLongRangedAttack>1</HasLongRangedAttack>
+			<HasStationaryMelee>1</HasStationaryMelee>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_PZH2000</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<ProjectileSpeed>7.0</ProjectileSpeed>
+			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_PZH2000</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<ProjectileSpeed>4.0</ProjectileSpeed>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+	
 	
 
-	<ArtDefine_UnitMemberInfos>
-		<Update>
-			<Set  Model="M109Austria2.fxsxml"/>
-			<Where Type="ART_DEF_UNIT_MEMBER_SPARTILLERY"/>
-		</Update>
-	</ArtDefine_UnitMemberInfos>
-
-	<ArtDefine_UnitInfoMemberInfos>
-			<Update>
-				<Set  NumMembers="2"/>
-				<Where UnitInfoType="ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY"/>
-			</Update>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitInfos>
-		<Update>
-			<Set  Formation="TwoBigGuns"/>
-			<Where Type="ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY"/>
-		</Update>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Update>
-			<Set  ReformBeforeCombat="1"/>
-			<Where UnitMemberType="ART_DEF_UNIT_MEMBER_SELF_PROPELLED_ARTILLERY"/>
-		</Update>
-	</ArtDefine_UnitMemberCombats>
 	
 	
 

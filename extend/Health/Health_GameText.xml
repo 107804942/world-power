@@ -751,8 +751,9 @@
 
 
 		<Row Tag="TXT_KEY_UNIT_DOCTOR">
-			<Text>医生</Text>
+			<Text>医师</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_UNIT_MODERN_DOCTOR">
 			<Text>现代医生</Text>
 		</Row>
