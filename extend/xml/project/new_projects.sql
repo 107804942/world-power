@@ -33,10 +33,6 @@ WHERE Type = 'BUILDING_STONE_WORKS';
 ALTER TABLE UnitPromotions ADD MutuallyExclusiveGroup INTEGER DEFAULT -1;
 
 
--- 晋升显示
---ALTER TABLE UnitPromotions  ADD COLUMN 'ShowInUnitPanel' INTEGER DEFAULT 1;
-
---ALTER TABLE UnitPromotions ADD COLUMN 'ShowInPedia' INTEGER DEFAULT 1;
 
 
 

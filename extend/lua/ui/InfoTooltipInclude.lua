@@ -480,7 +480,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 
 
 	------------------------------------------------ÐÂÔö½úÉýÏÔÊ¾------------------------------------------------
-for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
+    for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		item = GameInfo.UnitPromotions[ row.PromotionType ]
 		if item then
 		HitModifier= HitModifier + item.MaxHitPointsModifier

@@ -371,7 +371,7 @@ function GREAT_DOCTOR_CURE_Mission(playerID, unit)
 	    local heading = Locale.ConvertTextKey("TXT_KEY_DOCTOR_CURED_SHORT")
 		local text = Locale.ConvertTextKey("TXT_KEY_DOCTOR_CURED")
 		player:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, text, heading, plot:GetX(), plot:GetY());
-		end  
+    end  
 end
 
 function GREAT_DOCTOR_CONSTRUCT_Mission(playerID, unit, city)

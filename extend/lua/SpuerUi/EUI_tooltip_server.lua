@@ -448,25 +448,7 @@ local function ShowResourceToolTip( resourceID, tips )
 							numBuilds = numBuilds + 1
 						end
 					end
-					-- can player build this building someday ?
-					--[[
-					local canBuildSomeday
-					-- check whether this Unit has been blocked out by the civ XML
-					local buildingOverride = GameInfo.Civilization_BuildingClassOverrides{ CivilizationType = activeCivilization.Type, BuildingClassType = building.BuildingClass }()
-					if buildingOverride then
-						canBuildSomeday = buildingOverride.BuildingType == building.Type
-					else
-						canBuildSomeday = GameInfo.BuildingClasses[ building.BuildingClass ].DefaultBuilding == building.Type
-					end
-					if canBuildSomeday and
-						-- no espionage buildings for a non-espionage game
-						( ( g_isEspionageDisabled and building.IsEspionage )
-						-- is building obsolete by tech?
-						or ( building.ObsoleteTech and activeTeamTechs:HasTech( GameInfoTypes[building.ObsoleteTech] ) ) )
-					then
-						canBuildSomeday = false
-					end
-					]]--
+
 					if canBuildSomeday or numExisting > 0 or numBuilds > 0 then
 						local totalResource = (numExisting + numBuilds) * numResource
 						local tip = "[COLOR_YIELD_FOOD]" .. building._Name .. "[ENDCOLOR]"
@@ -605,37 +587,7 @@ local function ShowResourceToolTip( resourceID, tips )
 						end
 					end
 				end
-				-- can player build this unit someday ?
-				--[[
-				local canBuildSomeday = true
-				if IsCiv5BNW_BE then
-					-- does player trait prohibits training this unit ?
-					local leader = GameInfo.Leaders[ activePlayer:GetLeaderType() ]
-					for leaderTrait in GameInfo.Leader_Traits{ LeaderType = leader.Type } do
-						if GameInfo.Trait_NoTrain{ UnitClassType = unit.Class, TraitType = leaderTrait.TraitType }() then
-							canBuildSomeday = false
-							break
-						end
-					end
-				end
-				if canBuildSomeday then
-					-- check whether this Unit has been blocked out by the civ XML unit override
-					local unitOverride = GameInfo.Civilization_UnitClassOverrides{ CivilizationType = activeCivilization.Type, UnitClassType = unit.Class }()
-					if unitOverride then
-						canBuildSomeday = unitOverride.UnitType == unit.Type
-					else
-						canBuildSomeday = GameInfo.UnitClasses[ unit.Class ].DefaultUnit == unit.Type
-					end
-				end
-				canBuildSomeday = canBuildSomeday and not (
-					-- one City Challenge?
-					( g_isOneCityChallenge and (unit.Found or unit.FoundAbroad) )
-					-- Faith Requirements?
-					or ( g_isReligionEnabled and (unit.FoundReligion or unit.SpreadReligion or unit.RemoveHeresy) )
-					-- obsolete by tech?
-					or ( unit.ObsoleteTech and activeTeamTechs:HasTech( GameInfoTypes[unit.ObsoleteTech] ) )
-				)
-				]]--
+
 				if canBuildSomeday or numExisting > 0 or numBuilds > 0 then
 					local totalResource = (numExisting + numBuilds) * numResource
 					local tip = "[COLOR_YELLOW]" .. unit._Name .. "[ENDCOLOR]"
@@ -687,23 +639,7 @@ local function ShowResourceToolTip( resourceID, tips )
 						end
 					end
 				end
-				-- can player build this building someday ?
-				--[[
-				local canBuildSomeday
-				-- check whether this Unit has been blocked out by the civ XML
-				local buildingOverride = GameInfo.Civilization_BuildingClassOverrides{ CivilizationType = activeCivilization.Type, BuildingClassType = building.BuildingClass }()
-				if buildingOverride then
-					canBuildSomeday = buildingOverride.BuildingType == building.Type
-				else
-					canBuildSomeday = GameInfo.BuildingClasses[ building.BuildingClass ].DefaultBuilding == building.Type
-				end
-				canBuildSomeday = canBuildSomeday and not (
-					-- no espionage buildings for a non-espionage game
-					( g_isEspionageDisabled and building.IsEspionage )
-					-- Has obsolete tech?
-					or ( IsCiv5 and building.ObsoleteTech and activeTeamTechs:HasTech( GameInfoTypes[building.ObsoleteTech] ) )
-				)
-				]]--
+
 				if canBuildSomeday or numExisting > 0 or numBuilds > 0 then
 					local totalResource = (numExisting + numBuilds) * numResource
 					local tip = "[COLOR_YIELD_FOOD]" .. building._Name .. "[ENDCOLOR]"
@@ -807,18 +743,7 @@ local function ShowCivilizationToolTip( toolTip, playerID )
 --					g_CivilizationTooltipControls.Leader:SetTextureSizeVal( 200, 200 )
 --					g_CivilizationTooltipControls.Leader:SetTextureOffsetVal( 0, 0 )
 					isMinorCiv = g_CivilizationTooltipControls.Leader:SetTexture( L("TXT_KEY_CSL_ICON_"..minorCivInfo.Type) )
---[[
-				else
-					local row = GameInfo.Civilization_CityNames{ CityName = "TXT_KEY_CITY_NAME"..minorCivInfo.Type:sub(10,99) }()
---print( minorCivInfo.Type, row and row.CityName )
-					local leader = row and GameInfo.Civilization_Leaders{ CivilizationType = row.CivilizationType }()
-					leader = leader and GameInfo.Leaders[ leader.LeaderheadType ]
---print( minorCivInfo.Type, leader and leader.Type )
-					if leader then
-						g_CivilizationTooltipControls.Leader:SetTextureSizeVal( 254, 254 )
-						isMinorCiv = IconHookup( leader.PortraitIndex, 256, leader.IconAtlas, g_CivilizationTooltipControls.Leader )
-					end
---]]
+
 				end
 			end
 		else
@@ -1547,14 +1472,7 @@ local UnitToolTips = {
 	Button = UnitToolTip,
 	MovementPip = function( unit )
 		return ShowTextToolTip( unit and format( "%s %.3g / %g [ICON_MOVES]", L"TXT_KEY_UPANEL_MOVEMENT", unit:MovesLeft() / MOVE_DENOMINATOR, unit:MaxMoves() / MOVE_DENOMINATOR )
---[[
-.." GetActivityType="..(function(a) for k, v in pairs( ActivityTypes ) do if v==a then return k end end return "unknown" end)(unit:GetActivityType())
-.." GetFortifyTurns="..tostring(unit:GetFortifyTurns())
-.." HasMoved="..tostring(unit:HasMoved())
-.." IsReadyToMove="..tostring(unit:IsReadyToMove())
-.." IsWaiting="..tostring(unit:IsWaiting())
-.." IsAutomated="..tostring(unit:IsAutomated())
---]]
+
 		)
 	end,
 	Mission = function( unit )
