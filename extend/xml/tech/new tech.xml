@@ -511,7 +511,7 @@
 			<Help>TXT_KEY_SP_TECH_WORKERSPEED_HELP</Help>
 			<Era>ERA_CLASSICAL</Era>
 			<Trade>true</Trade>
-			<!--<WorkerSpeedModifier>25</WorkerSpeedModifier>-->
+			<WorkerSpeedModifier>25</WorkerSpeedModifier>
 			<GridX>3</GridX>
 			<GridY>8</GridY>
 			<Quote>TXT_KEY_TECH_IRON_WORKING_QUOTE</Quote>
@@ -1652,6 +1652,7 @@
 			<IconAtlas>TECH_ATLAS_1</IconAtlas>
 			<AudioIntro>AS2D_TECH_DYNAMITE</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_DYNAMITE</AudioIntroHeader>
+			<RazeSpeedModifier>99999</RazeSpeedModifier>
 		</Row>
 
 		<Row>

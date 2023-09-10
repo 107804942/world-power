@@ -25,6 +25,12 @@
 			</Text>
 		</Row>
 
+
+		<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
+			<Text>工人建造效率+25%</Text>
+		</Row>
+		
+		
 		<Row Tag="TXT_KEY_EXTRA_RESOURCES_VALUE_HELP">
 			<Text>工程师+1[ICON_RES_ELECTRICITY]电力。</Text>
 		</Row>

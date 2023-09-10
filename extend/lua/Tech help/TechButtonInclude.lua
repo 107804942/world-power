@@ -1,698 +1,665 @@
-print("This is the modded TechButtonInclude from 'UI - Tech Enhancement Icons'")
+--==========================================================
+-- Include file that has handy stuff for the tech tree
+-- and other screens that need to show a tech button
+-- Re-written by bc1 using Notepad++
+--==========================================================
 
--------------------------------------------------
--- Include file that has handy stuff for the tech tree and other screens that need to show a tech button
--------------------------------------------------
-include( "IconSupport" );
-include( "InfoTooltipInclude" );
+if not GameInfoCache then
+	include "GameInfoCache" -- warning! booleans are true, not 1, and use iterator ONLY with table field conditions, NOT string SQL query
+end
+local GameInfo = GameInfoCache
 
---
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
---
--- Mods to support Tech Enhancement specific icons
---
+include "IconHookup"
+local IconHookup = IconHookup
 
--- Do we have the TechEnhancementIcons table (and by implication the extensions to the Improvements, Routes and Domains tables)
-local bTechEnhIcons = false
-for row in DB.Query("SELECT name FROM sqlite_master WHERE type='table' AND name='TechEnhancementIcons'") do
-	bTechEnhIcons = true
+local IsCiv5 = type( MouseOverStrategicViewResource ) == "function"
+local IsCivBE = not IsCiv5
+local gk_mode = Game.GetReligionName ~= nil
+local bnw_mode = Game.GetActiveLeague ~= nil
+
+--==========================================================
+-- Minor lua optimizations
+--==========================================================
+
+local tonumber = tonumber
+local tostring = tostring
+local unpack = unpack
+local insert = table.insert
+
+local UI = UI
+local DomainTypes = DomainTypes
+local Events = Events
+local SearchForPediaEntry = Events.SearchForPediaEntry.Call
+local Mouse = Mouse
+local Locale = Locale
+local L = Locale.ConvertTextKey
+
+local ORDER_TRAIN = OrderTypes.ORDER_TRAIN
+local ORDER_CONSTRUCT = OrderTypes.ORDER_CONSTRUCT
+local ORDER_CREATE = OrderTypes.ORDER_CREATE
+local ORDER_MAINTAIN = OrderTypes.ORDER_MAINTAIN
+
+local g_OrderInfo = {
+	[ORDER_TRAIN] = GameInfo.Units,
+	[ORDER_CONSTRUCT] = GameInfo.Buildings,
+	[ORDER_CREATE] = GameInfo.Projects,
+	[ORDER_MAINTAIN] = GameInfo.Processes,
+	[11] = GameInfo.Resources,
+	[12] = GameInfo.Builds,
+	[13] = GameInfo.Missions,
+	[15] = IsCivBE and GameInfo.PlayerPerks,
+}
+-- the following need to be GLOBAL
+techPediaSearchStrings = {}
+g_searchTable = {}	-- holds mapping of searchable words to techs for Civ BE (unused in this script)
+g_recentlyAddedUnlocks = {}
+turnsString = L"TXT_KEY_TURNS"
+freeString = L"TXT_KEY_FREE"
+lockedString = "[ICON_LOCKED]" --L"TXT_KEY_LOCKED"
+
+local g_AffinityInfo = IsCivBE and {
+	AFFINITY_TYPE_PURITY	= { 0, "AFFINITY_ATLAS_TECHWEB", "TXT_KEY_TECHWEB_AFFINITY_ADDS_PURITY" },
+	AFFINITY_TYPE_SUPREMACY	= { 1, "AFFINITY_ATLAS_TECHWEB", "TXT_KEY_TECHWEB_AFFINITY_ADDS_SUPREMACY" },
+	AFFINITY_TYPE_HARMONY	= { 2, "AFFINITY_ATLAS_TECHWEB", "TXT_KEY_TECHWEB_AFFINITY_ADDS_HARMONY" },
+}
+
+local g_civType
+
+function GetTechPedia( techID, void2, button )
+	SearchForPediaEntry( techPediaSearchStrings[tostring(button)] )
 end
 
--- Construct the list of Tech Enhancement Icons ...
-local TechEnhancementIcons
-if (bTechEnhIcons) then
-	-- ... either from the database table
-	TechEnhancementIcons = {}
-	for row in DB.Query("SELECT * FROM TechEnhancementIcons") do
-		table.insert(TechEnhancementIcons, row)
+local function doNothing() end
+
+local function registerPediaCallback( button, row )
+	local entry = row and row.Type
+	if button and entry then
+		if entry:sub(1,6) == "BUILD_" then
+			row = GameInfo.Improvements[ row.ImprovementType ] or GameInfo.Routes[ row.RouteType ] or GameInfo.Concepts.CONCEPT_WORKERS_CLEARINGLAND -- we are a choppy thing
+
+		elseif entry:sub(1,8) =="MISSION_" then
+			if entry == "MISSION_EMBARK" then
+				row = GameInfo.Concepts.CONCEPT_MOVEMENT_EMBARKING
+			elseif entry == "MISSION_ROUTE_TO" then
+				row = GameInfo.Concepts.CONCEPT_WORKERS_ROADS_TRADE_ROUTES
+			elseif entry == "MISSION_ESTABLISH_TRADE_ROUTE" then
+				row = GameInfo.Concepts.CONCEPT_TRADE_ROUTES
+			else
+				row = nil
+			end
+
+		elseif entry:sub(1,10) == "TERRAFORM_" then -- IsCivBE only
+			if entry == "TERRAFORM_ADD_MIASMA" then
+				row = GameInfo.Concepts.CONCEPT_WORKERS_PLACE
+			elseif entry == "TERRAFORM_CLEAR_MIASMA" then
+				row = GameInfo.Concepts.CONCEPT_WORKERS_REMOVE
+			else
+				row = GameInfo.Features[ row.FeatureTypeChange ] or GameInfo.Terrains[ row.TerrainTypeChange ]
+			end
+		end
+
+		entry = row and row._Name
+		if entry then
+			return button:RegisterCallback( Mouse.eRClick, function() SearchForPediaEntry( entry ) end )
+		end
 	end
-else
-	-- ... or from a list of known enhancements (using the same format as the database table)
-	TechEnhancementIcons = {
-		{Enhancement="EmbarkedMoveChange",              Tip="TXT_KEY_FASTER_EMBARKED_MOVEMENT",             BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="AllowsEmbarking",                 Tip="TXT_KEY_ALLOWS_EMBARKING",                     BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="AllowsDefensiveEmbarking",        Tip="TXT_KEY_ABLTY_DEFENSIVE_EMBARK_STRING",        BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="EmbarkedAllWaterPassage",         Tip="TXT_KEY_ALLOWS_CROSSING_OCEANS",               BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="UnitFortificationModifier",       Tip="TXT_KEY_UNIT_FORTIFICATION_MOD",     Param=1,  BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="UnitBaseHealModifier",            Tip="TXT_KEY_UNIT_BASE_HEAL_MOD",         Param=1,  BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="AllowEmbassyTradingAllowed",      Tip="TXT_KEY_ALLOWS_EMBASSY",                       BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="OpenBordersTradingAllowed",       Tip="TXT_KEY_ALLOWS_OPEN_BORDERS",                  BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="DefensivePactTradingAllowed",     Tip="TXT_KEY_ALLOWS_DEFENSIVE_PACTS",               BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="ResearchAgreementTradingAllowed", Tip="TXT_KEY_ALLOWS_RESEARCH_AGREEMENTS",           BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="TradeAgreementTradingAllowed",    Tip="TXT_KEY_ALLOWS_TRADE_AGREEMENTS",              BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="BridgeBuilding",                  Tip="TXT_KEY_ALLOWS_BRIDGES",                       BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="MapVisible",                      Tip="TXT_KEY_REVEALS_ENTIRE_MAP",                   BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="InternationalTradeRoutesChange",  Tip="TXT_KEY_ADDITIONAL_INTERNATIONAL_TRADE_ROUTE", BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="InfluenceSpreadModifier",         Tip="TXT_KEY_DOUBLE_TOURISM",                       BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="AllowsWorldCongress",             Tip="TXT_KEY_ALLOWS_WORLD_CONGRESS",                BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0},
-		{Enhancement="ExtraVotesPerDiplomat",           Tip="TXT_KEY_EXTRA_VOTES_FROM_DIPLOMATS", Param=1,  BoostAtlas="GENERIC_FUNC_ATLAS", BoostIndex=0}
-	}
+	button:ClearCallback( Mouse.eRClick )
 end
 
---
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
---
--- Mods to support ShowInTechTree entries on the following tables (in addition to Builds)
---
--- Buildings, Eras, Improvements, Processes, Projects, Resources, Routes, Technologies, UnitPromotions and Units
---
--- Use SQL to add the ShowInTechTree column to the required table(s), eg
---   ALTER TABLE Buildings ADD ShowInTechTree INTEGER DEFAULT 1;
--- (It is recommended to place each ALTER TABLE statement in its own .sql file, in case of conflicts.)
--- Use XML/SQL to set ShowInTechTree to 0 for entries you don't want to appear on the Tech Tree, eg
---   <ShowInTechTree>0</ShowInTechTree>
---
+function GatherInfoAboutUniqueStuff( civType )
+	g_civType = civType
+	-- kludge to prevent TECH PANEL opening upon ButtonPopupTypes.BUTTONPOPUP_CHOOSETECH
+	if OnOpenInfoCorner and OnPopup then
+		Events.SerialEventGameMessagePopup.Remove( OnPopup )
+		OnPopup = nil
+	end
+end
 
+local function PediaCallback( techID, itemID )
+	local orderID = itemID%16
+	itemID = (itemID - orderID)/16
+	local row = g_OrderInfo[orderID]
+	row = row and row[itemID]
+	if row then
+		if orderID==12 then
+			row = GameInfo.Improvements[ row.ImprovementType ] or GameInfo.Routes[ row.RouteType ] or GameInfo.Concepts.CONCEPT_WORKERS_CLEARINGLAND -- we are a choppy thing
+		elseif orderID==ORDER_MAINTAIN then
+			row = GameInfo.Technologies[ row.TechPrereq ]
+		end
+	end
+print( "SearchForPediaEntry", itemID, orderID, row, row and row.Description )
+	return SearchForPediaEntry( row and row.Description )
+end
+
+local TechButtonTooltipCall = LuaEvents.TechButtonTooltip.Call
+
+local function ToolTipCallback( button )
+	local itemID = button:GetVoid2()
+	local orderID = itemID%16
+	return TechButtonTooltipCall( orderID, (itemID - orderID)/16 )
+end
+
+local function ToolTipSetup( button )
+	button:SetToolTipCallback( ToolTipCallback )
+	button:SetToolTipType( "EUI_ItemTooltip" )
+end
+
+
+
+local YieldIcons = {}
+local validUnitBuilds = {}
+local validBuildingBuilds = {}
+local validImprovementBuilds = {}
+
+do
+	local DB_Query = DB.Query
+	for row in Game and GameInfo.Yields() or DB_Query("SELECT * from Yields") do
+		YieldIcons[row.ID or false] = row.IconString
+		YieldIcons[row.Type or false] = row.IconString
+	end
+	YieldIcons.YIELD_CULTURE = YieldIcons.YIELD_CULTURE or "[ICON_CULTURE]"
+	YieldIcons.YIELD_ELECTRICITY = "[ICON_RES_ELECTRICITY]"
+	YieldIcons.YIELD_TOURISM = "[ICON_TOURISM]"
+end
+
+
+local g_buttonItemInfo = {}
+
+--==========================================================
+--	Has a few assumptions:
+--		1.) the small buttons are named "B1", "B2", "B3"
+--		2.) GatherInfoAboutUniqueStuff() has been called before this
 --
--- Helper function to ascertain if this row from the specified table should be shown
+--	ARGS:
+--	thisTechButtonInstance,	UI element
+--	tech,					data structure with technology info
+--	maxSmallButtonSize		no more than this many buttons will be populated
+--	textureSize
+--	startingButtoNum,		(optional) 1, but will use this instead if set
 --
+--	RETURNS: the # of small buttons added
+--==========================================================
 
-local gShowInTechTreeShowSupport = {Builds=true}
+function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButtons, textureSize, startingButtonNum )
 
-function ShowInTechTreeShow(table, data)
-	if (gShowInTechTreeShowSupport[table] == nil) then
-		gShowInTechTreeShowSupport[table] = false
+	local techType = tech and tech.Type
 
-		-- Note that we can't use pcall() to trap errors as we may be inside a coroutine
-		for row in DB.Query("SELECT * FROM " .. table .. " LIMIT 1") do
-			for col, _ in pairs(row) do
-				if (col == "ShowInTechTree") then
-					gShowInTechTreeShowSupport[table] = true
+	if not techType then
+		return 0
+	end
+
+	-- temporary used (e.g., search populating)
+	g_recentlyAddedUnlocks = {}
+	local civType = g_civType
+	local buttonNum = startingButtonNum or 1
+	local thisPrereqTech = { PrereqTech = techType }
+	local thisTechPrereq = { TechPrereq = techType }
+	local thisTechType = { TechType = techType }
+
+	local function addSmallButtonWithPedia( index, atlas, row, ... )
+		local button = thisTechButtonInstance["B"..buttonNum]
+		if button then
+			button:SetToolTipCallback( doNothing )
+			button:SetToolTipType()
+			registerPediaCallback( button, row )
+			IconHookup( index or 0, textureSize, atlas or "GENERIC_FUNC_ATLAS", button )
+			if ... then
+				button:LocalizeAndSetToolTip( ... )
+			else
+				button:SetToolTipString( "missing tooltip" )
+			end
+			button:SetText("")
+			buttonNum = buttonNum + 1
+			return button
+		end
+	end
+
+	local function addSmallButton( index, atlas, ... )
+		return addSmallButtonWithPedia( index, atlas, nil, ... )
+	end
+
+	local function addSmallGenericButton( ... )
+		return addSmallButtonWithPedia( 0, "GENERIC_FUNC_ATLAS", nil, ... )
+	end
+	local function addSmallGenericButtonIF( ... )
+		if ... then
+			return addSmallButtonWithPedia( 0, "GENERIC_FUNC_ATLAS", nil, ... )
+		end
+	end
+	local function NZ( n )
+		return (tonumber(n) or 0) ~= 0
+	end
+	local function addSmallGenericButtonNZ( n, s )
+		if NZ(n) then
+			return addSmallButtonWithPedia( 0, "GENERIC_FUNC_ATLAS", nil, s, n )
+		end
+	end
+
+	local function addSmallArtButton( row, orderID, portraitOffset, portraitAtlas )
+		if row then
+			insert( g_recentlyAddedUnlocks, row._Name )
+			local button = thisTechButtonInstance["B"..buttonNum]
+			if button then
+				button:SetText("")
+				button:SetVoid2( row.ID*16 + orderID )
+				button:SetToolTipCallback( ToolTipSetup )
+				button:RegisterCallback( Mouse.eRClick, PediaCallback )
+				IconHookup( portraitOffset or row.PortraitIndex or row.IconIndex or 0, textureSize, portraitAtlas or row.IconAtlas or "GENERIC_FUNC_ATLAS", button )
+				buttonNum = buttonNum + 1
+				return button
+			end
+		else
+			return addSmallGenericButton( "unknown item" )
+		end
+	end
+
+
+		local function addSmallArtYieldButton(row, icons, toolTip)
+		if row then
+			local button = thisTechButtonInstance["B"..buttonNum]
+			if button then
+				table.insert( g_recentlyAddedUnlocks, row.Description )
+				button:SetToolTipString( toolTip )
+				button:ClearCallback( Mouse.eMouseEnter )
+				g_buttonItemInfo[tostring(button)] = row
+				button:RegisterCallback( Mouse.eRClick, GetTechPedia )
+				IconHookup( row.PortraitIndex, textureSize, row.IconAtlas or "GENERIC_FUNC_ATLAS", button )
+				buttonNum = buttonNum + 1
+				button:GetTextControl():SetOffsetY( textureSize/3 )
+				button:GetTextControl():SetAlpha( 0.8 )
+				button:SetText( icons or "" )
+				return button
+			end
+		end
+	end
+
+
+	local function addSmallActionButton( row, icons, ... )
+		local button
+		if row then
+--print( "addSmallActionButton", tech._Name, row._Name, icons, ... )
+			insert( g_recentlyAddedUnlocks, row._Name )
+			button = thisTechButtonInstance["B"..buttonNum]
+			if button then
+				button:SetToolTipCallback( doNothing )
+				button:SetToolTipType()
+				button:LocalizeAndSetToolTip( ... )
+				registerPediaCallback( button, row )
+				IconHookup( row.IconIndex or row.PortraitIndex or 0, textureSize, row.IconAtlas or "GENERIC_FUNC_ATLAS", button )
+				buttonNum = buttonNum + 1
+			end
+		else
+			button = addSmallGenericButton( ... )
+		end
+		if button then
+			button:GetTextControl():SetOffsetY( textureSize/3 )
+			button:GetTextControl():SetAlpha( 0.8 )
+			button:SetText( icons or "" )
+			return button
+		end
+	end
+
+	if IsCivBE then
+		-- hide icon underlays
+		for i = 1, maxSmallButtons do
+			local iconUnderlay = thisTechButtonInstance["IconUnderlay"..i]
+			if iconUnderlay then
+				iconUnderlay:SetHide(true)
+			else
+				break
+			end
+		end
+		-- If an affinity exists, wire it up as the first small button
+		local textureSizeSave = textureSize
+		textureSize = 64
+		for tech in GameInfo.Technology_Affinities( thisTechType ) do
+			local affinityInfo = g_AffinityInfo[ tech.AffinityType ]
+			if affinityInfo then
+				local button = addSmallButton( unpack( affinityInfo ) )
+				if button then
+					local info = GameInfo.Affinity_Types[ tech.AffinityType ]
+					registerPediaCallback( button, info and GameInfo.Concepts[ info.CivilopediaConcept ] )
+					if textureSizeSave == 45 then
+						button:SetTextureOffsetVal( affinityInfo[1]*64+6,12 )
+					end
+				else
 					break
 				end
 			end
 		end
-	end
-	
-	if (gShowInTechTreeShowSupport[table] == false) then
-		-- The default is to show all items on the Tech Tree for tables that don't have a ShowInTechTree column
-		return true
+		textureSize = textureSizeSave
 	end
 
-	-- As the ShowInTechTree columns are added by altering the table with SQL, the game core doesn't know about them
-	-- so we can't use data.ShowInTechTree, hence we need to execute a DB.Query() to get the value directly and check it
-	for row in DB.Query("SELECT ShowInTechTree FROM " .. table .. " WHERE ID=" .. data.ID) do
-		-- Explicit check for ShowInTechTree required, as in Lua the number 0 is also "true"
-		return (row.ShowInTechTree == 1 or row.ShowInTechTree == true)
-	end
-
-	return false
-end
-
---
--- Replacement GameInfo iterator
---
---   for thisPromotion in GameInfo.Buildings() do ... end
---   for thisPromotion in ShowInTechTreeIterator("Buildings") do ... end
---
---   for policy in GameInfo.Buildings(string.format("PreReqTech = '%s'", techType)) do ... end
---   for policy in ShowInTechTreeIterator("Buildings", string.format("PreReqTech = '%s'", techType)) do ... end
---
-
-function ShowInTechTreeIterator(table, condition)
-	local next = coroutine.create(function ()
-		for row in GameInfo[table](condition or "ID=ID") do
-			if ShowInTechTreeShow(table, row) then
-				coroutine.yield(row)
-			end
-		end
-
-		return nil
-	end)
-
-	return function ()
-		local success, row = coroutine.resume(next)
-		return success and row or nil
-	end
-end
-
---
--- Replacement GameInfo lookup
---
---  local freePolicy = GameInfo.UnitPromotions[row.PromotionType]
---  local freePolicy = ShowInTechTreeLookup("UnitPromotions", row.PromotionType)
---
--- MUST always be followed by a check for nil
---
-
-function ShowInTechTreeLookup(table, key)
-	local row = GameInfo[table][key]
-
-	if not(ShowInTechTreeShow(table, row)) then
-		return nil
-	end
-
-	if (table == "Improvements" and row.SpecificCivRequired) then
-		if (GameInfoTypes[row.CivilizationType] ~= Players[Game.GetActivePlayer()]:GetCivilizationType()) then
-			return nil
-		end
-	end
-
-	return row
-end
-
-----------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------
-
-------------------------------------------列出我们所需要的图标------------------------------------------
-local defaultErrorTextureSheet;
-
-techPediaSearchStrings = {};
-techToolTips = {};
-
-if g_UseSmallIcons then
-	defaultErrorTextureSheet = "UnitActions360.dds";
-else
-	defaultErrorTextureSheet = "UnitActions.dds";
-end
-
-local validUnitBuilds = nil;
-local validBuildingBuilds = nil;
-local validImprovementBuilds = nil;
-
-turnsString = Locale.ConvertTextKey("TXT_KEY_TURNS");
-freeString = Locale.ConvertTextKey("TXT_KEY_FREE");
-lockedString = "[ICON_LOCKED]"; --Locale.ConvertTextKey("TXT_KEY_LOCKED");
-
-function GetTechPedia( void1, void2, button )
-	local searchString = techPediaSearchStrings[tostring(button)];
-	Events.SearchForPediaEntry( searchString );		
-end
-
-function GatherInfoAboutUniqueStuff( civType )
-
-	validUnitBuilds = {};
-	validBuildingBuilds = {};
-	validImprovementBuilds = {};
-
-	-- put in the default units for any civ
-	for thisUnitClass in GameInfo.UnitClasses() do
-		validUnitBuilds[thisUnitClass.Type]	= thisUnitClass.DefaultUnit;	
-	end
-
-	-- put in my overrides
-	for thisOverride in GameInfo.Civilization_UnitClassOverrides() do
- 		if thisOverride.CivilizationType == civType then
-			validUnitBuilds[thisOverride.UnitClassType]	= thisOverride.UnitType;
- 		end
-	end
-
-	-- put in the default buildings for any civ
-	for thisBuildingClass in GameInfo.BuildingClasses() do
-		validBuildingBuilds[thisBuildingClass.Type]	= thisBuildingClass.DefaultBuilding;	
-	end
-
-	-- put in my overrides
-	for thisOverride in GameInfo.Civilization_BuildingClassOverrides() do
- 		if thisOverride.CivilizationType == civType then
-			validBuildingBuilds[thisOverride.BuildingClassType]	= thisOverride.BuildingType;	
- 		end
-	end
-	
-	-- 改良设施
-	for thisImprovement in GameInfo.Improvements() do
-		if thisImprovement.CivilizationType == civType or thisImprovement.CivilizationType == nil then
-			validImprovementBuilds[thisImprovement.Type] = thisImprovement.Type;	
+	-- units unlocked by this tech
+	local overrideSearch = {CivilizationType = civType}
+	local override, ok, improvement, yield
+	for row in GameInfo.Units( thisPrereqTech ) do
+		--CivilizationType, UnitClassType, UnitType
+		overrideSearch.UnitClassType = row.Class
+		override = GameInfo.Civilization_UnitClassOverrides(overrideSearch)()
+		if override then
+			ok = override.UnitType == row.Type
 		else
-			validImprovementBuilds[thisImprovement.Type] = nil;	
+			ok = GameInfo.UnitClasses[ row.Class ]
+			ok = ok and ok.DefaultUnit == row.Type
+		end
+		if ok and not addSmallArtButton( row, ORDER_TRAIN, UI.GetUnitPortraitIcon(row.ID) ) then
+			break
 		end
 	end
-	
-end
-
-
-function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButtons, textureSize )
-	-- This has a few assumptions, the main one being that the small buttons are named "B1", "B2", "B3"... and that GatherInfoAboutUniqueStuff() has been called before this
-
-	-- first, hide the ones we aren't using
-	for buttonNum = 1, maxSmallButtons, 1 do
-		local buttonName = "B"..tostring(buttonNum);
-		thisTechButtonInstance[buttonName]:SetHide(true);
-	end
-	
-	if tech == nil then
-		return;
-	end
-
-	local buttonNum = 1;
-	local techType = tech.Type;
-
-	-- Units
---	for thisUnitInfo in GameInfo.Units(string.format("PreReqTech = '%s'", techType)) do
-	for thisUnitInfo in ShowInTechTreeIterator("Units", string.format("PreReqTech = '%s'", techType)) do
- 		-- if this tech grants this player the ability to make this unit
-		if validUnitBuilds[thisUnitInfo.Class] == thisUnitInfo.Type then
-			local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-			if thisButton then
-				AdjustArtOnGrantedUnitButton( thisButton, thisUnitInfo, textureSize );
-				buttonNum = buttonNum + 1;
-			end
-		end
- 	end
-
-	-- Buildings
--- 	for thisBuildingInfo in GameInfo.Buildings(string.format("PreReqTech = '%s'", techType)) do
- 	for thisBuildingInfo in ShowInTechTreeIterator("Buildings", string.format("PreReqTech = '%s'", techType)) do
- 		-- if this tech grants this player the ability to construct this building
-		if validBuildingBuilds[thisBuildingInfo.BuildingClass] == thisBuildingInfo.Type then
-			local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-			if thisButton then
-				AdjustArtOnGrantedBuildingButton( thisButton, thisBuildingInfo, textureSize );
-				buttonNum = buttonNum + 1;
-			end
-		end
- 	end
-
-	-- Revealed Resources
--- 	for thisResourceInfo in GameInfo.Resources(string.format("TechReveal = '%s'", techType)) do
- 	for thisResourceInfo in ShowInTechTreeIterator("Resources", string.format("TechReveal = '%s'", techType)) do
- 		-- if this tech grants this player the ability to reveal this resource
-		local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-		if thisButton then
-			AdjustArtOnGrantedResourceButton( thisButton, thisResourceInfo, textureSize );
-			buttonNum = buttonNum + 1;
-		end
- 	end
-
-	-- Projects
--- 	for thisProjectInfo in GameInfo.Projects(string.format("TechPrereq = '%s'", techType)) do
- 	for thisProjectInfo in ShowInTechTreeIterator("Projects", string.format("TechPrereq = '%s'", techType)) do
- 		-- if this tech grants this player the ability to build this project
-		local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
- 		if thisButton then
-			AdjustArtOnGrantedProjectButton( thisButton, thisProjectInfo, textureSize );
- 			buttonNum = buttonNum + 1;
- 		end
-	end
-
-	-- Improvements (Builds)
---	for thisBuildInfo in GameInfo.Builds{PrereqTech = techType, ShowInTechTree  = 1} do
-	for thisBuildInfo in ShowInTechTreeIterator("Builds", string.format("PrereqTech = '%s'", techType)) do
-		if thisBuildInfo.ImprovementType then
-			if validImprovementBuilds[thisBuildInfo.ImprovementType] == thisBuildInfo.ImprovementType then
-				local buttonName = "B"..tostring(buttonNum);
-				local thisButton = thisTechButtonInstance[buttonName];
-				if thisButton then
-					AdjustArtOnGrantedActionButton( thisButton, thisBuildInfo, textureSize );
- 					buttonNum = buttonNum + 1;
- 				end
- 			end
+	overrideSearch.UnitClassType = nil
+	-- buildings and wonders unlocked by this tech
+	for row in GameInfo.Buildings( thisPrereqTech ) do
+		--CivilizationType, BuildingClassType, BuildingType
+		overrideSearch.BuildingClassType = row.BuildingClass
+		override = GameInfo.Civilization_BuildingClassOverrides(overrideSearch)()
+		if override then
+			ok = override.BuildingType == row.Type
 		else
-			local buttonName = "B"..tostring(buttonNum);
-			local thisButton = thisTechButtonInstance[buttonName];
-			if thisButton then
-				AdjustArtOnGrantedActionButton( thisButton, thisBuildInfo, textureSize );
- 				buttonNum = buttonNum + 1;
- 			end
+			ok = GameInfo.BuildingClasses[ row.BuildingClass ]
+			ok = ok and ok.DefaultBuilding == row.Type
+		end
+		if ok and not addSmallArtButton( row, ORDER_CONSTRUCT ) then
+			break
 		end
 	end
-	
-	-- Processes
-	local processCondition = "TechPrereq = '" .. techType .. "'";
---	for row in GameInfo.Processes(processCondition) do
-	for row in ShowInTechTreeIterator("Processes", processCondition) do
-		local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-		if thisButton then
-			IconHookup( row.PortraitIndex, textureSize, row.IconAtlas, thisButton );
-			thisButton:SetHide( false );
-			local strPText = Locale.ConvertTextKey( row.Description );
-			thisButton:SetToolTipString( Locale.ConvertTextKey( "TXT_KEY_ENABLE_PRODUCITON_CONVERSION", strPText) );
+
+	-- resources revealed by this tech
+	for row in GameInfo.Resources{ TechReveal = techType } do
+		if not addSmallArtButton( row, 11 ) then
+			break
 		end
-		buttonNum = buttonNum + 1;
-	end	
-		
- 	-- Other Enhancements
-	local condition = "TechType = '" .. techType .. "'";
+	end
 
-	-- Movement Boosts
-	for row in GameInfo.Route_TechMovementChanges(condition) do
-		local route = ShowInTechTreeLookup("Routes", row.RouteType);
-		if (route) then
+	-- projects unlocked by this tech
+	for row in GameInfo.Projects( thisTechPrereq ) do
+		if not addSmallArtButton( row, ORDER_CREATE ) then
+			break
+		end
+	end
 
-		local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-		if thisButton then
-			if (bTechEnhIcons) then
-				IconHookup( route.MovementBoostIndex, textureSize, route.MovementBoostAtlas, thisButton );
-			else
-				IconHookup( 0, textureSize, "GENERIC_FUNC_ATLAS", thisButton );
+	-- actions enabled by this tech (usually only workers can do these)
+	for row in GameInfo.Builds( thisPrereqTech ) do
+		if row.ShowInTechTree ~= false then
+			improvement = GameInfo.Improvements[ row.ImprovementType ]
+			if (not improvement or not improvement.SpecificCivRequired or improvement.CivilizationType == civType) and not addSmallArtButton( row, 12 ) then
+				break
 			end
-			thisButton:SetHide( false );
-			thisButton:SetToolTipString( Locale.ConvertTextKey("TXT_KEY_FASTER_MOVEMENT", GameInfo.Routes[row.RouteType].Description ) );
-			buttonNum = buttonNum + 1;
+		end
+	end
+
+	-- processes unlocked by this tech
+	for row in GameInfo.Processes( thisTechPrereq ) do
+		if not addSmallArtButton( row, ORDER_MAINTAIN ) then
+			break
+		end
+	end
+
+	-- todo: need to add abilities, etc.
+	-- Player Perk unlocks
+
+	for row in GameInfo.Route_TechMovementChanges( thisTechType ) do
+		row = GameInfo.Routes[row.RouteType]
+		if row and not addSmallActionButton( GameInfo.Builds{ RouteType = row.Type }(), "[ICON_MOVES]", "TXT_KEY_FASTER_MOVEMENT", row._Name ) then
+			break
+		end
+	end
+
+	local thisTechAndImprovementTypes = { TechType = techType }
+
+	-- Some improvements can have multiple yield changes
+	for row in GameInfo.Improvement_TechYieldChanges( thisTechType ) do
+		improvement = GameInfo.Improvements[ row.ImprovementType ]
+		if improvement then -- and (not improvement.SpecificCivRequired or improvement.CivilizationType == civType)
+			local toolTip = improvement._Name
+			local icons = ""
+			local icon
+			thisTechAndImprovementTypes.ImprovementType = improvement.Type
+			for row in GameInfo.Improvement_TechYieldChanges( thisTechAndImprovementTypes ) do
+				if NZ(row.Yield) then
+					icon = GameInfo.Yields[row.YieldType]
+					icon = icon and icon.IconString or "?"
+					icons = icons .. icon
+					toolTip = ("%s %+i%s"):format( toolTip, row.Yield, icon )
+				end
+			end
+			if icon and not addSmallActionButton( GameInfo.Builds{ ImprovementType = improvement.Type }(), icons, toolTip ) then
+				break
+			end
+		end
+	end
+
+	for row in GameInfo.Improvement_TechNoFreshWaterYieldChanges( thisTechType ) do
+		yield = GameInfo.Yields[row.YieldType]
+		improvement = GameInfo.Improvements[row.ImprovementType]
+		if yield and not addSmallActionButton( GameInfo.Builds{ ImprovementType = row.ImprovementType }(), yield.IconString,
+				"TXT_KEY_NO_FRESH_WATER", improvement and improvement._Name or "?", yield._Name, row.Yield )
+		then
+			break
+		end
+	end
+
+	for row in GameInfo.Improvement_TechFreshWaterYieldChanges( thisTechType ) do
+		yield = GameInfo.Yields[row.YieldType]
+		improvement = GameInfo.Improvements[row.ImprovementType]
+		if yield and not addSmallActionButton( GameInfo.Builds{ ImprovementType = row.ImprovementType }(), yield.IconString,
+				"TXT_KEY_FRESH_WATER", improvement and improvement._Name or "?", yield._Name, row.Yield )
+		then
+			break
+		end
+	end
+
+	-- buildings yields improved by this tech
+	for row in GameInfo.Buildings{ EnhancedYieldTech = techType } do
+		--CivilizationType, BuildingClassType, BuildingType
+		overrideSearch.BuildingClassType = row.BuildingClass
+		override = GameInfo.Civilization_BuildingClassOverrides(overrideSearch)()
+		if override then
+			ok = override.BuildingType == row.Type
+		else
+			ok = GameInfo.BuildingClasses[ row.BuildingClass ]
+			ok = ok and ok.DefaultBuilding == row.Type
+		end
+		if ok then
+			local toolTip = row._Name
+			local icons = ""
+			local icon
+			for row in GameInfo.Building_TechEnhancedYieldChanges{ BuildingType = row.Type } do
+			-- BuildingType, YieldType, Yield
+				if NZ(row.Yield) then
+					icon = GameInfo.Yields[row.YieldType]
+					icon = icon and icon.IconString or "?"
+					icons = icons .. icon
+					toolTip = ("%s %+i%s"):format( toolTip, row.Yield, icon )
+				end
+			end
+			if icon and not addSmallActionButton( row, icons, toolTip ) then
+				break
+			end
+		end
+	end
+
+	---------------------------------------------新增------------------------------------------------------------
+	for row in GameInfo.Tech_SpecialistYieldChanges( thisTechType ) do
+			local specialist = GameInfo.Specialists[row.SpecialistType]
+			if specialist then
+				local icons = ""
+				local toolTip = ""
+				for row2 in GameInfo.Tech_SpecialistYieldChanges( thisTechType ) do
+					if(row2.SpecialistType == row.SpecialistType) then
+						local yield = GameInfo.Yields[row2.YieldType]
+						if yield and (row2.Yield > 0) then
+							local icon = YieldIcons[row2.YieldType] or "???"
+							icons = icons .. icon
+							toolTip = toolTip .. Locale.ConvertTextKey("TXT_KEY_EUI_SPECIALIST_YIELD_CHANGE", specialist.Description, yield.Description, row2.Yield, yield.IconString)
+						end
+					end
+				end
+				addSmallArtYieldButton(specialist, icons, toolTip)
+			end
+		end
+	---------------------------------------------end------------------------------------------------------------
+
+
+	if NZ(tech.EmbarkedMoveChange) then
+		addSmallActionButton( GameInfo.Missions.MISSION_EMBARK, "+"..tech.EmbarkedMoveChange.."[ICON_MOVES]", "TXT_KEY_FASTER_EMBARKED_MOVEMENT" )
+	end
+
+	if tech.AllowsEmbarking then
+		addSmallActionButton( GameInfo.Missions.MISSION_EMBARK, "", "TXT_KEY_ALLOWS_EMBARKING" )
+	end
+
+	if IsCiv5 then
+		if tech.AllowsDefensiveEmbarking then
+			addSmallActionButton( GameInfo.Missions.MISSION_EMBARK, "[ICON_STRENGTH]", "TXT_KEY_ABLTY_DEFENSIVE_EMBARK_STRING" )
+		end
+		if tech.EmbarkedAllWaterPassage then
+		  addSmallButton( 24, "TECH_ENH_ICONS_ATLAS", "TXT_KEY_ALLOWS_CROSSING_OCEANS" )
+		end
+	end
+	if gk_mode then
+		if NZ(tech.UnitFortificationModifier) then
+			addSmallActionButton( GameInfo.Missions.MISSION_FORTIFY, "", "TXT_KEY_UNIT_FORTIFICATION_MOD", tech.UnitFortificationModifier )
+		end
+		if NZ(tech.UnitBaseHealModifier) then
+			addSmallActionButton( GameInfo.Missions.MISSION_HEAL, "", "TXT_KEY_UNIT_BASE_HEAL_MOD", tech.UnitBaseHealModifier )
+		end
+		if tech.AllowEmbassyTradingAllowed then
+		    addSmallButton( 26, "TECH_ENH_ICONS_ATLAS", "TXT_KEY_ALLOWS_OPEN_BORDERS" )
+		end
+	end
+	if IsCiv5 then
+		if tech.OpenBordersTradingAllowed then
+			addSmallActionButton( GameInfo.Missions.MISSION_SWAP_UNITS, "", "TXT_KEY_ALLOWS_OPEN_BORDERS" ) --[COLOR_GREEN]<>
+		end
+		if tech.DefensivePactTradingAllowed then
+		    addSmallButton( 29, "TECH_ENH_ICONS_ATLAS", "TXT_KEY_ALLOWS_DEFENSIVE_PACTS" )
+		end
+		if tech.ResearchAgreementTradingAllowed then
+			addSmallActionButton( GameInfo.Missions.MISSION_DISCOVER, "", "TXT_KEY_ALLOWS_RESEARCH_AGREEMENTS" ) --[ICON_RESEARCH]
+		end
+		if tech.TradeAgreementTradingAllowed then
+			addSmallActionButton( nil, "[ICON_TRADE]", "TXT_KEY_ALLOWS_TRADE_AGREEMENTS" )
+		end
+		if tech.BridgeBuilding then
+		    addSmallButton( 21, "TECH_ENH_ICONS_ATLAS", "TXT_KEY_ALLOWS_OPEN_BORDERS" )
+		end
+	else
+		addSmallGenericButtonIF( tech.AllianceTradingAllowed and "TXT_KEY_ALLOWS_ALLIANCES" )
+		addSmallGenericButtonNZ( tech.UnitBaseMiasmaHeal, "TXT_KEY_BASE_MIASMA_HEAL" )
+	end
+
+	if tech.MapVisible then
+	     addSmallButton(33, "TECH_ENH_ICONS_ATLAS", "TXT_KEY_REVEALS_ENTIRE_MAP" )
+	end
+
+	if bnw_mode then
+		if NZ(tech.InternationalTradeRoutesChange) then
+			addSmallActionButton( GameInfo.Missions.MISSION_ESTABLISH_TRADE_ROUTE, ("%+i   "):format( tech.InternationalTradeRoutesChange ), "TXT_KEY_ADDITIONAL_INTERNATIONAL_TRADE_ROUTE" )
+		end
+
+		for row in GameInfo.Technology_TradeRouteDomainExtraRange( thisTechType ) do
+			if row.TechType == techType and NZ(row.Range) then
+				local toolTip = "?"
+				local domain = GameInfo.Domains[ row.DomainType ]
+				if domain then
+					if domain.ID == DomainTypes.DOMAIN_LAND then
+						toolTip = "TXT_KEY_EXTENDS_LAND_TRADE_ROUTE_RANGE"
+					elseif domain.ID == DomainTypes.DOMAIN_SEA then
+						toolTip = "TXT_KEY_EXTENDS_SEA_TRADE_ROUTE_RANGE"
+					end
+					if not addSmallActionButton( GameInfo.Missions.MISSION_ESTABLISH_TRADE_ROUTE, ("%+i%%  "):format( row.Range ), toolTip ) then --[ICON_RANGE_STRENGTH]
+						break
+					end
+				end
+			end
+		end
+
+		if IsCiv5 then
+			if NZ(tech.InfluenceSpreadModifier) then
+				addSmallActionButton( GameInfo.Missions.MISSION_ONE_SHOT_TOURISM, "[ICON_TOURISM]", "TXT_KEY_DOUBLE_TOURISM", tech.InfluenceSpreadModifier )
+			end
+			if tech.AllowsWorldCongress then
+				addSmallActionButton( GameInfo.Missions.MISSION_TRADE, "", "TXT_KEY_ALLOWS_WORLD_CONGRESS" ) --[ICON_CITY_STATE]
+			end
+			if NZ(tech.ExtraVotesPerDiplomat) then
+				addSmallActionButton( nil, "[ICON_DIPLOMAT]", "TXT_KEY_EXTRA_VOTES_FROM_DIPLOMATS", tech.ExtraVotesPerDiplomat )
+			end
+
+			--if (tech.WorkerSpeedModifier~=0) then
+			    --addSmallButton( 44, "TECH_ENH_ICONS_ATLAS", "TXT_KEY_EUI_WORKER_SPEED_MOD" )
+		       ---addSmallActionButton( GameInfo.Missions.MISSION_TRADE, "", "TXT_KEY_EUI_WORKER_SPEED_MOD" )
+	         --end
+
+			addSmallGenericButtonIF( tech.ScenarioTechButton == 1 and "TXT_KEY_SCENARIO_TECH_BUTTON_1" )
+			addSmallGenericButtonIF( tech.ScenarioTechButton == 2 and "TXT_KEY_SCENARIO_TECH_BUTTON_2" )
+			addSmallGenericButtonIF( tech.ScenarioTechButton == 3 and "TXT_KEY_SCENARIO_TECH_BUTTON_3" )
+			addSmallGenericButtonIF( tech.ScenarioTechButton == 4 and "TXT_KEY_SCENARIO_TECH_BUTTON_4" )
+			addSmallGenericButtonIF( tech.TriggersArchaeologicalSites and "TXT_KEY_EUI_TRIGGERS_ARCHAEOLOGICAL_SITES" )
+		end
+	end
+
+	if gk_mode then
+		for row in GameInfo.Technology_FreePromotions( thisTechType ) do
+			local promotion = GameInfo.UnitPromotions[ row.PromotionType ]
+			if promotion and not addSmallButton( promotion.PortraitIndex, promotion.IconAtlas, "TXT_KEY_FREE_PROMOTION_FROM_TECH", promotion._Name, promotion.Help ) then
+				break
+			end
+		end
+	end
+
+
+	
+	--FirstFreeUnitClass, "TXT_KEY_EUI_FIRST_FREE_UNIT_CLASS"
+	--FeatureProductionModifier, "TXT_KEY_EUI_FEATURE_PRODUCTION_MOD"
+	--addSmallGenericButtonNZ( tech.WorkerSpeedModifier, "TXT_KEY_EUI_WORKER_SPEED_MOD" )
+	addSmallGenericButtonNZ( tech.FirstFreeTechs, "TXT_KEY_EUI_FIRST_FREE_TECHS" )
+	addSmallGenericButtonIF( tech.EndsGame and "TXT_KEY_EUI_ENDS_GAME" )
+	addSmallGenericButtonIF( tech.ExtraWaterSeeFrom and "TXT_KEY_EUI_EXTRA_WATER_SEE_FROM" )
+	addSmallGenericButtonIF( tech.WaterWork and "TXT_KEY_EUI_WATER_WORK" )
+
+	-- show buttons we are using and hide the rest
+	for i = 1, maxSmallButtons do
+		local button = thisTechButtonInstance["B"..i]
+		if button then
+			button:SetHide(i>=buttonNum)
 		else
 			break
 		end
-		
-		end
-	end	
-	
-	-- Improvement Yield Boosts
-	local yieldChanges = {};
-	for row in GameInfo.Improvement_TechYieldChanges(condition) do
-		local improvement = ShowInTechTreeLookup("Improvements", row.ImprovementType);
-		if (improvement) then
-
-		local improvementType = row.ImprovementType;
-		
-		if(yieldChanges[improvementType] == nil) then
-			yieldChanges[improvementType] = {};
-		end
-		
-		local yield = GameInfo.Yields[row.YieldType];
-		table.insert(yieldChanges[improvementType], Locale.Lookup( "TXT_KEY_YIELD_IMPROVED", improvement.Description , yield.Description, row.Yield));
-
-		end
 	end
-	
-	local sortedYieldChanges = {};
-	for k,v in pairs(yieldChanges) do
-		table.insert(sortedYieldChanges, {k,v});
+	if IsCiv5 then
+		return buttonNum
+	else
+		return buttonNum - 1  -- another Firaxis cleverness
 	end
-	table.sort(sortedYieldChanges, function(a,b) return Locale.Compare(a[1], b[1]) == -1 end); 
-	
-	for i,v in pairs(sortedYieldChanges) do
-		local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-		if(thisButton ~= nil) then
-			table.sort(v[2], function(a,b) return Locale.Compare(a,b) == -1 end);
-		
-			if (bTechEnhIcons) then
-				local improvement = GameInfo.Improvements[v[1]]
-				IconHookup( improvement.YieldBoostIndex, textureSize, improvement.YieldBoostAtlas, thisButton );
-			else
-				IconHookup( 0, textureSize, "GENERIC_FUNC_ATLAS", thisButton );
-			end
-			thisButton:SetHide( false );
-			thisButton:SetToolTipString(table.concat(v[2], "[NEWLINE]"));
-			buttonNum = buttonNum + 1;
-		else
-			break;
-		end
-	end	
-
-	-- Improvement No Fresh Water Boosts
-	for row in GameInfo.Improvement_TechNoFreshWaterYieldChanges(condition) do
-		local improvement = ShowInTechTreeLookup("Improvements", row.ImprovementType);
-		if (improvement) then
-
-		local buttonName = "B"..tostring(buttonNum);
-		local thisButton = thisTechButtonInstance[buttonName];
-		if thisButton then
-			if (bTechEnhIcons) then
-				IconHookup( improvement.YieldBoostIndex, textureSize, improvement.YieldBoostAtlas, thisButton );
-			else
-				IconHookup( 0, textureSize, "GENERIC_FUNC_ATLAS", thisButton );
-			end
-			thisButton:SetHide( false );
-			thisButton:SetToolTipString( Locale.ConvertTextKey("TXT_KEY_NO_FRESH_WATER", GameInfo.Improvements[row.ImprovementType].Description , GameInfo.Yields[row.YieldType].Description, row.Yield));
-			buttonNum = buttonNum + 1;
-		else
-			break;
-		end
-		
-		end
-	end	
-
-	-- Improvement Fresh Water Boosts
-	for row in GameInfo.Improvement_TechFreshWaterYieldChanges(condition) do
-		local improvement = ShowInTechTreeLookup("Improvements", row.ImprovementType);
-		if (improvement) then
-
-		local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-		if thisButton then
-			if (bTechEnhIcons) then
-				IconHookup( improvement.YieldBoostIndex, textureSize, improvement.YieldBoostAtlas, thisButton );
-			else
-				IconHookup( 0, textureSize, "GENERIC_FUNC_ATLAS", thisButton );
-			end
-			thisButton:SetHide( false );
-			thisButton:SetToolTipString( Locale.ConvertTextKey("TXT_KEY_FRESH_WATER", GameInfo.Improvements[row.ImprovementType].Description , GameInfo.Yields[row.YieldType].Description, row.Yield));
-			buttonNum = buttonNum + 1;
-		else
-			break;
-		end
-		
-		end
-	end	
-
-	
-
-	-- Trade Route Range Boosts
-	for row in GameInfo.Technology_TradeRouteDomainExtraRange(condition) do
-		if (row.TechType == techType and row.Range > 0) then
-			local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-			if thisButton then
-				local domain = GameInfo.Domains[row.DomainType];
-				if (bTechEnhIcons) then
-					IconHookup( domain.TradeBoostIndex, textureSize, domain.TradeBoostAtlas, thisButton );
-				else
-					IconHookup( 0, textureSize, "GENERIC_FUNC_ATLAS", thisButton );
-				end
-				thisButton:SetHide( false );
-				if (domain.ID == DomainTypes.DOMAIN_LAND) then
-					thisButton:SetToolTipString( Locale.ConvertTextKey( "TXT_KEY_EXTENDS_LAND_TRADE_ROUTE_RANGE" ) );
-				elseif (domain.ID == DomainTypes.DOMAIN_SEA) then
-					thisButton:SetToolTipString( Locale.ConvertTextKey( "TXT_KEY_EXTENDS_SEA_TRADE_ROUTE_RANGE" ) );
-				end
-				buttonNum = buttonNum + 1;
-			end	
-		end
-	end
-
-	-- Specific Enhancements
-	for _, enh in ipairs(TechEnhancementIcons) do
-		local val = tech[enh.Enhancement];
-		if ((type(val) == "boolean" and val == true) or (type(val) == "number" and val > 0)) then
-			local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-			if thisButton then
-				IconHookup( enh.BoostIndex, textureSize, enh.BoostAtlas, thisButton );
-				thisButton:SetHide( false );
-				if (enh.Param == 1) then
-					thisButton:SetToolTipString( Locale.ConvertTextKey( enh.Tip, val ) );
-				else
-					thisButton:SetToolTipString( Locale.ConvertTextKey( enh.Tip ) );
-				end
-				buttonNum = buttonNum + 1;
-			end
-		end
-	end
-
-	-- Free Promotions
-	for row in GameInfo.Technology_FreePromotions(condition) do
---		local promotion = GameInfo.UnitPromotions[row.PromotionType];
-		local promotion = ShowInTechTreeLookup("UnitPromotions", row.PromotionType);
-		if (promotion) then
-		
-		local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-		if thisButton and promotion ~= nil then
-			IconHookup( promotion.PortraitIndex, textureSize, promotion.IconAtlas, thisButton );
-			thisButton:SetHide( false );
-			thisButton:SetToolTipString( Locale.ConvertTextKey("TXT_KEY_FREE_PROMOTION_FROM_TECH", promotion.Description, promotion.Help) );
-			buttonNum = buttonNum + 1;
-		else
-			break;
-		end
-
-		end
-	end
-	
-	-- Scenario Specific
-	for i=1, 4 do
-		if (tech.ScenarioTechButton == i) then
-			local thisButton = thisTechButtonInstance["B"..tostring(buttonNum)];
-			if thisButton then
-				IconHookup( 0, textureSize, "GENERIC_FUNC_ATLAS", thisButton );
-				thisButton:SetHide( false );
-				thisButton:SetToolTipString( Locale.ConvertTextKey( string.format("TXT_KEY_SCENARIO_TECH_BUTTON_%i", i) ) );
-				buttonNum = buttonNum + 1;
-			end
-		end
-	end
-	
-	return buttonNum;
-	
 end
 
+--==========================================================
+--	Obtain small buttons for a tech and lay them out
+--  radially centered from the bottom (Civ BE only).
+--==========================================================
+local AddSmallButtonsToTechButton = AddSmallButtonsToTechButton
+function AddSmallButtonsToTechButtonRadial( thisTechButtonInstance, tech, maxSmallButtons, textureSize )
+	local buttonNum = AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButtons, textureSize )
+
+	-- Push the start back based on # of icons
+	local phiDegrees = 90 - ((buttonNum-1) * 24 ) -- 90?is facing down (0?is far right), +values are clockwise, 24?is 1/2 angle per icon
+	for i = 1, buttonNum do
+		thisTechButtonInstance["B"..i]:SetOffsetVal( PolarToCartesian( 46, 24 * i + phiDegrees ) ) -- 46 is radius
+	end
+
+	return buttonNum
+end
 
 function AddCallbackToSmallButtons( thisTechButtonInstance, maxSmallButtons, void1, void2, thisEvent, thisCallback )
-	for buttonNum = 1, maxSmallButtons, 1 do
-		local buttonName = "B"..tostring(buttonNum);
-		thisTechButtonInstance[buttonName]:SetVoids(void1, void2);
-		thisTechButtonInstance[buttonName]:RegisterCallback(thisEvent, thisCallback);
-	end
-end
-
-
-function AdjustArtOnGrantedUnitButton( thisButton, thisUnitInfo, textureSize )
-	-- if we have one, update the unit picture
-	if thisButton then
-		
-		local portraitOffset, portraitAtlas = UI.GetUnitPortraitIcon(thisUnitInfo.ID);
-		local textureOffset, textureSheet = IconLookup( portraitOffset, textureSize, portraitAtlas );
-		if textureOffset == nil then
-			textureSheet = defaultErrorTextureSheet;
-			textureOffset = nullOffset;
-		end
-		thisButton:SetTexture( textureSheet );
-		thisButton:SetTextureOffset( textureOffset );
-		thisButton:SetHide( false );
-		techPediaSearchStrings[tostring(thisButton)] = Locale.ConvertTextKey(thisUnitInfo.Description);
-		thisButton:RegisterCallback( Mouse.eRClick, GetTechPedia );
-		
-		-- Tooltip
-		local bIncludeRequirementsInfo = true;
-		if g_UseItemTooltip then
-			techToolTips[tostring(thisButton)] = {portraitOffset, portraitAtlas, GetHelpTextForUnit(thisUnitInfo.ID, bIncludeRequirementsInfo)};
-			thisButton:SetToolTipType( "ItemTooltip" );
-			thisButton:SetToolTipCallback( TipHandler );
+	for i = 1, maxSmallButtons do
+		local button = thisTechButtonInstance["B"..i]
+		if button then
+			button:SetVoid1( void1 )
+			button:RegisterCallback( thisEvent, thisCallback )
 		else
-			thisButton:SetToolTipString( GetHelpTextForUnit(thisUnitInfo.ID, bIncludeRequirementsInfo) );
+			return
 		end
 	end
 end
 
-
-function AdjustArtOnGrantedBuildingButton( thisButton, thisBuildingInfo, textureSize )
-	-- if we have one, update the building (or wonder) picture
-	if thisButton then
-		
-		local textureOffset, textureSheet = IconLookup( thisBuildingInfo.PortraitIndex, textureSize, thisBuildingInfo.IconAtlas );				
-		if textureOffset == nil then
-			textureSheet = defaultErrorTextureSheet;
-			textureOffset = nullOffset;
-		end
-		thisButton:SetTexture( textureSheet );
-		thisButton:SetTextureOffset( textureOffset );
-		thisButton:SetHide( false );
-		techPediaSearchStrings[tostring(thisButton)] = Locale.ConvertTextKey(thisBuildingInfo.Description);
-		thisButton:RegisterCallback( Mouse.eRClick, GetTechPedia );
-		
-		-- Tooltip
-		local bExcludeName = false;
-		local bExcludeHeader = false;
-		if g_UseItemTooltip then
-			techToolTips[tostring(thisButton)] = {thisBuildingInfo.PortraitIndex, thisBuildingInfo.IconAtlas, GetHelpTextForBuilding(thisBuildingInfo.ID, bExcludeName, bExcludeHeader, false, nil)};
-			thisButton:SetToolTipType( "ItemTooltip" );
-			thisButton:SetToolTipCallback( TipHandler );
-		else
-			thisButton:SetToolTipString( GetHelpTextForBuilding(thisBuildingInfo.ID, bExcludeName, bExcludeHeader, false, nil) );
-		end
-	end
-end
-
-
-function AdjustArtOnGrantedProjectButton( thisButton, thisProjectInfo, textureSize )
-	-- if we have one, update the project picture
-	if thisButton then
-
-		local textureOffset, textureSheet = IconLookup( thisProjectInfo.PortraitIndex, textureSize, thisProjectInfo.IconAtlas );
-		if textureOffset == nil then
-			textureSheet = defaultErrorTextureSheet;
-			textureOffset = nullOffset;
-		end
-		thisButton:SetTexture( textureSheet );
-		thisButton:SetTextureOffset( textureOffset );
-		thisButton:SetHide( false );
-		techPediaSearchStrings[tostring(thisButton)] = Locale.ConvertTextKey(thisProjectInfo.Description);
-		thisButton:RegisterCallback( Mouse.eRClick, GetTechPedia );
-		
-		-- Tooltip
-		local bIncludeRequirementsInfo = true;
-		if g_UseItemTooltip then
-			techToolTips[tostring(thisButton)] = {thisProjectInfo.PortraitIndex, thisProjectInfo.IconAtlas, GetHelpTextForProject(thisProjectInfo.ID, bIncludeRequirementsInfo)};
-			thisButton:SetToolTipType( "ItemTooltip" );
-			thisButton:SetToolTipCallback( TipHandler );
-		else
-			thisButton:SetToolTipString( GetHelpTextForProject(thisProjectInfo.ID, bIncludeRequirementsInfo) );
-		end
-	end
-end
-
-
-function AdjustArtOnGrantedResourceButton( thisButton, thisResourceInfo, textureSize )
-	if thisButton then
-
-		local textureOffset, textureSheet = IconLookup( thisResourceInfo.PortraitIndex, textureSize, thisResourceInfo.IconAtlas );
-		if textureOffset == nil then
-			textureSheet = defaultErrorTextureSheet;
-			textureOffset = nullOffset;
-		end
-		thisButton:SetTexture( textureSheet );
-		thisButton:SetTextureOffset( textureOffset );
-		thisButton:SetHide( false );
-		techPediaSearchStrings[tostring(thisButton)] =  Locale.Lookup(thisResourceInfo.Description);
-		thisButton:RegisterCallback( Mouse.eRClick, GetTechPedia );
-		
-		-- Tooltip
-		if g_UseItemTooltip then
-			techToolTips[tostring(thisButton)] = {thisResourceInfo.PortraitIndex, thisResourceInfo.IconAtlas, Locale.ConvertTextKey("TXT_KEY_REVEALS_RESOURCE_ON_MAP", thisResourceInfo.Description)};
-			thisButton:SetToolTipType( "ItemTooltip" );
-			thisButton:SetToolTipCallback( TipHandler );
-		else
-			thisButton:SetToolTipString( Locale.ConvertTextKey("TXT_KEY_REVEALS_RESOURCE_ON_MAP", thisResourceInfo.Description) );
-		end
-	end
-end
-
-function AdjustArtOnGrantedActionButton( thisButton, thisBuildInfo, textureSize )
-	if thisButton then
-		local textureOffset, textureSheet = IconLookup( thisBuildInfo.IconIndex, textureSize, thisBuildInfo.IconAtlas );
-		if textureOffset == nil then
-			textureSheet = defaultErrorTextureSheet;
-			textureOffset = nullOffset;
-		end
-		thisButton:SetTexture( textureSheet );
-		thisButton:SetTextureOffset( textureOffset );
-		thisButton:SetHide(false);
-		
-		local thisBuildType;
-		local sToolTip = Locale.ConvertTextKey( thisBuildInfo.Description );
-		if thisBuildInfo.RouteType then
-			techPediaSearchStrings[tostring(thisButton)] = Locale.ConvertTextKey( GameInfo.Routes[thisBuildInfo.RouteType].Description );
-			thisBuildType = GameInfo.Routes[thisBuildInfo.RouteType];
-		elseif thisBuildInfo.ImprovementType then
-			techPediaSearchStrings[tostring(thisButton)] = Locale.ConvertTextKey( GameInfo.Improvements[thisBuildInfo.ImprovementType].Description );
-			thisBuildType = GameInfo.Improvements[thisBuildInfo.ImprovementType];
-			sToolTip = GetHelpTextForImprovement( thisBuildType.ID );
-		else -- we are a choppy thing
-			techPediaSearchStrings[tostring(thisButton)] = Locale.ConvertTextKey( GameInfo.Concepts["CONCEPT_WORKERS_CLEARINGLAND"].Description );
-		end
-		thisButton:RegisterCallback( Mouse.eRClick, GetTechPedia );
-		--techPediaSearchStrings[tostring(thisButton)] = Locale.ConvertTextKey( thisBuildInfo.Description );
-		--thisButton:RegisterCallback( Mouse.eRClick, GetTechPedia );
-		
-		-- Tooltip
-		if g_UseItemTooltip and thisBuildType then
-			techToolTips[tostring(thisButton)] = {thisBuildType.PortraitIndex, thisBuildType.IconAtlas, sToolTip};
-			thisButton:SetToolTipType( "ItemTooltip" );
-			thisButton:SetToolTipCallback( TipHandler );
-		else
-			thisButton:SetToolTipString( sToolTip );
-		end
-	end
-end
-
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-local tipControlTable = {};
-TTManager:GetTypeControlTable( "ItemTooltip", tipControlTable );
-function TipHandler( Button )
-	local controls = tipControlTable;
-	if controls.Text == nil then
-		return;
-	end
-	local iconIndex = techToolTips[tostring(Button)][1];
-	local iconAtlas = techToolTips[tostring(Button)][2];
-	local sTooltip  = techToolTips[tostring(Button)][3];
-	
-	controls.Text:SetText( sTooltip );
-	
-	local textureOffset, textureSheet;
-	if iconAtlas then
-		textureOffset, textureSheet = IconHookup( iconIndex, 256, iconAtlas, controls.Portrait );
-	end
-	controls.PortraitFrame:SetHide( textureOffset == nil );
-	controls.PortraitFrame:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" );
-	controls.Grid:DoAutoSize();
-end

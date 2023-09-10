@@ -205,11 +205,11 @@ VALUES
 --UPDATE Improvement_TechYieldChanges SET TechType = 'TECH_REFINING' WHERE ImprovementType = 'IMPROVEMENT_QUARRY' AND TechType = 'TECH_CHEMISTRY';
 
 
-
-
 DELETE FROM Improvement_TechYieldChanges WHERE ImprovementType = 'IMPROVEMENT_MINE' AND TechType = 'TECH_CHEMISTRY';
 DELETE FROM Improvement_TechYieldChanges WHERE ImprovementType = 'IMPROVEMENT_QUARRY' AND TechType = 'TECH_CHEMISTRY';
 
+DELETE FROM Improvement_TechYieldChanges WHERE ImprovementType = 'IMPROVEMENT_MOAI' AND TechType = 'TECH_FLIGHT';
+DELETE FROM Improvement_TechYieldChanges WHERE ImprovementType = 'IMPROVEMENT_CHATEAU' AND TechType = 'TECH_CHEMISTRY';
 
 
  -- IconFontTextures
@@ -283,42 +283,6 @@ UPDATE Specialists SET GreatPeopleRateChange = 1    WHERE  Type = 'SPECIALIST_SC
 
 
 
----专家额外资源
-ALTER TABLE Technologies ADD COLUMN 'EngineerResource' INTEGER DEFAULT 0; 
-
-----科学家额外产出
-ALTER TABLE Technologies ADD COLUMN 'ExtraScientist' INTEGER DEFAULT 0; 
-
-----文学家额外产出
-ALTER TABLE Technologies ADD COLUMN 'ExtraWriter' INTEGER DEFAULT 0; 
-
-----医学家额外产出
-ALTER TABLE Technologies ADD COLUMN 'ExtraDoctor' INTEGER DEFAULT 0; 
-
-
-
-UPDATE Technologies 
-Set EngineerResource = '1'
-WHERE EXISTS (SELECT * FROM Specialist_Resources WHERE (RequiredTechType =Technologies.Type  AND SpecialistType='SPECIALIST_ENGINEER')); 
-
-
-UPDATE Technologies 
-Set ExtraScientist = '1'
-WHERE EXISTS (SELECT * FROM Tech_SpecialistYieldChanges WHERE (TechType =Technologies.Type  AND SpecialistType='SPECIALIST_SCIENTIST')); 
-
-
-UPDATE Technologies 
-Set ExtraWriter = '1'
-WHERE EXISTS (SELECT * FROM Tech_SpecialistYieldChanges WHERE (TechType =Technologies.Type  AND SpecialistType='SPECIALIST_WRITER')); 
-
-UPDATE Technologies 
-Set ExtraDoctor = '1'
-WHERE EXISTS (SELECT * FROM Tech_SpecialistYieldChanges WHERE (TechType =Technologies.Type  AND SpecialistType='SPECIALIST_DOCTOR')); 
-
-
-
-
-
 -- Insert SQL Rules Here 
 -- Tech Enhancement Icons atlas entries
 INSERT INTO IconTextureAtlases(Atlas, IconSize, IconsPerRow, IconsPerColumn, Filename) VALUES
@@ -326,84 +290,6 @@ INSERT INTO IconTextureAtlases(Atlas, IconSize, IconsPerRow, IconsPerColumn, Fil
 	('TECH_ENH_ICONS_ATLAS', 45, 8, 5, 'TechEnhIcons45.dds'),
 	('TECH_ENH_ICONS_ATLAS2', 64, 8, 8, 'techEnhIconAtlas64.dds'),
 	('TECH_ENH_ICONS_ATLAS2', 45, 8, 8, 'techEnhIconAtlas45.dds');
-
-
-
-
-ALTER TABLE Improvements ADD YieldBoostAtlas TEXT DEFAULT 'GENERIC_FUNC_ATLAS';
-ALTER TABLE Improvements ADD YieldBoostIndex INTEGER DEFAULT 0;
-
-ALTER TABLE Routes ADD  MovementBoostAtlas TEXT DEFAULT 'GENERIC_FUNC_ATLAS';
-ALTER TABLE Routes ADD MovementBoostIndex INTEGER DEFAULT 0;
-
-ALTER TABLE Domains ADD TradeBoostAtlas TEXT DEFAULT 'GENERIC_FUNC_ATLAS';
-ALTER TABLE Domains ADD TradeBoostIndex INTEGER DEFAULT 0;
-
-CREATE TABLE IF NOT EXISTS TechEnhancementIcons(
-  Enhancement TEXT NOT NULL UNIQUE,
-  Tip TEXT NOT NULL,
-  Param INTEGER DEFAULT 0,
-  BoostAtlas TEXT DEFAULT 'GENERIC_FUNC_ATLAS',
-  BoostIndex INTEGER DEFAULT 0);
-
--- Embarkation Enhancements
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('AllowsEmbarking', 'TXT_KEY_ALLOWS_EMBARKING'),
-	('AllowsDefensiveEmbarking', 'TXT_KEY_ABLTY_DEFENSIVE_EMBARK_STRING'),
-	('EmbarkedAllWaterPassage', 'TXT_KEY_ALLOWS_CROSSING_OCEANS'),
-	('EmbarkedMoveChange', 'TXT_KEY_FASTER_EMBARKED_MOVEMENT');
-
--- Agreements Enhancements
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('AllowEmbassyTradingAllowed', 'TXT_KEY_ALLOWS_EMBASSY'),
-	('OpenBordersTradingAllowed', 'TXT_KEY_ALLOWS_OPEN_BORDERS'),
-	('DefensivePactTradingAllowed', 'TXT_KEY_ALLOWS_DEFENSIVE_PACTS'),
-	('ResearchAgreementTradingAllowed', 'TXT_KEY_ALLOWS_RESEARCH_AGREEMENTS'),
-	('TradeAgreementTradingAllowed', 'TXT_KEY_ALLOWS_TRADE_AGREEMENTS') -- Unused in base game
-;
-
--- World Congress Enhancements
-INSERT INTO TechEnhancementIcons(Enhancement, Tip, Param) VALUES
-	('AllowsWorldCongress', 'TXT_KEY_ALLOWS_WORLD_CONGRESS', 0),
-	('ExtraVotesPerDiplomat', 'TXT_KEY_EXTRA_VOTES_FROM_DIPLOMATS', 1);
-
--- Miscellaneous Enhancements
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('BridgeBuilding', 'TXT_KEY_ALLOWS_BRIDGES'),
-	('MapVisible', 'TXT_KEY_REVEALS_ENTIRE_MAP'),
-	('InternationalTradeRoutesChange', 'TXT_KEY_ADDITIONAL_INTERNATIONAL_TRADE_ROUTE'),
-	('InfluenceSpreadModifier', 'TXT_KEY_DOUBLE_TOURISM');
-
--- Unit Enhancements, both unused in base game
-INSERT INTO TechEnhancementIcons(Enhancement, Tip, Param) VALUES
-	('UnitFortificationModifier', 'TXT_KEY_UNIT_FORTIFICATION_MOD', 1),
-	('UnitBaseHealModifier', 'TXT_KEY_UNIT_BASE_HEAL_MOD', 1);
-
-----城市间接火力
--- City Bombardment Enhancements, both unused in base game
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('BombardIndirect', 'TXT_KEY_CITY_BOMBARDMENT_MOD');
-
-
-
-----科学家额外产出
--- 
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('ExtraScientist', 'TXT_KEY_EXTRA_SCIENTIST_YEILD_HELP');
-
-----文学家额外产出
--- 
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('ExtraWriter', 'TXT_KEY_EXTRA_WRITER_YEILD_HELP');
-
-----医学家额外产出
--- 
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('ExtraDoctor', 'TXT_KEY_EXTRA_DOCTOR_YEILD_HELP');
-
----工程师资源产出
-INSERT INTO TechEnhancementIcons(Enhancement, Tip) VALUES
-	('EngineerResource', 'TXT_KEY_EXTRA_RESOURCES_VALUE_HELP');
 
 ALTER TABLE Improvements ADD ShowInTechTree INTEGER DEFAULT 1;
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_FISHERY_MOD';
@@ -420,93 +306,6 @@ UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_FW_ARCOLO
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_CAIRN';
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_LATIFUNDIUM';
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_SANATORIUM';
-
--- Improvement Yield Boosts
-
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=0  WHERE Type='IMPROVEMENT_FARM';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=1  WHERE Type='IMPROVEMENT_MINE';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=2  WHERE Type='IMPROVEMENT_LUMBERMILL';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=3  WHERE Type='IMPROVEMENT_TRADING_POST';
-
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=4  WHERE Type='IMPROVEMENT_PASTURE';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=5  WHERE Type='IMPROVEMENT_CAMP';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=6  WHERE Type='IMPROVEMENT_PLANTATION';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=7  WHERE Type='IMPROVEMENT_FISHING_BOATS';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=8  WHERE Type='IMPROVEMENT_QUARRY';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=9  WHERE Type='IMPROVEMENT_CHATEAU';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=10 WHERE Type='IMPROVEMENT_MOAI';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=11 WHERE Type='IMPROVEMENT_TERRACE_FARM';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=12 WHERE Type='IMPROVEMENT_POLDER';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=13 WHERE Type='IMPROVEMENT_BRAZILWOOD_CAMP';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=14 WHERE Type='IMPROVEMENT_ACADEMY';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=15 WHERE Type='IMPROVEMENT_CUSTOMS_HOUSE';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=16 WHERE Type='IMPROVEMENT_MANUFACTORY';
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=38  WHERE Type='IMPROVEMENT_KASBAH';
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=34 WHERE Type='IMPROVEMENT_WELL';
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=35  WHERE Type='IMPROVEMENT_SANATORIUM';
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=37  WHERE Type='IMPROVEMENT_LATIFUNDIUM';
-
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=28 WHERE Type='IMPROVEMENT_SAND_BASE';
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS', YieldBoostIndex=36 WHERE Type='IMPROVEMENT_BYZANTIUM_ANGELOKASTRO';
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=31 WHERE Type='IMPROVEMENT_OFFSHORE_PLATFORM';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=27 WHERE Type='IMPROVEMENT_FISHERY_MOD';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=29 WHERE Type='IMPROVEMENT_FISHFARM_MOD';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=6 WHERE Type='IMPROVEMENT_BE_ACADEMY';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=11 WHERE Type='IMPROVEMENT_TERRASCAPE';
---UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=20 WHERE Type='IMPROVEMENT_FW_GENERATOR';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=0 WHERE Type='IMPROVEMENT_FW_COMM_ARRAY';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=4 WHERE Type='IMPROVEMENT_FW_INDUSTRIAL_COMPLEX';
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=24 WHERE Type='IMPROVEMENT_FW_ARCOLOGY';
-
-UPDATE Improvements SET YieldBoostAtlas='TECH_ENH_ICONS_ATLAS2', YieldBoostIndex=36 WHERE Type='IMPROVEMENT_HOLY_SITE';
-
--- Route Movement Boosts
-UPDATE Routes SET MovementBoostAtlas='TECH_ENH_ICONS_ATLAS', MovementBoostIndex=17 WHERE Type='ROUTE_ROAD';
-UPDATE Routes SET MovementBoostAtlas='TECH_ENH_ICONS_ATLAS', MovementBoostIndex=18 WHERE Type='ROUTE_RAILROAD';
-
--- Trade Route Distance Boosts
-UPDATE Domains SET TradeBoostAtlas='TECH_ENH_ICONS_ATLAS', TradeBoostIndex=19 WHERE Type='DOMAIN_LAND';
-UPDATE Domains SET TradeBoostAtlas='TECH_ENH_ICONS_ATLAS', TradeBoostIndex=20 WHERE Type='DOMAIN_SEA';
-
--- Miscellaneous Enhancements
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=21 WHERE Enhancement='BridgeBuilding';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=22 WHERE Enhancement='AllowsEmbarking';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=22 WHERE Enhancement='AllowsDefensiveEmbarking';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=23 WHERE Enhancement='EmbarkedAllWaterPassage';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=24 WHERE Enhancement='EmbarkedMoveChange';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=25 WHERE Enhancement='InternationalTradeRoutesChange';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=26 WHERE Enhancement='AllowEmbassyTradingAllowed';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=27 WHERE Enhancement='OpenBordersTradingAllowed';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=28 WHERE Enhancement='ResearchAgreementTradingAllowed';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=29 WHERE Enhancement='DefensivePactTradingAllowed';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=30 WHERE Enhancement='AllowsWorldCongress';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=31 WHERE Enhancement='ExtraVotesPerDiplomat';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=32 WHERE Enhancement='InfluenceSpreadModifier';
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS', BoostIndex=33 WHERE Enhancement='MapVisible';
-
-UPDATE TechEnhancementIcons SET BoostAtlas='SPBalance_ATLAS', BoostIndex=34 WHERE Enhancement='ExtraScientist';  
-UPDATE TechEnhancementIcons SET BoostAtlas='SPBalance_ATLAS', BoostIndex=40 WHERE Enhancement='ExtraWriter';  
-UPDATE TechEnhancementIcons SET BoostAtlas='ROBOT_ICON_ATLAS4', BoostIndex=41 WHERE Enhancement='ExtraDoctor';  
-
---UPDATE TechEnhancementIcons SET BoostAtlas='SPBalance_ATLAS', BoostIndex=37 WHERE Enhancement='EngineerResource'; 
-UPDATE TechEnhancementIcons SET BoostAtlas='GENERIC_FUNC_ATLAS', BoostIndex=0 WHERE Enhancement='EngineerResource';
-
---UPDATE TechEnhancementIcons SET BoostAtlas='UNIT_ACTION_ATLAS', BoostIndex=60 WHERE Enhancement='BombardQuickly';  
-UPDATE TechEnhancementIcons SET BoostAtlas='UNIT_ACTION_ATLAS', BoostIndex=13 WHERE Enhancement='BombardIndirect';  
----间接火力
-
-UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS2', BoostIndex=33 WHERE Enhancement='UnitFortificationModifier';
---UPDATE TechEnhancementIcons SET BoostAtlas='TECH_ENH_ICONS_ATLAS2', BoostIndex=35 WHERE Enhancement='UnitBaseHealModifier';
-UPDATE TechEnhancementIcons SET BoostAtlas='UNIT_ACTION_ATLAS', BoostIndex=3 WHERE Enhancement='UnitBaseHealModifier';
 
 
 INSERT INTO IconTextureAtlases	(Atlas, IconSize, Filename, IconsPerRow, IconsPerColumn) VALUES

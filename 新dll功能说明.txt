@@ -707,11 +707,37 @@ GetProjectCount()
 #define MOD_EVENTS_DO_DENOUNCE                      gCustomMods.isEVENTS_DO_DENOUNCE ()
 GAMEEVENT_DoDenounce
 
-#if defined(MOD_EVENTS_CITY)
-				if (MOD_EVENTS_CITY) {
-					GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityConstructed, getOwner(), GetID(), eConstructBuilding, false, false);
-				} else {
-#endif
 
 --void CvDiplomacyAI::DoDenouncePlayer(PlayerTypes ePlayer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

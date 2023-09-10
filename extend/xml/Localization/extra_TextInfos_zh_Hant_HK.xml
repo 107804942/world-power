@@ -25,6 +25,11 @@
 			</Text>
 		</Row>
 
+
+		<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
+			<Text>工人建造效率+25%</Text>
+		</Row>
+		
 		<Row Tag="TXT_KEY_NO_ACTION_CITY_COUNT_MAX">
 			<Text>每座城市只允许{1_Num}个。</Text>
 		</Row>

@@ -4156,7 +4156,7 @@
 
 		<Row>
 			<BuildingType>BUILDING_MALTA</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
@@ -4603,7 +4603,7 @@
 		<Row>
 			<BuildingType>BUILDING_LEP</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-2500</Yield>
+			<Yield>-1000</Yield>
 		</Row>
 
 		<Row>

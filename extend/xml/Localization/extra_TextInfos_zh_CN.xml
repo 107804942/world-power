@@ -27,6 +27,15 @@
 			</Row>
 
 
+			
+			<Row Tag="TXT_KEY_EUI_SPECIALIST_YIELD_CHANGE">
+			      <Text>{1_Name}+{3_Num}{2_Name}{4_Name}</Text>
+		    </Row>
+			
+			<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
+				<Text>工人建造效率+25%</Text>
+			</Row>
+
 			<Row Tag="TXT_KEY_GOLD_COST_LABEL">
 				<Text>维护费：</Text>
 			</Row>
