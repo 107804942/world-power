@@ -978,7 +978,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	local thisBuildingType = { BuildingType = buildingType }
 	local thisBuildingAndResourceTypes =  { BuildingType = buildingType }
 	local thisBuildingClassType = { BuildingClassType = buildingClassType }
-	local tip, tips, items, item, yieldID, yieldChange, yieldModifier, yieldPerPop,yieldPerPopGlobal, yieldPerReligion, tradeRouteSeaGoldBonus, tradeRouteLandGoldBonus, resource
+	local tip, tips, items, item, yieldID, yieldChange, yieldModifier, yieldPerPop,yieldPerPopGlobal, yieldPerReligion, tradeRouteSeaGoldBonus, tradeRouteLandGoldBonus, resource, tradeRouteSeaGoldBonusGlobal, tradeRouteLandGoldBonusGlobal
 
 	if g_isReligionEnabled and activePlayer then
 		local religionID = activePlayer:GetReligionCreatedByPlayer()
@@ -1113,7 +1113,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		GlobalGreatPeopleRateModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GPRM1" .. "%+i%%[ICON_GREAT_PEOPLE]",-- TOTO
 		GreatGeneralRateModifier = L"TXT_KEY_GGRM2" .. "%+i%%[ICON_GREAT_GENERAL]",-- TOTO
 		GreatPersonExpendGold = L"TXT_KEY_GPEG1" .. "%+i[ICON_GOLD]",		-- TOTO
-		GoldenAgeModifier = "%+i%% "..L"TXT_KEY_REPLAY_DATA_GOLDAGETURNS",
+		GoldenAgeModifier = L"TXT_KEY_REPLAY_DATA_GOLDAGETURNS" .. ":" .. "%+i%% ",
 		UnitUpgradeCostMod = L"TXT_KEY_UUCM1" .. "%+i%%[ICON_GOLD]",		-- TOTO
 		Experience = L("TXT_KEY_EXPERIENCE_POPUP", "%i"),			-- TOTO
 		GlobalExperience = L"TXT_KEY_GLOBAL1" .. L("TXT_KEY_EXPERIENCE_POPUP", "%i"),-- TOTO
@@ -1138,7 +1138,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		MilitaryProductionModifier = L"TXT_KEY_MILITARY_PRODUCTION_MODIFIER111" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
 		SpaceProductionModifier = L"TXT_KEY_SPACE_PRODUCTION_MODIFIER11" .. "%+i%%[ICON_PRODUCTION]",	-- TOTO
 		GlobalSpaceProductionModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_SPACE_PRODUCTION_MODIFIER11" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
-		BuildingProductionModifier = L"TXT_KEY_BUILDING_PRODUCTION_MODIFIER11" .. "%+i%%[ICON_PRODUCTION]",	-- TOTO
+		BuildingProductionModifier = L"TXT_KEY_SV_ICONS_LOCAL_SP" .. L"TXT_KEY_BUILDING_PRODUCTION_MODIFIER11" .. "%+i%%[ICON_PRODUCTION]",	-- TOTO
 		WonderProductionModifier = L"TXT_KEY_WONDER_PRODUCTION_MODIFIER111" .. "%+i%%[ICON_PRODUCTION]",	-- TOTO
 		CityConnectionTradeRouteModifier = L"TXT_KEY_CCTRM22" .. "%+i%%[ICON_GOLD]",-- TOTO
 		CapturePlunderModifier = L"TXT_KEY_CPM3" .. "%+i%%[ICON_GOLD]",		-- TOTO
@@ -1167,11 +1167,13 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		ExtraSpies = L"TXT_KEY_ES123123" .. " %+i" .. "[ICON_SPY]",		-- TOTO
 		SpyRankChange = L"TXT_KEY_SC_10" .. "[ICON_SPY]" .. "^%i",		-- TOTO
 		InstantSpyRankChange = L"TXT_KEY_ISC_10" .. "[ICON_SPY]" .. "^%i",	-- TOTO
-		TradeRouteRecipientBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER" .. " %+i"..g_currencyIcon.."[ICON_ARROW_LEFT]",
-		TradeRouteTargetBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER" .. " %+i"..g_currencyIcon.."[ICON_ARROW_RIGHT]",
+		TradeRouteRecipientBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_LEFT]",
+		TradeRouteTargetBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_RIGHT]",
 		NumTradeRouteBonus = "%+i[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER",
 		LandmarksTourismPercent = L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
+		LandmarksTourismPercentGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
 		GreatWorksTourismModifier = L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
+		GreatWorksTourismModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
 		XBuiltTriggersIdeologyChoice = L("TXT_KEY_XBTIC1", "%i"),			-- TOTO
 		TradeRouteSeaDistanceModifier = L"TXT_KEY_TSDM1" .. "%+i%%",
 	--y	TradeRouteSeaGoldBonus = L"TXT_KEY_TRSGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO
@@ -1334,6 +1336,28 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%s", tip, L"TXT_KEY_TRLGB1", tradeRouteLandGoldBonus, yield.IconString or "?" )
 		end
+
+		if yield.Type == "YIELD_GOLD" and building.TradeRouteSeaGoldBonusGlobal > 0 then
+			tradeRouteSeaGoldBonusGlobal = (building.TradeRouteSeaGoldBonusGlobal)/100
+			if tradeRouteSeaGoldBonusGlobal > 0 then
+				tradeRouteSeaGoldBonusGlobal = format("+%s", tradeRouteSeaGoldBonusGlobal);
+			end
+			if tip ~= "" then
+				tip = format("%s, ", tip )
+			end
+			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%s", tip, L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_TRSGB1", tradeRouteSeaGoldBonusGlobal, yield.IconString or "?" )
+		end
+		if yield.Type == "YIELD_GOLD" and building.TradeRouteLandGoldBonusGlobal > 0 then
+			tradeRouteLandGoldBonusGlobal = (building.TradeRouteLandGoldBonusGlobal)/100
+			if tradeRouteLandGoldBonusGlobal > 0 then
+				tradeRouteLandGoldBonusGlobal = format("+%s", tradeRouteLandGoldBonusGlobal);
+			end
+			if tip ~= "" then
+				tip = format("%s, ", tip )
+			end
+			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%s", tip, L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_TRLGB1", tradeRouteLandGoldBonusGlobal, yield.IconString or "?" )
+		end
+
 		if tip ~= "" then
 			insert( tips, L(yield.Description) .. ": " .. tip )
 		end
@@ -1691,7 +1715,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	-- Map Yields enhanced by Building
 	tip = GetYieldStringSpecial( "Yield", "%s %+i%%%s", GameInfo.Building_GlobalYieldModifiers( thisBuildingType ) )
 	if tip ~= "" then
-		insert( tips, L"TXT_KEY_TOPIC_CITIES" .. ":" .. tip )
+		insert( tips, L"TXT_KEY_SV_ICONS_GLOBAL_SP" .. ":" .. tip )
 	end
 
 	-- victory requisite
@@ -2211,6 +2235,17 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 
 	-- -------------------------------------------------------------end-- ----------------------------------------------------------
+	-- Required Buildings Global:
+	local buildingsGloabl = {}
+	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingType ) do
+		local item = GetCivBuilding( activeCivilizationType, row.BuildingClassType )
+		if item and not buildingsGloabl[ item ] then
+			insert( buildingsGloabl, BuildingColor( L(item.Description) ) )
+		end
+	end
+	if #buildingsGloabl > 0 then
+		insert( tips, L"TXT_KEY_BUILDIND_NEEDED_GLOBAL_SP" .. " " .. concat( buildingsGloabl, ", ") )
+	end
 
 	-- Local Resources Required:
 	local resources = {}
@@ -2278,7 +2313,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	local terrains = {}
 	if building.Water then
-		insert( terrains, L"TXT_KEY_TERRAIN_COAST" )
+		if building.MinAreaSize > 0 then
+			insert( terrains, L"TXT_KEY_TERRAIN_COAST" .. "(" .. building.MinAreaSize .. ")")
+		else
+			insert( terrains, L"TXT_KEY_TERRAIN_COAST")
+		end
 	end
 	if building.River then
 		insert( terrains, L"TXT_KEY_PLOTROLL_RIVER" )
@@ -2340,6 +2379,24 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	if #items > 0 then
 		insert( tips, L"TXT_KEY_PEDIA_BLDG_UNLOCK_LABEL" .. " " .. concat( items, ", ") )
 	end
+
+	-- Buildings Unlocked Global:
+	local buildingsUnlockedGlobal = {}
+	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingClassType ) do
+		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
+		SetKey( buildingsUnlockedGlobal, buildingUnlocked and buildingUnlocked.BuildingClass )
+	end
+	items = {}
+	for buildingUnlocked in pairs(buildingsUnlockedGlobal) do
+		buildingUnlocked = GetCivBuilding( activeCivilizationType, buildingUnlocked )
+		if buildingUnlocked then
+			insert( items, BuildingColor( L(buildingUnlocked.Description) ) )
+		end
+	end
+	if #items > 0 then
+		insert( tips, L"TXT_KEY_BUILDIND_UNLOCKED_GLOBAL_SP" .. " " .. concat( items, ", ") )
+	end
+
 
 	-- Built <> Buiding Class Count
 	local countText = {};
@@ -3037,46 +3094,7 @@ if Game then
 		yieldIconString = yieldIconString or YieldIcons[yieldID] or "?"
 		local tips = {}
 
-		-- Base Yield from health 新增
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_HEALTH", city:GetYieldFromHealth( yieldID ), yieldIconString )
-
-
-		-- Base Yield from health mod 新增
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_CRIME", city:GetYieldFromCrime( yieldID ), yieldIconString )
-
-
-
-
-		-- Base Yield from Terrain
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_TERRAIN", city:GetBaseYieldRateFromTerrain( yieldID ), yieldIconString )
-
-		-- Base Yield from Buildings
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_BUILDINGS", city:GetBaseYieldRateFromBuildings( yieldID ), yieldIconString )
-
-		-- Base Yield from Specialists
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_SPECIALISTS", city:GetBaseYieldRateFromSpecialists( yieldID ), yieldIconString )
-
-		-- Base Yield from Misc
-		insertLocalizedBulletIfNonZero( tips, yieldID == YieldTypes.YIELD_SCIENCE and "TXT_KEY_YIELD_FROM_POP" or "TXT_KEY_YIELD_FROM_MISC", city:GetBaseYieldRateFromMisc( yieldID ), yieldIconString )
-
-		-- Base Yield from Population
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_POP_EXTRA", city:GetYieldPerPopTimes100( yieldID ) * city:GetPopulation() / 100, yieldIconString )
-
-		-- Base Yield from Religion
-		if not IsCiv5Vanilla then
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_RELIGION", city:GetBaseYieldRateFromReligion( yieldID ), yieldIconString )
-		end
-
-		if IsCivBE then
-			-- Yield from Production Processes
-			local yieldFromProcesses = city:GetYieldRateFromProductionProcesses( yieldID )
-			if yieldFromProcesses ~= 0 then
-				local processInfo = GameInfo.Processes[ city:GetProductionProcess() ]
-				strModifiersString = strModifiersString .. "[NEWLINE][ICON_BULLET]" .. L( "TXT_KEY_SHORT_YIELD_FROM_SPECIFIC_OBJECT", yieldFromProcesses, yieldIconString, processInfo and processInfo.Description or "???" )
-			end
-			-- Base Yield from Loadout (colonists)
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_YIELD_FROM_LOADOUT", city:GetYieldPerTurnFromLoadout( yieldID ), yieldIconString )
-		end
+		insert( tips, city:GetYieldRateInfoTool(yieldID) )
 
 		-- Food eaten by pop
 		if yieldID == YieldTypes.YIELD_FOOD then
@@ -3327,57 +3345,21 @@ if Game then
 		local cityOwner = Players[city:GetOwner()]
 		local culturePerTurn, cultureStored, cultureNeeded, cultureFromBuildings, cultureFromPolicies, cultureFromSpecialists, cultureFromTraits, baseCulturePerTurn
 		-- Thanks fo Firaxis Cleverness...
-		if IsCiv5 then
-			culturePerTurn = city:GetJONSCulturePerTurn()
-			cultureStored = city:GetJONSCultureStored()
-			cultureNeeded = city:GetJONSCultureThreshold()
-			cultureFromBuildings = city:GetJONSCulturePerTurnFromBuildings()
-			cultureFromPolicies = city:GetJONSCulturePerTurnFromPolicies()
-			cultureFromSpecialists = city:GetJONSCulturePerTurnFromSpecialists()
-			cultureFromTraits = city:GetJONSCulturePerTurnFromTraits()
-			baseCulturePerTurn = city:GetBaseJONSCulturePerTurn()
-		else
-			culturePerTurn = city:GetCulturePerTurn()
-			cultureStored = city:GetCultureStored()
-			cultureNeeded = city:GetCultureThreshold()
-			cultureFromBuildings = city:GetCulturePerTurnFromBuildings()
-			cultureFromPolicies = city:GetCulturePerTurnFromPolicies()
-			cultureFromSpecialists = city:GetCulturePerTurnFromSpecialists()
-			cultureFromTraits = city:GetCulturePerTurnFromTraits()
-			baseCulturePerTurn = city:GetBaseCulturePerTurn()
-		end
+		culturePerTurn = city:GetJONSCulturePerTurn()
+		cultureStored = city:GetJONSCultureStored()
+		cultureNeeded = city:GetJONSCultureThreshold()
+		cultureFromBuildings = city:GetJONSCulturePerTurnFromBuildings()
+		cultureFromPolicies = city:GetJONSCulturePerTurnFromPolicies()
+		cultureFromSpecialists = city:GetJONSCulturePerTurnFromSpecialists()
+		cultureFromTraits = city:GetJONSCulturePerTurnFromTraits()
+		baseCulturePerTurn = city:GetBaseJONSCulturePerTurn()
 
-		if IsCivBE or not OptionsManager.IsNoBasicHelp() then
+		if not OptionsManager.IsNoBasicHelp() then
 			insert( tips, L"TXT_KEY_CULTURE_HELP_INFO" )
-			insert( tips, "" )
 		end
 
-		-- Culture from Buildings
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_BUILDINGS", cultureFromBuildings )
+		insert( tips, city:GetYieldRateInfoTool(YieldTypes.YIELD_CULTURE) )
 
-		-- Culture from Policies
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_POLICIES", cultureFromPolicies )
-
-		-- Culture from Specialists
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_SPECIALISTS", cultureFromSpecialists )
-
-		-- Culture from Religion
-		if not IsCiv5Vanilla then
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_RELIGION", city:GetJONSCulturePerTurnFromReligion() )
-		end
-
-		if IsCiv5BNW then
-			-- Culture from Great Works
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_GREAT_WORKS", city:GetJONSCulturePerTurnFromGreatWorks() )
-			-- Culture from Leagues
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_LEAGUES", city:GetJONSCulturePerTurnFromLeagues() )
-		end
-
-		-- Culture from Terrain
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_TERRAIN", IsCiv5Vanilla and city:GetJONSCulturePerTurnFromTerrain() or city:GetBaseYieldRateFromTerrain( YieldTypes.YIELD_CULTURE ) )
-
-		-- Culture from Traits
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_CULTURE_FROM_TRAITS", cultureFromTraits )
 		-- Base Total
 		if baseCulturePerTurn ~= culturePerTurn then
 			insert( tips, "----------------" )
@@ -3497,37 +3479,24 @@ if Game then
 		if g_isReligionEnabled then
 			local tips = {}
 
-			if IsCivBE or not OptionsManager.IsNoBasicHelp() then
+			if not OptionsManager.IsNoBasicHelp() then
 				insert( tips, L"TXT_KEY_FAITH_HELP_INFO" )
-				insert( tips, "" )
 			end
 
-			-- Faith from Buildings
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_BUILDINGS", city:GetFaithPerTurnFromBuildings() )
+			local iFaithPerTurn = city:GetFaithPerTurn()
+			if iFaithPerTurn ~= 0 then
+				insert( tips, city:GetYieldRateInfoTool(YieldTypes.YIELD_FAITH) )
 
-			-- Faith from Traits
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_TRAITS", city:GetFaithPerTurnFromTraits() )
+				-- Puppet modifier
+				insertLocalizedBulletIfNonZero( tips, "TXT_KEY_PRODMOD_PUPPET", city:IsPuppet() and GameDefines.PUPPET_FAITH_MODIFIER or 0 )
 
-			-- Faith from Terrain
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_TERRAIN", city:GetBaseYieldRateFromTerrain( YieldTypes.YIELD_FAITH ) )
+				insert( tips, city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH ) )
 
-			-- Faith from Policies
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_POLICIES", city:GetFaithPerTurnFromPolicies() )
-
-			-- Faith from Religion
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FAITH_FROM_RELIGION", city:GetFaithPerTurnFromReligion() )
-
-			-- Puppet modifier
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_PRODMOD_PUPPET", city:IsPuppet() and GameDefines.PUPPET_FAITH_MODIFIER or 0 )
-
-			insert( tips, city:GetYieldModifierTooltip( YieldTypes.YIELD_FAITH ) )
-
-			-- Citizens breakdown
-			insert( tips, "----------------")
-			insert( tips, L( "TXT_KEY_YIELD_TOTAL", city:GetFaithPerTurn(), "[ICON_PEACE]" ) )
-			insert( tips, "" )
-			insert( tips, GetReligionTooltip( city ) )
-
+				-- Citizens breakdown
+				insert( tips, "----------------")
+				insert( tips, L( "TXT_KEY_YIELD_TOTAL", city:GetFaithPerTurn(), "[ICON_PEACE]" ) )
+				insert( tips, GetReligionTooltip( city ) )
+			end
 			return concat( tips, "[NEWLINE]" )
 		else
 			return L"TXT_KEY_TOP_PANEL_RELIGION_OFF_TOOLTIP"
