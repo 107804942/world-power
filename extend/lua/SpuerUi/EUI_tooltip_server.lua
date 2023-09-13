@@ -1926,9 +1926,7 @@ local function CityOrderItemTooltip( city, isDisabled, purchaseYieldID, orderID,
 			end
 			if strDisabledInfo and #strDisabledInfo > 0 then
 				strDisabledInfo = (strDisabledInfo:gsub("^%[NEWLINE%]","")):gsub("^%[NEWLINE%]","")
---				if cash and cash < 0 then
---					strDisabledInfo = ("%s (%+i%s)"):format( strDisabledInfo, cash, icon )
---				end
+
 				tip = "[COLOR_WARNING_TEXT]" .. strDisabledInfo .. "[ENDCOLOR][NEWLINE][NEWLINE]"..tip
 			elseif purchaseYieldID then
 				if not isDisabled then
@@ -2237,19 +2235,30 @@ local function ScienceTooltip()
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_MINORS", activePlayer:GetScienceFromOtherPlayersTimes100() / 100 )
 
 		if IsCiv5 then
+
+			-- Science from Religion
+			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_RELIGION", activePlayer:GetScienceFromReligion()) ---新增
+
+			-- Science from Happiness 
+			insertLocalizedIfNonZero( tips, "TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", activePlayer:GetYieldModifierFromHappinessPolicy(GameInfoTypes["YIELD_SCIENCE"]) ) ---新增
+
+            -- Science from Resource
+			insertLocalizedIfNonZero( tips, "TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", activePlayer:GetGlobalYieldModifierFromResource(GameInfoTypes["YIELD_SCIENCE"])) ---新增
+
+
 			-- Science from Happiness
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_HAPPINESS", activePlayer:GetScienceFromHappinessTimes100() / 100 )
 
 			-- Science from Vassals / Compatibility with Putmalk's Civ IV Diplomacy Features Mod
-			if activePlayer.GetScienceFromVassalTimes100 then
-				insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_VASSALS", activePlayer:GetScienceFromVassalTimes100() / 100 )
-			end
+			--if activePlayer.GetScienceFromVassalTimes100 then
+				--insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_VASSALS", activePlayer:GetScienceFromVassalTimes100() / 100 )
+			--end
 
 			-- Compatibility with Gazebo's City-State Diplomacy Mod (CSD) for Brave New World v23
-			if activePlayer.GetScienceRateFromMinorAllies and activePlayer.GetScienceRateFromLeagueAid then
-				insertLocalizedIfNonZero( tips, "TXT_KEY_MINOR_SCIENCE_FROM_LEAGUE_ALLIES", activePlayer:GetScienceRateFromMinorAllies() )
-				insertLocalizedIfNonZero( tips, "TXT_KEY_SCIENCE_FUNDING_FROM_LEAGUE", activePlayer:GetScienceRateFromLeagueAid() )
-			end
+			--if activePlayer.GetScienceRateFromMinorAllies and activePlayer.GetScienceRateFromLeagueAid then
+				--insertLocalizedIfNonZero( tips, "TXT_KEY_MINOR_SCIENCE_FROM_LEAGUE_ALLIES", activePlayer:GetScienceRateFromMinorAllies() )
+				--insertLocalizedIfNonZero( tips, "TXT_KEY_SCIENCE_FUNDING_FROM_LEAGUE", activePlayer:GetScienceRateFromLeagueAid() )
+			--end
 
 			-- Science from Research Agreements
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_RESEARCH_AGREEMENTS", activePlayer:GetScienceFromResearchAgreementsTimes100() / 100 )
@@ -2270,8 +2279,7 @@ local function ScienceTooltip()
 					else
 						itemType, duration, finalTurn, data1, data2, fromPlayerID = ScratchDeal:GetNextItem()
 					end
---local itemKey for k,v in pairs( TradeableItems ) do if itemType == v then itemKey = k break end end
---print( "Deal #", i, "item type", itemType, itemKey, "duration", duration, "finalTurn", finalTurn, "data1", data1, "data2", data2, "fromPlayerID", fromPlayerID)
+
 					if itemType == TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT and fromPlayerID ~= activePlayerID then
 						researchAgreementCounters[fromPlayerID] = finalTurn - gameTurn
 						break
@@ -2305,20 +2313,7 @@ local function ScienceTooltip()
 				insert( tips, tipIndex+1, "" )
 				insert( tips, tipIndex+2, L"TXT_KEY_DO_RESEARCH_AGREEMENT" )
 			end
-		else
-			-- Science from Health
-			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_HEALTH", activePlayer:GetScienceFromHealthTimes100() / 100 )
 
-			-- Science from Culture Rate
-			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_CULTURE", activePlayer:GetScienceFromCultureTimes100() / 100 )
-
-			-- Science from Diplomacy Rate
-			local scienceFromDiplomacy = activePlayer:GetScienceFromDiplomacyTimes100() / 100
-			if scienceFromDiplomacy > 0 then
-				insert( tips, L( "TXT_KEY_TP_SCIENCE_FROM_DIPLOMACY", scienceFromDiplomacy ) )
-			elseif scienceFromDiplomacy < 0 then
-				insert( tips, L( "TXT_KEY_TP_NEGATIVE_SCIENCE_FROM_DIPLOMACY", -scienceFromDiplomacy ) )
-			end
 		end
 
 		-- Let people know that building more cities makes techs harder to get
@@ -2427,7 +2422,9 @@ local TopPanelTooltips = {
 	TechIcon = ScienceTooltip,
 
 
-
+-------------------------------------------------
+-- 每回合金钱明细
+-------------------------------------------------
 	GoldPerTurn = function()
 		local activePlayerID = GetActivePlayer()
 		local activeTeamID = GetActiveTeam()
@@ -2519,10 +2516,18 @@ local TopPanelTooltips = {
 		insertLocalizedBulletIfNonZero( tips, format("TXT_KEY_TP_%s_BUILDING_MAINT", g_currencyString), buildingMaintenance )
 		insertLocalizedBulletIfNonZero( tips, format("TXT_KEY_TP_%s_TILE_MAINT", g_currencyString), improvementMaintenance )
 		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_ENERGY_ROUTE_MAINT", routeMaintenance )
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_GOLD_VASSAL_MAINT", vassalMaintenance )	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
+		--insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_GOLD_VASSAL_MAINT", vassalMaintenance )	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
 		insertLocalizedBulletIfNonZero( tips, format("TXT_KEY_TP_%s_TO_OTHERS", g_currencyString ), goldPerTurnToOtherPlayers )
-		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_ENERGY_TO_BEACON", beaconEnergyDelta )
 		insert( tips, "[ENDCOLOR]" )
+
+
+		-----------------------------SP Manpower Discount ----------------------------------------
+		local strSPManPowerDiscount = Locale.ConvertTextKey("TXT_KEY_SP_UI_MANPOWER_DISCOUNT")
+		local ManPowerBonus = math.abs(activePlayer:GetGoldHurryCostModifierFromResourceByIndex(GameInfoTypes["RESOURCE_MANPOWER"]))
+		if ManPowerBonus > 0 then
+		  insert( tips, "[NEWLINE]  " .. strSPManPowerDiscount .. " " .. ManPowerBonus .."%")
+		end
+		-----------------------------SP Manpower Discount END----------------------------------------
 
 		-- show gold available for trade to the active player
 		local tipIndex = #tips
@@ -2616,8 +2621,11 @@ local TopPanelTooltips = {
 			local extraHappinessPerCity = activePlayer:GetExtraHappinessPerCity() * activePlayer:GetNumCities()
 			local leagueHappiness = IsCiv5BNW_BE and activePlayer:GetHappinessFromLeagues() or 0
 			local totalHappiness = activePlayer:GetHappiness()
-			local happinessFromVassals = activePlayer.GetHappinessFromVassals and activePlayer:GetHappinessFromVassals() or 0	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
-			local handicapHappiness = totalHappiness - policiesHappiness - resourcesHappiness - cityHappiness - buildingHappiness - garrisonedUnitsHappiness - minorCivHappiness - tradeRouteHappiness - religionHappiness - naturalWonderHappiness - extraHappinessPerCity - leagueHappiness - happinessFromVassals	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
+			--local happinessFromVassals = activePlayer.GetHappinessFromVassals and activePlayer:GetHappinessFromVassals() or 0	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
+			--local handicapHappiness = totalHappiness - policiesHappiness - resourcesHappiness - cityHappiness - buildingHappiness - garrisonedUnitsHappiness - minorCivHappiness - tradeRouteHappiness - religionHappiness - naturalWonderHappiness - extraHappinessPerCity - leagueHappiness - happinessFromVassals	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
+
+			--	SP Flat Hadicap Happiness
+		    local iHandicapHappiness = 11
 
 			if activePlayer:IsEmpireVeryUnhappy() then
 
@@ -2704,7 +2712,7 @@ local TopPanelTooltips = {
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_CITY_COUNT", extraHappinessPerCity )
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_CITY_STATE_FRIENDSHIP", minorCivHappiness )
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_LEAGUES", leagueHappiness )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_VASSALS", happinessFromVassals )	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
+			--insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_VASSALS", happinessFromVassals )	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
 
 			-- Happiness from Luxury Variety
 			insertLocalizedBulletIfNonZero( tips, "          ", "TXT_KEY_TP_HAPPINESS_RESOURCE_VARIETY", happinessFromExtraResources )
@@ -2715,6 +2723,27 @@ local TopPanelTooltips = {
 			-- Misc Happiness from Resources
 			local miscHappiness = resourcesHappiness - baseHappinessFromResources - happinessFromExtraResources - (extraLuxuryHappiness * numHappinessResources)
 			insertLocalizedBulletIfNonZero( tips, "          ", "TXT_KEY_TP_HAPPINESS_OTHER_SOURCES", miscHappiness )
+
+
+				
+		--------------------------------------SP Additional Happiness by Extra Consumer Goods-----------------------------
+	
+    	local strSPConsumerHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS")
+		local strSPConsumerPenalty = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY")
+		local SPPolicyConsumerBonus = Locale.ConvertTextKey("TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS")
+		
+		local ConsumerUnhappinessMod = pPlayer:GetUnHappinessModFromResourceByIndex(GameInfoTypes["RESOURCE_CONSUMER"])
+
+    	if ConsumerUnhappinessMod < 0 then
+		    insert( tips, "[NEWLINE][NEWLINE]".. strSPConsumerHappiness .." " ..-ConsumerUnhappinessMod.."%" )	
+			if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
+				 insert( tips, "[NEWLINE]"..SPPolicyConsumerBonus)
+			end
+		elseif ConsumerUnhappinessMod > 0 then	
+		    insert( tips, "[NEWLINE][NEWLINE]".. strSPConsumerPenalty .." " ..ConsumerUnhappinessMod.."%" )		
+		end
+	--------------------------------------SP Additional Happiness by Extra Consumer Goods END-----------------------------
+
 
 			if #availableResources > 0 then
 				insert( tips, "[ICON_BULLET]" .. L( "TXT_KEY_TP_HAPPINESS_FROM_RESOURCES", resourcesHappiness ) )
@@ -2934,40 +2963,68 @@ local TopPanelTooltips = {
 			local activePlayer = Players[activePlayerID]
 
 			local tips = {}
+
+			local excessHappiness = activePlayer:GetExcessHappiness()
 			local goldenAgeTurns = activePlayer:GetGoldenAgeTurns()
 			local happyProgress = activePlayer:GetGoldenAgeProgressMeter()
 			local happyNeeded = activePlayer:GetGoldenAgeProgressThreshold()
 
+			local iGoldAgePointFromReligion = activePlayer:GetGoldenAgePointPerTurnFromReligion() ---新增
+		    local iGoldAgePointFromTraits = activePlayer:GetGoldenAgePointPerTurnFromTraits()---新增
+		    local iGoldAgePointFromCitys = activePlayer:GetGoldenAgePointPerTurnFromCitys()---新增
+
 			if goldenAgeTurns > 0 then
-				if IsCiv5BNW and activePlayer:GetGoldenAgeTourismModifier() > 0 then
-					insert( tips, Locale.ToUpper"TXT_KEY_UNIQUE_GOLDEN_AGE_ANNOUNCE" )
-				else
-					insert( tips, Locale.ToUpper"TXT_KEY_GOLDEN_AGE_ANNOUNCE" )
-				end
-				insert( tips, L( "TXT_KEY_TP_GOLDEN_AGE_NOW", goldenAgeTurns ) )
+			
+			local GoldAgePointMultiple = GameDefines["GOLDEN_AGE_POINT_MULTIPLE_IN_GA"]
+			iHappiness = math.floor(iHappiness*GoldAgePointMultiple/100);
+			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion*GoldAgePointMultiple/100);
+			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits*GoldAgePointMultiple/100);
+			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys*GoldAgePointMultiple/100);
+			insert( tips, Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW", activePlayer:GetGoldenAgeTurns()))
+			insert( tips, "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple) .. "[NEWLINE]")
+		    end
+
+			insert( tips, Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_PROGRESS", activePlayer:GetGoldenAgeProgressMeter(), activePlayer:GetGoldenAgeProgressThreshold()))
+			insert( tips, "[NEWLINE]")
+
+			
+		if (iHappiness >= 0) then
+			insert( tips,Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION", iHappiness))
+		else
+		    insert( tips,"[COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_LOSS", -iHappiness) .. "[ENDCOLOR]")
+		end
+		if (iGoldAgePointFromReligion > 0) then
+		    insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION", iGoldAgePointFromReligion))
+		end
+		if (iGoldAgePointFromTraits > 0) then
+		    insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT", iGoldAgePointFromTraits))
+		end
+		if (iGoldAgePointFromCitys > 0) then
+		    insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY", iGoldAgePointFromCitys))
+		end
+		
+		if g_isBasicHelp then
+			insert( tips, "[NEWLINE][NEWLINE]")
+
+			if activePlayer:IsGoldenAgeCultureBonusDisabled() then
+					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE" )
+
+								
+			---------------------------SP China Pax Sinica------------------------		
+		   elseif activePlayer:GetGoldenAgeTurns() > 0
+		   and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[activePlayer:GetLeaderType()].Type, TraitType = "TRAIT_ART_OF_WAR" }()
+		   and(GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy 
+		   and activePlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy])))
+		   then
+		   insert( tips, L"TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS" )
+			---------------------------SP China Pax Sinica END------------------------
 			else
-				local excessHappiness = activePlayer:GetExcessHappiness()
-				insert( tips, L( "TXT_KEY_PROGRESS_TOWARDS", "[COLOR_YELLOW]"
-					.. Locale.ToUpper( "TXT_KEY_SPECIALISTSANDGP_GOLDENAGE_HEADING4_TITLE" )
-					.. "[ENDCOLOR]" ) .. " " .. happyProgress .. " / " .. happyNeeded )
-				if excessHappiness > 0 then
-					insert( tips, L"TXT_KEY_MISSION_START_GOLDENAGE" .. ": [COLOR_YELLOW]"
-						.. Locale.ToUpper( L( "TXT_KEY_STR_TURNS", ceil((happyNeeded - happyProgress) / excessHappiness) ) )
-						.. "[ENDCOLOR]"	.. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_TP_GOLDEN_AGE_ADDITION", excessHappiness) )
-				elseif excessHappiness < 0 then
-					insert( tips, "[COLOR_WARNING_TEXT]" .. L("TXT_KEY_TP_GOLDEN_AGE_LOSS", -excessHappiness) .. "[ENDCOLOR]" )
-				end
+				insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT" )
 			end
 
-			if g_isBasicHelp then
-				insert( tips, "" )
-				if IsCiv5notVanilla and activePlayer:IsGoldenAgeCultureBonusDisabled() then
-					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE" )
-				else
-					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT" )
-				end
+
 				if IsCiv5BNW and activePlayer:GetGoldenAgeTurns() > 0 and activePlayer:GetGoldenAgeTourismModifier() > 0 then
-					insert( tips, "" )
+					insert( tips, "[NEWLINE][NEWLINE]")
 					insert( tips, L"TXT_KEY_TP_CARNIVAL_EFFECT" )
 				end
 			end
@@ -3110,6 +3167,22 @@ local TopPanelTooltips = {
 			tipText = tipText .. "[NEWLINE][NEWLINE]"
 				.. L( "TXT_KEY_TOP_PANEL_TOURISM_TOOLTIP_3", L("TXT_KEY_CO_VICTORY_INFLUENTIAL_OF", numInfluential, numToBeInfluential) )
 		end
+
+		--------------------------------------SP Additional Tourism boost by Extra Happiness-----------------------------
+	
+		local iBonusFromHappiness = activePlayer:GetYieldModifierFromHappiness(GameInfoTypes["YIELD_TOURISM"])
+		if iBonusFromHappiness ~= 0 then
+			tipText = tipText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS") .. " " .. iBonusFromHappiness .. "%";
+		end
+
+		local iBonusFromNumGreakWork = activePlayer:GetYieldModifierFromNumGreakWork(GameInfoTypes["YIELD_TOURISM"])
+		if iBonusFromNumGreakWork ~= 0 then
+			tipText = tipText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK", iBonusFromNumGreakWork) 
+		end
+		tipText = tipText .. activePlayer:GetInternationalTourismTooltip();
+		
+	--------------------------------------SP Additional Tourism boost by Extra Happiness END-----------------------------
+
 		return tipText
 	end,
 	-------------------------------------------------

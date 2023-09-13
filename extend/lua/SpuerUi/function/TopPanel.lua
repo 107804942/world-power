@@ -255,6 +255,11 @@ local function UpdateTopPanelNow()
 			end
 			Controls.HappinessString:SetText(happinessText)
 
+
+			-----------------------------
+			-- Update Golden Age Info
+			-----------------------------
+
 			if IsCiv5BNW and excessHappiness < 0 then
 				unhappyProductionModifier = max( -excessHappiness * GameDefines.VERY_UNHAPPY_PRODUCTION_PENALTY_PER_UNHAPPY, GameDefines.VERY_UNHAPPY_MAX_PRODUCTION_PENALTY )
 				unhappyGoldModifier = max( -excessHappiness * GameDefines.VERY_UNHAPPY_GOLD_PENALTY_PER_UNHAPPY, GameDefines.VERY_UNHAPPY_MAX_GOLD_PENALTY )
@@ -528,13 +533,13 @@ end)
 
 Controls.ExitCityScreen:RegisterCallback( eLClick, Events.SerialEventExitCityScreen.Call )
 
-Events.SerialEventEnterCityScreen.Add( function()
-	return Controls.ExitCityScreen:SetHide( false )
-end)
+--Events.SerialEventEnterCityScreen.Add( function()
+	--return Controls.ExitCityScreen:SetHide( false )
+--end)
 
-Events.SerialEventExitCityScreen.Add( function()
-	return Controls.ExitCityScreen:SetHide( true )
-end)
+--Events.SerialEventExitCityScreen.Add( function()
+	--return Controls.ExitCityScreen:SetHide( true )
+--end)
 
 -- Science
 local function OnTechLClick()
@@ -653,6 +658,18 @@ local function CreateIcon( index, texture, ToolTipHandler, OnLClick, OnRClick, I
 		instance.Image:SetTextureSizeVal( 160, 160 )
 		instance.Image:NormalizeTexture()
 	
+		 ---consumer goods icon
+	elseif ID == GameInfo.Resources.RESOURCE_TIN.ID  then
+		instance.Image:SetTexture( "tin.dds" )
+		instance.Image:SetTextureSizeVal( 160, 160 )
+		instance.Image:NormalizeTexture()
+
+	 ---consumer goods icon
+	elseif ID == GameInfo.Resources.RESOURCE_GUNPOWDER.ID  then
+		instance.Image:SetTexture( "gunpowder.dds" )
+		instance.Image:SetTextureSizeVal( 160, 160 )
+		instance.Image:NormalizeTexture()
+
 	else	
 		instance.Image:SetTexture( texture )
 		instance.Image:SetTextureSizeVal( 160, 160 )
