@@ -403,13 +403,21 @@ local function ShowResourceToolTip( resourceID, tips )
 		local activeTeamTechs = activeTeam:GetTeamTechs()
 
 		local resourceID = resource.ID
+
 		local numResourceUsed = activePlayer:GetNumResourceUsed( resourceID )
 		local numResourceAvailable = activePlayer:GetNumResourceAvailable( resourceID, true )	-- same as (total - used)
+
 		local numResourceExport = activePlayer:GetResourceExport( resourceID )
 		local numResourceImport = activePlayer:GetResourceImport( resourceID ) + activePlayer:GetResourceFromMinors( resourceID )
 		local numResourceLocal = activePlayer:GetNumResourceTotal( resourceID, false ) + numResourceExport
 
---	if resourceID and GetResourceUsageType(resourceID) == RESOURCEUSAGE_STRATEGIC then
+     	if resourceID==GameInfo.Resources.RESOURCE_TROOPS.ID then  ---新增兵力
+        numResourceAvailable = activePlayer:GetNumResourceUsed( resourceID ) - activePlayer:GetNumResourceTotal(resourceID, true) 
+        numResourceUsed   = activePlayer:GetNumResourceTotal( resourceID, false ) + numResourceExport
+		numResourceLocal = activePlayer:GetNumResourceUsed( resourceID );
+        if (numResourceUsed ~= 0 or numResourceAvailable ~= 0) then
+		   end
+		end
 
 		insert( tips, ColorizeAbs(numResourceAvailable) .. resource.IconString .. " " .. Locale.ToUpper(resource._Name) )
 		insert( tips, "----------------" )
@@ -476,15 +484,18 @@ local function ShowResourceToolTip( resourceID, tips )
 								tip = tip .. " [COLOR_MAGENTA]" .. policyBranch._Name .. "[ENDCOLOR]"
 							end
 						end
+
+						if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----新增
+
 						if totalResource > 0 then
 							tipIndex = tipIndex+1
-							-- insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  numExisting .. " (+" .. numBuilds .. ") " .. tip )
-							-- insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  numExisting .. " x " .. perbuild .. " " .. tip )
 							local perbuild = totalResource/numExisting
 							insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  perbuild .. resource.IconString .. " x " .. numExisting .. " " .. tip )
 						else
 							insert( tips, "[ICON_BULLET] (" .. numResource .. "/" .. tip .. ")" )
+						    end
 						end
+
 					end
 				end
 			end
@@ -616,24 +627,19 @@ local function ShowResourceToolTip( resourceID, tips )
 						if policy and not activePlayer:HasPolicy( policy.ID ) then
 							tip = format( "%s [COLOR_MAGENTA]%s[ENDCOLOR]", tip, policy._Name )
 						end
-						if IsCivBE then
-							-- Affinity Level Requirements
-							for affinityPrereq in GameInfo.Unit_AffinityPrereqs{ UnitType = unit.Type } do
-								local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
-								if affinityInfo and activePlayer:GetAffinityLevel( affinityInfo.ID ) < affinityPrereq.Level then
-									tip = format("%s [%s]%i%s%s[ENDCOLOR]", tip, affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "???", affinityInfo._Name )
-								end
-							end
-						end
 					end
+
+					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----新增
+
 					if totalResource > 0 then
 						tipIndex = tipIndex+1
-						--insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  numExisting .. " (+" .. numBuilds .. ") " .. tip )
 						local perbuild = totalResource/numExisting
 						insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  perbuild .. resource.IconString .. " x " .. numExisting .. " " .. tip )
 					else
 						insert( tips, "[ICON_BULLET] (" .. numResource .. "/" .. tip .. ")" )
+						end
 					end
+
 				end
 			end
 		end
@@ -665,17 +671,11 @@ local function ShowResourceToolTip( resourceID, tips )
 						local policyBranch = IsCiv5BNW and building.PolicyBranchType and GameInfo.PolicyBranchTypes[ building.PolicyBranchType ]
 						if policyBranch and not activePlayer:GetPolicyBranchChosen( policyBranch.ID ) then
 							tip = format( "%s [COLOR_MAGENTA]%s[ENDCOLOR]", tip, policyBranch._Name )
-						end
-						if IsCivBE then
-							-- Affinity Level Requirements
-							for affinityPrereq in GameInfo.Building_AffinityPrereqs{ BuildingType = building.Type } do
-								local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
-								if affinityInfo and activePlayer:GetAffinityLevel( affinityInfo.ID ) < affinityPrereq.Level then
-									tip = format("%s [%s]%i%s%s[ENDCOLOR]", tip, affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "???", affinityInfo._Name )
-								end
-							end
-						end
+						end						
 					end
+
+					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----新增
+
 					if totalResource > 0 then
 						tipIndex = tipIndex+1						
 						--insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  numExisting .. " (+" .. numBuilds .. ") " .. tip )
@@ -683,6 +683,7 @@ local function ShowResourceToolTip( resourceID, tips )
 						insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  perbuild .. resource.IconString .. " x " .. numExisting .. " " .. tip )
 					else
 						insert( tips, "[ICON_BULLET] (" .. numResource .. "/" .. tip .. ")" )
+						end
 					end
 				end
 			end
@@ -2964,7 +2965,7 @@ local TopPanelTooltips = {
 
 			local tips = {}
 
-			local excessHappiness = activePlayer:GetExcessHappiness()
+			local iHappiness = activePlayer:GetExcessHappiness()
 			local goldenAgeTurns = activePlayer:GetGoldenAgeTurns()
 			local happyProgress = activePlayer:GetGoldenAgeProgressMeter()
 			local happyNeeded = activePlayer:GetGoldenAgeProgressThreshold()
@@ -3004,7 +3005,7 @@ local TopPanelTooltips = {
 		end
 		
 		if g_isBasicHelp then
-			insert( tips, "[NEWLINE][NEWLINE]")
+			insert( tips, "[NEWLINE]")
 
 			if activePlayer:IsGoldenAgeCultureBonusDisabled() then
 					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE" )
@@ -3024,7 +3025,7 @@ local TopPanelTooltips = {
 
 
 				if IsCiv5BNW and activePlayer:GetGoldenAgeTurns() > 0 and activePlayer:GetGoldenAgeTourismModifier() > 0 then
-					insert( tips, "[NEWLINE][NEWLINE]")
+					insert( tips, "[NEWLINE]")
 					insert( tips, L"TXT_KEY_TP_CARNIVAL_EFFECT" )
 				end
 			end

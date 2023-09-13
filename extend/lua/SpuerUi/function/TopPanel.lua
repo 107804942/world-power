@@ -193,7 +193,11 @@ local function UpdateTopPanelNow()
 
 	for resourceID, instance in pairs( g_ResourceIcons ) do
 		if activePlayer:GetNumResourceTotal( resourceID, true ) ~= 0 or activeTeamTechs:HasTech( instance.TechRevealID ) then
+		    if resourceID==GameInfo.Resources.RESOURCE_TROOPS.ID then  ---ÐÂÔö±øÁ¦
+			instance.Count:SetText( Colorize( -activePlayer:GetNumResourceAvailable(resourceID, true) ) )
+			else
 			instance.Count:SetText( Colorize( activePlayer:GetNumResourceAvailable(resourceID, true) ) )
+			end
 			instance.Image:SetHide( false )
 		else
 			instance.Image:SetHide( true )
