@@ -26,7 +26,7 @@ function CanHavePromotion(iPlayer, iUnit, iPromotionType)
   end
 
   if iPromotionType == GameInfoTypes.PROMOTION_DRILL_4 or iPromotionType == GameInfoTypes.PROMOTION_SHOCK_4 then
-  if pUnit:GetUnitClassType() ~=GameInfo.UnitClasses.UNITCLASS_MONK.ID then
+  if pUnit:GetUnitClassType() ~=GameInfo.UnitClasses.UNITCLASS_GLADIATOR.ID then
   return false
      end
   end

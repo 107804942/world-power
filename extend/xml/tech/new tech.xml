@@ -652,7 +652,7 @@
 			<Help>TXT_KEY_SP_TECH_WORKERSPEED_HELP</Help>
 			<Era>ERA_MEDIEVAL</Era>
 			<OpenBordersTradingAllowed>true</OpenBordersTradingAllowed>
-			<WorkerSpeedModifier>25</WorkerSpeedModifier>
+			<!--<WorkerSpeedModifier>25</WorkerSpeedModifier>-->
 			<Trade>true</Trade>
 			<GridX>6</GridX>
 			<GridY>3</GridY>

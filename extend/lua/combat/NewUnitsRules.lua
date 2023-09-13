@@ -21,7 +21,6 @@ local RangeBanID = GameInfo.UnitPromotions["PROMOTION_RANGE_BAN"].ID
 local LuckyCarrierID = GameInfo.UnitPromotions["PROMOTION_LUCKY_CARRIER"].ID
 
 local ForeignLandsID = GameInfo.UnitPromotions["PROMOTION_FOREIGN_LANDS"].ID
-local ExtraRSID = GameInfo.UnitPromotions["PROMOTION_EXTRA_RELIGION_SPREADS"].ID
 
 local CorpsID = GameInfo.UnitPromotions["PROMOTION_CORPS_1"].ID
 local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
@@ -114,13 +113,6 @@ function NewUnitCreationRules() ------------------------Human Player's units rul
 					then
 						unit:SetHasPromotion(OceanImpassableID, false);
 					end
-
-					-- Remove error promotion
-
-					if IsTimetoCheckPromotion then
-						RemoveErrorPromotion(playerID,unit:GetID())
-					end
-					
 					-- MOD Begin by CaptainCWB
 
 					-- Enterprise upgrade to become the most powerful carrier
@@ -340,7 +332,6 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 				and pEUnit:IsCombatUnit() and not pEUnit:IsImmobile()
 				and not pEUnit:IsHasPromotion(ArmeeID)
 				and pEUnit:GetDomainType() == DomainTypes.DOMAIN_LAND 
-
 		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"]
 		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_MECH"]
 		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]
@@ -692,18 +683,6 @@ function HeroicCarrierGenerate(playerID)
 end
 
 GameEvents.PlayerDoTurn.Add(HeroicCarrierGenerate)
-
-function NewUnitRemoveErrorPromotion( iPlayerID, iUnitID )
-	if( Players[ iPlayerID ] == nil or not Players[ iPlayerID ]:IsAlive()
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ) == nil
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDead()
-	or  Players[ iPlayerID ]:GetUnitByID( iUnitID ):IsDelayedDeath() )
-	then
-		return;
-	end
-	RemoveErrorPromotion(iPlayerID, iUnitID)
-end
-Events.SerialEventUnitCreated.Add(NewUnitRemoveErrorPromotion)
 -- MOD end by HMS
 
 -- MOD by CaptainCWB

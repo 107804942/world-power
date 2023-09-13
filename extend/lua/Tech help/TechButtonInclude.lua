@@ -405,29 +405,44 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 		end
 	end
 
-	local thisTechAndImprovementTypes = { TechType = techType }
 
-	-- Some improvements can have multiple yield changes
+
+	---------------------------------------------新增----------------------------------------------
+	-- Some improvements can have multiple yield changes, group them and THEN add buttons.
+	local improvementTypesChanged = {}
 	for row in GameInfo.Improvement_TechYieldChanges( thisTechType ) do
-		improvement = GameInfo.Improvements[ row.ImprovementType ]
-		if improvement then -- and (not improvement.SpecificCivRequired or improvement.CivilizationType == civType)
-			local toolTip = improvement._Name
-			local icons = ""
-			local icon
-			thisTechAndImprovementTypes.ImprovementType = improvement.Type
-			for row in GameInfo.Improvement_TechYieldChanges( thisTechAndImprovementTypes ) do
-				if NZ(row.Yield) then
-					icon = GameInfo.Yields[row.YieldType]
-					icon = icon and icon.IconString or "?"
-					icons = icons .. icon
-					toolTip = ("%s %+i%s"):format( toolTip, row.Yield, icon )
-				end
-			end
-			if icon and not addSmallActionButton( GameInfo.Builds{ ImprovementType = improvement.Type }(), icons, toolTip ) then
-				break
-			end
+		local thisImprovement = GameInfo.Improvements[ row.ImprovementType ]
+		if thisImprovement and (not thisImprovement.CivilizationType or thisImprovement.CivilizationType == civType) then
+			improvementTypesChanged[ row.ImprovementType or -1 ] = true
 		end
 	end
+	-- Let's sort the yield change buttons!
+	local sortedImprovements = {}
+	for improvementType in pairs( improvementTypesChanged ) do
+	    table.insert( sortedImprovements,GameInfo.Improvements[ improvementType ] )
+		--sortedImprovements:insertIf( GameInfo.Improvements[ improvementType ] )
+	end
+	table.sort( sortedImprovements, function(a,b) return Locale.Compare(a.Description or "", b.Description or "") == -1 end )
+
+	local thisTechAndImprovementTypes = { TechType = techType }
+	for i,improvement in ipairs( sortedImprovements ) do
+		local toolTip = Locale.ConvertTextKey( improvement.Description or "???" )
+		local icons = ""
+		thisTechAndImprovementTypes.ImprovementType = improvement.Type
+		for row in GameInfo.Improvement_TechYieldChanges( thisTechAndImprovementTypes ) do
+			if (row.Yield or 0)~=0 then
+				local icon = YieldIcons[row.YieldType] or "???"
+				icons = icons .. icon
+				toolTip = toolTip .. (" +%g"):format(row.Yield) .. icon
+			end
+		end
+		if not addSmallActionButton( GameInfo.Builds{ ImprovementType = improvement.Type }() or "???", icons, toolTip ) then
+			break
+		end
+	end
+	
+	----------------------------------------------end----------------------------------------------
+	
 
 	for row in GameInfo.Improvement_TechNoFreshWaterYieldChanges( thisTechType ) do
 		yield = GameInfo.Yields[row.YieldType]
@@ -509,6 +524,12 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 		addSmallActionButton( GameInfo.Missions.MISSION_EMBARK, "", "TXT_KEY_ALLOWS_EMBARKING" )
 	end
 
+	----新增
+	if tech.BombardIndirect~=0 then
+	   addSmallActionButton( GameInfo.Missions.MISSION_RANGE_ATTACK, "", "TXT_KEY_CITY_BOMBARDMENT_MOD" )
+	end
+	---end
+
 	if IsCiv5 then
 		if tech.AllowsDefensiveEmbarking then
 			addSmallActionButton( GameInfo.Missions.MISSION_EMBARK, "[ICON_STRENGTH]", "TXT_KEY_ABLTY_DEFENSIVE_EMBARK_STRING" )
@@ -577,7 +598,7 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 
 		if IsCiv5 then
 			if NZ(tech.InfluenceSpreadModifier) then
-				addSmallActionButton( GameInfo.Missions.MISSION_ONE_SHOT_TOURISM, "[ICON_TOURISM]", "TXT_KEY_DOUBLE_TOURISM", tech.InfluenceSpreadModifier )
+				addSmallActionButton( GameInfo.Missions.MISSION_ONE_SHOT_TOURISM, "[ICON_TOURISM]", Locale.ConvertTextKey("TXT_KEY_EUI_MOD_TOURISM", tech.InfluenceSpreadModifier) )
 			end
 			if tech.AllowsWorldCongress then
 				addSmallActionButton( GameInfo.Missions.MISSION_TRADE, "", "TXT_KEY_ALLOWS_WORLD_CONGRESS" ) --[ICON_CITY_STATE]
@@ -586,16 +607,16 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 				addSmallActionButton( nil, "[ICON_DIPLOMAT]", "TXT_KEY_EXTRA_VOTES_FROM_DIPLOMATS", tech.ExtraVotesPerDiplomat )
 			end
 
-			--if (tech.WorkerSpeedModifier~=0) then
+			if (tech.WorkerSpeedModifier~=0) then
 			    --addSmallButton( 44, "TECH_ENH_ICONS_ATLAS", "TXT_KEY_EUI_WORKER_SPEED_MOD" )
-		       ---addSmallActionButton( GameInfo.Missions.MISSION_TRADE, "", "TXT_KEY_EUI_WORKER_SPEED_MOD" )
-	         --end
+		       addSmallActionButton( GameInfo.Missions.MISSION_HURRY, "[ICON_PRODUCTION]",  Locale.ConvertTextKey("TXT_KEY_EUI_WORKER_SPEED_MOD", tech.WorkerSpeedModifier)  )
+	        end
 
 			addSmallGenericButtonIF( tech.ScenarioTechButton == 1 and "TXT_KEY_SCENARIO_TECH_BUTTON_1" )
 			addSmallGenericButtonIF( tech.ScenarioTechButton == 2 and "TXT_KEY_SCENARIO_TECH_BUTTON_2" )
 			addSmallGenericButtonIF( tech.ScenarioTechButton == 3 and "TXT_KEY_SCENARIO_TECH_BUTTON_3" )
 			addSmallGenericButtonIF( tech.ScenarioTechButton == 4 and "TXT_KEY_SCENARIO_TECH_BUTTON_4" )
-			addSmallGenericButtonIF( tech.TriggersArchaeologicalSites and "TXT_KEY_EUI_TRIGGERS_ARCHAEOLOGICAL_SITES" )
+			--addSmallGenericButtonIF( tech.TriggersArchaeologicalSites and "TXT_KEY_EUI_TRIGGERS_ARCHAEOLOGICAL_SITES" )
 		end
 	end
 

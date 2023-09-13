@@ -64,25 +64,6 @@ INSERT OR REPLACE INTO Defines(Name, Value) SELECT 'MAX_CITY_ATTACK_RANGE', max(
 INSERT OR REPLACE INTO Defines(Name, Value) SELECT 'MAX_CITY_ATTACK_RANGE', max(BombardRange) FROM Buildings;
 
 
-
-------------------------------------------------------------------------------------------------------------------------
--- 
-------------------------------------------------------------------------------------------------------------------------
-
-INSERT  INTO IconFontMapping(IconName,IconFontTexture,IconMapping)VALUES 
-('ICON_CRIME', 'ICON_FONT_TEXTURE_CITY_ICONS',49),
-('ICON_SOVEREIGNTY', 'ICON_FONT_TEXTURE_CITY_ICONS',54);
-
-UPDATE Yields SET IconString='[ICON_HEALTH]' ,ImageTexture='YieldAtlas_128_Health.dds' WHERE Type='YIELD_HEALTH';
-UPDATE Yields SET IconString='[ICON_GREAT_GENERAL]'  ,ImageTexture='yieldatlas_128_general.dds' WHERE Type='YIELD_GREAT_GENERAL_POINTS';
-UPDATE Yields SET IconString='[ICON_GREAT_ADMIRAL]'  ,ImageTexture='yieldatlas_128_admiral.dds' WHERE Type='YIELD_GREAT_ADMIRAL_POINTS';
-UPDATE Yields SET IconString='[ICON_DISEASE]',ImageTexture='YieldAtlas_128_Disease.dds' WHERE Type='YIELD_DISEASE';
-UPDATE Yields SET IconString='[ICON_CRIME]' WHERE Type='YIELD_CRIME';
-UPDATE Yields SET IconString='[ICON_SILVER_FIST]' WHERE Type='YIELD_LOYALTY';
-UPDATE Yields SET IconString='[ICON_SOVEREIGNTY]' WHERE Type='YIELD_SOVEREIGNTY';
-
-
-
 ------------------------------------------------------------------------------------------------------------------------
 -- 国家纪念日
 ------------------------------------------------------------------------------------------------------------------------

@@ -34,12 +34,7 @@ local ATBTEnergy =
 	 [2] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_2, [3] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_3,
 	 [4] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_4, [5] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_5, 
 	 [6] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_6, [7] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_7, 
-	 [8] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_8, [9] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_9, 
-	 [10]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_10, [11] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_11,
-	 [12]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_12, [13] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_13, 
-	 [14]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_14, [15] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_15,
-	 [16]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_16, [17] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_17, 
-	 [18]= GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_18}
+	 [8] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_8}
 
 function SomeUnitEffects(iPlayer)
 		local player = Players[iPlayer]
@@ -50,9 +45,9 @@ function SomeUnitEffects(iPlayer)
 
 		if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
 		local iSpaceBattleCruiserEnergy = load(unit, "SpaceBattleCruiserEnergy") or 0
-		if iSpaceBattleCruiserEnergy< 17 then
-				save(unit, "SpaceBattleCruiserEnergy", iSpaceBattleCruiserEnergy + 2)       
-				for i = 0, 18 do
+		if iSpaceBattleCruiserEnergy< 8 then
+				save(unit, "SpaceBattleCruiserEnergy", iSpaceBattleCruiserEnergy + 1)       
+				for i = 0, 8 do
 				unit:SetHasPromotion(ATBTEnergy[i], (i == load(unit, "SpaceBattleCruiserEnergy")))
 				end
 		    end
@@ -75,6 +70,234 @@ end
 GameEvents.PlayerDoTurn.Add(SomeUnitEffects)
 
 
+-----------------------------------------------------»ú¼×-----------------------------------------------------------------------
+
+MechRiotControlButton = {
+  Name = "Mech Control",
+  Title = "TXT_KEY_SP_BTNNOTE_UNIT_RIOT_CONTROL_SHORT2", -- or a TXT_KEY
+  OrderPriority = 200, -- default is 200
+  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
+  PortraitIndex = 25,
+  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_RIOT_CONTROL2", -- or a TXT_KEY_ or a function
+  
+ 
+  Condition = function(action, unit)
+    return unit:CanMove() and  unit:GetUnitType() == GameInfoTypes.UNIT_MECH and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_HPMOD1"].ID)
+  end, -- or nil or a boolean, default is true
+  
+ Disabled = function(action, unit) 
+    local plot = unit:GetPlot();
+    if not plot:IsCity() then return true end;
+    local city = plot:GetPlotCity()
+    return not city or city:GetOwner() ~= unit:GetOwner() or not city:IsResistance() ;
+  end, -- or nil or a boolean, default is false
+  
+  Action = function(action, unit, eClick) 
+	local plot = unit:GetPlot()
+    local city = plot:GetPlotCity()
+    local player = Players[unit:GetOwner()]
+	local citypop = math.ceil(city:GetPopulation()/2)
+    if not city then return end
+    
+    if unit then
+    	city:ChangeResistanceTurns(-city:GetResistanceTurns())
+		city:SetPopulation(citypop, true) 
+		Events.AudioPlay2DSound("AS2D_MECH_POWER")
+	   	unit:SetMoves(0)    
+    end
+  end
+};
+LuaEvents.UnitPanelActionAddin(MechRiotControlButton);
+
+
+
+-------------------------------------------------------------EMP BOMB Mode Switch---------------------------------------------------------------------------
+
+  UnitEmpBombOnButton = {
+  Name = "Emp Bomb On",
+  Title = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON_SHORT", -- or a TXT_KEY
+  OrderPriority = 200, -- default is 200
+  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
+  PortraitIndex = 28,
+  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON", -- or a TXT_KEY_ or a function
+  
+ 
+  
+  Condition = function(action, unit)
+   return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID)and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID) ;
+  end, -- or nil or a boolean, default is true
+  
+  Disabled = function(action, unit)   
+    return false;
+  end, -- or nil or a boolean, default is false
+  
+  Action = function(action, unit, eClick) 
+  	
+   	
+   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID, true) 
+	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID, false) 
+	--local iMovesLeft = math.max( 0, unit:MovesLeft()-3*GameDefines["MOVE_DENOMINATOR"])
+   --	unit:SetMoves(iMovesLeft)
+   	--print ("Emp Bomb On!")
+	
+  
+  
+  end
+};
+
+LuaEvents.UnitPanelActionAddin(UnitEmpBombOnButton);
+
+
+UnitEmpBombOffButton = {
+  Name = "Emp Bomb Mode Off",
+  Title = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF_SHORT", -- or a TXT_KEY
+  OrderPriority = 200, -- default is 200
+  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
+  PortraitIndex = 11,
+  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF", -- or a TXT_KEY_ or a function
+  
+ 
+  
+  Condition = function(action, unit)
+    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID);
+  end, -- or nil or a boolean, default is true
+  
+  Disabled = function(action, unit)     
+    return not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID) ;
+  end, -- or nil or a boolean, default is false
+  
+  Action = function(action, unit, eClick) 
+  	
+   	
+   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID, false)
+	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID, true)
+   	unit:SetMoves(0)
+   	print ("Emp Bomb Off!")	
+  end
+};
+
+LuaEvents.UnitPanelActionAddin(UnitEmpBombOffButton);
+
+
+
+
+
+
+
+----Focus Mode Switch
+
+UnitFocusOnButton = {
+  Name = "Focus Mode On",
+  Title = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_ON_SHORT", -- or a TXT_KEY
+  OrderPriority = 200, -- default is 200
+  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
+  PortraitIndex = 12,
+  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_ON", -- or a TXT_KEY_ or a function
+  
+  Condition = function(action, unit)
+    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CAN_FOCUS"].ID) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID);
+  end, -- or nil or a boolean, default is true
+  
+  Disabled = function(action, unit)   
+    return false;
+  end, -- or nil or a boolean, default is false
+  
+  Action = function(action, unit, eClick) 
+  	
+   	Events.AudioPlay2DSound("AS2D_SPACESHIP_CANNON")
+   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID, true)
+	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CAN_FOCUS"].ID, false)
+	local iMovesLeft = math.max( 0, unit:MovesLeft()-8*GameDefines["MOVE_DENOMINATOR"])
+   	unit:SetMoves(iMovesLeft)
+   	print ("Focus On!")
+	
+  
+  
+  end
+};
+LuaEvents.UnitPanelActionAddin(UnitFocusOnButton);
+
+
+
+
+UnitFocusOffButton = {
+  Name = "Focus Mode Off",
+  Title = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_OFF_SHORT", -- or a TXT_KEY
+  OrderPriority = 200, -- default is 200
+  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
+  PortraitIndex = 17,
+  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_OFF", -- or a TXT_KEY_ or a function
+  
+ 
+  
+  Condition = function(action, unit)
+    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID);
+  end, -- or nil or a boolean, default is true
+  
+  Disabled = function(action, unit)     
+    return not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID) ;
+  end, -- or nil or a boolean, default is false
+  
+  Action = function(action, unit, eClick) 
+  	
+   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID, false)
+	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CAN_FOCUS"].ID, true)
+   	unit:SetMoves(0)
+   	print ("Focus Mode Off!")
+	
+  end
+};
+LuaEvents.UnitPanelActionAddin(UnitFocusOffButton);
+
+
+
+
+
+
+local SuperDefenseButtonOn = {
+		Name = "TXT_KEY_NAME_SUPER_ENERGY_ON",
+		Title = "TXT_KEY_TITLE_SUPER_ENERGY_ON",
+		OrderPriority = 300,
+		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
+		PortraitIndex = 8,
+		ToolTip = "TXT_KEY_SP_BTNNOTE_SUPER_ENERGY_ON", -- or a TXT_KEY_ or a function
+		Condition = function(action, unit)
+		return   unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY"].ID) 
+        and unit:CanMove() and not  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID)  and  not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID) end, 
+		Disabled = function(action, unit)   
+    return false;
+  end, -- or nil or a boolean, default is false
+		Action = function(action, unit, eClick)
+			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID, true)
+			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY"].ID, false)
+		end
+};
+LuaEvents.UnitPanelActionAddin(SuperDefenseButtonOn);
+
+
+
+
+local SuperDefenseButtonOff = {
+		Name = "TXT_KEY_NAME_SUPER_ENERGY_OFF",
+		Title = "TXT_KEY_TITLE_SUPER_ENERGY_OFF",
+		OrderPriority = 300,
+		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
+		PortraitIndex = 20,
+		ToolTip = "TXT_KEY_SP_BTNNOTE_SUPER_ENERGY_OFF", -- or a TXT_KEY_ or a function
+		Condition = function(action, unit)
+		return unit:CanMove()  and  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID)  end, 
+		Disabled = function(action, unit)   
+    return false;
+  end, -- or nil or a boolean, default is false
+		Action = function(action, unit, eClick)
+			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID, false)
+			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY"].ID, true)
+			unit:SetMoves(0)
+		end
+};
+LuaEvents.UnitPanelActionAddin(SuperDefenseButtonOff);
+
+
 
 local lButtonDown = false
 local rButtonDown = false
@@ -82,7 +305,7 @@ local SpaceBattleCruiserSkill = 0
 local highlightedPlots = {}
 
 function CheckSpaceBattleCruiserButtonValidity(unit)
-		for i = 0, 7 do
+		for i = 0, 3 do
 			if unit:IsHasPromotion(ATBTEnergy[i]) then
 				return false
 			end
@@ -91,7 +314,7 @@ function CheckSpaceBattleCruiserButtonValidity(unit)
 end
 
 function CheckSpaceBattleCruiserButtonValidity2(unit)
-		for i = 0, 3 do
+		for i = 0, 1 do
 			if unit:IsHasPromotion(ATBTEnergy[i]) then
 				return false
 			end
@@ -465,16 +688,14 @@ LuaEvents.UnitPanelActionAddin(FranceCruiserMissionButton)
 
 
 
-	function  CheckAngryButtonValidity(unit)
-		for i = 0, 4 do
+function  CheckAngryButtonValidity(unit)
+	for i = 0, 4 do
 			if unit:IsHasPromotion(ANGEnergy[i]) then
 				return false;
 			end
 		end
-		return true;
-	end
-
-
+	return true;
+end
 
 
 local UnitAngryButton = {
@@ -501,8 +722,7 @@ local UnitAngryButton = {
 					return true
 				else
 					return false
-			end
-			
+			end		
 		end, -- or nil or a boolean, default is true
 		Disabled = function(action, unit)
 			local bIsValid = CheckAngryButtonValidity(unit)
@@ -570,7 +790,6 @@ local PlotHitMissionButton = {
 	SpaceBattleCruiserSkill = 6
 	Events.SerialEventMouseOverHex.Add( DisplayBombardHitArrow )
    	print ("Hit On!")
- 
   end
 };
 LuaEvents.UnitPanelActionAddin(PlotHitMissionButton);
@@ -689,7 +908,6 @@ local IronPagodaChargeButton = {
 				end
 			end
 		end
-
 	end
 	SpaceBattleCruiserSkill = 7
 end
@@ -778,9 +996,9 @@ function InputHandler( uiMsg, wParam, lParam )
 
                         if attack>0 then
 						Events.AddPopupTextEvent(PositionCalculator(pPlot:GetX(), pPlot:GetY()), Locale.ConvertTextKey("TXT_KEY_ALERT_SPACE_BATTLECRUISER"),0.1)
-						save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") - 8)
+						save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") - 4)
 							Events.AudioPlay2DSound("AS2D_ARCTURUS_YAMATO_CANNON")
-							for i = 0, 18 do
+							for i = 0, 8 do
 						    pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
 						 end
 					  end 
@@ -797,9 +1015,9 @@ function InputHandler( uiMsg, wParam, lParam )
 						if pPlot~=pUnit:GetPlot()  then
 						local plotDistance = Map.PlotDistance(pUnit:GetX(),pUnit:GetY(), pPlot:GetX(), pPlot:GetY());
 						if plotDistance <= 30 then
-						if load(pUnit, "SpaceBattleCruiserEnergy")~=nil and load(pUnit, "SpaceBattleCruiserEnergy")>=4 then
-						save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") - 4)
-							for i = 0, 18 do
+						if load(pUnit, "SpaceBattleCruiserEnergy")~=nil and load(pUnit, "SpaceBattleCruiserEnergy")>=2 then
+						save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") - 2)
+							for i = 0, 8 do
 						    pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
 							end
 								local unit = pPlayer:InitUnit(GameInfoTypes["UNIT_ICBM_MISSILE"], pUnit:GetX(), pUnit:GetY())

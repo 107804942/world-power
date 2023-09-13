@@ -42,6 +42,15 @@
 		<Row Tag="TXT_KEY_GOLD_COST_LABEL">
 			<Text>维护费：</Text>
 		</Row>
+		
+		<Row Tag="TXT_KEY_EUI_MOD_TOURISM">
+			<Text>魅力产出增加{1_Num}%。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUI_FREE_UNIT">
+			<Text>免费 {1_Num} {2_Name}{3_Name}。</Text>
+		</Row>
+		
 
 		<!-- New Unit Combats -->
 		<Row Tag="TXT_KEY_UNITCOMBAT_SETTLER">
@@ -2542,7 +2551,7 @@
 			<Text>[NEWLINE]"虽然吉萨金字塔是一项伟大的旷世奇观，但是与普马彭谷遗迹相比，简直就是小巫见大巫。"[NEWLINE]        ——《远古外星人》[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_HELP">
-			<Text>全国每5人口+1[ICON_CULTURE]文化，+1[ICON_PEACE]信仰。所有城市赠送神祠。</Text>
+			<Text>全国每5人口+1[ICON_CULTURE]文化，+1[ICON_PEACE]信仰。所有城市赠送神庙。</Text>
 		</Row>
 
 
@@ -4972,41 +4981,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_8">
 			<Text>[COLOR_MIGHT]粒子能量(200)[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_9">
-			<Text>[COLOR_MIGHT]粒子能量(225)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_10">
-			<Text>[COLOR_MIGHT]粒子能量(250)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_11">
-			<Text>[COLOR_MIGHT]粒子能量(275)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_12">
-			<Text>[COLOR_MIGHT]粒子能量(300)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_13">
-			<Text>[COLOR_MIGHT]粒子能量(325)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_14">
-			<Text>[COLOR_MIGHT]粒子能量(350)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_15">
-			<Text>[COLOR_MIGHT]粒子能量(375)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_16">
-			<Text>[COLOR_MIGHT]粒子能量(400)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_17">
-			<Text>[COLOR_MIGHT]粒子能量(425)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_18">
-			<Text>[COLOR_MIGHT]粒子能量(450)[ENDCOLOR]</Text>
-		</Row>
-
-
-
-
-
 
 
 
@@ -5038,39 +5012,7 @@
 			<Text>[COLOR_MANA]当前能量: 200[ENDCOLOR]</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_9_HELP">
-			<Text>[COLOR_MANA]当前能量: 225[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_10_HELP">
-			<Text>[COLOR_MANA]当前能量: 250[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_11_HELP">
-			<Text>[COLOR_MANA]当前能量: 275[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_12_HELP">
-			<Text>[COLOR_MANA]当前能量: 300[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_13_HELP">
-			<Text>[COLOR_MANA]当前能量: 325[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_14_HELP">
-			<Text>[COLOR_MANA]当前能量: 350[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_15_HELP">
-			<Text>[COLOR_MANA]当前能量: 375[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_16_HELP">
-			<Text>[COLOR_MANA]当前能量: 400[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_17_HELP">
-			<Text>[COLOR_MANA]当前能量: 425[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_18_HELP">
-			<Text>[COLOR_MANA]当前能量: 450[ENDCOLOR]</Text>
-		</Row>
-
-
-
+		
 
 
 
@@ -5081,7 +5023,7 @@
 			<Text>[COLOR_MANA]热核打击[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_NUKE'>
-			<Text>消耗粒子能量立即填充热核弹头，[COLOR_MIGHT]鼠标左键点击被点亮的地块[ENDCOLOR]即可发射核导弹进行攻击。（可选择范围:半径30格,消耗100点粒子能量）</Text>
+			<Text>消耗粒子能量立即填充热核弹头，[COLOR_MIGHT]鼠标左键点击被点亮的地块[ENDCOLOR]即可发射核导弹进行攻击。（可选择范围:半径30格,消耗50点粒子能量）</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_CANT_NUKE'>
 			<Text>[COLOR_UNIQUE]当前能量不足。[ENDCOLOR]</Text>
@@ -5100,7 +5042,7 @@
 			<Text>[COLOR_MANA]充能粒子束[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER'>
-			<Text>用毁灭性的粒子束轰击指定区域，该攻击可摧毁[COLOR_MIGHT]指定区域极其周围一格范围内所有敌方单位。[ENDCOLOR]（可选择范围:半径20格,消耗200点粒子能量与一移动力）</Text>
+			<Text>用毁灭性的粒子束轰击指定区域，该攻击可摧毁[COLOR_MIGHT]指定区域极其周围一格范围内所有敌方单位。[ENDCOLOR]（可选择范围:半径20格,消耗100点粒子能量与一移动力）</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_2'>
 			<Text>[COLOR_UNIQUE]当前能量不足[ENDCOLOR]</Text>
@@ -6124,7 +6066,7 @@
 			<Text>塔尔欣寺庙</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MALTA_HELP">
-			<Text>所有城市赠送神庙，所有神庙+2[ICON_PEACE]信仰。大幅度增加本城的宗教压力。</Text>
+			<Text>所有城市赠送神祠，所有神祠+2[ICON_PEACE]信仰。大幅度增加本城的宗教压力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_WONDER_MALTA_QUOTE">
@@ -6673,7 +6615,7 @@
 			<Text>喷火器</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON_HELP">
-			<Text>攻击时可造成溅射伤害，攻击时对消耗木材的单位额外造成100%最终伤害。对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除最大生命值的15%）若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
+			<Text>攻击时可造成溅射伤害，攻击时对消耗木材的单位额外造成100%最终伤害。对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除20点生命值）若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_SILKROAD">
@@ -7184,7 +7126,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_HELP">
 			<Text>
-				本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力，获得3个武僧。
+				本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_PEDIA">
@@ -7264,20 +7206,17 @@
 		</Row>
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_URBAN">
 			<Text>重创</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_URBAN_HELP">
-			<Text>攻击城市时有40%的几率破坏一个城防建筑（按照兵营，军械所，木栅栏，城墙，瞭望塔，城堡的顺序），且每次攻击均可让城市陷入1回合抵抗状态，额外造成城市最大生命值5%的伤害。</Text>
+			<Text>攻击城市时有40%的几率破坏一个城防建筑（按照兵营，军械所，木栅栏，城墙，瞭望塔，城堡的顺序），每次攻击额外造成城市最大生命值5%的伤害。</Text>
 		</Row>
-
 
 
 		<Row Tag="TXT_KEY_SPACEBASE_VISIT">
 			<Text>太空堡垒</Text>
 		</Row>
-
 
 
 		<Row Tag="TXT_KEY_CONFIRM_SELECTION">
@@ -8538,22 +8477,6 @@
 
 
 
-
-
-
-
-		<Row Tag="TXT_KEY_UNIT_MONK">
-			<Text>武僧</Text>
-			<Plurality>2</Plurality>
-		</Row>
-
-		<Row Tag="TXT_KEY_CIV5_ANTIQUITY_MONK_TEXT">
-			<Text>
-				武僧通常显得古灵精怪，因此他们能飞檐走壁、开山劈石的传闻不绝于耳。历史事实是他们的确武艺高超，但也绝非神乎其神。
-				[NEWLINE]中国嵩山少林寺由印度佛教高僧跋陀建于公元495年。天下武功出少林，少林寺习练武术的故事多与传说和流行文化相关。据传跋陀和他的首批中国弟子在出家之前曾从军，已身怀武术，于是便在建寺后留下了习武的传统。公元581年时，少林寺僧众已创出自己的独门秘笈，甚至还在隋末的战乱中与后来的唐朝皇帝李世民并肩作战。相比之下，日本的佛教僧兵则热衷于各个寺庙之间不甚光彩的地盘争夺战。他们拿起武器作战并非为传播佛法，而是出于政治目的。
-			</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_PROMOTION_DRILL_4">
 			<Text>操练四级</Text>
 		</Row>
@@ -8690,8 +8613,9 @@
 			<Text>防御精通</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE_HELP">
-			<Text>[ICON_STRENGTH]防御力+33%，受到攻击的最终伤害减少20。</Text>
+			<Text>[ICON_STRENGTH]防御力+20%，受到攻击的最终伤害减少10。</Text>
 		</Row>
+		
 		<!--Transport-->
 		<Row Tag='TXT_KEY_TITLE_IRON_BUDDHA_CHARGE'>
 			<Text>铁马嘶风万里秋</Text>
@@ -9361,21 +9285,6 @@
 
 
 
-
-
-		<Row Tag="TXT_KEY_BUILDING_CLOISTER_DESC">
-			<Text>[ICON_PEACE]寺院</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CIV5_BUILDINGS_CLOISTER_TEXT">
-			<Text>
-				寺院:读音sìyuàn;英文名temple;monastery;指供奉佛菩萨的庙宇场所，有时也指其他宗教的修道院，但一般是指佛教进行宗教活动的场所。寺院是出家人进行宗教活动的场所，是佛教信徒顶礼膜拜的地方，也是出家僧众修行的所在，后来逐步发展为具有多种综合功能的建筑群。
-				[NEWLINE]寺院最早起源于佛教的发源地----印度，在印度佛陀时代，最初称寺院为"精舍"，例如设于中印度王舍城的竹林精舍与舍卫城的只园精舍，便是佛教最早的寺院;由于当时精舍大都建筑在都城郊外幽静的林地，故又称"兰若"，意即寂静之处;又称"伽蓝"，意指僧众所居的园林。
-				[NEWLINE]寺院在中国就是佛教传教的场所，是外来文化。佛教大约在汉代传入中国。也就是在那个时候中国便有了寺院这种建筑，有记载的中国最早的佛教寺院是位于河南省洛阳市以东12公里处的千年古刹----白马寺。史载，佛教于公元67年传入中国，白马寺是佛教传入中国后营建的第一座寺院。相传，当年著名的佛教学者摩腾、竺法兰是用白马驮着佛经、佛像来到中国的，所以这座寺院便取名为"白马寺"。宋代以后，汉传佛教寺院的建筑平面逐步模式化，形成了"伽蓝七堂制"。即:佛寺通常坐北朝南，沿山门南北中轴线。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_CLOISTER_HELP">
-			<Text>+1[ICON_HAPPINESS_1]快乐，+1[ICON_CULTURE]文化，+3[ICON_PEACE]信仰。建造完成后，当你已经创立宗教时，可在本城花费信仰购买武僧。本城外来宗教传播速度-10%。</Text>
-		</Row>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_AZTEC_EAGLE">

@@ -2,6 +2,29 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------
+local thisTechAndImprovementTypes = { TechType = techType }
+
+	-- Some improvements can have multiple yield changes
+	for row in GameInfo.Improvement_TechYieldChanges( thisTechType ) do
+		improvement = GameInfo.Improvements[ row.ImprovementType ]
+		if improvement then -- and (not improvement.SpecificCivRequired or improvement.CivilizationType == civType)
+			local toolTip = improvement._Name
+			local icons = ""
+			local icon
+			thisTechAndImprovementTypes.ImprovementType = improvement.Type
+			for row in GameInfo.Improvement_TechYieldChanges( thisTechAndImprovementTypes ) do
+				if NZ(row.Yield) then
+					icon = GameInfo.Yields[row.YieldType]
+					icon = icon and icon.IconString or "?"
+					icons = icons .. icon
+					toolTip = ("%s %+i%s"):format( toolTip, row.Yield, icon )
+				end
+			end
+			if icon and not addSmallActionButton( GameInfo.Builds{ ImprovementType = improvement.Type }(), icons, toolTip ) then
+				break
+			end
+		end
+	end
 
 	--if IsCivBE then
 		-- Affinity Level Requirement
@@ -17,6 +40,57 @@
 
 
 	--pMinorCapital->ChangeResistanceTurns(-pMinorCapital->GetResistanceTurns());
+
+		for row in GameInfo.Building_FreeUnits( thisBuildingType ) do
+		item = GameInfo.Units[ row.UnitType ]
+		item = item and GetCivUnit( activeCivilizationType, item.Class )
+		if item and (row.NumUnits or 0) > 0 then
+			insert( tips, L("TXT_KEY_EUI_FREE_UNIT", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
+		end
+	end
+
+
+			
+		--<Row Tag="TXT_KEY_EUI_FREE_UNIT">
+			--<Text>免费 {1_Num} {2_Name}{3_Name}{4_Name}。</Text>
+		---</Row>
+
+	-- ********************************************************
+-- 乌尔班
+-- ********************************************************
+	 if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_URBAN"].ID)  then 
+        defCity:ChangeResistanceTurns(1)
+       end	
+  -- end
+
+
+  
+function HeroicCarrierRollStart(iTeam1, iTeam2, bWar)
+	if iTeam1 == nil or iTeam2 == nil then
+		return
+	end
+	local pTeam1 = Teams[iTeam1]
+	local pTeam2 = Teams[iTeam2]
+	if not pTeam1:IsAtWar(pTeam2) then
+		return
+	end
+	local CapitalCity = nil
+	for playerID, pPlayer in pairs(Players) do
+		if pPlayer and pPlayer:IsAlive() and not pPlayer:IsMinorCiv() and not pPlayer:IsBarbarian() then
+			CapitalCity = pPlayer:GetCapitalCity()
+			if CapitalCity ~= nil and CapitalCity:IsHasBuilding(GameInfoTypes["BUILDING_HEROIC_CARRIER_PROJECT"])
+				and (pPlayer:GetTeam() == iTeam1 or pPlayer:GetTeam() == iTeam2) then
+				print("The war calls the Heroic Carrier")
+				CapitalCity:SetNumRealBuilding(GameInfoTypes["BUILDING_HEROIC_CARRIER_START"], 1)
+				CapitalCity:SetNumRealBuilding(GameInfoTypes["BUILDING_HEROIC_CARRIER_PROJECT"], 0)
+				print("for next turn")
+				return
+			end
+		end
+	end
+end
+Events.WarStateChanged.Add(HeroicCarrierRollStart)
+
 
 	 function DoSomeEffects(playerID)
     local player = Players[playerID]

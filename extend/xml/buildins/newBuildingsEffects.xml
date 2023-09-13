@@ -1755,12 +1755,7 @@
 			<Flavor>845</Flavor>
 		</Row>
 		
-		<!--寺院-->
-		<Row>
-			<BuildingType>BUILDING_CLOISTER</BuildingType>
-			<FlavorType>FLAVOR_RELIGION</FlavorType>
-			<Flavor>80</Flavor>
-		</Row>
+
 
 
 		<!--庄园-->
@@ -2959,20 +2954,7 @@
 			<Yield>6</Yield>
 		</Row>
 		
-		
-		
-		<!--寺院-->
-		<Row>
-			<BuildingType>BUILDING_CLOISTER</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_CLOISTER</BuildingType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>3</Yield>
-		</Row>
-
+	
 		<!--庄园-->
 		<Row>
 			<BuildingType>BUILDING_JAIL</BuildingType>

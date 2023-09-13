@@ -196,19 +196,6 @@
 
 		<!--************ 禁止城邦野蛮人建造**********************************	-->
 
-
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_MONK</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_MONK</UnitClassType>
-			<UnitType/>
-		</Row>
-		
-		
 		
 		
 
@@ -714,12 +701,7 @@
 		</Row>
 
 		
-		<!--***********************************武僧********************************-->
-		<Row>
-			<Type>UNITCLASS_MONK</Type>
-			<Description>TXT_KEY_UNIT_MONK</Description>
-			<DefaultUnit>UNIT_MONK</DefaultUnit>
-		</Row>
+
 
 		<!--************************************堡垒********************************-->
 

@@ -4044,10 +4044,10 @@
 			<PortraitIndex>42</PortraitIndex>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<DefenseMod>25</DefenseMod>
+			<DefenseMod>20</DefenseMod>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<ChangeDamageValue>-20</ChangeDamageValue>
+			<ChangeDamageValue>-10</ChangeDamageValue>
 		</Row>
 
 		<!--*************步马协同**************-->
@@ -4340,7 +4340,8 @@
 			<PediaType>PEDIA_SHARED</PediaType>
 			<ShowInPedia>0</ShowInPedia>
 			<RemoveAfterXTurns>2</RemoveAfterXTurns>
-			<TurnDamagePercent>15</TurnDamagePercent>
+			<!--<TurnDamagePercent>15</TurnDamagePercent>-->
+			<TurnDamage>20</TurnDamage>
 			<PediaEntry>TXT_KEY_PROMOTION_BURNING_EFFECT</PediaEntry>
 		</Row>
 

@@ -167,13 +167,27 @@ do
 		g_UnitTooltipControls.Box:DoAutoSize()
 	end)
 
+
+
+	-----新增
+function IsUsingWP()
+	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
+	for _, mod in pairs(Modding.GetActivatedMods()) do
+		if (mod.ID == WPID) then
+			return true
+		end
+	end
+	return false
+end
+local WpModActive = IsUsingWP()
+
 	local GetTooltip2Seconds = OptionsManager.GetTooltip2Seconds
 	local function UpdateOptions()
 		g_isScienceEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_SCIENCE)
 		g_isPoliciesEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_POLICIES)
 		g_isHappinessEnabled = IsCiv5 and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)
 		g_isReligionEnabled = IsCiv5notVanilla and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION)
-		g_isHealthEnabled = not IsCiv5 and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HEALTH)
+		g_isHealthEnabled = WpModActive
 		g_isEspionageDisabled = Game.IsOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)
 		g_isAlwaysWar = Game.IsOption( GameOptionTypes.GAMEOPTION_ALWAYS_WAR )
 		g_isOneCityChallenge = Game.IsOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
@@ -1445,7 +1459,7 @@ local function UnitToolTip( unit )
 		g_PromotionIconIM:ResetInstances()
 		if not( unit.IsTrade and unit:IsTrade() ) then
 			for unitPromotion in GameInfo.UnitPromotions() do
-				if unit:IsHasPromotion(unitPromotion.ID) and unitPromotion.ShowInUnitPanel ~= false then
+				if unit:IsHasPromotion(unitPromotion.ID) and unitPromotion.ShowInUnitPanel ~= 0 then
 					promotionIcon = g_PromotionIconIM:GetInstance()
 					IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image )
 					insert( promotionText, unitPromotion._Name )
@@ -1463,6 +1477,7 @@ local function UnitToolTip( unit )
 	end
 end
 LuaEvents.UnitToolTip.Add( UnitToolTip )
+
 LuaEvents.UnitFlagToolTip.Add( function( button )
 	local player = Players[ button:GetVoid1() ]
 	UnitToolTip( player and player:GetUnitByID( button:GetVoid2() ) )
@@ -2147,7 +2162,7 @@ end)
 
 
 --==========================================================
--- TopPanel Tooltips
+-- TopPanel Tooltips  每回合科研明细
 --==========================================================
 
 local function ScienceTooltip()
@@ -2325,7 +2340,7 @@ local function ScienceTooltip()
 end
 
 -------------------------------------------------
--- Faith Tooltip (GK & BNW)
+-- Faith Tooltip (GK & BNW) 每回合信仰明细
 -------------------------------------------------
 local function FaithTooltip()
 
@@ -2410,6 +2425,9 @@ end
 local TopPanelTooltips = {
 	SciencePerTurn = ScienceTooltip,
 	TechIcon = ScienceTooltip,
+
+
+
 	GoldPerTurn = function()
 		local activePlayerID = GetActivePlayer()
 		local activeTeamID = GetActiveTeam()
@@ -2534,6 +2552,8 @@ local TopPanelTooltips = {
 
 		return concat( tips, "[NEWLINE]" )
 	end,
+
+
 	GpIcon = function()
 		local gp = ScanGP( Players[ GetActivePlayer() ] )
 		if gp then
@@ -2546,6 +2566,7 @@ local TopPanelTooltips = {
 			return "No Great Person found..."
 		end
 	end,
+
 	-------------------------------------------------
 	-- Happiness Tooltip
 	-------------------------------------------------
@@ -3139,122 +3160,15 @@ local TopPanelTooltips = {
 		return tipText
 	end,
 	-------------------------------------------------
-	-- Health Tooltip (CivBE)
+	-- Health Tooltip (CivBE) 健康度
 	-------------------------------------------------
 	HealthString = function()
-		if g_isHealthEnabled then
-			local activePlayerID = GetActivePlayer()
-			local activePlayer = Players[activePlayerID]
-
-			local excessHealth = activePlayer:GetExcessHealth()
-			local healthLevel = activePlayer:GetCurrentHealthLevel()
-			local healthLevelInfo = GameInfo.HealthLevels[healthLevel]
-			local colorPrefixText = "[COLOR_GREEN]"
-			local iconStringText = "[ICON_HEALTH]"
-			local rangeFactor = 1
-			if excessHealth < 0 then
-				colorPrefixText = "[COLOR_RED]"
-				iconStringText = "[ICON_UNHEALTH]"
-				rangeFactor = -1
-			end
-			local tips = { L("TXT_KEY_TP_HEALTH_SUMMARY", iconStringText, colorPrefixText, excessHealth * rangeFactor) }
-			if healthLevelInfo.Help then
-				insert( tips, L( healthLevelInfo.Help ) )
-			end
-			insert( tips, activePlayer:IsEmpireUnhealthy() and "[COLOR_WARNING_TEXT]" or "[COLOR_POSITIVE_TEXT]" )
-			local cityYieldMods = {}
-			local combatMod = 0
-			local cityGrowthMod = 0
-			local outpostGrowthMod = 0
-			local cityIntrigueMod = 0
-			for info in GameInfo.HealthLevels() do
-				local healthLevelID = info.ID
-				if activePlayer:IsAffectedByHealthLevel(healthLevelID) then
-					for yieldID = 0, YieldTypes.NUM_YIELD_TYPES-1 do
-						cityYieldMods[yieldID] = (cityYieldMods[yieldID] or 0) + Game.GetHealthLevelCityYieldModifier(healthLevelID, excessHealth, yieldID)
-					end
-					combatMod = combatMod + (info.CombatModifier or 0)
-					cityGrowthMod = cityGrowthMod + Game.GetHealthLevelCityGrowthModifier(healthLevelID, excessHealth)
-					outpostGrowthMod = outpostGrowthMod + Game.GetHealthLevelCityGrowthModifier(healthLevelID, excessHealth)
-					cityIntrigueMod = cityIntrigueMod + Game.GetHealthLevelCityIntrigueModifier(healthLevelID, excessHealth)
-				end
-			end
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_LEVEL_EFFECT_COMBAT_MODIFIER", combatMod )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_LEVEL_EFFECT_CITY_GROWTH_MODIFIER", cityGrowthMod )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_LEVEL_EFFECT_OUTPOST_GROWTH_MODIFIER", outpostGrowthMod )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_LEVEL_EFFECT_CITY_INTRIGUE_MODIFIER", cityIntrigueMod )
-			for yieldID = 0, YieldTypes.NUM_YIELD_TYPES-1 do
-				local yieldInfo = GameInfo.Yields[ yieldID ]
-				insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_LEVEL_EFFECT_CITY_YIELD_MODIFIER", yieldInfo and cityYieldMods[yieldID] or 0, yieldInfo.IconString, yieldInfo._Name )
-			end
---			insert( tips, "[ENDCOLOR]" )
-
-			--*** HEALTH Breakdown ***--
-			local totalHealth		= activePlayer:GetHealth()
-			local handicapInfo		= GameInfo.HandicapInfos[activePlayer:GetHandicapType()]
-			local handicapHealth		= handicapInfo.BaseHealthRate
-			local healthFromCities		= activePlayer:GetHealthFromCities()
-			local extraCityHealth		= activePlayer:GetExtraHealthPerCity() * activePlayer:GetNumCities()
-			local healthFromPolicies	= activePlayer:GetHealthFromPolicies()
-			local healthFromTradeRoutes	= activePlayer:GetHealthFromTradeRoutes()
-			--local healthFromNationalSecurityProject	= activePlayer:GetHealthFromNationalSecurityProject(); WRM: Add this in when we have a text string for it
-
-			insert( tips, "[COLOR_WHITE]" )
-			insert( tips, L( "TXT_KEY_TP_HEALTH_SOURCES", totalHealth ) )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_CITIES", healthFromCities )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_POLICIES", healthFromPolicies )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_CONNECTED_CITIES", healthFromTradeRoutes )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_CITY_COUNT", extraCityHealth )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_DIFFICULTY_LEVEL", handicapHealth )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HEALTH_OTHER_SOURCES", totalHealth - handicapHealth - healthFromPolicies - healthFromCities - healthFromTradeRoutes - extraCityHealth )
-			insert( tips, "[ENDCOLOR]" )
-
-			--*** UNHEALTH Breakdown ***--
-			local totalUnhealth			= activePlayer:GetUnhealth()
-			local unhealthFromCities		= activePlayer:GetUnhealthFromCities()
-			local unhealthFromUnits			= activePlayer:GetUnhealthFromUnits()
-			local unhealthFromCityCount		= activePlayer:GetUnhealthFromCityCount()
-			local unhealthFromConqueredCityCount	= activePlayer:GetUnhealthFromConqueredCityCount()
-			local unhealthFromPupetCities		= activePlayer:GetUnhealthFromPuppetCityPopulation()
-			local unhealthFromSpecialists		= activePlayer:GetUnhealthFromCitySpecialists()
-			local unhealthFromPop			= activePlayer:GetUnhealthFromCityPopulation() - unhealthFromSpecialists - unhealthFromPupetCities
-			local unhealthFromConqueredCities	= activePlayer:GetUnhealthFromConqueredCities()
-
-			insert( tips, "[COLOR:255:150:150:255]" )
-			insert( tips, L( "TXT_KEY_TP_UNHEALTH_TOTAL", totalUnhealth ) )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_CITIES", unhealthFromCities / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_CITY_COUNT", unhealthFromCityCount / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_CAPTURED_CITY_COUNT", unhealthFromConqueredCityCount / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_POPULATION", unhealthFromPop / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_PUPPET_CITIES", unhealthFromPupetCities / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_SPECIALISTS", unhealthFromSpecialists / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_OCCUPIED_POPULATION", unhealthFromConqueredCities / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_UNITS", unhealthFromUnits / 100 )
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_YIELD_FROM_UNCATEGORIZED", totalUnhealth - ( unhealthFromCities + unhealthFromCityCount + unhealthFromConqueredCityCount + unhealthFromPop + unhealthFromPupetCities + unhealthFromSpecialists + unhealthFromConqueredCities + unhealthFromUnits ) / 100 )
-			insert( tips, "[ENDCOLOR]" )
-
-			-- Overall Unhealth Mod
-			local unhealthMod = activePlayer:GetUnhealthMod()
-			if unhealthMod > 0 then -- Positive mod means more Unhealth - this is a bad thing!
-				append( tips, "[COLOR:255:150:150:255]" )
-			end
-			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHEALTH_MOD", unhealthMod )
-
-			-- Basic explanation of Health
-			insert( tips, "[ENDCOLOR]" )
-			insert( tips, L( "TXT_KEY_TP_HEALTH_EXPLANATION", totalUnhealth ) )
-
-			return concat( tips, "[NEWLINE]" )
-		else
-			return L"TXT_KEY_TOP_PANEL_HEALTH_OFF_TOOLTIP"
-		end
-	end,
+		local tipText =L("TXT_KEY_TP_HEALTH_EXPLANATION")
+		return tipText
+	end
 	-------------------------------------------------
-	-- Affinity Tooltips (CivBE)
+	-- Affinity Tooltips 
 	-------------------------------------------------
-	Harmony = function() return GetHelpTextForAffinity( GameInfoTypes.AFFINITY_TYPE_HARMONY, Players[GetActivePlayer()] ) end,
-	Purity = function() return GetHelpTextForAffinity( GameInfoTypes.AFFINITY_TYPE_PURITY, Players[GetActivePlayer()] ) end,
-	Supremacy = function() return GetHelpTextForAffinity( GameInfoTypes.AFFINITY_TYPE_SUPREMACY, Players[GetActivePlayer()] ) end,
 }
 
 LuaEvents.TopPanelTooltips.Add( function( control )

@@ -13,11 +13,6 @@
 			<CultureChange>2</CultureChange>
 		</Row>
 
-		<Row>
-			<PolicyType>POLICY_WARRIOR_CODE</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CLOISTER</BuildingClassType>
-			<CultureChange>1</CultureChange>
-		</Row>
 
 
 	</Policy_BuildingClassCultureChanges>
@@ -32,11 +27,7 @@
 			<Happiness>1</Happiness>
 		</Row>
 
-		<Row>
-			<PolicyType>POLICY_FREE_RELIGION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_CLOISTER</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
+
 		
 	</Policy_BuildingClassHappiness>
 	

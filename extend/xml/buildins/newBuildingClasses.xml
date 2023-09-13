@@ -54,13 +54,6 @@
 		</Row>
 		
 		
-		<!-- 寺院-->
-		<Row>
-			<Type>BUILDINGCLASS_CLOISTER</Type>
-			<DefaultBuilding>BUILDING_CLOISTER</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_CLOISTER</Description>
-		</Row>
-		
 
 
 		<!-- 水族馆-->

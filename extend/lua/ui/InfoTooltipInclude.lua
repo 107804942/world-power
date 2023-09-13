@@ -1737,33 +1737,29 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	end
 
 	-- free units
+
+
 	for row in GameInfo.Building_FreeUnits( thisBuildingType ) do
 		item = GameInfo.Units[ row.UnitType ]
 		item = item and GetCivUnit( activeCivilizationType, item.Class )
 		if item and (row.NumUnits or 0) > 0 then
-			insert( tips, L("{1: plural 2?{1} ;}{TXT_KEY_FREE} {2}", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
+		local dsc = ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type )  or ""  )
+		local dsc2= UnitColor( L(item.Description) ) 
+			insert( tips, L("TXT_KEY_EUI_FREE_UNIT", row.NumUnits, dsc, dsc2 ) )
 		end
 	end
-
 
 	-- 新增free units
 	for row in GameInfo.Building_FreeSpecUnits( thisBuildingType ) do
 		item = GameInfo.Units[ row.UnitType ]
+		item = item and GetCivUnit( activeCivilizationType, item.Class )
 		if item and (row.NumUnits or 0) > 0 then
-			insert( tips, L("{1: plural 2?{1} ;}{TXT_KEY_FREE} {2}", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
+		local dsc = ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type )  or ""  )
+		local dsc2= UnitColor( L(item.Description) ) 
+			insert( tips, L("TXT_KEY_EUI_FREE_UNIT", row.NumUnits, dsc, dsc2 ) )
 		end
 	end
 
-	-- free units (Truly)
-	--if GameInfo.Building_FreeUnits_Truly then
-	    ---for row in GameInfo.Building_FreeUnits_Truly( thisBuildingType ) do
-		---item = GameInfo.Units[ row.UnitType ]
-		--item = item and GetCivUnit( activeCivilizationType, item.Class )
-		--if item and (row.NumUnits or 0) > 0 then
-			--insert( tips, L("{1: plural 2?{1} ;}{TXT_KEY_FREE}({TXT_KEY_TRULY}) {2}", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
-		--end
-	    --end
-	--end
 
 --Building_FreeSpecialistCounts unused ?
 	-- free promotion to units trained in this city
@@ -1772,11 +1768,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL".." ("..L( "TXT_KEY_NOTIFICATION_SUMMARY_CITY_STATE_UNIT_SPAWN", "TXT_KEY_CITY" )..") +"..( item.IconString2 or "?" )..L( item.Help or "???" ) )
 	end
 
-	-- free promotion for all units
-	--item = building.FreePromotion and GameInfo.UnitPromotions[ building.FreePromotion ]
-	--if item then
-		--insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL".." +"..( item.IconString2 or "?" )..L( item.Help or "???" ) )
-	--end
+
 
 	--新增 free promotion for all units *********************************************************************************************************
 	item = building.FreePromotion and GameInfo.UnitPromotions[ building.FreePromotion ]
