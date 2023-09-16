@@ -1674,9 +1674,9 @@
 			<Row>
 				<Type>BUILDING_DEFENSE_NETWORK2</Type>
 				<BuildingClass>BUILDINGCLASS_DEFENSE_NETWORK2</BuildingClass>
-				<Description>DESC_DEFENSE_NETWORK2</Description>
+				<Description>BUILDING_DEFENSE_NETWORK2</Description>
 				<Help>HELP_DEFENSE_NETWORK2</Help>
-				<Strategy>STR_DEFENSE_NETWORK2</Strategy>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<Civilopedia>PEDIA_DEFENSE_NETWORK2</Civilopedia>
 				<Cost>6000</Cost>
 				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>
@@ -1695,9 +1695,9 @@
 			<Row>
 				<Type>BUILDING_FINANCIAL_NETWORK</Type>
 				<BuildingClass>BUILDINGCLASS_FINANCIAL_NETWORK</BuildingClass>
-				<Description>DESC_FINANCIAL_NETWORK</Description>
+				<Description>BUILDING_FINANCIAL_NETWORK</Description>
 				<Help>HELP_FINANCIAL_NETWORK</Help>
-				<Strategy>STR_FINANCIAL_NETWORK</Strategy>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<Civilopedia>PEDIA_FINANCIAL_NETWORK</Civilopedia>
 				<Cost>6000</Cost>
 				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>
@@ -1716,9 +1716,9 @@
 			<Row>
 				<Type>BUILDING_SCIENCE_NETWORK</Type>
 				<BuildingClass>BUILDINGCLASS_SCIENCE_NETWORK</BuildingClass>
-				<Description>DESC_SCIENCE_NETWORK</Description>
+				<Description>BUILDING_SCIENCE_NETWORK</Description>
 				<Help>HELP_SCIENCE_NETWORK</Help>
-				<Strategy>STR_SCIENCE_NETWORK</Strategy>
+				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<Civilopedia>PEDIA_SCIENCE_NETWORK</Civilopedia>
 				<Cost>6000</Cost>
 				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>

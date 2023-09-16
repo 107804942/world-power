@@ -37,6 +37,13 @@ getPedia = CivilopediaControl and getPediaA
 include( "Plague_UI.lua" );
 
 
+-- Infixo - IMs for Great Works 新增著作槽位
+local IsCiv5 = InStrategicView ~= nil
+local g_GreatWorksSlotIM   = InstanceManager:new( "Work", "Button", Controls.GreatWorksBox );
+local g_GreatWorksIM
+-- Infixo Great Works
+g_GreatWorksIM      = StackInstanceManager("", "", Controls.GreatWorksStack, Controls.GreatWorksHeader, ResizeRightStack)
+--end
 
 local g_BuildingIM   = InstanceManager:new( "BuildingInstance", "BuildingButton", Controls.BuildingStack );
 local g_GPIM   = InstanceManager:new( "GPInstance", "GPBox", Controls.GPStack );
@@ -56,6 +63,7 @@ local WorldPositionOffset = { x = 0, y = 0, z = 30 };
 local WorldPositionOffset2 = { x = 0, y = 35, z = 0 };
 
 local g_iPortraitSize = Controls.ProductionPortrait:GetSize().x;
+
 
 local screenSizeX, screenSizeY = UIManager:GetScreenSizeVal();
 
@@ -249,12 +257,18 @@ end
 
 local workerHeadingOpen = OptionsManager.IsNoCitizenWarning();
 local specialistHeadingOpen = true;
+local GreatWorkOpen = true;  ---新增
 local GPHeadingOpen = true;
 local wonderHeadingOpen = true;
 local greatWorkHeadingOpen = true;
 local specialistBuildingHeadingOpen = true;
 local buildingHeadingOpen = true;
 local productionQueueOpen = false;
+
+function OnGreatWorksHeaderSelected()  ----新增
+	GreatWorkOpen = not GreatWorkOpen;
+	OnCityViewUpdate();
+end
 
 function OnWorkerHeaderSelected()
 	workerHeadingOpen = not workerHeadingOpen;
@@ -840,6 +854,7 @@ function UpdateThisQueuedItem(city, queuedItemNumber, queueLength)
 	Controls[controlBox]:SetToolTipString(Locale.ConvertTextKey(strToolTip));
 	return isMaint;
 end
+
 
 -------------------------------------------------
 -- City View Update
@@ -1593,8 +1608,7 @@ function OnCityViewUpdate()
 			Controls.BoxODoctors:SetToolTipString( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_SPECIALIST_TOOLTIP", GameInfo.Specialists[GameInfoTypes["SPECIALIST_DOCTOR"]].Description) );
 			
 			 
-			
-
+		
 			AddSpecialistButton( pCity, 7, numDoctorsInThisCity, iNumDoctors );
 		else
 			Controls.BoxODoctors:SetHide( true );
@@ -1617,7 +1631,144 @@ function OnCityViewUpdate()
 			Controls.BoxOSlackers:SetHide( true );
 		end
 		
+
 		-- MOD by CaptainCWB - End
+
+ 
+			-----------------------------
+		-- Infixo: Great Works Box 新增著作槽位--
+		-----------------------------		
+		local totalGreatWorkCount = 0;
+		g_GreatWorksSlotIM:ResetInstances();
+		local greatWorksData = {
+			["GREAT_WORK_SLOT_ART_ARTIFACT"] = {},
+			["GREAT_WORK_SLOT_LITERATURE"] = {},
+			["GREAT_WORK_SLOT_MUSIC"] = {},
+		}
+		-- Build table of GWs
+		for building in GameInfo.Buildings() do
+			local buildingGreatWorkCount = IsCiv5 and building.GreatWorkCount or 0
+			local buildingGreatWorkSlotType = building.GreatWorkSlotType -- GREAT_WORK_SLOT_ART_ARTIFACT / GREAT_WORK_SLOT_MUSIC / GREAT_WORK_SLOT_LITERATURE
+			if buildingGreatWorkCount > 0 and buildingGreatWorkSlotType and pCity:IsHasBuilding(building.ID) then
+				totalGreatWorkCount = totalGreatWorkCount + buildingGreatWorkCount
+				local buildingGreatWorkSlot = GameInfo.GreatWorkSlots[ buildingGreatWorkSlotType ]
+				local buildingClassID = GameInfoTypes[ building.BuildingClass ]
+				local sThemingBonus = ""
+				if pCity:IsThemingBonusPossible( buildingClassID ) then sThemingBonus = pCity:GetThemingBonus( buildingClassID ) end
+
+				for i = 0, buildingGreatWorkCount - 1 do
+					local greatWorkData = {}
+					greatWorkData.BuildingID = building.ID
+					greatWorkData.BuildingDescription = building.Description
+					greatWorkData.ThemingBonus = sThemingBonus
+					greatWorkData.GreatWorkID = pCity:GetBuildingGreatWork( buildingClassID, i )
+					greatWorkData.GreatWorkSlot = buildingGreatWorkSlot
+					greatWorkData.GreatWorkSlotID = buildingGreatWorkSlot.ID
+					if greatWorkData.GreatWorkID >= 0 then
+						greatWorkData.IsFilled = true
+						greatWorkData.Icon = buildingGreatWorkSlot.FilledIcon
+					else
+						greatWorkData.IsFilled = false
+						greatWorkData.Icon = buildingGreatWorkSlot.EmptyIcon
+					end
+					table.insert(greatWorksData[buildingGreatWorkSlotType], greatWorkData);
+				end -- great works in a building
+			end -- greatWorkCount > 0
+		end -- GameInfo.Buildings
+		
+		-- show or hide the box
+		--print("SHOW/HIDE")
+		
+		if totalGreatWorkCount > 0  then				
+				Controls.GreatWorksHeader:SetHide( false );		    
+				Controls.GreatWorksHeader:RegisterCallback( Mouse.eLClick, OnGreatWorksHeaderSelected );
+				Controls.GreatWorksBox:SetHide( false );
+			--end
+			if not GreatWorkOpen then
+				Controls.GreatWorksBox:SetHide( true );
+			end
+		else
+			Controls.GreatWorksHeader:SetHide( true );
+			Controls.GreatWorksBox:SetHide( true );
+		end
+	
+		-- header
+		if GreatWorkOpen then
+			local localizedLabel = "[ICON_MINUS] "..Locale.ConvertTextKey( "TXT_KEY_VP_GREAT_WORKS" );
+			Controls.GreatWorksHeader:SetText(localizedLabel);
+		else
+			local localizedLabel = "[ICON_PLUS] "..Locale.ConvertTextKey( "TXT_KEY_VP_GREAT_WORKS" );
+			Controls.GreatWorksHeader:SetText(localizedLabel);
+		end
+
+
+		-- create slots and put them into the box
+		local slotX, slotY = 0, 0
+		--print("FOUND #gw in city", totalGreatWorkCount, city:GetName())
+		for gwt, gwall in pairs(greatWorksData) do -- 3 types
+			--print("GW TYPE:", gwt, #gwall);
+			for i, gwdata in pairs(gwall) do -- specific type
+				--print("  GW num#", i)
+				if slotX == 7 then slotX = 0; slotY = slotY + 1; end
+				-- create an instance
+				gwInstance = g_GreatWorksSlotIM:GetInstance();
+				--print("gwInstance", gwInstance);
+				-- content
+				gwInstance.Button:SetOffsetX(8 + slotX * 34);
+				gwInstance.Button:SetOffsetY(2 + slotY * 34);
+				gwInstance.Button:SetTexture(gwdata.Icon);
+				-- callbacks
+				gwInstance.Button:SetVoids( gwdata.GreatWorkID, gwdata.GreatWorkSlotID )
+
+				if gwdata.GreatWorkID >= 0 then
+				gwInstance.Button:SetToolTipString(Game.GetGreatWorkTooltip(gwdata.GreatWorkID, pCity:GetOwner()));
+				else
+				gwInstance.Button:LocalizeAndSetToolTip(gwdata.GreatWorkSlot.EmptyToolTipText);  -- GreatWorkTooltip
+				end
+
+				gwInstance.Button:RegisterCallback( Mouse.eRClick, function() 
+							local popupInfo = {
+								Type = ButtonPopupTypes.BUTTONPOPUP_CULTURE_OVERVIEW,
+								Data1 = 1,
+		                        Data2 = 1,
+							}
+					Events.SerialEventGameMessagePopup(popupInfo);
+				end);
+
+
+				if gwdata.IsFilled  and 	GameInfo.GreatWorks[Game.GetGreatWorkType(gwdata.GreatWorkID)].GreatWorkClassType ~= "GREAT_WORK_ARTIFACT" then 
+				gwInstance.Button:RegisterCallback( Mouse.eLClick, function() 
+							local popupInfo = {
+								Type = ButtonPopupTypes.BUTTONPOPUP_GREAT_WORK_COMPLETED_ACTIVE_PLAYER,
+								Data1 =  gwdata.GreatWorkID,
+								Priority = PopupPriority.Current
+							}
+							Events.SerialEventGameMessagePopup(popupInfo);
+						end);
+							
+				 -- GreatWorkPopup
+				else      gwInstance.Button:ClearCallback( Mouse.eLClick ) end
+				-- DEBUG
+				slotX = slotX + 1
+			end
+		end
+		-- resize the box
+		if totalGreatWorkCount > 0 then 
+			Controls.GreatWorksBox:SetSize( { x = 254, y = (slotY+1) * 34 + 4} );
+		end
+
+		Controls.GreatWorksStack:CalculateSize() -- Infixo
+	    Controls.GreatWorksStack:ReprocessAnchoring() -- Infixo
+	    RecalcPanelSize()
+		---------结束
+
+
+
+
+
+
+
+
 		
 		sortOrder = 0;
 		otherSortedList = {};
@@ -2004,13 +2155,6 @@ function OnCityViewUpdate()
 		local XP = pCity:GetFreeExperience()
 		local XP2 = pPlayer:GetFreeExperience()  
 		local XP3 = pCity:GetSpecialistFreeExperience() 
-
-
-		--local XP4 = pCity:GetDomainFreeExperienceFromGreatWorks() 
-		--local XP5 = pCity:GetDomainFreeExperienceFromGreatWorksGlobal() 
-		--local XP6 = pPlayer:GetDomainFreeExperience() ---lua未定义
-
-		---int CvCity::getProductionExperience(UnitTypes eUnit)
 
 		local XPAir = pCity:GetDomainFreeExperience(domainAirID)+pCity:GetDomainFreeExperienceFromGreatWorks(domainAirID)+pCity:GetDomainFreeExperienceFromGreatWorksGlobal(domainAirID) +pPlayer:GetDomainFreeExperience(domainAirID)
 		local XPLand = pCity:GetDomainFreeExperience(domainLandID)+pCity:GetDomainFreeExperienceFromGreatWorks(domainLandID)+pCity:GetDomainFreeExperienceFromGreatWorksGlobal(domainLandID) +pPlayer:GetDomainFreeExperience(domainLandID)
@@ -3428,316 +3572,7 @@ end
 Controls.BTNClearAllProduction:RegisterCallback( Mouse.eLClick, OnClearAllOrder);
 
 
---==========================================================================================================================
---史密森学会	
---==========================================================================================================================
---[[include("FLuaVector.lua")
 
-IconHookup(93, 64, "ROBOT_ICON_ATLAS2", Controls.ROGUrExpendCitizenImage)
-----------------------------------------------------------------------------------------------------------------------------
--- GetRandom
---------------------------------------------------------------------------------------------------------------------------
-function rog_GetRandom(lower, upper)
-    return Game.Rand((upper + 1) - lower, "") + lower
-end
-
-----------------------------------------------------------------------------------------------------------------------------
--- Specialist counting scheme
-----------------------------------------------------------------------------------------------------------------------------
---g_Specialists_Table
-local g_Specialists_Table = {}
-local g_Specialists_Count = 1
-for row in DB.Query("SELECT ID FROM Specialists WHERE ID > 0;") do     
-    g_Specialists_Table[g_Specialists_Count] = row.ID
-    g_Specialists_Count = g_Specialists_Count + 1
-end
---Player:GetTotalSpecialistCount
-function Player.GetTotalSpecialistCount(player, specialistID, city)
-    local numSpecialist = 0
-    if specialistID then
-        if city then
-            numSpecialist = numSpecialist + city:GetSpecialistCount(specialistID)
-        else
-            for city in player:Cities() do
-                numSpecialist = numSpecialist + city:GetSpecialistCount(specialistID)
-            end    
-        end    
-    else
-        if city then
-            --g_Specialists_Table
-            local specialistsTable = g_Specialists_Table
-            local numSpecialists = #specialistsTable
-            for index = 1, numSpecialists do
-                local ID = specialistsTable[index]
-                numSpecialist = numSpecialist + city:GetSpecialistCount(ID)
-            end
-        else
-            for city in player:Cities() do
-                --g_Specialists_Table
-                local specialistsTable = g_Specialists_Table
-                local numSpecialists = #specialistsTable
-                for index = 1, numSpecialists do
-                    local ID = specialistsTable[index]
-                    numSpecialist = numSpecialist + city:GetSpecialistCount(ID)
-                end
-            end    
-        end    
-    end    
-    return numSpecialist
-end
-----------------------------------------------------------------------------------------------------------------------------
--- CreateVariableDynamicNameAndAddToTable
-----------------------------------------------------------------------------------------------------------------------------
-local tableVariablesCreated = {}
-_G = {}
-function CreateVariableDynamicNameAndAddToTable(variableBase, variableChange, counterTable)
-   _G["" .. variableBase .. "" .. variableChange .. ""] = {}
-   table.insert(tableVariablesCreated, _G["" .. variableBase .. "" .. variableChange .. ""])
-end
-----------------------------------------------------------------------------------------------------------------------------
--- Globals
-----------------------------------------------------------------------------------------------------------------------------
-local activePlayerID 						= Game.GetActivePlayer()
-local activePlayer 							= Players[activePlayerID]
-
-
--- unique components 
-
-local tableSpecialistTypeStrings = {}
-local tableSpecialists						= GameInfo.Specialists
-for row in tableSpecialists() do
-	if row.ID > 0 then
-		tableSpecialistTypeStrings[row.ID] = row.Type
-	end
-end
-for k, v in ipairs(tableSpecialistTypeStrings) do
-    CreateVariableDynamicNameAndAddToTable("tableBuildingSpecialist", v)
-    for i = 1, 5 do
-        tableVariablesCreated[k][i] = GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. v .. "_" .. i .. ""]
-    end
-end
-
-local mathFloor		= math.floor
---==========================================================================================================================
--- MAIN FUNCTIONS	
---==========================================================================================================================
-
-----------------------------------------------------------------------------------------------------------------------------
--- Renaissance_NumSpecialistsReceived
-----------------------------------------------------------------------------------------------------------------------------
-function ROGSMITHSONIAN_NumSpecialistsReceived(city)
-
-	local numTimeUsedPerCity = 0
-	for k, v in ipairs(tableSpecialistTypeStrings) do
-
-		for i = 1, 5 do
-		
-			if city:IsHasBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. v .. "_" .. i .. ""]) then
-		
-				numTimeUsedPerCity = numTimeUsedPerCity + i
-			end
-		end
-	end
-
-	return numTimeUsedPerCity
-end
-----------------------------------------------------------------------------------------------------------------------------
--- ROGSMITHSONIAN_AI
-----------------------------------------------------------------------------------------------------------------------------
-function ROGSMITHSONIAN_AI(player, city)
-	local random = rog_GetRandom(1,100)
-	if random > 95 then
-		local numCityPop = city:GetPopulation()
-
-		local numTimeUsedPerCity = ROGSMITHSONIAN_NumSpecialistsReceived(city)
-		local citizenCost = mathFloor(2 + (0.35 * numTimeUsedPerCity))  
-	
-		local hasEnoughCitizens = false
-	
-		if numCityPop >= citizenCost + 2 then
-			hasEnoughCitizens = true
-		
-		end
-		local hasMaxedSpecialist = true
-	
-		for k, v in ipairs(tableSpecialistTypeStrings) do
-			if (not city:IsHasBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. v .. "_5"])) then
-				hasMaxedSpecialist = false
-			
-			end
-		end
-		if (not hasMaxedSpecialist) and hasEnoughCitizens then
-			city:ChangePopulation(-citizenCost, true)
-			local chosenSpecialist = 0
-			local stringChosenSpecialist = ""
-			chosenSpecialist = rog_GetRandom(1, #tableSpecialistTypeStrings)
-			stringChosenSpecialist = tableSpecialistTypeStrings[chosenSpecialist]
-			local b = false
-			for i = 4, 1, -1 do
-				if city:IsHasBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_" .. i .. ""]) then
-					city:SetNumRealBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_" .. i .. ""], 0)
-					city:SetNumRealBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_" .. i + 1 .. ""], 1)
-					b = true
-					break
-				end
-			end
-			if b == false then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_1"], 1)
-			end
-
-		end
-	end
-end
-
-
-----------------------------------------------------------------------------------------------------------------------------
--- AI USED
-----------------------------------------------------------------------------------------------------------------------------
-function SMITHSONIAN_On_ai_turn(playerID)
-	local player = Players[playerID]
-	if (not player:IsAlive()) then return end
-		if player == nil or player:IsMinorCiv() or player:IsBarbarian() or player:IsHuman() then
-	 	return
-	         end
-    if player:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_SMITHSONIAN.ID) > 0 then
-	for city in player:Cities() do
-	ROGSMITHSONIAN_AI(player, city)
-	   end
-	end
-end
-GameEvents.PlayerDoTurn.Add(SMITHSONIAN_On_ai_turn)
---==========================================================================================================================
--- UI FUNCTIONS
---==========================================================================================================================
---Globals
-----------------------------------------------------------------------------------------------------------------------------
-local isCityViewOpen = false
-----------------------------------------------------------------------------------------------------------------------------
--- ExpendCitizensSpecialists_Update
-----------------------------------------------------------------------------------------------------------------------------
-function ROG_Ur_ExpendCitizensSpecialists_Update()
-	--Controls.ROGUrExpendCitizenBackground:SetHide(true)
-	Controls.ROGUrExpendCitizenImage:SetHide(true)
-	Controls.ROGUrExpendCitizenButton:SetDisabled(true)
-	Controls.ROGUrExpendCitizenButton:LocalizeAndSetToolTip(nil)
-	local city = UI.GetHeadSelectedCity()
-
-	if city== nil then ---修复空值报错
-	 	return
-	         end
-
-	local ownerID = city:GetOwner()
-	local owner = Players[ownerID]
-	if city and (not city:IsPuppet()) 
-	and owner:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_SMITHSONIAN.ID) > 0 
-	and owner:IsHuman() then --防止出错
-		--Controls.ROGUrExpendCitizenBackground:SetHide(false)
-
-		Controls.ROGUrExpendCitizenImage:SetHide(false)
-	    Controls.ROGUrExpendCitizenButton:SetHide(false)
-	    --Controls.ROGUrExpendCitizenButton:SetDisabled(false)
-
-		local numCityPop = city:GetPopulation()
-
-		local numTimeUsedPerCity = ROGSMITHSONIAN_NumSpecialistsReceived(city)
-		local citizenCost = mathFloor(2 + (0.35 * numTimeUsedPerCity))  
-	
-		local hasEnoughCitizens = false
-	
-		if numCityPop >= citizenCost + 2 then
-			hasEnoughCitizens = true
-	
-		end
-		local hasMaxedSpecialist = true
-	
-		for k, v in ipairs(tableSpecialistTypeStrings) do
-			if (not city:IsHasBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. v .. "_5"])) then
-				hasMaxedSpecialist = false
-			
-			end
-		end
-		local buttonText = Locale.ConvertTextKey("TXT_KEY_TRAIT_SMITHSONIAN_EXPEND_CITIZENS")
-	-- DISABLE
-		if hasMaxedSpecialist then
-			
-			local buttonToolTipDisabled = Locale.ConvertTextKey("TXT_KEY_TRAIT_SMITHSONIAN_EXPEND_CITIZENS_DISABLED_MAXED", citizenCost)
-			Controls.ROGUrExpendCitizenButton:SetText(buttonText)
-			Controls.ROGUrExpendCitizenButton:LocalizeAndSetToolTip(buttonToolTipDisabled)
-	-- DISABLE
-		elseif (not hasMaxedSpecialist) and (not hasEnoughCitizens) then
-		
-			local buttonToolTipDisabled = Locale.ConvertTextKey("TXT_KEY_TRAIT_SMITHSONIAN_EXPEND_CITIZENS_DISABLED_COST", citizenCost)
-			Controls.ROGUrExpendCitizenButton:SetText(buttonText)
-			Controls.ROGUrExpendCitizenButton:LocalizeAndSetToolTip(buttonToolTipDisabled)
-	-- ENABLE
-		elseif (not hasMaxedSpecialist) and hasEnoughCitizens then
-	
-			local buttonToolTip = Locale.ConvertTextKey("TXT_KEY_TRAIT_SMITHSONIAN_EXPEND_CITIZENS_ENABLED", citizenCost)
-			Controls.ROGUrExpendCitizenButton:SetDisabled(false)
-			Controls.ROGUrExpendCitizenButton:SetText(buttonText)
-			Controls.ROGUrExpendCitizenButton:LocalizeAndSetToolTip(buttonToolTip)
-		end
-	end
-end
-----------------------------------------------------------------------------------------------------------------------------
--- ROG_Ur_OnExpendCitizensSpecialists
-----------------------------------------------------------------------------------------------------------------------------
-function ROG_Ur_OnExpendCitizensSpecialists()
-	local city = UI.GetHeadSelectedCity();
-	if city then
-		local playerID = city:GetOwner()
-		local player = Players[playerID]
-		local numCityPop = city:GetPopulation()
-		local numTimeUsedPerCity = ROGSMITHSONIAN_NumSpecialistsReceived(city)
-		local citizenCost = mathFloor(2 + (0.35 * numTimeUsedPerCity)) 
-		city:ChangePopulation(-citizenCost, true)
-		local chosenSpecialist = 0
-		local stringChosenSpecialist = ""
-		chosenSpecialist = rog_GetRandom(1, #tableSpecialistTypeStrings)
-		stringChosenSpecialist = tableSpecialistTypeStrings[chosenSpecialist]
-		local b = false
-		for i = 4, 1, -1 do
-			if city:IsHasBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_" .. i .. ""]) then
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_" .. i .. ""], 0)
-				city:SetNumRealBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_" .. i + 1 .. ""], 1)
-				b = true
-				break
-			end
-		end
-		if b == false then
-			city:SetNumRealBuilding(GameInfoTypes["BUILDING_ROG_SMITHSONIAN_" .. stringChosenSpecialist .. "_1"], 1)
-		end
-	end
-	ROG_Ur_ExpendCitizensSpecialists_Update()
-end
-Controls.ROGUrExpendCitizenButton:RegisterCallback(Mouse.eLClick, ROG_Ur_OnExpendCitizensSpecialists)
-----------------------------------------------------------------------------------------------------------------------------
--- OnEnterCityScreen
-----------------------------------------------------------------------------------------------------------------------------
-function ROG_OnEnterCityScreen()
-	isCityViewOpen = true
-	ROG_Ur_ExpendCitizensSpecialists_Update()
-end
-----------------------------------------------------------------------------------------------------------------------------
--- OnExitCityScreen
-----------------------------------------------------------------------------------------------------------------------------
-function ROG_OnExitCityScreen()
-	isCityViewOpen = false
-	ROG_Ur_ExpendCitizensSpecialists_Update()
-end
-----------------------------------------------------------------------------------------------------------------------------
--- OnNextCityScren
-----------------------------------------------------------------------------------------------------------------------------
-function ROG_OnNextCityScren()
-	if isCityViewOpen then
-		ROG_Ur_ExpendCitizensSpecialists_Update()
-	end
-end
-if activePlayer then
-	Events.SerialEventEnterCityScreen.Add(ROG_OnEnterCityScreen)
-	Events.SerialEventExitCityScreen.Add(ROG_OnExitCityScreen)
-	Events.SerialEventCityScreenDirty.Add(ROG_OnNextCityScren)
-end]]
 
 
 

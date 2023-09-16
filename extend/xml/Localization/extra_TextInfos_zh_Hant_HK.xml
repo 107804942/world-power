@@ -5097,40 +5097,33 @@
 
 
 		<!--Defense Network-->
-		<Row Tag="DESC_DEFENSE_NETWORK2">
+		<Row Tag="BUILDING_DEFENSE_NETWORK2">
 			<Text>[ICON_WAR]机密网络</Text>
 		</Row>
 		<Row Tag="HELP_DEFENSE_NETWORK2">
-			<Text>本城中敌方[ICON_SPY]间谍窃取效率减少50%,全国每4个[ICON_CITIZEN]人口+1[ICON_PRODUCTION]产能。[NEWLINE]无法与其他类型的网络计划共同建造。</Text>
+			<Text>本城中敌方[ICON_SPY]间谍窃取效率减少50%,全国每20个[ICON_CITIZEN]人口+1[ICON_PRODUCTION]产能。[NEWLINE]无法与其他类型的网络计划共同建造。</Text>
 		</Row>
-		<Row Tag="STR_DEFENSE_NETWORK2">
-			<Text>削弱敌方间谍行动，提升城市产能。</Text>
-		</Row>
+
 		<Row Tag="PEDIA_DEFENSE_NETWORK2">
 			<Text>在大型城市中建立特定类型的网络中心，使其作为连接周边城市的枢纽。</Text>
 		</Row>
 		<!--Financial Network-->
-		<Row Tag="DESC_FINANCIAL_NETWORK">
+		<Row Tag="BUILDING_FINANCIAL_NETWORK">
 			<Text>[ICON_GOLD]金融网络</Text>
 		</Row>
 		<Row Tag="HELP_FINANCIAL_NETWORK">
-			<Text>全国每4个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱。无法与其他类型的网络计划共同建造。</Text>
+			<Text>全国每20个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱。无法与其他类型的网络计划共同建造。</Text>
 		</Row>
-		<Row Tag="STR_FINANCIAL_NETWORK">
-			<Text>提升城市[ICON_GOLD]金钱产出。</Text>
-		</Row>
+
 		<Row Tag="PEDIA_FINANCIAL_NETWORK">
 			<Text>在大型城市中建立特定类型的网络中心，使其作为连接周边城市的枢纽。</Text>
 		</Row>
 		<!--Science Network-->
-		<Row Tag="DESC_SCIENCE_NETWORK">
+		<Row Tag="BUILDING_SCIENCE_NETWORK">
 			<Text>[ICON_RESEARCH]科研网络</Text>
 		</Row>
 		<Row Tag="HELP_SCIENCE_NETWORK">
-			<Text>全国每4个[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。无法与其他类型的网络计划共同建造。</Text>
-		</Row>
-		<Row Tag="STR_SCIENCE_NETWORK">
-			<Text>提升城市科研[ICON_RESEARCH]产出。</Text>
+			<Text>全国每20个[ICON_CITIZEN]人口+1[ICON_RESEARCH]科研。无法与其他类型的网络计划共同建造。</Text>
 		</Row>
 		<Row Tag="PEDIA_SCIENCE_NETWORK">
 			<Text>在大型城市中建立特定类型的网络中心，使其作为连接周边城市的枢纽。</Text>
@@ -7287,188 +7280,10 @@
 		</Row>
 
 
-
-
-
-
-
-
-
-
-
-
-		<!-- EUI Elements -->
-		<!-- Buildings & Wonders' EUI -->
-		<Replace Tag="TXT_KEY_TRULY">
-			<Text>真</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_FREE_TECHS">
-			<Text>免费科技：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_FREE_POLICIES">
-			<Text>免费政策：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BO1">
-			<Text>敌军在境内消耗额外移动</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_CAPITAL1">
-			<Text>首都</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_GLOBAL1">
-			<Text>全国</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_EL1">
-			<Text>所在城市每处已开发的奢侈资源额外+1</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ASN1">
-			<Text>间谍效果减成</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_NIM1">
-			<Text>消除科技魅力影响</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ARS1">
-			<Text>允许守军远程攻击</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_CRM1">
-			<Text>文化：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_GPRM1">
-			<Text>伟人点：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_GGRM2">
-			<Text>大军点：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_GPEG1">
-			<Text>每次消耗伟人</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_UUCM1">
-			<Text>升级花费：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_AIR_MODIFIER11">
-			<Text>停机位：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_NUKE_MODIFIER11">
-			<Text>受核弹打击后的人口损失减少：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_UH11">
-			<Text>全局快乐：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_UNHAPPINESS_MODIFIER111">
-			<Text>非占领城市的[ICON_CITIZEN]市民导致的[ICON_HAPPINESS_4]不满：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_HAPPINESS_PERCITY111">
-			<Text>所有城市：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_WORKER_SPEED_MODIFIER111">
-			<Text>工人改造速度：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_MILITARY_PRODUCTION_MODIFIER111">
-			<Text>军事生产效率：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_SPACE_PRODUCTION_MODIFIER11">
-			<Text>建造飞船组件：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BUILDING_PRODUCTION_MODIFIER11">
-			<Text>建造建筑速度：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_WONDER_PRODUCTION_MODIFIER111">
-			<Text>建造奇观速度：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_CCTRM22">
-			<Text>[ICON_CONNECTED]城市连接：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_CPM3">
-			<Text>被劫掠：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PCM22">
-			<Text>推行新政策：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PCCM4">
-			<Text>扩展新区块：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PBCM5">
-			<Text>购买新区块：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_GP111">
-			<Text>赠送伟人：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_MTPC_444">
-			<Text>合作研究产出：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_DM_0">
-			<Text>防御建筑效率：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_MFC_23">
-			<Text>对所有城邦的[ICON_INFLUENCE]影响力一次性：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_EMS_5">
-			<Text>传教次数：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_RPM_10">
-			<Text>宗教压力：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_EM561">
-			<Text>窃取科技效率：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ES123123">
-			<Text>间谍：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_SC_10">
-			<Text>新生间谍等级：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ISC_10">
-			<Text>现有间谍等级：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_LTP11">
-			<Text>地块与奇观[ICON_CULTURE]文化转化[ICON_TOURISM]魅力：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_IMI11">
-			<Text>每类陆军事单位免费增加一个</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_GWTM111">
-			<Text>杰作[ICON_TOURISM]魅力：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_XBTIC1">
-			<Text>建成{1_Num}个可选择意识形态</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_TSDM1">
-			<Text>海上商路距离：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_TRLDM1">
-			<Text>陆地商路距离：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_TRSGB1">
-			<Text>海上商路</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_TRLGB1">
-			<Text>陆地商路</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_CSTRPM1111">
-			<Text>每条城邦商路使全国：</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_GSBM4">
-			<Text>大科研究新科技时</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ELV3434">
-			<Text>会议代表：</Text>
+		<Replace Tag="TXT_KEY_SP_UI_BTN_CLEAR_ALL_ORDER_SHORT">
+			<Text>[ICON_CLEAR_ALL_ORDER]取消统一规划</Text>
 		</Replace>
 
-		<!-- Units' EUI -->
-		<Replace Tag="TXT_KEY_SUICIDE">
-			<Text>使用后消耗</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_MOVE_AFTER_PC">
-			<Text>购买后可以立即移动</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_REQUIRES_E">
-			<Text>增强宗教</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROHIBITS_SPREAD">
-			<Text>禁止附近传教</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_REL_STR">
-			<Text>宗教力量：</Text>
-		</Replace>
 
 		<Row Tag="TXT_KEY_EUPANEL_ATTACK_CITIES_MOD">
 			<Text>攻击加成</Text>
@@ -7531,7 +7346,7 @@
 			<Text>重装冲锋</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
-			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击时若消灭敌军，则有60%几率俘获该单位；攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
+			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
 		</Row>
 
 
@@ -7673,7 +7488,7 @@
 				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，[ICON_PIRATE]歼灭敌军有概率将其俘获。需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
 				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：攻击可对目标相邻区域的敌方单位造成50%溅射伤害，[ICON_PIRATE]歼灭非[COLOR_YIELD_GOLD]精英单位[ENDCOLOR]敌军时，有概率将其捕获为[COLOR_POSITIVE_TEXT]己方单位[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]善战无前[ENDCOLOR]：发动攻击将累积[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]，当[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]到达[COLOR_POSITIVE_TEXT]100[ENDCOLOR]时，可消耗1[ICON_MOVES]移动力组建一支[ICON_PROMOTION_NEW_INFANTRY_COMBAT][COLOR_POSITIVE_TEXT]重装步兵[ENDCOLOR]/[ICON_PROMOTION_NEW_GUNPOWDER_INFANTRY][COLOR_POSITIVE_TEXT]火药步兵[ENDCOLOR]。
 			</Text>
 		</Row>
@@ -8544,7 +8359,7 @@
 			<Text>
 				[ICON_BULLET]专业人员额外产出: 每位科学家+2[ICON_RESEARCH]科研、工程师+1[ICON_PRODUCTION]产能、商业家+2[ICON_GOLD]金钱、文学家、美术家、音乐家+1[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET]来自[ICON_HAPPINESS_1]满意度更低文明的移民[ICON_TEAM_4]迁入速率+50%。
-				[NEWLINE][ICON_BULLET]城市地块扩张时获得5[ICON_PRODUCTION]产能（随时代增加)。
+				[NEWLINE][ICON_BULLET]城市地块扩张时获得10[ICON_PRODUCTION]产能（随时代增加),可花费更多金钱购买其他文明的地块。
 			</Text>
 		</Replace>
 
@@ -8642,11 +8457,12 @@
 
 
 
+
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE">
 			<Text>防御精通</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE_HELP">
-			<Text>[ICON_STRENGTH]防御力+20%，受到攻击的最终伤害减少10。</Text>
+			<Text>[ICON_STRENGTH]防御力+15%，受到攻击的最终伤害减少10。</Text>
 		</Row>
 		
 		<!--Transport-->

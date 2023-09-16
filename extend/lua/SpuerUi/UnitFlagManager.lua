@@ -4022,7 +4022,6 @@ TTManager:GetTypeControlTable( "ROG_UnitTooltip", g_UnitTooltipControls )
 
 local g_PromotionIconIM = StackInstanceManager( "PromotionIcon", "Image", g_UnitTooltipControls.IconStack )
 
-
 --==========================================================
 -- Unit Tooltips
 --==========================================================

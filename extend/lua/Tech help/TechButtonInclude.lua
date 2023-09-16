@@ -20,7 +20,6 @@ local bnw_mode = Game.GetActiveLeague ~= nil
 --==========================================================
 -- Minor lua optimizations
 --==========================================================
-
 local tonumber = tonumber
 local tostring = tostring
 local unpack = unpack
@@ -299,36 +298,7 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 		end
 	end
 
-	if IsCivBE then
-		-- hide icon underlays
-		for i = 1, maxSmallButtons do
-			local iconUnderlay = thisTechButtonInstance["IconUnderlay"..i]
-			if iconUnderlay then
-				iconUnderlay:SetHide(true)
-			else
-				break
-			end
-		end
-		-- If an affinity exists, wire it up as the first small button
-		local textureSizeSave = textureSize
-		textureSize = 64
-		for tech in GameInfo.Technology_Affinities( thisTechType ) do
-			local affinityInfo = g_AffinityInfo[ tech.AffinityType ]
-			if affinityInfo then
-				local button = addSmallButton( unpack( affinityInfo ) )
-				if button then
-					local info = GameInfo.Affinity_Types[ tech.AffinityType ]
-					registerPediaCallback( button, info and GameInfo.Concepts[ info.CivilopediaConcept ] )
-					if textureSizeSave == 45 then
-						button:SetTextureOffsetVal( affinityInfo[1]*64+6,12 )
-					end
-				else
-					break
-				end
-			end
-		end
-		textureSize = textureSizeSave
-	end
+
 
 	-- units unlocked by this tech
 	local overrideSearch = {CivilizationType = civType}
@@ -513,7 +483,28 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 				addSmallArtYieldButton(specialist, icons, toolTip)
 			end
 		end
+
+
+	for row in GameInfo.Specialist_Resources({ RequiredTechType = techType }) do
+			local specialist = GameInfo.Specialists[row.SpecialistType]
+			if specialist then
+				local icons = ""
+				local toolTip = ""
+				for row2 in GameInfo.Specialist_Resources( { RequiredTechType = techType }) do
+					if(row2.SpecialistType == row.SpecialistType) then
+						local Resource = GameInfo.Resources[row2.ResourceType]
+						if Resource and (row2.Quantity > 0) then
+							local icon = Resource.IconString or "???"
+							icons = icons .. icon
+							toolTip = toolTip .. Locale.ConvertTextKey("TXT_KEY_EUI_SPECIALIST_YIELD_CHANGE", specialist.Description, Resource.Description, row2.Quantity, Resource.IconString)
+						end
+					end
+				end
+				addSmallArtYieldButton(specialist, icons, toolTip)
+			end
+		end
 	---------------------------------------------end------------------------------------------------------------
+
 
 
 	if NZ(tech.EmbarkedMoveChange) then

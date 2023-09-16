@@ -129,7 +129,7 @@
 		<TextButton ID="CurrentDate" Anchor="R,T" />
 
 		<!-- Turn -->
-		<TextButton ID="CurrentTurn" Anchor="R,T" Hidden="1" />
+		<TextButton ID="CurrentTurn" Anchor="R,T" Hidden="0" />
 
 		<!-- Resources -->
 		<TextButton ID="ResourceString" Anchor="R,T" ColorLayer0="255,0,255,255" ToolTipType="EUI_ItemTooltip" />

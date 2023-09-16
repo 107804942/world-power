@@ -1,7 +1,6 @@
 -- PLAGUE MOD
 include( "Plague_UI.lua" );
 include( "Health_Events.lua" );
---include( "ExtendFunction.lua" );
 ------------------------------------------------- 
 -- CityBannerManager
 -------------------------------------------------
@@ -11,12 +10,9 @@ include( "InfoTooltipInclude" );
 include( "CityStateStatusHelper" );
 include( "CorruptionUIUtils" );
 
-
-
 local g_TeamIM  = InstanceManager:new( "TeamCityBanner",  "Anchor", Controls.CityBanners );
 local g_OtherIM = InstanceManager:new( "OtherCityBanner", "Anchor", Controls.CityBanners  );
 local g_SVStrikeIM = InstanceManager:new( "SVRangeStrikeButton", "Anchor", Controls.StrategicViewStrikeButtons );
-
 
 
 -- Globals
@@ -561,45 +557,9 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 				controls.CityIcon_ResurceDemand:SetHide(true);
 			end
 			
-		-------------------------------------------- City Resource Needed & Focus (codes from EUI by bc1) --------------------------------------------
-		
-		
---		-- Demand resource / King day ?
---			local resource = GameInfo.Resources[city:GetResourceDemanded()]
---			local weLoveTheKingDayCounter = city:GetWeLoveTheKingDayCounter()
---			-- We love the king
---			if weLoveTheKingDayCounter > 0 then
---				cityBanner.QuestIcons:SetText( "[ICON_HAPPINESS_1]" )
---				cityBanner.QuestIcons:LocalizeAndSetToolTip( "TXT_KEY_CITYVIEW_WLTKD_COUNTER", weLoveTheKingDayCounter )
---				cityBanner.QuestIcons:SetHide( false )
---
---			elseif resource then
---				cityBanner.QuestIcons:SetText( resource.IconString )
---				cityBanner.QuestIcons:LocalizeAndSetToolTip( "TXT_KEY_CITYVIEW_RESOURCE_DEMANDED", resource.IconString .. " " .. L(resource.Description) )
---				cityBanner.QuestIcons:SetHide( false )
---			else
---				cityBanner.QuestIcons:SetHide( true )
---			end
---		
---		
---		
---			local cityFocus = g_CityFocus[city:GetFocusType()]
---				if not cityFocus or city:IsRazing() or city:IsResistance() or city:IsPuppet() then
---					cityBanner.FocusIcon:SetHide( true )
---				else
---					cityBanner.FocusIcon:SetText( cityFocus[1] )
---					cityBanner.FocusIcon:SetToolTipString( cityFocus[2] )
---					cityBanner.FocusIcon:SetHide( false )
-----todo focus menu
---				end
---		
-		
-		-------------------------------------------- City Resource Needed & Focus (codes from EUI by bc1) END-----------------------------------------	
-		
+	
 			
-			
-			
-			
+				
 		end
 			
 		
@@ -844,13 +804,14 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			if (controls.CityBannerLeftBackground) then
 
 
-				--if (city:IsProductionProcess()) then
-					--local cityProductionProcess = city:GetProductionProcess();
-					--local tooltipString = GetHelpTextForProcess(cityProductionProcess, false);
-					--controls.CityBannerLeftBackground:SetToolTipString(tooltipString);
+
+				    if (city:IsProductionUnit()) then
+					local cityProductionUnit = city:GetProductionUnit();
+					local tooltipString = GetHelpTextForUnit(cityProductionUnit);
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString);
 
 
-					if (city:IsProductionBuilding()) then
+					elseif (city:IsProductionBuilding()) then
 					local cityProductionBuilding = city:GetProductionBuilding();
 					local tooltipString = GetHelpTextForBuilding( cityProductionBuilding, true, true, true, city );
 					controls.CityBannerLeftBackground:SetToolTipString(tooltipString);

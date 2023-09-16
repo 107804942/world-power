@@ -237,12 +237,22 @@
 			<UnitClassType>UNITCLASS_SUI_FLEET</UnitClassType>
 			<UnitType/>
 		</Row>
-		
-		
-		
-		
-		
 
+
+
+
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
+			<UnitType/>
+		</Row>
+		
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
 			<UnitClassType>UNITCLASS_DOCTOR</UnitClassType>

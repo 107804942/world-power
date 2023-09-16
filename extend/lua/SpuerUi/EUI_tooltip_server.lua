@@ -1967,8 +1967,7 @@ end)
 --==========================================================
 -- Tech Tooltips
 --==========================================================
-
-LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )
+LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------所有信息分类获取
 	local tip = "no tip found"
 	local item, iconIndex, iconAtlas
 	if orderID == ORDER_TRAIN then

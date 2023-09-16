@@ -1464,7 +1464,7 @@
 	<!-- end-->
 	<!--=======================================================================================================================-->
 	<Stack Anchor="R,B" StackGrowth="Top" Padding="0" Offset="0,246" ID="OuterStack">
-		<Stack Anchor="R,B" StackGrowth="Top" ID="BigStack">
+		<Stack Anchor="R,B" StackGrowth="Left" ID="BigStack">
 			<!-- Notification Production  NotificationClearBase-->
 			<Button Anchor="R,C" Offset="0,0" Size="100,100" StateOffsetIncrement="0,0" Texture="assets\UI\Art\Notification\NotificationIconsFrame.dds" ID="ProductionButton" Hidden="1" ConsumeMouseOver="1">
 				<Image Anchor="C,C" Size="128,128" Texture="assets\UI\Art\Notification\NotificationIconsProduction.dds"/>

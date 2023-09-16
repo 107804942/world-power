@@ -1384,6 +1384,13 @@
 	<IconFontMapping>
 
 		<InsertOrAbort>
+			<IconName>ICON_CLEAR_ALL_ORDER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CUSTOM_EXAMPLE</IconFontTexture>
+			<IconMapping>55</IconMapping>
+		</InsertOrAbort>
+		
+
+		<InsertOrAbort>
 			<IconName>ICON_GREAT_DOCTOR</IconName>
 			<IconFontTexture>ICON_FONT_TEXTURE_PROMOTIONS5</IconFontTexture>
 			<IconMapping>10</IconMapping>

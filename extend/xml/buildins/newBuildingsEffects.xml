@@ -3373,19 +3373,19 @@
 	<Row>
 		<BuildingType>BUILDING_FINANCIAL_NETWORK</BuildingType>
 		<YieldType>YIELD_GOLD</YieldType>
-		<Yield>25</Yield>
+		<Yield>5</Yield>
 	</Row>
 		
 	<Row>
 		<BuildingType>BUILDING_DEFENSE_NETWORK2</BuildingType>
 		<YieldType>YIELD_PRODUCTION</YieldType>
-		<Yield>25</Yield>
+		<Yield>5</Yield>
 	</Row>
 
 	<Row>
 		<BuildingType>BUILDING_SCIENCE_NETWORK</BuildingType>
 		<YieldType>YIELD_SCIENCE</YieldType>
-		<Yield>25</Yield>
+		<Yield>5</Yield>
 	</Row>
 	
 	</Building_YieldChangesPerPopInEmpire>
