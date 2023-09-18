@@ -2,58 +2,60 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------
-local thisTechAndImprovementTypes = { TechType = techType }
+iTeam = -1
 
-	-- Some improvements can have multiple yield changes
-	for row in GameInfo.Improvement_TechYieldChanges( thisTechType ) do
-		improvement = GameInfo.Improvements[ row.ImprovementType ]
-		if improvement then -- and (not improvement.SpecificCivRequired or improvement.CivilizationType == civType)
-			local toolTip = improvement._Name
-			local icons = ""
-			local icon
-			thisTechAndImprovementTypes.ImprovementType = improvement.Type
-			for row in GameInfo.Improvement_TechYieldChanges( thisTechAndImprovementTypes ) do
-				if NZ(row.Yield) then
-					icon = GameInfo.Yields[row.YieldType]
-					icon = icon and icon.IconString or "?"
-					icons = icons .. icon
-					toolTip = ("%s %+i%s"):format( toolTip, row.Yield, icon )
+function MauryaWarMonitor (iAttacker, iDefender, bWar)
+
+	-- Gets the Attacker
+	if iTeam ~= -1 then
+		iTeam = -1
+		return
+	else
+		iTeam = iAttacker
+	end
+	--print(iAttacker, iDefender)
+	--print("Attacker is " .. iTeam)
+	
+	--War Declared
+	if bWar then
+		local pTeam = Teams[iTeam]
+		--print("War Declared")
+		for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
+			local pPlayer = Players[iPlayer]
+			if (pTeam:GetAtWarCount() == 0) and (pPlayer:GetCivilizationType() == iCivType) then
+				--print("Enemies annihilated, peace")
+				save(pPlayer, "bBonusEnabled", true)
+			elseif (pPlayer:GetTeam() == iTeam) and (pPlayer:GetCivilizationType() == iCivType) then
+				--print(iPlayer .. " is Maurya and Attacking!")
+				if load(pPlayer, "bBonusEnabled") == true then
+					--print("Bonus Reset")
+					save(pPlayer, "iNumCaptured", 0)
 				end
-			end
-			if icon and not addSmallActionButton( GameInfo.Builds{ ImprovementType = improvement.Type }(), icons, toolTip ) then
-				break
+				save(pPlayer, "bBonusEnabled", false)
 			end
 		end
-	end
+		
+	--Peace Made
+	else
+		--print("Peace Made")
+		for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
+			local pPlayer = Players[iPlayer]
+			local iPlayerTeam = pPlayer:GetTeam()
+			if ((iPlayerTeam == iAttacker) or (iPlayerTeam == iDefender)) and (pPlayer:GetCivilizationType() == iCivType) then
+				--print(iPlayer .. " is Maurya and has made Peace!")
+				local pTeam = Teams[iPlayerTeam]
+				if pTeam:GetAtWarCount() > 0 then
+					--print("However, is still at war with someone else")
+				else
+					save(pPlayer, "bBonusEnabled", true)
+					MauryaNotification(pPlayer)
+				end
+			end        
+		end    
+	end    
+end
+Events.WarStateChanged.Add(MauryaWarMonitor)
 
-	--if IsCivBE then
-		-- Affinity Level Requirement
-		--for affinityPrereq in GameInfo.Project_AffinityPrereqs{ ProjectType = project.Type } do
-			--local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
-			--if affinityInfo then
-				--insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_REQUIRED", affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "?", affinityInfo.Description or "???" ) )
-			--end
-		--end
-	--end
-
---GetEspionageSpies
-
-
-	--pMinorCapital->ChangeResistanceTurns(-pMinorCapital->GetResistanceTurns());
-
-		for row in GameInfo.Building_FreeUnits( thisBuildingType ) do
-		item = GameInfo.Units[ row.UnitType ]
-		item = item and GetCivUnit( activeCivilizationType, item.Class )
-		if item and (row.NumUnits or 0) > 0 then
-			insert( tips, L("TXT_KEY_EUI_FREE_UNIT", row.NumUnits, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) ) )
-		end
-	end
-
-
-			
-		--<Row Tag="TXT_KEY_EUI_FREE_UNIT">
-			--<Text>免费 {1_Num} {2_Name}{3_Name}{4_Name}。</Text>
-		---</Row>
 
 	-- ********************************************************
 -- 乌尔班

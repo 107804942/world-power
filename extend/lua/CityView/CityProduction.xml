@@ -103,17 +103,6 @@
     <Box Anchor="C,T" Size="955,32" Offset="0,44" Color="0,0,0,128" >
       <Stack Anchor="C,T" Size="971,32" Offset="0,0" Padding="0" StackGrowth="Right">
         <Button  Anchor="L,T" Size="300,24" Offset="0,0" String="TXT_KEY_CP_CITIES" ID="CitiesButton" >
-<!--
-          <ShowOnMouseOver>
-            <AlphaAnim Anchor="L,C" Size="300,27" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1"  >
-              <Grid   Size="300,27" Offset="0,2" Padding="0,0" Style="Grid9FrameTurnsHL" />
-            </AlphaAnim>
-          </ShowOnMouseOver>
--->
-          <!-- Selected State  -->
-<!--
-          <Grid Anchor="C,C" Offset="0,1" Size="300,26"  Style="Grid9FrameTurns" Hidden="1" ID="CitiesSelectHighlight" />
--->
         </Button>
       </Stack>
 

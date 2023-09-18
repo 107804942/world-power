@@ -8,121 +8,21 @@
 -- remove YieldIcons
 --==========================================================
 
-if not GameInfoCache then
-	local collectgarbage = collectgarbage
-	local pairs = pairs
-	local next = next
-	local print = print
-	local setmetatable = setmetatable
-	--local tonumber = tonumber
-	local type = type
-	local insert = table.insert
-	local sort = table.sort
-
-	local ContentManager_IsActive = ContentManager.IsActive
-	local ContentType_GAMEPLAY = ContentType.GAMEPLAY
-	local GameInfo = GameInfo
-	local Game = Game
-	local L = Locale.ConvertTextKey
-
-	local nilFunction = function() end
-
-	GameInfoCache = setmetatable( {}, { __index = function( t, tableName )
-		local thisGameInfoTable = GameInfo[ tableName ]
-		if thisGameInfoTable then
-			local keys = {}
-	--print( "Caching GameInfo table", tableName )
-			for row in DB.Query( "PRAGMA table_info("..tableName..")" ) do
-				keys[ row.name ] = true
-			end
-	--for k in pairs( keys ) do print( k ) end
-			local setMT
-			setMT = { __index = function( set, key )
-				if keys[key] then -- verify key is actually valid
-	--print("Creating subset for key", key )
-					local index = {}
-					set[ key ] = index
-					for i = 1, #set do
-						local row = set[i]
-						local v = row[ key ]
-						if v then
-							local subset = index[ v ]
-							if not subset then
-								subset = setmetatable( {}, setMT )
-								index[ v ] = subset
-							end
-							insert( subset, row )
-						end
-					end
-					return index
-				end
-			end }
-			local set = setmetatable( {}, setMT )
-			local function iterator( t, condition )
-				local subset = set
-				if condition then
-				-- Warning: EUI's GameInfoCache iterator only supports table conditions
-					for key, value in pairs( condition ) do
-						subset = (subset[ key ] or {})[ value ]
-						if not subset then
-							return nilFunction
-						end
-					end
-				end
-				local k = 0
-				local l = #subset
-				return function()
-					if k < l then
-						k = k+1
-						return subset[ k ]
-					end
-				end
-			end
-			local cacheMT
-			cacheMT = { __index = function( t, key )
-	--print("caching", tableName, t, key)
-					if key then
-						local row = thisGameInfoTable[ key ]
-						if row then
-							local cache = {}
-							for k, v in pairs( row ) do
-								cache[k] = v
-							end
-							t[ cache.ID or key ] = cache
-							t[ cache.Type or key ] = cache
-							return cache
-						else
-							t[ key ] = false
-						end
-					end
-				end, __call = function( t, condition )
-	--print("calling", tableName, t, condition )
-					if keys.ID then
-						for row in thisGameInfoTable() do
-							insert( set, t[row.ID] )
-						end
-					else
-						for row in thisGameInfoTable() do
-							local cache = {}
-							for k, v in pairs( row ) do
-								cache[ k ] = v
-							end
-							insert( set, cache )
-						end
-					end
-					cacheMT.__call = iterator
-					cacheMT.__index = nil
-					return iterator( t, condition )
-				end
-			}
-			local cache = setmetatable( {}, cacheMT )
-			t[ tableName ] = cache
-			return cache
-		end
-	end } )
+---新增
+if not EUI then
+	include( "EUI_utilities" )
 end
-local GameInfo = GameInfoCache
 
+local EUI = EUI
+local table = EUI.table
+local YieldIcons = EUI.YieldIcons
+local YieldNames = EUI.YieldNames
+local GameInfo = EUI.GameInfoCache -- warning! use iterator ONLY with table field conditions, NOT string SQL query
+---end
+
+-------------------------------
+-- minor lua optimizations
+-------------------------------
 local IsCiv5 = InStrategicView ~= nil
 local IsCivBE = not IsCiv5
 local IsCiv5BNW = IsCiv5 and ContentManager.IsActive("6DA07636-4123-4018-B643-6575B4EC336B", ContentType.GAMEPLAY)
@@ -1057,116 +957,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	
 	insert( tips, "----------------" )
 
-	-- Other tags
-	local buildingFlag = {
-	--y	Water = L"TXT_KEY_TERRAIN_COAST",
-		TeamShare = L"TXT_KEY_POP_UN_TEAM",
-	--y	River = L"TXT_KEY_PLOTROLL_RIVER",
-		FreshWater = L"TXT_KEY_ABLTY_FRESH_WATER_STRING",
-		FoundsReligion = "[ICON_RELIGION]" .. L"TXT_KEY_MISSION_FOUND_RELIGION",
-	--u	IsReligious = "",
-		BorderObstacle = "[ICON_PROMOTION_VOLLEY]" .. L"TXT_KEY_BO1",		-- TODO
-		PlayerBorderObstacle = "[ICON_PROMOTION_VOLLEY]" .. L"TXT_KEY_BO1".."*",-- TODO
-		Capital = "[ICON_CAPITAL]" .. L"TXT_KEY_CAPITAL1",
-		GoldenAge = "[ICON_GOLDEN_AGE]" .. L"TXT_KEY_MISSION_START_GOLDENAGE",
-		AllowsWaterRoutes = "[ICON_TRADE_WHITE][ICON_PROMOTION_AMPHIBIOUS]" .. L"TXT_KEY_BUILDING_HARBOR",-- TODO
-		ExtraLuxuries = L"TXT_KEY_EL1",						-- TODO
-		DiplomaticVoting = "[ICON_DIPLOMAT]"..L"TXT_KEY_VICTORY_ECONOMIC_BANG",	-- TODO
-		AffectSpiesNow = L"TXT_KEY_ASN1",					-- TODO
-		NullifyInfluenceModifier = L"TXT_KEY_NIM1",				-- TODO
-		HolyCity = "[ICON_RELIGION]" .. L"TXT_KEY_RO_WR_HOLY_CITY",
-		Airlift = "[ICON_PROMOTION_EXTENDED_PARADROP]" .. L"TXT_KEY_MISSION_AIRLIFT",
-		NoOccupiedUnhappiness = "[ICON_HAPPINESS_1]" .. L"TXT_KEY_BUILDING_COURTHOUSE_HELP",
-		AllowsRangeStrike = "[ICON_RANGE_STRENGTH]" .. L"TXT_KEY_ARS1",
-		AllowsFoodTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_FOOD]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
-		AllowsProductionTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_PRODUCTION]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
-		InstantMilitaryIncrease = L"TXT_KEY_IMI11",				-- TOTO
-	}
-	local buildingData = {
-		GlobalCultureRateModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_CRM1" .. "%+i%%[ICON_CULTURE]",-- TOTO
-		GreatPeopleRateModifier = L"TXT_KEY_GPRM1" .. "%+i%%[ICON_GREAT_PEOPLE]",-- TOTO
-		GlobalGreatPeopleRateModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GPRM1" .. "%+i%%[ICON_GREAT_PEOPLE]",-- TOTO
-		GreatGeneralRateModifier = L"TXT_KEY_GGRM2" .. "%+i%%[ICON_GREAT_GENERAL]",-- TOTO
-		GreatPersonExpendGold = L"TXT_KEY_GPEG1" .. "%+i[ICON_GOLD]",		-- TOTO
-		GoldenAgeModifier = L"TXT_KEY_REPLAY_DATA_GOLDAGETURNS" .. ":" .. "%+i%% ",
-		UnitUpgradeCostMod = L"TXT_KEY_UUCM1" .. "%+i%%[ICON_GOLD]",		-- TOTO
-		Experience = L("TXT_KEY_EXPERIENCE_POPUP", "%i"),			-- TOTO
-		GlobalExperience = L"TXT_KEY_GLOBAL1" .. L("TXT_KEY_EXPERIENCE_POPUP", "%i"),-- TOTO
-		FoodKept = "%+i%%[ICON_FOOD] " .. L"TXT_KEY_TRAIT_POPULATION_GROWTH_SHORT",-- granary effect
-		AirModifier = L"TXT_KEY_AIR_MODIFIER11" .. "%+i[ICON_PROMOTION_SPACE_ELEVATOR]",-- TOTO
-		NukeModifier = L"TXT_KEY_NUKE_MODIFIER11" .. "%i%%",			-- TOTO
-		NukeInterceptionChance = L"TXT_KEY_NUKE_INTERCEPTION11" .. "%i%%",			-- TOTO
-        ExtraAttacks = L"TXT_KEY_CITY_ATTACK_CHANGE" .. "%+i",			-- TOTO
-		RangedStrikeModifier = L"TXT_KEY_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO
-
-		GlobalCityStrengthMod = L"TXT_KEY_GLOBAL_CITY_STRENGTH_MOD" .. "%i%%",			-- TOTO
-		GlobalRangedStrikeModifier = L"TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO
-		UnmoddedHappiness = L"TXT_KEY_UH11" .. "%+i[ICON_HAPPINESS_1]",
-		UnhappinessModifier = L"TXT_KEY_UNHAPPINESS_MODIFIER111" .. "%+i%%",	-- TOTO
-		HappinessPerCity = L"TXT_KEY_HAPPINESS_PERCITY111" .. "%+i[ICON_HAPPINESS_1]",-- TOTO
-		WorkerSpeedModifier = L"TXT_KEY_WORKER_SPEED_MODIFIER111" .. "%+i%%",	-- TOTO
-		MilitaryProductionModifier = L"TXT_KEY_MILITARY_PRODUCTION_MODIFIER111" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
-		SpaceProductionModifier = L"TXT_KEY_SPACE_PRODUCTION_MODIFIER11" .. "%+i%%[ICON_PRODUCTION]",	-- TOTO
-		GlobalSpaceProductionModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_SPACE_PRODUCTION_MODIFIER11" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
-		BuildingProductionModifier = L"TXT_KEY_SV_ICONS_LOCAL_SP" .. L"TXT_KEY_BUILDING_PRODUCTION_MODIFIER11" .. "%+i%%[ICON_PRODUCTION]",	-- TOTO
-		WonderProductionModifier = L"TXT_KEY_WONDER_PRODUCTION_MODIFIER111" .. "%+i%%[ICON_PRODUCTION]",	-- TOTO
-		CityConnectionTradeRouteModifier = L"TXT_KEY_CCTRM22" .. "%+i%%[ICON_GOLD]",-- TOTO
-		CapturePlunderModifier = L"TXT_KEY_CPM3" .. "%+i%%[ICON_GOLD]",		-- TOTO
-		PolicyCostModifier = L"TXT_KEY_PCM22" .. "%+i%%[ICON_CULTURE]",		-- TOTO
-		PlotCultureCostModifier = L"TXT_KEY_PCCM4" .. "%+i%%[ICON_CULTURE]",	-- TOTO
-		GlobalPlotCultureCostModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_PCCM4" .. "%+i%%[ICON_CULTURE]",-- TOTO
-		PlotBuyCostModifier = L"TXT_KEY_PBCM5" .. "%+i%%[ICON_GOLD]",		-- TOTO
-		GlobalPlotBuyCostModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_PBCM5" .. "%+i%%[ICON_GOLD]",-- TOTO
-		GlobalPopulationChange = L"TXT_KEY_GLOBAL1" .. "%+i[ICON_CITIZEN]" .. L"TXT_KEY_POPULATION_SUPPLY",-- TOTO
-		PopulationChange = L"TXT_KEY_LOCAL_POP" .. "%+i[ICON_CITIZEN]" .. L"TXT_KEY_POPULATION_SUPPLY",-- TOTO
-		FreeTechs = L"TXT_KEY_FREE_TECHS" .. "%i",				-- TOTO
-		FreePolicies = L"TXT_KEY_FREE_POLICIES" .. "%i",			-- TOTO
-		FreeGreatPeople = L"TXT_KEY_GP111" .. "%i",				-- TOTO
-		MedianTechPercentChange = L"TXT_KEY_MTPC_444" .. "2*%+i%%[ICON_RESEARCH]",-- TOTO
-		Gold = L"TXT_KEY_PEDIA_GOLD_LABEL" .. " %i",				-- TOTO
-		GlobalDefenseMod = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_DM_0" .. "%+i%%[ICON_STRENGTH]",-- TOTO
-		MinorFriendshipChange = L"TXT_KEY_MFC_23" .. "%+i%%",			-- TOTO
-		ExtraMissionarySpreads = L"TXT_KEY_EMS_5" .. " %+i".."[ICON_MISSIONARY]",-- TOTO
-		ReligiousPressureModifier = L"TXT_KEY_RPM_10" .. "%+i%%",		-- TOTO
-		EspionageModifier = L"TXT_KEY_EM561" .. "%+i%%",			-- TOTO
-		GlobalEspionageModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_EM561" .. "%+i%%",-- TOTO
-		ExtraSpies = L"TXT_KEY_ES123123" .. " %+i" .. "[ICON_SPY]",		-- TOTO
-		SpyRankChange = L"TXT_KEY_SC_10" .. "[ICON_SPY]" .. "^%i",		-- TOTO
-		InstantSpyRankChange = L"TXT_KEY_ISC_10" .. "[ICON_SPY]" .. "^%i",	-- TOTO
-		TradeRouteRecipientBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_LEFT]",
-		TradeRouteTargetBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_RIGHT]",
-		NumTradeRouteBonus = "%+i[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER",
-		LandmarksTourismPercent = L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
-		LandmarksTourismPercentGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
-		GreatWorksTourismModifier = L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
-		GreatWorksTourismModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
-		XBuiltTriggersIdeologyChoice = L("TXT_KEY_XBTIC1", "%i"),			-- TOTO
-		TradeRouteSeaDistanceModifier = L"TXT_KEY_TSDM1" .. "%+i%%",
-	--y	TradeRouteSeaGoldBonus = L"TXT_KEY_TRSGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO
-		TradeRouteLandDistanceModifier = L"TXT_KEY_TRLDM1" .. "%+i%%",		-- TOTO
-	--y	TradeRouteLandGoldBonus = L"TXT_KEY_TRLGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO 
-		CityStateTradeRouteProductionModifier = L"TXT_KEY_CSTRPM1111" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
-		GreatScientistBeakerModifier = L"TXT_KEY_GSBM4" .. "%+i%%[ICON_RESEARCH]",-- TOTO
-		ExtraLeagueVotes = L"TXT_KEY_ELV3434" .. "%i",				-- TOTO
-	}
 	
-	for k,v in pairs( building ) do
-		if v and v ~= 0 then
-			tip = buildingFlag[k]
-			if tip then
-				if #tip == 0 then
-					tip = k
-				end
-				insert( tips, tip )
-			else
-			    tip = buildingData[k]
-			    v = tonumber(v) or 0
-			    if tip then
-				insert( tips, format( tip, v ) )
-			    end
-			end
-		end
-	end
 
 --local function GetBuildingYields( buildingID, buildingType, buildingClassID, activePlayer )
 	-- Yields
@@ -1410,15 +1201,140 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	insert( tips, L( "TXT_KEY_PEDIA_CONQUESTPROB", building.ConquestProb))
 	end
 
-		-- 新增不可占领:
+	-- 新增不可占领:
 	if (building.NeverCapture == true) then 
 	insert( tips, L( "TXT_KEY_PEDIA_NEVER_CAPTURE"))
 	end
 
-			-- 新增核抵消:
-	--if (building.NukeModifier ~= 0) then 
-	--insert( tips, L( "TXT_KEY_PEDIA_NUKE_DECREASE", building.NukeModifier))
-	--end
+	-- 新增复制单位:
+	if (building.InstantMilitaryIncrease == true) then 
+	insert( tips,L"TXT_KEY_IMI11")
+	end
+
+	-- Other tags
+	local buildingFlag = {
+	--y	Water = L"TXT_KEY_TERRAIN_COAST",
+		TeamShare = L"TXT_KEY_POP_UN_TEAM",
+	--y	River = L"TXT_KEY_PLOTROLL_RIVER",
+		FreshWater = L"TXT_KEY_ABLTY_FRESH_WATER_STRING",
+	--y	Mountain = L"TXT_KEY_TERRAIN_MOUNTAIN" .. "[ICON_RANGE_STRENGTH]1",
+	--y	NearbyMountainRequired = L"TXT_KEY_TERRAIN_MOUNTAIN" .. "[ICON_RANGE_STRENGTH]2",
+	--y	Hill = L"TXT_KEY_TERRAIN_HILL",
+	--y	Flat = L"TXT_KEY_MAP_OPTION_FLAT",
+		FoundsReligion = "[ICON_RELIGION]" .. L"TXT_KEY_MISSION_FOUND_RELIGION",
+	--u	IsReligious = "",
+		BorderObstacle = "[ICON_PROMOTION_VOLLEY]" .. L"TXT_KEY_BO1",		-- TODO
+		PlayerBorderObstacle = "[ICON_PROMOTION_VOLLEY]" .. L"TXT_KEY_BO1".."*",-- TODO
+		Capital = "[ICON_CAPITAL]" .. L"TXT_KEY_CAPITAL1",
+		GoldenAge = "[ICON_GOLDEN_AGE]" .. L"TXT_KEY_MISSION_START_GOLDENAGE",
+	--	MapCentering = L"TXT_KEY_MC1",						-- TODO
+	--n	NeverCapture = "",
+	--n	NukeImmune = "",
+		AllowsWaterRoutes = "[ICON_TRADE_WHITE][ICON_PROMOTION_AMPHIBIOUS]" .. L"TXT_KEY_BUILDING_HARBOR",-- TODO
+		ExtraLuxuries = L"TXT_KEY_EL1",						-- TODO
+		DiplomaticVoting = "[ICON_DIPLOMAT]"..L"TXT_KEY_VICTORY_ECONOMIC_BANG",	-- TODO
+		AffectSpiesNow = L"TXT_KEY_ASN1",					-- TODO
+		NullifyInfluenceModifier = L"TXT_KEY_NIM1",				-- TODO
+	--y	UnlockedByBelief = "",
+	--y	UnlockedByLeague = "",
+		HolyCity = "[ICON_RELIGION]" .. L"TXT_KEY_RO_WR_HOLY_CITY",
+		Airlift = "[ICON_PROMOTION_EXTENDED_PARADROP]" .. L"TXT_KEY_MISSION_AIRLIFT",
+		NoOccupiedUnhappiness = "[ICON_HAPPINESS_1]" .. L"TXT_KEY_BUILDING_COURTHOUSE_HELP",
+		AllowsRangeStrike = "[ICON_RANGE_STRENGTH]" .. L"TXT_KEY_ARS1",
+	--n	Espionage = L"TXT_KEY_GAME_CONCEPT_SECTION_22",
+		AllowsFoodTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_FOOD]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
+		AllowsProductionTradeRoutes = "[ICON_INTERNATIONAL_TRADE][ICON_PRODUCTION]" .. L"TXT_KEY_TRADE_ROUTES_HEADING2_TITLE", --TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER
+		---InstantMilitaryIncrease = L"TXT_KEY_IMI11",				-- TOTO
+	}
+
+
+		local buildingData = {
+		GlobalCultureRateModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_CRM1" .. "%+i%%".."[ICON_CULTURE]",-- TOTO
+		GreatPeopleRateModifier = L"TXT_KEY_GPRM1" .. "%+i%%".."[ICON_GREAT_PEOPLE]",-- TOTO
+		GlobalGreatPeopleRateModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GPRM1" .. "%+i%%" .. "[ICON_GREAT_PEOPLE]",-- TOTO
+		GreatGeneralRateModifier = L"TXT_KEY_GGRM2" .. "%+i%%" .. "[ICON_GREAT_GENERAL]",-- TOTO
+		GreatPersonExpendGold = L"TXT_KEY_GPEG1" .. "%+i".."[ICON_GOLD]",		-- TOTO
+		GoldenAgeModifier = L"TXT_KEY_REPLAY_DATA_GOLDAGETURNS" .. ":" .. "%+i%% ",
+		UnitUpgradeCostMod = L"TXT_KEY_UUCM1" .. "%+i%%".."[ICON_GOLD]",		-- TOTO
+		Experience = L("TXT_KEY_EXPERIENCE_POPUP", "%i"),			-- TOTO
+		GlobalExperience = L"TXT_KEY_GLOBAL1" .. L("TXT_KEY_EXPERIENCE_POPUP", "%i"),-- TOTO
+		FoodKept = "%+i%%[ICON_FOOD] " .. L"TXT_KEY_TRAIT_POPULATION_GROWTH_SHORT",-- granary effect
+		AirModifier = L"TXT_KEY_AIR_MODIFIER11" .. "%+i".."[ICON_PROMOTION_SPACE_ELEVATOR]",-- TOTO
+		NukeModifier = L"TXT_KEY_NUKE_MODIFIER11" .. "%i%%",			-- TOTO
+		NukeInterceptionChance = L"TXT_KEY_NUKE_INTERCEPTION11" .. "%i%%",			-- TOTO
+        ExtraAttacks = L"TXT_KEY_CITY_ATTACK_CHANGE" .. "%+i",			-- TOTO
+		RangedStrikeModifier = L"TXT_KEY_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO
+		GlobalCityStrengthMod = L"TXT_KEY_GLOBAL_CITY_STRENGTH_MOD" .. "%i%%",			-- TOTO
+		GlobalRangedStrikeModifier = L"TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO
+		UnmoddedHappiness = L"TXT_KEY_UH11" .. "%+i".."[ICON_HAPPINESS_1]",
+		UnhappinessModifier = L"TXT_KEY_UNHAPPINESS_MODIFIER111" .. "%+i%%",	-- TOTO
+		HappinessPerCity = L"TXT_KEY_HAPPINESS_PERCITY111" .. "%+i".."[ICON_HAPPINESS_1]",-- TOTO
+		WorkerSpeedModifier = L"TXT_KEY_WORKER_SPEED_MODIFIER111" .. "%+i%%",	-- TOTO
+		MilitaryProductionModifier = L"TXT_KEY_MILITARY_PRODUCTION_MODIFIER111" .. "%+i%%".."[ICON_PRODUCTION]",-- TOTO
+		SpaceProductionModifier = L"TXT_KEY_SPACE_PRODUCTION_MODIFIER11" .. "%+i%%".."[ICON_PRODUCTION]",	-- TOTO
+		GlobalSpaceProductionModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_SPACE_PRODUCTION_MODIFIER11" .. "%+i%%".."[ICON_PRODUCTION]",-- TOTO
+		BuildingProductionModifier = L"TXT_KEY_SV_ICONS_LOCAL_SP" .. L"TXT_KEY_BUILDING_PRODUCTION_MODIFIER11" .. "%+i%%".."[ICON_PRODUCTION]",	-- TOTO
+		WonderProductionModifier = L"TXT_KEY_WONDER_PRODUCTION_MODIFIER111" .. "%+i%%".."[ICON_PRODUCTION]",	-- TOTO
+		CityConnectionTradeRouteModifier = L"TXT_KEY_CCTRM22" .. "%+i%%".."[ICON_GOLD]",-- TOTO
+		CapturePlunderModifier = L"TXT_KEY_CPM3" .. "%+i%%".."[ICON_GOLD]",		-- TOTO
+		PolicyCostModifier = L"TXT_KEY_PCM22" .. "%+i%%".."[ICON_CULTURE]",		-- TOTO
+		PlotCultureCostModifier = L"TXT_KEY_PCCM4" .. "%+i%%".."[ICON_CULTURE]",	-- TOTO
+		GlobalPlotCultureCostModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_PCCM4" .. "%+i%%".."[ICON_CULTURE]",-- TOTO
+		PlotBuyCostModifier = L"TXT_KEY_PBCM5" .. "%+i%%".."[ICON_GOLD]",		-- TOTO
+		GlobalPlotBuyCostModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_PBCM5" .. "%+i%%".."[ICON_GOLD]",-- TOTO
+		GlobalPopulationChange = L"TXT_KEY_GLOBAL1" .. "%+i".."[ICON_CITIZEN]" .. L"TXT_KEY_POPULATION_SUPPLY",-- TOTO
+		PopulationChange = L"TXT_KEY_LOCAL_POP" .. "%+i".."[ICON_CITIZEN]" .. L"TXT_KEY_POPULATION_SUPPLY",-- TOTO
+		FreeTechs = L"TXT_KEY_FREE_TECHS" .. "%i",				-- TOTO
+		FreePolicies = L"TXT_KEY_FREE_POLICIES" .. "%i",			-- TOTO
+		FreeGreatPeople = L"TXT_KEY_GP111" .. "%i",				-- TOTO
+		MedianTechPercentChange = L"TXT_KEY_MTPC_444" .. "2*%+i%%".."[ICON_RESEARCH]",-- TOTO
+		Gold = L"TXT_KEY_PEDIA_GOLD_LABEL" .. " %i",				-- TOTO
+		GlobalDefenseMod = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_DM_0" .. "%+i%%".."[ICON_STRENGTH]",-- TOTO
+		MinorFriendshipChange = L"TXT_KEY_MFC_23" .. "%+i%%",			-- TOTO
+		ExtraMissionarySpreads = L"TXT_KEY_EMS_5" .. " %+i".."[ICON_MISSIONARY]",-- TOTO
+		ReligiousPressureModifier = L"TXT_KEY_RPM_10" .. "%+i%%",		-- TOTO
+		EspionageModifier = L"TXT_KEY_EM561" .. "%+i%%",			-- TOTO
+		GlobalEspionageModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_EM561" .. "%+i%%",-- TOTO
+		ExtraSpies = L"TXT_KEY_ES123123" .. " %+i" .. "[ICON_SPY]",		-- TOTO
+		SpyRankChange = L"TXT_KEY_SC_10" .. "[ICON_SPY]" .. "^%i",		-- TOTO
+		InstantSpyRankChange = L"TXT_KEY_ISC_10" .. "[ICON_SPY]" .. "^%i",	-- TOTO
+		TradeRouteRecipientBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_LEFT]",
+		TradeRouteTargetBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_RIGHT]",
+		NumTradeRouteBonus = "%+i".."[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER",
+		LandmarksTourismPercent = L"TXT_KEY_LTP11" .. "%i%%".."[ICON_TOURISM]",	-- TOTO
+		LandmarksTourismPercentGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_LTP11" .. "%i%%".."[ICON_TOURISM]",	-- TOTO
+		GreatWorksTourismModifier = L"TXT_KEY_GWTM111" .. "%+i%%".."[ICON_TOURISM]",-- TOTO
+		GreatWorksTourismModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GWTM111" .. "%+i%%".."[ICON_TOURISM]",-- TOTO
+		XBuiltTriggersIdeologyChoice = L("TXT_KEY_XBTIC1", "%i"),			-- TOTO
+		TradeRouteSeaDistanceModifier = L"TXT_KEY_TSDM1" .. "%+i%%",
+		TradeRouteLandDistanceModifier = L"TXT_KEY_TRLDM1" .. "%+i%%",		-- TOTO
+		CityStateTradeRouteProductionModifier = L"TXT_KEY_CSTRPM1111" .. "%+i%%".."[ICON_PRODUCTION]",-- TOTO
+		GreatScientistBeakerModifier = L"TXT_KEY_GSBM4" .. "%+i%%".."[ICON_RESEARCH]",-- TOTO
+		ExtraLeagueVotes = L"TXT_KEY_ELV3434" .. "%i",				-- TOTO
+	}
+
+
+ 
+	for k,v in pairs(building) do
+		if v then
+			local str = buildingFlag[k]
+			if str then
+				if #str == 0 then
+					str = k
+				end
+				insert( tips, str )
+			else
+				str = buildingData[k]
+				v = tonumber(v) or 0
+				if str and v > 0 then
+					if #str == 0 then
+						str = k .. " %i"
+					end
+					insert( tips, format( str, v ) )
+				end
+			end
+		end
+	end
 
 
 	-- Maintenance:
@@ -1975,18 +1891,6 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 
 
-	else
-		-- Orbital Production
-		insertLocalizedIfNonZero( tips, "TXT_KEY_DOMAIN_PRODUCTION_MOD", building.OrbitalProductionModifier or 0, "TXT_KEY_ORBITAL_UNITS" )
-
-		-- Orbital Coverage
-		insertLocalizedIfNonZero( tips, "TXT_KEY_BUILDING_ORBITAL_COVERAGE", building.OrbitalCoverageChange or 0 )
-
-		-- Anti-Orbital Strike
-		insertLocalizedIfNonZero( tips, "TXT_KEY_UNITPERK_RANGE_AGAINST_ORBITAL_CHANGE", building.OrbitalStrikeRangeChange or 0 )
-
-		-- Covert Ops Intrigue Cap
-		insertLocalizedIfNonZero( tips, "TXT_KEY_BUILDING_CITY_INTRIGUE_CAP", -(building.IntrigueCapChange or 0) * (GameDefines.MAX_CITY_INTRIGUE_LEVELS or 0) / 100 )
 	end
 
 	insert( tips, "----------------" )
@@ -2098,30 +2002,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
 	end
 
-		-- -------------------------新增建筑新的政策关联-- --------------------------------------------------------------------
-   --[[local Policies = {}
-   for row in GameInfo.Building_FreePolicies( thisBuildingType ) do
-		Policy = GameInfo.Policies[ row.PolicyType ]
-		if Policy then
-			insert( Policies, "[COLOR_PINK]"..Locale.ConvertTextKey( Policy.Description ).."[ENDCOLOR]" ) 
-		end
-	end
-	if #Policies > 0 then
-		Policies = { concat( Policies, ", ") }
-	end
-	if IsCiv5Vanilla then
-		Policies = concat( Policies, " / ")
-	else
-		local txt = Policies[1] or ""
-		for i = 2, #Policies do
-			txt = L( "TXT_KEY_PEDIA_A_OR_B", txt, Policies[i] )
-		end
-		Policies = txt
-	end
-	if #Policies > 0 then
-		insert( tips, L"TXT_KEY_PEDIA_FREE_POLICY" .. " " .. Policies )
-	end]]
-	-- -------------------------------------------------------------end-- --------------------------------------------------------------------
+
 
 
 	-- Prerequisite Techs:

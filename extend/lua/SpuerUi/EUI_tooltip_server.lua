@@ -187,7 +187,7 @@ local WpModActive = IsUsingWP()
 		g_isPoliciesEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_POLICIES)
 		g_isHappinessEnabled = IsCiv5 and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)
 		g_isReligionEnabled = IsCiv5notVanilla and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION)
-		g_isHealthEnabled = WpModActive
+		g_isHealthEnabled = WpModActive  ---ÐÂÔö
 		g_isEspionageDisabled = Game.IsOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)
 		g_isAlwaysWar = Game.IsOption( GameOptionTypes.GAMEOPTION_ALWAYS_WAR )
 		g_isOneCityChallenge = Game.IsOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
@@ -2625,7 +2625,7 @@ local TopPanelTooltips = {
 			--local handicapHappiness = totalHappiness - policiesHappiness - resourcesHappiness - cityHappiness - buildingHappiness - garrisonedUnitsHappiness - minorCivHappiness - tradeRouteHappiness - religionHappiness - naturalWonderHappiness - extraHappinessPerCity - leagueHappiness - happinessFromVassals	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
 
 			--	SP Flat Hadicap Happiness
-		    local iHandicapHappiness = 11
+		    local handicapHappiness = 11
 
 			if activePlayer:IsEmpireVeryUnhappy() then
 
@@ -2645,8 +2645,8 @@ local TopPanelTooltips = {
 				insert( tips, "" )
 			end
 
-			-- Individual Resource Info
 
+			-- Individual Resource Info
 			local baseHappinessFromResources = 0
 			local numHappinessResources = 0
 			local availableResources = ""
@@ -2732,11 +2732,11 @@ local TopPanelTooltips = {
 		local strSPConsumerPenalty = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY")
 		local SPPolicyConsumerBonus = Locale.ConvertTextKey("TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS")
 		
-		local ConsumerUnhappinessMod = pPlayer:GetUnHappinessModFromResourceByIndex(GameInfoTypes["RESOURCE_CONSUMER"])
+		local ConsumerUnhappinessMod = activePlayer:GetUnHappinessModFromResourceByIndex(GameInfoTypes["RESOURCE_CONSUMER"])
 
     	if ConsumerUnhappinessMod < 0 then
 		    insert( tips, "[NEWLINE][NEWLINE]".. strSPConsumerHappiness .." " ..-ConsumerUnhappinessMod.."%" )	
-			if pPlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
+			if activePlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
 				 insert( tips, "[NEWLINE]"..SPPolicyConsumerBonus)
 			end
 		elseif ConsumerUnhappinessMod > 0 then	
@@ -2911,8 +2911,6 @@ local TopPanelTooltips = {
 			end
 			-- show resources available for trade to the active player
 
---			insert( tips, L"TXT_KEY_DIPLO_ITEMS_LUXURY_RESOURCES" )
---			insert( tips, missingResources )
 			insert( tips, "" )
 			insert( tips, L"TXT_KEY_EO_RESOURCES_AVAILBLE" )
 

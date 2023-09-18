@@ -414,17 +414,6 @@
 		<Label Anchor="C,C" Offset="0,-2" String="TXT_KEY_CITYVIEW_RETURN_TO_MAP" Color0="255.255.200.255" Color1="0.0.0.128" Color2="255.255.200.255" Font="TwCenMT20" FontStyle="Shadow" ID="EndTurnText"/>
 	</GridButton>
 
-	<!-- 新增史密森学会 -->
-
-	<!--<GridButton Anchor="C,B" Size="280,36" Offset="0,28" ID="ROGUrExpendCitizenButton" Style="BaseButton" Hidden="1">
-		<Image ID="ROGUrExpendCitizenImage" Anchor="C,C" Offset="-100,0" Size="64,64" Hidden="1">
-		</Image>
-	</GridButton>-->
-
-
-
-
-
 
 	<!-- Buy Plot Button to show up on tile -->
 	<Instance Name="BuyPlotButtonInstance">
