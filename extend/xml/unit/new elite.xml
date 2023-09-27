@@ -1310,24 +1310,10 @@
 			<UnitType>UNIT_IRON_BUDDHA</UnitType>
 			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_IRON_BUDDHA</UnitType>
-			<PromotionType>PROMOTION_HEAVY_SHOCK_1</PromotionType>
-		</Row>
 
-
-
-		<Row>
-			<UnitType>UNIT_IRON_BUDDHA</UnitType>
-			<PromotionType>PROMOTION_HEAVY_DRILL_1</PromotionType>
-		</Row>
-
-
-
-
-
-	
-
+		
+		
+		
 
 		<Row>
 			<UnitType>UNIT_GLADIATOR</UnitType>

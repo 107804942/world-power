@@ -304,8 +304,8 @@ VALUES ('PROMOTION_FOCUS','PROMOTION_CITADEL_DEFENSE',300);
 INSERT  INTO UnitPromotions_PromotionModifiers (PromotionType,OtherPromotionType ,Modifier)
 VALUES ('PROMOTION_COMBAT_TO_DEATH','PROMOTION_ANTI_MOUNTED',100),
        ('PROMOTION_COMBAT_TO_DEATH','PROMOTION_ANTI_TANK',100),
-       ('PROMOTION_ANTI_ANTI_MOUNTED_BONUS','PROMOTION_ANTI_MOUNTED',100),
-       ('PROMOTION_ANTI_ANTI_MOUNTED_BONUS','PROMOTION_ANTI_TANK',100);
+       ('PROMOTION_ANTI_ANTI_MOUNTED_BONUS','PROMOTION_ANTI_MOUNTED',33),
+       ('PROMOTION_ANTI_ANTI_MOUNTED_BONUS','PROMOTION_ANTI_TANK',33);
 ------------------------------------------------------------------------------------------------------------------------
 -- 限制民兵数量
 UPDATE UnitClasses SET MaxPlayerInstances=5 WHERE Type='UNITCLASS_WARRIOR';

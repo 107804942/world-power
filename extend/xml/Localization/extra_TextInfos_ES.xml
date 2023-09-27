@@ -29,7 +29,11 @@
 		<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
 			<Text>工人建造效率+25%</Text>
 		</Row>
-		
+
+		<Row Tag="TXT_KEY_SV_ICONS_GLOBAL_GREATWORK">
+			<Text>全国杰作</Text>
+		</Row>
+
 		
 		<Row Tag="TXT_KEY_EXTRA_RESOURCES_VALUE_HELP">
 			<Text>工程师+1[ICON_RES_ELECTRICITY]电力。</Text>
@@ -2489,9 +2493,6 @@
 
 
 
-		<Row Tag="TXT_KEY_NOTIFICATION_SUMMARY_CHOOSE_IDEOLOGY_PREQ">
-			<Text>随着白宫的建成，现在可以解锁意识形态了。</Text>
-		</Row>
 		<Row Tag="TXT_KEY_BUILDING_WHITE_HOUSE">
 			<Text>白宫</Text>
 		</Row>
@@ -3242,7 +3243,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_FW_SKYCITY_HELP">
 			<Text>
-				机械化农场+4[ICON_FOOD]食物,+4[ICON_GOLD]金钱，+1[ICON_HAPPINESS_1]快乐。本城所有地形额外提升3点全类型产出。所有城市+33%[ICON_RESEARCH]科研、33%[ICON_GOLD]金钱。
+				机械化农场+4[ICON_FOOD]食物,+4[ICON_GOLD]金钱，+1[ICON_HAPPINESS_1]快乐。本城所有地形额外提升3点全类型产出。所有城市+25%[ICON_RESEARCH]科研、[ICON_GOLD]金钱。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_FW_SKYCITY_PEDIA">
@@ -3349,7 +3350,7 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_THORIUM_REACTOR_HELP">
-			<Text>本城市+5[ICON_PRODUCTION]产能。提供50[ICON_RES_ELECTRICITY]电力。本城地块上每个发电机+5[ICON_RES_ELECTRICITY]电力。</Text>
+			<Text>提供50[ICON_RES_ELECTRICITY]电力。本城地块上每个发电机+5[ICON_RES_ELECTRICITY]电力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_THORIUM_REACTOR_DESC">
@@ -3717,7 +3718,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_QUANTUM_LAB_HELP</Tag>
-			<Text>[ICON_RESEARCH]科研产出+45%，只能在国际大都市（80人口）建造。</Text>
+			<Text>[ICON_RESEARCH]科研产出+35%，只能在国际大都市（80人口）建造。</Text>
 		</Row>
 
 
@@ -5333,7 +5334,7 @@
 			<Text>凡尔赛宫</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_VERSAILLES_HELP">
-			<Text>建成后每个拥有世界奇观的城市+30%[ICON_RESEARCH]科研与[ICON_GOLD]金钱产出。</Text>
+			<Text>建成后每个拥有世界奇观的城市+20%[ICON_RESEARCH]科研与[ICON_GOLD]金钱产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_VERSAILLES_QUOTE">
 			<Text>[NEWLINE]"我每安排一个职位就会得罪一百个人，而任职者也不会对我感恩戴德。"[NEWLINE]        ——路易十四[NEWLINE]</Text>
@@ -5925,7 +5926,7 @@
 			<Text>[NEWLINE]"当你经过时，动物会从黑暗中出现。没有什么是静止不动的。影子依偎在洞穴里；在苍白突出的岩石上闪烁的光线会使蹄转动或抬起头。一个形状随着另一个形状的出现而消失，一切都停留在想象中。"[NEWLINE]        ——简布· 罗克斯《辉煌：人造光的进化》[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_LASCAUX_CAVES_WONDER_HELP">
-			<Text>全国每处[ICON_RES_SHEEP]绵羊，[ICON_RES_DEER]鹿,[ICON_RES_BISON]野牛,[ICON_RES_HORSE]马,[ICON_RES_COW]牛，[ICON_RES_CRAB]螃蟹，[ICON_RES_IVORY]象牙，[ICON_RES_TRUFFLES]松露资源+2[ICON_FOOD]食物、+2[ICON_GOLD]金钱。</Text>
+			<Text>全国每处[ICON_RES_SHEEP]绵羊，[ICON_RES_DEER]鹿,[ICON_RES_BISON]野牛,[ICON_RES_HORSE]马,[ICON_RES_COW]牛，[ICON_RES_CRAB]螃蟹，[ICON_RES_IVORY]象牙，[ICON_RES_TRUFFLES]松露资源+1[ICON_FOOD]食物、+1[ICON_GOLD]金钱。</Text>
 		</Row>
 
 
@@ -6954,7 +6955,7 @@
 			<Text>乌鲁伯格天文台</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ULUGH_BEG_HELP">
-			<Text>全国+15%[ICON_RESEARCH]科研产出，本城赠送[ICON_RESEARCH]天文台，每处天文台+2[ICON_RESEARCH]科研。</Text>
+			<Text>全国+10%[ICON_RESEARCH]科研产出，本城赠送[ICON_RESEARCH]天文台，每处天文台+2[ICON_RESEARCH]科研。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_WONDER_ULUGH_BEG_QUOTE">
@@ -7316,22 +7317,21 @@
 		</Row>
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER">
 			<Text>暗杀者</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER_HELP">
 			<Text>
-				周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。对抗满血单位+50%[ICON_STRENGTH]战斗力。在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
+				临近3格内我方单位进入隐身状态。周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。对抗满血单位+50%[ICON_STRENGTH]战斗力。在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_GHOST_ATTACKED">
+		<Row Tag="TXT_KEY_PROMOTION_GHOST_INVISIBLE">
 			<Text>隐秘</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_GHOST_ATTACKED_HELP">
+		<Row Tag="TXT_KEY_PROMOTION_GHOST_INVISIBLE_HELP">
 			<Text>
-				不可被单位攻击。
+				隐形单位。
 			</Text>
 		</Row>
 
@@ -7858,9 +7858,8 @@
 		</Row>
 
 
-
 		<Row Tag="TXT_KEY_GRANDEUR_1_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR][NEWLINE]每处战略资源+3[ICON_RESEARCH]科研、+3[ICON_PRODUCTION]产能、+3[ICON_GOLD]金钱。客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR][NEWLINE]每处战略资源+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_1_TEXT">
 			<Text>
@@ -7987,7 +7986,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_1_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]外交使节[ENDCOLOR][NEWLINE]每条商路+3%城市[ICON_RESEARCH]科研产出。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]外交使节[ENDCOLOR][NEWLINE]每条商路+2%城市[ICON_RESEARCH]科研产出。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_2">
@@ -8065,7 +8064,7 @@
 			<Text>科学基金会</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_7_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]科学基金会[ENDCOLOR][NEWLINE]大学、公立学校+10%[ICON_RESEARCH]科研、+2[ICON_HEALTH]健康度。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]科学基金会[ENDCOLOR][NEWLINE]大学、公立学校+8%[ICON_RESEARCH]科研、+2[ICON_HEALTH]健康度。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_7_TEXT">
 			<Text>
@@ -8406,7 +8405,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS_HELP">
 			<Text>
-				对反骑兵、反装甲单位+100%[ICON_STRENGTH]战斗力,对陆作战时+25%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+100%[ICON_STRENGTH]战斗力，无攻击次数限制。5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
+				对反骑兵、反装甲单位+33%[ICON_STRENGTH]战斗力,对陆作战时+15%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+50%[ICON_STRENGTH]战斗力，无攻击次数限制。5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
 				[NEWLINE]当剩余生命值超过150移动力不为0时，可使用特殊冲锋技能。
 			</Text>
 		</Row>
@@ -8417,7 +8416,7 @@
 			<Text>防御精通</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE_HELP">
-			<Text>[ICON_STRENGTH]防御力+15%，受到攻击的最终伤害减少10。</Text>
+			<Text>受到攻击的最终伤害减少10。</Text>
 		</Row>
 		
 		<!--Transport-->
@@ -8587,12 +8586,6 @@
 		</Replace>
 
 
-		<Replace Tag="TXT_KEY_UNIT_ELITE_RIDER_HELP">
-			<Text>精英骑兵单位。对敌军单位造成一定伤害后获得额外移动点数和攻击次数。[NEWLINE][NEWLINE]需要秦王府兵制解锁，你只能训练一队。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_UNIT_ELITE_RIDER_STRATEGY">
-			<Text>作为精英骑兵单位，他们有著平衡的机动性，攻击力和防御力。拥有著对敌军单位造成一定伤害后获得额外移动力与攻击次数的能力，他们是强大的战场突破者和收割机。[NEWLINE][NEWLINE]但是，不要玩得太浪，如果他们失陷在敌人的枪阵中，就无力回天了！</Text>
-		</Replace>
 
 		<Row Tag="TXT_KEY_BUILDING_COOKED_MEDICINE">
 			<Text>熟药所</Text>
@@ -8758,7 +8751,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SANKORE_HELP">
 			<Text>
-				全国每处炼金术会所+5%[ICON_RESEARCH]科研，大学+5%[ICON_RESEARCH]科研，公立学校+10%[ICON_RESEARCH]科研，研发实验室+10%[ICON_RESEARCH]科研。
+				科学家-3[ICON_GOLD]金钱，全国每处炼金术会所、大学、公立学校、研发实验室+5%[ICON_RESEARCH]科研。
 				[NEWLINE]只能在临近沙漠的城市建造。
 			</Text>
 		</Row>

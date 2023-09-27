@@ -940,7 +940,7 @@
 
 
 		<Update>
-			<Set Value="8"/>
+			<Set Value="6"/>
 			<Where Name="GOLDEN_AGE_LENGTH" />
 		</Update>
 	</Defines>

@@ -117,7 +117,7 @@
 
 		<Button	ID="ExitCityScreen" Anchor="R,T" Offset="0,-8" Size="32,32" Texture="IconFrame32Delete.dds" ToolTip="TXT_KEY_CITYVIEW_RETURN_TT" Hidden="1" />
 		
-		<Button	ID="MenuButton" Anchor="R,T" Offset="0,-6" Texture="MenuButton.dds" Size="28,28" ToolTip="TXT_KEY_MENU_TOOLTIP" Hidden="1"/>
+		<Button	ID="MenuButton" Anchor="R,T" Offset="0,-6" Texture="MenuButton.dds" Size="28,28" ToolTip="TXT_KEY_MENU_TOOLTIP" Hidden="0"/>
 
 		<Button ID="CivilopediaButton" Anchor="R,T" Offset="0,-6" Texture="HelpButton.dds" Size="28,28" ToolTip="TXT_KEY_CIVILOPEDIA_TOOLTIP" Hidden="0"/>
 

@@ -1285,7 +1285,7 @@
 			<Row>
 				<Type>BUILDING_QUANTUM_LAB</Type>
 				<BuildingClass>BUILDINGCLASS_QUANTUM_LAB</BuildingClass>
-				<Cost>2900</Cost>
+				<Cost>3000</Cost>
 				<GoldMaintenance>20</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
 				<Help>TXT_KEY_BUILDING_QUANTUM_LAB_HELP</Help>

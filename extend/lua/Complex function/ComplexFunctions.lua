@@ -1334,7 +1334,31 @@ function GolemActivate(playerID, unitID, bTestAllAllies)
 end
 GameEvents.UnitSetXY.Add(GolemActivate)
 
-
+function GhostActivate(playerID, unitID, bTestAllAllies)
+	local pPlayer = Players[playerID]
+	local pUnit = pPlayer:GetUnitByID(unitID)
+	if not pUnit then return end
+	if bTestAllAllies then
+		for pUnit  in pPlayer:Units() do
+			if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]   then
+				if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GHOST"], 3, true, false) then
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], true)
+				else
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], false)
+				end
+			end
+		end
+	else
+		 if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"] then
+			if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GHOST"], 3, true, false) then
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], true)
+			else
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], false)
+			end
+		end
+	end
+end
+GameEvents.UnitSetXY.Add(GhostActivate)
 
 
 -- ********************************************************
@@ -1923,7 +1947,7 @@ end
 
 function AiIntoNewEra(eTeam, eEra, bFirst)
         local handicap = Game:GetHandicapType();
-	    if   handicap > 7 then
+	    if   handicap >= 7 then
 	    for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 	    local pPlayer = Players[iPlayer]
 	   	if pPlayer:IsAlive() then
@@ -1932,16 +1956,16 @@ function AiIntoNewEra(eTeam, eEra, bFirst)
 		 if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
 
 		 pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
-		 pPlayer:ChangeOverflowResearch(3*pPlayer:GetScience())
+		 pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
 
-		 --for city in pPlayer:Cities() do
-	    -- local iCurrentBuilding = city:GetProductionBuilding()
-	    -- if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
-	     --local prod = city:GetProductionNeeded();
-	     --city:SetProduction(prod)
-	     --SetInvalidateCity()
-		             -- end
-		          -- end
+		 for city in pPlayer:Cities() do
+	     local iCurrentBuilding = city:GetProductionBuilding()
+	     if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
+	     local prod = city:GetProductionNeeded();
+	     city:SetProduction(prod)
+	     SetInvalidateCity()
+		              end
+		           end
 		        end
 		     end
 		  end

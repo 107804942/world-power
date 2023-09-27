@@ -12,6 +12,12 @@ GameEvents.TeamTechResearched.Add(MC_Maratha_GunpowderSepoys)
 
 
 
+		--建筑对全局杰作产出
+		GreatWorkyieldChange = 0
+		for row in  GameInfo.Building_GreatWorkYieldChanges( thisBuildingAndYieldTypes ) do
+			GreatWorkyieldChange = GreatWorkyieldChange + (row.Yield or 0)
+		end
+
 
 iImmobileWhileDamaged = GameInfo.UnitPromotions["PROMOTION_IMMOBILE_WHILE_DAMAGED"].ID
 

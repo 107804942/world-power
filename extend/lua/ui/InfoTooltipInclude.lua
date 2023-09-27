@@ -1014,6 +1014,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		for row in GameInfo.Building_YieldChangesPerPopInEmpire( thisBuildingAndYieldTypes ) do
 			yieldPerPopGlobal = yieldPerPopGlobal + (row.Yield or 0)/100
 		end
+
+
+
 		---------------------------------新增--------------------------------------------
 
 		yieldPerReligion = 0
@@ -1057,6 +1060,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 			tip = format("%s%s%s %s[ICON_CITIZEN]", tip, yieldPerPopGlobal, yield.IconString or "?", L"TXT_KEY_CITYVIEW_GLOBAL_EACH" )
 		end
+
 		---------------------------------新增--------------------------------------------
 
 		if yieldPerReligion ~= 0 then
@@ -1495,6 +1499,10 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
+
+
+
+
 	--本地改良设施产出
 	for Improvement in GameInfo.Improvements() do
 		tip = GetYieldString( GameInfo.Building_ImprovementYieldChanges{ BuildingType = buildingType, ImprovementType = Improvement.Type } )
@@ -1593,6 +1601,13 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	tip = GetYieldStringSpecial( "Yield", "%s %+i%%%s", GameInfo.Building_GlobalYieldModifiers( thisBuildingType ) )
 	if tip ~= "" then
 		insert( tips, L"TXT_KEY_SV_ICONS_GLOBAL_SP" .. ":" .. tip )
+	end
+
+
+	--新增全局杰作
+	tip = GetYieldString(GameInfo.Building_GreatWorkYieldChanges( thisBuildingType ) )
+	if tip ~= "" then
+		insert( tips, L"TXT_KEY_SV_ICONS_GLOBAL_GREATWORK" .. ":" .. tip )
 	end
 
 	-- victory requisite

@@ -3929,12 +3929,6 @@
 		
 		
 
-
-
-
-
-		
-
 		
 		<Row>
 			<BuildingType>BUILDING_SKARABRAE</BuildingType>
@@ -4484,18 +4478,12 @@
 
 		<!--波塞冬神庙-->
 		<Row>
-			<BuildingType>BUILDING_WHITE_HOUSE</BuildingType>
+			<BuildingType>BUILDING_POSEIDON_TEMPLE</BuildingType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<Yield>1</Yield>
 		</Row>
 
 
-		<!--白宫 -->
-		<Row>
-			<BuildingType>BUILDING_WHITE_HOUSE</BuildingType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>5</Yield>
-		</Row>
 		
 		
 

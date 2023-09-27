@@ -19,6 +19,7 @@ if Game then defineCIDHealthPlagueMinThreshold = (GameDefines["HEALTH_PLAGUE_MIN
 --------------------------------------------------------------------
 local yieldFoodID	 = YieldTypes.YIELD_FOOD
 local yieldGoldID	 = YieldTypes.YIELD_GOLD
+local yieldProductionID	 = YieldTypes.YIELD_PRODUCTION
  
 function GetNumTurn (player,city)
     local mathcheck=1    
@@ -87,9 +88,11 @@ function Health_PlayerDoTurn(playerID)
 		if  player:IsHuman() then 
 			city:SetYieldModifierFromHealth(yieldFoodID, 0) 
 	        city:SetYieldFromHealth(yieldFoodID, 0)
-			city:SetYieldModifierFromHealth(yieldGoldID, GetHealthYieldBuff(player,city,leftHealth)) 
-			city:SetYieldFromHealth(yieldGoldID, GetHealthYieldBuff(player,city,leftHealth))	
+			city:SetYieldModifierFromHealth(yieldProductionID, 0) 
+	        city:SetYieldFromHealth(yieldProductionID, 0)
 			if leftHealth<0 then
+			city:SetYieldModifierFromHealth(yieldProductionID, GetHealthYieldBuff(player,city,leftHealth)) 
+			city:SetYieldFromHealth(yieldProductionID, GetHealthYieldBuff(player,city,leftHealth))	
 	        city:SetYieldModifierFromHealth(yieldFoodID, GetHealthYieldBuff(player,city,leftHealth)) 
 	        city:SetYieldFromHealth(yieldFoodID, GetHealthYieldBuff(player,city,leftHealth))
 	        end

@@ -1667,7 +1667,7 @@
 		<Row>
 			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>5</Cost>
+			<Cost>8</Cost>
 		</Row>
 
 
@@ -2630,7 +2630,7 @@
 		<Row>
 			<BuildingType>BUILDING_QUANTUM_LAB</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>45</Yield>
+			<Yield>35</Yield>
 		</Row>
 
 
@@ -2755,11 +2755,6 @@
 			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-25</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>25</Yield>
 		</Row>
 
 	</Building_YieldChangesPerPop>
@@ -3163,11 +3158,6 @@
 		</Row>
 
 
-		<Row>
-			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>5</Yield>
-		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_FW_SANCTUARY</BuildingType>

@@ -301,7 +301,6 @@ function GUIGU_SPY(iPlayer, iSpy, iResult, iCityX, iCityY)
 			  Specialistinfo = GameInfo.Units{ID=tSpecialist}()    
               local SpecialistUnit = Player:InitUnit(Specialistinfo.ID, iX,iY)
 			  SpecialistUnit:JumpToNearestValidPlot()
-			  SpecialistUnit:SetHasPromotion(GameInfoTypes["PROMOTION_CULTURE_GREAT_PEOPLE"], true) 
              end	
          end
 

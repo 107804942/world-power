@@ -2687,6 +2687,7 @@
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
 			<SplashDamageFixed>1</SplashDamageFixed>
+			<AdjacentEnemySapMovement>1</AdjacentEnemySapMovement>
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
@@ -4044,7 +4045,7 @@
 			<PortraitIndex>42</PortraitIndex>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<DefenseMod>20</DefenseMod>
+			<!--<DefenseMod>20</DefenseMod>-->
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 			<ChangeDamageValue>-10</ChangeDamageValue>
@@ -4060,7 +4061,7 @@
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<ExtraAttacks>99</ExtraAttacks>
-			<CityAttack>100</CityAttack>
+			<CityAttack>50</CityAttack>
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -4187,7 +4188,21 @@
 		</Row>
 
 
-	
+		<Row>
+			<Type>PROMOTION_GHOST_INVISIBLE</Type>
+			<Description>TXT_KEY_PROMOTION_GHOST_INVISIBLE</Description>
+			<Help>TXT_KEY_PROMOTION_GHOST_INVISIBLE_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<ShowInPedia>0</ShowInPedia>
+			<Invisible>INVISIBLE_SUBMARINE</Invisible>
+			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
+			<PediaEntry>TXT_KEY_PROMOTION_GHOST_INVISIBLE</PediaEntry>
+		</Row>
 
 
 		<!--**************乌尔班**************-->
@@ -4426,7 +4441,6 @@
 		<Row>
 			<PromotionType>PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PromotionType>
 			<DomainType>DOMAIN_LAND</DomainType>
-			<Modifier>10</Modifier>
 			<Attack>15</Attack>
 			<Defense>15</Defense>
 		</Row>

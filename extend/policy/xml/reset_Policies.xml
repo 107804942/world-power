@@ -671,11 +671,10 @@
 
 	<Policy_TradeRouteCityYieldModifier>
 
-
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_1</PolicyType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 	</Policy_TradeRouteCityYieldModifier>
@@ -698,19 +697,6 @@
 			<Yield>15</Yield>
 		</Row>
 
-
-		<Row>
-			<PolicyType>POLICY_KNOWLEDGE_FINISHER</PolicyType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>15</Yield>
-		</Row>
-
-
-
-
-
-		
-		
 	</Policy_YieldModifiers>
 		
 
@@ -908,26 +894,26 @@
 			<PolicyType>POLICY_KNOWLEDGE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>10</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>15</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>20</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>25</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 
 
@@ -1001,192 +987,126 @@
 
 
 	<Policy_ResourceYieldChanges>
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
+
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_TIN</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_TIN</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		
-		
-		
-		
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_TITANIUM</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 
-
-
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_URANIUM</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 
-
-
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
-
-
-
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_HORSE</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
+		
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_HORSE</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
-
 
 
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_COAL</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_COAL</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_COAL</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 
 
-
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 
 
-
-
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_IRON</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 
 
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_LUMBER</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>3</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_LUMBER</ResourceType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
 			<ResourceType>RESOURCE_LUMBER</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
+			<Yield>1</Yield>
 		</Row>
 		
 	</Policy_ResourceYieldChanges>
@@ -1488,13 +1408,13 @@
 			<PolicyType>POLICY_KNOWLEDGE_7</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldMod>10</YieldMod>
+			<YieldMod>8</YieldMod>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_7</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_PUBLIC_SCHOOL</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldMod>10</YieldMod>
+			<YieldMod>8</YieldMod>
 		</Row>
 		
 	</Policy_BuildingClassYieldModifiers>

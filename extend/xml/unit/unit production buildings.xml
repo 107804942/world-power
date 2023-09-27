@@ -151,6 +151,12 @@
 		</Row>
 
 
+
+		<Row>
+			<UnitType>UNIT_SABR</UnitType>
+			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
+		</Row>
+		
 		<Row>
 			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>

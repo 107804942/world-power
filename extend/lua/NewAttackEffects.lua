@@ -287,6 +287,8 @@ end
     -- Debuff immune unit
 	    if defUnit then
 
+
+
 -- ********************************************************
 -- Ìú¸¡Í¼
 -- ********************************************************
@@ -385,8 +387,7 @@ or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFir
                         if pFoundUnit~=attUnit and pFoundUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STURMTIGER"].ID)  then
 						if Players[pFoundUnit:GetOwner()] == attPlayer then
 						if Map.PlotDistance(pFoundUnit:GetX(), pFoundUnit:GetY(), defUnit:GetX(), defUnit:GetY()) <= pFoundUnit:Range() then
-                        --pFoundUnit:SetMadeAttack(false)
-						pFoundUnit:ChangeMadeAttack(-1)
+                        pFoundUnit:SetMadeAttack(false)
 						pFoundUnit:ChangeMoves(GameDefines["MOVE_DENOMINATOR"])  
 						pFoundUnit:RangeStrike(defUnit:GetX(), defUnit:GetY())
 						pFoundUnit:SetMadeAttack(false)
@@ -481,7 +482,6 @@ function CityRangedStrikeDamage(iPlayer,iAttCity,idefPlayer,idefUnit,iX, iY)
 
 end
 GameEvents.CityRangedStrike.Add(CityRangedStrikeDamage)
-
 
 
 -- ****************************************

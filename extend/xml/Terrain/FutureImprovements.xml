@@ -1560,7 +1560,7 @@
 		
 		<Row>
 			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
-			<TechType>TECH_BIOLOGY</TechType>
+			<TechType>TECH_ECOLOGY</TechType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
