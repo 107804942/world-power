@@ -8,8 +8,8 @@ g_EVCMapNumLuxResources = {};
 local CountBuff = GameDefines["GOLD_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 100
 
 g_EVCEconomicVicotryWon = false;
-g_EVCGoldTarget = 2000000*CountBuff;
-g_EVCGPTTarget = 70000;
+g_EVCGoldTarget = 1000000*CountBuff;
+g_EVCGPTTarget = 50000;
 
 -- Economic Variables
 local iStreakTarget = 15;
@@ -39,7 +39,7 @@ function InitializeEconomicVictoryProgress()
 		if iHandicapID > 3 then
 			local iGPTModifier = (iHandicapID - 3)*5000 --GameInfo.HandicapInfos[Game:GetHandicapType()].AIWorkRateModifier;
 			g_EVCGPTTarget = g_EVCGPTTarget + iGPTModifier;
-			g_EVCGoldTarget = g_EVCGoldTarget + (iHandicapID - 3)*500000;
+			g_EVCGoldTarget = g_EVCGoldTarget + (iHandicapID - 3)*300000;
 		end
 	end
 end

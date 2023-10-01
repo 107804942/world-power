@@ -6,13 +6,13 @@
 		<Text>艾滋病</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_ALCOHOL">
-		<Text>酒精中毒</Text>
+		<Text>布鲁氏菌病</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_BONES">
-		<Text>脆骨病</Text>
+		<Text>包虫病</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_BRONCHITIS">
-		<Text>支气管炎</Text>
+		<Text>丝虫病</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_BUBONIC">
 		<Text>黑死病</Text>
@@ -39,19 +39,19 @@
 		<Text>回归热</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_FOOD">
-		<Text>食物中毒</Text>
+		<Text>疟疾</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_HIVES">
 		<Text>荨麻疹</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_IMPOTENCE">
-		<Text>肺气肿</Text>
+		<Text>血吸虫病</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_INFLUENZA">
-		<Text>流感</Text>
+		<Text>西班牙流感</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_GOUT">
-		<Text>痛风</Text>
+		<Text>脊髓灰质炎</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_LEG">
 		<Text>不宁腿综合征</Text>
@@ -66,7 +66,7 @@
 		<Text>埃博拉</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_MALAISE">
-		<Text>抑郁症</Text>
+		<Text>禽流感</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_MEASLES">
 		<Text>囊尾蚴病</Text>

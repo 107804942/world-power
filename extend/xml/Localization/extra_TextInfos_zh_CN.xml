@@ -8615,7 +8615,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_COOKED_MEDICINE_HELP">
 			<Text>
-				+6[ICON_HEALTH]健康度，+40%城市[ICON_HEALTH]健康度。所有城市中每个杰作+3[ICON_HEALTH]健康度，每处[ICON_FRU_RASPBERRY]浆果、[ICON_RES_SULFUR]硫磺、[ICON_RES_TEA]茶叶、[ICON_RES_LAVENDER]薰衣草、[ICON_RES_INCENSE]熏香、[ICON_RES_SAFFRON]藏红花+2[ICON_HEALTH]健康度，+2[ICON_GOLD]金钱。草药铺、私人药店、植物园+3[ICON_HEALTH]健康度，本城获得4个大医学家槽位。雪原、冻土+1[ICON_HEALTH]健康度。建成后赠送一个大医学家。
+				+6[ICON_HEALTH]健康度，+20%城市[ICON_HEALTH]健康度。每处[ICON_FRU_RASPBERRY]浆果、[ICON_RES_SULFUR]硫磺、[ICON_RES_TEA]茶叶、[ICON_RES_LAVENDER]薰衣草、[ICON_RES_INCENSE]熏香、[ICON_RES_SAFFRON]藏红花+2[ICON_HEALTH]健康度，+2[ICON_GOLD]金钱。本城获得3个大医学家槽位。雪原、冻土+1[ICON_HEALTH]健康度。建成后赠送一个大医学家。
 			</Text>
 		</Row>
 

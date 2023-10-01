@@ -292,32 +292,63 @@
 	</Policy_FeatureYieldChanges>
 
 
+	<Policy_YieldModifiers>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>100</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_DISEASE</YieldType>
+			<Yield>-100</Yield>
+		</Row>
+	</Policy_YieldModifiers>
 
 
-	<!--<Policy_SpecialistYieldChanges>
+	<Policy_SpecialistYieldChanges>
 
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldType>YIELD_HEALTH</YieldType>
 			<Yield>3</Yield>
 		</Row>
 
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldType>YIELD_HEALTH</YieldType>
 			<Yield>3</Yield>
 		</Row>
-
-
+		
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>3</Yield>
+		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldType>YIELD_HEALTH</YieldType>
 			<Yield>3</Yield>
 		</Row>
-	</Policy_SpecialistYieldChanges>-->
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Policy_SpecialistYieldChanges>
 
 
 
@@ -346,7 +377,7 @@
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>30</Yield>
+			<Yield>10</Yield>
 		</Row>
 
 		<Row>

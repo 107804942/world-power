@@ -196,15 +196,14 @@ FROM BuildFeatures WHERE BuildType = 'BUILD_HOLY_SITE';
 -- Improvements
 --------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Improvements
-		(Type,				BuildableOnResources,	CreatedByGreatPerson,	Description,	Help,							ArtDefineTag,							Civilopedia,										PillageGold,	PortraitIndex,	IconAtlas)
+(Type,				BuildableOnResources,	CreatedByGreatPerson,	Description,	Help,							ArtDefineTag,							Civilopedia,										PillageGold,	PortraitIndex,	IconAtlas)
 SELECT	'IMPROVEMENT_SANATORIUM',		1,			1,		'TXT_KEY_IMPROVEMENT_SANATORIUM','TXT_KEY_IMPROVEMENT_SANATORIUM_HELP',		'ART_DEF_IMPROVEMENT_EMBASSY', 	'TXT_KEY_CIV5_IMPROVEMENTS_SANATORIUM_TEXT',	20,				6,				'ROG_IMPROVEMENTS_ATLAS';
 
 
 --------------------------------------------------------------------------------------------------------------------------
 -- Improvement_ResourceTypes
 --------------------------------------------------------------------------------------------------------------------------
-INSERT INTO Improvement_ResourceTypes
-		(ImprovementType,				ResourceType)
+INSERT INTO Improvement_ResourceTypes(ImprovementType,				ResourceType)
 SELECT	'IMPROVEMENT_SANATORIUM', 	ResourceType
 FROM Improvement_ResourceTypes WHERE ImprovementType = 'IMPROVEMENT_HOLY_SITE';
 

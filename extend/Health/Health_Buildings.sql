@@ -15,8 +15,8 @@ VALUES('BUILDING_CITY_SIZE_TOWN', 'YIELD_DISEASE',25),
       ('BUILDING_CITY_SIZE_MEDIUM', 'YIELD_DISEASE',25),
 	  ('BUILDING_CITY_SIZE_LARGE', 'YIELD_DISEASE',25),
       ('BUILDING_CITY_SIZE_XL', 'YIELD_DISEASE',25),
-	  ('BUILDING_CITY_SIZE_XXL', 'YIELD_DISEASE',25),
-	  ('BUILDING_CITY_SIZE_GLOBAL', 'YIELD_DISEASE',25);
+	  ('BUILDING_CITY_SIZE_XXL', 'YIELD_DISEASE',50),
+	  ('BUILDING_CITY_SIZE_GLOBAL', 'YIELD_DISEASE',50);
 
 
 
@@ -41,9 +41,7 @@ UPDATE Buildings SET AddsFreshWater = 1 WHERE BuildingClass = 'BUILDINGCLASS_AQU
 UPDATE Buildings SET AddsFreshWater = 1 WHERE BuildingClass = 'BUILDINGCLASS_PONTDUGARD';
 
 
-
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR',GreatPeopleRateChange = 1  WHERE BuildingClass = 'BUILDINGCLASS_HEALTH_BUREAU';
-
 
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 , GreatPeopleRateChange = 3  WHERE BuildingClass = 'BUILDINGCLASS_COOKED_MEDICINE';
 
@@ -52,9 +50,9 @@ UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 ,
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 1 , GreatPeopleRateChange = 1  WHERE BuildingClass = 'BUILDINGCLASS_HERBALIST';
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 , GreatPeopleRateChange = 2  WHERE BuildingClass = 'BUILDINGCLASS_LOCAL_HOSPITAL';
 UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 WHERE BuildingClass = 'BUILDINGCLASS_HOSPITAL';
-UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 WHERE BuildingClass = 'BUILDINGCLASS_MEDICAL_LAB';
-UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 WHERE BuildingClass = 'BUILDINGCLASS_NATIONAL_HOSPITAL';   
-UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 3 WHERE BuildingClass = 'BUILDINGCLASS_MEDICAL_COMPANY';  
+UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 WHERE BuildingClass = 'BUILDINGCLASS_MEDICAL_LAB';
+UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 WHERE BuildingClass = 'BUILDINGCLASS_NATIONAL_HOSPITAL';   
+UPDATE Buildings SET SpecialistType = 'SPECIALIST_DOCTOR', SpecialistCount = 2 WHERE BuildingClass = 'BUILDINGCLASS_MEDICAL_COMPANY';  
 
 
 INSERT  INTO Building_SpecificGreatPersonRateModifier(BuildingType,SpecialistType,Modifier)VALUES
@@ -76,9 +74,9 @@ CREATE TABLE IF NOT EXISTS BuildingClass_HealthYields (BuildingClassType TEXT DE
 
 INSERT INTO BuildingClass_HealthYields (BuildingClassType,	Yield)
 SELECT 'BUILDINGCLASS_GARMENT_WORKSHOP',				     -2 UNION ALL   --纺织厂
-SELECT 'BUILDINGCLASS_CENTERS',				                 6 UNION ALL   --疾控
-SELECT 'BUILDINGCLASS_ORE_REFINERIES',				         -3 UNION ALL   --电冶金
-SELECT 'BUILDINGCLASS_COOKED_MEDICINE',				         6 UNION ALL   --熟药所
+SELECT 'BUILDINGCLASS_CENTERS',				                 5 UNION ALL   --疾控
+SELECT 'BUILDINGCLASS_ORE_REFINERIES',				         -5 UNION ALL   --电冶金
+SELECT 'BUILDINGCLASS_COOKED_MEDICINE',				         5 UNION ALL   --熟药所
 SELECT 'BUILDINGCLASS_PRIVATE_PHARMACY',				     3 UNION ALL   --私人药店
 SELECT 'BUILDINGCLASS_BIOLOGICAL_FACTORIES',				 3 UNION ALL   --生物制剂工厂
 SELECT 'BUILDINGCLASS_LOCAL_HOSPITAL',						 4 UNION ALL   --医馆
@@ -92,9 +90,9 @@ SELECT 'BUILDINGCLASS_COLOSSEUM',							-1 UNION ALL   --竞技场
 SELECT 'BUILDINGCLASS_THEATRE',								-1 UNION ALL   --歌剧院
 SELECT 'BUILDINGCLASS_HARBOR',								-2 UNION ALL   --海港
 SELECT 'BUILDINGCLASS_SEAPORT',								-2 UNION ALL   --港口
-SELECT 'BUILDINGCLASS_FACTORY',								-3 UNION ALL   --工厂
-SELECT 'BUILDINGCLASS_AIRPORT',								-2 UNION ALL   --机场
-SELECT 'BUILDINGCLASS_TOURIST_CENTER',						-2 UNION ALL   --旅游中心
+SELECT 'BUILDINGCLASS_FACTORY',								-8 UNION ALL   --工厂
+SELECT 'BUILDINGCLASS_AIRPORT',								-3 UNION ALL   --机场
+SELECT 'BUILDINGCLASS_TOURIST_CENTER',						-3 UNION ALL   --旅游中心
 SELECT 'BUILDINGCLASS_GRANARY',								 1 UNION ALL	   --粮仓
 SELECT 'BUILDINGCLASS_WINDMILL',							1 UNION ALL	    --风车
 SELECT 'BUILDINGCLASS_GARDEN',								1 UNION ALL	    --花园
@@ -106,17 +104,17 @@ SELECT 'BUILDINGCLASS_WELL',							    1 UNION ALL    --水井
 SELECT 'BUILDINGCLASS_HERBALIST',							2 UNION ALL	   --草药铺
 SELECT 'BUILDINGCLASS_STEEL_MILL',							-3 UNION ALL	--增值反应堆
 SELECT 'BUILDINGCLASS_WATER_TREATMENT_FACTORY',				3 UNION ALL     --污水处理厂
-SELECT 'BUILDINGCLASS_COAL_COMPANY',					    -3 UNION ALL    --炼焦厂  
-SELECT 'BUILDINGCLASS_OIL_REFINERY',					    -3 UNION ALL    --石油精炼
+SELECT 'BUILDINGCLASS_COAL_COMPANY',					    -5 UNION ALL    --炼焦厂  
+SELECT 'BUILDINGCLASS_OIL_REFINERY',					    -5 UNION ALL    --石油精炼
 SELECT 'BUILDINGCLASS_GAS_PLANT',					        -2 UNION ALL    --燃气发电站
 SELECT 'BUILDINGCLASS_OIL_PLANT',					        -3 UNION ALL    --燃油发电站
-SELECT 'BUILDINGCLASS_COAL_PLANT',					        -3 UNION ALL    --燃煤发电站
-SELECT 'BUILDINGCLASS_COAL_PLANT_EXTEND',					-2 UNION ALL    --燃煤扩充发电站
+SELECT 'BUILDINGCLASS_COAL_PLANT',					        -5 UNION ALL    --燃煤发电站
+SELECT 'BUILDINGCLASS_COAL_PLANT_EXTEND',					-3 UNION ALL    --燃煤扩充发电站
 SELECT 'BUILDINGCLASS_TAP_WATER_SUPPLY',					2 UNION ALL     --自来水系统
 SELECT 'BUILDINGCLASS_INLAND_CANAL',					    -1 UNION ALL    --内陆运河	
 SELECT 'BUILDINGCLASS_NATIONAL_HOSPITAL',					20 UNION ALL    --量子生物学中心
 SELECT 'BUILDINGCLASS_GENE_THERAPY',					    4 UNION ALL     --改造实验室	
-SELECT 'BUILDINGCLASS_TITANIUM_FACTORY',					-4 UNION ALL    --合金铸造厂
+SELECT 'BUILDINGCLASS_TITANIUM_FACTORY',					-10 UNION ALL    --合金铸造厂
 SELECT 'BUILDINGCLASS_FW_BIOFACTORY',					    3 UNION ALL     --生态学工厂
 SELECT 'BUILDINGCLASS_CLOACA',					            2 UNION ALL		--下水道
 SELECT 'BUILDINGCLASS_BALNEAE',					            1 UNION ALL		--公共浴室
@@ -126,8 +124,8 @@ SELECT 'BUILDINGCLASS_DESERT_TRANSFORMING_BASE',			3 UNION ALL	    --沙漠改造
 SELECT 'BUILDINGCLASS_UNDERGROUND',			                -2 UNION ALL	--地下城市
 SELECT 'BUILDINGCLASS_PONTDUGARD',			                3 UNION ALL	    --加尔桥   
 SELECT 'BUILDINGCLASS_MEDICAL_COMPANY',						6 UNION ALL     --医药公司
-SELECT 'BUILDINGCLASS_FW_MARKOV',						    -5 UNION ALL     --马尔科夫 
-SELECT 'BUILDINGCLASS_INDUSTRIAL_ZONE',						-5 UNION ALL     --鲁尔工业区
+SELECT 'BUILDINGCLASS_FW_MARKOV',						    -10 UNION ALL     --马尔科夫 
+SELECT 'BUILDINGCLASS_INDUSTRIAL_ZONE',						-15 UNION ALL     --鲁尔工业区
 SELECT 'BUILDINGCLASS_GREAT_LIBRARY',						 3 UNION ALL     --大图
 ------------------城市规模------------------------------
 SELECT 'BUILDINGCLASS_CITY_SIZE_SMALL',					    -3 UNION ALL    --小城市
@@ -163,30 +161,6 @@ SELECT 'BUILDING_PONTDUGARD',	15;
 --WHERE b.BuildingClass = h.BuildingClassType;
 
 
-INSERT INTO Policy_BuildingClassYieldModifiers (PolicyType, BuildingClassType, YieldType,YieldMod)
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_FACTORY',	         'YIELD_DISEASE', -50 UNION ALL  --工厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_NUCLEAR_PLANT',	     'YIELD_DISEASE', -40 UNION ALL  --核电站
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_STEEL_MILL',	     'YIELD_DISEASE', -50 UNION ALL --增值反应堆
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_OIL_REFINERY',		 'YIELD_DISEASE', -50 UNION ALL --石油精炼
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_MINING_COMPANY',	 'YIELD_DISEASE', -50 UNION ALL --矿业公司
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_COAL_PLANT',		 'YIELD_DISEASE', -50 UNION ALL --煤炭厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_COAL_PLANT_EXTEND',	 'YIELD_DISEASE', -50 UNION ALL --煤焦炭厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_COAL_COMPANY',		 'YIELD_DISEASE', -50 UNION ALL --煤焦炭厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_GAS_PLANT',			 'YIELD_DISEASE', -50 UNION ALL --燃气厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_OIL_PLANT',			 'YIELD_DISEASE', -50 ;  --燃石油厂
-
-
-INSERT INTO Policy_BuildingClassYieldChanges (PolicyType, BuildingClassType, YieldType,YieldChange)
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_FACTORY',	         'YIELD_DISEASE', -20 UNION ALL  --工厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_NUCLEAR_PLANT',	     'YIELD_DISEASE', -10 UNION ALL  --核电站
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_STEEL_MILL',	     'YIELD_DISEASE', -10 UNION ALL --增值反应堆
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_OIL_REFINERY',		 'YIELD_DISEASE', -10 UNION ALL --石油精炼
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_MINING_COMPANY',	 'YIELD_DISEASE', -30 UNION ALL --矿业公司
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_COAL_PLANT',		 'YIELD_DISEASE', -20 UNION ALL --煤炭厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_COAL_PLANT_EXTEND',	 'YIELD_DISEASE', -20 UNION ALL --煤焦炭厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_COAL_COMPANY',		 'YIELD_DISEASE', -20 UNION ALL --煤焦炭厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_GAS_PLANT',			 'YIELD_DISEASE', -20 UNION ALL --燃气厂
-SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_OIL_PLANT',			 'YIELD_DISEASE', -20 ;  --燃石油厂
 
 ---公共浴室
 INSERT  INTO Building_YieldModifiers(BuildingType,YieldType,Yield)
@@ -194,48 +168,80 @@ VALUES('BUILDING_BALNEAE', 'YIELD_HEALTH',5);
 
 -----------------------------------------------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS BuildingClass_HealthModifiers (BuildingClassType TEXT DEFAULT NULL, Yield INTEGER DEFAULT 0);
-
-INSERT INTO BuildingClass_HealthModifiers (BuildingClassType,	Yield)
-SELECT 'BUILDINGCLASS_HOSPITAL',								20 UNION ALL
-SELECT 'BUILDINGCLASS_THEME_PARK',								10 UNION ALL  ---主题公园
-SELECT 'BUILDINGCLASS_CENTERS',						            20 UNION ALL  ---疾控
-SELECT 'BUILDINGCLASS_ORE_REFINERIES',						    -10 UNION ALL  ---电冶金
-SELECT 'BUILDINGCLASS_COOKED_MEDICINE',						    40 UNION ALL  ---熟药所
-SELECT 'BUILDINGCLASS_FACTORY',									-15 UNION ALL  --工厂
-SELECT 'BUILDINGCLASS_NUCLEAR_PLANT',							-10 UNION ALL  --核电站
-SELECT 'BUILDINGCLASS_MEDICAL_LAB',								20 UNION ALL   ---医学实验室
-SELECT 'BUILDINGCLASS_HYDRO_PLANT',								10 UNION ALL  --水电站
-SELECT 'BUILDINGCLASS_STEEL_MILL',								-10 UNION ALL --增值反应堆
-SELECT 'BUILDINGCLASS_WATER_TREATMENT_FACTORY',					20 UNION ALL --污水处理厂
-SELECT 'BUILDINGCLASS_OIL_REFINERY',					        -10 UNION ALL --石油精炼
-SELECT 'BUILDINGCLASS_MINING_COMPANY',					        -15 UNION ALL --矿业公司
-SELECT 'BUILDINGCLASS_COAL_PLANT',					            -10 UNION ALL --煤炭厂
-SELECT 'BUILDINGCLASS_COAL_PLANT_EXTEND',					    -10 UNION ALL --煤焦炭厂
-SELECT 'BUILDINGCLASS_COAL_COMPANY',					        -10 UNION ALL --煤焦炭厂
-SELECT 'BUILDINGCLASS_GAS_PLANT',					            -10 UNION ALL --燃气厂
-SELECT 'BUILDINGCLASS_OIL_PLANT',					            -10 UNION ALL --燃石油厂
-SELECT 'BUILDINGCLASS_INDUSTRIAL_ZONE',					        -20 UNION ALL --鲁尔工业区
-SELECT 'BUILDINGCLASS_TAP_WATER_SUPPLY',					    20 UNION ALL    --自来水系统
-SELECT 'BUILDINGCLASS_PONTDUGARD',					            30 UNION ALL    --加尔桥
-SELECT 'BUILDINGCLASS_NATIONAL_HOSPITAL',					    50 ;   --量子生物学中心
-
+CREATE TABLE IF NOT EXISTS BuildingClass_HealthModifiersGlobal (BuildingClassType TEXT DEFAULT NULL, Yield INTEGER DEFAULT 0);
 
 UPDATE Buildings SET HumanOnly=1 WHERE BuildingClass='BUILDINGCLASS_COAL_COMPANY';
 UPDATE Buildings SET HumanOnly=1 WHERE BuildingClass='BUILDINGCLASS_COAL_PLANT_EXTEND';
 UPDATE Buildings SET HumanOnly=1 WHERE BuildingClass='BUILDINGCLASS_OIL_PLANT';
 UPDATE Buildings SET HumanOnly=1 WHERE BuildingClass='BUILDINGCLASS_GAS_PLANT';
 
+INSERT INTO BuildingClass_HealthModifiers (BuildingClassType,	Yield)
+------------------城市规模------------------------------
+SELECT 'BUILDINGCLASS_CITY_SIZE_SMALL',					         -10 UNION ALL    --小城市
+SELECT 'BUILDINGCLASS_CITY_SIZE_MEDIUM',					     -10 UNION ALL	--中城市
+SELECT 'BUILDINGCLASS_CITY_SIZE_LARGE',					         -10 UNION ALL	--大城市
+SELECT 'BUILDINGCLASS_CITY_SIZE_XL',					         -15 UNION ALL    --特大城市
+SELECT 'BUILDINGCLASS_CITY_SIZE_XXL',					         -20 UNION ALL	--巨型城市
+SELECT 'BUILDINGCLASS_CITY_SIZE_GLOBAL',					     -20 UNION ALL	--大都会
+
+SELECT 'BUILDINGCLASS_BIOLOGICAL_FACTORIES',				     10 UNION ALL   --生物制剂工厂
+SELECT 'BUILDINGCLASS_HEALTH_BUREAU',					         10 UNION ALL  --卫生局
+SELECT 'BUILDINGCLASS_TAP_WATER_SUPPLY',					     10 UNION ALL  --自来水系统
+SELECT 'BUILDINGCLASS_HOSPITAL',								 10 UNION ALL  --医院
+SELECT 'BUILDINGCLASS_THEME_PARK',								 10 UNION ALL  ---主题公园
+SELECT 'BUILDINGCLASS_ORE_REFINERIES',						    -20 UNION ALL  ---电冶金
+SELECT 'BUILDINGCLASS_FACTORY',									-20 UNION ALL  --工厂
+SELECT 'BUILDINGCLASS_NUCLEAR_PLANT',							-10 UNION ALL  --核电站
+SELECT 'BUILDINGCLASS_MEDICAL_LAB',								 15 UNION ALL   ---医学实验室
+SELECT 'BUILDINGCLASS_HYDRO_PLANT',								 10 UNION ALL  --水电站
+SELECT 'BUILDINGCLASS_STEEL_MILL',								-10 UNION ALL --增值反应堆
+SELECT 'BUILDINGCLASS_WATER_TREATMENT_FACTORY',					 10 UNION ALL --污水处理厂
+SELECT 'BUILDINGCLASS_OIL_REFINERY',					        -15 UNION ALL --石油精炼
+SELECT 'BUILDINGCLASS_MINING_COMPANY',					        -20 UNION ALL --矿业公司
+SELECT 'BUILDINGCLASS_COAL_PLANT',					            -20 UNION ALL --煤炭厂
+SELECT 'BUILDINGCLASS_COAL_PLANT_EXTEND',					    -20 UNION ALL --煤焦炭厂
+SELECT 'BUILDINGCLASS_COAL_COMPANY',					        -20 UNION ALL --煤焦炭厂
+SELECT 'BUILDINGCLASS_GAS_PLANT',					            -10 UNION ALL --燃气厂
+SELECT 'BUILDINGCLASS_OIL_PLANT',					            -15  ;        --燃石油厂; 
+
+
+INSERT INTO BuildingClass_HealthModifiersGlobal (BuildingClassType,	Yield)
+SELECT 'BUILDINGCLASS_CENTERS',						             20 UNION ALL  ---疾控
+SELECT 'BUILDINGCLASS_COOKED_MEDICINE',						     20 UNION ALL  ---熟药所
+SELECT 'BUILDINGCLASS_INDUSTRIAL_ZONE',					        -20 UNION ALL --鲁尔工业区
+SELECT 'BUILDINGCLASS_PONTDUGARD',					             20 UNION ALL    --加尔桥
+SELECT 'BUILDINGCLASS_NATIONAL_HOSPITAL',					     50 ;   --量子生物学中心
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
 ---疾病点数
-INSERT INTO Building_GlobalYieldModifiers(BuildingType, YieldType, Yield) 
+-----------------------------------------------------------------------------------------------------------------------
+---本地加成
+INSERT INTO  Building_YieldModifiers(BuildingType, YieldType, Yield) 
 SELECT	b.Type, 'YIELD_DISEASE', -h.Yield 
 FROM Buildings AS b,  BuildingClass_HealthModifiers AS h
 WHERE b.BuildingClass = h.BuildingClassType AND h.Yield<0 ;
 
-
----健康点数
+---全局加成
 INSERT INTO Building_GlobalYieldModifiers(BuildingType, YieldType, Yield) 
+SELECT	b.Type, 'YIELD_DISEASE', -h.Yield 
+FROM Buildings AS b,  BuildingClass_HealthModifiersGlobal AS h
+WHERE b.BuildingClass = h.BuildingClassType AND h.Yield<0 ;
+
+-----------------------------------------------------------------------------------------------------------------------
+---健康点数
+-----------------------------------------------------------------------------------------------------------------------
+---本地加成
+INSERT INTO Building_YieldModifiers(BuildingType, YieldType, Yield) 
 SELECT	b.Type, 'YIELD_HEALTH', h.Yield 
 FROM Buildings AS b, BuildingClass_HealthModifiers AS h
+WHERE b.BuildingClass = h.BuildingClassType AND h.Yield>0 ;
+
+---全局加成
+INSERT INTO Building_GlobalYieldModifiers(BuildingType, YieldType, Yield) 
+SELECT	b.Type, 'YIELD_HEALTH', h.Yield 
+FROM Buildings AS b,  BuildingClass_HealthModifiersGlobal AS h
 WHERE b.BuildingClass = h.BuildingClassType AND h.Yield>0 ;
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -296,11 +302,11 @@ SELECT     'POLICY_INDUSTRY_FINISHER',	             'IMPROVEMENT_QUARRY',	  'YIE
 
 ---建筑与人口产出
 INSERT INTO Building_YieldChangesPerPop(BuildingType,	YieldType,	  Yield)
-SELECT     'BUILDING_PRIVATE_PHARMACY',	        	     'YIELD_HEALTH',	  20 UNION ALL
-SELECT     'BUILDING_PRIVATE_PHARMACY',	        	     'YIELD_GOLD',	      20 UNION ALL
+SELECT     'BUILDING_PRIVATE_PHARMACY',	        	     'YIELD_HEALTH',	  10 UNION ALL
+SELECT     'BUILDING_PRIVATE_PHARMACY',	        	     'YIELD_GOLD',	      10 UNION ALL
 
-SELECT     'BUILDING_HOSPITAL',	        	             'YIELD_HEALTH',	  25 UNION ALL
-SELECT     'BUILDING_HERBALIST',	        	         'YIELD_HEALTH',	  20 UNION ALL
+SELECT     'BUILDING_HOSPITAL',	        	             'YIELD_HEALTH',	  15 UNION ALL
+SELECT     'BUILDING_HERBALIST',	        	         'YIELD_HEALTH',	  10 UNION ALL
 SELECT     'BUILDING_PONTDUGARD',	                     'YIELD_HEALTH',	  25 ;
 
 ---建筑与河流产出
@@ -342,9 +348,9 @@ FROM Features WHERE NaturalWonder = '1' OR PseudoNaturalWonder = '1';
 
 ---建筑提升建筑产出
 INSERT INTO Building_BuildingClassYieldChanges (BuildingType,	BuildingClassType,			YieldType,		YieldChange)
-SELECT     'BUILDING_COOKED_MEDICINE',	'BUILDINGCLASS_HERBALIST',	                     'YIELD_HEALTH',	  3 UNION ALL
-SELECT     'BUILDING_COOKED_MEDICINE',	'BUILDINGCLASS_VINYARD',	                     'YIELD_HEALTH',	  3 UNION ALL
-SELECT     'BUILDING_COOKED_MEDICINE',	'BUILDINGCLASS_PRIVATE_PHARMACY',	             'YIELD_HEALTH',      3 UNION ALL
+SELECT     'BUILDING_COOKED_MEDICINE',	'BUILDINGCLASS_HERBALIST',	                     'YIELD_HEALTH',	  1 UNION ALL
+SELECT     'BUILDING_COOKED_MEDICINE',	'BUILDINGCLASS_VINYARD',	                     'YIELD_HEALTH',	  1 UNION ALL
+SELECT     'BUILDING_COOKED_MEDICINE',	'BUILDINGCLASS_PRIVATE_PHARMACY',	             'YIELD_HEALTH',      1 UNION ALL
 
 
 SELECT     'BUILDING_BIOLOGICAL_FACTORIES',	'BUILDINGCLASS_HOSPITAL',	                    'YIELD_HEALTH',	  3 UNION ALL
