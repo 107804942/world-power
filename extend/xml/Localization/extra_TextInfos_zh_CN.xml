@@ -1519,7 +1519,7 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
-			<Text>[ICON_STRENGTH]战斗力+33%。额外增加一次攻击次数，该单位4格范围内的海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。</Text>
+			<Text>[ICON_STRENGTH]战斗力+33%。额外增加一次攻击次数，该单位4格范围内的海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。远程攻击有100%的几率击退敌方海军单位，被击退的单位会受到额外的溅射伤害。</Text>
 		</Row>
 
 
@@ -7180,7 +7180,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_URBAN_CANNON_HELP">
-			<Text>强大的攻城单位，攻击时可对大范围的敌军造成阻滞效果。但该单位十分笨重，行动迟缓。</Text>
+			<Text>强大的攻城单位，该单位十分笨重，行动迟缓。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_URBAN_CANNON_STRATEGY">
@@ -9932,8 +9932,10 @@
 			</Row>
 
 
-	
-			
+
+
+		
+
 		</Language_zh_CN>
 
 

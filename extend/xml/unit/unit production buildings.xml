@@ -24,12 +24,11 @@
 		</Row>
 
 
+	
 		<Row>
 			<UnitType>UNIT_SUI_FLEET</UnitType>
 			<BuildingClassType>BUILDINGCLASS_WOOD_DOCK</BuildingClassType>
 		</Row>
-
-
 
 		<Row>
 			<UnitType>UNIT_HITTITE_WAR_CHARIOT</UnitType>

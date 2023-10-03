@@ -225,7 +225,10 @@
 		</Row>
 
 
+		
 
+		
+		
 
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
@@ -720,6 +723,8 @@
 			<Description>TXT_KEY_UNIT_CITADEL_FUTURE</Description>
 			<DefaultUnit>UNIT_CITADEL_FUTURE</DefaultUnit>
 		</Row>
+
+
 
 		<!--************************************五牙********************************-->
 		<Row>

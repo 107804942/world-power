@@ -1523,11 +1523,8 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
-			<Text>[ICON_STRENGTH]战斗力+33%。额外增加一次攻击次数，该单位4格范围内的海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。</Text>
+			<Text>[ICON_STRENGTH]战斗力+33%。额外增加一次攻击次数，该单位4格范围内的海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。远程攻击有100%的几率击退敌方海军单位，被击退的单位会受到额外的溅射伤害。</Text>
 		</Row>
-
-
-
 
 
 
@@ -7199,7 +7196,7 @@
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_URBAN_CANNON_HELP">
-			<Text>强大的攻城单位，攻击时可对大范围的敌军造成阻滞效果。但该单位十分笨重，行动迟缓。</Text>
+			<Text>强大的攻城单位，该单位十分笨重，行动迟缓。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_URBAN_CANNON_STRATEGY">
@@ -9969,6 +9966,9 @@
 		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA">
 			<Text>公共工程是行政主体为了公共利益对不动产所进行的工程活动，以及其他人为实现行政主体的意图对不动产进行的以公共利益为目的工程活动。必须具备下述条件：1.以不动产为对象。非物质的活动不是工程，不动产的范围包括按自然性质的不动产和按用途作用的不动产。2.以公共利益为目的。行政主体为了公共利益的目的而实施，具有特殊的权力。行政主体纯粹为了财政收入百的管理私产的工程，不是公共工程。3.由行政主体自己实施或他人为行政主体意图而实施。他人实施，但以行政主体因此得到利益作为工程的目的，即为行政主体的打算而进行的工程。</Text>
 		</Row>
+
+
+
 		
 	</Language_zh_Hant_HK>
 

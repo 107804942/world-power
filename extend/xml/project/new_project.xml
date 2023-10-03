@@ -266,6 +266,20 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
 
+
+		<Row>
+			<Type>PROJECT_ATAKABUNE</Type>
+			<Description>TXT_KEY_PROJECT_ATAKABUNE</Description>
+			<Help>TXT_KEY_PROJECT_ATAKABUNE_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_ATAKABUNE_PEDIA</Civilopedia>
+			<TechPrereq>TECH_ADMINISTRATION</TechPrereq>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<Cost>260</Cost>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+		
 		<Row>
 			<Type>PROJECT_SUI_FLEET</Type>
 			<Description>TXT_KEY_PROJECT_SUI_FLEET</Description>
@@ -522,8 +536,15 @@
 		</Row>
 
 
+
+
+
+
 	</Projects>
 
+	
+	
+	
 	<Project_Flavors>
 
 	
@@ -626,8 +647,14 @@
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
-		
-		
+
+
+
+		<Row>
+			<ProjectType>PROJECT_ATAKABUNE</ProjectType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>950</Flavor>
+		</Row>
 		
 		<Row>
 			<ProjectType>PROJECT_SUI_FLEET</ProjectType>
