@@ -761,6 +761,4 @@ end
 
 Events.UnitShouldDimFlag.Add(FixWorkerBridge)
 
-tExExRSUnitName = nil;
-
 print("NewUnitRules Check success!")
