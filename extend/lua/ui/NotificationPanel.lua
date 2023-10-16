@@ -244,10 +244,7 @@ function OnNotificationAdded( Id, type, toolTip, strSummary, iGameValue, iExtraG
         return;
     end
     
-    -- Block the lost of "Special" Resources (Manpower, Consumer & Electricity) Notification
-    if (type == NotificationTypes.NOTIFICATION_DEMAND_RESOURCE and iExtraGameData == -1 and GameInfoTypes["RESOURCE_MANPOWER"] ~= nil
-    and (iGameValue == GameInfoTypes["RESOURCE_MANPOWER"] or iGameValue == GameInfoTypes["RESOURCE_CONSUMER"] or iGameValue == GameInfoTypes["RESOURCE_ELECTRICITY"] or iGameValue == GameInfoTypes["RESOURCE_TROOPS"]))
-	or (type == NotificationTypes.NOTIFICATION_PROJECT_COMPLETED and GameInfoTypes["PROJECT_COMMOM_ORGANIZED"] ~= nil and iGameValue == GameInfoTypes["PROJECT_COMMOM_ORGANIZED"])  ---新增
+    if (type == NotificationTypes.NOTIFICATION_PROJECT_COMPLETED and GameInfoTypes["PROJECT_COMMOM_ORGANIZED"] ~= nil and iGameValue == GameInfoTypes["PROJECT_COMMOM_ORGANIZED"])  ---新增
     then
         return;
     end

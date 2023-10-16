@@ -2839,8 +2839,6 @@
 		<Delete UnitType="UNIT_MECH" PromotionType="PROMOTION_IGNORE_TERRAIN_COST" />
 		<Delete UnitType="UNIT_MECH" PromotionType="PROMOTION_MARCH" />
 		<Delete UnitType="UNIT_MECH" PromotionType="PROMOTION_INDIRECT_FIRE" />
-		<Delete UnitType="UNIT_MECH" PromotionType="PROMOTION_CORPS_1" />
-		<Delete UnitType="UNIT_MECH" PromotionType="PROMOTION_CORPS_2" />
 
 
 
