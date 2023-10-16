@@ -8466,7 +8466,7 @@
 
 
 
-		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
+		<!-- <Replace Tag="TXT_KEY_PROMOTION_BARRAGE_1_HELP" >
 			<Text>如果目标单位本次被攻击时HP损失大于40，则其下回合[ICON_MOVES]移动力降低至1，并失去近战攻击能力，再次受到攻击则完全丧失移动，直至其恢复满员该效果才会消失。</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_BARRAGE_2_HELP" >
@@ -8492,7 +8492,7 @@
 
 		<Replace Tag="TXT_KEY_PROMOTION_SUNDER_2_HELP">
 			<Text>如果目标单位本次被攻击时HP损失大于10，则其防御力-25%，直至其恢复满员该效果才会消失。（该效果可叠加）</Text>
-		</Replace>
+		</Replace>-->
 
 
 

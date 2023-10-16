@@ -1500,7 +1500,9 @@ function OnBannerClick( x, y )
 		local player = Players[playerID];
 		
 		-- Active player city
-		if playerID == Game.GetActivePlayer() then
+		if playerID == Game.GetActivePlayer() 
+		or Players[Game.GetActivePlayer()]:IsObserver()
+		then
 			-- Puppets are special
 			if (plot:GetPlotCity():IsPuppet() and not player:MayNotAnnex()) then
 				local popupInfo = {

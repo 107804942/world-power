@@ -3636,7 +3636,12 @@ if Game then
 				end
 			end
 	-- todo !!!
-			append( tips, concat(luxuries) .. concat(strategic) )
+			if #luxuries > 0 then
+				insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_LUXURIES_SHORT" .. ":" .. concat(luxuries))
+			end
+			if #strategic > 0 then
+				insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_STRATEGIC_SHORT" .. ":" .. concat(strategic))
+			end
 
 		else  --if teamID ~= activeTeamID then
 
@@ -3661,7 +3666,12 @@ if Game then
 						end
 					end
 				end
-				append( tips, concat(luxuries) .. concat(strategic) )
+				if #luxuries > 0 then
+					insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_LUXURIES_SHORT" .. ":" .. concat(luxuries))
+				end
+				if #strategic > 0 then
+					insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_STRATEGIC_SHORT" .. ":" .. concat(strategic))
+				end
 
 				-- Resources they would like from us
 				luxuries = {}
@@ -3676,8 +3686,16 @@ if Game then
 					end
 				end
 				if #luxuries > 0 or #strategic > 0 then
-					insert( tips, L"TXT_KEY_DIPLO_YOUR_ITEMS_LABEL" .. ": " .. concat(luxuries) .. concat(strategic) )
+					insert( tips, L"TXT_KEY_DIPLO_YOUR_ITEMS_LABEL")
+					if #luxuries > 0 then
+						insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_LUXURIES_SHORT" .. ":" .. concat(luxuries))
+					end
+					if #strategic > 0 then
+						insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_STRATEGIC_SHORT" .. ":" .. concat(strategic))
+					end
+					insert( tips, "----------------")
 				end
+				
 
 				-- Treaties
 				local peaceTurnExpire = dealsFinalTurn[ TradeableItems.TRADE_ITEM_PEACE_TREATY ]
