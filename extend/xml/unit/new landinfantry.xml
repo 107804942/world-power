@@ -148,6 +148,7 @@
 			<ExtraMaintenanceCost>12</ExtraMaintenanceCost>
 			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
 			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
+			<NoTroopConsume>true</NoTroopConsume>
 		</Row>
 
 		<Row>
@@ -189,6 +190,7 @@
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
 			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
+			<NoTroopConsume>true</NoTroopConsume>
 		</Row>
 
 		<Row>
@@ -230,6 +232,7 @@
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
 			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
+			<NoTroopConsume>true</NoTroopConsume>
 		</Row>
 
 
@@ -271,6 +274,7 @@
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
 			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
+			<NoTroopConsume>true</NoTroopConsume>
 		</Row>
 
 

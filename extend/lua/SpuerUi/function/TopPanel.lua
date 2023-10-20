@@ -192,7 +192,7 @@ local function UpdateTopPanelNow()
 	for resourceID, instance in pairs( g_ResourceIcons ) do
 		if activePlayer:GetNumResourceTotal( resourceID, true ) ~= 0 or activeTeamTechs:HasTech( instance.TechRevealID ) then
 		    if resourceID==GameInfo.Resources.RESOURCE_TROOPS.ID then  ---ÐÂÔö±øÁ¦
-			instance.Count:SetText( Colorize( -activePlayer:GetNumResourceAvailable(resourceID, true) ) )
+			instance.Count:SetText( Colorize( activePlayer:GetDomainTroopsActive() ) )
 			else
 			instance.Count:SetText( Colorize( activePlayer:GetNumResourceAvailable(resourceID, true) ) )
 			end
@@ -399,6 +399,9 @@ local function UpdateTopPanelNow()
 
 			if unitSupplyProductionModifier < 0 then
 				insert( tips, L("TXT_KEY_UNIT_SUPPLY_REACHED_TOOLTIP", activePlayer:GetNumUnitsSupplied(), activePlayer:GetNumUnitsOutOfSupply(), -unitSupplyProductionModifier ) )
+			end
+			if activePlayer:IsLackingTroops() then
+				insert( tips, L("TXT_KEY_LACKING_TROOPS_TOOLTIP"))
 			end
 
 			local warningText = ""

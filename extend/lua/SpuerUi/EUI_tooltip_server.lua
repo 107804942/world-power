@@ -412,11 +412,11 @@ local function ShowResourceToolTip( resourceID, tips )
 		local numResourceLocal = activePlayer:GetNumResourceTotal( resourceID, false ) + numResourceExport
 
      	if resourceID==GameInfo.Resources.RESOURCE_TROOPS.ID then  ---ÐÂÔö±øÁ¦
-        numResourceAvailable = activePlayer:GetNumResourceUsed( resourceID ) - activePlayer:GetNumResourceTotal(resourceID, true) 
-        numResourceUsed   = activePlayer:GetNumResourceTotal( resourceID, false ) + numResourceExport
-		numResourceLocal = activePlayer:GetNumResourceUsed( resourceID );
-        if (numResourceUsed ~= 0 or numResourceAvailable ~= 0) then
-		   end
+			numResourceAvailable = activePlayer:GetDomainTroopsActive();
+			numResourceUsed   = activePlayer:GetDomainTroopsUsed();
+			numResourceLocal = activePlayer:GetDomainTroopsTotal();
+        	if (numResourceUsed ~= 0 or numResourceAvailable ~= 0) then
+			end
 		end
 
 		insert( tips, ColorizeAbs(numResourceAvailable) .. resource.IconString .. " " .. Locale.ToUpper(resource._Name) )

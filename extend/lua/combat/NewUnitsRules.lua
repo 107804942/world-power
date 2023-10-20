@@ -5,9 +5,6 @@
 include("UtilityFunctions")
 
 
-g_CorpsCount = {};
-
-
 local AirCraftCarrierID = GameInfo.UnitPromotions["PROMOTION_CARRIER_UNIT"].ID
 local MilitiaID = GameInfo.UnitPromotions["PROMOTION_MILITIA_COMBAT"].ID
 
@@ -28,15 +25,8 @@ local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 local CitadelID = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
 
 
-function NewUnitCreationRules() ------------------------Human Player's units rule & AI units assistance--
-	local iTurnTrigger = 10;
-	local iTurnsElapsed = Game.GetElapsedGameTurns();
-	local IsTimetoCheckPromotion = false;
-	if iTurnsElapsed % iTurnTrigger == 9 then
-		IsTimetoCheckPromotion = true;
-		print("It's Time to Check Unit Promotion");
-	end
-
+-- Human Player's units rule & AI units assistance
+function NewUnitCreationRules()
 	for playerID, player in pairs(Players) do
 		if player and player:IsAlive() and not player:IsMinorCiv() and player:GetNumUnits() > 0 then --  and not player:IsBarbarian() then
 			print("Player " .. playerID .. " - Unit Counts: " .. player:GetNumUnits());
@@ -51,40 +41,11 @@ function NewUnitCreationRules() ------------------------Human Player's units rul
 
 			-- Troops count - Total
 			local CapCity = player:GetCapitalCity();
-			local iTotalTroops = 0;
-			local iUsedTroops = 0
-			if CapCity then
-				iTotalTroops = player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_SMALL"])
-					+ player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_MEDIUM"])
-					+ player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_LARGE"])
-					+ player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_XL"])
-					+ player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_XXL"])
-					+ player:GetBuildingClassCount(GameInfoTypes["BUILDINGCLASS_CITY_SIZE_GLOBAL"]);
-				if player:IsHuman() then
-					iTotalTroops = iTotalTroops + 6;
-				else
-					iTotalTroops = iTotalTroops + 8;
-				end
-			end
 
 			-------------Units Processing!
 			-- Initial Cargo List
 			g_CargoSetList[playerID] = nil;
-			g_CorpsCount[playerID] = { 0, 0, nil, nil, nil };
 			for unit in player:Units() do
-				-- Troops count - Used
-				if unit and unit:IsCombatUnit() and not unit:IsImmobile() then
-					iUsedTroops = iUsedTroops + 1;
-					if unit:IsHasPromotion(CorpsID) and GameInfo.Unit_FreePromotions { UnitType = GameInfo.Units
-						[unit:GetUnitType()].Type, PromotionType = "PROMOTION_CORPS_1" } () == nil then
-						g_CorpsCount[playerID][1] = g_CorpsCount[playerID][1] + 1;
-					end
-					if unit:IsHasPromotion(ArmeeID) and GameInfo.Unit_FreePromotions { UnitType = GameInfo.Units
-						[unit:GetUnitType()].Type, PromotionType = "PROMOTION_CORPS_2" } () == nil then
-						g_CorpsCount[playerID][2] = g_CorpsCount[playerID][2] + 1;
-					end
-				end
-
 				if unit == nil then
 					-- Fix Possible 0 HP Unit Bug (Temp Method)
 				elseif (unit:GetDamage() >= unit:GetMaxHitPoints() or unit:GetCurrHitPoints() <= 0) then
@@ -257,37 +218,6 @@ function NewUnitCreationRules() ------------------------Human Player's units rul
 
 				end
 			end -------for units END
-
-			-- Troops count - Set
-			if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
-				if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_HIGH") == 1 then
-					iTotalTroops = iTotalTroops * 4;
-				elseif PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_LOW") == 1 then
-					iTotalTroops = iTotalTroops * 1;
-				else
-					iTotalTroops = iTotalTroops * 2;
-				end
-			else
-				iTotalTroops = 0;
-			end
-			if iTotalTroops < iUsedTroops then
-				iUsedTroops = iTotalTroops;
-			end
-			if CapCity then
-				if CapCity:GetNumBuilding(GameInfoTypes["BUILDING_TROOPS"]) ~= iTotalTroops then
-					CapCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TROOPS"], iTotalTroops);
-				end
-				if CapCity:GetNumBuilding(GameInfoTypes["BUILDING_TROOPS_USED"]) ~= iUsedTroops then
-					CapCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TROOPS_USED"], iUsedTroops);
-				end
-				if iTotalTroops > 0 then
-					if iTotalTroops > iUsedTroops then
-						CapCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TROOPS_DEBUFF"], 0);
-					else
-						CapCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TROOPS_DEBUFF"], 1);
-					end
-				end
-			end
 		end ----------if player ~= nil END
 	end -------for playerID END
 end  ------function end
@@ -308,7 +238,7 @@ Events.LoadScreenClose.Add(OnSPLoadSkip)
 -- Set Corps & Armee for AI
 function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	if G_isSPLoading or Players[iPlayerID] == nil or Players[iPlayerID]:GetCapitalCity() == nil
-		or Players[iPlayerID]:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS"]) == 0
+		or PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 1
 		or Players[iPlayerID]:GetUnitByID(iUnitID) == nil
 		or Players[iPlayerID]:GetUnitByID(iUnitID):GetPlot() == nil
 		or Players[iPlayerID]:GetUnitByID(iUnitID):IsImmobile()
@@ -332,20 +262,20 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 				and pEUnit:IsCombatUnit() and not pEUnit:IsImmobile()
 				and not pEUnit:IsHasPromotion(ArmeeID)
 				and pEUnit:GetDomainType() == DomainTypes.DOMAIN_LAND 
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_MECH"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_CNDR"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_SIEGE04H"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_LEVDESTROYER"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03P"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_ANGEL"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03S"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVAL_MONSTER"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_HOVER_WORM"]
-		  and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_PARTICLE_CANNON"]-- SP8.0: Corps & Armee only for land units
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_MECH"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_CNDR"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_SIEGE04H"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_LEVDESTROYER"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03P"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_ANGEL"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03S"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_NAVAL_MONSTER"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_HOVER_WORM"]
+				and pEUnit:GetUnitType() ~= GameInfoTypes["UNIT_PARTICLE_CANNON"]-- SP8.0: Corps & Armee only for land units
 			then
 				table.insert(eUnitList, pEUnit);
 			end
@@ -358,14 +288,8 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 		if pCUnit == nil then
 		elseif pCUnit:IsHasPromotion(CorpsID) then
 			pCUnit:SetHasPromotion(ArmeeID, true);
-			if g_CorpsCount[iPlayerID] then
-				g_CorpsCount[iPlayerID][2] = g_CorpsCount[iPlayerID][2] + 1;
-			end
 		else
 			pCUnit:SetHasPromotion(CorpsID, true);
-			if g_CorpsCount[iPlayerID] then
-				g_CorpsCount[iPlayerID][1] = g_CorpsCount[iPlayerID][1] + 1;
-			end
 		end
 	end
 	if not pUnit:IsCombatUnit() then
@@ -377,9 +301,6 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	local pPlot              = pUnit:GetPlot();
 	local iType              = pUnit:GetUnitType();
 	local class              = pUnit:GetUnitClassType();
-
-	local iTotalTroops       = CapCity:GetNumBuilding(GameInfoTypes["BUILDING_TROOPS"]);
-	local iUsedTroops        = CapCity:GetNumBuilding(GameInfoTypes["BUILDING_TROOPS_USED"]);
 
 	local iArsenalClass      = GameInfoTypes["BUILDINGCLASS_ARSENAL"];
 	local iMilitaryBaseClass = GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"];
@@ -428,7 +349,7 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 		end
 	end
 
-	if Heal2Unit or (Heal1Unit and pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0) then
+	if Heal2Unit or (Heal1Unit and pPlayer:IsLackingTroops()) then
 		if Heal1Unit then
 			Heal1Unit:ChangeDamage(-30);
 			Heal1Unit:SetMoves(math.floor(Heal1Unit:MovesLeft() / (2 * GameDefines["MOVE_DENOMINATOR"])) *
@@ -449,29 +370,19 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	elseif CorpsUnit then
 		CorpsUnit:SetHasPromotion(ArmeeID, true);
 		pUnit:Kill();
-		if g_CorpsCount[iPlayerID] then
-			g_CorpsCount[iPlayerID][2] = g_CorpsCount[iPlayerID][2] + 1;
-		end
 		return;
 	elseif otherUnit then
 		otherUnit:SetHasPromotion(CorpsID, true);
 		pUnit:Kill();
-		if g_CorpsCount[iPlayerID] then
-			g_CorpsCount[iPlayerID][1] = g_CorpsCount[iPlayerID][1] + 1;
-		end
 		return;
 	end
 
 	-- Remove redundance Units
-	if (not pUnit:CanMove() and not pPlot:IsCity()) or pUnit:GetLevel() > 1 then
-	elseif pPlayer:CountNumBuildings(GameInfoTypes["BUILDING_TROOPS_DEBUFF"]) > 0 then
+	if pPlayer:GetDomainTroopsActive() < 0
+	and not pUnit:IsNoTroops() 
+	and not (pUnit:GetLevel() > 1) 
+	then
 		pUnit:Kill();
-	else
-		iUsedTroops = math.min(iUsedTroops + 1, iTotalTroops);
-		CapCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TROOPS_USED"], iUsedTroops);
-		if iUsedTroops == iTotalTroops then
-			CapCity:SetNumRealBuilding(GameInfoTypes["BUILDING_TROOPS_DEBUFF"], 1);
-		end
 	end
 end
 
@@ -520,10 +431,8 @@ end
 function AASPromotionTransfer(player, unit)
 	local Sunder1ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_1"].ID
 	local Sunder2ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_2"].ID
-	-- local Sunder3ID = GameInfo.UnitPromotions["PROMOTION_SUNDER_3"].ID
 	local CollDamageLV1ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_1"].ID
 	local CollDamageLV2ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_2"].ID
-	-- local CollDamageLV3ID = GameInfo.UnitPromotions["PROMOTION_COLLATERAL_DAMAGE_3"].ID
 
 	local LogisticsID = GameInfo.UnitPromotions["PROMOTION_LOGISTICS"].ID
 
@@ -760,7 +669,5 @@ function FixWorkerBridge(iPlayerID, iUnitID)
 end
 
 Events.UnitShouldDimFlag.Add(FixWorkerBridge)
-
-tExExRSUnitName = nil;
 
 print("NewUnitRules Check success!")

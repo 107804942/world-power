@@ -110,9 +110,9 @@ DROP TRIGGER UnitClass_FreePromotions_Corps;
 DROP TRIGGER UnitClass_FreePromotions_Armee; 
 
 ----删除堡垒的军团
-DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_CORPS_1' AND UnitType = 'UNIT_CITADEL_MID';
-DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_CORPS_1' AND UnitType = 'UNIT_CITADEL_LATE';
-DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_CORPS_2' AND UnitType = 'UNIT_CITADEL_LATE';
+--DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_CORPS_1' AND UnitType = 'UNIT_CITADEL_MID';
+--DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_CORPS_1' AND UnitType = 'UNIT_CITADEL_LATE';
+--DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_CORPS_2' AND UnitType = 'UNIT_CITADEL_LATE';
 
 ----删除堡垒的军团晋升触发器
 --CREATE TRIGGER IF NOT EXISTS CITADEL_Corps
