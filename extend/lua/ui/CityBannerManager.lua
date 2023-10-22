@@ -403,7 +403,7 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		
 		
 		
-			-------------------------------------------- SP City Levels & Sizes & Resource Demend Icon-----------------------------------------
+		-------------------------------------------- SP City Levels & Sizes & Resource Demend Icon-----------------------------------------
 		local cityOwner = Players[city:GetOwner()]
 		
 		if city:GetPopulation() > 0 and cityOwner:IsHuman() and controls.CityIcon_NOUTILITY ~= nil then
@@ -502,70 +502,48 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			controls.CityIcon_Lv4:SetHide(true);
 			controls.CityIcon_Lv5:SetHide(true);
 			controls.CityIcon_NOAC:SetHide(true);
-			
-			if     city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV1"]) or city:IsHasBuilding(GameInfoTypes["BUILDING_SATRAPS_COURT"]) then
+
+			local iCityLevel = city:GetCorruptionLevel()
+			local sCityLevelIconTT = getCorruptionScoreReport(player, city)
+			if iCityLevel == GameInfoTypes["CORRUPTION_LV1"] then
 				controls.CityIcon_Lv1:SetHide(false);
-				controls.CityIcon_Lv1:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_HALL_LV1_HELP"));
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV2"]) then
+				controls.CityIcon_Lv1:SetToolTipString(sCityLevelIconTT .. Locale.ConvertTextKey( "TXT_KEY_BUILDING_CITY_HALL_LV1_HELP"));
+			elseif iCityLevel == GameInfoTypes["CORRUPTION_LV2"] then
 				controls.CityIcon_Lv2:SetHide(false);
-				controls.CityIcon_Lv2:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV2_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_CONSTABLE"]) and not city:IsHasBuilding(GameInfoTypes["BUILDING_ROMAN_SENATE"]) then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV2"));
-				end
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV3"]) then
+				controls.CityIcon_Lv2:SetToolTipString(sCityLevelIconTT .. Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV2_HELP"));
+			elseif iCityLevel == GameInfoTypes["CORRUPTION_LV3"] then
 				controls.CityIcon_Lv3:SetHide(false);
-				controls.CityIcon_Lv3:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV3_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_SHERIFF_OFFICE"])then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV3"));
-				end
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV4"]) then
+				controls.CityIcon_Lv3:SetToolTipString(sCityLevelIconTT .. Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV3_HELP"));
+			elseif iCityLevel == GameInfoTypes["CORRUPTION_LV4"] then
 				controls.CityIcon_Lv4:SetHide(false);
-				controls.CityIcon_Lv4:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV4_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_POLICE_STATION"])then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV4"));
-				end
-				
-				
-			elseif city:IsHasBuilding(GameInfoTypes["BUILDING_CITY_HALL_LV5"]) then
+				controls.CityIcon_Lv4:SetToolTipString(sCityLevelIconTT .. Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV4_HELP"));
+			elseif iCityLevel == GameInfoTypes["CORRUPTION_LV5"] then
 				controls.CityIcon_Lv5:SetHide(false);
-				controls.CityIcon_Lv5:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV5_HELP"));
-				
-				if not city:IsHasBuilding(GameInfoTypes["BUILDING_PROCURATORATE"])then
-					controls.CityIcon_NOAC:SetHide(false);
-					controls.CityIcon_NOAC:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_NOAC_LV5"));
-				end
+				controls.CityIcon_Lv5:SetToolTipString(sCityLevelIconTT .. Locale.ConvertTextKey("TXT_KEY_BUILDING_CITY_HALL_LV5_HELP"));
+			end
+			
+			local iAntiCorruptionBuildingID = getAntiCorruptionBuildingID(player, iCityLevel)
+			if iAntiCorruptionBuildingID ~= -1 and not city:IsHasBuilding(iAntiCorruptionBuildingID) then
+				controls.CityIcon_NOAC:SetHide(false);
 			end
 			
 			
 			if city:GetResourceDemanded(true) ~= -1 and city:GetWeLoveTheKingDayCounter() <= 0 then
 --				local ResourceDemand = city:GetResourceDemanded()
 				local pResourceInfo = GameInfo.Resources[city:GetResourceDemanded()];
-				
 				controls.CityIcon_ResurceDemand:SetText( pResourceInfo.IconString )
 				controls.CityIcon_ResurceDemand:SetToolTipString(Locale.ConvertTextKey("TXT_KEY_CITYVIEW_RESOURCE_DEMANDED_TT"));
 				controls.CityIcon_ResurceDemand:SetHide(false);
 			else
 				controls.CityIcon_ResurceDemand:SetHide(true);
 			end
-			
-	
-			
-				
+
 		end
 			
 		
 		
 		
-			-------------------------------------------- SP City Levels & Sizes & Resource Demend Icon END-----------------------------------------	
+		-------------------------------------------- SP City Levels & Sizes & Resource Demend Icon END-----------------------------------------	
 		
 		
 	
