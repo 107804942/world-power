@@ -967,7 +967,7 @@
 			<Cost>640</Cost>
 			<ConquestProb>100</ConquestProb>
 			<MaxStartEra>ERA_MODERN</MaxStartEra>
-			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
+			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
@@ -1196,7 +1196,7 @@
 			<Cost>1300</Cost>
 			<ConquestProb>100</ConquestProb>
 			<MaxStartEra>ERA_MODERN</MaxStartEra>
-			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
