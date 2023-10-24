@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<HandicapInfos>
+
 		<Row>
 			<Type>HANDICAP_IMPOSSIBLE</Type>
 			<Description>TXT_KEY_HANDICAP_IMPOSSIBLE</Description>
@@ -57,6 +58,66 @@
 			<AIAdvancedStartPercent>200</AIAdvancedStartPercent>
 			<IconAtlas>DIFFICULTY_9</IconAtlas>
 			<PortraitIndex>8</PortraitIndex>
+			<AIFreeXP>200</AIFreeXP>
+			<AIFreeXPPercent>100</AIFreeXPPercent>
+		</Row>
+		
+		<Row>
+			<Type>HANDICAP_IMPOSSIBLE_EXTREM</Type>
+			<Description>TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM</Description>
+			<Help>TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM_HELP</Help>
+			<StartingLocPercent>50</StartingLocPercent>
+			<AdvancedStartPointsMod>75</AdvancedStartPointsMod>
+			<HappinessDefault>10</HappinessDefault>
+			<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
+			<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
+			<Gold>0</Gold>
+			<GoldFreeUnits>0</GoldFreeUnits>
+			<ProductionFreeUnits>5</ProductionFreeUnits>
+			<ProductionFreeUnitsPopulationPercent>100</ProductionFreeUnitsPopulationPercent>
+			<ProductionFreeUnitsPerCity>2</ProductionFreeUnitsPerCity>
+			<RouteCostPercent>100</RouteCostPercent>
+			<UnitCostPercent>100</UnitCostPercent>
+			<BuildingCostPercent>100</BuildingCostPercent>
+			<ResearchPercent>100</ResearchPercent>
+			<PolicyPercent>100</PolicyPercent>
+			<ImprovementCostPercent>100</ImprovementCostPercent>
+			<CityProductionNumOptionsConsidered>2</CityProductionNumOptionsConsidered>
+			<TechNumOptionsConsidered>2</TechNumOptionsConsidered>
+			<PolicyNumOptionsConsidered>2</PolicyNumOptionsConsidered>
+			<!--<InflationPercent>100</InflationPercent>-->
+			<AttitudeChange>-11</AttitudeChange>
+			<NoTechTradeModifier>10</NoTechTradeModifier>
+			<BarbCampGold>25</BarbCampGold>
+			<BarbSpawnMod>0</BarbSpawnMod>
+			<BarbarianBonus>0</BarbarianBonus>
+			<AIBarbarianBonus>80</AIBarbarianBonus>
+			<EarliestBarbarianReleaseTurn>0</EarliestBarbarianReleaseTurn>
+			<BarbarianLandTargetRange>5</BarbarianLandTargetRange>
+			<BarbarianSeaTargetRange>10</BarbarianSeaTargetRange>
+			<AIStartingUnitMultiplier>4</AIStartingUnitMultiplier>
+			<AIStartingDefenseUnits>4</AIStartingDefenseUnits>
+			<AIStartingWorkerUnits>4</AIStartingWorkerUnits>
+			<AIStartingExploreUnits>3</AIStartingExploreUnits>
+			<AIDeclareWarProb>300</AIDeclareWarProb>
+			<AIWorkRateModifier>600</AIWorkRateModifier>
+			<AIUnhappinessPercent>30</AIUnhappinessPercent>
+			<AIGrowthPercent>33</AIGrowthPercent>
+			<AITrainPercent>33</AITrainPercent>
+			<AIWorldTrainPercent>50</AIWorldTrainPercent>
+			<AIConstructPercent>25</AIConstructPercent>
+			<AIWorldConstructPercent>50</AIWorldConstructPercent>
+			<AICreatePercent>50</AICreatePercent>
+			<AIWorldCreatePercent>50</AIWorldCreatePercent>
+			<AIBuildingCostPercent>20</AIBuildingCostPercent>
+			<AIUnitCostPercent>20</AIUnitCostPercent>
+			<AIUnitSupplyPercent>75</AIUnitSupplyPercent>
+			<AIUnitUpgradePercent>5</AIUnitUpgradePercent>
+			<!--<AIInflationPercent>80</AIInflationPercent>-->
+			<AIPerEraModifier>-12</AIPerEraModifier>
+			<AIAdvancedStartPercent>200</AIAdvancedStartPercent>
+			<IconAtlas>DIFFICULTY_9</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
 			<AIFreeXP>700</AIFreeXP>
 			<AIFreeXPPercent>100</AIFreeXPPercent>
 		</Row>
@@ -64,6 +125,38 @@
 
 
 	<HandicapInfo_AIFreeTechs>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<TechType>TECH_AGRICULTURE</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<TechType>TECH_FISHERY</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<TechType>TECH_HUNTING</TechType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<TechType>TECH_STONE_TOOLS</TechType>
+		</Row>
+
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<TechType>TECH_BRONZE_WORKING</TechType>
+		</Row>
+
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<TechType>TECH_MINING</TechType>
+		</Row>
+		
+		
+		
+		
+		
+		
 		<Row>
 			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
 			<TechType>TECH_AGRICULTURE</TechType>
@@ -118,6 +211,48 @@
 
 	<HandicapInfo_Goodies>
 
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_POPULATION</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_CULTURE</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_PANTHEON_FAITH</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_PROPHET_FAITH</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_GOLD</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_MAP</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_TECH</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_REVEAL_NEARBY_BARBS</GoodyType>
+		</Row>
+		<Row>
+			<HandicapType>HANDICAP_IMPOSSIBLE_EXTREM</HandicapType>
+			<GoodyType>GOODY_UPGRADE_UNIT</GoodyType>
+		</Row>
+		
+		
+		
+
+		
+		
 		<Row>
 			<HandicapType>HANDICAP_IMPOSSIBLE</HandicapType>
 			<GoodyType>GOODY_POPULATION</GoodyType>
@@ -195,7 +330,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
 			<OrderPriority>11</OrderPriority>
-			<MaxHitPointsModifier>400</MaxHitPointsModifier>
+			<MaxHitPointsModifier>200</MaxHitPointsModifier>
 			<PortraitIndex>26</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
@@ -207,6 +342,24 @@
 
 
 
+		<Row>
+			<Type>PROMOTION_DIFFICULTY_10</Type>
+			<Description>TXT_KEY_PROMOTION_DIFFICULTY_10</Description>
+			<Help>TXT_KEY_PROMOTION_DIFFICULTY_10_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>11</OrderPriority>
+			<MaxHitPointsModifier>300</MaxHitPointsModifier>
+			<PortraitIndex>26</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<ShowInPedia>0</ShowInPedia>
+			<CityAttack>50</CityAttack>
+			<SiegeInflictDamageChangeMaxHPPercent>8</SiegeInflictDamageChangeMaxHPPercent>
+			<PediaEntry>TXT_KEY_PROMOTION_DIFFICULTY_10</PediaEntry>
+		</Row>
+		
+		
 
 		<Row>
 			<Type>PROMOTION_AI_ATTACK_CITY</Type>
@@ -233,14 +386,24 @@
 		<Row>
 			<Type>POLICY_DIFFICULTY_9</Type>
 			<Description>TXT_KEY_POLICY_DIFFICULTY_9</Description>
+			<ExtraHappinessPerCity>3</ExtraHappinessPerCity>
+			<Dummy>1</Dummy>
+			<WorkerSpeedModifier>25</WorkerSpeedModifier>
+			<CulturePerCity>2</CulturePerCity>
+		</Row>
+
+
+
+		<Row>
+			<Type>POLICY_DIFFICULTY_10</Type>
+			<Description>TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM</Description>
 			<ExtraHappinessPerCity>5</ExtraHappinessPerCity>
 			<Dummy>1</Dummy>
 			<WonderProductionModifier>33</WonderProductionModifier>
 			<WorkerSpeedModifier>50</WorkerSpeedModifier>
 			<CulturePerCity>2</CulturePerCity>
 		</Row>
-
-
+		
 
 		<Row>
 			<Type>POLICY_AI_REDUCE</Type>
@@ -313,40 +476,40 @@
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 		
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>3</Yield>
+			<Yield>2</Yield>
 		</Row>
 	</Policy_SpecialistYieldChanges>
 
@@ -354,26 +517,9 @@
 
 
 	<Policy_CityYieldChanges>
-		<!--<Row>
-			<PolicyType>POLICY_AI_REDUCE</PolicyType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_REDUCE</PolicyType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_REDUCE</PolicyType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>3</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_AI_REDUCE</PolicyType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
-		</Row>-->
+		
+
+		
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_HEALTH</YieldType>
@@ -408,13 +554,54 @@
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>20</Yield>
+			<Yield>4</Yield>
+		</Row>
+
+
+	
+		
+		
+		
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>10</Yield>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_HEALTH</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>3</Yield>
 		</Row>
 
 	</Policy_CityYieldChanges>
 
 
 	<Policy_FreePromotions>
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+		</Row>
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_9</PolicyType>
 			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
@@ -547,6 +734,69 @@
 			<PromotionType>PROMOTION_DIFFICULTY_9</PromotionType>
 			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
 		</Row>
+
+
+
+
+
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_DIFFICULTY_10</PromotionType>
+			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
+		</Row>
 	</UnitPromotions_UnitCombats>
 
 	<Language_zh_CN>
@@ -554,7 +804,7 @@
 			<Text>军备竞赛</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9_HELP">
-			<Text>HP最大值+400%,[ICON_STRENGTH]攻击力+50%。</Text>
+			<Text>HP最大值+200%,[ICON_STRENGTH]攻击力+50%。</Text>
 		</Row>
 
 
@@ -562,7 +812,7 @@
 			<Text>世界霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_HELP">
-			<Text>世界霸主，适合追求极致挑战的玩家。</Text>
+			<Text>世界霸主，适合高强度模组文明使用。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DIFFICULTY_9">
 			<Text>世界霸主</Text>
@@ -570,6 +820,25 @@
 
 		<Row Tag="TXT_KEY_POLICY_AI_REDUCE">
 			<Text>战备</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM">
+			<Text>世界传奇</Text>
+		</Row>
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM_HELP">
+			<Text>AI拥有极其恐怖的全方位加成，适合追求极致挑战的玩家。</Text>
+		</Row>
+
+		
+		
+
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_10">
+			<Text>世界传奇</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_10_HELP">
+			<Text>HP最大值+300%,攻城时具备额外加成。</Text>
 		</Row>
 	</Language_zh_CN>
 
@@ -579,7 +848,7 @@
 			<Text>军备竞赛</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9_HELP">
-			<Text>HP最大值+400%,[ICON_STRENGTH]攻击力+50%。</Text>
+			<Text>HP最大值+200%,[ICON_STRENGTH]攻击力+50%。</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_POLICY_AI_REDUCE">
@@ -590,10 +859,23 @@
 			<Text>世界霸主</Text>
 		</Row>
 		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_HELP">
-			<Text>世界霸主，适合追求极致挑战的玩家。</Text>
+			<Text>世界霸主，适合高强度模组文明使用。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_DIFFICULTY_9">
 			<Text>世界霸主</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM">
+			<Text>世界传奇</Text>
+		</Row>
+		<Row Tag="TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM_HELP">
+			<Text>AI拥有极其恐怖的全方位加成，适合追求极致挑战的玩家。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_10">
+			<Text>世界传奇</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_10_HELP">
+			<Text>HP最大值+300%,攻城时具备额外加成。</Text>
 		</Row>
 	</Language_en_US>
 

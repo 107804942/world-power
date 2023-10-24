@@ -106,8 +106,8 @@ INSERT INTO Audio_2DSounds (ScriptID,SoundID,SoundType,MinVolume,MaxVolume) VALU
 
 
 ----删除堡垒的军团晋升触发器
-DROP TRIGGER UnitClass_FreePromotions_Corps; 
-DROP TRIGGER UnitClass_FreePromotions_Armee; 
+--DROP TRIGGER UnitClass_FreePromotions_Corps; 
+--DROP TRIGGER UnitClass_FreePromotions_Armee; 
 
 ----删除堡垒的军团
 --DELETE FROM Unit_FreePromotions WHERE PromotionType = 'PROMOTION_CORPS_1' AND UnitType = 'UNIT_CITADEL_MID';

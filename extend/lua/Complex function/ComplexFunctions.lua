@@ -1907,21 +1907,34 @@ function IsUsingDifficult9()
 end
 local Difficult9Active = IsUsingDifficult9()
 
+function IsUsingDifficult10()
+	
+		if PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_IMPOSSIBLE_EXTREM then
+			return true
+		end
+
+	return false
+end
+local Difficult10Active = IsUsingDifficult10()
+
 function AI_DIFFICULTY_REDUCE()
 	 for i=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 		local Player = Players[i]
 		if Player:IsAlive() and Player:IsMajorCiv() then
 	    if not Player:IsHuman()  then
 
-		--if Game:GetHandicapType()>7 then
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_AI_REDUCE"].ID,true)
-		--end
 
-		if Difficult9Active then
+		if Game:GetHandicapType()>8 then
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_DIFFICULTY_9"].ID,true)
-		       end
-		   end
+		end
 
+	    if PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_IMPOSSIBLE_EXTREM  then
+		Player:SetHasPolicy(GameInfo.Policies["POLICY_DIFFICULTY_10"].ID,true)
+		end
+
+
+		   end
 		end
 	end
 end
@@ -1975,10 +1988,11 @@ function AiIntoNewEra(eTeam, eEra, bFirst)
 GameEvents.TeamSetEra.Add(AiIntoNewEra)
 
 
-if Difficult9Active  then
+
+
+if Difficult9Active or  Difficult10Active then
 
 function UpdateGreatPerson(eTeam, eEra, bFirst)
-       local TookSomething = 0	
 	   if  (bFirst) then
 	   for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 	   local pPlayer = Players[iPlayer]
@@ -1986,14 +2000,8 @@ function UpdateGreatPerson(eTeam, eEra, bFirst)
 	
 	   if pPlayer:GetTeam() == eTeam then
     	---------------------------------------
-		 if pPlayer:IsMajorCiv() and (not pPlayer:IsHuman())  then
-		 local capital = pPlayer:GetCapitalCity() 
-		 local capitalX = capital:GetX()
-		 local capitalY = capital:GetY()
+	   if pPlayer:IsMajorCiv() and (not pPlayer:IsHuman())  then
 
-		 pPlayer:InitUnit(GameInfoTypes.UNIT_ENGINEER, capitalX, capitalY)
-		 pPlayer:InitUnit(GameInfoTypes.UNIT_WRITER, capitalX, capitalY)
-		 pPlayer:InitUnit(GameInfoTypes.UNIT_ARTIST, capitalX, capitalY)
          pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
 		 end
 
@@ -2004,18 +2012,10 @@ function UpdateGreatPerson(eTeam, eEra, bFirst)
  end
 GameEvents.TeamSetEra.Add(UpdateGreatPerson)
 
-
-function IsAiMajorCiv(Player)
-    if  Player:IsMajorCiv() 
-	and not  Player:IsHuman() 
-	then
-        return true 
-    else
-        return false
-    end
 end
 
 
+if  Difficult10Active then
 function StealTech(iPlayer)
 local pPlayer = Players[iPlayer]
 if pPlayer == nil or (not pPlayer:IsMajorCiv()) or pPlayer:IsHuman() then
@@ -2038,8 +2038,8 @@ for i=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
     end
  end	
 GameEvents.PlayerDoTurn.Add(StealTech)
-
 end
+
 
 
 
