@@ -83,6 +83,21 @@
 			<UnitType>UNIT_STURMTIGER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
 		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_NAVAL_MONSTER</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_ALIEN_SIEGE_WORM</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_HOVER_WORM</UnitType>
+			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+		</Row>
 	</Unit_BuildingClassRequireds>
 
 
