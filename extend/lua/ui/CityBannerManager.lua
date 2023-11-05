@@ -254,7 +254,13 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 	
 		
 		
-		
+		if Players[Game.GetActivePlayer()]:IsObserver() then
+			convertedKey = convertedKey .. " " .. Locale.ConvertTextKey(city:GetProductionNameKey())
+			local iTurnsLeft = city:GetProductionTurnsLeft()
+			if iTurnsLeft < 999 then
+				convertedKey = convertedKey .. "(" .. iTurnsLeft .. ")"
+			end
+		end
 		controls.CityName:SetText(convertedKey);
 		
 		if (isActivePlayerCity) then
