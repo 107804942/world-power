@@ -1,3 +1,7 @@
+﻿-- Lua Script3
+-- Author: 11585
+-- DateCreated: 2023/11/5 19:12:06
+--------------------------------------------------------------
 ------------------------------------------------------------------------------
 --	FILE:	  AssignStartingPlots.lua
 --	AUTHOR:   Bob Thomas
@@ -21,6 +25,40 @@ include("NaturalWondersCustomMethods");
 -- NOTE FOR MODDERS: There is a detailed Reference at the end of the file.
 ------------------------------------------------------------------------------
 
+--                             FOREWORD
+
+-- Jon wanted a lot of changes to terrain composition for Civ5. These have
+-- had the effect of making different parts of each randomly generated map
+-- more distinct, more unique, but it has also necessitated a complete
+-- overhaul of where civs are placed on the map and how resources are
+-- distributed. The new placements are much more precise, both for civs 
+-- and resources. As such, any modifications to terrain or resource types 
+-- will no longer be "plug and play" in the XML. Terrain modders will have 
+-- to work with this file as well as the XML, to integrate their mods in to
+-- the new system.
+
+-- Some civs will be purposely placed in difficult terrain, depending on what
+-- a given map instance has to offer. Civs placed in tough environments will
+-- receive specific amounts of assistance, primarily in the form of Bonus food
+-- from Wheat, Cows, Deer, Bananas, or Fish. This part of the new system is 
+-- very precisely calibrated and balanced, so be aware that any changes or 
+-- additions to how resources are placed near start points will have a 
+-- dramatic effect on the game, and could pose challenges of a sort that were
+-- not present in the sphere of Civ4 modding.
+
+-- The Luxury resources are also carefully calibrated. In a given game, some
+-- will be clustered near a small number of civs (perhaps even a monopoly 
+-- given to one). Some will be placed only near City States, requiring civs 
+-- to go through a City State, one way or another, to obtain any instances of
+-- that luxury type. Some will be left up to fate, appearing randomly in 
+-- whatever is their normal habitat. Yet others may be oversupplied or perhaps
+-- even absent from a given game. Which luxuries fall in to which category 
+-- will be scrambled, to keep players guessing, and to help further the sense
+-- of curiosity when exploring a new map in a new game.
+
+-- Bob Thomas  -  April 16, 2010
+
+-- There is a Reference section at the end of the file.
 
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -373,7 +411,7 @@ function AssignStartingPlots.Create()
 		coffee_ID = -1, tea_ID = -1, tobacco_ID = -1, amber_ID = -1, jade_ID = -1,	-- MOD.Barathor: New
 		olives_ID = -1, perfume_ID = -1, coral_ID = -1, lapis_ID = -1,			-- MOD.Barathor: New
 		
-		---��
+		---��
 		
 		lavender_ID = -1, titanium_ID = -1, flax_ID = -1, lumber_ID = -1, raspberryz_ID = -1,	-- MOD.rog: New
 		tin_ID = -1, sulfur_ID = -1,barley_ID = -1 ,saffron_ID = -1 , sanpendro_ID = -1, tequila_ID = -1,			-- MOD.rog: New
@@ -623,7 +661,7 @@ function AssignStartingPlots:__Init()
 		elseif resourceType == "RESOURCE_LAPIS" then	-- MOD.Barathor: New
 			self.lapis_ID = resourceID;
 
-------------------------------��---------------
+------------------------------��---------------
 		elseif resourceType == "RESOURCE_LAVENDER" then	-- MOD.Barathor: New
 			self.lavender_ID = resourceID;
 		elseif resourceType == "RESOURCE_TITANIUM" then	-- MOD.Barathor: New
@@ -6159,7 +6197,7 @@ function AssignStartingPlots:GenerateNaturalWondersCandidatePlotLists()
 	self.wonder_list = table.fill(-1, self.iNumNW);
 	local next_wonder_number = 1;
 	for row in GameInfo.Features() do
-		if (row.NaturalWonder == true  or row.PseudoNaturalWonder == 1) then  --��
+		if (row.NaturalWonder == true  or row.PseudoNaturalWonder == 1) then  --��
 			self.wonder_list[next_wonder_number] = row.Type;
 			next_wonder_number = next_wonder_number + 1;
 		end
@@ -10087,6 +10125,14 @@ function AssignStartingPlots:PlaceSmallQuantitiesOfStrategics(frequency, plot_li
 							elseif diceroll == 1 then
 								selected_ID = self.coal_ID;
 								selected_quantity = coal_amt;
+
+								---------------新增钛---------------
+							elseif diceroll == 2 then
+								selected_ID = self.titanium_ID;
+								selected_quantity = titanium_amt;	
+                              
+								---------------新增钛---------------
+
 							else
 								selected_ID = self.aluminum_ID;
 								selected_quantity = alum_amt;
@@ -10100,8 +10146,12 @@ function AssignStartingPlots:PlaceSmallQuantitiesOfStrategics(frequency, plot_li
 								selected_ID = self.coal_ID;
 								selected_quantity = coal_amt;
 
-
-						
+							---------------新增钛---------------
+							elseif diceroll == 2 then
+								selected_ID = self.titanium_ID;
+								selected_quantity = titanium_amt;	
+                              
+							---------------新增钛---------------
 
 							else
 								selected_ID = self.iron_ID;
@@ -10155,13 +10205,21 @@ function AssignStartingPlots:PlaceSmallQuantitiesOfStrategics(frequency, plot_li
 									selected_quantity = horse_amt;
 								end
 							elseif terrainType == TerrainTypes.TERRAIN_DESERT then
-								local diceroll = Map.Rand(3, "Resource selection - Place Small Quantities LUA");
+								local diceroll = Map.Rand(4, "Resource selection - Place Small Quantities LUA");
 								if diceroll == 0 then
 									selected_ID = self.iron_ID;
 									selected_quantity = iron_amt;
 								elseif diceroll == 1 then
 									selected_ID = self.aluminum_ID;
 									selected_quantity = alum_amt;
+
+									---------------新增钛---------------
+							elseif diceroll == 2 then
+								selected_ID = self.titanium_ID;
+								selected_quantity = titanium_amt;	
+                              
+							---------------新增钛---------------
+
 								else
 									selected_ID = self.oil_ID;
 									selected_quantity = oil_amt;
@@ -10174,6 +10232,13 @@ function AssignStartingPlots:PlaceSmallQuantitiesOfStrategics(frequency, plot_li
 								elseif diceroll == 1 then
 									selected_ID = self.uranium_ID;
 									selected_quantity = uran_amt;
+
+									---------------新增钛---------------
+							elseif diceroll == 2 then
+								selected_ID = self.titanium_ID;
+								selected_quantity = titanium_amt;	
+                              
+							---------------新增钛---------------
 								else
 									selected_ID = self.oil_ID;
 									selected_quantity = oil_amt;
@@ -10821,7 +10886,7 @@ function AssignStartingPlots:PrintFinalResourceTotalsToLog()
 	print(self.coal_ID,     "Coal....: ", self.amounts_of_resources_placed[self.coal_ID + 1])
 	print(self.oil_ID,      "Oil.....: ", self.amounts_of_resources_placed[self.oil_ID + 1])
 	print(self.aluminum_ID, "Aluminum: ", self.amounts_of_resources_placed[self.aluminum_ID + 1])
-	print(self.uranium_ID,  "Uranium.: ", self.amounts_of_resources_placed[self.uranium_ID + 1])
+	print(self.uranium_ID,  "Uranium.: ", self.amounts_of_resources_placed[self.uranium_ID + 1]
 	print("-");
 	print("- BONUS Resources -");
 	print(self.wheat_ID,    "Wheat...: ", self.amounts_of_resources_placed[self.wheat_ID + 1])
@@ -10834,17 +10899,17 @@ function AssignStartingPlots:PrintFinalResourceTotalsToLog()
 	print(self.bison_ID,    "Bison...: ", self.amounts_of_resources_placed[self.bison_ID + 1])
 
 	print("- rog BONUS Resources -")
-	print(self.lavender_ID,     "Rice....: ", self.amounts_of_resources_placed[self.lavender_ID + 1])
-	print(self.titanium_ID,    "Maize...: ", self.amounts_of_resources_placed[self.titanium_ID + 1])
-	print(self.flax_ID,  "Berries..: ", 	self.amounts_of_resources_placed[self.flax_ID + 1])
-	print(self.lumber_ID,  	"Cactus..: ", 	self.amounts_of_resources_placed[self.lumber_ID + 1])
-	print(self.raspberryz_ID,  "Coconut.: ", self.amounts_of_resources_placed[self.raspberryz_ID + 1])
-	print(self.tin_ID, 	"Timber: ", 	self.amounts_of_resources_placed[self.tin_ID + 1])
-	print(self.sulfur_ID,      "Tin.....: ", 	self.amounts_of_resources_placed[self.sulfur_ID + 1])
-	print(self.barley_ID,   	"Trout..: ", 	self.amounts_of_resources_placed[self.barley_ID + 1])
-	print(self.saffron_ID,   "Rubber..: ", self.amounts_of_resources_placed[self.saffron_ID + 1])
-	print(self.sanpendro_ID, "Rare Earth: ", self.amounts_of_resources_placed[self.sanpendro_ID + 1])
-	print(self.tequila_ID, "Rare Earth: ", self.amounts_of_resources_placed[self.tequila_ID + 1])
+	print(self.lavender_ID,     "lavender....: ", self.amounts_of_resources_placed[self.lavender_ID + 1])
+	print(self.titanium_ID,    "titanium....: ", self.amounts_of_resources_placed[self.titanium_ID + 1])
+	print(self.flax_ID,  "flax....: ", 	self.amounts_of_resources_placed[self.flax_ID + 1])
+	print(self.lumber_ID,  	"lumber....: ", 	self.amounts_of_resources_placed[self.lumber_ID + 1])
+	print(self.raspberryz_ID,  "raspberryz....: ", self.amounts_of_resources_placed[self.raspberryz_ID + 1])
+	print(self.tin_ID, 	"Tin....: ", 	self.amounts_of_resources_placed[self.tin_ID + 1])
+	print(self.sulfur_ID,      "sulfur....: ", 	self.amounts_of_resources_placed[self.sulfur_ID + 1])
+	print(self.barley_ID,   	"barley....: ", 	self.amounts_of_resources_placed[self.barley_ID + 1])
+	print(self.saffron_ID,   "saffron....: ", self.amounts_of_resources_placed[self.saffron_ID + 1])
+	print(self.sanpendro_ID, "sanpendro....: ", self.amounts_of_resources_placed[self.sanpendro_ID + 1])
+	print(self.tequila_ID, "tequila....: ", self.amounts_of_resources_placed[self.tequila_ID + 1])
 
 	print("-");
 	print("-----------------------------------------------------");
@@ -10885,7 +10950,7 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 	-- Order of placement matters, so changing the order may affect a later dependency.
 	
 	-- Adjust amounts, if applicable, based on Resource Setting.
-	local uran_amt, horse_amt, oil_amt, iron_amt, coal_amt, alum_amt = self:GetMajorStrategicResourceQuantityValues()
+	local uran_amt, horse_amt, oil_amt, iron_amt, coal_amt, alum_amt,  titanium_amt= self:GetMajorStrategicResourceQuantityValues()
 
 	-- Adjust appearance rate per Resource Setting chosen by user.
 	local bonus_multiplier = 1;
@@ -10898,14 +10963,15 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 	-- Place Strategic resources.
 	print("Map Generation - Placing Strategics");
 	local resources_to_place = {
-	{self.oil_ID, oil_amt, 65, 1, 1},
-	{self.uranium_ID, uran_amt, 35, 0, 1} };
+	{self.oil_ID, oil_amt, 50, 1, 1},
+	{self.uranium_ID, uran_amt, 30, 0, 1},
+	{self.titanium_ID, titanium_amt, 20, 0, 1} };
 	self:ProcessResourceList(9, 1, self.marsh_list, resources_to_place)
 
 	local resources_to_place = {
-	{self.oil_ID, oil_amt, 40, 1, 2},
+	{self.oil_ID, oil_amt, 35, 1, 2},
 	{self.aluminum_ID, alum_amt, 15, 1, 2},
-	{self.iron_ID, iron_amt, 45, 1, 2} };
+	{self.iron_ID, iron_amt, 50, 1, 2}};
 	self:ProcessResourceList(16, 1, self.tundra_flat_no_feature, resources_to_place)
 
 	local resources_to_place = {
@@ -10927,11 +10993,13 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 
 	local resources_to_place = {
 	{self.coal_ID, coal_amt, 30, 1, 2},
-	{self.uranium_ID, uran_amt, 70, 1, 2} };
+	{self.uranium_ID, uran_amt, 50, 1, 2},
+	{self.titanium_ID, titanium_amt, 20, 1, 2} };
 	self:ProcessResourceList(33, 1, self.jungle_flat_list, resources_to_place)
 	local resources_to_place = {
 	{self.coal_ID, coal_amt, 30, 1, 2},
-	{self.uranium_ID, uran_amt, 70, 1, 1} };
+	{self.uranium_ID, uran_amt, 50, 1, 1},
+	{self.titanium_ID, titanium_amt, 20, 1, 2} };
 	self:ProcessResourceList(39, 1, self.forest_flat_list, resources_to_place)
 
 	local resources_to_place = {
@@ -10995,6 +11063,11 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 		self:ProcessResourceList(99999, 1, self.land_list, resources_to_place)
 	end
 	
+	if self.amounts_of_resources_placed[self.titanium_ID + 1] < 6 * self.iNumCivs then
+		print("Map has very low titanium, adding another.");
+		local resources_to_place = { {self.titanium_ID, titanium_amt, 100, 0, 0} };
+		self:ProcessResourceList(99999, 1, self.land_list, resources_to_place)
+	end
 	
 	-- Place Bonus Resources
 	print("Map Generation - Placing Bonuses");
@@ -11056,7 +11129,24 @@ function AssignStartingPlots:PlaceStrategicAndBonusResources()
 end
 ------------------------------------------------------------------------------
 function AssignStartingPlots:PlaceResourcesAndCityStates()
-	
+	-- This function controls nearly all resource placement. Only resources
+	-- placed during Normalization operations are handled elsewhere.
+	--
+	-- Luxury resources are placed in relationship to Regions, adapting to the
+	-- details of the given map instance, including number of civs and city 
+	-- states present. At Jon's direction, Luxuries have been implemented to
+	-- be diplomatic widgets for trading, in addition to sources of Happiness.
+	--
+	-- Strategic and Bonus resources are terrain-adjusted. They will customize
+	-- to each map instance. Each terrain type has been measured and has certain 
+	-- resource types assigned to it. You can customize resource placement to 
+	-- any degree desired by controlling generation of plot groups to feed in
+	-- to the process. The default plot groups are terrain-based, but any
+	-- criteria you desire could be used to determine plot group membership.
+	-- 
+	-- If any default methods fail to meet a specific need, don't hesitate to 
+	-- replace them with custom methods. I have labored to make this new 
+	-- system as accessible and powerful as any ever before offered.
 
 	print("Map Generation - Assigning Luxury Resource Distribution");
 	self:AssignLuxuryRoles()
@@ -11088,4 +11178,612 @@ function AssignStartingPlots:PlaceResourcesAndCityStates()
 	--
 end
 ------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+--                             REFERENCE
+------------------------------------------------------------------------------
+--[[
+APPENDIX A - ORDER OF OPERATIONS
+
+1. StartPlotSystem() is called from MapGenerator() in MapGenerator.lua
+
+2. If left to default, StartPlotSystem() executes. However, since the core map
+options (World Age, etc) are now custom-handled in each map script, nearly every
+script needs to overwrite this function to process the Resources option. Many
+scripts also need to pass in arguments, such as division method or bias adjustments.
+
+3. AssignStartingPlots.Create() organizes the table that includes all member
+functions and all common data.
+
+4. AssignStartingPlots.Create() executes __Init() and __InitLuxuryWeights() to
+populate data structures with values applicable to the current game and map. An
+empty override is also provided via __CustomInit() to allow for easy modifications
+on a small scale, instead of needing to replace all of the Create() function: for
+instance, if a script wants to change only a couple of values in the self dot table.
+
+5. AssignStartingPlots:DivideIntoRegions() is called. This function and its
+children carry out the creation of Region Data, to be acted on by later methods.
+-a. Division method is chosen by parameter. Default is Method 2, Continental.
+-b. Four core methods are included. Refer to the function for details.
+-c. If applicable, start locations are assigned to specific Areas (landmasses).
+-d. Each populated landmass is processed. Any with more than one civ assigned 
+to them are divided in to Regions. Any with one civ are designated as a Region.
+If a Rectuangular method is chosen, the map is divided without regard to Areas.
+-e. Regional division occurs based on "Start Placement Fertility" measurements,
+which are hard-coded in the function that measures the worth of a given plot. To
+change these values for a script or mod, override the applicable function.
+-f. All methods generate a database of Regions. The data includes coordinates
+of the southwest corner of the region, plus width and height. If width or 
+height, counting from the SW corner, would exceed a map edge, world-wrap is 
+implied. As such, all processes that act on Regions need to account for wrap.
+Other data included are the AreaID of the region (-1 if a division method in
+use that ignores Areas), the total Start Placement Fertility measured in that
+region, the total plot count of the region's rectangle, and fertility/plot. (I 
+was not told until later that no Y-Wrap support would be available. As such, 
+the entire default system is wired for Y-Wrap support, which seems destined to 
+lie dormant unless this code is re-used with Civ6 or some other game with Y-Wrap.)
+
+6. AssignStartingPlots:ChooseLocations() is called.
+-a. Each Region defined in self.regionData has its terrain types measured.
+-b. Using the terrain types, each Region is classified. The classifications
+should match the definitions in Regions.XML -- or Regions.xml needs to be 
+altered to match the internal classifications of any modified process. The 
+Regional classifications affect favored types of terrain for the start plot
+selection in that Region, plus affect matching of start locations with those
+civilizations who come with Terrain Bias (preferring certain conditions to 
+support their specific abilities), as well as the pool from which the Region's
+Luxury type will be selected.
+-c. An order of processing for Regions is determined. Regions of lowest average
+fertility get their start plots chosen first. When a start plot is selected, it
+creates a zone around itself where any additional starts will be reluctant to
+appear, so the order matters. We give those with the worst land the best pick
+of the land they have, while those with the best land will be the ones (if any)
+to suffer being "pushed around" by proximity to already-chosen start plots.
+-d. Start plots are chosen. There is a method that forces starts to occur along
+the oceans, another method that allows for inland placement, and a third method
+that ignores AreaID and instead looks for the most fertile Area available.
+
+7. AssignStartingPlots:BalanceAndAssign() is called.
+-a. Each start plot is evaluated for land quality. Those not meeting playable
+standards are modified via adding Bonus Resources, Oases, or Hills. Ice, if
+any, is removed from the waters immediately surrounding the start plot.
+-b. The civilizations active in the current game are checked for Terrain Bias.
+Any civs with biases are given first pick of start locations, seeking their
+particular type of bias. Then civs who have a bias against certain terrain
+conditions are given pick of what is left. Finally, civs without bias are
+randomly assigned to the remaining regions.
+-c. If the game is a Team game, start locations may be exchanged in an effort
+to ensure that teammates start near one another. (This may upset Biases).
+
+8. AssignStartingPlots:PlaceNaturalWonders() is called.
+-a. All plots on the map are evaluated for eligibility for each Natural
+wonder. Map scripts can overwrite eligibility calculations for any given NW
+type, where desired. Lists of candidate plots are assembled for each NW.
+-b. Some NW's with stricter eligibility may be prioritized to always appear
+when eligible. The number of NWs that are eligible is checked against the 
+map. If the map can support more than the number allowed for that game (based
+on map size), then the ones that will be placed are selected at random.
+-c. The order of placement gives priority to any "always appear if eligible"
+wonders, then priority after that goes to the wonder with the fewest candidates.
+-d. There are minimum distance considerations for both civ starts and other
+Natural Wonders, reflected in the Impact Data Layers. If collisions eliminate
+all of a wonder's candidate plots, then a replacement wonder will be "pulled 
+off the bench and put in the game", if such a replacement is available.
+
+9. AssignStartingPlots:PlaceResourcesAndCityStates() is called.
+-a. Luxury resources are assigned roles. Each Region draws from a weighted
+pool of Luxury types applicable to its dominant terrain type. This process
+occurs according to Region Type, with Type 1 (Tundra) going first. Where
+multiple regions of the same type occur, those within each category are
+randomized in the selection order. When all regions have been matched to a
+Luxury type (and each Luxury type can be spread across up to three regions)
+then the City States pick three of the remaining types, at random. The
+number of types to be disabled for that map size are removed, then the 
+remainder are assigned to be distributed globally, at random. Note that all
+of these values are subject to modification. See Great Plains, for example.
+-b. City States are assigned roles. If enough of them (1.35x civ count, at 
+least), then one will be assigned to each region. If the CS count way
+exceeds the civ count, multiple CS may be assigned per region. Of those
+not assigned to a region off the bat, the land of the map must be evaluated
+to determine how much land exists outside of any region (if any). City
+States get assigned to these "Uninhabited" lands next. Then we check for
+any Luxuries that got split three-ways (a misfortune for those regions)
+and, if there are enough unassigned CS remaining to give each such region
+a bonus CS, this is done. Any remaining CS are awarded to Regions with the
+lowest average fertility per land plot (and bound to have more total land
+around as a result).
+-c. The city state locations are chosen. Two methods exist: regional
+placement, which strongly favors the edges of regions (civ starts strongly
+favor the center of regions), and Uninhabited, which are completely random.
+-d. Any city states that were unable to be placed where they were slated to 
+go (due to proximity collisions, aka "overcrowded area", then are moved to 
+a "last chance" fallback list and will be squeezed in anywhere on the map 
+that they can fit. If even that fails, the city state is discarded.
+-e. Luxury resources are placed. Each civ gets at least one at its start
+location. Regions of low fertility can get up to two more at their starts.
+Then each city state gets one luxury, the type depending on what is 
+possible to place at their territory, crossed with the pool of types
+available to city states in that game. Then, affected by what has already
+been placed on the map, the amount of luxuries for each given region are
+determined and placed. Finally, based on what has been placed so far, the
+amount of the remaining types is determined, and they are placed globally.
+-f. Each civ is given a second Luxury type at its start plot (except in 
+games using the Resources core map option available on most scripts, and
+choosing the Sparse setting.) This second Luxury type CAN be Marble, which
+boosts wonder production. (Marble is not in the normal rotation, though.)
+-g. City State locations low on food (typical) or hammers get some help
+in the normalization process: mostly food Bonus resources.
+-h. Strategic resources are placed globally. The terrain balance greatly
+affects location and quantity of various types and their balance. So the
+game is going to play differently on different map scripts.
+-i. Bonus resources are distributed randomly, with weightings. (Poor 
+terrain types get more assistance, particularly the Tundra. Hills regions
+get extra Bonus support as well.)
+-j. Various cleanup operations occur, including placing Oil in the sea, 
+fixing Sugar terrain -- and as the very last item, recalculating Area IDs, 
+which invalidates the entire Region Data pool, so it MUST come last.
+
+10. Process ends. Map generation continues according to MapGenerator()
+------------------------------------------------------------------------------
+
+APPENDIX B - ADVICE FOR MODDERS
+
+Depending upon the game areas being modified, it may be necessary to modify
+the start placement and resource distribution code to support your effort.
+
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+If you are modifying Civilizations:
+
+* You can plug your new or modified civilizations in to the Terrain Bias 
+system via table entries in Civ5Civilizations.xml
+
+1. Start Along Ocean
+2. Start Along River		-- Ended up inactive for the initial civ pool, but is operational in the code.
+3. Start Region Priority
+4. Start Region Avoid
+
+Along Ocean is boolean, defaulting to false, and is processed first, 
+overriding all other concerns. Along River is boolean and comes next.
+
+Priority and Avoid refer to "region types", of which there are eight. Each 
+of these region types is dominated by the associated terrain.
+1. Tundra
+2. Jungle
+3. Forest
+4. Desert
+5. Hills
+6. Plains
+7. Grass
+8. Hybrid (of plains and grass).
+
+The defintions are sequential, so that a region that might qualify for
+more than one designation gets the lowest-number it qualifies for.
+
+The Priority and Avoid can be multiple-case. There are multiple-case Avoid
+needs in the initial Civ pool, but only single-case Priority needs. This is
+because the single-case needs have a fallback method that will place the civ
+in the region with the most of its favored terrain type, if no region is 
+available that is dominated by that terrain. Whereas any Civ that has multiple
+Priority needs must find an exact region match to one of its needs or it gets
+no bias. Thus I found that all of the biases desired for the initial Civ pool
+were able to be met via single Priority.
+
+Any clash between Priority and Avoid, Priority wins. 
+
+I hope you enjoy this new ability to flavor and influence start locations.
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+If you are modifying Resources:
+
+XML no longer plays any role whatsoever on the distribution of Resources, but
+it does still define available resource types and how they will interact with
+the game.
+
+Do not place a Luxury resource type at the top of the list, in ID slot #0.
+Other than that, you can do what you will with the list and how they are ordered.
+
+Be warned, there is NO automatic handling of resource balance and appearance for
+new or modified resource types. Gone is the Civ4 method of XML-based terrain
+permissions. Gone is plug-and-play with new resource types. If you remove any
+types from the list, you will need to disable the hard-coded handling of those
+types present in the resource distribution. If you modify or add types, you will
+not see them in the game until you add them to the hard-coded distribution.
+
+The distribution is handled wholly within this file, here in Lua. Whether you 
+approve of this change is your prerogative, but it does come with benefits in
+the form of greatly increased power over how the resources are placed.
+
+Bonus resources are used as the primary method for start point balancing, both
+for civs and city states. Bonus Resources do nothing at all other than affect
+yields of an individual tile and the type of improvement needed in that tile.
+
+If you modify or add bonus resources, you may want to modify Normalization
+methods as well, so your mod interacts with this subsystem. These are the 
+methods involved with Bonus resource normalization:
+
+AttemptToPlaceBonusResourceAtPlot()
+AttemptToPlaceHillsAtPlot()
+AttemptToPlaceSmallStrategicAtPlot()
+NormalizeStartLocation()
+NormalizeCityState()
+NormalizeCityStateLocations()	-- Dependent on PlaceLuxuries being executed first.
+AddExtraBonusesToHillsRegions()
+
+Strategic Resources are now quantified, so their placement is no longer of the
+nature of on/off, and having extra of something may help. Strategics are no longer
+a significant part of the trading system. As such, their balance is looser in
+Civ5 than it had to be in Civ4 or Civ3. Strategics are now placed globally, but
+you can modify this to any method you choose. The default method is here:
+
+PlaceStrategicAndBonusResources()
+
+And it primarily relies upon the per-tile approach of this method:
+
+ProcessResourceList()
+
+Bonus resources are the same, for their global distribution. Additional functions
+that provide custom handling are here:
+
+AddStrategicBalanceResources()	-- Only called when this game launch option is in effect.
+PlaceMarble()
+PlaceSmallQuantitiesOfStrategics()
+PlaceFish()
+PlaceSexyBonusAtCivStarts()
+PlaceOilInTheSea()
+FixResourceGraphics()
+
+All three types of Resources, which each play a different role in the game, are
+dependent upon the new "Impact and Ripple" data layers to detect previously
+placed instances and remain at appropriate distances. By replacing a singular,
+hardcoded "minimum distance" with the impact-and-ripple, I have been able to
+introduce variable distances. This creates a less contrived-looking result and
+allows for some clustering of resources without letting the clusters grow too 
+large, and without predetermining the nature and distribution of clusters. You
+can most easily understand the net effect of this change by examing the fish
+distribution. You will see that is less regular than the Civ4 method, yet still
+avoids packing too many fish in to any given area. Larger clusters are possible
+but quite rare, and the added variance should make city placement more interesting.
+
+Another benefit of the Impact and Ripple is that it is Hex Accurate. The ripples
+form a true hexagon (radiating outward from the impact plot, with weightings and
+biases weakening the farther away from the impact it sits) instead of a rectangle
+defined by an x-y coordinate area scan.
+
+What this means for you, as a Resources modder, is that you will need to grasp
+the operation of Impact and Ripple in order to properly calibrate any placements
+of resources that you decide to make. This is true for all three types. Each has
+its own layer of Impact and Ripple, but you could choose to remove a resource 
+from participation in a given layer, assign it to a different layer or to its own
+layer, or even discard this method and come up with your own. Realize that each
+resource placed will impact its layer, rippling outward from its plot to whatever
+radius range you have selected, and then bar any later placements from being close
+to that resource.
+
+Everywhere in this code that a civ start is placed, or a city state, or a resource,
+there are associated Impacts and Ripples on one or more data layers. The 
+interaction of all this activity is why a common database was needed. Yet because
+none of this data affects the game after game launch and the map has been set, it 
+is all handled locally here in Lua, then is discarded and its memory recycled.
+
+Meanwhile, Luxury resources are more tightly controlled than ever. The Regional
+Division methods are as close to fair as I could make them, considering the highly
+varied and unpredicatable landforms generated by the various map scripts. They
+are fair enough to form a basis for distributing Luxuries in a way to create
+supply and demand, to foster trade and diplomacy.
+
+
+All Luxury resource placements are handled via this method:
+
+PlaceSpecificNumberOfResources()
+
+This method also handles placement of sea-based sources of Oil.
+
+
+Like ProcessResourceList(), this method acts upon a plot list fed to it, but 
+instead of handling large numbers of plots and placing one for every n plots, it
+tends to handle much smaller number of plots, and will return the number it was
+unable to place for whatever reason (collisions with the luxury data layer being
+the main cause, and not enough members in the plot list to receive all the
+resources being placed is another) so that fallback methods can try again.
+
+As I mentioned earlier, XML no longer governs resource placement. Gone are the 
+XML terrain permissions, a hardwired "all or nothing" approach that could allow
+a resource to appear in forest (any forest), or not. The new method allows for 
+more subtlety, such as creating a plot list that includes only forests on hills,
+or which can allow a resource to appear along rivers in the plains but only 
+away from rivers in grasslands. The sky is the limit, now, when it comes to 
+customizing resource appearance. Any method you can measure and implement, and
+translate in to a list of candidate plots, you can apply here.
+
+The default permissions are now contained in an interaction between two married
+functions: terrain-based plot lists and a function matching each given resource
+to a selection of lists appropriate to that resource.
+
+The three list-generating functions are these:
+
+GenerateGlobalResourcePlotLists()
+GenerateLuxuryPlotListsAtCitySite()
+GenerateLuxuryPlotListsInRegion()
+
+
+The indexing function is:
+
+GetIndicesForLuxuryType()
+
+
+The process uses one of these three list generations (depending on whether it 
+is currently trying to assign Luxuries globally, regionally, or in support of
+a specific civ or city state start location).
+
+Other methods determine WHICH Luxury fits which role and how much of it to place;
+then these processes come up with candidate plot lists, and then the indexing
+matches the appropriate lists to the specific luxury type. Finally, all of this
+data is passed to the function that actually places the Luxury, which is:
+
+PlaceSpecificNumberOfResources()
+
+
+If you want to modify the terrain permissions of existing Luxury types, you 
+need only handle the list generators and the indexing function.
+
+
+If you want to modify which Luxury types get assigned to which Region types:
+
+__InitLuxuryWeights()
+IdentifyRegionsOfThisType()
+SortRegionsByType()
+AssignLuxuryToRegion()
+
+All weightings for regional matching are contained here. But beware, the
+system has to handle up to 22 civilizations and 41 city states, so the 
+combination of self.iNumMaxAllowedForRegions and the number of regions to
+which any given Luxury can be assigned must multiply out to more than 22.
+
+The default system allows up to 8 types for regions, up to 3 regions per type,
+factoring out to 24 maximum allowable, barely enough to cover 22 civs.
+
+Perhaps in an Expansion pack, more Luxury types could be added, to ease the
+stress on the system. As it is, I had to spend a lot of political capital 
+with Jon to get us to Fifteen Luxury Types, and have enough to make this
+new concept and this new system work. The amount is plenty for the default
+numbers of civs for each map size, though. If too many types come available
+in a given game, it could upset the game balance regarding Happiness and Trade.
+
+
+If you wish to add new Luxury types, there is quite a bit involved. You will 
+either have to plug your modifications in to the existing system, or replace
+the entire system. I have worked to make it as easy as possible to interact
+with the new system, documenting every function, every design element. And
+since this entire system exists here in Lua, nothing is beyond your reach.
+
+The "handy resource ID shortcuts" will free you from needing to order the
+luxuries in the XML in any particular fashion. These IDs will adapt to the
+XML list. But you will have to create new shortcuts for any added or renamed
+Luxury types, and activate the shortcuts here:
+
+__Init()
+
+You will also need to deactivate or remove any code handling luxury types
+that your mod removes. I recommend using an editor with a Find feature and 
+scan the file for all instances of keys that you want to remove. At each
+instance found, if the key is in a group, you can safely remove it from 
+the group so long as the group retains at least one key in it. If the key
+is the only one being acted upon, you may need to replace it with a different
+key or else deactivate that chunk of code. (If the method attempts to act
+upon a nil-value key, that will cause an Assert and the start finder will
+exit without finishing all of its operations.)
+
+If you are going to plug in to the new system, you need to determine if the
+default terrain-based plot lists meet your needs. If not, create new list 
+types for all three list-generation methods and index them as applicable.
+
+GenerateGlobalResourcePlotLists()
+GenerateLuxuryPlotListsAtCitySite()
+GenerateLuxuryPlotListsInRegion()
+GetIndicesForLuxuryType()
+
+You will also need to modify functions that determine which Luxury types
+can be placed at City States (this affects which luxury each receives).
+
+GetListOfAllowableLuxuriesAtCitySite()
+
+
+Finally, the command center of Luxury Distribution is here:
+
+PlaceLuxuries()
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+If you are modifying Terrain:
+
+You will need to update every aspect of the new system to make it operate
+correctly on your terrain changes. Or you will need to replace the entire system.
+
+I'm sorry if that is bad news, but if you modified Terrain for Civ4, you likely
+experienced it being applied inconsistently (not working on lots of map scripts)
+and ran in to barriers where something you wanted to do was impossible, because
+only certain limited permissions were enabled through the XML. You may even have
+had to rise to the level of modifying the game core DLLs in C++ to open up more
+functionality.
+
+Whatever interactions with the game core your terrain needs to make remain in the
+XML and the C++. The only relevant aspects here involve how your terrain interacts
+with map generation, start placement, and resource distribution.
+
+I have modified the base map generation methods to include more parameters and
+options, so that more of the map scripts can rely on them. This means less 
+hardcoding in individual scripts, to where an update to the core methods that 
+includes new terrain types or feature types will have a wider reach.
+
+As for start placement and resources, a big part of Jon's vision for Civ5 was to
+bring back grandiose terrain, realistically large regions of Desert, Tundra, 
+Plains, and so on. But this type of map, combined with the old start generation
+method, tended to force starts on grassland, and do other things counter to the
+vision. So I designed the new system to more accurately divide the map, not by 
+strict tile count, but by relative worth, trying to give each civ as fair a patch
+of land as possible. Where the terrain would be too harsh, we would support it
+with Bonus resources, which could now be placed in any quantity needed, thanks to
+being untied from the trade system. The regonal division divides the map, then
+the classification system identifies each region's dominant terrain type and aims
+to give the civ who starts there a flavored environment, complete with a start in
+or near that type of terrain, enough Bonus to remove the worst cases of "bad luck", 
+and a cluster of luxury resources at hand that is appropriate to that region type.
+
+In doing all of this, I have hard-coded the system with countless assumptions 
+based on the default terrain. If you wish to make use of this system in tandem 
+with new types of terrain or with modified yields of existing terrain, or both,
+you will need to rewire the system, mold it to the specific needs of the new
+terrain balance that you are crafting.
+
+This begins with the Start Placement Fertility, which is measured per plot here:
+
+MeasureStartPlacementFertilityOfPlot()
+
+
+Measurements are processed in two ways, but you likely don't need to mod these:
+
+MeasureStartPlacementFertilityInRectangle()
+MeasureStartPlacementFertilityOfLandmass()
+
+
+Once you have regions dividing in ways appropriate to your new terrain, you will
+need to update terrain measurements and regional classifications here:
+
+MeasureTerrainInRegions()
+DetermineRegionTypes()
+
+You may also have XML work to do in regard to regions. The region list is here:
+CIV5Regions.xml
+
+And each Civilization's specific regional or terrain bias is found here:
+CIV5Civilizations.xml
+
+
+Start plot location is a rather sizable operation, spanning half a dozen functions.
+
+MeasureSinglePlot()
+EvaluateCandidatePlot()
+IterateThroughCandidatePlotList()
+FindStart()
+FindCoastalStart()
+FindStartWithoutRegardToAreaID()
+ChooseLocations()
+
+Depending on the nature of your modifications, you may need to recalibrate this 
+entire system. However, like with Start Fertility, the core of the system is 
+handled at the plot level, evaluating the meaning of each type of plot for each
+type of region. I have enacted a simple mechanism at the core, with only four
+categories of plot measurement: Food, Prod, Good, Junk. The food label may be
+misleading, as this is the primary mechanism for biasing starting terrain. For
+instance, in tundra regions I have tundra tiles set as Food, but grass are not.
+A desert region sets Plains as Food but Grass is not, while a Jungle region sets
+Grass as Food but Plains aren't. The Good tiles act as a hedge, and are the main
+way of differentiating one candidate site from another, so that among a group of
+plots of similar terrain, the best tends to get picked. I also have the overall
+standards set reasonably low to keep the Center Bias element of the system at 
+the forefront of start placement. This is chiefly because the exact quality of 
+the initial starting location is less urgent than maintaining as good of a 
+positioning as possible among civs. Balancing the quality of the start plot
+against positioning near the center of each region was a fun challenge to 
+tackle, and I feel that I have succeeded in my design goals. Just be aware that
+any change loosening the bias toward the center could ripple through the system.
+
+Regional terrain biases that purposely put starts in non-ideal terrain are
+intended to be supported via Normalization and other compensations built in to
+the system in general. Yet the normalization used in Civ5 is much more lightly
+applied than Civ4's methods. The new system modifies the actual terrain as
+little as possible, giving support mostly through the addition of Bonus type
+resources, which add food. Jon wanted starts to occur in a variety of terrain
+yet for each to be competitive. He directed me to use resources to balance it.
+
+
+If your terrain modifications affect tile yields, or introduce new elements in
+to the ecosystem, it is likely your mod would benefit from adjusting the start
+site normalization process.
+
+AttemptToPlaceBonusResourceAtPlot()
+AttemptToPlaceHillsAtPlot()
+AttemptToPlaceSmallStrategicAtPlot()
+NormalizeStartLocation()
+PlaceSexyBonusAtCivStarts()
+AddExtraBonusesToHillsRegions()
+
+City State placement is subordinate to civ placement, in the new system. The 
+city states get no consideration whatsoever to the quality of their starts, only
+to the location relative to civilizations. So this is the one area of the system
+that is likely to be unaffected by terrain mods, except at Normalization:
+
+NormalizeCityState()
+NormalizeCityStateLocations()
+
+
+Finally, a terrain mod is sure to scramble the hard-coded and carefully balanced
+resource distribution system. That entire system is predicated upon the nature
+of default terrain, what it yields, how the pieces interact, how they are placed
+by map scripts, and in general governed by a measured sense of realism, informed
+by gameplay needs and a drive for simplicity. From the order of operations upon
+regions (sorted by dominant terrain type) to the interwoven nature of resource
+terrain preferences, it is unlikely the default implementation will properly 
+support any significant terrain mod. The work needed to integrate a terrain mod
+in to resource distribution would be similar to that needed for a resource mod,
+so I will refer you back to that section of the appendix for additional info.
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+If you are modifying game rules:
+
+The new system is rife with dependencies upon elements in the default rules. This
+need not be a barrier to your mod, but it will surely assist in your cause to
+be alert to possible side effects of game rules changes. One of the biggest
+dependencies lies with rules that govern tile improvements: how much they benefit,
+where they are possible to build, when upgrades to their yield output come online
+and so forth. Evaluations for Fertility that governs regional division, for 
+Normalization that props up weaker locations, and the logic of resource distribution
+(such as placing numerous Deer in the tundra to make small cities viable there)
+all depend in large part on the current game rules. So if, for instance, your mod
+were to remove or push back the activation of yield boost at Fresh Water farms, 
+this would impact the accuracy of the weighting that the start finder places on
+fresh water plots and on fresh water grasslands in particular. This is the type of
+assumption built in to the system now. In a way it is unfriendly to mods, but it 
+also provides a stronger support for the default rule set, and sets an example of
+how the system could support mods as well, if re-calibrated successfully.
+
+The start placement and resource distribution systems include no mechanism for
+automatically detecting game rules modifications, or terrain or resource mods, 
+either. So to the degree that your mod may impact the logic of start placement,
+you may want to consider making adjustments to the system, to ensure that it
+behaves in ways productive to your mod.
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+
+------------------------------------------------------------------------------
+
+APPENDIX C - ACKNOWLEDGEMENTS
+
+Thanks go to Jon for turning me loose on this system. I had the vision for
+this system as far back as the middle of vanilla Civ4 development, but I did
+not get the opportunity to act on it until now. Designing, coding, testing 
+and implementing my baby here have been a true pleasure. That the effort has
+enabled a key element of Jon's overall vision for the game is a pride point.
+
+Thanks to Ed Beach for his brilliant algorithm, which has enhanced the value
+and performance of this system to a great degree.
+
+Thanks to Shaun Seckman and Brian Wade for numerous instances of assistance
+with Lua programming issues, and for providing the initial ports of Python to
+Lua, which gave me an easy launching point for all of my tasks.
+
+Thanks to everyone on the Civ5 development team whom I met on my visit to 
+Firaxis HQ in Baltimore, who were so warm and welcoming and supportive. It
+has been a joy to be part of such a positive working environment and to 
+contribute to a team like this. If every gamer got to see the inside of
+the studio and how things really work, I believe they would be inspired.
+
+Thanks to all on the web team, who provided direct and indirect support. I
+can't reveal any details here, but each of you knows who you are.
+
+Finally, special thanks to my wife, Jaime, who offered advice, input,
+feedback and general support throughout my design and programming effort.
+
+- Robert B. Thomas	(Sirian)		April 26, 2010
+]]--
 ------------------------------------------------------------------------------
