@@ -2,18 +2,6 @@
 <!-- Created by ModBuddy on 2021/2/19 19:14:07 -->
 <GameData>
 
-	<!--*********************新资源关联方式 ********************-->
-	<Table name="Building_EmpireResourceAnds">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
-		<Column name="AllowsImport" type="boolean" default="true"/>
-	</Table>
-
-	<Table name="Building_EmpireResourceOrs">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
-		<Column name="AllowsImport" type="boolean" default="true"/>
-	</Table>
 
 
 		

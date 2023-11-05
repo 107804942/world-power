@@ -1235,111 +1235,20 @@ function InputHandler( uiMsg, wParam, lParam )
 	end
 ContextPtr:SetInputHandler( InputHandler )
 
-
-
--- **********************************************************************************************************************************************
--- 浮石章鱼
--- **********************************************************************************************************************************************
---local NoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  
---local AbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  
-
-local PlagueMissionButton = {
-		Name = "TXT_KEY_NAME_CREAT_PLAGUE",
-		Title = "TXT_KEY_TITLE_CREAT_PLAGUE",
-		OrderPriority = 300,
-		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
-		PortraitIndex = 25,
-		ToolTip = function(action, unit)
-			local sTooltip;
-			local pPlayer = Players[Game:GetActivePlayer()];
-			local bIsValid = CheckPlagueMissionButtonValidity( unit);
-			if bIsValid then
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_CREAT_PLAGUE");
-			else
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_CREAT_PLAGUE_2" );
-			end
-			return sTooltip
-		end, -- or a TXT_KEY_ or a function
-		Condition = function(action, unit)
-			if unit:GetMoves() <= 0 then
-				return false
-			end
-				if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_HOVER_WORM"].ID) then
-					return true
-				else
-					return false
-			end
-			
-		end, -- or nil or a boolean, default is true
-		Disabled = function(action, unit)
-			local bIsValid = CheckPlagueMissionButtonValidity(unit);
-			if bIsValid then
-				return false
-			end
-			return true;
-		end, -- or nil or a boolean, default is false
-		Action = function(action, unit, eClick)
-		if eClick == Mouse.eRClick then
-			return
-		end
-		    local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity()
-			if 	city~=nil then
-			unit:SetMoves(0)
-			local zombie = Players[63]:InitUnit(GameInfoTypes["UNIT_ZOMBIE"], city:GetX()+1, city:GetY())
-			zombie:JumpToNearestValidPlot()
-
-			if  city:HasPlague() then   ----有瘟疫则延长持续
-				city:ChangePlagueTurns(city:GetPlagueTurns()+8)
-				Events.AudioPlay2DSound("AS2D_PLAGUE")
-			else
-			    city:SetPlagueCounter(0)
-			    Health_PlagueBegins(city)
-			    city:ChangeDamage(100+gCityHeal)
-			    DiseaseUnits(city)			    
-		 end
-	  end
-  end
-}
-LuaEvents.UnitPanelActionAddin(PlagueMissionButton)
 end
                     
 
 
 -- **********************************************************************************************************************************************
 -- 
--- **********************************************************************************************************************************************
-function GolemActivate(playerID, unitID, bTestAllAllies)
-	local pPlayer = Players[playerID]
-	local pUnit = pPlayer:GetUnitByID(unitID)
-	if not pUnit then return end
-	if bTestAllAllies then
-		for pUnit  in pPlayer:Units() do
-			if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]   then
-				if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
-					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
-				else
-					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
-				end
-			end
-		end
-	else
-		 if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"] then
-			if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
-				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
-			else
-				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
-			end
-		end
-	end
-end
-GameEvents.UnitSetXY.Add(GolemActivate)
-
+-- *********************************************************************************************************************************************
 function GhostActivate(playerID, unitID, bTestAllAllies)
 	local pPlayer = Players[playerID]
 	local pUnit = pPlayer:GetUnitByID(unitID)
 	if not pUnit then return end
 	if bTestAllAllies then
 		for pUnit  in pPlayer:Units() do
+		    ------------------------------------------------------------------------
 			if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]   then
 				if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GHOST"], 3, true, false) then
 					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], true)
@@ -1347,8 +1256,20 @@ function GhostActivate(playerID, unitID, bTestAllAllies)
 					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], false)
 				end
 			end
+			------------------------------------------------------------------------
+			if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]   then
+				if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
+				else
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
+				end
+			end
+			------------------------------------------------------------------------
+
 		end
+		
 	else
+	     ------------------------------------------------------------------------
 		 if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"] then
 			if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GHOST"], 3, true, false) then
 				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], true)
@@ -1356,6 +1277,15 @@ function GhostActivate(playerID, unitID, bTestAllAllies)
 				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_GHOST_INVISIBLE"], false)
 			end
 		end
+		------------------------------------------------------------------------
+		if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"] then
+			if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
+			else
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
+			end
+		end
+		------------------------------------------------------------------------
 	end
 end
 GameEvents.UnitSetXY.Add(GhostActivate)
@@ -1468,50 +1398,7 @@ function LatifundiumCheck(iPlayer, iUnit, iX, iY, iBuild)
 GameEvents.PlayerCanBuild.Add(LatifundiumCheck)
 
 
-function Building_EmpireReourceAnds_Check(playerID, buildingID)
-	local player = Players[playerID];
 
-	local condition = "BuildingType = '" .. GameInfo.Buildings[buildingID].Type .. "'";
-	for row in GameInfo.Building_EmpireResourceAnds(condition) do
-		if(player:GetNumResourceAvailable(GameInfoTypes[row.ResourceType], row.AllowsImport) <= 0) then
-			return false; -- 列出玩家未拥有的资源
-		end
-	end
-
-	return true;
-end
-GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceAnds_Check);
-
-
-
-function Building_EmpireReourceOrs_Check(playerID, buildingID)
-	local player = Players[playerID];
-	local buildingNotInTable = true;
-	
-	local condition = "BuildingType = '" .. GameInfo.Buildings[buildingID].Type .. "'";
-	for row in GameInfo.Building_EmpireResourceOrs(condition) do
-		buildingNotInTable = false; -- 建筑需要资源才可建造
-			
-		if(player:GetNumResourceAvailable(GameInfoTypes[row.ResourceType], row.AllowsImport) > 0) then
-			return true; -- 列出玩家拥有的资源
-		end
-	end
-
-	return buildingNotInTable;
-end
-GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceOrs_Check);
-
-
-local retVal = {};
-LuaEvents.Building_EmpireResources_IsInitialized(retVal);
-
-
-if (retVal.isInitialized == nil) then
-	LuaEvents.Building_EmpireResources_IsInitialized.Add(function (retVal) retVal.isInitialized = true; end);
-	-- 置入代码
-	GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceAnds_Check);
-	GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceOrs_Check);
-end
 
 
 

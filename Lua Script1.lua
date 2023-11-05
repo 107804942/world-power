@@ -2,6 +2,90 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------
+
+
+function Building_EmpireReourceAnds_Check(playerID, buildingID)
+	local player = Players[playerID];
+
+	local condition = "BuildingType = '" .. GameInfo.Buildings[buildingID].Type .. "'";
+	for row in GameInfo.Building_EmpireResourceAnds(condition) do
+		if(player:GetNumResourceAvailable(GameInfoTypes[row.ResourceType], row.AllowsImport) <= 0) then
+			return false; -- 列出玩家未拥有的资源
+		end
+	end
+
+	return true;
+end
+GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceAnds_Check);
+
+
+
+function Building_EmpireReourceOrs_Check(playerID, buildingID)
+	local player = Players[playerID];
+	local buildingNotInTable = true;
+	
+	local condition = "BuildingType = '" .. GameInfo.Buildings[buildingID].Type .. "'";
+	for row in GameInfo.Building_EmpireResourceOrs(condition) do
+		buildingNotInTable = false; -- 建筑需要资源才可建造
+			
+		if(player:GetNumResourceAvailable(GameInfoTypes[row.ResourceType], row.AllowsImport) > 0) then
+			return true; -- 列出玩家拥有的资源
+		end
+	end
+
+	return buildingNotInTable;
+end
+GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceOrs_Check);
+
+
+local retVal = {};
+LuaEvents.Building_EmpireResources_IsInitialized(retVal);
+
+
+if (retVal.isInitialized == nil) then
+	LuaEvents.Building_EmpireResources_IsInitialized.Add(function (retVal) retVal.isInitialized = true; end);
+	-- 置入代码
+	GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceAnds_Check);
+	GameEvents.PlayerCanConstruct.Add(Building_EmpireReourceOrs_Check);
+end
+
+
+
+
+
+
+
+function GolemActivate(playerID, unitID, bTestAllAllies)
+	local pPlayer = Players[playerID]
+	local pUnit = pPlayer:GetUnitByID(unitID)
+	if not pUnit then return end
+	if bTestAllAllies then
+		for pUnit  in pPlayer:Units() do
+			if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]   then
+				if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
+				else
+					pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
+				end
+			end
+		end
+	else
+		 if pUnit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"] then
+			if  pUnit:IsWithinDistanceOfUnit(GameInfoTypes["UNIT_GOLEM"], 2, true, false) then
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], true)
+			else
+				pUnit:SetHasPromotion(GameInfoTypes["PROMOTION_NUKE_IMMUNE2"], false)
+			end
+		end
+	end
+end
+GameEvents.UnitSetXY.Add(GolemActivate)
+
+
+
+
+
+
 iTeam = -1
 
 function MauryaWarMonitor (iAttacker, iDefender, bWar)

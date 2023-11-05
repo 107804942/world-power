@@ -492,57 +492,7 @@ ALTER TABLE Buildings ADD COLUMN 'LiberatedInfluence' INTEGER DEFAULT 0;
 		<Column name="Yield" type="integer" default="0"/>
 	</Table>
 
-
-
-
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);
-ALTER TABLE UnitPromotions ADD COLUMN 'IsPlague' BOOLEAN DEFAULT 0;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT 0;
-
-
-
-
-	<Table name="Policy_YieldModifierFromActiveSpies">
-		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
-		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" default="0"/>
-	</Table>
-
-
-
-
-<Table name="Building_YieldFromInternalTR">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" default="0"/>
-	</Table>
-
-
-
-	<Table name="Project_YieldModifiers">
-		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer"/>
-	</Table>
-
-	<Table name="Project_YieldChanges">
-		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer"/>
-	</Table>
-
-
-ALTER TABLE Projects ADD COLUMN 'Maintenance' INTEGER DEFAULT 0;
-ALTER TABLE Projects ADD COLUMN 'CostScalerEra' INTEGER DEFAULT 0;
-ALTER TABLE Projects ADD COLUMN 'CostScalerNumRepeats' INTEGER DEFAULT 0;
-ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
-
-
-
-	<Table name="Building_YieldFromConstruction">
+		<Table name="Building_YieldFromConstruction">
 		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
 		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
 		<Column name="Yield" type="integer" default="0"/>
@@ -569,6 +519,115 @@ ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
 		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
 		<Column name="Yield" type="integer" default="0"/>
 	</Table>
+
+
+	
+<Table name="Building_YieldFromInternalTR">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+		<Table name="Building_YieldFromPillage">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+	<Table name="Building_YieldFromPillageGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+	<Table name="Building_YieldFromPillageGlobalPlayer">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+	单位晋升时回血
+		<Table name="Building_UnitTypePrmoteHealGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="UnitType" type="text" reference="Units(Type)"/>
+		<Column name="Heal" type="integer" default="0"/>
+	</Table>
+
+
+		<!-- BUILDINGS: Allows you to define a Featuer AND or OR requirement for the city. -->
+	<Table name="Building_LocalFeatureOrs">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+	</Table>
+	<Table name="Building_LocalFeatureAnds">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+	</Table>
+
+
+		<!--*********************新资源关联方式 ********************-->
+	<Table name="Building_EmpireResourceAnds">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/
+	</Table>
+
+	<Table name="Building_EmpireResourceOrs">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+	</Table>
+
+
+
+
+
+
+
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);
+ALTER TABLE UnitPromotions ADD COLUMN 'IsPlague' BOOLEAN DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT 0;
+
+
+
+
+	<Table name="Policy_YieldModifierFromActiveSpies">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+
+
+
+
+
+
+	<Table name="Project_YieldModifiers">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+	<Table name="Project_YieldChanges">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+ALTER TABLE Projects ADD COLUMN 'Maintenance' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CostScalerEra' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CostScalerNumRepeats' INTEGER DEFAULT 0;
+ALTER TABLE Projects ADD COLUMN 'CityMaxNum' INTEGER DEFAULT 0;
+
+
+
+
 
 
 
@@ -626,33 +685,7 @@ ALTER TABLE UnitPromotions ADD COLUMN 'PillageReplenishHealth' INTEGER DEFAULT 0
 
 
 
-	<Table name="Building_YieldFromPillage">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" default="0"/>
-	</Table>
 
-
-	<Table name="Building_YieldFromPillageGlobal">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" default="0"/>
-	</Table>
-
-
-	<Table name="Building_YieldFromPillageGlobalPlayer">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" default="0"/>
-	</Table>
-
-
-	单位晋升时回血
-		<Table name="Building_UnitTypePrmoteHealGlobal">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="UnitType" type="text" reference="Units(Type)"/>
-		<Column name="Heal" type="integer" default="0"/>
-	</Table>
 
 	<GetGroundAttackRange>1</GetGroundAttackRange>
 	
@@ -665,6 +698,12 @@ ALTER TABLE UnitPromotions ADD COLUMN 'GetGroundAttackRange' INTEGER DEFAULT 0;
 -- Changes the intercept range against air units (NEW)
 ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 -------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);

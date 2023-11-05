@@ -4,7 +4,7 @@
 -- INCLUDES
 --=======================================================================================================================
 include("PlotIterators.lua");
-include ("Plague_UI.lua");
+include("Plague_UI.lua");
 include( "FLuaVector" );
 include("FunctionUtilities.lua");
 include("Rog_SaveUtils.lua"); MY_MOD_NAME = "世界强权";
@@ -291,6 +291,74 @@ function Health_PlagueBegins(city)
 	end
 	Events.AudioPlay2DSound("AS2D_PLAGUE")
 end
+
+
+
+-- **********************************************************************************************************************************************
+-- 浮石章鱼
+-- **********************************************************************************************************************************************
+--local NoPlagues	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DISABLED") == 1)  
+--local AbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)  
+
+local PlagueMissionButton = {
+		Name = "TXT_KEY_NAME_CREAT_PLAGUE",
+		Title = "TXT_KEY_TITLE_CREAT_PLAGUE",
+		OrderPriority = 300,
+		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
+		PortraitIndex = 25,
+		ToolTip = function(action, unit)
+			local sTooltip;
+			local pPlayer = Players[Game:GetActivePlayer()];
+			local bIsValid = CheckPlagueMissionButtonValidity( unit);
+			if bIsValid then
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_CREAT_PLAGUE");
+			else
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_CREAT_PLAGUE_2" );
+			end
+			return sTooltip
+		end, -- or a TXT_KEY_ or a function
+		Condition = function(action, unit)
+			if unit:GetMoves() <= 0 then
+				return false
+			end
+				if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_HOVER_WORM"].ID) then
+					return true
+				else
+					return false
+			end
+			
+		end, -- or nil or a boolean, default is true
+		Disabled = function(action, unit)
+			local bIsValid = CheckPlagueMissionButtonValidity(unit);
+			if bIsValid then
+				return false
+			end
+			return true;
+		end, -- or nil or a boolean, default is false
+		Action = function(action, unit, eClick)
+		if eClick == Mouse.eRClick then
+			return
+		end
+		    local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity()
+			if 	city~=nil then
+			unit:SetMoves(0)
+			local zombie = Players[63]:InitUnit(GameInfoTypes["UNIT_ZOMBIE"], city:GetX()+1, city:GetY())
+			zombie:JumpToNearestValidPlot()
+
+			if  city:HasPlague() then   ----有瘟疫则延长持续
+				city:ChangePlagueTurns(city:GetPlagueTurns()+8)
+				Events.AudioPlay2DSound("AS2D_PLAGUE")
+			else
+			    city:SetPlagueCounter(0)
+			    Health_PlagueBegins(city)
+			    city:ChangeDamage(250)
+			    DiseaseUnits(city)			    
+		 end
+	  end
+  end
+}
+LuaEvents.UnitPanelActionAddin(PlagueMissionButton)
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- DOCTOR

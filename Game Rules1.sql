@@ -1,6 +1,23 @@
 -- Insert SQL Rules Here 
 
 
+
+	<!--*********************新资源关联方式 ********************-->
+	<Table name="Building_EmpireResourceAnds">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="AllowsImport" type="boolean" default="true"/>
+	</Table>
+
+	<Table name="Building_EmpireResourceOrs">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="AllowsImport" type="boolean" default="true"/>
+	</Table>
+
+
+
+
 INSERT INTO Policy_BuildingClassYieldModifiers (PolicyType, BuildingClassType, YieldType,YieldMod)
 SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_FACTORY',	         'YIELD_DISEASE', -50 UNION ALL  --工厂
 SELECT  'POLICY_AI_REDUCE' , 'BUILDINGCLASS_NUCLEAR_PLANT',	     'YIELD_DISEASE', -40 UNION ALL  --核电站
