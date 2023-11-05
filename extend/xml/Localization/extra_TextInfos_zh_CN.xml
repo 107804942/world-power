@@ -10,6 +10,13 @@
 			
 
 			<!-- VOLCANOS -->
+			<Row Tag="TXT_KEY_GAMEOPTION_NEW_VOLCANO">
+				<Text>火山</Text>
+			</Row>
+			<Row Tag="TXT_KEY_GAMEOPTION_NEW_VOLCANO_HELP">
+				<Text>允许地图生成火山（一种会造成随机事件的地貌）</Text>
+			</Row>
+			
 			<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO">
 				<Text>火山</Text>
 			</Row>

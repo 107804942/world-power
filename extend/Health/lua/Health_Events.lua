@@ -4,7 +4,6 @@
 -- INCLUDES
 --=======================================================================================================================
 include("PlotIterators.lua");
-include ("Plague_SaveData.lua");
 include ("Plague_UI.lua");
 include( "FLuaVector" );
 include("FunctionUtilities.lua");
@@ -142,6 +141,96 @@ function Health_PlayerDoTurn(playerID)
 end
 GameEvents.PlayerDoTurn.Add(Health_PlayerDoTurn)
 
+
+function CitySetDoctor(iPlayer)
+    local player = Players[iPlayer]
+	if player == nil 
+
+	or player:IsMinorCiv() 
+	or player:IsBarbarian() 
+	or player:IsHuman()
+	or not player:IsAlive() 
+	then return end
+
+	local plaguecityTAB ={}
+	local DoctorTAB ={}	
+	local GreatDoctorTAB ={}	
+	------Auto add doctor to cure
+	for city in player:Cities() do		
+	if  city:HasPlague()  then ------城市处于瘟疫
+	table.insert(plaguecityTAB, city)
+			end
+		end
+
+	for unit in player:Units() do	
+	if  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DOCTOR"].ID) then ------有医生单位
+	table.insert(DoctorTAB, unit)
+	   end
+	end
+
+	for unit in player:Units() do	 
+	if  unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_GREAT_DOCTOR"] then ------有大医学家单位
+	table.insert(GreatDoctorTAB, unit)
+		end
+	end
+	---------------------------------------------区分不同情况----------------------------------
+	if  #plaguecityTAB > 0 then  ---存在瘟疫城市（大前提）
+
+	if  #DoctorTAB > 0  then   ---有普通医生
+	    if  #GreatDoctorTAB == 0 then   ---无大医学家
+		local randomNumber  = ROG_GetTrueRandom(1,#plaguecityTAB)
+		--Game.GetRandom(1,#plaguecityTAB)
+		local randomNumber2 = ROG_GetTrueRandom(1,#DoctorTAB)
+		--Game.GetRandom(1,#DoctorTAB)
+		local tCITY = plaguecityTAB[randomNumber]
+		local tUNIT = DoctorTAB[randomNumber2]
+		Health_PlagueEnds(tCITY)  --治疗
+		tUNIT:Kill()
+		 print (" doctor cure health for ai !")
+		 else   ---有大医学家
+		 local randomNumber3 =  ROG_GetTrueRandom(1,#GreatDoctorTAB)
+		 --Game.GetRandom(1,#GreatDoctorTAB)
+		 local tUNIT2 = GreatDoctorTAB[randomNumber3]
+		 GREAT_DOCTOR_CURE_Mission(iPlayer, tUNIT2)
+		 print ("great doctor cure health for ai !")
+		 end
+	 end
+
+	 if  #DoctorTAB == 0 then    ---无普通医生
+	     if  #GreatDoctorTAB > 0  then   ---有大医学家
+		 local randomNumber4 = ROG_GetTrueRandom(1,#GreatDoctorTAB)  	 
+		 --Game.GetRandom(1,#GreatDoctorTAB)
+		 local tUNIT3 = GreatDoctorTAB[randomNumber4]
+		 GREAT_DOCTOR_CURE_Mission(iPlayer, tUNIT3)
+		 print ("great doctor cure health for ai !")
+		 end
+	 end
+
+	
+	 else  ---不存在瘟疫城市（大前提）
+	 if  #GreatDoctorTAB > 0  then   ---有大医学家
+	 local randomNumber5 = ROG_GetTrueRandom(1,#GreatDoctorTAB) 
+	 --Game.GetRandom(1,#GreatDoctorTAB)
+	 local tUNIT4 = GreatDoctorTAB[randomNumber5]
+	 local city = tUNIT4:GetPlot():GetPlotCity() or tUNIT4:GetPlot():GetWorkingCity();
+	 if city~=nil 
+	 and city:GetOwner()==iPlayer 
+	 and not city:IsHasBuilding(GameInfoTypes.BUILDING_LOCAL_HOSPITAL) then ---未在已建造医馆的城市中
+	 city:SetNumRealBuilding(GameInfoTypes["BUILDING_LOCAL_HOSPITAL"], 1)
+	 tUNIT4:Kill() 
+	    end
+	 end
+	 
+     if  LocalizingRandom(1,100) <=60 then
+	 for unit in player:Units() do		
+	 if  unit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED) then ------有患病单位
+	     unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
+	         end
+	      end
+	   end
+	end
+end
+GameEvents.PlayerDoneTurn.Add(CitySetDoctor)
 
 --------------------------------------------------------------------
 ---对单位造成伤害
@@ -490,90 +579,6 @@ function GetCityPlagueTypeToSpawn(city)
 end
 
 
-function CitySetDoctor(iPlayer)
-    local player = Players[iPlayer]
-	if player == nil 
-
-	or player:IsMinorCiv() 
-	or player:IsBarbarian() 
-	or player:IsHuman()
-	or not player:IsAlive() 
-	then return end
-
-	local plaguecityTAB ={}
-	local DoctorTAB ={}	
-	local GreatDoctorTAB ={}	
-	------Auto add doctor to cure
-	for city in player:Cities() do		
-	if  city:HasPlague()  then ------城市处于瘟疫
-	table.insert(plaguecityTAB, city)
-			end
-		end
-
-	for unit in player:Units() do	
-	if  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DOCTOR"].ID) then ------有医生单位
-	table.insert(DoctorTAB, unit)
-	   end
-	end
-
-	for unit in player:Units() do	 
-	if  unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_GREAT_DOCTOR"] then ------有大医学家单位
-	table.insert(GreatDoctorTAB, unit)
-		end
-	end
-	---------------------------------------------区分不同情况----------------------------------
-	if  #plaguecityTAB > 0 then  ---存在瘟疫城市（大前提）
-
-	if  #DoctorTAB > 0  then   ---有普通医生
-	    if  #GreatDoctorTAB == 0 then   ---无大医学家
-		local randomNumber  = Game.GetRandom(1,#plaguecityTAB)
-		local randomNumber2 = Game.GetRandom(1,#DoctorTAB)
-		local tCITY = plaguecityTAB[randomNumber]
-		local tUNIT = DoctorTAB[randomNumber2]
-		Health_PlagueEnds(tCITY)  --治疗
-		tUNIT:Kill()
-		 print (" doctor cure health for ai !")
-		 else   ---有大医学家
-		 local randomNumber3 = Game.GetRandom(1,#GreatDoctorTAB)
-		 local tUNIT2 = GreatDoctorTAB[randomNumber3]
-		 GREAT_DOCTOR_CURE_Mission(iPlayer, tUNIT2)
-		 print ("great doctor cure health for ai !")
-		 end
-	 end
-
-	 if  #DoctorTAB == 0 then    ---无普通医生
-	     if  #GreatDoctorTAB > 0  then   ---有大医学家
-		 local randomNumber4 = Game.GetRandom(1,#GreatDoctorTAB)
-		 local tUNIT3 = GreatDoctorTAB[randomNumber4]
-		 GREAT_DOCTOR_CURE_Mission(iPlayer, tUNIT3)
-		 print ("great doctor cure health for ai !")
-		 end
-	 end
-
-	
-	 else  ---不存在瘟疫城市（大前提）
-	 if  #GreatDoctorTAB > 0  then   ---有大医学家
-	 local randomNumber5 = Game.GetRandom(1,#GreatDoctorTAB)
-	 local tUNIT4 = GreatDoctorTAB[randomNumber5]
-	 local city = tUNIT4:GetPlot():GetPlotCity() or tUNIT4:GetPlot():GetWorkingCity();
-	 if city~=nil 
-	 and city:GetOwner()==iPlayer 
-	 and not city:IsHasBuilding(GameInfoTypes.BUILDING_LOCAL_HOSPITAL) then ---未在已建造医馆的城市中
-	 city:SetNumRealBuilding(GameInfoTypes["BUILDING_LOCAL_HOSPITAL"], 1)
-	 tUNIT4:Kill() 
-	    end
-	 end
-	 
-     if  LocalizingRandom(1,100) <=60 then
-	 for unit in player:Units() do		
-	 if  unit:IsHasPromotion(GameInfoTypes.PROMOTION_PLAGUED) then ------有患病单位
-	     unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLAGUED"].ID, false); 
-	         end
-	      end
-	   end
-	end
-end
-GameEvents.PlayerDoneTurn.Add(CitySetDoctor)
 
 
 

@@ -5,10 +5,10 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>19</ModVersion>
+    <ModVersion>21</ModVersion>
     <Stability>Alpha</Stability>
-    <Teaser>[COLOR_YELLOW]基于SP9.2的拓展模组[/COLOR]</Teaser>
-    <Description>[COLOR_YELLOW]基于SP9.2的拓展模组[/COLOR]</Description>
+    <Teaser>[COLOR_YELLOW]基于SP9.4的拓展模组[/COLOR]</Teaser>
+    <Description>[COLOR_YELLOW]基于SP9.4的拓展模组[/COLOR]</Description>
     <Authors>夏皮罗的棒子</Authors>
     <SpecialThanks>夏皮罗的棒子</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
@@ -262,6 +262,11 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>extend/xml/extra.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>extend/xml/Terrain/New_NaturalWonders.xml</FileName>
       </Action>
       <Action>
@@ -273,11 +278,6 @@
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>extend/xml/Unit Effect.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>extend/xml/extra.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>

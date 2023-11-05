@@ -1378,6 +1378,13 @@ VALUES	('FEATURE_NEW_VOLCANO',	'PLOT_LAND',		'YIELD_FOOD',			1,		1),
 		('FEATURE_NEW_VOLCANO',	'PLOT_LAND',		'YIELD_TOURISM',		1,		1),
 		('FEATURE_NEW_VOLCANO',	'PLOT_HILLS',		'YIELD_TOURISM',		1,		1);
 
+--------------------------------------------------------------------------------------------------
+--GameOptions
+--------------------------------------------------------------------------------------------------
+INSERT INTO GameOptions (Type,				Description,									Help,										 SupportsMultiplayer)	
+SELECT 'GAMEOPTION_NEW_VOLCANO',		'TXT_KEY_GAMEOPTION_NEW_VOLCANO',			'TXT_KEY_GAMEOPTION_NEW_VOLCANO_HELP',			0 ;
+
+
 
 
 

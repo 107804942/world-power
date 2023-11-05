@@ -534,10 +534,8 @@
 
 
 	<GameOptions>
-		<Update>
-			<Where Type="GAMEOPTION_PLAGUE_DESTROYS_CITIES"/>
-			<Set Default="1"/>
-		</Update>
+	
+		
 		<Update>
 			<Where Type="GAMEOPTION_POLICY_SAVING"/>
 			<Set Default="1"/>

@@ -1071,8 +1071,15 @@
 		
 		
 	</Natural_Wonder_Placement>
-	
 
+
+
+	<GameOptions>
+		<Update>
+			<Where Type="GAMEOPTION_NEW_VOLCANO"/>
+			<Set Default="1"/>
+		</Update>
+	</GameOptions>
 	
 	
 </GameData>

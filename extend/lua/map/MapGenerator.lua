@@ -685,6 +685,9 @@ function AddGoodies()
 
 
 	--------------------------ÐÂÔö»ðÉ½--------------------------
+	if (Game.IsOption(GameOptionTypes.GAMEOPTION_NEW_VOLCANO)) then
+
+    print("Map Generation - Allow Volcano");
 	for feature in GameInfo.Features() do
 		local tilesPerVolcano = bWPIsActive and feature.TilesPerVolcano;
 		if bWPIsActive and feature.Volcano and tilesPerVolcano > 0 then
@@ -695,6 +698,7 @@ function AddGoodies()
 					if (CanPlaceVolcanoAt(feature, plot)) then
 						plot:SetFeatureType(featureID);
 						print("A Volcano has been placed");
+						end
 					end
 				end
 			end
