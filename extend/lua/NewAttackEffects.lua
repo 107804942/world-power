@@ -279,15 +279,11 @@ end
 -- ********************************************************  
 	--if defCity then
 
-
-
 -- ********************************************************
 -- ¸ºÃæbuff
 -- ********************************************************   
     -- Debuff immune unit
-	    if defUnit then
-
-
+	if defUnit then
 
 -- ********************************************************
 -- Ìú¸¡Í¼
@@ -308,18 +304,18 @@ end
 	  --pFoundUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
 	  pFoundUnit:SetMoves(math.floor(pFoundUnit:MovesLeft() +GameDefines["MOVE_DENOMINATOR"]))
 	  print("Unit Near IronBeddha Killed!")
-		          end
+		             end
+			      end
 			   end
-			end
-		 end
-	  end  		 
+		    end
+	     end  		 
+      end
    end
-end
 
 -- ********************************************************
 -- º£¹Ö
 -- ********************************************************
- if attUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NAVAL_MONSTER) and  defUnit  then
+   if attUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NAVAL_MONSTER) and  defUnit  then
         local heal = 0
 		--if  defUnit:IsDead() then
 		attUnit:ChangeDamage(-50)
