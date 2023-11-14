@@ -1254,6 +1254,11 @@ VALUES	('FEATURE_MT_EVEREST',	'YIELD_FAITH',			4),
 		('FEATURE_RETBA',		'YIELD_CULTURE',		2),
 		('FEATURE_RETBA',		'YIELD_TOURISM',		1),
 
+		('FEATURE_DELICATE_ARCH',		'YIELD_PRODUCTION',		2),
+		('FEATURE_DELICATE_ARCH',		'YIELD_FAITH',		2),
+		('FEATURE_DELICATE_ARCH',		'YIELD_CULTURE',		3),
+		('FEATURE_DELICATE_ARCH',		'YIELD_TOURISM',		1),
+
 		('FEATURE_LUMI_BAY',	'YIELD_GOLD',			5),
 		('FEATURE_LUMI_BAY',	'YIELD_SCIENCE',		4),
 		('FEATURE_LUMI_BAY',	'YIELD_TOURISM',		3),
@@ -1307,6 +1312,14 @@ VALUES	('FEATURE_MT_EVEREST',		'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 		('FEATURE_DALLOL',			'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		2,		0),
 		('FEATURE_DALLOL',			'PLOT_LAND',		'YIELD_SCIENCE',		2,		0),
 
+		('FEATURE_DELICATE_ARCH',			'PLOT_HILLS',		'YIELD_FAITH',		2,		0),
+		('FEATURE_DELICATE_ARCH',			'PLOT_MOUNTAIN',	'YIELD_FAITH',		2,		0),
+		('FEATURE_DELICATE_ARCH',			'PLOT_LAND',		'YIELD_FAITH',		2,		0),
+
+		('FEATURE_DELICATE_ARCH',			'PLOT_HILLS',		'YIELD_GOLD',		2,		0),
+		('FEATURE_DELICATE_ARCH',			'PLOT_MOUNTAIN',	'YIELD_GOLD',		2,		0),
+		('FEATURE_DELICATE_ARCH',			'PLOT_LAND',		'YIELD_GOLD',		2,		0),
+
 		('FEATURE_CAUSEWAY_A',			'PLOT_OCEAN',	'YIELD_GOLD',		    2,		0),
 		('FEATURE_CAUSEWAY_A',			'PLOT_OCEAN',	'YIELD_PRODUCTION',		2,		0),
 		('FEATURE_CAUSEWAY_A',			'PLOT_OCEAN',	'YIELD_TOURISM',		1,		0),
@@ -1318,7 +1331,8 @@ VALUES	('FEATURE_MT_EVEREST',		'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 
 
 INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)
-VALUES	('ART_DEF_FEATURE_MT_EVEREST',	'Resource',		'Mt. Everest'),
+VALUES	('ART_DEF_FEATURE_DELICATE_ARCH', 'Resource',		'Arch'),
+        ('ART_DEF_FEATURE_MT_EVEREST',	'Resource',		'Mt. Everest'),
 		('ART_DEF_FEATURE_SALAR_A',		'Resource',		'Salar de Uyuni 1'),
 		('ART_DEF_FEATURE_SALAR_B',		'Resource',		'Salar de Uyuni 2'),
 		('ART_DEF_FEATURE_LUMI_BAY',	'Resource',		'Bioluminescent Bay'),
@@ -1328,6 +1342,7 @@ VALUES	('ART_DEF_FEATURE_MT_EVEREST',	'Resource',		'Mt. Everest'),
 
 
 INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHandler,	ResourceType,	Model,	TerrainContour) VALUES
+('Any',		'Any',	0.7,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DELICATE_ARCH',	'DelicateArch.fxsxml',	0),
 ('Any',		'Any',	0.7,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_GIANTS_CAUSEWAY',	'feature_causeway.fxsxml',	0),
 ('Any',		'Any',	0.55,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_MT_EVEREST',	'feature_mt_everest.fxsxml',	1),
 ('Any',		'Any',	1,		'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_SALAR_A',		'feature_salar.fxsxml',			1),
@@ -1342,6 +1357,7 @@ CREATE TABLE Feature_ArtDefine_StrategicView AS SELECT * FROM ArtDefine_Strategi
 DELETE FROM ArtDefine_StrategicView WHERE TileType = 'Feature';
 INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		Asset)
 VALUES	('ART_DEF_FEATURE_GIANTS_CAUSEWAY',	'Feature',	'sv_Causeway_C.dds'),
+        ('ART_DEF_FEATURE_DELICATE_ARCH',	'Feature',	'sv_DelicateArch.dds'),
         ('ART_DEF_FEATURE_MT_EVEREST',	'Feature',		'sv_Mt_Everest.dds'),
 		('ART_DEF_FEATURE_SALAR_A',		'Feature',		'sv_Salar_S.dds'),
 		('ART_DEF_FEATURE_SALAR_B',		'Feature',		'sv_Salar_B.dds'),
@@ -1381,8 +1397,8 @@ VALUES	('FEATURE_NEW_VOLCANO',	'PLOT_LAND',		'YIELD_FOOD',			1,		1),
 --------------------------------------------------------------------------------------------------
 --GameOptions
 --------------------------------------------------------------------------------------------------
-INSERT INTO GameOptions (Type,				Description,									Help,										 SupportsMultiplayer)	
-SELECT 'GAMEOPTION_NEW_VOLCANO',		'TXT_KEY_GAMEOPTION_NEW_VOLCANO',			'TXT_KEY_GAMEOPTION_NEW_VOLCANO_HELP',			0 ;
+--INSERT INTO GameOptions (Type,				Description,									Help,										 SupportsMultiplayer)	
+--SELECT 'GAMEOPTION_NEW_VOLCANO',		'TXT_KEY_GAMEOPTION_NEW_VOLCANO',			'TXT_KEY_GAMEOPTION_NEW_VOLCANO_HELP',			0 ;
 
 
 

@@ -257,7 +257,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>extend/xml/HandInfo.xml</FileName>
+        <FileName>extend/xml/Terrain/New_NaturalWonders.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -267,7 +267,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>extend/xml/Terrain/New_NaturalWonders.xml</FileName>
+        <FileName>extend/xml/HandInfo.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -528,6 +528,7 @@
     <Folder Include="extend\art\nature\dallol" />
     <Folder Include="extend\art\nature\causeway" />
     <Folder Include="extend\art\nature\lumibay" />
+    <Folder Include="extend\art\nature\DelicateArch" />
     <Folder Include="extend\art\nature\retba" />
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
@@ -4009,6 +4010,22 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\nature\causeway\sv_Causeway_T.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\DelicateArch\DelicateArch.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\DelicateArch\DelicateArch.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\DelicateArch\DelicateArch.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\DelicateArch\sv_DelicateArch.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

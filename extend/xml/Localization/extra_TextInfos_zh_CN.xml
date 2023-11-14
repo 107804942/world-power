@@ -7061,7 +7061,7 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_EXPLOSIVE_MATERIAL_FACTORY_HELP">
-			<Text>提供8单位[ICON_RES_GUNPOWDER]火药资源。</Text>
+			<Text>提供10单位[ICON_RES_GUNPOWDER]火药资源，本城每个制造中心提供5单位[ICON_RES_GUNPOWDER]火药。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_EXPLOSIVE_MATERIAL_FACTORY">
 			<Text>[ICON_WAR]炸药厂</Text>
@@ -9531,7 +9531,22 @@
 
 
 		<!--EXTRA NATURAL WONDERS-->
-		<!-- Salar de Uyuni -->
+
+			<!-- DELICATE -->
+			<Row Tag="TXT_KEY_FEATURE_DELICATE_ARCH">
+				<Text>精致拱门</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
+			<Row Tag="TXT_KEY_CIV5_FEATURES_DELICATE_ARCH_TEXT">
+				<Text>
+					一处历史悠久而造型独特的岩石吸引着美国西南地区民众的眼球。高耸的外形酷似弓形腿人的腰腿部。弗兰克·贝克威茨在1934年将其命名为“精致拱门”，报纸编辑却将它称作“巨大的窗口”、“皮套裤”和“女教师的灯笼裤”。
+					[NEWLINE]这扇看似摇摇欲坠的砂岩拱门有六层楼高。地心引力和犹他州无情的风吹注定了它终将坍塌崩坏的命运。然而大自然还并非是它唯一的敌人，一些头脑发热的攀岩者也对精致拱门的宏伟结构产生了破坏。
+				</Text>
+			</Row>
+
+			
+			
+			<!-- Salar de Uyuni -->
 		<Row Tag="TXT_KEY_FEATURE_SALAR_A">
 			<Text>乌尤尼盐湖(大)</Text>
 			<Gender>neuter:no_article</Gender>

@@ -685,7 +685,6 @@ function AddGoodies()
 
 
 	--------------------------ÐÂÔö»ðÉ½--------------------------
-	if (Game.IsOption(GameOptionTypes.GAMEOPTION_NEW_VOLCANO)) then
 
     print("Map Generation - Allow Volcano");
 	for feature in GameInfo.Features() do
@@ -703,7 +702,7 @@ function AddGoodies()
 				end
 			end
 		end
-	end
+
 	------------------------------------------------------------------------------
 	
 	-- If an era setting wants no goodies, don't place any.
@@ -717,6 +716,9 @@ function AddGoodies()
 		print("** The game specified NO GOODY HUTS");
 		return false;
 	end
+
+
+
 
 	-- Check XML for any and all Improvements flagged as "Goody" and distribute them.
 	for improvement in GameInfo.Improvements() do

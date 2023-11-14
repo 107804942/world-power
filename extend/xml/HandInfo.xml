@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
+
+	<!--<GameOptions>
+		<Update>
+			<Where Type="GAMEOPTION_NEW_VOLCANO"/>
+			<Set Default="1"/>
+		</Update>
+	</GameOptions>-->
+	
+	
 	<HandicapInfos>
 
 		<Row>

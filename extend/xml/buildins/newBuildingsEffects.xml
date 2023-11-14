@@ -2822,7 +2822,7 @@
 		<Row>
 			<BuildingType>BUILDING_EXPLOSIVE_MATERIAL_FACTORY</BuildingType>
 			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
-			<Quantity>8</Quantity>
+			<Quantity>10</Quantity>
 		</Row>
 		
 
