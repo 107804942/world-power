@@ -16,13 +16,13 @@
 			<Description>TXT_KEY_HANDICAP_IMPOSSIBLE</Description>
 			<Help>TXT_KEY_HANDICAP_IMPOSSIBLE_HELP</Help>
 			<StartingLocPercent>50</StartingLocPercent>
-			<AdvancedStartPointsMod>75</AdvancedStartPointsMod>
-			<HappinessDefault>9</HappinessDefault>
+			<AdvancedStartPointsMod>50</AdvancedStartPointsMod>
+			<HappinessDefault>11</HappinessDefault>
 			<NumCitiesUnhappinessMod>100</NumCitiesUnhappinessMod>
 			<PopulationUnhappinessMod>100</PopulationUnhappinessMod>
 			<Gold>0</Gold>
 			<GoldFreeUnits>0</GoldFreeUnits>
-			<ProductionFreeUnits>5</ProductionFreeUnits>
+			<ProductionFreeUnits>20</ProductionFreeUnits>
 			<ProductionFreeUnitsPopulationPercent>100</ProductionFreeUnitsPopulationPercent>
 			<ProductionFreeUnitsPerCity>2</ProductionFreeUnitsPerCity>
 			<RouteCostPercent>100</RouteCostPercent>
@@ -51,16 +51,16 @@
 			<AIDeclareWarProb>300</AIDeclareWarProb>
 			<AIWorkRateModifier>600</AIWorkRateModifier>
 			<AIUnhappinessPercent>30</AIUnhappinessPercent>
-			<AIGrowthPercent>33</AIGrowthPercent>
-			<AITrainPercent>33</AITrainPercent>
-			<AIWorldTrainPercent>50</AIWorldTrainPercent>
-			<AIConstructPercent>25</AIConstructPercent>
+			<AIGrowthPercent>50</AIGrowthPercent>
+			<AITrainPercent>50</AITrainPercent>
+			<AIWorldTrainPercent>75</AIWorldTrainPercent>
+			<AIConstructPercent>30</AIConstructPercent>
 			<AIWorldConstructPercent>50</AIWorldConstructPercent>
 			<AICreatePercent>50</AICreatePercent>
 			<AIWorldCreatePercent>50</AIWorldCreatePercent>
-			<AIBuildingCostPercent>20</AIBuildingCostPercent>
+			<AIBuildingCostPercent>33</AIBuildingCostPercent>
 			<AIUnitCostPercent>20</AIUnitCostPercent>
-			<AIUnitSupplyPercent>75</AIUnitSupplyPercent>
+			<AIUnitSupplyPercent>25</AIUnitSupplyPercent>
 			<AIUnitUpgradePercent>5</AIUnitUpgradePercent>
 			<!--<AIInflationPercent>80</AIInflationPercent>-->
 			<AIPerEraModifier>-12</AIPerEraModifier>

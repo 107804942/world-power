@@ -3166,7 +3166,7 @@
 
 		<Row>
 			<Type>TECH_PHOTON_COMPUTER</Type>
-			<Cost>450000</Cost>
+			<Cost>350000</Cost>
 			<Description>TXT_KEY_TECH_PHOTON_COMPUTER_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_PHOTON_COMPUTER_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
@@ -3180,7 +3180,7 @@
 		</Row>
 		<Row>
 			<Type>TECH_INTERSTELLAR_TRAVEL</Type>
-			<Cost>450000</Cost>
+			<Cost>350000</Cost>
 			<Description>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
@@ -3195,7 +3195,7 @@
 
 		<Row>
 			<Type>TECH_CHAOS</Type>
-			<Cost>450000</Cost>
+			<Cost>350000</Cost>
 			<Description>TXT_KEY_TECH_CHAOS_TITLE</Description>
 			<Civilopedia>TXT_KEY_TECH_CHAOS_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>

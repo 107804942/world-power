@@ -109,9 +109,9 @@ ALTER TABLE Improvements ADD WonderProductionModifier INTEGER DEFAULT 0;
 
 
 15..临近的兵种加成
-ALTER TABLE UnitPromotions ADD NearbyUnitClassBonus INTEGER DEFAULT 0;
-ALTER TABLE UnitPromotions ADD NearbyUnitClassBonusRange INTEGER DEFAULT 0;
-ALTER TABLE UnitPromotions ADD CombatBonusFromNearbyUnitClass INTEGER DEFAULT -1;
+ALTER TABLE UnitPromotions ADD NearbyUnitPromotionBonus INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD NearbyUnitPromotionBonusRange INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD CombatBonusFromNearbyUnitPromotion INTEGER DEFAULT -1;
 
 
 

@@ -370,17 +370,11 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 		local pFromPlot = pMyUnit:GetPlot();
 		local pToPlot = pCity:Plot();
 
-
-		
 	
-		
 		-- Ranged Unit
 		if (pMyUnit:IsRangedSupportFire() == false and pMyUnit:GetBaseRangedCombatStrength() > 0 and melee == false) then --Modified
 			iMyStrength = pMyUnit:GetMaxRangedCombatStrength(nil, pCity, true, true);
 			bRanged = true;
-		
-
-	
 			
 		-- Melee Unit
 		else
@@ -818,8 +812,8 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			end
 -----------------------------------------------------额外buff--------------------------------------------------
 -- Nearby UnitClass modifier
-		if (pMyUnit:GetNearbyUnitClassModifierFromUnitClass() ~= 0) then
-				iModifier = pMyUnit:GetNearbyUnitClassModifierFromUnitClass();
+		if (pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
+				iModifier = pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNITCLASS_NEAR" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
@@ -1467,6 +1461,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 
+
 		------新增原始首都数量加成
 			iModifier = pMyUnit:GetNumOriginalCapitalAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumOriginalCapital()>1 ) then
@@ -1505,6 +1500,18 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			    end
             end
+
+
+			
+			------新增高度坐标加成
+			iModifier = pMyUnit:GetTotalHeightMod(pToPlot);
+			if (iModifier ~= 0 ) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_HEIGHT_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+
 			------新增黄金时代加成
 			iModifier = pMyUnit:GoldenAgeMod();
 			if (iModifier ~= 0 and  pMyPlayer:IsGoldenAge()) then
@@ -2173,6 +2180,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
             end
   ----------------------------------------------------------------晋升对晋升的显示效果end----------------------------------------------------------------
 
+
+        	------新增高度坐标加成
+			iModifier = pTheirUnit:GetTotalHeightMod(pFromPlot);
+			if (iModifier ~= 0 ) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_HEIGHT_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+			end
+
 			------新增黄金时代加成
 			iModifier = pTheirUnit:GoldenAgeMod();
 			if (iModifier ~= 0 and  pTheirPlayer:IsGoldenAge()) then
@@ -2417,8 +2433,8 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 				-- Nearby UnitClass modifier
-					if (pTheirUnit:GetNearbyUnitClassModifierFromUnitClass() ~= 0) then
-					iModifier = pTheirUnit:GetNearbyUnitClassModifierFromUnitClass();
+					if (pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
+					iModifier = pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
 					controlTable = g_TheirCombatDataIM:GetInstance();
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNITCLASS_NEAR" );
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );

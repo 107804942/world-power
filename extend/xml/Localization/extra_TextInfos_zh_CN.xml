@@ -173,7 +173,9 @@
 			<Row Tag="TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS" >
 				<Text>损失血量加成</Text>
 			</Row>
-
+			<Row Tag="TXT_KEY_EUPANEL_PLAYER_HEIGHT_BONUS" >
+				<Text>地势高度加成</Text>
+			</Row>
 			<Row Tag="TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS" >
 				<Text>原始首都数量加成</Text>
 			</Row>
@@ -223,7 +225,7 @@
 			
 
 			<Row Tag="TXT_KEY_EUPANEL_UNITCLASS_NEAR" >
-				<Text>临近军种加成</Text>
+				<Text>临近晋升加成</Text>
 			</Row>
 
 			<Row Tag="TXT_KEY_NUKE_INTERCEPTION11">
@@ -1525,9 +1527,12 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
-			<Text>[ICON_STRENGTH]战斗力+33%。额外增加一次攻击次数，该单位4格范围内的海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。远程攻击有100%的几率击退敌方海军单位，被击退的单位会受到额外的溅射伤害。</Text>
-		</Row>
+			<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
+				<Text>
+					远程攻击有100%的几率击退敌方海军单位，被击退的单位会受到额外的溅射伤害。额外增加一次攻击次数，
+					[NEWLINE]包括自身在内，该单位6格范围内的现代化海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。
+				</Text>
+			</Row>
 
 
 
@@ -9904,17 +9909,7 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_SEA_COMBAT_UNIT">
-			<Text>海军单位</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_SEA_COMBAT_UNIT_HELP">
-			<Text>海军单位。</Text>
-		</Row>
-
-
-
-
+	
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >

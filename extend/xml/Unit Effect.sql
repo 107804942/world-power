@@ -7,6 +7,9 @@ UPDATE Units SET CombatClass = 'UNITCOMBAT_SETTLER' WHERE Class  = 'UNITCLASS_SE
 UPDATE Units SET CombatClass = 'UNITCOMBAT_WORKER' WHERE Class = 'UNITCLASS_WORKER';
 
 
+---更新桨帆战舰需求科技
+UPDATE Units SET PrereqTech = 'TECH_CARTOGRAPHY' ,ObsoleteTech = 'TECH_NAUTICAL_SCIENCE' WHERE Class  = 'UNITCLASS_GREAT_GALLEASS';
+
 
 
 INSERT INTO Unit_TechCombatStrength 
@@ -249,23 +252,15 @@ DELETE FROM UnitPromotions_Domains WHERE PromotionType = 'PROMOTION_CARRIER_FIGH
 
 
  ---伟人一次性产出削弱
- UPDATE Units SET BaseBeakersTurnsToCount=1 WHERE Class='UNITCLASS_SCIENTIST';
+ UPDATE Units SET BaseBeakersTurnsToCount=2 WHERE Class='UNITCLASS_SCIENTIST';
  UPDATE Units SET BaseCultureTurnsToCount=3 WHERE Class='UNITCLASS_WRITER';
  UPDATE Units SET OneShotTourism=7 WHERE Class='UNITCLASS_MUSICIAN';
  UPDATE Units SET BaseHurry=3000 ,HurryMultiplier=50 WHERE Class='UNITCLASS_ENGINEER';
-------------------------------------------------------------------------------------------------------------------------
--- 海军系判定
-------------------------------------------------------------------------------------------------------------------------
-INSERT  INTO Unit_FreePromotions(UnitType,PromotionType)
-SELECT  Type, 'PROMOTION_SEA_COMBAT_UNIT' FROM Units WHERE Domain='DOMAIN_SEA' AND Class != 'UNITCLASS_NAVALCARRIER03S';
 
-CREATE TRIGGER FreePromotionForSEA
-AFTER INSERT ON Units
-WHEN 'DOMAIN_SEA'=NEW.Domain AND NEW.Class != 'UNITCLASS_NAVALCARRIER03S'
-BEGIN
-  INSERT INTO Unit_FreePromotions(UnitType,PromotionType )
-    VALUES(NEW.Type, 'PROMOTION_SEA_COMBAT_UNIT');
-END;
+------------------------------------------------------------------------------------------------------------------------
+-- 泰坦战舰对现代化海军的增幅
+------------------------------------------------------------------------------------------------------------------------
+UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusRange=6,CombatBonusFromNearbyUnitPromotion= 'PROMOTION_WEAPON_SHIP' WHERE Type='PROMOTION_DESTROYER_COMBAT' OR Type='PROMOTION_NAVAL_RANGED_CRUISER' OR Type='PROMOTION_SUBMARINE_COMBAT' OR Type='PROMOTION_NAVAL_CAPITAL_SHIP';
 
 
 ---投石手

@@ -2946,8 +2946,6 @@
 			<Help>TXT_KEY_PROMOTION_WEAPON_SHIP_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>54</PortraitIndex>
-			<AttackMod>33</AttackMod>
-			<DefenseMod>33</DefenseMod>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<ExtraAttacks>1</ExtraAttacks>
 			<PediaEntry>TXT_KEY_PROMOTION_WEAPON_SHIP</PediaEntry>
@@ -2959,25 +2957,6 @@
 
 
 
-
-
-
-		<Row>
-			<Type>PROMOTION_SEA_COMBAT_UNIT</Type>
-			<Description>TXT_KEY_PROMOTION_SEA_COMBAT_UNIT</Description>
-			<Help>TXT_KEY_PROMOTION_SEA_COMBAT_UNIT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SEA_COMBAT_UNIT</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<NearbyUnitClassBonus>100</NearbyUnitClassBonus>
-			<NearbyUnitClassBonusRange>6</NearbyUnitClassBonusRange>
-			<CombatBonusFromNearbyUnitClass>UNITCLASS_NAVALCARRIER03S</CombatBonusFromNearbyUnitClass>
-		</Row>
 
 
 
@@ -4311,6 +4290,7 @@
 			<IgnoreTerrainDamage>true</IgnoreTerrainDamage>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
+			<AddEnemyPromotionImmune>true</AddEnemyPromotionImmune>
 		</Row>
 
 		<!--*************核免疫**************-->

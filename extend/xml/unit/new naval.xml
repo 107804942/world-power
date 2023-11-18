@@ -832,14 +832,6 @@
 		</Update>
 
 
-		<Update>
-			<Set   PrereqTech="TECH_CARTOGRAPHY" />
-			<Where Type="UNIT_VENETIAN_GALLEASS" />
-		</Update>
-		<Update>
-			<Set   PrereqTech="TECH_CARTOGRAPHY" />
-			<Where Type="UNIT_KOREAN_TURTLE_SHIP" />
-		</Update>
 	
 
 		<Update>
