@@ -121,7 +121,7 @@
 			<PortraitIndex>166</PortraitIndex>
 			<ProjectPrereq>PROJECT_GLADIATOR</ProjectPrereq>
 			<ExtraMaintenanceCost>5</ExtraMaintenanceCost>
-			<PolicyType>POLICY_HONOR</PolicyType>
+			<!--<PolicyType>POLICY_HONOR</PolicyType>-->
 		</Row>
 
 		<!--喷火油柜-->
