@@ -1312,7 +1312,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		XBuiltTriggersIdeologyChoice = L("TXT_KEY_XBTIC1", "%i"),			-- TOTO
 		TradeRouteSeaDistanceModifier = L"TXT_KEY_TSDM1" .. "%+i%%",
 		TradeRouteLandDistanceModifier = L"TXT_KEY_TRLDM1" .. "%+i%%",		-- TOTO
-		CityStateTradeRouteProductionModifier = L"TXT_KEY_CSTRPM1111" .. "%+i%%".."[ICON_PRODUCTION]",-- TOTO
+		CityStateTradeRouteProductionModifier = L"TXT_KEY_CSTRPM1111" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
+		CityStateTradeRouteProductionModifierGlobal = L"TXT_KEY_CSTRPMG" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
 		GreatScientistBeakerModifier = L"TXT_KEY_GSBM4" .. "%+i%%".."[ICON_RESEARCH]",-- TOTO
 		ExtraLeagueVotes = L"TXT_KEY_ELV3434" .. "%i",				-- TOTO
 	}
@@ -1734,6 +1735,19 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		if item and (row.Experience or 0) > 0 then
 			insert( tips, UnitColor( L(item.Description) ).." "..L( "TXT_KEY_EXPERIENCE_POPUP", row.Experience ) )
 		end
+	end
+
+	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_UNIT_MODIFIER", building.GlobalProductionNeededUnitModifier or 0 )
+	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER", building.GlobalProductionNeededBuildingModifier or 0 )
+	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER", building.GlobalProductionNeededProjectModifier or 0 )
+
+	if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
+		local TroopRow = GameInfo.Building_DomainTroops{BuildingType = buildingType, DomainType = "DOMAIN_SEA"}()
+		if TroopRow then
+			insertLocalizedIfNonZero( tips, "TXT_KEY_BASE_TROOPS", TroopRow.NumTroop or 0 )
+		end
+		insertLocalizedIfNonZero( tips, "TXT_KEY_BASE_CROPS", building.NumCrops  or 0 )
+		insertLocalizedIfNonZero( tips, "TXT_KEY_BASE_ARMEE", building.NumArmee or 0 )
 	end
 
 	--------------------------------²ú³ö×ª»»--------------------------------
@@ -3623,6 +3637,7 @@ if Game then
 			end
 		end
 
+		--[[ too much info
 		local tip
 		if bnw_be then
 			for _, route in ipairs( activePlayer:GetTradeRoutes() ) do
@@ -3642,6 +3657,7 @@ if Game then
 				end
 			end
 		end
+		]]
 
 		if isUs then
 

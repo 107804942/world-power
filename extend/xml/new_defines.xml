@@ -177,6 +177,8 @@
 		<Replace Name="EVENTS_TILE_REVEALED" Value="1"/>
 		<Replace Name="EVENTS_NW_DISCOVERY" Value="1"/>
 
+		<!-- 游猎开启临近视野并获得经验 -->
+		<Replace Name="AIR_SWEEP_FOUND_SOMETHING" Value="1"/>
 	</CustomModOptions>
 
 
