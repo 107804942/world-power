@@ -1275,9 +1275,9 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 
-				--  Nearby UnitClass modifier
-			if (pMyUnit:GetNearbyUnitClassModifierFromUnitClass() ~= 0) then
-				iModifier = pMyUnit:GetNearbyUnitClassModifierFromUnitClass();
+				--  Nearby Unit Promotion modifier
+			if (pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
+				iModifier = pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNITCLASS_NEAR" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
@@ -2182,12 +2182,12 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
         	------新增高度坐标加成
-			iModifier = pTheirUnit:GetTotalHeightMod(pFromPlot);
-			if (iModifier ~= 0 ) then
-				controlTable = g_TheirCombatDataIM:GetInstance();		
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_HEIGHT_BONUS");
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
-			end
+			--iModifier = pTheirUnit:GetTotalHeightMod(pFromPlot);
+			--if (iModifier ~= 0 ) then
+				--controlTable = g_TheirCombatDataIM:GetInstance();		
+				--controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_HEIGHT_BONUS");
+				--controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+			--end
 
 			------新增黄金时代加成
 			iModifier = pTheirUnit:GoldenAgeMod();
@@ -2432,7 +2432,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 
-				-- Nearby UnitClass modifier
+				-- Nearby Unit promotion modifier
 					if (pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
 					iModifier = pTheirUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
 					controlTable = g_TheirCombatDataIM:GetInstance();

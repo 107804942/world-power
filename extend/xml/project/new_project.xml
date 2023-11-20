@@ -127,13 +127,13 @@
 		<Row>
 			<ProcessType>PROCESS_GATHER</ProcessType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>5</Yield>
+			<Yield>10</Yield>
 		</Row>
 		
 		<Row>
 			<ProcessType>PROCESS_CULTURE</ProcessType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>5</Yield>
+			<Yield>10</Yield>
 		</Row>
 
 		<Row>
@@ -143,12 +143,12 @@
 		</Row>
 
 		<Update>
-			<Set Yield="5"/>
+			<Set Yield="10"/>
 			<Where ProcessType="PROCESS_RESEARCH"/>
 		</Update>
 
 		<Update>
-			<Set Yield="5"/>
+			<Set Yield="10"/>
 			<Where ProcessType="PROCESS_WEALTH"/>
 		</Update>
 

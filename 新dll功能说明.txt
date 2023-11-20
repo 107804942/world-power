@@ -699,11 +699,34 @@ ALTER TABLE UnitPromotions ADD COLUMN 'GetGroundAttackRange' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 -------------------------------------------------------------------------------------------------
 
+	<!-- BUILDING: Allows you to define a flat yield that is gained from a CS alliance. -->
+	<Table name="Building_YieldPerAlly">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
 
 
+	<Table name="Building_YieldPerEspionageSpy">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
 
 
+	TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_ESPIONAGE_SPY
 
+	<Row Tag="TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_ESPIONAGE_SPY">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}{2_IconString} 来自间谍获取</Text>
+		</Row>
+
+	m_aiYieldFromConstruction
+	ChangeYieldPerEspionageSpy
+
+		m_piYieldPerEspionageSpy(NULL),
+		m_piYieldChangeWorldWonderGlobal
+
+		&& GET_PLAYER(getOwner()).GetEspionage()->GetNumSpies() > 0
 
 INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);
@@ -718,7 +741,12 @@ VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
 
 
 
+INSERT INTO Building_YieldPerEspionageSpy(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_BLETCHLEY_PARK','YIELD_SCIENCE',100);
 
+
+INSERT INTO Building_YieldPerEspionageSpy(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_BLETCHLEY_PARK','YIELD_GOLD',100);
 
 
 	<Table name="Policy_FreeBuilding">

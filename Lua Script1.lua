@@ -2,6 +2,56 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------
+function AG_BUFF(iPlayer)
+	local player = Players[iPlayer]
+	if player == nil 
+	or (not player:IsMajorCiv()) 
+	or (not player:IsAlive()) then
+	 	return
+	         end
+
+	if  player:CountNumBuildings(GameInfoTypes.BUILDING_FOREIGN_OFFICE) > 0 
+	and player:GetNumSpies() >0 then
+	            local sum= 0
+				local agents = player:GetEspionageSpies()
+				for i,v in ipairs(agents) do
+					local iAgent = v
+					if (v.IsDiplomat) then -- Only for diplomat!
+						local pPlot = Map.GetPlot(iAgent.CityX, iAgent.CityY)
+						local pCity = nil
+						if(pPlot ~= nil) then
+							pCity = pPlot:GetPlotCity()
+							if(pCity ~= nil) then
+								 local pOwner = Players[pCity:GetOwner()]
+								 local science= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
+				                 local gold= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_GOLD))
+				                 local faith= pCity:GetFaithPerTurn()
+								 local Culture= pCity:GetBaseJONSCulturePerTurn()
+								--if (not pOwner:IsMinorCiv()) then -- Not for city states
+									if  pOwner:IsDoF(iPlayer) then -- If not friend then begins attack
+									    sum = 0.15
+										else 
+										sum = 0.25
+									    end
+					                    player:ChangeGold(gold*sum)
+	                                    player:ChangeJONSCulture(Culture*sum)
+					 					player:ChangeFaith(faith*sum)
+					 					local iTeamID = player:GetTeam()
+                     					local iTeam = Teams[iTeamID]
+			         					local iTeamTechs = iTeam:GetTeamTechs()
+			         					--local Boost = player:GetScience()
+				                         ChangeResearchProcess(player, iTeamID, iTeam, iTeamTechs, iPlayer, science*sum)									
+                					 end
+		      					 end
+           					 end
+        				end
+	 				end
+	 ----------------------------------------------------------------------------------
+
+end
+GameEvents.PlayerDoTurn.Add(AG_BUFF)
+
+
 
 
 function Building_EmpireReourceAnds_Check(playerID, buildingID)

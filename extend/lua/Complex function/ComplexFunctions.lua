@@ -1453,59 +1453,6 @@ function PlayerCompletedQuest(iMajor, iMinor, iQuestType, iStartTurn, iOldInflue
 end
 GameEvents.PlayerCompletedQuest.Add(PlayerCompletedQuest) 
 
--- ****************************************
--- 
--- ****************************************
-function BLETCHLEY_PARK(playerID) 
-	local pPlayer = Players[playerID] 
-	if pPlayer == nil or (not pPlayer:IsMajorCiv())  then
-	 	return
-	         end
-
-  	if pPlayer:GetNumSpies() < 1  or (not pPlayer:HasWonder(GameInfoTypes.BUILDING_BLETCHLEY_PARK)) then
-			return
-		end
-
-	         local production = 0
-			 local gold = 0
-			 local science = 0
-			 for city in pPlayer:Cities() do
-			 if  city:IsHasBuilding(GameInfoTypes["BUILDING_BLETCHLEY_PARK"]) then
-
-			 for k, v in pairs(pPlayer:GetEspionageSpies()) do
-			 local pSpyPlot = Map.GetPlot(v.CityX, v.CityY)
-
-			 if pSpyPlot ~= nil then
-
-			 local ecity = pSpyPlot:GetPlotCity()
-			 
-			 if ecity ~= nil then
-
-			 if ecity:GetOwner() ~= pPlayer:GetID() then
-
-				 science = science + math.max(0,0.25*ecity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
-				 gold = gold + math.max(0,0.25*ecity:GetYieldRate(YieldTypes.YIELD_GOLD))
-				 production = production + math.max(0,0.25*ecity:GetYieldRate(YieldTypes.YIELD_PRODUCTION)) 
-				           end
-				        end
-				    end
-				 end
-
-                 pPlayer:ChangeGold(gold)					 		 
-				 city:ChangeProduction(production)
-
-				 local iTeamID = pPlayer:GetTeam()
-			     local iTeam = Teams[iTeamID]
-			     local iTeamTechs = iTeam:GetTeamTechs()
-			     local iPlayerID = pPlayer:GetID()
-
-				 ChangeResearchProcess(pPlayer, iTeamID, iTeam, iTeamTechs, iPlayerID, science)
-		       end
-	       end
-
-end
-GameEvents.PlayerDoneTurn.Add(BLETCHLEY_PARK)
-
 
 -- **********************************************************************************************************************************************
 --
@@ -1531,54 +1478,6 @@ end
 GameEvents.DoDenounce.Add(Denounce_BUFF)
 
 
-function AG_BUFF(iPlayer)
-	local player = Players[iPlayer]
-	if player == nil 
-	or (not player:IsMajorCiv()) 
-	or (not player:IsAlive()) then
-	 	return
-	         end
-
-	if  player:CountNumBuildings(GameInfoTypes.BUILDING_FOREIGN_OFFICE) > 0 
-	and player:GetNumSpies() >0 then
-	            local sum= 0
-				local agents = player:GetEspionageSpies()
-				for i,v in ipairs(agents) do
-					local iAgent = v
-					if (v.IsDiplomat) then -- Only for diplomat!
-						local pPlot = Map.GetPlot(iAgent.CityX, iAgent.CityY)
-						local pCity = nil
-						if(pPlot ~= nil) then
-							pCity = pPlot:GetPlotCity()
-							if(pCity ~= nil) then
-								 local pOwner = Players[pCity:GetOwner()]
-								 local science= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_SCIENCE))
-				                 local gold= math.max(0,pCity:GetYieldRate(YieldTypes.YIELD_GOLD))
-				                 local faith= pCity:GetFaithPerTurn()
-								 local Culture= pCity:GetBaseJONSCulturePerTurn()
-								--if (not pOwner:IsMinorCiv()) then -- Not for city states
-									if  pOwner:IsDoF(iPlayer) then -- If not friend then begins attack
-									    sum = 0.15
-										else 
-										sum = 0.25
-									    end
-					                    player:ChangeGold(gold*sum)
-	                                    player:ChangeJONSCulture(Culture*sum)
-					 					player:ChangeFaith(faith*sum)
-					 					local iTeamID = player:GetTeam()
-                     					local iTeam = Teams[iTeamID]
-			         					local iTeamTechs = iTeam:GetTeamTechs()
-			         					--local Boost = player:GetScience()
-				                         ChangeResearchProcess(player, iTeamID, iTeam, iTeamTechs, iPlayer, science*sum)									
-                					 end
-		      					 end
-           					 end
-        				end
-	 				end
-	 ----------------------------------------------------------------------------------
-
-end
-GameEvents.PlayerDoTurn.Add(AG_BUFF)
 
 
 

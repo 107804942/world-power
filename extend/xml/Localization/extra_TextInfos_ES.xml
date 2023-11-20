@@ -9357,7 +9357,7 @@
 			<Text>布莱奇利公园</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP">
-			<Text>获得一个免费科技，提供2[COLOR_POSITIVE_TEXT]额外[ENDCOLOR][ICON_SPY]间谍,敌方间谍工作效率-15%。从研究协定中额外获得25%科研。回合结束时，我方间谍所在非己方城市25%的[ICON_GOLD]金钱、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研产出将提供给该奇观所在城市。</Text>
+			<Text>获得一个免费科技，提供2[COLOR_POSITIVE_TEXT]额外[ENDCOLOR][ICON_SPY]间谍,敌方间谍工作效率-15%。从研究协定中额外获得25%科研。我方间谍所在非己方城市25%的[ICON_GOLD]金钱、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研产出将提供给该奇观所在城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_BLETCHLEY_PARK_TEXT">
 			<Text>布莱切利公园位于白金汉郡的米尔顿凯恩斯，是英国政府通讯总部的中心所在地。二战期间，英国定期渗透到轴心国的秘密通讯中，最重要的是德国的恩尼格玛密码和洛伦兹密码。二战时期英国情报机构的官方历史学家写道，布莱切利生产的”超级”情报，将战争缩短了2到4年，没有它，战争的结果将是不确定的。这个地方现在是一个教育和历史景点，用来纪念和庆祝这些成就。</Text>
@@ -9374,7 +9374,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_FOREIGN_OFFICE_HELP">
 			<Text>
-				在世界会议获得2个额外代表票数。当你赠予城邦礼物时，可获得更多[ICON_INFLUENCE]影响力。当你在其他文明城市中安置了外交官时，每回合可获得该城市多项产出（[ICON_CULTURE]文化、[ICON_PEACE]信仰、[ICON_RESEARCH]科研、[ICON_GOLD]金钱）的15%。若双方宣布了友好申明，则数值提升至25%。
+				在世界会议获得2个额外代表票数。当你赠予城邦礼物时，可获得更多[ICON_INFLUENCE]影响力。当你在其他文明城市中安置了间谍或者外交官时，每回合可获得该城市多项产出（[ICON_CULTURE]文化、[ICON_PEACE]信仰、[ICON_RESEARCH]科研、[ICON_GOLD]金钱）的15%。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_FOREIGN_OFFICE_TEXT">
