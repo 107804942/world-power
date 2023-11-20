@@ -7,7 +7,7 @@ end
 
 function GetCityCrimePerTurnAndToolTip(pCity)
 
-     ----------------------------经济----------------------------
+     ----------------------------贪污----------------------------
 	local strCorruptionToolTip = Locale.Lookup("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION")
 	local pPlayer = Players[pCity:GetOwner()]
 
@@ -207,12 +207,7 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 		strViolenceToolTip = strViolenceToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_VIOLENCE_EDICTS", iViolencePerTurnFromEdicts);
 	end
 
-	local iHousingPerTurn, strHousingToolTip = Iska_GetCityHousingPerTurnAndToolTip(pCity)
-	local iViolencePerTurnFromHousing = 0;
-	if iHousingPerTurn < 0 then iViolencePerTurnFromHousing = iHousingPerTurn * -1 end
-	if iViolencePerTurnFromHousing > 0 then 
-		strViolenceToolTip = strViolenceToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_VIOLENCE_HOUSING", iViolencePerTurnFromHousing);
-	end
+
 
 	local iViolencePerTurnFromBuildings = 0;
 	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_JAIL"]) == 1 then iViolencePerTurnFromBuildings = iViolencePerTurnFromBuildings - 2 end
