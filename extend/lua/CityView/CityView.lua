@@ -2436,7 +2436,12 @@ function DoUpdateProductionInfo( bNoProduction )
 	-- Output
 	local strBase = Locale.ConvertTextKey("TXT_KEY_YIELD_BASE", iBaseProductionPT, "[ICON_PRODUCTION]");
 	local strTotal = Locale.ConvertTextKey("TXT_KEY_YIELD_TOTAL", iProductionPerTurn, "[ICON_PRODUCTION]");
-	local strOutput = strBase .. "[NEWLINE]" .. strTotal;
+	local strOverFlow = Locale.ConvertTextKey("TXT_KEY_YIELD_OVERFLOW", pCity:GetOverflowProduction(), "[ICON_PRODUCTION]");
+	local strOutput = "";
+	if strOverFlow > 0 then
+		strOutput = strOutput .. strOverFlow .. "[NEWLINE]"
+	end
+	strOutput = strOutput .. strBase .. "[NEWLINE]" .. strTotal;
 	strToolTip = strToolTip .. "[NEWLINE]";
 	
 	-- This builds the tooltip from C++
