@@ -769,22 +769,33 @@ GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjec
 
 GetProjectCount()
 
-	
-	//   GameEvents.DoDenounce.Add(function(PlayerID, OtherPlayerID) end) 
-#define MOD_EVENTS_DO_DENOUNCE                      gCustomMods.isEVENTS_DO_DENOUNCE ()
-GAMEEVENT_DoDenounce
-
-
---void CvDiplomacyAI::DoDenouncePlayer(PlayerTypes ePlayer)
 
 
 
+Violence
+Heresy
 
+	case YIELD_VIOLENCE:
+			case YIELD_HERESY:
 
+	<Row>
+			<ID>15</ID>
+			<Type>YIELD_VIOLENCE</Type>
+			<Description>TXT_KEY_YIELD_VIOLENCE</Description>
+			<IconString>[ICON_CULTURE]</IconString>
+			<MinCity>0</MinCity>
+			<AIWeightPercent>80</AIWeightPercent>
+		</Row>
 
-
-
-
+		
+	<Row>
+			<ID>16</ID>
+			<Type>YIELD_HERESY</Type>
+			<Description>TXT_KEY_YIELD_HERESY</Description>
+			<IconString>[ICON_CULTURE]</IconString>
+			<MinCity>0</MinCity>
+			<AIWeightPercent>80</AIWeightPercent>
+		</Row>
 
 
 

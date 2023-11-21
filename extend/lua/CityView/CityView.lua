@@ -31,8 +31,8 @@ getPedia = CivilopediaControl and getPediaA
 ------------------------------
 ------------------------------
 
-
-
+-- CRIME MOD
+include( "Crime_UI.lua" );
 -- PLAGUE MOD
 include( "Plague_UI.lua" );
 
@@ -2104,12 +2104,16 @@ function OnCityViewUpdate()
 		--新增(详细说明)
 	   local strHealthToolTip = pPlayer:GetCityHealthTT(pCity)
 	   Controls.HealthBox:SetToolTipString(strHealthToolTip);
-	    --end addition
+	    ----------------------------------------end----------------------------------------
 
 
+		----------------------------------------新增犯罪率----------------------------------------
+		local CRIMEID   = GameInfo.Yields["YIELD_CRIME"].ID
+		local iCrimePerTurn = pCity:GetBaseYieldRate(CRIMEID)
+		Controls.CrimePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT", iCrimePerTurn) );
+        ---------------------------------------end----------------------------------------
 		
-----------------------------------------end----------------------------------------
-		
+
 		local iCulturePerTurn = pCity:GetJONSCulturePerTurn();
 		Controls.CulturePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT", iCulturePerTurn) );
 		--Controls.CultureBox:SetToolTipString(strToolTip);
@@ -2499,6 +2503,11 @@ function DoUpdateUpperLeftTooltips()
 	--新增PLAGUE MOD
 	local strHealthToolTip =player:GetCityHealthTT(pCity) -- GetHealthTooltip(pCity, false);
 	Controls.HealthBox:SetToolTipString(strHealthToolTip);
+	--end addition
+
+	--新增crime
+	local strCrimeToolTip =player:GetCityCrimeTT(pCity) -- GetCrimeTooltip(pCity, false);
+	Controls.CrimeBox:SetToolTipString(strCrimeToolTip);
 	--end addition
 
 	--新增goldenage 

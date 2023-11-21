@@ -283,11 +283,7 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 		strTheftToolTip = strTheftToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_THEFT_BASE", iTheftPerTurnFromCitySize);
 	end
 
-	local iTheftPerTurnFromHousing = 0;
-	if iHousingPerTurn < 0 then iTheftPerTurnFromHousing = iHousingPerTurn * -1 end
-	if iTheftPerTurnFromHousing > 0 then 
-		strTheftToolTip = strTheftToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_THEFT_HOUSING", iTheftPerTurnFromHousing);
-	end
+
 
 	local iTheftPerTurnFromEdicts = 0;
 	if pCity:GetGarrisonedUnit() ~= nil then

@@ -852,3 +852,28 @@ GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
 
 
 
+	if (eIndex == YIELD_HERESY)
+	{
+		ReligionTypes eMajority = GetCityReligions()->GetReligiousMajority();
+		if (eMajority >= RELIGION_PANTHEON )
+		{
+			//const CvReligion* pReligion = GC.getGame().GetGameReligions()->GetReligion(eMajority, getOwner());
+			if (eMajority && (GetCityReligions()->GetNumFollowers(eMajority) != getPopulation()))
+			{
+				int iBase = getPopulation() - GetCityReligions()->GetNumFollowers(eMajority);
+				if (iBase > 0)
+				{
+					iBaseValue = iBase;
+					szRtnValue += GetLocalizedText("TXT_KEY_CITYVIEW_BASE_YIELD_TT_HERESY_DISCORD", iBaseValue, YieldIcon);
+				}
+			}
+		}
+
+		iBaseValue = -5;
+		if (GET_PLAYER(m_eOwner).isGoldenAge())
+		{
+			szRtnValue += GetLocalizedText("TXT_KEY_CITYVIEW_BASE_YIELD_TT_HERESY_DISCORD_FROM_GOLDENAGE", iBaseValue, YieldIcon);
+		}
+		//GetCityReligions()->GetNumReligionsWithFollowers()
+	}
+	
