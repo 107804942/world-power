@@ -145,9 +145,9 @@
 				<Text>[COLOR_ENDURANCE]不可被俘[ENDCOLOR]</Text>
 			</Row>
 			
-			<Row Tag="TXT_KEY_UNIT_IGNORE_ZOC" >
+			<Replace Tag="TXT_KEY_UNIT_IGNORE_ZOC_D" >
 				<Text>[COLOR_ENDURANCE]无视ZOC[ENDCOLOR]</Text>
-			</Row>
+			</Replace>
 
 			<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT" >
 				<Text>[COLOR_COURAGE]受到的最终伤害{1_Num}[ENDCOLOR]</Text>
