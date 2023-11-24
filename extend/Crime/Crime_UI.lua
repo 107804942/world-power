@@ -27,15 +27,18 @@ end
 -- end
 -- ********************************************************	
 local yieldCrimeID  = GameInfoTypes["YIELD_CRIME"]
+local yieldLoyaltyID  = GameInfoTypes["YIELD_LOYALTY"]
+local yieldViolenceID  = GameInfoTypes["YIELD_VIOLENCE"]
+local yieldHeresyID  = GameInfoTypes["YIELD_HERESY"]
 
 --Player:GetCityCrimeTT
 function Player.GetCityCrimeTT(player, city)
 	--local totalCrime, totalCrime = player:GetCityCrimeTotal(city, true)
 	local toolTipCrime = ""
 	--local toolTipDisease = ""
-	local toolTipPlagueSentiment = nil
+	local toolTipCrimeSentiment = nil
 -- ********************************************************
--- ½¡¿µ¶ÈÃ÷Ï¸
+-- ¸¯°ÜÃ÷Ï¸
 -- ********************************************************
    
 	-- Base Yield from Terrain

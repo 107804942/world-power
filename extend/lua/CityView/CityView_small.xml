@@ -5,7 +5,7 @@
 	<Image Anchor="L,C" Offset="0,0" Texture="assets\UI\Art\WorldView\1920_LeftSide.DDS" Size="100.1200"/>
 	<Image Anchor="R,C" Offset="0,0" Texture="assets\UI\Art\WorldView\1920_RightSide.DDS" Size="100.1200"/>
 	<!-- City Information -->
-	<Grid Size="225,615" Anchor="L,T" Offset="-16,-9" Style="Grid9DetailSix140" Hidden="0" ID="TopLeft" ConsumeMouse="1">
+	<Grid Size="225,643" Anchor="L,T" Offset="-16,-9" Style="Grid9DetailSix140" Hidden="0" ID="TopLeft" ConsumeMouse="1">
 		<Stack Anchor="L,T" Offset="18,8" Size="0,0" StackGrowth="Bottom" Padding="0">
 
 			<!-- Population Info -->
@@ -92,7 +92,13 @@
 				<Label ID="CityHealthLabel" Anchor="R,C" Offset="5,-2" String="" Font="TwCenMT20" FontStyle="Shadow"/>
 			</Box>
 
-
+			<!-- Crime Info -->
+			<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="CrimeBox">
+				<Image Offset="0,0" Anchor="L,T" Size="196,28" Texture="yieldbox.dds"/>
+				<Label Anchor="L,C" Offset="8,0" String="[ICON_SILVER_FIST]"/>
+				<Label Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_CRIME_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
+				<Label ID="CrimePerTurnLabel" Anchor="R,C" Offset="5,-2" String="" Font="TwCenMT20" FontStyle="Shadow"/>
+			</Box>
 
 			<!-- National Yields Header -->
 			<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2">

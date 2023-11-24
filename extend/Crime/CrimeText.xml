@@ -52,6 +52,18 @@
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TT_FROM_OTHER_YIELD">
 			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自其他产出</Text>
 		</Row>
+		<Replace Tag="TXT_KEY_YIELD_CRIME">
+			<Text>腐败</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
+			<Text>盗窃</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_VIOLENCE">
+			<Text>暴力</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_HERESY">
+			<Text>邪教</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 
 
@@ -106,7 +118,18 @@
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TT_FROM_OTHER_YIELD">
 			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自其他产出</Text>
 		</Row>
-	
+		<Replace Tag="TXT_KEY_YIELD_CRIME">
+			<Text>腐败</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
+			<Text>盗窃</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_VIOLENCE">
+			<Text>暴力</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_HERESY">
+			<Text>邪教</Text>
+		</Replace>
 	</Language_zh_CN>
 
 
@@ -161,5 +184,18 @@
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TT_FROM_OTHER_YIELD">
 			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_HEALTH]来自其他产出</Text>
 		</Row>
+
+		<Replace Tag="TXT_KEY_YIELD_CRIME">
+			<Text>腐败</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
+			<Text>盗窃</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_VIOLENCE">
+			<Text>暴力</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_YIELD_HERESY">
+			<Text>邪教</Text>
+		</Replace>
 	</Language_en_US>
 </GameData>
