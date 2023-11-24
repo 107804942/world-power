@@ -786,21 +786,22 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 			convertedKey = Locale.ConvertTextKey(cityProductionName);
 			controls.CityProductionName:SetText(convertedKey);
 			if (controls.CityBannerLeftBackground) then
-
-
-
-				    if (city:IsProductionUnit()) then
-					local cityProductionUnit = city:GetProductionUnit();
-					local tooltipString = GetHelpTextForUnit(cityProductionUnit);
-					controls.CityBannerLeftBackground:SetToolTipString(tooltipString);
-
-
-					elseif (city:IsProductionBuilding()) then
-					local cityProductionBuilding = city:GetProductionBuilding();
-					local tooltipString = GetHelpTextForBuilding( cityProductionBuilding, true, true, true, city );
-					controls.CityBannerLeftBackground:SetToolTipString(tooltipString);
-
-
+				if city:IsProductionProcess() then
+					local cityProductionProcess = city:GetProductionProcess()
+					local tooltipString = GetHelpTextForProcess(cityProductionProcess, false)
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
+				elseif city:IsProductionUnit() then
+					local cityProductionUnit = city:GetProductionUnit()
+					local tooltipString = GetHelpTextForUnit(cityProductionUnit)
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
+				elseif city:IsProductionBuilding() then
+					local cityProductionBuilding = city:GetProductionBuilding()
+					local tooltipString = GetHelpTextForBuilding(cityProductionBuilding, true, true, true, city)
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
+				elseif city:IsProductionProject() then
+					local cityProductionProject = city:GetProductionProject()
+					local tooltipString = GetHelpTextForProject(cityProductionProject)
+					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
 				else
 					if cityProductionName == "TXT_KEY_PRODUCTION_NO_PRODUCTION" then
 						controls.CityBannerLeftBackground:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_CITY_NOT_PRODUCING", localizedCityName ));
