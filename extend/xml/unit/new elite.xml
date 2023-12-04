@@ -827,7 +827,7 @@
 			<Combat>3000</Combat>
 			<RangedCombat>3000</RangedCombat>
 			<Cost>80000</Cost>
-			<Moves>30</Moves>
+			<Moves>20</Moves>
 			<Range>20</Range>
 			<Immobile>0</Immobile>
 			<BaseSightRange>6</BaseSightRange>
@@ -929,7 +929,7 @@
 			<RangedCombatLimit>1000</RangedCombatLimit>
 			<CombatLimit>0</CombatLimit>
 			<XPValueDefense>0</XPValueDefense>
-			<NukeDamageLevel>3</NukeDamageLevel>
+			<NukeDamageLevel>4</NukeDamageLevel>
 			<UnitArtInfo>ART_DEF_UNIT_NUCLEAR_MISSILE</UnitArtInfo>
 			<UnitFlagAtlas>TTMOD_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>8</UnitFlagIconOffset>
@@ -1580,7 +1580,7 @@
 
 		<Row>
 			<UnitType>UNIT_SPACESHIP</UnitType>
-			<PromotionType>PROMOTION_CAN_FOCUS</PromotionType>
+			<PromotionType>PROMOTION_FOCUS</PromotionType>
 		</Row>
 
 		<Row>

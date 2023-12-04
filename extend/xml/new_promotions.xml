@@ -3090,7 +3090,6 @@
 		</Row>
 
 
-
 		<Row>
 			<Type>PROMOTION_FOCUS</Type>
 			<Description>TXT_KEY_PROMOTION_FOCUS</Description>
@@ -3101,20 +3100,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_FOCUS</PediaEntry>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
-			<MovesChange>-7</MovesChange>
 			<RangedAttackModifier>100</RangedAttackModifier>
-		</Row>
-
-		<Row>
-			<Type>PROMOTION_CAN_FOCUS</Type>
-			<Description>TXT_KEY_PROMOTION_CAN_FOCUS</Description>
-			<Help>TXT_KEY_PROMOTION_CAN_FOCUS_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_CAN_FOCUS</PediaEntry>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<CannotBeChosen>true</CannotBeChosen>
 			<SplashDamagePercent>100</SplashDamagePercent>
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
@@ -3123,7 +3109,6 @@
 			<CollateralDamagePercent>100</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 		</Row>
-
 
 
 		<Row>
@@ -4195,12 +4180,28 @@
 			<IconAtlas>promoMUC_atlas_01</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_URBAN</PediaEntry>
-			<SiegeInflictDamageChangeMaxHPPercent>5</SiegeInflictDamageChangeMaxHPPercent>
+			<SiegeInflictDamageChangeMaxHPPercent>10</SiegeInflictDamageChangeMaxHPPercent>
 			<DestroyBuildingCollection>COLLECTIONS_WUBAN_CANNON</DestroyBuildingCollection>
 			<DestroyBuildingProbability>40</DestroyBuildingProbability>
 			<DestroyBuildingNumLimit>1</DestroyBuildingNumLimit>
 		</Row>
 
+		<!--**************攻城掠地**************-->
+		<Row>
+			<Type>PROMOTION_PLUNDERED</Type>
+			<Description>TXT_KEY_PROMOTION_PLUNDERED</Description>
+			<Help>TXT_KEY_PROMOTION_PLUNDERED_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>9</PortraitIndex>
+			<!--<MustSetUpToRangedAttack>false</MustSetUpToRangedAttack>-->
+			<FreePillageMoves>true</FreePillageMoves>
+			<PillageReplenishMoves>1</PillageReplenishMoves>
+			<PillageReplenishAttck>1</PillageReplenishAttck>
+			<PillageReplenishHealth>25</PillageReplenishHealth>
+			<IconAtlas>promoMUC_atlas_01</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_PLUNDERED</PediaEntry>
+		</Row>
 
 
 		<!--**************卡尔卡松**************-->
@@ -4241,22 +4242,6 @@
 
 
 
-		<!--**************攻城掠地**************-->
-		<Row>
-			<Type>PROMOTION_PLUNDERED</Type>
-			<Description>TXT_KEY_PROMOTION_PLUNDERED</Description>
-			<Help>TXT_KEY_PROMOTION_PLUNDERED_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>9</PortraitIndex>
-			<MustSetUpToRangedAttack>-2</MustSetUpToRangedAttack>
-			<FreePillageMoves>true</FreePillageMoves>
-			<PillageReplenishMoves>1</PillageReplenishMoves>
-			<PillageReplenishAttck>1</PillageReplenishAttck>
-			<PillageReplenishHealth>1</PillageReplenishHealth>
-			<IconAtlas>promoMUC_atlas_01</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_PLUNDERED</PediaEntry>
-		</Row>
 
 
 

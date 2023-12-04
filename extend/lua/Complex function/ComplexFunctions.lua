@@ -175,81 +175,7 @@ UnitEmpBombOffButton = {
    	print ("Emp Bomb Off!")	
   end
 };
-
 LuaEvents.UnitPanelActionAddin(UnitEmpBombOffButton);
-
-
-
-
-
-
-
-----Focus Mode Switch
-
-UnitFocusOnButton = {
-  Name = "Focus Mode On",
-  Title = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_ON_SHORT", -- or a TXT_KEY
-  OrderPriority = 200, -- default is 200
-  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
-  PortraitIndex = 12,
-  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_ON", -- or a TXT_KEY_ or a function
-  
-  Condition = function(action, unit)
-    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CAN_FOCUS"].ID) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID);
-  end, -- or nil or a boolean, default is true
-  
-  Disabled = function(action, unit)   
-    return false;
-  end, -- or nil or a boolean, default is false
-  
-  Action = function(action, unit, eClick) 
-  	
-   	Events.AudioPlay2DSound("AS2D_SPACESHIP_CANNON")
-   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID, true)
-	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CAN_FOCUS"].ID, false)
-	local iMovesLeft = math.max( 0, unit:MovesLeft()-8*GameDefines["MOVE_DENOMINATOR"])
-   	unit:SetMoves(iMovesLeft)
-   	print ("Focus On!")
-	
-  
-  
-  end
-};
-LuaEvents.UnitPanelActionAddin(UnitFocusOnButton);
-
-
-
-
-UnitFocusOffButton = {
-  Name = "Focus Mode Off",
-  Title = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_OFF_SHORT", -- or a TXT_KEY
-  OrderPriority = 200, -- default is 200
-  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
-  PortraitIndex = 17,
-  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_FOCUS_OFF", -- or a TXT_KEY_ or a function
-  
- 
-  
-  Condition = function(action, unit)
-    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID);
-  end, -- or nil or a boolean, default is true
-  
-  Disabled = function(action, unit)     
-    return not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID) ;
-  end, -- or nil or a boolean, default is false
-  
-  Action = function(action, unit, eClick) 
-  	
-   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_FOCUS"].ID, false)
-	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_CAN_FOCUS"].ID, true)
-   	unit:SetMoves(0)
-   	print ("Focus Mode Off!")
-	
-  end
-};
-LuaEvents.UnitPanelActionAddin(UnitFocusOffButton);
-
-
 
 
 
@@ -1342,7 +1268,7 @@ local pUnit = player:GetUnitByID(iUnit)
 		
 if pUnit~=nil then
 if pUnit:GetUnitType() ==GameInfoTypes["UNIT_ANTIMATTER_EXPLOSION"]  then
-pUnit:Kill(true, -1) 
+--pUnit:Kill(true, -1) 
 	  for iShiftX = -iTileRadius, iTileRadius do
 	  for iShiftY = -iTileRadius, iTileRadius do
 	  local pTargetPlot = Map.PlotXYWithRangeCheck(iX, iY, iShiftX, iShiftY, iTileRadius)
@@ -1384,11 +1310,10 @@ GameEvents.NuclearDetonation.Add(NukeBuff)
 -- 
 -- ******************************************************** 
 local iLatifundium = GameInfoTypes.BUILD_LATIFUNDIUM
-local iBuildingSilkroadClass = GameInfo.BuildingClasses.BUILDINGCLASS_SILKROAD.ID  
 function LatifundiumCheck(iPlayer, iUnit, iX, iY, iBuild)
    if iBuild == iLatifundium  then
    local pPlayer = Players[iPlayer]
-   if pPlayer:GetBuildingClassCount(iBuildingSilkroadClass) > 0 then
+   if pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_SILKROAD.ID) > 0 then
      return true
 		 end   
 	 return false
@@ -1453,7 +1378,6 @@ function PlayerCompletedQuest(iMajor, iMinor, iQuestType, iStartTurn, iOldInflue
 end
 GameEvents.PlayerCompletedQuest.Add(PlayerCompletedQuest) 
 
-
 -- **********************************************************************************************************************************************
 --
 -- **********************************************************************************************************************************************
@@ -1476,10 +1400,6 @@ function Denounce_BUFF(PlayerID, OtherPlayerID)
 	end
 end
 GameEvents.DoDenounce.Add(Denounce_BUFF)
-
-
-
-
 
 -- **********************************************************************************************************************************************
 --/* Current assignments of members of popupInfo

@@ -714,19 +714,7 @@ ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 	</Table>
 
 
-	TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_ESPIONAGE_SPY
 
-	<Row Tag="TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_ESPIONAGE_SPY">
-			<Text>[NEWLINE][ICON_BULLET]{1_Num}{2_IconString} 来自间谍获取</Text>
-		</Row>
-
-	m_aiYieldFromConstruction
-	ChangeYieldPerEspionageSpy
-
-		m_piYieldPerEspionageSpy(NULL),
-		m_piYieldChangeWorldWonderGlobal
-
-		&& GET_PLAYER(getOwner()).GetEspionage()->GetNumSpies() > 0
 
 INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);
@@ -756,47 +744,12 @@ VALUES ('BUILDING_BLETCHLEY_PARK','YIELD_GOLD',100);
 	</Table>
 
 
--- New Traits - WLTKD from GP birth
-ALTER TABLE Traits ADD COLUMN 'GPWLTKD' BOOLEAN DEFAULT 0;
-
-
--- Allows for Unit to be purchased in puppet city
-ALTER TABLE Units ADD COLUMN 'PuppetPurchaseOverride' BOOLEAN DEFAULT 0;
 
 
 
 GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjectType);
 
 GetProjectCount()
-
-
-
-
-Violence
-Heresy
-
-	case YIELD_VIOLENCE:
-			case YIELD_HERESY:
-
-	<Row>
-			<ID>15</ID>
-			<Type>YIELD_VIOLENCE</Type>
-			<Description>TXT_KEY_YIELD_VIOLENCE</Description>
-			<IconString>[ICON_CULTURE]</IconString>
-			<MinCity>0</MinCity>
-			<AIWeightPercent>80</AIWeightPercent>
-		</Row>
-
-		
-	<Row>
-			<ID>16</ID>
-			<Type>YIELD_HERESY</Type>
-			<Description>TXT_KEY_YIELD_HERESY</Description>
-			<IconString>[ICON_CULTURE]</IconString>
-			<MinCity>0</MinCity>
-			<AIWeightPercent>80</AIWeightPercent>
-		</Row>
-
 
 
 

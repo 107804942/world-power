@@ -5,10 +5,10 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>25</ModVersion>
+    <ModVersion>26</ModVersion>
     <Stability>Alpha</Stability>
-    <Teaser>[COLOR_YELLOW]基于SP9.4的拓展模组[/COLOR]</Teaser>
-    <Description>[COLOR_YELLOW]基于SP9.4的拓展模组[/COLOR]</Description>
+    <Teaser>[COLOR_YELLOW]基于SP9.5的拓展模组[/COLOR]</Teaser>
+    <Description>[COLOR_YELLOW]基于SP9.5的拓展模组[/COLOR]</Description>
     <Authors>夏皮罗的棒子</Authors>
     <SpecialThanks>夏皮罗的棒子</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
@@ -406,12 +406,6 @@
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
-        <Name>NewAttackEffects</Name>
-        <Description />
-        <FileName>extend/lua/NewAttackEffects.lua</FileName>
-      </Content>
-      <Content>
-        <Type>InGameUIAddin</Type>
         <Name>ComplexFunctions</Name>
         <Description />
         <FileName>extend/lua/Complex function/ComplexFunctions.lua</FileName>
@@ -433,6 +427,12 @@
         <Name>CityHealth</Name>
         <Description />
         <FileName>extend/Health/lua/CityHealth.xml</FileName>
+      </Content>
+      <Content>
+        <Type>InGameUIAddin</Type>
+        <Name>NewAttackEffects</Name>
+        <Description />
+        <FileName>extend/lua/combat/NewAttackEffects.lua</FileName>
       </Content>
     </ModContent>
     <ModProperties />
@@ -15863,6 +15863,10 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\lua\combat\NewAttackEffects.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="extend\lua\combat\NewUnitsRules.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -15994,10 +15998,6 @@
     <Content Include="extend\lua\map\NaturalWondersCustomMethods.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\NewAttackEffects.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\SpuerUi\EUI_context.lua">
       <SubType>Lua</SubType>
@@ -16196,10 +16196,6 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\Bombardment.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\combat\NewCombatRules.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

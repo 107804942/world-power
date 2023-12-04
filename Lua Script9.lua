@@ -7,10 +7,12 @@ end
 
 function GetCityCrimePerTurnAndToolTip(pCity)
 
-     ----------------------------贪污----------------------------
+     ----------------------------腐败----------------------------
 	local strCorruptionToolTip = Locale.Lookup("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION")
 	local pPlayer = Players[pCity:GetOwner()]
 
+
+	----来自商路
 	local iCorruptionPerTurnFromTradeRoutes =  pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_TOTALTRADEROUTES"]) * 2
 
 	local iCorruptionPerTurnFromBuildingMaintenance = 0;
@@ -18,6 +20,38 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 	if iBuildingMaintenance > 0 then iCorruptionPerTurnFromBuildingMaintenance = iCorruptionPerTurnFromBuildingMaintenance + iBuildingMaintenance end
 	if iCorruptionPerTurnFromTradeRoutes > 0 or iCorruptionPerTurnFromBuildingMaintenance > 0 then
 		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_BASE", iCorruptionPerTurnFromTradeRoutes + iCorruptionPerTurnFromBuildingMaintenance);
+	end
+
+
+	
+
+	----来自快乐度
+	local iCorruptionPerTurnFromHappiness = 0
+	if Players[pCity:GetOwner()]:GetHappiness() - Players[pCity:GetOwner()]:GetUnhappiness() < 0 then
+		iCorruptionPerTurnFromHappiness = (Players[pCity:GetOwner()]:GetHappiness() - Players[pCity:GetOwner()]:GetUnhappiness()) * -1
+		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_HAPPINESS", iCorruptionPerTurnFromHappiness);
+	end
+	
+	local iCorruptionPerTurnFromLoyalty = 0
+	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_DISLOYAL"]) > 0 then
+		iCorruptionPerTurnFromLoyalty = 2
+		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_LOYALTY", iCorruptionPerTurnFromLoyalty);
+	end
+
+	----来自建筑
+	local iNCorruptionPerTurnFromBuildings = 0;
+	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_ASSEMBLY_HALL"]) == 1 then iNCorruptionPerTurnFromBuildings = 1 end
+	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_FACTORY"]) == 1 and pCity:GetNumRealBuilding(GameInfoTypes["EDICT_GENERAL_16_DUMMY"]) == 1 then iNCorruptionPerTurnFromBuildings = 5 end
+	if iNCorruptionPerTurnFromBuildings > 0 then
+		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_NBUILDINGS", iNCorruptionPerTurnFromBuildings);
+	end
+
+	local iCorruptionPerTurnFromBuildings = 0;
+	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_JAIL"]) == 1 then iCorruptionPerTurnFromBuildings = iCorruptionPerTurnFromBuildings - 1 end
+	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_CONSTABLE"]) == 1 then iCorruptionPerTurnFromBuildings = iCorruptionPerTurnFromBuildings - 3 end
+	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_PRISON"]) == 1 then iCorruptionPerTurnFromBuildings = iCorruptionPerTurnFromBuildings - 5 end
+	if iCorruptionPerTurnFromBuildings < 0 then
+		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_BUILDINGS", iCorruptionPerTurnFromBuildings);
 	end
 
 	local iCorruptionPerTurnFromTaxEvasion = 0;
@@ -33,26 +67,8 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 	if iCorruptionPerTurnFromTaxEvasion > 0 then
 		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_TAX", iCorruptionPerTurnFromTaxEvasion);
 	end
-	
-	local iCorruptionPerTurnFromHappiness = 0
-	if Players[pCity:GetOwner()]:GetHappiness() - Players[pCity:GetOwner()]:GetUnhappiness() < 0 then
-		iCorruptionPerTurnFromHappiness = (Players[pCity:GetOwner()]:GetHappiness() - Players[pCity:GetOwner()]:GetUnhappiness()) * -1
-		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_HAPPINESS", iCorruptionPerTurnFromHappiness);
-	end
-	
-	local iCorruptionPerTurnFromLoyalty = 0
-	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_DISLOYAL"]) > 0 then
-		iCorruptionPerTurnFromLoyalty = 2
-		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_LOYALTY", iCorruptionPerTurnFromLoyalty);
-	end
 
-	local iNCorruptionPerTurnFromBuildings = 0;
-	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_ASSEMBLY_HALL"]) == 1 then iNCorruptionPerTurnFromBuildings = 1 end
-	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_FACTORY"]) == 1 and pCity:GetNumRealBuilding(GameInfoTypes["EDICT_GENERAL_16_DUMMY"]) == 1 then iNCorruptionPerTurnFromBuildings = 5 end
-	if iNCorruptionPerTurnFromBuildings > 0 then
-		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_NBUILDINGS", iNCorruptionPerTurnFromBuildings);
-	end
-
+	----来自政策
 	local iCorruptionPerTurnFromPolicies = 0;
 	if Players[pCity:GetOwner()]:HasPolicy(GameInfoTypes["POLICY_LIBERTY_CRIME"]) then iCorruptionPerTurnFromPolicies = iCorruptionPerTurnFromPolicies + 3 end
 	if Players[pCity:GetOwner()]:HasPolicy(GameInfoTypes["POLICY_LIBERTY_CRIME_NATIONALISM"]) then iCorruptionPerTurnFromPolicies = iCorruptionPerTurnFromPolicies + 3 end
@@ -67,16 +83,9 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_EDICTS", iCorruptionPerTurnFromEdicts);
 	end
 
-	local iCorruptionPerTurnFromBuildings = 0;
-	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_JAIL"]) == 1 then iCorruptionPerTurnFromBuildings = iCorruptionPerTurnFromBuildings - 1 end
-	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_CONSTABLE"]) == 1 then iCorruptionPerTurnFromBuildings = iCorruptionPerTurnFromBuildings - 3 end
-	if pCity:GetNumRealBuilding(GameInfoTypes["BUILDING_PRISON"]) == 1 then iCorruptionPerTurnFromBuildings = iCorruptionPerTurnFromBuildings - 5 end
-	if iCorruptionPerTurnFromBuildings < 0 then
-		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_BUILDINGS", iCorruptionPerTurnFromBuildings);
-	end
 
 
-
+	----来自间谍
 	local iCorruptionPerTurnFromSpies = 0;
 	for i,v in ipairs(Players[pCity:GetOwner()]:GetEspionageSpies()) do
 		local plot = Map.GetPlot(v.CityX, v.CityY);
@@ -95,6 +104,8 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 
 	local iCorruptionPerTurn = iCorruptionPerTurnFromTradeRoutes + iCorruptionPerTurnFromBuildingMaintenance + iCorruptionPerTurnFromPolicies + iCorruptionPerTurnFromBuildings + iCorruptionPerTurnFromLoyalty + iCorruptionPerTurnFromTaxEvasion + iCorruptionPerTurnFromSpies + iCorruptionPerTurnFromVirtues + iCorruptionPerTurnFromHappiness + iNCorruptionPerTurnFromBuildings + iCorruptionPerTurnFromEdicts
 	
+
+	----来自宗教
 	local iCorruptionPerTurnFromBeliefs = 0;
 	if pCity:GetReligiousMajority() > 0 and iCorruptionPerTurn > 0 and math.floor(pCity:GetFaithPerTurn() / 2) > 0 then
 		for i,v in ipairs(Game.GetBeliefsInReligion(pCity:GetReligiousMajority())) do

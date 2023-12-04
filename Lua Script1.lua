@@ -1,7 +1,86 @@
 ﻿-- Lua Script1
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
---------------------------------------------------------------
+--------------------------------------------------------------\
+	// Adjacent Friendly military Unit?
+	if(IsFriendlyUnitAdjacent(/*bCombatUnit*/ true))
+		iModifier += GetAdjacentModifier();
+
+
+
+
+			if(pOtherUnit != NULL)
+	{
+		CvAssertMsg(pOtherUnit != this, "Compared combat strength against one's own pointer. This is weird and probably wrong.");
+
+		if(!bIgnoreUnitAdjacency)
+		{
+			// Flanking
+			int iNumAdjacentFriends = pOtherUnit->GetNumEnemyUnitsAdjacent(this);
+			if(iNumAdjacentFriends > 0)
+			{
+				iTempModifier = /*15*/ GC.getBONUS_PER_ADJACENT_FRIEND() * iNumAdjacentFriends;
+
+				int iFlankModifier = GetFlankAttackModifier();
+				if(iFlankModifier > 0)
+				{
+					iTempModifier = iTempModifier * (100 + iFlankModifier) / 100;
+				}
+
+				iModifier += iTempModifier;
+			}
+		}
+
+function UpdateGreatPerson(eTeam, eEra, bFirst)
+	   if  (bFirst) then
+	   for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
+	   local pPlayer = Players[iPlayer]
+	   if pPlayer:IsAlive() then
+	
+	   if pPlayer:GetTeam() == eTeam then
+    	---------------------------------------
+	   if pPlayer:IsMajorCiv() and (not pPlayer:IsHuman())  then
+
+         pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
+		 end
+
+		     end
+		  end
+	   end
+    end
+ end
+GameEvents.TeamSetEra.Add(UpdateGreatPerson)
+
+function AiIntoNewEra(eTeam, eEra, bFirst)
+        local handicap = Game:GetHandicapType();
+	    if   handicap >= 7 then
+	    for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
+	    local pPlayer = Players[iPlayer]
+	   	if pPlayer:IsAlive() then
+	    if pPlayer:GetTeam() == eTeam then
+
+		 if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
+
+		 pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
+		 pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
+
+		 for city in pPlayer:Cities() do
+	     local iCurrentBuilding = city:GetProductionBuilding()
+	     if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
+	     local prod = city:GetProductionNeeded();
+	     city:SetProduction(prod)
+	     SetInvalidateCity()
+		              end
+		           end
+		        end
+		     end
+		  end
+	   end
+    end
+ end
+GameEvents.TeamSetEra.Add(AiIntoNewEra)
+
+
 function AG_BUFF(iPlayer)
 	local player = Players[iPlayer]
 	if player == nil 

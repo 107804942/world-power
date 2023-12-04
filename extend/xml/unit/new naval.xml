@@ -143,8 +143,8 @@
 			<Type>UNIT_NAVALFIGHTER03P</Type>
 			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
 			<BaseSightRange>3</BaseSightRange>
-			<Combat>960</Combat>
-			<RangedCombat>960</RangedCombat>
+			<Combat>1000</Combat>
+			<RangedCombat>1000</RangedCombat>
 			<Cost>7600</Cost>
 			<Moves>8</Moves>
 			<Range>5</Range>
