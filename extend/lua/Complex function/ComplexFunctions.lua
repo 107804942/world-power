@@ -1744,60 +1744,38 @@ function SetInvalidateCity()
 	Events.SerialEventGameDataDirty();
 end
 
-function AiIntoNewEra(eTeam, eEra, bFirst)
-        local handicap = Game:GetHandicapType();
-	    if   handicap >= 7 then
-	    for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
-	    local pPlayer = Players[iPlayer]
-	   	if pPlayer:IsAlive() then
-	    if pPlayer:GetTeam() == eTeam then
 
-		 if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
 
-		 pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
-		 pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
-
-		 for city in pPlayer:Cities() do
-	     local iCurrentBuilding = city:GetProductionBuilding()
-	     if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
-	     local prod = city:GetProductionNeeded();
-	     city:SetProduction(prod)
-	     SetInvalidateCity()
-		              end
-		           end
-		        end
+function AiIntoNewEra(ePlayer, eEra, bFirst)
+        local handicap = Game:GetHandicapType()
+		local pPlayer = Players[ePlayer]
+	    if   handicap >= 7 and pPlayer:IsAlive() then
+		if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
+		pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
+		pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
+		for city in pPlayer:Cities() do
+	    local iCurrentBuilding = city:GetProductionBuilding()
+	    if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
+	    local prod = city:GetProductionNeeded();
+	    city:SetProduction(prod)
+	    SetInvalidateCity()
 		     end
 		  end
 	   end
     end
  end
-GameEvents.TeamSetEra.Add(AiIntoNewEra)
+GameEvents.PlayerSetEra.Add(AiIntoNewEra)
 
 
 
-
+function UpdateGreatPerson(ePlayer, eEra, bFirst)
+		local pPlayer = Players[ePlayer]
+	    if pPlayer:IsAlive() and pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
+		pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
+    end
+ end
 if Difficult9Active or  Difficult10Active then
-
-function UpdateGreatPerson(eTeam, eEra, bFirst)
-	   if  (bFirst) then
-	   for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
-	   local pPlayer = Players[iPlayer]
-	   if pPlayer:IsAlive() then
-	
-	   if pPlayer:GetTeam() == eTeam then
-    	---------------------------------------
-	   if pPlayer:IsMajorCiv() and (not pPlayer:IsHuman())  then
-
-         pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
-		 end
-
-		     end
-		  end
-	   end
-    end
- end
-GameEvents.TeamSetEra.Add(UpdateGreatPerson)
-
+GameEvents.PlayerSetEra.Add(UpdateGreatPerson)
 end
 
 

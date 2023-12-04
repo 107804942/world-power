@@ -74,6 +74,7 @@
 		<Replace Name="EVENTS_GREAT_PEOPLE_BOOST" Value="1"/>
 		<Replace Name="EVENTS_CITY_RANGE_STRIKE" Value="1"/>
 		<Replace Name="EVENTS_UNIT_CAN_RANGEATTACK" Value="1"/>
+		<Replace Name="EVENTS_PLAYER_SET_HAS_TECH" Value="1"/>
 		<!--<Replace Name="EVENTS_UNIT_MOVE" Value="1"/>
 		<Replace Name="EVENTS_IMPROVEMENTS_PILLAGED" Value="1"/>-->
 		<Replace Name="EVENTS_DO_DENOUNCE" Value="1"/>
