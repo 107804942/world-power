@@ -1912,6 +1912,18 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RANGED_ATTACK_MODIFIER" );
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 				end
+
+
+				iModifier = pMyUnit:RangedFlankAttackModifier();
+				local iNumEnemy = pTheirUnit:GetNumNearByEnemyUnitsAdjacent()-1;
+				if (iModifier ~= 0 and iNumEnemy>0) then
+					iModifier=iModifier*iNumEnemy
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER" );
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+				end
+
+
 			end
 			
 			if (pToPlot:GetFeatureType() ~= -1) then

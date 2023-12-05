@@ -156,7 +156,9 @@
 			<Text>[COLOR_ENDURANCE]无视资源惩罚[ENDCOLOR]</Text>
 		</Row>
 
-
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER" >
+			<Text>远程夹击攻击加成</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS" >
 			<Text>黄金时代加成</Text>
@@ -9961,6 +9963,8 @@
 		</Row>
 
 
+
+	
 
 		
 	</Language_zh_Hant_HK>

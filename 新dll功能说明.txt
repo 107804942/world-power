@@ -753,21 +753,13 @@ GetProjectCount()
 
 
 
+ALTER TABLE UnitPromotions ADD COLUMN 'RangedFlankAttackModifier' INTEGER DEFAULT 0;
 
+--GetNumNearByEnemyUnitsAdjacent
 
+<RangedFlankAttackModifier>100</RangedFlankAttackModifier>
 
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 

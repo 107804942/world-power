@@ -187,6 +187,10 @@
 			<Row Tag="TXT_KEY_EUPANEL_PLAYER_ON_DIFFERENT_CAPITAL_LAND_BONUS" >
 				<Text>与首都不同大陆加成</Text>
 			</Row>
+
+			<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER" >
+				<Text>远程夹击攻击加成</Text>
+			</Row>
 			
 			
 			<Row Tag="TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN" >
@@ -9924,6 +9928,7 @@
 			<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA">
 				<Text>公共工程是行政主体为了公共利益对不动产所进行的工程活动，以及其他人为实现行政主体的意图对不动产进行的以公共利益为目的工程活动。必须具备下述条件：1.以不动产为对象。非物质的活动不是工程，不动产的范围包括按自然性质的不动产和按用途作用的不动产。2.以公共利益为目的。行政主体为了公共利益的目的而实施，具有特殊的权力。行政主体纯粹为了财政收入百的管理私产的工程，不是公共工程。3.由行政主体自己实施或他人为行政主体意图而实施。他人实施，但以行政主体因此得到利益作为工程的目的，即为行政主体的打算而进行的工程。</Text>
 			</Row>
+
 
 
 

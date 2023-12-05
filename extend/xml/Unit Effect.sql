@@ -1,3 +1,7 @@
+---Ô¶³Ì¼Ð»÷
+UPDATE UnitPromotions SET RangedFlankAttackModifier = '15' WHERE Type  = 'PROMOTION_ARCHERY_COMBAT'OR Type= 'PROMOTION_NAVAL_RANGED_CRUISER'OR Type= 'PROMOTION_NAVAL_RANGED_SHIP';
+
+
 
 INSERT INTO UnitCombatInfos  	(Type,					Description)VALUES		
     ('UNITCOMBAT_SETTLER',	'TXT_KEY_UNITCOMBAT_SETTLER'),
