@@ -4180,7 +4180,7 @@
 			<IconAtlas>promoMUC_atlas_01</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_URBAN</PediaEntry>
-			<SiegeInflictDamageChangeMaxHPPercent>10</SiegeInflictDamageChangeMaxHPPercent>
+			<SiegeInflictDamageChangeMaxHPPercent>8</SiegeInflictDamageChangeMaxHPPercent>
 			<DestroyBuildingCollection>COLLECTIONS_WUBAN_CANNON</DestroyBuildingCollection>
 			<DestroyBuildingProbability>40</DestroyBuildingProbability>
 			<DestroyBuildingNumLimit>1</DestroyBuildingNumLimit>
@@ -4213,7 +4213,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<!--<ShowInUnitPanel>0</ShowInUnitPanel>-->
 			<ShowInPedia>0</ShowInPedia>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PediaType>PEDIA_SHARED</PediaType>

@@ -8771,8 +8771,8 @@
 		</Row>
 			<Row Tag="TXT_KEY_WONDER_SANKORE_HELP">
 				<Text>
-					科学家-3[ICON_GOLD]金钱，全国每处炼金术会所、大学、公立学校、研发实验室+5%[ICON_RESEARCH]科研。
-					[NEWLINE]只能在临近沙漠的城市建造。
+					全国每处炼金术会所、大学、公立学校、研发实验室+5%[ICON_RESEARCH]科研。
+					[NEWLINE][NEWLINE]只能在临近沙漠的城市建造。
 				</Text>
 			</Row>
 

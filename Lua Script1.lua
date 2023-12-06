@@ -2,34 +2,7 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------\
-	// Adjacent Friendly military Unit?
-	if(IsFriendlyUnitAdjacent(/*bCombatUnit*/ true))
-		iModifier += GetAdjacentModifier();
 
-
-
-
-			if(pOtherUnit != NULL)
-	{
-		CvAssertMsg(pOtherUnit != this, "Compared combat strength against one's own pointer. This is weird and probably wrong.");
-
-		if(!bIgnoreUnitAdjacency)
-		{
-			// Flanking
-			int iNumAdjacentFriends = pOtherUnit->GetNumEnemyUnitsAdjacent(this);
-			if(iNumAdjacentFriends > 0)
-			{
-				iTempModifier = /*15*/ GC.getBONUS_PER_ADJACENT_FRIEND() * iNumAdjacentFriends;
-
-				int iFlankModifier = GetFlankAttackModifier();
-				if(iFlankModifier > 0)
-				{
-					iTempModifier = iTempModifier * (100 + iFlankModifier) / 100;
-				}
-
-				iModifier += iTempModifier;
-			}
-		}
 
 function UpdateGreatPerson(eTeam, eEra, bFirst)
 	   if  (bFirst) then
@@ -929,7 +902,30 @@ GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
 
 
 
-
+		if PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_SETTLER then
+			iModifier=40
+			elseif 
+			PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_CHIEFTAIN then
+			iModifier=20
+			elseif 
+			PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_WARLORD then
+			iModifier=0
+			elseif 
+			PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_PRINCE then
+			iModifier=0
+			elseif 
+			PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_KING then
+			iModifier=0
+			elseif 
+			PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_EMPEROR then
+			iModifier=0
+			elseif 
+			PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_IMMORTAL then
+			iModifier=0
+			elseif 
+			PreGame.GetHandicap(0)== GameInfoTypes.HANDICAP_DEITY then
+			iModifier=0
+			end
 
 	if (eIndex == YIELD_HERESY)
 	{

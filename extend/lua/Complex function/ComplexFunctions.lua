@@ -1611,7 +1611,6 @@ function IsUsingDifficult9()
 
 	return false
 end
-local Difficult9Active = IsUsingDifficult9()
 
 function IsUsingDifficult10()
 	
@@ -1621,6 +1620,7 @@ function IsUsingDifficult10()
 
 	return false
 end
+local Difficult9Active = IsUsingDifficult9()
 local Difficult10Active = IsUsingDifficult10()
 
 function AI_DIFFICULTY_REDUCE()
@@ -1671,32 +1671,34 @@ function AiIntoNewEra(ePlayer, eEra, bFirst)
 		local pPlayer = Players[ePlayer]
 	    if   handicap >= 7 and pPlayer:IsAlive() then
 		if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
-		pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
+
+		if Difficult9Active or  Difficult10Active then
 		pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
+		end
+
+		pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
+		pPlayer:ChangeOverflowResearch(5*pPlayer:GetScience())
+
 		for city in pPlayer:Cities() do
 	    local iCurrentBuilding = city:GetProductionBuilding()
+		local projectProduction = city:GetProductionProject()
+
 	    if iCurrentBuilding > -1 and (not tWonders[iCurrentBuilding])  then
-	    local prod = city:GetProductionNeeded();
-	    city:SetProduction(prod)
+	    local BuildingPro = city:GetProductionNeeded();
+	    city:SetProduction(BuildingPro)
 	    SetInvalidateCity()
+		--elseif projectProduction ~= -1 then
+		--local projectPro = city:GetProductionNeeded();
+	   -- city:SetProduction(projectPro)
+	    --SetInvalidateCity()
 		     end
 		  end
+
 	   end
     end
  end
 GameEvents.PlayerSetEra.Add(AiIntoNewEra)
 
-
-
-function UpdateGreatPerson(ePlayer, eEra, bFirst)
-		local pPlayer = Players[ePlayer]
-	    if pPlayer:IsAlive() and pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
-		pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
-    end
- end
-if Difficult9Active or  Difficult10Active then
-GameEvents.PlayerSetEra.Add(UpdateGreatPerson)
-end
 
 
 if  Difficult10Active then
