@@ -472,19 +472,24 @@ function Health_MissionStart(playerID, unitID, missionID, data1, data2, flags, t
 	local player = Players[playerID]
 	local unit = player:GetUnitByID(unitID)
 	local city = unit:GetPlot():GetPlotCity()
-	if missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"]     then
+
+	if missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"]     then  ----医生治疗城市
 		Health_CurePlagueMission(playerID, unit, city)
 		return CUSTOM_MISSION_ACTION
-	elseif missionID == GameInfoTypes["MISSION_DOCTOR_CURE_UNIT"] then
+
+	elseif missionID == GameInfoTypes["MISSION_DOCTOR_CURE_UNIT"] then  ----医生治疗单位
 		Health_GrantPopulationMission(playerID, unit)
 		return CUSTOM_MISSION_ACTION
+
 	elseif missionID == GameInfoTypes["MISSION_CONSTRUCT_CITY"]   then
 		GREAT_DOCTOR_CONSTRUCT_Mission(playerID, unit, city)
 		return CUSTOM_MISSION_ACTION
+
 	elseif missionID == GameInfoTypes["MISSION_GREAT_DOCTOR_CURE"]then
 		GREAT_DOCTOR_CURE_Mission(playerID, unit)
 		return CUSTOM_MISSION_ACTION
 	end
+
 	return CUSTOM_MISSION_NO_ACTION
 end
 GameEvents.CustomMissionStart.Add(Health_MissionStart)
@@ -552,13 +557,48 @@ end
 function Health_CurePlagueMission(playerID, unit, city)
 	local player = Players[playerID]  
 	if player:IsHuman() and city:HasPlague() then
-		-- notification
-	   Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
+	local plagueID=city:GetPlagueType()  ---疾病种类
+	if plagueID ~= -1 then
+	------------------------------------------不足六回合立即治愈
+	if city:GetPlagueTurns()<6+GetExtraCureTurns(unit, city) then
+	 -- Notification
+	local plague = GameInfo.Plagues[plagueID]
+	local heading = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION_SHORT")
+	local text = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION",plague.IconString,plague.Description,city:GetName())
+	player:AddNotification(NotificationTypes.NOTIFICATION_INSTANT_YIELD, text, heading,city:GetX(),city:GetY())
+	Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
+	city:SetPlagueType(-1)
+	city:SetPlagueCounter(0)
+	------------------------------------------大于六回合减少回合数
+	else  
+	 -- Notification
+	local reduce= 5+GetExtraCureTurns(unit, city)
+	local plague = GameInfo.Plagues[plagueID]
+	local heading = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_REDUCE_NOTIFICATION_SHORT")
+	local text = Locale.ConvertTextKey("TXT_KEY_CITY_PLAGUE_REDUCE_NOTIFICATION",plague.IconString,plague.Description,city:GetName(),reduce)
+	player:AddNotification(NotificationTypes.NOTIFICATION_INSTANT_YIELD, text, heading,city:GetX(),city:GetY())  
+	Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
+	city:ChangePlagueTurns(-reduce)
+	--city:SetPlagueCounter(city:GetPlagueTurns()-5)
+	end
+	------------------------------------------
+	unit:Kill()
 	   end
-       Health_PlagueEnds(city)
-	   unit:Kill()
+	end
+		
 end
 
+
+-- Extra Cure Turn
+function GetExtraCureTurns(unit, city)
+   local ExtraCureTurn =0
+   local player = Players[unit:GetOwner()]  
+   if  player:HasPolicy(GameInfo.Policies["POLICY_KNOWLEDGE_4"].ID) then  ExtraCureTurn=ExtraCureTurn+2 end
+   if  city:IsHasBuilding(GameInfoTypes["BUILDING_HERBALIST"]) then ExtraCureTurn=ExtraCureTurn+1 end
+   if  city:IsHasBuilding(GameInfoTypes["BUILDING_HOSPITAL"]) then ExtraCureTurn=ExtraCureTurn+2 end
+   return 
+   ExtraCureTurn
+end
 
 
 -- Health_GrantPopulationMission

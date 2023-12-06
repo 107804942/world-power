@@ -132,8 +132,7 @@ FROM Unit_AITypes WHERE UnitType = 'UNIT_ENGINEER';
 --------------------------------------------------------------------------------------------------------------------------
 -- Unit_Flavors
 --------------------------------------------------------------------------------------------------------------------------
-INSERT INTO Unit_Flavors 	
-		(UnitType, 					FlavorType, Flavor)
+INSERT INTO Unit_Flavors 	(UnitType, 					FlavorType, Flavor)
 SELECT	'UNIT_GREAT_DOCTOR', 	FlavorType, Flavor
 FROM Unit_Flavors WHERE UnitType = 'UNIT_ENGINEER';
 

@@ -628,8 +628,14 @@
 		<Row Tag="TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION">
 			<Text>位于{3_CityName}的传染病{1_PlagueIcon}{2_PlagueDesc}已经被消灭!</Text>
 		</Row>
-		
-		
+
+		<Row Tag="TXT_KEY_CITY_PLAGUE_REDUCE_NOTIFICATION_SHORT">
+			<Text>瘟疫缓解!</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITY_PLAGUE_REDUCE_NOTIFICATION">
+			<Text>位于{3_CityName}的传染病{1_PlagueIcon}{2_PlagueDesc}已减少{4_Num}回合持续时间!</Text>
+		</Row>
 		
 
 

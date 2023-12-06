@@ -1537,10 +1537,10 @@
 		</Update>
 
 
-		<Update>
+		<!--<Update>
 			<Set ArtDefineTag="ART_DEF_IMPROVEMENT_KURGAN"/>
 			<Where Type="IMPROVEMENT_MAYA_ALTAR" />
-		</Update>
+		</Update>-->
 
 
 

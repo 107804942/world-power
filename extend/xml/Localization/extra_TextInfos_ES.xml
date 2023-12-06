@@ -2598,7 +2598,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MAGINOT_LINE_HELP">
 			<Text>
-				堡垒+200点生命值上限，额外获得一次攻击次数且在非友方领土不会损失生命值。城防效率+20%，陆军单位在堡垒改良设施8格范围内战斗时+100%[ICON_STRENGTH]战斗力。
+				堡垒+200点生命值上限，且临近的敌军在回合开始时移动力-1,额外获得一次攻击次数且在非友方领土不会损失生命值。城防效率+20%，陆军单位在堡垒改良设施8格范围内战斗时+100%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 
@@ -6535,7 +6535,10 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_HERBALIST_HELP">
-			<Text>+1[ICON_RESEARCH]科学，丛林、森林+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]每处[ICON_RES_SANPEDRO]圣佩德罗、[ICON_RES_LAVENDER]薰衣草、[ICON_RES_SULFUR]硫磺、[ICON_RES_SPICES]香料、[ICON_RES_INCENSE]熏香、[ICON_RES_SAFFRON]藏红花+1[ICON_HEALTH]健康度。</Text>
+			<Text>
+				+1[ICON_RESEARCH]科学，丛林、森林+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]每处[ICON_RES_SANPEDRO]圣佩德罗、[ICON_RES_LAVENDER]薰衣草、[ICON_RES_SULFUR]硫磺、[ICON_RES_SPICES]香料、[ICON_RES_INCENSE]熏香、[ICON_RES_SAFFRON]藏红花+1[ICON_HEALTH]健康度。
+				[NEWLINE][NEWLINE]当城市中建有该建筑时，使用医生治疗瘟疫能额外减少一回合持续时间。
+			</Text>
 		</Row>
 
 
@@ -6675,7 +6678,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_YUEYANG_HELP">
 			<Text>
-				提供三个剑士，所有城市训练的步兵单位+25%[ICON_STRENGTH]战斗力。
+				+3[ICON_GREAT_GENERAL]大军事家点数，提供三个剑士，所有城市训练的步兵单位+25%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 
@@ -8003,7 +8006,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_4_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]精英学派[ENDCOLOR][NEWLINE]科学家+1[ICON_RESEARCH]科研、医学家+1[ICON_HEALTH]健康度。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]精英学派[ENDCOLOR][NEWLINE]科学家+1[ICON_RESEARCH]科研、医学家+1[ICON_HEALTH]健康度。使用医生治疗瘟疫能额外减少两回合持续时间。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_4_TEXT">

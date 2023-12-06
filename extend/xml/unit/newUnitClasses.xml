@@ -612,7 +612,7 @@
 			<Type>UNITCLASS_DOCTOR</Type>
 			<Description>TXT_KEY_UNIT_DOCTOR</Description>
 			<DefaultUnit>UNIT_DOCTOR</DefaultUnit>
-			<MaxPlayerInstances>5</MaxPlayerInstances>
+			<MaxPlayerInstances>6</MaxPlayerInstances>
 		</Row>
 
 		
@@ -621,7 +621,7 @@
 			<Type>UNITCLASS_MODERN_DOCTOR</Type>
 			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
 			<DefaultUnit>UNIT_MODERN_DOCTOR</DefaultUnit>
-			<MaxPlayerInstances>5</MaxPlayerInstances>
+			<MaxPlayerInstances>6</MaxPlayerInstances>
 		</Row>
 
 

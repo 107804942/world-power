@@ -665,7 +665,7 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		local pPlot = Map.GetPlot(x, y)
 		
 		pPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetTerrainType(eTerrainPlains, false, false)
+		--pPlot:SetTerrainType(eTerrainPlains, false, false)
 		pPlot:SetResourceType(-1) ---Ïû³ý×ÊÔ´
 
 		-- setting up Plains around and cleaning Forests and Jungles
