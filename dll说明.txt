@@ -717,8 +717,6 @@ ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 
 
 
-
-
 INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);
 
@@ -730,22 +728,8 @@ INSERT INTO Building_YieldFromPillageGlobalPlayer(BuildingType,YieldType,Yield)
 VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
 
 
-
-
 INSERT INTO Building_YieldPerEspionageSpy(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_BLETCHLEY_PARK','YIELD_SCIENCE',100);
-
-
-INSERT INTO Building_YieldPerEspionageSpy(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_BLETCHLEY_PARK','YIELD_GOLD',100);
-
-
-	<Table name="Policy_FreeBuilding">
-		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
-		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
-		<Column name="Count" type="integer" default="0"/>
-	</Table>
-
 
 
 
@@ -755,8 +739,39 @@ GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjec
 GetProjectCount()
 
 
-<RangedFlankAttackModifier>100</RangedFlankAttackModifier>
 
-	
+	-- Adds minimum national population requirement for a building.
+ALTER TABLE Buildings ADD COLUMN 'NationalPopRequired' INTEGER DEFAULT 0;
 
+
+		<!-- Promotion: Unit gains the specified combat modifier (can specify attack or defense only) per adjacent unit of the specified unit combat type -->
+	<Table name="UnitPromotions_CombatModPerAdjacentUnitCombat">
+		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
+		<Column name="UnitCombatType" type="text" reference="UnitCombatInfos(Type)"/>
+		<Column name="Modifier" type="integer"/>
+		<Column name="Attack" type="integer"/>
+		<Column name="Defense" type="integer"/> <!-- note the American spelling -->
+	</Table>
+
+
+-- Adds minimum national population requirement for a building.
+ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpyGlobal' BOOLEAN DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpy' BOOLEAN DEFAULT 0;
+
+
+
+		//	--------------------------------------------------------------------------------
+bool CvCity::isAddsFreshWater() const {
+	VALIDATE_OBJECT
+
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++) {
+		if (m_pCityBuildings->GetNumBuilding((BuildingTypes)iI) > 0) {
+			if (GC.getBuildingInfo((BuildingTypes)iI)->IsAddsFreshWater()) {
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
 

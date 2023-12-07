@@ -827,8 +827,9 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<!--<SpyRankChange>1</SpyRankChange>-->
+			<ForbiddenForeignSpyGlobal>1</ForbiddenForeignSpyGlobal>
 			<ConquestProb>100</ConquestProb>
-			<EspionageModifier>-999</EspionageModifier>
+			<!--<EspionageModifier>-999</EspionageModifier>-->
 			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 			<PortraitIndex>15</PortraitIndex>
 			<FreePromotion>PROMOTION_KGB</FreePromotion>

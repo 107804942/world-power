@@ -952,3 +952,46 @@ GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
 		//GetCityReligions()->GetNumReligionsWithFollowers()
 	}
 	
+
+
+	if (bOutBreakLv1)
+			{
+				int iRange = 2;
+				for (int iDX = -iRange; iDX <= iRange; iDX++)
+				{
+					for (int iDY = -iRange; iDY <= iRange; iDY++)
+					{
+						CvPlot* pLoopPlot = plotXYWithRangeCheck(getX(), getY(), iDX, iDY, 1);
+						if (pLoopPlot != NULL)
+						{
+							GC.getGame().setPlotExtraYield(pLoopPlot->getX(), pLoopPlot->getY(), YIELD_FOOD, 1);
+
+							if (pLoopPlot->getImprovementType() != NULL && !pLoopPlot->isCity() && !pLoopPlot->IsImprovementPillaged())
+							{
+								CvImprovementEntry* pkImprovement = GC.getImprovementInfo(pLoopPlot->getImprovementType());
+								pLoopPlot->SetImprovementPillaged(true);
+
+								if (pkImprovement && pkImprovement->IsDestroyedWhenPillaged())
+								{
+									pLoopPlot->setImprovementType(NO_IMPROVEMENT);
+									pLoopPlot->SetImprovementPillaged(false);
+								}
+							}
+							//for (int iUnitLoop = 0; iUnitLoop < pLoopPlot->getNumUnits(); iUnitLoop++)
+							//{
+								//CvUnit* loopUnit = pLoopPlot->getUnitByIndex(iUnitLoop);
+								//if (loopUnit != NULL && loopUnit->getDomainType() != DOMAIN_AIR && loopUnit->getDomainType() != DOMAIN_HOVER)
+								//{
+									//loopUnit->changeDamage(50);
+								//}
+							//}
+						}
+					}
+				}
+				SetBreakTurns(10);
+				CvString strBuffer = GetLocalizedText("TXT_KEY_VOLCANO_EVENT_1");
+				CvString strSummary = GetLocalizedText("TXT_KEY_VOLCAN_EVENT_TITLE");
+				if (isRevealed(GC.getGame().getActiveTeam(), false))
+				{
+					GET_TEAM(GC.getGame().getActiveTeam()).AddNotification(NOTIFICATION_GENERIC, strBuffer, strSummary, getX(), getY());
+				}

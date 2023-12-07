@@ -3917,7 +3917,7 @@
 			<Text>牢不可破</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD2_HELP">
-			<Text>+200%最大生命值,在非友方领土时每回合恢复50HP。</Text>
+			<Text>+200%最大生命值,且临近的敌军在回合开始时移动力-1,在非友方领土时每回合恢复50HP。</Text>
 		</Replace>
 
 
@@ -9374,7 +9374,7 @@
 			<Text>克格勃</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KGB_HELP">
-			<Text>极大减少本城中外来[ICON_SPY]间谍行动效率，当你的[ICON_SPY]间谍成功操纵城邦选举或者粉碎敌方[ICON_SPY]间谍试图推翻你的政权的行动时，你将获得一次性的[ICON_RESEARCH]科研、[ICON_GOLD]金钱产出。即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止新的外来间谍进入本文明拥有的城市。</Text>
+			<Text>当你的[ICON_SPY]间谍成功操纵城邦选举或者粉碎敌方[ICON_SPY]间谍试图推翻你的政权的行动时，你将获得一次性的[ICON_RESEARCH]科研、[ICON_GOLD]金钱产出。即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止外来间谍进入本文明拥有的城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_KGB_TEXT">
 			<Text>

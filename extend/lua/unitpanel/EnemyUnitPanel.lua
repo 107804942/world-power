@@ -1917,7 +1917,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			   -- Ranged Flanking bonus
 			   	local iNumEnemy = pTheirUnit:GetNumEnemyUnitsAdjacent(pMyUnit);
 				if (iNumEnemy>0) then
-					iModifier=iNumEnemy* (GameDefines["BONUS_PER_ADJACENT_FRIEND"]+pMyUnit:RangedFlankAttackModifier()) ;
+					iModifier=iNumEnemy* (GameDefines["BONUS_PER_ADJACENT_FRIEND_RANGED"]+pMyUnit:RangedFlankAttackModifier()) ;
 					local iFlankModifierRanged = pMyUnit:RangedFlankAttackModifierPercent();
 					if (iModifier ~= 0 and iFlankModifierRanged>=0 ) then
 					iModifier = iModifier * (100 + iFlankModifierRanged) / 100;

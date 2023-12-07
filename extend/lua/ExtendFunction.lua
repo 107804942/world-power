@@ -266,18 +266,7 @@ function SoldBuildingBuff(iPlayer, iCity, iBuilding)
 end 	
 GameEvents.CitySoldBuilding.Add(SoldBuildingBuff)  
 
--- ****************************************
---
--- ****************************************	
-function EspionageCanMove(iPlayer, iCityOwner, iCity) 
-   local Player = Players[iPlayer]   
-   local otherPlayer=Players[iCityOwner]
-   if Player~= otherPlayer then 
-      return not otherPlayer:HasWonder(GameInfoTypes.BUILDING_KGB)
-   end
-   return true
-end 	
-GameEvents.EspionageCanMoveSpyTo.Add(EspionageCanMove)  
+
 
 
 
