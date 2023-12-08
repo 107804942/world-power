@@ -9489,11 +9489,11 @@
 		<Row Tag="TXT_KEY_BUILDING_ROCKEFELLER">
 			<Text>洛克菲勒中心</Text>
 		</Row>
-		<!-- Help tags -->
+			<!-- Help tags -->
 			<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_HELP">
 				<Text>
 					本城[ICON_CULTURE]文化+33%，本地[ICON_GREAT_MERCHANT]商业家+2[ICON_GOLD]金钱，[ICON_GOLD]金钱+33%，每5人口+1[ICON_GOLD]金钱。
-					[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，城市出售建筑时，本城获得相当于其[ICON_PRODUCTION]产能数值100%的一次性[ICON_PRODUCTION]产能，其余城市则获得其25%的一次性[ICON_PRODUCTION]产能。
+					[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，每个同城城邦+200[ICON_GOLD]金钱，每个友好城邦+100[ICON_GOLD]金钱。
 				</Text>
 			</Row>
 		<!-- Quote tags -->

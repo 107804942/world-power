@@ -240,35 +240,6 @@ end
 GameEvents.EspionageResult.Add(GUIGU_SPY)  
    
 
--- ****************************************
---
--- ****************************************	
-function SoldBuildingBuff(iPlayer, iCity, iBuilding)
-	local player = Players[iPlayer]
-	local city = player:GetCityByID(iCity)
-
-	if player == nil or (not player:IsMajorCiv())   then
-		return
-	end
-
-	if  player:HasWonder(GameInfoTypes.BUILDING_ROCKEFELLER)  then
-	for row in GameInfo.Buildings("HurryCostModifier <> -1") do
-	if  row.ID == iBuilding then 
-	city:ChangeProduction(row.Cost)	
-	for Othercity in player:Cities() do  
-	if  Othercity~=city then
-	Othercity:ChangeProduction(0.25*row.Cost)	
-	                 end
-		          end	
-		      end
-		  end
-	 end 
-end 	
-GameEvents.CitySoldBuilding.Add(SoldBuildingBuff)  
-
-
-
-
 
 local iFreezeCollectionID = GameInfoTypes["PROMOTION_COLLECTION_FREEZE_BOMB"];
 local iFreezedCollectionID = GameInfoTypes["PROMOTION_COLLECTION_FREEZE_EFFECT"];

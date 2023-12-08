@@ -348,6 +348,12 @@ VALUES ('BUILDING_AMERICA_RANCH', 'FLAVOR_MILITARY_TRAINING',10),
 	   ('BUILDING_POSEIDON_TEMPLE', 'FLAVOR_WONDER',850);
 
 
+---来自城邦
+INSERT INTO Building_YieldPerFriend(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_ROCKEFELLER','YIELD_GOLD',100);
+
+INSERT INTO Building_YieldPerAlly(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_ROCKEFELLER','YIELD_GOLD',200);
 
 ---若干个地形
 --INSERT INTO Building_YieldPerXTerrainTimes100(BuildingType,TerrainType,YieldType,Yield) 
