@@ -1,0 +1,6 @@
+<Asset>
+	<Mesh file="whitedesert.gr2" source="Max" />
+	<Texture file="whiteflatland.dds" source="Max" />
+	<Texture file="desertflatland.dds" source="Max" />
+                <Texture file="kilimanjaro_ground_sref.dds" source="Max" />
+</Asset>

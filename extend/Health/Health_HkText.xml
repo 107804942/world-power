@@ -680,7 +680,7 @@
 
 		<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_CITY_HELP">
 			<Text>
-				执行该指令可以消除城市中的瘟疫。
+				执行该指令可以治疗城市中的瘟疫。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_DOCTOR_CURED_UNIT_SHORT">

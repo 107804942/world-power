@@ -9488,6 +9488,29 @@
 
 		<!--EXTRA NATURAL WONDERS-->
 
+		<!-- white desert -->
+		<Row Tag="TXT_KEY_FEATURE_WHITE_DESERT">
+			<Text>白沙漠</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_WHITE_DESERT_TEXT">
+			<Text>
+				世界上是否有一个地方可以同时找到鸡、蘑菇、独石和冰淇淋呢？这些形象都只是埃及法拉弗拉城外白沙漠中的部分钙化石像而已。
+				[NEWLINE]这片地区曾淹没在汪洋大海之中，经数百万年风水侵蚀后形成了这些形状各异的白色巨石。从日落时的粉色到满月下的银白色，这些白色的白垩岩会在一天中发生巨大变化。
+				[NEWLINE]该地区在2002年被划为国家公园，除这些独特的雕像外，这里还是瞪羚、耳廓狐与沙猫的栖息地。今天，游客们可以乘坐四驱越野车或骆驼来游览白沙漠，这里也成为了颇具魔幻气息的热门夜营旅行景点。
+			</Text>
+		</Row>
+		<!-- GALAPAGOS -->
+		<Row Tag="TXT_KEY_FEATURE_GALAPAGOS">
+			<Text>科隆群岛</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_GALAPAGOS_TEXT">
+			<Text>
+				科隆群岛（英文 Colón Island、西班牙文 Archipiélago de Colón）：即加拉帕戈斯群岛。隶属厄瓜多尔，位于南美大陆以西1000公里的太平洋面上，群岛面积7500多平方公里，由海底火山喷发的熔岩凝固而成的13个小岛和19个岩礁组成。
+				[NEWLINE]群岛的多样性气候和火山地貌的特殊自然环境，使不同生活习性的动物和植物同时生长繁衍在这块土地上。这里奇花异草荟萃，珍禽怪兽云集，被称为“生物进化活博物馆”。群岛上现存有其他地区罕见的多种动物。
+			</Text>
+		</Row>
 
 		<!-- DELICATE -->
 		<Row Tag="TXT_KEY_FEATURE_DELICATE_ARCH">

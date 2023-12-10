@@ -534,6 +534,8 @@
     <Folder Include="extend\art\nature\causeway" />
     <Folder Include="extend\art\nature\lumibay" />
     <Folder Include="extend\art\nature\DelicateArch" />
+    <Folder Include="extend\art\nature\galapagos" />
+    <Folder Include="extend\art\nature\whitedesert" />
     <Folder Include="extend\art\nature\retba" />
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
@@ -4035,6 +4037,22 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\nature\galapagos\galapagos.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\galapagos\galapagos.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\galapagos\galapagos.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\galapagos\SV_Galapagos.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\nature\lumibay\FXM_BIOLUMINESCENT_1.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -4172,6 +4190,30 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\nature\salar\sv_Salar_S.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\whitedesert\desertflatland.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\whitedesert\desertflatland_h.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\whitedesert\SV_WhiteDesert.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\whitedesert\whitedesert.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\whitedesert\whitedesert.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\whitedesert\whiteflatland.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
