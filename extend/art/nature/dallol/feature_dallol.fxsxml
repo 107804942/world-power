@@ -1,6 +1,0 @@
-<Asset>
-	<Mesh file="feature_dallol.gr2" source="Max" />
-	<Texture file="dallol_ground_diff.dds" source="Max" />
-	<Texture file="dallol_ground_h.dds" source="Max" />
-	<Texture file="kilimanjaro_ground_sref.dds" source="Max" />
-</Asset>

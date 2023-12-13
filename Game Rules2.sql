@@ -88,3 +88,25 @@
 
 
 
+
+		<!--´óÏ¿¹È-->
+
+		<Row>
+			<Type>FEATURE_GRAND_CANYON</Type>
+			<Description>TXT_KEY_FEATURE_GRAND_CANYON</Description>
+			<Civilopedia>TXT_KEY_CIV5_FEATURES_GRAND_CANYON_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_GRAND_CANYON</ArtDefineTag>
+			<Movement>1</Movement>
+			<SeeThrough>0</SeeThrough>
+			<Impassable>false</Impassable>
+			<InfluenceCost>-3</InfluenceCost>
+			<NaturalWonder>false</NaturalWonder>
+			<PseudoNaturalWonder>true</PseudoNaturalWonder>
+			<NoCity>true</NoCity>
+			<NoImprovement>true</NoImprovement>
+			<Rough>true</Rough>
+			<YieldNotAdditive>true</YieldNotAdditive>
+			<InBorderHappiness>5</InBorderHappiness>
+			<PortraitIndex>64</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+		</Row>

@@ -1,0 +1,12 @@
+<Asset>
+  <Mesh file="MT_PAEKTU_GRASS.gr2" source="Max" />
+  <BoneUsage>
+    <Bone name="FX_WATERFALL" />
+    <Bone name="FX_WATERFALL_2" />
+    <Bone name="FX_CLOUDS" />
+  </BoneUsage>
+  <TimedTrigger file="FX_TRIGGERS_MT_PAEKTU_CLOUDS.ftsxml" source="Tool" model="Lake" state="0,1,2,3" />
+  <TimedTrigger file="FX_TRIGGERS_MT_PAEKTU_WATERFALL.ftsxml" source="Tool" model="Waterfall_1" state="0,1,2,3" />
+  <TimedTrigger file="FX_TRIGGERS_MT_PAEKTU_WATERFALL_2.ftsxml" source="Tool" model="Waterfall_2" state="0,1,2,3" />
+  <DecisionTree file="LandmarkDecisionTree.ddtxml" source="Tool" />
+</Asset>

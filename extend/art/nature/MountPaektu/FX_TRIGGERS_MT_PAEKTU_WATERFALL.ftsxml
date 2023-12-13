@@ -1,0 +1,13 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="1" time="0" duration="3" repeat="0" ec="1000" track="2" tier="0" event="ART_DEF_VEFFECT_FOUNTAIN_OF_YOUTH_WATERFALL" bone="FX_WATERFALL" />
+    <trigger type="FTimedTriggerSound" id="3" time="0" duration="0" repeat="0" ec="1000" track="1" tier="-1" event="AS3D_RESOURCE_WATERFALL" bone="" />
+  </triggers>
+</trigger_system>

@@ -7792,9 +7792,10 @@
 			<Text>产业扩张</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_INDUSTRY_6_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]产业扩张[ENDCOLOR][NEWLINE]工程师+1[ICON_PRODUCTION]产能，+6[ICON_RES_ELECTRICITY]电力，+5[ICON_RES_HARDWOOD]木材，+5[ICON_RES_GUNPOWDER]火药。</Text>
-		</Row>
+
+			<Row Tag="TXT_KEY_INDUSTRY_6_HELP">
+				<Text>[COLOR_POSITIVE_TEXT]产业扩张[ENDCOLOR][NEWLINE]工程师+1[ICON_PRODUCTION]产能。每座城市+6[ICON_RES_ELECTRICITY]电力，+5[ICON_RES_HARDWOOD]木材，+5[ICON_RES_GUNPOWDER]火药。</Text>
+			</Row>
 
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_6_TEXT">
 			<Text>
@@ -9524,6 +9525,78 @@
 
 		<!--EXTRA NATURAL WONDERS-->
 
+
+
+			<!--BERMUDA -->
+			<Row Tag="TXT_KEY_FEATURE_BERMUDA">
+				<Text>百慕大三角</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
+			<Row Tag="TXT_KEY_CIV5_FEATURES_BERMUDA_TEXT">
+				<Text>
+					最开始是关于奇怪灯光的一些报告，然后演变为失踪和幽灵船只的故事。自19世纪中叶以来（如果哥伦布的日记可信，则确切时间甚至可能更早），便不断有船只和飞机从百慕大三角区消失。据称已有50多艘船只和20架飞机消失在该三角区内，自此渺无音讯。关于大量的交通工具和人类失踪，外星人是一个较为流行的理论，但也有一些更平凡的假设可以解释这个三角区。一些科学家认为存在“空气炸弹”或小型爆炸，船只便因此沉没。其他科学家则认为，（事故根因是）巨大的超级巨浪或磁偏移让罗盘错误显示北向。虽然传说和谣言持续不断，但人们普遍认为，百慕大三角区中失踪和失事的频率并不比其他经常通行的海路更高。
+				</Text>
+			</Row>
+			
+			
+			<!--EYE_OF_SAHARA -->
+			<Row Tag="TXT_KEY_FEATURE_EYE_OF_SAHARA">
+				<Text>撒哈拉之眼</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
+			<Row Tag="TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_TEXT">
+				<Text>
+					撒哈拉沙漠深处，一只蓝色巨眼远远凝视，能亲眼到这般景象的人屈指可数。这颗目不转睛的撒哈拉之眼正式名称为“理查特结构”，直径约40公里。它色彩艳丽，是宇航员眼中易于辨识的地标，他们也是少数得以窥其全貌的人。
+					[NEWLINE]理查特结构的成因仍广受争议，陨石冲击而成的初步猜测最终也并无结果。而现行的地质学理论则认为撒哈拉之眼是“侵蚀对称隆起”形成。简单来说就是一种由层状岩体形成的穹丘。
+				</Text>
+			</Row>
+			
+			<!-- Mt. Everest -->
+			<Row Tag="TXT_KEY_FEATURE_MT_PAEKTU">
+				<Text>长白山</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
+			<Row Tag="TXT_KEY_CIV5_FEATURES_MT_PAEKTU_TEXT">
+				<Text>
+					长白山景区处于东亚大陆边缘，濒临太平洋的强烈褶皱带。在两亿年至七千五百万年的中生代以前，就曾经过多次地壳变迁活动，形成古老的岩层。中生代经历上亿年的风雨侵蚀，形成一系列山间盆地。到了新生代，变成了一片波状起伏的具有残丘散布的准平原。景区地貌为典型的火山地貌。随海拔自下而上主要由玄武岩台地、玄武岩高原和火山锥体三大部分构成。在广阔的玄武岩台地和玄武岩高原上是火山锥体——长白山主峰。玄武岩高原（又称山麓倾斜高原）介于玄武岩台地和火山锥体之间，是比较明显的倾斜地带，地面坡度一般在10度左右，海拔约在1000—1800米之间，是陡峻的火山锥体向玄武岩台地的过渡地带。
+					[NEWLINE]长白山景区资源丰富，动植物种类繁多，是欧亚大陆北半部最具有代表性的典型自然综合体，是世界少有的“物种基因库”和“天然博物馆”。据统计，这里生存着1800多种高等植物，栖息着50多种兽类，280多种鸟类，50种鱼类以及1000多种昆虫。
+				</Text>
+			</Row>
+
+			<!-- HA LONG -->
+			<Row Tag="TXT_KEY_FEATURE_HA_LONG">
+				<Text>下龙湾</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
+			<Row Tag="TXT_KEY_CIV5_FEATURES_HA_LONG_TEXT">
+				<Text>
+					在国家的创建神话中，自然景观可谓屡见不鲜。据越南传说，众神在此派出巨龙，口吐宝石珠玉，形成了海湾中星罗棋布的岩石岛屿，也形成了抵御早期中国入侵者的天然屏障。顾名思义，下龙湾是指“下凡之龙”或“入海之龙”。下龙湾便是这群喀斯特小岛的总称。这些岛屿历经数百万年侵蚀，形成天然灰岩地层，山脊、高塔和洞穴重峦叠嶂。今日越南绵延120公里的海岸线中有一张1600多个灰岩岛和洞穴所组成的网络，供人观赏探秘。
+					[NEWLINE]早在公元前16000年，此处已是早期渔民部落的家园。而在漫长的历史中，它又是一座抵御侵略者的天然堡垒。1288年越南将军陈兴道以铁头木桩成功阻挡蒙古战船的前进，大破蒙古军队。自2000年起，下龙湾被联合国教科文组织列为世界遗产。
+				</Text>
+			</Row>
+			<!--ZHANGJIAJIE -->
+			<Row Tag="TXT_KEY_FEATURE_ZHANGJIAJIE">
+				<Text>张家界</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
+			<Row Tag="TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_TEXT">
+				<Text>
+					张家界国家森林公园位于张家界市武陵源区金鞭路279号，1988年8月，张家界武陵源旅游区被列入国家重点风景名胜区；1992年12月，因奇特的石英砂岩大峰林被联合国列入《世界自然遗产名录》，2004年2月被列入世界地质公园；2007年被列入中国首批国家5A级旅游景区，公园总面积4810公顷。
+					[NEWLINE武陵源旅游区自然风光以峰称奇、以谷显幽、以林见秀。其间有奇峰3000多座，如人如兽、如器如物，形象逼真，气势壮观，有“奇峰三千，秀水八百”之美称。主要景点有黄石寨、金鞭溪、袁家界、杨家界等。
+				</Text>
+			</Row>
+			<!--BLUE HOLE -->
+			<Row Tag="TXT_KEY_FEATURE_BLUE_HOLE">
+				<Text>蓝洞</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
+			<Row Tag="TXT_KEY_CIV5_FEATURES_BLUE_HOLE_TEXT">
+				<Text>
+					蓝洞(Great Blue Hole)为一石灰岩洞，是已发现的全世界第四深的水下洞穴，位于伯利兹外海约60英里(96.5公里)的大巴哈马浅滩的海底高原边缘的灯塔暗礁(Lighthouse Reef)。位于北纬17度18分54秒，西经87度32分6秒处，形成于海平面较低的冰河时代末期，后来因为海水上升，洞顶随之塌陷，遂变成水下石灰石坑洞穴。
+					[NEWLINE]1971年，海洋先驱雅各-伊夫·库斯托将大蓝洞评为十大最好的潜水地之一 。洞内钟乳石群交错复杂 ，在水下面可以看到大型钟乳石和石笋，有的甚至达12米长。更有品种繁多的鲨鱼(据说，多为个性温和慵懒不主动攻击的品种)伴您水下同游，身处神秘森幽的海下洞穴，美丽与凶险并存 。潜水越深，水质越清，地质构造越复杂难懂 。蓝色天坑是伯利兹堡礁保护系统的一部分，被联合国科教文组织列为世界历史遗产之一 。
+				</Text>
+			</Row>
+			
 			<!-- white desert -->
 			<Row Tag="TXT_KEY_FEATURE_WHITE_DESERT">
 				<Text>白沙漠</Text>
@@ -9589,13 +9662,13 @@
 		</Row>
 		<!-- Giant's Causeway -->
 			<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_A">
-				<Text>巨人堤</Text>
+				<Text>巨人堤(陆地)</Text>
 				<Gender>neuter:no_article</Gender>
 			</Row>
-		<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_B">
-			<Text>巨人堤(陆地)</Text>
-			<Gender>neuter:no_article</Gender>
-		</Row>
+			<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_B">
+				<Text>巨人堤(海洋)</Text>
+				<Gender>neuter:no_article</Gender>
+			</Row>
 		<Row Tag="TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT">
 			<Text>
 				巨人之路位于北爱尔兰贝尔法斯特西北约80公里处大西洋海岸，由数万根大小不均匀的玄武岩石柱聚集成一条绵延数千米的堤道， 被视为世界自然奇迹。300年来，地质学家们研究其构造，了解到它是在第三纪由活火山不断喷发而形成的。1986年"巨人之路"被列为世界自然遗产。

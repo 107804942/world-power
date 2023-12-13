@@ -3,7 +3,17 @@
 UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusRange=6,CombatBonusFromNearbyUnitPromotion= 'PROMOTION_WEAPON_SHIP' WHERE Type='PROMOTION_NAVAL_RANGED_CRUISER';
 UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusRange=6,CombatBonusFromNearbyUnitPromotion= 'PROMOTION_WEAPON_SHIP' WHERE Type='PROMOTION_SUBMARINE_COMBAT';
 UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusRange=6,CombatBonusFromNearbyUnitPromotion= 'PROMOTION_WEAPON_SHIP' WHERE Type='PROMOTION_NAVAL_CAPITAL_SHIP';
-
+		<Row Tag="TXT_KEY_FEATURE_GRAND_CANYON">
+			<Text>科罗拉多大峡谷</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_GRAND_CANYON_TEXT">
+			<Text>
+				美国科罗拉多大峡谷(The Grand Canyon)位于美国亚利桑那州(Arizona)西北部，科罗拉多高原西南部。是世界上最大的峡谷之一，也是地球上自然界七大奇景之一。科罗拉多大峡谷(The Grand Canyon)总面积接近3000平方千米。大峡谷全长446千米，平均宽度16千米，最深处1829米，平均深度超过1500米，总面积2724平方千米。
+				[NEWLINE]大峡谷山石多为红色，从谷底到顶部分布着从寒武纪到新生代各个时期的岩层，层次清晰，色调各异，并且含有各个地质年代的代表性生物化石，被称为"活的地质史教科书"。
+				[NEWLINE]大峡谷两岸都是红色的巨岩断层，大自然用鬼斧神工的创造力镌刻得岩层嶙峋、层峦叠嶂，夹着一条深不见底的巨谷，卓显出无比的苍劲壮丽。更为奇特的是，这里的土壤虽然大都是褐色，但当它沐浴在阳光中时，依太阳光线的强弱，岩石的色彩则时而是深蓝色、时而是棕色、时而又是赤色，变幻无穷，彰显出大自然的斑斓诡秘。这时的大峡谷，宛若仙境般七彩缤纷、苍茫迷幻，迷人的景色令人流连忘返。峡谷的色彩与结构，特别是那气势磅礴的魅力，是任何雕塑家和画家都无法模拟的。
+			</Text>
+		</Row>
 
 
 	<!--*********************新资源关联方式 ********************-->

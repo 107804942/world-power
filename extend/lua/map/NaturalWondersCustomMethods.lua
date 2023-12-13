@@ -168,10 +168,103 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 	--elseif method_number == 4 then
 	--elseif method_number == 5 then
 
+	-- reserved: Mt. Everest
+	elseif method_number == 22 then
+		
+    -- reserved: 乌尤尼盐湖
 	elseif method_number == 6 then
-		-- reserved: 乌尤尼盐湖
-	--elseif method_number == 9 then
-		-- reserved: 珠峰
+
+	-- reserved: Mt. Paektu
+	elseif method_number == 8 then
+
+	-- reserved: Eye of the Sahara
+	elseif method_number == 12 then
+		
+	-- HA LONG BAY	
+    elseif method_number == 7 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		if pPlot == nil then return false end
+		if pPlot:IsWater() == false then return false end
+		if pPlot:IsLake() then return false end
+		
+		local iNumLand, iNumCoast, iNumOcean = 0, 0, 0
+		local bContinent, bGrass = false, false
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+			
+			if sAdjacentPlotType ~= ePlotOcean then
+				iNumLand = iNumLand + 1
+
+				local sAdjacentAreaNear = pAdjacentPlot:Area():GetNumTiles()
+				
+				if sAdjacentAreaNear > 40 then
+					bContinent = true
+				end
+
+				if sAdjacentTerrainType == eTerrainGrass then
+					bGrass = true
+				end
+			else
+				if sAdjacentTerrainType == eTerrainCoast then
+					iNumCoast = iNumCoast + 1
+				end
+			
+				if sAdjacentTerrainType == eTerrainOcean then
+					iNumOcean = iNumOcean + 1
+				end
+			end
+		end
+		
+		if iNumLand == 0 or iNumCoast < 2 or iNumOcean < 2 or bContinent == false or bGrass == false then return false end
+
+		return true
+
+  -- reserved: 群岛
+	elseif method_number == 9 then
+			local pPlot = Map.GetPlot(x, y)
+		
+		if pPlot == nil then return false end
+		if pPlot:IsWater() == false then return false end
+		if pPlot:IsLake() then return false end
+		
+		local iNumCoast, iNumAtoll = 0, 0
+		local bLand = false
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			local sAdjacentFeatureType = pAdjacentPlot:GetFeatureType()
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+			
+			if sAdjacentPlotType ~= ePlotOcean then
+				bLand = true
+				break
+			end
+
+			if sAdjacentFeatureType == eFeatureAtoll then
+				iNumAtoll = iNumAtoll + 1
+			end
+
+			if sAdjacentTerrainType == eTerrainCoast then
+				iNumCoast = iNumCoast + 1
+			end
+		end
+		
+		if iNumCoast < 1 or iNumCoast > 4 or iNumAtoll == 0 or bLand then return false end
+
+		return true
+
 
 	elseif method_number == 10 then
 		-- reserved: 瑞特巴湖
@@ -219,6 +312,125 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		if not bIsHasSeaTiles or iNumLandTiles < 3 or iNumLandTiles > 4 then return false end
 
 		return true
+
+		-- GREAT BLUE HOLE
+         elseif method_number == 11 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		if pPlot == nil then return false end
+		if pPlot:IsWater() == false then return false end
+		if pPlot:IsLake() then return false end
+		
+		local iNumAtoll, iNumLand, iNumOcean = 0, 0, 0
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			local sAdjacentFeatureType = pAdjacentPlot:GetFeatureType()
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+			
+			if sAdjacentPlotType ~= ePlotOcean then
+				iNumLand = iNumLand + 1
+			end
+			
+			if sAdjacentFeatureType == eFeatureAtoll then
+				iNumAtoll = iNumAtoll + 1
+			end
+			
+			if sAdjacentTerrainType == eTerrainOcean then
+				iNumOcean = iNumOcean + 1
+			end
+		end
+		
+		if iNumAtoll == 0 or iNumLand == 0 or iNumOcean == 0 then return false end
+
+		return true
+
+
+
+     -- EYE OF THE SAHARA
+     elseif method_number == 12 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		local pSEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
+		local pSWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pSEPlot:SetPlotType(ePlotFlat, false, false)
+		pSWPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSEPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSWPlot:SetTerrainType(eTerrainDesert, false, false)
+
+		pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
+		pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
+		pSEPlot:SetResourceType(-1)	
+		pSWPlot:SetResourceType(-1)		
+		-- setting up additional Mountains around
+		local tPossibleMountains = {}
+		local iNumberMountains = 0
+		local pAdjacentPlot
+
+		for i, direction in ipairs(tDirectionsTop) do
+			pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
+				table.insert(tPossibleMountains, pAdjacentPlot)
+			end
+
+			if pAdjacentPlot:GetPlotType() == ePlotMountain then
+				iNumberMountains = iNumberMountains + 1
+			end
+		end
+
+		local iSEX = pSEPlot:GetX()
+		local iSEY = pSEPlot:GetY()
+
+		for i, direction in ipairs(tDirectionsBottomRight) do
+			pAdjacentPlot = Map.PlotDirection(iSEX, iSEY, direction)
+			
+			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
+				table.insert(tPossibleMountains, pAdjacentPlot)
+			end
+
+			if pAdjacentPlot:GetPlotType() == ePlotMountain then
+				iNumberMountains = iNumberMountains + 1
+			end
+		end
+
+		local iSWX = pSWPlot:GetX()
+		local iSWY = pSWPlot:GetY()
+
+		for i, direction in ipairs(tDirectionsBottomLeft) do
+			pAdjacentPlot = Map.PlotDirection(iSWX, iSWY, direction)
+			
+			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
+				table.insert(tPossibleMountains, pAdjacentPlot)
+			end
+
+			if pAdjacentPlot:GetPlotType() == ePlotMountain then
+				iNumberMountains = iNumberMountains + 1
+			end
+		end
+			
+		if iNumberMountains >= 2 or #tPossibleMountains == 0 then return end
+
+		local pChosenPlot
+
+		repeat
+			pChosenPlot = table.remove(tPossibleMountains, Game.Rand(#tPossibleMountains, "Place a mountain around Eye of Sahara") + 1)
+			pChosenPlot:SetPlotType(ePlotMountain, false, false)
+
+			iNumberMountains = iNumberMountains + 1
+		until(iNumberMountains >= 2 or #tPossibleMountains == 0)
+
+
+
+
 	elseif method_number == 13 then
 		-- reserved: 达洛尔火山
 	elseif method_number == 14 then
@@ -254,61 +466,19 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 
 
-		-- 科隆群岛
-		elseif method_number == 9 then
-
-		local pPlot = Map.GetPlot(x, y)
 		
-		if pPlot == nil then return false end
-		if pPlot:IsWater() == false then return false end
-		if pPlot:IsLake() then return false end
-		if pPlot:GetTerrainType() ~= eTerrainOcean then return false end
-		
-		local iNumCoast, iNumland = 0, 0
 
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			
-			if pAdjacentPlot == nil then return false end
-		
-			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
-			local sAdjacentFeatureType = pAdjacentPlot:GetFeatureType()
-			
-			if (sAdjacentPlotType ~= ePlotOcean) and (sAdjacentPlotType ~= eTerrainCoast) then  ---临近区块非海洋
-				iNumland = iNumland + 1
-			end
-
-			   ---两格区块内有陆地
-			 local extraRange = 2	
-	         for dx = -extraRange, extraRange - 1, 1 do
-	         for dy = -extraRange, extraRange - 1, 1 do
-             local adjPlot = Map.PlotXYWithRangeCheck(x, y, dx, dy, 2);
-		     if adjPlot ~= nil then
-			 if adjPlot:GetTerrainType() ~= ePlotOcean and adjPlot:GetTerrainType() ~= eTerrainCoast  and adjPlot:GetPlotType() ~= ePlotMountain then
-				iNumCoast = iNumCoast + 1  ---两格内非山脉陆地地块数量
-				      end
-				   end
-				end
-			end
-		end
-		
-		if iNumCoast < 1 or iNumland > 0 then return false end
-		
-		return true
-
-
-
-
-		elseif method_number == 15 then
 		-- 巨人堤
+		elseif method_number == 15 then
+		
 		local pPlot = Map.GetPlot(x, y)
 		
 		if pPlot == nil then return false end
 		if pPlot:IsWater() == false then return false end
 		if pPlot:IsLake() then return false end
-		if pPlot:GetTerrainType() ~= eTerrainCoast then return false end
+		--if pPlot:GetTerrainType() ~= eTerrainCoast then return false end
 		
-		local iNumCoast, iNumJungle, iNumGrass = 0, 0, 0
+        local iNumLand = 0
 
 		for i, direction in ipairs(tDirectionTypes) do
 			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
@@ -316,18 +486,23 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 			if pAdjacentPlot == nil then return false end
 		
 			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
 			local sAdjacentFeatureType = pAdjacentPlot:GetFeatureType()
 			
+			if sAdjacentFeatureType == eFeatureIce then return false end
+
 			if sAdjacentPlotType ~= ePlotOcean then
-				if sAdjacentFeatureType == eFeatureJungle or sAdjacentFeatureType == eFeatureForest then
-					iNumJungle = iNumJungle + 1
-				end
-			else
-				iNumCoast = iNumCoast + 1
+				if pAdjacentPlot:Area():GetNumTiles() < 5 or pAdjacentPlot:Area():GetNumTiles() > 50 
+				or not (sAdjacentTerrainType == eTerrainTundra or sAdjacentTerrainType == eTerrainGrass or sAdjacentTerrainType == eTerrainPlains)
+				or sAdjacentFeatureType ~= eFeatureNo then return false end
+				
+				iNumLand = iNumLand + 1
+				
+				if iNumLand > 2 then return false end
 			end
 		end
 		
-		if iNumCoast < 1 or iNumCoast > 4 or iNumJungle > 0 then return false end
+		if iNumLand < 1 then return false end
 		
 		return true
 		-- end
@@ -408,6 +583,90 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 
 		return true
 
+
+		-- BERMUDA TRIANGLE
+		elseif method_number == 18 then
+	
+		local pMainPlot = Map.GetPlot(x, y)		
+		
+		if pMainPlot == nil then return false end
+		if pMainPlot:IsWater() == false then return false end
+		if pMainPlot:IsLake() then return false end
+
+		local pSEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
+		
+		if pSEPlot == nil then return false end
+		if pSEPlot:IsWater() == false then return false end
+		
+		local pSWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+
+		if pSWPlot == nil then return false end
+		if pSWPlot:IsWater() == false then return false end
+		
+		local iNumLandN, iNumLandSE, iNumLandSW = 0, 0, 0
+		
+		local tDirectionsTop = {
+			DirectionTypes.DIRECTION_NORTHWEST,
+			DirectionTypes.DIRECTION_NORTHEAST,
+			DirectionTypes.DIRECTION_WEST,
+			DirectionTypes.DIRECTION_EAST
+		}
+		local tDirectionsBottomRight = {
+			DirectionTypes.DIRECTION_EAST,
+			DirectionTypes.DIRECTION_SOUTHEAST,
+			DirectionTypes.DIRECTION_SOUTHWEST
+		}
+		local tDirectionsBottomLeft = {
+			DirectionTypes.DIRECTION_SOUTHWEST,
+			DirectionTypes.DIRECTION_WEST
+		}
+
+		for i, direction in ipairs(tDirectionsTop) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			if pAdjacentPlot == nil then return false end
+			if pAdjacentPlot:GetTerrainType() == eTerrainSnow then return false end
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean then
+				iNumLandN = iNumLandN + 1
+			end
+		end
+
+		local iSEX = pSEPlot:GetX()
+		local iSEY = pSEPlot:GetY()
+
+		for i, direction in ipairs(tDirectionsBottomRight) do
+			local pAdjacentPlot = Map.PlotDirection(iSEX, iSEY, direction)
+
+			if pAdjacentPlot == nil then return false end
+			if pAdjacentPlot:GetTerrainType() == eTerrainSnow then return false end
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean  then
+				iNumLandSE = iNumLandSE + 1
+			end
+		end
+
+		local iSWX = pSWPlot:GetX()
+		local iSWY = pSWPlot:GetY()
+
+		for i, direction in ipairs(tDirectionsBottomLeft) do
+			local pAdjacentPlot = Map.PlotDirection(iSWX, iSWY, direction)
+
+			if pAdjacentPlot == nil then return false end
+			if pAdjacentPlot:GetTerrainType() == eTerrainSnow then return false end
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean then
+				iNumLandSW = iNumLandSW + 1
+			end
+		end
+		
+		if iNumLandN < 1 or iNumLandSE < 1 or iNumLandSW < 1 then return false end
+
+		local iNumLandSum = iNumLandN + iNumLandSE + iNumLandSW
+		
+		if iNumLandSum < 3 or iNumLandSum > 5 then return false end
+		
+		return true
 
 
 	elseif method_number == 100 then
@@ -698,13 +957,32 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		pChosenPlot:SetResourceType(-1)		
 		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_SALAR_B)
 
+	-- HA LONG BAY
+      elseif method_number == 7 then
+	
+		local tCoastPlots = {}
+		local pChosenPlot
 
-	--[[elseif method_number == 9 then
-		-- MT. EVEREST  珠穆朗玛
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			-- checking features
+			if pAdjacentPlot:GetTerrainType() == eTerrainCoast then
+				table.insert(tCoastPlots, pAdjacentPlot)
+			end
+		end
+		
+		pChosenPlot = table.remove(tCoastPlots, Game.Rand(#tCoastPlots, "Choose plot for Ha Long Bay B") + 1)
+		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_HA_LONG_B)
+
+
+    -- MT. EVEREST  珠穆朗玛
+	elseif method_number == 22 then
+		
 		local pPlot = Map.GetPlot(x, y)
 	
-		--pPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetPlotType(ePlotMountain, false, false)
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		--pPlot:SetPlotType(ePlotMountain, false, false)
 		pPlot:SetTerrainType(eTerrainSnow, false, false)
 		
 		-- creating Mountains around
@@ -737,11 +1015,11 @@ function NWCustomPlacement(x, y, row_number, method_number)
 				pAdjacentPlot:SetTerrainType(eTerrainSnow, false, false)
 				pAdjacentPlot:SetResourceType(-1)
 			end
-		end]]
+		end
 
-
+    -- LAKE RETBA 瑞特巴湖
 	elseif method_number == 10 then
-		-- LAKE RETBA 瑞特巴湖
+		
 		local pPlot = Map.GetPlot(x, y)
 		
 		pPlot:SetPlotType(ePlotFlat, false, false)
@@ -761,32 +1039,991 @@ function NWCustomPlacement(x, y, row_number, method_number)
 			end
 		end
 
-
+	-- MT. PAEKTU 长白山
+	elseif method_number == 8 then
 	
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainTundra, false, false)
+
+		local tPossibleForests = {}
+		local iForestsPlanted = 0
+
+		-- changing snow to tundra
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			if pAdjacentPlot:GetTerrainType() == eTerrainSnow then
+				pAdjacentPlot:SetTerrainType(eTerrainTundra, false, false)
+			end
+
+			if pAdjacentPlot:GetTerrainType() == eTerrainTundra and pAdjacentPlot:GetFeatureType() == eFeatureNo then
+				table.insert(tPossibleForests, pAdjacentPlot)
+			end
+
+			if pAdjacentPlot:GetFeatureType() == eFeatureForest then
+				iForestsPlanted = iForestsPlanted + 1
+			end
+		end
+
+		-- placing some forests
+		if iForestsPlanted < 2 and #tPossibleForests ~= 0 then
+			local pChosenTileForTheForest
+
+			repeat
+				pChosenTileForTheForest = table.remove(tPossibleForests, Game.Rand(#tPossibleForests, "Placing a forest around Mt. Paektu") + 1)
+				pChosenTileForTheForest:SetFeatureType(eFeatureForest)
+				iForestsPlanted = iForestsPlanted + 1
+			until(iForestsPlanted >= 2 or #tPossibleForests == 0)
+		end
+
+		-- starting plots for rivers
+		local pNEPlot = Map.PlotDirection(x, y, eDirNE)
+		local pNWPlot = Map.PlotDirection(x, y, eDirNW)
+		local pWPlot = Map.PlotDirection(x, y, eDirW)
+		
+		-- creating 3 random Rivers with start around MT. PAEKTU
+		local iRandomRiverTurn, iCase
+		local bIsMetRiver = false
+		local bIsMetSeaOrLake = false
+		local bIsEndOfTheMap = false
+		local pCurrentPlot, pSupportPlot, pUltraSupportPlot
+		local iNormalCorrection = -4 
+		local iNormalCorrectionToMathRandom = math.abs(iNormalCorrection) * 2
+		local iHandicapCorrection = 2 
+		local iAdditionalOneWayCorrection = 0 
+		
+		-- NORTH RIVER (SONGHUA)
+		pNWPlot:SetWOfRiver(true, eFlowN)
+		
+		pCurrentPlot = Map.PlotDirection(pNWPlot:GetX(), pNWPlot:GetY(), eDirNE)
+		pSupportPlot = nil
+		pUltraSupportPlot = nil
+
+		if pCurrentPlot ~= nil then
+			iCase = 1
+
+			repeat
+				if iCase == 1 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsNWOfRiver() or pCurrentPlot:IsNEOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 6
+						
+							pCurrentPlot:SetNEOfRiver(true, eFlowNW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A1")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 2
+						
+							pCurrentPlot:SetNWOfRiver(true, eFlowNE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A2")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end
+				elseif iCase == 2 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsNEOfRiver() or pSupportPlot:IsWOfRiver() then	bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn - iHandicapCorrection <= 0 then
+							iCase = 1
+						
+							pSupportPlot:SetWOfRiver(true, eFlowN)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A3")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 3
+						
+							pCurrentPlot:SetNEOfRiver(true, eFlowSE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A4")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end		
+				elseif iCase == 3 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pSupportPlot:IsNWOfRiver() or pUltraSupportPlot:IsWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn - iHandicapCorrection <= 0 then
+							iCase = 2
+						
+							pSupportPlot:SetNWOfRiver(true, eFlowNE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A5")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 4
+						
+							pUltraSupportPlot:SetWOfRiver(true, eFlowS)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A6")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 4 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pSupportPlot:IsNEOfRiver() or pUltraSupportPlot:IsNWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 3
+						
+							pSupportPlot:SetNEOfRiver(true, eFlowSE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A7")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 5
+						
+							pUltraSupportPlot:SetNWOfRiver(true, eFlowSW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A8")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 5 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsWOfRiver() or pSupportPlot:IsNEOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 4
+						
+							pCurrentPlot:SetWOfRiver(true, eFlowS)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A9")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn + iHandicapCorrection > 0 then
+							iCase = 6
+						
+							pSupportPlot:SetNEOfRiver(true, eFlowNW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A10")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 6 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsWOfRiver() or pCurrentPlot:IsNWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 5
+						
+							pCurrentPlot:SetNWOfRiver(true, eFlowSW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A11")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn + iHandicapCorrection > 0 then
+							iCase = 1
+						
+							pCurrentPlot:SetWOfRiver(true, eFlowN)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map A12")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				end
+			until(bIsMetSeaOrLake or bIsMetRiver or bIsEndOfTheMap)
+		else
+			print("Paketu river at the end of the map X1")
+		end
+
+		-- NORTHEAST RIVER (TUMEN)
+		bIsMetRiver = false
+		bIsMetSeaOrLake = false
+		iAdditionalOneWayCorrection = 0
+
+		pNEPlot:SetNWOfRiver(true, eFlowNE)
+		
+		pCurrentPlot = Map.PlotDirection(pNEPlot:GetX(), pNEPlot:GetY(), eDirE)
+		pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+		pUltraSupportPlot = nil
+		
+		if pCurrentPlot ~= nil and pSupportPlot ~= nil then
+			iCase = 2
+
+			repeat
+				if iCase == 1 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsNWOfRiver() or pCurrentPlot:IsNEOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 6
+						
+							pCurrentPlot:SetNEOfRiver(true, eFlowNW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B1")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn + iHandicapCorrection > 0 then
+							iCase = 2
+						
+							pCurrentPlot:SetNWOfRiver(true, eFlowNE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B2")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 2 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsNEOfRiver() or pSupportPlot:IsWOfRiver() then	bIsMetRiver = true end
+				
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 1
+						
+							pSupportPlot:SetWOfRiver(true, eFlowN)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B3")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn + iHandicapCorrection > 0 then
+							iCase = 3
+						
+							pCurrentPlot:SetNEOfRiver(true, eFlowSE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B4")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end		
+				elseif iCase == 3 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pSupportPlot:IsNWOfRiver() or pUltraSupportPlot:IsWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn - iHandicapCorrection <= 0 then
+							iCase = 2
+						
+							pSupportPlot:SetNWOfRiver(true, eFlowNE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B5")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 4
+						
+							pUltraSupportPlot:SetWOfRiver(true, eFlowS)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B6")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 4 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pSupportPlot:IsNEOfRiver() or pUltraSupportPlot:IsNWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn - iHandicapCorrection <= 0 then
+							iCase = 3
+						
+							pSupportPlot:SetNEOfRiver(true, eFlowSE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B7")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 5
+						
+							pUltraSupportPlot:SetNWOfRiver(true, eFlowSW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B8")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 5 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsWOfRiver() or pSupportPlot:IsNEOfRiver() then bIsMetRiver = true end
+				
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 4
+						
+							pCurrentPlot:SetWOfRiver(true, eFlowS)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B9")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 6
+						
+							pSupportPlot:SetNEOfRiver(true, eFlowNW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B10")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 6 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsWOfRiver() or pCurrentPlot:IsNWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 5
+						
+							pCurrentPlot:SetNWOfRiver(true, eFlowSW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B11")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 1
+						
+							pCurrentPlot:SetWOfRiver(true, eFlowN)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map B12")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				end
+			until(bIsMetSeaOrLake or bIsMetRiver or bIsEndOfTheMap)
+		else
+			print("Paketu river at the end of the map X2")
+		end
+		
+		-- SOUTHWEST RIVER (YALU)
+		bIsMetRiver = false
+		bIsMetSeaOrLake = false
+		iAdditionalOneWayCorrection = 0
+
+		pWPlot:SetNWOfRiver(true, eFlowSW)
+
+		pCurrentPlot = Map.PlotDirection(pWPlot:GetX(), pWPlot:GetY(), eDirSW)
+		pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+		pUltraSupportPlot = nil
+
+		if pCurrentPlot ~= nil and pSupportPlot ~= nil then
+			iCase = 5
+
+			repeat
+				if iCase == 1 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsNWOfRiver() or pCurrentPlot:IsNEOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn - iHandicapCorrection <= 0 then
+							iCase = 6
+						
+							pCurrentPlot:SetNEOfRiver(true, eFlowNW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C1")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 2
+						
+							pCurrentPlot:SetNWOfRiver(true, eFlowNE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C2")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 2 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsNEOfRiver() or pSupportPlot:IsWOfRiver() then	bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 1
+						
+							pSupportPlot:SetWOfRiver(true, eFlowN)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C3")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 3
+						
+							pCurrentPlot:SetNEOfRiver(true, eFlowSE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C4")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end		
+				elseif iCase == 3 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pSupportPlot:IsNWOfRiver() or pUltraSupportPlot:IsWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 2
+						
+							pSupportPlot:SetNWOfRiver(true, eFlowNE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C5")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn + iHandicapCorrection > 0 then
+							iCase = 4
+						
+							pUltraSupportPlot:SetWOfRiver(true, eFlowS)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C6")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 4 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pSupportPlot:IsNEOfRiver() or pUltraSupportPlot:IsNWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 3
+						
+							pSupportPlot:SetNEOfRiver(true, eFlowSE)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C7")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn + iHandicapCorrection > 0 then
+							iCase = 5
+						
+							pUltraSupportPlot:SetNWOfRiver(true, eFlowSW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C8")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 5 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsWOfRiver() or pSupportPlot:IsNEOfRiver() then bIsMetRiver = true end
+				
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn <= 0 then
+							iCase = 4
+						
+							pCurrentPlot:SetWOfRiver(true, eFlowS)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSE)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+
+							if pCurrentPlot == nil or pSupportPlot == nil or pUltraSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C9")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 6
+						
+							pSupportPlot:SetNEOfRiver(true, eFlowNW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNW)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C10")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				elseif iCase == 6 then
+					if pCurrentPlot:GetPlotType() == ePlotOcean then bIsMetSeaOrLake = true	end
+					if pCurrentPlot:IsWOfRiver() or pCurrentPlot:IsNWOfRiver() then bIsMetRiver = true end
+
+					if not bIsMetSeaOrLake and not bIsMetRiver then
+						iRandomRiverTurn = Game.Rand(iNormalCorrectionToMathRandom, "River turn") + 1 + iNormalCorrection + iAdditionalOneWayCorrection
+					
+						if iRandomRiverTurn - iHandicapCorrection <= 0 then
+							iCase = 5
+						
+							pCurrentPlot:SetNWOfRiver(true, eFlowSW)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirSW)
+							pSupportPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil or pSupportPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C11")
+							end
+
+							if iAdditionalOneWayCorrection >= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection + 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						elseif iRandomRiverTurn > 0 then
+							iCase = 1
+						
+							pCurrentPlot:SetWOfRiver(true, eFlowN)
+						
+							pCurrentPlot = Map.PlotDirection(pCurrentPlot:GetX(), pCurrentPlot:GetY(), eDirNE)
+							pSupportPlot = nil
+							pUltraSupportPlot = nil
+
+							if pCurrentPlot == nil then
+								bIsEndOfTheMap = true
+								print("Paketu river at the end of the map C12")
+							end
+
+							if iAdditionalOneWayCorrection <= 0 then
+								iAdditionalOneWayCorrection = iAdditionalOneWayCorrection - 1
+							else
+								iAdditionalOneWayCorrection = 0
+							end
+						end
+					end	
+				end
+			until(bIsMetSeaOrLake or bIsMetRiver or bIsEndOfTheMap)
+		else
+			print("Paketu river at the end of the map X3")
+		end
 
 
+	--巨人堤
 	elseif method_number == 15 then
-		--巨人堤
+		
 		local pPlot = Map.GetPlot(x, y)
 		
 		pPlot:SetPlotType(ePlotOcean, false, false)
-		--pPlot:SetTerrainType(eTerrainPlains, false, false)
-
-		-- setting up Plains around and cleaning Forests and Jungles
+		pPlot:SetTerrainType(eTerrainCoast, false, false)
+		
+		-- finding suitable places for CAUSEWAY
+		local tPossibleSpots = {}
+		
 		for i, direction in ipairs(tDirectionTypes) do
 			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-
-			if pAdjacentPlot:GetPlotType() ~= ePlotOcean 
-			--and pAdjacentPlot:GetTerrainType() ~= eTerrainDesert
-			 then
-				--pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
-				pAdjacentPlot:SetPlotType(ePlotHill, false, false)
-
-				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
-					pAdjacentPlot:SetFeatureType(eFeatureNo)
-				end
+			
+			if pAdjacentPlot:GetPlotType() == ePlotOcean then
+				pAdjacentPlot:SetTerrainType(eTerrainCoast, false, false)
+			else
+				table.insert(tPossibleSpots, pAdjacentPlot)
 			end
 		end
+		
+		pChosenPlot = table.remove(tPossibleSpots, Game.Rand(#tPossibleSpots, "Place B tile for Causeway") + 1)
+		pChosenPlot:SetPlotType(ePlotFlat, false, false)
+		pChosenPlot:SetTerrainType(eTerrainTundra, false, false)
+		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_CAUSEWAY_B)
 
 
 elseif method_number == 16 then
@@ -837,12 +2074,80 @@ elseif method_number == 16 then
 
     --科隆群岛
     elseif method_number == 9 then
-	    local pPlot = Map.GetPlot(x, y)
-		pPlot:SetResourceType(-1) ---消除资源
-	    for i, direction in ipairs(tDirectionTypes) do
-		local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-		pAdjacentPlot:SetResourceType(-1) ---消除资源
-	end
+
+	    local tOceanPlots, tCoastPlots, tPlotsAroundForResources = {}, {}, {}
+		local pChosenPlot
+		local pPlot = Map.GetPlot(x, y)
+
+		pPlot:SetTerrainType(eTerrainCoast, false, false)
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			pAdjacentPlot:SetTerrainType(eTerrainCoast, false, false)
+
+			if pAdjacentPlot:GetTerrainType() == eTerrainOcean then
+				table.insert(tOceanPlots, pAdjacentPlot)
+			elseif pAdjacentPlot:GetTerrainType() == eTerrainCoast then
+				table.insert(tCoastPlots, pAdjacentPlot)
+			end
+
+			table.insert(tPlotsAroundForResources, pAdjacentPlot)
+		end
+		
+		if #tOceanPlots > 0 then
+			pChosenPlot = table.remove(tOceanPlots, Game.Rand(#tOceanPlots, "Choose ocean around Galapagos") + 1)
+		elseif #tCoastPlots > 0 then
+			pChosenPlot = table.remove(tCoastPlots, Game.Rand(#tCoastPlots, "Choose coast around Galapagos") + 1)
+		end
+
+		pChosenPlot:SetTerrainType(eTerrainCoast, false, false)
+		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_GALAPAGOS_B)
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pChosenX = pChosenPlot:GetX()
+			local pChosenY = pChosenPlot:GetY()
+			local pAdjacentPlot = Map.PlotDirection(pChosenX, pChosenY, direction)
+
+			if pAdjacentPlot:GetX() == x and pAdjacentPlot:GetY() == y then
+				-- GALAPAGOS_A
+			else
+				pAdjacentPlot:SetTerrainType(eTerrainCoast, false, false)
+				table.insert(tPlotsAroundForResources, pAdjacentPlot)
+			end
+		end
+
+		-- placing resources
+		local iNumFish = 0
+
+		repeat
+			pChosenPlot = table.remove(tPlotsAroundForResources, Game.Rand(#tPlotsAroundForResources, "Choose plot for a resource around Galapagos") + 1)
+			eChosenFeature = pChosenPlot:GetFeatureType()
+			eChosenResource = pChosenPlot:GetResourceType()
+			print(eChosenFeature, eChosenResource)
+			if eChosenFeature == eFeatureNo and eChosenResource == -1 then
+				pChosenPlot:SetPlotType(ePlotFlat, false, false)
+				pChosenPlot:SetTerrainType(eTerrainGrass, false, false)
+				pChosenPlot:SetResourceType(GameInfoTypes.RESOURCE_DEER, 1)  ---特殊资源
+				iNumFish = iNumFish + 1
+			end
+		until(#tPlotsAroundForResources == 0 or iNumFish >= 1)
+		
+		if #tPlotsAroundForResources == 0 then return end
+
+		repeat
+			pChosenPlot = table.remove(tPlotsAroundForResources, Game.Rand(#tPlotsAroundForResources, "Choose plot for a resource around Galapagos") + 1)
+			eChosenFeature = pChosenPlot:GetFeatureType()
+			eChosenResource = pChosenPlot:GetResourceType()
+			print(eChosenFeature, eChosenResource)
+			if eChosenFeature == eFeatureNo and eChosenResource == -1 then
+				pChosenPlot:SetResourceType(GameInfoTypes.RESOURCE_CORAL, 1) ---特殊资源
+				iNumFish = iNumFish + 1
+			end
+		until(#tPlotsAroundForResources == 0 or iNumFish >= 3)
+
+
+
 
 	-- BIOLUMINESCENT BAY
 	elseif method_number == 14 then
@@ -863,6 +2168,26 @@ elseif method_number == 16 then
 				end
 			end
 		end
+
+    -- reserved for: Great Blue Hole
+	elseif method_number == 11 then
+	
+
+	-- BERMUDA TRIANGLE
+	elseif method_number == 18 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		local pSEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
+		local pSWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+
+		pPlot:SetTerrainType(eTerrainCoast, false, false)
+		pSEPlot:SetTerrainType(eTerrainCoast, false, false)
+		pSWPlot:SetTerrainType(eTerrainCoast, false, false)
+
+		pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_B)
+		pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_C)
+			
+
 	end
 end
 ------------------------------------------------------------------------------

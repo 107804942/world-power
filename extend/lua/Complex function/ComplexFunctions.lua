@@ -1597,6 +1597,20 @@ Initialise()
 --==========================================================================================================================
 --GetUserSetting (DIFFICULTY_9!)
 ----------------------------------------------------------------------------------------------------------------------------
+
+function RemoveErrorResources()
+	-- loop through all plots
+	for iPlot = 0, Map.GetNumPlots() - 1 do
+		local plot = Map.GetPlotByIndex(iPlot);
+		if (plot:IsNaturalWonder() or plot:HasAnyNaturalWonder() )
+		then
+		   plot:SetResourceType(-1)
+		end
+	end
+end
+Events.LoadScreenClose.Add(RemoveErrorResources)
+
+
 local gHandicap				= PreGame.GetHandicap(0)  ---难度等级
 local Difficult				= Game:GetHandicapType()
 local info = GameInfo.HandicapInfos[PreGame.GetHandicap(0)];
@@ -1624,7 +1638,7 @@ local Difficult9Active = IsUsingDifficult9()
 local Difficult10Active = IsUsingDifficult10()
 
 function AI_DIFFICULTY_REDUCE()
-	 for i=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
+	    for i=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 		local Player = Players[i]
 		if Player:IsAlive() and Player:IsMajorCiv() then
 	    if not Player:IsHuman()  then

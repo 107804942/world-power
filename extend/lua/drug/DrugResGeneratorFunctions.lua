@@ -158,7 +158,8 @@ function isSuitable_Plot_Check( pPlot)
 	   +1 was added to all IDs to avoid problem when ID=0 where 0*0 = 0 gives wrong condition result 
 	--]]
 
-	if pPlot:GetResourceType(-1) == -1 and not pPlot:IsImpassable() and not pPlot:IsCity() and not pPlot:IsGoody()  then
+	if pPlot:GetResourceType(-1) == -1 and not pPlot:IsImpassable() and not pPlot:IsCity() and not pPlot:IsGoody()  
+	and not pPlot:HasAnyNaturalWonder()   then
 
 		if  (iTerrain +1) * iTerrain_Types.Grass == TerrainTypes.TERRAIN_GRASS +1 or
 			(iTerrain +1) * iTerrain_Types.Plains == TerrainTypes.TERRAIN_PLAINS +1 or
