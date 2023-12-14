@@ -38,6 +38,8 @@ SELECT  'PROMOTION_CAUSEWAY', Type FROM UnitCombatInfos WHERE ID >= 0;
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
 SELECT  'PROMOTION_EXPLOSIVE_MIXTURE', Type FROM Units WHERE RangedCombat > 0;
 
+INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
+SELECT  'PROMOTION_BERMUDA', Type FROM Units WHERE Domain= 'DOMAIN_SEA';
 
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_YUEYANG', Type FROM UnitCombatInfos WHERE Type= 'UNITCOMBAT_MELEE';

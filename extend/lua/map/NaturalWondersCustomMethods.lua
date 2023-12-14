@@ -351,86 +351,6 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 
 
-
-     -- EYE OF THE SAHARA
-     elseif method_number == 12 then
-		
-		local pPlot = Map.GetPlot(x, y)
-		local pSEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
-		local pSWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
-
-		pPlot:SetPlotType(ePlotFlat, false, false)
-		pSEPlot:SetPlotType(ePlotFlat, false, false)
-		pSWPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetTerrainType(eTerrainDesert, false, false)
-		pSEPlot:SetTerrainType(eTerrainDesert, false, false)
-		pSWPlot:SetTerrainType(eTerrainDesert, false, false)
-
-		pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
-		pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
-		pSEPlot:SetResourceType(-1)	
-		pSWPlot:SetResourceType(-1)		
-		-- setting up additional Mountains around
-		local tPossibleMountains = {}
-		local iNumberMountains = 0
-		local pAdjacentPlot
-
-		for i, direction in ipairs(tDirectionsTop) do
-			pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			
-			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
-				table.insert(tPossibleMountains, pAdjacentPlot)
-			end
-
-			if pAdjacentPlot:GetPlotType() == ePlotMountain then
-				iNumberMountains = iNumberMountains + 1
-			end
-		end
-
-		local iSEX = pSEPlot:GetX()
-		local iSEY = pSEPlot:GetY()
-
-		for i, direction in ipairs(tDirectionsBottomRight) do
-			pAdjacentPlot = Map.PlotDirection(iSEX, iSEY, direction)
-			
-			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
-				table.insert(tPossibleMountains, pAdjacentPlot)
-			end
-
-			if pAdjacentPlot:GetPlotType() == ePlotMountain then
-				iNumberMountains = iNumberMountains + 1
-			end
-		end
-
-		local iSWX = pSWPlot:GetX()
-		local iSWY = pSWPlot:GetY()
-
-		for i, direction in ipairs(tDirectionsBottomLeft) do
-			pAdjacentPlot = Map.PlotDirection(iSWX, iSWY, direction)
-			
-			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
-				table.insert(tPossibleMountains, pAdjacentPlot)
-			end
-
-			if pAdjacentPlot:GetPlotType() == ePlotMountain then
-				iNumberMountains = iNumberMountains + 1
-			end
-		end
-			
-		if iNumberMountains >= 2 or #tPossibleMountains == 0 then return end
-
-		local pChosenPlot
-
-		repeat
-			pChosenPlot = table.remove(tPossibleMountains, Game.Rand(#tPossibleMountains, "Place a mountain around Eye of Sahara") + 1)
-			pChosenPlot:SetPlotType(ePlotMountain, false, false)
-
-			iNumberMountains = iNumberMountains + 1
-		until(iNumberMountains >= 2 or #tPossibleMountains == 0)
-
-
-
-
 	elseif method_number == 13 then
 		-- reserved: ´ïÂå¶û»ðÉ½
 	elseif method_number == 14 then
@@ -2172,6 +2092,85 @@ elseif method_number == 16 then
     -- reserved for: Great Blue Hole
 	elseif method_number == 11 then
 	
+
+	
+     -- EYE OF THE SAHARA
+     elseif method_number == 12 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		local pSEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
+		local pSWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pSEPlot:SetPlotType(ePlotFlat, false, false)
+		pSWPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSEPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSWPlot:SetTerrainType(eTerrainDesert, false, false)
+
+		pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
+		pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
+		pSEPlot:SetResourceType(-1)	
+		pSWPlot:SetResourceType(-1)		
+		-- setting up additional Mountains around
+		--[[local tPossibleMountains = {}
+		local iNumberMountains = 0
+		local pAdjacentPlot
+
+		for i, direction in ipairs(tDirectionsTop) do
+			pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
+				table.insert(tPossibleMountains, pAdjacentPlot)
+			end
+
+			if pAdjacentPlot:GetPlotType() == ePlotMountain then
+				iNumberMountains = iNumberMountains + 1
+			end
+		end
+
+		local iSEX = pSEPlot:GetX()
+		local iSEY = pSEPlot:GetY()
+
+		for i, direction in ipairs(tDirectionsBottomRight) do
+			pAdjacentPlot = Map.PlotDirection(iSEX, iSEY, direction)
+			
+			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
+				table.insert(tPossibleMountains, pAdjacentPlot)
+			end
+
+			if pAdjacentPlot:GetPlotType() == ePlotMountain then
+				iNumberMountains = iNumberMountains + 1
+			end
+		end
+
+		local iSWX = pSWPlot:GetX()
+		local iSWY = pSWPlot:GetY()
+
+		for i, direction in ipairs(tDirectionsBottomLeft) do
+			pAdjacentPlot = Map.PlotDirection(iSWX, iSWY, direction)
+			
+			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
+				table.insert(tPossibleMountains, pAdjacentPlot)
+			end
+
+			if pAdjacentPlot:GetPlotType() == ePlotMountain then
+				iNumberMountains = iNumberMountains + 1
+			end
+		end
+			
+		if iNumberMountains >= 2 or #tPossibleMountains == 0 then return end
+
+		local pChosenPlot
+
+		repeat
+			pChosenPlot = table.remove(tPossibleMountains, Game.Rand(#tPossibleMountains, "Place a mountain around Eye of Sahara") + 1)
+			pChosenPlot:SetPlotType(ePlotMountain, false, false)
+
+			iNumberMountains = iNumberMountains + 1
+		until(iNumberMountains >= 2 or #tPossibleMountains == 0)]]
+
+
 
 	-- BERMUDA TRIANGLE
 	elseif method_number == 18 then

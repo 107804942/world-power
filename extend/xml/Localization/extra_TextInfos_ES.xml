@@ -9721,7 +9721,15 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_BERMUDA">
+			<Text>谜之暗流</Text>
+		</Row>
 
+		<Row Tag="TXT_KEY_PROMOTION_BERMUDA_HELP">
+			<Text>
+				+1[ICON_MOVES]移动力，回合开始时临近的敌人[ICON_MOVES]移动力-1。
+			</Text>
+		</Row>
 
 
 

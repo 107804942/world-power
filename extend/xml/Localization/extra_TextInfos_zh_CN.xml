@@ -9732,9 +9732,17 @@
 				[NEWLINE]在所有荧光海湾中，最著名的就是波多黎各Vieque岛，海湾里发光的是一种叫做鞭毛藻 (dinoflagellate)的非植物非动物、类似于细菌的单细胞微生物。这个海湾里每加仑的水中有大约72万个这种小东西，它们个头不大， 也就几十微米，肉眼是根本看不到的。
 			</Text>
 		</Row>
-	
-		
-		
+
+
+			<Row Tag="TXT_KEY_PROMOTION_BERMUDA">
+				<Text>谜之暗流</Text>
+			</Row>
+
+			<Row Tag="TXT_KEY_PROMOTION_BERMUDA_HELP">
+				<Text>
+					+1[ICON_MOVES]移动力，回合开始时临近的敌人[ICON_MOVES]移动力-1。
+				</Text>
+			</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EXPLOSIVE_MIXTURE">
 			<Text>爆炸性混合物</Text>
