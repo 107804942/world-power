@@ -73,6 +73,9 @@ end
 
 -----------------------------------------------Plot Functions------------------------------------------------------
 function PlotIsVisibleToHuman(plot) --------------------Is the plot can be seen by Human
+	if Players[Game.GetActivePlayer()]:IsObserver() then
+		return false
+	end
 	for playerID, HumanPlayer in pairs(Players) do
 		if HumanPlayer:IsHuman() then
 			local HumanPlayerTeamIndex = HumanPlayer:GetTeam()

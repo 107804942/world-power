@@ -916,11 +916,9 @@ function HappinessTipHandler( control )
 		local iMinorCivHappiness = pPlayer:GetHappinessFromMinorCivs();
 		local iLeagueHappiness = pPlayer:GetHappinessFromLeagues();
 		local iFaithHappiness = pPlayer:GetHappinessFromFaith();
-	
---		local iHandicapHappiness = pPlayer:GetHappiness() - iPoliciesHappiness - iResourcesHappiness - iCityHappiness - iBuildingHappiness - iTradeRouteHappiness - iReligionHappiness - iNaturalWonderHappiness - iMinorCivHappiness - iExtraHappinessPerCity - iLeagueHappiness;
 
---	SP Flat Hadicap Happiness
-		local iHandicapHappiness = 11
+		--SP Flat Hadicap Happiness
+		local iHandicapHappiness = Game.GetHappinessFromHandicap();
 
 	
 		if (pPlayer:IsEmpireVeryUnhappy()) then

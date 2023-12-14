@@ -2625,7 +2625,7 @@ local TopPanelTooltips = {
 			--local handicapHappiness = totalHappiness - policiesHappiness - resourcesHappiness - cityHappiness - buildingHappiness - garrisonedUnitsHappiness - minorCivHappiness - tradeRouteHappiness - religionHappiness - naturalWonderHappiness - extraHappinessPerCity - leagueHappiness - happinessFromVassals	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
 
 			--	SP Flat Hadicap Happiness
-		    local handicapHappiness = 11
+		    local handicapHappiness = Game.GetHappinessFromHandicap();
 
 			if activePlayer:IsEmpireVeryUnhappy() then
 
