@@ -2355,7 +2355,7 @@ function DoUpdateProductionInfo( bNoProduction )
 	-- Base Production per turn
 	local iProductionPerTurn = pCity:GetCurrentProductionDifferenceTimes100(false, false) / 100;--pCity:GetYieldRate(YieldTypes.YIELD_PRODUCTION);
 	local iProductionModifier = pCity:GetProductionModifier() + 100;
-	local iProductionOverflow = pCity:GetOverflowProduction();
+	local iProductionOverflow = pCity:GetOverflowProduction() + pCity:GetFeatureProduction();
 	--iProductionPerTurn = iProductionPerTurn * iProductionModifier;
 	--iProductionPerTurn = iProductionPerTurn / 100;
 	
