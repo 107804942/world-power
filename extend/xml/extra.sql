@@ -52,16 +52,17 @@ INSERT INTO Project_YieldChanges(ProjectType,YieldType, Yield)VALUES
 -- ³ÇÊÐ¹¥»÷¾àÀë
 ------------------------------------------------------------------------------------------------------------------------
 UPDATE Technologies     SET BombardIndirect=1   WHERE Type='TECH_ENGINEERING';
-UPDATE Buildings        SET BombardRange=2   WHERE BuildingClass='BUILDINGCLASS_WALLS';
-UPDATE Buildings        SET BombardRange=3 , BombardIndirect=1  WHERE BuildingClass='BUILDINGCLASS_PALACE';
-UPDATE Buildings        SET BombardRange=3   WHERE BuildingClass='BUILDINGCLASS_MILITARY_BASE';
-UPDATE Buildings        SET BombardRange=4   WHERE BuildingClass='BUILDINGCLASS_KRAK_DES_CHEVALIERS';
-UPDATE Buildings        SET BombardRange=5   WHERE BuildingClass='BUILDINGCLASS_MATRIX';
-UPDATE Buildings        SET BombardRange=8   WHERE BuildingClass='BUILDINGCLASS_SPACE_FORTRESS';
+--UPDATE Buildings        SET BombardRange=1   WHERE BuildingClass='BUILDINGCLASS_WALLS';
+UPDATE Buildings        SET BombardRange=1 , BombardIndirect=1  WHERE BuildingClass='BUILDINGCLASS_PALACE';
+UPDATE Buildings        SET BombardRange=1   WHERE BuildingClass='BUILDINGCLASS_MILITARY_BASE';
+UPDATE Buildings        SET BombardRange=1   WHERE BuildingClass='BUILDINGCLASS_KRAK_DES_CHEVALIERS';
+UPDATE Buildings        SET BombardRange=1   WHERE BuildingClass='BUILDINGCLASS_MATRIX';
+UPDATE Buildings        SET BombardRange=1   WHERE BuildingClass='BUILDINGCLASS_SPACE_FORTRESS';
+UPDATE Defines          SET Value=7   WHERE Name='MAX_CITY_ATTACK_RANGE';
+UPDATE Defines          SET Value=2   WHERE Name='CITY_ATTACK_RANGE';
+--INSERT OR REPLACE INTO Defines(Name, Value) SELECT 'MAX_CITY_ATTACK_RANGE', max(BombardRange) FROM Technologies;
+--INSERT OR REPLACE INTO Defines(Name, Value) SELECT 'MAX_CITY_ATTACK_RANGE', max(BombardRange) FROM Buildings;
 
-
-INSERT OR REPLACE INTO Defines(Name, Value) SELECT 'MAX_CITY_ATTACK_RANGE', max(BombardRange) FROM Technologies;
-INSERT OR REPLACE INTO Defines(Name, Value) SELECT 'MAX_CITY_ATTACK_RANGE', max(BombardRange) FROM Buildings;
 
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -1203,6 +1204,16 @@ VALUES	('FEATURE_LAKE_VICTORIA',	'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 		('FEATURE_EL_DORADO',	    'PLOT_HILLS',		'YIELD_CULTURE',		1,		0),
 		('FEATURE_EL_DORADO',	    'PLOT_MOUNTAIN',	'YIELD_CULTURE',		1,		0),
 
+
+		('FEATURE_VALLEY_B',		'PLOT_LAND',		'YIELD_PRODUCTION',	    1,		0),
+		('FEATURE_VALLEY_B',	    'PLOT_HILLS',		'YIELD_PRODUCTION',		1,		0),
+		('FEATURE_VALLEY_B',	    'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		1,		0),
+		('FEATURE_VALLEY_A',		'PLOT_LAND',		'YIELD_PRODUCTION',		1,		0),
+		('FEATURE_VALLEY_A',	    'PLOT_HILLS',		'YIELD_PRODUCTION',		1,		0),
+		('FEATURE_VALLEY_A',	    'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		1,		0),
+
+
+
 		('FEATURE_POTOSI',		    'PLOT_LAND',		'YIELD_GOLD',			1,		0),
 		('FEATURE_POTOSI',	        'PLOT_HILLS',		'YIELD_GOLD',		    1,		0),
 		('FEATURE_POTOSI',	        'PLOT_MOUNTAIN',	'YIELD_GOLD',		    1,		0),
@@ -1234,6 +1245,23 @@ VALUES	('FEATURE_LAKE_VICTORIA',	'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 --=======================================================================================================================
 
 INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES	
+        ('FEATURE_VALLEY_A',	'YIELD_GOLDEN_AGE_POINTS',3),
+		('FEATURE_VALLEY_A',	'YIELD_PRODUCTION',5),
+		('FEATURE_VALLEY_A',	'YIELD_TOURISM',2),
+		('FEATURE_VALLEY_A',	'YIELD_CULTURE',3),
+		('FEATURE_VALLEY_A',	'YIELD_FAITH',2),
+
+		('FEATURE_VALLEY_B',	'YIELD_GOLDEN_AGE_POINTS',3),
+		('FEATURE_VALLEY_B',	'YIELD_PRODUCTION',5),
+		('FEATURE_VALLEY_B',	'YIELD_TOURISM',2),
+		('FEATURE_VALLEY_B',	'YIELD_CULTURE',3),
+		('FEATURE_VALLEY_B',	'YIELD_FAITH',2),
+
+		('FEATURE_DANXIA',	'YIELD_GOLDEN_AGE_POINTS',6),
+		('FEATURE_DANXIA',	'YIELD_GREAT_GENERAL_POINTS',3),
+		('FEATURE_DANXIA',	'YIELD_TOURISM',2),
+		('FEATURE_DANXIA',	'YIELD_CULTURE',6),
+
         ('FEATURE_SALAR_A',		'YIELD_PRODUCTION',		3),
 		('FEATURE_SALAR_A',		'YIELD_GOLD',			3),
 		('FEATURE_SALAR_A',		'YIELD_CULTURE',		3),
@@ -1249,14 +1277,14 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 		('FEATURE_ZHANGJIAJIE',	'YIELD_TOURISM',		2),
 		('FEATURE_ZHANGJIAJIE',	'YIELD_CULTURE',		5),
 
-		('FEATURE_WHITE_DESERT',	'YIELD_GOLD',			4),
-		('FEATURE_WHITE_DESERT',	'YIELD_SCIENCE',		7),
-		('FEATURE_WHITE_DESERT',	'YIELD_FOOD',		    3),
-		('FEATURE_WHITE_DESERT',	'YIELD_TOURISM',		2),
+		--('FEATURE_WHITE_DESERT',	'YIELD_GOLD',			4),
+		--('FEATURE_WHITE_DESERT',	'YIELD_SCIENCE',		7),
+		--('FEATURE_WHITE_DESERT',	'YIELD_FOOD',		    3),
+		--('FEATURE_WHITE_DESERT',	'YIELD_TOURISM',		2),
 
-		('FEATURE_GALAPAGOS',	'YIELD_GOLD',			3),
-		('FEATURE_GALAPAGOS',	'YIELD_CULTURE',		3),
-		('FEATURE_GALAPAGOS',	'YIELD_FOOD',		    3),
+		('FEATURE_GALAPAGOS_A',	'YIELD_GOLD',			3),
+		('FEATURE_GALAPAGOS_A',	'YIELD_CULTURE',		3),
+		('FEATURE_GALAPAGOS_A',	'YIELD_FOOD',		    3),
 
 		('FEATURE_GALAPAGOS_B',		'YIELD_GOLD',			3),
 		('FEATURE_GALAPAGOS_B',		'YIELD_CULTURE',		3),
@@ -1331,8 +1359,21 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 
 		
 
-INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	Yield,	IgnoreNaturalWonderPlots)
-VALUES	('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
+INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	Yield,	IgnoreNaturalWonderPlots)VALUES	
+ 
+        ('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_GOLDEN_AGE_POINTS',2,	0),
+		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_PRODUCTION',     2,		0),
+		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_TOURISM',        1,		0),
+		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_CULTURE',        1,		0),
+		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_FAITH',          1,		0),
+
+		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_GOLDEN_AGE_POINTS',2,	0),
+		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_PRODUCTION',     2,		0),
+		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_TOURISM',        1,		0),
+		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_CULTURE',        1,		0),
+		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_FAITH',          1,		0),
+
+        ('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
 		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_GOLD',		    2,		0),
 		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_FOOD',		    1,		0),
 		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_SCIENCE',		1,		0),
@@ -1356,10 +1397,16 @@ VALUES	('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
 		('FEATURE_MT_PAEKTU',			'PLOT_MOUNTAIN',	'YIELD_FAITH',		2,		0),
 		('FEATURE_MT_PAEKTU',			'PLOT_LAND',		'YIELD_FAITH',		2,		0),
 		
-		('FEATURE_MT_PAEKTU',			'PLOT_HILLS',		'YIELD_FOOD',		    1,		0),
-		('FEATURE_MT_PAEKTU',			'PLOT_MOUNTAIN',	'YIELD_FOOD',		    1,		0),
-		('FEATURE_MT_PAEKTU',			'PLOT_LAND',		'YIELD_FOOD',		    1,		0),
+		('FEATURE_MT_PAEKTU',			'PLOT_HILLS',		'YIELD_FOOD',		1,		0),
+		('FEATURE_MT_PAEKTU',			'PLOT_MOUNTAIN',	'YIELD_FOOD',		1,		0),
+		('FEATURE_MT_PAEKTU',			'PLOT_LAND',		'YIELD_FOOD',		1,		0),
 
+
+		('FEATURE_DANXIA',			'PLOT_HILLS',		'YIELD_CULTURE',		1,		0),
+		('FEATURE_DANXIA',			'PLOT_LAND',		'YIELD_CULTURE',		1,		0),
+		
+		('FEATURE_DANXIA',			'PLOT_HILLS',		'YIELD_GREAT_GENERAL_POINTS',		    1,		0),
+		('FEATURE_DANXIA',			'PLOT_LAND',		'YIELD_GREAT_GENERAL_POINTS',		    1,		0),
 
 
 		('FEATURE_ZHANGJIAJIE',			'PLOT_HILLS',		'YIELD_SCIENCE',		1,		0),
@@ -1390,17 +1437,17 @@ VALUES	('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
 
 
 
-		('FEATURE_WHITE_DESERT',			'PLOT_HILLS',		'YIELD_SCIENCE',		2,		0),
-		('FEATURE_WHITE_DESERT',			'PLOT_MOUNTAIN',	'YIELD_SCIENCE',		2,		0),
-		('FEATURE_WHITE_DESERT',			'PLOT_LAND',		'YIELD_SCIENCE',		2,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_HILLS',		'YIELD_SCIENCE',		2,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_MOUNTAIN',	'YIELD_SCIENCE',		2,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_LAND',		'YIELD_SCIENCE',		2,		0),
 		
-		('FEATURE_WHITE_DESERT',			'PLOT_HILLS',		'YIELD_GOLD',		    2,		0),
-		('FEATURE_WHITE_DESERT',			'PLOT_MOUNTAIN',	'YIELD_GOLD',		    2,		0),
-		('FEATURE_WHITE_DESERT',			'PLOT_LAND',		'YIELD_GOLD',		    2,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_HILLS',		'YIELD_GOLD',		    2,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_MOUNTAIN',	'YIELD_GOLD',		    2,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_LAND',		'YIELD_GOLD',		    2,		0),
 
-		('FEATURE_WHITE_DESERT',			'PLOT_HILLS',		'YIELD_PRODUCTION',		1,		0),
-		('FEATURE_WHITE_DESERT',			'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		1,		0),
-		('FEATURE_WHITE_DESERT',			'PLOT_LAND',		'YIELD_PRODUCTION',		1,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_HILLS',		'YIELD_PRODUCTION',		1,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		1,		0),
+		--('FEATURE_WHITE_DESERT',			'PLOT_LAND',		'YIELD_PRODUCTION',		1,		0),
 
 
         ('FEATURE_MT_EVEREST',		'PLOT_LAND',		'YIELD_FOOD',			2,		0),
@@ -1440,9 +1487,9 @@ VALUES	('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
 		('FEATURE_DELICATE_ARCH',			'PLOT_LAND',		'YIELD_GOLD',		2,		0),
 
 
-		('FEATURE_BERMUDA_A',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
-		('FEATURE_BERMUDA_B',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
-		('FEATURE_BERMUDA_C',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
+		--('FEATURE_BERMUDA_A',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
+		----('FEATURE_BERMUDA_B',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
+		---('FEATURE_BERMUDA_C',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
 
 
 		('FEATURE_BLUE_HOLE',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
@@ -1483,6 +1530,8 @@ VALUES	('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
 
 
 INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES	
+	   ('ART_DEF_FEATURE_DANXIA',	'Resource',		'Dan Xia'),
+
         ('ART_DEF_FEATURE_BLUE_HOLE',		'Resource',		'Great Blue Hole'),
         ('ART_DEF_FEATURE_ZHANGJIAJIE',		'Resource',		'Zhangjiajie'),
         ('ART_DEF_FEATURE_HA_LONG_A',		'Resource',		'Ha Long Bay A'),
@@ -1496,13 +1545,16 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 		('ART_DEF_FEATURE_DALLOL',		'Resource',		'Dallol'),
 		('ART_DEF_FEATURE_GIANTS_CAUSEWAY_A',	'Resource',		'Causeway A'),
 		('ART_DEF_FEATURE_GIANTS_CAUSEWAY_B',	'Resource',		'Causeway B'),
-		('ART_DEF_FEATURE_WHITE_DESERT',	'Resource',		'White Desert'),
+		--('ART_DEF_FEATURE_WHITE_DESERT',	'Resource',		'White Desert'),
 		('ART_DEF_FEATURE_GALAPAGOS_A',		'Resource',		'Galapagos A'),
 		('ART_DEF_FEATURE_GALAPAGOS_B',		'Resource',		'Galapagos B'),
 
 		('ART_DEF_FEATURE_BERMUDA_A',	'Resource',		'Bermuda Triangle A'),
 		('ART_DEF_FEATURE_BERMUDA_B',	'Resource',		'Bermuda Triangle B'),
 		('ART_DEF_FEATURE_BERMUDA_C',	'Resource',		'Bermuda Triangle C'),
+
+		 ('ART_DEF_FEATURE_VALLEY_B',	'Resource',		'Valley B'),
+		  ('ART_DEF_FEATURE_VALLEY_A',	'Resource',		'Valley A'),
 
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_A',	'Resource',		'Eye of the Sahara A'),
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_B',	'Resource',		'Eye of the Sahara B'),
@@ -1512,8 +1564,13 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 
 
 INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHandler,	ResourceType,	Model,	TerrainContour) VALUES
+('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_B',	'Monument_valley_1.fxsxml',1),       --important!
+('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_A',	'Monument_valley_2.fxsxml',1),       --important!
 
-('Any',		'Any',	0.85,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_A',	'bermuda_triangle_1.fxsxml',1),       --important!
+
+('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DANXIA',	'Danxia_Mountain.fxsxml',1),       --important!
+
+('Any',		'Any',	0.85,	'ART_DEF_IMPROVEMENT_NONE',		'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_A',	'bermuda_triangle_1.fxsxml',1),       --important!
 ('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_B',	null,1),       --important!
 ('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_C',	null,1),       --important!
 
@@ -1522,23 +1579,33 @@ INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHand
 ('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_EYE_OF_SAHARA_C',	null,1),       --important!
 
 ('Any',		'Any',	1.1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BLUE_HOLE',	'Great_blue_hole.fxsxml',1),       --important!
+
 ('Any',		'Any',	1.2,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_ZHANGJIAJIE',	'feature_zhangjiajie.fxsxml',1),       --important!
+
 ('Any',		'Any',	1.1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_HA_LONG_A',	'Halong_Bay_1.fxsxml',0),       --important!
 ('Any',		'Any',	1.1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_HA_LONG_B',	'Halong_Bay_2.fxsxml',	0),      --important!
+
 ('Any',		'Any',	0.85,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_MT_PAEKTU',	'MT_PAEKTU_GRASS.fxsxml',	1),      --important!
+
 ('Any',		'Any',	0.7,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DELICATE_ARCH',	'DelicateArch.fxsxml',	1),      --important!
 
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_GIANTS_CAUSEWAY_A',	'causeway_land.fxsxml',1),       --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_GIANTS_CAUSEWAY_B',	'causeway_sea.fxsxml',	0),      --important!
 
 ('Any',		'Any',	1.5,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_MT_EVEREST',	'Mt_Everest.fxsxml',	1),          --important!
+
 ('Any',		'Any',	1,		'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_SALAR_A',		'feature_salar.fxsxml',			1),  --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_SALAR_B',		'feature_salar_b.fxsxml',		1),  --important!
+
 ('Any',		'Any',	1.15,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_LUMI_BAY',		'lumi_bay.fxsxml',				0), --important!
+
 ('Any',		'Any',	1,		'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DALLOL',		'dallol_3d.fxsxml',		1),         --important!
+
 ('Any',		'Any',	1.4,	'ART_DEF_IMPROVEMENT_NONE',		    'SNAPSHOT',		'ART_DEF_FEATURE_GALAPAGOS_A',	'galapagos.fxsxml',				1),  --important!
 ('Any',		'Any',	1.2,	'ART_DEF_IMPROVEMENT_NONE',		    'SNAPSHOT',		'ART_DEF_FEATURE_GALAPAGOS_B',	'galapagos_2.fxsxml',				1),  --important!
-('Any',		'Any',	0.5,	    'ART_DEF_IMPROVEMENT_NONE',		'SNAPSHOT',		'ART_DEF_FEATURE_WHITE_DESERT',	'whitedesert.fxsxml',			1),  --important!
+
+--('Any',		'Any',	0.5,	    'ART_DEF_IMPROVEMENT_NONE',		'SNAPSHOT',		'ART_DEF_FEATURE_WHITE_DESERT',	'whitedesert.fxsxml',			1),  --important!
+
 ('Any',		'Any',	0.9,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_RETBA',		'Lake_Retba.fxsxml',			1);  --important!
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -1548,8 +1615,8 @@ DELETE FROM ArtDefine_StrategicView WHERE TileType = 'Feature';
 INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		Asset)VALUES	
         ('ART_DEF_FEATURE_HA_LONG_A',	'Feature',	'sv_Ha_Long_A.dds'),
         ('ART_DEF_FEATURE_HA_LONG_B',	'Feature',	'sv_Ha_Long_B.dds'),
-		  ('ART_DEF_FEATURE_MT_PAEKTU',	'Feature',	'sv_Paektu.dds'),
-		   ('ART_DEF_FEATURE_BLUE_HOLE',	'Feature',	'sv_Blue_Hole.dds'),
+		('ART_DEF_FEATURE_MT_PAEKTU',	'Feature',	'sv_Paektu.dds'),
+		('ART_DEF_FEATURE_BLUE_HOLE',	'Feature',	'sv_Blue_Hole.dds'),
         ('ART_DEF_FEATURE_GIANTS_CAUSEWAY_A',	'Feature',	'sv_Causeway_T.dds'),
         ('ART_DEF_FEATURE_GIANTS_CAUSEWAY_B',	'Feature',	'sv_Causeway_C.dds'),
         ('ART_DEF_FEATURE_DELICATE_ARCH',	'Feature',	'sv_DelicateArch.dds'),
@@ -1560,7 +1627,7 @@ INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		
 		('ART_DEF_FEATURE_DALLOL',		'Feature',		'sv_Dallol.dds'),
 		('ART_DEF_FEATURE_GALAPAGOS_A',	'Feature',		'sv_Galapagos_A.dds'),
 		('ART_DEF_FEATURE_GALAPAGOS_B',	'Feature',		'sv_Galapagos_B.dds'),
-		('ART_DEF_FEATURE_WHITE_DESERT','Feature',		'SV_WhiteDesert.dds'),
+		--('ART_DEF_FEATURE_WHITE_DESERT','Feature',		'SV_WhiteDesert.dds'),
 		('ART_DEF_FEATURE_ZHANGJIAJIE','Feature',		'sv_Zhangjiajie.dds'),
 
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_C',	'Feature',		'sv_Sahara_Eye.dds'),
@@ -1571,6 +1638,11 @@ INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		
 		('ART_DEF_FEATURE_BERMUDA_A','Feature',		'sv_Bermuda.dds'),
 		('ART_DEF_FEATURE_BERMUDA_B','Feature',		'sv_Bermuda.dds'),
 
+		('ART_DEF_FEATURE_VALLEY_A','Feature',		'sv_VALLEY.dds'),
+		('ART_DEF_FEATURE_VALLEY_B','Feature',		'sv_VALLEY.dds'),
+
+		('ART_DEF_FEATURE_DANXIA','Feature',		'sv_Dan Xia.dds'),
+		
 		('ART_DEF_FEATURE_RETBA',		'Feature',		'sv_Retba.dds');
 
 INSERT INTO ArtDefine_StrategicView SELECT * FROM Feature_ArtDefine_StrategicView AS t

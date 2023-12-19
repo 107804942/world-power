@@ -543,6 +543,8 @@
     <Folder Include="extend\art\nature\GreatBlueHole" />
     <Folder Include="extend\art\nature\EyeOfTheSahara" />
     <Folder Include="extend\art\nature\bermuda" />
+    <Folder Include="extend\art\nature\Monument Valley" />
+    <Folder Include="extend\art\nature\danxia Mountain" />
     <Folder Include="extend\art\nature\Zhangjiajie" />
     <Folder Include="extend\art\nature\whitedesert" />
     <Folder Include="extend\art\nature\retba" />
@@ -4073,6 +4075,26 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\nature\danxia Mountain\danxia mountain.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\danxia Mountain\Danxia_Mountain.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\danxia Mountain\Danxia_Mountain.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\danxia Mountain\no_hight_decal.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\danxia Mountain\sv_Dan Xia.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\nature\DelicateArch\DelicateArch.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -4258,6 +4280,30 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\nature\lumibay\SV_LumiBay.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Monument Valley\Monument_Valley_1.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Monument Valley\Monument_valley_1.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Monument Valley\Monument_valley_1.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Monument Valley\Monument_valley_2.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Monument Valley\Monument_valley_2.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Monument Valley\sv_VALLEY.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

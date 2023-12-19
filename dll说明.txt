@@ -804,27 +804,6 @@ bool CvCity::isAddsFreshWater() const {
 
 	 --GameEvents.EspionageCanStageCoup.Add(function(iPlayer, iCityOwner, iCity) return true)
 
-	#if defined(MOD_ROG_CORE)
-			if (MOD_ROG_CORE) 
-			{
-				YieldTypes eYield;
-				for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-				{
-					eYield = (YieldTypes)iI;
-
-					//Let's loop through all cities for this.
-					int iLoop = 0;
-					for (CvCity* pLoopCity = GET_PLAYER(m_pPlayer->GetID()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(m_pPlayer->GetID()).nextCity(&iLoop))
-					{
-						//If we passed in a city, only check that city.
-						if (pLoopCity == NULL)
-							continue;
-					    int iBoost = pLoopCity->GetYieldFromSpyAttack(eYield);
-						pLoopCity->doInstantYield(eYield, iBoost);
-					}
-				}
-			}
-#endif
 
 
 
@@ -842,3 +821,5 @@ bool CvCity::isAddsFreshWater() const {
 
 INSERT INTO Building_YieldPerFriend(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
+
+

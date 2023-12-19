@@ -409,3 +409,36 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 
 	return iCrimePerTurn, strCrimeToolTip, iViolencePerTurn, strViolenceToolTip, iCorruptionPerTurn, strCorruptionToolTip, iTheftPerTurn, strTheftToolTip, iHeresyPerTurn, strHeresyToolTip
 end
+
+
+
+
+
+
+
+
+			-- reserved: 丹霞
+        elseif method_number == 23 then
+		
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+
+		if pMainPlot:IsRiver()  then return false end  ---不可沿河
+		if pMainPlot:IsLake() then return false end
+
+		if pMainPlot:GetTerrainType() ~= eTerrainPlains and pMainPlot:GetTerrainType() ~= eTerrainGrass  then return false end ---需满足平原或草原
+
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			if pAdjacentPlot:GetTerrainType() ~= eTerrainPlains and pAdjacentPlot:GetTerrainType() ~= eTerrainGrass then return false end  ----附近地块非平原或草原
+	
+			if pAdjacentPlot:GetPlotType() == ePlotMountain or pAdjacentPlot:IsLake() or pAdjacentPlot:IsRiver()  then return false end  ---临近地块存在山脉或者河流湖泊
+
+		end
+
+		return true

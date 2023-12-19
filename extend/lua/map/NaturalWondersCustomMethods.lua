@@ -174,12 +174,15 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
     -- reserved: 乌尤尼盐湖
 	elseif method_number == 6 then
 
-	-- reserved: Mt. Paektu
+	-- reserved: Mt. Paektu 长白山
 	elseif method_number == 8 then
 
 	-- reserved: Eye of the Sahara
 	elseif method_number == 12 then
-		
+	
+	-- reserved: 达洛尔火山
+	elseif method_number == 13 then
+			
 	-- HA LONG BAY	
     elseif method_number == 7 then
 		
@@ -351,8 +354,7 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 
 
-	elseif method_number == 13 then
-		-- reserved: 达洛尔火山
+
 	elseif method_number == 14 then
 		-- 荧光海
 		local pPlot = Map.GetPlot(x, y)
@@ -427,8 +429,10 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 		-- end
 
- elseif method_number == 16 then
-		-- reserved: 精致拱门
+
+        -- reserved: 精致拱门
+        elseif method_number == 16 then
+		
 		local pMainPlot = Map.GetPlot(x, y)
 		
 		if pMainPlot == nil then return false end
@@ -445,9 +449,6 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 
 		--if pMainAreaNear < 20 then return false end 
 
-		local bIsHasSeaTiles = false
-		local iNumLandTiles = 0
-
 		for i, direction in ipairs(tDirectionTypes) do
 			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
 			
@@ -467,19 +468,19 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 
 
-
-		-- reserved: 白沙漠
-        elseif method_number == 17 then
-		
+		-- reserved: 峡谷
+		elseif method_number == 24 then
+	
 		local pMainPlot = Map.GetPlot(x, y)
 		
 		if pMainPlot == nil then return false end
 		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
 		if pMainPlot:IsRiver() then return false end  ---不可沿河
 		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
-
+  
 		local pMainTerrainType = pMainPlot:GetTerrainType()
-		if pMainTerrainType ~= eTerrainDesert then return false end ---非沙漠 
+
+		if pMainTerrainType ~= eTerrainPlains then return false end  
 		
 		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
 
@@ -492,7 +493,7 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		
 			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
 
-			if sAdjacentTerrainType ~= eTerrainDesert then return false end  ----附近地块非沙漠
+			if sAdjacentTerrainType ~= eTerrainPlains then return false end  ----附近地块非
 
 			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
 			
@@ -502,6 +503,41 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		end
 
 		return true
+
+
+	
+		-- reserved: 丹霞
+        elseif method_number == 17 then
+		
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
+		if pMainPlot:IsRiver() then return false end  ---不可沿河
+		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
+
+		local pMainTerrainType = pMainPlot:GetTerrainType()
+		if pMainTerrainType ~= eTerrainPlains then return false end ---非平原
+		
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+
+			if sAdjacentTerrainType ~= eTerrainPlains then return false end  ----附近地块非沙漠
+
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			
+			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
+		end
+
+		return true
+
+
+
+	
 
 
 		-- BERMUDA TRIANGLE
@@ -1945,9 +1981,9 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		pChosenPlot:SetTerrainType(eTerrainTundra, false, false)
 		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_CAUSEWAY_B)
 
-
-elseif method_number == 16 then
-		-- 精致拱门
+       -- 精致拱门
+      elseif method_number == 16 then
+		
 		local pPlot = Map.GetPlot(x, y)
 		
 		pPlot:SetPlotType(ePlotFlat, false, false)
@@ -1967,21 +2003,21 @@ elseif method_number == 16 then
 			end
 		end
 
-		-- 白沙漠
-         elseif method_number == 17 then
+		-- 峡谷
+		elseif method_number == 24 then
 		
 		local pPlot = Map.GetPlot(x, y)
 		
 		pPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetTerrainType(eTerrainDesert, false, false)
+		pPlot:SetTerrainType(eTerrainPlains, false, false)
 		pPlot:SetResourceType(-1) ---消除资源
 
 		-- setting up Plains around and cleaning Forests and Jungles
 		for i, direction in ipairs(tDirectionTypes) do
 			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
 
-			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainDesert then
-				pAdjacentPlot:SetTerrainType(eTerrainDesert, false, false)
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainPlains then
+				pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
 				
 				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
 					pAdjacentPlot:SetFeatureType(eFeatureNo)
@@ -2093,99 +2129,73 @@ elseif method_number == 16 then
 	elseif method_number == 11 then
 	
 
-	
-     -- EYE OF THE SAHARA
-     elseif method_number == 12 then
+	-- 丹霞
+	elseif method_number == 17 then
 		
 		local pPlot = Map.GetPlot(x, y)
-		local pSEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
-		local pSWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+		local NEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_NORTHEAST)
+		local SWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
 
-		pPlot:SetPlotType(ePlotFlat, false, false)
-		pSEPlot:SetPlotType(ePlotFlat, false, false)
-		pSWPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetTerrainType(eTerrainDesert, false, false)
-		pSEPlot:SetTerrainType(eTerrainDesert, false, false)
-		pSWPlot:SetTerrainType(eTerrainDesert, false, false)
+		pPlot:SetPlotType(ePlotMountain, false, false)
+		NEPlot:SetPlotType(ePlotMountain, false, false)
+		SWPlot:SetPlotType(ePlotMountain, false, false)
 
-		pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
-		pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
-		pSEPlot:SetResourceType(-1)	
-		pSWPlot:SetResourceType(-1)		
-		-- setting up additional Mountains around
-		--[[local tPossibleMountains = {}
-		local iNumberMountains = 0
-		local pAdjacentPlot
+		pPlot:SetFeatureType(GameInfoTypes.FEATURE_DANXIA)
+		NEPlot:SetFeatureType(GameInfoTypes.FEATURE_DANXIA)
+		SWPlot:SetFeatureType(GameInfoTypes.FEATURE_DANXIA)
+		pPlot:SetResourceType(-1)	
+		NEPlot:SetResourceType(-1)	
+		SWPlot:SetResourceType(-1)
 
-		for i, direction in ipairs(tDirectionsTop) do
-			pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			
-			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
-				table.insert(tPossibleMountains, pAdjacentPlot)
-			end
-
-			if pAdjacentPlot:GetPlotType() == ePlotMountain then
-				iNumberMountains = iNumberMountains + 1
-			end
+		for i, direction in ipairs(tDirectionTypes) do
+		local pAdjacentNEPlot = Map.PlotDirection( NEPlot:GetX(), NEPlot:GetY(), direction)
+		if pAdjacentNEPlot~=nil and pAdjacentNEPlot~=pPlot and pAdjacentNEPlot:GetPlotType()== ePlotMountain then
+		pAdjacentNEPlot:SetPlotType(ePlotFlat, false, false)
+		   end
 		end
 
-		local iSEX = pSEPlot:GetX()
-		local iSEY = pSEPlot:GetY()
-
-		for i, direction in ipairs(tDirectionsBottomRight) do
-			pAdjacentPlot = Map.PlotDirection(iSEX, iSEY, direction)
-			
-			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
-				table.insert(tPossibleMountains, pAdjacentPlot)
-			end
-
-			if pAdjacentPlot:GetPlotType() == ePlotMountain then
-				iNumberMountains = iNumberMountains + 1
-			end
+		for i, direction in ipairs(tDirectionTypes) do
+		local pAdjacentSWPlot = Map.PlotDirection( SWPlot:GetX(), SWPlot:GetY(), direction)
+		if pAdjacentSWPlot~=nil and pAdjacentSWPlot~=pPlot and pAdjacentSWPlot:GetPlotType()== ePlotMountain then
+		pAdjacentNEPlot:SetPlotType(ePlotFlat, false, false)
+		   end
 		end
-
-		local iSWX = pSWPlot:GetX()
-		local iSWY = pSWPlot:GetY()
-
-		for i, direction in ipairs(tDirectionsBottomLeft) do
-			pAdjacentPlot = Map.PlotDirection(iSWX, iSWY, direction)
-			
-			if pAdjacentPlot:GetFeatureType() ~= eFeatureNo then
-				table.insert(tPossibleMountains, pAdjacentPlot)
-			end
-
-			if pAdjacentPlot:GetPlotType() == ePlotMountain then
-				iNumberMountains = iNumberMountains + 1
-			end
-		end
-			
-		if iNumberMountains >= 2 or #tPossibleMountains == 0 then return end
-
-		local pChosenPlot
-
-		repeat
-			pChosenPlot = table.remove(tPossibleMountains, Game.Rand(#tPossibleMountains, "Place a mountain around Eye of Sahara") + 1)
-			pChosenPlot:SetPlotType(ePlotMountain, false, false)
-
-			iNumberMountains = iNumberMountains + 1
-		until(iNumberMountains >= 2 or #tPossibleMountains == 0)]]
 
 
 
 	-- BERMUDA TRIANGLE
 	elseif method_number == 18 then
 		
-		local pPlot = Map.GetPlot(x, y)
+		local BERMUDAPlot = Map.GetPlot(x, y)
 		local pSEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
 		local pSWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
 
-		pPlot:SetTerrainType(eTerrainCoast, false, false)
+		BERMUDAPlot:SetTerrainType(eTerrainCoast, false, false)
 		pSEPlot:SetTerrainType(eTerrainCoast, false, false)
 		pSWPlot:SetTerrainType(eTerrainCoast, false, false)
 
 		pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_B)
 		pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_C)
-			
+
+	
+     -- EYE OF THE SAHARA
+     elseif method_number == 12 then
+		
+		local pSAHARAPlot = Map.GetPlot(x, y)
+		local pSAHARASEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
+		local pSAHARASWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+
+		pSAHARAPlot:SetPlotType(ePlotFlat, false, false)
+		pSAHARASEPlot:SetPlotType(ePlotFlat, false, false)
+		pSAHARASWPlot:SetPlotType(ePlotFlat, false, false)
+		pSAHARAPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSAHARASEPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSAHARASWPlot:SetTerrainType(eTerrainDesert, false, false)
+
+		pSAHARASEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
+		pSAHARASWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
+		pSAHARASEPlot:SetResourceType(-1)	
+		pSAHARASWPlot:SetResourceType(-1)		
 
 	end
 end

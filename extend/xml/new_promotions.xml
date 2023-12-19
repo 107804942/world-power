@@ -4152,22 +4152,6 @@
 		</Row>
 
 
-		<Row>
-			<Type>PROMOTION_GHOST_INVISIBLE</Type>
-			<Description>TXT_KEY_PROMOTION_GHOST_INVISIBLE</Description>
-			<Help>TXT_KEY_PROMOTION_GHOST_INVISIBLE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
-			<Invisible>INVISIBLE_SUBMARINE</Invisible>
-			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<PediaEntry>TXT_KEY_PROMOTION_GHOST_INVISIBLE</PediaEntry>
-		</Row>
-
 
 		<!--**************乌尔班**************-->
 		<Row>
@@ -4293,20 +4277,6 @@
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 		</Row>
 
-		<Row>
-			<Type>PROMOTION_NUKE_IMMUNE2</Type>
-			<Description>TXT_KEY_PROMOTION_NUKE_IMMUNE2</Description>
-			<Help>TXT_KEY_PROMOTION_NUKE_IMMUNE2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>18</PortraitIndex>
-			<IconAtlas>promoVP_atlas_03</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_NUKE_IMMUNE2</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<NukeImmune>true</NukeImmune>
-			<CannotBeRangedAttacked>true</CannotBeRangedAttacked>
-			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
-		</Row>
 
 
 

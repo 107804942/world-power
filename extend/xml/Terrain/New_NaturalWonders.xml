@@ -46,6 +46,21 @@
 			<MovesChange>1</MovesChange>
 			<AdjacentEnemySapMovement>1</AdjacentEnemySapMovement>
 		</Row>
+
+
+		<Row>
+			<Type>PROMOTION_VALLEY</Type>
+			<Description>TXT_KEY_PROMOTION_VALLEY</Description>
+			<Help>TXT_KEY_PROMOTION_VALLEY_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PediaEntry>TXT_KEY_PROMOTION_BERMUDA</PediaEntry>
+			<MovesChange>1</MovesChange>
+			<OutsideFriendlyLandsModifier>15</OutsideFriendlyLandsModifier>
+		</Row>
 	</UnitPromotions>
 	
 	
@@ -226,7 +241,6 @@
 			<Type>FEATURE_CAUSEWAY_B</Type>
 			<Description>TXT_KEY_FEATURE_CAUSEWAY_B</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT</Civilopedia>
-			<Help>TXT_KEY_CIV5_FEATURES_CAUSEWAY_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_GIANTS_CAUSEWAY_A</ArtDefineTag>
 			<Movement>0</Movement>
 			<SeeThrough>1</SeeThrough>
@@ -311,29 +325,6 @@
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
-
-		<!--白沙漠-->
-
-		<Row>
-			<Type>FEATURE_WHITE_DESERT</Type>
-			<Description>TXT_KEY_FEATURE_WHITE_DESERT</Description>
-			<Civilopedia>TXT_KEY_CIV5_FEATURES_WHITE_DESERT_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_WHITE_DESERT</ArtDefineTag>
-			<Movement>1</Movement>
-			<SeeThrough>0</SeeThrough>
-			<Impassable>false</Impassable>
-			<InfluenceCost>-3</InfluenceCost>
-			<NaturalWonder>false</NaturalWonder>
-			<PseudoNaturalWonder>true</PseudoNaturalWonder>
-			<NoCity>true</NoCity>
-			<NoImprovement>true</NoImprovement>
-			<Rough>true</Rough>
-			<YieldNotAdditive>true</YieldNotAdditive>
-			<InBorderHappiness>5</InBorderHappiness>
-			<PortraitIndex>82</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<FreePromotionIfOwned>PROMOTION_DESERT_EXTRA</FreePromotionIfOwned>
-		</Row>
 
 
 
@@ -463,6 +454,7 @@
 			<NoCity>true</NoCity>
 			<NoImprovement>true</NoImprovement>
 			<Rough>true</Rough>
+			<FreePromotionIfOwned>PROMOTION_DESERT_EXTRA</FreePromotionIfOwned>
 			<YieldNotAdditive>true</YieldNotAdditive>
 			<PortraitIndex>80</PortraitIndex>
 			<InBorderHappiness>2</InBorderHappiness>
@@ -578,6 +570,77 @@
 			<AdjacentUnitFreePromotion>PROMOTION_BERMUDA</AdjacentUnitFreePromotion>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
+
+
+
+
+		<!--丹霞-->
+		<Row>
+			<Type>FEATURE_DANXIA</Type>
+			<Description>TXT_KEY_FEATURE_DANXIA</Description>
+			<Civilopedia>TXT_KEY_CIV5_FEATURES_DANXIA_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_DANXIA</ArtDefineTag>
+			<Movement>0</Movement>
+			<SeeThrough>2</SeeThrough>
+			<Impassable>true</Impassable>
+			<InfluenceCost>-3</InfluenceCost>
+			<NaturalWonder>false</NaturalWonder>
+			<PseudoNaturalWonder>true</PseudoNaturalWonder>
+			<NoCity>true</NoCity>
+			<NoImprovement>true</NoImprovement>
+			<Rough>true</Rough>
+			<YieldNotAdditive>true</YieldNotAdditive>
+			<PortraitIndex>96</PortraitIndex>
+			<InBorderHappiness>6</InBorderHappiness>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+		</Row>
+
+
+
+		<!--碑谷-->
+
+		<Row>
+			<Type>FEATURE_VALLEY_A</Type>
+			<Description>TXT_KEY_FEATURE_VALLEY</Description>
+			<Civilopedia>TXT_KEY_CIV5_FEATURES_VALLEY_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_VALLEY_A</ArtDefineTag>
+			<Movement>1</Movement>
+			<SeeThrough>0</SeeThrough>
+			<Impassable>false</Impassable>
+			<InfluenceCost>-3</InfluenceCost>
+			<NaturalWonder>false</NaturalWonder>
+			<PseudoNaturalWonder>true</PseudoNaturalWonder>
+			<NoCity>true</NoCity>
+			<NoImprovement>true</NoImprovement>
+			<Rough>true</Rough>
+			<YieldNotAdditive>true</YieldNotAdditive>
+			<InBorderHappiness>7</InBorderHappiness>
+			<PortraitIndex>84</PortraitIndex>
+			<FreePromotionIfOwned>PROMOTION_VALLEY</FreePromotionIfOwned>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+		</Row>
+
+
+		<Row>
+			<Type>FEATURE_VALLEY_B</Type>
+			<Description>TXT_KEY_FEATURE_VALLEY</Description>
+			<Civilopedia>TXT_KEY_CIV5_FEATURES_VALLEY_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_VALLEY_B</ArtDefineTag>
+			<Movement>1</Movement>
+			<SeeThrough>0</SeeThrough>
+			<Impassable>false</Impassable>
+			<InfluenceCost>-3</InfluenceCost>
+			<NaturalWonder>false</NaturalWonder>
+			<PseudoNaturalWonder>true</PseudoNaturalWonder>
+			<NoCity>true</NoCity>
+			<NoImprovement>true</NoImprovement>
+			<Rough>true</Rough>
+			<YieldNotAdditive>true</YieldNotAdditive>
+			<InBorderHappiness>7</InBorderHappiness>
+			<PortraitIndex>84</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+		</Row>
+		
 	</Features>
 
 
@@ -585,10 +648,274 @@
 	<Natural_Wonder_Placement>
 
 
+		<!-- 碑谷 -->
+		<Row>
+			<NaturalWonderType>FEATURE_VALLEY_A</NaturalWonderType>
+			<OccurrenceFrequency>10</OccurrenceFrequency>
+			<EligibilityMethodNumber>24</EligibilityMethodNumber>
+			<TileChangesMethodNumber>24</TileChangesMethodNumber>
+			<LandBased>true</LandBased>
+			<RequireBiggestLandmass>false</RequireBiggestLandmass>
+			<AvoidBiggestLandmass>false</AvoidBiggestLandmass>
+			<RequireFreshWater>false</RequireFreshWater>
+			<AvoidFreshWater>false</AvoidFreshWater>
+			<RequireLandAdjacentToOcean>false</RequireLandAdjacentToOcean>
+			<AvoidLandAdjacentToOcean>false</AvoidLandAdjacentToOcean>
+			<CoreTileCanBeAnyPlotType>false</CoreTileCanBeAnyPlotType>
+			<CoreTileCanBeFlatland>false</CoreTileCanBeFlatland>
+			<CoreTileCanBeHills>false</CoreTileCanBeHills>
+			<CoreTileCanBeMountain>false</CoreTileCanBeMountain>
+			<CoreTileCanBeOcean>false</CoreTileCanBeOcean>
+			<CoreTileCanBeAnyTerrainType>false</CoreTileCanBeAnyTerrainType>
+			<CoreTileCanBeGrass>false</CoreTileCanBeGrass>
+			<CoreTileCanBePlains>false</CoreTileCanBePlains>
+			<CoreTileCanBeDesert>false</CoreTileCanBeDesert>
+			<CoreTileCanBeTundra>false</CoreTileCanBeTundra>
+			<CoreTileCanBeSnow>false</CoreTileCanBeSnow>
+			<CoreTileCanBeShallowWater>false</CoreTileCanBeShallowWater>
+			<CoreTileCanBeDeepWater>false</CoreTileCanBeDeepWater>
+			<CoreTileCanBeAnyFeatureType>false</CoreTileCanBeAnyFeatureType>
+			<CoreTileCanBeNoFeature>false</CoreTileCanBeNoFeature>
+			<CoreTileCanBeForest>false</CoreTileCanBeForest>
+			<CoreTileCanBeJungle>false</CoreTileCanBeJungle>
+			<CoreTileCanBeOasis>false</CoreTileCanBeOasis>
+			<CoreTileCanBeFloodPlains>false</CoreTileCanBeFloodPlains>
+			<CoreTileCanBeMarsh>false</CoreTileCanBeMarsh>
+			<CoreTileCanBeIce>false</CoreTileCanBeIce>
+			<CoreTileCanBeAtoll>false</CoreTileCanBeAtoll>
+			<AdjacentTilesAvoidAnyland>false</AdjacentTilesAvoidAnyland>
+			<AdjacentTilesCareAboutPlotTypes>false</AdjacentTilesCareAboutPlotTypes>
+			<AdjacentTilesRequireFlatland>false</AdjacentTilesRequireFlatland>
+			<RequiredNumberOfAdjacentFlatland>0</RequiredNumberOfAdjacentFlatland>
+			<AdjacentTilesRequireHills>false</AdjacentTilesRequireHills>
+			<RequiredNumberOfAdjacentHills>0</RequiredNumberOfAdjacentHills>
+			<AdjacentTilesRequireMountain>false</AdjacentTilesRequireMountain>
+			<RequiredNumberOfAdjacentMountain>0</RequiredNumberOfAdjacentMountain>
+			<AdjacentTilesRequireHillsPlusMountains>false</AdjacentTilesRequireHillsPlusMountains>
+			<RequiredNumberOfAdjacentHillsPlusMountains>0</RequiredNumberOfAdjacentHillsPlusMountains>
+			<AdjacentTilesRequireOcean>false</AdjacentTilesRequireOcean>
+			<RequiredNumberOfAdjacentOcean>0</RequiredNumberOfAdjacentOcean>
+			<AdjacentTilesAvoidFlatland>false</AdjacentTilesAvoidFlatland>
+			<MaximumAllowedAdjacentFlatland>99</MaximumAllowedAdjacentFlatland>
+			<AdjacentTilesAvoidHills>false</AdjacentTilesAvoidHills>
+			<MaximumAllowedAdjacentHills>99</MaximumAllowedAdjacentHills>
+			<AdjacentTilesAvoidMountain>false</AdjacentTilesAvoidMountain>
+			<MaximumAllowedAdjacentMountain>99</MaximumAllowedAdjacentMountain>
+			<AdjacentTilesAvoidHillsPlusMountains>false</AdjacentTilesAvoidHillsPlusMountains>
+			<MaximumAllowedAdjacentHillsPlusMountains>99</MaximumAllowedAdjacentHillsPlusMountains>
+			<AdjacentTilesAvoidOcean>false</AdjacentTilesAvoidOcean>
+			<MaximumAllowedAdjacentOcean>99</MaximumAllowedAdjacentOcean>
+			<AdjacentTilesCareAboutTerrainTypes>false</AdjacentTilesCareAboutTerrainTypes>
+			<AdjacentTilesRequireGrass>false</AdjacentTilesRequireGrass>
+			<RequiredNumberOfAdjacentGrass>0</RequiredNumberOfAdjacentGrass>
+			<AdjacentTilesRequirePlains>false</AdjacentTilesRequirePlains>
+			<RequiredNumberOfAdjacentPlains>0</RequiredNumberOfAdjacentPlains>
+			<AdjacentTilesRequireDesert>false</AdjacentTilesRequireDesert>
+			<RequiredNumberOfAdjacentDesert>0</RequiredNumberOfAdjacentDesert>
+			<AdjacentTilesRequireTundra>false</AdjacentTilesRequireTundra>
+			<RequiredNumberOfAdjacentTundra>0</RequiredNumberOfAdjacentTundra>
+			<AdjacentTilesRequireSnow>false</AdjacentTilesRequireSnow>
+			<RequiredNumberOfAdjacentSnow>0</RequiredNumberOfAdjacentSnow>
+			<AdjacentTilesRequireShallowWater>false</AdjacentTilesRequireShallowWater>
+			<RequiredNumberOfAdjacentShallowWater>0</RequiredNumberOfAdjacentShallowWater>
+			<AdjacentTilesRequireDeepWater>false</AdjacentTilesRequireDeepWater>
+			<RequiredNumberOfAdjacentDeepWater>0</RequiredNumberOfAdjacentDeepWater>
+			<AdjacentTilesAvoidGrass>false</AdjacentTilesAvoidGrass>
+			<MaximumAllowedAdjacentGrass>99</MaximumAllowedAdjacentGrass>
+			<AdjacentTilesAvoidPlains>false</AdjacentTilesAvoidPlains>
+			<MaximumAllowedAdjacentPlains>99</MaximumAllowedAdjacentPlains>
+			<AdjacentTilesAvoidDesert>false</AdjacentTilesAvoidDesert>
+			<MaximumAllowedAdjacentDesert>99</MaximumAllowedAdjacentDesert>
+			<AdjacentTilesAvoidTundra>false</AdjacentTilesAvoidTundra>
+			<MaximumAllowedAdjacentTundra>99</MaximumAllowedAdjacentTundra>
+			<AdjacentTilesAvoidSnow>false</AdjacentTilesAvoidSnow>
+			<MaximumAllowedAdjacentSnow>99</MaximumAllowedAdjacentSnow>
+			<AdjacentTilesAvoidShallowWater>false</AdjacentTilesAvoidShallowWater>
+			<MaximumAllowedAdjacentShallowWater>99</MaximumAllowedAdjacentShallowWater>
+			<AdjacentTilesAvoidDeepWater>false</AdjacentTilesAvoidDeepWater>
+			<MaximumAllowedAdjacentDeepWater>99</MaximumAllowedAdjacentDeepWater>
+			<AdjacentTilesCareAboutFeatureTypes>false</AdjacentTilesCareAboutFeatureTypes>
+			<AdjacentTilesRequireNoFeature>false</AdjacentTilesRequireNoFeature>
+			<RequiredNumberOfAdjacentNoFeature>0</RequiredNumberOfAdjacentNoFeature>
+			<AdjacentTilesRequireForest>false</AdjacentTilesRequireForest>
+			<RequiredNumberOfAdjacentForest>0</RequiredNumberOfAdjacentForest>
+			<AdjacentTilesRequireJungle>false</AdjacentTilesRequireJungle>
+			<RequiredNumberOfAdjacentJungle>0</RequiredNumberOfAdjacentJungle>
+			<AdjacentTilesRequireOasis>false</AdjacentTilesRequireOasis>
+			<RequiredNumberOfAdjacentOasis>0</RequiredNumberOfAdjacentOasis>
+			<AdjacentTilesRequireFloodPlains>false</AdjacentTilesRequireFloodPlains>
+			<RequiredNumberOfAdjacentFloodPlains>0</RequiredNumberOfAdjacentFloodPlains>
+			<AdjacentTilesRequireMarsh>false</AdjacentTilesRequireMarsh>
+			<RequiredNumberOfAdjacentMarsh>0</RequiredNumberOfAdjacentMarsh>
+			<AdjacentTilesRequireIce>false</AdjacentTilesRequireIce>
+			<RequiredNumberOfAdjacentIce>0</RequiredNumberOfAdjacentIce>
+			<AdjacentTilesRequireAtoll>false</AdjacentTilesRequireAtoll>
+			<RequiredNumberOfAdjacentAtoll>0</RequiredNumberOfAdjacentAtoll>
+			<AdjacentTilesAvoidNoFeature>false</AdjacentTilesAvoidNoFeature>
+			<MaximumAllowedAdjacentNoFeature>99</MaximumAllowedAdjacentNoFeature>
+			<AdjacentTilesAvoidForest>false</AdjacentTilesAvoidForest>
+			<MaximumAllowedAdjacentForest>99</MaximumAllowedAdjacentForest>
+			<AdjacentTilesAvoidJungle>false</AdjacentTilesAvoidJungle>
+			<MaximumAllowedAdjacentJungle>99</MaximumAllowedAdjacentJungle>
+			<AdjacentTilesAvoidOasis>false</AdjacentTilesAvoidOasis>
+			<MaximumAllowedAdjacentOasis>99</MaximumAllowedAdjacentOasis>
+			<AdjacentTilesAvoidFloodPlains>false</AdjacentTilesAvoidFloodPlains>
+			<MaximumAllowedAdjacentFloodPlains>99</MaximumAllowedAdjacentFloodPlains>
+			<AdjacentTilesAvoidMarsh>false</AdjacentTilesAvoidMarsh>
+			<MaximumAllowedAdjacentMarsh>99</MaximumAllowedAdjacentMarsh>
+			<AdjacentTilesAvoidIce>false</AdjacentTilesAvoidIce>
+			<MaximumAllowedAdjacentIce>99</MaximumAllowedAdjacentIce>
+			<AdjacentTilesAvoidAtoll>false</AdjacentTilesAvoidAtoll>
+			<MaximumAllowedAdjacentAtoll>99</MaximumAllowedAdjacentAtoll>
+			<ChangeCoreTileToMountain>0</ChangeCoreTileToMountain>
+			<ChangeCoreTileToFlatland>0</ChangeCoreTileToFlatland>
+			<ChangeCoreTileTerrainToGrass>0</ChangeCoreTileTerrainToGrass>
+			<ChangeCoreTileTerrainToPlains>0</ChangeCoreTileTerrainToPlains>
+			<SetAdjacentTilesToShallowWater>0</SetAdjacentTilesToShallowWater>
+		</Row>
+
+
+		<Row>
+			<NaturalWonderType>FEATURE_VALLEY_B</NaturalWonderType>
+			<OccurrenceFrequency>0</OccurrenceFrequency>
+			<EligibilityMethodNumber>100</EligibilityMethodNumber>
+		</Row>
+		
+		
+		
+		<!-- DANXIA -->
+		<Row>
+			<NaturalWonderType>FEATURE_DANXIA</NaturalWonderType>
+			<OccurrenceFrequency>33</OccurrenceFrequency>
+
+			<EligibilityMethodNumber>17</EligibilityMethodNumber>
+			<TileChangesMethodNumber>17</TileChangesMethodNumber>
+
+			<LandBased>true</LandBased>
+			<RequireBiggestLandmass>false</RequireBiggestLandmass>
+			<AvoidBiggestLandmass>false</AvoidBiggestLandmass>
+			<RequireFreshWater>false</RequireFreshWater>
+			<AvoidFreshWater>false</AvoidFreshWater>
+			<RequireLandAdjacentToOcean>false</RequireLandAdjacentToOcean>
+			<AvoidLandAdjacentToOcean>false</AvoidLandAdjacentToOcean>
+			<CoreTileCanBeAnyPlotType>false</CoreTileCanBeAnyPlotType>
+			<CoreTileCanBeFlatland>false</CoreTileCanBeFlatland>
+			<CoreTileCanBeHills>false</CoreTileCanBeHills>
+			<CoreTileCanBeMountain>false</CoreTileCanBeMountain>
+			<CoreTileCanBeOcean>false</CoreTileCanBeOcean>
+			<CoreTileCanBeAnyTerrainType>false</CoreTileCanBeAnyTerrainType>
+			<CoreTileCanBeGrass>false</CoreTileCanBeGrass>
+			<CoreTileCanBePlains>false</CoreTileCanBePlains>
+			<CoreTileCanBeDesert>false</CoreTileCanBeDesert>
+			<CoreTileCanBeTundra>false</CoreTileCanBeTundra>
+			<CoreTileCanBeSnow>false</CoreTileCanBeSnow>
+			<CoreTileCanBeShallowWater>false</CoreTileCanBeShallowWater>
+			<CoreTileCanBeDeepWater>false</CoreTileCanBeDeepWater>
+			<CoreTileCanBeAnyFeatureType>false</CoreTileCanBeAnyFeatureType>
+			<CoreTileCanBeNoFeature>false</CoreTileCanBeNoFeature>
+			<CoreTileCanBeForest>false</CoreTileCanBeForest>
+			<CoreTileCanBeJungle>false</CoreTileCanBeJungle>
+			<CoreTileCanBeOasis>false</CoreTileCanBeOasis>
+			<CoreTileCanBeFloodPlains>false</CoreTileCanBeFloodPlains>
+			<CoreTileCanBeMarsh>false</CoreTileCanBeMarsh>
+			<CoreTileCanBeIce>false</CoreTileCanBeIce>
+			<CoreTileCanBeAtoll>false</CoreTileCanBeAtoll>
+			<AdjacentTilesAvoidAnyland>false</AdjacentTilesAvoidAnyland>
+			<AdjacentTilesCareAboutPlotTypes>false</AdjacentTilesCareAboutPlotTypes>
+			<AdjacentTilesRequireFlatland>false</AdjacentTilesRequireFlatland>
+			<RequiredNumberOfAdjacentFlatland>0</RequiredNumberOfAdjacentFlatland>
+			<AdjacentTilesRequireHills>false</AdjacentTilesRequireHills>
+			<RequiredNumberOfAdjacentHills>0</RequiredNumberOfAdjacentHills>
+			<AdjacentTilesRequireMountain>false</AdjacentTilesRequireMountain>
+			<RequiredNumberOfAdjacentMountain>0</RequiredNumberOfAdjacentMountain>
+			<AdjacentTilesRequireHillsPlusMountains>false</AdjacentTilesRequireHillsPlusMountains>
+			<RequiredNumberOfAdjacentHillsPlusMountains>0</RequiredNumberOfAdjacentHillsPlusMountains>
+			<AdjacentTilesRequireOcean>false</AdjacentTilesRequireOcean>
+			<RequiredNumberOfAdjacentOcean>0</RequiredNumberOfAdjacentOcean>
+			<AdjacentTilesAvoidFlatland>false</AdjacentTilesAvoidFlatland>
+			<MaximumAllowedAdjacentFlatland>99</MaximumAllowedAdjacentFlatland>
+			<AdjacentTilesAvoidHills>false</AdjacentTilesAvoidHills>
+			<MaximumAllowedAdjacentHills>99</MaximumAllowedAdjacentHills>
+			<AdjacentTilesAvoidMountain>false</AdjacentTilesAvoidMountain>
+			<MaximumAllowedAdjacentMountain>99</MaximumAllowedAdjacentMountain>
+			<AdjacentTilesAvoidHillsPlusMountains>false</AdjacentTilesAvoidHillsPlusMountains>
+			<MaximumAllowedAdjacentHillsPlusMountains>99</MaximumAllowedAdjacentHillsPlusMountains>
+			<AdjacentTilesAvoidOcean>false</AdjacentTilesAvoidOcean>
+			<MaximumAllowedAdjacentOcean>99</MaximumAllowedAdjacentOcean>
+			<AdjacentTilesCareAboutTerrainTypes>false</AdjacentTilesCareAboutTerrainTypes>
+			<AdjacentTilesRequireGrass>false</AdjacentTilesRequireGrass>
+			<RequiredNumberOfAdjacentGrass>0</RequiredNumberOfAdjacentGrass>
+			<AdjacentTilesRequirePlains>false</AdjacentTilesRequirePlains>
+			<RequiredNumberOfAdjacentPlains>0</RequiredNumberOfAdjacentPlains>
+			<AdjacentTilesRequireDesert>false</AdjacentTilesRequireDesert>
+			<RequiredNumberOfAdjacentDesert>0</RequiredNumberOfAdjacentDesert>
+			<AdjacentTilesRequireTundra>false</AdjacentTilesRequireTundra>
+			<RequiredNumberOfAdjacentTundra>0</RequiredNumberOfAdjacentTundra>
+			<AdjacentTilesRequireSnow>false</AdjacentTilesRequireSnow>
+			<RequiredNumberOfAdjacentSnow>0</RequiredNumberOfAdjacentSnow>
+			<AdjacentTilesRequireShallowWater>false</AdjacentTilesRequireShallowWater>
+			<RequiredNumberOfAdjacentShallowWater>0</RequiredNumberOfAdjacentShallowWater>
+			<AdjacentTilesRequireDeepWater>false</AdjacentTilesRequireDeepWater>
+			<RequiredNumberOfAdjacentDeepWater>0</RequiredNumberOfAdjacentDeepWater>
+			<AdjacentTilesAvoidGrass>false</AdjacentTilesAvoidGrass>
+			<MaximumAllowedAdjacentGrass>99</MaximumAllowedAdjacentGrass>
+			<AdjacentTilesAvoidPlains>false</AdjacentTilesAvoidPlains>
+			<MaximumAllowedAdjacentPlains>99</MaximumAllowedAdjacentPlains>
+			<AdjacentTilesAvoidDesert>false</AdjacentTilesAvoidDesert>
+			<MaximumAllowedAdjacentDesert>99</MaximumAllowedAdjacentDesert>
+			<AdjacentTilesAvoidTundra>false</AdjacentTilesAvoidTundra>
+			<MaximumAllowedAdjacentTundra>99</MaximumAllowedAdjacentTundra>
+			<AdjacentTilesAvoidSnow>false</AdjacentTilesAvoidSnow>
+			<MaximumAllowedAdjacentSnow>99</MaximumAllowedAdjacentSnow>
+			<AdjacentTilesAvoidShallowWater>false</AdjacentTilesAvoidShallowWater>
+			<MaximumAllowedAdjacentShallowWater>99</MaximumAllowedAdjacentShallowWater>
+			<AdjacentTilesAvoidDeepWater>false</AdjacentTilesAvoidDeepWater>
+			<MaximumAllowedAdjacentDeepWater>99</MaximumAllowedAdjacentDeepWater>
+			<AdjacentTilesCareAboutFeatureTypes>false</AdjacentTilesCareAboutFeatureTypes>
+			<AdjacentTilesRequireNoFeature>false</AdjacentTilesRequireNoFeature>
+			<RequiredNumberOfAdjacentNoFeature>0</RequiredNumberOfAdjacentNoFeature>
+			<AdjacentTilesRequireForest>false</AdjacentTilesRequireForest>
+			<RequiredNumberOfAdjacentForest>0</RequiredNumberOfAdjacentForest>
+			<AdjacentTilesRequireJungle>false</AdjacentTilesRequireJungle>
+			<RequiredNumberOfAdjacentJungle>0</RequiredNumberOfAdjacentJungle>
+			<AdjacentTilesRequireOasis>false</AdjacentTilesRequireOasis>
+			<RequiredNumberOfAdjacentOasis>0</RequiredNumberOfAdjacentOasis>
+			<AdjacentTilesRequireFloodPlains>false</AdjacentTilesRequireFloodPlains>
+			<RequiredNumberOfAdjacentFloodPlains>0</RequiredNumberOfAdjacentFloodPlains>
+			<AdjacentTilesRequireMarsh>false</AdjacentTilesRequireMarsh>
+			<RequiredNumberOfAdjacentMarsh>0</RequiredNumberOfAdjacentMarsh>
+			<AdjacentTilesRequireIce>false</AdjacentTilesRequireIce>
+			<RequiredNumberOfAdjacentIce>0</RequiredNumberOfAdjacentIce>
+			<AdjacentTilesRequireAtoll>false</AdjacentTilesRequireAtoll>
+			<RequiredNumberOfAdjacentAtoll>0</RequiredNumberOfAdjacentAtoll>
+			<AdjacentTilesAvoidNoFeature>false</AdjacentTilesAvoidNoFeature>
+			<MaximumAllowedAdjacentNoFeature>99</MaximumAllowedAdjacentNoFeature>
+			<AdjacentTilesAvoidForest>false</AdjacentTilesAvoidForest>
+			<MaximumAllowedAdjacentForest>99</MaximumAllowedAdjacentForest>
+			<AdjacentTilesAvoidJungle>false</AdjacentTilesAvoidJungle>
+			<MaximumAllowedAdjacentJungle>99</MaximumAllowedAdjacentJungle>
+			<AdjacentTilesAvoidOasis>false</AdjacentTilesAvoidOasis>
+			<MaximumAllowedAdjacentOasis>99</MaximumAllowedAdjacentOasis>
+			<AdjacentTilesAvoidFloodPlains>false</AdjacentTilesAvoidFloodPlains>
+			<MaximumAllowedAdjacentFloodPlains>99</MaximumAllowedAdjacentFloodPlains>
+			<AdjacentTilesAvoidMarsh>false</AdjacentTilesAvoidMarsh>
+			<MaximumAllowedAdjacentMarsh>99</MaximumAllowedAdjacentMarsh>
+			<AdjacentTilesAvoidIce>false</AdjacentTilesAvoidIce>
+			<MaximumAllowedAdjacentIce>99</MaximumAllowedAdjacentIce>
+			<AdjacentTilesAvoidAtoll>false</AdjacentTilesAvoidAtoll>
+			<MaximumAllowedAdjacentAtoll>99</MaximumAllowedAdjacentAtoll>
+			<ChangeCoreTileToMountain>0</ChangeCoreTileToMountain>
+			<ChangeCoreTileToFlatland>0</ChangeCoreTileToFlatland>
+			<ChangeCoreTileTerrainToGrass>0</ChangeCoreTileTerrainToGrass>
+			<ChangeCoreTileTerrainToPlains>0</ChangeCoreTileTerrainToPlains>
+			<SetAdjacentTilesToShallowWater>0</SetAdjacentTilesToShallowWater>
+		</Row>
+
+
 		<!-- Bermuda Triangle -->
 		<Row>
 			<NaturalWonderType>FEATURE_BERMUDA_A</NaturalWonderType>
-			<OccurrenceFrequency>20</OccurrenceFrequency>
+			<OccurrenceFrequency>5</OccurrenceFrequency>
 
 			<EligibilityMethodNumber>18</EligibilityMethodNumber>
 			<TileChangesMethodNumber>18</TileChangesMethodNumber>
@@ -744,7 +1071,7 @@
 		<!-- Eye of Sahara -->
 		<Row>
 			<NaturalWonderType>FEATURE_EYE_OF_SAHARA_A</NaturalWonderType>
-			<OccurrenceFrequency>15</OccurrenceFrequency>
+			<OccurrenceFrequency>3</OccurrenceFrequency>
 
 			<EligibilityMethodNumber>-1</EligibilityMethodNumber>
 			<TileChangesMethodNumber>12</TileChangesMethodNumber>
@@ -899,7 +1226,7 @@
 		<!-- Zhangjiajie -->
 		<Row>
 			<NaturalWonderType>FEATURE_ZHANGJIAJIE</NaturalWonderType>
-			<OccurrenceFrequency>50</OccurrenceFrequency>
+			<OccurrenceFrequency>20</OccurrenceFrequency>
 
 			<EligibilityMethodNumber>-1</EligibilityMethodNumber>
 			<TileChangesMethodNumber>-1</TileChangesMethodNumber>
@@ -1190,9 +1517,9 @@
 		<!-- Mt. Paektu -->
 		<Row>
 			<NaturalWonderType>FEATURE_MT_PAEKTU</NaturalWonderType>
-			<OccurrenceFrequency>25</OccurrenceFrequency>
+			<OccurrenceFrequency>50</OccurrenceFrequency>
 
-			<EligibilityMethodNumber>8</EligibilityMethodNumber>
+			<EligibilityMethodNumber>-1</EligibilityMethodNumber>
 			<TileChangesMethodNumber>8</TileChangesMethodNumber>
 
 			<LandBased>true</LandBased>
@@ -1336,7 +1663,7 @@
 		<!-- Ha Long Bay -->
 		<Row>
 			<NaturalWonderType>FEATURE_HA_LONG_A</NaturalWonderType>
-			<OccurrenceFrequency>50</OccurrenceFrequency>
+			<OccurrenceFrequency>8</OccurrenceFrequency>
 
 			<EligibilityMethodNumber>7</EligibilityMethodNumber>
 			<TileChangesMethodNumber>7</TileChangesMethodNumber>
@@ -1484,136 +1811,7 @@
 		</Row>
 		
 		
-		
-		<!-- 白沙漠 -->
-		<Row>
-			<NaturalWonderType>FEATURE_WHITE_DESERT</NaturalWonderType>
-			<OccurrenceFrequency>10</OccurrenceFrequency>
-			<EligibilityMethodNumber>17</EligibilityMethodNumber>
-			<TileChangesMethodNumber>17</TileChangesMethodNumber>
-			<LandBased>true</LandBased>
-			<RequireBiggestLandmass>false</RequireBiggestLandmass>
-			<AvoidBiggestLandmass>false</AvoidBiggestLandmass>
-			<RequireFreshWater>false</RequireFreshWater>
-			<AvoidFreshWater>false</AvoidFreshWater>
-			<RequireLandAdjacentToOcean>false</RequireLandAdjacentToOcean>
-			<AvoidLandAdjacentToOcean>false</AvoidLandAdjacentToOcean>
-			<CoreTileCanBeAnyPlotType>false</CoreTileCanBeAnyPlotType>
-			<CoreTileCanBeFlatland>false</CoreTileCanBeFlatland>
-			<CoreTileCanBeHills>false</CoreTileCanBeHills>
-			<CoreTileCanBeMountain>false</CoreTileCanBeMountain>
-			<CoreTileCanBeOcean>false</CoreTileCanBeOcean>
-			<CoreTileCanBeAnyTerrainType>false</CoreTileCanBeAnyTerrainType>
-			<CoreTileCanBeGrass>false</CoreTileCanBeGrass>
-			<CoreTileCanBePlains>false</CoreTileCanBePlains>
-			<CoreTileCanBeDesert>false</CoreTileCanBeDesert>
-			<CoreTileCanBeTundra>false</CoreTileCanBeTundra>
-			<CoreTileCanBeSnow>false</CoreTileCanBeSnow>
-			<CoreTileCanBeShallowWater>false</CoreTileCanBeShallowWater>
-			<CoreTileCanBeDeepWater>false</CoreTileCanBeDeepWater>
-			<CoreTileCanBeAnyFeatureType>false</CoreTileCanBeAnyFeatureType>
-			<CoreTileCanBeNoFeature>false</CoreTileCanBeNoFeature>
-			<CoreTileCanBeForest>false</CoreTileCanBeForest>
-			<CoreTileCanBeJungle>false</CoreTileCanBeJungle>
-			<CoreTileCanBeOasis>false</CoreTileCanBeOasis>
-			<CoreTileCanBeFloodPlains>false</CoreTileCanBeFloodPlains>
-			<CoreTileCanBeMarsh>false</CoreTileCanBeMarsh>
-			<CoreTileCanBeIce>false</CoreTileCanBeIce>
-			<CoreTileCanBeAtoll>false</CoreTileCanBeAtoll>
-			<AdjacentTilesAvoidAnyland>false</AdjacentTilesAvoidAnyland>
-			<AdjacentTilesCareAboutPlotTypes>false</AdjacentTilesCareAboutPlotTypes>
-			<AdjacentTilesRequireFlatland>false</AdjacentTilesRequireFlatland>
-			<RequiredNumberOfAdjacentFlatland>0</RequiredNumberOfAdjacentFlatland>
-			<AdjacentTilesRequireHills>false</AdjacentTilesRequireHills>
-			<RequiredNumberOfAdjacentHills>0</RequiredNumberOfAdjacentHills>
-			<AdjacentTilesRequireMountain>false</AdjacentTilesRequireMountain>
-			<RequiredNumberOfAdjacentMountain>0</RequiredNumberOfAdjacentMountain>
-			<AdjacentTilesRequireHillsPlusMountains>false</AdjacentTilesRequireHillsPlusMountains>
-			<RequiredNumberOfAdjacentHillsPlusMountains>0</RequiredNumberOfAdjacentHillsPlusMountains>
-			<AdjacentTilesRequireOcean>false</AdjacentTilesRequireOcean>
-			<RequiredNumberOfAdjacentOcean>0</RequiredNumberOfAdjacentOcean>
-			<AdjacentTilesAvoidFlatland>false</AdjacentTilesAvoidFlatland>
-			<MaximumAllowedAdjacentFlatland>99</MaximumAllowedAdjacentFlatland>
-			<AdjacentTilesAvoidHills>false</AdjacentTilesAvoidHills>
-			<MaximumAllowedAdjacentHills>99</MaximumAllowedAdjacentHills>
-			<AdjacentTilesAvoidMountain>false</AdjacentTilesAvoidMountain>
-			<MaximumAllowedAdjacentMountain>99</MaximumAllowedAdjacentMountain>
-			<AdjacentTilesAvoidHillsPlusMountains>false</AdjacentTilesAvoidHillsPlusMountains>
-			<MaximumAllowedAdjacentHillsPlusMountains>99</MaximumAllowedAdjacentHillsPlusMountains>
-			<AdjacentTilesAvoidOcean>false</AdjacentTilesAvoidOcean>
-			<MaximumAllowedAdjacentOcean>99</MaximumAllowedAdjacentOcean>
-			<AdjacentTilesCareAboutTerrainTypes>false</AdjacentTilesCareAboutTerrainTypes>
-			<AdjacentTilesRequireGrass>false</AdjacentTilesRequireGrass>
-			<RequiredNumberOfAdjacentGrass>0</RequiredNumberOfAdjacentGrass>
-			<AdjacentTilesRequirePlains>false</AdjacentTilesRequirePlains>
-			<RequiredNumberOfAdjacentPlains>0</RequiredNumberOfAdjacentPlains>
-			<AdjacentTilesRequireDesert>false</AdjacentTilesRequireDesert>
-			<RequiredNumberOfAdjacentDesert>0</RequiredNumberOfAdjacentDesert>
-			<AdjacentTilesRequireTundra>false</AdjacentTilesRequireTundra>
-			<RequiredNumberOfAdjacentTundra>0</RequiredNumberOfAdjacentTundra>
-			<AdjacentTilesRequireSnow>false</AdjacentTilesRequireSnow>
-			<RequiredNumberOfAdjacentSnow>0</RequiredNumberOfAdjacentSnow>
-			<AdjacentTilesRequireShallowWater>false</AdjacentTilesRequireShallowWater>
-			<RequiredNumberOfAdjacentShallowWater>0</RequiredNumberOfAdjacentShallowWater>
-			<AdjacentTilesRequireDeepWater>false</AdjacentTilesRequireDeepWater>
-			<RequiredNumberOfAdjacentDeepWater>0</RequiredNumberOfAdjacentDeepWater>
-			<AdjacentTilesAvoidGrass>false</AdjacentTilesAvoidGrass>
-			<MaximumAllowedAdjacentGrass>99</MaximumAllowedAdjacentGrass>
-			<AdjacentTilesAvoidPlains>false</AdjacentTilesAvoidPlains>
-			<MaximumAllowedAdjacentPlains>99</MaximumAllowedAdjacentPlains>
-			<AdjacentTilesAvoidDesert>false</AdjacentTilesAvoidDesert>
-			<MaximumAllowedAdjacentDesert>99</MaximumAllowedAdjacentDesert>
-			<AdjacentTilesAvoidTundra>false</AdjacentTilesAvoidTundra>
-			<MaximumAllowedAdjacentTundra>99</MaximumAllowedAdjacentTundra>
-			<AdjacentTilesAvoidSnow>false</AdjacentTilesAvoidSnow>
-			<MaximumAllowedAdjacentSnow>99</MaximumAllowedAdjacentSnow>
-			<AdjacentTilesAvoidShallowWater>false</AdjacentTilesAvoidShallowWater>
-			<MaximumAllowedAdjacentShallowWater>99</MaximumAllowedAdjacentShallowWater>
-			<AdjacentTilesAvoidDeepWater>false</AdjacentTilesAvoidDeepWater>
-			<MaximumAllowedAdjacentDeepWater>99</MaximumAllowedAdjacentDeepWater>
-			<AdjacentTilesCareAboutFeatureTypes>false</AdjacentTilesCareAboutFeatureTypes>
-			<AdjacentTilesRequireNoFeature>false</AdjacentTilesRequireNoFeature>
-			<RequiredNumberOfAdjacentNoFeature>0</RequiredNumberOfAdjacentNoFeature>
-			<AdjacentTilesRequireForest>false</AdjacentTilesRequireForest>
-			<RequiredNumberOfAdjacentForest>0</RequiredNumberOfAdjacentForest>
-			<AdjacentTilesRequireJungle>false</AdjacentTilesRequireJungle>
-			<RequiredNumberOfAdjacentJungle>0</RequiredNumberOfAdjacentJungle>
-			<AdjacentTilesRequireOasis>false</AdjacentTilesRequireOasis>
-			<RequiredNumberOfAdjacentOasis>0</RequiredNumberOfAdjacentOasis>
-			<AdjacentTilesRequireFloodPlains>false</AdjacentTilesRequireFloodPlains>
-			<RequiredNumberOfAdjacentFloodPlains>0</RequiredNumberOfAdjacentFloodPlains>
-			<AdjacentTilesRequireMarsh>false</AdjacentTilesRequireMarsh>
-			<RequiredNumberOfAdjacentMarsh>0</RequiredNumberOfAdjacentMarsh>
-			<AdjacentTilesRequireIce>false</AdjacentTilesRequireIce>
-			<RequiredNumberOfAdjacentIce>0</RequiredNumberOfAdjacentIce>
-			<AdjacentTilesRequireAtoll>false</AdjacentTilesRequireAtoll>
-			<RequiredNumberOfAdjacentAtoll>0</RequiredNumberOfAdjacentAtoll>
-			<AdjacentTilesAvoidNoFeature>false</AdjacentTilesAvoidNoFeature>
-			<MaximumAllowedAdjacentNoFeature>99</MaximumAllowedAdjacentNoFeature>
-			<AdjacentTilesAvoidForest>false</AdjacentTilesAvoidForest>
-			<MaximumAllowedAdjacentForest>99</MaximumAllowedAdjacentForest>
-			<AdjacentTilesAvoidJungle>false</AdjacentTilesAvoidJungle>
-			<MaximumAllowedAdjacentJungle>99</MaximumAllowedAdjacentJungle>
-			<AdjacentTilesAvoidOasis>false</AdjacentTilesAvoidOasis>
-			<MaximumAllowedAdjacentOasis>99</MaximumAllowedAdjacentOasis>
-			<AdjacentTilesAvoidFloodPlains>false</AdjacentTilesAvoidFloodPlains>
-			<MaximumAllowedAdjacentFloodPlains>99</MaximumAllowedAdjacentFloodPlains>
-			<AdjacentTilesAvoidMarsh>false</AdjacentTilesAvoidMarsh>
-			<MaximumAllowedAdjacentMarsh>99</MaximumAllowedAdjacentMarsh>
-			<AdjacentTilesAvoidIce>false</AdjacentTilesAvoidIce>
-			<MaximumAllowedAdjacentIce>99</MaximumAllowedAdjacentIce>
-			<AdjacentTilesAvoidAtoll>false</AdjacentTilesAvoidAtoll>
-			<MaximumAllowedAdjacentAtoll>99</MaximumAllowedAdjacentAtoll>
-			<ChangeCoreTileToMountain>0</ChangeCoreTileToMountain>
-			<ChangeCoreTileToFlatland>0</ChangeCoreTileToFlatland>
-			<ChangeCoreTileTerrainToGrass>0</ChangeCoreTileTerrainToGrass>
-			<ChangeCoreTileTerrainToPlains>0</ChangeCoreTileTerrainToPlains>
-			<SetAdjacentTilesToShallowWater>0</SetAdjacentTilesToShallowWater>
-		</Row>
-
-
 	
-		
 		<!-- 科隆群岛 -->
 		<Row>
 			<NaturalWonderType>FEATURE_GALAPAGOS_A</NaturalWonderType>
@@ -1770,7 +1968,7 @@
 		<!-- 精致拱门 -->
 		<Row>
 			<NaturalWonderType>FEATURE_DELICATE_ARCH</NaturalWonderType>
-			<OccurrenceFrequency>10</OccurrenceFrequency>
+			<OccurrenceFrequency>25</OccurrenceFrequency>
 			<EligibilityMethodNumber>16</EligibilityMethodNumber>
 			<TileChangesMethodNumber>16</TileChangesMethodNumber>
 			<LandBased>true</LandBased>
@@ -1899,7 +2097,7 @@
 			<NaturalWonderType>FEATURE_MT_EVEREST</NaturalWonderType>
 			<OccurrenceFrequency>50</OccurrenceFrequency>
 
-			<EligibilityMethodNumber>22</EligibilityMethodNumber>
+			<EligibilityMethodNumber>-1</EligibilityMethodNumber>
 			<TileChangesMethodNumber>22</TileChangesMethodNumber>
 
 			<LandBased>true</LandBased>
@@ -2639,7 +2837,7 @@
 			<NaturalWonderType>FEATURE_CAUSEWAY_A</NaturalWonderType>
 			<EligibilityMethodNumber>15</EligibilityMethodNumber>
 			<TileChangesMethodNumber>15</TileChangesMethodNumber>
-			<OccurrenceFrequency>30</OccurrenceFrequency>
+			<OccurrenceFrequency>10</OccurrenceFrequency>
 			<LandBased>false</LandBased>
 			<RequireBiggestLandmass>false</RequireBiggestLandmass>
 			<AvoidBiggestLandmass>false</AvoidBiggestLandmass>

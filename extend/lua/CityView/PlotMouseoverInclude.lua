@@ -631,6 +631,18 @@ function GetYieldString(plot)
 	if (iNumHealth ~= 0) then
 		strYield = strYield .. "[ICON_HEALTH] " .. iNumHealth .. " ";
 	end
+
+	---GENERAL
+	local iGENERAL = plot:CalculateYield(8, true); 
+	if (iGENERAL ~= 0) then
+		strYield = strYield .. "[ICON_GREAT_GENERAL] " .. iGENERAL .. " ";
+	end
+
+   --GREAT_ADMIRAL_POINTS
+	local iADMIRAL = plot:CalculateYield(9, true); 
+	if (iADMIRAL ~= 0) then
+		strYield = strYield .. "[ICON_GREAT_ADMIRAL] " .. iADMIRAL .. " ";
+	end
 	--END
 
 

@@ -268,6 +268,7 @@ DELETE FROM UnitPromotions_Domains WHERE PromotionType = 'PROMOTION_CARRIER_FIGH
 ------------------------------------------------------------------------------------------------------------------------
 UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusRange=6,CombatBonusFromNearbyUnitPromotion= 'PROMOTION_WEAPON_SHIP' WHERE Type='PROMOTION_DESTROYER_COMBAT' OR Type='PROMOTION_NAVAL_RANGED_CRUISER' OR Type='PROMOTION_SUBMARINE_COMBAT' OR Type='PROMOTION_NAVAL_CAPITAL_SHIP';
 
+UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusRange=3,CombatBonusFromNearbyUnitPromotion= 'PROMOTION_GOLEM' WHERE Type='PROMOTION_ROBORT_COMBAT' OR Type='PROMOTION_HEAVY_ROBORT';
 
 ---Õ∂ Ø ÷
 --INSERT  INTO UnitPromotions_PromotionModifiers (PromotionType,OtherPromotionType ,Attack)
