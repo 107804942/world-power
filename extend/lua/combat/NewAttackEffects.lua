@@ -214,31 +214,6 @@ end
 
 
 -- ********************************************************
--- µºµØ
--- ******************************************************** 
-   if attUnit:IsHasPromotion(GameInfoTypes.PROMOTION_GROUP_AIR) then
-   if attUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GUIDED_MISSILE.ID
-   or attUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SUPER_MISSILE.ID then
-   if not defUnit:IsDead() then
-   local unitCount = attPlot:GetNumUnits()
-   for i = 0, unitCount - 1, 1 do
-   local pFoundUnit = attPlot:GetUnit(i)
-   if (pFoundUnit ~=nil and pFoundUnit ~= attUnit and pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_GROUP_AIR)) then
-   if pFoundUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GUIDED_MISSILE.ID
-   or pFoundUnit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_SUPER_MISSILE.ID then
-   if pFoundUnit:CanRangeStrikeAt(defPlot:GetX(), defPlot:GetY(), true, true) 
-   and Players[pFoundUnit:GetOwner()] == attPlayer  then
-   pFoundUnit:RangeStrike(defPlot:GetX(), defPlot:GetY() )
-   pFoundUnit:Kill()
-                     end
-                  end
-               end
-            end
-         end
-      end
-   end
-
--- ********************************************************
 -- »‰≥Ê
 -- ******************************************************** 
 if  attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EVIL"].ID) 
