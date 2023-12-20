@@ -219,7 +219,7 @@
 			<Type>FEATURE_CAUSEWAY_A</Type>
 			<Description>TXT_KEY_FEATURE_CAUSEWAY_A</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_GIANTS_CAUSEWAY_B</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_GIANTS_CAUSEWAY_A</ArtDefineTag>
 			<Movement>1</Movement>
 			<SeeThrough>1</SeeThrough>
 			<Impassable>true</Impassable>
@@ -241,7 +241,7 @@
 			<Type>FEATURE_CAUSEWAY_B</Type>
 			<Description>TXT_KEY_FEATURE_CAUSEWAY_B</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_GIANTS_CAUSEWAY_A</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_FEATURE_GIANTS_CAUSEWAY_B</ArtDefineTag>
 			<Movement>0</Movement>
 			<SeeThrough>1</SeeThrough>
 			<Impassable>true</Impassable>
@@ -591,7 +591,7 @@
 			<Rough>true</Rough>
 			<YieldNotAdditive>true</YieldNotAdditive>
 			<PortraitIndex>96</PortraitIndex>
-			<InBorderHappiness>6</InBorderHappiness>
+			<InBorderHappiness>2</InBorderHappiness>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 

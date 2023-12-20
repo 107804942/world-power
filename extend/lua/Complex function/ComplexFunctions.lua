@@ -1272,8 +1272,6 @@ GameEvents.PlayerCanBuild.Add(LatifundiumCheck)
 
 
 
-
-
 function OnCanHavePromotion(iPlayer, iUnit, iPromotion)
   local iGroup = GameInfo.UnitPromotions[iPromotion].MutuallyExclusiveGroup
   

@@ -290,7 +290,28 @@ UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_LATIFUNDI
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_SANATORIUM';
 
 
+
+
+		
+
 INSERT INTO IconTextureAtlases	(Atlas, IconSize, Filename, IconsPerRow, IconsPerColumn) VALUES
+	('MainRobotPromo_Atlas', 256, 'MianRobotPromotionAtlas256.dds', '8', '8'),
+	('MainRobotPromo_Atlas', 064, 'MianRobotPromotionAtlas64.dds', '8', '8'),
+	('MainRobotPromo_Atlas', 045, 'MianRobotPromotionAtlas45.dds', '8', '8'),
+	('MainRobotPromo_Atlas', 032, 'MianRobotPromotionAtlas32.dds', '8', '8'),
+
+	('robotPromo_Atlas', 256, 'ROBOTPromo_256.dds', '8', '8'),
+	('robotPromo_Atlas', 064, 'ROBOTPromo_064.dds', '8', '8'),
+	('robotPromo_Atlas', 045, 'ROBOTPromo_045.dds', '8', '8'),
+	('robotPromo_Atlas', 032, 'ROBOTPromo_032.dds', '8', '8'),
+	('robotPromo_Atlas', 016, 'ROBOTPromo_016.dds', '8', '8'),
+
+	('VALERY_ATLAS', 256, 'PromoIconAtlasx256.dds', '8', '8'),
+	('VALERY_ATLAS', 064, 'PromoIconAtlasx64.dds', '8', '8'),
+	('VALERY_ATLAS', 045, 'PromoIconAtlasx45.dds', '8', '8'),
+	('VALERY_ATLAS', 032, 'PromoIconAtlasx32.dds', '8', '8'),
+	
+
     ('SPY_PROMOTION_ATLAS',	256,'SpyPromotion256.dds','2','1'),
 	('SPY_PROMOTION_ATLAS',	64, 'SpyPromotion64.dds','2','1'),
 	('SPY_PROMOTION_ATLAS',	45, 'SpyPromotion45.dds','2','1'),
@@ -320,18 +341,6 @@ INSERT INTO IconTextureAtlases	(Atlas, IconSize, Filename, IconsPerRow, IconsPer
 	('promoVP_atlas_03', 045, 'promoVP_03_045.dds', '8', '8'),
 	('promoVP_atlas_03', 032, 'promoVP_03_032.dds', '8', '8'),
 	('promoVP_atlas_03', 016, 'promoVP_03_016.dds', '8', '8'),
-
-
-	('MainRobotPromo_Atlas', 256, 'MianRobotPromotionAtlas256.dds', '8', '8'),
-	('MainRobotPromo_Atlas', 064, 'MianRobotPromotionAtlas64.dds', '8', '8'),
-	('MainRobotPromo_Atlas', 045, 'MianRobotPromotionAtlas45.dds', '8', '8'),
-	('MainRobotPromo_Atlas', 032, 'MianRobotPromotionAtlas32.dds', '8', '8'),
-
-	('robotPromo_Atlas', 256, 'ROBOTPromo_256.dds', '8', '8'),
-	('robotPromo_Atlas', 064, 'ROBOTPromo_064.dds', '8', '8'),
-	('robotPromo_Atlas', 045, 'ROBOTPromo_045.dds', '8', '8'),
-	('robotPromo_Atlas', 032, 'ROBOTPromo_032.dds', '8', '8'),
-	('robotPromo_Atlas', 016, 'ROBOTPromo_016.dds', '8', '8'),
 	
 	('promoMUC_atlas_00', 	256, 	'0_muc_PI_256.dds', '8', '8'),
 	('promoMUC_atlas_00', 	064, 	'0_muc_PI_064.dds', '8', '8'),

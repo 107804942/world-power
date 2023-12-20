@@ -28,7 +28,7 @@
 		<Grid Anchor="L,B" Offset="-154,-39" Size="240,462" Padding="0,0" Style="Grid9DetailFive140" Hidden="0" ID="PrimaryStretchy" ConsumeMouse="1" />
 
 		<!-- Worker Action Panel  -->
-		<Grid Anchor="L,B" Offset="200,123" Size="290,210" Padding="0,0" Style="Grid9DetailFive140" Hidden="0" ID="WorkerActionPanel" ConsumeMouse="1">
+		<Grid Anchor="L,B" Offset="200,180" Size="290,180" Padding="0,0" Style="Grid9DetailFive140" Hidden="0" ID="WorkerActionPanel" ConsumeMouse="1">
 			<TextButton Offset="30,25" Anchor="R,T" AnchorSide="I.I" Font="TwCenMT14" ColorSet="Beige_Black_Alpha" String="TXT_KEY_EDIT_BUTTON" ToolTip="TXT_KEY_EDIT_BUTTON" FontStyle="Shadow" MouseOverStyle="SoftShadow" ConsumeMouse="1" ID="EditButton" />
 
 			<Label  Anchor="C,T" Offset="0,18" Font="TwCenMT20" FontStyle="Shadow" String="TXT_KEY_WORKERACTION_TEXT" ID="WorkerText"/>
@@ -50,14 +50,14 @@
 
 
 
-		<Grid Anchor="L,B" Offset="200,116" Size="280,210" Padding="0,0" Style="Grid9DetailFive140" Hidden="1" ID="" ConsumeMouse="1">
+		<Grid Anchor="L,B" Offset="200,135" Size="280,210" Padding="0,0" Style="Grid9DetailFive140" Hidden="1" ID="" ConsumeMouse="1">
 			<Label Anchor="C,T" Offset="0,18" Font="TwCenMT20" String="TXT_KEY_UPANEL_UNIT_PROMOTED"  FontStyle="Shadow"  />
 			<FlipAnim Size="64,64" Offset="28,-14" Anchor="L,T" Columns="4" Speed="10" Pause=".5" StepSize="64,64" FrameCount="8" Texture="assets\UI\Art\Notification\PromotionAnimation.dds" />
 		</Grid>
 
 		<!-- UNIT PROMOTED needs to be DELETED after the top is implemented -->
 
-		<GridButton ID="PromotionButton" Size="266,32" Anchor="L,B" Offset="220,160"  ToolTip="TXT_KEY_UPANEL_UNIT_PROMOTED_TT"  Hidden="1">
+		<GridButton ID="PromotionButton" Size="266,32" Anchor="L,B" Offset="220,180"  ToolTip="TXT_KEY_UPANEL_UNIT_PROMOTED_TT"  Hidden="1">
 			<GridData Style="Grid9DarkBlue8Button" />
 			<Label Anchor="C,C" Offset="0,0" Font="TwCenMT20" String="TXT_KEY_UPANEL_UNIT_PROMOTED"  FontStyle="Shadow"  />
 			<FlipAnim Size="64,64" Offset="6,-4" Anchor="L,C" Columns="4" Speed="10" Pause=".5" StepSize="64,64" FrameCount="8" Texture="assets\UI\Art\Notification\PromotionAnimation.dds" />
@@ -66,7 +66,7 @@
 		</GridButton>
 
 		<!-- Background -->
-		<Grid Anchor="L,B" Offset="-37,-39" Size="546,208" Padding="0,0" Style="Grid9DetailFive140" Hidden="0"  ConsumeMouse="1">
+		<Grid Anchor="L,B" Offset="-37,-39" Size="546,238" Padding="0,0" Style="Grid9DetailFive140" Hidden="0"  ConsumeMouse="1">
 
 			<Box Anchor="R,T" Size="400,128" Offset="17,45" Color="White,0" HideBox="0" >
 
@@ -83,10 +83,16 @@
 				<Stack Anchor="R,T" Offset="0,0"  Padding="0" Size="0,0" StackGrowth="Bottom">
 
 					<!-- Promotions -->
-					<Box Anchor="R,T" Size="260,26" Offset="0,4" Color="White,0" HideBox="0" ID="EarnedPromotions">
+					<Box Anchor="R,T" Size="260,50" Offset="0,4" Color="White,0" HideBox="0" ID="EarnedPromotions">
 						<Stack Anchor="R,T" Offset="3,-8" Padding="-7" StackGrowth="Left" ID="EarnedPromotionStack" />
+
+						<!--******************SP two Rows of Promotions***********-->
+						<Stack Anchor="R,T" Offset="3,17" Padding="-7" StackGrowth="Left" ID="EarnedPromotionStack2" />
+
 					</Box>
 
+				
+					
 					<!-- XP METER -->
 					<Grid Anchor="R,C" Offset="0,0" Size="275,12" Padding="0,0" Style="Grid9FrameTurns" ID="XPFrame">
 						<TextureBar Anchor="L,T"  Offset="3,2"  Texture="assets/UI/Art/UnitPanel/XPmeter.dds" Size="269,7" ID="XPMeter"/>

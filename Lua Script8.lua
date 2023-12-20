@@ -95,9 +95,38 @@ GameEvents.PlayerDoTurn.Add(JurassicParkBonus)
 
 
 
+GameEvents.PlayerCanFoundCityRegardless.Add(function(iPlayer, iPlotX, iPlotY) return false end) 
 
 
 
+function OnUnitCanRangeAttackAt(iPlayer,iPlotX, iPlotY)
+	local pPlayer = Players[iPlayer]
+	local pPlot = Map.GetPlot(iPlotX, iPlotY)
+	
+	if (pUnitInfo.RangedPillage > 0) then
+		local pPlot = Map.GetPlot(iX, iY)
+		local ePlayer = Players[pPlot:GetOwner()]
+		local iRangedPillage = pUnitInfo.RangedPillage
+
+    	if (pPlot:GetImprovementType() ~= -1 and PlayersAtWar(ePlayer, pPlayer)) then
+      		print(string.format("%s can range pillage the improvement at (%i, %i)", pUnit:GetName(), iX, iY))
+
+      		if (iRangedPillage == 1 or not pPlot:IsImprovementPillaged()) then
+        		-- TODO - for an AI player, does this unit want to pillage the tile?  This opens a whole can of worms!
+	    		return pPlayer:IsHuman();
+	  		end
+		elseif (pPlot:IsRoute()) then
+      	print(string.format("%s can range pillage the route at (%i, %i)", pUnit:GetName(), iX, iY))
+
+      		if (iRangedPillage == 1 or not pPlot:IsRoutePillaged()) then
+        		-- TODO - for an AI player, does this unit want to pillage the tile?  This opens a whole can of worms!
+	   	 		return pPlayer:IsHuman();
+	  		end
+		end
+  	end
+  return false;
+end
+GameEvents.UnitCanRangeAttackAt.Add(OnUnitCanRangeAttackAt)
 
 local tMissions = {
 iMove = MissionTypes.MISSION_MOVE_TO,
@@ -122,3 +151,5 @@ return true
 
 end
 GameEvents.CanStartMission.Add(ImmobileWhileDamaged)
+
+

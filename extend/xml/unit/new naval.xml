@@ -785,16 +785,6 @@
 		</Update>
 
 
-		<Update>
-			<Set   UnitArtInfo="ART_DEF_UNIT_IOWA_CLASS_BATTLESHIP888"/>
-			<Where Type="UNIT_GREEK_ARMORED_CRUISER" />
-		</Update>
-
-		<Update>
-			<Set   UnitArtInfo="ART_DEF_UNIT_LITTORIO_CLASS"/>
-			<Where Type="UNIT_SPANISH_CANARIAS" />
-		</Update>
-
 
 		<Update>
 			<Set PrereqTech="TECH_MARINE_ENGINEERING"  UnitArtInfo="ART_DEF_UNIT_ADMIRAL_CLASS_BATTLECRUISER888"/>

@@ -1821,10 +1821,6 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_GOLEM</UnitType>
-			<PromotionType>PROMOTION_NO_CASUALTIES</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_GOLEM</UnitType>
 			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
 		</Row>
 
@@ -2911,14 +2907,7 @@
 			<PromotionType>PROMOTION_HEAVY_ROBORT</PromotionType>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_MECH</UnitType>
-			<PromotionType>PROMOTION_NO_CASUALTIES</PromotionType>
-		</Row>
-
-
-
-		
+	
 
 		<Row>
 			<UnitType>UNIT_GLADIATOR</UnitType>

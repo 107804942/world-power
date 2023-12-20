@@ -6,6 +6,22 @@
 
 		<Delete Type="PROMOTION_INSTA_HEAL"/>
 
+		<Update>
+			<Set ShowInUnitPanel="0"/>
+			<Where Type="PROMOTION_FIRST_STRIKE"/>
+		</Update>
+
+		<Update>
+			<Set IconAtlas="MainRobotPromo_Atlas" PortraitIndex="23"/>
+			<Where Type="PROMOTION_NO_CASUALTIES"/>
+		</Update>
+
+		<Update>
+			<Set ShowInUnitPanel="0" ShowInPedia="0"/>
+			<Where Type="PROMOTION_FRANCE_MISTRAL" />
+		</Update>
+
+		
 
 		<Row>
 			<ID>0</ID>
@@ -2418,6 +2434,37 @@
 		</Row>
 
 
+
+
+		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_1"/>
+		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_2"/>
+
+
+		<Row>
+			<Type>PROMOTION_ARMOR_BATTLESHIP_1</Type>
+			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</Description>
+			<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>12</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionPrereqOr1>
+			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</PediaEntry>
+			<DefenseMod>33</DefenseMod>
+		</Row>
+		<Row>
+			<Type>PROMOTION_ARMOR_BATTLESHIP_2</Type>
+			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</Description>
+			<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>13</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_ARMOR_BATTLESHIP_1</PromotionPrereqOr1>
+			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</PediaEntry>
+			<DefenseMod>33</DefenseMod>
+		</Row>
+		
 		<Row>
 			<Type>PROMOTION_ARMOR_BATTLESHIP_3</Type>
 			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_3</Description>
@@ -3902,28 +3949,6 @@
 	<UnitPromotions>
 		<Delete Type="PROMOTION_ANTI_DEBUFF"/>
 		<Delete Type="PROMOTION_NUKE_IMMUNE"/>
-
-
-
-		<Update>
-			<Set ShowInUnitPanel="0"/>
-			<Where Type="PROMOTION_FIRST_STRIKE"/>
-		</Update>
-
-		<Update>
-			<Set IconAtlas="VALERY_ATLAS" PortraitIndex="37"/>
-			<Where Type="PROMOTION_NO_CASUALTIES"/>
-		</Update>
-
-
-
-		<Update>
-			<Set ShowInUnitPanel="0" ShowInPedia="0"/>
-			<Where Type="PROMOTION_FRANCE_MISTRAL" />
-		</Update>
-
-
-
 
 
 		<Row>

@@ -10,7 +10,7 @@ Controls.OK:RegisterCallback(Mouse.eRClick, function()
 end);
 
 
-Controls.CLEAR:RegisterCallback(Mouse.eLClick, function() 
+--[[Controls.CLEAR:RegisterCallback(Mouse.eLClick, function() 
 	for i = 0, GameDefines.MAX_CIV_PLAYERS- 1 do
 
 	      if   Players[i]:IsAlive()
@@ -27,4 +27,4 @@ end);
 Controls.CLEAR:RegisterCallback(Mouse.eRClick, function() 
 	local select = Controls.Select
 	select:SetHide(false)
-end);
+end);]]

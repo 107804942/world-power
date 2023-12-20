@@ -832,7 +832,9 @@ function UpdateCityPortrait(city)
     --Clear promotions
     g_EarnedPromotionIM:ResetInstances();
     
-  
+  -------------------------SP Two Rows of Promotions-----------------------------------------------
+	g_EarnedPromotionIM2:ResetInstances();
+	-------------------------SP Two Rows of Promotions END-----------------------------------------------
     
     --Controls.UnitTypeFrame:SetHide(true);
     Controls.CycleLeft:SetHide(true);
@@ -865,6 +867,70 @@ end
 --------------------------------------------------------------------------------
 -- Refresh unit promotions
 --------------------------------------------------------------------------------
+function UpdateUnitPromotions(unit)
+
+	g_EarnedPromotionIM:ResetInstances();
+
+	-------------------------SP Two Rows of Promotions-----------------------------------------------
+	g_EarnedPromotionIM2:ResetInstances();
+	-------------------------SP Two Rows of Promotions END-----------------------------------------------
+
+	local controlTable;
+
+	--For each avail promotion, display the icon
+	for unitPromotion in GameInfo.UnitPromotions() do
+
+		if bIsBNW == true then
+
+			local unitPromotionID = unitPromotion.ID;
+
+			-------------------------SP Two Rows of Promotions-----------------------------------------------
+			--	        local index = 1;
+
+
+			if (unit:IsHasPromotion(unitPromotionID) and not unit:IsTrade()  and unitPromotion.ShowInUnitPanel ~= 0  ) then
+
+
+				if unitPromotion.PediaType == "PEDIA_ATTRIBUTES" or unitPromotion.PediaType == "PEDIA_SHARED"
+
+
+				then
+					controlTable = g_EarnedPromotionIM:GetInstance();
+				else
+					controlTable = g_EarnedPromotionIM2:GetInstance();
+				end
+				IconHookup(unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, controlTable.UnitPromotionImage);
+
+				-- Tooltip
+				local strToolTip = Locale.ConvertTextKey(unitPromotion.Description);
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey(unitPromotion.Help)
+				controlTable.UnitPromotionImage:SetToolTipString(strToolTip);
+				--	         index = index + 1;
+			end
+
+
+
+		else
+			if (unit:IsHasPromotion(unitPromotionID)  and unitPromotion.ShowInUnitPanel ~= 0  ) then
+
+				if index % 2 == 1 then
+					controlTable = g_EarnedPromotionIM:GetInstance();
+				else
+					controlTable = g_EarnedPromotionIM2:GetInstance();
+				end
+				IconHookup(unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, controlTable.UnitPromotionImage);
+
+				-- Tooltip
+				local strToolTip = Locale.ConvertTextKey(unitPromotion.Description);
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey(unitPromotion.Help)
+				controlTable.UnitPromotionImage:SetToolTipString(strToolTip);
+				index = index + 1;
+			end
+
+			-------------------------SP Two Rows of Promotions END-----------------------------------------------
+		end
+	end
+end
 
 
 -- Condensed - MOD
@@ -1365,8 +1431,8 @@ function OnInfoPaneDirty()
     if (unit ~= nil) then
         UpdateUnitActions(unit);
         UpdateUnitPortrait(unit);
-        --UpdateUnitPromotions(unit);
-		UpdateUnitPromotionsCondensed(unit);
+        UpdateUnitPromotions(unit);
+		--UpdateUnitPromotionsCondensed(unit);
         UpdateUnitStats(unit);
         UpdateUnitHealthBar(unit);
         ContextPtr:SetHide( false );

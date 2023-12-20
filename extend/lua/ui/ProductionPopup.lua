@@ -4,8 +4,7 @@
 include("IconSupport");
 include("InstanceManager");
 include("InfoTooltipInclude");
-include("Plague_UI");
-
+include("Plague_UI"); ---新增
 
 local g_UnitInstanceManager = InstanceManager:new( "ProdButton", "Button", Controls.UnitButtonStack );
 local g_BuildingInstanceManager = InstanceManager:new( "ProdButton", "Button", Controls.BuildingButtonStack );
@@ -86,6 +85,7 @@ function ProductionSelected( ePurchaseEnum, iData)
 	
 	local eOrder;
 	local eYield;
+    local bIsPurchase = false;
 		
 	-- Viewing mode only!
 	-- slewis - Venice side-effect. Able to purchase in city-states
@@ -151,8 +151,10 @@ function ProductionSelected( ePurchaseEnum, iData)
 		if (eOrder == OrderTypes.ORDER_TRAIN or eOrder == OrderTypes.ORDER_CONSTRUCT or eOrder == OrderTypes.ORDER_CREATE) then
 			if (eYield == YieldTypes.YIELD_GOLD) then
 				Events.AudioPlay2DSound("AS2D_INTERFACE_CITY_SCREEN_PURCHASE");
+                bIsPurchase = true;
 			elseif (eYield == YieldTypes.YIELD_FAITH) then
 				Events.AudioPlay2DSound("AS2D_INTERFACE_FAITH_PURCHASE");
+                bIsPurchase = true;
 			end
 		end
     end
@@ -162,7 +164,7 @@ function ProductionSelected( ePurchaseEnum, iData)
     Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_BANNER);
     Events.SpecificCityInfoDirty( player, cityID, CityUpdateTypes.CITY_UPDATE_TYPE_PRODUCTION);
  
-	if not g_append or not g_IsProductionMode then 
+	if not bIsPurchase and (not g_append or not g_IsProductionMode)then 
 		OnClose();
 	end
 end
@@ -305,11 +307,10 @@ function UpdateWindow( city )
 	Controls.Faith:SetText( "[ICON_PEACE]" .. city:GetFaithPerTurn() );
 
 	---新增
-
 	local totalHealth, totalDisease = player:GetCityHealthTotal(city, true)
 	local cityhealth=totalHealth-totalDisease
 	Controls.Health:SetText( "[ICON_HEALTH]" .. cityhealth);
-
+	---------------end
 
     Controls.CityButton:SetVoids( city:GetX(), city:GetY() );
 
@@ -341,8 +342,9 @@ function UpdateWindow( city )
 	
 	local strFaithToolTip = GetFaithTooltip(city);
 	Controls.Faith:SetToolTipString(strFaithToolTip);
+   
 
-	---新增
+   ---新增
 	local strHealthToolTip = player:GetCityHealthTT(city)
 	--local strHealthToolTip = GetHealthTooltip(city, bCondensed);
 	Controls.Health:SetToolTipString(strHealthToolTip);

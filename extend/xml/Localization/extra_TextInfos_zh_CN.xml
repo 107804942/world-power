@@ -890,12 +890,9 @@
 			<Text>不可占领</Text>
 		</Row>
 
-
-
-
-		<Row Tag="TXT_KEY_PEDIA_CITY_BOMBARDRANGE">
-			<Text>城市攻击范围: {1_Num}[ICON_RANGE_STRENGTH]</Text>
-		</Row>
+			<Row Tag="TXT_KEY_PEDIA_CITY_BOMBARDRANGE">
+				<Text>额外城市攻击范围: {1_Num}[ICON_RANGE_STRENGTH]</Text>
+			</Row>
 
 		<Row Tag="TXT_KEY_PRODUCTION_BUILDING_DEFENSE_MOD">
 			<Text>[ICON_STRENGTH]全国城防提升: +{1_Num}%</Text>
@@ -9461,11 +9458,11 @@
 		</Row>
 		<!-- Giant's Causeway -->
 			<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_A">
-				<Text>巨人堤(陆地)</Text>
+				<Text>巨人堤</Text>
 				<Gender>neuter:no_article</Gender>
 			</Row>
 			<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_B">
-				<Text>巨人堤(海洋)</Text>
+				<Text>巨人堤</Text>
 				<Gender>neuter:no_article</Gender>
 			</Row>
 		<Row Tag="TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT">

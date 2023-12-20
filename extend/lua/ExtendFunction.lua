@@ -175,6 +175,7 @@ function OnCircumnavigatedGlobe(iTeam)
 
   local Team = Teams[iTeam]
   local Player = Players[Team:GetLeaderID()];
+
   local plot =  Player:GetCapitalCity():Plot()
   local Unit  = Player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, plot:GetX(), plot:GetY())
 
