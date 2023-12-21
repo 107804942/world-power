@@ -1,13 +1,4 @@
 
---建筑来自友好城邦的产出
---CREATE TABLE IF NOT EXISTS Building_YieldFromCityStates (
-	--BuildingType text,
-	--YieldType text,
-	--Yield integer default 0,
-	--IncludeFriendly boolean default false );
-
-
-
  -----晋升显示
 --ALTER TABLE UnitPromotions ADD COLUMN 'ShowInTooltip' INTEGER DEFAULT 1;
 
@@ -27,24 +18,6 @@ SET	ProhibitedCityTerrain = null
 WHERE Type = 'BUILDING_STONE_WORKS';
 
 
-
-
--- 限定互斥晋升
-ALTER TABLE UnitPromotions ADD MutuallyExclusiveGroup INTEGER DEFAULT -1;
-
-
-
-
-
--- 多建筑关联
--- CREATE TABLE IF NOT EXISTS
- --Building_ClassesNeededInCityOR(
- --BuildingType                text    REFERENCES Buildings(TYPE)                      DEFAULT NULL,
- --BuildingClassType            text    REFERENCES BuildingClasses(TYPE)                DEFAULT NULL);
-
-
-
- 
 
 
 -- AUDIO

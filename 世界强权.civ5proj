@@ -370,12 +370,6 @@
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
-        <Name>ExtendFunction</Name>
-        <Description />
-        <FileName>extend/lua/ExtendFunction.lua</FileName>
-      </Content>
-      <Content>
-        <Type>InGameUIAddin</Type>
         <Name>AtlasFontsPreview</Name>
         <Description />
         <FileName>extend/lua/Top panel/AtlasFontsPreview.xml</FileName>
@@ -16451,10 +16445,6 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\Music Changer\MusicButton.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\ExtendFunction.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
