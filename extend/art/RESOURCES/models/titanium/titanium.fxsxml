@@ -1,12 +1,11 @@
 <Asset>
-  <Mesh file="Titanium.gr2" source="Max" />
-  <Texture file="CityBase_SREF.dds" source="Max" />
+  <Mesh file="titanium.gr2" source="Max" />
+  <Texture file="Aluminum_DIFF.dds" source="Max" />
+  <Texture file="Aluminum_Decal_DIFF.dds" source="Max" />
+  <Texture file="Aluminum_SREF.dds" source="Max" />
+  <Texture file="Aluminum_ore_Decal_H.dds" source="Max" />
   <Texture file="Generic_Grey_8.dds" source="Max" />
-  <Texture file="Titanium_Decal_DIFF.dds" source="Max" />
-  <Texture file="Titanium_ore_Decal_H.dds" source="Max" />
   <Texture file="Resource_Irradiance.dds" source="Max" />
-  <Texture file="Titanium_ore_DIFF.dds" source="Max" />
-  <Texture file="Titanium_ore_SREF.dds" source="Max" />
-  <Texture file="resource_EnvTitaniumment_Sharp.dds" source="Max" />
-  <Texture file="resources_EnvTitaniumment_Dull.dds" source="Max" />
+  <Texture file="resource_Environment_Sharp.dds" source="Max" />
+  <Texture file="resources_Environment_Dull.dds" source="Max" />
 </Asset>

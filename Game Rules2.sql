@@ -110,3 +110,23 @@
 			<PortraitIndex>64</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
+
+
+
+
+
+
+
+INSERT INTO ArtDefine_Landmarks (Era,				State,						Scale,		ImprovementType,							LayoutHandler,			ResourceType,								Model,                                                  TerrainContour) VALUES						
+                                ('Ancient',			'UnderConstruction',		0.925,		'ART_DEF_IMPROVEMENT_MINE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM',				'HB_MED_Mine_Titanium.fxsxml',						1),
+								('Ancient',			'Constructed',				0.925,		'ART_DEF_IMPROVEMENT_MINE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM',				'MED_Mine_Titanium.fxsxml',						1),
+								('Ancient',			'Pillaged',					0.925,		'ART_DEF_IMPROVEMENT_MINE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM',				'PL_MED_Mine_Titanium.fxsxml',						1),
+								('Industrial',		'UnderConstruction',		0.925,		'ART_DEF_IMPROVEMENT_MINE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM',				'HB_IND_Mine_Titanium.fxsxml',						1),
+								('Industrial',		'Constructed',				0.925,		'ART_DEF_IMPROVEMENT_MINE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM',				'IND_Mine_Titanium.fxsxml',						1),
+								('Industrial',		'Pillaged',					0.925,		'ART_DEF_IMPROVEMENT_MINE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM',				'PL_IND_Mine_Titanium.fxsxml',						1),
+								('Any',				'Any',						0.925,		'ART_DEF_IMPROVEMENT_NONE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM',				'Titanium.fxsxml',									1);
+								
+
+
+
+
