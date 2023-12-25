@@ -2543,7 +2543,6 @@
 			<GreatPeopleRateChange>3</GreatPeopleRateChange>
 			<GreatScientistBeakerModifier>50</GreatScientistBeakerModifier>
 			<FreeBuildingThisCity>BUILDINGCLASS_SPACESHIP_FACTORY</FreeBuildingThisCity>
-			<!--<UnhappinessModifier>-15</UnhappinessModifier>-->
 			<ExtraLeagueVotes>5</ExtraLeagueVotes>
 			<GoldenAge>true</GoldenAge>
 			<NukeImmune>true</NukeImmune>
@@ -2690,6 +2689,7 @@
 			<PortraitIndex>127</PortraitIndex>
 			<Happiness>-20</Happiness>
 			<Defense>13000</Defense>
+			<NukeModifier>-100</NukeModifier>
 			<ConquestProb>100</ConquestProb>
 			<GlobalDefenseMod>100</GlobalDefenseMod>
 			<ExtraCityHitPoints>2500</ExtraCityHitPoints>

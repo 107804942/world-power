@@ -7,27 +7,6 @@
 
 		<Improvements>
 
-			<!--*******************阿基米德********************* -->
-
-			<Row>
-				<Type>IMPROVEMENT_BEACON</Type>
-				<Description>TXT_KEY_IMPROVEMENT_BEACON</Description>
-				<Civilopedia>TXT_KEY_IMPROVEMENT_BEACON_TEXT</Civilopedia>
-				<Help>TXT_KEY_IMPROVEMENT_BEACON_HELP</Help>
-				<!--<ArtDefineTag>ART_DEF_IMPROVEMENT_KIBBUTZ</ArtDefineTag>-->
-				<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
-				<PortraitIndex>22</PortraitIndex>
-				<NoTwoAdjacent>1</NoTwoAdjacent>
-				<OutsideBorders>0</OutsideBorders>
-				<!--<DefenseModifier>300</DefenseModifier>-->
-				<ImprovementResource>RESOURCE_ELECTRICITY</ImprovementResource>
-				<ImprovementResourceQuantity>-20</ImprovementResourceQuantity>
-				<BuildableOnResources>0</BuildableOnResources>
-				<DestroyedWhenPillaged>false</DestroyedWhenPillaged>
-				<RequiresFlatlands>true</RequiresFlatlands>
-				<GraphicalOnly>true</GraphicalOnly>
-				<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
-			</Row>
 
 
 			<!--*******************沙漠改造********************* -->
@@ -564,14 +543,7 @@
 			<TerrainType>TERRAIN_SNOW</TerrainType>
 		</Row>
 
-		<Row>
-			<ImprovementType>IMPROVEMENT_BEACON</ImprovementType>
-			<TerrainType>TERRAIN_GRASS</TerrainType>
-		</Row>
-		<Row>
-			<ImprovementType>IMPROVEMENT_BEACON</ImprovementType>
-			<TerrainType>TERRAIN_PLAINS</TerrainType>
-		</Row>
+		
 	
 		<Row>
 			<ImprovementType>IMPROVEMENT_FW_COMM_ARRAY</ImprovementType>
@@ -851,23 +823,7 @@
 			<IconAtlas>FW_IMPROVEMENTS_ATLAS</IconAtlas>
 		</Row>
 
-		<!--*******************阿基米德********************* -->
-
-		
-		<Row>
-			<Type>BUILD_BEACON</Type>
-			<Time>1100</Time>
-			<PrereqTech>TECH_SDI</PrereqTech>
-			<ImprovementType>IMPROVEMENT_BEACON</ImprovementType>
-			<Description>TXT_KEY_BUILD_BEACON</Description>
-			<Help>TXT_KEY_BUILD_BEACON_HELP</Help>
-			<Recommendation>TXT_KEY_BUILD_BEACON_REC</Recommendation>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_Z</HotKey>
-			<OrderPriority>25</OrderPriority>
-			<IconIndex>22</IconIndex>
-			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
-		</Row>
+	
 
 		<!--*******************沙漠改造********************* -->
 		<Row>
@@ -1290,14 +1246,7 @@
 			<BuildType>BUILD_SAND_BASE</BuildType>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_WORKER</UnitType>
-			<BuildType>BUILD_BEACON</BuildType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
-			<BuildType>BUILD_BEACON</BuildType>
-		</Row>
+		
 		
 
 		<Row>

@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>29</ModVersion>
+    <ModVersion>30</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于SP9.5的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于SP9.5的拓展模组[/COLOR]</Description>
@@ -93,11 +93,6 @@
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>extend/xml/extra Resources/Improvements/Improvement_ResourceTypes.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>extend/xml/extra Resources/Resources/Drugs_Art.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -391,12 +386,6 @@
         <Name>ReligiousVictory</Name>
         <Description />
         <FileName>extend/lua/Extra Victory/lua/ReligiousVictory.lua</FileName>
-      </Content>
-      <Content>
-        <Type>InGameUIAddin</Type>
-        <Name>ArchimedesManager</Name>
-        <Description />
-        <FileName>extend/lua/Archimedes/ArchimedesManager.lua</FileName>
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
@@ -698,7 +687,6 @@
     <Folder Include="extend\lua\Extra Victory\ui" />
     <Folder Include="extend\lua\combat" />
     <Folder Include="extend\lua\Extra Victory" />
-    <Folder Include="extend\lua\Archimedes" />
     <Folder Include="extend\lua\Complex function" />
     <Folder Include="extend\lua\map" />
     <Folder Include="extend\lua\SpuerUi" />
@@ -16132,14 +16120,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\lua\CityView\CultureOverview.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\CityView\CultureOverview.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\lua\combat\NewAttackEffects.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -16151,14 +16131,6 @@
     <Content Include="extend\lua\Complex function\ComplexFunctions.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\Archimedes\ArchimedesManager.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\lua\Archimedes\ArchimedesManager.xml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\CityView\CityProduction.lua">
       <SubType>Lua</SubType>
@@ -20917,10 +20889,6 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\xml\extra Resources\Improvements\Improvement_ResourceType_Yields.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\xml\extra Resources\Resources\Drugs_Art.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
