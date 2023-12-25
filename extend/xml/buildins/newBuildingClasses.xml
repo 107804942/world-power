@@ -105,11 +105,11 @@
 		</Row>
 
 		<!-- 蓄水池-->
-		<Row>
+		<Replace>
 			<Type>BUILDINGCLASS_CISTERN</Type>
 			<DefaultBuilding>BUILDING_CISTERN</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_CISTERN</Description>
-		</Row>
+		</Replace>
 
 		<!-- 医药公司-->
 		<Row>

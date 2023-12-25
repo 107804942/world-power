@@ -7,35 +7,29 @@
 -------------If two players are AT WAR?
 
 function PlayersAtWar(iPlayer, ePlayer)
-	local iTeam = Teams[iPlayer:GetTeam()];
-	local eTeamIndex = ePlayer:GetTeam();
-	if iTeam:IsAtWar(eTeamIndex) then
-		return true;
-	else
-		return false;
-	end
+	return iPlayer:IsAtWarWith(ePlayer:GetID())
 end
 
 ---------If the AI player is at war with Human?
 
 function PlayerAtWarWithHuman(player)
 	local CurrentPlayerTeam = Teams[player:GetTeam()]
-	local IsWarWithHuman = false;
-
+	
 	for playerID, HumanPlayer in pairs(Players) do
-		if IsWarWithHuman then
-			break;
-		end
-		if HumanPlayer:IsHuman() and CurrentPlayerTeam:IsAtWar(HumanPlayer:GetTeam()) then
+		if HumanPlayer and HumanPlayer:IsHuman() and CurrentPlayerTeam:IsAtWar(HumanPlayer:GetTeam()) then
 			print("Human is at war with this AI!")
-			IsWarWithHuman = true;
+			return true;
 		end
 	end
-	return IsWarWithHuman;
+	return false;
 end
 
 ---------If the AI has the chance to become the Boss?
 function AICanBeBoss(player)
+	if player:IsHuman() or not player:IsMajorCiv() then
+		return false
+	end
+
 	local WorldCityTotal = Game.GetNumCities()
 	local WorldPopTotal = Game.GetTotalPopulation()
 
@@ -43,7 +37,7 @@ function AICanBeBoss(player)
 	local AIPopCount = player:GetTotalPopulation()
 	local MajorCivNum = 0
 	for id, pPlayer in pairs(Players) do
-		if pPlayer:IsEverAlive() then
+		if pPlayer and pPlayer:IsEverAlive() then
 			if not (pPlayer:IsMinorCiv() or pPlayer:IsBarbarian()) then
 				MajorCivNum = MajorCivNum + 1
 			end
@@ -51,17 +45,12 @@ function AICanBeBoss(player)
 	end
 	print("total civ is: " .. MajorCivNum)
 
-	if player:IsHuman() or player:IsBarbarian() or player:IsMinorCiv() then
-		return false
-	end
-
 	local CapitalDistance = 0;
 	local WorldSizeLength = Map.GetGridSize();
 	if Players[Game.GetActivePlayer()] ~= nil and Players[Game.GetActivePlayer()]:GetCapitalCity() ~= nil and player:GetCapitalCity() ~= nil then
 		local HumanCapital  = Players[Game.GetActivePlayer()]:GetCapitalCity();
 		local ThisAICapital = player:GetCapitalCity();
-		CapitalDistance     = Map.PlotDistance(HumanCapital:GetX(), HumanCapital:GetY(), ThisAICapital:GetX(),
-			ThisAICapital:GetY())
+		CapitalDistance     = Map.PlotDistance(HumanCapital:GetX(), HumanCapital:GetY(), ThisAICapital:GetX(), ThisAICapital:GetY())
 	end
 	if AICityCount >= 15 or AICityCount >= WorldCityTotal / MajorCivNum or AIPopCount >= WorldPopTotal / MajorCivNum or CapitalDistance >= WorldSizeLength / 3 then
 		print("This AI can become a Boss!")
@@ -73,6 +62,7 @@ end
 
 -----------------------------------------------Plot Functions------------------------------------------------------
 function PlotIsVisibleToHuman(plot) --------------------Is the plot can be seen by Human
+	--Single Observer (Test Mod):
 	if Players[Game.GetActivePlayer()]:IsObserver() then
 		return false
 	end
@@ -80,10 +70,10 @@ function PlotIsVisibleToHuman(plot) --------------------Is the plot can be seen 
 		if HumanPlayer:IsHuman() then
 			local HumanPlayerTeamIndex = HumanPlayer:GetTeam()
 			if plot:IsVisible(HumanPlayerTeamIndex) then
-				--		   	    print ("Human can see this plot! So stop Cheating!")	
+				--print ("Human can see this plot! So stop Cheating!")	
 				return true
 			else
-				--				print ("Human CANNOT see this plot! Let's Cheat!")
+				--print ("Human CANNOT see this plot! Let's Cheat!")
 				return false
 			end
 
@@ -249,7 +239,7 @@ function SatelliteEffectsGlobal(unit)
 		end
 	elseif unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_GPS or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_RECONNAISSANCE or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_APOLLO11 or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_HUBBLE or unit:GetUnitClassType() == GameInfoTypes.UNITCLASS_SATELLITE_TIANGONG then
 		for playerID, player in pairs(Players) do
-			if player:GetNumCities() > 0 and not player:IsMinorCiv() and not player:IsBarbarian() then
+			if player and player:GetNumCities() > 0 and not player:IsMinorCiv() and not player:IsBarbarian() then
 				print("Satellite Effects Global:Effects!")
 				local CapitalCity = player:GetCapitalCity()
 				print("Find Capital")
@@ -348,6 +338,10 @@ else
 			print("The Player is lacking of ELECTRICITY! " .. MoveOutCounterBase)
 		end
 
+		if HumanPlayer:GetTeam() == AIPlayer:GetTeam() then
+			MoveOutCounterBase = 0
+			print ("Players are in the same team"..MoveOutCounterBase);
+		end
 
 		------------------------------------------Diplomacy Modifier--------------------------------
 		if PlayersAtWar(MoveOutPlayer, MoveInPlayer) then
@@ -1163,7 +1157,4 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 end
 
 -- MOD End   by CaptainCWB
-function RemoveErrorPromotion(iPlayerID, iUnitID)
-	-- keep for compatibility
-end
 print("UtilityFunctions Check Pass!")

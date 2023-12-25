@@ -1859,16 +1859,16 @@
 		
 		
 		<!--蓄水池-->
-		<Row>
+		<Replace>
 			<BuildingType>BUILDING_CISTERN</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>50</Flavor>
-		</Row>
-		<Row>
+		</Replace>
+		<Replace>
 			<BuildingType>BUILDING_CISTERN</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>10</Flavor>
-		</Row>
+		</Replace>
 		
 	
 		
@@ -2985,11 +2985,11 @@
 
 		<!--蓄水池-->
 
-		<Row>
+		<Replace>
 			<BuildingType>BUILDING_CISTERN</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>2</Yield>
-		</Row>
+		</Replace>
 		
 	
 

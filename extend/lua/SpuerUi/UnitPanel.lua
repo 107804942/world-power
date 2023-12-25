@@ -77,16 +77,34 @@ local addinActions = {}
 local addinBuilds = {}
 
 function OnUnitPanelActionAddin(action)
-  --print(string.format("Adding UnitPanel action %s (%s)", Locale.ConvertTextKey(action.Title), action.Name))
-  table.insert(addinActions, action)
+	--print(string.format("Adding UnitPanel action %s (%s)", Locale.ConvertTextKey(action.Title), action.Name))
+	table.insert(addinActions, action)
 end
 LuaEvents.UnitPanelActionAddin.Add(OnUnitPanelActionAddin)
 
+function OnUnitPanelActionRemove(action)
+	for key, value in pairs(addinActions) do
+		if value == action then
+			table.remove(addinActions, key)
+		end
+	end
+end
+LuaEvents.UnitPanelActionRemove.Add(OnUnitPanelActionRemove)
+
 function OnUnitPanelBuildAddin(build)
-  --print(string.format("Adding UnitPanel build %s (%s)", Locale.ConvertTextKey(build.Title), build.Name))
-  table.insert(addinBuilds, build)
+	--print(string.format("Adding UnitPanel build %s (%s)", Locale.ConvertTextKey(build.Title), build.Name))
+	table.insert(addinBuilds, build)
 end
 LuaEvents.UnitPanelBuildAddin.Add(OnUnitPanelBuildAddin)
+
+function OnUnitPanelBuildRemove(build)
+	for key, value in pairs(addinBuilds) do
+		if build == action then
+			table.remove(addinBuilds, key)
+		end
+	end
+end
+LuaEvents.UnitPanelBuildRemove.Add(OnUnitPanelBuildRemove)
 
 addins = {}
 -- handle UnitPanelAddins
