@@ -398,7 +398,7 @@ function GetHelpTextForTech( iTechID )
 		if numAbilities > 0 then
 				abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";
 		end
-		abilitiesString = abilitiesString .. Locale.ConvertTextKey( "TXT_KEY_DOUBLE_TOURISM");
+		abilitiesString = abilitiesString .. Locale.ConvertTextKey( "TXT_KEY_DOUBLE_TOURISM_PERCENT", thisTech.InfluenceSpreadModifier);
 		numAbilities = numAbilities + 1;
 	end
 	
@@ -437,8 +437,32 @@ function GetHelpTextForTech( iTechID )
 		numAbilities = numAbilities + 1;
 	end
 
+    if thisTech.WorkerSpeedModifier > 0 then
+		if numAbilities > 0 then
+			abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";
+		end
+		abilitiesString = abilitiesString .. Locale.ConvertTextKey( "TXT_KEY_TECH_HELP_WORKER_SPEED_MODIFIER_SP", thisTech.WorkerSpeedModifier);
+		numAbilities = numAbilities + 1;
+	end
 
-		if(numAbilities > 0) then
+    if thisTech.RazeSpeedModifier > 0 then
+		if numAbilities > 0 then
+			abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";
+		end
+		abilitiesString = abilitiesString .. Locale.ConvertTextKey( "TXT_KEY_TECH_HELP_RAZE_SPEED_MODIFIER_SP", thisTech.RazeSpeedModifier);
+		numAbilities = numAbilities + 1;
+	end
+
+	if iTechID == GameInfo.Technologies["TECH_AUTOMATION_T"].ID then
+		if numAbilities > 0 then
+			abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";
+		end
+		abilitiesString = abilitiesString .. Locale.ConvertTextKey( "TXT_KEY_SP_TECH_AUTOMATION_T_HELP_SHORT");
+		numAbilities = numAbilities + 1;
+	end
+
+
+	if(numAbilities > 0) then
 		UnlocksString = UnlocksString .. abilitiesString
 	end
 	

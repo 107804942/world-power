@@ -522,7 +522,7 @@
 
 
 			<!--蓄水池-->
-			<Row>
+			<Replace>
 				<Type>BUILDING_CISTERN</Type>
 				<BuildingClass>BUILDINGCLASS_CISTERN</BuildingClass>
 				<Cost>30</Cost>
@@ -540,7 +540,7 @@
 				<HurryCostModifier>25</HurryCostModifier>
 				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 				<PortraitIndex>20</PortraitIndex>
-			</Row>
+			</Replace>
 
 
 
