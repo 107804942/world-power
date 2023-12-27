@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>30</ModVersion>
+    <ModVersion>31</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于SP9.5的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于SP9.5的拓展模组[/COLOR]</Description>
@@ -1393,6 +1393,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\future\splash\COOKED_MEDICINE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\future\splash\DIABLO.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

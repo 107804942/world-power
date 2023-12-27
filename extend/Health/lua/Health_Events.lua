@@ -246,7 +246,11 @@ function DiseaseUnits(city)
         if unitCount > 0 then
 		for i = 0, unitCount-1, 1 do
         local pFoundUnit = adjPlot:GetUnit(i);
-		if  pFoundUnit~=nil and pFoundUnit:NukeDamageLevel()== -1  and not pFoundUnit:IsImmuePlague() then
+		if  pFoundUnit~=nil and pFoundUnit:NukeDamageLevel()== -1 
+		and pFoundUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR 
+		and pFoundUnit:GetUnitType() ~=GameInfoTypes["UNIT_DOCTOR"]
+	    and pFoundUnit:GetUnitType() ~=GameInfoTypes["UNIT_MODERN_DOCTOR"]  
+		and pFoundUnit:GetUnitType() ~=GameInfoTypes["UNIT_GREAT_DOCTOR"] then
 		          pFoundUnit:ChangeDamage(50)  
 		          pFoundUnit:SetHasPromotion(GameInfoTypes.PROMOTION_PLAGUED, true) 
 				  end

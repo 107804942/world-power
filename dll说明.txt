@@ -299,6 +299,16 @@ ALTER TABLE Buildings ADD COLUMN 'LandTileDamage' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'LandTileMovementReduce' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'LandTileTurnDamage' INTEGER DEFAULT 0;
 
+
+ALTER TABLE Buildings ADD COLUMN 'WaterTileDamageGlobal' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'WaterTileMovementReduceGlobal' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'WaterTileTurnDamageGlobal' INTEGER DEFAULT 0;
+
+ALTER TABLE Buildings ADD COLUMN 'LandTileDamageGlobal' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'LandTileMovementReduceGlobal' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'LandTileTurnDamageGlobal' INTEGER DEFAULT 0;
+
+
 ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'MinorCivFriendship' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'MoveAfterCreated' INTEGER DEFAULT 0; 
@@ -606,10 +616,9 @@ ALTER TABLE Buildings ADD COLUMN 'LiberatedInfluence' INTEGER DEFAULT 0;
 
 ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);
-ALTER TABLE UnitPromotions ADD COLUMN 'IsPlague' BOOLEAN DEFAULT 0;
 ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;
 ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT -1;
 
 
 
@@ -689,9 +698,14 @@ ALTER TABLE Policies ADD COLUMN 'OriginalCapitalCaptureGreatPerson' INTEGER DEFA
 
 ALTER TABLE Policies ADD COLUMN 'AlwaysWeLoveKindDayInGoldenAge' BOOLEAN DEFAULT 0;
 
+规避伤害
+ALTER TABLE UnitPromotions ADD COLUMN 'IgnoreDamageChance' INTEGER DEFAULT 0;
 
 ----击退可造成溅射伤害
 ALTER TABLE UnitPromotions ADD  'CanDoFallBackDamage' BOOLEAN DEFAULT 0;
+
+---核爆伤害
+ALTER TABLE UnitPromotions ADD COLUMN 'CanDoNukeDamage' BOOLEAN DEFAULT 0; 
 
 ---任意地形空降
 ALTER TABLE UnitPromotions ADD  'CanParadropAnyWhere' BOOLEAN DEFAULT 0;
@@ -727,7 +741,8 @@ ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 	</Table>
 
 
-
+ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpyGlobal' BOOLEAN DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpy' BOOLEAN DEFAULT 0;
 
 INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);
@@ -766,41 +781,13 @@ ALTER TABLE Buildings ADD COLUMN 'NationalPopRequired' INTEGER DEFAULT 0;
 	</Table>
 
 
--- Adds minimum national population requirement for a building.
-ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpyGlobal' BOOLEAN DEFAULT 0;
-ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpy' BOOLEAN DEFAULT 0;
+-- 
+
 
 
 
 		//	--------------------------------------------------------------------------------
-bool CvCity::isAddsFreshWater() const {
-	VALIDATE_OBJECT
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++) {
-		if (m_pCityBuildings->GetNumBuilding((BuildingTypes)iI) > 0) {
-			if (GC.getBuildingInfo((BuildingTypes)iI)->IsAddsFreshWater()) {
-				return true;
-			}
-		}
-	}
-
-	return false;
-}
-
-
-
-	<!-- Allows you to define an instant yield granted when a spy is killed in a city. -->
-	<Table name="Building_YieldFromSpyDefense">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" default="0"/>
-	</Table>
-	<!-- Allows you to define an instant yield granted when a spy completes a task (steal tech, etc.). -->
-	<Table name="Building_YieldFromSpyAttack">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="integer" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" default="0"/>
-	</Table>
 
 	 --GameEvents.EspionageCanStageCoup.Add(function(iPlayer, iCityOwner, iCity) return true)
 
@@ -821,5 +808,7 @@ bool CvCity::isAddsFreshWater() const {
 
 INSERT INTO Building_YieldPerFriend(BuildingType,YieldType,Yield) 
 VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
+
+
 
 

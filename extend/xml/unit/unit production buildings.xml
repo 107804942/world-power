@@ -87,16 +87,16 @@
 
 		<Row>
 			<UnitType>UNIT_NAVAL_MONSTER</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_JURASSIC_PARK</BuildingClassType>
 		</Row>
 
 		<Row>
 			<UnitType>UNIT_ALIEN_SIEGE_WORM</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_JURASSIC_PARK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_HOVER_WORM</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_JURASSIC_PARK</BuildingClassType>
 		</Row>
 	</Unit_BuildingClassRequireds>
 
@@ -115,7 +115,7 @@
 		
 		<Row>
 			<UnitType>UNIT_SPACESHIP</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		
 		<Row>
@@ -129,14 +129,14 @@
 
 		<Row>
 			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 
 
 		<Row>
 			<UnitType>UNIT_FW_HOVERTANK</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 		<Row>
@@ -147,7 +147,7 @@
 
 		<Row>
 			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_AIRFIGHTER04P</UnitType>
@@ -157,7 +157,7 @@
 
 		<Row>
 			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_AIRFIGHTER03P</UnitType>
@@ -173,7 +173,7 @@
 		
 		<Row>
 			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
@@ -183,11 +183,11 @@
 		
 		<Row>
 			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_FW_VERTOL</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_FW_VERTOL</UnitType>
@@ -201,11 +201,11 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_SUPER_ROCKET</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
@@ -215,65 +215,65 @@
 
 		<Row>
 			<UnitType>UNIT_FW_AUTOMATON</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_FW_AUTOMATON</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 		
 		
 		<Row>
 			<UnitType>UNIT_SABR</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 		<Row>
 			<UnitType>UNIT_CARVR</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_CARVR</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 
 		<Row>
 			<UnitType>UNIT_CNDR</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 
 		<Row>
 			<UnitType>UNIT_CNDR</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 
 		<Row>
 			<UnitType>UNIT_AEGIS</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_AEGIS</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 
 		<Row>
 			<UnitType>UNIT_BEAM_JUMPER</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_BEAM_JUMPER</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 
 
 		<Row>
 			<UnitType>UNIT_BATTLESUIT</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_BATTLESUIT</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 		
 		
@@ -284,13 +284,13 @@
 
 		<Row>
 			<UnitType>UNIT_RANGEDMARINE03S</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 
 		<Row>
 			<UnitType>UNIT_LEVDESTROYER</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_LEVDESTROYER</UnitType>
@@ -299,7 +299,7 @@
 
 		<Row>
 			<UnitType>UNIT_SIEGE04H</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 		<Row>
@@ -309,12 +309,12 @@
 		
 		<Row>
 			<UnitType>UNIT_GHOST</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		
 		<Row>
 			<UnitType>UNIT_ANGEL</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_ANGEL</UnitType>
@@ -324,28 +324,28 @@
 		
 		<Row>
 			<UnitType>UNIT_MECH</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 		<Row>
 			<UnitType>UNIT_MECH</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 
 
 		<Row>
 			<UnitType>UNIT_GOLEM</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_GOLEM</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 
 		<Row>
 			<UnitType>UNIT_ANTIMATTER_EXPLOSION</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 
@@ -353,7 +353,7 @@
 
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
@@ -364,7 +364,7 @@
 
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER03H</UnitType>
@@ -372,7 +372,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER02</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER02</UnitType>
@@ -380,7 +380,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
@@ -388,7 +388,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04S</UnitType>
@@ -396,7 +396,7 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
@@ -406,7 +406,7 @@
 
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 		<Row>
@@ -416,7 +416,7 @@
 		
 		<Row>
 			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_PARTICLE_CANNON</UnitType>

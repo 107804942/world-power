@@ -1930,16 +1930,18 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_DESC">
-			<Text>[ICON_HEALTH][ICON_FOOD]生物工厂</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_HELP">
-			<Text>本城+8[ICON_FOOD]食物产出，每四人口+1[ICON_FOOD]食物产出。城市所有已开发的[ICON_RES_DEER]鹿、[ICON_RES_BISON]牦牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马资源+1[ICON_FOOD]食物、[ICON_HEALTH]健康度、[ICON_PRODUCTION]产能。湖泊水域+1[ICON_FOOD]食物。</Text>
-		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_PEDIA">
-			<Text>虽然几个世纪以来已经发展了各种增加粮食生产的方法，但有些地区的人口增长甚至可能超过农场和传统城市所提供的最大供应量。因此，一些社区转向大规模生产营养完整的食品替代品，利用各种工艺合成适合人类消费的蛋白质和纤维。由此产生的食物替代品有足够的营养，但往往缺乏真正食物的味道和质地。然而，对于许多人来说，这是他们唯一能负担得起开支的营养摄入渠道。</Text>
-		</Row>
+			<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_DESC">
+				<Text>[ICON_HEALTH][ICON_FOOD]生物工厂</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_HELP">
+				<Text>本城+8[ICON_FOOD]食物产出，每四人口+1[ICON_FOOD]食物产出。城市所有已开发的[ICON_RES_DEER]鹿、[ICON_RES_BISON]牦牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马资源+1[ICON_FOOD]食物、[ICON_HEALTH]健康度、[ICON_PRODUCTION]产能。湖泊水域+1[ICON_FOOD]食物。</Text>
+			</Row>
+
+			<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_PEDIA">
+				<Text>虽然几个世纪以来已经发展了各种增加粮食生产的方法，但有些地区的人口增长甚至可能超过农场和传统城市所提供的最大供应量。因此，一些社区转向大规模生产营养完整的食品替代品，利用各种工艺合成适合人类消费的蛋白质和纤维。由此产生的食物替代品有足够的营养，但往往缺乏真正食物的味道和质地。然而，对于许多人来说，这是他们唯一能负担得起开支的营养摄入渠道。</Text>
+			</Row>
+			
 		<Row Tag="TXT_KEY_BUILDING_VR_TRAINING_DESC">
 			<Text>[ICON_STRENGTH]虚拟训练中心</Text>
 		</Row>
@@ -2463,37 +2465,37 @@
 		<Row Tag="TXT_KEY_WONDER_SPACE_FORTRESS_HELP">
 			<Text>建成后获得四个单位。城市攻击次数+2，所有海军基地、空军基地、导弹基地、指挥中心、星际基地+3[ICON_GOLD]金钱。所有城市防御效率提升100%。本城市轰炸范围+1，购买或建造的单位可以立即行动。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_SERVER_HUB_DESC">
+			
+		<Row Tag="TXT_KEY_BUILDING_SERVER_HUB_DESC">
 			<Text>[ICON_RESEARCH]超级计算机中心</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_SERVER_HUB_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_SERVER_HUB_PEDIA">
 			<Text>虽然计算机能够执行许多会计和科学任务，从而有助于促进商业、科学研究和工业发展，但真正导致革命性变革的是将它们联网的行为，它使几乎所有人都处于大数据平台。当计算机网络变得越来越复杂和复杂时，用户可以通过这些服务器访问和共享数据，万物互联。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_SERVER_HUB_HELP">
+		<Row Tag="TXT_KEY_BUILDING_SERVER_HUB_HELP">
 			<Text>提供2个科学家席位，+10[ICON_RESEARCH]科研，本城[ICON_RESEARCH]科研产出+25%。</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_ULTIMATOWER">
-			<Text>终极塔</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_ULTIMATOWER_HELP">
-			<Text>每座城市+5[ICON_CITIZEN]人口，全国每两人口+1[ICON_RESEARCH]科研。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_ULTIMATOWER_QUOTE">
-			<Text>
-				[NEWLINE]"人们可以居住在任何地方。他们可以在任何事情上痛苦，在任何事情上狂喜。我越来越认为建筑与之无关。当然，这既是解放也是令人担忧的。"[NEWLINE]        ——雷姆·库哈斯[NEWLINE]
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_ULTIMATOWER_PEDIA">
-			<Text>
-				设计构想中的终极塔楼有一个直径6000英尺(约合1830米)的基座，覆盖总共53平方英里的空间，外形为高2英里(约3.2千米)的圆锥形建筑。崔悦君的"终极塔楼"展示了一个能容纳100万人口的垂直城市的设计构想，满足甚至超越了之前任何类似的设计方案。 终极塔楼的外立面安装太阳能吸收板和风力涡轮机，并采用一种称为"大气能量转换"的技术，利用楼顶和楼底之间的压差发电，为这座未来派巨型建筑提供常年稳定的能源，同时对环境不会造成任何破坏。一旦建成，终极塔楼在100至165英尺高的楼层设有开放的绿化空间，特有的叠层设计使人身处这样的高度时，有一种开阔、敞亮的感觉。值得一提的是，尽管终极塔楼高达数千米，但乘坐速度达到每分钟3英里的电梯，客人用不了10分钟就可以从楼底升到顶层。
-				[NEWLINE]旧金山终极塔楼的内部能源设施全部按照仿生学原理而特别设计，令整座塔楼就像一棵树，可以直接从四周的湖水、阳光、甚至空气中吸收水和能量，从而不会对环境造成任何污染。据悉，"终极塔楼"四面被湖水环绕，而设计师崔悦君从树木由根须吸收水分并运送到树顶的原理受到启发，设计了一种类似的装置，从而可以自动地将塔楼底部的湖水运送到塔楼高处。 同时，"终极塔楼"表面覆盖光电太阳能吸收板，从而将阳光转化为塔楼所需要的大部分电能。而且，"终极塔楼"还将使用一种"大气能量转换系统"，利用塔楼顶部和底部的气压差来发电。此外，风力涡轮发电机也将利用风力为塔楼提供辅助电能。据设计师崔悦君称，整座"终极塔楼"就是一个大型的生态系统，如同一座"活着而且会呼吸的建筑"。
-				按照崔悦君的设计，"终极塔楼"楼内总建筑面积多达63平方英里，能够供100万人口同时居住生活。而且，在这座"塔中城市"里，居民们可以享受到非常好的生活质量。据悉，"终极塔楼"总计有144部电梯，围绕在塔楼的外围。所有电梯利用压缩空气产生垂直推动力，令电梯速度可达到每小时13英里。尽管"终极塔楼"有3200米高，乘坐的电梯只需要9分40秒就可以从底层到顶层。
-				[NEWLINE]此外，"终极塔楼"塔身的窗户都带有特别设计的有空气动力学风帽，从而将自然风引入塔内，使塔楼内的空气保持新鲜。同时，塔身还安装无数面反射镜，可让阳光直接照射到建筑中。"终极塔楼"每层都将修建开放式的花园阳台，供塔楼居民休闲散步。塔楼的电动车都由丙烷和氢气驱动，从而完全避免了内燃机或者有毒废气排放。据报道，崔悦君设计的旧金山"终极塔楼"造价估计高达150亿美元，仍处于构想阶段。尽管如此，崔悦君已有一个更大胆的设想--世界各地任何一个人口密度过高的大城市都可以建一座这样的"终极塔楼"，从而彻底解决住房问题。
-			</Text>
-		</Row>
-
+			<Row Tag="TXT_KEY_BUILDING_ULTIMATOWER">
+				<Text>终极塔</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_HELP">
+				<Text>每座城市+5[ICON_CITIZEN]人口，全国每两人口+1[ICON_RESEARCH]科研。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_QUOTE">
+				<Text>
+					[NEWLINE]"人们可以居住在任何地方。他们可以在任何事情上痛苦，在任何事情上狂喜。我越来越认为建筑与之无关。当然，这既是解放也是令人担忧的。"[NEWLINE]        ——雷姆·库哈斯[NEWLINE]
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_PEDIA">
+				<Text>
+					设计构想中的终极塔楼有一个直径6000英尺(约合1830米)的基座，覆盖总共53平方英里的空间，外形为高2英里(约3.2千米)的圆锥形建筑。崔悦君的"终极塔楼"展示了一个能容纳100万人口的垂直城市的设计构想，满足甚至超越了之前任何类似的设计方案。 终极塔楼的外立面安装太阳能吸收板和风力涡轮机，并采用一种称为"大气能量转换"的技术，利用楼顶和楼底之间的压差发电，为这座未来派巨型建筑提供常年稳定的能源，同时对环境不会造成任何破坏。一旦建成，终极塔楼在100至165英尺高的楼层设有开放的绿化空间，特有的叠层设计使人身处这样的高度时，有一种开阔、敞亮的感觉。值得一提的是，尽管终极塔楼高达数千米，但乘坐速度达到每分钟3英里的电梯，客人用不了10分钟就可以从楼底升到顶层。
+					[NEWLINE]旧金山终极塔楼的内部能源设施全部按照仿生学原理而特别设计，令整座塔楼就像一棵树，可以直接从四周的湖水、阳光、甚至空气中吸收水和能量，从而不会对环境造成任何污染。据悉，"终极塔楼"四面被湖水环绕，而设计师崔悦君从树木由根须吸收水分并运送到树顶的原理受到启发，设计了一种类似的装置，从而可以自动地将塔楼底部的湖水运送到塔楼高处。 同时，"终极塔楼"表面覆盖光电太阳能吸收板，从而将阳光转化为塔楼所需要的大部分电能。而且，"终极塔楼"还将使用一种"大气能量转换系统"，利用塔楼顶部和底部的气压差来发电。此外，风力涡轮发电机也将利用风力为塔楼提供辅助电能。据设计师崔悦君称，整座"终极塔楼"就是一个大型的生态系统，如同一座"活着而且会呼吸的建筑"。
+					按照崔悦君的设计，"终极塔楼"楼内总建筑面积多达63平方英里，能够供100万人口同时居住生活。而且，在这座"塔中城市"里，居民们可以享受到非常好的生活质量。据悉，"终极塔楼"总计有144部电梯，围绕在塔楼的外围。所有电梯利用压缩空气产生垂直推动力，令电梯速度可达到每小时13英里。尽管"终极塔楼"有3200米高，乘坐的电梯只需要9分40秒就可以从底层到顶层。
+					[NEWLINE]此外，"终极塔楼"塔身的窗户都带有特别设计的有空气动力学风帽，从而将自然风引入塔内，使塔楼内的空气保持新鲜。同时，塔身还安装无数面反射镜，可让阳光直接照射到建筑中。"终极塔楼"每层都将修建开放式的花园阳台，供塔楼居民休闲散步。塔楼的电动车都由丙烷和氢气驱动，从而完全避免了内燃机或者有毒废气排放。据报道，崔悦君设计的旧金山"终极塔楼"造价估计高达150亿美元，仍处于构想阶段。尽管如此，崔悦君已有一个更大胆的设想--世界各地任何一个人口密度过高的大城市都可以建一座这样的"终极塔楼"，从而彻底解决住房问题。
+				</Text>
+			</Row>
 
 
 
@@ -2539,14 +2541,14 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_DESC">
+		<Row Tag="TXT_KEY_BUILDING_GEOTHERMAL_PLANT_DESC">
 			<Text>[ICON_RES_ELECTRICITY]地热发电厂</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_HELP">
+		<Row Tag="TXT_KEY_BUILDING_GEOTHERMAL_PLANT_HELP">
 			<Text>这座城市必须建在一座山的旁边，建成后提供30[ICON_RES_ELECTRICITY]电力，消耗5人力资源。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_GEOTHERMAL_PLANT_PEDIA">
 			<Text>
 				由于几乎每一种发电方法都需要蒸汽，一些科学家寻求比化石燃料或核能更环保的替代发电方法，试图利用地壳地热喷口冒出的蒸汽量。虽然这些发电厂只能设在能够获得这种地热能的地区，但当它们能够被利用时，确实给当地工业带来了巨大的增幅。
 			</Text>
@@ -2626,17 +2628,17 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_HELP">
+		<Row Tag="TXT_KEY_BUILDING_TELEPRESENCE_HUB_HELP">
 			<Text>
 				这是一种封闭式的机器人加工厂。无数的废弃电子垃圾被重新加工或改造，最终生产出一些全新的机器人成品，同时也打造了一些用于军事目的的装备。
 				[NEWLINE][NEWLINE]本城增加5点[ICON_PRODUCTION]产能，建造陆地单位时+15%[ICON_PRODUCTION]产能。
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_DESC">
+		<Row Tag="TXT_KEY_BUILDING_TELEPRESENCE_HUB_DESC">
 			<Text>[ICON_PRODUCTION]电子人工厂</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_TELEPRESENCE_HUB_PEDIA">
 			<Text>这是一种封闭式的机器人加工厂。工厂的核心控制中枢已经设置了自动生产的命令。无数的废弃电子垃圾被重新加工或改造，最终生产出一些全新的机器人成品，同时也打造了一些用于军事目的的装备。</Text>
 		</Row>
 
@@ -2972,14 +2974,14 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_BIOMOD_TANK_DESC">
+		<Row Tag="TXT_KEY_BUILDING_BIOMOD_TANK_DESC">
 			<Text>[ICON_WAR]星际基地</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_BIOMOD_TANK_HELP">
+		<Row Tag="TXT_KEY_BUILDING_BIOMOD_TANK_HELP">
 			<Text>允许你在本城市训练或雇佣以下[COLOR_POSITIVE_TEXT]军事单位[ENDCOLOR]。[NEWLINE][ICON_BULLET][COLOR_YELLOW]未来时代陆军单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]未来时代海军单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]未来时代空军单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]未来时代精英单位[ENDCOLOR]。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_BIOMOD_TANK_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_BIOMOD_TANK_PEDIA">
 			<Text>虽然大部分机器人单位已经可以投入大规模生产，但更前端的实验性武装技术需要在更复杂的实验室设备下反复调试。为了保密性和安全性，该类实验室常常被建造在星际战略基地。机器人模块化常用的方法是留有富于的电子设备接口，模块化的设计便于进行更复杂武器的改造。以及需要时植入增强战斗能力的多功能武器。</Text>
 		</Row>
 
@@ -3081,26 +3083,25 @@
 
 
 
+			<Row Tag="TXT_KEY_BUILDING_SKYCITY">
+				<Text>太空城</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_SKYCITY_HELP">
+				<Text>
+					机械化农场+4[ICON_FOOD]食物,+4[ICON_GOLD]金钱，+1[ICON_HAPPINESS_1]快乐。本城所有地形额外提升3点全类型产出。所有城市+25%[ICON_RESEARCH]科研、[ICON_GOLD]金钱。
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_SKYCITY_PEDIA">
+				<Text>
+					天空之城是一座超高摩天大楼，建筑高1000米(3281英尺) ，底部宽400米(1312英尺) ，总建筑面积8平方公里(3.1平方英里)。根据设计构想，它将容纳3.5万至3.6万名全职居民和10万名工人。它包括14个凹盘形的“空间高原”堆叠在楼层。 高原的内部将包含绿色空间，在建筑的边缘，在建筑的两侧，将是公寓。 建筑中还包括办公室、商业设施、学校、剧院和其他现代化设施。
+				</Text>
+			</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_SKYCITY">
-			<Text>太空城</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_SKYCITY_HELP">
-			<Text>
-				机械化农场+4[ICON_FOOD]食物,+4[ICON_GOLD]金钱，+1[ICON_HAPPINESS_1]快乐。本城所有地形额外提升3点全类型产出。所有城市+25%[ICON_RESEARCH]科研、[ICON_GOLD]金钱。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_SKYCITY_PEDIA">
-			<Text>
-				天空之城是一座超高摩天大楼，建筑高1000米(3281英尺) ，底部宽400米(1312英尺) ，总建筑面积8平方公里(3.1平方英里)。根据设计构想，它将容纳3.5万至3.6万名全职居民和10万名工人。它包括14个凹盘形的“空间高原”堆叠在楼层。 高原的内部将包含绿色空间，在建筑的边缘，在建筑的两侧，将是公寓。 建筑中还包括办公室、商业设施、学校、剧院和其他现代化设施。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_FW_SKYCITY_QUOTE">
-			<Text>
-				[NEWLINE]"建筑师再也不能被正统现代主义的清教徒式的道德说教所吓服了。我喜欢建筑要素的混杂，而不要‘纯净’。"[NEWLINE]        ——罗伯特・文丘里[NEWLINE]
-			</Text>
-		</Row>
+			<Row Tag="TXT_KEY_WONDER_SKYCITY_QUOTE">
+				<Text>
+					[NEWLINE]"建筑师再也不能被正统现代主义的清教徒式的道德说教所吓服了。我喜欢建筑要素的混杂，而不要‘纯净’。"[NEWLINE]        ——罗伯特・文丘里[NEWLINE]
+				</Text>
+			</Row>
 
 
 
@@ -3128,42 +3129,39 @@
 		
 		
 
-		<Row Tag="TXT_KEY_BUILDING_FW_SKYNET_DESC">
+		<Row Tag="TXT_KEY_BUILDING_SKYNET_DESC">
 			<Text>天网</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_SKYNET_HELP">
+		<Row Tag="TXT_KEY_BUILDING_SKYNET_HELP">
 			<Text>己方单位获得无偿晋升：[ICON_STRENGTH]战斗力增加15%，与机器人单位作战时+25%[ICON_STRENGTH]战斗力。本城核拦截几率+50%</Text>
 		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_SKYNET_QUOTE">
+		<Row Tag="TXT_KEY_WONDER_SKYNET_QUOTE">
 			<Text>
 				[NEWLINE]"系统于1997年8月4日启动。战略防御系统决定将人类移除。天网开始以几何比率学习。它在凌晨2:14开始有自我意识.."[NEWLINE]        ——终结者2审判日[NEWLINE]
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_SKYNET_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_SKYNET_PEDIA">
 			<Text>天网是一种人工智能工具，它可以控制智能化的军事硬件和系统，以减少反应时间，消除军事决策中的人为错误。同时它能将附近最新的战争数据迅速传导出去，让己方作战更有大局观，是未来战争中极其有用的工具。</Text>
 		</Row>
 
 
 
 
+			<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_DESC">
+				<Text>[ICON_PRODUCTION]生态学工厂</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_HELP">
+				<Text>本城市+10[ICON_PRODUCTION]产能。每处市民工作的草地、冻土、平原地貌+2[ICON_PRODUCTION]产能。冻土、雪原+1[ICON_HEALTH]健康度。</Text>
+			</Row>
 
+			<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_PEDIA">
+				<Text>随着社会的生态意识越来越强，重工业对环境的影响也越来越受到重视。在日益增加的社会压力下，工业界开始尝试寻找更加生态友好的方式来维持生产，将现有的工厂改造为“生态学工厂” ，这对自然环境以及在其中和周围工作的人类都有更好的保护。最终，这些“生态工厂”变得类似于在某些地区正变得普遍的合成生态——人工创造的满足工业需求的环境。而改造生态系统的方法则十分复杂。</Text>
+			</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_BIOFACTORY_DESC">
-			<Text>[ICON_PRODUCTION]生态学工厂</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_BIOFACTORY_HELP">
-			<Text>本城市+10[ICON_PRODUCTION]产能。每处市民工作的草地、冻土、平原地貌+2[ICON_PRODUCTION]产能。冻土、雪原+1[ICON_HEALTH]健康度。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_BUILDING_FW_BIOFACTORY_PEDIA">
-			<Text>随着社会的生态意识越来越强，重工业对环境的影响也越来越受到重视。在日益增加的社会压力下，工业界开始尝试寻找更加生态友好的方式来维持生产，将现有的工厂改造为“生态学工厂” ，这对自然环境以及在其中和周围工作的人类都有更好的保护。最终，这些“生态工厂”变得类似于在某些地区正变得普遍的合成生态——人工创造的满足工业需求的环境。而改造生态系统的方法则十分复杂。</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_PROMOTION_FW_SKYNET_LINK">
+		<Row Tag="TXT_KEY_PROMOTION_SKYNET_LINK">
 			<Text>天眼</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FW_SKYNET_LINK_HELP">
+		<Row Tag="TXT_KEY_PROMOTION_SKYNET_LINK_HELP">
 			<Text>+15%[ICON_STRENGTH]战斗力</Text>
 		</Row>
 
@@ -3174,18 +3172,19 @@
 		<Row Tag="TXT_KEY_PROMOTION_KGB_HELP">
 			<Text>你拥有的每个间谍为你的单位+3%[ICON_STRENGTH]攻击力与[ICON_STRENGTH]防御力。</Text>
 		</Row>
-		
 
-		<Row Tag="TXT_KEY_BUILDING_FW_MOON_BASE_DESC">
-			<Text>[ICON_RESEARCH]月球基地</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_MOON_BASE_HELP">
-			<Text>增加全国所有核电站及钍反应堆的[ICON_PRODUCTION]产能，[ICON_GOLD]金钱及[ICON_RESEARCH]科研产出。额外增加50点钛和铀资源储量。</Text>
-		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_MOON_BASE_PEDIA">
-			<Text>21世纪人类的野心之一，就是在月球上建立永久的定居点。这样的定居点将为月球和其他天体的研究提供一个极好的研究平台，以及几乎无限的材料来源，如可用于聚变反应堆的氚。</Text>
-		</Row>
+			<Row Tag="TXT_KEY_BUILDING_MOON_BASE_DESC">
+				<Text>[ICON_RESEARCH]月球基地</Text>
+			</Row>
+			<Row Tag="TXT_KEY_BUILDING_MOON_BASE_HELP">
+				<Text>增加全国所有核电站及钍反应堆的[ICON_PRODUCTION]产能，[ICON_GOLD]金钱及[ICON_RESEARCH]科研产出。额外增加50点钛和铀资源储量。</Text>
+			</Row>
+
+			<Row Tag="TXT_KEY_BUILDING_MOON_BASE_PEDIA">
+				<Text>人类的野心之一，就是在月球上建立永久的定居点。这样的定居点将为月球和其他天体的研究提供一个极好的研究平台，以及几乎无限的材料来源，如可用于聚变反应堆的氚。</Text>
+			</Row>
+
 
 
 
@@ -3225,23 +3224,23 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_HELIOS">
-			<Text>太阳神微波卫星</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_HELIOS_HELP">
-			<Text>本城每处沙漠地块+4[ICON_PRODUCTION]产能、4[ICON_GOLD]金钱、4[ICON_RESEARCH]科研。太阳能发电站+10[ICON_PRODUCTION]产能，当建有太阳能发电站的城市攻击时，对城市3格范围内的敌人额外造成25%伤害。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_HELIOS_QUOTE">
-			<Text>
-				[NEWLINE]"我认为太阳能的未来是光明的。"[NEWLINE]        ——肯・萨拉查[NEWLINE]
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_HELIOS_PEDIA">
-			<Text>
-				卫星可以在轨道上收集太阳能，然后以微波的形式传送到地球上的收集器，这个概念从20世纪中期就已经存在了。武器研究人员将太阳神微波卫星设计成自动运行，并进行远程维修的行星轨道智能武器平台，直到2300年发生事故，当时作为核心处理器的人工智能控制器，发布了错误的命令，将光束对准了当时正在欧亚大陆一座边境城市附近驻扎的第23机甲军团。虽然光束的能量不足以直接杀伤他们的重型兵器，但随着源源不断的能量传输到这片区域。其产生的热辐射强度点燃了干燥的草原及丛林，引起了熊熊大火，烧毁了军队的补给，迫使他们紧急撤退。当被问及此次攻击时，人工智能为自己的行为辩护，声称其受到了指令要求它保护其为之提供能量的城市。后来这种解释被认为是人工智能发展的标志，人工智能能够自行做出人类思维水平的决定。
-			</Text>
-		</Row>
 
+			<Row Tag="TXT_KEY_BUILDING_HELIOS">
+				<Text>太阳神微波卫星</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_HELIOS_HELP">
+				<Text>本城每处沙漠地块+4[ICON_PRODUCTION]产能、4[ICON_GOLD]金钱、4[ICON_RESEARCH]科研。太阳能发电站+10[ICON_PRODUCTION]产能，当建有太阳能发电站的城市攻击时，对城市3格范围内的敌人额外造成25%伤害。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_HELIOS_QUOTE">
+				<Text>
+					[NEWLINE]"我认为太阳能的未来是光明的。"[NEWLINE]        ——肯・萨拉查[NEWLINE]
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_HELIOS_PEDIA">
+				<Text>
+					卫星可以在轨道上收集太阳能，然后以微波的形式传送到地球上的收集器，这个概念从20世纪中期就已经存在了。武器研究人员将太阳神微波卫星设计成自动运行，并进行远程维修的行星轨道智能武器平台，直到2300年发生事故，当时作为核心处理器的人工智能控制器，发布了错误的命令，将光束对准了当时正在欧亚大陆一座边境城市附近驻扎的第23机甲军团。虽然光束的能量不足以直接杀伤他们的重型兵器，但随着源源不断的能量传输到这片区域。其产生的热辐射强度点燃了干燥的草原及丛林，引起了熊熊大火，烧毁了军队的补给，迫使他们紧急撤退。当被问及此次攻击时，人工智能为自己的行为辩护，声称其受到了指令要求它保护其为之提供能量的城市。后来这种解释被认为是人工智能发展的标志，人工智能能够自行做出人类思维水平的决定。
+				</Text>
+			</Row>
 
 
 
@@ -4288,18 +4287,12 @@
 
 
 
-
-
-
-
-		<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX">
-			<Text>防空火力网</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX_HELP">
-			<Text>轨道自动化科技解锁，驱逐舰单位额外增加一次空袭拦截次数。</Text>
-		</Row>
-
-
+			<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX">
+				<Text>防空火力网</Text>
+			</Row>
+			<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX_HELP">
+				<Text>轨道自动化科技解锁，驱逐舰单位额外增加一次空袭拦截次数且拦截范围+2。</Text>
+			</Row>
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_BE_ACADEMY">
@@ -4703,22 +4696,23 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_JURASSIC_PARK">
-			<Text>异种生物研究所</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_JURASSIC_PARK_HELP">
-			<Text>+2500[ICON_TOURISM]魅力产出，+20[ICON_HAPPINESS_1]快乐。城市必须临近海洋才能建造，建造完成后可在本城训练巨型生物。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_JURASSIC_PARK_QUOTE">
-			<Text>
-				[NEWLINE]"生活，总会有办法的。"[NEWLINE]        ——伊恩·马尔科姆[NEWLINE]
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_JURASSIC_PARK_PEDIA">
-			<Text>
-				虽然早期的基因操作主要集中在改造和提高现有的动植物生命，但也有一些不乏创造性的尝试，试图复活已经灭绝的动植物物种，或者创造新的物种。获取远古化石保存下来的DNA是极其困难的，但是随着科技的进步，未来人们利用复杂的计算机算法和基因拼接来修复受损的基因片段，这使得研究人员可以实现复活已经灭绝的一些物种这一伟大壮举。其中最著名的例子是《侏罗纪公园》几种恐龙的基因被重新设计。这种研究在多方面取得了成功，但是新创造的物种在基因操纵方面表现出了一些危险——人们对新物种对了解甚少，而且异种生物往往表现出意想不到的行为。有几个巨大物种逃离管控区域，越界到人类生活区，而这通常需要在军事来干预阻止。这一系列的实验表明，需要更全面地理解基因工程生物的行为表现和与环境相互作用，才便于最终加以利用。
-			</Text>
-		</Row>
+
+			<Row Tag="TXT_KEY_BUILDING_JURASSIC_PARK">
+				<Text>异种生物研究所</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_HELP">
+				<Text>+2500[ICON_TOURISM]魅力产出，+20[ICON_HAPPINESS_1]快乐。城市必须临近海洋才能建造，建造完成后可在本城训练巨型生物。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_QUOTE">
+				<Text>
+					[NEWLINE]"生活，总会有办法的。"[NEWLINE]        ——伊恩·马尔科姆[NEWLINE]
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_PEDIA">
+				<Text>
+					虽然早期的基因操作主要集中在改造和提高现有的动植物生命，但也有一些不乏创造性的尝试，试图复活已经灭绝的动植物物种，或者创造新的物种。获取远古化石保存下来的DNA是极其困难的，但是随着科技的进步，未来人们利用复杂的计算机算法和基因拼接来修复受损的基因片段，这使得研究人员可以实现复活已经灭绝的一些物种这一伟大壮举。其中最著名的例子是《侏罗纪公园》几种恐龙的基因被重新设计。这种研究在多方面取得了成功，但是新创造的物种在基因操纵方面表现出了一些危险——人们对新物种对了解甚少，而且异种生物往往表现出意想不到的行为。有几个巨大物种逃离管控区域，越界到人类生活区，而这通常需要在军事来干预阻止。这一系列的实验表明，需要更全面地理解基因工程生物的行为表现和与环境相互作用，才便于最终加以利用。
+				</Text>
+			</Row>
 
 
 
@@ -5563,23 +5557,22 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_MARKOV">
-			<Text>马尔科夫重叠心智</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_MARKOV_HELP">
-			<Text>全国所有城市训练的单位额外获得120点经验值。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_MARKOV_QUOTE">
-			<Text>
-				[NEWLINE]"卓越是一门通过训练和习惯获得的艺术。我们之所以伟大，不是因为我们有美德或优秀，而是因为我们不断重复某一件事。实际上，卓越不是一种行为，而是一种习惯。"[NEWLINE]        ——亚里士多德[NEWLINE]
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_FW_MARKOV_PEDIA">
-			<Text>
-				训练新兵服兵役一直以来既是一门艺术，又是一门科学，世界各地的各种军事院校和其他训练机构都在努力寻找最佳方法，为新兵做好服兵役的指导。然而，随着模因学、生物技术和神经接口的发展，通过利用老兵的记录记忆和经验，将所需训练记忆简单地植入新兵成为可能。马尔科夫系统是第一个尝试这种方法的设施，它复制了老兵的记忆和经历，并将这些记忆和经历植入新兵的头脑中。
-			</Text>
-		</Row>
-
+			<Row Tag="TXT_KEY_BUILDING_MARKOV">
+				<Text>马尔科夫重叠心智</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_MARKOV_HELP">
+				<Text>全国所有城市训练的单位额外获得120点经验值。</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_MARKOV_QUOTE">
+				<Text>
+					[NEWLINE]"卓越是一门通过训练和习惯获得的艺术。我们之所以伟大，不是因为我们有美德或优秀，而是因为我们不断重复某一件事。实际上，卓越不是一种行为，而是一种习惯。"[NEWLINE]        ——亚里士多德[NEWLINE]
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_MARKOV_PEDIA">
+				<Text>
+					训练新兵服兵役一直以来既是一门艺术，又是一门科学，世界各地的各种军事院校和其他训练机构都在努力寻找最佳方法，为新兵做好服兵役的指导。然而，随着模因学、生物技术和神经接口的发展，通过利用老兵的记录记忆和经验，将所需训练记忆简单地植入新兵成为可能。马尔科夫系统是第一个尝试这种方法的设施，它复制了老兵的记忆和经历，并将这些记忆和经历植入新兵的头脑中。
+				</Text>
+			</Row>
 
 
 	
@@ -5798,9 +5791,9 @@
 		<Row Tag="TXT_KEY_WONDER_ARCHIMEDES_WONDER_QUOTE">
 			<Text>[NEWLINE][NEWLINE]“不要认为战场上存在公平或对你有什么优待。”[NEWLINE]        ——雷吉纳尔多·李奥纳多·佩德罗·玻利瓦尔·德·阿伦卡尔-阿拉里皮《现代军事原则》[NEWLINE]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_WONDER_ARCHIMEDES_WONDER_HELP">
-			<Text>建成后可在我方地盘内建造一个阿基米德杠杆。</Text>
-		</Row>
+			<Row Tag="TXT_KEY_WONDER_ARCHIMEDES_WONDER_HELP">
+				<Text>敌对军事单位在我方任意城市地块内移动时会消耗额外一点移动力，每回合受到10点伤害。</Text>
+			</Row>
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_BEACON">
@@ -9876,9 +9869,37 @@
 
 
 
+			<Replace Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP">
+				<Text>[ICON_BULLET]攻击时可在一定范围内附带核爆伤害（伤害数值等同于原子弹）。[NEWLINE][ICON_BULLET]攻击城市时摧毁目标城市60%的[COLOR_POSITIVE_TEXT]人口[ENDCOLOR]（如果目标城市拥有防空洞则为15%）[NEWLINE][ICON_BULLET]不会造成辐射。</Text>
+			</Replace>
 
-		
 
+
+			<Row Tag="TXT_KEY_BUILDING_DIABLO">
+				<Text>预知计划</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_DIABLO_PEDIA">
+				<Text>
+					除了战略规划和深奥艺术，预测未来还有几种不同的方法，在这些领域重叠的狭小地带，预知工程的种子诞生了。该计划可用来预测混沌系统的结果，由很多不同的理论组成，比如随机预测、模糊量子测距、分形塔罗以及谢尔宾斯基曼陀罗。类合成计算膜被特别委任执行第一次预知工程，其复杂的建造方法已是当时的极限。
+					[NEWLINE]预知工程后被证明在对指定地理空间内作战行动结果的预测惊人的准确，高精度地理记录密切配合威胁应对计算，以即时战斗数据的全面选择（从军队级后勤表到士兵步枪剩余的弹药量），该系统能够根据现有资源提供最优的选择。
+					[NEWLINE]当然，预知工程的优势在于记录的详尽。军事单位在威胁出现前就做出应对，潜在威胁经常在大量的因果分析后才能发现。士兵的个人周期记录显示其从怀疑预知工程转变为虔诚地信任“神圣之眼的深谋远虑”。
+				</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_DIABLO_QUOTE">
+				<Text>[NEWLINE]"睁开双眼，睁开双眼。专注前方，专注前方。"[NEWLINE]        ——卡维萨·塔库尔《出世经经典籍》[NEWLINE]</Text>
+			</Row>
+			<Row Tag="TXT_KEY_WONDER_DIABLO_HELP">
+				<Text>单位被攻击时，有33%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+			</Row>
+
+
+			<Row Tag="TXT_KEY_PROMOTION_DIABLO">
+				<Text>战场感知</Text>
+			</Row>
+
+			<Row Tag="TXT_KEY_PROMOTION_DIABLO_HELP">
+				<Text>单位被攻击时，有33%几率规避此次伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+			</Row>
 		</Language_zh_CN>
 
 

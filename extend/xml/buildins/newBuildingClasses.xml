@@ -305,19 +305,19 @@
 			<Description>TXT_KEY_BUILDING_ECITY</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_FW_GEOTHERMAL_PLANT</Type>
-			<DefaultBuilding>BUILDING_FW_GEOTHERMAL_PLANT</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT</Description>
+			<Type>BUILDINGCLASS_GEOTHERMAL_PLANT</Type>
+			<DefaultBuilding>BUILDING_GEOTHERMAL_PLANT</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GEOTHERMAL_PLANT</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_FW_SERVER_HUB</Type>
-			<DefaultBuilding>BUILDING_FW_SERVER_HUB</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_SERVER_HUB</Description>
+			<Type>BUILDINGCLASS_SERVER_HUB</Type>
+			<DefaultBuilding>BUILDING_SERVER_HUB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SERVER_HUB</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_FW_MYCOPROTEIN_VATS</Type>
-			<DefaultBuilding>BUILDING_FW_MYCOPROTEIN_VATS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS</Description>
+			<Type>BUILDINGCLASS_MYCOPROTEIN_VATS</Type>
+			<DefaultBuilding>BUILDING_MYCOPROTEIN_VATS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MYCOPROTEIN_VATS</Description>
 		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_VR_TRAINING</Type>
@@ -333,9 +333,9 @@
 		</Row>
 
 		<Row>
-			<Type>BUILDINGCLASS_FW_BIOMOD_TANK</Type>
-			<DefaultBuilding>BUILDING_FW_BIOMOD_TANK</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_BIOMOD_TANK</Description>
+			<Type>BUILDINGCLASS_BIOMOD_TANK</Type>
+			<DefaultBuilding>BUILDING_BIOMOD_TANK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BIOMOD_TANK</Description>
 		</Row>
 
 		<Row>
@@ -351,9 +351,9 @@
 			<Description>TXT_KEY_BUILDING_MATRIX</Description>
 		</Row>
 		<Row>
-			<Type>BUILDINGCLASS_FW_TELEPRESENCE_HUB</Type>
-			<DefaultBuilding>BUILDING_FW_TELEPRESENCE_HUB</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB</Description>
+			<Type>BUILDINGCLASS_TELEPRESENCE_HUB</Type>
+			<DefaultBuilding>BUILDING_TELEPRESENCE_HUB</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_TELEPRESENCE_HUB</Description>
 		</Row>
 		<Row>
 			<Type>BUILDINGCLASS_NAVAL_BASE</Type>
@@ -401,9 +401,9 @@
 		</Row>
 
 		<Row>
-			<Type>BUILDINGCLASS_FW_BIOFACTORY</Type>
-			<DefaultBuilding>BUILDING_FW_BIOFACTORY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_BIOFACTORY</Description>
+			<Type>BUILDINGCLASS_BIOFACTORY</Type>
+			<DefaultBuilding>BUILDING_BIOFACTORY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BIOFACTORY</Description>
 		</Row>
 
 		<Row>

@@ -4,7 +4,13 @@
 	
 	<BuildingClasses>
 
-
+		<!-- 时态演算 -->
+		<Row>
+			<Type>BUILDINGCLASS_DIABLO</Type>
+			<DefaultBuilding>BUILDING_DIABLO</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DIABLO</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
 		
 		<!--洛克斐尔-->
 		<Row>
@@ -323,9 +329,9 @@
 		<!-- 太阳神 -->
 
 		<Row>
-			<Type>BUILDINGCLASS_FW_HELIOS</Type>
-			<DefaultBuilding>BUILDING_FW_HELIOS</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_HELIOS</Description>
+			<Type>BUILDINGCLASS_HELIOS</Type>
+			<DefaultBuilding>BUILDING_HELIOS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_HELIOS</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -333,9 +339,9 @@
 
 		<!--月球基地 -->
 		<Row>
-			<Type>BUILDINGCLASS_FW_MOON_BASE</Type>
-			<DefaultBuilding>BUILDING_FW_MOON_BASE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_MOON_BASE</Description>
+			<Type>BUILDINGCLASS_MOON_BASE</Type>
+			<DefaultBuilding>BUILDING_MOON_BASE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MOON_BASE</Description>
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
 
@@ -344,9 +350,9 @@
 		<!-- 天网-->
 
 		<Row>
-			<Type>BUILDINGCLASS_FW_SKYNET</Type>
-			<DefaultBuilding>BUILDING_FW_SKYNET</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_SKYNET</Description>
+			<Type>BUILDINGCLASS_SKYNET</Type>
+			<DefaultBuilding>BUILDING_SKYNET</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SKYNET</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -355,9 +361,9 @@
 		<!-- 天空城-->
 
 		<Row>
-			<Type>BUILDINGCLASS_FW_SKYCITY</Type>
-			<DefaultBuilding>BUILDING_FW_SKYCITY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_SKYCITY</Description>
+			<Type>BUILDINGCLASS_SKYCITY</Type>
+			<DefaultBuilding>BUILDING_SKYCITY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SKYCITY</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -395,9 +401,9 @@
 
 
 		<Row>
-			<Type>BUILDINGCLASS_FW_JURASSIC_PARK</Type>
-			<DefaultBuilding>BUILDING_FW_JURASSIC_PARK</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_JURASSIC_PARK</Description>
+			<Type>BUILDINGCLASS_JURASSIC_PARK</Type>
+			<DefaultBuilding>BUILDING_JURASSIC_PARK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_JURASSIC_PARK</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -473,9 +479,9 @@
 
 		<!--终极塔-->
 		<Row>
-			<Type>BUILDINGCLASS_FW_ULTIMATOWER</Type>
-			<DefaultBuilding>BUILDING_FW_ULTIMATOWER</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_ULTIMATOWER</Description>
+			<Type>BUILDINGCLASS_ULTIMATOWER</Type>
+			<DefaultBuilding>BUILDING_ULTIMATOWER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ULTIMATOWER</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -507,9 +513,9 @@
 
 		<!--马尔可夫-->
 		<Row>
-			<Type>BUILDINGCLASS_FW_MARKOV</Type>
-			<DefaultBuilding>BUILDING_FW_MARKOV</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_MARKOV</Description>
+			<Type>BUILDINGCLASS_MARKOV</Type>
+			<DefaultBuilding>BUILDING_MARKOV</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_MARKOV</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -2378,7 +2384,7 @@
 			<Civilopedia>TXT_KEY_WONDER_ARCHIMEDES_CIVILOPEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_ARCHIMEDES_WONDER_QUOTE</Quote>
 			<NukeImmune>true</NukeImmune>
-			<Cost>50000</Cost>
+			<Cost>26000</Cost>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
@@ -2387,19 +2393,23 @@
 			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
 			<PortraitIndex>75</PortraitIndex>
 			<WonderSplashImage>Lift_Splash.dds</WonderSplashImage>
-		</Row>
+			<WaterTileTurnDamageGlobal>10</WaterTileTurnDamageGlobal>
+			<WaterTileMovementReduceGlobal>1</WaterTileMovementReduceGlobal>
+			<LandTileTurnDamageGlobal>10</LandTileTurnDamageGlobal>
+			<LandTileMovementReduceGlobal>1</LandTileMovementReduceGlobal>		
+	</Row>
 
 
 
 
 		<!--异种研究所-->
 		<Row>
-			<Type>BUILDING_FW_JURASSIC_PARK</Type>
-			<BuildingClass>BUILDINGCLASS_FW_JURASSIC_PARK</BuildingClass>
-			<Description>TXT_KEY_BUILDING_FW_JURASSIC_PARK</Description>
-			<Help>TXT_KEY_WONDER_FW_JURASSIC_PARK_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_FW_JURASSIC_PARK_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_FW_JURASSIC_PARK_QUOTE</Quote>
+			<Type>BUILDING_JURASSIC_PARK</Type>
+			<BuildingClass>BUILDINGCLASS_JURASSIC_PARK</BuildingClass>
+			<Description>TXT_KEY_BUILDING_JURASSIC_PARK</Description>
+			<Help>TXT_KEY_WONDER_JURASSIC_PARK_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_JURASSIC_PARK_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_JURASSIC_PARK_QUOTE</Quote>
 			<Cost>17000</Cost>
 			<PrereqTech>TECH_MASS</PrereqTech>
 			<UnmoddedHappiness>20</UnmoddedHappiness>
@@ -2558,12 +2568,12 @@
 
 
 		<Row>
-			<Type>BUILDING_FW_HELIOS</Type>
-			<BuildingClass>BUILDINGCLASS_FW_HELIOS</BuildingClass>
-			<Description>TXT_KEY_BUILDING_FW_HELIOS</Description>
-			<Help>TXT_KEY_WONDER_FW_HELIOS_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_FW_HELIOS_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_FW_HELIOS_QUOTE</Quote>
+			<Type>BUILDING_HELIOS</Type>
+			<BuildingClass>BUILDINGCLASS_HELIOS</BuildingClass>
+			<Description>TXT_KEY_BUILDING_HELIOS</Description>
+			<Help>TXT_KEY_WONDER_HELIOS_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_HELIOS_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_HELIOS_QUOTE</Quote>
 			<Cost>12000</Cost>
 			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
 			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
@@ -2583,14 +2593,14 @@
 
 
 		<Row>
-			<Type>BUILDING_FW_MOON_BASE</Type>
-			<BuildingClass>BUILDINGCLASS_FW_MOON_BASE</BuildingClass>
+			<Type>BUILDING_MOON_BASE</Type>
+			<BuildingClass>BUILDINGCLASS_MOON_BASE</BuildingClass>
 			<Cost>3000</Cost>
 			<PrereqTech>TECH_EARTH</PrereqTech>
 			<NumCityCostMod>25</NumCityCostMod>
-			<Help>TXT_KEY_BUILDING_FW_MOON_BASE_HELP</Help>
-			<Description>TXT_KEY_BUILDING_FW_MOON_BASE_DESC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FW_MOON_BASE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MOON_BASE_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MOON_BASE_DESC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MOON_BASE_PEDIA</Civilopedia>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>3</SpecialistCount>
 			<MinAreaSize>-1</MinAreaSize>
@@ -2603,16 +2613,16 @@
 
 
 		<Row>
-			<Type>BUILDING_FW_SKYNET</Type>
-			<BuildingClass>BUILDINGCLASS_FW_SKYNET</BuildingClass>
-			<Help>TXT_KEY_BUILDING_FW_SKYNET_HELP</Help>
-			<Description>TXT_KEY_BUILDING_FW_SKYNET_DESC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FW_SKYNET_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_FW_SKYNET_QUOTE</Quote>
+			<Type>BUILDING_SKYNET</Type>
+			<BuildingClass>BUILDINGCLASS_SKYNET</BuildingClass>
+			<Help>TXT_KEY_BUILDING_SKYNET_HELP</Help>
+			<Description>TXT_KEY_BUILDING_SKYNET_DESC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SKYNET_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SKYNET_QUOTE</Quote>
 			<Cost>13000</Cost>
 			<Happiness>-20</Happiness>
 			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
-			<FreePromotion>PROMOTION_FW_SKYNET_LINK</FreePromotion>
+			<FreePromotion>PROMOTION_SKYNET_LINK</FreePromotion>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
@@ -2649,12 +2659,12 @@
 		</Row>
 		
 		<Row>
-			<Type>BUILDING_FW_SKYCITY</Type>
-			<BuildingClass>BUILDINGCLASS_FW_SKYCITY</BuildingClass>
-			<Description>TXT_KEY_BUILDING_FW_SKYCITY</Description>
-			<Help>TXT_KEY_WONDER_FW_SKYCITY_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_FW_SKYCITY_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_FW_SKYCITY_QUOTE</Quote>
+			<Type>BUILDING_SKYCITY</Type>
+			<BuildingClass>BUILDINGCLASS_SKYCITY</BuildingClass>
+			<Description>TXT_KEY_BUILDING_SKYCITY</Description>
+			<Help>TXT_KEY_WONDER_SKYCITY_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_SKYCITY_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_SKYCITY_QUOTE</Quote>
 			<Cost>12000</Cost>
 			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -2701,12 +2711,12 @@
 
 		<!--终极塔-->
 		<Row>
-			<Type>BUILDING_FW_ULTIMATOWER</Type>
-			<BuildingClass>BUILDINGCLASS_FW_ULTIMATOWER</BuildingClass>
-			<Description>TXT_KEY_BUILDING_FW_ULTIMATOWER</Description>
-			<Help>TXT_KEY_WONDER_FW_ULTIMATOWER_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_FW_ULTIMATOWER_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_FW_ULTIMATOWER_QUOTE</Quote>
+			<Type>BUILDING_ULTIMATOWER</Type>
+			<BuildingClass>BUILDINGCLASS_ULTIMATOWER</BuildingClass>
+			<Description>TXT_KEY_BUILDING_ULTIMATOWER</Description>
+			<Help>TXT_KEY_WONDER_ULTIMATOWER_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_ULTIMATOWER_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ULTIMATOWER_QUOTE</Quote>
 			<Cost>20000</Cost>
 			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 			<GlobalPopulationChange>5</GlobalPopulationChange>
@@ -2797,14 +2807,39 @@
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
 
+
+
+		<!--时态演算-->
+
+		<Row>
+			<Type>BUILDING_DIABLO</Type>
+			<BuildingClass>BUILDINGCLASS_DIABLO</BuildingClass>
+			<Description>TXT_KEY_BUILDING_DIABLO</Description>
+			<Help>TXT_KEY_WONDER_DIABLO_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_DIABLO_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_DIABLO_QUOTE</Quote>
+			<Cost>50000</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PrereqTech>TECH_SDI</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<FreePromotion>PROMOTION_DIABLO</FreePromotion>
+			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>28</PortraitIndex>
+			<WonderSplashImage>DIABLO.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		
 		<!-- 马尔科夫系统 -->
 		<Row>
-			<Type>BUILDING_FW_MARKOV</Type>
-			<BuildingClass>BUILDINGCLASS_FW_MARKOV</BuildingClass>
-			<Description>TXT_KEY_BUILDING_FW_MARKOV</Description>
-			<Help>TXT_KEY_WONDER_FW_MARKOV_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_FW_MARKOV_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_FW_MARKOV_QUOTE</Quote>
+			<Type>BUILDING_MARKOV</Type>
+			<BuildingClass>BUILDINGCLASS_MARKOV</BuildingClass>
+			<Description>TXT_KEY_BUILDING_MARKOV</Description>
+			<Help>TXT_KEY_WONDER_MARKOV_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_MARKOV_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_MARKOV_QUOTE</Quote>
 			<Cost>18000</Cost>
 			<Happiness>-50</Happiness>
 			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
@@ -3303,12 +3338,12 @@
 
 		<!--异种研究所-->
 		<Row>
-			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>25</Cost>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>10</Cost>
 		</Row>
@@ -3400,30 +3435,50 @@
 		
 
 		<Row>
-			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<BuildingType>BUILDING_MARKOV</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>20</Cost>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<BuildingType>BUILDING_MARKOV</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>35</Cost>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<BuildingType>BUILDING_MARKOV</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Cost>8</Cost>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>28</Cost>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>35</Cost>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>8</Cost>
 		</Row>
 		
+		
 
 		<Row>
-			<BuildingType>BUILDING_FW_ULTIMATOWER</BuildingType>
+			<BuildingType>BUILDING_ULTIMATOWER</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>18</Cost>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_ULTIMATOWER</BuildingType>
+			<BuildingType>BUILDING_ULTIMATOWER</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>15</Cost>
 		</Row>
@@ -3506,17 +3561,17 @@
 		
 		
 		<Row>
-			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>8</Cost>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>10</Cost>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>10</Cost>
 		</Row>
@@ -3524,19 +3579,19 @@
 		
 		
 		<Row>
-			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<BuildingType>BUILDING_SKYNET</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>25</Cost>
 		</Row>
 		
 		<Row>
-			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<BuildingType>BUILDING_SKYNET</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>25</Cost>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<BuildingType>BUILDING_SKYNET</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>10</Cost>
 		</Row>
@@ -3545,7 +3600,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_HELIOS</BuildingType>
+			<BuildingType>BUILDING_HELIOS</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>5</Cost>
 		</Row>
@@ -3988,7 +4043,7 @@
 
 		<Row>
 			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>3</YieldChange>
 		</Row>
@@ -4070,7 +4125,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_HELIOS</BuildingType>
+			<BuildingType>BUILDING_HELIOS</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SOLAR_PLANT</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldChange>10</YieldChange>
@@ -4079,13 +4134,13 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<YieldChange>4</YieldChange>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>4</YieldChange>
@@ -4094,19 +4149,19 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_THORIUM_REACTOR</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldChange>6</YieldChange>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_THORIUM_REACTOR</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldChange>6</YieldChange>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_THORIUM_REACTOR</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>20</YieldChange>
@@ -4115,19 +4170,19 @@
 		
 
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<YieldChange>6</YieldChange>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldChange>6</YieldChange>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_NUCLEAR_PLANT</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>20</YieldChange>
@@ -4226,7 +4281,7 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_SKYCITY</BuildingType>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
@@ -4234,7 +4289,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_THEATRE</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
@@ -4246,7 +4301,7 @@
 
 	<Building_ResourceQuantity>
 		<Row>
-			<BuildingType>BUILDING_FW_HELIOS</BuildingType>
+			<BuildingType>BUILDING_HELIOS</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Quantity>30</Quantity>
 		</Row>
@@ -4418,12 +4473,12 @@
 	    </Row>
 		
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Quantity>50</Quantity>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Quantity>50</Quantity>
 		</Row>
@@ -4570,7 +4625,7 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-500</Yield>
 		</Row>
@@ -4596,7 +4651,7 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-500</Yield>
 		</Row>
@@ -4604,7 +4659,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<BuildingType>BUILDING_SKYNET</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-500</Yield>
 		</Row>
@@ -4617,11 +4672,15 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<BuildingType>BUILDING_MARKOV</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-500</Yield>
 		</Row>
-
+		<Row>
+			<BuildingType>BUILDING_DIABLO</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-500</Yield>
+		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_REGISTAN</BuildingType>
@@ -4788,13 +4847,13 @@
 		
 		
 		<Row>
-			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>30</Yield>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>5</Yield>
 		</Row>
@@ -4871,7 +4930,7 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_JURASSIC_PARK</BuildingType>
+			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
 			<YieldType>YIELD_TOURISM</YieldType>
 			<Yield>2500</Yield>
 		</Row>
@@ -4932,7 +4991,7 @@
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_ULTIMATOWER</BuildingType>
+			<BuildingType>BUILDING_ULTIMATOWER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 		<Row>
@@ -4940,7 +4999,7 @@
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_SKYNET</BuildingType>
+			<BuildingType>BUILDING_SKYNET</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 		<Row>
@@ -4964,8 +5023,8 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 
@@ -4977,7 +5036,7 @@
 		
 		
 		<Row>
-			<BuildingType>BUILDING_FW_MARKOV</BuildingType>
+			<BuildingType>BUILDING_MARKOV</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 		
@@ -5018,8 +5077,8 @@
 	<Building_PrereqBuildingClasses>
 		
         <Row>
-			<BuildingType>BUILDING_FW_MOON_BASE</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingType>BUILDING_MOON_BASE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 			<NumBuildingNeeded>-1</NumBuildingNeeded>
 		</Row>
 

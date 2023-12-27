@@ -5,7 +5,8 @@
 	<UnitPromotions>
 
 		<Delete Type="PROMOTION_INSTA_HEAL"/>
-
+		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
+		
 		<Update>
 			<Set ShowInUnitPanel="0"/>
 			<Where Type="PROMOTION_FIRST_STRIKE"/>
@@ -38,7 +39,19 @@
 			<PediaEntry>TXT_KEY_PROMOTION_HEAL_INSTANTLY</PediaEntry>
 		</Row>
 
-
+		<Row>
+			<Type>PROMOTION_NUCLEAR_ARTILLERY</Type>
+			<Description>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</Description>
+			<Help>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CanDoNukeDamage>true</CanDoNukeDamage>
+			<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
+		</Row>
 	</UnitPromotions>
 
 
@@ -1263,7 +1276,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_ROBORT_COMBAT</PediaEntry>
 			<CityAttack>100</CityAttack>
 			<CannotBeChosen>true</CannotBeChosen>
-			<ImmuePlague>1</ImmuePlague>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 		</Row>
 
@@ -1891,7 +1903,6 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_HEAVY_ROBORT</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<ImmuePlague>1</ImmuePlague>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 			<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
 		</Row>
@@ -2269,6 +2280,7 @@
 			<InterceptChanceChange>100</InterceptChanceChange>
 			<IconAtlas>promoVP_atlas_02</IconAtlas>
 			<NumInterceptionChange>1</NumInterceptionChange>
+			<AirInterceptRangeChange>2</AirInterceptRangeChange>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTIAIRX</PediaEntry>
 		</Row>
@@ -4109,7 +4121,6 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DOCTOR</PediaEntry>
 			<ShowInPedia>0</ShowInPedia>
-			<ImmuePlague>1</ImmuePlague>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
@@ -4124,7 +4135,6 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DOCTOR</PediaEntry>
 			<ShowInPedia>0</ShowInPedia>
-			<ImmuePlague>1</ImmuePlague>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
@@ -4550,9 +4560,9 @@
 
 
 		<Row>
-			<Type>PROMOTION_FW_SKYNET_LINK</Type>
-			<Description>TXT_KEY_PROMOTION_FW_SKYNET_LINK</Description>
-			<Help>TXT_KEY_PROMOTION_FW_SKYNET_LINK_HELP</Help>
+			<Type>PROMOTION_SKYNET_LINK</Type>
+			<Description>TXT_KEY_PROMOTION_SKYNET_LINK</Description>
+			<Help>TXT_KEY_PROMOTION_SKYNET_LINK_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
 			<AttackMod>15</AttackMod>
@@ -4560,10 +4570,22 @@
 			<PortraitIndex>20</PortraitIndex>
 			<IconAtlas>VALERY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FW_SKYNET_LINK</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_SKYNET_LINK</PediaEntry>
 		</Row>
 
 
+		<Row>
+			<Type>PROMOTION_DIABLO</Type>
+			<Description>TXT_KEY_PROMOTION_DIABLO</Description>
+			<Help>TXT_KEY_PROMOTION_DIABLO_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<IgnoreDamageChance>33</IgnoreDamageChance>
+			<PortraitIndex>59</PortraitIndex>
+			<CannotBeChosen>true</CannotBeChosen>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_DIABLO</PediaEntry>
+		</Row>
 
 		<!--*************特殊效果**************-->
 

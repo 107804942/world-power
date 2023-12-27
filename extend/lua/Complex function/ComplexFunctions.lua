@@ -1180,7 +1180,7 @@ function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
   return false
   end
 
-  if pUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR then
+  if pUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR and not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SPACESHIP"].ID) then
   if IsNotEnemySpaceShipPlot(pUnit,plot) then
 	 return true
   end

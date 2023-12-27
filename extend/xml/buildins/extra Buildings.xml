@@ -1424,16 +1424,15 @@
 
 			<!--星际基地-->
 			<Row>
-				<Type>BUILDING_FW_BIOMOD_TANK</Type>
-				<BuildingClass>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClass>
+				<Type>BUILDING_BIOMOD_TANK</Type>
+				<BuildingClass>BUILDINGCLASS_BIOMOD_TANK</BuildingClass>
 				<Cost>3100</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
-				<Help>TXT_KEY_BUILDING_FW_BIOMOD_TANK_HELP</Help>
-				<Description>TXT_KEY_BUILDING_FW_BIOMOD_TANK_DESC</Description>
-				<Civilopedia>TXT_KEY_BUILDING_FW_BIOMOD_TANK_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_BIOMOD_TANK_HELP</Help>
+				<Description>TXT_KEY_BUILDING_BIOMOD_TANK_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_BIOMOD_TANK_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>ART_DEF_BUILDING_FW_BIOMOD_TANK</ArtDefineTag>
 				<MinAreaSize>-1</MinAreaSize>
 				<AllowsRangeStrike>true</AllowsRangeStrike>
 				<NeverCapture>true</NeverCapture>
@@ -1469,15 +1468,14 @@
 			</Row>
 			<!--超级计算机中心-->
 			<Row>
-				<Type>BUILDING_FW_SERVER_HUB</Type>
-				<BuildingClass>BUILDINGCLASS_FW_SERVER_HUB</BuildingClass>
+				<Type>BUILDING_SERVER_HUB</Type>
+				<BuildingClass>BUILDINGCLASS_SERVER_HUB</BuildingClass>
 				<Cost>2500</Cost>
 				<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
-				<Description>TXT_KEY_BUILDING_FW_SERVER_HUB_DESC</Description>
-				<Civilopedia>TXT_KEY_BUILDING_FW_SERVER_HUB_PEDIA</Civilopedia>
-				<Help>TXT_KEY_BUILDING_FW_SERVER_HUB_HELP</Help>
+				<Description>TXT_KEY_BUILDING_SERVER_HUB_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_SERVER_HUB_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_SERVER_HUB_HELP</Help>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
 				<MinAreaSize>-1</MinAreaSize>
 				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 				<SpecialistCount>2</SpecialistCount>
@@ -1490,14 +1488,14 @@
 
 			<!--生物工厂-->
 			<Row>
-				<Type>BUILDING_FW_MYCOPROTEIN_VATS</Type>
-				<BuildingClass>BUILDINGCLASS_FW_MYCOPROTEIN_VATS</BuildingClass>
+				<Type>BUILDING_MYCOPROTEIN_VATS</Type>
+				<BuildingClass>BUILDINGCLASS_MYCOPROTEIN_VATS</BuildingClass>
 				<Cost>2500</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
-				<Help>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_HELP</Help>
-				<Description>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_DESC</Description>
-				<Civilopedia>TXT_KEY_BUILDING_FW_MYCOPROTEIN_VATS_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_MYCOPROTEIN_VATS_HELP</Help>
+				<Description>TXT_KEY_BUILDING_MYCOPROTEIN_VATS_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_MYCOPROTEIN_VATS_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
 				<MinAreaSize>-1</MinAreaSize>
@@ -1510,16 +1508,15 @@
 
 			<!--地热发电厂-->
 			<Row>
-				<Type>BUILDING_FW_GEOTHERMAL_PLANT</Type>
-				<BuildingClass>BUILDINGCLASS_FW_GEOTHERMAL_PLANT</BuildingClass>
+				<Type>BUILDING_GEOTHERMAL_PLANT</Type>
+				<BuildingClass>BUILDINGCLASS_GEOTHERMAL_PLANT</BuildingClass>
 				<Cost>3100</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
-				<Help>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_HELP</Help>
-				<Description>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_DESC</Description>
-				<Civilopedia>TXT_KEY_BUILDING_FW_GEOTHERMAL_PLANT_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_GEOTHERMAL_PLANT_HELP</Help>
+				<Description>TXT_KEY_BUILDING_GEOTHERMAL_PLANT_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_GEOTHERMAL_PLANT_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>ART_DEF_BUILDING_FW_HYDRO_PLANT</ArtDefineTag>
 				<NearbyMountainRequired>true</NearbyMountainRequired>
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>66</ConquestProb>
@@ -1534,16 +1531,15 @@
 
 			<!--电子人工厂-->
 			<Row>
-				<Type>BUILDING_FW_TELEPRESENCE_HUB</Type>
-				<BuildingClass>BUILDINGCLASS_FW_TELEPRESENCE_HUB</BuildingClass>
+				<Type>BUILDING_TELEPRESENCE_HUB</Type>
+				<BuildingClass>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClass>
 				<Cost>3400</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
-				<Help>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_HELP</Help>
-				<Description>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_DESC</Description>
-				<Civilopedia>TXT_KEY_BUILDING_FW_TELEPRESENCE_HUB_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_TELEPRESENCE_HUB_HELP</Help>
+				<Description>TXT_KEY_BUILDING_TELEPRESENCE_HUB_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_TELEPRESENCE_HUB_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>75</ConquestProb>
 				<HurryCostModifier>75</HurryCostModifier>
@@ -1845,14 +1841,14 @@
 
 			<!---生态学工厂-->
 		<Row>
-			<Type>BUILDING_FW_BIOFACTORY</Type>
-			<BuildingClass>BUILDINGCLASS_FW_BIOFACTORY</BuildingClass>
+			<Type>BUILDING_BIOFACTORY</Type>
+			<BuildingClass>BUILDINGCLASS_BIOFACTORY</BuildingClass>
 			<Cost>3300</Cost>
 			<GoldMaintenance>50</GoldMaintenance>
 			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
-			<Help>TXT_KEY_BUILDING_FW_BIOFACTORY_HELP</Help>
-			<Description>TXT_KEY_BUILDING_FW_BIOFACTORY_DESC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FW_BIOFACTORY_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_BIOFACTORY_HELP</Help>
+			<Description>TXT_KEY_BUILDING_BIOFACTORY_DESC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BIOFACTORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 			<MinAreaSize>-1</MinAreaSize>
 			<NukeImmune>true</NukeImmune>
@@ -1992,7 +1988,7 @@
 			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingType>BUILDING_MYCOPROTEIN_VATS</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
 		</Row>
 
@@ -2014,7 +2010,7 @@
 
 		<Row>
 			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_PLANET_MINE</BuildingType>
@@ -2058,7 +2054,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
 		</Row>
 
@@ -2090,7 +2086,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<BuildingType>BUILDING_BIOMOD_TANK</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 

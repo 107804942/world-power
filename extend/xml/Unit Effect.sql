@@ -89,7 +89,10 @@ INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_LIBERATION_STRENGTH', Type FROM UnitCombatInfos;
 
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
-SELECT  'PROMOTION_FW_SKYNET_LINK', Type FROM UnitCombatInfos;
+SELECT  'PROMOTION_SKYNET_LINK', Type FROM UnitCombatInfos;
+
+INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
+SELECT  'PROMOTION_DIABLO', Type FROM UnitCombatInfos;
 
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_GOLDEN_BUFF', Type FROM UnitCombatInfos;
@@ -280,7 +283,7 @@ UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusR
 
 ---天网对机器人
 INSERT  INTO UnitPromotions_PromotionModifiers (PromotionType,OtherPromotionType ,Modifier)
-VALUES ('PROMOTION_FW_SKYNET_LINK','PROMOTION_ROBORT_COMBAT',25);
+VALUES ('PROMOTION_SKYNET_LINK','PROMOTION_ROBORT_COMBAT',25);
 
 ---重型机甲对机器人
 INSERT  INTO UnitPromotions_PromotionModifiers (PromotionType,OtherPromotionType ,Modifier)

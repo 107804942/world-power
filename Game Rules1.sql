@@ -200,3 +200,57 @@ SELECT 'TECH_SATELLITES',					1 UNION ALL
 SELECT 'TECH_ROBOTICS',						1 UNION ALL
 SELECT 'TECH_NANOTECHNOLOGY',				1;
 
+<!--
+	Very Important: If you change this at all you will need to change
+	NUM_INVISIBLE_TYPES in CvPlot and recompile (this was done for memory allocation efficiency)
+	-->
+
+	<!-- Table definition -->
+    <Table name="InvisibleInfos">
+        <Column name="ID" type="integer" primarykey="true" autoincrement="true" />
+        <Column name="Type" type="text" notnull="true" unique="true" />
+        <Column name="Description" type="text" />
+    </Table>
+
+    <!-- Table data -->
+    <InvisibleInfos>
+        <Row>
+            <ID>0</ID>
+            <Type>INVISIBLE_SUBMARINE</Type>
+            <Description>TXT_KEY_INVISIBLE_SUBMARINE</Description>
+        </Row>
+    </InvisibleInfos>
+
+
+	<!--*********************新建筑关联方式 ********************-->
+
+	<!--<Building_ClassesNeededInCityOR>
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_MATRIX</BuildingClassType>
+		</Row>
+
+
+
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WATER_TREATMENT_FACTORY</BuildingClassType>
+		</Row>
+
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_SMALL_MARKET</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCityOR>-->

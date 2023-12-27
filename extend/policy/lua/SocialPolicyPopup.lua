@@ -870,7 +870,7 @@ function TenetSelect(ideologyButtonNumber)
 					
 				entry.TenetButton:SetSizeVal(tbW, newHeight);
 				entry.Box:SetSizeVal(tbW, newHeight);
-					
+				entry.BounceGrid:SetSizeVal(tbW, newHeight+6);	
 				entry.TenetButton:ReprocessAnchoring();
 					
 				entry.TenetButton:RegisterCallback(Mouse.eLClick, function()

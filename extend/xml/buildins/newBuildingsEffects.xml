@@ -20,7 +20,7 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 		</Row>
 
@@ -65,44 +65,6 @@
 	
 
 
-	<!--*********************新建筑关联方式 ********************-->
-
-	<!--<Building_ClassesNeededInCityOR>
-		<Row>
-			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_FW_BIOMOD_TANK</BuildingClassType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_FORCE_FIELD</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_MATRIX</BuildingClassType>
-		</Row>
-
-
-
-		<Row>
-			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_WATER_TREATMENT_FACTORY</BuildingClassType>
-		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_SMALL_MARKET</BuildingClassType>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_HEALTH_BUREAU</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
-		</Row>
-	</Building_ClassesNeededInCityOR>-->
-	
-	<!--*********************end ********************-->
-	
-	
-	
-	
 
 	<!--*********************自然地型产出 ********************-->
 	<Building_FeatureYieldChanges>
@@ -327,7 +289,7 @@
 		
 		
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<DomainType>DOMAIN_LAND</DomainType>
 			<Modifier>15</Modifier>
 		</Row>
@@ -1150,7 +1112,7 @@
 	<Building_LakePlotYieldChanges>
 		<!--生物工厂-->
 		<Row>
-			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingType>BUILDING_MYCOPROTEIN_VATS</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -1302,7 +1264,7 @@
 		<!--电子人工厂-->
 		
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>2</Cost>
 		</Row>
@@ -1381,26 +1343,26 @@
 
 		<!--地热发电厂-->
 		<Row>
-			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<BuildingType>BUILDING_GEOTHERMAL_PLANT</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>5</Cost>
 		</Row>
 
 		<!--超级计算机中心-->
 		<Row>
-			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<BuildingType>BUILDING_SERVER_HUB</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>5</Cost>
 		</Row>
 		<!--星际基地-->
 		<Row>
-			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<BuildingType>BUILDING_BIOMOD_TANK</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>1</Cost>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<BuildingType>BUILDING_BIOMOD_TANK</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>7</Cost>
 		</Row>
@@ -1419,7 +1381,7 @@
 		
 		<!--生物工厂-->
 		<Row>
-			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingType>BUILDING_MYCOPROTEIN_VATS</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>5</Cost>
 		</Row>
@@ -1446,7 +1408,7 @@
 
 		<!--电子人工厂-->
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>5</Cost>
 		</Row>
@@ -1642,13 +1604,13 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
@@ -2300,7 +2262,7 @@
 			<Flavor>50</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
@@ -2345,19 +2307,19 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<BuildingType>BUILDING_GEOTHERMAL_PLANT</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>110</Flavor>
 		</Row>
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<BuildingType>BUILDING_SERVER_HUB</BuildingType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>180</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<BuildingType>BUILDING_SERVER_HUB</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>180</Flavor>
 		</Row>
@@ -2367,12 +2329,12 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingType>BUILDING_MYCOPROTEIN_VATS</BuildingType>
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>155</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingType>BUILDING_MYCOPROTEIN_VATS</BuildingType>
 			<FlavorType>FLAVOR_EXPANSION</FlavorType>
 			<Flavor>155</Flavor>
 		</Row>
@@ -2406,30 +2368,30 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<BuildingType>BUILDING_BIOMOD_TANK</BuildingType>
 			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
 			<Flavor>120</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<BuildingType>BUILDING_BIOMOD_TANK</BuildingType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOMOD_TANK</BuildingType>
+			<BuildingType>BUILDING_BIOMOD_TANK</BuildingType>
 			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
 			<Flavor>60</Flavor>
 		</Row>
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>200</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
@@ -2609,7 +2571,7 @@
 		</Row>
 		
 		<Row>
-			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<BuildingType>BUILDING_SERVER_HUB</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>25</Yield>
 		</Row>
@@ -2652,7 +2614,7 @@
 		
 
 		<Row>
-			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<BuildingType>BUILDING_SERVER_HUB</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-25</Yield>
 		</Row>
@@ -2666,7 +2628,7 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingType>BUILDING_MYCOPROTEIN_VATS</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>25</Yield>
 		</Row>
@@ -2680,7 +2642,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<BuildingType>BUILDING_GEOTHERMAL_PLANT</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-25</Yield>
 		</Row>
@@ -2869,7 +2831,7 @@
 
 		<!--地热发电厂-->
 		<Row>
-		<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+		<BuildingType>BUILDING_GEOTHERMAL_PLANT</BuildingType>
 		<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 		<Quantity>30</Quantity>
 	    </Row>
@@ -3051,14 +3013,14 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_TELEPRESENCE_HUB</BuildingType>
+			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>5</Yield>
 		</Row>
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_MYCOPROTEIN_VATS</BuildingType>
+			<BuildingType>BUILDING_MYCOPROTEIN_VATS</BuildingType>
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>8</Yield>
 		</Row>
@@ -3071,7 +3033,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<BuildingType>BUILDING_GEOTHERMAL_PLANT</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>10</Yield>
 		</Row>
@@ -3079,7 +3041,7 @@
 
 	
 		<Row>
-			<BuildingType>BUILDING_FW_SERVER_HUB</BuildingType>
+			<BuildingType>BUILDING_SERVER_HUB</BuildingType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>10</Yield>
 		</Row>
@@ -3140,7 +3102,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>10</Yield>
 		</Row>
@@ -3186,7 +3148,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_GEOTHERMAL_PLANT</BuildingType>
+			<BuildingType>BUILDING_GEOTHERMAL_PLANT</BuildingType>
 			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>4</Yield>
@@ -3194,20 +3156,20 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<TerrainType>TERRAIN_GRASS</TerrainType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<TerrainType>TERRAIN_PLAINS</TerrainType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_BIOFACTORY</BuildingType>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>2</Yield>
