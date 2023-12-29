@@ -42,6 +42,7 @@ function OnAdvanced()
     Controls.SelectGameSpeed:SetHide( true );
     Controls.SelectMapType:SetHide( true );
     Controls.SelectMapSize:SetHide( true );
+	Controls.SPHelpFrame:SetHide( true );
 end
 Controls.AdvancedButton:RegisterCallback( Mouse.eLClick, OnAdvanced );
 
@@ -131,6 +132,7 @@ function OnCivilization()
     Controls.SelectMapType:SetHide( true );
     Controls.SelectMapSize:SetHide( true );
     Controls.LargeMapImage:UnloadTexture();
+	Controls.SPHelpFrame:SetHide( true );
 end
 Controls.CivilizationButton:RegisterCallback( Mouse.eLClick, OnCivilization );
 
@@ -579,11 +581,17 @@ function IsWBMap(file)
 	return Path.UsesExtension(file,".Civ5Map"); 
 end
 ----------------------------------------------------------------        
-----------------------------------------------------------------        
+----------------------------------------------------------------   
+local iNumHelp = 0;
+for row in DB.Query("SELECT COUNT(*) AS COUNT FROM Language_ZH_HANT_HK WHERE Tag LIKE 'TXT_KEY_SP_SETUP_SCREEN_HELP_%';") do 	
+	iNumHelp = row.COUNT
+end
 function ShowHideHandler( isHide, isInit )
 	if ( isInit == true) then
 		SetSPAtlas( string.format("SP_Atlas_%d.dds", math.random(0, 18)) );
 		Controls.SPLogo:SetTexture( string.format("SP_Logo_%d.dds", math.random(2)) );
+		Controls.SPHelpFrame:SetHide( false );
+		Controls.SPHelpLabel:SetText(Locale.ConvertTextKey( string.format("TXT_KEY_SP_SETUP_SCREEN_HELP_%d", math.random(iNumHelp)) ));
 	else
 		Controls.Timer:Stop();
 		if( not isHide ) then
@@ -597,6 +605,8 @@ function ShowHideHandler( isHide, isInit )
 			Controls.SelectMapSize:SetHide( true );
 			Controls.SelectDifficulty:SetHide( true );
 			Controls.SelectGameSpeed:SetHide( true );
+			Controls.SPHelpFrame:SetHide( false );
+			Controls.SPHelpLabel:SetText(Locale.ConvertTextKey( string.format("TXT_KEY_SP_SETUP_SCREEN_HELP_%d", math.random(iNumHelp)) ));
 		end
 	end
 	

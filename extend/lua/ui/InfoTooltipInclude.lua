@@ -1603,6 +1603,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	if tip ~= "" then
 		insert( tips, L"TXT_KEY_SV_ICONS_GLOBAL_SP" .. ":" .. tip )
 	end
+	-- Local Total Yields enhanced by Building
+	tip = GetYieldStringSpecial( "Yield", "%s %+i%%%s", GameInfo.Building_YieldMultiplier( thisBuildingType ) )
+	if tip ~= "" then
+		insert( tips, L"TXT_KEY_SV_ICONS_LOCAL_SP" .." ".. L"TXT_KEY_YIELD_MULTIPLIER" .. ":" .. tip )
+	end
 
 
 	--新增全局杰作
@@ -2198,6 +2203,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	if building.AnyWater==1 then  --新增
 		insert( terrains, L"TXT_KEY_BUILDING_NEED_ANY_WATER" )
+	end
+	if building.RiverOrCoastal==1 then
+		insert( terrains, L"TXT_KEY_BUILDING_NEED_RIVER_OR_COASTAL" )
 	end
 
 	if building.NearbyMountainRequired then
