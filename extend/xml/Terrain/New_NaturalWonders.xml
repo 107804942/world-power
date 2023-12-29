@@ -621,7 +621,7 @@
 		</Row>
 
 
-		<Row>
+		<!--<Row>
 			<Type>FEATURE_VALLEY_B</Type>
 			<Description>TXT_KEY_FEATURE_VALLEY</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_VALLEY_TEXT</Civilopedia>
@@ -639,7 +639,7 @@
 			<InBorderHappiness>7</InBorderHappiness>
 			<PortraitIndex>84</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
+		</Row>-->
 		
 	</Features>
 
@@ -775,11 +775,11 @@
 		</Row>
 
 
-		<Row>
+		<!--<Row>
 			<NaturalWonderType>FEATURE_VALLEY_B</NaturalWonderType>
 			<OccurrenceFrequency>0</OccurrenceFrequency>
 			<EligibilityMethodNumber>100</EligibilityMethodNumber>
-		</Row>
+		</Row>-->
 		
 		
 		

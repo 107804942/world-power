@@ -1214,9 +1214,9 @@ VALUES	('FEATURE_LAKE_VICTORIA',	'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 		('FEATURE_EL_DORADO',	    'PLOT_MOUNTAIN',	'YIELD_CULTURE',		1,		0),
 
 
-		('FEATURE_VALLEY_B',		'PLOT_LAND',		'YIELD_PRODUCTION',	    1,		0),
-		('FEATURE_VALLEY_B',	    'PLOT_HILLS',		'YIELD_PRODUCTION',		1,		0),
-		('FEATURE_VALLEY_B',	    'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		1,		0),
+		--('FEATURE_VALLEY_B',		'PLOT_LAND',		'YIELD_PRODUCTION',	    1,		0),
+		--('FEATURE_VALLEY_B',	    'PLOT_HILLS',		'YIELD_PRODUCTION',		1,		0),
+		--('FEATURE_VALLEY_B',	    'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		1,		0),
 		('FEATURE_VALLEY_A',		'PLOT_LAND',		'YIELD_PRODUCTION',		1,		0),
 		('FEATURE_VALLEY_A',	    'PLOT_HILLS',		'YIELD_PRODUCTION',		1,		0),
 		('FEATURE_VALLEY_A',	    'PLOT_MOUNTAIN',	'YIELD_PRODUCTION',		1,		0),
@@ -1260,11 +1260,11 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 		('FEATURE_VALLEY_A',	'YIELD_CULTURE',3),
 		('FEATURE_VALLEY_A',	'YIELD_FAITH',2),
 
-		('FEATURE_VALLEY_B',	'YIELD_GOLDEN_AGE_POINTS',3),
-		('FEATURE_VALLEY_B',	'YIELD_PRODUCTION',5),
-		('FEATURE_VALLEY_B',	'YIELD_TOURISM',2),
-		('FEATURE_VALLEY_B',	'YIELD_CULTURE',3),
-		('FEATURE_VALLEY_B',	'YIELD_FAITH',2),
+		--('FEATURE_VALLEY_B',	'YIELD_GOLDEN_AGE_POINTS',3),
+		--('FEATURE_VALLEY_B',	'YIELD_PRODUCTION',5),
+		--('FEATURE_VALLEY_B',	'YIELD_TOURISM',2),
+		--('FEATURE_VALLEY_B',	'YIELD_CULTURE',3),
+		--('FEATURE_VALLEY_B',	'YIELD_FAITH',2),
 
 		('FEATURE_DANXIA',	'YIELD_GOLDEN_AGE_POINTS',6),
 		('FEATURE_DANXIA',	'YIELD_GREAT_GENERAL_POINTS',3),
@@ -1376,11 +1376,11 @@ INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	
 		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_CULTURE',        1,		0),
 		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_FAITH',          1,		0),
 
-		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_GOLDEN_AGE_POINTS',2,	0),
-		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_PRODUCTION',     2,		0),
-		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_TOURISM',        1,		0),
-		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_CULTURE',        1,		0),
-		('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_FAITH',          1,		0),
+		--('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_GOLDEN_AGE_POINTS',2,	0),
+		--('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_PRODUCTION',     2,		0),
+		--('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_TOURISM',        1,		0),
+		--('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_CULTURE',        1,		0),
+		--('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_FAITH',          1,		0),
 
         ('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
 		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_GOLD',		    2,		0),
@@ -1562,7 +1562,7 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 		('ART_DEF_FEATURE_BERMUDA_B',	'Resource',		'Bermuda Triangle B'),
 		('ART_DEF_FEATURE_BERMUDA_C',	'Resource',		'Bermuda Triangle C'),
 
-		 ('ART_DEF_FEATURE_VALLEY_B',	'Resource',		'Valley B'),
+		-- ('ART_DEF_FEATURE_VALLEY_B',	'Resource',		'Valley B'),
 		  ('ART_DEF_FEATURE_VALLEY_A',	'Resource',		'Valley A'),
 
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_A',	'Resource',		'Eye of the Sahara A'),
@@ -1573,7 +1573,7 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 
 
 INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHandler,	ResourceType,	Model,	TerrainContour) VALUES
-('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_B',	'Monument_valley_1.fxsxml',1),       --important!
+--('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_B',	'Monument_valley_1.fxsxml',1),       --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_A',	'Monument_valley_2.fxsxml',1),       --important!
 
 
@@ -1648,7 +1648,7 @@ INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		
 		('ART_DEF_FEATURE_BERMUDA_B','Feature',		'sv_Bermuda.dds'),
 
 		('ART_DEF_FEATURE_VALLEY_A','Feature',		'sv_VALLEY.dds'),
-		('ART_DEF_FEATURE_VALLEY_B','Feature',		'sv_VALLEY.dds'),
+		--('ART_DEF_FEATURE_VALLEY_B','Feature',		'sv_VALLEY.dds'),
 
 		('ART_DEF_FEATURE_DANXIA','Feature',		'sv_Dan Xia.dds'),
 		

@@ -30,16 +30,16 @@
 		<!--悬浮攻城炮-->
 
 		<Row>
-			<ScriptID>AS2D_BUILD_FW_HOVERTANK</ScriptID>
-			<SoundID>SND_BUILD_FW_HOVERTANK</SoundID>
+			<ScriptID>AS2D_BUILD_HOVERTANK</ScriptID>
+			<SoundID>SND_BUILD_HOVERTANK</SoundID>
 			<SoundType>GAME_SFX</SoundType>
 			<MaxVolume>100</MaxVolume>
 			<MinVolume>100</MinVolume>
 			<IsMusic>1</IsMusic>
 		</Row>
 		<Row>
-			<ScriptID>AS2D_SELECT_FW_HOVERTANK</ScriptID>
-			<SoundID>SND_SELECT_FW_HOVERTANK</SoundID>
+			<ScriptID>AS2D_SELECT_HOVERTANK</ScriptID>
+			<SoundID>SND_SELECT_HOVERTANK</SoundID>
 			<SoundType>GAME_SFX</SoundType>
 			<MaxVolume>100</MaxVolume>
 			<MinVolume>100</MinVolume>
@@ -199,8 +199,8 @@
 
 		<!--战争机器-->
 		<Row>
-			<ScriptID>AS2D_SELECT_FW_AUTOMATON</ScriptID>
-			<SoundID>SND_SELECT_FW_AUTOMATON</SoundID>
+			<ScriptID>AS2D_SELECT_AUTOMATON</ScriptID>
+			<SoundID>SND_SELECT_AUTOMATON</SoundID>
 			<SoundType>GAME_SFX</SoundType>
 			<MaxVolume>100</MaxVolume>
 			<MinVolume>100</MinVolume>
@@ -208,8 +208,8 @@
 		</Row>
 
 		<Row>
-			<ScriptID>AS2D_BUILD_FW_AUTOMATON</ScriptID>
-			<SoundID>SND_BUILD_FW_AUTOMATON</SoundID>
+			<ScriptID>AS2D_BUILD_AUTOMATON</ScriptID>
+			<SoundID>SND_BUILD_AUTOMATON</SoundID>
 			<SoundType>GAME_SFX</SoundType>
 			<MaxVolume>100</MaxVolume>
 			<MinVolume>100</MinVolume>
@@ -219,8 +219,8 @@
 
 		<!--动力装甲-->
 		<Row>
-			<ScriptID>AS2D_SELECT_FW_BATTLESUIT</ScriptID>
-			<SoundID>SND_SELECT_FW_BATTLESUIT</SoundID>
+			<ScriptID>AS2D_SELECT_GARIO_BATTLESUIT</ScriptID>
+			<SoundID>SND_SELECT_GARIO_BATTLESUIT</SoundID>
 			<SoundType>GAME_SFX</SoundType>
 			<MaxVolume>100</MaxVolume>
 			<MinVolume>100</MinVolume>
@@ -228,8 +228,8 @@
 		</Row>
 
 		<Row>
-			<ScriptID>AS2D_BUILD_FW_BATTLESUIT</ScriptID>
-			<SoundID>SND_BUILD_FW_BATTLESUIT</SoundID>
+			<ScriptID>AS2D_BUILD_GARIO_BATTLESUIT</ScriptID>
+			<SoundID>SND_BUILD_GARIO_BATTLESUIT</SoundID>
 			<SoundType>GAME_SFX</SoundType>
 			<MaxVolume>100</MaxVolume>
 			<MinVolume>100</MinVolume>
@@ -510,12 +510,12 @@
 
 		 <!--悬浮攻城炮-->
 		 <Row>
-			 <SoundID>SND_SELECT_FW_HOVERTANK</SoundID>
+			 <SoundID>SND_SELECT_HOVERTANK</SoundID>
 			 <Filename>selectsiege03s</Filename>
 			 <LoadType>DynamicResident</LoadType>
 		 </Row>
 		 <Row>
-			 <SoundID>SND_BUILD_FW_HOVERTANK</SoundID>
+			 <SoundID>SND_BUILD_HOVERTANK</SoundID>
 			 <Filename>birthsiege03s</Filename>
 			 <LoadType>DynamicResident</LoadType>
 		 </Row>
@@ -621,12 +621,12 @@
 
 		 <!--战争机器-->
 		 <Row>
-			 <SoundID>SND_SELECT_FW_AUTOMATON</SoundID>
+			 <SoundID>SND_SELECT_AUTOMATON</SoundID>
 			 <Filename>selectcavalry03p</Filename>
 			 <LoadType>DynamicResident</LoadType>
 		 </Row>
 		 <Row>
-			 <SoundID>SND_BUILD_FW_AUTOMATON</SoundID>
+			 <SoundID>SND_BUILD_AUTOMATON</SoundID>
 			 <Filename>selectcavalry03p</Filename>
 			 <LoadType>DynamicResident</LoadType>
 		 </Row>
@@ -635,12 +635,12 @@
 
 		 <!--动力装甲-->
 		 <Row>
-			 <SoundID>SND_SELECT_FW_BATTLESUIT</SoundID>
+			 <SoundID>SND_SELECT_GARIO_BATTLESUIT</SoundID>
 			 <Filename>selectangel</Filename>
 			 <LoadType>DynamicResident</LoadType>
 		 </Row>
 		 <Row>
-			 <SoundID>SND_BUILD_FW_BATTLESUIT</SoundID>
+			 <SoundID>SND_BUILD_GARIO_BATTLESUIT</SoundID>
 			 <Filename>selectangel</Filename>
 			 <LoadType>DynamicResident</LoadType>
 		 </Row>
@@ -789,9 +789,9 @@
 
 		<!--悬浮攻城炮-->
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
-			<SelectionSound>AS2D_SELECT_FW_HOVERTANK</SelectionSound>
-			<FirstSelectionSound>AS2D_BUILD_FW_HOVERTANK</FirstSelectionSound>
+			<UnitType>UNIT_HOVERTANK</UnitType>
+			<SelectionSound>AS2D_SELECT_HOVERTANK</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_HOVERTANK</FirstSelectionSound>
 		</Row>
 		<!--星际战舰-->
 		<Row>
@@ -865,17 +865,17 @@
 		<!--战争机器-->
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
-			<SelectionSound>AS2D_SELECT_FW_AUTOMATON</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_FW_AUTOMATON</FirstSelectionSound>
+			<UnitType>UNIT_AUTOMATON</UnitType>
+			<SelectionSound>AS2D_SELECT_AUTOMATON</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_AUTOMATON</FirstSelectionSound>
 		</Row>
 
 
 		<!--动力装甲-->
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
-			<SelectionSound>AS2D_SELECT_FW_BATTLESUIT</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_FW_BATTLESUIT</FirstSelectionSound>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
+			<SelectionSound>AS2D_SELECT_GARIO_BATTLESUIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_GARIO_BATTLESUIT</FirstSelectionSound>
 		</Row>
 		<!--圣盾-->
 		<Row>
@@ -938,10 +938,10 @@
 			<FirstSelectionSound>AS2D_BIRTH_ANGEL</FirstSelectionSound>
 		</Row>
 
-		<!--FW_VERTOL-->
+		<!--VERTOL-->
 
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<SelectionSound>AS2D_SELECT_HELICOPTER_GUNSHIP</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_HELICOPTER_GUNSHIP</FirstSelectionSound>
 		</Row>
@@ -1007,7 +1007,7 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<SelectionSound>AS2D_SELECT_MOBILE_SAM</SelectionSound>
 			<FirstSelectionSound>AS2D_BIRTH_MOBILE_SAM</FirstSelectionSound>
 		</Row>
@@ -1096,9 +1096,9 @@
 		</Row>
 		
 		<!-- 幻像-->
-
+ 
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<SelectionSound>AS2D_BUILD_RANGEDMARINE04SP</SelectionSound>
 			<FirstSelectionSound>AS2D_BUILD_RANGEDMARINE04SP</FirstSelectionSound>
 		</Row>

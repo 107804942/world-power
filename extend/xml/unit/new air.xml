@@ -127,8 +127,8 @@
 
 		<!--轰炸机-->
 		<Row>
-			<Class>UNITCLASS_FW_DRONE_FIGHTER_2</Class>
-			<Type>UNIT_FW_DRONE_FIGHTER_2</Type>
+			<Class>UNITCLASS_DRONE_FIGHTER</Class>
+			<Type>UNIT_DRONE_FIGHTER</Type>
 			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
 			<RangedCombat>780</RangedCombat>
 			<Cost>6300</Cost>
@@ -139,8 +139,8 @@
 			<CombatClass>UNITCOMBAT_ARCHER</CombatClass>
 			<Domain>DOMAIN_AIR</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FW_DRONE_FIGHTER_2</Description>
-			<Civilopedia>TXT_KEY_UNIT_FW_DRONE_FIGHTER_2_TEXT</Civilopedia>
+			<Description>TXT_KEY_UNIT_DRONE_FIGHTER</Description>
+			<Civilopedia>TXT_KEY_UNIT_DRONE_FIGHTER_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_AIR_STRATEGIC_BOMBERS_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_STRATEGIC_BOMBER_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
@@ -153,7 +153,7 @@
 			<CombatLimit>0</CombatLimit>
 			<XPValueAttack>7</XPValueAttack>
 			<XPValueDefense>7</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_FW_DRONE_FIGHTER_2</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_DRONE_FIGHTER</UnitArtInfo>
 			<UnitFlagIconOffset>21</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<PortraitIndex>71</PortraitIndex>
@@ -340,11 +340,11 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<PromotionType>PROMOTION_STRATEGIC_BOMBER</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<PromotionType>PROMOTION_EVASION_II</PromotionType>
 		</Row>
 
@@ -433,27 +433,27 @@
 		</Row>
 		
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>5</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>20</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Cost>2</Cost>
 		</Row>
@@ -544,11 +544,11 @@
 		
 		
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<UnitAIType>UNITAI_CITY_BOMBARD</UnitAIType>
 		</Row>
 
@@ -586,17 +586,17 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<FlavorType>FLAVOR_AIR</FlavorType>
 			<Flavor>105</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>105</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<FlavorType>FLAVOR_NUKE</FlavorType>
 			<Flavor>105</Flavor>
 		</Row>

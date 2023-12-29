@@ -46,8 +46,8 @@
 
 		<!--攻城炮-->
 		<Row>
-			<Class>UNITCLASS_FW_HOVERTANK</Class>
-			<Type>UNIT_FW_HOVERTANK</Type>
+			<Class>UNITCLASS_HOVERTANK</Class>
+			<Type>UNIT_HOVERTANK</Type>
 			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<Combat>100</Combat>
 			<RangedCombat>360</RangedCombat>
@@ -58,9 +58,9 @@
 			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_CITY_BOMBARD</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FW_HOVERTANK</Description>
-			<Civilopedia>TXT_KEY_UNIT_FW_HOVERTANK_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FW_HOVERTANK_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_HOVERTANK</Description>
+			<Civilopedia>TXT_KEY_UNIT_HOVERTANK_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HOVERTANK_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_CITY_SIEGE_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -158,20 +158,20 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<PromotionType>PROMOTION_CITY_SIEGE</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<PromotionType>PROMOTION_CARGO_II</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
 		</Row>
 		<Row>
@@ -219,27 +219,27 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>4</Cost>
 		</Row>
@@ -299,11 +299,11 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<UnitAIType>UNITAI_CITY_BOMBARD</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<UnitAIType>UNITAI_RANGED</UnitAIType>
 		</Row>
 
@@ -340,22 +340,22 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>160</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>165</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>115</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
 			<Flavor>30</Flavor>
 		</Row>

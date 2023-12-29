@@ -10,11 +10,11 @@
 
     <!-- Unit Actions Secondary 522Back -->
 
-    <Grid Anchor="L,B" Offset="50,-106" Size="74,446" Padding="0,0" Style="Grid9Detail48Black" Hidden="0" ID="SecondaryStretchy" ConsumeMouse="1" >
+    <Grid Anchor="L,B" Offset="50,-76" Size="74,476" Padding="0,0" Style="Grid9Detail48Black" Hidden="0" ID="SecondaryStretchy" ConsumeMouse="1" >
 
     </Grid>
 
-    <Grid Anchor="L,B" Offset="-70,-90" Size="140,462" Padding="0,0" Style="Grid9DetailSix140" Hidden="0" ID="PrimaryStretchy" ConsumeMouse="1" >
+    <Grid Anchor="L,B" Offset="-70,-60" Size="140,492" Padding="0,0" Style="Grid9DetailSix140" Hidden="0" ID="PrimaryStretchy" ConsumeMouse="1" >
 
     </Grid>
 
@@ -28,7 +28,7 @@
 
 		<FlipAnim Size="64,64" Offset="12,-12" Anchor="L,T" Columns="4" Speed="10" Pause=".5" StepSize="64,64" FrameCount="8" Texture="assets\UI\Art\Notification\PromotionAnimation.dds" ID="PromotionAnimation" />
 
-        <GridButton Anchor="R,T" Size="36,36" Offset="25,50"  Style="BaseButton"  Hidden="1" ID="RecommendedActionButton" ToolTipType="TypeUnitAction">
+        <GridButton Anchor="R,T" Size="36,36" Offset="25,58"  Style="BaseButton"  Hidden="1" ID="RecommendedActionButton" ToolTipType="TypeUnitAction">
             <Box Anchor="L,T" AnchorSide="O,I" Offset="5,0" Size="191,40" Color="0,0,0,0" ID="RecommendedActionTitle">
                 <Label Anchor="L,C" WrapWidth="191" Font="TwCenMT16" FontStyle="Shadow" String="TXT_KEY_UPANEL_REPAIR_TILE" ID="RecommendedActionLabel"/>
             </Box>
@@ -60,7 +60,7 @@
 
     <!-- Secondary Actions  -->
 
-    <GridButton ID="SecondaryButton" Size="36,32" Style="SmallButton2" Anchor="L,B" Offset="10,170"  ToolTip="TXT_KEY_SECONDARY_O_TEXT"  Hidden="0">
+    <GridButton ID="SecondaryButton" Size="36,32" Style="SmallButton2" Anchor="L,B" Offset="10,200"  ToolTip="TXT_KEY_SECONDARY_O_TEXT"  Hidden="0">
 
         <Image Anchor="C,C"  Offset="0,1"  Texture="OpenSecondary.dds" Size="64,32" Hidden="0" ID="SecondaryImageOpen"/>
         <Image Anchor="C,C"  Offset="-1,1"  Texture="CloseSecondary.dds" Size="64,32" Hidden="1" ID="SecondaryImageClosed"/>
@@ -171,10 +171,10 @@
 
     <!-- Action Button Stacks 72 -->
 
-    <Stack Offset="225,176" Anchor="L,B" StackGrowth="Left" ID="BuildStack" Padding="2"/>
-    <Stack Offset="70,172"  Anchor="L,B" StackGrowth="Bottom" ID="SecondaryAStack" Padding="2" Hidden="1" />
-    <Stack Offset="70,172"  Anchor="L,B" StackGrowth="Bottom" ID="SecondaryStack" Padding="2" Hidden="1" />
-    <Stack Offset="9,206"   Anchor="L,B" StackGrowth="Bottom" ID="PrimaryStack" Padding="2">
+    <Stack Offset="225,206" Anchor="L,B" StackGrowth="Left" ID="BuildStack" Padding="2"/>
+    <Stack Offset="70,202"  Anchor="L,B" StackGrowth="Bottom" ID="SecondaryAStack" Padding="2" Hidden="1" />
+    <Stack Offset="70,202"  Anchor="L,B" StackGrowth="Bottom" ID="SecondaryStack" Padding="2" Hidden="1" />
+    <Stack Offset="9,236"   Anchor="L,B" StackGrowth="Bottom" ID="PrimaryStack" Padding="2">
 
         <!-- Special magical Build City button -->
         <Button Anchor="R,T" Size="36,36" StateOffsetIncrement="0,0" AnchorSide="I.O" Offset="0,0" Hidden="1" Texture="Assets/UI/Art/Icons/BuildCity36.dds" ID="BuildCityButton" ToolTipType="TypeUnitAction">

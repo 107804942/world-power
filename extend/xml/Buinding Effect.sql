@@ -450,7 +450,7 @@ VALUES('BUILDING_SUMMER_PALACE', 'YIELD_TOURISM',2),
 ----免费单位	
 INSERT  INTO Building_FreeUnits(BuildingType,UnitType,NumUnits)
 VALUES ('BUILDING_SPACE_FORTRESS', 'UNIT_AEGIS', 1),
-	   ('BUILDING_SPACE_FORTRESS', 'UNIT_FW_DRONE_FIGHTER_2', 2),
+	   ('BUILDING_SPACE_FORTRESS', 'UNIT_DRONE_FIGHTER', 2),
 	   ('BUILDING_SPACE_FORTRESS', 'UNIT_BEAM_JUMPER', 1),
 
 	   ('BUILDING_BEILUN_TOWER', 'UNIT_GREAT_ADMIRAL', 1),
@@ -660,8 +660,8 @@ VALUES('BUILDING_MARKOV', 'DOMAIN_SEA',120),
 
 ----凡尔赛
 INSERT  INTO Building_CityWithWorldWonderYieldModifierGlobal(BuildingType,YieldType,Yield)
-VALUES('BUILDING_VERSAILLES', 'YIELD_GOLD',20),
-      ('BUILDING_VERSAILLES', 'YIELD_SCIENCE',20);
+VALUES('BUILDING_VERSAILLES', 'YIELD_GOLD',33),
+      ('BUILDING_VERSAILLES', 'YIELD_SCIENCE',33);
 
 ----水晶宫
 INSERT  INTO Building_GreatWorkYieldChanges(BuildingType,YieldType,Yield)
@@ -807,7 +807,7 @@ FROM Features WHERE NaturalWonder = '1'OR PseudoNaturalWonder = '1' ;
 
 --人造生态圈
 INSERT  INTO Building_FeatureYieldChanges(BuildingType, 	FeatureType, 	YieldType, 		Yield)
-SELECT 'BUILDING_FW_SANCTUARY', p.Type, h.Type,  6 
+SELECT 'BUILDING_SANCTUARY', p.Type, h.Type,  6 
 FROM Features AS p, Yields AS h 
 WHERE (p.NaturalWonder ='1'OR p.PseudoNaturalWonder = '1' OR p.Type ='FEATURE_ATOLL' OR p.Type ='FEATURE_OASIS') AND (h.Type = 'YIELD_GOLD' OR h.Type = 'YIELD_CULTURE');
 

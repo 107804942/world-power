@@ -153,3 +153,143 @@ end
 GameEvents.CanStartMission.Add(ImmobileWhileDamaged)
 
 
+	if (pkDefender->GetIgnoreDamageChance() > 0)
+		{
+			int iRand = GC.getGame().getJonRandNum(100, "Ignore Damage Chance");
+			if (iRand <= pkDefender->GetIgnoreDamageChance())
+			{
+				iDamage = 0;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		int CvCombatInfo::getDamageInflicted(BattleUnitTypes unitType) const
+{
+	checkBattleUnitType(unitType);
+	int iDamage = m_iDamageInflicted[unitType];
+#ifdef MOD_EVENTS_BATTLES_DAMAGE
+#ifndef MOD_EVENTS_BATTLES_CUSTOM_DAMAGE
+	if (MOD_EVENTS_BATTLES_DAMAGE) {
+		int iValue = 0;
+		if (GAMEEVENTINVOKE_VALUE(iValue, GAMEEVENT_BattleDamageDelta, unitType, iDamage) == GAMEEVENTRETURN_VALUE) {
+			if (iValue != 0) {
+				if (iValue < 0) {
+					// Decreasing the amount of damage, in which case it can't be more than the amount inflicted (as that's called 'healing'!)
+					if (iDamage + iValue < 0) {
+						iValue = -iDamage;
+					}
+				} else {
+					// Increasing the amount of damage, in which case we can't exceed unit/city hit points
+					CvCity* pCity = m_pCities[unitType];
+					if (pCity)
+					{
+						if (iDamage + iValue + pCity->getDamage() > pCity->GetMaxHitPoints())
+						{
+							iValue = pCity->GetMaxHitPoints() - pCity->getDamage() - iDamage;
+						}
+					}
+					else
+					{
+						if (iDamage + iValue > m_pUnits[unitType]->GetCurrHitPoints())
+						{
+							iValue = m_pUnits[unitType]->GetCurrHitPoints() - iDamage;
+						}
+					}
+				}
+				
+				iDamage += iValue;
+	
+// Fuck fucking C const, it should have been fucking banned fucking years ago!
+//				if (unitType == BATTLE_UNIT_ATTACKER) {
+//					m_iFinalDamage[BATTLE_UNIT_DEFENDER] += iValue;
+//				} else {
+//					m_iFinalDamage[BATTLE_UNIT_ATTACKER] += iValue;
+//				}
+			}
+		}
+	}
+#endif
+#endif
+
+#ifdef MOD_EVENTS_BATTLES_CUSTOM_DAMAGE
+	if (MOD_EVENTS_BATTLES_CUSTOM_DAMAGE)
+	{
+		int iAttackPlayerID = 0;
+		int iAttackUnitOrCityID = 0;
+		bool bAttackIsCity = false;
+		int iAttackDamage = 0;
+
+		int iDefensePlayerID = 0;
+		int iDefenseUnitOrCityID = 0;
+		bool bDefenseIsCity = false;
+		int iDefenseDamage = 0;
+
+		int iInterceptorPlayerID = 0;
+		int iInterceptorUnitOrCityID = 0;
+		bool bInterceptorIsCity = false;
+		int iInterceptorDamage = 0;
+
+		BattleUnitTypes iBattleUnitType = unitType;
+		BattleTypeTypes iBattleType = getBattleType();
+
+		setBattleUnitInfo(BATTLE_UNIT_ATTACKER, iAttackPlayerID, iAttackUnitOrCityID, bAttackIsCity, iAttackDamage);
+		setBattleUnitInfo(BATTLE_UNIT_DEFENDER, iDefensePlayerID, iDefenseUnitOrCityID, bDefenseIsCity, iDefenseDamage);
+		setBattleUnitInfo(BATTLE_UNIT_INTERCEPTOR, iInterceptorPlayerID, iInterceptorUnitOrCityID, bInterceptorIsCity, iInterceptorDamage);
+
+		int iDelta = 0;
+		if (GAMEEVENTINVOKE_VALUE(iDelta, GAMEEVENT_BattleCustomDamage, 
+								iBattleUnitType, iBattleType,
+								iAttackPlayerID, iAttackUnitOrCityID, bAttackIsCity, iAttackDamage,
+								iDefensePlayerID, iDefenseUnitOrCityID, bDefenseIsCity, iDefenseDamage,
+								iInterceptorPlayerID, iInterceptorUnitOrCityID, bInterceptorIsCity, iInterceptorDamage) == GAMEEVENTRETURN_VALUE)
+		{
+			iDamage += iDelta;
+
+			CvPlayer& AttackPlayer = GET_PLAYER((PlayerTypes)iAttackPlayerID);
+			CvPlayer& DefensePlayer = GET_PLAYER((PlayerTypes)iDefensePlayerID);
+
+			if (iAttackPlayerID != NULL && iDefensePlayerID != NULL && !bDefenseIsCity)
+			{
+
+				CvUnit* defUnit = DefensePlayer.getUnit(iDefenseUnitOrCityID);
+
+				if (defUnit != NULL && defUnit->GetIgnoreDamageChance() > 0)
+				{
+					int iRand = GC.getGame().getJonRandNum(100, "Ignore Damage Chance");
+					if (iRand <= defUnit->GetIgnoreDamageChance())
+					{
+						iDamage = 0;
+					}
+				}
+			}
+		}
+	}
+#endif
+
+
+
+
+#if defined(MOD_ROG_CORE)
+				if (pkDefender->GetIgnoreDamageChance() > 0)
+				{
+					int iRand = GC.getGame().getJonRandNum(100, "Ignore Damage Chance");
+					if (iRand <= pkDefender->GetIgnoreDamageChance())
+					{
+						iDamage = 0;
+					}
+				}
+#endif
+		
+
+
+

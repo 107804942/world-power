@@ -1509,21 +1509,21 @@
 	<!--DRONE_FIGHTER-->
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_FW_DRONE_FIGHTER_2</Type>
+			<Type>ART_DEF_UNIT_DRONE_FIGHTER</Type>
 			<DamageStates>1</DamageStates>
 			<Formation>BomberWing</Formation>
 		</Row>
 	</ArtDefine_UnitInfos>
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_FW_DRONE_FIGHTER_2</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_FW_DRONE_FIGHTER_2</UnitMemberInfoType>
+			<UnitInfoType>ART_DEF_UNIT_DRONE_FIGHTER</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_DRONE_FIGHTER</UnitMemberInfoType>
 			<NumMembers>1</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_FW_DRONE_FIGHTER_2</Type>
+			<Type>ART_DEF_UNIT_MEMBER_DRONE_FIGHTER</Type>
 			<Scale>0.16</Scale>
 			<Domain>Air</Domain>
 			<Model>DroneFighter.fxsxml</Model>
@@ -1533,7 +1533,7 @@
 	</ArtDefine_UnitMemberInfos>
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_DRONE_FIGHTER_2</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_DRONE_FIGHTER</UnitMemberType>
 			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
 			<AttackRadius>64.0</AttackRadius>
 			<MoveRate>4.0</MoveRate>
@@ -1544,7 +1544,7 @@
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_DRONE_FIGHTER_2</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_DRONE_FIGHTER</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>0</SubIndex>
 			<VisKillStrengthMin>35.0</VisKillStrengthMin>
@@ -3148,24 +3148,24 @@
 	
 
 
-	<!--FW_AUTOMATON-->
+	<!--AUTOMATON-->
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_FW_AUTOMATON</Type>
+			<Type>ART_DEF_UNIT_AUTOMATON</Type>
 			<DamageStates>1</DamageStates>
 			<Formation>Vehicle</Formation>
 		</Row>
 	</ArtDefine_UnitInfos>
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_FW_AUTOMATON</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_FW_AUTOMATON</UnitMemberInfoType>
+			<UnitInfoType>ART_DEF_UNIT_AUTOMATON</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_AUTOMATON</UnitMemberInfoType>
 			<NumMembers>1</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_FW_AUTOMATON</Type>
+			<Type>ART_DEF_UNIT_MEMBER_AUTOMATON</Type>
 			<Scale>0.14</Scale>
 			<Domain></Domain>
 			<Model>metalgear.fxsxml</Model>
@@ -3175,7 +3175,7 @@
 	</ArtDefine_UnitMemberInfos>
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_AUTOMATON</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_AUTOMATON</UnitMemberType>
 			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
 			<DisableActions></DisableActions>
 			<MoveRadius>5</MoveRadius>
@@ -3190,7 +3190,7 @@
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_AUTOMATON</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_AUTOMATON</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>0</SubIndex>
 			<ID>ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE</ID>
@@ -3202,7 +3202,7 @@
 			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
 		</Row>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_AUTOMATON</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_AUTOMATON</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>1</SubIndex>
 			<ID>ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ</ID>
@@ -3212,7 +3212,7 @@
 			<WeaponTypeSoundOverrideTag>RAILGUN</WeaponTypeSoundOverrideTag>
 		</Row>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_AUTOMATON</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_AUTOMATON</UnitMemberType>
 			<Index>1</Index>
 			<SubIndex>0</SubIndex>
 			<ID></ID>
@@ -3627,20 +3627,20 @@
 
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_FW_HOVERTANK</Type>
+			<Type>ART_DEF_UNIT_HOVERTANK</Type>
 			<DamageStates>1</DamageStates>
 		</Row>
 	</ArtDefine_UnitInfos>
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_FW_HOVERTANK</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_FW_HOVERTANK</UnitMemberInfoType>
+			<UnitInfoType>ART_DEF_UNIT_HOVERTANK</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_HOVERTANK</UnitMemberInfoType>
 			<NumMembers>1</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_FW_HOVERTANK</Type>
+			<Type>ART_DEF_UNIT_MEMBER_HOVERTANK</Type>
 			<Scale>0.101</Scale>
 			<Domain>Hover</Domain>
 			<Model>Hovertank.fxsxml</Model>
@@ -3650,7 +3650,7 @@
 	</ArtDefine_UnitMemberInfos>
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_HOVERTANK</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_HOVERTANK</UnitMemberType>
 			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
 			<HasShortRangedAttack>1</HasShortRangedAttack>
 			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
@@ -3658,7 +3658,7 @@
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_HOVERTANK</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_HOVERTANK</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>0</SubIndex>
 			<VisKillStrengthMin>1.0</VisKillStrengthMin>
@@ -3668,7 +3668,7 @@
 			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
 		</Row>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_HOVERTANK</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_HOVERTANK</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>1</SubIndex>
 			<ID>PROJECTILE</ID>

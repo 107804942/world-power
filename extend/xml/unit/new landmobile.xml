@@ -195,8 +195,8 @@
 
 
 		<Row>
-			<Class>UNITCLASS_FW_VERTOL</Class>
-			<Type>UNIT_FW_VERTOL</Type>
+			<Class>UNITCLASS_VERTOL</Class>
+			<Type>UNIT_VERTOL</Type>
 			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>300</Combat>
@@ -209,9 +209,9 @@
 			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FW_VERTOL</Description>
-			<Civilopedia>TXT_KEY_UNIT_FW_VERTOL_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FW_VERTOL_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_VERTOL</Description>
+			<Civilopedia>TXT_KEY_UNIT_VERTOL_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_VERTOL_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_HELI_ATTACK_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -316,12 +316,12 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
 
@@ -390,11 +390,11 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<UnitAIType>UNITAI_RANGED</UnitAIType>
 		</Row>
 
@@ -535,27 +535,27 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>3</Cost>
 		</Row>
@@ -637,22 +637,22 @@
 			<Flavor>200</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
 			<Flavor>150</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>70</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>60</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>60</Flavor>
 		</Row>

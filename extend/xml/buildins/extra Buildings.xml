@@ -1818,16 +1818,15 @@
 
 			<!---人造生态圈-->
 			<Row>
-				<Type>BUILDING_FW_SANCTUARY</Type>
-				<BuildingClass>BUILDINGCLASS_FW_SANCTUARY</BuildingClass>
+				<Type>BUILDING_SANCTUARY</Type>
+				<BuildingClass>BUILDINGCLASS_SANCTUARY</BuildingClass>
 				<Cost>3300</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
-				<Help>TXT_KEY_BUILDING_FW_SANCTUARY_HELP</Help>
-				<Description>TXT_KEY_BUILDING_FW_SANCTUARY_DESC</Description>
-				<Civilopedia>TXT_KEY_BUILDING_FW_SANCTUARY_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_SANCTUARY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_SANCTUARY_DESC</Description>
+				<Civilopedia>TXT_KEY_BUILDING_SANCTUARY_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>ART_DEF_BUILDING_FW_GARDEN</ArtDefineTag>
 				<LandmarksTourismPercent>33</LandmarksTourismPercent>
 				<GreatWorksTourismModifier>33</GreatWorksTourismModifier>
 				<MinAreaSize>-1</MinAreaSize>

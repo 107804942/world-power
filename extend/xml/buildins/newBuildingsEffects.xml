@@ -57,6 +57,12 @@
 			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
 			<ResourceType>RESOURCE_FLAX</ResourceType>
 		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_DYE</ResourceType>
+		</Row>
 	</Building_EmpireResourceOrs>
 	<!--*********************end ********************-->
 	
@@ -765,6 +771,12 @@
 		<!-- 布厂-->
 		<Row>
 			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_DYE</ResourceType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
 			<ResourceType>RESOURCE_COTTON</ResourceType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>2</Yield>
@@ -789,8 +801,12 @@
 		</Row>
 
 
-
-
+		<Row>
+			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
+			<ResourceType>RESOURCE_DYE</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
 		<Row>
 			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
 			<ResourceType>RESOURCE_COTTON</ResourceType>
@@ -1597,7 +1613,7 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_FW_SANCTUARY</BuildingType>
+			<BuildingType>BUILDING_SANCTUARY</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
@@ -3110,7 +3126,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_FW_SANCTUARY</BuildingType>
+			<BuildingType>BUILDING_SANCTUARY</BuildingType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>5</Yield>
 		</Row>

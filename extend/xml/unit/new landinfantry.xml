@@ -356,8 +356,8 @@
 
 
 		<Row>
-			<Class>UNITCLASS_FW_AUTOMATON</Class>
-			<Type>UNIT_FW_AUTOMATON</Type>
+			<Class>UNITCLASS_AUTOMATON</Class>
+			<Type>UNIT_AUTOMATON</Type>
 			<BaseSightRange>3</BaseSightRange>
 			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
@@ -367,9 +367,9 @@
 			<HurryCostModifier>33</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_FW_AUTOMATON</Description>
-			<Civilopedia>TXT_KEY_UNIT_FW_AUTOMATON_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FW_AUTOMATON_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_AUTOMATON</Description>
+			<Civilopedia>TXT_KEY_UNIT_AUTOMATON_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_AUTOMATON_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -395,8 +395,8 @@
 
 
 		<Row>
-			<Class>UNITCLASS_FW_BATTLESUIT</Class>
-			<Type>UNIT_FW_BATTLESUIT</Type>
+			<Class>UNITCLASS_GARIO_BATTLESUIT</Class>
+			<Type>UNIT_GARIO_BATTLESUIT</Type>
 			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>250</Combat>
@@ -408,9 +408,9 @@
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FW_BATTLESUIT</Description>
-			<Civilopedia>TXT_KEY_UNIT_FW_BATTLESUIT_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FW_BATTLESUIT_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_GARIO_BATTLESUIT</Description>
+			<Civilopedia>TXT_KEY_UNIT_GARIO_BATTLESUIT_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GARIO_BATTLESUIT_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -420,7 +420,7 @@
 			<XPValueAttack>4</XPValueAttack>
 			<XPValueDefense>4</XPValueDefense>
 			<Conscription>7</Conscription>
-			<UnitArtInfo>ART_DEF_UNIT_FW_AUTOMATON</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_AUTOMATON</UnitArtInfo>
 			<UnitFlagIconOffset>26</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
@@ -465,8 +465,8 @@
 
 		<!--毁灭战士-->
 		<Row>
-			<Class>UNITCLASS_FW_ROBOT_INFANTRY</Class>
-			<Type>UNIT_FW_ROBOT_INFANTRY</Type>
+			<Class>UNITCLASS_ROBOT_INFANTRY</Class>
+			<Type>UNIT_ROBOT_INFANTRY</Type>
 			<BaseSightRange>3</BaseSightRange>
 			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
 			<Combat>220</Combat>
@@ -478,10 +478,10 @@
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FW_ROBOT_INFANTRY</Description>
-			<Civilopedia>TXT_KEY_UNIT_FW_ROBOT_INFANTRY_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FW_ROBOT_INFANTRY_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_FW_ROBOT_INFANTRY_HELP</Help>
+			<Description>TXT_KEY_UNIT_ROBOT_INFANTRY</Description>
+			<Civilopedia>TXT_KEY_UNIT_ROBOT_INFANTRY_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_ROBOT_INFANTRY_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_ROBOT_INFANTRY_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -541,8 +541,8 @@
 
 
 		<Row>
-			<Class>UNITCLASS_FW_RAILGUN_TANK</Class>
-			<Type>UNIT_FW_RAILGUN_TANK</Type>
+			<Class>UNITCLASS_RAILGUN_TANK</Class>
+			<Type>UNIT_RAILGUN_TANK</Type>
 			<BaseSightRange>2</BaseSightRange>
 			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 			<Combat>270</Combat>
@@ -554,9 +554,9 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<HurryCostModifier>45</HurryCostModifier>
 			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FW_RAILGUN_TANK</Description>
-			<Civilopedia>TXT_KEY_UNIT_FW_RAILGUN_TANK_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FW_RAILGUN_TANK_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_RAILGUN_TANK</Description>
+			<Civilopedia>TXT_KEY_UNIT_RAILGUN_TANK_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_RAILGUN_TANK_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_ANTI_TANK_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
@@ -566,7 +566,7 @@
 			<AdvancedStartCost>70</AdvancedStartCost>
 			<XPValueAttack>4</XPValueAttack>
 			<XPValueDefense>4</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_FW_HOVERTANK</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_HOVERTANK</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_FUTURE_4</UnitFlagAtlas>
 			<UnitFlagIconOffset>2</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
@@ -612,21 +612,21 @@
 		
 
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<PromotionType>PROMOTION_ANTI_TANK</PromotionType>
 		</Row>
 
 
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<PromotionType>PROMOTION_HOVERING_UNIT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
 		</Row>
 
@@ -635,19 +635,19 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
 		</Row>
 
 
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<PromotionType>PROMOTION_GUN_1</PromotionType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
 		</Row>
 
@@ -662,16 +662,16 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 		
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<PromotionType>PROMOTION_BURNING_BOMB</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
 		</Row>
 
@@ -860,22 +860,22 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>1</Cost>
 		</Row>
@@ -885,29 +885,29 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>1</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 
@@ -917,29 +917,29 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>1</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 		</Row>
 
@@ -949,17 +949,17 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>1</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>1</Cost>
 		</Row>
@@ -1010,11 +1010,11 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
 		</Row>
 
@@ -1023,11 +1023,11 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
 		</Row>
 
@@ -1050,11 +1050,11 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<UnitAIType>UNITAI_FAST_ATTACK</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<UnitAIType>UNITAI_DEFENSE</UnitAIType>
 		</Row>
 
@@ -1073,11 +1073,11 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<UnitAIType>UNITAI_RANGED</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<UnitAIType>UNITAI_COUNTER</UnitAIType>
 		</Row>
 
@@ -1095,12 +1095,12 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>80</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>45</Flavor>
 		</Row>
@@ -1118,12 +1118,12 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>90</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>90</Flavor>
 		</Row>
@@ -1132,12 +1132,12 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>90</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>90</Flavor>
 		</Row>
@@ -1146,12 +1146,12 @@
 
 
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>90</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>90</Flavor>
 		</Row>

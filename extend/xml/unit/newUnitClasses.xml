@@ -640,9 +640,9 @@
 		</Row>
 
 		<Row>
-			<Type>UNITCLASS_FW_HOVERTANK</Type>
-			<Description>TXT_KEY_UNIT_FW_HOVERTANK</Description>
-			<DefaultUnit>UNIT_FW_HOVERTANK</DefaultUnit>
+			<Type>UNITCLASS_HOVERTANK</Type>
+			<Description>TXT_KEY_UNIT_HOVERTANK</Description>
+			<DefaultUnit>UNIT_HOVERTANK</DefaultUnit>
 		</Row>
 
 
@@ -699,9 +699,9 @@
 	</Row>
 
 	<Row>
-		<Type>UNITCLASS_FW_DRONE_FIGHTER_2</Type>
-		<Description>TXT_KEY_UNIT_FW_DRONE_FIGHTER_2</Description>
-		<DefaultUnit>UNIT_FW_DRONE_FIGHTER_2</DefaultUnit>
+		<Type>UNITCLASS_DRONE_FIGHTER</Type>
+		<Description>TXT_KEY_UNIT_DRONE_FIGHTER</Description>
+		<DefaultUnit>UNIT_DRONE_FIGHTER</DefaultUnit>
 	</Row>
 
 
@@ -921,9 +921,9 @@
 		</Row>
 
 		<Row>
-			<Type>UNITCLASS_FW_AUTOMATON</Type>
-			<Description>TXT_KEY_UNIT_FW_AUTOMATON</Description>
-			<DefaultUnit>UNIT_FW_AUTOMATON</DefaultUnit>
+			<Type>UNITCLASS_AUTOMATON</Type>
+			<Description>TXT_KEY_UNIT_AUTOMATON</Description>
+			<DefaultUnit>UNIT_AUTOMATON</DefaultUnit>
 		</Row>
 
 		<Row>
@@ -939,9 +939,9 @@
 
 
 		<Row>
-			<Type>UNITCLASS_FW_ROBOT_INFANTRY</Type>
-			<Description>TXT_KEY_UNIT_FW_ROBOT_INFANTRY</Description>
-			<DefaultUnit>UNIT_FW_ROBOT_INFANTRY</DefaultUnit>
+			<Type>UNITCLASS_ROBOT_INFANTRY</Type>
+			<Description>TXT_KEY_UNIT_ROBOT_INFANTRY</Description>
+			<DefaultUnit>UNIT_ROBOT_INFANTRY</DefaultUnit>
 		</Row>
 
 
@@ -967,9 +967,9 @@
 
 
 		<Row>
-			<Type>UNITCLASS_FW_RAILGUN_TANK</Type>
-			<Description>TXT_KEY_UNIT_FW_RAILGUN_TANK</Description>
-			<DefaultUnit>UNIT_FW_RAILGUN_TANK</DefaultUnit>
+			<Type>UNITCLASS_RAILGUN_TANK</Type>
+			<Description>TXT_KEY_UNIT_RAILGUN_TANK</Description>
+			<DefaultUnit>UNIT_RAILGUN_TANK</DefaultUnit>
 		</Row>
 
 
@@ -978,9 +978,9 @@
 
 		<!--************************************坦克系单位********************************-->
 		<Row>
-			<Type>UNITCLASS_FW_BATTLESUIT</Type>
-			<Description>TXT_KEY_UNIT_FW_BATTLESUIT</Description>
-			<DefaultUnit>UNIT_FW_BATTLESUIT</DefaultUnit>
+			<Type>UNITCLASS_GARIO_BATTLESUIT</Type>
+			<Description>TXT_KEY_UNIT_GARIO_BATTLESUIT</Description>
+			<DefaultUnit>UNIT_GARIO_BATTLESUIT</DefaultUnit>
 		</Row>
 		<Row>
 			<Type>UNITCLASS_AEGIS</Type>
@@ -999,9 +999,9 @@
 			<DefaultUnit>UNIT_BEAM_JUMPER</DefaultUnit>
 		</Row>
 		<Row>
-			<Type>UNITCLASS_FW_VERTOL</Type>
-			<Description>TXT_KEY_UNIT_FW_VERTOL</Description>
-			<DefaultUnit>UNIT_FW_VERTOL</DefaultUnit>
+			<Type>UNITCLASS_VERTOL</Type>
+			<Description>TXT_KEY_UNIT_VERTOL</Description>
+			<DefaultUnit>UNIT_VERTOL</DefaultUnit>
 		</Row>
 
 

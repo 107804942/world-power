@@ -382,11 +382,7 @@
 
 
 
-		<Row>
-			<Type>BUILDINGCLASS_FW_ANGELNET_DUMMY</Type>
-			<DefaultBuilding>BUILDING_FW_ANGELNET_DUMMY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_ANGELNET_DUMMY</Description>
-		</Row>
+
 
 		<Row>
 			<Type>BUILDINGCLASS_FORCE_FIELD</Type>
@@ -414,9 +410,9 @@
 
 
 		<Row>
-			<Type>BUILDINGCLASS_FW_SANCTUARY</Type>
-			<DefaultBuilding>BUILDING_FW_SANCTUARY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_FW_SANCTUARY</Description>
+			<Type>BUILDINGCLASS_SANCTUARY</Type>
+			<DefaultBuilding>BUILDING_SANCTUARY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_SANCTUARY</Description>
 		</Row>
 
 

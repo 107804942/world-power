@@ -128,19 +128,19 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_ROBOT_INFANTRY</UnitType>
+			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_FW_HOVERTANK</UnitType>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
 		</Row>
 
@@ -172,25 +172,25 @@
 		</Row>
 		
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_RAILGUN_TANK</UnitType>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
 		</Row>
 		
 		
 		<Row>
-			<UnitType>UNIT_FW_BATTLESUIT</UnitType>
+			<UnitType>UNIT_GARIO_BATTLESUIT</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_VERTOL</UnitType>
+			<UnitType>UNIT_VERTOL</UnitType>
 			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
 		</Row>
 
@@ -204,21 +204,21 @@
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_DRONE_FIGHTER_2</UnitType>
+			<UnitType>UNIT_DRONE_FIGHTER</UnitType>
 			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
 		</Row>
 
 
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_FW_AUTOMATON</UnitType>
+			<UnitType>UNIT_AUTOMATON</UnitType>
 			<BuildingClassType>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClassType>
 		</Row>
 		

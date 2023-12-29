@@ -3,642 +3,642 @@
 <GameData>
 
 
-	
+
 	<!--FRONT END-->
-		<Language_zh_CN>
-
-			
-
-			<!-- VOLCANOS -->
-			<Row Tag="TXT_KEY_GAMEOPTION_NEW_VOLCANO">
-				<Text>火山</Text>
-			</Row>
-			<Row Tag="TXT_KEY_GAMEOPTION_NEW_VOLCANO_HELP">
-				<Text>允许地图生成火山（一种会造成随机事件的地貌）</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO">
-				<Text>火山</Text>
-			</Row>
-			<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO_HELP">
-				<Text>临近的陆地地块(自然奇观除外)+1[ICON_FOOD]食物，+1[ICON_TOURISM]魅力。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO_PEDIA">
-				<Text>
-					古罗马时期，人们看见火山喷发的现象，便把这种山在燃烧的原因归之为火神武尔卡发怒，于是意大利南部地中海利帕里群岛中的武尔卡诺火山便由此而得名，同时也成为火山一词的英文名称－－Volcano。
-					[NEWLINE][NEWLINE]火山（volcano）是炽热地心的窗口，是地球上最具爆发性的力量。火山爆发喷出的大量火山灰和暴雨结合形成泥石流能冲毁道路、桥梁，淹没附近的乡村和城市，使得无数人无家可归。泥土、岩石碎屑形成的泥浆就像洪水一般淹没了整座城市。岩石虽被火山灰云遮住了，但火山刚爆发时仍可看到被喷到半空中的巨大岩石。
-					[NEWLINE][NEWLINE]火山是一个由固体碎屑、熔岩、流或穹状喷出物围绕着其喷出口堆积而成的隆起的丘或山。火山喷出口是一条由地球上地幔或岩石圈到地表的管道，大部分物质堆积在火山口附近，有些被大气携带到高处而扩散到几百或几千公里外的地方。
-					[NEWLINE][NEWLINE]火山的形成涉及一系列物理化学过程。地壳上地幔岩石在一定温度压力条件下产生部分熔融并与母岩分离，熔融体通过孔隙或裂隙向上运移，并在一定部位逐渐富集而形成岩浆囊。随着岩浆的不断补给，岩浆囊的岩浆过剩压力逐渐增大。当表壳覆盖层的强度不足以阻止岩浆继续向上运动时，岩浆通过薄弱带向地表上升。在上升过程中溶解在岩浆中挥发份逐渐溶出，形成气泡，当气泡占有的体积分数超过75%时，禁锢在液体中的气泡会迅速释放出来，导致爆炸性喷发，气体释放后岩浆粘度降到很低，流动转变成湍流性质的。如若岩浆粘滞性数较低或挥发份较少，便仅有宁静式溢流。从部分熔融到喷发一系列的物理化学过程的差别形成了形形色色的火山活动。
-					[NEWLINE][NEWLINE]火山出现的历史很悠久。有些火山在人类有史以前就喷发过，但现在已不再活动，这样的火山称之为“死火山”；而有史以来曾经喷发过．但长期以来处于相对静止状态的火山。此类火山都保存有完好的火山雄形态，仍具有火山活动能力，或尚不能断定其已丧失火山活动能力,人们称之为“休眠火山”；人类有史以来，时有喷发的火山，称为“活火山”。
-				</Text>
-			</Row>
-
-
-
-			<Replace Tag="TXT_KEY_SP_UI_BTN_CLEAR_ALL_ORDER_SHORT">
-				<Text>[ICON_CLEAR_ALL_ORDER]取消统一规划</Text>
-			</Replace>
-			
-			
-			<Row Tag="TXT_KEY_EUI_SPECIALIST_YIELD_CHANGE">
-			      <Text>{1_Name}+{3_Num}{2_Name}{4_Name}</Text>
-		    </Row>
-			
-			<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
-				<Text>工人建造效率+25%</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_GOLD_COST_LABEL">
-				<Text>维护费：</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_SV_ICONS_GLOBAL_GREATWORK">
-				<Text>全国杰作</Text>
-			</Row>
-			
-			
-			<Row Tag="TXT_KEY_EXTRA_RESOURCES_VALUE_HELP">
-				<Text>工程师+1[ICON_RES_ELECTRICITY]电力。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_NO_ACTION_CITY_COUNT_MAX">
-				<Text>每座城市只允许{1_Num}个。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUI_MOD_TOURISM">
-				<Text>魅力产出增加{1_Num}%。</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUI_FREE_UNIT">
-				<Text>免费 {1_Num} {2_Name}{3_Name}。</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_PROMOTION_AI_ATTACK_CITY">
-				<Text>战斗补偿</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_AI_ATTACK_CITY_HELP">
-				<Text>获得攻城加成与额外视野。</Text>
-			</Row>
-
-			<!-- New Unit Combats -->
-			<Row Tag="TXT_KEY_UNITCOMBAT_SETTLER">
-				<Text>移民单位</Text>
-			</Row>
-			<Row Tag="TXT_KEY_UNITCOMBAT_WORKER">
-				<Text>工人单位</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_SP_BTNNOTE_ELITE_SELECT_SHORT">
-				<Text>精英列表</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SP_BTNNOTE_ELITE_SELECT">
-				<Text>点击打开你目前所拥有的精英单位总览列表（可执行排序，快速定位功能）</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_SP_BTNNOTE_ELITE">
-				<Text>
-					[COLOR_MIGHT]精英单位[ENDCOLOR]
-				</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_CH_ELITEUNIT">
-				<Text>精英单位总览</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CH_SORT_MOVES_TT">
-				<Text>单击按剩余移动力排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CH_SORT_ELITE_NAME_TT">
-				<Text>单击按单位名字排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CH_SORT_STRENGTH_TT">
-				<Text>单击按近战战斗力排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CH_RANGE_STRENGTH_TT">
-				<Text>单击按远程战斗力排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CH_ELITE_NAME">
-				<Text>名称</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITYVIEW_GLOBAL_EACH" >
-				<Text>全国每个</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EVERY_PER" >
-				<Text>本城：每</Text>
-			</Row>
-			
-			
-			<Row Tag="TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL" >
-				<Text>全国</Text>
-			</Row>
-			<Row Tag="TXT_KEY_LOCAL_POP" >
-				<Text>本城</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_PEDIA_NEAR_ENEMY_DAMAGE" >
-				<Text>临近敌人每回合伤害：{1_Num}</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PEDIA_NEAR_OUR_HEAL" >
-				<Text>临近己方每回合治疗：{1_Num}</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_NO_CAPTURE" >
-				<Text>[COLOR_ENDURANCE]不可被俘[ENDCOLOR]</Text>
-			</Row>
-			
-			<Replace Tag="TXT_KEY_UNIT_IGNORE_ZOC_D" >
-				<Text>[COLOR_ENDURANCE]无视ZOC[ENDCOLOR]</Text>
-			</Replace>
-
-			<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT" >
-				<Text>[COLOR_COURAGE]受到的最终伤害{1_Num}[ENDCOLOR]</Text>
-			</Row>
-
-
-
-			<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT" >
-				<Text>[COLOR_ENDURANCE]额外远程攻击能力[ENDCOLOR]</Text>
-			</Row>
-
-
-			<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH" >
-				<Text>[COLOR_ENDURANCE]无视资源惩罚[ENDCOLOR]</Text>
-			</Row>
-			
-			
-
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS" >
-				<Text>黄金时代加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS" >
-				<Text>损失血量加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_HEIGHT_BONUS" >
-				<Text>地势高度加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS" >
-				<Text>原始首都数量加成</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_ON_SAME_CAPITAL_LAND_BONUS" >
-				<Text>与首都同大陆加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_ON_DIFFERENT_CAPITAL_LAND_BONUS" >
-				<Text>与首都不同大陆加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER" >
-				<Text>远程夹击攻击加成</Text>
-			</Row>
-			
-			
-			<Row Tag="TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN" >
-				<Text>对领域攻击加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_DEFENSE_VS_DOMAIN" >
-				<Text>对领域防御加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS" >
-				<Text>临近敌军数量加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_MOVES_LEFT_BONUS" >
-				<Text>剩余移动力加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_EUPANEL_MOVES_USED_BONUS" >
-				<Text>已用移动力加成</Text>
-			</Row>
-
-
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS" >
-				<Text>杰作数量加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS" >
-				<Text>世界奇观数量加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS" >
-				<Text>间谍数量加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY" >
-				<Text>间谍加成</Text>
-			</Row>
-			
-
-			<Row Tag="TXT_KEY_EUPANEL_UNITCLASS_NEAR" >
-				<Text>临近晋升加成</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_NUKE_INTERCEPTION11">
-				<Text>核拦截几率:</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITY_ATTACK_CHANGE">
-				<Text>城市攻击次数:</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITY_RANGED_ATTACK_MOD">
-				<Text>城市攻击加成:</Text>
-			</Row>
-			<Row Tag="TXT_KEY_GLOBAL_CITY_STRENGTH_MOD">
-				<Text>全局城防加成:</Text>
-			</Row>
-			<Row Tag="TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD">
-				<Text>全局城市攻击加成:</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_NUKE_INTERCEPTED">
-				<Text>{1_CIV}的核武器被{2_City}拦截！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_NUKE_INTERCEPTED_S">
-				<Text>核打击被拦截！</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_NUKE_INTERCEPTED_US">
-				<Text>{2_City}的防御系统拦截了我们的核武器，并将其摧毁了！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_NUKE_INTERCEPTED_US_S">
-				<Text>核打击被拦截！</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_LOCAL_IMPROVEMENT_YIELD" >
-				<Text>本地</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_PEDIA_GLOBAL_RESOURCES" >
-				<Text>全国</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_SV_ICONS_GLOBAL" >
-				<Text>全国</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_LOCAL_SPECIALIST" >
-				<Text>本地</Text>
-			</Row>
-			<Row Tag="TXT_KEY_SV_ICONS_LOCAL" >
-				<Text>本地</Text>
-			</Row>
-
-
-			<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION" >
-				<Text>对指定[COLOR_ENDURANCE]晋升[ENDCOLOR]战斗加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION_ATTACK" >
-				<Text>对指定[COLOR_ENDURANCE]晋升[ENDCOLOR]攻击加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION_DEFENSE" >
-				<Text>对指定[COLOR_ENDURANCE]晋升[ENDCOLOR]防御加成</Text>
-			</Row>
-
-
-			<Row Tag="TXT_KEY_CP_OVERVIEW">
-				<Text>建造列表</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_CITIES">
-				<Text>城市</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_PUPPET_WARNING">
-				<Text>[COLOR_RED]回合结束时，所有傀儡城市将变更为[ICON_GOLD]偏重于金钱产出![ENDCOLOR]</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_CITY">
-				<Text>城市</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS">
-				<Text>关注</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_CURRENT">
-				<Text>建造</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_PROGRESS">
-				<Text>项目</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_TURNS">
-				<Text>回合</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_STATUS_CAPITAL_TT">
-				<Text>首都</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_STATUS_OCCUPIED_TT">
-				<Text>占领城市</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_STATUS_PUPPET_TT">
-				<Text>傀儡城</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_STATUS_RESISTANCE_TT">
-				<Text>抵抗中!</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_STATUS_RAZING_TT">
-				<Text>焚毁!</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_CITY_TT">
-				<Text>点击进入城市界面</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_POP_TT">
-				<Text>点击按城市人口排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_STATUS_TT">
-				<Text>点击按城市状态排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_NAME_TT">
-				<Text>点击按城市名称排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_PRODUCTION_TT">
-				<Text>点击按城市产能排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOOD_TT">
-				<Text>点击按剩余食物排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_SCIENCE_TT">
-				<Text>点击按每回合科研产出排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_GOLD_TT">
-				<Text>点击按每回合金钱产出排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_CULTURE_TT">
-				<Text>点击按每回合文化产出排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FAITH_TT">
-				<Text>点击按每回合信仰产出排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_DEFAULT_TT">
-				<Text>单击以按照默认市民分配排序,右键以令所有城市使用默认市民分配</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_PRODUCTION_TT">
-				<Text>单击以按照偏重于产能排序,右键以令所有城市偏重于产能</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_FOOD_TT">
-				<Text>单击以按照偏重于食物排序,右键以令所有城市偏重于食物产出</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_SCIENCE_TT">
-				<Text>单击以按照偏重于科研排序,右键以令所有城市偏重于科研产出</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_GOLD_TT">
-				<Text>单击以按照偏重于金钱排序,右键以令所有城市偏重于金钱产出</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_CULTURE_TT">
-				<Text>单击以按照偏重于文化排序,右键以令所有城市偏重于文化产出</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_FAITH_TT">
-				<Text>单击以按照偏重于信仰排序,右键以令所有城市偏重于信仰产出</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_FOCUS_GP_TT">
-				<Text>单击以按照偏重于伟人点数排序,右键以令所有城市偏重于伟人点数产出</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_MANUAL_TILES_TT">
-				<Text>单击以按处于手动分配地块状态的城市进行排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_MANUAL_CITIZENS_TT">
-				<Text>单击以按处于手动分配专家槽位状态的城市进行排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_MANUAL_GROWTH_TT">
-				<Text>单击以按处于避免人口增长状态的城市进行排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_BUILD_ICON_TT">
-				<Text>点击按当前建造项目排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_BUILD_PROGRESS_TT">
-				<Text>点击按当前建造进度排序</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_SORT_BUILD_TURNS_TT">
-				<Text>单击以按当前剩余建造回合数排序</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_FOCUS_DEFAULT">
-				<Text>单击以令城市使用默认市民分配</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS_PRODUCTION">
-				<Text>单击以令该城偏重于[ICON_PRODUCTION]产能</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS_FOOD">
-				<Text>单击以令该城偏重于[ICON_FOOD]食物</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS_SCIENCE">
-				<Text>单击以令该城偏重于[ICON_RESEARCH]科研</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS_GOLD">
-				<Text>单击以令该城偏重于[ICON_GOLD]金钱</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS_CULTURE">
-				<Text>单击以令该城偏重于[ICON_CULTURE]文化</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS_FAITH">
-				<Text>单击以令该城偏重于[ICON_PEACE]信仰</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_FOCUS_GP">
-				<Text>单击以令该城偏重于[ICON_GREAT_PEOPLE]伟人点数</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_MANUAL_TILES_TT">
-				<Text>城市已手动分配（锁定）地块</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_MANUAL_CITIZENS_TT">
-				<Text>市已手动分配专家</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CP_MANUAL_GROWTH_TT">
-				<Text>城市试图保持当前人口</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_BUILD_PROGRESS_TT">
-				<Text>{1_Done}分之{2_Total}</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CP_DIPLO_CORNER_HOOK" Text="城市生产"/>
-			<Row Tag="TXT_KEY_CP_DIPLO_CORNER_HOOK_TT" Text="通过当前界面管理所有城市生产"/>
-			
-			
-			
-			
-
-			<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL">
-				<Text>运河</Text>
-			</Replace>
-			<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL_HELP">
-				<Text>允许海军通过该地块。只能在苏伊士和巴拿马建造。</Text>
-			</Replace>
-			<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL_TEXT">
-				<Text>运河是指人工开凿的规模比较大的，可以使水流流过的通道。运河通常为连接湖泊、河流和海洋，或横贯半岛、地峡而造。运河可以让驳船或运河船通行，海船运河可以让海上的船舶通行到不靠海的港口（例如曼彻斯特大运河），或是由一个海洋到另一个海洋（例如巴拿马运河或苏伊士运河）。[NEWLINE][NEWLINE]允许海军通过该地块。在运河中的单位可获得50%的防御战斗力加成。只能在苏伊士和巴拿马建造。</Text>
-			</Replace>
-			<Replace Tag="TXT_KEY_BUILD_CANAL">
-				<Text>建造[LINK=IMPROVEMENT_CANAL]运河[\LINK]</Text>
-			</Replace>
-			<Replace Tag="TXT_KEY_BUILD_CANAL_HELP">
-				<Text>允许海军通过该地块。只能在苏伊士和巴拿马建造。</Text>
-			</Replace>
-			<Replace Tag="TXT_KEY_BUILD_CANAL_REC">
-				<Text>允许海军通过该地块。</Text>
-			</Replace>
-
-
-
-			<Row Tag="TXT_KEY_CITYVIEW_LOCALYIELDS_TEXT">
-				<Text>本地产出</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITYVIEW_NATYIELDS_NATIONAL_TEXT">
-				<Text>全局产出</Text>
-			</Row>
-
-
-			<Row Tag="TXT_KEY_CITYVIEW_LOCALYIELDS_XP_TEXT">
-				<Text>军事训练</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITYVIEW_LAND_TEXT">
-				<Text>陆军</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITYVIEW_SEA_TEXT">
-				<Text>海军</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITYVIEW_AIR_TEXT">
-				<Text>空军</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITYVIEW_XP_TEXT">
-				<Text>[COLOR_DISEASE]+{1_perTurn:number "#.##"}[ENDCOLOR]</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_CITYVIEW_GOLDENAGE_TEXT">
-				<Text>黄金时代</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_ROG_CITYVIEW_LAND_TEXT_TT">
-				<Text>新建陆军单位可获得{1_Num}[COLOR_SORCERY]经验值[ENDCOLOR]</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_ROG_CITYVIEW_SEA_TEXT_TT">
-				<Text>新建海军单位可获得{1_Num}[COLOR_SORCERY]经验值[ENDCOLOR]</Text>
-			</Row>
-
-			<Row Tag="TXT_KEY_ROG_CITYVIEW_AIR_TEXT_TT">
-				<Text>新建空军单位可获得{1_Num}[COLOR_SORCERY]经验值[ENDCOLOR]</Text>
-			</Row>
-			
-			
-			<!--Golden Age Points-->
-
-			<Row Tag="TXT_KEY_ROG_CITYVIEW_GAP_TEXT_TT">
-				<Text>[ICON_GOLDEN_AGE]黄金时代点数用于触发黄金时代;一种可获得额外[ICON_CULTURE]文化,[ICON_GOLD]金钱,[ICON_PRODUCTION]产能收益的时期。[NEWLINE]{1_GAPBreakdown}[NEWLINE][NEWLINE]------------------[NEWLINE][COLOR_POSITIVE_TEXT]{2_Num}[ICON_GOLDEN_AGE]总计</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_BUILDINGS">
-				<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自建筑</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_LOCAL_HAPPINESS">
-				<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自本地满意度</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_MODIFIERS">
-				<Text>[NEWLINE][NEWLINE][ICON_BULLET]{1_Num}%[ICON_GOLDEN_AGE]来自城市加成</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_RELIGION">
-				<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自宗教</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_SPECIALISTS">
-				<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自专家</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_TERRAIN">
-				<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自地形</Text>
-			</Row>
-
-			
-			
-
-			<!-- 额外胜利 -->
-			<Row Tag="TXT_KEY_VICTORY_RELIGIOUS">
-				<Text>宗教</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VICTORY_RELIGIOUS_BANG">
-				<Text>宗教胜利!</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VICTORYSCREEN_RELIGIOUS">
-				<Text>[ICON_VICTORY_RELIGIOUS]宗教</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_RELIGIOUS_VICTORY_DISABLED">
-				<Text>禁用宗教胜利。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_NO_RELIGIONS_FOUNDED">
-				<Text>尚未建立任何宗教</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VICTORY_FLAVOR_RELIGIOUS">
-				<Text>你通过信仰团结了世界。所有国家的人都承认你的宗教是通向真理的唯一道路。其他信仰或哲学都宣称效忠于您的宗教命令，其他国王也无法行使它的权力。所有人都向你们的先知寻求指导，并祈祷这种前所未有的团结将带来持久的和平。世人将永远铭记您的奇迹成就。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VICTORY_ECONOMIC">
-				<Text>经济</Text>
-			</Row>
-			<!--<Row Tag="TXT_KEY_VICTORY_ECONOMIC_BANG">
+	<Language_zh_CN>
+
+
+
+		<!-- VOLCANOS -->
+		<Row Tag="TXT_KEY_GAMEOPTION_NEW_VOLCANO">
+			<Text>火山</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GAMEOPTION_NEW_VOLCANO_HELP">
+			<Text>允许地图生成火山（一种会造成随机事件的地貌）</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO">
+			<Text>火山</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO_HELP">
+			<Text>临近的陆地地块(自然奇观除外)+1[ICON_FOOD]食物，+1[ICON_TOURISM]魅力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_FEATURE_NEW_VOLCANO_PEDIA">
+			<Text>
+				古罗马时期，人们看见火山喷发的现象，便把这种山在燃烧的原因归之为火神武尔卡发怒，于是意大利南部地中海利帕里群岛中的武尔卡诺火山便由此而得名，同时也成为火山一词的英文名称－－Volcano。
+				[NEWLINE][NEWLINE]火山（volcano）是炽热地心的窗口，是地球上最具爆发性的力量。火山爆发喷出的大量火山灰和暴雨结合形成泥石流能冲毁道路、桥梁，淹没附近的乡村和城市，使得无数人无家可归。泥土、岩石碎屑形成的泥浆就像洪水一般淹没了整座城市。岩石虽被火山灰云遮住了，但火山刚爆发时仍可看到被喷到半空中的巨大岩石。
+				[NEWLINE][NEWLINE]火山是一个由固体碎屑、熔岩、流或穹状喷出物围绕着其喷出口堆积而成的隆起的丘或山。火山喷出口是一条由地球上地幔或岩石圈到地表的管道，大部分物质堆积在火山口附近，有些被大气携带到高处而扩散到几百或几千公里外的地方。
+				[NEWLINE][NEWLINE]火山的形成涉及一系列物理化学过程。地壳上地幔岩石在一定温度压力条件下产生部分熔融并与母岩分离，熔融体通过孔隙或裂隙向上运移，并在一定部位逐渐富集而形成岩浆囊。随着岩浆的不断补给，岩浆囊的岩浆过剩压力逐渐增大。当表壳覆盖层的强度不足以阻止岩浆继续向上运动时，岩浆通过薄弱带向地表上升。在上升过程中溶解在岩浆中挥发份逐渐溶出，形成气泡，当气泡占有的体积分数超过75%时，禁锢在液体中的气泡会迅速释放出来，导致爆炸性喷发，气体释放后岩浆粘度降到很低，流动转变成湍流性质的。如若岩浆粘滞性数较低或挥发份较少，便仅有宁静式溢流。从部分熔融到喷发一系列的物理化学过程的差别形成了形形色色的火山活动。
+				[NEWLINE][NEWLINE]火山出现的历史很悠久。有些火山在人类有史以前就喷发过，但现在已不再活动，这样的火山称之为“死火山”；而有史以来曾经喷发过．但长期以来处于相对静止状态的火山。此类火山都保存有完好的火山雄形态，仍具有火山活动能力，或尚不能断定其已丧失火山活动能力,人们称之为“休眠火山”；人类有史以来，时有喷发的火山，称为“活火山”。
+			</Text>
+		</Row>
+
+
+
+		<Replace Tag="TXT_KEY_SP_UI_BTN_CLEAR_ALL_ORDER_SHORT">
+			<Text>[ICON_CLEAR_ALL_ORDER]取消统一规划</Text>
+		</Replace>
+
+
+		<Row Tag="TXT_KEY_EUI_SPECIALIST_YIELD_CHANGE">
+			<Text>{1_Name}+{3_Num}{2_Name}{4_Name}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
+			<Text>工人建造效率+25%</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_GOLD_COST_LABEL">
+			<Text>维护费：</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SV_ICONS_GLOBAL_GREATWORK">
+			<Text>全国杰作</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EXTRA_RESOURCES_VALUE_HELP">
+			<Text>工程师+1[ICON_RES_ELECTRICITY]电力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NO_ACTION_CITY_COUNT_MAX">
+			<Text>每座城市只允许{1_Num}个。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_MOD_TOURISM">
+			<Text>魅力产出增加{1_Num}%。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUI_FREE_UNIT">
+			<Text>免费 {1_Num} {2_Name}{3_Name}。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_AI_ATTACK_CITY">
+			<Text>战斗补偿</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_AI_ATTACK_CITY_HELP">
+			<Text>获得攻城加成与额外视野。</Text>
+		</Row>
+
+		<!-- New Unit Combats -->
+		<Row Tag="TXT_KEY_UNITCOMBAT_SETTLER">
+			<Text>移民单位</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNITCOMBAT_WORKER">
+			<Text>工人单位</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_BTNNOTE_ELITE_SELECT_SHORT">
+			<Text>精英列表</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_ELITE_SELECT">
+			<Text>点击打开你目前所拥有的精英单位总览列表（可执行排序，快速定位功能）</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_BTNNOTE_ELITE">
+			<Text>
+				[COLOR_MIGHT]精英单位[ENDCOLOR]
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CH_ELITEUNIT">
+			<Text>精英单位总览</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CH_SORT_MOVES_TT">
+			<Text>单击按剩余移动力排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_SORT_ELITE_NAME_TT">
+			<Text>单击按单位名字排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_SORT_STRENGTH_TT">
+			<Text>单击按近战战斗力排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_RANGE_STRENGTH_TT">
+			<Text>单击按远程战斗力排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CH_ELITE_NAME">
+			<Text>名称</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_GLOBAL_EACH" >
+			<Text>全国每个</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EVERY_PER" >
+			<Text>本城：每</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL" >
+			<Text>全国</Text>
+		</Row>
+		<Row Tag="TXT_KEY_LOCAL_POP" >
+			<Text>本城</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PEDIA_NEAR_ENEMY_DAMAGE" >
+			<Text>临近敌人每回合伤害：{1_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PEDIA_NEAR_OUR_HEAL" >
+			<Text>临近己方每回合治疗：{1_Num}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_NO_CAPTURE" >
+			<Text>[COLOR_ENDURANCE]不可被俘[ENDCOLOR]</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_UNIT_IGNORE_ZOC_D" >
+			<Text>[COLOR_ENDURANCE]无视ZOC[ENDCOLOR]</Text>
+		</Replace>
+
+		<Row Tag="TXT_KEY_EUPANEL_CHANGE_DAMAGEVALUE_SUPPORT" >
+			<Text>[COLOR_COURAGE]受到的最终伤害{1_Num}[ENDCOLOR]</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT" >
+			<Text>[COLOR_ENDURANCE]额外远程攻击能力[ENDCOLOR]</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH" >
+			<Text>[COLOR_ENDURANCE]无视资源惩罚[ENDCOLOR]</Text>
+		</Row>
+
+
+
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS" >
+			<Text>黄金时代加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS" >
+			<Text>损失血量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_HEIGHT_BONUS" >
+			<Text>地势高度加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_ORIGINAL_CAPITAL_BONUS" >
+			<Text>原始首都数量加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_ON_SAME_CAPITAL_LAND_BONUS" >
+			<Text>与首都同大陆加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_ON_DIFFERENT_CAPITAL_LAND_BONUS" >
+			<Text>与首都不同大陆加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER" >
+			<Text>远程夹击攻击加成</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_VS_DOMAIN" >
+			<Text>对领域攻击加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_DEFENSE_VS_DOMAIN" >
+			<Text>对领域防御加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_NUM_ENARBYENEMY_BONUS" >
+			<Text>临近敌军数量加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_LEFT_BONUS" >
+			<Text>剩余移动力加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_MOVES_USED_BONUS" >
+			<Text>已用移动力加成</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS" >
+			<Text>杰作数量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_WORLDWONDER_BONUS" >
+			<Text>世界奇观数量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS" >
+			<Text>间谍数量加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY" >
+			<Text>间谍加成</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EUPANEL_UNITCLASS_NEAR" >
+			<Text>临近晋升加成</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_NUKE_INTERCEPTION11">
+			<Text>核拦截几率:</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITY_ATTACK_CHANGE">
+			<Text>城市攻击次数:</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITY_RANGED_ATTACK_MOD">
+			<Text>城市攻击加成:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GLOBAL_CITY_STRENGTH_MOD">
+			<Text>全局城防加成:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD">
+			<Text>全局城市攻击加成:</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_NUKE_INTERCEPTED">
+			<Text>{1_CIV}的核武器被{2_City}拦截！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUKE_INTERCEPTED_S">
+			<Text>核打击被拦截！</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_NUKE_INTERCEPTED_US">
+			<Text>{2_City}的防御系统拦截了我们的核武器，并将其摧毁了！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NUKE_INTERCEPTED_US_S">
+			<Text>核打击被拦截！</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_LOCAL_IMPROVEMENT_YIELD" >
+			<Text>本地</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PEDIA_GLOBAL_RESOURCES" >
+			<Text>全国</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SV_ICONS_GLOBAL" >
+			<Text>全国</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_LOCAL_SPECIALIST" >
+			<Text>本地</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SV_ICONS_LOCAL" >
+			<Text>本地</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION" >
+			<Text>对指定[COLOR_ENDURANCE]晋升[ENDCOLOR]战斗加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION_ATTACK" >
+			<Text>对指定[COLOR_ENDURANCE]晋升[ENDCOLOR]攻击加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION_DEFENSE" >
+			<Text>对指定[COLOR_ENDURANCE]晋升[ENDCOLOR]防御加成</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CP_OVERVIEW">
+			<Text>建造列表</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_CITIES">
+			<Text>城市</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_PUPPET_WARNING">
+			<Text>[COLOR_RED]回合结束时，所有傀儡城市将变更为[ICON_GOLD]偏重于金钱产出![ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_CITY">
+			<Text>城市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS">
+			<Text>关注</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_CURRENT">
+			<Text>建造</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_PROGRESS">
+			<Text>项目</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_TURNS">
+			<Text>回合</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_STATUS_CAPITAL_TT">
+			<Text>首都</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_STATUS_OCCUPIED_TT">
+			<Text>占领城市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_STATUS_PUPPET_TT">
+			<Text>傀儡城</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_STATUS_RESISTANCE_TT">
+			<Text>抵抗中!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_STATUS_RAZING_TT">
+			<Text>焚毁!</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_CITY_TT">
+			<Text>点击进入城市界面</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_POP_TT">
+			<Text>点击按城市人口排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_STATUS_TT">
+			<Text>点击按城市状态排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_NAME_TT">
+			<Text>点击按城市名称排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_PRODUCTION_TT">
+			<Text>点击按城市产能排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOOD_TT">
+			<Text>点击按剩余食物排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_SCIENCE_TT">
+			<Text>点击按每回合科研产出排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_GOLD_TT">
+			<Text>点击按每回合金钱产出排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_CULTURE_TT">
+			<Text>点击按每回合文化产出排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FAITH_TT">
+			<Text>点击按每回合信仰产出排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_DEFAULT_TT">
+			<Text>单击以按照默认市民分配排序,右键以令所有城市使用默认市民分配</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_PRODUCTION_TT">
+			<Text>单击以按照偏重于产能排序,右键以令所有城市偏重于产能</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_FOOD_TT">
+			<Text>单击以按照偏重于食物排序,右键以令所有城市偏重于食物产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_SCIENCE_TT">
+			<Text>单击以按照偏重于科研排序,右键以令所有城市偏重于科研产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_GOLD_TT">
+			<Text>单击以按照偏重于金钱排序,右键以令所有城市偏重于金钱产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_CULTURE_TT">
+			<Text>单击以按照偏重于文化排序,右键以令所有城市偏重于文化产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_FAITH_TT">
+			<Text>单击以按照偏重于信仰排序,右键以令所有城市偏重于信仰产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_FOCUS_GP_TT">
+			<Text>单击以按照偏重于伟人点数排序,右键以令所有城市偏重于伟人点数产出</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_MANUAL_TILES_TT">
+			<Text>单击以按处于手动分配地块状态的城市进行排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_MANUAL_CITIZENS_TT">
+			<Text>单击以按处于手动分配专家槽位状态的城市进行排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_MANUAL_GROWTH_TT">
+			<Text>单击以按处于避免人口增长状态的城市进行排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_BUILD_ICON_TT">
+			<Text>点击按当前建造项目排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_BUILD_PROGRESS_TT">
+			<Text>点击按当前建造进度排序</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_SORT_BUILD_TURNS_TT">
+			<Text>单击以按当前剩余建造回合数排序</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_FOCUS_DEFAULT">
+			<Text>单击以令城市使用默认市民分配</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS_PRODUCTION">
+			<Text>单击以令该城偏重于[ICON_PRODUCTION]产能</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS_FOOD">
+			<Text>单击以令该城偏重于[ICON_FOOD]食物</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS_SCIENCE">
+			<Text>单击以令该城偏重于[ICON_RESEARCH]科研</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS_GOLD">
+			<Text>单击以令该城偏重于[ICON_GOLD]金钱</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS_CULTURE">
+			<Text>单击以令该城偏重于[ICON_CULTURE]文化</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS_FAITH">
+			<Text>单击以令该城偏重于[ICON_PEACE]信仰</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_FOCUS_GP">
+			<Text>单击以令该城偏重于[ICON_GREAT_PEOPLE]伟人点数</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_MANUAL_TILES_TT">
+			<Text>城市已手动分配（锁定）地块</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_MANUAL_CITIZENS_TT">
+			<Text>市已手动分配专家</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CP_MANUAL_GROWTH_TT">
+			<Text>城市试图保持当前人口</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_BUILD_PROGRESS_TT">
+			<Text>{1_Done}分之{2_Total}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CP_DIPLO_CORNER_HOOK" Text="城市生产"/>
+		<Row Tag="TXT_KEY_CP_DIPLO_CORNER_HOOK_TT" Text="通过当前界面管理所有城市生产"/>
+
+
+
+
+
+		<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL">
+			<Text>运河</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL_HELP">
+			<Text>允许海军通过该地块。只能在苏伊士和巴拿马建造。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL_TEXT">
+			<Text>运河是指人工开凿的规模比较大的，可以使水流流过的通道。运河通常为连接湖泊、河流和海洋，或横贯半岛、地峡而造。运河可以让驳船或运河船通行，海船运河可以让海上的船舶通行到不靠海的港口（例如曼彻斯特大运河），或是由一个海洋到另一个海洋（例如巴拿马运河或苏伊士运河）。[NEWLINE][NEWLINE]允许海军通过该地块。在运河中的单位可获得50%的防御战斗力加成。只能在苏伊士和巴拿马建造。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILD_CANAL">
+			<Text>建造[LINK=IMPROVEMENT_CANAL]运河[\LINK]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILD_CANAL_HELP">
+			<Text>允许海军通过该地块。只能在苏伊士和巴拿马建造。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILD_CANAL_REC">
+			<Text>允许海军通过该地块。</Text>
+		</Replace>
+
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_LOCALYIELDS_TEXT">
+			<Text>本地产出</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_NATYIELDS_NATIONAL_TEXT">
+			<Text>全局产出</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_LOCALYIELDS_XP_TEXT">
+			<Text>军事训练</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_LAND_TEXT">
+			<Text>陆军</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_SEA_TEXT">
+			<Text>海军</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_AIR_TEXT">
+			<Text>空军</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_XP_TEXT">
+			<Text>[COLOR_DISEASE]+{1_perTurn:number "#.##"}[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_GOLDENAGE_TEXT">
+			<Text>黄金时代</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_ROG_CITYVIEW_LAND_TEXT_TT">
+			<Text>新建陆军单位可获得{1_Num}[COLOR_SORCERY]经验值[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_ROG_CITYVIEW_SEA_TEXT_TT">
+			<Text>新建海军单位可获得{1_Num}[COLOR_SORCERY]经验值[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_ROG_CITYVIEW_AIR_TEXT_TT">
+			<Text>新建空军单位可获得{1_Num}[COLOR_SORCERY]经验值[ENDCOLOR]</Text>
+		</Row>
+
+
+		<!--Golden Age Points-->
+
+		<Row Tag="TXT_KEY_ROG_CITYVIEW_GAP_TEXT_TT">
+			<Text>[ICON_GOLDEN_AGE]黄金时代点数用于触发黄金时代;一种可获得额外[ICON_CULTURE]文化,[ICON_GOLD]金钱,[ICON_PRODUCTION]产能收益的时期。[NEWLINE]{1_GAPBreakdown}[NEWLINE][NEWLINE]------------------[NEWLINE][COLOR_POSITIVE_TEXT]{2_Num}[ICON_GOLDEN_AGE]总计</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_BUILDINGS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自建筑</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_LOCAL_HAPPINESS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自本地满意度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_MODIFIERS">
+			<Text>[NEWLINE][NEWLINE][ICON_BULLET]{1_Num}%[ICON_GOLDEN_AGE]来自城市加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_RELIGION">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自宗教</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_SPECIALISTS">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自专家</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_ROG_GAP_TT_FROM_TERRAIN">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_GOLDEN_AGE]来自地形</Text>
+		</Row>
+
+
+
+
+		<!-- 额外胜利 -->
+		<Row Tag="TXT_KEY_VICTORY_RELIGIOUS">
+			<Text>宗教</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VICTORY_RELIGIOUS_BANG">
+			<Text>宗教胜利!</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VICTORYSCREEN_RELIGIOUS">
+			<Text>[ICON_VICTORY_RELIGIOUS]宗教</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_RELIGIOUS_VICTORY_DISABLED">
+			<Text>禁用宗教胜利。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_NO_RELIGIONS_FOUNDED">
+			<Text>尚未建立任何宗教</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VICTORY_FLAVOR_RELIGIOUS">
+			<Text>你通过信仰团结了世界。所有国家的人都承认你的宗教是通向真理的唯一道路。其他信仰或哲学都宣称效忠于您的宗教命令，其他国王也无法行使它的权力。所有人都向你们的先知寻求指导，并祈祷这种前所未有的团结将带来持久的和平。世人将永远铭记您的奇迹成就。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VICTORY_ECONOMIC">
+			<Text>经济</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_VICTORY_ECONOMIC_BANG">
 			<Text>TBD</Text>
 		</Row>-->
-			<Row Tag="TXT_KEY_VICTORYSCREEN_ECONOMIC">
-				<Text>[ICON_VICTORY_ECONOMIC]经济</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_VICTORY_DISABLED">
-				<Text>禁用经济胜利。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VICTORY_FLAVOR_ECONOMIC">
-				<Text>你通过财富的力量统治了世界。从未有过如此多的财富积累：您对玛蒙的奉献超越了所有国王和公司。没有你买不到的东西，也没有你不能用你的商品诱惑的东西。所有人都愿意为你的硬币服务，因此所有人都愿意为你服务。世人将永远铭记您的卓越成就。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_VICTORYSCREEN_ECONOMIC">
+			<Text>[ICON_VICTORY_ECONOMIC]经济</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_VICTORY_DISABLED">
+			<Text>禁用经济胜利。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VICTORY_FLAVOR_ECONOMIC">
+			<Text>你通过财富的力量统治了世界。从未有过如此多的财富积累：您对玛蒙的奉献超越了所有国王和公司。没有你买不到的东西，也没有你不能用你的商品诱惑的东西。所有人都愿意为你的硬币服务，因此所有人都愿意为你服务。世人将永远铭记您的卓越成就。</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_VP_RELIGIOUS_STATUS">
-				<Text>{1_ReligiousIcon} {2_Religion}[NEWLINE]创立者: {8_Player}[NEWLINE]传播: {3_Spread}%/70%[NEWLINE]追随者: {4_Followers}/{5_MaxFollowers}[NEWLINE]圣城: {6_ControlledHolyCities}/{7_MaxHolyCities}</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_RELIGIOUS_STATUS_UNMET">
-				<Text>{1_ReligiousIcon} {2_Religion}[NEWLINE]创立者: 未知[NEWLINE]传播: {3_Spread}%/70%[NEWLINE]追随者: {4_Followers}/{5_MaxFollowers}[NEWLINE]圣城: {6_ControlledHolyCities}/{7_MaxHolyCities}</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_RELIGIOUS_STATUS_PLAYER">
-				<Text>{1_ReligiousIcon} {2_Religion}[NEWLINE]创立者: 你[NEWLINE]传播: {3_Spread}%/70%[NEWLINE]追随者: {4_Followers}/{5_MaxFollowers}[NEWLINE]圣城: {6_ControlledHolyCities}/{7_MaxHolyCities}</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_GOLD">
-				<Text>金钱积累: {1_Gold} [ICON_GOLD] / {2_GoldTarget} [ICON_GOLD]</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_GOLD_DONE">
-				<Text>金钱积累: [COLOR_POSITIVE_TEXT]{1_Gold} [ICON_GOLD] [ENDCOLOR]/[COLOR_POSITIVE_TEXT] {2_GoldTarget} [ICON_GOLD][ENDCOLOR]</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_GPT">
-				<Text>金钱产出超出{1_GPTTarget}[ICON_GOLD]的持续回合数:</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_GPT_TOOLTIP">
-				<Text>{1_Turns}/ 15</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_LUXURIES">
-				<Text>奢侈品: </Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_LUXURY_TOOLTIP">
-				<Text>{1_Luxury}</Text>
-			</Row>
-			<Row Tag="TXT_KEY_VP_ECONOMIC_LUXURY_TOOLTIP_AQUIRED">
-				<Text>[COLOR_POSITIVE_TEXT]{1_Luxury}[ENDCOLOR]</Text>
-			</Row>
+		<Row Tag="TXT_KEY_VP_RELIGIOUS_STATUS">
+			<Text>{1_ReligiousIcon} {2_Religion}[NEWLINE]创立者: {8_Player}[NEWLINE]传播: {3_Spread}%/70%[NEWLINE]追随者: {4_Followers}/{5_MaxFollowers}[NEWLINE]圣城: {6_ControlledHolyCities}/{7_MaxHolyCities}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_RELIGIOUS_STATUS_UNMET">
+			<Text>{1_ReligiousIcon} {2_Religion}[NEWLINE]创立者: 未知[NEWLINE]传播: {3_Spread}%/70%[NEWLINE]追随者: {4_Followers}/{5_MaxFollowers}[NEWLINE]圣城: {6_ControlledHolyCities}/{7_MaxHolyCities}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_RELIGIOUS_STATUS_PLAYER">
+			<Text>{1_ReligiousIcon} {2_Religion}[NEWLINE]创立者: 你[NEWLINE]传播: {3_Spread}%/70%[NEWLINE]追随者: {4_Followers}/{5_MaxFollowers}[NEWLINE]圣城: {6_ControlledHolyCities}/{7_MaxHolyCities}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_GOLD">
+			<Text>金钱积累: {1_Gold} [ICON_GOLD] / {2_GoldTarget} [ICON_GOLD]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_GOLD_DONE">
+			<Text>金钱积累: [COLOR_POSITIVE_TEXT]{1_Gold} [ICON_GOLD] [ENDCOLOR]/[COLOR_POSITIVE_TEXT] {2_GoldTarget} [ICON_GOLD][ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_GPT">
+			<Text>金钱产出超出{1_GPTTarget}[ICON_GOLD]的持续回合数:</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_GPT_TOOLTIP">
+			<Text>{1_Turns}/ 15</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_LUXURIES">
+			<Text>奢侈品: </Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_LUXURY_TOOLTIP">
+			<Text>{1_Luxury}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_VP_ECONOMIC_LUXURY_TOOLTIP_AQUIRED">
+			<Text>[COLOR_POSITIVE_TEXT]{1_Luxury}[ENDCOLOR]</Text>
+		</Row>
 
 
-	
 
-			<!-- 环球航行 -->
 
-			<Row Tag="TXT_KEY_MAGELLAN_NOTIFICATIONS">
-				<Text>环球航行</Text>
-			</Row>
+		<!-- 环球航行 -->
 
-			<Row Tag="TXT_KEY_MAGELLAN_HEAD">
-				<Text>世界是圆的！</Text>
-			</Row>
-			<Row Tag="TXT_KEY_MAGELLAN_TEXT_YOU">
-				<Text>你的地图证明了世界是圆的。你的船舶获得[ICON_MOVEMENT]+1移动。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_MAGELLAN_TEXT_KNOWN">
-				<Text>{1_civ}证明了世界是圆的。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_MAGELLAN_TEXT_UNKNOWN">
-				<Text>一个未知的文明证明了世界是圆的。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_MAGELLAN_NOTIFICATIONS">
+			<Text>环球航行</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_MAGELLAN_HEAD">
+			<Text>世界是圆的！</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAGELLAN_TEXT_YOU">
+			<Text>你的地图证明了世界是圆的。你的船舶获得[ICON_MOVEMENT]+1移动。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAGELLAN_TEXT_KNOWN">
+			<Text>{1_civ}证明了世界是圆的。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAGELLAN_TEXT_UNKNOWN">
+			<Text>一个未知的文明证明了世界是圆的。</Text>
+		</Row>
 
 
 		<!--<Row Tag="TXT_KEY_SP_UI_BTN_FILL_DOCTORS_SHORT">
@@ -651,158 +651,158 @@
 		</Row>-->
 
 
-	
 
 
 
-			
-			<Row Tag="TXT_KEY_UPANEL_HP_TT">
-				<Text>当前单位生命值</Text>
-			</Row>
 
 
-			<Row Tag="TXT_KEY_CLEAR_FREE_POLICY">
-				<Text>清除</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUTTON_CLEAR_FREE_POLICY">
-				<Text>清除当前富余政策。</Text>
-			</Row>
-
-			
-
-	
-
-			<Replace>
-				<Tag>TXT_KEY_SPECIALIST_WRITER_STRATEGY</Tag>
-				<Text>+2[ICON_CULTURE]文化并+2[ICON_GREAT_PEOPLE]大文学家伟人点数。</Text>
-			</Replace>
-
-			<Replace>
-				<Tag>TXT_KEY_SPECIALIST_ARTIST_STRATEGY</Tag>
-				<Text>+2[ICON_CULTURE]文化并+2[ICON_GREAT_PEOPLE]大美术家伟人点数。</Text>
-			</Replace>
-
-			<Replace>
-				<Tag>TXT_KEY_SPECIALIST_MUSICIAN_STRATEGY</Tag>
-				<Text>+2[ICON_CULTURE]文化并+2[ICON_GREAT_PEOPLE]大音乐家伟人点数。</Text>
-			</Replace>
-
-			<Replace>
-				<Tag>TXT_KEY_SPECIALIST_SCIENTIST_STRATEGY</Tag>
-				<Text>+3[ICON_RESEARCH]科研,-2[ICON_GOLD]金钱并+2[ICON_GREAT_PEOPLE]大科学家伟人点数。</Text>
-			</Replace>
-
-			<Replace>
-				<Tag>TXT_KEY_SPECIALIST_ENGINEER_STRATEGY</Tag>
-				<Text>+2[ICON_RES_MANPOWER]人力资源，-2[ICON_GOLD]金钱，+2[ICON_PRODUCTION]产能并+2[ICON_GREAT_PEOPLE]大工程师伟人点数。</Text>
-			</Replace>
-
-			<Replace>
-				<Tag>TXT_KEY_SPECIALIST_MERCHANT_STRATEGY</Tag>
-				<Text>+2[ICON_GOLD]金钱+4[ICON_RES_CONSUMER]商品并+2[ICON_GREAT_PEOPLE]大商业家伟人点数。</Text>
-			</Replace>
-			
-			
-			
-		
-
-			
-
-			<Row Tag="TXT_KEY_BELIEF_HEALTH_SHAMANS_SHORT">
-				<Text>萨满教</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BELIEF_HEALTH_SHAMANS">
-				<Text>每座3以上人口的城市+2[ICON_HEALTH]健康度</Text>
-			</Row>
-	
-			<Row Tag="TXT_KEY_BELIEF_HEALTH_VAPORS_SHORT">
-				<Text>蒸汽水疗</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_BELIEF_HEALTH_VAPORS">
-				<Text>沼泽和泛滥平原+1[ICON_HEALTH]健康度,公共浴室+2[ICON_CULTURE]文化，+2[ICON_RESEARCH]科研，+2[ICON_GOLD]金钱，+2[ICON_PEACE]信仰</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_BELIEF_HEALTH_SACRIFICE_SHORT">
-				<Text>动物祭祀</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BELIEF_HEALTH_SACRIFICE">
-				<Text>神祠、神庙、寺院+1[ICON_HEALTH]健康度</Text>
-			</Row>
-
-			<Replace Tag="TXT_KEY_POLICY_STATECRAFT_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]经世致用[ENDCOLOR][NEWLINE]所有图书馆、学院、大学、公立学校和研发实验室+2[ICON_CULTURE]文化,所有图书馆、学院、大学、公立学校+2[ICON_HEALTH]健康度。</Text>
-			</Replace>
-
-		
-
-			<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR][NEWLINE]所有神祠、神庙、寺院+1[ICON_HAPPINESS_1]本地快乐，+1[ICON_HEALTH]健康度。[NEWLINE]立刻开启一次黄金时代。</Text>
-			</Replace>
-
-			<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR][NEWLINE]所有神祠、神庙、寺院和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。[NEWLINE]所有宗教奇观+4[ICON_CULTURE]文化产出。</Text>
-			</Replace>
-			
-			
-			<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
-				<Text>[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR][NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度,+2[ICON_RES_CONSUMER]商品。</Text>
-			</Replace>
-
-			<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
-				<Text>城墙和城堡+2[ICON_PEACE]信仰，城市远程攻击力+20%</Text>
-			</Replace>
+		<Row Tag="TXT_KEY_UPANEL_HP_TT">
+			<Text>当前单位生命值</Text>
+		</Row>
 
 
-			
+		<Row Tag="TXT_KEY_CLEAR_FREE_POLICY">
+			<Text>清除</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUTTON_CLEAR_FREE_POLICY">
+			<Text>清除当前富余政策。</Text>
+		</Row>
 
 
-	
-			<Row Tag="TXT_KEY_BUILD_ELECTRICITY_STRING">
-				<Text>[COLOR_NEGATIVE_TEXT]{1_Total}[ENDCOLOR][ICON_RES_ELECTRICITY]电力</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_ELECTRICITY_STRING2">
-				<Text>[COLOR_POSITIVE_TEXT]+{1_Total}[ENDCOLOR][ICON_RES_ELECTRICITY]电力</Text>
-			</Row>
 
 
-			<Row Tag="TXT_KEY_CITY_PLAGUED_FOR_UI">
-				<Text>{3_CityName}[COLOR_SAVAGE]({1_num}/{2_num})[ENDCOLOR]</Text>
-			</Row>
+
+		<Replace>
+			<Tag>TXT_KEY_SPECIALIST_WRITER_STRATEGY</Tag>
+			<Text>+2[ICON_CULTURE]文化并+2[ICON_GREAT_PEOPLE]大文学家伟人点数。</Text>
+		</Replace>
+
+		<Replace>
+			<Tag>TXT_KEY_SPECIALIST_ARTIST_STRATEGY</Tag>
+			<Text>+2[ICON_CULTURE]文化并+2[ICON_GREAT_PEOPLE]大美术家伟人点数。</Text>
+		</Replace>
+
+		<Replace>
+			<Tag>TXT_KEY_SPECIALIST_MUSICIAN_STRATEGY</Tag>
+			<Text>+2[ICON_CULTURE]文化并+2[ICON_GREAT_PEOPLE]大音乐家伟人点数。</Text>
+		</Replace>
+
+		<Replace>
+			<Tag>TXT_KEY_SPECIALIST_SCIENTIST_STRATEGY</Tag>
+			<Text>+3[ICON_RESEARCH]科研,-2[ICON_GOLD]金钱并+2[ICON_GREAT_PEOPLE]大科学家伟人点数。</Text>
+		</Replace>
+
+		<Replace>
+			<Tag>TXT_KEY_SPECIALIST_ENGINEER_STRATEGY</Tag>
+			<Text>+2[ICON_RES_MANPOWER]人力资源，-2[ICON_GOLD]金钱，+2[ICON_PRODUCTION]产能并+2[ICON_GREAT_PEOPLE]大工程师伟人点数。</Text>
+		</Replace>
+
+		<Replace>
+			<Tag>TXT_KEY_SPECIALIST_MERCHANT_STRATEGY</Tag>
+			<Text>+2[ICON_GOLD]金钱+4[ICON_RES_CONSUMER]商品并+2[ICON_GREAT_PEOPLE]大商业家伟人点数。</Text>
+		</Replace>
 
 
-			<Row Tag="TXT_KEY_BUILD_GOLDEN_AGE_POINTS_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_GOLDEN_AGE]黄金时代点数</Text>
-			</Row>
 
-			<Row Tag="TXT_KEY_BUILD_TOURISM_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_TOURISM]魅力</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_GREAT_GENERAL_POINTS_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_GREAT_GENERAL]大军点数</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_GREAT_ADMIRAL_POINTS_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_GREAT_ADMIRAL]海军上将点数</Text>
-			</Row>
-	
-			<Row Tag="TXT_KEY_BUILD_DISEASE_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_DISEASE]疾病</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_CRIME_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_CRIME]犯罪率</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_LOYALTY_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_SILVER_FIST]忠诚度</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_SOVEREIGNTY_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_SOVEREIGNTY]权力</Text>
-			</Row>
-			
-			<Row Tag="TXT_KEY_BUILD_HEALTH_STRING">
-				<Text>{1_Total}[ENDCOLOR][ICON_HEALTH]健康</Text>
-			</Row>
 
-	
+
+
+
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_SHAMANS_SHORT">
+			<Text>萨满教</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_SHAMANS">
+			<Text>每座3以上人口的城市+2[ICON_HEALTH]健康度</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_VAPORS_SHORT">
+			<Text>蒸汽水疗</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_VAPORS">
+			<Text>沼泽和泛滥平原+1[ICON_HEALTH]健康度,公共浴室+2[ICON_CULTURE]文化，+2[ICON_RESEARCH]科研，+2[ICON_GOLD]金钱，+2[ICON_PEACE]信仰</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_SACRIFICE_SHORT">
+			<Text>动物祭祀</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_SACRIFICE">
+			<Text>神祠、神庙、寺院+1[ICON_HEALTH]健康度</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_POLICY_STATECRAFT_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]经世致用[ENDCOLOR][NEWLINE]所有图书馆、学院、大学、公立学校和研发实验室+2[ICON_CULTURE]文化,所有图书馆、学院、大学、公立学校+2[ICON_HEALTH]健康度。</Text>
+		</Replace>
+
+
+
+		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR][NEWLINE]所有神祠、神庙、寺院+1[ICON_HAPPINESS_1]本地快乐，+1[ICON_HEALTH]健康度。[NEWLINE]立刻开启一次黄金时代。</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR][NEWLINE]所有神祠、神庙、寺院和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。[NEWLINE]所有宗教奇观+4[ICON_CULTURE]文化产出。</Text>
+		</Replace>
+
+
+		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
+			<Text>[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR][NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度,+2[ICON_RES_CONSUMER]商品。</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
+			<Text>城墙和城堡+2[ICON_PEACE]信仰，城市远程攻击力+20%</Text>
+		</Replace>
+
+
+
+
+
+
+		<Row Tag="TXT_KEY_BUILD_ELECTRICITY_STRING">
+			<Text>[COLOR_NEGATIVE_TEXT]{1_Total}[ENDCOLOR][ICON_RES_ELECTRICITY]电力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_ELECTRICITY_STRING2">
+			<Text>[COLOR_POSITIVE_TEXT]+{1_Total}[ENDCOLOR][ICON_RES_ELECTRICITY]电力</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITY_PLAGUED_FOR_UI">
+			<Text>{3_CityName}[COLOR_SAVAGE]({1_num}/{2_num})[ENDCOLOR]</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_BUILD_GOLDEN_AGE_POINTS_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_GOLDEN_AGE]黄金时代点数</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILD_TOURISM_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_TOURISM]魅力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_GREAT_GENERAL_POINTS_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_GREAT_GENERAL]大军点数</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_GREAT_ADMIRAL_POINTS_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_GREAT_ADMIRAL]海军上将点数</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILD_DISEASE_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_DISEASE]疾病</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_CRIME_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_CRIME]犯罪率</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_LOYALTY_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_SILVER_FIST]忠诚度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SOVEREIGNTY_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_SOVEREIGNTY]权力</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_BUILD_HEALTH_STRING">
+			<Text>{1_Total}[ENDCOLOR][ICON_HEALTH]健康</Text>
+		</Row>
+
+
 
 
 		<Row Tag="TXT_KEY_ABLTY_RIVER_SIDE_STRING" >
@@ -824,7 +824,7 @@
 		<Replace Tag="TXT_KEY_TOP_PANEL_GOLD">
 			<Text>[ICON_GOLD_MORE][COLOR:255:235:0:255]{1_TotalGold: number "##"} {2_GoldPerTurn: number "'(+'##')';'[COLOR:255:60:60:255](-'##')'"}[/COLOR]</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TOURISM_TEXT" >
 			<Text>[COLOR_MIGHT]+{1_Num}[ENDCOLOR]</Text>
 		</Row>
@@ -835,7 +835,7 @@
 		<Row Tag="TXT_KEY_EUI_AUTOMATE_PRODUCTION_TT">
 			<Text>自动建造</Text>
 		</Row>
-		
+
 		<Replace Tag="TXT_KEY_XP" >
 			<Text>XP</Text>
 		</Replace>
@@ -869,7 +869,7 @@
 		</Replace>
 
 
-		
+
 
 
 
@@ -890,9 +890,9 @@
 			<Text>不可占领</Text>
 		</Row>
 
-			<Row Tag="TXT_KEY_PEDIA_CITY_BOMBARDRANGE">
-				<Text>额外城市攻击范围: {1_Num}[ICON_RANGE_STRENGTH]</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PEDIA_CITY_BOMBARDRANGE">
+			<Text>额外城市攻击范围: {1_Num}[ICON_RANGE_STRENGTH]</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PRODUCTION_BUILDING_DEFENSE_MOD">
 			<Text>[ICON_STRENGTH]全国城防提升: +{1_Num}%</Text>
@@ -904,7 +904,7 @@
 		<Row Tag="TXT_KEY_MUSIC">
 			<Text>Music</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_SKIPS_THE_CURRENT_PLAYER_ALL_UNIT">
 			<Text>删除当前所有ai全部单位</Text>
 		</Row>
@@ -912,8 +912,8 @@
 		<Row Tag="TXT_KEY_SKIPS_THE_CURRENT_CULTURE">
 			<Text>清空当前文化</Text>
 		</Row>
-		
-		
+
+
 
 		<Replace Tag="TXT_KEY_FREE_PROMOTION_FROM_TECH">
 			<Text>[COLOR_POSITIVE_TEXT]{@1_PromotionName}[ENDCOLOR][NEWLINE][NEWLINE]({@2_PromotionHelp})</Text>
@@ -1047,7 +1047,7 @@
 			</Text>
 		</Row>
 
-	
+
 
 		<Row Tag="TXT_KEY_CLOCK_TOOLTIP">
 			<Text>
@@ -1099,12 +1099,12 @@
 			<Text>移动力:</Text>
 		</Replace>
 
-	
+
 
 		<Row Tag="TXT_KEY_FLAG_UNIT_CARGO_TYPE">
 			<Text>运载类型:</Text>
 		</Row>
-		
+
 
 		<Row Tag="TXT_KEY_FREEPROMOTIONS2">
 			<Text>[COLOR_CYAN]单位属性:[ENDCOLOR]</Text>
@@ -1294,7 +1294,7 @@
 		<Row Tag="PROMOTION_AIR_RANGE_EXTEND">
 			<Text>航程拓展</Text>
 		</Row>
-		
+
 
 
 		<Row Tag="PROMOTION_AIR_RANGE_EXTEND_HELP">
@@ -1307,7 +1307,8 @@
 			<Text>异星海怪</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_MONSTER_HELP">
-			<Text>隐形移动，每回合可自动恢复100HP。掠劫不消耗移动力，可进入未开边国家。攻城[ICON_STRENGTH]战斗力+200%，临近三格内所有敌军-33%战斗力，攻击敌军时，可让临近两格内所有包括自身在内的我方海军单位立即恢复50HP。
+			<Text>
+				隐形移动，每回合可自动恢复100HP。掠劫不消耗移动力，可进入未开边国家。攻城[ICON_STRENGTH]战斗力+200%，临近三格内所有敌军-33%战斗力，攻击敌军时，可让临近两格内所有包括自身在内的我方海军单位立即恢复50HP。
 			</Text>
 		</Row>
 
@@ -1316,8 +1317,8 @@
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_ENEMY_NAVAL_MONSTER_BUFF">
 			<Text>敌方的{2_EnUName}被你的{1_UnitName}攻击！他将在下回合无法行动内无法行动！</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_US_NAVAL_MONSTER_BUFF">
 			<Text>我方的{2_EnUName}被敌方的{1_UnitName}攻击！他将在下回合无法行动内无法行动！</Text>
 		</Row>
@@ -1344,22 +1345,22 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
-				<Text>
-					远程攻击有100%的几率击退敌方海军单位，被击退的单位会受到额外的溅射伤害。额外增加一次攻击次数，
-					[NEWLINE]包括自身在内，该单位6格范围内的现代化海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
+			<Text>
+				远程攻击有100%的几率击退敌方海军单位，被击退的单位会受到额外的溅射伤害。额外增加一次攻击次数，
+				[NEWLINE]包括自身在内，该单位6格范围内的现代化海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。
+			</Text>
+		</Row>
 
 
-			<Row Tag="TXT_KEY_PROMOTION_GOLEM">
-				<Text>加压增幅器</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_GOLEM_HELP">
-				<Text>
-					3格范围内的机器人和机甲单位+100%[ICON_STRENGTH]战斗力。魔像受到远程攻击时会对攻击单位施加反弹伤害。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLEM">
+			<Text>加压增幅器</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLEM_HELP">
+			<Text>
+				3格范围内的机器人和机甲单位+100%[ICON_STRENGTH]战斗力。魔像受到远程攻击时会对攻击单位施加反弹伤害。
+			</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SUPER_ENERGY">
@@ -1433,7 +1434,7 @@
 		</Row>
 
 
-		
+
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_3">
 			<Text>重甲三级</Text>
 		</Row>
@@ -1664,7 +1665,7 @@
 			<Text>减少75%由战略轰炸造成的人口损失，50%由核攻击造成的人口损失。[NEWLINE][NEWLINE]每3[ICON_CITIZEN]市民+1[ICON_GOLD]维护费。[NEWLINE][NEWLINE]只能在中型城市（15人口）建造。</Text>
 		</Replace>
 
-	
+
 
 
 
@@ -1764,46 +1765,45 @@
 		<Row Tag="TXT_KEY_UNIT_CHINESE_055_PEDIA">
 			<Text>055型导弹驱逐舰（英语：Type 055 destroyer，北约代号：Renhai-class ，中文名：刃海级）是中国船舶重工集团701研究所设计、江南造船厂与大连造船厂共同承建的、装备新型有源相控阵雷达的新型舰队防空驱逐舰。055型驱逐舰的问世对于中国海军来说意义非凡，表现在这个型号上，除了运用了诸多新的技术和设计理念以外，更是中国海军第一款一服役就在平台和设计理念上达到世界先进甚至局部领先水平的舰船。</Text>
 		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_FW_BATTLESUIT">
+		<Row Tag="TXT_KEY_UNIT_GARIO_BATTLESUIT">
 			<Text>盖里欧机甲</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_BATTLESUIT_TEXT">
+		<Row Tag="TXT_KEY_UNIT_GARIO_BATTLESUIT_TEXT">
 			<Text>机械化单位可以比普通步兵携带更大口径的武器，同时具有高强度作战和更佳的防御能力，这两者结合起来能有效压制缺乏反装甲武器的步兵，现有的全自动化机器人结合了探测生命体的热感应系统，是传统步兵的噩梦，极有效率的杀人兵器。盖里欧机甲是一种装备了一门800mm口径巨型能量炮的大型机器人步兵。凭借着该大炮，该单位能够进行远程攻击。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_BATTLESUIT_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_GARIO_BATTLESUIT_STRATEGY">
 			<Text>装备有大口径能量炮的机械士兵。强大的作战单位，可进行远程攻击。</Text>
 		</Row>
 
 
 
-		<Row Tag="TXT_KEY_UNIT_FW_VERTOL">
+		<Row Tag="TXT_KEY_UNIT_VERTOL">
 			<Text>喷气式直升机</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_VERTOL_TEXT">
+		<Row Tag="TXT_KEY_UNIT_VERTOL_TEXT">
 			<Text>随着垂直起降飞机背后的技术成熟，越来越多的各种设计开始出现，越来越多的直升机开始使用喷气涡轮发动机，但设计上允许发动机旋转或以其他方式控制推力。喷气式的动力装置有很多优点：第一是“马力重量比”大，可以大大提高直升机的有用载荷。第二是体积小便于安置。一直以来直升机的全部机件大都要想法安置在机身里。它没有普通飞机的机翼可以利用。所以机身内部显得非常拥挤。第三是振动小，这对直升机来说是一个非常重要的问题。直升机本身由于构造复杂，已经引起了很头痛的振动问题，若再使用振动很利害的、往复运动的活塞式发动机来个火上加油就更加麻烦了。所以直升机若采用喷气式的动力装置，无论在载荷，航程，性能上都会有显著的提高。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_VERTOL_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_VERTOL_STRATEGY">
 			<Text>喷气式直升机出现后替代了传统的螺旋式直升机。该直升机能在高原高山，雨雪天气，风沙天气飞行。可用于军事或物资运输或运输救灾物资，旨在打击敌人的轻型陆地部队并为己方陆地单位提供空中火力支援。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_FW_AUTOMATON">
+		<Row Tag="TXT_KEY_UNIT_AUTOMATON">
 			<Text>战争机器</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_AUTOMATON_TEXT">
+		<Row Tag="TXT_KEY_UNIT_AUTOMATON_TEXT">
 			<Text>从最早的机器人发展到现在,机器人士兵的概念已经存在.虽然早在二战时遥控机器就取得了一些成功，但直到20世纪末无人驾驶战斗车辆的部署，自主作战机器的概念才开始变得可行。这类武器通常称为“自动武器”，更进一步地发展自主武器系统的认知技术，使其能在战场上发挥更大的作用。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_AUTOMATON_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_AUTOMATON_STRATEGY">
 			<Text>战争机器是一种未来的主力机器人步兵单位。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_FW_RAILGUN_TANK">
+		<Row Tag="TXT_KEY_UNIT_RAILGUN_TANK">
 			<Text>悬浮穿甲炮</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_RAILGUN_TANK_TEXT">
+		<Row Tag="TXT_KEY_UNIT_RAILGUN_TANK_TEXT">
 			<Text>虽然常规反坦克弹药在过去几十年里不断改进，但新型反装甲武器更具有毁灭性的潜力。传统的大炮越来越多地采用萨波特炮弹来穿透敌人坚固的装甲，因为这些炮弹可以把更多的能量集中在更小的区域，而新型穿甲炮平台可以以更高的灵活性更快地发射炮弹。最早的穿甲炮安装在陆地载具上，但发电系统和能源系统的进步最终导致了新一代的能量炮可以安装在悬浮移动载具上。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_RAILGUN_TANK_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_RAILGUN_TANK_STRATEGY">
 			<Text>悬浮穿甲炮能克制装甲单位。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_NAVAL_BASE_DESC">
@@ -1860,7 +1860,7 @@
 		<Row Tag="TXT_KEY_TECH_HOMO_SUPERIOR_QUOTE">
 			<Text>
 				广义超结构是指在一定结构层次基础上形成的某种复合结构或变异结构。以体心立方结构的成分为50%的CuZn固溶体为例:完全有序化后，晶体结构类型转变为CsCl型，而点阵类型也转变为简单立方型，但习惯上仍称之为具有超结构的固溶体。上例中超结构的晶胞尺寸和原来相同，但也有不少固溶体中超结构的出现导致晶胞尺寸变大。最突出的例子是一些具有长周期的超结构，如CuAull，晶胞在一个方向扩大10倍。有人采用溅射或蒸发的方法人工制备具有长周期超结构的合金材料，研究其异常的物理性能。
-                适当成分的合金在较高温度形成无序的固溶体，当温度降到临界温度Tc时变成的原子分布规则化的结构。如原子比为1∶3的Au–Cu合金在高于Tc=395℃时是无序的固溶体，在Tc时合金变成有序化的结构，Au占据面心立方晶格的角顶位置，Cu占据晶格的6个面心位置。对比同一成分的两个试样，一个试样在高于Tc温度下淬火，另一试样在低于Tc的温度下长时间退火，发现后者的X射线衍射图出现了超结构对应的衍射条纹。合金中出现超结构时其物理性质如比热、导热性和磁性也发生明显变化。这是合金无序与有序间的转变，一般属于二级相变。
+				适当成分的合金在较高温度形成无序的固溶体，当温度降到临界温度Tc时变成的原子分布规则化的结构。如原子比为1∶3的Au–Cu合金在高于Tc=395℃时是无序的固溶体，在Tc时合金变成有序化的结构，Au占据面心立方晶格的角顶位置，Cu占据晶格的6个面心位置。对比同一成分的两个试样，一个试样在高于Tc温度下淬火，另一试样在低于Tc的温度下长时间退火，发现后者的X射线衍射图出现了超结构对应的衍射条纹。合金中出现超结构时其物理性质如比热、导热性和磁性也发生明显变化。这是合金无序与有序间的转变，一般属于二级相变。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HOMO_SUPERIOR_DESC">
@@ -1904,8 +1904,8 @@
 				该改良设施可以增加地块的产能与金钱产出，但会造成健康度惩罚。
 			</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_IMPROVEMENT_FW_ARCOLOGY">
 			<Text>生态城市</Text>
 		</Row>
@@ -1931,17 +1931,17 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_DESC">
-				<Text>[ICON_HEALTH][ICON_FOOD]生物工厂</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_HELP">
-				<Text>本城+8[ICON_FOOD]食物产出，每四人口+1[ICON_FOOD]食物产出。城市所有已开发的[ICON_RES_DEER]鹿、[ICON_RES_BISON]牦牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马资源+1[ICON_FOOD]食物、[ICON_HEALTH]健康度、[ICON_PRODUCTION]产能。湖泊水域+1[ICON_FOOD]食物。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_DESC">
+			<Text>[ICON_HEALTH][ICON_FOOD]生物工厂</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_HELP">
+			<Text>本城+8[ICON_FOOD]食物产出，每四人口+1[ICON_FOOD]食物产出。城市所有已开发的[ICON_RES_DEER]鹿、[ICON_RES_BISON]牦牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马资源+1[ICON_FOOD]食物、[ICON_HEALTH]健康度、[ICON_PRODUCTION]产能。湖泊水域+1[ICON_FOOD]食物。</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_PEDIA">
-				<Text>虽然几个世纪以来已经发展了各种增加粮食生产的方法，但有些地区的人口增长甚至可能超过农场和传统城市所提供的最大供应量。因此，一些社区转向大规模生产营养完整的食品替代品，利用各种工艺合成适合人类消费的蛋白质和纤维。由此产生的食物替代品有足够的营养，但往往缺乏真正食物的味道和质地。然而，对于许多人来说，这是他们唯一能负担得起开支的营养摄入渠道。</Text>
-			</Row>
-			
+		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_PEDIA">
+			<Text>虽然几个世纪以来已经发展了各种增加粮食生产的方法，但有些地区的人口增长甚至可能超过农场和传统城市所提供的最大供应量。因此，一些社区转向大规模生产营养完整的食品替代品，利用各种工艺合成适合人类消费的蛋白质和纤维。由此产生的食物替代品有足够的营养，但往往缺乏真正食物的味道和质地。然而，对于许多人来说，这是他们唯一能负担得起开支的营养摄入渠道。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_BUILDING_VR_TRAINING_DESC">
 			<Text>[ICON_STRENGTH]虚拟训练中心</Text>
 		</Row>
@@ -1953,13 +1953,13 @@
 			<Text>由于现代战场和军事装备的日益复杂，在各种模拟环境中的训练变得越来越重要，以便在不以发生真实伤亡的情况下让士兵更加富有战斗经验。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_FW_HOVERTANK">
+		<Row Tag="TXT_KEY_UNIT_HOVERTANK">
 			<Text>悬浮攻城炮</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_HOVERTANK_TEXT">
+		<Row Tag="TXT_KEY_UNIT_HOVERTANK_TEXT">
 			<Text>虽然轮式和履带式车辆仍然是实用的，但悬浮战斗火炮的概念早已吸引了工程师和科学家的想象力。制造可行的悬浮火炮的实验是大势所趋，这些悬浮机动火炮可以穿越一些复杂的地形，去到大多数地面车辆到达不了的地方。他们的高机动性完胜传统地面火炮，但也容易被敌军防空单位克制，因此他们通常配备导弹系统以避免极端情况。这些导弹使得火炮平台变得更具攻击性，它能够从常规载具无法到达的地点发动攻击，使高机动性的战术价值得以最大化发挥。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_HOVERTANK_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_HOVERTANK_STRATEGY">
 			<Text>未来时代可悬浮攻城单位。</Text>
 		</Row>
 
@@ -1994,13 +1994,13 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_FW_DRONE_FIGHTER_2">
+		<Row Tag="TXT_KEY_UNIT_DRONE_FIGHTER">
 			<Text>幽浮轰炸机</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_DRONE_FIGHTER_2_TEXT">
+		<Row Tag="TXT_KEY_UNIT_DRONE_FIGHTER_TEXT">
 			<Text>人工智能技术和核动力反应堆引擎的进步导致了能够处理空中特殊任务的超级轰炸机的发展。轰炸机发展的主要限制因素是人力因素及动力系统，结合了人工智能和核动力的轰炸机可以更出色地发挥单位的全部威力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_DRONE_FIGHTER_2_HELP">
+		<Row Tag="TXT_KEY_UNIT_DRONE_FIGHTER_HELP">
 			<Text>设计用来摧毁敌方城市和地面防御设施的超级轰炸机。</Text>
 		</Row>
 
@@ -2329,7 +2329,7 @@
 		</Row>
 
 
-		
+
 
 		<Row Tag="TXT_KEY_BUILDING_WHITE_HOUSE">
 			<Text>白宫</Text>
@@ -2337,22 +2337,22 @@
 		<Row Tag="TXT_KEY_WONDER_WHITE_HOUSE_PEDIA">
 			<Text>
 				[NEWLINE]白宫在很久以前也不称白宫，而被称作"总统大厦"、"总统之宫"。1790年7月16日， 美国国会通过立法，决定在波托马克河岸建立美国永久性首都。它授权美国当时总统乔治·华盛顿选择首都地址。地点选定以后，法国工程师皮埃尔·兰方特受命规划城市蓝图。美国当时国务卿杰佛逊向总统和哥伦比亚区专员提议，为这两项设计，在全国范围内举行建筑设计竞赛。
-                [NEWLINE]1792年3月14日，哥伦比亚区专员宣布竞赛开始。1792年7月17日，生于爱尔兰并在爱尔兰受教育的建筑师霍班在竞赛中获胜。他的设计，采用了布列颠群岛的民居形式。同年10月13日，由美国共济会和哥伦比亚区专员共同为白宫建造，正式奠基。霍班负责指挥现场施工。1797年，华盛顿总统离任时，白宫只建好了墙壁，装好了屋架。
-                [NEWLINE]霍本亲自担任施工建筑师。首先是在今天白宫北面的草坪一带垒造了三个砖窑，烧制砖块，供国会大厦和白宫建筑的需要。建筑师对施工质量要求极高，建筑材料有许多来自美国各著名产地，所以施工期拖得较长，以致首任总统华盛顿并没有在这里住过。在他离任的时候，官邸刚刚完成了建筑轮廓。在施工期间，霍班不断在各地，包括在美国之外，寻找熟练工人，满足工程需要。在1793年，他在苏格兰的爱丁堡招雇了一批瓦工。与此同时，他也雇用了一些奴隶。白宫的基础和外墙所用的石料，取自弗吉尼亚州的格里克石场。石料用船沿波托马克河运到华盛顿。白宫的门窗和地板所用的优质木材，来自北卡罗莱纳和弗吉尼亚州。石灰采自马里兰的弗里德里克。
+				[NEWLINE]1792年3月14日，哥伦比亚区专员宣布竞赛开始。1792年7月17日，生于爱尔兰并在爱尔兰受教育的建筑师霍班在竞赛中获胜。他的设计，采用了布列颠群岛的民居形式。同年10月13日，由美国共济会和哥伦比亚区专员共同为白宫建造，正式奠基。霍班负责指挥现场施工。1797年，华盛顿总统离任时，白宫只建好了墙壁，装好了屋架。
+				[NEWLINE]霍本亲自担任施工建筑师。首先是在今天白宫北面的草坪一带垒造了三个砖窑，烧制砖块，供国会大厦和白宫建筑的需要。建筑师对施工质量要求极高，建筑材料有许多来自美国各著名产地，所以施工期拖得较长，以致首任总统华盛顿并没有在这里住过。在他离任的时候，官邸刚刚完成了建筑轮廓。在施工期间，霍班不断在各地，包括在美国之外，寻找熟练工人，满足工程需要。在1793年，他在苏格兰的爱丁堡招雇了一批瓦工。与此同时，他也雇用了一些奴隶。白宫的基础和外墙所用的石料，取自弗吉尼亚州的格里克石场。石料用船沿波托马克河运到华盛顿。白宫的门窗和地板所用的优质木材，来自北卡罗莱纳和弗吉尼亚州。石灰采自马里兰的弗里德里克。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_WHITE_HOUSE_QUOTE">
 			<Text>[NEWLINE]"我祈求上苍赐予最大福份给这所房屋和所有此后居住的人，但愿只有诚实和智慧的人住在此屋檐下。"[NEWLINE]        ——亚当斯[NEWLINE]</Text>
 		</Row>
-			<Row Tag="TXT_KEY_WONDER_WHITE_HOUSE_HELP">
-				<Text>只能在[ICON_CAPITAL]首都建造，建成后可无视时代要求提前开启意识形态政策。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_WHITE_HOUSE_HELP">
+			<Text>只能在[ICON_CAPITAL]首都建造，建成后可无视时代要求提前开启意识形态政策。</Text>
+		</Row>
 
 
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_DZIMBABWE">
+		<Row Tag="TXT_KEY_BUILDING_DZIMBABWE">
 			<Text>大津巴布韦</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_DZIMBABWE_PEDIA">
@@ -2369,50 +2369,50 @@
 		<Row Tag="TXT_KEY_WONDER_DZIMBABWE_QUOTE">
 			<Text>[NEWLINE]"示巴女王所要求的一切东西，所罗门王都满足了她；另外还按照自己的意愿给予她丰富的馈赠。所以她和仆人一起返回了自己的国家。"[NEWLINE]        ——《列王纪》10章13节[NEWLINE]</Text>
 		</Row>
-			<Row Tag="TXT_KEY_WONDER_DZIMBABWE_HELP">
-				<Text>每四人口+1[ICON_GOLD]金钱产出，[ICON_RES_SANPEDRO]圣佩德罗、[ICON_RES_TEQUILA]龙舌兰、[ICON_RES_AMBER]琥珀、[ICON_RES_JADE]玉石、[ICON_RES_LAPIS]天青石和[ICON_RES_INCENSE]熏香+5[ICON_GOLD]金钱产出，额外获得两条贸易路线,陆地商路距离+50%。全国每处沙漠地形+1[ICON_GOLD]金钱。本城每完成一个基础建筑的建造时，可获得与该建筑产能数值相关的[ICON_GOLD]金钱收益。全国每处沙漠改造+1[ICON_PRODUCTION]产能。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_DZIMBABWE_HELP">
+			<Text>每四人口+1[ICON_GOLD]金钱产出，[ICON_RES_SANPEDRO]圣佩德罗、[ICON_RES_TEQUILA]龙舌兰、[ICON_RES_AMBER]琥珀、[ICON_RES_JADE]玉石、[ICON_RES_LAPIS]天青石和[ICON_RES_INCENSE]熏香+5[ICON_GOLD]金钱产出，额外获得两条贸易路线,陆地商路距离+50%。全国每处沙漠地形+1[ICON_GOLD]金钱。本城每完成一个基础建筑的建造时，可获得与该建筑产能数值相关的[ICON_GOLD]金钱收益。全国每处沙漠改造+1[ICON_PRODUCTION]产能。</Text>
+		</Row>
 
 
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_PUMA_PUMKU">
-				<Text>普马彭谷神庙</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_PEDIA">
-				<Text>
-					普马彭谷神庙( 英文名称: 又名""Puma Pumku" 或 "Puma Puncu")位于Tiwanaku古城，大约建立于距今2万年前，已经倒塌，目前该处只剩下遍地的巨石碎片，每块巨石重约几十到一百吨，被切割得非常光滑整齐，甚至能割手，要打磨就必须是金刚石。巨石上有深度一致的几毫米深得凹槽，这些凹槽形成的线是笔直的。从已经倒塌的痕迹来看，神庙的建筑结构像搭积木一样，用巨型石块建成，这些石块非常坚硬，石块间连接处就像一个凸起一个凹槽连接起来。在遗址附近有一块表面非常光滑正方形石板，经过万年没有一点破损。
-					[NEWLINE]以现代人的观念，在那个年代无法搭建起这种天衣无缝的巨石建筑。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_QUOTE">
-				<Text>[NEWLINE]"虽然吉萨金字塔是一项伟大的旷世奇观，但是与普马彭谷遗迹相比，简直就是小巫见大巫。"[NEWLINE]        ——《远古外星人》[NEWLINE]</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_HELP">
-				<Text>全国每5人口+1[ICON_CULTURE]文化，+1[ICON_PEACE]信仰。所有城市赠送神庙。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_PUMA_PUMKU">
+			<Text>普马彭谷神庙</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_PEDIA">
+			<Text>
+				普马彭谷神庙( 英文名称: 又名""Puma Pumku" 或 "Puma Puncu")位于Tiwanaku古城，大约建立于距今2万年前，已经倒塌，目前该处只剩下遍地的巨石碎片，每块巨石重约几十到一百吨，被切割得非常光滑整齐，甚至能割手，要打磨就必须是金刚石。巨石上有深度一致的几毫米深得凹槽，这些凹槽形成的线是笔直的。从已经倒塌的痕迹来看，神庙的建筑结构像搭积木一样，用巨型石块建成，这些石块非常坚硬，石块间连接处就像一个凸起一个凹槽连接起来。在遗址附近有一块表面非常光滑正方形石板，经过万年没有一点破损。
+				[NEWLINE]以现代人的观念，在那个年代无法搭建起这种天衣无缝的巨石建筑。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_QUOTE">
+			<Text>[NEWLINE]"虽然吉萨金字塔是一项伟大的旷世奇观，但是与普马彭谷遗迹相比，简直就是小巫见大巫。"[NEWLINE]        ——《远古外星人》[NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_PUMA_PUMKU_HELP">
+			<Text>全国每5人口+1[ICON_CULTURE]文化，+1[ICON_PEACE]信仰。所有城市赠送神庙。</Text>
+		</Row>
 
 
-			<Row Tag="TXT_KEY_BUILDING_MOTHERLAND">
-				<Text>祖国之母</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_MOTHERLAND_PEDIA">
-				<Text>
-					[NEWLINE]乌克兰首都基辅的第聂伯河右岸，建有一座祖国母亲雕像Motherland Monument，基辅最著名的地标建筑。
-					[NEWLINE]为了纪念基辅战役，1981年在临近第聂伯河右岸的一座小山包上建起了一座高达62米的不锈钢雕像。雕像是位身着乌克兰民族服装的母亲形象，她右手高举一把利剑直指蓝天，左手拿着一面刻着苏联国徽的盾牌，象征着乌克兰人民保卫祖国的信心和决心，雕像的名字就叫做“祖国母亲”。雕塑下方的卫国战争纪念馆墙壁上刻有那次战役中阵亡的苏军将士名单。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_MOTHERLAND_QUOTE">
-				<Text>[NEWLINE]"我们光荣的祖国万岁！我们祖国的自由和独立万岁！"[NEWLINE]        ——斯大林[NEWLINE]</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_MOTHERLAND_HELP">
-				<Text>按你所有拥有的陆地军事类型，每类单位免费增加一个，出现于建造该奇观的城市附近。单位在友方领土内+25%[ICON_STRENGTH]战斗力。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOTHERLAND">
+			<Text>祖国之母</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_MOTHERLAND_PEDIA">
+			<Text>
+				[NEWLINE]乌克兰首都基辅的第聂伯河右岸，建有一座祖国母亲雕像Motherland Monument，基辅最著名的地标建筑。
+				[NEWLINE]为了纪念基辅战役，1981年在临近第聂伯河右岸的一座小山包上建起了一座高达62米的不锈钢雕像。雕像是位身着乌克兰民族服装的母亲形象，她右手高举一把利剑直指蓝天，左手拿着一面刻着苏联国徽的盾牌，象征着乌克兰人民保卫祖国的信心和决心，雕像的名字就叫做“祖国母亲”。雕塑下方的卫国战争纪念馆墙壁上刻有那次战役中阵亡的苏军将士名单。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_MOTHERLAND_QUOTE">
+			<Text>[NEWLINE]"我们光荣的祖国万岁！我们祖国的自由和独立万岁！"[NEWLINE]        ——斯大林[NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_MOTHERLAND_HELP">
+			<Text>按你所有拥有的陆地军事类型，每类单位免费增加一个，出现于建造该奇观的城市附近。单位在友方领土内+25%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_MAGINOT_LINE">
+		<Row Tag="TXT_KEY_BUILDING_MAGINOT_LINE">
 			<Text>马奇诺防线</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MAGINOT_LINE_PEDIA">
@@ -2424,21 +2424,21 @@
 		<Row Tag="TXT_KEY_WONDER_MAGINOT_LINE_QUOTE">
 			<Text>[NEWLINE]"在人类战争史上，从来也没有一次像这样，以如此少的兵力，取得如此大的成功，保护如此多的众生。"[NEWLINE]        ——温斯顿·丘吉尔[NEWLINE]</Text>
 		</Row>
-			<Row Tag="TXT_KEY_WONDER_MAGINOT_LINE_HELP">
-				<Text>
-					堡垒+200点生命值上限，且临近的敌军在回合开始时移动力-1,额外获得一次攻击次数且在非友方领土不会损失生命值。城防效率+20%，陆军单位在堡垒改良设施8格范围内战斗时+100%[ICON_STRENGTH]战斗力。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_MAGINOT_LINE_HELP">
+			<Text>
+				堡垒+200点生命值上限，且临近的敌军在回合开始时移动力-1,额外获得一次攻击次数且在非友方领土不会损失生命值。城防效率+20%，陆军单位在堡垒改良设施8格范围内战斗时+100%[ICON_STRENGTH]战斗力。
+			</Text>
+		</Row>
 
 
 
-			<Replace Tag="TXT_KEY_PROMOTION_HPMOD2">
-				<Text>牢不可破</Text>
-			</Replace>
-			<Replace Tag="TXT_KEY_PROMOTION_HPMOD2_HELP">
-				<Text>+200%最大生命值,且临近的敌军在回合开始时移动力-1,在非友方领土时每回合恢复50HP。</Text>
-			</Replace>
-			
+		<Replace Tag="TXT_KEY_PROMOTION_HPMOD2">
+			<Text>牢不可破</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_HPMOD2_HELP">
+			<Text>+200%最大生命值,且临近的敌军在回合开始时移动力-1,在非友方领土时每回合恢复50HP。</Text>
+		</Replace>
+
 		<Row Tag="TXT_KEY_PROMOTION_MAGINOT_LINE">
 			<Text>阵地防御</Text>
 		</Row>
@@ -2465,7 +2465,7 @@
 		<Row Tag="TXT_KEY_WONDER_SPACE_FORTRESS_HELP">
 			<Text>建成后获得四个单位。城市攻击次数+2，所有海军基地、空军基地、导弹基地、指挥中心、星际基地+3[ICON_GOLD]金钱。所有城市防御效率提升100%。本城市轰炸范围+1，购买或建造的单位可以立即行动。</Text>
 		</Row>
-			
+
 		<Row Tag="TXT_KEY_BUILDING_SERVER_HUB_DESC">
 			<Text>[ICON_RESEARCH]超级计算机中心</Text>
 		</Row>
@@ -2477,25 +2477,25 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_BUILDING_ULTIMATOWER">
-				<Text>终极塔</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_HELP">
-				<Text>每座城市+5[ICON_CITIZEN]人口，全国每两人口+1[ICON_RESEARCH]科研。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_QUOTE">
-				<Text>
-					[NEWLINE]"人们可以居住在任何地方。他们可以在任何事情上痛苦，在任何事情上狂喜。我越来越认为建筑与之无关。当然，这既是解放也是令人担忧的。"[NEWLINE]        ——雷姆·库哈斯[NEWLINE]
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_PEDIA">
-				<Text>
-					设计构想中的终极塔楼有一个直径6000英尺(约合1830米)的基座，覆盖总共53平方英里的空间，外形为高2英里(约3.2千米)的圆锥形建筑。崔悦君的"终极塔楼"展示了一个能容纳100万人口的垂直城市的设计构想，满足甚至超越了之前任何类似的设计方案。 终极塔楼的外立面安装太阳能吸收板和风力涡轮机，并采用一种称为"大气能量转换"的技术，利用楼顶和楼底之间的压差发电，为这座未来派巨型建筑提供常年稳定的能源，同时对环境不会造成任何破坏。一旦建成，终极塔楼在100至165英尺高的楼层设有开放的绿化空间，特有的叠层设计使人身处这样的高度时，有一种开阔、敞亮的感觉。值得一提的是，尽管终极塔楼高达数千米，但乘坐速度达到每分钟3英里的电梯，客人用不了10分钟就可以从楼底升到顶层。
-					[NEWLINE]旧金山终极塔楼的内部能源设施全部按照仿生学原理而特别设计，令整座塔楼就像一棵树，可以直接从四周的湖水、阳光、甚至空气中吸收水和能量，从而不会对环境造成任何污染。据悉，"终极塔楼"四面被湖水环绕，而设计师崔悦君从树木由根须吸收水分并运送到树顶的原理受到启发，设计了一种类似的装置，从而可以自动地将塔楼底部的湖水运送到塔楼高处。 同时，"终极塔楼"表面覆盖光电太阳能吸收板，从而将阳光转化为塔楼所需要的大部分电能。而且，"终极塔楼"还将使用一种"大气能量转换系统"，利用塔楼顶部和底部的气压差来发电。此外，风力涡轮发电机也将利用风力为塔楼提供辅助电能。据设计师崔悦君称，整座"终极塔楼"就是一个大型的生态系统，如同一座"活着而且会呼吸的建筑"。
-					按照崔悦君的设计，"终极塔楼"楼内总建筑面积多达63平方英里，能够供100万人口同时居住生活。而且，在这座"塔中城市"里，居民们可以享受到非常好的生活质量。据悉，"终极塔楼"总计有144部电梯，围绕在塔楼的外围。所有电梯利用压缩空气产生垂直推动力，令电梯速度可达到每小时13英里。尽管"终极塔楼"有3200米高，乘坐的电梯只需要9分40秒就可以从底层到顶层。
-					[NEWLINE]此外，"终极塔楼"塔身的窗户都带有特别设计的有空气动力学风帽，从而将自然风引入塔内，使塔楼内的空气保持新鲜。同时，塔身还安装无数面反射镜，可让阳光直接照射到建筑中。"终极塔楼"每层都将修建开放式的花园阳台，供塔楼居民休闲散步。塔楼的电动车都由丙烷和氢气驱动，从而完全避免了内燃机或者有毒废气排放。据报道，崔悦君设计的旧金山"终极塔楼"造价估计高达150亿美元，仍处于构想阶段。尽管如此，崔悦君已有一个更大胆的设想--世界各地任何一个人口密度过高的大城市都可以建一座这样的"终极塔楼"，从而彻底解决住房问题。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_ULTIMATOWER">
+			<Text>终极塔</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_HELP">
+			<Text>每座城市+5[ICON_CITIZEN]人口，全国每两人口+1[ICON_RESEARCH]科研。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_QUOTE">
+			<Text>
+				[NEWLINE]"人们可以居住在任何地方。他们可以在任何事情上痛苦，在任何事情上狂喜。我越来越认为建筑与之无关。当然，这既是解放也是令人担忧的。"[NEWLINE]        ——雷姆·库哈斯[NEWLINE]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_ULTIMATOWER_PEDIA">
+			<Text>
+				设计构想中的终极塔楼有一个直径6000英尺(约合1830米)的基座，覆盖总共53平方英里的空间，外形为高2英里(约3.2千米)的圆锥形建筑。崔悦君的"终极塔楼"展示了一个能容纳100万人口的垂直城市的设计构想，满足甚至超越了之前任何类似的设计方案。 终极塔楼的外立面安装太阳能吸收板和风力涡轮机，并采用一种称为"大气能量转换"的技术，利用楼顶和楼底之间的压差发电，为这座未来派巨型建筑提供常年稳定的能源，同时对环境不会造成任何破坏。一旦建成，终极塔楼在100至165英尺高的楼层设有开放的绿化空间，特有的叠层设计使人身处这样的高度时，有一种开阔、敞亮的感觉。值得一提的是，尽管终极塔楼高达数千米，但乘坐速度达到每分钟3英里的电梯，客人用不了10分钟就可以从楼底升到顶层。
+				[NEWLINE]旧金山终极塔楼的内部能源设施全部按照仿生学原理而特别设计，令整座塔楼就像一棵树，可以直接从四周的湖水、阳光、甚至空气中吸收水和能量，从而不会对环境造成任何污染。据悉，"终极塔楼"四面被湖水环绕，而设计师崔悦君从树木由根须吸收水分并运送到树顶的原理受到启发，设计了一种类似的装置，从而可以自动地将塔楼底部的湖水运送到塔楼高处。 同时，"终极塔楼"表面覆盖光电太阳能吸收板，从而将阳光转化为塔楼所需要的大部分电能。而且，"终极塔楼"还将使用一种"大气能量转换系统"，利用塔楼顶部和底部的气压差来发电。此外，风力涡轮发电机也将利用风力为塔楼提供辅助电能。据设计师崔悦君称，整座"终极塔楼"就是一个大型的生态系统，如同一座"活着而且会呼吸的建筑"。
+				按照崔悦君的设计，"终极塔楼"楼内总建筑面积多达63平方英里，能够供100万人口同时居住生活。而且，在这座"塔中城市"里，居民们可以享受到非常好的生活质量。据悉，"终极塔楼"总计有144部电梯，围绕在塔楼的外围。所有电梯利用压缩空气产生垂直推动力，令电梯速度可达到每小时13英里。尽管"终极塔楼"有3200米高，乘坐的电梯只需要9分40秒就可以从底层到顶层。
+				[NEWLINE]此外，"终极塔楼"塔身的窗户都带有特别设计的有空气动力学风帽，从而将自然风引入塔内，使塔楼内的空气保持新鲜。同时，塔身还安装无数面反射镜，可让阳光直接照射到建筑中。"终极塔楼"每层都将修建开放式的花园阳台，供塔楼居民休闲散步。塔楼的电动车都由丙烷和氢气驱动，从而完全避免了内燃机或者有毒废气排放。据报道，崔悦君设计的旧金山"终极塔楼"造价估计高达150亿美元，仍处于构想阶段。尽管如此，崔悦君已有一个更大胆的设想--世界各地任何一个人口密度过高的大城市都可以建一座这样的"终极塔楼"，从而彻底解决住房问题。
+			</Text>
+		</Row>
 
 
 
@@ -2571,7 +2571,7 @@
 		</Row>
 
 
-	
+
 
 
 		<Row Tag="TXT_KEY_UNIT_AIRFIGHTER03P">
@@ -2892,19 +2892,19 @@
 
 
 
-		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY">
+		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY">
 			<Text>幻像</Text>
 
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY_HELP">
+		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY_HELP">
 			<Text>远程火力机器人战士，可以发射燃烧弹（对敌方单位造成额外附加伤害）。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY_TEXT">
+		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY_TEXT">
 			<Text>
 				作为机器士兵，它并未配备复杂的装备及多余的护甲。它得特性使其能够在攻击时极大削弱敌人生命值，配合不朽者的攻击效果能够获得高额攻击加成。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY_STRATEGY">
 			<Text>
 				幻像是一种受过远程便携式火炮训练的机器人士兵。幻像的武器库中最著名的是火焰发射器，而且由于和不朽者得冷冻攻击属于两种极端情形，所以该单位通常和不朽者一起协同作战以便于发挥最大战斗力。
 			</Text>
@@ -3083,25 +3083,25 @@
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_SKYCITY">
-				<Text>太空城</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_SKYCITY_HELP">
-				<Text>
-					机械化农场+4[ICON_FOOD]食物,+4[ICON_GOLD]金钱，+1[ICON_HAPPINESS_1]快乐。本城所有地形额外提升3点全类型产出。所有城市+25%[ICON_RESEARCH]科研、[ICON_GOLD]金钱。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_SKYCITY_PEDIA">
-				<Text>
-					天空之城是一座超高摩天大楼，建筑高1000米(3281英尺) ，底部宽400米(1312英尺) ，总建筑面积8平方公里(3.1平方英里)。根据设计构想，它将容纳3.5万至3.6万名全职居民和10万名工人。它包括14个凹盘形的“空间高原”堆叠在楼层。 高原的内部将包含绿色空间，在建筑的边缘，在建筑的两侧，将是公寓。 建筑中还包括办公室、商业设施、学校、剧院和其他现代化设施。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_SKYCITY">
+			<Text>太空城</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_SKYCITY_HELP">
+			<Text>
+				机械化农场+4[ICON_FOOD]食物,+4[ICON_GOLD]金钱，+1[ICON_HAPPINESS_1]快乐。本城所有地形额外提升3点全类型产出。所有城市+25%[ICON_RESEARCH]科研、[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_SKYCITY_PEDIA">
+			<Text>
+				天空之城是一座超高摩天大楼，建筑高1000米(3281英尺) ，底部宽400米(1312英尺) ，总建筑面积8平方公里(3.1平方英里)。根据设计构想，它将容纳3.5万至3.6万名全职居民和10万名工人。它包括14个凹盘形的“空间高原”堆叠在楼层。 高原的内部将包含绿色空间，在建筑的边缘，在建筑的两侧，将是公寓。 建筑中还包括办公室、商业设施、学校、剧院和其他现代化设施。
+			</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_WONDER_SKYCITY_QUOTE">
-				<Text>
-					[NEWLINE]"建筑师再也不能被正统现代主义的清教徒式的道德说教所吓服了。我喜欢建筑要素的混杂，而不要‘纯净’。"[NEWLINE]        ——罗伯特・文丘里[NEWLINE]
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_SKYCITY_QUOTE">
+			<Text>
+				[NEWLINE]"建筑师再也不能被正统现代主义的清教徒式的道德说教所吓服了。我喜欢建筑要素的混杂，而不要‘纯净’。"[NEWLINE]        ——罗伯特・文丘里[NEWLINE]
+			</Text>
+		</Row>
 
 
 
@@ -3126,8 +3126,8 @@
 		<Row Tag="TXT_KEY_THEMING_BONUS_VIRTUAL_IDOL">
 			<Text>{1_Era}{2_CivAdjective}虚拟偶像</Text>
 		</Row>
-		
-		
+
+
 
 		<Row Tag="TXT_KEY_BUILDING_SKYNET_DESC">
 			<Text>天网</Text>
@@ -3147,16 +3147,16 @@
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_DESC">
-				<Text>[ICON_PRODUCTION]生态学工厂</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_HELP">
-				<Text>本城市+10[ICON_PRODUCTION]产能。每处市民工作的草地、冻土、平原地貌+2[ICON_PRODUCTION]产能。冻土、雪原+1[ICON_HEALTH]健康度。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_DESC">
+			<Text>[ICON_PRODUCTION]生态学工厂</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_HELP">
+			<Text>本城市+10[ICON_PRODUCTION]产能。每处市民工作的草地、冻土、平原地貌+2[ICON_PRODUCTION]产能。冻土、雪原+1[ICON_HEALTH]健康度。</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_PEDIA">
-				<Text>随着社会的生态意识越来越强，重工业对环境的影响也越来越受到重视。在日益增加的社会压力下，工业界开始尝试寻找更加生态友好的方式来维持生产，将现有的工厂改造为“生态学工厂” ，这对自然环境以及在其中和周围工作的人类都有更好的保护。最终，这些“生态工厂”变得类似于在某些地区正变得普遍的合成生态——人工创造的满足工业需求的环境。而改造生态系统的方法则十分复杂。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_PEDIA">
+			<Text>随着社会的生态意识越来越强，重工业对环境的影响也越来越受到重视。在日益增加的社会压力下，工业界开始尝试寻找更加生态友好的方式来维持生产，将现有的工厂改造为“生态学工厂” ，这对自然环境以及在其中和周围工作的人类都有更好的保护。最终，这些“生态工厂”变得类似于在某些地区正变得普遍的合成生态——人工创造的满足工业需求的环境。而改造生态系统的方法则十分复杂。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_SKYNET_LINK">
 			<Text>天眼</Text>
@@ -3174,27 +3174,27 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_BUILDING_MOON_BASE_DESC">
-				<Text>[ICON_RESEARCH]月球基地</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILDING_MOON_BASE_HELP">
-				<Text>增加全国所有核电站及钍反应堆的[ICON_PRODUCTION]产能，[ICON_GOLD]金钱及[ICON_RESEARCH]科研产出。额外增加50点钛和铀资源储量。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOON_BASE_DESC">
+			<Text>[ICON_RESEARCH]月球基地</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MOON_BASE_HELP">
+			<Text>增加全国所有核电站及钍反应堆的[ICON_PRODUCTION]产能，[ICON_GOLD]金钱及[ICON_RESEARCH]科研产出。额外增加50点钛和铀资源储量。</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_BUILDING_MOON_BASE_PEDIA">
-				<Text>人类的野心之一，就是在月球上建立永久的定居点。这样的定居点将为月球和其他天体的研究提供一个极好的研究平台，以及几乎无限的材料来源，如可用于聚变反应堆的氚。</Text>
-			</Row>
-
-
+		<Row Tag="TXT_KEY_BUILDING_MOON_BASE_PEDIA">
+			<Text>人类的野心之一，就是在月球上建立永久的定居点。这样的定居点将为月球和其他天体的研究提供一个极好的研究平台，以及几乎无限的材料来源，如可用于聚变反应堆的氚。</Text>
+		</Row>
 
 
 
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_THORIUM_REACTOR_HELP">
-				<Text>提供50[ICON_RES_ELECTRICITY]电力。本城地块上每个发电机+5[ICON_RES_ELECTRICITY]电力。</Text>
-			</Row>
+
+
+		<Row Tag="TXT_KEY_BUILDING_THORIUM_REACTOR_HELP">
+			<Text>提供50[ICON_RES_ELECTRICITY]电力。本城地块上每个发电机+5[ICON_RES_ELECTRICITY]电力。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_BUILDING_THORIUM_REACTOR_DESC">
 			<Text>[ICON_RES_ELECTRICITY]钍反应堆</Text>
 		</Row>
@@ -3206,41 +3206,33 @@
 			</Text>
 		</Row>
 
-
-
-
-
-		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_DESC">
+		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_DESC">
 			<Text>[ICON_TOURISM]人造生态圈</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_HELP">
+		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_HELP">
 			<Text>本城市所有自然奇观、环礁和绿洲+6[ICON_GOLD]金钱+6[ICON_CULTURE]文化。+5[ICON_CULTURE]文化+2[ICON_HAPPINESS_1]快乐。城市33%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+100%。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_PEDIA">
 			<Text>在生态哲学占据主导地位的社区里，人们深切地感到需要一种方式，来感受与周围残存的野生自然环境之间的联系。虽然自然保护区提供了最令人愉快的环境，但不是每个人都能抽出时间和资源来享用当地的环境资源。后来，人造生态圈开始发展，生态区规模逐渐扩大。虽然在某种程度上是人造的，但作为一种必需品，它们比显然比城市更加有趣和自然，能够让民众感受到与自然世界更大的联系。这些保护区往往最终成为文化中心，激发了各种各样的艺术、音乐和文学作品。</Text>
 		</Row>
 
-
-
-
-
-			<Row Tag="TXT_KEY_BUILDING_HELIOS">
-				<Text>太阳神微波卫星</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_HELIOS_HELP">
-				<Text>本城每处沙漠地块+4[ICON_PRODUCTION]产能、4[ICON_GOLD]金钱、4[ICON_RESEARCH]科研。太阳能发电站+10[ICON_PRODUCTION]产能，当建有太阳能发电站的城市攻击时，对城市3格范围内的敌人额外造成25%伤害。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_HELIOS_QUOTE">
-				<Text>
-					[NEWLINE]"我认为太阳能的未来是光明的。"[NEWLINE]        ——肯・萨拉查[NEWLINE]
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_HELIOS_PEDIA">
-				<Text>
-					卫星可以在轨道上收集太阳能，然后以微波的形式传送到地球上的收集器，这个概念从20世纪中期就已经存在了。武器研究人员将太阳神微波卫星设计成自动运行，并进行远程维修的行星轨道智能武器平台，直到2300年发生事故，当时作为核心处理器的人工智能控制器，发布了错误的命令，将光束对准了当时正在欧亚大陆一座边境城市附近驻扎的第23机甲军团。虽然光束的能量不足以直接杀伤他们的重型兵器，但随着源源不断的能量传输到这片区域。其产生的热辐射强度点燃了干燥的草原及丛林，引起了熊熊大火，烧毁了军队的补给，迫使他们紧急撤退。当被问及此次攻击时，人工智能为自己的行为辩护，声称其受到了指令要求它保护其为之提供能量的城市。后来这种解释被认为是人工智能发展的标志，人工智能能够自行做出人类思维水平的决定。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_HELIOS">
+			<Text>太阳神微波卫星</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_HELIOS_HELP">
+			<Text>本城每处沙漠地块+4[ICON_PRODUCTION]产能、4[ICON_GOLD]金钱、4[ICON_RESEARCH]科研。太阳能发电站+10[ICON_PRODUCTION]产能，当建有太阳能发电站的城市攻击时，对城市3格范围内的敌人额外造成25%伤害。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_HELIOS_QUOTE">
+			<Text>
+				[NEWLINE]"我认为太阳能的未来是光明的。"[NEWLINE]        ——肯・萨拉查[NEWLINE]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_HELIOS_PEDIA">
+			<Text>
+				卫星可以在轨道上收集太阳能，然后以微波的形式传送到地球上的收集器，这个概念从20世纪中期就已经存在了。武器研究人员将太阳神微波卫星设计成自动运行，并进行远程维修的行星轨道智能武器平台，直到2300年发生事故，当时作为核心处理器的人工智能控制器，发布了错误的命令，将光束对准了当时正在欧亚大陆一座边境城市附近驻扎的第23机甲军团。虽然光束的能量不足以直接杀伤他们的重型兵器，但随着源源不断的能量传输到这片区域。其产生的热辐射强度点燃了干燥的草原及丛林，引起了熊熊大火，烧毁了军队的补给，迫使他们紧急撤退。当被问及此次攻击时，人工智能为自己的行为辩护，声称其受到了指令要求它保护其为之提供能量的城市。后来这种解释被认为是人工智能发展的标志，人工智能能够自行做出人类思维水平的决定。
+			</Text>
+		</Row>
 
 
 
@@ -3279,7 +3271,7 @@
 			<Text>反物质核弹在理论上拥有巨大的湮灭性摧毁能力，是拥有最强大力量的武器，目前作为假想武器存在，仅出现于科幻小说或电子游戏中。但军方已经对其可能的军事用途，包括毁灭性效果产生了兴趣。自从冷战开始，其就开始资助反物质相关的物理研究。其主要的理论优势是物质与反物质相撞会将将近100%质量转化成能量(高能伽玛射线)，而利用聚变反应的氢弹则大约是只有0.7%的质能转换。</Text>
 		</Row>
 
-	
+
 
 
 
@@ -3351,30 +3343,21 @@
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT_HELP">
-				<Text>单位处于灼烧状态，每回合减少等同于最大生命值15%的生命值。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT_HELP">
+			<Text>单位处于灼烧状态，每回合减少等同于最大生命值15%的生命值。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT">
 			<Text>灼烧状态</Text>
 		</Row>
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_BOMB">
 			<Text>火焰弹</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_BOMB_HELP">
-			<Text>攻击敌人时对其额外造成当前生命值20%（下限15）的最终伤害，若敌方有人造意志晋升则该属性无效。若敌军处于冰冻弹负面状态，则对其最终伤害额外+30。</Text>
+			<Text>攻击时+50%[ICON_STRENGTH]战斗力，若敌军处于冰冻弹负面状态，则对其额外+150%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
-
-
-
-
-
-
-
-
 
 
 		<Row Tag="TXT_KEY_UNIT_BEAM_JUMPER">
@@ -3419,7 +3402,7 @@
 
 
 
-	
+
 
 
 
@@ -3711,9 +3694,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_CAN_RANGE_ATTACK">
 			<Text>[COLOR_YELLOW]粒子束攻城巨炮[ENDCOLOR]</Text>
 		</Row>
-			<Row Tag="TXT_KEY_PROMOTION_CAN_RANGE_ATTACK_HELP">
-				<Text>当超结构科技研究完成后解锁，末日机甲升基础[ICON_STRENGTH]战斗力+300</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CAN_RANGE_ATTACK_HELP">
+			<Text>当超结构科技研究完成后解锁，末日机甲升基础[ICON_STRENGTH]战斗力+300</Text>
+		</Row>
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1">
@@ -3749,14 +3732,14 @@
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_FOCUS">
-				<Text>超级武器</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_FOCUS_HELP">
-				<Text>远程攻击力+100%[ENDCOLOR]，对堡垒额外追加300%攻击力。攻击时会造成100%溅射伤害。</Text>
-			</Row>
-			
-		
+		<Row Tag="TXT_KEY_PROMOTION_FOCUS">
+			<Text>超级武器</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FOCUS_HELP">
+			<Text>远程攻击力+100%[ENDCOLOR]，对堡垒额外追加300%攻击力。攻击时会造成100%溅射伤害。</Text>
+		</Row>
+
+
 		<Update>
 			<Where Tag="TXT_KEY_BUILDING_MILITARY_BASE_HELP" />
 			<Set Text="允许你在本城市训练或雇佣以下[COLOR_POSITIVE_TEXT]军事单位[ENDCOLOR]。[NEWLINE][ICON_BULLET][COLOR_YELLOW]固定翼飞机单位[ENDCOLOR]；[NEWLINE][ICON_BULLET][COLOR_YELLOW]直升机单位[ENDCOLOR]。[NEWLINE][NEWLINE]允许从这个城市空运单位。[COLOR_POSITIVE_TEXT]城市可容纳的空军单位数量增加4单位。[ENDCOLOR][NEWLINE][NEWLINE]城市必须拥有兵工厂。需要3单位[ICON_RES_ELECTRICITY]电力。" />
@@ -3797,13 +3780,13 @@
 				[NEWLINE]硫磺的主要用途有：1.一种重要的橡胶助剂，用于天然橡胶和各种合成橡胶的生产中。2 .具有防腐和漂白作用，我国规定仅限于干果、干菜、粉丝、蜜饯、食糖的熏蒸。3. 洁身，兼具去屑止痒。长期使用可防治皮肤瘙痒、疥疮、脚气等症。4. 自然硫用于提炼硫黄和制造硫酸、染料及橡胶制品，也用于医药、农药等工业部门。5.在食品工业中作防腐、杀虫、漂白等熏蒸用。6.用作橡胶硫化剂，还可用于荧光粉的制造。7.用于橡胶硫化，制造杀虫剂、硫肥、染料、黑色火药等。8.用于提取硫黄9.用于防治森林病害。10.用于制造制造硫酸、染料和橡胶制品，也用于医药等工业部门 高纯硫供半导体工业用，其他用途同沉降硫。 11.广泛用于家用电器、钢制家具、建筑五金及金属制品的高档装饰和保护。12.用于防治麦类锈病、白粉病、稻瘟病，果树白粉、桃疮痂病及棉花、果树上的红蜘蛛等。13.用于制取多硫化铵和碱金属硫化物，加热硫和蜡的混合物制取硫化氢，实验室制取二氧化硫等。14.可治疗各种皮肤病，止头痒、去头屑、杀菌消毒 。15.用于制造硫酸、染料和橡胶制品，也用于制药 。16.主要用于电子工业中制造电视显像管及其他阴极射线管用各种荧光粉，同时也是高级的化学试剂硫黄。17.不溶性硫黄主要用于橡胶工业，作为硫化剂时使橡胶制品表面不喷霜，能增进钢一胶黏合性，由于在胶中分布均匀，能保证硫化质量，是最佳的橡胶硫化剂，故广泛用于轮胎的胎体胶料，尤其是全钢丝子午轮胎中，也可用于电缆，胶辊，胶鞋等橡胶制品的胶料中。18.用于制造硫酸、液体二氧化硫、亚硫酸钠、二硫化碳、氯化亚砜、氧化铬绿等。染料工业用于生产硫化染料。也用于制造农药、爆竹。硫黄粉用作橡胶的硫化剂，也用于配制火柴药头。造纸工业用于蒸煮纸浆。还用于冶金、选矿、硬质合金的冶炼、制造炸药、化学纤维和制糖的漂白、铁路枕木的处理等。
 			</Text>
 		</Row>
-	
 
 
 
 
 
-	
+
+
 
 
 		<Row Tag="TXT_KEY_RESOURCE_TIN">
@@ -3823,7 +3806,7 @@
 		<Row Tag="TXT_KEY_CIV5_RESOURCE_GUNPOWDER_TEXT">
 			<Text>火药是武器发射弹丸的能源，按用途可分为点火药、发射药、固体推进剂。其中发射药又分为：枪用发射药、炮用发射药、弹射座椅发射药等。固体推进剂又分为火箭用固体推进剂、导弹用固体推进剂。</Text>
 		</Row>
-	
+
 
 
 
@@ -3852,7 +3835,7 @@
 			</Text>
 		</Row>
 
-		
+
 
 		<Row Tag="TXT_KEY_RESOURCE_BERRIES">
 			<Text>浆果</Text>
@@ -4123,7 +4106,7 @@
 		<Row Tag="TXT_KEY_RESOURCE_RASPBERRYZ">
 			<Text>浆果</Text>
 		</Row>
-	
+
 		<Row Tag="TXT_KEY_CIV5_RESOURCE_RASPBERRYZ_TEXT">
 			<Text>
 				早在人类开始农业生产之前，浆果就已经成为宝贵的食物来源，并且一直是其他灵长类动物的主要食物来源。几千年来，它们是早期狩猎采集者的季节性主食，今天在欧洲和北美，野生浆果采集仍然是一种流行的活动。随着时间的推移，人类学会了储存浆果，这样它们就可以在冬天使用，它们可以被制成果酱，在美洲原住民中，混合着肉和脂肪作为干肉饼。
@@ -4197,15 +4180,15 @@
 			<Text>攻城掠地</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PLUNDERED_HELP">
-			 <Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可额外获得一移动力与一攻击次数。</Text>
+			<Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可额外获得一移动力与一攻击次数。</Text>
 		</Row>
-			
+
 		<Row Tag="TXT_KEY_PROMOTION_EQUICK">
 			<Text>火力覆盖</Text>
 		</Row>
-			<Row Tag="TXT_KEY_PROMOTION_EQUICK_HELP">
-				<Text>战术机器人学解锁，陆军AOE单位获得晋升：远程攻击力+20%。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_EQUICK_HELP">
+			<Text>战术机器人学解锁，陆军AOE单位获得晋升：远程攻击力+20%。</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_BUILDING_MINEFIELD">
@@ -4243,7 +4226,7 @@
 
 
 
-	
+
 
 
 
@@ -4287,12 +4270,12 @@
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX">
-				<Text>防空火力网</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX_HELP">
-				<Text>轨道自动化科技解锁，驱逐舰单位额外增加一次空袭拦截次数且拦截范围+2。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX">
+			<Text>防空火力网</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX_HELP">
+			<Text>轨道自动化科技解锁，驱逐舰单位额外增加一次空袭拦截次数且拦截范围+2。</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_BE_ACADEMY">
@@ -4332,7 +4315,7 @@
 		</Row>
 
 
-		
+
 
 		<Row Tag="TXT_KEY_PROMOTION_ROBORT_COMBAT">
 			<Text>机械步兵</Text>
@@ -4444,7 +4427,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_HEAVY_DRILL_3_HELP">
 			<Text>对[COLOR_POSITIVE_TEXT]复杂[ENDCOLOR]地形(丘陵/森林/丛林)+25%[ICON_STRENGTH]攻击力。</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_PROMOTION_HEAL_KILL_ENEMY" >
 			<Text>猛烈冲锋</Text>
 		</Row>
@@ -4484,7 +4467,7 @@
 		</Replace>
 
 
-		
+
 		<Row Tag="TXT_KEY_BUILDING_LEP">
 			<Text>地球之心高温炉</Text>
 		</Row>
@@ -4697,22 +4680,22 @@
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_JURASSIC_PARK">
-				<Text>异种生物研究所</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_HELP">
-				<Text>+2500[ICON_TOURISM]魅力产出，+20[ICON_HAPPINESS_1]快乐。城市必须临近海洋才能建造，建造完成后可在本城训练巨型生物。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_QUOTE">
-				<Text>
-					[NEWLINE]"生活，总会有办法的。"[NEWLINE]        ——伊恩·马尔科姆[NEWLINE]
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_PEDIA">
-				<Text>
-					虽然早期的基因操作主要集中在改造和提高现有的动植物生命，但也有一些不乏创造性的尝试，试图复活已经灭绝的动植物物种，或者创造新的物种。获取远古化石保存下来的DNA是极其困难的，但是随着科技的进步，未来人们利用复杂的计算机算法和基因拼接来修复受损的基因片段，这使得研究人员可以实现复活已经灭绝的一些物种这一伟大壮举。其中最著名的例子是《侏罗纪公园》几种恐龙的基因被重新设计。这种研究在多方面取得了成功，但是新创造的物种在基因操纵方面表现出了一些危险——人们对新物种对了解甚少，而且异种生物往往表现出意想不到的行为。有几个巨大物种逃离管控区域，越界到人类生活区，而这通常需要在军事来干预阻止。这一系列的实验表明，需要更全面地理解基因工程生物的行为表现和与环境相互作用，才便于最终加以利用。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_JURASSIC_PARK">
+			<Text>异种生物研究所</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_HELP">
+			<Text>+2500[ICON_TOURISM]魅力产出，+20[ICON_HAPPINESS_1]快乐。城市必须临近海洋才能建造，建造完成后可在本城训练巨型生物。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_QUOTE">
+			<Text>
+				[NEWLINE]"生活，总会有办法的。"[NEWLINE]        ——伊恩·马尔科姆[NEWLINE]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_JURASSIC_PARK_PEDIA">
+			<Text>
+				虽然早期的基因操作主要集中在改造和提高现有的动植物生命，但也有一些不乏创造性的尝试，试图复活已经灭绝的动植物物种，或者创造新的物种。获取远古化石保存下来的DNA是极其困难的，但是随着科技的进步，未来人们利用复杂的计算机算法和基因拼接来修复受损的基因片段，这使得研究人员可以实现复活已经灭绝的一些物种这一伟大壮举。其中最著名的例子是《侏罗纪公园》几种恐龙的基因被重新设计。这种研究在多方面取得了成功，但是新创造的物种在基因操纵方面表现出了一些危险——人们对新物种对了解甚少，而且异种生物往往表现出意想不到的行为。有几个巨大物种逃离管控区域，越界到人类生活区，而这通常需要在军事来干预阻止。这一系列的实验表明，需要更全面地理解基因工程生物的行为表现和与环境相互作用，才便于最终加以利用。
+			</Text>
+		</Row>
 
 
 
@@ -4743,8 +4726,8 @@
 		<Row Tag="TXT_KEY_WONDER_FORCE_FIELD_HELP">
 			<Text>强大的防御材料，城市+100生命值上限，每回合能额外恢复150生命值。建成后城市立即恢复200点生命值。</Text>
 		</Row>
-		
-		
+
+
 
 		<!-- Pedia tags -->
 		<Row Tag="TXT_KEY_WONDER_FORCE_FIELD_PEDIA">
@@ -4792,7 +4775,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_8">
 			<Text>[COLOR_MIGHT]粒子能量(200)[ENDCOLOR]</Text>
 		</Row>
-		
+
 
 
 
@@ -4826,7 +4809,7 @@
 			<Text>[COLOR_MANA]当前能量: 200[ENDCOLOR]</Text>
 		</Row>
 
-	
+
 
 
 		<Row Tag='TXT_KEY_NAME_SPACE_BATTLECRUISER_NUKE'>
@@ -4861,7 +4844,7 @@
 			<Text>[COLOR_UNIQUE]当前能量不足[ENDCOLOR]</Text>
 		</Row>
 
-		
+
 		<!--Holography-->
 		<Row Tag="DESC_HOLOGRAPHY">
 			<Text>全息技术</Text>
@@ -4948,9 +4931,9 @@
 			<Text>[COLOR_YELLOW]强虎[ENDCOLOR]</Text>
 		</Row>
 
-	
-		
-		
+
+
+
 
 		<Row Tag="TXT_KEY_PROMOTION_STURMTIGER">
 			<Text>强击群</Text>
@@ -4994,7 +4977,7 @@
 				[NEWLINE][NEWLINE][COLOR_ENDURANCE]“再说一遍，不许从炮管上下车!”——来自突击虎车长的怒吼[ENDCOLOR]
 			</Text>
 		</Row>
-		
+
 
 
 		<!--Exploration-->
@@ -5098,9 +5081,8 @@
 			<Text>[ICON_PRODUCTION]布厂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CLOTH_MILL_HELP">
-			<Text>每处[ICON_RES_COTTON]棉、[ICON_RES_SHEEP]羊、[ICON_RES_FLAX]亚麻与[ICON_RES_SILK]丝绸+2[ICON_GOLD]金钱。</Text>
+			<Text>每处[ICON_RES_DYE]染料、[ICON_RES_COTTON]棉、[ICON_RES_SHEEP]羊、[ICON_RES_FLAX]亚麻与[ICON_RES_SILK]丝绸+2[ICON_GOLD]金钱，+2[ICON_PRODUCTION]产能。</Text>
 		</Row>
-
 		<Row Tag="TXT_KEY_BUILDING_CLOTH_MILL_PEDIA">
 			<Text>布厂是早期用于生产纱线和布的机械化车间，为工业革命期间工厂的发展奠定了基础。最初，布厂依靠快速流动的溪流和河流来驱动他们的水轮，但随着时间的推移，他们将依靠蒸汽来转动机器。第一家布厂于1740年代在英格兰北部发展起来，但很快传播到美国殖民地及其他地区。</Text>
 		</Row>
@@ -5109,8 +5091,8 @@
 		<Replace Tag="TXT_KEY_BUILDING_GARMENT_WORKSHOP_HELP">
 			<Text>+5[ICON_RES_MANPOWER]人力。[NEWLINE][NEWLINE]本城每处已开发的[ICON_RES_FLAX]亚麻、[ICON_RES_COTTON]棉花、[ICON_RES_SILK]丝绸、[ICON_RES_DYE]染料、[ICON_RES_FUR]毛皮和[ICON_RES_OIL]石油+2[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]城市附近必须拥有上述资源的一种或多种。[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]污染[ENDCOLOR]将会导致[ICON_FOOD]食物累积-5%。[NEWLINE][NEWLINE]需要1单位[ICON_RES_ELECTRICITY]电力。</Text>
 		</Replace>
-		
-		
+
+
 		<!--Customs House-->
 		<Row Tag="TXT_KEY_BUILDING_WEIGH_HOUSE">
 			<Text>[ICON_GOLD]计量所</Text>
@@ -5138,15 +5120,15 @@
 		<Row Tag="TXT_KEY_WONDER_SUMMER_PALACE_QUOTE">
 			<Text>[NEWLINE]"窗竹影摇书案上，山泉声入砚池中。"[NEWLINE]        ——爱新觉罗·弘历[NEWLINE]</Text>
 		</Row>
-		
-		
+
+
 
 		<!--Versailles-->
 		<Row Tag="TXT_KEY_BUILDING_VERSAILLES">
 			<Text>凡尔赛宫</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_VERSAILLES_HELP">
-			<Text>建成后每个拥有世界奇观的城市+20%[ICON_RESEARCH]科研与[ICON_GOLD]金钱产出。</Text>
+			<Text>建成后每个拥有世界奇观的城市+33%[ICON_RESEARCH]科研与[ICON_GOLD]金钱产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_VERSAILLES_QUOTE">
 			<Text>[NEWLINE]"我每安排一个职位就会得罪一百个人，而任职者也不会对我感恩戴德。"[NEWLINE]        ——路易十四[NEWLINE]</Text>
@@ -5154,7 +5136,7 @@
 		<Row Tag="TXT_KEY_WONDER_VERSAILLES_PEDIA">
 			<Text>凡尔赛宫是十八世纪法国艺术最美丽的成就之一。1682年，路易十三的儿子路易十四改造并扩建了这个狩猎小屋，将法国的宫廷和政府迁至凡尔赛宫。在法国大革命之前，三位法国国王都曾在此居住，他们都对这里进行了改造，使其更加美丽。1789年，这座城堡失去了官方权力中心的地位，但在19世纪获得了法国历史博物馆的新角色，这座博物馆是在路易-菲利普的授意下建立的，路易-菲利普于1830年登上王位。那时候，许多城堡的房间被接管，用来存放新的收藏品，这些收藏品一直被添加到20世纪初，追溯了法国历史上的里程碑。</Text>
 		</Row>
-	
+
 
 
 		<!--马尔堡城堡-->
@@ -5176,12 +5158,12 @@
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF">
-				<Text>盛世</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF_HELP">
-				<Text>处于黄金时代时单位+20%[ICON_STRENGTH]战斗力。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF">
+			<Text>盛世</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF_HELP">
+			<Text>处于黄金时代时单位+20%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
 
 
 		<!--Smithsonian Institute-->
@@ -5227,15 +5209,15 @@
 		<Row Tag="TXT_KEY_POLICY_FASIL_GHEBBI">
 			<Text>法西尔盖比</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_PROMOTION_FASIL_GHEBBI">
 			<Text>法西尔盖比</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FASIL_GHEBBI_HELP">
 			<Text>对抗陆军时+20%[ICON_STRENGTH]防御力。</Text>
 		</Row>
-		
-		
+
+
 
 		<!--Bastion-->
 		<Row Tag="TXT_KEY_BUILDING_EE_BASTION">
@@ -5259,11 +5241,11 @@
 		<Row Tag="TXT_KEY_WONDER_CRYSTAL_PALACE_HELP">
 			<Text>全国每个杰作+5[ICON_RESEARCH]科研，+5[ICON_GOLD]金钱。[NEWLINE][NEWLINE]包含4个著作槽，在世界会议获得额外2个代表票数。所有世界奇观+5[ICON_TOURISM]魅力，伟人设施+5[ICON_TOURISM]魅力。</Text>
 		</Row>
-			
+
 		<Row Tag="TXT_KEY_CRYSTAL_PALACE_THEMING_BONUS_HELP">
 			<Text>为了最大限度地发挥作用，确保所有伟大的作品槽都装满了来自不同文明的作品。</Text>
 		</Row>
-			
+
 		<Row Tag="TXT_KEY_THEMING_BONUS_CRYSTAL_PALACE">
 			<Text>展出{1_Era}杰作</Text>
 		</Row>
@@ -5302,7 +5284,7 @@
 			<Text>+50[ICON_HP]</Text>
 		</Row>
 
-	
+
 
 		<Row Tag="TXT_KEY_UNIT_HELP_XCOM">
 			<Text>
@@ -5366,26 +5348,26 @@
 
 
 
-			<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE">
-				<Text>人造绿洲</Text>
-			</Row>
-			<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_TEXT">
-				<Text>绿洲是浩瀚沙漠中的片片沃土，出现於终年淡水源不断之处。绿洲大小不一，从小泉水周围1公顷(15亩)左右到大面积有天然水或灌溉的土地，它就像是沙漠瀚海上美丽的珍珠，镶嵌在沙漠里，闪烁着神奇的色彩。随着科技进步，人类已经能够建造出类似天然绿洲一样的人工景观。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_HELP">
-				<Text>该景观为所建成地块提供6[ICON_FOOD]食物及1[ICON_RESEARCH]科研产出。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_TERRASCAPE">
-				<Text>人造绿洲</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_TERRASCAPE_HELP">
-				<Text>建造一个绿洲，提高地块[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILD_TERRASCAPE_REC">
-				<Text>
-					该景观可以增加地块的[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE">
+			<Text>人造绿洲</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_TEXT">
+			<Text>绿洲是浩瀚沙漠中的片片沃土，出现於终年淡水源不断之处。绿洲大小不一，从小泉水周围1公顷(15亩)左右到大面积有天然水或灌溉的土地，它就像是沙漠瀚海上美丽的珍珠，镶嵌在沙漠里，闪烁着神奇的色彩。随着科技进步，人类已经能够建造出类似天然绿洲一样的人工景观。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_HELP">
+			<Text>该景观为所建成地块提供6[ICON_FOOD]食物及1[ICON_RESEARCH]科研产出。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_TERRASCAPE">
+			<Text>人造绿洲</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_TERRASCAPE_HELP">
+			<Text>建造一个绿洲，提高地块[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_TERRASCAPE_REC">
+			<Text>
+				该景观可以增加地块的[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。
+			</Text>
+		</Row>
 
 
 
@@ -5409,9 +5391,9 @@
 		<Row Tag="TXT_KEY_UNIT_HELP_GOLEM">
 			<Text>体型最大的战斗机甲，能有效克制末日机甲。不会拥有“被火力压制”、“阵形破坏”等负面状态，每回合都会自动修复。[NEWLINE][NEWLINE]你只能在建有太空堡垒奇观的城市建造该单位。</Text>
 		</Row>
-			<Row Tag="TXT_KEY_UNIT_GOLEM_STRATEGY">
-				<Text>该单位与末日机甲类似，都属于巨型战斗机器人。该单位能为附近机甲单位提供战斗力加成且自身拥有强大的战斗力。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_UNIT_GOLEM_STRATEGY">
+			<Text>该单位与末日机甲类似，都属于巨型战斗机器人。该单位能为附近机甲单位提供战斗力加成且自身拥有强大的战斗力。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_MODERN_GOLEM_TEXT">
 			<Text>为了对抗敌方末日机甲，部分武器科研人员开始了大胆的设计构想，虽然厚重的防护装甲给魔像带来了前所未有的超级防御力，但也因此不可避免的给动力系统带来了沉重的负担，也因此导致体积的进一步膨胀。</Text>
 		</Row>
@@ -5557,25 +5539,25 @@
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_MARKOV">
-				<Text>马尔科夫重叠心智</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_MARKOV_HELP">
-				<Text>全国所有城市训练的单位额外获得120点经验值。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_MARKOV_QUOTE">
-				<Text>
-					[NEWLINE]"卓越是一门通过训练和习惯获得的艺术。我们之所以伟大，不是因为我们有美德或优秀，而是因为我们不断重复某一件事。实际上，卓越不是一种行为，而是一种习惯。"[NEWLINE]        ——亚里士多德[NEWLINE]
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_MARKOV_PEDIA">
-				<Text>
-					训练新兵服兵役一直以来既是一门艺术，又是一门科学，世界各地的各种军事院校和其他训练机构都在努力寻找最佳方法，为新兵做好服兵役的指导。然而，随着模因学、生物技术和神经接口的发展，通过利用老兵的记录记忆和经验，将所需训练记忆简单地植入新兵成为可能。马尔科夫系统是第一个尝试这种方法的设施，它复制了老兵的记忆和经历，并将这些记忆和经历植入新兵的头脑中。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_MARKOV">
+			<Text>马尔科夫重叠心智</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_MARKOV_HELP">
+			<Text>全国所有城市训练的单位额外获得120点经验值。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_MARKOV_QUOTE">
+			<Text>
+				[NEWLINE]"卓越是一门通过训练和习惯获得的艺术。我们之所以伟大，不是因为我们有美德或优秀，而是因为我们不断重复某一件事。实际上，卓越不是一种行为，而是一种习惯。"[NEWLINE]        ——亚里士多德[NEWLINE]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_MARKOV_PEDIA">
+			<Text>
+				训练新兵服兵役一直以来既是一门艺术，又是一门科学，世界各地的各种军事院校和其他训练机构都在努力寻找最佳方法，为新兵做好服兵役的指导。然而，随着模因学、生物技术和神经接口的发展，通过利用老兵的记录记忆和经验，将所需训练记忆简单地植入新兵成为可能。马尔科夫系统是第一个尝试这种方法的设施，它复制了老兵的记忆和经历，并将这些记忆和经历植入新兵的头脑中。
+			</Text>
+		</Row>
 
 
-	
+
 		<Row Tag="TXT_KEY_CITY_BOMBARDMENT_MOD">
 			<Text>城市获得间接火力</Text>
 		</Row>
@@ -5708,7 +5690,7 @@
 				城市[ICON_STRENGTH]防御力+5，生命值+25。
 			</Text>
 		</Row>
-		
+
 		<!--护城河-->
 		<Row Tag="TXT_KEY_BUILDING_HILL_FORT">
 			<Text>[ICON_STRENGTH]护城河</Text>
@@ -5765,11 +5747,11 @@
 			</Text>
 		</Row>
 
-			<Row Tag="TXT_KEY_BUILDING_CARPENTER_HELP">
-				<Text>
-					+2[ICON_PRODUCTION]产能，提供6单位[ICON_RES_HARDWOOD]木材资源。本城每个锯木厂、红木林场+1[ICON_PRODUCTION]产能，每个锯木厂+1[ICON_RES_HARDWOOD]木材。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_CARPENTER_HELP">
+			<Text>
+				+2[ICON_PRODUCTION]产能，提供6单位[ICON_RES_HARDWOOD]木材资源。本城每个锯木厂、红木林场+1[ICON_PRODUCTION]产能，每个锯木厂+1[ICON_RES_HARDWOOD]木材。
+			</Text>
+		</Row>
 
 
 
@@ -5791,9 +5773,9 @@
 		<Row Tag="TXT_KEY_WONDER_ARCHIMEDES_WONDER_QUOTE">
 			<Text>[NEWLINE][NEWLINE]“不要认为战场上存在公平或对你有什么优待。”[NEWLINE]        ——雷吉纳尔多·李奥纳多·佩德罗·玻利瓦尔·德·阿伦卡尔-阿拉里皮《现代军事原则》[NEWLINE]</Text>
 		</Row>
-			<Row Tag="TXT_KEY_WONDER_ARCHIMEDES_WONDER_HELP">
-				<Text>敌对军事单位在我方任意城市地块内移动时会消耗额外一点移动力，每回合受到10点伤害。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_ARCHIMEDES_WONDER_HELP">
+			<Text>敌对军事单位在我方任意城市地块内移动时会消耗额外一点移动力，每回合受到10点伤害。</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_BEACON">
@@ -5811,8 +5793,8 @@
 				该设施可用于军事打击。
 			</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_IMPROVEMENT_BEACON_TEXT">
 			<Text>可执行全球范围打击任务的巨型军事设施。</Text>
 		</Row>
@@ -5840,9 +5822,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_SPY_ADJACENCY_BUFF">
 			<Text>战争情报</Text>
 		</Row>
-			<Row Tag="TXT_KEY_PROMOTION_SPY_ADJACENCY_BUFF_HELP">
-				<Text>与有我方间谍驻扎的文明的单位作战时+25%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPY_ADJACENCY_BUFF_HELP">
+			<Text>与有我方间谍驻扎的文明的单位作战时+25%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。</Text>
+		</Row>
 
 
 		<!-- The Sphinx -->
@@ -5886,9 +5868,9 @@
 		<Row Tag="TXT_KEY_BUILDING_MEROE">
 			<Text>麦罗埃</Text>
 		</Row>
-			<Row Tag="TXT_KEY_WONDER_MEROE_HELP">
-				<Text>国境内每处沙漠地块+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰。本城绿洲地貌+2[ICON_PRODUCTION]产能+2[ICON_GOLD]金钱。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_MEROE_HELP">
+			<Text>国境内每处沙漠地块+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰。本城绿洲地貌+2[ICON_PRODUCTION]产能+2[ICON_GOLD]金钱。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_WONDER_MEROE_QUOTE">
 			<Text>
@@ -6119,17 +6101,17 @@
 		</Row>
 
 
-	
+
 
 
 		<Row Tag="TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS">
 			<Text>骑士堡</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP">
-				<Text>
-					城市攻击范围+1，满足前置建造条件后可在本城花费信仰购买骑士、枪骑兵、胸甲骑兵、近代骑兵。骑乘单位的训练速度提高20%。每次获得晋升时，重骑兵单位立即恢复50HP。免费提供一个[ICON_GREAT_GENERAL]大军事家,大军事家的增益光环额外提供15%[ICON_STRENGTH]战斗力加成且范围+1。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP">
+			<Text>
+				城市攻击范围+1，满足前置建造条件后可在本城花费信仰购买骑士、枪骑兵、胸甲骑兵、近代骑兵。骑乘单位的训练速度提高20%。每次获得晋升时，重骑兵单位立即恢复50HP。免费提供一个[ICON_GREAT_GENERAL]大军事家,大军事家的增益光环额外提供15%[ICON_STRENGTH]战斗力加成且范围+1。
+			</Text>
+		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA">
 			<Text>
 				骑士堡(Crac des Chevaliers)是一座坚固的十字军城堡。起初叫"库尔德人的城堡"(Hisn al Akrad)。1142年到1271年，骑士堡由医院骑士团控制，于是被叫做"医院堡"(Crac de l 'Ospital)。18世纪末被称为"骑士堡"(Crac des Chevaliers)。它位于今天叙利亚境内。如今，也是世界上现存的最重要的一个中世纪城堡。
@@ -6145,9 +6127,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_GENERAL_1">
 			<Text>光环增强</Text>
 		</Row>
-			<Row Tag="TXT_KEY_PROMOTION_GENERAL_1_HELP">
-				<Text>大军事家光环范围+1，额外提供15%[ICON_STRENGTH]战斗力。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GENERAL_1_HELP">
+			<Text>大军事家光环范围+1，额外提供15%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_BUILDING_VINYARD">
@@ -6163,10 +6145,10 @@
 				新的考古发现表明，新石器时代的人在高加索地区忙着酿造红酒。尽管这一时期的液体葡萄酒没有保存下来，但科学家们已经发现并测试了8000年前陶瓷储酒罐内表面上发现的葡萄酒残留物。对这些古代陶制酒坛的生化测试表明，在早期，人类有意在葡萄汁中添加抗菌防腐剂，以便发酵后的葡萄酒可以保存更长时间。该地区陶器的发展似乎也对第一批葡萄酒的生产起到了关键作用。陶瓷容器比以前使用的石膏或皮革容器能够更好地保存葡萄酒。这项研究还发现了一系列石器时代人们庆祝葡萄树的微小、高度风格化的浮雕图像，从而证明了早期葡萄酒在文化上，可能还有宗教上的重要性。古希腊人的酿酒技术有了长足的进步，但直到罗马帝国末期，我们所知的栽培技术才在整个欧洲普及。
 			</Text>
 		</Row>
-		
-		
-		
-		
+
+
+
+
 
 
 		<Row Tag="TXT_KEY_BUILDING_SMOKEHOUSE">
@@ -6195,7 +6177,7 @@
 		<Row Tag="TXT_KEY_BUILDING_ALCHEMIST_PEDIA">
 			<Text>
 				炼金术与化学，魔法与科学，它们之间其实并不像最初那般风马牛不相及。每个魔法人类学者（如马瑟·牟斯）都在尝试操纵世界并产生效果。炼金术和化学都代表到一种物质向另一种物质的转化。在中世纪观察者的眼中，这种转化似乎意味着物质本质已经发生改变。而对中世纪炼金术士而言，这种改变拥有巨大的潜力——一个人可以把铅变成黄金，或者把老迈的身躯转换为年轻的体魄。本游戏所描绘的“炼金术会所”是以中世纪和文艺复兴时期的欧洲传统炼金术为蓝本，但实际上中国、印度和世界其他地区也拥有各自的炼金术传统和实践。
-                [NEWLINE] 在中世纪，伊斯兰科学在整个欧洲广为传播，穆斯林学者保存了拉丁文献，发展出了自己的大学和学术机构，并采纳了亚洲的见解。对欧洲人来说，这些新知识体系呈现出令人眼花缭乱的语言、命题、思维和可能性——科学、政治、宗教，当然还有魔法。为了实现魔法这个宏伟目标，欧洲会所团结一心，将文献中的理论付诸实践，寄希望于揭开宇宙的奥秘。炼金术的重点就是理解这些文献中隐藏的古老真理。正因为如此，18和19世纪的科学院更专注于实验而非文献的翻译，更注重新知识而非旧知识，炼金术会所也脱离了西方思想的主流，转入地下。
+				[NEWLINE] 在中世纪，伊斯兰科学在整个欧洲广为传播，穆斯林学者保存了拉丁文献，发展出了自己的大学和学术机构，并采纳了亚洲的见解。对欧洲人来说，这些新知识体系呈现出令人眼花缭乱的语言、命题、思维和可能性——科学、政治、宗教，当然还有魔法。为了实现魔法这个宏伟目标，欧洲会所团结一心，将文献中的理论付诸实践，寄希望于揭开宇宙的奥秘。炼金术的重点就是理解这些文献中隐藏的古老真理。正因为如此，18和19世纪的科学院更专注于实验而非文献的翻译，更注重新知识而非旧知识，炼金术会所也脱离了西方思想的主流，转入地下。
 			</Text>
 		</Row>
 
@@ -6234,15 +6216,15 @@
 			<Text>本城市所有[ICON_RES_WHEAT]小麦、[ICON_RES_SPICES]香料、[ICON_RES_CITRUS]柑橘、[ICON_RES_BARLEY]大麦、[ICON_FRU_RASPBERRY]浆果、[ICON_RES_BANANA]香蕉、[ICON_RES_SALT]食盐、[ICON_RES_SUGAR]蔗糖、[ICON_RES_COW]牛群、[ICON_RES_SHEEP]绵羊和[ICON_RES_INCENSE]熏香+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。</Text>
 		</Replace>
 
-	
+
 		<Replace Tag="TXT_KEY_BUILDING_GRAIN_DEPOT_HELP">
 			<Text>本城市+10%[ICON_FOOD]食物产出。[NEWLINE][NEWLINE]本城所有海滨和大洋区块+1[ICON_FOOD]食物。已开发的每处[ICON_RES_WHEAT]小麦、[ICON_RES_BARLEY]大麦、[ICON_RES_BANANA]香蕉、[ICON_RES_DEER]野鹿、[ICON_RES_BISON]野牛、[ICON_RES_FISH]鱼群和[ICON_RES_CRAB]螃蟹资源+1[ICON_FOOD]食物。[NEWLINE][NEWLINE]允许在本国的商路之间输送[ICON_FOOD]食物。</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_BUILDING_MARKET_HELP">
 			<Text>城市中每有4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。每处[ICON_RES_WHEAT]小麦、[ICON_RES_BARLEY]大麦、[ICON_RES_SPICES]香料、[ICON_RES_CITRUS]柑橘、[ICON_RES_SALT]食盐、[ICON_RES_SUGAR]蔗糖、[ICON_RES_COW]牛群、[ICON_RES_SHEEP]绵羊、[ICON_RES_INCENSE]熏香+1金。</Text>
 		</Replace>
-		
+
 		<Replace Tag="TXT_KEY_BUILDING_MOROCCO_MARKET_HELP">
 			<Text>
 				本城每4[ICON_CITIZEN]人口+1[ICON_GOLD]金钱产出。[NEWLINE][NEWLINE]本城市所有拥有的奢侈资源数量+1，每处[ICON_RES_WHEAT]小麦、[ICON_RES_BARLEY]大麦、[ICON_RES_SPICES]香料、[ICON_RES_CITRUS]柑橘、[ICON_RES_SALT]食盐、[ICON_RES_SUGAR]蔗糖、[ICON_RES_COW]牛群、[ICON_RES_SHEEP]绵羊、[ICON_RES_INCENSE]熏香+1金。
@@ -6275,7 +6257,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS_HELP">
 			<Text>防御力+33%。</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_RESOURCE_FOIEGRAS">
 			<Text>鹅肝</Text>
 		</Row>
@@ -6287,7 +6269,7 @@
 
 
 
-	
+
 
 
 
@@ -6311,11 +6293,11 @@
 		<Row Tag="TXT_KEY_BUILDING_BALNEAE">
 			<Text>[ICON_HEALTH][ICON_HAPPINESS_1]公共浴室</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_BALNEAE_HELP">
-				<Text>
-					+2[ICON_HAPPINESS_1]快乐,+5%[ICON_HEALTH]健康度。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_BALNEAE_HELP">
+			<Text>
+				+2[ICON_HAPPINESS_1]快乐,+5%[ICON_HEALTH]健康度。
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_BALNEAE_PEDIA">
 			<Text>
@@ -6366,12 +6348,14 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_WATCH_HELP">
-			<Text>城市+25[ICON_STRENGTH]防御，20生命值。
+			<Text>
+				城市+25[ICON_STRENGTH]防御，20生命值。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_WATCH">
-			<Text>[ICON_WAR]瞭望塔
+			<Text>
+				[ICON_WAR]瞭望塔
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_WATCH_PEDIA">
@@ -6415,13 +6399,13 @@
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON">
-				<Text>喷火器</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON_HELP">
-				<Text>攻击时可造成溅射伤害，攻击时对消耗木材的单位额外造成100%最终伤害。对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除20点生命值）若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
-			</Row>
-			
+		<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON">
+			<Text>喷火器</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON_HELP">
+			<Text>攻击时可造成溅射伤害，对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除20点生命值）攻击燃烧状态的敌人时[ICON_STRENGTH]攻击力+50%，若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_BUILDING_SILKROAD">
 			<Text>丝绸之路</Text>
 		</Row>
@@ -6465,8 +6449,8 @@
 
 
 
-		
-		
+
+
 
 
 
@@ -6479,7 +6463,7 @@
 		<Row Tag="TXT_KEY_WONDER_SKARABRAE_HELP">
 			<Text>全国每处采石场+2[ICON_PRODUCTION]产能、+2[ICON_RESEARCH]科研。本城+2[ICON_CULTURE]文化，本城每个石祭坛+1[ICON_PEACE]信仰。所有石碑+1[ICON_GOLD]金钱、+1[ICON_PEACE]信仰。</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_WONDER_SKARABRAE_QUOTE">
 			<Text>
 				[NEWLINE]"相信梦想，因为梦想中隐藏着通往永恒的大门。"[NEWLINE]        ——哈利勒·吉卜兰[NEWLINE]
@@ -6498,11 +6482,11 @@
 		<Row Tag="TXT_KEY_BUILDING_YUEYANG">
 			<Text>岳阳楼</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_YUEYANG_HELP">
-				<Text>
-					+3[ICON_GREAT_GENERAL]大军事家点数，提供三个剑士，所有城市训练的步兵单位+25%[ICON_STRENGTH]战斗力。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_YUEYANG_HELP">
+			<Text>
+				+3[ICON_GREAT_GENERAL]大军事家点数，提供三个剑士，所有城市训练的步兵单位+25%[ICON_STRENGTH]战斗力。
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_YUEYANG_PEDIA">
 			<Text>
@@ -6600,7 +6584,7 @@
 
 
 
-	
+
 		<Row Tag="TXT_KEY_BUILDING_KAMUTHI">
 			<Text>卡努尔太阳能公园</Text>
 		</Row>
@@ -6718,9 +6702,9 @@
 		<Row Tag="TXT_KEY_WONDER_DIONYSUS_QUOTE">
 			<Text>[NEWLINE]"音乐如同酒一般激发一个人的精神状态，而我是酒神巴克斯，是我为人类推出了这瓶光荣的酒，并使他们变得醉醺醺的。"[NEWLINE]        ——路德维希·范·贝多芬[NEWLINE]</Text>
 		</Row>
-			<Row Tag="TXT_KEY_WONDER_DIONYSUS_HELP">
-				<Text>需开启赞助政策，建成后所有城市获得[ICON_GREAT_WRITER]露天剧场，对所有本文明已遇见[ICON_CITY_STATE]城邦的[ICON_INFLUENCE]影响力提升50。完成城邦任务时，额外赠送30点[ICON_INFLUENCE]影响力。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_DIONYSUS_HELP">
+			<Text>需开启赞助政策，建成后所有城市获得[ICON_GREAT_WRITER]露天剧场，对所有本文明已遇见[ICON_CITY_STATE]城邦的[ICON_INFLUENCE]影响力提升50。完成城邦任务时，额外赠送30点[ICON_INFLUENCE]影响力。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_WONDER_DIONYSUS_PEDIA">
 			<Text>
 				狄奥尼索斯剧场建于公元前6世纪，是最古老的露天剧场。在这足以容纳17000人的剧场里曾经上演过无数场埃斯库罗斯、索福克勒斯和欧里庇得斯的悲剧作品及阿里斯托芬的喜剧作品。剧场依山坡而建，大得惊人，似凝结了天地大美之气。在古代希腊（特别是雅典），观看悲剧不仅是市民大众喜闻乐见的最主要的艺术活动，也是城邦生活的重要内容。
@@ -6819,13 +6803,13 @@
 			</Text>
 		</Row>
 
-	
-
-	
 
 
 
-	
+
+
+
+
 
 
 
@@ -6926,15 +6910,15 @@
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI">
 			<Text>高德院</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_OSARAGI_HELP">
-				<Text>
-					本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_OSARAGI_HELP">
+			<Text>
+				本城宗教压力+300%，解放城市后对所有城邦+50[ICON_INFLUENCE]影响力。
+			</Text>
+		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_PEDIA">
 			<Text>
 				宁静安详，历久弥坚，略显神秘，人称“大佛”的佛像坐落于镰仓市的高德院外。大佛高高耸立在佛寺游客面前，耐心地迎接信徒和旅者。一位不留名的大师以青铜铸造了镰仓大佛，自然风化后它呈现出一种柔和的绿色。
-                [NEWLINE]高德院大师在铸造时无疑对大佛寄予了年深日久的愿景。它在一次地震和两次台风中均安然无恙。其中一次周围的建筑物均已坍塌，而大佛依然稳如泰山。750年来，虽历经大自然的纷纷扰扰，大佛始终处变不惊。
+				[NEWLINE]高德院大师在铸造时无疑对大佛寄予了年深日久的愿景。它在一次地震和两次台风中均安然无恙。其中一次周围的建筑物均已坍塌，而大佛依然稳如泰山。750年来，虽历经大自然的纷纷扰扰，大佛始终处变不惊。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_QUOTE">
@@ -6987,7 +6971,8 @@
 		<Row Tag="TXT_KEY_UNIT_URBAN_CANNON_PEDIA">
 			<Text>
 				1453年4月12日，穆罕默德二世率大军兵临君士坦丁堡，发起了旨在灭亡拜占庭帝国的攻城战。穆罕默德二世庞大的炮兵部队在前线展开，一切就绪，君士坦丁堡面临着巨大的考验，因为这些大炮并不是普通的大炮，而是专门为此战打造的乌尔班大炮。这些“恐怖而非凡的怪兽”，由匈牙利籍火炮设计师乌尔班设计和制造，炮管长约5.18m，重达17吨，为了能够承受巨大的冲击力，设计炮筒厚约20cm，口径则高达762mm，可以容纳一个成人，炮弹用花岗岩制成，重约680公斤，其威力可以称霸整个时代。
-				[NEWLINE][NEWLINE]重炮在这次足以改变欧洲历史的围攻中发挥了巨大的作用。君士坦丁堡的陷落也标志着欧洲传统要塞技术的过时和攻城战术的改变，在军事史上也揭开了崭新的一页。乌尔班大炮(有时也被称作"土耳其巨炮"或"达达尼尔大炮")。该炮长达17英尺(约合5.18m)，重17吨，炮筒厚达8英寸(约20cm，以便承受开炮时的巨大冲击力)，口径则高达30英寸(约合762mm)，足以容纳一位成人，所用花岗岩炮弹重达1500磅(约680公斤)。是所处时代威力最大的火器。</Text>
+				[NEWLINE][NEWLINE]重炮在这次足以改变欧洲历史的围攻中发挥了巨大的作用。君士坦丁堡的陷落也标志着欧洲传统要塞技术的过时和攻城战术的改变，在军事史上也揭开了崭新的一页。乌尔班大炮(有时也被称作"土耳其巨炮"或"达达尼尔大炮")。该炮长达17英尺(约合5.18m)，重17吨，炮筒厚达8英寸(约20cm，以便承受开炮时的巨大冲击力)，口径则高达30英寸(约合762mm)，足以容纳一位成人，所用花岗岩炮弹重达1500磅(约680公斤)。是所处时代威力最大的火器。
+			</Text>
 		</Row>
 
 
@@ -7008,12 +6993,12 @@
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_URBAN">
-				<Text>重创</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_URBAN_HELP">
-				<Text>攻击城市时有40%的几率破坏一个城防建筑（按照兵营，军械所，木栅栏，城墙，瞭望塔，城堡的顺序），每次攻击额外造成城市最大生命值5%的伤害。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_URBAN">
+			<Text>重创</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_URBAN_HELP">
+			<Text>攻击城市时有40%的几率破坏一个城防建筑（按照兵营，军械所，木栅栏，城墙，瞭望塔，城堡的顺序），每次攻击额外造成城市最大生命值5%的伤害。</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_SPACEBASE_VISIT">
@@ -7025,8 +7010,8 @@
 		<Row Tag="TXT_KEY_CONFIRM_SELECTION">
 			<Text>确认选择</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_BUTTON_SPACEBASE_CHOOSE_CLOSE">
 			<Text>点击关闭界面（该操作将放弃奖励）。</Text>
 		</Row>
@@ -7051,17 +7036,17 @@
 			<Text>采纳该方案可立即获得一个无畏机甲，一个机甲巨兵，一个悬浮攻城炮(上述单位均为满级)。</Text>
 		</Row>
 
-		
 
-       <Row Tag="TXT_KEY_SPACEBASE_UNLOCKS">
-		<Text>获得：</Text>
-	   </Row>
+
+		<Row Tag="TXT_KEY_SPACEBASE_UNLOCKS">
+			<Text>获得：</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_EUPANEL_ATTACK_CITIES_MOD">
 			<Text>攻击加成</Text>
 		</Row>
-			
+
 		<Replace Tag="TXT_KEY_SP_ENEMY_COVER_PENALTY">
 			<Text>
 				远程攻击防御
@@ -7115,24 +7100,24 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH">
-				<Text>重装冲锋</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
-				<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH">
+			<Text>重装冲锋</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
+			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER">
-				<Text>暗杀者</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER_HELP">
-				<Text>
-					周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。对抗满血单位+50%[ICON_STRENGTH]战斗力。在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER">
+			<Text>暗杀者</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER_HELP">
+			<Text>
+				周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。对抗满血单位+50%[ICON_STRENGTH]战斗力。在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
+			</Text>
+		</Row>
 
-	
-		
+
+
 
 		<Row Tag="TXT_KEY_PROMOTION_PARATROOPER_BUFF">
 			<Text>行星扫描仪</Text>
@@ -7159,26 +7144,26 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_UNIT_NAVAL_MONSTER">
-				<Text>[COLOR_LEGENDARY]大海妖(巨型生物)[ENDCOLOR]</Text>
-			</Row>
-			<Row Tag="TXT_KEY_UNIT_NAVAL_MONSTER_HELP">
-				<Text>因研究所安全故障而逃逸的外星殖民地所特有的巨型海洋生物，具有可怕的破坏力，可以直接攻击单位和城市。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_UNIT_NAVAL_MONSTER_PEDIA">
-				<Text>北欧神话中传奇的“大海妖”。第一次出现是在英雄欧万欧德尔的冒险中，欧万欧德尔在格陵兰海上发现了一座“岛屿”，沉没数日之后偶尔会突然浮上海面并开始吞噬船只，鲸鱼，以及一些其他食物。鉴于旧地球的大海妖仅仅只是一个传说，让人类殖民者感到沮丧的是，类似的大海妖在其他星球上是实实在在存在的。由于它具有的双向体系，凸显的头部，以及多组触手，殖民地的动物学家将其认定为头足类动物。它还具有一副用来保护身体上部的钙质外壳，类似钢壳类动物。大海妖具有一副强大且上下两分的几丁质喙嘴，其中有多排锋利的齿舌，能够嚼碎最厚实的材料。[NEWLINE][NEWLINE]尽管一般情况下它不会主动攻击，但是在进食状态中或者察觉到其幼崽有危险的时候很容易被激怒。有幸的是，殖民者与大海妖的接触机会非常少，因为它们在海面停留的时间总是很短；而且，本地的大海妖都会进行多次生殖，每次下蛋后都会沉寂很长一段时间。当蛋孵化之后，小海妖由浮游生物形态逐渐转为成熟形态的过程将会跨越十年以上。最后一提，当处在海面上时，大海妖的感觉器官几乎会完全失去作用，所以它除非是意外情况，一般是不会接近人类领地的。以上因素便是与大海妖接触次数甚少的原因……直到殖民者们开始在海边建设前哨站并向着海域开始探索。[NEWLINE][NEWLINE]大海妖这个星球上目前所知的最大的生物，其巨大无比的外形让这个世界上所有的生物都显得渺小。沿海水域具有非常寒冷的温度以及超乎想象的压强，所以有理论指出，这个庞然大物的形成是为了适应深海食物缺失的必然结果。根据一块在建筑工作时被偶然挖掘出来的海妖壳来看，一头完全成长过的海妖全长超过336米，跟甲板不相上下；如果还要比较的话，旧地球所建造的最大的航空母舰上的飞行甲板也比不过。对大海妖的内部构造，生命周期，以及智慧程度的研究虽然还迟迟没有大的突破，但是研究不会因此而停下脚步。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_UNIT_NAVAL_MONSTER">
+			<Text>[COLOR_LEGENDARY]大海妖(巨型生物)[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_NAVAL_MONSTER_HELP">
+			<Text>因研究所安全故障而逃逸的外星殖民地所特有的巨型海洋生物，具有可怕的破坏力，可以直接攻击单位和城市。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_NAVAL_MONSTER_PEDIA">
+			<Text>北欧神话中传奇的“大海妖”。第一次出现是在英雄欧万欧德尔的冒险中，欧万欧德尔在格陵兰海上发现了一座“岛屿”，沉没数日之后偶尔会突然浮上海面并开始吞噬船只，鲸鱼，以及一些其他食物。鉴于旧地球的大海妖仅仅只是一个传说，让人类殖民者感到沮丧的是，类似的大海妖在其他星球上是实实在在存在的。由于它具有的双向体系，凸显的头部，以及多组触手，殖民地的动物学家将其认定为头足类动物。它还具有一副用来保护身体上部的钙质外壳，类似钢壳类动物。大海妖具有一副强大且上下两分的几丁质喙嘴，其中有多排锋利的齿舌，能够嚼碎最厚实的材料。[NEWLINE][NEWLINE]尽管一般情况下它不会主动攻击，但是在进食状态中或者察觉到其幼崽有危险的时候很容易被激怒。有幸的是，殖民者与大海妖的接触机会非常少，因为它们在海面停留的时间总是很短；而且，本地的大海妖都会进行多次生殖，每次下蛋后都会沉寂很长一段时间。当蛋孵化之后，小海妖由浮游生物形态逐渐转为成熟形态的过程将会跨越十年以上。最后一提，当处在海面上时，大海妖的感觉器官几乎会完全失去作用，所以它除非是意外情况，一般是不会接近人类领地的。以上因素便是与大海妖接触次数甚少的原因……直到殖民者们开始在海边建设前哨站并向着海域开始探索。[NEWLINE][NEWLINE]大海妖这个星球上目前所知的最大的生物，其巨大无比的外形让这个世界上所有的生物都显得渺小。沿海水域具有非常寒冷的温度以及超乎想象的压强，所以有理论指出，这个庞然大物的形成是为了适应深海食物缺失的必然结果。根据一块在建筑工作时被偶然挖掘出来的海妖壳来看，一头完全成长过的海妖全长超过336米，跟甲板不相上下；如果还要比较的话，旧地球所建造的最大的航空母舰上的飞行甲板也比不过。对大海妖的内部构造，生命周期，以及智慧程度的研究虽然还迟迟没有大的突破，但是研究不会因此而停下脚步。</Text>
+		</Row>
 
 
 
 
-			<Row Tag='TXT_KEY_TITLE_SUPER_TRANSPORT'>
+		<Row Tag='TXT_KEY_TITLE_SUPER_TRANSPORT'>
 			<Text>[COLOR_MANA]相位传送[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SUPER_TRANSPORT'>
 			<Text>消耗本回合内所有剩余[ICON_MOVES]移动力进行传送，可瞬移至[COLOR_MIGHT]指定地块[ENDCOLOR](以单位为中心半径20格内可进入的领域地块，或者任意的存在我方间谍的城市附近三格内的可进入的领域地块）。</Text>
 		</Row>
-		
+
 		<Row Tag='TXT_KEY_ALERT_SPY_TRANSPORT'>
 			<Text>[COLOR_NEGATIVE_TEXT]{@1_name}[ENDCOLOR]传送至此地块！</Text>
 		</Row>
@@ -7187,11 +7172,13 @@
 
 
 		<Row Tag="TXT_KEY_UNIT_TRANSPORT">
-			<Text>点击进入改造界面，可花费大量金币对本单位进行三方面的属性改造：攻击力、防御力 、特殊属性。
+			<Text>
+				点击进入改造界面，可花费大量金币对本单位进行三方面的属性改造：攻击力、防御力 、特殊属性。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_CHANGE">
-			<Text>单位改造
+			<Text>
+				单位改造
 			</Text>
 		</Row>
 
@@ -7205,15 +7192,15 @@
 		<Row Tag='TXT_KEY_COND_FRANCE_TRANSPORT_2'>
 			<Text>[COLOR_UNIQUE]未满足使用条件(本单位需要临近陆地，且需要花费{1_Gold}金钱）。[ENDCOLOR]</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_PROMOTION_FRANCE">
 			<Text>登录作战</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FRANCE_HELP">
 			<Text>可消耗一定量金币在沿岸执行步兵登录（根据当前军舰类型分为机械化步兵或盖里欧机甲）。</Text>
 		</Row>
-		
-		
+
+
 		<!--<Row Tag="TXT_KEY_UNIT_CHANGE_DESC3">
 			<Text>
 				消耗一定量金币从上述方案中选择任选一种来对当前单位进行改造
@@ -7225,7 +7212,7 @@
 
 
 
-		
+
 
 		<Row Tag='TXT_KEY_TITLE_ANGRY'>
 			<Text>[COLOR_MANA]组建军队[ENDCOLOR]</Text>
@@ -7242,15 +7229,15 @@
 			<Text>[COLOR_YELLOW]赫梯战车[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Row>
-			<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
-				<Text>
-					[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
-					[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。
-					[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。
-					[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
-					[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]善战无前[ENDCOLOR]：发动攻击将累积[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]，当[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]到达[COLOR_POSITIVE_TEXT]100[ENDCOLOR]时，可消耗1[ICON_MOVES]移动力组建一支[ICON_PROMOTION_NEW_INFANTRY_COMBAT][COLOR_POSITIVE_TEXT]重装步兵[ENDCOLOR]/[ICON_PROMOTION_NEW_GUNPOWDER_INFANTRY][COLOR_POSITIVE_TEXT]火药步兵[ENDCOLOR]。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
+			<Text>
+				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
+				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]善战无前[ENDCOLOR]：发动攻击将累积[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]，当[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]到达[COLOR_POSITIVE_TEXT]100[ENDCOLOR]时，可消耗1[ICON_MOVES]移动力组建一支[ICON_PROMOTION_NEW_INFANTRY_COMBAT][COLOR_POSITIVE_TEXT]重装步兵[ENDCOLOR]/[ICON_PROMOTION_NEW_GUNPOWDER_INFANTRY][COLOR_POSITIVE_TEXT]火药步兵[ENDCOLOR]。
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_SP_UNITS_HITTITE_WAR_CHARIOT_STRATEGY">
 			<Text>
@@ -7418,12 +7405,12 @@
 		<Row Tag="TXT_KEY_UNIT_SUI_FLEET_PEDIA">
 			<Text>五牙战船是隋朝最大的主力战船，可容战士八百人。一般在四川地区建造，由隋朝大将杨素筹措、打造。"五牙"实际上是指战舰有5层结构，高百余尺。左右前后设置六台拍竿，高五十尺。每根木桅顶系巨石，下设辘轳，战斗中和敌舰迫近时，可以迅速用辘轳把巨石放下，砸坏敌船。若一击不中，也可迅速收起再放。若敌舰四面包围，还可以"六管齐下"，其战斗力之强，可见一斑。1000多年前，总长55米的大舰也属于庞然大物了，它在隋朝统一全国的战争中发挥了重要的作用，战争也推动造船业朝着更完善的方向发展。公元588年，隋军五十余万人，水陆并进，大举攻陈。杨素统领的长江上游水军，自永安发船，出三峡，顺江而下，船多势大，锐不可挡。在延州(今湖北江陵西)，隋陈两军展开决战，隋军以四艘五牙战舰冲击敌阵，先后用拍竿击沉十余艘敌船，俘敌二千余人，陈军闻风丧胆。不久，隋灭掉偏安江南的陈王朝，统一了中国。隋代还有比五牙战船次一等的黄龙船，可载战士一百余人，以及平乘、舴艋等各具功能的战船。</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET_1">
 			<Text>百舸皆震</Text>
 		</Row>
 
-		
+
 		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET_1_HELP">
 			<Text>生命值上限+100%,攻击可对目标地块三格内的所有单位按照距离分别造成100%、50%、25%的溅射伤害。</Text>
 		</Row>
@@ -7467,10 +7454,10 @@
 
 
 		<!-- ********************************新政策******************************* -->
-			<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]奴隶生产[ENDCOLOR][NEWLINE]全国所有城市+1[ICON_CITIZEN]人口。农场，牧场，种植园，植物园+1[ICON_GOLD]金钱。</Text>
-			</Row>
-		
+		<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]奴隶生产[ENDCOLOR][NEWLINE]全国所有城市+1[ICON_CITIZEN]人口。农场，牧场，种植园，植物园+1[ICON_GOLD]金钱。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING">
 			<Text>奴隶生产</Text>
 		</Row>
@@ -7486,16 +7473,16 @@
 		<Row Tag="TXT_KEY_POLICY_ASSIMILATIONISM">
 			<Text>同化主义</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_POLICY_ASSIMILATIONISM_TEXT">
 			<Text>
 				同化主义(assimilationist)，即由"assimilation"一词派生而来。它是指一个国家以国族或主体民族的优势文化强制弱势民族或部族集团接受自己传统文化的一种思想或理论。
 				[NEWLINE]事实上，近代"国民国家"以"文明输出"论理和同化主义思想制定的同化政策，既对内又对外。对外主要表现为:宗主国强制要求殖民地接受自国的传统文化以及宗主国在自国民与殖民地的国民之间设置差别，划分优劣，法律上绝不认可两者的平等权益，殖民地的民族和人民的自由、民主和人权自然荡然无存。这从近代西方对外殖民史上斑斑可考，例如广为人知的"大航海时代西班牙和葡萄牙对中美南美先住民实施的同化政策"、"法国对亚州、非洲殖民地实施的同化政策"、"大英帝国对亚非拉三大洲殖民地实施的同化政策"、"德国对殖民地实施的同化政策"、"美洲新大陆开拓时代白种人对印第安人实施的同化政策"、"俄罗斯帝国时代对乌克兰等周边地区实施的俄罗斯化政策"、"先是西班牙，后是美国对菲律宾先住民实施的同化政策"、"瑞典对芬兰实施的瑞典化政策"、"美国于1893年将夏威夷兼并后对夏威夷先住民实施的同化政策"、"大日本帝国时代日本对殖民地朝鲜半岛和我国台湾实施的皇民化政策"。这些表面看上去属于文化上的同化政策必然伴随政治上的差别，人种主义差别政策随之横空出世。
 			</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_POLICY_BRANCH_INDUSTRY_CAP">
 			<Text>工业</Text>
 		</Row>
@@ -7510,10 +7497,10 @@
 				没有多少“技术”（或此情况下几项科技的融合）会给一场革命和一个时代贴上标签。学者们认为工业化是农业社会到工业社会的转变，伴随着历史上普遍的社会和经济动荡。它被新机器的发明和新能源的发现所驱动。18世纪始于欧洲的工业革命给人们的日常生活方式带来了不可预见的变化，有利又有害。
 				[NEWLINE]随着日益复杂的机械和工具的使用，曾经由有才能的工匠完成的贸易行业已被淘汰，大量缺乏技能的工厂劳工开始在装配线上工作。新行业逐步形成。人们搬到城市，这里工厂和交通集中在一起。这个过程涉及世界经济的重组，从自给自足到制造和消费分而开来。工人工资上涨、服务和商品市场扩大、需求大于生产，这一切导致飓风周期里更高的价格和更高的工资等。
 				[NEWLINE]工业化的特点是城市化、剥削（世界上超过40%的雇员被联合国认为是“在低报酬职务工作的人”）、机构复杂性、疯狂消费、资本主义和共产主义、前所未有的人口增长、每个社会结构的复变，甚至是核心家庭。资本许可的累积增加了科学研究和新技术的投资，加速了工业化过程。
-                [NEWLINE]有人指出18世纪晚期发生了第二次工业革命，在这期间，内燃机、电力、电话、和创新的工厂机器开始了城市化、消费和社会疏离感的新周期。只需看看过去25年发生的变化，甚至会有人相信文明已进入另一个工业革命。
+				[NEWLINE]有人指出18世纪晚期发生了第二次工业革命，在这期间，内燃机、电力、电话、和创新的工厂机器开始了城市化、消费和社会疏离感的新周期。只需看看过去25年发生的变化，甚至会有人相信文明已进入另一个工业革命。
 			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_INDUSTRY_1">
 			<Text>手工产业</Text>
 		</Row>
@@ -7523,7 +7510,7 @@
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_1_TEXT">
 			<Text>手工业是指使用简单工具，依靠手工劳动，从事小规模生产的工业。它最初与农业融为一体，属于农民副业性质的家庭手工业。农民把自己生产的农副产品作为原料进行加工，或者制造某些劳动工具和日用器皿。其产品除满足自己的需要外，多余的予以出卖。随着第二次社会大分工，手工业从农业中分离出来，形成了独立的个体手工业。个体手工业的特点是以一家一户为单位，使用私有的生产资料分散经营，一般不雇用工人或只雇用做辅助性工作的助手和学徒，并以本人的手工劳动为生活的主要来源。</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_INDUSTRY_2">
 			<Text>劳工帮派</Text>
 		</Row>
@@ -7537,17 +7524,17 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_INDUSTRY_3">
-				<Text>建筑工会</Text>
-			</Row>
-			<Row Tag="TXT_KEY_INDUSTRY_3_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]建筑工会[ENDCOLOR][NEWLINE]大工程师获取速率+50%。使用大工程师加速建造时，额外获得50%[ICON_PRODUCTION]产能。</Text>
-			</Row>
-			<Row Tag="TXT_KEY_POLICY_INDUSTRY_3_TEXT">
-				<Text>
-					工会，或称劳工总会、工人联合会。工会原意是指基于共同利益而自发组织的社会团体。这个共同利益团体诸如为同一雇主工作的员工，在某一产业领域的个人。工会组织成立的主要意图，可以与雇主谈判工资薪水、工作时限和工作条件等等。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_INDUSTRY_3">
+			<Text>建筑工会</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INDUSTRY_3_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]建筑工会[ENDCOLOR][NEWLINE]大工程师获取速率+50%。使用大工程师加速建造时，额外获得50%[ICON_PRODUCTION]产能。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_INDUSTRY_3_TEXT">
+			<Text>
+				工会，或称劳工总会、工人联合会。工会原意是指基于共同利益而自发组织的社会团体。这个共同利益团体诸如为同一雇主工作的员工，在某一产业领域的个人。工会组织成立的主要意图，可以与雇主谈判工资薪水、工作时限和工作条件等等。
+			</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_INDUSTRY_4">
@@ -7563,7 +7550,7 @@
 				[NEWLINE]资本主义工业化的过程，是在资本家追逐利润的过程中自发地实现的。资本主义工业化一般从发展轻工业开始。因为，轻工业资本周转较快，可以用较少的投资，获得较多的利润。轻工业发展起来以后为资本主义积累了大量资金，并产生对新的生产设备、机器、动力、工具等的需要，促进了重工业的迅速发展。
 			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_INDUSTRY_5">
 			<Text>都市主义</Text>
 		</Row>
@@ -7582,9 +7569,9 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_INDUSTRY_6_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]产业扩张[ENDCOLOR][NEWLINE]工程师+1[ICON_PRODUCTION]产能。每座城市+6[ICON_RES_ELECTRICITY]电力，+5[ICON_RES_HARDWOOD]木材，+5[ICON_RES_GUNPOWDER]火药。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_INDUSTRY_6_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]产业扩张[ENDCOLOR][NEWLINE]工程师+1[ICON_PRODUCTION]产能。每座城市+6[ICON_RES_ELECTRICITY]电力，+5[ICON_RES_HARDWOOD]木材，+5[ICON_RES_GUNPOWDER]火药。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_6_TEXT">
 			<Text>
@@ -7593,8 +7580,8 @@
 				[NEWLINE]另一种说法是产业扩张的内容包括生产能力、产业组织和产业区域分布等方面；产业扩张的主要形式有产业贸易、产业投资、产业协作等；产业扩张的主要途径包括产业的自我更新（升级和转移）、溶进和吸入其他产业溢出的资源等方面。
 			</Text>
 		</Row>
-	
-		
+
+
 		<Row Tag="TXT_KEY_INDUSTRY_7">
 			<Text>例外论</Text>
 		</Row>
@@ -7617,8 +7604,8 @@
 		<Row Tag="TXT_KEY_INDUSTRY_TITLE">
 			<Text>{2_CivName:textkey}缔造者 干练的{1_PlayerName:textkey}</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_POLICY_BRANCH_GRANDEUR_CAP">
 			<Text>宏伟</Text>
 		</Row>
@@ -7658,15 +7645,15 @@
 
 
 
-			<Row Tag="TXT_KEY_GRANDEUR_1_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR][NEWLINE]每处战略资源+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_GRANDEUR_1_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR][NEWLINE]每处战略资源+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_1_TEXT">
 			<Text>
 				市场监管是指对市场和市场规则的监管。市场监管不是对某一行业、某一具体市场、某一区域的管理，而是具有普遍性的监督管理。过去大多数工商行政管理部门只涉及一些人身安全、假冒伪劣、市场等等一些有形市场的管理而忽视一些市场本身行为和范围（即无形市场）的管理，更不用说电子商务、网上购物、邮购等交易行为的管理，一句话说，只局限于具体交易行为的管理，没有充分认识市场交易关系，从抽象行为进行监管，因此，市场监管要把监管眼光放到随经济的发展而发展。
 			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_GRANDEUR_2">
 			<Text>英勇伦理</Text>
 		</Row>
@@ -7678,7 +7665,7 @@
 				许多国王、皇帝、将军都拥有一支精英卫队，这些由他们钦点，且训练有素的士兵在他（或她）进行战斗时伴随左右。虽然这些“御用”侍卫的主要任务是使他们的指挥官生存下去，但他们也是战斗中最好的突击部队：更好的装备、更严格的纪律、战斗至死的意愿（据说）。有很多关于此类激动人心的壮举的描述——波斯长生军、奥斯曼苏丹亲兵、唐代禁军、拿破仑老近卫军，以及英国皇家军队。看来，这些作战单位不仅仅是有漂亮的制服而已。
 			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_GRANDEUR_3">
 			<Text>强迫劳役</Text>
 		</Row>
@@ -7704,7 +7691,7 @@
 				国家纪念日是一个国家为纪念曾经发生过的重大民族灾难而设立的国家纪念活动，由国家权力机关决定。
 			</Text>
 		</Row>
-		
+
 
 		<Row Tag="TXT_KEY_GRANDEUR_5">
 			<Text>碑铭主义</Text>
@@ -7712,14 +7699,16 @@
 		<Row Tag="TXT_KEY_GRANDEUR_5_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]碑铭主义[ENDCOLOR][NEWLINE]每个世界奇观与自然奇观+3[ICON_CULTURE]文化、+3[ICON_PEACE]信仰、+3[ICON_GOLDEN_AGE]黄金时代点数。所有自然奇观+3[ICON_HEALTH]健康度。
-				[NEWLINE]拥有世界奇观的城市+10%[ICON_GOLD]金钱，[ICON_CULTURE]文化，[ICON_RESEARCH]科研。[NEWLINE]</Text>
+				[NEWLINE]拥有世界奇观的城市+10%[ICON_GOLD]金钱，[ICON_CULTURE]文化，[ICON_RESEARCH]科研。[NEWLINE]
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_5_TEXT">
 			<Text>
 				1.展现文艺复兴时期,追求雄伟不朽艺术的企图。
 				[NEWLINE]2.在画风上展现雄伟之气,并藉以表显或寓意当时政权,教权之伟大。
-				[NEWLINE]3.此一画风直接影响巴洛克时期。</Text>
+				[NEWLINE]3.此一画风直接影响巴洛克时期。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_GRANDEUR_6">
@@ -7780,13 +7769,13 @@
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_1_TEXT">
 			<Text>
 				使节作为国与国间进行谈判的制度可以说与人类的历史一样悠久。各国的史书都有关于派遣使节的记载。甚至在远古时代，使节们处处都享有特别的保护和某些特权。因此，可以说，外交使节制度是伴随人类社会相互交往而产生的特殊制度。在古代罗马、古代中国等都有外交使节方面的制度和惯例。"两国交兵，不斩来使"便是这方面的例证之一。
-                [NEWLINE]常驻外交使节在十三世纪开始出现。例如，在意大利，特别是当时的威尼斯，便成为外国使节的汇集地。到十五世纪，意大利开始向西班牙、德国、法国和英国派遣常驻代表。奇怪的是，外交官兼国际法学家格老秀斯曾认为常驻使节没有必要，"现行常驻使节是可以不要的;古代习惯中并没有这种制度，可以证明无此必要。"目前，国家之间互设大使馆已经成为国际交往的惯例。建立外交关系的必然结果便是互相设立大使馆。
+				[NEWLINE]常驻外交使节在十三世纪开始出现。例如，在意大利，特别是当时的威尼斯，便成为外国使节的汇集地。到十五世纪，意大利开始向西班牙、德国、法国和英国派遣常驻代表。奇怪的是，外交官兼国际法学家格老秀斯曾认为常驻使节没有必要，"现行常驻使节是可以不要的;古代习惯中并没有这种制度，可以证明无此必要。"目前，国家之间互设大使馆已经成为国际交往的惯例。建立外交关系的必然结果便是互相设立大使馆。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_1_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]外交使节[ENDCOLOR][NEWLINE]每条商路+2%城市[ICON_RESEARCH]科研产出。</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_KNOWLEDGE_2">
 			<Text>口头传统</Text>
 		</Row>
@@ -7798,7 +7787,7 @@
 				口头传统乃是人类表达文化的"根"。“口头”传统涵括了多种交流方式和模式，富含了各种知识、记忆、价值观、象征意义，带有一般非文学、或是美学-文学特征的语言学事物、有书面术语的事物、从口头传统衍生出来、带有口头与传统特征的文本。我专攻短诗（minimal poetry），附有抒情（主要是四行、五行、六行诗）与叙述（传统叙述歌曲）特征。
 			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_KNOWLEDGE_3">
 			<Text>佣书业</Text>
 		</Row>
@@ -7810,24 +7799,24 @@
 				佣书业是是以社会上一个贫穷的、有文化的群体为主力军，受雇为政府、私人、书商、寺观等抄书，以此获取报酬的一种行业。它肇始于汉代，兴盛于六朝，至唐宋时期丧失存在的基础。
 			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_KNOWLEDGE_4">
 			<Text>精英学派</Text>
 		</Row>
 
-			<Row Tag="TXT_KEY_KNOWLEDGE_4_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]精英学派[ENDCOLOR][NEWLINE]科学家+1[ICON_RESEARCH]科研、医学家+1[ICON_HEALTH]健康度。使用医生治疗瘟疫能额外减少两回合持续时间。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_KNOWLEDGE_4_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]精英学派[ENDCOLOR][NEWLINE]科学家+1[ICON_RESEARCH]科研、医学家+1[ICON_HEALTH]健康度。使用医生治疗瘟疫能额外减少两回合持续时间。</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_4_TEXT">
 			<Text>
 				9~12世纪，在翻译传播希腊哲学和东方(波斯、印度)哲学思想的过程中，在阿拉伯伊斯兰教国家统治下的广大地区，先后出现了众多的具有自由思想的哲学家。他们的思想深受希腊哲学和自然科学思想的影响，尤其推崇亚里士多德，称其学说为"最高的真理，"人类智力所能达到的极限"，并注释、研究和评论其哲学和科学著作，从中汲取了丰富的思想营养，形成了具有唯理主义倾向的自然观、宗教观及社会历史观。
 			</Text>
 		</Row>
-		
-		
 
-		
+
+
+
 		<Row Tag="TXT_KEY_KNOWLEDGE_5">
 			<Text>情报网络</Text>
 		</Row>
@@ -7840,10 +7829,10 @@
 			</Text>
 		</Row>
 
-			<Row Tag="TXT_KEY_KNOWLEDGE_5_HELP">
-				<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]每个活跃的间谍可为城市提供4%[ICON_RESEARCH]科研加成。地牢、监禁所、警察局+2[ICON_RESEARCH]科研。</Text>
-			</Row>
-		
+		<Row Tag="TXT_KEY_KNOWLEDGE_5_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]每个活跃的间谍可为城市提供4%[ICON_RESEARCH]科研加成。地牢、监禁所、警察局+2[ICON_RESEARCH]科研。</Text>
+		</Row>
+
 		<Row Tag="TXT_KEY_KNOWLEDGE_6">
 			<Text>自然哲学</Text>
 		</Row>
@@ -7856,7 +7845,7 @@
 				[NEWLINE]自然哲学(philosophy of nature，nature- philosophy)指多少含有形而上学观点的对自然的解释。在古希腊的自然哲学中与生物学关系最密切的是亚里士多德(Aristoteles)的各种概念。但是单称为自然哲学的生物学时代的自然哲学是指从十八世纪后半叶到十九世纪以德国古典哲学为基础而诞生的哲学观点(也称为浪漫主义自然哲学)，它是以谢林(F.von Schelling)的哲学为代表的。在谢林的哲学出现之前，歌德(J.W.von Goethe)、K.F.Kielmeyer、奥肯(L.Oken)都已是自然哲学的生物学家。歌德型(原型)的概念和他与奥肯的脊椎脑颅说就是以该哲学为背景所产生的。这种在自然哲学的生物学中采用对重演论预见的平行法则和自然梯级等的连续性法则，它是否与进化的观点有直接联系，一般还是问题，否定的意见很多。再有"natural philosophy"也是自然哲学，但它只不过是物理学的同义词而已。
 			</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_KNOWLEDGE_7">
 			<Text>科学基金会</Text>
 		</Row>
@@ -7868,7 +7857,7 @@
 				对科学家进行国家层面上的支持拥有诸多好处。汇集众多智囊除了能促进人类知识进步，还能提升国家威望。另外，在危急时刻时抽象理论的益处也能转化为武器方面的应用。国家科学委员会按学科建立各种委员会，另外根据研究某种特殊问题的需要，建立一些特别委员会。
 			</Text>
 		</Row>
-		
+
 		<Replace Tag="TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP" >
 			<Text>[COLOR_POSITIVE_TEXT]五年计划[ENDCOLOR][NEWLINE]每处矿井、采石场、伐木场、油井、海上钻井平台、捕捞船、工业综合体+1[ICON_PRODUCTION]产能。</Text>
 		</Replace>
@@ -7899,7 +7888,7 @@
 
 
 
-	
+
 		<Row Tag="TXT_KEY_BUILDING_ROG_SMITHSONIAN_SPECIALIST">
 			<Text>专家学会</Text>
 		</Row>
@@ -7941,8 +7930,8 @@
 		<Row Tag="TXT_KEY_UNIT_GLADIATOR_STRATEGY">
 			<Text>这种陆军近战单位具备强大的生存能力，被单位攻击后满足特定情形下可恢复血量，并且在自身受到的伤害增加时战斗力会逐渐提升。</Text>
 		</Row>
-		
-		
+
+
 
 
 		<Row Tag="TXT_KEY_PROJECT_GLADIATOR">
@@ -7965,7 +7954,7 @@
 
 
 
-		
+
 
 
 
@@ -7975,8 +7964,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_US_URBAN">
 			<Text>你在该地格的单位由于受到乌尔班大炮攻击，下一轮丧失全部[ICON_MOVES]移动力！</Text>
-		</Row>	
-		
+		</Row>
+
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_ENEMY_URBAN_SHORT">
 			<Text>乌尔班大炮命中目标！</Text>
 		</Row>
@@ -8076,7 +8065,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_HUGE_BOMB_HELP">
 			<Text>可对被攻击地块及周围半径3格范围内的所有单位与城市造成大量伤害,并且爆炸范围内的城市将陷入4回合混乱状态。对堡垒+200%[ICON_STRENGTH]攻击力。</Text>
 		</Row>-->
-	
+
 
 
 
@@ -8204,22 +8193,22 @@
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS">
 			<Text>步马协同</Text>
 		</Row>
-			<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS_HELP">
-				<Text>
-					对反骑兵、反装甲单位+33%[ICON_STRENGTH]战斗力,对陆作战时+15%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+50%[ICON_STRENGTH]战斗力，无攻击次数限制。5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
-					[NEWLINE]当剩余生命值超过150移动力不为0时，可使用特殊冲锋技能。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS_HELP">
+			<Text>
+				对反骑兵、反装甲单位+33%[ICON_STRENGTH]战斗力,对陆作战时+15%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+50%[ICON_STRENGTH]战斗力，无攻击次数限制。5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
+				[NEWLINE]当剩余生命值超过150移动力不为0时，可使用特殊冲锋技能。
+			</Text>
+		</Row>
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE">
-				<Text>防御精通</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE_HELP">
-				<Text>受到攻击的最终伤害减少10。</Text>
-			</Row>
-			
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE">
+			<Text>防御精通</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE_HELP">
+			<Text>受到攻击的最终伤害减少10。</Text>
+		</Row>
+
 		<!--Transport-->
 		<Row Tag='TXT_KEY_TITLE_IRON_BUDDHA_CHARGE'>
 			<Text>铁马嘶风万里秋</Text>
@@ -8311,7 +8300,7 @@
 
 
 
-	
+
 
 
 
@@ -8375,7 +8364,8 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_PRIVATE_PHARMACY_TEXT">
-			<Text>世界上第一个私人药店是于8世纪阿拉伯人开设的，开创了医药的分家。
+			<Text>
+				世界上第一个私人药店是于8世纪阿拉伯人开设的，开创了医药的分家。
 			</Text>
 		</Row>
 
@@ -8455,7 +8445,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_PEOPLES_HALL_QUOTE">
 			<Text>
-				[NEWLINE]"你想当一辈子懦夫，还是被万人拥护。哪怕你是一个魔鬼。需要的，不仅仅是勇气。来自心底的革命呐喊，只为惊醒少数人。"[NEWLINE]        —— 阿道夫 · 希特勒[NEWLINE]</Text>
+				[NEWLINE]"你想当一辈子懦夫，还是被万人拥护。哪怕你是一个魔鬼。需要的，不仅仅是勇气。来自心底的革命呐喊，只为惊醒少数人。"[NEWLINE]        —— 阿道夫 · 希特勒[NEWLINE]
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_PEOPLES_HALL_HELP">
 			<Text>
@@ -8466,12 +8457,12 @@
 
 
 
-			<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL">
-				<Text>战争狂热</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL_HELP">
-				<Text>单位剩余血量越低则战斗力越高。攻击城市时获得相对于城市损害400%的[ICON_GOLD]金钱。大军事家的光环效果增益提升20%，且范围+2。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL">
+			<Text>战争狂热</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL_HELP">
+			<Text>单位剩余血量越低则战斗力越高。攻击城市时获得相对于城市损害400%的[ICON_GOLD]金钱。大军事家的光环效果增益提升20%，且范围+2。</Text>
+		</Row>
 
 
 
@@ -8510,15 +8501,15 @@
 		</Row>
 
 
-			<Row Tag="TXT_KEY_WONDER_GUIGU_HELP">
-				<Text>
-					所有专家对应的基础产出数值+4。+25%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。每次间谍行动完成时，可一次性获得2回合的[ICON_GOLD]金钱、[ICON_RESEARCH]科研产出，且有一定几率获得一个随机类型的伟人。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_GUIGU_HELP">
+			<Text>
+				所有专家对应的基础产出数值+4。+25%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。每次间谍行动完成时，可一次性获得2回合的[ICON_GOLD]金钱、[ICON_RESEARCH]科研产出，且有一定几率获得一个随机类型的伟人。
+			</Text>
+		</Row>
 
 
 
-	
+
 
 
 
@@ -8532,33 +8523,33 @@
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_LODGE_DESC">
-				<Text>
-					[ICON_INTERNATIONAL_TRADE][ICON_FOOD]乡村小屋
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILDING_LODGE_HELP">
-				<Text>
-					+2[ICON_FOOD]食物。本城市的每处[ICON_RES_DEER]野鹿和[ICON_RES_BISON]野牛资源+1[ICON_FOOD]食物, 每处[ICON_RES_FUR]毛皮、[ICON_RES_IVORY]象牙+1[ICON_GOLD]金钱。[NEWLINE][NEWLINE]通向其他文明的陆地商路额外+6基础[ICON_GOLD]金钱。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_BUILDINGS_LODGE_TEXT">
-				<Text>
-					民宿是指利用自用住宅空闲房间，结合当地人文、自然景观、生态、环境资源及农林渔牧生产活动，以家庭副业方式经营，提供旅客乡野生活的住所。民宿不同于传统的饭店旅馆，它能让人体验当地风情、感受民宿主人的热情与服务、并体验有别于以往的生活。民宿可以说是农家乐的精致版，通过地方政府统一管理，由民宿主人个体经营的一种模式，这种经营模式可以发动社区全民参与，其盈利效益非常可观。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_LODGE_DESC">
+			<Text>
+				[ICON_INTERNATIONAL_TRADE][ICON_FOOD]乡村小屋
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_LODGE_HELP">
+			<Text>
+				+2[ICON_FOOD]食物。本城市的每处[ICON_RES_DEER]野鹿和[ICON_RES_BISON]野牛资源+1[ICON_FOOD]食物, 每处[ICON_RES_FUR]毛皮、[ICON_RES_IVORY]象牙+1[ICON_GOLD]金钱。[NEWLINE][NEWLINE]通向其他文明的陆地商路额外+6基础[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_LODGE_TEXT">
+			<Text>
+				民宿是指利用自用住宅空闲房间，结合当地人文、自然景观、生态、环境资源及农林渔牧生产活动，以家庭副业方式经营，提供旅客乡野生活的住所。民宿不同于传统的饭店旅馆，它能让人体验当地风情、感受民宿主人的热情与服务、并体验有别于以往的生活。民宿可以说是农家乐的精致版，通过地方政府统一管理，由民宿主人个体经营的一种模式，这种经营模式可以发动社区全民参与，其盈利效益非常可观。
+			</Text>
+		</Row>
 
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_SANKORE">
+		<Row Tag="TXT_KEY_BUILDING_SANKORE">
 			<Text>桑科雷大学</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SANKORE_PEDIA">
 			<Text>
 				桑科雷大学坐落于廷巴克图的桑科雷金字塔清真寺之中。其在古代，特别是曼沙·穆萨统治时期，是一个非常优秀的学习中心。
 				[NEWLINE]桑科雷大学与现代的大学运行方式极为不同。大学中并无中央行政部门，取而代之的是数个独立的学校结成的组织，其各自都有自己专属的教授，而教学地点一般都选在庭院或是私人家中。对于现代的学生而言，这所大学似乎看起来过于随意，但是桑科雷大学在当时却是声名显赫的伊斯兰学习中心。学习课程自然包含了古兰经教义的讲习，但同时学生们也会汲取到像是医学、地理、物理、历史和艺术等世俗知识。桑科雷大学总共提供四个等级的学位，并会为毕业的学生举办典礼。毕业生们将会戴上传统的头巾参加仪式，而头巾则代表了他们各自在学业上取得的卓越成就。
-				[NEWLINE]公元1590年代，马里遭到了摩洛哥的入侵。这场战争造成大量学者的流失，他们中有人被驱逐出境，而另一些则选择了逃亡，同时桑科雷大学的大部分教学成果与著作也被毁于一旦。			
+				[NEWLINE]公元1590年代，马里遭到了摩洛哥的入侵。这场战争造成大量学者的流失，他们中有人被驱逐出境，而另一些则选择了逃亡，同时桑科雷大学的大部分教学成果与著作也被毁于一旦。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SANKORE_QUOTE">
@@ -8566,12 +8557,12 @@
 				[NEWLINE]"学者皆是先知的子嗣。先知并未在世间留下任何财富，而是将宝贵的知识传给后人。"[NEWLINE]        —— 穆斯奈德·艾尔-巴扎尔[NEWLINE]
 			</Text>
 		</Row>
-			<Row Tag="TXT_KEY_WONDER_SANKORE_HELP">
-				<Text>
-					全国每处炼金术会所、大学、公立学校、研发实验室+5%[ICON_RESEARCH]科研。
-					[NEWLINE][NEWLINE]只能在临近沙漠的城市建造。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_SANKORE_HELP">
+			<Text>
+				全国每处炼金术会所、大学、公立学校、研发实验室+5%[ICON_RESEARCH]科研。
+				[NEWLINE][NEWLINE]只能在临近沙漠的城市建造。
+			</Text>
+		</Row>
 
 
 
@@ -8621,7 +8612,7 @@
 
 
 
-	
+
 
 		<Row Tag="TXT_KEY_TECH_SOVEREIGNTY">
 			<Text>主权国家</Text>
@@ -8701,9 +8692,9 @@
 		</Row>
 
 
-	
-		
-		
+
+
+
 
 		<Row Tag="TXT_KEY_BUILDING_JAIL">
 			<Text>
@@ -8818,8 +8809,8 @@
 			<Text>+50[ICON_HP]生命值上限。</Text>
 		</Row>
 
-		
-		
+
+
 
 		<Row Tag="TXT_KEY_BUILDING_THE_CAPITOL">
 			<Text>国会大厦</Text>
@@ -8892,7 +8883,7 @@
 				[NEWLINE][TAB][TAB]"音乐，是比一切智慧,一切哲学更高的启示。"[NEWLINE][TAB][TAB] - 贝多芬[NEWLINE][TAB]
 			</Text>
 		</Row>
-	
+
 
 
 
@@ -8906,7 +8897,7 @@
 			<Text>掠劫地块额外恢复50生命值，对血量不足一半的单位+33%攻击力。</Text>
 		</Row>
 
-	
+
 
 
 		<Row Tag="TXT_KEY_BUILDING_LOCKUP">
@@ -9028,7 +9019,7 @@
 
 
 
-		
+
 
 		<Row Tag="TXT_KEY_BUILDING_KARRUPP">
 			<Text>克虏伯兵工厂</Text>
@@ -9128,7 +9119,7 @@
 				[NEWLINE]不同于19世纪另外三大通讯社(哈瓦斯社、路透社、沃尔夫社)，港口新闻社是合作性质的组织，不以赢利为目的，一切费用由各家平均分摊。
 				[NEWLINE]据埃默里父子《美国新闻史》一书所讲:
 				[NEWLINE]关于在1848年正式组建通讯社一说，并未有资料可佐证。这个后来发展成为现代美联社的组织正式创办时期最确切的日期是1849年1月11日。正是在这一天，上面提到的这六家纽约日报签署了一项协议，组成"港口新闻社"。该协议的第一副本于1967年由理查德·A.施瓦茨洛斯(Richard A.Schwarzlose)教授在纽约公共图书馆手稿部所藏亨利·J.雷蒙德的文件中发现。他提供了以往不为人知的细节内容:6个合伙人按规定共享两艘船只，在驶入纽约港的轮船上采集新闻，共同分担费用，向纽约市以外的报纸出售新闻，还要制订成员规章。显然是由于通过电报出售新闻的生意变得越来越重要之故，1851年，该组织签署新的协议，改名为"电讯与综合新闻联合社"(Telegraphic General News Association)。
-				[NEWLINE]"联合新闻社"(Association Press)的名称直到1860年才广泛使用，但纽约市的组织正是现代报业联合会的先驱。		
+				[NEWLINE]"联合新闻社"(Association Press)的名称直到1860年才广泛使用，但纽约市的组织正是现代报业联合会的先驱。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_AP_QUOTE">
@@ -9142,9 +9133,9 @@
 		<Row Tag="TXT_KEY_BUILDING_KGB">
 			<Text>克格勃</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_KGB_HELP">
-				<Text>当你的[ICON_SPY]间谍成功操纵城邦选举或者粉碎敌方[ICON_SPY]间谍试图推翻你的政权的行动时，你将获得一次性的[ICON_RESEARCH]科研、[ICON_GOLD]金钱产出。即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止外来间谍进入本文明拥有的城市。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_KGB_HELP">
+			<Text>当你的[ICON_SPY]间谍成功操纵城邦选举或者粉碎敌方[ICON_SPY]间谍试图推翻你的政权的行动时，你将获得一次性的[ICON_RESEARCH]科研、[ICON_GOLD]金钱产出。即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止外来间谍进入本文明拥有的城市。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_KGB_TEXT">
 			<Text>
 				克格勃，全称"苏联国家安全委员会"(俄文:Комитет Государственной Безопасности，英文:The Committee of State Security)，简称КГБ，与美国中央情报局、英国军情六处和以色列摩萨德，并称为"世界四大情报机构"。是1954年3月13日至1991年11月6日期间苏联的情报机构，以实力和高明而著称于世。
@@ -9163,9 +9154,9 @@
 		<Row Tag="TXT_KEY_BUILDING_BLETCHLEY_PARK">
 			<Text>布莱奇利公园</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP">
-				<Text>获得一个免费科技，提供2[COLOR_POSITIVE_TEXT]额外[ENDCOLOR][ICON_SPY]间谍,敌方间谍工作效率-15%。从研究协定中额外获得25%科研。我方间谍所在非己方城市25%的[ICON_GOLD]金钱、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研产出将提供给该奇观所在城市。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP">
+			<Text>获得一个免费科技，提供2[COLOR_POSITIVE_TEXT]额外[ENDCOLOR][ICON_SPY]间谍,敌方间谍工作效率-15%。从研究协定中额外获得25%科研。我方间谍所在非己方城市25%的[ICON_GOLD]金钱、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研产出将提供给该奇观所在城市。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_BLETCHLEY_PARK_TEXT">
 			<Text>布莱切利公园位于白金汉郡的米尔顿凯恩斯，是英国政府通讯总部的中心所在地。二战期间，英国定期渗透到轴心国的秘密通讯中，最重要的是德国的恩尼格玛密码和洛伦兹密码。二战时期英国情报机构的官方历史学家写道，布莱切利生产的”超级”情报，将战争缩短了2到4年，没有它，战争的结果将是不确定的。这个地方现在是一个教育和历史景点，用来纪念和庆祝这些成就。</Text>
 		</Row>
@@ -9179,11 +9170,11 @@
 		<Row Tag="TXT_KEY_BUILDING_FOREIGN_OFFICE">
 			<Text>外交部</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_FOREIGN_OFFICE_HELP">
-				<Text>
-					在世界会议获得2个额外代表票数。当你赠予城邦礼物时，可获得更多[ICON_INFLUENCE]影响力。当你在其他文明城市中安置了间谍或者外交官时，每回合可获得该城市多项产出（[ICON_CULTURE]文化、[ICON_PEACE]信仰、[ICON_RESEARCH]科研、[ICON_GOLD]金钱）的15%。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_FOREIGN_OFFICE_HELP">
+			<Text>
+				在世界会议获得2个额外代表票数。当你赠予城邦礼物时，可获得更多[ICON_INFLUENCE]影响力。当你在其他文明城市中安置了间谍或者外交官时，每回合可获得该城市多项产出（[ICON_CULTURE]文化、[ICON_PEACE]信仰、[ICON_RESEARCH]科研、[ICON_GOLD]金钱）的15%。
+			</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_FOREIGN_OFFICE_TEXT">
 			<Text>
 				长久以来，文明和国家之间的关系均由外交礼节所主导。良好的礼节不但能消除误解，更能防止战争。派驻海外国家的外交官一职于焉诞生。随着国际事务日趋复杂化，人们便在市政系统中增设了一类职务，代表政府与各国外交官进行接洽。
@@ -9199,11 +9190,11 @@
 		<Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_BUREAU">
 			<Text>情报局</Text>
 		</Row>
-			<Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_BUREAU_HELP">
-				<Text>
-					与有我方间谍驻扎的文明的单位作战时+25%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_INTELLIGENCE_BUREAU_HELP">
+			<Text>
+				与有我方间谍驻扎的文明的单位作战时+25%[ICON_STRENGTH]战斗力,每回合额外恢复25点生命值。战斗获得经验的速率+100%。
+			</Text>
+		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_INTELLIGENCE_BUREAU_TEXT">
 			<Text>
 				很多国家事务需要谨慎处理，而其中有些事务的实际解决方法也可能有悖于国家及其领导层的公开形象。因此，统治者需要一小群人士来处理这些事务。他们都是经受严格培训的专业人士，能够谨慎妥善地处理国家机密事务。
@@ -9279,13 +9270,12 @@
 		<Row Tag="TXT_KEY_BUILDING_ROCKEFELLER">
 			<Text>洛克菲勒中心</Text>
 		</Row>
-			<!-- Help tags -->
-			<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_HELP">
-				<Text>
-					本城[ICON_CULTURE]文化+33%，本地[ICON_GREAT_MERCHANT]商业家+2[ICON_GOLD]金钱，[ICON_GOLD]金钱+33%，每5人口+1[ICON_GOLD]金钱。
-					[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，每个同城城邦+200[ICON_GOLD]金钱，每个友好城邦+100[ICON_GOLD]金钱。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_HELP">
+			<Text>
+				本城[ICON_CULTURE]文化+33%，本地[ICON_GREAT_MERCHANT]商业家+2[ICON_GOLD]金钱，[ICON_GOLD]金钱+33%，每5人口+1[ICON_GOLD]金钱。
+				[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，每个同盟城邦+50[ICON_GOLD]金钱，每个友好城邦+25[ICON_GOLD]金钱。
+			</Text>
+		</Row>
 		<!-- Quote tags -->
 		<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_QUOTE">
 			<Text>
@@ -9316,117 +9306,117 @@
 
 
 
-			<!--BERMUDA -->
-			<Row Tag="TXT_KEY_FEATURE_BERMUDA">
-				<Text>百慕大三角</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_BERMUDA_TEXT">
-				<Text>
-					最开始是关于奇怪灯光的一些报告，然后演变为失踪和幽灵船只的故事。自19世纪中叶以来（如果哥伦布的日记可信，则确切时间甚至可能更早），便不断有船只和飞机从百慕大三角区消失。据称已有50多艘船只和20架飞机消失在该三角区内，自此渺无音讯。关于大量的交通工具和人类失踪，外星人是一个较为流行的理论，但也有一些更平凡的假设可以解释这个三角区。一些科学家认为存在“空气炸弹”或小型爆炸，船只便因此沉没。其他科学家则认为，（事故根因是）巨大的超级巨浪或磁偏移让罗盘错误显示北向。虽然传说和谣言持续不断，但人们普遍认为，百慕大三角区中失踪和失事的频率并不比其他经常通行的海路更高。
-				</Text>
-			</Row>
-			
-			
-			<!--EYE_OF_SAHARA -->
-			<Row Tag="TXT_KEY_FEATURE_EYE_OF_SAHARA">
-				<Text>撒哈拉之眼</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_TEXT">
-				<Text>
-					撒哈拉沙漠深处，一只蓝色巨眼远远凝视，能亲眼到这般景象的人屈指可数。这颗目不转睛的撒哈拉之眼正式名称为“理查特结构”，直径约40公里。它色彩艳丽，是宇航员眼中易于辨识的地标，他们也是少数得以窥其全貌的人。
-					[NEWLINE]理查特结构的成因仍广受争议，陨石冲击而成的初步猜测最终也并无结果。而现行的地质学理论则认为撒哈拉之眼是“侵蚀对称隆起”形成。简单来说就是一种由层状岩体形成的穹丘。
-				</Text>
-			</Row>
-			
-			<!-- Mt. Everest -->
-			<Row Tag="TXT_KEY_FEATURE_MT_PAEKTU">
-				<Text>长白山</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_MT_PAEKTU_TEXT">
-				<Text>
-					长白山景区处于东亚大陆边缘，濒临太平洋的强烈褶皱带。在两亿年至七千五百万年的中生代以前，就曾经过多次地壳变迁活动，形成古老的岩层。中生代经历上亿年的风雨侵蚀，形成一系列山间盆地。到了新生代，变成了一片波状起伏的具有残丘散布的准平原。景区地貌为典型的火山地貌。随海拔自下而上主要由玄武岩台地、玄武岩高原和火山锥体三大部分构成。在广阔的玄武岩台地和玄武岩高原上是火山锥体——长白山主峰。玄武岩高原（又称山麓倾斜高原）介于玄武岩台地和火山锥体之间，是比较明显的倾斜地带，地面坡度一般在10度左右，海拔约在1000—1800米之间，是陡峻的火山锥体向玄武岩台地的过渡地带。
-					[NEWLINE]长白山景区资源丰富，动植物种类繁多，是欧亚大陆北半部最具有代表性的典型自然综合体，是世界少有的“物种基因库”和“天然博物馆”。据统计，这里生存着1800多种高等植物，栖息着50多种兽类，280多种鸟类，50种鱼类以及1000多种昆虫。
-				</Text>
-			</Row>
+		<!--BERMUDA -->
+		<Row Tag="TXT_KEY_FEATURE_BERMUDA">
+			<Text>百慕大三角</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_BERMUDA_TEXT">
+			<Text>
+				最开始是关于奇怪灯光的一些报告，然后演变为失踪和幽灵船只的故事。自19世纪中叶以来（如果哥伦布的日记可信，则确切时间甚至可能更早），便不断有船只和飞机从百慕大三角区消失。据称已有50多艘船只和20架飞机消失在该三角区内，自此渺无音讯。关于大量的交通工具和人类失踪，外星人是一个较为流行的理论，但也有一些更平凡的假设可以解释这个三角区。一些科学家认为存在“空气炸弹”或小型爆炸，船只便因此沉没。其他科学家则认为，（事故根因是）巨大的超级巨浪或磁偏移让罗盘错误显示北向。虽然传说和谣言持续不断，但人们普遍认为，百慕大三角区中失踪和失事的频率并不比其他经常通行的海路更高。
+			</Text>
+		</Row>
 
-			<!-- HA LONG -->
-			<Row Tag="TXT_KEY_FEATURE_HA_LONG">
-				<Text>下龙湾</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_HA_LONG_TEXT">
-				<Text>
-					在国家的创建神话中，自然景观可谓屡见不鲜。据越南传说，众神在此派出巨龙，口吐宝石珠玉，形成了海湾中星罗棋布的岩石岛屿，也形成了抵御早期中国入侵者的天然屏障。顾名思义，下龙湾是指“下凡之龙”或“入海之龙”。下龙湾便是这群喀斯特小岛的总称。这些岛屿历经数百万年侵蚀，形成天然灰岩地层，山脊、高塔和洞穴重峦叠嶂。今日越南绵延120公里的海岸线中有一张1600多个灰岩岛和洞穴所组成的网络，供人观赏探秘。
-					[NEWLINE]早在公元前16000年，此处已是早期渔民部落的家园。而在漫长的历史中，它又是一座抵御侵略者的天然堡垒。1288年越南将军陈兴道以铁头木桩成功阻挡蒙古战船的前进，大破蒙古军队。自2000年起，下龙湾被联合国教科文组织列为世界遗产。
-				</Text>
-			</Row>
-			<!--ZHANGJIAJIE -->
-			<Row Tag="TXT_KEY_FEATURE_ZHANGJIAJIE">
-				<Text>张家界</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_TEXT">
-				<Text>
-					张家界国家森林公园位于张家界市武陵源区金鞭路279号，1988年8月，张家界武陵源旅游区被列入国家重点风景名胜区；1992年12月，因奇特的石英砂岩大峰林被联合国列入《世界自然遗产名录》，2004年2月被列入世界地质公园；2007年被列入中国首批国家5A级旅游景区，公园总面积4810公顷。
-					[NEWLINE武陵源旅游区自然风光以峰称奇、以谷显幽、以林见秀。其间有奇峰3000多座，如人如兽、如器如物，形象逼真，气势壮观，有“奇峰三千，秀水八百”之美称。主要景点有黄石寨、金鞭溪、袁家界、杨家界等。
-				</Text>
-			</Row>
-			<!--BLUE HOLE -->
-			<Row Tag="TXT_KEY_FEATURE_BLUE_HOLE">
-				<Text>蓝洞</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_BLUE_HOLE_TEXT">
-				<Text>
-					蓝洞(Great Blue Hole)为一石灰岩洞，是已发现的全世界第四深的水下洞穴，位于伯利兹外海约60英里(96.5公里)的大巴哈马浅滩的海底高原边缘的灯塔暗礁(Lighthouse Reef)。位于北纬17度18分54秒，西经87度32分6秒处，形成于海平面较低的冰河时代末期，后来因为海水上升，洞顶随之塌陷，遂变成水下石灰石坑洞穴。
-					[NEWLINE]1971年，海洋先驱雅各-伊夫·库斯托将大蓝洞评为十大最好的潜水地之一 。洞内钟乳石群交错复杂 ，在水下面可以看到大型钟乳石和石笋，有的甚至达12米长。更有品种繁多的鲨鱼(据说，多为个性温和慵懒不主动攻击的品种)伴您水下同游，身处神秘森幽的海下洞穴，美丽与凶险并存 。潜水越深，水质越清，地质构造越复杂难懂 。蓝色天坑是伯利兹堡礁保护系统的一部分，被联合国科教文组织列为世界历史遗产之一 。
-				</Text>
-			</Row>
-			
-			<!-- white desert -->
-			<Row Tag="TXT_KEY_FEATURE_WHITE_DESERT">
-				<Text>白沙漠</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_WHITE_DESERT_TEXT">
-				<Text>
-					世界上是否有一个地方可以同时找到鸡、蘑菇、独石和冰淇淋呢？这些形象都只是埃及法拉弗拉城外白沙漠中的部分钙化石像而已。
-					[NEWLINE]这片地区曾淹没在汪洋大海之中，经数百万年风水侵蚀后形成了这些形状各异的白色巨石。从日落时的粉色到满月下的银白色，这些白色的白垩岩会在一天中发生巨大变化。
-					[NEWLINE]该地区在2002年被划为国家公园，除这些独特的雕像外，这里还是瞪羚、耳廓狐与沙猫的栖息地。今天，游客们可以乘坐四驱越野车或骆驼来游览白沙漠，这里也成为了颇具魔幻气息的热门夜营旅行景点。
-				</Text>
-			</Row>
 
-			<!-- GALAPAGOS -->
-			<Row Tag="TXT_KEY_FEATURE_GALAPAGOS">
-				<Text>科隆群岛</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_GALAPAGOS_TEXT">
-				<Text>
-					科隆群岛（英文 Colón Island、西班牙文 Archipiélago de Colón）：即加拉帕戈斯群岛。隶属厄瓜多尔，位于南美大陆以西1000公里的太平洋面上，群岛面积7500多平方公里，由海底火山喷发的熔岩凝固而成的13个小岛和19个岩礁组成。
-					[NEWLINE]群岛的多样性气候和火山地貌的特殊自然环境，使不同生活习性的动物和植物同时生长繁衍在这块土地上。这里奇花异草荟萃，珍禽怪兽云集，被称为“生物进化活博物馆”。群岛上现存有其他地区罕见的多种动物。
-				</Text>
-			</Row>
-			
+		<!--EYE_OF_SAHARA -->
+		<Row Tag="TXT_KEY_FEATURE_EYE_OF_SAHARA">
+			<Text>撒哈拉之眼</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_TEXT">
+			<Text>
+				撒哈拉沙漠深处，一只蓝色巨眼远远凝视，能亲眼到这般景象的人屈指可数。这颗目不转睛的撒哈拉之眼正式名称为“理查特结构”，直径约40公里。它色彩艳丽，是宇航员眼中易于辨识的地标，他们也是少数得以窥其全貌的人。
+				[NEWLINE]理查特结构的成因仍广受争议，陨石冲击而成的初步猜测最终也并无结果。而现行的地质学理论则认为撒哈拉之眼是“侵蚀对称隆起”形成。简单来说就是一种由层状岩体形成的穹丘。
+			</Text>
+		</Row>
 
-			<!-- DELICATE -->
-			<Row Tag="TXT_KEY_FEATURE_DELICATE_ARCH">
-				<Text>精致拱门</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_DELICATE_ARCH_TEXT">
-				<Text>
-					一处历史悠久而造型独特的岩石吸引着美国西南地区民众的眼球。高耸的外形酷似弓形腿人的腰腿部。弗兰克·贝克威茨在1934年将其命名为“精致拱门”，报纸编辑却将它称作“巨大的窗口”、“皮套裤”和“女教师的灯笼裤”。
-					[NEWLINE]这扇看似摇摇欲坠的砂岩拱门有六层楼高。地心引力和犹他州无情的风吹注定了它终将坍塌崩坏的命运。然而大自然还并非是它唯一的敌人，一些头脑发热的攀岩者也对精致拱门的宏伟结构产生了破坏。
-				</Text>
-			</Row>
+		<!-- Mt. Everest -->
+		<Row Tag="TXT_KEY_FEATURE_MT_PAEKTU">
+			<Text>长白山</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_MT_PAEKTU_TEXT">
+			<Text>
+				长白山景区处于东亚大陆边缘，濒临太平洋的强烈褶皱带。在两亿年至七千五百万年的中生代以前，就曾经过多次地壳变迁活动，形成古老的岩层。中生代经历上亿年的风雨侵蚀，形成一系列山间盆地。到了新生代，变成了一片波状起伏的具有残丘散布的准平原。景区地貌为典型的火山地貌。随海拔自下而上主要由玄武岩台地、玄武岩高原和火山锥体三大部分构成。在广阔的玄武岩台地和玄武岩高原上是火山锥体——长白山主峰。玄武岩高原（又称山麓倾斜高原）介于玄武岩台地和火山锥体之间，是比较明显的倾斜地带，地面坡度一般在10度左右，海拔约在1000—1800米之间，是陡峻的火山锥体向玄武岩台地的过渡地带。
+				[NEWLINE]长白山景区资源丰富，动植物种类繁多，是欧亚大陆北半部最具有代表性的典型自然综合体，是世界少有的“物种基因库”和“天然博物馆”。据统计，这里生存着1800多种高等植物，栖息着50多种兽类，280多种鸟类，50种鱼类以及1000多种昆虫。
+			</Text>
+		</Row>
 
-			
-			
-			<!-- Salar de Uyuni -->
+		<!-- HA LONG -->
+		<Row Tag="TXT_KEY_FEATURE_HA_LONG">
+			<Text>下龙湾</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_HA_LONG_TEXT">
+			<Text>
+				在国家的创建神话中，自然景观可谓屡见不鲜。据越南传说，众神在此派出巨龙，口吐宝石珠玉，形成了海湾中星罗棋布的岩石岛屿，也形成了抵御早期中国入侵者的天然屏障。顾名思义，下龙湾是指“下凡之龙”或“入海之龙”。下龙湾便是这群喀斯特小岛的总称。这些岛屿历经数百万年侵蚀，形成天然灰岩地层，山脊、高塔和洞穴重峦叠嶂。今日越南绵延120公里的海岸线中有一张1600多个灰岩岛和洞穴所组成的网络，供人观赏探秘。
+				[NEWLINE]早在公元前16000年，此处已是早期渔民部落的家园。而在漫长的历史中，它又是一座抵御侵略者的天然堡垒。1288年越南将军陈兴道以铁头木桩成功阻挡蒙古战船的前进，大破蒙古军队。自2000年起，下龙湾被联合国教科文组织列为世界遗产。
+			</Text>
+		</Row>
+		<!--ZHANGJIAJIE -->
+		<Row Tag="TXT_KEY_FEATURE_ZHANGJIAJIE">
+			<Text>张家界</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_TEXT">
+			<Text>
+				张家界国家森林公园位于张家界市武陵源区金鞭路279号，1988年8月，张家界武陵源旅游区被列入国家重点风景名胜区；1992年12月，因奇特的石英砂岩大峰林被联合国列入《世界自然遗产名录》，2004年2月被列入世界地质公园；2007年被列入中国首批国家5A级旅游景区，公园总面积4810公顷。
+				[NEWLINE武陵源旅游区自然风光以峰称奇、以谷显幽、以林见秀。其间有奇峰3000多座，如人如兽、如器如物，形象逼真，气势壮观，有“奇峰三千，秀水八百”之美称。主要景点有黄石寨、金鞭溪、袁家界、杨家界等。
+			</Text>
+		</Row>
+		<!--BLUE HOLE -->
+		<Row Tag="TXT_KEY_FEATURE_BLUE_HOLE">
+			<Text>蓝洞</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_BLUE_HOLE_TEXT">
+			<Text>
+				蓝洞(Great Blue Hole)为一石灰岩洞，是已发现的全世界第四深的水下洞穴，位于伯利兹外海约60英里(96.5公里)的大巴哈马浅滩的海底高原边缘的灯塔暗礁(Lighthouse Reef)。位于北纬17度18分54秒，西经87度32分6秒处，形成于海平面较低的冰河时代末期，后来因为海水上升，洞顶随之塌陷，遂变成水下石灰石坑洞穴。
+				[NEWLINE]1971年，海洋先驱雅各-伊夫·库斯托将大蓝洞评为十大最好的潜水地之一 。洞内钟乳石群交错复杂 ，在水下面可以看到大型钟乳石和石笋，有的甚至达12米长。更有品种繁多的鲨鱼(据说，多为个性温和慵懒不主动攻击的品种)伴您水下同游，身处神秘森幽的海下洞穴，美丽与凶险并存 。潜水越深，水质越清，地质构造越复杂难懂 。蓝色天坑是伯利兹堡礁保护系统的一部分，被联合国科教文组织列为世界历史遗产之一 。
+			</Text>
+		</Row>
+
+		<!-- white desert -->
+		<Row Tag="TXT_KEY_FEATURE_WHITE_DESERT">
+			<Text>白沙漠</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_WHITE_DESERT_TEXT">
+			<Text>
+				世界上是否有一个地方可以同时找到鸡、蘑菇、独石和冰淇淋呢？这些形象都只是埃及法拉弗拉城外白沙漠中的部分钙化石像而已。
+				[NEWLINE]这片地区曾淹没在汪洋大海之中，经数百万年风水侵蚀后形成了这些形状各异的白色巨石。从日落时的粉色到满月下的银白色，这些白色的白垩岩会在一天中发生巨大变化。
+				[NEWLINE]该地区在2002年被划为国家公园，除这些独特的雕像外，这里还是瞪羚、耳廓狐与沙猫的栖息地。今天，游客们可以乘坐四驱越野车或骆驼来游览白沙漠，这里也成为了颇具魔幻气息的热门夜营旅行景点。
+			</Text>
+		</Row>
+
+		<!-- GALAPAGOS -->
+		<Row Tag="TXT_KEY_FEATURE_GALAPAGOS">
+			<Text>科隆群岛</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_GALAPAGOS_TEXT">
+			<Text>
+				科隆群岛（英文 Colón Island、西班牙文 Archipiélago de Colón）：即加拉帕戈斯群岛。隶属厄瓜多尔，位于南美大陆以西1000公里的太平洋面上，群岛面积7500多平方公里，由海底火山喷发的熔岩凝固而成的13个小岛和19个岩礁组成。
+				[NEWLINE]群岛的多样性气候和火山地貌的特殊自然环境，使不同生活习性的动物和植物同时生长繁衍在这块土地上。这里奇花异草荟萃，珍禽怪兽云集，被称为“生物进化活博物馆”。群岛上现存有其他地区罕见的多种动物。
+			</Text>
+		</Row>
+
+
+		<!-- DELICATE -->
+		<Row Tag="TXT_KEY_FEATURE_DELICATE_ARCH">
+			<Text>精致拱门</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_DELICATE_ARCH_TEXT">
+			<Text>
+				一处历史悠久而造型独特的岩石吸引着美国西南地区民众的眼球。高耸的外形酷似弓形腿人的腰腿部。弗兰克·贝克威茨在1934年将其命名为“精致拱门”，报纸编辑却将它称作“巨大的窗口”、“皮套裤”和“女教师的灯笼裤”。
+				[NEWLINE]这扇看似摇摇欲坠的砂岩拱门有六层楼高。地心引力和犹他州无情的风吹注定了它终将坍塌崩坏的命运。然而大自然还并非是它唯一的敌人，一些头脑发热的攀岩者也对精致拱门的宏伟结构产生了破坏。
+			</Text>
+		</Row>
+
+
+
+		<!-- Salar de Uyuni -->
 		<Row Tag="TXT_KEY_FEATURE_SALAR_A">
 			<Text>乌尤尼盐湖(大)</Text>
 			<Gender>neuter:no_article</Gender>
@@ -9439,8 +9429,8 @@
 		<Row Tag="TXT_KEY_CIV5_FEATURES_SALAR_HELP">
 			<Text>每处临近地块。</Text>
 		</Row>
-		
-		
+
+
 		<Row Tag="TXT_KEY_CIV5_FEATURES_SALAR_TEXT">
 			<Text>
 				乌尤尼盐沼在玻利维亚波托西省西部高原内，海拔3,656米(11,995英尺)，长150公里，宽130公里，面积9,065平方公里，为世界最大的盐层覆盖的荒原，有"天空之镜"的美称。边缘有盐场，主要盐场间有公路相通。
@@ -9450,14 +9440,14 @@
 			</Text>
 		</Row>
 		<!-- Giant's Causeway -->
-			<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_A">
-				<Text>巨人堤</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_B">
-				<Text>巨人堤</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
+		<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_A">
+			<Text>巨人堤</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_B">
+			<Text>巨人堤</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
 		<Row Tag="TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT">
 			<Text>
 				巨人之路位于北爱尔兰贝尔法斯特西北约80公里处大西洋海岸，由数万根大小不均匀的玄武岩石柱聚集成一条绵延数千米的堤道， 被视为世界自然奇迹。300年来，地质学家们研究其构造，了解到它是在第三纪由活火山不断喷发而形成的。1986年"巨人之路"被列为世界自然遗产。
@@ -9481,7 +9471,7 @@
 			</Text>
 		</Row>
 
-		
+
 		<!-- Lake Retba -->
 		<Row Tag="TXT_KEY_FEATURE_RETBA">
 			<Text>瑞特巴湖</Text>
@@ -9506,7 +9496,7 @@
 				[NEWLINE]达洛尔的年平均气温为34℃，是地球上的"热极"，是世界上最热的地方。
 			</Text>
 		</Row>
-	
+
 
 
 		<!-- Mt. Everest -->
@@ -9523,49 +9513,49 @@
 		</Row>
 
 
-			<!--BERMUDA -->
-			<Row Tag="TXT_KEY_FEATURE_DANXIA">
-				<Text>张掖丹霞</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_DANXIA_TEXT">
-				<Text>
-					张掖丹霞的砂岩山崎岖不平，绵延达310平方公里，地处现代中国的心脏附近，祁连山脉脚下。印度和欧亚板块之间自然产生的化学反应、侵蚀及构造变化在这片奇峰峻岭之上形成了红、蓝、绿、金的五彩色带。
-					[NEWLINE]“彩虹山”色泽极为艳丽，因此其天然照片也会呈现出数字滤镜的效果。自然光线对色泽的调配可谓鬼斧神工，每日各时段的景致均独特别致。张掖丹霞可谓大自然创造的真正奇迹。
-				</Text>
-			</Row>
-			<!--VALLEY -->
-			<Row Tag="TXT_KEY_FEATURE_VALLEY">
-				<Text>纪念碑谷</Text>
-				<Gender>neuter:no_article</Gender>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_FEATURES_VALLEY_TEXT">
-				<Text>
-					纪念碑谷是科罗拉多高原的一部分。谷底大多是含粉砂岩的卡特勒层（Cutler Formation）地层或从河流切穿峡谷形成的砂沉积。纪念碑谷的鲜艳红色来自铁氧化物从风化的砂岩中暴露。谷中较暗的蓝灰色岩石则是来自氧化锰。
-					[NEWLINE]谷中的孤峰清楚分成多个地层，最主要的地层有三个。最底下的地层是称为 Organ Rock 的页岩，中间则是谢伊层砂岩（de Chelly），最顶层则是称为孟科匹（Moenkopi）层的页岩，更上方被称为 Shinarump 的粉砂岩覆盖。纪念碑谷内有许多巨型岩石结构，其中包含了“太阳之眼”（Eye of the Sun）。
-				</Text>
-			</Row>
+		<!--BERMUDA -->
+		<Row Tag="TXT_KEY_FEATURE_DANXIA">
+			<Text>张掖丹霞</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_DANXIA_TEXT">
+			<Text>
+				张掖丹霞的砂岩山崎岖不平，绵延达310平方公里，地处现代中国的心脏附近，祁连山脉脚下。印度和欧亚板块之间自然产生的化学反应、侵蚀及构造变化在这片奇峰峻岭之上形成了红、蓝、绿、金的五彩色带。
+				[NEWLINE]“彩虹山”色泽极为艳丽，因此其天然照片也会呈现出数字滤镜的效果。自然光线对色泽的调配可谓鬼斧神工，每日各时段的景致均独特别致。张掖丹霞可谓大自然创造的真正奇迹。
+			</Text>
+		</Row>
+		<!--VALLEY -->
+		<Row Tag="TXT_KEY_FEATURE_VALLEY">
+			<Text>纪念碑谷</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_VALLEY_TEXT">
+			<Text>
+				纪念碑谷是科罗拉多高原的一部分。谷底大多是含粉砂岩的卡特勒层（Cutler Formation）地层或从河流切穿峡谷形成的砂沉积。纪念碑谷的鲜艳红色来自铁氧化物从风化的砂岩中暴露。谷中较暗的蓝灰色岩石则是来自氧化锰。
+				[NEWLINE]谷中的孤峰清楚分成多个地层，最主要的地层有三个。最底下的地层是称为 Organ Rock 的页岩，中间则是谢伊层砂岩（de Chelly），最顶层则是称为孟科匹（Moenkopi）层的页岩，更上方被称为 Shinarump 的粉砂岩覆盖。纪念碑谷内有许多巨型岩石结构，其中包含了“太阳之眼”（Eye of the Sun）。
+			</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_PROMOTION_VALLEY">
-				<Text>西部先锋</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_VALLEY">
+			<Text>西部先锋</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_PROMOTION_VALLEY_HELP">
-				<Text>
-					+1[ICON_MOVES]移动力，在友方领土外作战+15%[ICON_STRENGTH]战斗力。
-				</Text>
-			</Row>
-			
-			
-			<Row Tag="TXT_KEY_PROMOTION_BERMUDA">
-				<Text>谜之暗流</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_VALLEY_HELP">
+			<Text>
+				+1[ICON_MOVES]移动力，在友方领土外作战+15%[ICON_STRENGTH]战斗力。
+			</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_PROMOTION_BERMUDA_HELP">
-				<Text>
-					+1[ICON_MOVES]移动力，回合开始时临近的敌人[ICON_MOVES]移动力-1。
-				</Text>
-			</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BERMUDA">
+			<Text>谜之暗流</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BERMUDA_HELP">
+			<Text>
+				+1[ICON_MOVES]移动力，回合开始时临近的敌人[ICON_MOVES]移动力-1。
+			</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EXPLOSIVE_MIXTURE">
 			<Text>爆炸性混合物</Text>
@@ -9601,7 +9591,7 @@
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_LESS_50_HP_UNITS">
 			<Text>目标不高于50%HP</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_UNITCOMBAT_DAMAGE_MODIFIER">
 			<Text>单位生命值</Text>
 		</Row>
@@ -9724,7 +9714,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]经世致用[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有图书馆、学院、大学、公立学校和研发实验室+2[ICON_CULTURE]文化。
-				[NEWLINE][ICON_BULLET]所有图书馆、学院、大学、公立学校+2[ICON_HEALTH]健康度。</Text>
+				[NEWLINE][ICON_BULLET]所有图书馆、学院、大学、公立学校+2[ICON_HEALTH]健康度。
+			</Text>
 		</Replace>
 
 
@@ -9734,7 +9725,8 @@
 				[COLOR_POSITIVE_TEXT]军事纪律[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每个与本战场相邻的己方单位获得+25%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE][ICON_BULLET]夹击加成由10%增加至15%。
-				[NEWLINE][ICON_BULLET]军营+1[ICON_HEALTH]健康度。</Text>
+				[NEWLINE][ICON_BULLET]军营+1[ICON_HEALTH]健康度。
+			</Text>
 		</Replace>
 
 
@@ -9742,14 +9734,16 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有神祠和神庙+1[ICON_HAPPINESS_1]本地快乐，+1[ICON_HEALTH]健康度。
-				[NEWLINE][ICON_BULLET]立刻开启一次黄金时代。</Text>
+				[NEWLINE][ICON_BULLET]立刻开启一次黄金时代。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有神祠、神庙、寺院和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。
-				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化产出。</Text>
+				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化产出。
+			</Text>
 		</Replace>
 
 
@@ -9757,7 +9751,8 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度，+2[ICON_RES_CONSUMER]商品。
-				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。</Text>
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+			</Text>
 		</Replace>
 
 
@@ -9806,9 +9801,9 @@
 		</Row>
 
 
-	
-	
-		
+
+
+
 		<Row Tag="TXT_KEY_PROMOTION_HALF_MOVE">
 			<Text>移动受限</Text>
 		</Row>
@@ -9826,7 +9821,7 @@
 		</Row>
 
 
-	
+
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
@@ -9835,73 +9830,73 @@
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_AMERICA_RANCH">
-				<Text>
-					[ICON_FOOD][ICON_PRODUCTION]大农场
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_BUILDING_AMERICA_RANCH_HELP">
-				<Text>
-					提供额外5单位[ICON_RES_HORSE]马资源。替代马厩，不会过时。[NEWLINE][NEWLINE]本城+3[ICON_PRODUCTION]产能，+3[ICON_FOOD]食物。每处[ICON_RES_BISON]野牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马+2[ICON_FOOD]食物，+2[ICON_GOLD]金钱，+2[ICON_PRODUCTION]产能。骑乘单位，移民单位，工人单位建造速率+33%。[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。[NEWLINE][NEWLINE]本城每处农场、牧场+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱。从本城出发的每条国内贸易路线+2[ICON_PRODUCTION]产能。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_CIV5_BUILDINGS_AMERICA_RANCH_TEXT">
-				<Text>
-					农场，指农业生产单位、生产组织或生产企业，以从事农业生产或畜牧养殖为主，经营各种农产品和畜牧产品，"大家种有机农场"。
-					[NEWLINE]农场可以作为一个企业，由个人、家庭或社群所有和经营，或由联合体、公司所有和经营，农场的规模可以从数亩到成百上千公顷不等，在美洲，一个农场的规模大的可以大到几万公顷或几十万公顷。
-				</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_AMERICA_RANCH">
+			<Text>
+				[ICON_FOOD][ICON_PRODUCTION]大农场
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_AMERICA_RANCH_HELP">
+			<Text>
+				提供额外5单位[ICON_RES_HORSE]马资源。替代马厩，不会过时。[NEWLINE][NEWLINE]本城+3[ICON_PRODUCTION]产能，+3[ICON_FOOD]食物。每处[ICON_RES_BISON]野牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马+2[ICON_FOOD]食物，+2[ICON_GOLD]金钱，+2[ICON_PRODUCTION]产能。骑乘单位，移民单位，工人单位建造速率+33%。[NEWLINE][NEWLINE]研发因特网后+2[ICON_TOURISM]魅力。[NEWLINE][NEWLINE]本城每处农场、牧场+1[ICON_PRODUCTION]产能，+1[ICON_GOLD]金钱。从本城出发的每条国内贸易路线+2[ICON_PRODUCTION]产能。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_AMERICA_RANCH_TEXT">
+			<Text>
+				农场，指农业生产单位、生产组织或生产企业，以从事农业生产或畜牧养殖为主，经营各种农产品和畜牧产品，"大家种有机农场"。
+				[NEWLINE]农场可以作为一个企业，由个人、家庭或社群所有和经营，或由联合体、公司所有和经营，农场的规模可以从数亩到成百上千公顷不等，在美洲，一个农场的规模大的可以大到几万公顷或几十万公顷。
+			</Text>
+		</Row>
 
 
 
-			<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED">
-				<Text>公共工程</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_HELP">
-				<Text>
-					本城+10[ICON_PRODUCTION]产能，+5%[ICON_PRODUCTION]产能,-5[ICON_DISEASE]疾病，-20%[ICON_DISEASE]疾病。每座城市可重复建造3次，但每次建造后会使建造成本+1000[ICON_PRODUCTION]产能。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA">
-				<Text>公共工程是行政主体为了公共利益对不动产所进行的工程活动，以及其他人为实现行政主体的意图对不动产进行的以公共利益为目的工程活动。必须具备下述条件：1.以不动产为对象。非物质的活动不是工程，不动产的范围包括按自然性质的不动产和按用途作用的不动产。2.以公共利益为目的。行政主体为了公共利益的目的而实施，具有特殊的权力。行政主体纯粹为了财政收入百的管理私产的工程，不是公共工程。3.由行政主体自己实施或他人为行政主体意图而实施。他人实施，但以行政主体因此得到利益作为工程的目的，即为行政主体的打算而进行的工程。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED">
+			<Text>公共工程</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_HELP">
+			<Text>
+				本城+10[ICON_PRODUCTION]产能，+5%[ICON_PRODUCTION]产能,-5[ICON_DISEASE]疾病，-20%[ICON_DISEASE]疾病。每座城市可重复建造3次，但每次建造后会使建造成本+1000[ICON_PRODUCTION]产能。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA">
+			<Text>公共工程是行政主体为了公共利益对不动产所进行的工程活动，以及其他人为实现行政主体的意图对不动产进行的以公共利益为目的工程活动。必须具备下述条件：1.以不动产为对象。非物质的活动不是工程，不动产的范围包括按自然性质的不动产和按用途作用的不动产。2.以公共利益为目的。行政主体为了公共利益的目的而实施，具有特殊的权力。行政主体纯粹为了财政收入百的管理私产的工程，不是公共工程。3.由行政主体自己实施或他人为行政主体意图而实施。他人实施，但以行政主体因此得到利益作为工程的目的，即为行政主体的打算而进行的工程。</Text>
+		</Row>
 
 
 
 
-			<Replace Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP">
-				<Text>[ICON_BULLET]攻击时可在一定范围内附带核爆伤害（伤害数值等同于原子弹）。[NEWLINE][ICON_BULLET]攻击城市时摧毁目标城市60%的[COLOR_POSITIVE_TEXT]人口[ENDCOLOR]（如果目标城市拥有防空洞则为15%）[NEWLINE][ICON_BULLET]不会造成辐射。</Text>
-			</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP">
+			<Text>[ICON_BULLET]攻击时可在一定范围内附带核爆伤害（伤害数值等同于原子弹）。[NEWLINE][ICON_BULLET]攻击城市时摧毁目标城市60%的[COLOR_POSITIVE_TEXT]人口[ENDCOLOR]（如果目标城市拥有防空洞则为15%）[NEWLINE][ICON_BULLET]不会造成辐射。</Text>
+		</Replace>
 
 
 
-			<Row Tag="TXT_KEY_BUILDING_DIABLO">
-				<Text>预知计划</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_DIABLO_PEDIA">
-				<Text>
-					除了战略规划和深奥艺术，预测未来还有几种不同的方法，在这些领域重叠的狭小地带，预知工程的种子诞生了。该计划可用来预测混沌系统的结果，由很多不同的理论组成，比如随机预测、模糊量子测距、分形塔罗以及谢尔宾斯基曼陀罗。类合成计算膜被特别委任执行第一次预知工程，其复杂的建造方法已是当时的极限。
-					[NEWLINE]预知工程后被证明在对指定地理空间内作战行动结果的预测惊人的准确，高精度地理记录密切配合威胁应对计算，以即时战斗数据的全面选择（从军队级后勤表到士兵步枪剩余的弹药量），该系统能够根据现有资源提供最优的选择。
-					[NEWLINE]当然，预知工程的优势在于记录的详尽。军事单位在威胁出现前就做出应对，潜在威胁经常在大量的因果分析后才能发现。士兵的个人周期记录显示其从怀疑预知工程转变为虔诚地信任“神圣之眼的深谋远虑”。
-				</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_DIABLO_QUOTE">
-				<Text>[NEWLINE]"睁开双眼，睁开双眼。专注前方，专注前方。"[NEWLINE]        ——卡维萨·塔库尔《出世经经典籍》[NEWLINE]</Text>
-			</Row>
-			<Row Tag="TXT_KEY_WONDER_DIABLO_HELP">
-				<Text>单位被攻击时，有33%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
-			</Row>
+		<Row Tag="TXT_KEY_BUILDING_DIABLO">
+			<Text>预知计划</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_DIABLO_PEDIA">
+			<Text>
+				除了战略规划和深奥艺术，预测未来还有几种不同的方法，在这些领域重叠的狭小地带，预知工程的种子诞生了。该计划可用来预测混沌系统的结果，由很多不同的理论组成，比如随机预测、模糊量子测距、分形塔罗以及谢尔宾斯基曼陀罗。类合成计算膜被特别委任执行第一次预知工程，其复杂的建造方法已是当时的极限。
+				[NEWLINE]预知工程后被证明在对指定地理空间内作战行动结果的预测惊人的准确，高精度地理记录密切配合威胁应对计算，以即时战斗数据的全面选择（从军队级后勤表到士兵步枪剩余的弹药量），该系统能够根据现有资源提供最优的选择。
+				[NEWLINE]当然，预知工程的优势在于记录的详尽。军事单位在威胁出现前就做出应对，潜在威胁经常在大量的因果分析后才能发现。士兵的个人周期记录显示其从怀疑预知工程转变为虔诚地信任“神圣之眼的深谋远虑”。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_DIABLO_QUOTE">
+			<Text>[NEWLINE]"睁开双眼，睁开双眼。专注前方，专注前方。"[NEWLINE]        ——卡维萨·塔库尔《出世经经典籍》[NEWLINE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_DIABLO_HELP">
+			<Text>单位被攻击时，有33%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+		</Row>
 
 
-			<Row Tag="TXT_KEY_PROMOTION_DIABLO">
-				<Text>战场感知</Text>
-			</Row>
+		<Row Tag="TXT_KEY_PROMOTION_DIABLO">
+			<Text>战场感知</Text>
+		</Row>
 
-			<Row Tag="TXT_KEY_PROMOTION_DIABLO_HELP">
-				<Text>单位被攻击时，有33%几率规避此次伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
-			</Row>
-		</Language_zh_CN>
+		<Row Tag="TXT_KEY_PROMOTION_DIABLO_HELP">
+			<Text>单位被攻击时，有33%几率规避此次伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+		</Row>
+	</Language_zh_CN>
 
 
-	
+
 </GameData>
