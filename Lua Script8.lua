@@ -153,128 +153,12 @@ end
 GameEvents.CanStartMission.Add(ImmobileWhileDamaged)
 
 
-	if (pkDefender->GetIgnoreDamageChance() > 0)
-		{
-			int iRand = GC.getGame().getJonRandNum(100, "Ignore Damage Chance");
-			if (iRand <= pkDefender->GetIgnoreDamageChance())
-			{
-				iDamage = 0;
-			}
-		}
 
 
 
 
 
 
-
-
-
-
-
-
-		int CvCombatInfo::getDamageInflicted(BattleUnitTypes unitType) const
-{
-	checkBattleUnitType(unitType);
-	int iDamage = m_iDamageInflicted[unitType];
-#ifdef MOD_EVENTS_BATTLES_DAMAGE
-#ifndef MOD_EVENTS_BATTLES_CUSTOM_DAMAGE
-	if (MOD_EVENTS_BATTLES_DAMAGE) {
-		int iValue = 0;
-		if (GAMEEVENTINVOKE_VALUE(iValue, GAMEEVENT_BattleDamageDelta, unitType, iDamage) == GAMEEVENTRETURN_VALUE) {
-			if (iValue != 0) {
-				if (iValue < 0) {
-					// Decreasing the amount of damage, in which case it can't be more than the amount inflicted (as that's called 'healing'!)
-					if (iDamage + iValue < 0) {
-						iValue = -iDamage;
-					}
-				} else {
-					// Increasing the amount of damage, in which case we can't exceed unit/city hit points
-					CvCity* pCity = m_pCities[unitType];
-					if (pCity)
-					{
-						if (iDamage + iValue + pCity->getDamage() > pCity->GetMaxHitPoints())
-						{
-							iValue = pCity->GetMaxHitPoints() - pCity->getDamage() - iDamage;
-						}
-					}
-					else
-					{
-						if (iDamage + iValue > m_pUnits[unitType]->GetCurrHitPoints())
-						{
-							iValue = m_pUnits[unitType]->GetCurrHitPoints() - iDamage;
-						}
-					}
-				}
-				
-				iDamage += iValue;
-	
-// Fuck fucking C const, it should have been fucking banned fucking years ago!
-//				if (unitType == BATTLE_UNIT_ATTACKER) {
-//					m_iFinalDamage[BATTLE_UNIT_DEFENDER] += iValue;
-//				} else {
-//					m_iFinalDamage[BATTLE_UNIT_ATTACKER] += iValue;
-//				}
-			}
-		}
-	}
-#endif
-#endif
-
-#ifdef MOD_EVENTS_BATTLES_CUSTOM_DAMAGE
-	if (MOD_EVENTS_BATTLES_CUSTOM_DAMAGE)
-	{
-		int iAttackPlayerID = 0;
-		int iAttackUnitOrCityID = 0;
-		bool bAttackIsCity = false;
-		int iAttackDamage = 0;
-
-		int iDefensePlayerID = 0;
-		int iDefenseUnitOrCityID = 0;
-		bool bDefenseIsCity = false;
-		int iDefenseDamage = 0;
-
-		int iInterceptorPlayerID = 0;
-		int iInterceptorUnitOrCityID = 0;
-		bool bInterceptorIsCity = false;
-		int iInterceptorDamage = 0;
-
-		BattleUnitTypes iBattleUnitType = unitType;
-		BattleTypeTypes iBattleType = getBattleType();
-
-		setBattleUnitInfo(BATTLE_UNIT_ATTACKER, iAttackPlayerID, iAttackUnitOrCityID, bAttackIsCity, iAttackDamage);
-		setBattleUnitInfo(BATTLE_UNIT_DEFENDER, iDefensePlayerID, iDefenseUnitOrCityID, bDefenseIsCity, iDefenseDamage);
-		setBattleUnitInfo(BATTLE_UNIT_INTERCEPTOR, iInterceptorPlayerID, iInterceptorUnitOrCityID, bInterceptorIsCity, iInterceptorDamage);
-
-		int iDelta = 0;
-		if (GAMEEVENTINVOKE_VALUE(iDelta, GAMEEVENT_BattleCustomDamage, 
-								iBattleUnitType, iBattleType,
-								iAttackPlayerID, iAttackUnitOrCityID, bAttackIsCity, iAttackDamage,
-								iDefensePlayerID, iDefenseUnitOrCityID, bDefenseIsCity, iDefenseDamage,
-								iInterceptorPlayerID, iInterceptorUnitOrCityID, bInterceptorIsCity, iInterceptorDamage) == GAMEEVENTRETURN_VALUE)
-		{
-			iDamage += iDelta;
-
-			CvPlayer& AttackPlayer = GET_PLAYER((PlayerTypes)iAttackPlayerID);
-			CvPlayer& DefensePlayer = GET_PLAYER((PlayerTypes)iDefensePlayerID);
-
-			if (iAttackPlayerID != NULL && iDefensePlayerID != NULL && !bDefenseIsCity)
-			{
-
-				CvUnit* defUnit = DefensePlayer.getUnit(iDefenseUnitOrCityID);
-
-				if (defUnit != NULL && defUnit->GetIgnoreDamageChance() > 0)
-				{
-					int iRand = GC.getGame().getJonRandNum(100, "Ignore Damage Chance");
-					if (iRand <= defUnit->GetIgnoreDamageChance())
-					{
-						iDamage = 0;
-					}
-				}
-			}
-		}
-	}
-#endif
 
 
 
@@ -290,6 +174,87 @@ GameEvents.CanStartMission.Add(ImmobileWhileDamaged)
 				}
 #endif
 		
+		<Row Tag="TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_GARRISONED_UNIT">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}{2_IconString} 来自驻军</Text>
+		</Row>
 
 
 
+
+
+	// Garrisoned Unit
+	CvUnit* pGarrisonedUnit = GetGarrisonedUnit();
+	int iStrengthFromUnits = 0;
+	if(pGarrisonedUnit)
+	{
+#if defined(MOD_UNITS_MAX_HP)
+		int iMaxHits = pGarrisonedUnit->GetMaxHitPoints();
+#else
+		int iMaxHits = GC.getMAX_HIT_POINTS();
+#endif
+		iStrengthFromUnits = pGarrisonedUnit->GetBaseCombatStrength() * 100 * (iMaxHits - pGarrisonedUnit->getDamage()) / iMaxHits;
+	}
+
+
+
+
+int CvCity::getCrimeFromGarrisonedUnit() const
+{
+	int iCrimeFromGarrisonedUnit = 0;
+	// Garrisoned Unit
+	CvUnit* pGarrisonedUnit = GetGarrisonedUnit();
+	if (pGarrisonedUnit)
+	{
+		int iGarrisonedStrength = 0;
+		iGarrisonedStrength = pGarrisonedUnit->GetBaseCombatStrength();
+
+		if (iGarrisonedStrength <= 30)
+		{
+			iCrimeFromGarrisonedUnit = 3;
+		}
+		else if (iGarrisonedStrength >30 && iGarrisonedStrength<= 60)
+		{
+			iCrimeFromGarrisonedUnit = 5;
+		}
+		else if (iGarrisonedStrength > 60 && iGarrisonedStrength <= 100)
+		{
+			iCrimeFromGarrisonedUnit = 7;
+		}
+		else if (iGarrisonedStrength > 100 && iGarrisonedStrength <= 200)
+		{
+			iCrimeFromGarrisonedUnit = 10;
+		}
+		else if (iGarrisonedStrength > 200 )
+		{
+			iCrimeFromGarrisonedUnit = 15;
+		}
+	}
+	return iCrimeFromGarrisonedUnit;
+}
+
+
+
+	if (eIndex == YIELD_CRIME && owner.isGoldenAge())
+	{
+		iTempMod = GC.getMAX_HIT_POINTS();
+		iModifier += iTempMod;
+		if (iTempMod != 0 && toolTipSink)
+			GC.getGame().BuildProdModHelpText(toolTipSink, "TXT_KEY_PRODMOD_YIELD_GOLDEN_AGE", iTempMod);
+	}
+
+	if (eIndex == YIELD_LOYALTY && owner.isGoldenAge())
+	{
+		iTempMod = GC.getCITY_LOYALTY_GOLDEN_AGE_YIELD();
+		iModifier += iTempMod;
+		if (iTempMod != 0 && toolTipSink)
+			GC.getGame().BuildProdModHelpText(toolTipSink, "TXT_KEY_PRODMOD_YIELD_GOLDEN_AGE", iTempMod);
+	}
+
+		inline int getCITY_CRIME_GOLDEN_AGE_YIELD()
+	{
+		return m_iCITY_CRIME_GOLDEN_AGE_YIELD;
+	}
+	inline int getCITY_LOYALTY_GOLDEN_AGE_YIELD()
+	{
+		return m_iCITY_LOYALTY_GOLDEN_AGE_YIELD;
+	}

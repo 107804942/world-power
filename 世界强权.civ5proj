@@ -349,6 +349,11 @@
         <Type>UpdateDatabase</Type>
         <FileName>extend/Crime/CrimeText.xml</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>extend/xml/Localization/extra_TextInfos_Hant_HK.xml</FileName>
+      </Action>
     </ModActions>
     <ModContent>
       <Content>
@@ -477,9 +482,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="extend\art" />
-    <Folder Include="extend\art\button\SpuerUi\" />
-    <Folder Include="extend\art\button\SpuerUi\function\" />
-    <Folder Include="extend\art\button\SpuerUi\function\art\" />
     <Folder Include="extend\art\future\splash" />
     <Folder Include="extend\art\future\icon" />
     <Folder Include="extend\art\health\doctor" />
@@ -752,6 +754,10 @@
     <Folder Include="extend" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="extend\art\button\bluricon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\button\CityIcons.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -780,47 +786,19 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\bluricon.dds">
+    <Content Include="extend\art\button\gunpowder.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\gunpowder.dds">
+    <Content Include="extend\art\button\HelpButton.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\HelpButton.dds">
+    <Content Include="extend\art\button\manpower.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\manpower.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\MenuButton.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\sv_electricity.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\sv_manpower.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\TechMeter256.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\tin.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\TopPanelGoldenAge.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\button\SpuerUi\function\art\TopPanelGoldenAgeGlow.dds">
+    <Content Include="extend\art\button\MenuButton.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -865,6 +843,30 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\button\SP_Atlas_5.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\button\sv_electricity.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\button\sv_manpower.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\button\TechMeter256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\button\tin.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\button\TopPanelGoldenAge.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\button\TopPanelGoldenAgeGlow.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -20901,6 +20903,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\xml\Localization\extra_TextInfos_ES.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\xml\Localization\extra_TextInfos_Hant_HK.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

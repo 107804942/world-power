@@ -40,67 +40,11 @@ function Player.GetCityCrimeTT(player, city)
 -- ********************************************************
 -- ¸¯°ÜÃ÷Ï¸
 -- ********************************************************
-   
-	-- Base Yield from Terrain
-	local CrimeTerrain = city:GetBaseYieldRateFromTerrain(yieldCrimeID)
-	if CrimeTerrain ~= 0 then
-		if CrimeTerrain > 0 then CrimeTerrain = "+" .. CrimeTerrain end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_TERRAIN", CrimeTerrain)
-	end
 
-	-- Base Yield from Buildings
-	local CrimeBuilding = city:GetBaseYieldRateFromBuildings(yieldCrimeID)
-	if CrimeBuilding ~= 0 then
-		if CrimeBuilding > 0 then CrimeBuilding = "+" .. CrimeBuilding end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_BUILDINGS", CrimeBuilding)
-	end
+    toolTipCrime = toolTipCrime ..city:GetYieldRateInfoTool(GameInfoTypes["YIELD_CRIME"])
 
-	-- Base Yield from Specialists
-	local CrimeSpecialist = city:GetBaseYieldRateFromSpecialists(yieldCrimeID)
-	if CrimeSpecialist ~= 0 then
-		if CrimeSpecialist > 0 then CrimeSpecialist = "+" .. CrimeSpecialist end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_SPECIALISTS", CrimeSpecialist)
-	end
-
-	-- Base Yield from Misc
-	local CrimeMisc = city:GetBaseYieldRateFromMisc(yieldCrimeID)
-	if CrimeMisc ~= 0 then
-		if CrimeMisc > 0 then CrimeMisc = "+" .. CrimeMisc end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_TRAITS", CrimeMisc)
-	end 
-
-	-- Base Yield from Population
-	local CrimePopulation = city:GetYieldPerPopTimes100(yieldCrimeID) * city:GetPopulation() / 100
-	if CrimePopulation ~= 0 then
-		if CrimePopulation > 0 then CrimePopulation = "+" .. CrimePopulation end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_POPULATION", CrimePopulation)
-	end 
-
-	-- Base Yield from Religion
-	local CrimeReligion = city:GetBaseYieldRateFromReligion(yieldCrimeID)
-	if CrimeReligion ~= 0 then
-		if CrimeReligion > 0 then CrimeReligion = "+" .. CrimeReligion end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_RELIGION", CrimeReligion)
-	end
-
-
-	-- Base Yield from GreatWork
-	local CrimeGreatWorks = city:GetBaseYieldRateFromGreatWorks(yieldCrimeID)
-	if CrimeGreatWorks ~= 0 then
-		if CrimeGreatWorks > 0 then CrimeGreatWorks = "+" .. CrimeGreatWorks end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_GREATWORK", CrimeGreatWorks)
-	end
-
-	-- Base Yield from OtherYield
-	local CrimeOtherYield = city:GetBaseYieldRateFromOtherYield(yieldCrimeID)
-	if CrimeOtherYield ~= 0 then
-		if CrimeOtherYield > 0 then CrimeOtherYield = "+" .. CrimeOtherYield end
-		toolTipCrime = toolTipCrime .. convertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_FROM_OTHER_YIELD", CrimeOtherYield)
-	end
-
-
-	if city:GetYieldModifierTooltip(yieldCrimeID)~= "" then
-	   toolTipCrime = toolTipCrime .. city:GetYieldModifierTooltip(yieldCrimeID)
+	if city:GetYieldModifierTooltip(GameInfoTypes["YIELD_CRIME"])~= "" then
+	   toolTipCrime = toolTipCrime .. city:GetYieldModifierTooltip(GameInfoTypes["YIELD_CRIME"])
 	end
 
 	

@@ -1,9 +1,6 @@
 --==========================================================================================================================
 -- BELIEFS
 --==========================================================================================================================	
-ALTER TABLE Beliefs	ADD FaithToHealthRate	integer	default 0;
-
-
 
 INSERT INTO Beliefs (Type,				Pantheon,	Founder,	Follower,	Description,							ShortDescription)
 SELECT 'BELIEF_HEALTH_VAPORS',			1,			0,			0,			'TXT_KEY_BELIEF_HEALTH_VAPORS',			'TXT_KEY_BELIEF_HEALTH_VAPORS_SHORT' UNION ALL

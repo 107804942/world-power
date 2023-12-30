@@ -35,8 +35,6 @@ SELECT 'BUILDING_LOCAL_HOSPITAL','YIELD_SCIENCE',15 ;   --医馆
 -----------------------------------------------------------------------------------------------------
 --Buildings  建筑类设定
 -----------------------------------------------------------------------------------------------------
---ALTER TABLE Buildings ADD AddsFreshWaterHealth boolean DEFAULT 0;
-ALTER TABLE Buildings ADD IsNoDiseaseFromBuildings  boolean DEFAULT 0;
 UPDATE Buildings SET AddsFreshWater = 1 WHERE BuildingClass = 'BUILDINGCLASS_AQUEDUCT';
 UPDATE Buildings SET AddsFreshWater = 1 WHERE BuildingClass = 'BUILDINGCLASS_PONTDUGARD';
 

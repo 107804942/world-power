@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- Created by ModBuddy on 2021/2/23 18:40:25 -->
 <GameData>
 
 
+	<Language_ZH_Hant_HK>
 
-	<Language_en_US>
 
 
 
@@ -36,41 +36,31 @@
 		<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
 			<Text>工人建造效率+25%</Text>
 		</Row>
-
 		<Row Tag="TXT_KEY_SV_ICONS_GLOBAL_GREATWORK">
 			<Text>全国杰作</Text>
 		</Row>
 
-		
-		<Row Tag="TXT_KEY_EXTRA_RESOURCES_VALUE_HELP">
-			<Text>工程师+1[ICON_RES_ELECTRICITY]电力。</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_NO_ACTION_CITY_COUNT_MAX">
 			<Text>每座城市只允许{1_Num}个。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_GOLD_COST_LABEL">
-			<Text>维护费：</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_EUI_MOD_TOURISM">
 			<Text>魅力产出增加{1_Num}%。</Text>
 		</Row>
+
+
 
 		<Row Tag="TXT_KEY_EUI_FREE_UNIT">
 			<Text>免费 {1_Num} {2_Name}{3_Name}。</Text>
 		</Row>
 		
+		<Row Tag="TXT_KEY_EXTRA_RESOURCES_VALUE_HELP">
+			<Text>工程师+1[ICON_RES_ELECTRICITY]电力。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_GOLD_COST_LABEL">
+			<Text>维护费：</Text>
+		</Row>
 
-		<!-- New Unit Combats -->
-		<Row Tag="TXT_KEY_UNITCOMBAT_SETTLER">
-			<Text>移民单位</Text>
-		</Row>
-		<Row Tag="TXT_KEY_UNITCOMBAT_WORKER">
-			<Text>工人单位</Text>
-		</Row>
-		
 		<Row Tag="TXT_KEY_PROMOTION_AI_ATTACK_CITY">
 			<Text>战斗补偿</Text>
 		</Row>
@@ -91,6 +81,16 @@
 			</Text>
 		</Row>
 
+
+		<!-- New Unit Combats -->
+		<Row Tag="TXT_KEY_UNITCOMBAT_SETTLER">
+			<Text>移民单位</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNITCOMBAT_WORKER">
+			<Text>工人单位</Text>
+		</Row>
+		
+		
 		<Row Tag="TXT_KEY_CH_ELITEUNIT">
 			<Text>精英单位总览</Text>
 		</Row>
@@ -159,7 +159,7 @@
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_ATTACK_FLANK_MODIFIER" >
 			<Text>远程夹击攻击加成</Text>
 		</Row>
-		
+
 		<Row Tag="TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS" >
 			<Text>黄金时代加成</Text>
 		</Row>
@@ -213,9 +213,11 @@
 		<Row Tag="TXT_KEY_EUPANEL_PLAYER_SPY_BONUS" >
 			<Text>间谍数量加成</Text>
 		</Row>
+		
 		<Row Tag="TXT_KEY_EUPANEL_ATTACK_BUFF_SPY" >
 			<Text>间谍加成</Text>
 		</Row>
+
 
 		<Row Tag="TXT_KEY_EUPANEL_UNITCLASS_NEAR" >
 			<Text>临近晋升加成</Text>
@@ -231,6 +233,7 @@
 		<Row Tag="TXT_KEY_CITY_RANGED_ATTACK_MOD">
 			<Text>城市攻击加成:</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_GLOBAL_CITY_STRENGTH_MOD">
 			<Text>全局城防加成:</Text>
 		</Row>
@@ -641,6 +644,9 @@
 
 
 
+
+
+
 		<Row Tag="TXT_KEY_UPANEL_HP_TT">
 			<Text>当前单位生命值</Text>
 		</Row>
@@ -700,6 +706,16 @@
 			<Text>每座3以上人口的城市+2[ICON_HEALTH]健康度</Text>
 		</Row>
 
+		
+		
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_REINCARNATION_SHORT">
+			<Text>宗教科学</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_HEALTH_REINCARNATION">
+			<Text>每座信奉该宗教的城市贡献6[ICON_RESEARCH]科研</Text>
+		</Row>
+		
+		
 		<Row Tag="TXT_KEY_BELIEF_HEALTH_VAPORS_SHORT">
 			<Text>蒸汽水疗</Text>
 		</Row>
@@ -854,7 +870,6 @@
 		</Replace>
 
 
-		
 
 
 
@@ -871,8 +886,6 @@
 		<Row Tag="TXT_KEY_PEDIA_NEVER_CAPTURE">
 			<Text>不可占领</Text>
 		</Row>
-
-
 
 
 		<Row Tag="TXT_KEY_PEDIA_CITY_BOMBARDRANGE">
@@ -1333,9 +1346,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP_HELP">
 			<Text>
 				远程攻击有100%的几率击退敌方海军单位，被击退的单位会受到额外的溅射伤害。额外增加一次攻击次数，
-				[NEWLINE]包括自身在内，该单位6格范围内的现代化海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。</Text>
+				[NEWLINE]包括自身在内，该单位6格范围内的现代化海军单位获得火力支援，[ICON_STRENGTH]战斗力+100%。
+			</Text>
 		</Row>
-
 
 
 		<Row Tag="TXT_KEY_PROMOTION_GOLEM">
@@ -1417,6 +1430,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_3_HELP">
 			<Text>攻城+50%[ICON_STRENGTH]战斗力</Text>
 		</Row>
+
 
 
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_3">
@@ -1514,8 +1528,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_SP_ACCURACY_1">
 			<Text>精准一级</Text>
 		</Row>
-
-
+	
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_3">
@@ -1751,47 +1764,47 @@
 			<Text>055型导弹驱逐舰（英语：Type 055 destroyer，北约代号：Renhai-class ，中文名：刃海级）是中国船舶重工集团701研究所设计、江南造船厂与大连造船厂共同承建的、装备新型有源相控阵雷达的新型舰队防空驱逐舰。055型驱逐舰的问世对于中国海军来说意义非凡，表现在这个型号上，除了运用了诸多新的技术和设计理念以外，更是中国海军第一款一服役就在平台和设计理念上达到世界先进甚至局部领先水平的舰船。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_GARIO_BATTLESUIT">
+		<Row Tag="TXT_KEY_UNIT_FW_BATTLESUIT">
 			<Text>盖里欧机甲</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_GARIO_BATTLESUIT_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FW_BATTLESUIT_TEXT">
 			<Text>机械化单位可以比普通步兵携带更大口径的武器，同时具有高强度作战和更佳的防御能力，这两者结合起来能有效压制缺乏反装甲武器的步兵，现有的全自动化机器人结合了探测生命体的热感应系统，是传统步兵的噩梦，极有效率的杀人兵器。盖里欧机甲是一种装备了一门800mm口径巨型能量炮的大型机器人步兵。凭借着该大炮，该单位能够进行远程攻击。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_GARIO_BATTLESUIT_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_FW_BATTLESUIT_STRATEGY">
 			<Text>装备有大口径能量炮的机械士兵。强大的作战单位，可进行远程攻击。</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_UNIT_VERTOL">
+
+		<Row Tag="TXT_KEY_UNIT_FW_VERTOL">
 			<Text>喷气式直升机</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_VERTOL_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FW_VERTOL_TEXT">
 			<Text>随着垂直起降飞机背后的技术成熟，越来越多的各种设计开始出现，越来越多的直升机开始使用喷气涡轮发动机，但设计上允许发动机旋转或以其他方式控制推力。喷气式的动力装置有很多优点：第一是“马力重量比”大，可以大大提高直升机的有用载荷。第二是体积小便于安置。一直以来直升机的全部机件大都要想法安置在机身里。它没有普通飞机的机翼可以利用。所以机身内部显得非常拥挤。第三是振动小，这对直升机来说是一个非常重要的问题。直升机本身由于构造复杂，已经引起了很头痛的振动问题，若再使用振动很利害的、往复运动的活塞式发动机来个火上加油就更加麻烦了。所以直升机若采用喷气式的动力装置，无论在载荷，航程，性能上都会有显著的提高。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_VERTOL_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_FW_VERTOL_STRATEGY">
 			<Text>喷气式直升机出现后替代了传统的螺旋式直升机。该直升机能在高原高山，雨雪天气，风沙天气飞行。可用于军事或物资运输或运输救灾物资，旨在打击敌人的轻型陆地部队并为己方陆地单位提供空中火力支援。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_AUTOMATON">
+		<Row Tag="TXT_KEY_UNIT_FW_AUTOMATON">
 			<Text>战争机器</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_AUTOMATON_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FW_AUTOMATON_TEXT">
 			<Text>从最早的机器人发展到现在,机器人士兵的概念已经存在.虽然早在二战时遥控机器就取得了一些成功，但直到20世纪末无人驾驶战斗车辆的部署，自主作战机器的概念才开始变得可行。这类武器通常称为“自动武器”，更进一步地发展自主武器系统的认知技术，使其能在战场上发挥更大的作用。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_AUTOMATON_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_FW_AUTOMATON_STRATEGY">
 			<Text>战争机器是一种未来的主力机器人步兵单位。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_RAILGUN_TANK">
+		<Row Tag="TXT_KEY_UNIT_FW_RAILGUN_TANK">
 			<Text>悬浮穿甲炮</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_RAILGUN_TANK_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FW_RAILGUN_TANK_TEXT">
 			<Text>虽然常规反坦克弹药在过去几十年里不断改进，但新型反装甲武器更具有毁灭性的潜力。传统的大炮越来越多地采用萨波特炮弹来穿透敌人坚固的装甲，因为这些炮弹可以把更多的能量集中在更小的区域，而新型穿甲炮平台可以以更高的灵活性更快地发射炮弹。最早的穿甲炮安装在陆地载具上，但发电系统和能源系统的进步最终导致了新一代的能量炮可以安装在悬浮移动载具上。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_RAILGUN_TANK_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_FW_RAILGUN_TANK_STRATEGY">
 			<Text>悬浮穿甲炮能克制装甲单位。</Text>
 		</Row>
-		
 		<Row Tag="TXT_KEY_BUILDING_NAVAL_BASE_DESC">
 			<Text>[ICON_WAR]海军基地</Text>
 		</Row>
@@ -1916,6 +1929,7 @@
 			</Text>
 		</Row>
 
+
 		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_DESC">
 			<Text>[ICON_HEALTH][ICON_FOOD]生物工厂</Text>
 		</Row>
@@ -1926,8 +1940,6 @@
 		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_PEDIA">
 			<Text>虽然几个世纪以来已经发展了各种增加粮食生产的方法，但有些地区的人口增长甚至可能超过农场和传统城市所提供的最大供应量。因此，一些社区转向大规模生产营养完整的食品替代品，利用各种工艺合成适合人类消费的蛋白质和纤维。由此产生的食物替代品有足够的营养，但往往缺乏真正食物的味道和质地。然而，对于许多人来说，这是他们唯一能负担得起开支的营养摄入渠道。</Text>
 		</Row>
-		
-		
 		<Row Tag="TXT_KEY_BUILDING_VR_TRAINING_DESC">
 			<Text>[ICON_STRENGTH]虚拟训练中心</Text>
 		</Row>
@@ -1939,13 +1951,13 @@
 			<Text>由于现代战场和军事装备的日益复杂，在各种模拟环境中的训练变得越来越重要，以便在不以发生真实伤亡的情况下让士兵更加富有战斗经验。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_HOVERTANK">
+		<Row Tag="TXT_KEY_UNIT_FW_HOVERTANK">
 			<Text>悬浮攻城炮</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HOVERTANK_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FW_HOVERTANK_TEXT">
 			<Text>虽然轮式和履带式车辆仍然是实用的，但悬浮战斗火炮的概念早已吸引了工程师和科学家的想象力。制造可行的悬浮火炮的实验是大势所趋，这些悬浮机动火炮可以穿越一些复杂的地形，去到大多数地面车辆到达不了的地方。他们的高机动性完胜传统地面火炮，但也容易被敌军防空单位克制，因此他们通常配备导弹系统以避免极端情况。这些导弹使得火炮平台变得更具攻击性，它能够从常规载具无法到达的地点发动攻击，使高机动性的战术价值得以最大化发挥。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HOVERTANK_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_FW_HOVERTANK_STRATEGY">
 			<Text>未来时代可悬浮攻城单位。</Text>
 		</Row>
 
@@ -1979,17 +1991,19 @@
 				增加所在地块的单位防御力，每回合对临近敌人造成20点伤害。
 			</Text>
 		</Row>
-		
-		<Row Tag="TXT_KEY_UNIT_DRONE_FIGHTER">
+
+		<Row Tag="TXT_KEY_UNIT_FW_DRONE_FIGHTER_2">
 			<Text>幽浮轰炸机</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_DRONE_FIGHTER_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FW_DRONE_FIGHTER_2_TEXT">
 			<Text>人工智能技术和核动力反应堆引擎的进步导致了能够处理空中特殊任务的超级轰炸机的发展。轰炸机发展的主要限制因素是人力因素及动力系统，结合了人工智能和核动力的轰炸机可以更出色地发挥单位的全部威力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_DRONE_FIGHTER_HELP">
+		<Row Tag="TXT_KEY_UNIT_FW_DRONE_FIGHTER_2_HELP">
 			<Text>设计用来摧毁敌方城市和地面防御设施的超级轰炸机。</Text>
 		</Row>
-		
+
+
+
 
 		<Row Tag="TXT_KEY_PROMOTION_CROSS_ALL_TERRAIN_HELP">
 			<Text>该单位能够[COLOR_POSITIVE_TEXT]在任意地形移动[ENDCOLOR]。</Text>
@@ -2314,6 +2328,8 @@
 
 
 
+
+		
 		<Row Tag="TXT_KEY_BUILDING_WHITE_HOUSE">
 			<Text>白宫</Text>
 		</Row>
@@ -2330,7 +2346,6 @@
 		<Row Tag="TXT_KEY_WONDER_WHITE_HOUSE_HELP">
 			<Text>只能在[ICON_CAPITAL]首都建造，建成后可无视时代要求提前开启意识形态政策。</Text>
 		</Row>
-
 
 
 
@@ -2394,6 +2409,7 @@
 		<Row Tag="TXT_KEY_WONDER_MOTHERLAND_HELP">
 			<Text>按你所有拥有的陆地军事类型，每类单位免费增加一个，出现于建造该奇观的城市附近。单位在友方领土内+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
+
 
 
 		<Row Tag="TXT_KEY_BUILDING_MAGINOT_LINE">
@@ -2470,10 +2486,7 @@
 				[NEWLINE]此外，"终极塔楼"塔身的窗户都带有特别设计的有空气动力学风帽，从而将自然风引入塔内，使塔楼内的空气保持新鲜。同时，塔身还安装无数面反射镜，可让阳光直接照射到建筑中。"终极塔楼"每层都将修建开放式的花园阳台，供塔楼居民休闲散步。塔楼的电动车都由丙烷和氢气驱动，从而完全避免了内燃机或者有毒废气排放。据报道，崔悦君设计的旧金山"终极塔楼"造价估计高达150亿美元，仍处于构想阶段。尽管如此，崔悦君已有一个更大胆的设想--世界各地任何一个人口密度过高的大城市都可以建一座这样的"终极塔楼"，从而彻底解决住房问题。
 			</Text>
 		</Row>
-
-
-
-
+		
 
 		<Row Tag="TXT_KEY_TECH_CYBERNETICS">
 			<Text>控制论</Text>
@@ -2598,6 +2611,7 @@
 		<Row Tag="TXT_KEY_UNIT_CARRIER_FIGHTER_STORM_PEDIA">
 			<Text>继承了幽浮舰载机的性能优点并独立开发的新一代航母舰载机，作战能力更加强大</Text>
 		</Row>
+
 
 
 
@@ -2863,23 +2877,29 @@
 
 
 
-		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY">
+
+
+		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY">
 			<Text>幻像</Text>
 
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY_HELP">
+		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY_HELP">
 			<Text>远程火力机器人战士，可以发射燃烧弹（对敌方单位造成额外附加伤害）。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY_TEXT">
 			<Text>
 				作为机器士兵，它并未配备复杂的装备及多余的护甲。它得特性使其能够在攻击时极大削弱敌人生命值，配合不朽者的攻击效果能够获得高额攻击加成。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_ROBOT_INFANTRY_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_FW_ROBOT_INFANTRY_STRATEGY">
 			<Text>
 				幻像是一种受过远程便携式火炮训练的机器人士兵。幻像的武器库中最著名的是火焰发射器，而且由于和不朽者得冷冻攻击属于两种极端情形，所以该单位通常和不朽者一起协同作战以便于发挥最大战斗力。
 			</Text>
 		</Row>
+
+
+
+
 
 
 
@@ -3090,6 +3110,7 @@
 				随着科学技术的发展，虚拟偶像不断进化为各种形式，交互性也越来越强，定义也在不断地更新：从基于3DCG的虚拟偶像、基于网络活动的虚拟偶像、基于游戏的虚拟偶像，一直到基于音乐制作软件的偶像。初音未来作为第一个使用全息投影技术举办演唱会的虚拟偶像，在多国举办了演唱会。其中，技术进步是虚拟偶像产生和发展的重要推力，如3D建模技术、声库技术、全息成像技术，这些都为构建虚拟偶像提供了必要的物质条件。此外，二次元文化的发展也为虚拟偶像提供了广阔的市场。有媒体认为，虚拟偶像之所受欢迎，是因为它们不会人设崩塌，不会有绯闻，满足了人们的完美主义情结。
 			</Text>
 		</Row>
+		
 		<Row Tag="TXT_KEY_THEMING_BONUS_VIRTUAL_IDOL">
 			<Text>{1_Era}{2_CivAdjective}虚拟偶像</Text>
 		</Row>
@@ -3110,8 +3131,6 @@
 		<Row Tag="TXT_KEY_BUILDING_SKYNET_PEDIA">
 			<Text>天网是一种人工智能工具，它可以控制智能化的军事硬件和系统，以减少反应时间，消除军事决策中的人为错误。同时它能将附近最新的战争数据迅速传导出去，让己方作战更有大局观，是未来战争中极其有用的工具。</Text>
 		</Row>
-
-
 
 
 
@@ -3180,14 +3199,14 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_DESC">
+		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_DESC">
 			<Text>[ICON_TOURISM]人造生态圈</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_HELP">
+		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_HELP">
 			<Text>本城市所有自然奇观、环礁和绿洲+6[ICON_GOLD]金钱+6[ICON_CULTURE]文化。+5[ICON_CULTURE]文化+2[ICON_HAPPINESS_1]快乐。城市33%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+100%。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_PEDIA">
 			<Text>在生态哲学占据主导地位的社区里，人们深切地感到需要一种方式，来感受与周围残存的野生自然环境之间的联系。虽然自然保护区提供了最令人愉快的环境，但不是每个人都能抽出时间和资源来享用当地的环境资源。后来，人造生态圈开始发展，生态区规模逐渐扩大。虽然在某种程度上是人造的，但作为一种必需品，它们比显然比城市更加有趣和自然，能够让民众感受到与自然世界更大的联系。这些保护区往往最终成为文化中心，激发了各种各样的艺术、音乐和文学作品。</Text>
 		</Row>
 
@@ -3319,10 +3338,11 @@
 			<Text>你的{2_UnitName}被敌方{1_EnUName}用冷冻弹攻击！他将在下回合无法行动内无法行动，且防御力降低！</Text>
 		</Row>
 
-
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT_HELP">
 			<Text>单位处于灼烧状态，每回合减少等同于最大生命值15%的生命值。</Text>
 		</Row>
+
+
 
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT">
 			<Text>灼烧状态</Text>
@@ -3334,8 +3354,13 @@
 			<Text>火焰弹</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_BOMB_HELP">
-			<Text>攻击时+50%[ICON_STRENGTH]战斗力，若敌军处于冰冻弹负面状态，则对其额外+150%[ICON_STRENGTH]战斗力。</Text>
+			<Text>攻击敌人时对其额外造成当前生命值20%（下限15）的最终伤害，若敌方有人造意志晋升则该属性无效。若敌军处于冰冻弹负面状态，则对其最终伤害额外+30。</Text>
 		</Row>
+
+
+
+
+
 
 
 
@@ -3672,6 +3697,7 @@
 
 
 
+
 		<Row Tag="TXT_KEY_PROMOTION_CAN_RANGE_ATTACK">
 			<Text>[COLOR_YELLOW]粒子束攻城巨炮[ENDCOLOR]</Text>
 		</Row>
@@ -3716,13 +3742,7 @@
 		</Replace>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_FOCUS">
-			<Text>超级武器</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FOCUS_HELP">
-			<Text>远程攻击力+100%[ENDCOLOR]，对堡垒额外追加300%攻击力。攻击时会造成100%溅射伤害。</Text>
-		</Row>
-	
+
 
 
 		<Update>
@@ -3747,7 +3767,12 @@
 
 
 
-
+		<Row Tag="TXT_KEY_PROMOTION_FOCUS">
+			<Text>超级武器</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FOCUS_HELP">
+			<Text>远程攻击力+100%[ENDCOLOR]，对堡垒额外追加300%攻击力。攻击时会造成100%溅射伤害。</Text>
+		</Row>
 
 
 
@@ -4163,15 +4188,12 @@
 
 
 
-
-
 		<Row Tag="TXT_KEY_PROMOTION_PLUNDERED">
 			<Text>攻城掠地</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PLUNDERED_HELP">
 			<Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可额外获得一移动力与一攻击次数。</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_PROMOTION_EQUICK">
 			<Text>火力覆盖</Text>
@@ -4259,19 +4281,12 @@
 		</Row>
 
 
-
-
-
-
-
 		<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX">
 			<Text>防空火力网</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTIAIRX_HELP">
 			<Text>轨道自动化科技解锁，驱逐舰单位额外增加一次空袭拦截次数且拦截范围+2。</Text>
 		</Row>
-
-
 
 
 		<Row Tag="TXT_KEY_IMPROVEMENT_BE_ACADEMY">
@@ -4675,6 +4690,7 @@
 		</Row>
 
 
+
 		<Row Tag="TXT_KEY_BUILDING_JURASSIC_PARK">
 			<Text>异种生物研究所</Text>
 		</Row>
@@ -4770,6 +4786,12 @@
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_8">
 			<Text>[COLOR_MIGHT]粒子能量(200)[ENDCOLOR]</Text>
 		</Row>
+		
+		
+		
+
+
+
 
 
 
@@ -4802,6 +4824,8 @@
 		</Row>
 
 		
+
+
 
 
 
@@ -5043,7 +5067,10 @@
 		<Row Tag="TXT_KEY_WONDER_GLOBALCNIEMA_QUOTE">
 			<Text>[NEWLINE]“在好莱坞，人们愿意用一千美元交换你的吻，但只愿意付50美分买你的灵魂。”[NEWLINE]  ——玛丽莲•梦露[NEWLINE]</Text>
 		</Row>
-	
+		<Row Tag="TXT_KEY_POLICY_GLOBALCNIEMA">
+			<Text>梦工厂</Text>
+		</Row>
+
 
 
 
@@ -5071,8 +5098,9 @@
 			<Text>[ICON_PRODUCTION]布厂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CLOTH_MILL_HELP">
-			<Text>每处[ICON_RES_DYE]染料、[ICON_RES_COTTON]棉、[ICON_RES_SHEEP]羊、[ICON_RES_FLAX]亚麻与[ICON_RES_SILK]丝绸+2[ICON_GOLD]金钱，+2[ICON_PRODUCTION]产能。</Text>
+			<Text>每处[ICON_RES_COTTON]棉、[ICON_RES_SHEEP]羊、[ICON_RES_FLAX]亚麻与[ICON_RES_SILK]丝绸+2[ICON_GOLD]金钱。</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_BUILDING_CLOTH_MILL_PEDIA">
 			<Text>布厂是早期用于生产纱线和布的机械化车间，为工业革命期间工厂的发展奠定了基础。最初，布厂依靠快速流动的溪流和河流来驱动他们的水轮，但随着时间的推移，他们将依靠蒸汽来转动机器。第一家布厂于1740年代在英格兰北部发展起来，但很快传播到美国殖民地及其他地区。</Text>
 		</Row>
@@ -5118,7 +5146,7 @@
 			<Text>凡尔赛宫</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_VERSAILLES_HELP">
-			<Text>建成后每个拥有世界奇观的城市+33%[ICON_RESEARCH]科研与[ICON_GOLD]金钱产出。</Text>
+			<Text>建成后每个拥有世界奇观的城市+20%[ICON_RESEARCH]科研与[ICON_GOLD]金钱产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_VERSAILLES_QUOTE">
 			<Text>[NEWLINE]"我每安排一个职位就会得罪一百个人，而任职者也不会对我感恩戴德。"[NEWLINE]        ——路易十四[NEWLINE]</Text>
@@ -5490,6 +5518,7 @@
 
 
 
+
 		<Row Tag="TXT_KEY_PROMOTION_INVISIBLE_DESTROYER">
 			<Text>隐形战舰</Text>
 		</Row>
@@ -5540,8 +5569,6 @@
 				训练新兵服兵役一直以来既是一门艺术，又是一门科学，世界各地的各种军事院校和其他训练机构都在努力寻找最佳方法，为新兵做好服兵役的指导。然而，随着模因学、生物技术和神经接口的发展，通过利用老兵的记录记忆和经验，将所需训练记忆简单地植入新兵成为可能。马尔科夫系统是第一个尝试这种方法的设施，它复制了老兵的记忆和经历，并将这些记忆和经历植入新兵的头脑中。
 			</Text>
 		</Row>
-
-
 
 
 		<Row Tag="TXT_KEY_CITY_BOMBARDMENT_MOD">
@@ -5708,6 +5735,7 @@
 
 
 
+
 		<Row Tag="TXT_KEY_TECH_WOOD_WORKING_TITLE">
 			<Text>木工</Text>
 		</Row>
@@ -5737,6 +5765,12 @@
 				+2[ICON_PRODUCTION]产能，提供6单位[ICON_RES_HARDWOOD]木材资源。本城每个锯木厂、红木林场+1[ICON_PRODUCTION]产能，每个锯木厂+1[ICON_RES_HARDWOOD]木材。
 			</Text>
 		</Row>
+
+
+
+
+
+
 
 
 
@@ -6285,9 +6319,6 @@
 		</Row>
 
 
-
-
-
 		<Row Tag="TXT_KEY_BUILDING_ZHENGGUOQU">
 			<Text>郑国渠</Text>
 		</Row>
@@ -6378,11 +6409,13 @@
 			</Text>
 		</Row>
 
+
+
 		<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON">
 			<Text>喷火器</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON_HELP">
-			<Text>攻击时可造成溅射伤害，对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除20点生命值）攻击燃烧状态的敌人时[ICON_STRENGTH]攻击力+50%，若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
+			<Text>攻击时可造成溅射伤害，攻击时对消耗木材的单位额外造成100%最终伤害。对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除20点生命值）若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_SILKROAD">
@@ -6981,9 +7014,11 @@
 		</Row>
 
 
+
 		<Row Tag="TXT_KEY_SPACEBASE_VISIT">
 			<Text>太空堡垒</Text>
 		</Row>
+
 
 
 		<Row Tag="TXT_KEY_CONFIRM_SELECTION">
@@ -7021,10 +7056,10 @@
 			<Text>获得：</Text>
 		</Row>
 
+
 		<Replace Tag="TXT_KEY_SP_UI_BTN_CLEAR_ALL_ORDER_SHORT">
 			<Text>[ICON_CLEAR_ALL_ORDER]取消统一规划</Text>
 		</Replace>
-
 
 
 		<Row Tag="TXT_KEY_EUPANEL_ATTACK_CITIES_MOD">
@@ -7082,12 +7117,18 @@
 			<Text>[ICON_STRENGTH]攻击力+25%，[ICON_STRENGTH]防御力+50%。</Text>
 		</Row>
 
+
+
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH">
 			<Text>重装冲锋</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
 			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
 		</Row>
+
+
+
+
 
 
 		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER">
@@ -7098,8 +7139,6 @@
 				周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。对抗满血单位+50%[ICON_STRENGTH]战斗力。在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
-
-
 
 
 		<Row Tag="TXT_KEY_PROMOTION_PARATROOPER_BUFF">
@@ -7181,6 +7220,14 @@
 		<Row Tag="TXT_KEY_PROMOTION_FRANCE_HELP">
 			<Text>可消耗一定量金币在沿岸执行步兵登录（根据当前军舰类型分为机械化步兵或盖里欧机甲）。</Text>
 		</Row>
+
+
+		<!--<Row Tag="TXT_KEY_UNIT_CHANGE_DESC3">
+			<Text>
+				消耗一定量金币从上述方案中选择任选一种来对当前单位进行改造
+			</Text>
+		</Row>-->
+
 
 
 
@@ -7307,7 +7354,6 @@
 		</Row>
 
 
-	
 
 		<Replace Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP">
 			<Text>所在城市每处已开发的[ICON_RES_MARBLE]大理石、[ICON_RES_STONE]花岗岩资源+1[ICON_PRODUCTION]产能。[NEWLINE][NEWLINE]城市境内需拥有任意一处已开发的[ICON_RES_MARBLE][ICON_RES_STONE]上述资源。[NEWLINE][NEWLINE]研发[COLOR_CYAN]炸药[ENDCOLOR]后[COLOR_NEGATIVE_TEXT]过期[ENDCOLOR]（不再提供产出且无法建造）。[NEWLINE][NEWLINE]研发[COLOR_CYAN]因特网[ENDCOLOR]后+2[ICON_TOURISM]魅力产出。</Text>
@@ -7504,6 +7550,7 @@
 			</Text>
 		</Row>
 
+
 		<Row Tag="TXT_KEY_INDUSTRY_3">
 			<Text>建筑工会</Text>
 		</Row>
@@ -7547,6 +7594,7 @@
 		<Row Tag="TXT_KEY_INDUSTRY_6">
 			<Text>产业扩张</Text>
 		</Row>
+
 
 		<Row Tag="TXT_KEY_INDUSTRY_6_HELP">
 			<Text>[COLOR_POSITIVE_TEXT]产业扩张[ENDCOLOR][NEWLINE]工程师+1[ICON_PRODUCTION]产能。每座城市+6[ICON_RES_ELECTRICITY]电力，+5[ICON_RES_HARDWOOD]木材，+5[ICON_RES_GUNPOWDER]火药。</Text>
@@ -7621,6 +7669,7 @@
 		<Row Tag="TXT_KEY_GRANDEUR_1">
 			<Text>市场监管</Text>
 		</Row>
+
 
 
 		<Row Tag="TXT_KEY_GRANDEUR_1_HELP">
@@ -7938,8 +7987,6 @@
 
 
 
-
-
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_US_URBAN_SHORT">
 			<Text>你遭受了乌尔班大炮的攻击！</Text>
 		</Row>
@@ -8047,10 +8094,6 @@
 			<Text>可对被攻击地块及周围半径3格范围内的所有单位与城市造成大量伤害,并且爆炸范围内的城市将陷入4回合混乱状态。对堡垒+200%[ICON_STRENGTH]攻击力。</Text>
 		</Row>-->
 
-
-
-
-
 		<Row Tag="TXT_KEY_PROMOTION_DRILL_4">
 			<Text>操练四级</Text>
 		</Row>
@@ -8074,6 +8117,10 @@
 		<Row Tag="TXT_KEY_PROMOTION_GUN_2_HELP">
 			<Text>大幅度提升每次进攻时首先发动的远程先手打击伤害。</Text>
 		</Row>
+
+
+
+
 
 
 		<Replace Tag="TXT_KEY_TRAIT_RIVER_EXPANSION">
@@ -8279,7 +8326,6 @@
 
 
 
-
 		<Row Tag="TXT_KEY_BUILDING_SUPERCONDUCTING_GRID_DESC">
 			<Text>[ICON_RES_ELECTRICITY]无损微波输电系统</Text>
 		</Row>
@@ -8371,7 +8417,6 @@
 				+6[ICON_HEALTH]健康度，+20%城市[ICON_HEALTH]健康度。每处[ICON_FRU_RASPBERRY]浆果、[ICON_RES_SULFUR]硫磺、[ICON_RES_TEA]茶叶、[ICON_RES_LAVENDER]薰衣草、[ICON_RES_INCENSE]熏香、[ICON_RES_SAFFRON]藏红花+2[ICON_HEALTH]健康度，+2[ICON_GOLD]金钱。本城获得3个大医学家槽位。雪原、冻土+1[ICON_HEALTH]健康度。建成后赠送一个大医学家。
 			</Text>
 		</Row>
-
 
 
 
@@ -8474,17 +8519,13 @@
 			</Text>
 		</Row>
 
-
 		<Row Tag="TXT_KEY_WONDER_GUIGU_HELP">
 			<Text>
 				所有专家对应的基础产出数值+4。+25%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。每次间谍行动完成时，可一次性获得2回合的[ICON_GOLD]金钱、[ICON_RESEARCH]科研产出，且有一定几率获得一个随机类型的伟人。
 			</Text>
 		</Row>
-
-	
-
-
-
+		
+		
 
 		<Replace Tag="TXT_KEY_PROMOTION_CORPS_1_HELP">
 			<Text>+100%最大生命值。</Text>
@@ -8497,6 +8538,21 @@
 
 
 
+		<Row Tag="TXT_KEY_BUILDING_LODGE_DESC">
+			<Text>
+				[ICON_INTERNATIONAL_TRADE][ICON_FOOD]乡村小屋
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_LODGE_HELP">
+			<Text>
+				+2[ICON_FOOD]食物。本城市的每处[ICON_RES_DEER]野鹿和[ICON_RES_BISON]野牛资源+1[ICON_FOOD]食物, 每处[ICON_RES_FUR]毛皮、[ICON_RES_IVORY]象牙+1[ICON_GOLD]金钱。[NEWLINE][NEWLINE]通向其他文明的陆地商路额外+6基础[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_LODGE_TEXT">
+			<Text>
+				民宿是指利用自用住宅空闲房间，结合当地人文、自然景观、生态、环境资源及农林渔牧生产活动，以家庭副业方式经营，提供旅客乡野生活的住所。民宿不同于传统的饭店旅馆，它能让人体验当地风情、感受民宿主人的热情与服务、并体验有别于以往的生活。民宿可以说是农家乐的精致版，通过地方政府统一管理，由民宿主人个体经营的一种模式，这种经营模式可以发动社区全民参与，其盈利效益非常可观。
+			</Text>
+		</Row>
 
 
 
@@ -8842,7 +8898,6 @@
 				[NEWLINE][TAB][TAB]"音乐，是比一切智慧,一切哲学更高的启示。"[NEWLINE][TAB][TAB] - 贝多芬[NEWLINE][TAB]
 			</Text>
 		</Row>
-
 
 
 
@@ -9234,7 +9289,7 @@
 		<Row Tag="TXT_KEY_WONDER_ROCKEFELLER_HELP">
 			<Text>
 				本城[ICON_CULTURE]文化+33%，本地[ICON_GREAT_MERCHANT]商业家+2[ICON_GOLD]金钱，[ICON_GOLD]金钱+33%，每5人口+1[ICON_GOLD]金钱。
-				[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，每个同盟城邦+50[ICON_GOLD]金钱，每个友好城邦+25[ICON_GOLD]金钱。
+				[NEWLINE]基于当前数值的城邦[ICON_INFLUENCE]影响力翻倍，每个同城城邦+200[ICON_GOLD]金钱，每个友好城邦+100[ICON_GOLD]金钱。
 			</Text>
 		</Row>
 		<!-- Quote tags -->
@@ -9265,7 +9320,6 @@
 
 		<!--EXTRA NATURAL WONDERS-->
 
-
 		<!--BERMUDA -->
 		<Row Tag="TXT_KEY_FEATURE_BERMUDA">
 			<Text>百慕大三角</Text>
@@ -9278,7 +9332,6 @@
 		</Row>
 		
 		
-
 		<!--EYE_OF_SAHARA -->
 		<Row Tag="TXT_KEY_FEATURE_EYE_OF_SAHARA">
 			<Text>撒哈拉之眼</Text>
@@ -9291,8 +9344,6 @@
 			</Text>
 		</Row>
 		
-		
-		
 		<!--ZHANGJIAJIE -->
 		<Row Tag="TXT_KEY_FEATURE_ZHANGJIAJIE">
 			<Text>张家界</Text>
@@ -9301,10 +9352,9 @@
 		<Row Tag="TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_TEXT">
 			<Text>
 				张家界国家森林公园位于张家界市武陵源区金鞭路279号，1988年8月，张家界武陵源旅游区被列入国家重点风景名胜区；1992年12月，因奇特的石英砂岩大峰林被联合国列入《世界自然遗产名录》，2004年2月被列入世界地质公园；2007年被列入中国首批国家5A级旅游景区，公园总面积4810公顷。
-				[NEWLINE]武陵源旅游区自然风光以峰称奇、以谷显幽、以林见秀。其间有奇峰3000多座，如人如兽、如器如物，形象逼真，气势壮观，有“奇峰三千，秀水八百”之美称。主要景点有黄石寨、金鞭溪、袁家界、杨家界等。
+				[NEWLINE武陵源旅游区自然风光以峰称奇、以谷显幽、以林见秀。其间有奇峰3000多座，如人如兽、如器如物，形象逼真，气势壮观，有“奇峰三千，秀水八百”之美称。主要景点有黄石寨、金鞭溪、袁家界、杨家界等。
 			</Text>
 		</Row>
-		
 		<!--BLUE HOLE -->
 		<Row Tag="TXT_KEY_FEATURE_BLUE_HOLE">
 			<Text>蓝洞</Text>
@@ -9316,7 +9366,7 @@
 				[NEWLINE]1971年，海洋先驱雅各-伊夫·库斯托将大蓝洞评为十大最好的潜水地之一 。洞内钟乳石群交错复杂 ，在水下面可以看到大型钟乳石和石笋，有的甚至达12米长。更有品种繁多的鲨鱼(据说，多为个性温和慵懒不主动攻击的品种)伴您水下同游，身处神秘森幽的海下洞穴，美丽与凶险并存 。潜水越深，水质越清，地质构造越复杂难懂 。蓝色天坑是伯利兹堡礁保护系统的一部分，被联合国科教文组织列为世界历史遗产之一 。
 			</Text>
 		</Row>
-
+		
 		<!-- Mt. Everest -->
 		<Row Tag="TXT_KEY_FEATURE_MT_PAEKTU">
 			<Text>长白山</Text>
@@ -9340,6 +9390,7 @@
 				[NEWLINE]早在公元前16000年，此处已是早期渔民部落的家园。而在漫长的历史中，它又是一座抵御侵略者的天然堡垒。1288年越南将军陈兴道以铁头木桩成功阻挡蒙古战船的前进，大破蒙古军队。自2000年起，下龙湾被联合国教科文组织列为世界遗产。
 			</Text>
 		</Row>
+		
 		
 		<!-- white desert -->
 		<Row Tag="TXT_KEY_FEATURE_WHITE_DESERT">
@@ -9376,7 +9427,7 @@
 				[NEWLINE]这扇看似摇摇欲坠的砂岩拱门有六层楼高。地心引力和犹他州无情的风吹注定了它终将坍塌崩坏的命运。然而大自然还并非是它唯一的敌人，一些头脑发热的攀岩者也对精致拱门的宏伟结构产生了破坏。
 			</Text>
 		</Row>
-
+		
 		
 		
 		<!-- Salar de Uyuni -->
@@ -9499,8 +9550,7 @@
 				[NEWLINE]谷中的孤峰清楚分成多个地层，最主要的地层有三个。最底下的地层是称为 Organ Rock 的页岩，中间则是谢伊层砂岩（de Chelly），最顶层则是称为孟科匹（Moenkopi）层的页岩，更上方被称为 Shinarump 的粉砂岩覆盖。纪念碑谷内有许多巨型岩石结构，其中包含了“太阳之眼”（Eye of the Sun）。
 			</Text>
 		</Row>
-
-
+		
 		<Row Tag="TXT_KEY_PROMOTION_VALLEY">
 			<Text>西部先锋</Text>
 		</Row>
@@ -9512,6 +9562,8 @@
 		</Row>
 		
 		
+		
+
 		<Row Tag="TXT_KEY_PROMOTION_EXPLOSIVE_MIXTURE">
 			<Text>爆炸性混合物</Text>
 		</Row>
@@ -9532,6 +9584,7 @@
 			</Text>
 		</Row>
 
+
 		<Row Tag="TXT_KEY_PROMOTION_BERMUDA">
 			<Text>谜之暗流</Text>
 		</Row>
@@ -9541,7 +9594,6 @@
 				+1[ICON_MOVES]移动力，回合开始时临近的敌人[ICON_MOVES]移动力-1。
 			</Text>
 		</Row>
-
 
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_VS_FULLY_HEALED_UNITS">
@@ -9786,26 +9838,15 @@
 
 
 
+
+
+	
+
 		<Replace Tag="TXT_KEY_PROMOTION_LOGISTICS_HELP" >
 			<Text>每回合增加1次额外攻击次数。</Text>
 		</Replace>
 
 
-		<Row Tag="TXT_KEY_BUILDING_LODGE_DESC">
-			<Text>
-				[ICON_INTERNATIONAL_TRADE][ICON_FOOD]乡村小屋
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_LODGE_HELP">
-			<Text>
-				+2[ICON_FOOD]食物。本城市的每处[ICON_RES_DEER]野鹿和[ICON_RES_BISON]野牛资源+1[ICON_FOOD]食物, 每处[ICON_RES_FUR]毛皮、[ICON_RES_IVORY]象牙+1[ICON_GOLD]金钱。[NEWLINE][NEWLINE]通向其他文明的陆地商路额外+6基础[ICON_GOLD]金钱。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CIV5_BUILDINGS_LODGE_TEXT">
-			<Text>
-				民宿是指利用自用住宅空闲房间，结合当地人文、自然景观、生态、环境资源及农林渔牧生产活动，以家庭副业方式经营，提供旅客乡野生活的住所。民宿不同于传统的饭店旅馆，它能让人体验当地风情、感受民宿主人的热情与服务、并体验有别于以往的生活。民宿可以说是农家乐的精致版，通过地方政府统一管理，由民宿主人个体经营的一种模式，这种经营模式可以发动社区全民参与，其盈利效益非常可观。
-			</Text>
-		</Row>
 
 
 		<Row Tag="TXT_KEY_BUILDING_AMERICA_RANCH">
@@ -9840,14 +9881,11 @@
 
 
 
-
-
-
-
 		<Replace Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP">
 			<Text>[ICON_BULLET]攻击时可在一定范围内附带核爆伤害（伤害数值等同于原子弹）。[NEWLINE][ICON_BULLET]攻击城市时摧毁目标城市60%的[COLOR_POSITIVE_TEXT]人口[ENDCOLOR]（如果目标城市拥有防空洞则为15%）[NEWLINE][ICON_BULLET]不会造成辐射。</Text>
 		</Replace>
-		
+
+
 		<Row Tag="TXT_KEY_BUILDING_DIABLO">
 			<Text>预知计划</Text>
 		</Row>
@@ -9862,17 +9900,19 @@
 			<Text>[NEWLINE]"睁开双眼，睁开双眼。专注前方，专注前方。"[NEWLINE]        ——卡维萨·塔库尔《出世经经典籍》[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_DIABLO_HELP">
-			<Text>单位被攻击时，有33%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+			<Text>单位攻击或被攻击时，有33%几率规避伤害。</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_PROMOTION_DIABLO">
 			<Text>战场感知</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DIABLO_HELP">
-			<Text>单位被攻击时，有33%几率规避此次伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+			<Text>单位攻击或被攻击时，有33%几率规避伤害。</Text>
 		</Row>
-	</Language_en_US>
+		
+	</Language_ZH_Hant_HK>
+
+
 
 </GameData>

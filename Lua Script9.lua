@@ -72,14 +72,6 @@ function GetCityCrimePerTurnAndToolTip(pCity)
 		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_POLICIES", iCorruptionPerTurnFromPolicies);
 	end
 	
-	local iCorruptionPerTurnFromEdicts = 0
-	if pCity:GetNumRealBuilding(GameInfoTypes["EDICT_DEMOCRACY_1_DUMMY"]) == 1 then iCorruptionPerTurnFromEdicts = iCorruptionPerTurnFromEdicts - 5 end
-	if Players[pCity:GetOwner()]:HasPolicy(GameInfoTypes["DUMMY_EDICT_ISKA_FUTURE_3"]) then iCorruptionPerTurnFromEdicts = iCorruptionPerTurnFromEdicts - 10 end
-	if iCorruptionPerTurnFromEdicts < 0 then
-		strCorruptionToolTip = strCorruptionToolTip .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_CITYVIEW_CRIME_TT_HEADER_CORRUPTION_EDICTS", iCorruptionPerTurnFromEdicts);
-	end
-
-
 
 	----来自间谍
 	local iCorruptionPerTurnFromSpies = 0;
