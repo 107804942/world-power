@@ -7362,20 +7362,6 @@
 
 
 
-
-
-
-
-
-
-
-		<Replace Tag="TXT_KEY_BUILDING_GRAND_TEMPLE_HELP">
-			<Text>获得一个免费的传教士,所有新建城市获得神庙，所有神庙免维护费。[NEWLINE][NEWLINE]必须建造于圣城，且在文明的所有城市中拥有神庙。建造成本随城市数量增加。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BUILDING_STONEHENGE_HELP">
-			<Text>+12[ICON_PEACE]信仰，+1[ICON_GREAT_PEOPLE]大工程师点数。[NEWLINE][NEWLINE]研究考古学科技后+6[ICON_TOURISM]魅力产出。</Text>
-		</Replace>
-
 		<Replace Tag="TXT_KEY_BUILDING_WINDMILL">
 			<Text>[ICON_HEALTH][ICON_FOOD]风车</Text>
 		</Replace>

@@ -6,8 +6,8 @@
 			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_FOOD">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_DETAIL">
+			<Text>[ICON_CRIME]犯罪率[ENDCOLOR][NEWLINE]{1_Crime}</Text>
 		</Row>
 
 	
@@ -31,8 +31,8 @@
 			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_FOOD">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_DETAIL">
+			<Text>[ICON_CRIME]犯罪率[ENDCOLOR][NEWLINE]{1_Crime}</Text>
 		</Row>
 
 		
@@ -56,8 +56,8 @@
 			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_FOOD">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_DETAIL">
+			<Text>[ICON_CRIME]犯罪率[ENDCOLOR][NEWLINE]{1_Crime}</Text>
 		</Row>
 
 		

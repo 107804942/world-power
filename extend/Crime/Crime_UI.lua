@@ -48,7 +48,7 @@ function Player.GetCityCrimeTT(player, city)
 	end
 
 	
-	return convertTextKey("TXT_KEY_CITYVIEW_CRIME_TEXT_TT_FOOD",toolTipCrime)
+	return convertTextKey("TXT_KEY_CITYVIEW_CRIME_TEXT_TT_DETAIL",toolTipCrime)
 	
 end
 

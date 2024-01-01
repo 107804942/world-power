@@ -354,6 +354,11 @@
         <Type>UpdateDatabase</Type>
         <FileName>extend/xml/Localization/extra_TextInfos_Hant_HK.xml</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>extend/Crime/Crime_Buildings.sql</FileName>
+      </Action>
     </ModActions>
     <ModContent>
       <Content>
@@ -16041,6 +16046,10 @@
     <Content Include="extend\Crime\Crime_UI.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\Crime\Crime_Buildings.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\Health\Health_HkText.xml">
       <SubType>Lua</SubType>

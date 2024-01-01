@@ -180,24 +180,6 @@ GameEvents.CanStartMission.Add(ImmobileWhileDamaged)
 
 
 
-
-
-	// Garrisoned Unit
-	CvUnit* pGarrisonedUnit = GetGarrisonedUnit();
-	int iStrengthFromUnits = 0;
-	if(pGarrisonedUnit)
-	{
-#if defined(MOD_UNITS_MAX_HP)
-		int iMaxHits = pGarrisonedUnit->GetMaxHitPoints();
-#else
-		int iMaxHits = GC.getMAX_HIT_POINTS();
-#endif
-		iStrengthFromUnits = pGarrisonedUnit->GetBaseCombatStrength() * 100 * (iMaxHits - pGarrisonedUnit->getDamage()) / iMaxHits;
-	}
-
-
-
-
 int CvCity::getCrimeFromGarrisonedUnit() const
 {
 	int iCrimeFromGarrisonedUnit = 0;
@@ -233,15 +215,6 @@ int CvCity::getCrimeFromGarrisonedUnit() const
 }
 
 
-
-	if (eIndex == YIELD_CRIME && owner.isGoldenAge())
-	{
-		iTempMod = GC.getMAX_HIT_POINTS();
-		iModifier += iTempMod;
-		if (iTempMod != 0 && toolTipSink)
-			GC.getGame().BuildProdModHelpText(toolTipSink, "TXT_KEY_PRODMOD_YIELD_GOLDEN_AGE", iTempMod);
-	}
-
 	if (eIndex == YIELD_LOYALTY && owner.isGoldenAge())
 	{
 		iTempMod = GC.getCITY_LOYALTY_GOLDEN_AGE_YIELD();
@@ -250,11 +223,104 @@ int CvCity::getCrimeFromGarrisonedUnit() const
 			GC.getGame().BuildProdModHelpText(toolTipSink, "TXT_KEY_PRODMOD_YIELD_GOLDEN_AGE", iTempMod);
 	}
 
-		inline int getCITY_CRIME_GOLDEN_AGE_YIELD()
+
+	   int NumForeignSpy = getNumForeignSpy();
+			iValue += NumForeignSpy * GC.getCITY_CRIME_SPY_YIELD();
+			if (GetCityEspionage()->m_aiSpyAssignment[getOwner()] != -1)
+			{
+				iValue -= GC.getCITY_CRIME_SPY_YIELD();
+			}
+
+
+
+			int NumForeignSpy = getNumForeignSpy();
+		iBaseValue = NumForeignSpy * GC.getCITY_CRIME_SPY_YIELD();
+		if (GetCityEspionage()->m_aiSpyAssignment[getOwner()] != -1)
+		{
+			iBaseValue -= GC.getCITY_CRIME_SPY_YIELD();
+		}
+		if (iBaseValue != 0)
+		{
+			szRtnValue += GetLocalizedText("TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_SPIES", iBaseValue, YieldIcon);
+		}
+
+
+
+		GetCityReligions()->GetReligiousMajority()
+
+
+		ReligionTypes eMajority = GetCityReligions()->GetReligiousMajority();
+	const CvReligion* pReligion = GC.getGame().GetGameReligions()->GetReligion(eMajority, getOwner());
+	if(pReligion)
 	{
-		return m_iCITY_CRIME_GOLDEN_AGE_YIELD;
-	}
-	inline int getCITY_LOYALTY_GOLDEN_AGE_YIELD()
+		int iReligionYieldMaxFollowers = pReligion->m_Beliefs.GetMaxYieldModifierPerFollower(eIndex);
+		int iFollowers = GetCityReligions()->GetNumFollowers(eMajority);
+		iTempMod = 0;
+
+		GetPressurePerTurn
+
+int CvCity::getHeresyFromDiscord() const
+{
+	int  iHeresyPerTurnFromDiscord = 0;
+
+	for (int i = 0; i < MAX_MAJOR_CIVS; i++)
 	{
-		return m_iCITY_LOYALTY_GOLDEN_AGE_YIELD;
+		PlayerTypes eTargetPlayer = (PlayerTypes)i;
+
+		if (GET_PLAYER(eTargetPlayer).isEverAlive() && GET_PLAYER(eTargetPlayer).GetReligions()->HasCreatedReligion() && eTargetPlayer!= getOwner())
+		{
+			iHeresyPerTurnFromDiscord+= GetCityReligions()->GetNumFollowers(GET_PLAYER(eTargetPlayer).GetReligions()->GetReligionCreatedByPlayer(true));
+
+			if (iHeresyPerTurnFromDiscord== getPopulation());
+		}
+
 	}
+	return iHeresyPerTurnFromDiscord;
+}
+
+
+	if (eIndex == YIELD_HERESY)
+	{
+		iValue += getHeresyFromDiscord();
+	}
+
+
+	<Row Tag="TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_DISCORD">
+			<Text>[NEWLINE][ICON_BULLET]{1_Num}{2_IconString} 来自异教徒</Text>
+		</Row>
+
+
+		-- Collect founded religions
+	local foundedReligions = {}
+	for iPlayer = 0, GameDefines.MAX_MAJOR_CIVS - 1 do	
+		local pPlayer = Players[iPlayer] 
+		if (pPlayer:IsEverAlive() and pPlayer:HasCreatedReligion()) then
+			foundedReligions[pPlayer:GetReligionCreatedByPlayer()] = true 
+		end
+	end
+
+	-- Update instances
+	local isHolyCity = currentCity:IsHolyCityAnyReligion()
+	Controls.HolyCityWarning:SetHide(not isHolyCity)
+
+	conversionsManager:ResetInstances() 
+	for _, v in ipairs(data.religions) do
+		if foundedReligions[v.ID] then
+			local instance = conversionsManager:GetInstance() 
+			if instance then
+				instance.Header:SetText(v.iconString) 
+				local update = HookNumericBox("Conversion", 
+					function() return currentCity:GetNumFollowers(v.ID) end, 
+					function(amount) SetFollowers(v.ID, amount) end, 
+					0, currentCity:GetPopulation(), 1, instance) 
+				update(currentCity:GetNumFollowers(v.ID)) 
+				instance.MinButton:RegisterCallback(Mouse.eLClick, function() SetMinFollowers(v.ID) end) 
+				instance.MaxButton:RegisterCallback(Mouse.eLClick, function() SetMaxFollowers(v.ID) end) 
+
+				instance.NumericBox:SetToolTipString(L("TXT_KEY_IGE_FOLLOWERS", Game.GetReligionName(v.ID))) 
+				instance.MinButton:SetToolTipString(L("TXT_KEY_IGE_FOLLOWERS_MIN_HELP", Game.GetReligionName(v.ID))) 
+				instance.MaxButton:SetToolTipString(L("TXT_KEY_IGE_FOLLOWERS_MAX_HELP", Game.GetReligionName(v.ID))) 
+			end
+		end
+	end
+end

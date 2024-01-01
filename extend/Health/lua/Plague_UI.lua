@@ -89,12 +89,7 @@ function Player.GetCityHealthTotal(player, city, returnsDisease, isBase)
 	end
 
 	local totalHealth = city:GetYieldRate(yieldHealthID)
-	for row in GameInfo.Beliefs("FaithToHealthRate > 0") do
-		if player:HasBelief(row.ID) then
-			totalHealth = totalHealth + ((city:GetYieldRate(yieldFaithID) * row.FaithToHealthRate)/100)
-		end
-	end
-	
+
 	----------------------------------------------------------------------------------------
 
 	local totalDisease = 0
