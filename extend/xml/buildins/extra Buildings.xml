@@ -160,7 +160,7 @@
 				<Where Type="BUILDING_AQUEDUCT" />
 			</Update>
 			<Update>
-				<Set    PrereqTech="TECH_ADVANCED_AGRICULTURE"/>
+				<Set    PrereqTech="TECH_CONSTRUCTION"/>
 				<Where Type="BUILDING_BASILICA_CISTERN" />
 			</Update>
 			

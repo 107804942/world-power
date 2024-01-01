@@ -1607,7 +1607,7 @@ local function CityProduction( city )
 
 	elseif orderID == ORDER_CREATE then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Projects, itemID )
-		tip = GetHelpTextForProject( itemID, true )
+		tip = GetHelpTextForProject( itemID, true, city)
 
 	elseif orderID == ORDER_MAINTAIN then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Processes, itemID )
@@ -1913,7 +1913,7 @@ local function CityOrderItemTooltip( city, isDisabled, purchaseYieldID, orderID,
 
 		elseif orderID == ORDER_CREATE then
 			itemInfo = GameInfo.Projects
-			tip = GetHelpTextForProject( itemID, true )
+			tip = GetHelpTextForProject( itemID, true, city)
 		elseif orderID == ORDER_MAINTAIN then
 			itemInfo = GameInfo.Processes
 			tip = GetHelpTextForProcess( itemID, true )
