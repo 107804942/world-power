@@ -1,6 +1,9 @@
 ---Ô¶³Ì¼Ð»÷
 UPDATE UnitPromotions SET RangedFlankAttackModifier = '10' WHERE Type  = 'PROMOTION_ARCHERY_COMBAT'OR Type= 'PROMOTION_NAVAL_RANGED_CRUISER'OR Type= 'PROMOTION_NAVAL_RANGED_SHIP';
 
+---ºóÆÚÃâÒß·ýÂ²
+INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)
+SELECT  Type, 'PROMOTION_NO_CAPTURED' FROM Units WHERE HurryCostModifier = -1 AND Combat>=500;
 
 
 INSERT INTO UnitCombatInfos  	(Type,					Description)VALUES		

@@ -733,12 +733,6 @@ ALTER TABLE UnitPromotions ADD COLUMN 'GetGroundAttackRange' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 -------------------------------------------------------------------------------------------------
 
-	<!-- BUILDING: Allows you to define a flat yield that is gained from a CS alliance. -->
-	<Table name="Building_YieldPerAlly">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" notnull="true"/>
-	</Table>
 
 
 ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpyGlobal' BOOLEAN DEFAULT 0;
@@ -767,7 +761,7 @@ GetProjectCount()
 
 
 
-	-- Adds minimum national population requirement for a building.
+-- Adds minimum national population requirement for a building.
 ALTER TABLE Buildings ADD COLUMN 'NationalPopRequired' INTEGER DEFAULT 0;
 
 
@@ -781,34 +775,14 @@ ALTER TABLE Buildings ADD COLUMN 'NationalPopRequired' INTEGER DEFAULT 0;
 	</Table>
 
 
--- 
+
+	ALTER TABLE UnitPromotions ADD COLUMN 'MultiAttackBonus' INTEGER DEFAULT 0;
+	ALTER TABLE UnitPromotions ADD 'NumAttacksMadeThisTurnAttackMod' INTEGER DEFAULT 0;
 
 
+	ChangeNumTimesAttackedThisTurn
+
+	  <Row Class="6" Name="ROG_CORE_BOMBARD_RANGE_BUILDINGS" Value="0"/>
 
 
-		//	--------------------------------------------------------------------------------
-
-
-	 --GameEvents.EspionageCanStageCoup.Add(function(iPlayer, iCityOwner, iCity) return true)
-
-
-
-
-	<Table name="Building_YieldPerFriend">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" notnull="true"/>
-	</Table>
-	<!-- BUILDING: Allows you to define a flat yield that is gained from a CS alliance. -->
-	<Table name="Building_YieldPerAlly">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" notnull="true"/>
-	</Table>
-
-INSERT INTO Building_YieldPerFriend(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
-
-
-
-
+	  GetMultiAttackBonusCity

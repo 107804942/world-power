@@ -1083,37 +1083,7 @@
 		</Row>
 
 
-		<!--****乡村小屋***-->
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<ResourceType>RESOURCE_DEER</ResourceType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<ResourceType>RESOURCE_BISON</ResourceType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<ResourceType>RESOURCE_FUR</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<ResourceType>RESOURCE_IVORY</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
+	
 
 	</Building_ResourceYieldChanges>
 	
@@ -1811,22 +1781,6 @@
 
 
 
-		<!--乡村小屋-->
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<FlavorType>FLAVOR_I_LAND_TRADE_ROUTE</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
 		
 		<!--私人药店-->
 		<Row>
@@ -2771,21 +2725,7 @@
 		</Row>
 
 
-		<!--乡村小屋-->
-
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<ResourceType>RESOURCE_CONSUMER</ResourceType>
-			<Quantity>3</Quantity>
-		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_LONGHOUSE</BuildingType>
-			<ResourceType>RESOURCE_LUMBER</ResourceType>
-			<Quantity>7</Quantity>
-		</Row>
-
+	
 		<!--家具厂-->
 		<Row>
 			<BuildingType>BUILDING_MINGING_FACTORY</BuildingType>
@@ -2953,14 +2893,7 @@
 		</Row>
 
 
-		<!--乡村小屋-->
-
-		<Row>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>2</Yield>
-		</Row>
-
+	
 		<!--蓄水池-->
 
 		<Replace>

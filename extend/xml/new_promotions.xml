@@ -2126,10 +2126,6 @@
 			<Help>TXT_KEY_PROMOTION_ZHONGCHENGWS_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<GreatGeneralReceivesMovement>true</GreatGeneralReceivesMovement>
-			<GreatGeneralCombatModifier>33</GreatGeneralCombatModifier>
-			<GreatGeneralModifier>100</GreatGeneralModifier>
-			<AttackFortifiedMod>50</AttackFortifiedMod>
 			<Invisible>INVISIBLE_SUBMARINE</Invisible>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<IgnoreTerrainCost>true</IgnoreTerrainCost>
@@ -2911,7 +2907,18 @@
 			<ImmueMeleeAttack>1</ImmueMeleeAttack>
 		</Row>
 
-
+		<Row>
+			<Type>PROMOTION_NO_CAPTURED</Type>
+			<Description>TXT_KEY_PROMOTION_NO_CAPTURED</Description>
+			<Help>TXT_KEY_PROMOTION_NO_CAPTURED_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_NO_CAPTURED</PediaEntry>
+			<CannotBeCaptured>true</CannotBeCaptured>
+		</Row>
 
 
 
@@ -4067,7 +4074,8 @@
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
+			<NumAttacksMadeThisTurnAttackMod>8</NumAttacksMadeThisTurnAttackMod>	
+	     </Row>
 
 		<Row>
 			<Type>PROMOTION_NO_CHARGE_BONUS</Type>

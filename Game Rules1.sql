@@ -254,3 +254,20 @@ SELECT 'TECH_NANOTECHNOLOGY',				1;
 			<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
 		</Row>
 	</Building_ClassesNeededInCityOR>-->
+
+
+
+
+
+	INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)
+SELECT  Type, 'PROMOTION_NO_CAPTURED' FROM Units WHERE PrereqTech != -1 
+AND EXISTS (SELECT * FROM Technologies WHERE Type = Units.PrereqTech AND ERA_FUTURE = 'ERA_FUTURE');
+
+
+
+
+
+INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)
+SELECT  p.Type, 'PROMOTION_NO_CAPTURED' 
+FROM Units  AS p (WHERE p.HurryCostModifier = -1) 
+AND EXISTS (SELECT * FROM Technologies WHERE Type = p.PrereqTech AND Era = 'ERA_FUTURE');

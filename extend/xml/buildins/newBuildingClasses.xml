@@ -499,12 +499,6 @@
 
 
 
-		<Row>
-			<CivilizationType>CIVILIZATION_IROQUOIS</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_CARAVANSARY</BuildingClassType>
-			<BuildingType>BUILDING_LODGE</BuildingType>
-		</Row>
-
 
 
 		<Row>

@@ -554,6 +554,14 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
+
+			iModifier = pMyUnit:GetNumAttacksMadeThisTurnAttackMod()*pMyUnit:GetNumAttacksMadeThisTurn();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_NUM_MOD");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 			--Extra Resouce and Happiness Bonus
 			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
 			if (iModifier ~= 0) then
@@ -754,6 +762,16 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_CITY_STATE_FRENDSHIP");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
+
+
+			-- 重复攻击加成
+			iModifier = pMyUnit:GetMultiAttackBonusCity(pCity);
+			if (iModifier ~= 0 ) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+			-- END
 			
 			if (not bRanged) then
 				
@@ -1492,6 +1510,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
+			iModifier = pMyUnit:GetNumAttacksMadeThisTurnAttackMod()*pMyUnit:GetNumAttacksMadeThisTurn();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_NUM_MOD");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 			--Extra Resouce and Happiness Bonus
 			iModifier = pMyUnit:GetStrengthModifierFromExtraResource();
 			if (iModifier ~= 0) then
@@ -1505,6 +1530,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_EXCESS_HAPINESS_MODIFIER");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
+
+			-- 多重攻击加成
+			iModifier = pMyUnit:GetMultiAttackBonus(pTheirUnit);
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 
 			------新增原始首都数量加成
 			iModifier = pMyUnit:GetNumOriginalCapitalAttackMod();
@@ -3191,19 +3225,14 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		end
 
 		
-		-- BarbarianBonuses
-		--if (theirUnit:IsBarbarian()) then
+		-- 多重攻击加成
+			iModifier = myCity:GetMultiAttackBonusCity(theirUnit);
+		if (iModifier ~= 0) then
+			controlTable = g_MyCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS" );
+			controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end		
 
-		    --iModifier = GameInfo.HandicapInfos[Game:GetHandicapType()].BarbarianBonus;
-			--iModifier = pMyUnit:GetBarbarianCombatBonusTotal()
-			--iModifier = iModifier + myPlayer:GetBarbarianCombatBonus();
-
-			--if (iModifier ~= 0) then
-				--controlTable = g_MyCombatDataIM:GetInstance();
-				--controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_VS_BARBARIANS_BONUS" );
-				--controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-			---end
-		--end
 		
 		if (myCity:GetGarrisonedUnit() ~= nil) then		
 			iModifier = myPlayer:GetGarrisonedCityRangeStrikeModifier();

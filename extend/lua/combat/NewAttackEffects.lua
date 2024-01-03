@@ -343,36 +343,50 @@ if attUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
 if not attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STURMTIGER"].ID)  then 
 if not defUnit:IsDead()  then
 
-if batType == GameInfoTypes["BATTLETYPE_MELEE"] 
+if  batType == GameInfoTypes["BATTLETYPE_MELEE"] 
 or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFire() == false) then
 
     local uniqueRange = 2
 	for dx = -uniqueRange, uniqueRange - 1, 1 do
-		for dy = -uniqueRange, uniqueRange - 1, 1 do
+	for dy = -uniqueRange, uniqueRange - 1, 1 do
             local adjPlot = Map.PlotXYWithRangeCheck(attUnit:GetX(),attUnit:GetY(), dx, dy,1)
             if (adjPlot ~= nil) then
                 local unitCount = adjPlot:GetNumUnits();
                 if unitCount > 0 then
                     for i = 0, unitCount-1, 1 do
                         local pFoundUnit = adjPlot:GetUnit(i);
-                        if pFoundUnit~=attUnit and pFoundUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STURMTIGER"].ID)  then
-						if Players[pFoundUnit:GetOwner()] == attPlayer then
-						if Map.PlotDistance(pFoundUnit:GetX(), pFoundUnit:GetY(), defUnit:GetX(), defUnit:GetY()) <= pFoundUnit:Range() then
-                        pFoundUnit:SetMadeAttack(false)
-						pFoundUnit:ChangeMoves(GameDefines["MOVE_DENOMINATOR"])  
-						pFoundUnit:RangeStrike(defUnit:GetX(), defUnit:GetY())
-						pFoundUnit:SetMadeAttack(false)
-						           end         
+                        if pFoundUnit~=attUnit and pFoundUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STURMTIGER"].ID)  
+						and  Players[pFoundUnit:GetOwner()] == attPlayer 
+						and Map.PlotDistance(pFoundUnit:GetX(), pFoundUnit:GetY(), defUnit:GetX(), defUnit:GetY()) <= pFoundUnit:Range() then
+
+						pFoundUnit:ChangeMoves(GameDefines["MOVE_DENOMINATOR"])
+
+						if  pFoundUnit:GetNumAttacksMadeThisTurn()==0 then  ---本回合未攻击
+						    if 	pFoundUnit:CanRangeStrikeAt(defUnit:GetX(), defUnit:GetY()) then	  
+						    pFoundUnit:RangeStrike(defUnit:GetX(), defUnit:GetY())
+							pFoundUnit:ChangeMadeAttackNum(-1)
+							else 
+							pFoundUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
+							end
+				        else               ---本回合已攻击
+						
+						    pFoundUnit:ChangeMadeAttackNum(-1)
+						    if 	pFoundUnit:CanRangeStrikeAt(defUnit:GetX(), defUnit:GetY()) then				    	  
+						    pFoundUnit:RangeStrike(defUnit:GetX(), defUnit:GetY())
+						    else 
+						    pFoundUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
+							pFoundUnit:ChangeMadeAttackNum(1) 
+						    end
+                       end
 						       end
 						    end
 						 end
 					  end
-				   end
-				end
-			 end
-		  end     
-	   end  
-    end
+				  end
+		       end
+		   end     
+	    end  
+     end
  end
 
 -- ********************************************************

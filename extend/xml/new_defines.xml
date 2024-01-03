@@ -64,8 +64,9 @@
 	<!--***********************基础设置***********************-->
 	<CustomModOptions>
 		<!--*****额外新增功能******-->
+		<Replace Name="ROG_CORE_BOMBARD_RANGE_BUILDINGS" Value="1"/>
 		<Replace Name="MORE_NATURAL_WONDER" Value="1"/>
-		<Replace Name="EVENTS_CITY_BOMBARD" Value="1"/>
+		<!--<Replace Name="EVENTS_CITY_BOMBARD" Value="1"/>-->
 		<Replace Name="IMPROVEMENT_FUNCTION" Value="1"/>
 		<Replace Name="BUILDING_IMPROVEMENT_RESOURCES" Value="1"/>
 		<Replace Name="ROG_CORE" Value="1"/>
@@ -185,6 +186,10 @@
 
 
 	<Defines>
+		<Update>
+			<Set Value="50"/>
+			<Where Name="ORIGINAL_CAPITAL_MODMAX" />
+		</Update>
 		
 	<Update>
 		<Set Value="20"/>

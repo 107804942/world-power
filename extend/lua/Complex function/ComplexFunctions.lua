@@ -1673,35 +1673,6 @@ function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
 GameEvents.PlayerBuilt.Add(RemoveJungle)
 
 
--- ********************************************************
--- 阿基米德
--- ********************************************************	 
-function ARCHIMEDES(plot)
-         if plot==nil then
-         return false
-		 end
-		 local city= plot:GetWorkingCity()
-		 if city~=nil and city:IsHasBuilding(GameInfoTypes.BUILDING_ARCHIMEDES) then
-		    return true  
-	    end
-  return false 
-end 
-
-function ARCHIMEDES(iPlayer, iUnit, iX, iY, iBuild)
-   if iBuild == GameInfoTypes.BUILD_BEACON  then
-   local plot= Map.GetPlot(iX, iY)
-   local pPlayer = Players[iPlayer]
-   if pPlayer:HasWonder(GameInfoTypes.BUILDING_ARCHIMEDES) 
-   and ARCHIMEDES(plot) 
-   and pPlayer:CountAllImprovement(GameInfoTypes["IMPROVEMENT_BEACON"])==0    then
-      return true
-		 end   
-	  return false
-	  end
-	  return true
- end
-GameEvents.PlayerCanBuild.Add(ARCHIMEDES)
-
 
 -- **********************************************************************************************************************************************
 -- 购买地块

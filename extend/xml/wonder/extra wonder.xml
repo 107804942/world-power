@@ -1182,6 +1182,7 @@
 			<Water>1</Water>
 			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
 			<TechEnhancedTourism>6</TechEnhancedTourism>
+			<WaterTileMovementReduceGlobal>1</WaterTileMovementReduceGlobal>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<FreePromotion>PROMOTION_STEAM_POWERED</FreePromotion>
 			<PortraitIndex>175</PortraitIndex>
@@ -1318,7 +1319,7 @@
 			<Happiness>-5</Happiness>
 			<FreePromotion>PROMOTION_HPMOD2</FreePromotion>
 			<FreePromotion2>PROMOTION_MAGINOT_LINE</FreePromotion2>
-			<!--<TrainedFreePromotion>PROMOTION_MAGINOT_LINE</TrainedFreePromotion>-->
+			<LandTileMovementReduceGlobal>1</LandTileMovementReduceGlobal>
 			<Defense>8000</Defense>
 			<ExtraCityHitPoints>100</ExtraCityHitPoints>
 			<GlobalDefenseMod>20</GlobalDefenseMod>
@@ -1926,7 +1927,6 @@
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<SpecialistCount>1</SpecialistCount>
-			<Hill>true</Hill>
 			<NukeImmune>true</NukeImmune>
 			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
 			<HurryCostModifier>-1</HurryCostModifier>
