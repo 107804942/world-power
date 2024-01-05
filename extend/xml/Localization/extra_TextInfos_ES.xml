@@ -155,7 +155,9 @@
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT" >
 			<Text>[COLOR_ENDURANCE]额外远程攻击能力[ENDCOLOR]</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_EUPANEL_WITHDRAW_CHANCE">
+			<Text>[COLOR_CYAN]撤退概率[ENDCOLOR]</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH" >
 			<Text>[COLOR_ENDURANCE]无视资源惩罚[ENDCOLOR]</Text>

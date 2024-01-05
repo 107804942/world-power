@@ -1021,18 +1021,39 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			-- Normal Melee Combat
 			else
 
-			iTheirStrength = pTheirUnit:GetMaxDefenseStrength(pToPlot, pMyUnit);				
+			-- checks for embarkation ...
+			iTheirStrength = pTheirUnit:GetMaxDefenseStrength(pToPlot, pMyUnit);
+			
+				-- deal with extra Ranged Support Fire attack
+				if (pMyUnit:IsRangedSupportFire() == true) then
+					local iTheirDamage = pTheirUnit:GetDamage();
+					local iMyRangedSupportDamageInflicted = pMyUnit:GetRangeCombatDamage(pTheirUnit, nil, false);
+					local iTheirDamageModifier = pTheirUnit:GetDamageCombatModifier(false, iTheirDamage + iMyRangedSupportDamageInflicted);
+					iTheirStrength = iTheirStrength * (100 + iTheirDamageModifier) / 100;
+				end
+				-------end
+							
 				local pFireSupportUnit = pMyUnit:GetFireSupportUnit(pTheirUnit:GetOwner(), pToPlot:GetX(), pToPlot:GetY());
 				if (pFireSupportUnit ~= nil) then
-					local iTheirDamage = pTheirUnit:GetDamage(); ----他们的单位已经受到的伤害
-					local iTheirDamageModifier = pTheirUnit:GetDamageCombatModifier(false, iTheirDamage + pMyUnit:GetRangeCombatDamage(pTheirUnit, nil, false));
-					iTheirStrength = iTheirStrength * (100 + iTheirDamageModifier) / 100;
+					--local iTheirDamage = pTheirUnit:GetDamage(); ----他们的单位已经受到的伤害
+					--local iTheirDamageModifier = pTheirUnit:GetDamageCombatModifier(false, iTheirDamage + pMyUnit:GetRangeCombatDamage(pTheirUnit, nil, false));
+					--iTheirStrength = iTheirStrength * (100 + iTheirDamageModifier) / 100;
 					iTheirFireSupportCombatDamage = pFireSupportUnit:GetRangeCombatDamage(pMyUnit, nil, false);
 				end
 				
 				iMyDamageInflicted = pMyUnit:GetCombatDamage(iMyStrength, iTheirStrength, pMyUnit:GetDamage() + iTheirFireSupportCombatDamage, false, false, false);  --我对ai的伤害
-				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false); --ai对我的伤害
+				iMyDamageInflicted = iMyDamageInflicted + iMyRangedSupportDamageInflicted;  ---先手远程打击一并计算
+
+				if (pTheirUnit:IsEmbarked()) then
+				    iTheirDamageInflicted = 0
+				else
+    				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false);  --ai对我的伤害
+    		    end
 				iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
+
+
+				--iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false); --ai对我的伤害
+				---iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
 				
 			end
 
@@ -1205,13 +1226,17 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 			-------------------------
-			--Nocapture--
+			--不可被俘--
 			-------------------------
 			if(pMyUnit:IsCannotBeCapturedUnit() == true) then
 				controlTable = g_MyCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NO_CAPTURE" );
 				controlTable.Value:SetText("");
 			end
+
+
+	
+
 			-------------------------
 			-- Movement Immunity ----
 			-------------------------
@@ -2101,6 +2126,19 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_NO_CAPTURE" );
 				controlTable.Value:SetText("");
 			end
+
+			---------------------
+			-- 撤退几率 --
+			---------------------
+			if (not bRanged) then
+				iChance = pTheirUnit:GetWithdrawChance(pMyUnit);
+				if (iChance >= 0) then
+				   controlTable = g_TheirCombatDataIM:GetInstance();
+				   controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_WITHDRAW_CHANCE");
+				   controlTable.Value:SetText( GetFormattedText(strText, iChance, false, true, "[COLOR_CYAN]") );
+				end		
+			end		
+
 			-------------------------
 			-- Movement Immunity ----
 			-------------------------
@@ -3226,12 +3264,12 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 
 		
 		-- 多重攻击加成
-			iModifier = myCity:GetMultiAttackBonusCity(theirUnit);
-		if (iModifier ~= 0) then
-			controlTable = g_MyCombatDataIM:GetInstance();
-			controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS" );
-			controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-			end		
+			--iModifier = myCity:GetMultiAttackBonusCity(theirUnit);
+	---	if (iModifier ~= 0) then
+			--controlTable = g_MyCombatDataIM:GetInstance();
+			--controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_BONUS_MULTI_ATTACK_BONUS" );
+			---controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			---end		
 
 		
 		if (myCity:GetGarrisonedUnit() ~= nil) then		

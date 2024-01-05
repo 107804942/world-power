@@ -144,7 +144,9 @@
 		<Row Tag="TXT_KEY_EUPANEL_NO_CAPTURE" >
 			<Text>[COLOR_ENDURANCE]不可被俘[ENDCOLOR]</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_EUPANEL_WITHDRAW_CHANCE">
+			<Text>[COLOR_CYAN]撤退概率[ENDCOLOR]</Text>
+		</Row>
 		<Replace Tag="TXT_KEY_UNIT_IGNORE_ZOC_D" >
 			<Text>[COLOR_ENDURANCE]无视ZOC[ENDCOLOR]</Text>
 		</Replace>
@@ -8186,7 +8188,7 @@
 			</Text>
 		</Row>
 
-
+	
 
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS">
 			<Text>步马协同</Text>
