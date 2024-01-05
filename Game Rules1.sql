@@ -271,3 +271,19 @@ INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)
 SELECT  p.Type, 'PROMOTION_NO_CAPTURED' 
 FROM Units  AS p (WHERE p.HurryCostModifier = -1) 
 AND EXISTS (SELECT * FROM Technologies WHERE Type = p.PrereqTech AND Era = 'ERA_FUTURE');
+
+
+INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);
+
+INSERT INTO Building_YieldFromPillageGlobal(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_CASTLE','YIELD_FAITH',100);
+
+
+INSERT INTO Building_YieldFromPillageGlobalPlayer(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
+
+
+INSERT INTO Building_YieldPerEspionageSpy(BuildingType,YieldType,Yield) 
+VALUES ('BUILDING_BLETCHLEY_PARK','YIELD_SCIENCE',100);
+

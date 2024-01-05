@@ -341,7 +341,6 @@ end
 -- ******************************************************** 
 if attUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
 if not attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_STURMTIGER"].ID)  then 
-if not defUnit:IsDead()  then
 
 if  batType == GameInfoTypes["BATTLETYPE_MELEE"] 
 or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFire() == false) then
@@ -362,8 +361,8 @@ or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFir
 						pFoundUnit:ChangeMoves(GameDefines["MOVE_DENOMINATOR"])
 
 						if  pFoundUnit:GetNumAttacksMadeThisTurn()==0 then  ---本回合未攻击
-						    if 	pFoundUnit:CanRangeStrikeAt(defUnit:GetX(), defUnit:GetY()) then	  
-						    pFoundUnit:RangeStrike(defUnit:GetX(), defUnit:GetY())
+						    if 	pFoundUnit:CanRangeStrikeAt(defPlot:GetX(), defPlot:GetY()) then	  
+						    pFoundUnit:RangeStrike(defPlot:GetX(), defPlot:GetY())
 							pFoundUnit:ChangeMadeAttackNum(-1)
 							else 
 							pFoundUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
@@ -371,13 +370,13 @@ or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFir
 				        else               ---本回合已攻击
 						
 						    pFoundUnit:ChangeMadeAttackNum(-1)
-						    if 	pFoundUnit:CanRangeStrikeAt(defUnit:GetX(), defUnit:GetY()) then				    	  
-						    pFoundUnit:RangeStrike(defUnit:GetX(), defUnit:GetY())
+						    if 	pFoundUnit:CanRangeStrikeAt(defPlot:GetX(), defPlot:GetY()) then				    	  
+						    pFoundUnit:RangeStrike(defPlot:GetX(), defPlot:GetY())
 						    else 
 						    pFoundUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
 							pFoundUnit:ChangeMadeAttackNum(1) 
 						    end
-                       end
+
 						       end
 						    end
 						 end

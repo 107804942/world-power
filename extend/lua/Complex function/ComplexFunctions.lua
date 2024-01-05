@@ -1734,7 +1734,32 @@ end
 GameEvents.CircumnavigatedGlobe.Add(OnCircumnavigatedGlobe)
 LuaEvents.MagellanNotificationIdRequest()
 
-
+-- ********************************************************
+-- 
+-- ********************************************************  
+ function ghostdamage(iPlayer, iUnit, iFromX, iFromY, iToX, iToY) 
+   local Player = Players[iPlayer]
+   local pUnit = Player:GetUnitByID(iUnit)
+   local ToPlot = Map.GetPlot(iToX, iToY)
+   if pUnit == nil or (not pUnit:IsHasPromotion(GameInfoTypes.PROMOTION_GHOST_POWER)) then
+   return
+   end
+   for i = 0, 5 do
+			local adjPlot = Map.PlotDirection(iToX,iToY, i)
+			if adjPlot ~= nil then
+			local unitCount = adjPlot:GetNumUnits()
+			if unitCount > 0 then
+				for i = 0, unitCount - 1, 1 do
+				local pFoundUnit = adjPlot:GetUnit(i)
+				if Player:IsAtWarWith(pFoundUnit:GetOwner())   then
+				pFoundUnit:ChangeDamage(33, Player)
+				end
+			 end
+		 end
+	  end
+   end
+end 	
+GameEvents.ParadropAt.Add(ghostdamage)  
 -- ********************************************************
 -- 
 -- ********************************************************           
@@ -1751,7 +1776,7 @@ function GUIGU_SPY(iPlayer, iSpy, iResult, iCityX, iCityY)
    local iTeam = Teams[iTeamID]
    local iTeamTechs = iTeam:GetTeamTechs()
    local iGoldPerTurn = Player:CalculateGoldRate()
-   local Science=math.max(0,4*Player:GetScience())
+   local Science=math.max(0,2*Player:GetScience())
    if  iResult then
 
    --City:ChangeDamage(50)

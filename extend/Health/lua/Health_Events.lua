@@ -163,7 +163,7 @@ function CitySetDoctor(iPlayer)
 		end
 
 	for unit in player:Units() do	
-	if  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_DOCTOR"].ID) then ------有医生单位
+	if  unit:GetUnitType() ==GameInfoTypes["UNIT_DOCTOR"] then ------有医生单位
 	table.insert(DoctorTAB, unit)
 	   end
 	end
@@ -249,7 +249,6 @@ function DiseaseUnits(city)
 		if  pFoundUnit~=nil and pFoundUnit:NukeDamageLevel()== -1 
 		and pFoundUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR 
 		and pFoundUnit:GetUnitType() ~=GameInfoTypes["UNIT_DOCTOR"]
-	    and pFoundUnit:GetUnitType() ~=GameInfoTypes["UNIT_MODERN_DOCTOR"]  
 		and pFoundUnit:GetUnitType() ~=GameInfoTypes["UNIT_GREAT_DOCTOR"] then
 		          pFoundUnit:ChangeDamage(50)  
 		          pFoundUnit:SetHasPromotion(GameInfoTypes.PROMOTION_PLAGUED, true) 
@@ -422,7 +421,7 @@ function Health_MissionPossible(playerID, unitID, missionID, data1, data2, _, _,
 	local player = Players[playerID]
 	if    missionID == GameInfoTypes["MISSION_DOCTOR_CURE_CITY"] then
 		local unit = player:GetUnitByID(unitID)
-		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_DOCTOR"] or unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_MODERN_DOCTOR"] then
+		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_DOCTOR"] then
 			local unitPlot = Map.GetPlot(plotX, plotY)
 			local unitPlotCity = unitPlot:GetPlotCity()
 			if ((not unitPlotCity) or (not unitPlotCity:HasPlague()) ) then
@@ -432,7 +431,7 @@ function Health_MissionPossible(playerID, unitID, missionID, data1, data2, _, _,
 		end
 	elseif missionID == GameInfoTypes["MISSION_DOCTOR_CURE_UNIT"] then
 		local unit = player:GetUnitByID(unitID)
-		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_DOCTOR"]  or unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_MODERN_DOCTOR"]  then
+		if unit:GetUnitClassType() == GameInfoTypes["UNITCLASS_DOCTOR"] then
 			local unitPlot = Map.GetPlot(plotX, plotY)
 			local unitPlotCity = unitPlot:GetPlotCity()  
 			if (not IsNearDiseaseUnit(unit) ) then

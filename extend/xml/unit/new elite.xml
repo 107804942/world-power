@@ -210,8 +210,9 @@
 			<Moves>4</Moves>
 			<BaseSightRange>3</BaseSightRange>
 			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>
+			<ProductionCostAddedPerEra>100</ProductionCostAddedPerEra>
 			<Domain>DOMAIN_LAND</Domain>
-			<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>
+			<!--<ObsoleteTech>TECH_BIOLOGY</ObsoleteTech>-->
 			<ExtraMaintenanceCost>6</ExtraMaintenanceCost>
 			<Description>TXT_KEY_UNIT_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT</Civilopedia>
@@ -225,36 +226,10 @@
 			<UnitFlagAtlas>UNIT_FLAG_GREAT_DOCTOR_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
 			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>HEALTH_UNIT_ATLAS</IconAtlas>
-		</Row>
+			<IconAtlas>HEALTH_UNIT_ATLAS</IconAtlas>	
+	    </Row>
 
-		<Row>
-			<Class>UNITCLASS_MODERN_DOCTOR</Class>
-			<Type>UNIT_MODERN_DOCTOR</Type>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<PrereqTech>TECH_BIOLOGY</PrereqTech>
-			<Cost>400</Cost>
-			<Moves>5</Moves>
-			<BaseSightRange>1</BaseSightRange>
-			<CivilianAttackPriority>CIVILIAN_ATTACK_PRIORITY_HIGH</CivilianAttackPriority>
-			<Domain>DOMAIN_LAND</Domain>
-			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
-			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
-			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DOCTOR_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_DOCTOR</Help>
-			<AdvancedStartCost>10</AdvancedStartCost>
-			<MoveAfterPurchase>true</MoveAfterPurchase>
-			<MoveRate>GREAT_PERSON</MoveRate>
-			<CombatLimit>0</CombatLimit>
-			<UnitArtInfo>ART_DEF_UNIT_GREAT_DOCTOR</UnitArtInfo>
-			<UnitArtInfoEraVariation>true</UnitArtInfoEraVariation>
-			<UnitFlagAtlas>FA_UNIT_FLAG_ATLAS_A</UnitFlagAtlas>
-			<UnitFlagIconOffset>34</UnitFlagIconOffset>
-			<PortraitIndex>3</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-		</Row>
-		
+	
 
 		<Row>
 			<Class>UNITCLASS_HITTITE_WAR_CHARIOT</Class>
@@ -687,7 +662,7 @@
 		<Row>
 			<Type>UNIT_ALIEN_SIEGE_WORM</Type>
 			<Class>UNITCLASS_ALIEN_SIEGE_WORM</Class>
-			<Combat>1000</Combat>
+			<Combat>1200</Combat>
 			<Cost>18000</Cost>
 			<Moves>3</Moves>
 			<PrereqTech>TECH_MASS</PrereqTech>
@@ -720,8 +695,8 @@
 			<Type>UNIT_HOVER_WORM</Type>
 			<Class>UNITCLASS_HOVER_WORM</Class>
 			<BaseSightRange>6</BaseSightRange>
-			<Combat>1000</Combat>
-			<RangedCombat>1000</RangedCombat>
+			<Combat>1200</Combat>
+			<RangedCombat>1200</RangedCombat>
 			<Range>8</Range>
 			<Cost>18000</Cost>
 			<Moves>10</Moves>
@@ -754,7 +729,7 @@
 		<Row>
 			<Type>UNIT_NAVAL_MONSTER</Type>
 			<Class>UNITCLASS_NAVAL_MONSTER</Class>
-			<Combat>1000</Combat>
+			<Combat>1200</Combat>
 			<Cost>18000</Cost>
 			<Moves>9</Moves>
 			<HurryCostModifier>-1</HurryCostModifier>
@@ -2885,11 +2860,7 @@
 			<UnitType>UNIT_DOCTOR</UnitType>
 			<PromotionType>PROMOTION_DOCTOR</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
-			<PromotionType>PROMOTION_DOCTOR</PromotionType>
-		</Row>
-		
+	
 
 		<Row>
 			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
@@ -3183,27 +3154,8 @@
 			<Flavor>500</Flavor>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
-			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>750</Flavor>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
-			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
-			<Flavor>500</Flavor>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>500</Flavor>
-		</Row>
+	
 		
-
 	</Unit_Flavors>
 
 	<Unit_UniqueNames>

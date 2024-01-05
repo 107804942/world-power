@@ -6,7 +6,13 @@ INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)
 SELECT  Type, 'PROMOTION_NO_CAPTURED' FROM Units WHERE HurryCostModifier = -1 AND Combat>=500;
 
 
-INSERT INTO UnitCombatInfos  	(Type,					Description)VALUES		
+---步马协同
+INSERT  INTO UnitPromotions_CombatModPerAdjacentUnitCombat(PromotionType,UnitCombatType ,Modifier,Attack,Defense)
+VALUES ('PROMOTION_ANTI_ANTI_MOUNTED_BONUS','UNITCOMBAT_MELEE',8,0,0);
+
+
+
+INSERT INTO UnitCombatInfos (Type,	Description)VALUES		
     ('UNITCOMBAT_SETTLER',	'TXT_KEY_UNITCOMBAT_SETTLER'),
 	('UNITCOMBAT_WORKER',	'TXT_KEY_UNITCOMBAT_WORKER');
 
@@ -1720,10 +1726,6 @@ SELECT Type, 'RESOURCE_GUNPOWDER',3 FROM Buildings WHERE BuildingClass='BUILDING
 
 
  -------------------------------单位升级------------------------------
-
- --医生
-INSERT INTO Unit_ClassUpgrades(UnitType, UnitClassType)
-SELECT Type, 'UNITCLASS_MODERN_DOCTOR' FROM Units WHERE Class='UNITCLASS_DOCTOR';
 
  --堡垒
 INSERT INTO Unit_ClassUpgrades(UnitType, UnitClassType)

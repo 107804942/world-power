@@ -721,7 +721,25 @@ ALTER TABLE UnitPromotions ADD COLUMN 'RangedFlankAttackModifierPercent' INTEGER
 ALTER TABLE UnitPromotions ADD COLUMN 'RangedFlankAttackModifier' INTEGER DEFAULT 0;
 
 
-	<GetGroundAttackRange>1</GetGroundAttackRange>
+--对被攻击的单位多次攻击叠加加成
+ALTER TABLE UnitPromotions ADD COLUMN 'MultiAttackBonus' INTEGER DEFAULT 0;
+
+--本回合以攻击次数加成
+ALTER TABLE UnitPromotions ADD 'NumAttacksMadeThisTurnAttackMod' INTEGER DEFAULT 0;
+
+--对高人口加成
+ALTER TABLE UnitPromotions ADD 'AntiHigherPopMod' INTEGER DEFAULT 0;
+
+
+	<!-- Promotion: Unit gains the specified combat modifier (can specify attack or defense only) per adjacent unit of the specified unit combat type -->
+	<Table name="UnitPromotions_CombatModPerAdjacentUnitCombat">
+		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
+		<Column name="UnitCombatType" type="text" reference="UnitCombatInfos(Type)"/>
+		<Column name="Modifier" type="integer"/>
+		<Column name="Attack" type="integer"/>
+		<Column name="Defense" type="integer"/> <!-- note the American spelling -->
+	</Table>
+
 	
 -- Base damage dealth to adjacent air units after an unintercepted air sweep
 ALTER TABLE UnitPromotions ADD COLUMN 'GetGroundAttackDamage' INTEGER DEFAULT 0;
@@ -732,27 +750,14 @@ ALTER TABLE UnitPromotions ADD COLUMN 'GetGroundAttackRange' INTEGER DEFAULT 0;
 -- Changes the intercept range against air units (NEW)
 ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 -------------------------------------------------------------------------------------------------
-
+ALTER TABLE UnitPromotions ADD  'IsCanParadropUnLimit' BOOLEAN DEFAULT 0;
 
 
 ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpyGlobal' BOOLEAN DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpy' BOOLEAN DEFAULT 0;
 
-INSERT INTO Building_YieldFromPillage(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_WORKSHOP','YIELD_FAITH',100);
 
-INSERT INTO Building_YieldFromPillageGlobal(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_CASTLE','YIELD_FAITH',100);
-
-
-INSERT INTO Building_YieldFromPillageGlobalPlayer(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_WALLS','YIELD_GOLD',100);
-
-
-INSERT INTO Building_YieldPerEspionageSpy(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_BLETCHLEY_PARK','YIELD_SCIENCE',100);
-
-
+UPDATE UnitPromotions SET IsCanParadropUnLimit=1 WHERE Type='PROMOTION_GHOST';
 
 
 GAMEEVENTINVOKE_HOOK(GAMEEVENT_CityProjectComplete, getOwner(), GetID(), eProjectType);
@@ -765,51 +770,16 @@ GetProjectCount()
 ALTER TABLE Buildings ADD COLUMN 'NationalPopRequired' INTEGER DEFAULT 0;
 
 
-		<!-- Promotion: Unit gains the specified combat modifier (can specify attack or defense only) per adjacent unit of the specified unit combat type -->
-	<Table name="UnitPromotions_CombatModPerAdjacentUnitCombat">
-		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
-		<Column name="UnitCombatType" type="text" reference="UnitCombatInfos(Type)"/>
-		<Column name="Modifier" type="integer"/>
-		<Column name="Attack" type="integer"/>
-		<Column name="Defense" type="integer"/> <!-- note the American spelling -->
-	</Table>
+ALTER TABLE Units ADD COLUMN 'ProductionCostAddedPerEra' integer default 0;
+
+
+INSERT  INTO UnitPromotions_CombatModPerAdjacentUnitCombat(PromotionType,UnitCombatType ,Modifier,Attack,Defense)
+VALUES ('PROMOTION_COMBAT_TO_DEATH','UNITCOMBAT_ARMOR',50,100,25);
+
+UPDATE UnitPromotions SET AntiHigherPopMod=100 WHERE Type='PROMOTION_GOLEM';
 
 
 
-	ALTER TABLE UnitPromotions ADD COLUMN 'MultiAttackBonus' INTEGER DEFAULT 0;
-	ALTER TABLE UnitPromotions ADD 'NumAttacksMadeThisTurnAttackMod' INTEGER DEFAULT 0;
-
-
-	ChangeNumTimesAttackedThisTurn
-
-	<Row Tag="TXT_KEY_EUPANEL_WITHDRAW_CHANCE">
-			<Text>[COLOR_CYAN]撤退概率[ENDCOLOR]</Text>
-		</Row>
-
-	-- CombatBonusVsHigherPop
-			iModifier = pMyPlayer:GetCombatBonusVsHigherPop();
-			if (iModifier ~= 0 and pTheirUnit:IsHigherPopThan(pMyUnit) and bonusCount < maxBonusDisplay) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_TRAIT_LOW_POP_BONUS" );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-				bonusCount = bonusCount + 1;
-			elseif (iModifier ~= 0 and pTheirUnit:IsHigherPopThan(pMyUnit)) then
-				bonusSum = bonusSum + iModifier;
-				bonusCount = bonusCount + 1;
-			end
-
-
-
-			-- PerAdjacentUnitCombatModifier
-			iModifier = pMyUnit:PerAdjacentUnitCombatModifier() + pMyUnit:PerAdjacentUnitCombatAttackMod();
-			if (iModifier ~= 0 and bonusCount < maxBonusDisplay) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				--local unitClassType = Locale.ConvertTextKey(GameInfo.UnitClasses[pTheirUnit:GetUnitClassType()].Description);
-				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_PER_ADJACENT_UNIT_COMBAT" );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-				bonusCount = bonusCount + 1;
-			elseif (iModifier ~= 0) then
-				bonusSum = bonusSum + iModifier;
-				bonusCount = bonusCount + 1;
-			end
--- END
+#if defined(MOD_CIV6_WORKER)
+	int GetBuilderStrength() const;
+#endif

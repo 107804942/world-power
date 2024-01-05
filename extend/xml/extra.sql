@@ -6,6 +6,10 @@
  --AND  EXISTS (SELECT * FROM Unit_FreePromotions WHERE (PromotionType ='PROMOTION_GUNPOWDER_INFANTRY_COMBAT' AND UnitType = NEW.Type)))
 
 
+ -----采矿同步青铜资源开发
+UPDATE Resources SET TechCityTrade = 'TECH_POTTERY'  WHERE TechCityTrade ='TECH_BRONZE_WORKING'; 
+UPDATE Resources SET TechCityTrade = 'TECH_MINING'  WHERE TechCityTrade ='TECH_CALENDAR'; 
+UPDATE Resources SET TechCityTrade = 'TECH_STONE_TOOLS'  WHERE TechCityTrade ='TECH_MASONRY'; 
 ------------------------------------------------------------------------------------------------------------------------
 -- 强权
 ------------------------------------------------------------------------------------------------------------------------

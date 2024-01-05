@@ -242,19 +242,6 @@
 		</Row>
 
 
-
-
-		
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_MODERN_DOCTOR</UnitClassType>
-			<UnitType/>
-		</Row>
 		
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
@@ -616,13 +603,6 @@
 		</Row>
 
 		
-		
-		<Row>
-			<Type>UNITCLASS_MODERN_DOCTOR</Type>
-			<Description>TXT_KEY_UNIT_MODERN_DOCTOR</Description>
-			<DefaultUnit>UNIT_MODERN_DOCTOR</DefaultUnit>
-			<MaxPlayerInstances>6</MaxPlayerInstances>
-		</Row>
 
 
 		<Row>

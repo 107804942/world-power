@@ -166,19 +166,6 @@
 
 
 
-	<UnitPromotions_YieldFromKills>
-		<Row>
-			<PromotionType>PROMOTION_WISDOM</PromotionType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>20</Yield>
-		</Row>
-
-	</UnitPromotions_YieldFromKills>
-
-
-
-
-
 
 	<!-- * 地貌伤害及移动力数值 * -->
 
@@ -2916,6 +2903,8 @@
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<ShowInPedia>0</ShowInPedia>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
 			<PediaEntry>TXT_KEY_PROMOTION_NO_CAPTURED</PediaEntry>
 			<CannotBeCaptured>true</CannotBeCaptured>
 		</Row>
@@ -4074,7 +4063,7 @@
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<NumAttacksMadeThisTurnAttackMod>8</NumAttacksMadeThisTurnAttackMod>	
+			<!--<NumAttacksMadeThisTurnAttackMod>8</NumAttacksMadeThisTurnAttackMod>-->	
 	     </Row>
 
 		<Row>
@@ -4184,7 +4173,7 @@
 			<PortraitIndex>25</PortraitIndex>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<IconAtlas>VALERY_ATLAS</IconAtlas>
-			<AttackFullyHealedMod>50</AttackFullyHealedMod>
+			<IsCanParadropUnLimit>1</IsCanParadropUnLimit>
 			<FightWellDamaged>1</FightWellDamaged>
 			<SplashDamageImmune>1</SplashDamageImmune>
 			<CollateralDamageImmune>1</CollateralDamageImmune>
@@ -4248,25 +4237,6 @@
 			<DefenseMod>33</DefenseMod>
 			<PediaEntry>TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</PediaEntry>
 		</Row>
-
-
-
-
-
-		<!--**************杀敌获取科研**************-->
-
-		<Row>
-			<Type>PROMOTION_WISDOM</Type>
-			<Description>TXT_KEY_WISDOM_X</Description>
-			<Help>TXT_KEY_WISDOM</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>3</PortraitIndex>
-			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>VALERY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_WISDOM_X</PediaEntry>
-		</Row>
-
 
 
 

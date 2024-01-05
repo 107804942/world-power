@@ -597,6 +597,13 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
+				------新增对高人口加成
+			iModifier = pMyUnit:GetAntiHigherPopMod();
+			if (iModifier ~= 0 and  pMyPlayer:GetTotalPopulation()<pTheirPlayer:GetTotalPopulation() ) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_TRAIT_LOW_POP_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
 
 			------新增与首都同大陆加成
 			  iModifier = pMyUnit:GetOnCapitalLandAttackMod();
@@ -904,6 +911,17 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 				end
 			end
+
+
+			-- PerAdjacentUnitCombatModifier
+			iModifier = pMyUnit:PerAdjacentUnitCombatModifier() + pMyUnit:PerAdjacentUnitCombatAttackMod();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				--local unitClassType = Locale.ConvertTextKey(GameInfo.UnitClasses[pTheirUnit:GetUnitClassType()].Description);
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_PER_ADJACENT_UNIT_COMBAT" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 			
 			-- Policy Attack bonus
 			local iTurns = pMyPlayer:GetAttackBonusTurns();
@@ -986,6 +1004,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			
 			-- Start with logic of combat estimation
 			local iMyDamageInflicted = 0;
+			local iMyRangedSupportDamageInflicted = 0; --新增
 			local iTheirDamageInflicted = 0;
 			local iTheirFireSupportCombatDamage = 0;
 
@@ -1435,6 +1454,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
+			-- 对高人口数量加成
+			iModifier = pMyUnit:GetAntiHigherPopMod();
+			if (iModifier ~= 0 and pTheirUnit:IsHigherPopThan(pMyUnit)) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_TRAIT_LOW_POP_BONUS" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
 
 
 					
@@ -1526,6 +1552,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 				
+	--临近战斗类型加成
+			iModifier = pMyUnit:PerAdjacentUnitCombatModifier() + pMyUnit:PerAdjacentUnitCombatAttackMod();
+			if (iModifier ~= 0 ) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				--local unitClassType = Locale.ConvertTextKey(GameInfo.UnitClasses[pTheirUnit:GetUnitClassType()].Description);
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_PER_ADJACENT_UNIT_COMBAT" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
 			-- Attack Modifier
 			iModifier = pMyUnit:GetAttackModifier();
 			if (iModifier ~= 0) then
@@ -2131,11 +2166,12 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			-- 撤退几率 --
 			---------------------
 			if (not bRanged) then
-				iChance = pTheirUnit:GetWithdrawChance(pMyUnit);
+				iChance = pTheirUnit:GetWithdrawChance(pMyUnit,true);
 				if (iChance >= 0) then
-				   controlTable = g_TheirCombatDataIM:GetInstance();
-				   controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_WITHDRAW_CHANCE");
-				   controlTable.Value:SetText( GetFormattedText(strText, iChance, false, true, "[COLOR_CYAN]") );
+				  controlTable = g_TheirCombatDataIM:GetInstance();
+				  controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_WITHDRAW_CHANCE", iChance);
+				  controlTable.Value:SetText("");
+				  --controlTable.Value:SetText( GetFormattedText(strText, iChance, false, true, "[COLOR_CYAN]") );
 				end		
 			end		
 
@@ -2655,6 +2691,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 
 
+				-- 临近战斗类型
+				iModifier = pTheirUnit:PerAdjacentUnitCombatModifier() + pTheirUnit:PerAdjacentUnitCombatDefenseMod();
+				if (iModifier ~= 0 ) then
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					--local unitClassType = Locale.ConvertTextKey(GameInfo.UnitClasses[pTheirUnit:GetUnitClassType()].Description);
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_PER_ADJACENT_UNIT_COMBAT" );
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+				end
 
 				-- DomainModifier
 				iModifier = pTheirUnit:DomainModifier(pMyUnit:GetDomainType());
@@ -2719,7 +2763,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 				end
 				
-				
+				-- 对高人口数量加成
+			iModifier = pTheirUnit:GetAntiHigherPopMod();
+			if (iModifier ~= 0 and pMyUnit:IsHigherPopThan(pTheirUnit)) then
+				controlTable = g_MyCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_TRAIT_LOW_POP_BONUS" );
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
 
 							
 				-- CapitalDefenseModifier
@@ -2959,6 +3009,15 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_ADJACENT_FRIEND_UNIT_BONUS" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 			end
+		end
+
+
+		-- 临近战斗类型
+		iModifier = theirUnit:PerAdjacentUnitCombatModifier() + theirUnit:PerAdjacentUnitCombatDefenseMod();
+		if (iModifier ~= 0 ) then
+			controlTable = g_TheirCombatDataIM:GetInstance();
+			controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_PER_ADJACENT_UNIT_COMBAT" );
+			controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 		end
 		
 		-- Plot Defense

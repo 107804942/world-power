@@ -156,7 +156,14 @@
 			<Text>[COLOR_ENDURANCE]额外远程攻击能力[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_WITHDRAW_CHANCE">
-			<Text>[COLOR_CYAN]撤退概率[ENDCOLOR]</Text>
+			<Text>[COLOR_CYAN]撤退概率{1_Num}%[ENDCOLOR]</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUPANEL_TRAIT_LOW_POP_BONUS">
+			<Text>人口低于敌方</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_BONUS_PER_ADJACENT_UNIT_COMBAT">
+			<Text>相邻单位战斗类型加成</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EUPANEL_NO_RS_PSH" >
@@ -7101,7 +7108,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER_HELP">
 			<Text>
-				周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。对抗满血单位+50%[ICON_STRENGTH]战斗力。在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
+				周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。
+				[NEWLINE]在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
+				[NEWLINE]每回合可以无限次空降直到移动力用尽，每次空降会对目标地块周围一格内的敌人造成33点伤害。
 			</Text>
 		</Row>
 
@@ -8154,16 +8163,18 @@
 
 
 
+
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS">
 			<Text>步马协同</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS_HELP">
 			<Text>
-				对反骑兵、反装甲单位+33%[ICON_STRENGTH]战斗力,对陆作战时+15%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+50%[ICON_STRENGTH]战斗力，无攻击次数限制。5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
+				对反骑兵、反装甲单位+33%[ICON_STRENGTH]战斗力,对陆作战时+15%[ICON_STRENGTH]战斗力，攻城时不会一次性损失所有移动力且对城市+50%[ICON_STRENGTH]战斗力，无攻击次数限制。
+				[NEWLINE]5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
+				[NEWLINE]临近一格内每存在一个步兵系单位则增加8%[ICON_STRENGTH]战斗力。
 				[NEWLINE]当剩余生命值超过150移动力不为0时，可使用特殊冲锋技能。
 			</Text>
 		</Row>
-
 
 
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE">
