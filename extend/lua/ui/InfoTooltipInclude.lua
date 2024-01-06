@@ -1267,7 +1267,6 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		NukeModifier = L"TXT_KEY_NUKE_MODIFIER11" .. "%i%%",			-- TOTO
 		NukeInterceptionChance = L"TXT_KEY_NUKE_INTERCEPTION11" .. "%i%%",			-- TOTO
         ExtraAttacks = L"TXT_KEY_CITY_ATTACK_CHANGE" .. "%+i",			-- TOTO
-		ReduceDamageValue = L"TXT_KEY_CITY_DAMAGE_CHANGE" .. "%+i",			-- TOTO
 		RangedStrikeModifier = L"TXT_KEY_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO
 		GlobalCityStrengthMod = L"TXT_KEY_GLOBAL_CITY_STRENGTH_MOD" .. "%i%%",			-- TOTO
 		GlobalRangedStrikeModifier = L"TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO
@@ -1317,6 +1316,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		CityStateTradeRouteProductionModifierGlobal = L"TXT_KEY_CSTRPMG" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
 		GreatScientistBeakerModifier = L"TXT_KEY_GSBM4" .. "%+i%%".."[ICON_RESEARCH]",-- TOTO
 		ExtraLeagueVotes = L"TXT_KEY_ELV3434" .. "%i",				-- TOTO
+		ReduceDamageValue = L"TXT_KEY_CITY_DAMAGE_RESET_CHANGE" .. "%i",			-- TOTO
 	}
 
 
@@ -1332,7 +1332,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			else
 				str = buildingData[k]
 				v = tonumber(v) or 0
-				if str and v > 0 then
+				if str and v ~= 0 then  ---修复
 					if #str == 0 then
 						str = k .. " %i"
 					end
@@ -1519,6 +1519,23 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		tip = GetYieldStringSpecial( "Yield", "%s%+i%%%s", GameInfo.Building_ImprovementYieldModifiers( { BuildingType = buildingType, ImprovementType = Improvement.Type }) )
 		if tip ~= "" then
 			insert( tips, L"TXT_KEY_LOCAL_IMPROVEMENT_YIELD" ..ResourceColor(L(Improvement.Description)) .. ":" .. tip )
+		end
+	end
+
+		--建筑对本地地貌产出
+	for feature in GameInfo.Features() do
+		tip = GetYieldStringSpecial( "Yield", "%s%+i%%%s", GameInfo.Building_FeatureYieldModifiers( { BuildingType = buildingType, featureType = feature.Type }) )
+		if tip ~= "" then
+			insert( tips, L"TXT_KEY_LOCAL_TERRAIN_YIELD" ..ResourceColor(L(feature.Description)) .. ":" .. tip )
+		end
+	end
+
+
+	--建筑对本地地形产出
+	for Terrain in GameInfo.Terrains() do
+		tip = GetYieldStringSpecial( "Yield", "%s%+i%%%s", GameInfo.Building_TerrainYieldModifier( { BuildingType = buildingType, TerrainType = Terrain.Type }) )
+		if tip ~= "" then
+			insert( tips, L"TXT_KEY_LOCAL_TERRAIN_YIELD" ..ResourceColor(L(Terrain.Description)) .. ":" .. tip )
 		end
 	end
 

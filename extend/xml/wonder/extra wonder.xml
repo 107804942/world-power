@@ -1325,7 +1325,7 @@
 		<Row>
 			<Type>BUILDING_BURJALARAB</Type>
 			<BuildingClass>BUILDINGCLASS_BURJALARAB</BuildingClass>
-			<Cost>2600</Cost>
+			<Cost>3000</Cost>
 			<PrereqTech>TECH_CITY_SCAPE</PrereqTech>
 			<Description>TXT_KEY_BUILDING_BURJALARAB</Description>
 			<Help>TXT_KEY_WONDER_BURJALARAB_HELP</Help>
@@ -1720,7 +1720,7 @@
 		<Row>
 			<Type>BUILDING_GLOBALCNIEMA</Type>
 			<BuildingClass>BUILDINGCLASS_GLOBALCNIEMA</BuildingClass>
-			<Cost>2500</Cost>
+			<Cost>2800</Cost>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<Description>TXT_KEY_BUILDING_GLOBALCNIEMA</Description>
 			<Help>TXT_KEY_WONDER_GLOBALCNIEMA_HELP</Help>
@@ -2262,13 +2262,36 @@
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
 
-
+		<Row>
+			<Type>BUILDING_BLETCHLEY_PARK</Type>
+			<BuildingClass>BUILDINGCLASS_BLETCHLEY_PARK</BuildingClass>
+			<Cost>2300</Cost>
+			<PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
+			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
+			<Description>TXT_KEY_BUILDING_BLETCHLEY_PARK</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_BLETCHLEY_PARK_TEXT</Civilopedia>
+			<Help>TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP</Help>
+			<Quote>TXT_KEY_WONDER_BLETCHLEY_PARK_QUOTE</Quote>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<DisplayPosition>1</DisplayPosition>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<EspionageModifier>-15</EspionageModifier>
+			<ExtraSpies>2</ExtraSpies>
+			<MedianTechPercentChange>25</MedianTechPercentChange>
+			<Espionage>true</Espionage>
+			<FreeTechs>1</FreeTechs>
+			<WonderSplashImage>bletchleysplash.dds</WonderSplashImage>
+			<PortraitIndex>50</PortraitIndex>
+		</Row>
 
 		<!--Kamuthi光伏电站-->
 		<Row>
 			<Type>BUILDING_KAMUTHI</Type>
 			<BuildingClass>BUILDINGCLASS_KAMUTHI</BuildingClass>
-			<Cost>2600</Cost>
+			<Cost>3000</Cost>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<Help>TXT_KEY_WONDER_KAMUTHI_HELP</Help>
 			<Description>TXT_KEY_BUILDING_KAMUTHI</Description>
@@ -2404,7 +2427,7 @@
 			<Help>TXT_KEY_WONDER_JURASSIC_PARK_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_JURASSIC_PARK_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_JURASSIC_PARK_QUOTE</Quote>
-			<Cost>17000</Cost>
+			<Cost>26000</Cost>
 			<PrereqTech>TECH_MASS</PrereqTech>
 			<UnmoddedHappiness>20</UnmoddedHappiness>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -2429,7 +2452,7 @@
 		<Row>
 			<Type>BUILDING_TECHNOMART</Type>
 			<BuildingClass>BUILDINGCLASS_TECHNOMART</BuildingClass>
-			<Cost>12000</Cost>
+			<Cost>20000</Cost>
 			<PrereqTech>TECH_MASS</PrereqTech>
 			<Help>TXT_KEY_WONDER_TECHNOMART_HELP</Help>
 			<Description>TXT_KEY_BUILDING_TECHNOMART_DESC</Description>
@@ -2479,30 +2502,7 @@
 
 
 
-		<Row>
-			<Type>BUILDING_BLETCHLEY_PARK</Type>
-			<BuildingClass>BUILDINGCLASS_BLETCHLEY_PARK</BuildingClass>
-			<Cost>2300</Cost>
-			<PolicyBranchType>POLICY_BRANCH_RATIONALISM</PolicyBranchType>
-			<PrereqTech>TECH_SOCIAL_AGENDA</PrereqTech>
-			<Description>TXT_KEY_BUILDING_BLETCHLEY_PARK</Description>
-			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_BLETCHLEY_PARK_TEXT</Civilopedia>
-			<Help>TXT_KEY_BUILDING_BLETCHLEY_PARK_HELP</Help>
-			<Quote>TXT_KEY_WONDER_BLETCHLEY_PARK_QUOTE</Quote>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<ConquestProb>100</ConquestProb>
-			<DisplayPosition>1</DisplayPosition>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<EspionageModifier>-15</EspionageModifier>
-			<ExtraSpies>2</ExtraSpies>
-			<MedianTechPercentChange>25</MedianTechPercentChange>
-			<Espionage>true</Espionage>
-			<FreeTechs>1</FreeTechs>
-			<WonderSplashImage>bletchleysplash.dds</WonderSplashImage>
-			<PortraitIndex>50</PortraitIndex>
-		</Row>
+	
 
 
 		<Row>
@@ -2537,7 +2537,7 @@
 		<Row>
 			<Type>BUILDING_LEP</Type>
 			<BuildingClass>BUILDINGCLASS_LEP</BuildingClass>
-			<Cost>13000</Cost>
+			<Cost>20000</Cost>
 			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
 			<Help>TXT_KEY_WONDER_LEP_HELP</Help>
 			<Description>TXT_KEY_BUILDING_LEP</Description>
@@ -2568,7 +2568,7 @@
 			<Help>TXT_KEY_WONDER_HELIOS_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_HELIOS_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_HELIOS_QUOTE</Quote>
-			<Cost>12000</Cost>
+			<Cost>20000</Cost>
 			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
 			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
 			<FreeBuildingThisCity>BUILDINGCLASS_SOLAR_PLANT</FreeBuildingThisCity>
@@ -2613,7 +2613,7 @@
 			<Description>TXT_KEY_BUILDING_SKYNET_DESC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SKYNET_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_SKYNET_QUOTE</Quote>
-			<Cost>13000</Cost>
+			<Cost>20000</Cost>
 			<Happiness>-20</Happiness>
 			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
 			<FreePromotion>PROMOTION_SKYNET_LINK</FreePromotion>
@@ -2636,7 +2636,7 @@
 			<Help>TXT_KEY_WONDER_SKYCITY_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_SKYCITY_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_SKYCITY_QUOTE</Quote>
-			<Cost>15000</Cost>
+			<Cost>20000</Cost>
 			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<GreatPeopleRateChange>2</GreatPeopleRateChange>
@@ -2714,7 +2714,7 @@
 			<Help>TXT_KEY_WONDER_FOLDING_MACHINE_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_FOLDING_MACHINE_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_FOLDING_MACHINE_QUOTE</Quote>
-			<Cost>15000</Cost>
+			<Cost>20000</Cost>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>3</SpecialistCount>
 			<PrereqTech>TECH_PLANETARY_NETWORKS</PrereqTech>
@@ -2811,7 +2811,7 @@
 			<Help>TXT_KEY_WONDER_MARKOV_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_MARKOV_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_MARKOV_QUOTE</Quote>
-			<Cost>18000</Cost>
+			<Cost>25000</Cost>
 			<Happiness>-50</Happiness>
 			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
 			<MaxStartEra>ERA_FUTURE</MaxStartEra>

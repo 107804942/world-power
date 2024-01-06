@@ -13,7 +13,7 @@
 			<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
 			<Combat>130</Combat>
 			<RangedCombat>260</RangedCombat>
-			<Cost>1300</Cost>
+			<Cost>1600</Cost>
 			<Moves>5</Moves>
 			<Range>3</Range>
 			<Immobile>0</Immobile>
@@ -51,7 +51,7 @@
 			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<Combat>100</Combat>
 			<RangedCombat>360</RangedCombat>
-			<Cost>1900</Cost>
+			<Cost>2600</Cost>
 			<Moves>5</Moves>
 			<Range>3</Range>
 			<HurryCostModifier>60</HurryCostModifier>
@@ -89,7 +89,7 @@
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>100</Combat>
 			<RangedCombat>500</RangedCombat>
-			<Cost>3000</Cost>
+			<Cost>4000</Cost>
 			<Moves>4</Moves>
 			<Range>5</Range>
 			<HurryCostModifier>100</HurryCostModifier>

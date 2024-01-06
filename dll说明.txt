@@ -613,6 +613,14 @@ ALTER TABLE Buildings ADD COLUMN 'LiberatedInfluence' INTEGER DEFAULT 0;
 	</Table>
 
 
+	<!--*********************来自工作中地形百分比加成 ********************-->
+		
+	<Table name="Building_TerrainYieldModifier">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="TerrainType" type="text" reference="Terrains(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
 
 ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);
@@ -788,38 +796,44 @@ UPDATE UnitPromotions SET AntiHigherPopMod=100 WHERE Type='PROMOTION_GOLEM';
 #endif
 
 
+	-- Yields enhanced by Technology
+	if techFilter( enhancedYieldTech ) then
+		tip = GetYieldString( GameInfo.Building_TechEnhancedYieldChanges( thisBuildingType ) )
+		if #tip > 0 then
+			insert( tips, "[ICON_BULLET]" .. enhancedYieldTechName .. tip )
+		end
+	end
 
 
-bool CvPlot::IsImmueVolcanoDamage() const
-{
-	FeatureTypes eFeature = getFeatureType();
-	if (eFeature == NO_FEATURE)
-		return false;
-	return GC.getFeatureInfo(eFeature)->IsVolcano();
-}
 
-		
-	<Table name="Building_TerrainYieldModifier">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="TerrainType" type="text" reference="Terrains(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer"/>
-	</Table>
+	-- units strength improved by this tech
+	--Unit_TechCombatStrength (UnitType, 	TechType,	CombatStrength)
 
-	CvCity* pCity = getWorkingCity();
-
-		if(pCity)
-
-		#if defined(MOD_MORE_NATURAL_WONDER)
-	m_iImmueVolcanoDamage = 0;
-#endif
-
-#if defined(MOD_MORE_NATURAL_WONDER)
-/// Does this building add FreshWater?
-bool CvBuildingEntry::IsImmueVolcanoDamage() const
-{
-	return m_bImmueVolcanoDamage;
-}
-#endif
-
-IsImmueVolcanoDamage()
+	for row in GameInfo.Buildings{ EnhancedYieldTech = techType } do
+		--CivilizationType, BuildingClassType, BuildingType
+		overrideSearch.BuildingClassType = row.BuildingClass
+		override = GameInfo.Civilization_BuildingClassOverrides(overrideSearch)()
+		if override then
+			ok = override.BuildingType == row.Type
+		else
+			ok = GameInfo.BuildingClasses[ row.BuildingClass ]
+			ok = ok and ok.DefaultBuilding == row.Type
+		end
+		if ok then
+			local toolTip = row._Name
+			local icons = ""
+			local icon
+			for row in GameInfo.Unit_TechCombatStrength{ BuildingType = row.UnitType } do
+			-- BuildingType, YieldType, Yield
+				if NZ(row.Yield) then
+					icon = GameInfo.Yields[row.YieldType]
+					icon = icon and icon.IconString or "?"
+					icons = icons .. icon
+					toolTip = ("%s %+i%s"):format( toolTip, row.Yield, icon )
+				end
+			end
+			if icon and not addSmallActionButton( row, icons, toolTip ) then
+				break
+			end
+		end
+	end

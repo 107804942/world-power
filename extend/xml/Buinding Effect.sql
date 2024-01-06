@@ -428,7 +428,7 @@ VALUES ('BUILDING_KRONBORG', 'TERRAIN_OCEAN', 'YIELD_GOLD',2),
 
 
 INSERT INTO Building_TerrainYieldModifier(BuildingType,TerrainType,YieldType,Yield) 
-VALUES ('BUILDING_GEOLOGICAL_ANVIL', 'TERRAIN_MOUNTAIN', 'YIELD_PRODUCTION',10);
+VALUES ('BUILDING_GEOLOGICAL_ANVIL', 'TERRAIN_PLAINS', 'YIELD_PRODUCTION',10);
 
 
 
@@ -641,7 +641,7 @@ SELECT  'BUILDING_PUMA_PUMKU', Type, 20 FROM Yields WHERE Type ='YIELD_CULTURE'O
 
 INSERT  INTO Building_YieldChangesPerPopInEmpire(BuildingType,YieldType,Yield)
 VALUES('BUILDING_ULTIMATOWER', 'YIELD_SCIENCE',50),
-      ('BUILDING_TECHNOMART', 'YIELD_PRODUCTION',50);
+      ('BUILDING_TECHNOMART', 'YIELD_PRODUCTION',25);
 
 --硅谷等全局百分比加成
 INSERT  INTO Building_GlobalYieldModifiers(BuildingType,YieldType,Yield)
@@ -659,10 +659,10 @@ SELECT  'BUILDING_REGISTAN', Type,10 FROM Yields WHERE Type ='YIELD_GOLD' OR Typ
 
 
 ----史诗
-INSERT  INTO Building_DomainFreeExperiences(BuildingType,DomainType,Experience)
-VALUES('BUILDING_HEROIC_EPIC', 'DOMAIN_SEA',7),
-      ('BUILDING_HEROIC_EPIC', 'DOMAIN_LAND',7),
-      ('BUILDING_HEROIC_EPIC', 'DOMAIN_AIR',7);
+--INSERT  INTO Building_DomainFreeExperiences(BuildingType,DomainType,Experience)
+--VALUES('BUILDING_HEROIC_EPIC', 'DOMAIN_SEA',7),
+     -- ('BUILDING_HEROIC_EPIC', 'DOMAIN_LAND',7),
+      --('BUILDING_HEROIC_EPIC', 'DOMAIN_AIR',7);
 
 --马尔科夫
 INSERT  INTO Building_DomainFreeExperiencesGlobal(BuildingType,DomainType,Experience)

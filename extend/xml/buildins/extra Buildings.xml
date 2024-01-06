@@ -1285,7 +1285,7 @@
 			<Row>
 				<Type>BUILDING_GENE_THERAPY</Type>
 				<BuildingClass>BUILDINGCLASS_GENE_THERAPY</BuildingClass>
-				<Cost>3000</Cost>
+				<Cost>3500</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
 				<Help>TXT_KEY_BUILDING_GENE_THERAPY_HELP</Help>
@@ -1429,7 +1429,7 @@
 			<Row>
 				<Type>BUILDING_ECITY</Type>
 				<BuildingClass>BUILDINGCLASS_ECITY</BuildingClass>
-				<Cost>3000</Cost>
+				<Cost>3500</Cost>
 				<PrereqTech>TECH_COGNITIVE</PrereqTech>
 				<Help>TXT_KEY_BUILDING_ECITY_HELP</Help>
 				<Description>TXT_KEY_BUILDING_ECITY</Description>
@@ -1448,7 +1448,7 @@
 			<Row>
 				<Type>BUILDING_SERVER_HUB</Type>
 				<BuildingClass>BUILDINGCLASS_SERVER_HUB</BuildingClass>
-				<Cost>3000</Cost>
+				<Cost>3500</Cost>
 				<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 				<Description>TXT_KEY_BUILDING_SERVER_HUB_DESC</Description>
 				<Civilopedia>TXT_KEY_BUILDING_SERVER_HUB_PEDIA</Civilopedia>
@@ -1468,7 +1468,7 @@
 			<Row>
 				<Type>BUILDING_MYCOPROTEIN_VATS</Type>
 				<BuildingClass>BUILDINGCLASS_MYCOPROTEIN_VATS</BuildingClass>
-				<Cost>3000</Cost>
+				<Cost>3500</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
 				<Help>TXT_KEY_BUILDING_MYCOPROTEIN_VATS_HELP</Help>
@@ -1611,7 +1611,7 @@
 				<Help>HELP_PLANET_MINE</Help>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<Civilopedia>PEDIA_PLANET_MINE</Civilopedia>
-				<Cost>5000</Cost>
+				<Cost>6000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<HurryCostModifier>40</HurryCostModifier>
 				<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
@@ -1740,7 +1740,7 @@
 			<Row>
 				<Type>BUILDING_MINEFIELD</Type>
 				<BuildingClass>BUILDINGCLASS_MINEFIELD</BuildingClass>
-				<Cost>3500</Cost>
+				<Cost>4000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_ARTIFICIAL_INTELLIGENCE</PrereqTech>
 				<Description>TXT_KEY_BUILDING_MINEFIELD</Description>
@@ -1748,7 +1748,7 @@
 				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
 				<Help>TXT_KEY_BUILDING_MINEFIELD_HELP</Help>
 				<ArtDefineTag>ART_DEF_BUILDING_GARDEN</ArtDefineTag>
-				<MinAreaSize>-1</MinAreaSize>
+				<MinAreaSize>10</MinAreaSize>
 				<ConquestProb>100</ConquestProb>
 				<Water>true</Water>
 				<NukeImmune>true</NukeImmune>
@@ -1801,14 +1801,15 @@
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 				<Help>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_HELP</Help>
-				<Description>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_DESC</Description>
+				<Description>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL</Description>
 				<Civilopedia>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<MinAreaSize>-1</MinAreaSize>
+				<ImmueVolcanoDamage>1</ImmueVolcanoDamage>
 				<ConquestProb>50</ConquestProb>
 				<HurryCostModifier>40</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>118</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>91</PortraitIndex>
 			</Row>
 
 
@@ -1816,7 +1817,7 @@
 			<Row>
 				<Type>BUILDING_SANCTUARY</Type>
 				<BuildingClass>BUILDINGCLASS_SANCTUARY</BuildingClass>
-				<Cost>3500</Cost>
+				<Cost>4000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 				<Help>TXT_KEY_BUILDING_SANCTUARY_HELP</Help>
@@ -1838,7 +1839,7 @@
 		<Row>
 			<Type>BUILDING_BIOFACTORY</Type>
 			<BuildingClass>BUILDINGCLASS_BIOFACTORY</BuildingClass>
-			<Cost>3500</Cost>
+			<Cost>4000</Cost>
 			<GoldMaintenance>100</GoldMaintenance>
 			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 			<Help>TXT_KEY_BUILDING_BIOFACTORY_HELP</Help>

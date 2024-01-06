@@ -322,7 +322,7 @@
 			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>150</Combat>
-			<Cost>300</Cost>
+			<Cost>400</Cost>
 			<Moves>4</Moves>
 			<CombatClass>UNITCOMBAT_RECON</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
@@ -362,7 +362,7 @@
 			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Combat>320</Combat>
-			<Cost>1800</Cost>
+			<Cost>2500</Cost>
 			<Moves>4</Moves>
 			<HurryCostModifier>33</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
@@ -402,7 +402,7 @@
 			<Combat>250</Combat>
 			<RangedCombat>360</RangedCombat>
 			<Range>1</Range>
-			<Cost>1800</Cost>
+			<Cost>2500</Cost>
 			<HurryCostModifier>33</HurryCostModifier>
 			<Moves>4</Moves>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
@@ -436,7 +436,7 @@
 			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 			<Combat>170</Combat>
 			<HurryCostModifier>45</HurryCostModifier>
-			<Cost>1100</Cost>
+			<Cost>1400</Cost>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Moves>3</Moves>
 			<Immobile>0</Immobile>
@@ -473,7 +473,7 @@
 			<RangedCombat>220</RangedCombat>
 			<Range>2</Range>
 			<HurryCostModifier>33</HurryCostModifier>
-			<Cost>1300</Cost>
+			<Cost>1500</Cost>
 			<Moves>5</Moves>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
@@ -509,7 +509,7 @@
 			<HurryCostModifier>33</HurryCostModifier>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<Combat>220</Combat>
-			<Cost>1400</Cost>
+			<Cost>1600</Cost>
 			<Moves>4</Moves>
 			<Immobile>0</Immobile>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
@@ -548,7 +548,7 @@
 			<Combat>270</Combat>
 			<RangedCombat>270</RangedCombat>
 			<Range>2</Range>
-			<Cost>1000</Cost>
+			<Cost>1400</Cost>
 			<Moves>5</Moves>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>

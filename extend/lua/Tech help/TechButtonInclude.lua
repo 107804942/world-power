@@ -464,6 +464,29 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 		end
 	end
 
+
+
+	---------------------------------------------新增单位战力------------------------------------------------------------
+	for row in GameInfo.Unit_TechCombatStrength( thisTechType ) do
+			local Unit = GameInfo.Units[row.UnitType]
+			if   Unit then
+				local icons = "[ICON_STRENGTH]"
+				local toolTip = ""
+					toolTip = toolTip .. Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_COMBATSTRENGTH", Unit.Description, row.CombatStrength)
+				end
+			addSmallArtYieldButton(Unit, icons, toolTip)
+		end
+
+	
+		for row in GameInfo.Unit_TechRangedCombatStrength( thisTechType ) do
+			local Unit = GameInfo.Units[row.UnitType]
+			if  Unit then
+			    local icons = "[ICON_RANGE_STRENGTH]"
+				local toolTip = ""
+					toolTip = toolTip .. Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_RANGED_COMBATSTRENGTH", Unit.Description, row.RangedCombatStrength)
+				end
+			addSmallArtYieldButton(Unit, icons, toolTip)
+		end
 	---------------------------------------------新增------------------------------------------------------------
 	for row in GameInfo.Tech_SpecialistYieldChanges( thisTechType ) do
 			local specialist = GameInfo.Specialists[row.SpecialistType]

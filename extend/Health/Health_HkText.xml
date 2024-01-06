@@ -646,17 +646,15 @@
 		<Row Tag="TXT_KEY_UNIT_DOCTOR">
 			<Text>医生</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_MODERN_DOCTOR">
-			<Text>现代医生</Text>
-		</Row>
+
 		<Row Tag="TXT_KEY_UNIT_HELP_DOCTOR">
 			<Text>
-				可用于治疗瘟疫城市，或者治疗患病单位。
+				可用于治疗瘟疫城市，或者治疗患病单位。只能在城市中建造，建造成本随时代增加。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_DOCTOR_STRATEGY">
-			<Text>可用于治疗瘟疫城市，或者治疗患病单位。当治疗城市后，或者完成三次单位治疗后将被消耗。</Text>
+			<Text>可用于治疗瘟疫城市，或者治疗患病单位。当治疗城市，或者完成三次单位治疗后将被消耗。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT">
@@ -941,10 +939,13 @@
 		</Replace>
 
 
-		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
-			<Text>所有城市额外+2[ICON_RES_MANPOWER]人力资源，每处沿河地块+1[ICON_GOLD]金，每处冲积平原地块+1[ICON_PRODUCTION]产能。沙漠地貌+1[ICON_HEALTH]健康度，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。</Text>
-		</Replace>
-
+			<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
+				<Text>
+					[ICON_BULLET]所有城市额外+2[ICON_RES_MANPOWER]人力资源，每处沿河地块+1[ICON_GOLD]金，每处冲积平原地块+1[ICON_PRODUCTION]产能。
+					[NEWLINE][ICON_BULLET]沙漠地貌+1[ICON_HEALTH]健康度，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+				</Text>
+			</Replace>
+			
 	</Language_ZH_Hant_HK>
 
 </GameData>

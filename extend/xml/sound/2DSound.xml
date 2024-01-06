@@ -1064,11 +1064,7 @@
 			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
 			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
 		</Row>
-		<Row>
-			<UnitType>UNIT_MODERN_DOCTOR</UnitType>
-			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
-			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
-		</Row>
+		
 		<!-- 铁浮图-->
 
 		<Row>

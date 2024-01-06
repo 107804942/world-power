@@ -61,8 +61,19 @@
 		<Row Tag="TXT_KEY_EUI_FREE_UNIT">
 			<Text>免费 {1_Num} {2_Name}{3_Name}。</Text>
 		</Row>
-		
 
+		<Row Tag="TXT_KEY_EUI_SPECIALIST_YIELD_CHANGE">
+			<Text>{1_Name}+{3_Num}{2_Name}{4_Name}</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_EUI_TECH_YIELD_UNIT_COMBATSTRENGTH">
+			<Text>{1_Name}+{2_Num}[ICON_STRENGTH]近战战斗力</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_TECH_YIELD_UNIT_RANGED_COMBATSTRENGTH">
+			<Text>{1_Name}+{2_Num}[ICON_RANGE_STRENGTH]远程战斗力</Text>
+		</Row>
+		
 		<!-- New Unit Combats -->
 		<Row Tag="TXT_KEY_UNITCOMBAT_SETTLER">
 			<Text>移民单位</Text>
@@ -242,7 +253,7 @@
 		<Row Tag="TXT_KEY_CITY_ATTACK_CHANGE">
 			<Text>城市攻击次数:</Text>
 		</Row>
-		<Row Tag="TXT_KEY_CITY_DAMAGE_CHANGE">
+		<Row Tag="TXT_KEY_CITY_DAMAGE_RESET_CHANGE">
 			<Text>城市被击伤害:</Text>
 		</Row>
 		
@@ -273,7 +284,9 @@
 		<Row Tag="TXT_KEY_LOCAL_IMPROVEMENT_YIELD" >
 			<Text>本地</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_LOCAL_TERRAIN_YIELD" >
+			<Text>本地</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PEDIA_GLOBAL_RESOURCES" >
 			<Text>全国</Text>
 		</Row>
@@ -4668,7 +4681,7 @@
 			<Text>[NEWLINE]"市场不是资本主义的发明，它已经存在了几个世纪，它是文明的发明"[NEWLINE]        ——米哈伊尔·戈尔巴乔夫[NEWLINE]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_WONDER_TECHNOMART_HELP'>
-			<Text>全国每两人口+1[ICON_PRODUCTION]产能。工人工作效率+25%，城市将[ICON_PRODUCTION]产能转换为其他产出时的转换率+30%(健康度除外)。</Text>
+			<Text>全国每四人口+1[ICON_PRODUCTION]产能。工人工作效率+25%，城市将[ICON_PRODUCTION]产能转换为其他产出时的转换率+30%(健康度除外)。</Text>
 		</Row>
 		<Row Tag='TXT_KEY_WONDER_TECHNOMART_PEDIA'>
 			<Text>
@@ -9857,7 +9870,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_HELP">
 			<Text>
-				火山喷发不会对本城地块产生伤害，但加成效果依旧有效。本城范围内每个山脉地形+10%[ICON_PRODUCTION]产能。提供五份[ICON_RES_TITANIUM]钛资源。
+				火山喷发不会对本城地块产生伤害，但加成效果依旧有效。本城范围内每个平原地形+10%[ICON_PRODUCTION]产能。提供五份[ICON_RES_TITANIUM]钛资源。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_GEOLOGICAL_ANVIL_TEXT">
@@ -9868,6 +9881,14 @@
 				[NEWLINE]深处的设施生产的材料在高热和高压的地壳以外环境中无法复制。特别是著名的超纯镍铁合金、柔性菲拉瑟化合物以及脆弱的浮石。数不清的专门制造和冶炼法在此被开发出了，正在进行的主要地质学和材料学也可能是因该设施才创立。甚至产生了一门用铁砧采矿输出作为主要数据的分析地理科学的新领域。
 				[NEWLINE]而所有这些永不停息的工作却无需大量的人力支持。只有一小队人类控制员在下面几公里处轮班工作和生活。他们从一些列控制室中观察铁砧作业，监控更深层工作的机器发来的报告。这些工程师创造了地质铁砧的机器人神话，唤醒了旧地球的灵魂，如矮人、命运女神、火巨人和巨人，他们开玩笑说这些才是看不见的铁砧真正的工人。
 			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROMOTION_NO_CAPTURED">
+			<Text>钢铁意志</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NO_CAPTURED_HELP">
+			<Text>被击败时免疫俘虏。</Text>
 		</Row>
 	</Language_en_US>
 

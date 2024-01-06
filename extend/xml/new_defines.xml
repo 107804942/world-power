@@ -747,12 +747,20 @@
 			<Where Name="GOLDEN_AGE_BASE_THRESHOLD_HAPPINESS" />
 		</Update>
 		<Update>
-			<Set Value="0.015"/>
+			<Set Value="0.02"/>
 			<Where Name="GOLDEN_AGE_THRESHOLD_CITY_MULTIPLIER" />
 		</Update>
-		
-	
+		<Update>
+			<Set Value="400"/>
+			<Where Name="GOLDEN_AGE_EACH_GA_ADDITIONAL_HAPPINESS" />
+		</Update>
 
+		<Update>
+			<Set Value="5"/>
+			<Where Name="GOLDEN_AGE_LENGTH" />
+		</Update>
+		
+		
 		<!--快乐度战斗力惩罚下限-->
 		<Update>
 			<Set Value="-40"/>
@@ -921,10 +929,7 @@
 			<Where Name="MAX_YIELD_STACK" />
 		</Update>
 
-		<Update>
-			<Set Value="1200"/>
-			<Where Name="RELIGION_FAITH_DELTA_NEXT_GREAT_PERSON" />
-		</Update>
+	
 
 		<Update>
 			<Set Value="30"/>
@@ -945,10 +950,42 @@
 		</Update>
 
 
+
+
+
+
+
+		<!--Religion-->
 		<Update>
-			<Set Value="6"/>
-			<Where Name="GOLDEN_AGE_LENGTH" />
+			<Set Value="1500"/>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_GREAT_PERSON" />
 		</Update>
+		
+		<Update>
+			<Set Value="1500"/>
+			<Where Name="RELIGION_FAITH_DELTA_NEXT_GREAT_PERSON" />
+		</Update>
+
+		
+		<Update>
+			<Set Value="150"/>
+			<Where Name="RELIGION_FAITH_DELTA_NEXT_PROPHET" />
+		</Update>
+
+
+		<Update>
+			<Set Value="10"/>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_PANTHEON" />
+		</Update>
+		<Update>
+			<Set Value="8"/>
+			<Where Name="RELIGION_GAME_FAITH_DELTA_NEXT_PANTHEON" />
+		</Update>
+		<Update>
+			<Set Value="250"/>
+			<Where Name="RELIGION_MIN_FAITH_FIRST_PROPHET" />
+		</Update>
+
 	</Defines>
 
 
