@@ -3027,8 +3027,8 @@
 			<GridX>31</GridX>
 			<GridY>5</GridY>
 			<Quote>TXT_KEY_TECH_AUTONOMOUS_SYSTEMS_QUOTE</Quote>
-			<PortraitIndex>28</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>142</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
 
 		<Row>

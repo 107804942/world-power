@@ -1574,6 +1574,18 @@
 		</Row>
 
 
+		<Row>
+			<BuildingType>BUILDING_GEOLOGICAL_ANVIL</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
+
+
+		<Row>
+			<BuildingType>BUILDING_GEOLOGICAL_ANVIL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
 
 
 		<Row>
@@ -3063,6 +3075,14 @@
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>5</Yield>
 		</Row>
+
+		
+		<Row>
+			<BuildingType>BUILDING_GEOLOGICAL_ANVIL</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		
 	</Building_YieldChanges>
 
 
@@ -3131,8 +3151,12 @@
 		<!--东印度公司 -->
 
 		<Delete BuildingType="BUILDING_NATIONAL_TREASURY"/>
-		
-		
+
+		<Row>
+			<BuildingType>BUILDING_GEOLOGICAL_ANVIL</BuildingType>
+			<ResourceType>RESOURCE_TITANIUM</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
 		
 		
 		<Row>

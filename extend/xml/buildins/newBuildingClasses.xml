@@ -416,7 +416,11 @@
 		</Row>
 
 
-
+		<Row>
+			<Type>BUILDINGCLASS_GEOLOGICAL_ANVIL</Type>
+			<DefaultBuilding>BUILDING_GEOLOGICAL_ANVIL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL</Description>
+		</Row>
 
 		<Row>
 			<Type>BUILDINGCLASS_DRONE_CONTROL</Type>

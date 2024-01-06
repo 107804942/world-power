@@ -337,10 +337,10 @@ INSERT INTO Building_FeatureYieldChanges (BuildingType,	FeatureType,			YieldType
 SELECT     'BUILDING_DESERT_TRANSFORMING_BASE',	'FEATURE_OASIS',	         'YIELD_HEALTH',	  1 ;
 
 --¼Ó¶ûÇÅ
-INSERT INTO Building_FeatureYieldChanges
-		(BuildingType, 			FeatureType, 	YieldType, 		Yield)
-SELECT 	'BUILDING_PONTDUGARD', 	Type,		'YIELD_HEALTH', 	1
-FROM Features WHERE NaturalWonder = '1' OR PseudoNaturalWonder = '1';
+--INSERT INTO Building_FeatureYieldChanges
+		--(BuildingType, 			FeatureType, 	YieldType, 		Yield)
+--SELECT 	'BUILDING_PONTDUGARD', 	Type,		'YIELD_HEALTH', 	1
+--FROM Features WHERE NaturalWonder = '1' OR PseudoNaturalWonder = '1';
 
 
 

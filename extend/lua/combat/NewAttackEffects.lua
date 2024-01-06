@@ -440,7 +440,7 @@ function CityRangedStrikeDamage(iPlayer,iAttCity,idefPlayer,idefUnit,iX, iY)
             end
 
 	        if  player:GetCurrentEra()==GameInfoTypes.ERA_FUTURE then
-	        if  player:HasWonder(GameInfoTypes.BUILDING_FW_HELIOS) then
+	        if  player:HasWonder(GameInfoTypes.BUILDING_HELIOS) then
 			if  City:IsHasBuilding(GameInfoTypes["BUILDING_SOLAR_PLANT"])then
 				local plot = City:Plot()
 				local extraRange = 3	

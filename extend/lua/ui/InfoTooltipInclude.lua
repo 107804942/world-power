@@ -1267,6 +1267,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		NukeModifier = L"TXT_KEY_NUKE_MODIFIER11" .. "%i%%",			-- TOTO
 		NukeInterceptionChance = L"TXT_KEY_NUKE_INTERCEPTION11" .. "%i%%",			-- TOTO
         ExtraAttacks = L"TXT_KEY_CITY_ATTACK_CHANGE" .. "%+i",			-- TOTO
+		ReduceDamageValue = L"TXT_KEY_CITY_DAMAGE_CHANGE" .. "%+i",			-- TOTO
 		RangedStrikeModifier = L"TXT_KEY_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO
 		GlobalCityStrengthMod = L"TXT_KEY_GLOBAL_CITY_STRENGTH_MOD" .. "%i%%",			-- TOTO
 		GlobalRangedStrikeModifier = L"TXT_KEY_GLOBAL_CITY_RANGED_ATTACK_MOD" .. "%i%%",			-- TOTO

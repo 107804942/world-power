@@ -3981,9 +3981,10 @@
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 			<OnlyDefensive>true</OnlyDefensive>
-			<NearbyEnemyCombatMod>-33</NearbyEnemyCombatMod>
-			<NearbyEnemyCombatRange>3</NearbyEnemyCombatRange>
-		</Row>
+			<MoraleBreakChance>100</MoraleBreakChance>
+			<!--<NearbyEnemyCombatMod>-33</NearbyEnemyCombatMod>
+			<NearbyEnemyCombatRange>3</NearbyEnemyCombatRange>-->		
+	   </Row>
 
 
 

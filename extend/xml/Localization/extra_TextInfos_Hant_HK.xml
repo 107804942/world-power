@@ -247,6 +247,11 @@
 		<Row Tag="TXT_KEY_CITY_ATTACK_CHANGE">
 			<Text>城市攻击次数:</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_CITY_DAMAGE_CHANGE">
+			<Text>城市被击伤害:</Text>
+		</Row>
+		
 		<Row Tag="TXT_KEY_CITY_RANGED_ATTACK_MOD">
 			<Text>城市攻击加成:</Text>
 		</Row>
@@ -1948,15 +1953,21 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_DESC">
-			<Text>[ICON_HEALTH][ICON_FOOD]生物工厂</Text>
+			<Text>[ICON_HEALTH][ICON_FOOD]纳米牧场</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_HELP">
 			<Text>本城+8[ICON_FOOD]食物产出，每四人口+1[ICON_FOOD]食物产出。城市所有已开发的[ICON_RES_DEER]鹿、[ICON_RES_BISON]牦牛、[ICON_RES_COW]牛、[ICON_RES_SHEEP]羊、[ICON_RES_HORSE]马资源+1[ICON_FOOD]食物、[ICON_HEALTH]健康度、[ICON_PRODUCTION]产能。湖泊水域+1[ICON_FOOD]食物。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_MYCOPROTEIN_VATS_PEDIA">
-			<Text>虽然几个世纪以来已经发展了各种增加粮食生产的方法，但有些地区的人口增长甚至可能超过农场和传统城市所提供的最大供应量。因此，一些社区转向大规模生产营养完整的食品替代品，利用各种工艺合成适合人类消费的蛋白质和纤维。由此产生的食物替代品有足够的营养，但往往缺乏真正食物的味道和质地。然而，对于许多人来说，这是他们唯一能负担得起开支的营养摄入渠道。</Text>
+			<Text>
+				纳米牧场是极度依赖小型机械维持其作物的健康的农场。虽然有密集的化学治疗，但失去了地球的无脊椎生态环境，很多地球上生长的植物及其后代都十分危险。纳米牧场有成群的生物扮演类似的角色，如缺失的地球生物、细菌和有益病毒。它们为植物授粉、去除故。旺业神故形于该星球的露天种植来说，纳米牧场是最有效也最多产的系统之一，因为它能以设计出的繁荣生态系统复制土地种植的效率。
+				[NEWLINE]最先进的纳米牧场拥有可自我改进的纳米机器人克隆体和除虫机器人，据此总结了效果反馈，在后来的世代中用于设计了无人机。奇怪的是，有些纳米牧场报告称这些生物的设计正开始融合成许多地球物种的外观。一个纳米牧场在报告中称，一个设计用于清理杂草虫害的机器人用其尾部的附件发出了刺耳的金属摩擦声，该行为源自旧地球的蟋蟀。
+			</Text>
 		</Row>
+		
+		
+		
 		<Row Tag="TXT_KEY_BUILDING_VR_TRAINING_DESC">
 			<Text>[ICON_STRENGTH]虚拟训练中心</Text>
 		</Row>
@@ -3110,28 +3121,6 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_VIRTUAL_IDOL">
-			<Text>虚拟偶像</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_VIRTUAL_IDOL_HELP">
-			<Text>本城[ICON_CULTURE]文化产出增加50%,本城所有杰作带来的[ICON_TOURISM]旅游值产出增加100%，奇观建成后获得两个无偿的音乐家，+80[ICON_RES_CONSUMER]商品。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_VIRTUAL_IDOL_QUOTE">
-			<Text>[NEWLINE]"小心与人工智能软件的虚拟关系。"[NEWLINE]        ——拉里·埃里森[NEWLINE]</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_VIRTUAL_IDOL_PEDIA">
-			<Text>
-				随着科学技术的发展，虚拟偶像不断进化为各种形式，交互性也越来越强，定义也在不断地更新：从基于3DCG的虚拟偶像、基于网络活动的虚拟偶像、基于游戏的虚拟偶像，一直到基于音乐制作软件的偶像。初音未来作为第一个使用全息投影技术举办演唱会的虚拟偶像，在多国举办了演唱会。其中，技术进步是虚拟偶像产生和发展的重要推力，如3D建模技术、声库技术、全息成像技术，这些都为构建虚拟偶像提供了必要的物质条件。此外，二次元文化的发展也为虚拟偶像提供了广阔的市场。有媒体认为，虚拟偶像之所受欢迎，是因为它们不会人设崩塌，不会有绯闻，满足了人们的完美主义情结。
-			</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_THEMING_BONUS_VIRTUAL_IDOL">
-			<Text>{1_Era}{2_CivAdjective}虚拟偶像</Text>
-		</Row>
-
 
 
 		<Row Tag="TXT_KEY_BUILDING_SKYNET_DESC">
@@ -3216,14 +3205,14 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_DESC">
+		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_DESC">
 			<Text>[ICON_TOURISM]人造生态圈</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_HELP">
-			<Text>本城市所有自然奇观、环礁和绿洲+6[ICON_GOLD]金钱+6[ICON_CULTURE]文化。+5[ICON_CULTURE]文化+2[ICON_HAPPINESS_1]快乐。城市33%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+100%。</Text>
+		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_HELP">
+			<Text>本城市所有环礁、绿洲、人造绿洲+6[ICON_GOLD]金钱+6[ICON_CULTURE]文化。+5[ICON_CULTURE]文化+2[ICON_HAPPINESS_1]快乐。城市33%的地块和奇观文化产出转化为[ICON_TOURISM]魅力产出，且杰作[ICON_TOURISM]魅力产出+100%。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_FW_SANCTUARY_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_SANCTUARY_PEDIA">
 			<Text>在生态哲学占据主导地位的社区里，人们深切地感到需要一种方式，来感受与周围残存的野生自然环境之间的联系。虽然自然保护区提供了最令人愉快的环境，但不是每个人都能抽出时间和资源来享用当地的环境资源。后来，人造生态圈开始发展，生态区规模逐渐扩大。虽然在某种程度上是人造的，但作为一种必需品，它们比显然比城市更加有趣和自然，能够让民众感受到与自然世界更大的联系。这些保护区往往最终成为文化中心，激发了各种各样的艺术、音乐和文学作品。</Text>
 		</Row>
 
@@ -4703,7 +4692,9 @@
 			<Text>全国每两人口+1[ICON_PRODUCTION]产能。工人工作效率+25%，城市将[ICON_PRODUCTION]产能转换为其他产出时的转换率+30%(健康度除外)。</Text>
 		</Row>
 		<Row Tag='TXT_KEY_WONDER_TECHNOMART_PEDIA'>
-			<Text>摩天起重机大幅度提升了生产效率。</Text>
+			<Text>
+				磁悬浮引擎有多种应用、不只是在建筑领域。千年以来，人类用起重机拾起并移动重物；当大型悬浮引擎被设计出来时，可以猜想到第一个应用就是地表的起重作业，而且可同时运用与地表和低轨道工程。由于磁悬浮的性质，基底力矩总和近乎为零，摩天起重机非常稳定因此该起重机的负荷超出一般地面固定起重机85％。殖民地的摩天起重机一般是两种类型：高架（或桥架），吊钩机制位于平台下，以及边吊起移动重器，其吊臂可延伸过平台另一侧。
+				[NEWLINE]最大的摩天起重机有两个系统，有些也集合了贝塞尔光束系统。地面起起重机的一个主要挑战是保持平衡，而魔音起重机的设计安装了多个寻引擎，避免了这个问题。在低轨道建设中，摩天起重机是用于移动和操纵大型组件就位的标准设备，其锤头配置采用了液压悬臂。虽然对轨道上的摩天起重机来说，负重不是问题，但负载惯性却是因此很多专为轨道建设建造的摩天起重机装有各种惯性阻尼器。</Text>
 		</Row>
 
 
@@ -7335,7 +7326,7 @@
 			<Text>[NEWLINE]"罗马城不是一天建成的。"[NEWLINE]        ——古罗马谚语[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_PONTDUGARD_HELP">
-			<Text>每处公共浴室+1[ICON_HEALTH]健康度，每处引水渠+3[ICON_HEALTH]健康度，全局健康度+3%。所有城市的[ICON_PLAGUE]瘟疫阈值提升15%,所有自然奇观+1[ICON_HEALTH]健康度。</Text>
+			<Text>每处公共浴室+1[ICON_HEALTH]健康度，每处引水渠+3[ICON_HEALTH]健康度，全局健康度+3%。所有城市的[ICON_PLAGUE]瘟疫阈值提升15%。</Text>
 		</Row>
 
 
@@ -8849,7 +8840,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_AQUARIUM_HELP">
 			<Text>
-				+2[ICON_HAPPINESS_1]满意度，所有自然奇观+1[ICON_RESEARCH]科研、+1[ICON_CULTURE]文化。本城+10%[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
+				+2[ICON_HAPPINESS_1]满意度。本城+10%[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_AQUARIUM_TEXT">
@@ -9800,7 +9791,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BLIALI_HELP">
 			<Text>
-				攻击次数+2，可攻击后移动。+50%近战[ICON_STRENGTH]防御力，攻击时可造成50%溅射伤害。临近三格内的敌人-33%[ICON_STRENGTH]战斗力。不可近战攻击。
+				攻击次数+2，可攻击后移动。+50%近战[ICON_STRENGTH]防御力，攻击时可造成50%溅射伤害。远程攻击时有100%几率击退敌人，不可近战攻击。
 			</Text>
 		</Row>
 
@@ -9904,7 +9895,30 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIABLO_HELP">
 			<Text>被攻击时，有33%几率规避此次伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
 		</Row>
-		
+
+
+
+
+
+		<Row Tag="TXT_KEY_BUILDING_GEOLOGICAL_ANVIL">
+			<Text>
+				[ICON_PRODUCTION]地质铁砧
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_HELP">
+			<Text>
+				火山喷发不会对本城地块产生伤害，但加成效果依旧有效。本城范围内每个山脉地形+10%[ICON_PRODUCTION]产能。提供五份[ICON_RES_TITANIUM]钛资源。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_GEOLOGICAL_ANVIL_TEXT">
+			<Text>
+				奇怪的是没有人亲眼见过地质铁砧工作的样子。我们大概了解它的占地体积（约1500立方公顷，含几公顷误差），我们也能明里的观察到它流过管道时产生的物质，但对操作员来说，其确切的大小和工作都是不可见的。
+				[NEWLINE]建造地质铁砧是为了从星球地壳最深层抽取更多的稀有金属和重金属（讽刺的是还包含浮石）。由于表层沉淀越来越稀少且由于政治上的困难难以取得，材料工程师和应用地质学家便考虑重现“播种”前地球上的采矿方法-钻入地壳深处采集其中的矿藏。在地球上，这个过程会受星球的相对年龄、风化层退化状态以及相对较高的能源成本的制约。这个年轻的星球地壳较为完整，能源也更便宜，深层抽取的行动似乎某种意义上并不困难。
+				[NEWLINE]第一步是挖掘洞穴导管，直至地壳脆弱柔软的部位。然后一队大小不等的机器人工人被送下去，从庞大物体的搬运到自主组装碳纳米晶体，它们需要完成铸造厂、冶炼厂和传属阵列的工作，其他类似的地表设施都无法比拟。无人机不停地挖掘、分类、融化、运输，设施会把废热排至附近的峡谷，异星的金属和合金被带到地标以满足工业需求。
+				[NEWLINE]深处的设施生产的材料在高热和高压的地壳以外环境中无法复制。特别是著名的超纯镍铁合金、柔性菲拉瑟化合物以及脆弱的浮石。数不清的专门制造和冶炼法在此被开发出了，正在进行的主要地质学和材料学也可能是因该设施才创立。甚至产生了一门用铁砧采矿输出作为主要数据的分析地理科学的新领域。
+				[NEWLINE]而所有这些永不停息的工作却无需大量的人力支持。只有一小队人类控制员在下面几公里处轮班工作和生活。他们从一些列控制室中观察铁砧作业，监控更深层工作的机器发来的报告。这些工程师创造了地质铁砧的机器人神话，唤醒了旧地球的灵魂，如矮人、命运女神、火巨人和巨人，他们开玩笑说这些才是看不见的铁砧真正的工人。
+			</Text>
+		</Row>
 	</Language_ZH_Hant_HK>
 
 

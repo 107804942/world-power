@@ -367,13 +367,7 @@
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
-		<Row>
-			<Type>BUILDINGCLASS_VIRTUAL_IDOL</Type>
-			<DefaultBuilding>BUILDING_VIRTUAL_IDOL</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_VIRTUAL_IDOL</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-
+	
 
 		<Row>
 			<Type>BUILDINGCLASS_SATELLITE_NET</Type>
@@ -2634,29 +2628,6 @@
 			<NukeInterceptionChance>50</NukeInterceptionChance>
 		</Row>
 
-		<!-- 虚拟偶像-->
-		<Row>
-			<Type>BUILDING_VIRTUAL_IDOL</Type>
-			<BuildingClass>BUILDINGCLASS_VIRTUAL_IDOL</BuildingClass>
-			<Description>TXT_KEY_BUILDING_VIRTUAL_IDOL</Description>
-			<Help>TXT_KEY_WONDER_VIRTUAL_IDOL_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_VIRTUAL_IDOL_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_VIRTUAL_IDOL_QUOTE</Quote>
-			<Cost>12000</Cost>
-			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
-			<NukeImmune>true</NukeImmune>
-			<GreatWorksTourismModifier>100</GreatWorksTourismModifier>
-			<CultureRateModifier>50</CultureRateModifier>
-			<GreatWorkSlotType>GREAT_WORK_SLOT_MUSIC</GreatWorkSlotType>
-			<GreatWorkCount>2</GreatWorkCount>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>62</PortraitIndex>
-			<WonderSplashImage>VirtualIdol_Splash.dds</WonderSplashImage>
-			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-		</Row>
 		
 		<Row>
 			<Type>BUILDING_SKYCITY</Type>
@@ -2665,8 +2636,8 @@
 			<Help>TXT_KEY_WONDER_SKYCITY_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_SKYCITY_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_SKYCITY_QUOTE</Quote>
-			<Cost>12000</Cost>
-			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
+			<Cost>15000</Cost>
+			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<GreatPeopleRateChange>2</GreatPeopleRateChange>
 			<NukeImmune>true</NukeImmune>
@@ -2910,14 +2881,7 @@
 		
 				
 		
-		<Row>
-			<BuildingType>BUILDING_VIRTUAL_IDOL</BuildingType>
-			<Description>TXT_KEY_THEMING_BONUS_VIRTUAL_IDOL</Description>
-			<Bonus>2</Bonus>
-			<SameEra>true</SameEra>
-			<RequiresSamePlayer>true</RequiresSamePlayer>
-			<AIPriority>2</AIPriority>
-		</Row>
+
 	</Building_ThemingBonuses>
 
 
@@ -3605,13 +3569,7 @@
 			<Cost>5</Cost>
 		</Row>
 		
-		<Row>
-			<BuildingType>BUILDING_VIRTUAL_IDOL</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>10</Cost>
-		</Row>
-
-
+	
 
 		<Row>
 			<BuildingType>BUILDING_BLETCHLEY_PARK</BuildingType>
@@ -4466,11 +4424,6 @@
 		</Row>
 		
 
-	    <Row>
-		      <BuildingType>BUILDING_VIRTUAL_IDOL</BuildingType>
-		      <ResourceType>RESOURCE_CONSUMER</ResourceType>
-		      <Quantity>80</Quantity>
-	    </Row>
 		
 		<Row>
 			<BuildingType>BUILDING_MOON_BASE</BuildingType>

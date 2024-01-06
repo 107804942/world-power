@@ -69,8 +69,8 @@
 			<Type>UNIT_NAVALFIGHTER03H</Type>
 			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
-			<Combat>540</Combat>
-			<Cost>3700</Cost>
+			<Combat>550</Combat>
+			<Cost>4000</Cost>
 			<Moves>11</Moves>
 			<AirInterceptRange>3</AirInterceptRange>
 			<HurryCostModifier>60</HurryCostModifier>
@@ -107,8 +107,8 @@
 			<BaseSightRange>4</BaseSightRange>
 			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<Combat>700</Combat>
-			<RangedCombat>540</RangedCombat>
-			<Cost>4400</Cost>
+			<RangedCombat>550</RangedCombat>
+			<Cost>4700</Cost>
 			<Moves>10</Moves>
 			<Range>4</Range>
 			<HurryCostModifier>85</HurryCostModifier>
@@ -145,7 +145,7 @@
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>1000</Combat>
 			<RangedCombat>1000</RangedCombat>
-			<Cost>7600</Cost>
+			<Cost>8000</Cost>
 			<Moves>8</Moves>
 			<Range>5</Range>
 			<HurryCostModifier>200</HurryCostModifier>
@@ -187,7 +187,7 @@
 			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>700</Combat>
-			<Cost>8000</Cost>
+			<Cost>8500</Cost>
 			<Moves>9</Moves>
 			<HurryCostModifier>200</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
@@ -225,8 +225,8 @@
 			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<BaseSightRange>6</BaseSightRange>
 			<Combat>580</Combat>
-			<RangedCombat>470</RangedCombat>
-			<Cost>3500</Cost>
+			<RangedCombat>480</RangedCombat>
+			<Cost>3800</Cost>
 			<Moves>10</Moves>
 			<Range>3</Range>
 			<HurryCostModifier>110</HurryCostModifier>
@@ -582,7 +582,6 @@
 		<!-- 桨帆船 -->
 		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
 		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
-
 		<!-- 炮艇 -->
 		<Delete UnitType="UNIT_MONITOR_SHIP"/>
 		<!-- 护卫舰 -->
