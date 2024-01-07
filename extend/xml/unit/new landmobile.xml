@@ -17,7 +17,7 @@
 			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
 			<Combat>150</Combat>
 			<BaseSightRange>5</BaseSightRange>
-			<HurryCostModifier>50</HurryCostModifier>
+			<HurryCostModifier>75</HurryCostModifier>
 			<Cost>500</Cost>
 			<Moves>5</Moves>
 			<Immobile>0</Immobile>
@@ -52,7 +52,7 @@
 			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
 			<Combat>300</Combat>
 			<Cost>2800</Cost>
-			<HurryCostModifier>75</HurryCostModifier>
+			<HurryCostModifier>90</HurryCostModifier>
 			<Moves>4</Moves>
 			<Immobile>0</Immobile>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
@@ -88,11 +88,11 @@
 			<Type>UNIT_AEGIS</Type>
 			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
-			<Combat>430</Combat>
-			<RangedCombat>430</RangedCombat>
+			<Combat>450</Combat>
+			<RangedCombat>450</RangedCombat>
 			<Range>2</Range>
-			<Cost>3800</Cost>
-			<HurryCostModifier>75</HurryCostModifier>
+			<Cost>4000</Cost>
+			<HurryCostModifier>90</HurryCostModifier>
 			<Moves>5</Moves>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
@@ -125,8 +125,8 @@
 			<Type>UNIT_CARVR</Type>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
 			<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
-			<Combat>390</Combat>
-			<HurryCostModifier>75</HurryCostModifier>
+			<Combat>400</Combat>
+			<HurryCostModifier>90</HurryCostModifier>
 			<Cost>3700</Cost>
 			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
 			<Moves>5</Moves>
@@ -161,8 +161,8 @@
 			<Type>UNIT_BEAM_JUMPER</Type>
 			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
 			<Combat>500</Combat>
-			<Cost>4800</Cost>
-			<HurryCostModifier>75</HurryCostModifier>
+			<Cost>5500</Cost>
+			<HurryCostModifier>90</HurryCostModifier>
 			<Moves>5</Moves>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
@@ -200,9 +200,9 @@
 			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>300</Combat>
-			<RangedCombat>270</RangedCombat>
-			<Cost>2500</Cost>
-			<HurryCostModifier>75</HurryCostModifier>
+			<RangedCombat>300</RangedCombat>
+			<Cost>2700</Cost>
+			<HurryCostModifier>90</HurryCostModifier>
 			<Moves>11</Moves>
 			<Range>1</Range>
 			<ExtraMaintenanceCost>30</ExtraMaintenanceCost>

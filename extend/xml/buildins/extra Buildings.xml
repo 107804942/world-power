@@ -1263,8 +1263,8 @@
 			<Row>
 				<Type>BUILDING_QUANTUM_LAB</Type>
 				<BuildingClass>BUILDINGCLASS_QUANTUM_LAB</BuildingClass>
-				<Cost>3500</Cost>
-				<GoldMaintenance>50</GoldMaintenance>
+				<Cost>4000</Cost>
+				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
 				<Help>TXT_KEY_BUILDING_QUANTUM_LAB_HELP</Help>
 				<Description>TXT_KEY_BUILDING_QUANTUM_LAB</Description>
@@ -1280,25 +1280,24 @@
 			</Row>
 
 
-			<!--改造实验室-->
+			<!--鱼雷电池-->
 
 			<Row>
-				<Type>BUILDING_GENE_THERAPY</Type>
-				<BuildingClass>BUILDINGCLASS_GENE_THERAPY</BuildingClass>
-				<Cost>3500</Cost>
+				<Type>BUILDING_TORPEDO_BATTERY</Type>
+				<BuildingClass>BUILDINGCLASS_TORPEDO_BATTERY</BuildingClass>
+				<Cost>4000</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
-				<Help>TXT_KEY_BUILDING_GENE_THERAPY_HELP</Help>
-				<Description>TXT_KEY_BUILDING_GENE_THERAPY</Description>
-				<Civilopedia>TXT_KEY_BUILDING_GENE_THERAPY_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_TORPEDO_BATTERY_HELP</Help>
+				<Description>TXT_KEY_BUILDING_TORPEDO_BATTERY</Description>
+				<Civilopedia>TXT_KEY_BUILDING_TORPEDO_BATTERY_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_SP_PUBLIC_HEALTH_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>ART_DEF_BUILDING_GENE_THERAPY</ArtDefineTag>
-				<FoodKept>35</FoodKept>
-				<MinAreaSize>-1</MinAreaSize>
+				<RangedStrikeModifier>50</RangedStrikeModifier>
+				<ExtraAttacks>2</ExtraAttacks>
 				<ConquestProb>100</ConquestProb>
 				<HurryCostModifier>160</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>30</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>93</PortraitIndex>
 			</Row>
 
 
@@ -1459,9 +1458,9 @@
 				<SpecialistCount>2</SpecialistCount>
 				<ConquestProb>100</ConquestProb>
 				<HurryCostModifier>120</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>119</PortraitIndex>
-				<GoldMaintenance>5</GoldMaintenance>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>91</PortraitIndex>
+				<GoldMaintenance>100</GoldMaintenance>
 			</Row>
 
 			<!--生物工厂-->
@@ -1802,14 +1801,14 @@
 				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 				<Help>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_HELP</Help>
 				<Description>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL</Description>
-				<Civilopedia>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_PEDIA</Civilopedia>
+				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_GEOLOGICAL_ANVIL_TEXT</Civilopedia>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<MinAreaSize>-1</MinAreaSize>
 				<ImmueVolcanoDamage>1</ImmueVolcanoDamage>
 				<ConquestProb>50</ConquestProb>
 				<HurryCostModifier>40</HurryCostModifier>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-				<PortraitIndex>91</PortraitIndex>
+				<PortraitIndex>94</PortraitIndex>
 			</Row>
 
 
@@ -2098,13 +2097,6 @@
 			<BuildingType>BUILDING_ZXZCC</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_SHIPYARD</BuildingClassType>
 		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_MEDIUM</BuildingClassType>
-		</Row>
-
 
 
 		<Row>

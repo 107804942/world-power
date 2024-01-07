@@ -190,112 +190,53 @@ int CvLuaPlayer::lEspionageSetOutcome(lua_State* L)
 }
 
 
-int CvLuaPlayer::lGetEspionageSpies(lua_State* L)
-{
-	CvPlayerAI* pkThisPlayer = GetInstance(L);
-	CvPlayerEspionage* pkPlayerEspionage = pkThisPlayer->GetEspionage();
 
-	lua_createtable(L, 0, 0);
-	int index = 1;
 
-	for(uint uiSpy = 0; uiSpy < pkPlayerEspionage->m_aSpyList.size(); ++uiSpy)
+
+	//SpecialistYieldModifiers
 	{
-		CvEspionageSpy* pSpy = &(pkPlayerEspionage->m_aSpyList[uiSpy]);
+		kUtility.Initialize2DArray(m_ppaiSpecialistYieldModifier, "Specialists", "Yields");
 
-		lua_createtable(L, 0, 0);
-		const int t = lua_gettop(L);
-
-		lua_pushinteger(L, uiSpy);
-		lua_setfield(L, t, "AgentID");
-
-		lua_pushinteger(L, pSpy->m_iCityX);
-		lua_setfield(L, t, "CityX");
-
-		lua_pushinteger(L, pSpy->m_iCityY);
-		lua_setfield(L, t, "CityY");
-
-#if defined(MOD_BUGFIX_SPY_NAMES)
-		const char* szSpyName = pSpy->GetSpyName(pkThisPlayer);
-#else
-		const char* szSpyName = pkThisPlayer->getCivilizationInfo().getSpyNames(pSpy->m_iName);
-#endif
-		lua_pushstring(L, szSpyName);
-		lua_setfield(L, t, "Name");
-
-		switch(pSpy->m_eRank)
+		std::string strKey("Building_SpecialistYieldModifiers");
+		Database::Results* pResults = kUtility.GetResults(strKey);
+		if (pResults == NULL)
 		{
-		case SPY_RANK_RECRUIT:
-			lua_pushstring(L, "TXT_KEY_SPY_RANK_0");
-			break;
-		case SPY_RANK_AGENT:
-			lua_pushstring(L, "TXT_KEY_SPY_RANK_1");
-			break;
-		case SPY_RANK_SPECIAL_AGENT:
-			lua_pushstring(L, "TXT_KEY_SPY_RANK_2");
-			break;
-		default:
-			CvAssertMsg(false, "pSpy->m_eRank not in case statement");
-			break;
+			pResults = kUtility.PrepareResults(strKey, "select Specialists.ID as SpecialistID, Yields.ID as YieldID, Yield from Building_SpecialistYieldModifiers inner join Specialists on Specialists.Type = SpecialistType inner join Yields on Yields.Type = YieldType where BuildingType = ?");
 		}
-		lua_setfield(L, t, "Rank");
 
-		switch(pSpy->m_eSpyState)
+		pResults->Bind(1, szBuildingType);
+
+		while (pResults->Step())
 		{
-		case SPY_STATE_UNASSIGNED:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_UNASSIGNED");
-			break;
-		case SPY_STATE_TRAVELLING:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_TRAVELLING");
-			break;
-		case SPY_STATE_SURVEILLANCE:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_SURVEILLANCE");
-			break;
-		case SPY_STATE_GATHERING_INTEL:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_GATHERING_INTEL");
-			break;
-		case SPY_STATE_RIG_ELECTION:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_RIGGING_ELECTION");
-			break;
-		case SPY_STATE_COUNTER_INTEL:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_COUNTER_INTEL");
-			break;
-		case SPY_STATE_DEAD:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_DEAD");
-			break;
-		case SPY_STATE_MAKING_INTRODUCTIONS:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_MAKING_INTRODUCTIONS");
-			break;
-		case SPY_STATE_SCHMOOZE:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_SCHMOOZING");
-			break;
-#if defined(MOD_API_LUA_EXTENSIONS) && defined(MOD_API_ESPIONAGE)
-		case SPY_STATE_TERMINATED:
-			lua_pushstring(L, "TXT_KEY_SPY_STATE_TERMINATED");
-			break;
-#endif
-		default:
-			CvAssertMsg(false, "pSpy->m_eSpyState not in case statement");
-			break;
+			const int SpecialistID = pResults->GetInt(0);
+			const int YieldID = pResults->GetInt(1);
+			const int yield = pResults->GetInt(2);
+
+			m_ppaiSpecialistYieldModifier[SpecialistID][YieldID] = yield;
 		}
-		lua_setfield(L, t, "State");
-
-		lua_pushinteger(L, pkPlayerEspionage->GetTurnsUntilStateComplete(uiSpy));
-		lua_setfield(L, t, "TurnsLeft");
-
-		lua_pushinteger(L, pkPlayerEspionage->GetPercentOfStateComplete(uiSpy));
-		lua_setfield(L, t, "PercentComplete");
-
-		lua_pushboolean(L, pkPlayerEspionage->HasEstablishedSurveillance(uiSpy));
-		lua_setfield(L, t, "EstablishedSurveillance");
-
-		lua_pushboolean(L, pkPlayerEspionage->IsDiplomat(uiSpy));
-		lua_setfield(L, t, "IsDiplomat");
-
-#if defined(MOD_API_LUA_EXTENSIONS) && defined(MOD_API_ESPIONAGE)
-		lua_pushboolean(L, pSpy->m_bPassive);
-		lua_setfield(L, t, "Passive");
-#endif
-		lua_rawseti(L, -2, index++);
 	}
-	return 1;
-}
+
+
+	//Building_SpecialistYieldModifiersGlobal
+	{
+
+		kUtility.Initialize2DArray(m_ppaiSpecialistYieldModifierGlobal, "Specialists", "Yields");
+
+		std::string strKey("Building_SpecialistYieldModifiersGlobal");
+		Database::Results* pResults = kUtility.GetResults(strKey);
+		if (pResults == NULL)
+		{
+			pResults = kUtility.PrepareResults(strKey, "select Specialists.ID as SpecialistID, Yields.ID as YieldID, Yield from Building_SpecialistYieldModifiersGlobal inner join Specialists on Specialists.Type = SpecialistType inner join Yields on Yields.Type = YieldType where BuildingType = ?");
+		}
+
+		pResults->Bind(1, szBuildingType);
+
+		while (pResults->Step())
+		{
+			const int SpecialistID = pResults->GetInt(0);
+			const int YieldID = pResults->GetInt(1);
+			const int yield = pResults->GetInt(2);
+
+			m_ppaiSpecialistYieldModifierGlobal[SpecialistID][YieldID] = yield;
+		}
+	}

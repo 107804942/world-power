@@ -45,12 +45,12 @@
 			<Type>UNIT_AIRFIGHTER03P</Type>
 			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
 			<RangedCombat>660</RangedCombat>
-			<Cost>2600</Cost>
+			<Cost>3000</Cost>
 			<Moves>3</Moves>
 			<Immobile>true</Immobile>
 			<Range>35</Range>
 			<AirInterceptRange>35</AirInterceptRange>
-			<HurryCostModifier>125</HurryCostModifier>
+			<HurryCostModifier>150</HurryCostModifier>
 			<Special>SPECIALUNIT_STEALTH</Special>
 			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
 			<Domain>DOMAIN_AIR</Domain>
@@ -87,12 +87,12 @@
 			<Type>UNIT_AIRFIGHTER04P</Type>
 			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
 			<RangedCombat>550</RangedCombat>
-			<Cost>2600</Cost>
+			<Cost>3000</Cost>
 			<Moves>3</Moves>
 			<Immobile>true</Immobile>
 			<Range>30</Range>
 			<Special>SPECIALUNIT_STEALTH</Special>
-			<HurryCostModifier>125</HurryCostModifier>
+			<HurryCostModifier>150</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_ARCHER</CombatClass>
 			<Domain>DOMAIN_AIR</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
@@ -131,7 +131,7 @@
 			<Type>UNIT_DRONE_FIGHTER</Type>
 			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
 			<RangedCombat>780</RangedCombat>
-			<Cost>6300</Cost>
+			<Cost>8000</Cost>
 			<Moves>2</Moves>
 			<Immobile>true</Immobile>
 			<Range>50</Range>
@@ -160,7 +160,7 @@
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>190</ExtraMaintenanceCost>
-			<HurryCostModifier>220</HurryCostModifier>
+			<HurryCostModifier>250</HurryCostModifier>
 		</Row>
 
 

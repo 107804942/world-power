@@ -1310,11 +1310,11 @@
 			<Cost>7</Cost>
 		</Row>
 
-		<!--改造实验室-->
+		<!--电池-->
 		<Row>
-			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
+			<BuildingType>BUILDING_TORPEDO_BATTERY</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>4</Cost>
+			<Cost>5</Cost>
 		</Row>
 
 
@@ -2455,9 +2455,9 @@
 		</Row>
 
 		<Row>
-			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
-			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>370</Flavor>
+			<BuildingType>BUILDING_TORPEDO_BATTERY</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>580</Flavor>
 		</Row>
 
 		<Row>
@@ -2604,7 +2604,7 @@
 		
 		
 		<Row>
-			<BuildingType>BUILDING_GENE_THERAPY</BuildingType>
+			<BuildingType>BUILDING_TORPEDO_BATTERY</BuildingType>
 			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>-25</Yield>
 		</Row>

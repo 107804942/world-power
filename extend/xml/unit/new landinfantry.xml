@@ -364,7 +364,7 @@
 			<Combat>320</Combat>
 			<Cost>2500</Cost>
 			<Moves>4</Moves>
-			<HurryCostModifier>33</HurryCostModifier>
+			<HurryCostModifier>50</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_AUTOMATON</Description>
@@ -403,7 +403,7 @@
 			<RangedCombat>360</RangedCombat>
 			<Range>1</Range>
 			<Cost>2500</Cost>
-			<HurryCostModifier>33</HurryCostModifier>
+			<HurryCostModifier>50</HurryCostModifier>
 			<Moves>4</Moves>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
@@ -435,7 +435,7 @@
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 			<Combat>170</Combat>
-			<HurryCostModifier>45</HurryCostModifier>
+			<HurryCostModifier>50</HurryCostModifier>
 			<Cost>1400</Cost>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Moves>3</Moves>
@@ -545,14 +545,14 @@
 			<Type>UNIT_RAILGUN_TANK</Type>
 			<BaseSightRange>2</BaseSightRange>
 			<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
-			<Combat>270</Combat>
-			<RangedCombat>270</RangedCombat>
+			<Combat>300</Combat>
+			<RangedCombat>300</RangedCombat>
 			<Range>2</Range>
-			<Cost>1400</Cost>
+			<Cost>1500</Cost>
 			<Moves>5</Moves>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
-			<HurryCostModifier>45</HurryCostModifier>
+			<HurryCostModifier>50</HurryCostModifier>
 			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAILGUN_TANK</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAILGUN_TANK_TEXT</Civilopedia>
@@ -616,11 +616,6 @@
 			<PromotionType>PROMOTION_ANTI_TANK</PromotionType>
 		</Row>
 
-
-		<Row>
-			<UnitType>UNIT_RAILGUN_TANK</UnitType>
-			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
-		</Row>
 		<Row>
 			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<PromotionType>PROMOTION_HOVERING_UNIT</PromotionType>

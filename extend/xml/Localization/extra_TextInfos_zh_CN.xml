@@ -45,10 +45,11 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_EUI_TECH_YIELD_UNIT_COMBATSTRENGTH">
-			<Text>{1_Name}+{2_Num}[ICON_STRENGTH]近战战斗力</Text>
+			<Text>{1_Name}[ICON_STRENGTH]近战战斗力变更为{2_Num}</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_EUI_TECH_YIELD_UNIT_RANGED_COMBATSTRENGTH">
-			<Text>{1_Name}+{2_Num}[ICON_RANGE_STRENGTH]远程战斗力</Text>
+			<Text>{1_Name}[ICON_RANGE_STRENGTH]远程战斗力变更为{2_Num}</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_EUI_WORKER_SPEED_MOD">
@@ -1301,7 +1302,7 @@
 			<Text>纳米铝热剂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ALUMINIST_HELP">
-			<Text>当"物质重组"研究完成后，单位攻城时+50%[ICON_STRENGTH]攻击力。</Text>
+			<Text>攻城时+50%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 
 
@@ -1440,7 +1441,7 @@
 			<Text>精确制导</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIGHTER_ATTACK_HELP">
-			<Text>重力子理论科技解锁，隐形歼击机、幽浮歼击机与同时代舰载机单位获得该晋升：对海军及陆地单位+25%[ICON_STRENGTH]战斗力。</Text>
+			<Text>隐形歼击机、幽浮歼击机与同时代舰载机单位对海军及陆地单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_1">
@@ -2844,12 +2845,13 @@
 
 
 
+
 		<Row Tag="TXT_KEY_UNIT_ANGEL">
 			<Text>[COLOR_YELLOW]天使机甲[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_HELP_ANGEL">
-			<Text>强大的防空单位，能彻底阻止附近地块遭受空袭。</Text>
+			<Text>强大的防空单位，该单位附近20格内的地块不可被空袭。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_ANTIQUITY_ANGEL_TEXT">
 			<Text>
@@ -3234,7 +3236,7 @@
 			<Text>太阳神微波卫星</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_HELIOS_HELP">
-			<Text>本城每处沙漠地块+4[ICON_PRODUCTION]产能、4[ICON_GOLD]金钱、4[ICON_RESEARCH]科研。太阳能发电站+10[ICON_PRODUCTION]产能，当建有太阳能发电站的城市攻击时，对城市3格范围内的敌人额外造成25%伤害。</Text>
+			<Text>本城每处沙漠地块+10%[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。太阳能发电站+10[ICON_PRODUCTION]产能，当建有太阳能发电站的城市攻击时，对城市3格范围内的敌人额外造成25%伤害。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_HELIOS_QUOTE">
 			<Text>
@@ -3571,19 +3573,19 @@
 
 
 		<Row>
-			<Tag>TXT_KEY_BUILDING_GENE_THERAPY</Tag>
-			<Text>[ICON_HEALTH][ICON_FOOD]改造实验室</Text>
+			<Tag>TXT_KEY_BUILDING_TORPEDO_BATTERY</Tag>
+			<Text>[ICON_WAR]鱼雷电池</Text>
 		</Row>
 		<Row>
-			<Tag>TXT_KEY_BUILDING_GENE_THERAPY_PEDIA</Tag>
+			<Tag>TXT_KEY_BUILDING_TORPEDO_BATTERY_PEDIA</Tag>
 			<Text>
-				人体改造可谓人类最古老的梦想之一。人类贵为万物之灵，但主要的长处只表现在智力上。人类游泳不及鱼儿、奔跑不及虎豹，视力不及鹰隼，嗅觉不及狼犬。甚至打起架来，臂力还不及我们的祖先类人猿。总之，上帝在赋予"万物之灵"以无上智力的同时，也给我们设置了许多遗传上的限制。
-				于是，改造人体，突破这些限制，享受更大的行动自由，自古以来就是宗教、神话和民间传说的重要主题。平地飞升、力大无穷、忍饥耐渴等等，都是各种法术修练的目标。只不过，在科幻中出现的人体改造故事里，改造现有人体的不再是魔法，巫术，而是科学技术。
+				术语“鱼雷”通常指海军战斗中所使用的所有类型的水下对象：从静止的触发水雷到推进式爆炸装置。后来，此术语专指自我推进式水下导弹。随着22世纪战争的到来，此术语又演变为指代更多种类的海军武器。鱼雷不仅可以自我推进、自我导向，还能通过遥感读数或完全通过自主程序从静止状态被“唤醒”。鱼雷也不再局限于水环境，可以从陆地、空中或海面发射。鱼雷成为了全地形导弹，这种新类型的鱼雷需要新的发射平台。进入现代鱼雷电池。
+				[NEWLINE]鱼雷电池能够在几秒内对多个目标发射高强度攻击，它是所有海上防御的指挥中心。鱼雷电池最初由北海联盟工程师依照巴西利亚小型舰队的命令所研发，其结构优化为360度防御。它彻底改良了北海联盟“方舟”的防御能力，可以全自动或由十几个远程操控者控制。鱼雷电池也很容易调节大小以适应较大或较小的城市以及不同的水环境（包括温度、含盐度、洋流力度和海底生命密度）。
 			</Text>
 		</Row>
 		<Row>
-			<Tag>TXT_KEY_BUILDING_GENE_THERAPY_HELP</Tag>
-			<Text>只能在中型城市建造。</Text>
+			<Tag>TXT_KEY_BUILDING_TORPEDO_BATTERY_HELP</Tag>
+			<Text>城市[ICON_STRENGTH]攻击力+50%，且攻击次数+2。</Text>
 		</Row>
 
 
@@ -3708,15 +3710,16 @@
 			<Text>[COLOR_YELLOW]粒子束攻城巨炮[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_CAN_RANGE_ATTACK_HELP">
-			<Text>当超结构科技研究完成后解锁，末日机甲升基础[ICON_STRENGTH]战斗力+300</Text>
+			<Text>末日机甲攻击范围+2，获得间接火力</Text>
 		</Row>
+
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1">
 			<Text>[COLOR_YELLOW]复合材料[ENDCOLOR]</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1_HELP">
-			<Text>当超结构科技研究完成后解锁，末日机甲+200最大生命值,获得镇暴能力（可对抵抗中的城市进行镇暴，一次性消除所有抵抗时间，但城市会损失一半人口）</Text>
+			<Text>末日机甲+200最大生命值,获得镇暴能力（可对抵抗中的城市进行镇暴，一次性消除所有抵抗时间，但城市会损失一半人口）</Text>
 		</Replace>
 
 
@@ -4061,13 +4064,12 @@
 		</Row>
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_AERIAL_REFUELING">
 			<Text>区域轰炸</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_AERIAL_REFUELING_HELP">
 			<Text>
-				行星网络科技解锁：隐形轰炸机或幽浮轰炸机单位获得AOE效果。
+				隐形轰炸机或幽浮轰炸机单位获得AOE效果。
 			</Text>
 		</Row>
 
@@ -4169,19 +4171,6 @@
 
 
 
-
-		<Row Tag="TXT_KEY_PROMOTION_EHOVER">
-			<Text>战术悬浮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_EHOVER_HELP">
-			<Text>移动悬浮科技解锁，未来时代攻城单位获得该晋升：战术悬浮，可以悬浮移动。</Text>
-		</Row>
-
-
-
-
-
-
 		<Row Tag="TXT_KEY_WISDOM_X">
 			<Text>战术研究</Text>
 		</Row>
@@ -4200,9 +4189,8 @@
 			<Text>火力覆盖</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_EQUICK_HELP">
-			<Text>战术机器人学解锁，陆军AOE单位获得晋升：远程攻击力+20%。</Text>
+			<Text>陆军AOE单位远程攻击力+20%。</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_BUILDING_MINEFIELD">
 			<Text>[ICON_STRENGTH]智能水雷区</Text>
@@ -4490,7 +4478,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_LEP_HELP">
-			<Text>开启一次[ICON_GOLDEN_AGE]黄金時代,科学家研究科技时产出+50%[ICON_RESEARCH]科研。在联合国中获得额外5个代表票数。所在城市获得一座太空船工厂,建造太空船部件時+100%[ICON_PRODUCTION]产能。能提供100个单位铁、石油、煤、铝等战略资源。</Text>
+			<Text>科学家研究科技时产出+50%[ICON_RESEARCH]科研。所在城市获得一座太空船工厂,建造太空船部件時+100%[ICON_PRODUCTION]产能。能提供100个单位铁、石油、煤、铝等战略资源。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_LEP_QUOTE">
 			<Text>[NEWLINE]“科学精神最重要的就是创新。”[NEWLINE]        ——钱学森[NEWLINE]</Text>
@@ -4652,19 +4640,14 @@
 
 
 
-
-
 		<Row Tag="TXT_KEY_PROMOTION_FORTIFY_PERFORMED">
 			<Text>丝铁合金</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FORTIFY_PERFORMED_HELP">
 			<Text>
-				超材料科技解锁:步兵系单位被攻击时受到的最终伤害-5。
+				步兵系单位被攻击时受到的最终伤害-5。
 			</Text>
 		</Row>
-
-
-
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SMETAL">
@@ -9602,7 +9585,7 @@
 			<Text>太空部队</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_XCOM_WEAPON_BASE_HELP">
-			<Text>全息技术科技解锁，伞兵系单位获得该能力：国境外也能执行空降任务，对陆作战时+150%[ICON_STRENGTH]战斗力。</Text>
+			<Text>伞兵系单位在国境外也能执行空降任务，对陆作战时+150%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
 

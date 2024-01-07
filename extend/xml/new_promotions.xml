@@ -314,70 +314,7 @@
 
 
 
-	<Technology_FreePromotions>
 
-		<Row>
-			<TechType>TECH_HOLOGRAPHY</TechType>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-		</Row>
-
-
-
-		<Row>
-			<TechType>TECH_METAMATERIAL</TechType>
-			<PromotionType>PROMOTION_FORTIFY_PERFORMED</PromotionType>
-		</Row>
-
-		<Row>
-			<TechType>TECH_NANOTECHNOLOGY</TechType>
-			<PromotionType>PROMOTION_SMETAL</PromotionType>
-		</Row>
-
-		<Row>
-			<TechType>TECH_MATTERTRANSMISSION</TechType>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-		</Row>
-
-		<Row>
-			<TechType>TECH_SDI</TechType>
-			<PromotionType>PROMOTION_ANTIAIRX</PromotionType>
-		</Row>
-		<Row>
-			<TechType>TECH_PLANETARY_NETWORKS</TechType>
-			<PromotionType>PROMOTION_AERIAL_REFUELING</PromotionType>
-		</Row>
-		<Row>
-			<TechType>TECH_AUTONOMOUS_SYSTEMS</TechType>
-			<PromotionType>PROMOTION_EQUICK</PromotionType>
-		</Row>
-		<Row>
-			<TechType>TECH_ORBITAL_SUSPENSION</TechType>
-			<PromotionType>PROMOTION_EHOVER</PromotionType>
-		</Row>
-
-		<Row>
-			<TechType>TECH_HOMO_SUPERIOR</TechType>
-			<PromotionType>PROMOTION_HPMOD1</PromotionType>
-		</Row>
-		<Row>
-			<TechType>TECH_NEURAL_INTERFACE</TechType>
-			<PromotionType>PROMOTION_CAN_RANGE_ATTACK</PromotionType>
-		</Row>
-
-
-		<Row>
-			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
-			<PromotionType>PROMOTION_FIGHTER_ATTACK</PromotionType>
-		</Row>
-
-
-
-		<Row>
-			<TechType>TECH_MILITARY_OCEANOGRAPHY</TechType>
-			<PromotionType>PROMOTION_NAVAL_SIGHT</PromotionType>
-		</Row>
-
-	</Technology_FreePromotions>
 
 
 
@@ -973,8 +910,8 @@
 			<CanMoveImpassable>true</CanMoveImpassable>
 			<OrderPriority>11</OrderPriority>
 			<HoveringUnit>true</HoveringUnit>
-			<PortraitIndex>49</PortraitIndex>
-			<IconAtlas>VALERY_ATLAS</IconAtlas>
+			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>promoVP_atlas_01</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_HOVERING_UNIT</PediaEntry>
 		</Row>
@@ -3327,21 +3264,7 @@
 		</Row>
 
 
-		<Row>
-			<Type>PROMOTION_EHOVER</Type>
-			<Description>TXT_KEY_PROMOTION_EHOVER</Description>
-			<Help>TXT_KEY_PROMOTION_EHOVER_HELP</Help>
-			<TechPrereq>TECH_ORBITAL_SUSPENSION</TechPrereq>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>28</PortraitIndex>
-			<IconAtlas>promoVP_atlas_01</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_EHOVER</PediaEntry>
-			<HoveringUnit>true</HoveringUnit>
-			<IgnoreTerrainCost>true</IgnoreTerrainCost>
-		</Row>
-
+	
 
 
 		<Row>

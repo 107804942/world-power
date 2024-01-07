@@ -2452,7 +2452,7 @@
 		<Row>
 			<Type>BUILDING_TECHNOMART</Type>
 			<BuildingClass>BUILDINGCLASS_TECHNOMART</BuildingClass>
-			<Cost>20000</Cost>
+			<Cost>26000</Cost>
 			<PrereqTech>TECH_MASS</PrereqTech>
 			<Help>TXT_KEY_WONDER_TECHNOMART_HELP</Help>
 			<Description>TXT_KEY_BUILDING_TECHNOMART_DESC</Description>
@@ -2537,7 +2537,7 @@
 		<Row>
 			<Type>BUILDING_LEP</Type>
 			<BuildingClass>BUILDINGCLASS_LEP</BuildingClass>
-			<Cost>20000</Cost>
+			<Cost>26000</Cost>
 			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
 			<Help>TXT_KEY_WONDER_LEP_HELP</Help>
 			<Description>TXT_KEY_BUILDING_LEP</Description>
@@ -2547,8 +2547,6 @@
 			<GreatPeopleRateChange>3</GreatPeopleRateChange>
 			<GreatScientistBeakerModifier>50</GreatScientistBeakerModifier>
 			<FreeBuildingThisCity>BUILDINGCLASS_SPACESHIP_FACTORY</FreeBuildingThisCity>
-			<ExtraLeagueVotes>5</ExtraLeagueVotes>
-			<GoldenAge>true</GoldenAge>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
@@ -2568,10 +2566,9 @@
 			<Help>TXT_KEY_WONDER_HELIOS_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_HELIOS_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_HELIOS_QUOTE</Quote>
-			<Cost>20000</Cost>
+			<Cost>26000</Cost>
 			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
 			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
-			<FreeBuildingThisCity>BUILDINGCLASS_SOLAR_PLANT</FreeBuildingThisCity>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<GreatPeopleRateChange>2</GreatPeopleRateChange>
 			<NukeImmune>true</NukeImmune>
@@ -2589,7 +2586,7 @@
 		<Row>
 			<Type>BUILDING_MOON_BASE</Type>
 			<BuildingClass>BUILDINGCLASS_MOON_BASE</BuildingClass>
-			<Cost>3000</Cost>
+			<Cost>4000</Cost>
 			<PrereqTech>TECH_EARTH</PrereqTech>
 			<NumCityCostMod>25</NumCityCostMod>
 			<Help>TXT_KEY_BUILDING_MOON_BASE_HELP</Help>
@@ -2613,7 +2610,7 @@
 			<Description>TXT_KEY_BUILDING_SKYNET_DESC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SKYNET_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_SKYNET_QUOTE</Quote>
-			<Cost>20000</Cost>
+			<Cost>26000</Cost>
 			<Happiness>-20</Happiness>
 			<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
 			<FreePromotion>PROMOTION_SKYNET_LINK</FreePromotion>
@@ -2688,7 +2685,7 @@
 			<Help>TXT_KEY_WONDER_ULTIMATOWER_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_ULTIMATOWER_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_ULTIMATOWER_QUOTE</Quote>
-			<Cost>20000</Cost>
+			<Cost>26000</Cost>
 			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 			<GlobalPopulationChange>5</GlobalPopulationChange>
 			<!--<UnmoddedHappiness>20</UnmoddedHappiness>-->
@@ -2714,7 +2711,7 @@
 			<Help>TXT_KEY_WONDER_FOLDING_MACHINE_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_FOLDING_MACHINE_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_FOLDING_MACHINE_QUOTE</Quote>
-			<Cost>20000</Cost>
+			<Cost>26000</Cost>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>3</SpecialistCount>
 			<PrereqTech>TECH_PLANETARY_NETWORKS</PrereqTech>
@@ -2811,7 +2808,7 @@
 			<Help>TXT_KEY_WONDER_MARKOV_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_MARKOV_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_MARKOV_QUOTE</Quote>
-			<Cost>25000</Cost>
+			<Cost>26000</Cost>
 			<Happiness>-50</Happiness>
 			<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
 			<MaxStartEra>ERA_FUTURE</MaxStartEra>
@@ -4417,12 +4414,7 @@
 			<Quantity>80</Quantity>
 		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_LEP</BuildingType>
-			<ResourceType>RESOURCE_LUMBER</ResourceType>
-			<Quantity>100</Quantity>
-		</Row>
-		
+
 
 		
 		<Row>

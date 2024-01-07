@@ -290,9 +290,9 @@
 		
 		
 		<Row>
-			<Type>BUILDINGCLASS_GENE_THERAPY</Type>
-			<DefaultBuilding>BUILDING_GENE_THERAPY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_GENE_THERAPY</Description>
+			<Type>BUILDINGCLASS_TORPEDO_BATTERY</Type>
+			<DefaultBuilding>BUILDING_TORPEDO_BATTERY</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_TORPEDO_BATTERY</Description>
 		</Row>
 
 	

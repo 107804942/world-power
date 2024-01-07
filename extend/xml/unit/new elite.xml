@@ -845,7 +845,7 @@
 			<Combat>380</Combat>
 			<RangedCombat>380</RangedCombat>
 			<Range>2</Range>
-			<Cost>1680</Cost>
+			<Cost>2500</Cost>
 			<Moves>3</Moves>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1123,7 +1123,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<Combat>780</Combat>
 			<RangedCombat>870</RangedCombat>
-			<Cost>10000</Cost>
+			<Cost>15000</Cost>
 			<Moves>5</Moves>
 			<Immobile>0</Immobile>
 			<Range>5</Range>

@@ -796,44 +796,140 @@ UPDATE UnitPromotions SET AntiHigherPopMod=100 WHERE Type='PROMOTION_GOLEM';
 #endif
 
 
-	-- Yields enhanced by Technology
-	if techFilter( enhancedYieldTech ) then
-		tip = GetYieldString( GameInfo.Building_TechEnhancedYieldChanges( thisBuildingType ) )
-		if #tip > 0 then
-			insert( tips, "[ICON_BULLET]" .. enhancedYieldTechName .. tip )
-		end
-	end
+	本地改良对本城产出百分比加成
+	 <Table name="Building_SpecialistYieldModifiers">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+		 <Table name="Building_SpecialistYieldModifiersGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+	---全局专家产出
+INSERT INTO Building_SpecialistYieldModifiersGlobal(BuildingType,	SpecialistType,	YieldType,	  Yield)
+SELECT     'BUILDING_GUIGU',	              'SPECIALIST_SCIENTIST',	    'YIELD_SCIENCE',	 10  UNION ALL
+SELECT     'BUILDING_GUIGU',	              'SPECIALIST_MUSICIAN',	    'YIELD_TOURISM',	 10  UNION ALL
+SELECT     'BUILDING_GUIGU',	               'SPECIALIST_WRITER',	        'YIELD_CULTURE', 10 UNION ALL
+SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ARTIST',	                'YIELD_CULTURE',	 10 UNION ALL
+SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ENGINEER',	            'YIELD_PRODUCTION',	 10  UNION ALL
+SELECT     'BUILDING_GUIGU',	      'SPECIALIST_MERCHANT',	            'YIELD_GOLD',	 10 ;
+
+
+	#if defined(MOD_ROG_CORE)
+		for (int iL = 0; iL < GC.getNumSpecialistInfos(); iL++)
+		{
+			SpecialistTypes eSpecialist = (SpecialistTypes)iL;
+			CvSpecialistInfo* pSpecialistInfo = GC.getSpecialistInfo((SpecialistTypes)iL);
+
+
+			if (pSpecialistInfo)
+			{
+				int iValue = pBuildingInfo->GetSpecificGreatPersonRateModifier((SpecialistTypes)iL);
+				if (iValue > 0)
+				{
+					ChangeSpecialistRateModifier(eSpecialist, (pBuildingInfo->GetSpecificGreatPersonRateModifier((SpecialistTypes)iL) * iChange));
+				}
+			}
+		}
+#endif
+
+
+	m_ppaiImprovementYieldModifier(NULL),
+	m_ppaiSpecialistYieldModifier(NULL),
+	m_ppaiSpecialistYieldModifierGlobal(NULL),
+
+		for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
+			{
+				ChangeImprovementExtraYield(((ImprovementTypes)iJ), eYield, (GC.getBuildingInfo(eBuilding)->GetImprovementYieldChange(iJ, eYield) * iChange));
+
+
+					int iYieldMod = pBuildingInfo->GetImprovementYieldModifier(((ImprovementTypes)iJ), eYield);
+					changeYieldModifierFromImprovement((ImprovementTypes)iJ, eYield, iYieldMod * iChange);
+
+			}
+
+			
+			int iYieldMod = pBuildingInfo->GetSpecialistYieldModifier(((SpecialistTypes)iL), eYield);
+			changeYieldModifierFromImprovement((ImprovementTypes)iJ, eYield, iYieldMod * iChange);
+
+
+			Building_ImprovementYieldChangesGlobal
+
+			TXT_KEY_PRODMOD_YIELD_IMPROVEMENTS
+
+			TXT_KEY_PRODMOD_YIELD_SPECIALIST
+
+				<Row Tag="TXT_KEY_PRODMOD_YIELD_SPECIALIST">
+			<Text>[NEWLINE][ICON_BULLET]来自专家: {1_Num}%</Text>
+		</Row>
 
 
 
-	-- units strength improved by this tech
-	--Unit_TechCombatStrength (UnitType, 	TechType,	CombatStrength)
+					for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+		{
+			changeSpecialistExtraYield(((SpecialistTypes)iI), ((YieldTypes)iJ), (pBuildingInfo->GetSpecialistYieldChange(iI, iJ) * iChange));
 
-	for row in GameInfo.Buildings{ EnhancedYieldTech = techType } do
-		--CivilizationType, BuildingClassType, BuildingType
-		overrideSearch.BuildingClassType = row.BuildingClass
-		override = GameInfo.Civilization_BuildingClassOverrides(overrideSearch)()
-		if override then
-			ok = override.BuildingType == row.Type
-		else
-			ok = GameInfo.BuildingClasses[ row.BuildingClass ]
-			ok = ok and ok.DefaultBuilding == row.Type
-		end
-		if ok then
-			local toolTip = row._Name
-			local icons = ""
-			local icon
-			for row in GameInfo.Unit_TechCombatStrength{ BuildingType = row.UnitType } do
-			-- BuildingType, YieldType, Yield
-				if NZ(row.Yield) then
-					icon = GameInfo.Yields[row.YieldType]
-					icon = icon and icon.IconString or "?"
-					icons = icons .. icon
-					toolTip = ("%s %+i%s"):format( toolTip, row.Yield, icon )
-				end
-			end
-			if icon and not addSmallActionButton( row, icons, toolTip ) then
-				break
-			end
-		end
-	end
+			int iYieldMod = pBuildingInfo->GetSpecialistYieldModifierGlobal(((SpecialistTypes)iI), ((YieldTypes)iJ));
+			changeYieldModifierFromSpecialistGlobal(((SpecialistTypes)iI), ((YieldTypes)iJ), iYieldMod * iChange);
+		}
+
+
+
+int CvPlayer::GetYieldModifierFromSpecialistGlobal(SpecialistTypes eSpecialist, YieldTypes eYield) const
+{
+	CvAssertMsg(eSpecialist >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	CvAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	CvAssertMsg(eYield >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	CvAssertMsg(eYield < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+	return m_ppiSpecialistYieldChange[eSpecialist][eYield];
+}
+
+//	--------------------------------------------------------------------------------
+void CvPlayer::changeYieldModifierFromSpecialistGlobal(SpecialistTypes eSpecialist, YieldTypes eYield, int iChange)
+{
+	CvAssertMsg(eSpecialist >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
+	CvAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	CvAssertMsg(eYield >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
+	CvAssertMsg(eYield < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
+
+	if (iChange != 0)
+	{
+		Firaxis::Array<int, NUM_YIELD_TYPES> yields = m_ppiSpecialistYieldChange[eSpecialist];
+		yields[eYield] = (m_ppiSpecialistYieldChange[eSpecialist][eYield] + iChange);
+		m_ppiSpecialistYieldChange[eSpecialist] = yields;
+		CvAssert(GetSpecialistExtraYield(eSpecialist, eYield) >= 0);
+
+		updateYield();
+	}
+}
+
+
+
+void CvPlayer::changeSpecialistExtraYield(YieldTypes eIndex, int iChange)
+
+void CvPlayer::changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange)
+
+		iMod = pPolicy->GetSpecialistExtraYield(iI) * iChange;
+		if(iMod != 0)
+			changeSpecialistExtraYield(eYield, iMod);
+
+
+void CvCity::changeSpecialistYieldRateModifier(YieldTypes eIndex, int iChange)
+changeYieldModifierFromSpecialist(((SpecialistTypes)iI), ((YieldTypes)iJ), iYieldMod * iChange);
+
+
+//	--------------------------------------------------------------------------------
+int CvPlayer::getSpecialistYieldRateModifier(YieldTypes eIndex) const
+{
+	CvAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	CvAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_aiSpecialistYieldRateModifier[eIndex];
+}

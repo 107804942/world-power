@@ -1760,53 +1760,7 @@ LuaEvents.MagellanNotificationIdRequest()
    end
 end 	
 GameEvents.ParadropAt.Add(ghostdamage)  
--- ********************************************************
--- 
--- ********************************************************           
-function GUIGU_SPY(iPlayer, iSpy, iResult, iCityX, iCityY) 
-   local Player = Players[iPlayer]
-   local tSpecialists ={}
 
-   if Player == nil or (not Player:IsMajorCiv())
-   or (not Player:HasWonder(GameInfoTypes.BUILDING_GUIGU)) then
-      return
-   end
-
-   local iTeamID = Player:GetTeam()
-   local iTeam = Teams[iTeamID]
-   local iTeamTechs = iTeam:GetTeamTechs()
-   local iGoldPerTurn = Player:CalculateGoldRate()
-   local Science=math.max(0,2*Player:GetScience())
-   if  iResult then
-
-   --City:ChangeDamage(50)
-
-   Player:ChangeGold(2*iGoldPerTurn)
-   ChangeResearchProcess(Player, iTeamID, iTeam, iTeamTechs, iPlayer, science)
-
-  local randomNumber = ROG_GetTrueRandom(1, 100)
-  if randomNumber>=80 then
-  local iX, iY = GetGuiGuCity(Player):GetX(), GetGuiGuCity(Player):GetY() 
- 
-  for row in GameInfo.Units() do
-  if  row.Special=='SPECIALUNIT_PEOPLE' then
-	    table.insert(tSpecialists, row.ID)
-		   end
-		end
-		   if #tSpecialists > 0 then
-			  local randomNumber = ROG_GetTrueRandom(1, #tSpecialists)
-			  local tSpecialist = tSpecialists[randomNumber]
-			  Specialistinfo = GameInfo.Units{ID=tSpecialist}()    
-              local SpecialistUnit = Player:InitUnit(Specialistinfo.ID, iX,iY)
-			  SpecialistUnit:JumpToNearestValidPlot()
-             end	
-         end
-
-     end
-
-end 	
-GameEvents.EspionageResult.Add(GUIGU_SPY)  
-   
 
 
 local iFreezeCollectionID = GameInfoTypes["PROMOTION_COLLECTION_FREEZE_BOMB"];

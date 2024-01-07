@@ -467,26 +467,55 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 
 
 	---------------------------------------------新增单位战力------------------------------------------------------------
-	for row in GameInfo.Unit_TechCombatStrength( thisTechType ) do
+	  for row in GameInfo.Unit_TechCombatStrength( thisTechType ) do
 			local Unit = GameInfo.Units[row.UnitType]
-			if   Unit then
-				local icons = "[ICON_STRENGTH]"
-				local toolTip = ""
-					toolTip = toolTip .. Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_COMBATSTRENGTH", Unit.Description, row.CombatStrength)
-				end
-			addSmallArtYieldButton(Unit, icons, toolTip)
-		end
+			local icons = ""
+			local toolTip = ""
+			local toolTip2 = -1
+        
+             if  Unit then    -----未改变近战力
 
-	
+			    icons = "[ICON_STRENGTH]" 				
+			    for row2 in GameInfo.Unit_TechRangedCombatStrength( thisTechType ) do
+				local Unit2 = GameInfo.Units[row2.UnitType]
+				if(Unit2~= nil and  row2.UnitType == row.UnitType ) then
+				local icon = "[ICON_RANGE_STRENGTH]" or "???"
+				icons = icons .. icon
+				toolTip2 = Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_RANGED_COMBATSTRENGTH", Unit2.Description, row2.RangedCombatStrength)			
+				    end
+				end
+
+				if toolTip2~= -1 then
+				toolTip = toolTip2 .. "[NEWLINE]".. Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_COMBATSTRENGTH", Unit.Description, row.CombatStrength)
+				else
+				toolTip = toolTip.. Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_COMBATSTRENGTH", Unit.Description, row.CombatStrength)
+				end			
+			    addSmallArtYieldButton(Unit, icons, toolTip)
+		    end
+        end
+
+
 		for row in GameInfo.Unit_TechRangedCombatStrength( thisTechType ) do
 			local Unit = GameInfo.Units[row.UnitType]
-			if  Unit then
-			    local icons = "[ICON_RANGE_STRENGTH]"
-				local toolTip = ""
-					toolTip = toolTip .. Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_RANGED_COMBATSTRENGTH", Unit.Description, row.RangedCombatStrength)
+			local icons = ""
+			local toolTip = ""
+			local toolTip2 = -1       
+             if  Unit then  
+			    icons = "[ICON_RANGE_STRENGTH]"				
+			    for row2 in GameInfo.Unit_TechCombatStrength( thisTechType ) do
+				local Unit2 = GameInfo.Units[row2.UnitType]
+				if(Unit2~= nil and  row2.UnitType == row.UnitType ) then
+				        toolTip2=1
+				    end
 				end
-			addSmallArtYieldButton(Unit, icons, toolTip)
-		end
+				if toolTip2~=1 then
+				toolTip = toolTip ..Locale.ConvertTextKey("TXT_KEY_EUI_TECH_YIELD_UNIT_RANGED_COMBATSTRENGTH", Unit.Description, row.RangedCombatStrength)
+				addSmallArtYieldButton(Unit, icons, toolTip)	
+				end								    
+		    end
+        end
+
+
 	---------------------------------------------新增------------------------------------------------------------
 	for row in GameInfo.Tech_SpecialistYieldChanges( thisTechType ) do
 			local specialist = GameInfo.Specialists[row.SpecialistType]

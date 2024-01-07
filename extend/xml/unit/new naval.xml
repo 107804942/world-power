@@ -73,7 +73,7 @@
 			<Cost>4200</Cost>
 			<Moves>11</Moves>
 			<AirInterceptRange>3</AirInterceptRange>
-			<HurryCostModifier>60</HurryCostModifier>
+			<HurryCostModifier>90</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_NAVALMELEE</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
@@ -111,7 +111,7 @@
 			<Cost>5500</Cost>
 			<Moves>10</Moves>
 			<Range>4</Range>
-			<HurryCostModifier>85</HurryCostModifier>
+			<HurryCostModifier>90</HurryCostModifier>
 			<AirInterceptRange>4</AirInterceptRange>
 			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
@@ -148,7 +148,7 @@
 			<Cost>9500</Cost>
 			<Moves>8</Moves>
 			<Range>5</Range>
-			<HurryCostModifier>200</HurryCostModifier>
+			<HurryCostModifier>250</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
@@ -189,7 +189,7 @@
 			<Combat>700</Combat>
 			<Cost>10000</Cost>
 			<Moves>9</Moves>
-			<HurryCostModifier>200</HurryCostModifier>
+			<HurryCostModifier>250</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
@@ -229,7 +229,7 @@
 			<Cost>4800</Cost>
 			<Moves>10</Moves>
 			<Range>3</Range>
-			<HurryCostModifier>110</HurryCostModifier>
+			<HurryCostModifier>100</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_SUBMARINE</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
