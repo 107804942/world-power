@@ -1310,14 +1310,6 @@
 			<Cost>7</Cost>
 		</Row>
 
-		<!--电池-->
-		<Row>
-			<BuildingType>BUILDING_TORPEDO_BATTERY</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>5</Cost>
-		</Row>
-
-
 
 
 		<!--未来金融公司-->
@@ -1604,13 +1596,13 @@
 		<Row>
 			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>3</Cost>
+			<Cost>5</Cost>
 		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>2</Cost>
+			<Cost>3</Cost>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
@@ -1709,7 +1701,7 @@
 		<!--庄园-->
 		<Row>
 			<BuildingType>BUILDING_JAIL</BuildingType>
-			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>25</Flavor>
 		</Row>
 		<Row>
@@ -2243,12 +2235,19 @@
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
+		
 		<Row>
 			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 			<Flavor>50</Flavor>
 		</Row>
-
+		<Row>
+			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		
+		
 		<Row>
 			<BuildingType>BUILDING_THORIUM_REACTOR</BuildingType>
 			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -2697,6 +2696,13 @@
 	
 	
 	<Building_ResourceQuantity>
+		<!--鱼雷电池-->
+
+		<Row>
+			<BuildingType>BUILDING_TORPEDO_BATTERY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>10</Quantity>
+		</Row>
 
 
 		<!--微波输电-->
@@ -3062,12 +3068,6 @@
 		</Row>
 
 
-		<Row>
-			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>10</Yield>
-		</Row>
-
 
 
 		<Row>
@@ -3124,25 +3124,7 @@
 		</Row>
 
 
-		<Row>
-			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
-			<TerrainType>TERRAIN_GRASS</TerrainType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
-			<TerrainType>TERRAIN_PLAINS</TerrainType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_BIOFACTORY</BuildingType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>2</Yield>
-		</Row>
+		
 	</Building_TerrainYieldChanges>
 
 
@@ -3253,7 +3235,7 @@
 		<Row>
 			<BuildingType>BUILDING_JAIL</BuildingType>
 			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
-			<YieldType>YIELD_FOOD</YieldType>
+			<YieldType>YIELD_GOLD</YieldType>
 			<Yield>1</Yield>
 		</Row>
 

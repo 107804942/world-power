@@ -387,7 +387,7 @@
 				<Type>BUILDING_JAIL</Type>
 				<BuildingClass>BUILDINGCLASS_JAIL</BuildingClass>
 				<Cost>300</Cost>
-				<GoldMaintenance>4</GoldMaintenance>
+				<!--<GoldMaintenance>4</GoldMaintenance>-->
 				<PrereqTech>TECH_SOVEREIGNTY</PrereqTech>
 				<Help>TXT_KEY_BUILDING_JAIL_HELP</Help>
 				<Description>TXT_KEY_BUILDING_JAIL</Description>

@@ -622,6 +622,32 @@ ALTER TABLE Buildings ADD COLUMN 'LiberatedInfluence' INTEGER DEFAULT 0;
 		<Column name="Yield" type="integer"/>
 	</Table>
 
+
+		---专家对本城产出百分比加成
+	 <Table name="Building_SpecialistYieldModifiers">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+
+		 <Table name="Building_SpecialistYieldModifiersGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+
+		<!-- Allows you to define a yield that generates another yield for every x% you produce in that city, in every city. -->
+	<Table name="Building_YieldFromYieldPercentGlobal">
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="YieldOut" type="integer" reference="Yields(Type)"/>
+		<Column name="YieldIn" type="integer" reference="Yields(Type)"/>
+		<Column name="Value" type="integer" default="0"/>
+	</Table>
+
+
 ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);
 ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;
@@ -796,24 +822,7 @@ UPDATE UnitPromotions SET AntiHigherPopMod=100 WHERE Type='PROMOTION_GOLEM';
 #endif
 
 
-	本地改良对本城产出百分比加成
-	 <Table name="Building_SpecialistYieldModifiers">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer"/>
-	</Table>
-
-
-		 <Table name="Building_SpecialistYieldModifiersGlobal">
-		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
-		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer"/>
-	</Table>
-
-
-	---全局专家产出
+---全局专家产出
 INSERT INTO Building_SpecialistYieldModifiersGlobal(BuildingType,	SpecialistType,	YieldType,	  Yield)
 SELECT     'BUILDING_GUIGU',	              'SPECIALIST_SCIENTIST',	    'YIELD_SCIENCE',	 10  UNION ALL
 SELECT     'BUILDING_GUIGU',	              'SPECIALIST_MUSICIAN',	    'YIELD_TOURISM',	 10  UNION ALL
@@ -822,114 +831,28 @@ SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ARTIST',	                'YIELD_C
 SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ENGINEER',	            'YIELD_PRODUCTION',	 10  UNION ALL
 SELECT     'BUILDING_GUIGU',	      'SPECIALIST_MERCHANT',	            'YIELD_GOLD',	 10 ;
 
-
-	#if defined(MOD_ROG_CORE)
-		for (int iL = 0; iL < GC.getNumSpecialistInfos(); iL++)
-		{
-			SpecialistTypes eSpecialist = (SpecialistTypes)iL;
-			CvSpecialistInfo* pSpecialistInfo = GC.getSpecialistInfo((SpecialistTypes)iL);
+INSERT INTO Building_YieldFromYieldPercentGlobal
+		(BuildingType, 						YieldIn, 		YieldOut, 			Value)
+VALUES	('BUILDING_WALLS', 	'YIELD_GOLD', 	'YIELD_CULTURE', 	1);
 
 
-			if (pSpecialistInfo)
-			{
-				int iValue = pBuildingInfo->GetSpecificGreatPersonRateModifier((SpecialistTypes)iL);
-				if (iValue > 0)
-				{
-					ChangeSpecialistRateModifier(eSpecialist, (pBuildingInfo->GetSpecificGreatPersonRateModifier((SpecialistTypes)iL) * iChange));
-				}
-			}
-		}
-#endif
+('BUILDING_OIL_WELL', 'RESOURCE_OIL','IMPROVEMENT_WELL',1),
 
 
-	m_ppaiImprovementYieldModifier(NULL),
-	m_ppaiSpecialistYieldModifier(NULL),
-	m_ppaiSpecialistYieldModifierGlobal(NULL),
-
-		for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
-			{
-				ChangeImprovementExtraYield(((ImprovementTypes)iJ), eYield, (GC.getBuildingInfo(eBuilding)->GetImprovementYieldChange(iJ, eYield) * iChange));
-
-
-					int iYieldMod = pBuildingInfo->GetImprovementYieldModifier(((ImprovementTypes)iJ), eYield);
-					changeYieldModifierFromImprovement((ImprovementTypes)iJ, eYield, iYieldMod * iChange);
-
-			}
-
-			
-			int iYieldMod = pBuildingInfo->GetSpecialistYieldModifier(((SpecialistTypes)iL), eYield);
-			changeYieldModifierFromImprovement((ImprovementTypes)iJ, eYield, iYieldMod * iChange);
-
-
-			Building_ImprovementYieldChangesGlobal
-
-			TXT_KEY_PRODMOD_YIELD_IMPROVEMENTS
-
-			TXT_KEY_PRODMOD_YIELD_SPECIALIST
-
-				<Row Tag="TXT_KEY_PRODMOD_YIELD_SPECIALIST">
-			<Text>[NEWLINE][ICON_BULLET]来自专家: {1_Num}%</Text>
-		</Row>
+ALTER TABLE Buildings ADD COLUMN 'CityCollateralDamage' BOOLEAN DEFAULT 0;
+ALTER TABLE Technologies ADD COLUMN 'CitySplashDamage' BOOLEAN DEFAULT 0;
 
 
 
-					for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
-		{
-			changeSpecialistExtraYield(((SpecialistTypes)iI), ((YieldTypes)iJ), (pBuildingInfo->GetSpecialistYieldChange(iI, iJ) * iChange));
+alter table UnitPromotions add column 'AttackInflictDamageChange' integer not null default 0;
+alter table UnitPromotions add column 'AttackInflictDamageChangeMaxHPPercent' integer not null default 0;
 
-			int iYieldMod = pBuildingInfo->GetSpecialistYieldModifierGlobal(((SpecialistTypes)iI), ((YieldTypes)iJ));
-			changeYieldModifierFromSpecialistGlobal(((SpecialistTypes)iI), ((YieldTypes)iJ), iYieldMod * iChange);
-		}
+alter table UnitPromotions add column 'DefenseInflictDamageChange' integer not null default 0;
+alter table UnitPromotions add column 'DefenseInflictDamageChangeMaxHPPercent' integer not null default 0;
 
+alter table UnitPromotions add column 'SiegeInflictDamageChange' integer not null default 0;
+alter table UnitPromotions add column 'SiegeInflictDamageChangeMaxHPPercent' integer not null default 0;
 
-
-int CvPlayer::GetYieldModifierFromSpecialistGlobal(SpecialistTypes eSpecialist, YieldTypes eYield) const
-{
-	CvAssertMsg(eSpecialist >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	CvAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	CvAssertMsg(eYield >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	CvAssertMsg(eYield < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
-	return m_ppiSpecialistYieldChange[eSpecialist][eYield];
-}
-
-//	--------------------------------------------------------------------------------
-void CvPlayer::changeYieldModifierFromSpecialistGlobal(SpecialistTypes eSpecialist, YieldTypes eYield, int iChange)
-{
-	CvAssertMsg(eSpecialist >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	CvAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
-	CvAssertMsg(eYield >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
-	CvAssertMsg(eYield < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
-
-	if (iChange != 0)
-	{
-		Firaxis::Array<int, NUM_YIELD_TYPES> yields = m_ppiSpecialistYieldChange[eSpecialist];
-		yields[eYield] = (m_ppiSpecialistYieldChange[eSpecialist][eYield] + iChange);
-		m_ppiSpecialistYieldChange[eSpecialist] = yields;
-		CvAssert(GetSpecialistExtraYield(eSpecialist, eYield) >= 0);
-
-		updateYield();
-	}
-}
-
-
-
-void CvPlayer::changeSpecialistExtraYield(YieldTypes eIndex, int iChange)
-
-void CvPlayer::changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange)
-
-		iMod = pPolicy->GetSpecialistExtraYield(iI) * iChange;
-		if(iMod != 0)
-			changeSpecialistExtraYield(eYield, iMod);
-
-
-void CvCity::changeSpecialistYieldRateModifier(YieldTypes eIndex, int iChange)
-changeYieldModifierFromSpecialist(((SpecialistTypes)iI), ((YieldTypes)iJ), iYieldMod * iChange);
-
-
-//	--------------------------------------------------------------------------------
-int CvPlayer::getSpecialistYieldRateModifier(YieldTypes eIndex) const
-{
-	CvAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	CvAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_aiSpecialistYieldRateModifier[eIndex];
-}
+<ExtraResourceType>RESOURCE_HORSE</ExtraResourceType>
+			<ExtraResourceCombatModifier>1</ExtraResourceCombatModifier>
+			<ExtraResourceCombatModifierMax>25</ExtraResourceCombatModifierMax>

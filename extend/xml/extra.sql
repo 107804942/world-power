@@ -38,6 +38,11 @@ UPDATE Traits SET BuyOwnedTiles = 1 WHERE Type ='TRAIT_RIVER_EXPANSION';
 UPDATE Improvements SET DestroyedWhenPillaged = 1 WHERE Type ='IMPROVEMENT_FISHFARM_MOD'; 
 
 
+
+----科技解锁城市溅射
+UPDATE Technologies SET CitySplashDamage = 1 WHERE Type ='TECH_RIFLING'; 
+
+
 --------傀儡健康度加成
 UPDATE Defines SET Value =-100 WHERE Name='PUPPET_DISEASE_MODIFIER'; 
 UPDATE Defines SET Value = 100 WHERE Name='PUPPET_HEALTH_MODIFIER'; 

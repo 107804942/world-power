@@ -2967,27 +2967,17 @@
 
 
 
-
 		<Row>
-			<Type>PROMOTION_SUPER_ENERGY</Type>
-			<Description>TXT_KEY_PROMOTION_SUPER_ENERGY</Description>
-			<Help>TXT_KEY_PROMOTION_SUPER_ENERGY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>54</PortraitIndex>
-			<IconAtlas>promoVP_atlas_03</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_SUPER_ENERGY</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
-		<Row>
-			<Type>PROMOTION_SUPER_ENERGY_ON</Type>
-			<Description>TXT_KEY_PROMOTION_SUPER_ENERGY_ON</Description>
-			<Help>TXT_KEY_PROMOTION_SUPER_ENERGY_ON_HELP</Help>
+			<Type>PROMOTION_PLASMA_CANNON_ON</Type>
+			<Description>TXT_KEY_PROMOTION_PLASMA_CANNON_ON</Description>
+			<Help>TXT_KEY_PROMOTION_PLASMA_CANNON_ON_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>54</PortraitIndex>
 			<ExtraAttacks>1</ExtraAttacks>
 			<IconAtlas>promoVP_atlas_03</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_SUPER_ENERGY_ON</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_PLASMA_CANNON_ON</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<RangedAttackModifier>20</RangedAttackModifier>
 		</Row>
 
 
@@ -3003,6 +2993,7 @@
 			<IconAtlas>VALERY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_PLASMA_CANNON</PediaEntry>
+			<InsightEnemyDamageModifier>100</InsightEnemyDamageModifier>
 		</Row>
 
 
@@ -4148,18 +4139,21 @@
 		<!--**************卡尔卡松**************-->
 
 		<Row>
-			<Type>PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</Type>
-			<Description>TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</Description>
-			<Help>TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS_HELP</Help>
+			<Type>PROMOTION_CARCASSONNE</Type>
+			<Description>TXT_KEY_PROMOTION_CARCASSONNE</Description>
+			<Help>TXT_KEY_PROMOTION_CARCASSONNE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>59</PortraitIndex>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<!--<ShowInUnitPanel>0</ShowInUnitPanel>-->
+			<!--<ShowInUnitPanel>0</ShowInUnitPanel>
 			<ShowInPedia>0</ShowInPedia>
+			<ExtraResourceType>RESOURCE_FOIEGRAS</ExtraResourceType>
+			<ExtraResourceCombatModifier>1</ExtraResourceCombatModifier>
+			<ExtraResourceCombatModifierMax>25</ExtraResourceCombatModifierMax>-->		
 			<CannotBeChosen>true</CannotBeChosen>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<DefenseMod>33</DefenseMod>
-			<PediaEntry>TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_CARCASSONNE</PediaEntry>
 		</Row>
 
 
@@ -4521,10 +4515,12 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_PEOPLES_HALL</PediaEntry>
 			<OrderPriority>11</OrderPriority>
-			<CityAttackPlunderModifier>400</CityAttackPlunderModifier>
 			<StrongerDamaged>1</StrongerDamaged>
-			<AuraRangeChange>2</AuraRangeChange>
-			<AuraEffectChange>20</AuraEffectChange>
+			<NearbyUnitPromotionBonus>25</NearbyUnitPromotionBonus>
+			<NearbyUnitPromotionBonusRange>5</NearbyUnitPromotionBonusRange>
+			<CombatBonusFromNearbyUnitPromotion>PROMOTION_GREAT_GENERAL</CombatBonusFromNearbyUnitPromotion>
+			<!--<AuraRangeChange>2</AuraRangeChange>
+			<AuraEffectChange>20</AuraEffectChange>-->
 			<ShowInUnitPanel>0</ShowInUnitPanel>
 			<ShowInPedia>0</ShowInPedia>
 		</Row>

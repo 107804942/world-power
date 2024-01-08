@@ -115,6 +115,9 @@ LuaEvents.UnitPanelActionAddin(MechRiotControlButton);
 
 -------------------------------------------------------------EMP BOMB Mode Switch---------------------------------------------------------------------------
 
+-- ********************************************************
+-- emp
+-- ******************************************************** 
   UnitEmpBombOnButton = {
   Name = "Emp Bomb On",
   Title = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON_SHORT", -- or a TXT_KEY
@@ -126,7 +129,8 @@ LuaEvents.UnitPanelActionAddin(MechRiotControlButton);
  
   
   Condition = function(action, unit)
-   return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID) and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID)and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID) ;
+   return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID) 
+   and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID);
   end, -- or nil or a boolean, default is true
   
   Disabled = function(action, unit)   
@@ -134,19 +138,10 @@ LuaEvents.UnitPanelActionAddin(MechRiotControlButton);
   end, -- or nil or a boolean, default is false
   
   Action = function(action, unit, eClick) 
-  	
-   	
+  	 	
    	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID, true) 
-	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID, false) 
-	--local iMovesLeft = math.max( 0, unit:MovesLeft()-3*GameDefines["MOVE_DENOMINATOR"])
-   --	unit:SetMoves(iMovesLeft)
-   	--print ("Emp Bomb On!")
-	
-  
-  
   end
 };
-
 LuaEvents.UnitPanelActionAddin(UnitEmpBombOnButton);
 
 
@@ -158,21 +153,18 @@ UnitEmpBombOffButton = {
   PortraitIndex = 11,
   ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF", -- or a TXT_KEY_ or a function
   
- 
-  
+
   Condition = function(action, unit)
     return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID);
   end, -- or nil or a boolean, default is true
   
-  Disabled = function(action, unit)     
-    return not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID) ;
+  Disabled = function(action, unit)   
+    return false;
   end, -- or nil or a boolean, default is false
-  
+
   Action = function(action, unit, eClick) 
-  	
-   	
+  	 	
    	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID, false)
-	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID, true)
    	unit:SetMoves(0)
    	print ("Emp Bomb Off!")	
   end
@@ -181,49 +173,48 @@ LuaEvents.UnitPanelActionAddin(UnitEmpBombOffButton);
 
 
 
-
-local SuperDefenseButtonOn = {
-		Name = "TXT_KEY_NAME_SUPER_ENERGY_ON",
-		Title = "TXT_KEY_TITLE_SUPER_ENERGY_ON",
+-- ********************************************************
+-- аёвсез
+-- ******************************************************** 
+local SuperChainButtonOn = {
+		Name = "TXT_KEY_NAME_PLASMA_CANNON_ON",
+		Title = "TXT_KEY_TITLE_PLASMA_CANNON_ON",
 		OrderPriority = 300,
 		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
 		PortraitIndex = 8,
-		ToolTip = "TXT_KEY_SP_BTNNOTE_SUPER_ENERGY_ON", -- or a TXT_KEY_ or a function
+		ToolTip = "TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_ON", -- or a TXT_KEY_ or a function
 		Condition = function(action, unit)
-		return   unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY"].ID) 
-        and unit:CanMove() and not  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID)  and  not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID) end, 
+		return   unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON"].ID) 
+        and unit:CanMove()
+		and not  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID)  end, 
 		Disabled = function(action, unit)   
     return false;
   end, -- or nil or a boolean, default is false
 		Action = function(action, unit, eClick)
-			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID, true)
-			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY"].ID, false)
+			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID, true)
 		end
 };
-LuaEvents.UnitPanelActionAddin(SuperDefenseButtonOn);
+LuaEvents.UnitPanelActionAddin( SuperChainButtonOn);
 
-
-
-
-local SuperDefenseButtonOff = {
-		Name = "TXT_KEY_NAME_SUPER_ENERGY_OFF",
-		Title = "TXT_KEY_TITLE_SUPER_ENERGY_OFF",
+local SuperChainButtonOff = {
+		Name = "TXT_KEY_NAME_PLASMA_CANNON_OFF",
+		Title = "TXT_KEY_TITLE_PLASMA_CANNON_OFF",
 		OrderPriority = 300,
 		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
 		PortraitIndex = 20,
-		ToolTip = "TXT_KEY_SP_BTNNOTE_SUPER_ENERGY_OFF", -- or a TXT_KEY_ or a function
+		ToolTip = "TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_OFF", -- or a TXT_KEY_ or a function
 		Condition = function(action, unit)
-		return unit:CanMove()  and  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID)  end, 
+		return unit:CanMove()  
+		and  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID)  end, 
 		Disabled = function(action, unit)   
     return false;
   end, -- or nil or a boolean, default is false
 		Action = function(action, unit, eClick)
-			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY_ON"].ID, false)
-			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SUPER_ENERGY"].ID, true)
+			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID, false)
 			unit:SetMoves(0)
 		end
 };
-LuaEvents.UnitPanelActionAddin(SuperDefenseButtonOff);
+LuaEvents.UnitPanelActionAddin(SuperChainButtonOff);
 
 
 
@@ -1258,11 +1249,10 @@ GameEvents.NuclearDetonation.Add(NukeBuff)
 -- ********************************************************
 -- 
 -- ******************************************************** 
-local iLatifundium = GameInfoTypes.BUILD_LATIFUNDIUM
 function LatifundiumCheck(iPlayer, iUnit, iX, iY, iBuild)
-   if iBuild == iLatifundium  then
+   if iBuild == GameInfoTypes.BUILD_LATIFUNDIUM  then
    local pPlayer = Players[iPlayer]
-   if pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_SILKROAD.ID) > 0 then
+   if pPlayer:HasWonder(GameInfoTypes.BUILDING_SILKROAD) then
      return true
 		 end   
 	 return false

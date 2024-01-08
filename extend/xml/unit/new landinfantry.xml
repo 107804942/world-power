@@ -374,6 +374,7 @@
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
+			<WorkRate>100</WorkRate>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<AdvancedStartCost>40</AdvancedStartCost>
 			<XPValueAttack>4</XPValueAttack>
@@ -415,6 +416,7 @@
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
+			<WorkRate>100</WorkRate>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<AdvancedStartCost>60</AdvancedStartCost>
 			<XPValueAttack>4</XPValueAttack>
@@ -458,6 +460,7 @@
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 			<PortraitIndex>2</PortraitIndex>
 			<MaxHitPoints>400</MaxHitPoints>
+			<WorkRate>100</WorkRate>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
 		</Row>
@@ -495,6 +498,7 @@
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 			<PortraitIndex>85</PortraitIndex>
+			<WorkRate>100</WorkRate>
 			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
 		</Row>
 
@@ -532,6 +536,7 @@
 			<UnitFlagIconOffset>2</UnitFlagIconOffset>
 			<PortraitIndex>98</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<WorkRate>100</WorkRate>
 			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
 		</Row>
 

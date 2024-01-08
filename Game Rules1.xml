@@ -1,10 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
-  <!-- TODO: Insert table creation example here. -->
- 
-  <!-- TODO: Insert table data example here.-->
-  
-  <!-- Enter your Game Data here. -->
-  
+
+	<Row Tag="TXT_KEY_BUILDING_SKYCITY">
+		<Text>代达罗斯天梯</Text>
+	</Row>
+	<Row Tag="TXT_KEY_WONDER_SKYCITY_HELP">
+		<Text>
+			所有单位生命上限+100，单位阵亡时不会造成人口损失。
+		</Text>
+	</Row>
+	<Row Tag="TXT_KEY_WONDER_SKYCITY_PEDIA">
+		<Text>
+			我们今天能站在代达罗斯通天梯之上，应该感激那些开辟出一条自旧地球通往这颗新星的先驱者们。我们没吃什么苦，但却见识了很多，懂得了很多，我们用自己的双手辛勤劳作，在每一个星球挥洒汗水，我们要背负着原始人类所观所感，直到我们变为宇宙注定我们要变成的样子。
+			[NEWLINE]人类究竟是什么，是否要去在意？比猿类进化一点，比天使落后很多。群居，却孤单，缺乏信任，又满心恐惧。生命局限在仅有一次的周期里，肉体不断老化，心灵不断受挫，最后终结于死亡。但这可悲的材料足以创造代达罗斯通天梯了，所有人都清楚，每一个阶梯都是我们自己组成的：
+			[NEWLINE]机械化：将失去机能的身体替换成机械，从而维持生命。
+			[NEWLINE]基因重塑：修复基因型，消除不良遗传基因。
+			[NEWLINE]遗传编码：创建自我复制码，用自我本质观察并保护代达罗斯通天梯。
+			[NEWLINE]记忆增强：完善自身记忆。
+			[NEWLINE]兹诺同化：吸收新世界的心理、生理、生化元素至自身。
+			[NEWLINE]记忆同化：嵌入其他物种的记忆并优化认知操作。
+			[NEWLINE]基因再生：将代达罗斯通天梯传给我们尚未出生的后代。
+			[NEWLINE]生命延长：任意延长生命周期，自我决定死亡时间。
+			[NEWLINE]人格替换：将原来的自己关闭，由代达罗斯通天梯的创造物作为新的自己。
+			[NEWLINE]现在去看代达罗斯通天梯第一次使用的设施，仍保留着原来的样子，因为现在已不需要机器来引领人类的提升。一个物种可以如此深远地改造提升自己，这是不是很奇怪？只要我们想，我们就可以，我们可以体验从前人类的局限-我们也清楚，这个局限永远挥之不去。但我们会献上我们的敬意，因为没有先人，我们不会一出生就拥有这个星系。
+		</Text>
+	</Row>
+
+	<Row Tag="TXT_KEY_WONDER_SKYCITY_QUOTE">
+		<Text>
+			[NEWLINE]"超脱凡身，远离无妄梦想，吾载舞于星宿问。吾子吾孙亦载舞，于三千世界。"[NEWLINE]        ——卡维萨·塔库尔，《出世经经典籍》[NEWLINE]
+		</Text>
+	</Row>
+
+
 </GameData>

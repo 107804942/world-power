@@ -1136,6 +1136,9 @@
 		</Replace>
 
 
+		<Row Tag="TXT_KEY_PEDIA_WORKRATE_LABEL">
+			<Text>建造速率:</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_FLAG_UNIT_CARGO_TYPE">
 			<Text>运载类型:</Text>
@@ -1399,36 +1402,42 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_SUPER_ENERGY">
+
+		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON">
+			<Text>重型等离子炮</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON_HELP">
+			<Text>
+				攻击时对视野中的所有敌军单位造成100%伤害。
+				[NEWLINE]可开启超级粒子炮:攻击次数+1，远程[ICON_STRENGTH]攻击力+25%。
+			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON_ON">
 			<Text>超级粒子炮</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SUPER_ENERGY_HELP">
-			<Text>可开启超级粒子炮:[COLOR_MIGHT]攻击次数+1，链式反应效果在原有基础上额外附加数值等同于敌军最大生命值25%的伤害[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON_ON_HELP">
+			<Text>攻击次数+1，远程[ICON_STRENGTH]攻击力+25%。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_SUPER_ENERGY_ON">
-			<Text>超级粒子炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SUPER_ENERGY_ON_HELP">
-			<Text>攻击次数+1，链式反应效果在原有基础上额外附加数值等同于敌军最大生命值25%的伤害。</Text>
+		<Row Tag="TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_ON">
+			<Text>启动超级粒子炮：攻击次数+1，远程[ICON_STRENGTH]攻击力+25%。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_SP_BTNNOTE_SUPER_ENERGY_ON">
-			<Text>启动超级粒子炮：攻击次数+1，链式反应效果在原有基础上额外附加数值等同于敌军最大生命值25%的伤害。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TITLE_SUPER_ENERGY_ON">
+		<Row Tag="TXT_KEY_TITLE_PLASMA_CANNON_ON">
 			<Text>启动超级粒子炮</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_SP_BTNNOTE_SUPER_ENERGY_OFF">
+		<Row Tag="TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_OFF">
 			<Text>关闭超级粒子炮，取消其带来的额外效果。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_TITLE_SUPER_ENERGY_OFF">
+		<Row Tag="TXT_KEY_TITLE_PLASMA_CANNON_OFF">
 			<Text>关闭超级粒子炮</Text>
 		</Row>
+		
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SPLASH_DAMAGE2">
@@ -3114,26 +3123,29 @@
 
 
 
-
 		<Row Tag="TXT_KEY_BUILDING_SKYCITY">
-			<Text>太空城</Text>
+			<Text>法拉第回旋体</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SKYCITY_HELP">
 			<Text>
-				机械化农场+4[ICON_FOOD]食物,+4[ICON_GOLD]金钱，+1[ICON_HAPPINESS_1]快乐。本城所有地形额外提升3点全类型产出。所有城市+25%[ICON_RESEARCH]科研、[ICON_GOLD]金钱。
+				提供300份[ICON_RES_ELECTRICITY]电力资源。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SKYCITY_PEDIA">
 			<Text>
-				天空之城是一座超高摩天大楼，建筑高1000米(3281英尺) ，底部宽400米(1312英尺) ，总建筑面积8平方公里(3.1平方英里)。根据设计构想，它将容纳3.5万至3.6万名全职居民和10万名工人。它包括14个凹盘形的“空间高原”堆叠在楼层。 高原的内部将包含绿色空间，在建筑的边缘，在建筑的两侧，将是公寓。 建筑中还包括办公室、商业设施、学校、剧院和其他现代化设施。
+				法拉第回旋体是一个城市规模的电磁体，可以生成巨大的低压电源，并且可为不大的发动机和电池供电。通过播散数百万金属微熔丝，大型涡流式涡轮可以人为地导致海洋环流。如果应用适当，此现象产生的电磁力可以导致巨大的电流。
+				[NEWLINE]超过200,000 立方米的海水会以每分钟60公里的速度涌过涡轮。产生巨大的回旋力并且会永恒旋转下去，这会导致灾难性风暴，要建造一个可以容纳这个风暴的结构，相比而言可要难多了。通过连续介质力学发现了解决办法，那就是可以将海水转向，重新回收到加压的水流中。通过安全距离的水下观察到，人们可以目睹猛烈的漩涡塌缩为一个球心；四处充斥着振荡力。
+				[NEWLINE]在发明法拉第回旋体过程中，针对潜在的军事应用，评估了电磁站的设计和目的。当时的想法是要将电磁站转换为移动的、能潜入水中的站点，可以毁灭海军舰艇和定居点，还可以摧毁沿海城市。但是，由于需要多赞助者合作才能建造初始站点，所以军事用途的设计并没有融入其中。
+				[NEWLINE]结构上沿附近的逆向转子可以过滤微熔丝，并将其重新处理还原为涡轮，逆向转子会导致产生有利的副作用，即将清新、闪烁的雾气释放到上方城市。这些薄雾被称为＂幽灵＂。在温暖的天气里，看见孩子们在街上追逐玩耍并不稀奇，并没有注意到轻薄的雾气中生成的巨大压毁力。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_WONDER_SKYCITY_QUOTE">
 			<Text>
-				[NEWLINE]"建筑师再也不能被正统现代主义的清教徒式的道德说教所吓服了。我喜欢建筑要素的混杂，而不要‘纯净’。"[NEWLINE]        ——罗伯特・文丘里[NEWLINE]
+				[NEWLINE]"将这样的系统作为我们的工作和社会的一种交互模式：强大的军队力量针对数不清的特工采取行动、发掘真理般的自然科学定律以及建立行动和进度的实例。"[NEWLINE]        ——科兹洛夫，《中央理事会备忘录》[NEWLINE]
 			</Text>
 		</Row>
+
 
 
 
@@ -3162,7 +3174,7 @@
 			<Text>[ICON_PRODUCTION]生态学工厂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_HELP">
-			<Text>本城市+10[ICON_PRODUCTION]产能。每处市民工作的草地、冻土、平原地貌+2[ICON_PRODUCTION]产能。冻土、雪原+1[ICON_HEALTH]健康度。</Text>
+			<Text>本城所有地形额外提升3点全类型产出。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_BIOFACTORY_PEDIA">
@@ -3240,7 +3252,7 @@
 			<Text>太阳神微波卫星</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_HELIOS_HELP">
-			<Text>本城每处沙漠地块+10%[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。太阳能发电站+10[ICON_PRODUCTION]产能，当建有太阳能发电站的城市攻击时，对城市3格范围内的敌人额外造成25%伤害。</Text>
+			<Text>本城每处沙漠地块+10%[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。每处太阳能发电站+10[ICON_PRODUCTION]产能，+10%[ICON_PRODUCTION]产能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_HELIOS_QUOTE">
 			<Text>
@@ -3600,7 +3612,7 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_TORPEDO_BATTERY_HELP</Tag>
-			<Text>城市[ICON_STRENGTH]攻击力+50%，且攻击次数+2。</Text>
+			<Text>城市远程攻击力+50%，且攻击次数+2。提供10份[ICON_RES_ELECTRICITY]电力资源。</Text>
 		</Row>
 
 
@@ -5535,10 +5547,10 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_SIGHT">
-			<Text>海洋定位</Text>
+			<Text>精确定位</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_SIGHT_HELP">
-			<Text>所有海军单位+1视野。</Text>
+			<Text>海军单位+1视野。</Text>
 		</Row>
 
 
@@ -5549,14 +5561,6 @@
 
 
 
-
-
-		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON">
-			<Text>重型等离子炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON_HELP">
-			<Text>攻击时对视野中的所有敌军单位造成100%伤害。</Text>
-		</Row>
 
 
 
@@ -6256,7 +6260,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_HELP">
 			<Text>
-				单位获得属性：防御力+33%。赠送3份[ICON_RES_FOIEGRAS]鹅肝。所有城市[ICON_STRENGTH]城防+15%，城市攻击杀死单位时可获得一次攻击次数。
+				单位获得属性：防御力+33%。赠送3份[ICON_RES_FOIEGRAS]鹅肝。所有城市[ICON_STRENGTH]城防+15%，本城+2攻击次数。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_PEDIA">
@@ -6271,10 +6275,10 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS">
+		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE">
 			<Text>庇护</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS_HELP">
+		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE_HELP">
 			<Text>防御力+33%。</Text>
 		</Row>
 
@@ -8436,7 +8440,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SOVIET_PALACE_HELP">
 			<Text>
-				建成后可自选一个伟人，所有工厂+15%[ICON_PRODUCTION]产能，公立学校+15%[ICON_RESEARCH]科研。提供50份[ICON_RES_MANPOWER]人力资源，提供25份[ICON_RES_IRON]铁、[ICON_RES_OIL]石油、[ICON_RES_ALUMINUM]铝、[ICON_RES_GUNPOWDER]火药、[ICON_RES_URANIUM]铀资源。每条秩序政策+2[ICON_HAPPINESS_1]快乐、+5[ICON_RESEARCH]科研、+5[ICON_PRODUCTION]产能、+5[ICON_CULTURE]文化。可根据市政厅等级提供额外[ICON_CULTURE]文化产出，所有城市防御效率+33%。
+               所有工厂+15%[ICON_PRODUCTION]产能，公立学校+15%[ICON_RESEARCH]科研。提供50份[ICON_RES_MANPOWER]人力资源，提供25份[ICON_RES_IRON]铁、[ICON_RES_OIL]石油、[ICON_RES_ALUMINUM]铝、[ICON_RES_GUNPOWDER]火药、[ICON_RES_URANIUM]铀资源。每条秩序政策+2[ICON_HAPPINESS_1]快乐、+5[ICON_RESEARCH]科研、+5[ICON_PRODUCTION]产能、+5[ICON_CULTURE]文化。全国每座城市中10%的基础[ICON_RESEARCH]科研产出转换为基础[ICON_PRODUCTION]产能产出，所有城市防御效率+33%。
 			</Text>
 		</Row>
 
@@ -8478,14 +8482,8 @@
 			<Text>战争狂热</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PEOPLES_HALL_HELP">
-			<Text>单位剩余血量越低则战斗力越高。攻击城市时获得相对于城市损害400%的[ICON_GOLD]金钱。大军事家的光环效果增益提升20%，且范围+2。</Text>
+			<Text>单位剩余血量越低则战斗力越高，临近5格内存在大军时+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
-
-
-
-
-
-
 
 
 
@@ -8519,7 +8517,7 @@
 
 		<Row Tag="TXT_KEY_WONDER_GUIGU_HELP">
 			<Text>
-				所有专家对应的基础产出数值+4。+25%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。每次间谍行动完成时，可一次性获得2回合的[ICON_GOLD]金钱、[ICON_RESEARCH]科研产出，且有一定几率获得一个随机类型的伟人。
+				所有专家对应的基础产出数值+4。+10%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。所有城市中每个专家增加2%各自城市的对应基础产出。
 			</Text>
 		</Row>
 		
@@ -8743,9 +8741,10 @@
 			</Text>
 		</Row>
 
+
 		<Row Tag="TXT_KEY_WONDER_BEILUN_TOWER_HELP">
 			<Text>
-				本城+25[ICON_STRENGTH]防御力，+50[ICON_HP]生命值上限。所有地牢、庄园、港口+2[ICON_GOLD]金钱。海军单位击杀敌军后额外恢复20点[ICON_HP]生命值，且每当获得晋升时，可立即恢复50[ICON_HP]生命值。获得一位海军统帅。
+				本城+25[ICON_STRENGTH]防御力，+50生命值上限。所有地牢、庄园、港口+2[ICON_GOLD]金钱。海军单位击杀敌军后额外恢复20点生命值，且每当获得晋升时，可立即恢复50生命值。获得一位海军统帅。
 				[NEWLINE]只能在临近海岸的城市建造。
 			</Text>
 		</Row>
@@ -8755,7 +8754,7 @@
 			<Text>贝伦塔</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BEILUN_TOWER_HELP">
-			<Text>击杀敌军后额外恢复20点[ICON_HP]生命值。</Text>
+			<Text>击杀敌军后额外恢复20点生命值。</Text>
 		</Row>
 
 

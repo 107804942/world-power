@@ -1420,11 +1420,6 @@
 		</Row>
 
 
-		<Row>
-			<UnitType>UNIT_SIEGE04H</UnitType>
-			<PromotionType>PROMOTION_SUPER_ENERGY</PromotionType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_SIEGE04H</UnitType>

@@ -1097,7 +1097,7 @@
 			<PolicyBranchType>POLICY_BRANCH_ORDER</PolicyBranchType>
 			<NukeImmune>true</NukeImmune>
 			<GlobalDefenseMod>33</GlobalDefenseMod>
-			<FreeGreatPeople>1</FreeGreatPeople>
+			<!--<FreeGreatPeople>1</FreeGreatPeople>-->
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
@@ -1579,15 +1579,16 @@
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<Hill>1</Hill>
+			<ExtraAttacks>2</ExtraAttacks>
 			<GlobalCityStrengthMod>15</GlobalCityStrengthMod>
-			<FreePromotion>PROMOTION_CARCASSONNE_FAITH_COMBAT_BONUS</FreePromotion>
+			<FreePromotion>PROMOTION_CARCASSONNE</FreePromotion>
 			<Quote>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<WonderSplashImage>Carcassonne_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>31</PortraitIndex>
-		</Row>
+			<PortraitIndex>31</PortraitIndex>	
+	</Row>
 
 		<!--骑士堡-->
 		<Row>
@@ -1693,6 +1694,7 @@
 			<Civilopedia>TXT_KEY_WONDER_ISHTARGATE_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_ISHTARGATE_QUOTE</Quote>
 			<Cost>130</Cost>
+			<FreeBuilding>BUILDINGCLASS_WALLS</FreeBuilding>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
 			<GreatWorkCount>2</GreatWorkCount>
 			<PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
@@ -2633,7 +2635,7 @@
 			<Help>TXT_KEY_WONDER_SKYCITY_HELP</Help>
 			<Civilopedia>TXT_KEY_WONDER_SKYCITY_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_SKYCITY_QUOTE</Quote>
-			<Cost>20000</Cost>
+			<Cost>30000</Cost>
 			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<GreatPeopleRateChange>2</GreatPeopleRateChange>
@@ -2641,9 +2643,9 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>76</PortraitIndex>
-			<WonderSplashImage>FWSkyCity_Splash.dds</WonderSplashImage>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>92</PortraitIndex>
+			<WonderSplashImage>SkyCity_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,T</WonderSplashAnchor>
 		</Row>
 
@@ -2886,7 +2888,14 @@
 
 
 	<Building_ResourceQuantityRequirements>
-	
+		<!--巨城-->
+		<Row>
+			<BuildingType>BUILDING_MEGACITY_PYRAMID</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>30</Cost>
+		</Row>
+		
+		
 
 		<!--洛克斐乐-->
 		<Row>
@@ -3524,17 +3533,13 @@
 		<Row>
 			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
-			<Cost>8</Cost>
+			<Cost>30</Cost>
 		</Row>
-		<Row>
-			<BuildingType>BUILDING_SKYCITY</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>10</Cost>
-		</Row>
+
 		<Row>
 			<BuildingType>BUILDING_SKYCITY</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>10</Cost>
+			<Cost>60</Cost>
 		</Row>
 		
 		
@@ -4088,20 +4093,7 @@
 		
 
 
-		<Row>
-			<BuildingType>BUILDING_SKYCITY</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
-			<YieldType>YIELD_FOOD</YieldType>
-			<YieldChange>4</YieldChange>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SKYCITY</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>4</YieldChange>
-		</Row>
-
-
+	
 
 		<Row>
 			<BuildingType>BUILDING_MOON_BASE</BuildingType>
@@ -4235,13 +4227,6 @@
 			<Happiness>1</Happiness>
 		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_SKYCITY</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_MECHANIZED_FARM</BuildingClassType>
-			<Happiness>1</Happiness>
-		</Row>
-
-
 
 		<Row>
 			<BuildingType>BUILDING_JURASSIC_PARK</BuildingType>
@@ -4255,6 +4240,15 @@
 
 
 	<Building_ResourceQuantity>
+
+		<Row>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Quantity>300</Quantity>
+		</Row>
+		
+		
+		
 		<Row>
 			<BuildingType>BUILDING_HELIOS</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
@@ -4601,7 +4595,15 @@
 			<Yield>-500</Yield>
 		</Row>
 
-
+		
+		
+		
+		<Row>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-1000</Yield>
+		</Row>
+		
 
 		<Row>
 			<BuildingType>BUILDING_SKYNET</BuildingType>
@@ -4897,7 +4899,12 @@
 	
 	<Building_ClassesNeededInCity>
 
-
+		<Row>
+			<BuildingType>BUILDING_SKYCITY</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
+		</Row>
+		
+		
 		<Row>
 			<BuildingType>BUILDING_INTELLIGENCE_BUREAU</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XXL</BuildingClassType>

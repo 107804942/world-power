@@ -363,6 +363,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 	local rangedStrength = unit.RangedCombat
 	local unitRange = unit.Range 
 	local combatStrength = unit.Combat
+	local workrate = unit.WorkRate
 	local unitMoves = unit.Moves
 	local unitSight = unit.BaseSightRange
 	local unitDomainType = unit.Domain
@@ -449,9 +450,15 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 	end
 
 
+
 	-- Ranged Combat:
 	if rangedStrength > 0 then
 		insert( tips, L"TXT_KEY_PEDIA_RANGEDCOMBAT_LABEL" .. " " .. rangedStrength .. "[ICON_RANGE_STRENGTH]" .. unitRange )
+	end
+
+			-- workrate:
+	if workrate ~=nil then
+		insert( tips, L"TXT_KEY_PEDIA_WORKRATE_LABEL" ..workrate  )
 	end
 
 	-----新增Sight:视野--------------------------------------------------- 
@@ -1572,7 +1579,25 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
-	--本地专家产出 Specialist Yields enhanced by Building
+			-- 全局专家百分比产出
+	for specialist in GameInfo.Specialists() do
+		tip = GetYieldStringSpecial( "Yield", "%s%+i%%%s",GameInfo.Building_SpecialistYieldModifiersGlobal{ BuildingType = buildingType, SpecialistType = specialist.Type } )
+		if tip ~= "" then
+			insert( tips,UnitColor( L(specialist.Description) ) .. ":" .. tip )
+		end
+	end
+	
+
+
+		-- 本地专家百分比产出
+	for specialist in GameInfo.Specialists() do
+		tip =GetYieldStringSpecial( "Yield", "%s%+i%%%s",GameInfo.Building_SpecialistYieldModifiers{ BuildingType = buildingType, SpecialistType = specialist.Type } )
+		if tip ~= "" then
+			insert( tips, L"TXT_KEY_LOCAL_SPECIALIST" ..UnitColor( L(specialist.Description) ) .. ":" .. tip )
+		end
+	end
+
+	--本地专家产出 
 	for specialist in GameInfo.Specialists() do
 		tip = GetYieldString( GameInfo.Building_SpecialistYieldChangesLocal{ BuildingType = buildingType, SpecialistType = specialist.Type } )
 		if tip ~= "" then
