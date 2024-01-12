@@ -27,14 +27,34 @@
 		</Grid>
 	</ToolTipType>
 
+	<!-- 科技树中的通用显示 -->
+
+	<!-- 额外新增部分 -->
+	<Instance Name="PromotionIcon2">
+		<Image ID="Image2" Size="32,32" Sampler="Linear" />
+	</Instance>
+	<AlphaAnim ID="UnitTooltipTimer2" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
+
+
 	<ToolTipType Name="EUI_ItemTooltip" >
 		<Grid ID="Box" Size="530,90" Offset="8.0" Padding="8,8" Style="GridBlack8" NoClip="1" >
-			<Image ID="PortraitFrame" Anchor="R,C" Offset="-40,0" AnchorSide="O.i" Size="256,256" Texture="256x256Frame.dds">
-				<Image ID="Portrait" Size="256,256"/>
+			<!--额外补充部分 -->
+			<Stack Offset="12,12" StackGrowth="Down" Padding="8">
+				<Label ID="Text2" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
+				<Stack ID="PromotionStack2" StackGrowth="Right">
+					<Stack ID="IconStack2" StackGrowth="Right" WrapGrowth="Bottom" WrapPadding="-6" Padding="-6" WrapWidth="260"/>
+					<Label ID="PromotionText2" Offset="0,10" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5" />
+				</Stack>
+			</Stack>
+			<!--end -->
+			<Image ID="PortraitFrame2" Anchor="R,C" Offset="-40,0" AnchorSide="O.i" Size="256,256" Texture="256x256Frame.dds">
+				<Image ID="Portrait2" Size="256,256"/>
 			</Image>
-			<Label ID="Text" Offset="12,12" LeadingOffset="-2" WrapWidth="400" Font="TwCenMT16" ColorSet="Beige_Black"/>
+			<!--<Label ID="Text" Offset="12,12" LeadingOffset="-2" WrapWidth="400" Font="TwCenMT16" ColorSet="Beige_Black"/>-->
 		</Grid>
 	</ToolTipType>
+	
+	
 
 	<!-- Promotion Instances for unit tooltip -->
 	<Instance Name="PromotionIcon">

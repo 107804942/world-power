@@ -136,8 +136,6 @@ local g_yieldCurrency = IsCiv5 and YieldTypes.YIELD_GOLD or YieldTypes.YIELD_ENE
 --local g_happinessIcon = IsCiv5 and "[ICON_HAPPY]" or "[ICON_HEALTH]"
 local g_happinessString = IsCiv5 and "HAPPINESS" or "HEALTH"
 
-local g_ItemTooltipControls = {}
-TTManager:GetTypeControlTable( "EUI_ItemTooltip", g_ItemTooltipControls )
 
 local g_UnitTooltipControls = {}
 TTManager:GetTypeControlTable( "EUI_UnitTooltip", g_UnitTooltipControls )
@@ -166,6 +164,8 @@ do
 		g_UnitTooltipControls.IconStack:CalculateSize()
 		g_UnitTooltipControls.Box:DoAutoSize()
 	end)
+
+
 
 
 
@@ -374,14 +374,7 @@ local function TooltipSelect( tooltipTable, control, ... )
 	end
 end
 
-local function ShowTextToolTipAndPicture( tip, index, altlas )
-	local controls = g_ItemTooltipControls
-	controls.Text:SetText( tip )
-	controls.PortraitFrame:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait ) ) )
-	controls.PortraitFrame:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
-	controls.Box:DoAutoSize()
-end
-LuaEvents.ShowTextToolTipAndPicture.Add( ShowTextToolTipAndPicture )
+
 
 local function ShowTextToolTip( ... )
 	return ShowTextToolTipAndPicture( ... and concat( {...}, "[NEWLINE]----------------[NEWLINE]" ) )
@@ -1967,28 +1960,122 @@ end)
 --==========================================================
 -- Tech Tooltips
 --==========================================================
+local g_ItemTooltipControls = {}
+TTManager:GetTypeControlTable( "EUI_ItemTooltip", g_ItemTooltipControls )
+
+local g_PromotionIconIM2 = StackInstanceManager( "PromotionIcon2", "Image2", g_ItemTooltipControls.IconStack2 )
+
+local function ShowTextToolTipAndPicture( tip, index, altlas )
+	local controls = g_ItemTooltipControls
+
+	g_PromotionIconIM2:ResetInstances()
+	--local controlTable = g_PromotionIconIM2:GetInstance();
+	--controlTable.PromotionIcon2:SetHide( true)
+	--controlTable.Image2:SetHide(true )
+	--controls.IconStack2:SetWrapWidth( 0 )
+	--controls.IconStack2:SetHide(true)
+	controls.PromotionText2:SetHide(true)
+	controls.Text2:SetText( tip )
+	controls.PortraitFrame2:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait2 ) ) )
+	controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
+	controls.Box:ReprocessAnchoring()
+	controls.Box:DoAutoSize()
+end
+LuaEvents.ShowTextToolTipAndPicture.Add( ShowTextToolTipAndPicture )
+
+
+Controls.UnitTooltipTimer2:RegisterAnimCallback( function()
+		g_ItemTooltipControls.PortraitFrame2:SetHide( false )
+		g_ItemTooltipControls.IconStack2:SetWrapWidth( 32 )
+		g_ItemTooltipControls.IconStack2:CalculateSize()
+		g_ItemTooltipControls.PromotionText2:SetHide( false )
+		g_ItemTooltipControls.Box:ReprocessAnchoring()
+		g_ItemTooltipControls.Box:DoAutoSize()
+end)
+
+
+
+function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
+	    local controls = g_ItemTooltipControls
+		
+
+		controls.Text2:SetText( tip )  ----‘⁄µ⁄“ª∏ˆ…œ≤øœ‘ æ
+		------------------------------------------------–¬‘ˆΩ˙…˝œ‘ æ------------------------------------------------
+		local unit = GameInfo.Units[itemID]
+		local i = 0
+		local unitPromotion
+		local promotionText = {}
+		local promotionIcon
+		g_PromotionIconIM2:ResetInstances()
+
+		if not( unit.Trade ) then
+		local thisUnitType = { UnitType = unit.Type }
+        for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
+		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
+		if unitPromotion~=nil  then
+		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
+		    promotionIcon = g_PromotionIconIM2:GetInstance()
+			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image2 )
+			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
+			    end
+			end
+		end
+	
+	    controls.PortraitFrame2:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait2 ) ) )
+	    controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
+
+		controls.PromotionText2:SetText( table.concat( promotionText, "[NEWLINE]" ) )
+		controls.PromotionText2:SetHide( #promotionText ~= 1 )
+
+		controls.IconStack2:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
+		controls.IconStack2:CalculateSize()
+
+		controls.Box:ReprocessAnchoring()
+		controls.Box:DoAutoSize()
+
+		Controls.UnitTooltipTimer2:SetToBeginning()
+        Controls.UnitTooltipTimer2:SetPauseTime(0) ---æˆ∂®Ω˙…˝Õº±Í≥ˆœ÷µƒ—”≥Ÿ ±º‰
+		Controls.UnitTooltipTimer2:Reverse()	
+		end
+end
+
+
+
+
 LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿‡ªÒ»°
 	local tip = "no tip found"
 	local item, iconIndex, iconAtlas
-	if orderID == ORDER_TRAIN then
-		iconIndex, iconAtlas = GetUnitPortraitIcon( itemID, GetActivePlayer() )
-		tip = GetHelpTextForUnit( itemID, true )
 
-	elseif orderID == ORDER_CONSTRUCT then
+	if orderID == OrderTypes.ORDER_TRAIN then	
+		iconIndex, iconAtlas = GetUnitPortraitIcon( itemID, GetActivePlayer() )
+		tip = GetHelpTextForUnit2(itemID)
+	    return ShowTextToolTipAndPicture2( tip,orderID,itemID ,iconIndex, iconAtlas )
+
+
+	elseif orderID == OrderTypes.ORDER_CONSTRUCT then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Buildings, itemID )
 		tip = GetHelpTextForBuilding( itemID )
+		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
 
-	elseif orderID == ORDER_CREATE then
+
+
+	elseif orderID ==  OrderTypes.ORDER_CREATE then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Projects, itemID )
 		tip = GetHelpTextForProject( itemID, true )
+		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
 
-	elseif orderID == ORDER_MAINTAIN then
+
+	elseif orderID == OrderTypes.ORDER_MAINTAIN then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Processes, itemID )
 		tip = GetHelpTextForProcess( itemID, true )
+		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
+
 
 	elseif orderID == 11 then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Resources, itemID )
 		tip = L("TXT_KEY_REVEALS_RESOURCE_ON_MAP", GameInfo.Resources[itemID]._Name)
+		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
+		       
 
 	elseif orderID == 12 then
 		local build = GameInfo.Builds[ itemID ]
@@ -2008,6 +2095,7 @@ LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿
 				iconIndex, iconAtlas = item.PortraitIndex, item.IconAtlas
 			end
 		end
+		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
 
 	elseif orderID == 13 then
 		item = GameInfo.Missions[ itemID ]
@@ -2024,6 +2112,8 @@ LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿
 				tip = item._Name
 			end
 		end
+		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
+
 
 	elseif orderID == 14 then
 		item = GameInfo.Terraform[ itemID ]
@@ -2040,12 +2130,12 @@ LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿
 				tip = item._Name
 			end
 		end
-	elseif orderID == 15 then
-		tip = GetHelpTextForPlayerPerk( itemID, true )
+		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
+
 	end
-	return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
---	return ShowTextToolTipAndPicture( "This is button tooltip for order "..orderID.." item "..itemID.." icon "..tostring(iconIndex)..":"..tostring(iconAtlas).."[NEWLINE]"..tip, iconIndex, iconAtlas )
+
 end)
+
 
 LuaEvents.TechTooltip.Add( function( techID )
 	return ShowTextToolTipAndPicture( GetHelpTextForTech( techID, Players[ GetActivePlayer() ]:CanResearch( techID ) ), GetItemPortraitIcon( GameInfo.Technologies, techID ) )
@@ -3248,3 +3338,4 @@ LuaEvents.TopPanelTooltips.Add( function( control )
 end)
 
 print( "EUI tooltip server loaded." )
+

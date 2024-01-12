@@ -2174,8 +2174,8 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		pSEPlot:SetTerrainType(eTerrainCoast, false, false)
 		pSWPlot:SetTerrainType(eTerrainCoast, false, false)
 
-		pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_B)
-		pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_C)
+		--pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_B)
+		--pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_C)
 
 	
      -- EYE OF THE SAHARA
@@ -2192,10 +2192,10 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		pSAHARASEPlot:SetTerrainType(eTerrainDesert, false, false)
 		pSAHARASWPlot:SetTerrainType(eTerrainDesert, false, false)
 
-		pSAHARASEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
-		pSAHARASWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
-		pSAHARASEPlot:SetResourceType(-1)	
-		pSAHARASWPlot:SetResourceType(-1)		
+		--pSAHARASEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
+		---pSAHARASWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
+		--pSAHARASEPlot:SetResourceType(-1)	
+		--pSAHARASWPlot:SetResourceType(-1)		
 
 	end
 end

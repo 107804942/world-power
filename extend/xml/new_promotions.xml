@@ -3981,21 +3981,6 @@
 			<!--<NumAttacksMadeThisTurnAttackMod>8</NumAttacksMadeThisTurnAttackMod>-->	
 	     </Row>
 
-		<Row>
-			<Type>PROMOTION_NO_CHARGE_BONUS</Type>
-			<Description>TXT_KEY_PROMOTION_NO_CHARGE_BONUS</Description>
-			<Help>TXT_KEY_PROMOTION_NO_CHARGE_BONUS_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<PediaEntry>TXT_KEY_PROMOTION_NO_CHARGE_BONUS</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
-
-
 
 
 

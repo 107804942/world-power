@@ -779,7 +779,7 @@ local IronPagodaChargeButton = {
 		return sTooltip
 	end, -- or a TXT_KEY_ or a function
 	Condition = function(action, unit)
-		if unit:IsHasPromotion(IronPagodaHumanID) and unit:GetMoves() <= 0 then
+		if  unit:GetMoves() <= 0 then
 			return false
 		end
 		local pPlayer = Players[Game:GetActivePlayer()];
@@ -1099,7 +1099,6 @@ function InputHandler( uiMsg, wParam, lParam )
 			                            local pFoundUnitStrength = pFoundUnit:GetMaxDefenseStrength(plot, pSUnit);
 			                            local DamageOri = math.floor(3*pSUnit:GetCombatDamage(attUnitStrength, pFoundUnitStrength, pSUnit:GetDamage(), false, false, false));
 
-										    pSUnit:SetHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS, true)
 										    pFoundUnit:ChangeDamage(DamageOri) -- µÐ·½µ¥Î»µôÑª
 												
 											--end

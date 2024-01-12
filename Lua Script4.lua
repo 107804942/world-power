@@ -26,4 +26,38 @@
 
 
 
+CvUnit* pBestDefender = plot.getBestDefender(NO_PLAYER, kAttacker.getOwner()).pointer();
+
+DoNewBattleEffects(kCombatInfo, iDamage);
+
+
+void CvUnitCombat::ResolveRangedUnitVsCombat(const CvCombatInfo& kCombatInfo, uint uiParentEventID)
+
+void CvUnitCombat::DoNewBattleEffects(const CvCombatInfo& kCombatInfo, int iAttackDamage)
+{
+	if (!ShouldDoNewBattleEffects(kCombatInfo))
+		return;
+	DoNukeDamage(kCombatInfo);
+	DoSplashDamage(kCombatInfo);
+	DoCollateralDamage(kCombatInfo);
+	DoAddEnemyPromotions(kCombatInfo);
+	DoDestroyBuildings(kCombatInfo);
+	DoKillCitizens(kCombatInfo);
+	DoStackingFightBack(kCombatInfo);
+	DoStopAttacker(kCombatInfo);
+	DoBounsFromCombatDamageWhenFinish(kCombatInfo, iAttackDamage);
+	DoInsightEnemyDamage(kCombatInfo);
+}
+
+bool CvUnitCombat::ShouldDoNewBattleEffects(const CvCombatInfo& kCombatInfo)
+{
+	if (kCombatInfo.getAttackIsNuclear()) return false;
+
+	CvPlayerAI& kAttackPlayer = getAttackerPlayer(kCombatInfo);
+	CvPlayerAI& kDefensePlayer = getDefenderPlayer(kCombatInfo);
+
+	// Only do this for human players.
+	// May provide GameOption to enable for AI later.
+	return kAttackPlayer.isHuman() || kDefensePlayer.isHuman();
+}
 

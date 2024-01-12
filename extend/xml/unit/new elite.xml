@@ -1453,10 +1453,7 @@
 		</Row>
 
 
-		<Row>
-			<UnitType>UNIT_ANTIMATTER_EXPLOSION</UnitType>
-			<PromotionType>PROMOTION_ANTIMATTER_EXPLOSION</PromotionType>
-		</Row>
+
 
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER03P</UnitType>

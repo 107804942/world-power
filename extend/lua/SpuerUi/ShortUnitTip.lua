@@ -137,7 +137,7 @@ function ShortUnitTip( unit )
 		if  not unit:IsTrade() then
 				hp = unit:GetCurrHitPoints() .. "/" .. hp
 			end
-			unitTip = unitTip .. " " .. hp .. "[ICON_HP]"	
+			unitTip = unitTip .. "[NEWLINE]"..Locale.ConvertTextKey("TXT_KEY_PEDIA_MAXHP" )..hp .. "[ICON_HP]"	
 	end
 
 	-- Embarked?

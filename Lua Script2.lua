@@ -123,33 +123,6 @@ GameEvents.EspionageCanMoveSpyTo.Add(EspionageCanMove)
 
 
 
-function UnitNearIronBeddhaKilled(iPlayer, iUnit, iUnitType, iX, iY, bDelay, iByPlayer)
-
-	local pPlayer = Players[iPlayer]
-	local pUnit = pPlayer:GetUnitByID(iUnit)		
-	
-	if iPlayer == -1  then return end -- 被毁灭单位所属文明
-	if pUnit == -1  then return end -- 被毁灭单位	
-	if not pUnit:IsCombatUnit() then return end ---非战斗单位
-	--if iPlayer == iByPlayer  then return end --只能被其他文明摧毁
-	--if iByPlayer == -1   then return end
-    --local Plot =  pUnit:GetPlot()
-
-	local Plot = Map.GetPlot(iX, iY)		
-	for pAdjacentPlot in PlotAreaSweepIterator(Plot, 5, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		for iVal = 0,(pAdjacentPlot:GetNumUnits() - 1) do
-			 local loopUnit = pAdjacentPlot:GetUnit(iVal)
-			 if   loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_ANTI_ANTI_MOUNTED_BONUS) 
-			 and  loopUnit:GetMoves() < 6*GameDefines["MOVE_DENOMINATOR"] 
-			 and  not loopUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS)  then
-			   loopUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
-			   print("Unit Near IronBeddha Killed!")
-			end
-        end
-	end
-end
-GameEvents.UnitPrekill.Add(UnitNearIronBeddhaKilled)
-
 ----------------------------新政策属性----------------------------
 function Knowledge_5or1(playerID)
     local player = Players[playerID]

@@ -234,6 +234,9 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 		end
 	end
 
+
+
+	--------------------------定义科技树中圆圈动图
 	local function addSmallArtButton( row, orderID, portraitOffset, portraitAtlas )
 		if row then
 			insert( g_recentlyAddedUnlocks, row._Name )
@@ -241,8 +244,8 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 			if button then
 				button:SetText("")
 				button:SetVoid2( row.ID*16 + orderID )
-				button:SetToolTipCallback( ToolTipSetup )
-				button:RegisterCallback( Mouse.eRClick, PediaCallback )
+				button:SetToolTipCallback( ToolTipSetup ) ----调取文本
+				button:RegisterCallback( Mouse.eRClick, PediaCallback )  ----调取大文本界面
 				IconHookup( portraitOffset or row.PortraitIndex or row.IconIndex or 0, textureSize, portraitAtlas or row.IconAtlas or "GENERIC_FUNC_ATLAS", button )
 				buttonNum = buttonNum + 1
 				return button
@@ -299,7 +302,7 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 	end
 
 
-
+	----------------------------科技解锁的单位
 	-- units unlocked by this tech
 	local overrideSearch = {CivilizationType = civType}
 	local override, ok, improvement, yield
@@ -318,6 +321,13 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 		end
 	end
 	overrideSearch.UnitClassType = nil
+
+
+
+
+
+
+
 	-- buildings and wonders unlocked by this tech
 	for row in GameInfo.Buildings( thisPrereqTech ) do
 		--CivilizationType, BuildingClassType, BuildingType

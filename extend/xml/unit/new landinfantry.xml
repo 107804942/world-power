@@ -108,6 +108,7 @@
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>182</PortraitIndex>
 			<ShowInPedia>false</ShowInPedia>
+			<CombatStrengthChangeAfterKilling>5</CombatStrengthChangeAfterKilling>
 		</Row>
 
 
@@ -606,13 +607,6 @@
 			<UnitType>UNIT_ZOMBIE</UnitType>
 			<PromotionType>PROMOTION_ANTI_EMP</PromotionType>
 		</Row>
-		
-		<Row>
-			<UnitType>UNIT_ZOMBIE</UnitType>
-			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
-		</Row>
-		
-
 
 		
 

@@ -428,6 +428,13 @@ INSERT INTO Building_TerrainYieldModifier(BuildingType,TerrainType,YieldType,Yie
 ('BUILDING_HELIOS', 'TERRAIN_DESERT', 'YIELD_PRODUCTION',10),	   
 ('BUILDING_GEOLOGICAL_ANVIL', 'TERRAIN_PLAINS', 'YIELD_PRODUCTION',10);
 
+---地貌百分比提升
+
+--自然博物馆
+INSERT INTO Building_FeatureYieldModifiers (BuildingType, 			FeatureType, 	YieldType, 		Yield)
+SELECT 'BUILDING_AQUARIUM', p.Type, h.Type,  10 
+FROM Features AS p, Yields AS h 
+WHERE (p.NaturalWonder ='1'OR p.PseudoNaturalWonder = '1') AND (h.Type = 'YIELD_SCIENCE' OR h.Type = 'YIELD_CULTURE');
 
 
 ---地貌提升

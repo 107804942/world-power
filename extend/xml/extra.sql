@@ -903,19 +903,15 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 		('FEATURE_CAUSEWAY_B',	'YIELD_TOURISM',2),
 
 		('FEATURE_BERMUDA_A',		'YIELD_SCIENCE',		5),
-		('FEATURE_BERMUDA_B',		'YIELD_SCIENCE',		5),
-		('FEATURE_BERMUDA_C',		'YIELD_SCIENCE',		5),
+
 
 		('FEATURE_BLUE_HOLE',		'YIELD_SCIENCE',		3),
 		('FEATURE_BLUE_HOLE',		'YIELD_FOOD',		    4),
 		('FEATURE_BLUE_HOLE',		'YIELD_TOURISM',		4),
 
-		('FEATURE_EYE_OF_SAHARA_A',		'YIELD_SCIENCE',		3),
-		('FEATURE_EYE_OF_SAHARA_A',		'YIELD_PRODUCTION',		4),
-		('FEATURE_EYE_OF_SAHARA_B',		'YIELD_SCIENCE',		3),
-		('FEATURE_EYE_OF_SAHARA_B',		'YIELD_PRODUCTION',		4),
-		('FEATURE_EYE_OF_SAHARA_C',		'YIELD_SCIENCE',		3),
-		('FEATURE_EYE_OF_SAHARA_C',		'YIELD_PRODUCTION',		4),
+		('FEATURE_EYE_OF_SAHARA_A',		'YIELD_SCIENCE',		4),
+		('FEATURE_EYE_OF_SAHARA_A',		'YIELD_PRODUCTION',		5),
+
 
 		('FEATURE_DALLOL',		'YIELD_PRODUCTION',		4),
 		('FEATURE_DALLOL',		'YIELD_SCIENCE',		3),
@@ -1054,7 +1050,7 @@ INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	
 		('FEATURE_DELICATE_ARCH',			'PLOT_LAND',		'YIELD_GOLD',		2,		0),
 
 
-		--('FEATURE_BERMUDA_A',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
+		('FEATURE_BERMUDA_A',		'PLOT_OCEAN', 'YIELD_SCIENCE',		3,		0),
 		----('FEATURE_BERMUDA_B',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
 		---('FEATURE_BERMUDA_C',		'PLOT_OCEAN', 'YIELD_SCIENCE',		1,		0),
 
@@ -1069,13 +1065,10 @@ INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	
 		('FEATURE_EYE_OF_SAHARA_A',			'PLOT_MOUNTAIN',	'YIELD_TOURISM',		1,		0),
 		('FEATURE_EYE_OF_SAHARA_A',			'PLOT_LAND',		'YIELD_TOURISM',		1,		0),
 
-		('FEATURE_EYE_OF_SAHARA_B',			'PLOT_HILLS',		'YIELD_TOURISM',		1,		0),
-		('FEATURE_EYE_OF_SAHARA_B',			'PLOT_MOUNTAIN',	'YIELD_TOURISM',		1,		0),
-		('FEATURE_EYE_OF_SAHARA_B',			'PLOT_LAND',		'YIELD_TOURISM',		1,		0),
+		('FEATURE_EYE_OF_SAHARA_A',			'PLOT_HILLS',		'YIELD_SCIENCE',		1,		0),
+		('FEATURE_EYE_OF_SAHARA_A',			'PLOT_MOUNTAIN',	'YIELD_SCIENCE',		1,		0),
+		('FEATURE_EYE_OF_SAHARA_A',			'PLOT_LAND',		'YIELD_SCIENCE',		1,		0),
 
-		('FEATURE_EYE_OF_SAHARA_C',			'PLOT_HILLS',	    'YIELD_TOURISM',		1,		0),
-		('FEATURE_EYE_OF_SAHARA_C',			'PLOT_MOUNTAIN',	'YIELD_TOURISM',		1,		0),
-		('FEATURE_EYE_OF_SAHARA_C',			'PLOT_LAND',	    'YIELD_TOURISM',        1,	    0),
 
 
 
@@ -1117,20 +1110,21 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 		('ART_DEF_FEATURE_GALAPAGOS_B',		'Resource',		'Galapagos B'),
 
 		('ART_DEF_FEATURE_BERMUDA_A',	'Resource',		'Bermuda Triangle A'),
-		('ART_DEF_FEATURE_BERMUDA_B',	'Resource',		'Bermuda Triangle B'),
-		('ART_DEF_FEATURE_BERMUDA_C',	'Resource',		'Bermuda Triangle C'),
+
 
 		-- ('ART_DEF_FEATURE_VALLEY_B',	'Resource',		'Valley B'),
 		  ('ART_DEF_FEATURE_VALLEY_A',	'Resource',		'Valley A'),
 
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_A',	'Resource',		'Eye of the Sahara A'),
-		('ART_DEF_FEATURE_EYE_OF_SAHARA_B',	'Resource',		'Eye of the Sahara B'),
-		('ART_DEF_FEATURE_EYE_OF_SAHARA_C',	'Resource',		'Eye of the Sahara C'),
+
+		('ART_DEF_FEATURE_VOLCANO_1',	'Resource',		'Volcan 1'),
 
 		('ART_DEF_FEATURE_RETBA',		'Resource',		'Lake Retba');
 
 
 INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHandler,	ResourceType,	Model,	TerrainContour) VALUES
+('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VOLCANO_1',	'apocalyptic_volcano_1.fxsxml',1),       --important!
+
 --('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_B',	'Monument_valley_1.fxsxml',1),       --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_A',	'Monument_valley_2.fxsxml',1),       --important!
 
@@ -1138,12 +1132,10 @@ INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHand
 ('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DANXIA',	'Danxia_Mountain.fxsxml',1),       --important!
 
 ('Any',		'Any',	0.85,	'ART_DEF_IMPROVEMENT_NONE',		'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_A',	'bermuda_triangle_1.fxsxml',1),       --important!
-('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_B',	null,1),       --important!
-('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_C',	null,1),       --important!
 
-('Any',		'Any',	3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_EYE_OF_SAHARA_A',	'eye_of_the_sahara_3_tile_version.fxsxml',1),       --important!
-('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_EYE_OF_SAHARA_B',	null,1),       --important!
-('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_EYE_OF_SAHARA_C',	null,1),       --important!
+
+('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_EYE_OF_SAHARA_A',	'eye_of_the_sahara.fxsxml',1),       --important!
+
 
 ('Any',		'Any',	1.1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BLUE_HOLE',	'Great_blue_hole.fxsxml',1),       --important!
 
@@ -1197,13 +1189,9 @@ INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		
 		--('ART_DEF_FEATURE_WHITE_DESERT','Feature',		'SV_WhiteDesert.dds'),
 		('ART_DEF_FEATURE_ZHANGJIAJIE','Feature',		'sv_Zhangjiajie.dds'),
 
-		('ART_DEF_FEATURE_EYE_OF_SAHARA_C',	'Feature',		'sv_Sahara_Eye.dds'),
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_A','Feature',		'sv_Sahara_Eye.dds'),
-		('ART_DEF_FEATURE_EYE_OF_SAHARA_B','Feature',		'sv_Sahara_Eye.dds'),
 
-		('ART_DEF_FEATURE_BERMUDA_C',	'Feature',		'sv_Bermuda.dds'),
 		('ART_DEF_FEATURE_BERMUDA_A','Feature',		'sv_Bermuda.dds'),
-		('ART_DEF_FEATURE_BERMUDA_B','Feature',		'sv_Bermuda.dds'),
 
 		('ART_DEF_FEATURE_VALLEY_A','Feature',		'sv_VALLEY.dds'),
 		--('ART_DEF_FEATURE_VALLEY_B','Feature',		'sv_VALLEY.dds'),

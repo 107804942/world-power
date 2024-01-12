@@ -184,19 +184,6 @@ end
 
 
 -- ********************************************************
--- 蠕虫
--- ******************************************************** 
-if  attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EVIL"].ID) 
-and attUnit:GetBaseCombatStrength()<600 then
-if defUnit:IsDead() then 
-   attUnit:SetBaseCombatStrength(attUnit:GetBaseCombatStrength()+10)
-   end
-end
-
-
-
-
--- ********************************************************
 -- 赫梯
 -- ******************************************************** 
 if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH"].ID)  then
@@ -244,9 +231,7 @@ end
       for i = 0, unitCount-1, 1 do
       local pFoundUnit = pTargetPlot:GetUnit(i)
       if  pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_ANTI_ANTI_MOUNTED_BONUS)  
-	  and pFoundUnit:GetMoves() < 6*GameDefines["MOVE_DENOMINATOR"]  
-	  and not pFoundUnit:IsHasPromotion(GameInfoTypes.PROMOTION_NO_CHARGE_BONUS)  then
-	  --pFoundUnit:ChangeMoves(0.5*GameDefines["MOVE_DENOMINATOR"])
+	  and pFoundUnit:GetMoves() < 6*GameDefines["MOVE_DENOMINATOR"]   then
 	  pFoundUnit:SetMoves(math.floor(pFoundUnit:MovesLeft() +GameDefines["MOVE_DENOMINATOR"]))
 	  print("Unit Near IronBeddha Killed!")
 		             end
@@ -295,18 +280,6 @@ end
 		
 
 -- ********************************************************
--- 堡垒克制近战
--- ********************************************************                      
-     if  attUnit  and defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID) 
-	 and batType == GameInfoTypes["BATTLETYPE_MELEE"] then
-	 if  not attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SIEGE6"].ID) 
-	 and not attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_ANTI_DEBUFF"].ID) 
-	 and not defUnit:IsDead()  then 
-		 attUnit:SetMoves(0)
-	    end
-	end
-
--- ********************************************************
 -- 突击虎无限次远程火力支援
 -- ******************************************************** 
 if attUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
@@ -330,14 +303,14 @@ or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFir
 
 						pFoundUnit:ChangeMoves(GameDefines["MOVE_DENOMINATOR"])
 
-						if  pFoundUnit:GetNumAttacksMadeThisTurn()==0 then  ---本回合未攻击
+						if  pFoundUnit:GetNumAttacksMadeThisTurn()==0 then  
 						    if 	pFoundUnit:CanRangeStrikeAt(defPlot:GetX(), defPlot:GetY()) then	  
 						    pFoundUnit:RangeStrike(defPlot:GetX(), defPlot:GetY())
 							pFoundUnit:ChangeMadeAttackNum(-1)
 							else 
 							pFoundUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
 							end
-				        else               ---本回合已攻击
+				        else   
 						
 						    pFoundUnit:ChangeMadeAttackNum(-1)
 						    if 	pFoundUnit:CanRangeStrikeAt(defPlot:GetX(), defPlot:GetY()) then				    	  
@@ -357,17 +330,6 @@ or (batType == GameInfoTypes["BATTLETYPE_RANGED"] and attUnit:IsRangedSupportFir
 	    end  
      end
  end
-
--- ********************************************************
--- 魔像
--- ********************************************************
-        if not attUnit:IsDead() then
-        if batType==GameInfoTypes["BATTLETYPE_RANGED"] then
-        if not defUnit:IsDead() and defUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GOLEM"].ID)  then
-		attUnit:ChangeDamage(defUnitDamage,defPlayer)
-             end
-          end
-       end
 
 	end
 end	

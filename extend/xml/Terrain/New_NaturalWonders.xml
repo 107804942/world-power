@@ -74,6 +74,7 @@
 			<Civilopedia>TXT_KEY_FEATURE_NEW_VOLCANO_PEDIA</Civilopedia>
 			<Help>TXT_KEY_FEATURE_NEW_VOLCANO_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO</ArtDefineTag>
+			<!--<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_1</ArtDefineTag>-->
 			<Movement>1</Movement>
 			<NoCity>true</NoCity>
 			<Volcano>true</Volcano>
@@ -446,7 +447,7 @@
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_EYE_OF_SAHARA_A</ArtDefineTag>
 			<Movement>2</Movement>
-			<SeeThrough>1</SeeThrough>
+			<SeeThrough>0</SeeThrough>
 			<Impassable>false</Impassable>
 			<InfluenceCost>-3</InfluenceCost>
 			<NaturalWonder>false</NaturalWonder>
@@ -461,48 +462,7 @@
 			<Defense>20</Defense>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
-		<Row>
-			<Type>FEATURE_EYE_OF_SAHARA_B</Type>
-			<Description>TXT_KEY_FEATURE_EYE_OF_SAHARA</Description>
-			<Civilopedia>TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_EYE_OF_SAHARA_B</ArtDefineTag>
-			<Movement>2</Movement>
-			<SeeThrough>1</SeeThrough>
-			<Impassable>false</Impassable>
-			<InfluenceCost>-3</InfluenceCost>
-			<NaturalWonder>false</NaturalWonder>
-			<PseudoNaturalWonder>true</PseudoNaturalWonder>
-			<NoCity>true</NoCity>
-			<NoImprovement>true</NoImprovement>
-			<Rough>true</Rough>
-			<YieldNotAdditive>true</YieldNotAdditive>
-			<PortraitIndex>80</PortraitIndex>
-			<InBorderHappiness>2</InBorderHappiness>
-			<Defense>20</Defense>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
-		<Row>
-			<Type>FEATURE_EYE_OF_SAHARA_C</Type>
-			<Description>TXT_KEY_FEATURE_EYE_OF_SAHARA</Description>
-			<Civilopedia>TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_EYE_OF_SAHARA_C</ArtDefineTag>
-			<Movement>2</Movement>
-			<SeeThrough>1</SeeThrough>
-			<Impassable>false</Impassable>
-			<InfluenceCost>-3</InfluenceCost>
-			<NaturalWonder>false</NaturalWonder>
-			<PseudoNaturalWonder>true</PseudoNaturalWonder>
-			<NoCity>true</NoCity>
-			<NoImprovement>true</NoImprovement>
-			<Rough>true</Rough>
-			<YieldNotAdditive>true</YieldNotAdditive>
-			<PortraitIndex>80</PortraitIndex>
-			<InBorderHappiness>2</InBorderHappiness>
-			<Defense>20</Defense>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
-
-
+	
 
 
 		<!-- 百慕大 -->
@@ -528,51 +488,7 @@
 			<AdjacentUnitFreePromotion>PROMOTION_BERMUDA</AdjacentUnitFreePromotion>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
-		<Row>
-			<Type>FEATURE_BERMUDA_B</Type>
-			<Description>TXT_KEY_FEATURE_BERMUDA</Description>
-			<Civilopedia>TXT_KEY_CIV5_FEATURES_BERMUDA_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_BERMUDA_B</ArtDefineTag>
-			<Movement>10</Movement>
-			<SeeThrough>0</SeeThrough>
-			<Impassable>false</Impassable>
-			<InfluenceCost>-3</InfluenceCost>
-			<NaturalWonder>false</NaturalWonder>
-			<PseudoNaturalWonder>true</PseudoNaturalWonder>
-			<NoCity>true</NoCity>
-			<NoImprovement>true</NoImprovement>
-			<Rough>true</Rough>
-			<YieldNotAdditive>true</YieldNotAdditive>
-			<PortraitIndex>81</PortraitIndex>
-			<InBorderHappiness>0</InBorderHappiness>
-			<TurnDamage>33</TurnDamage>
-			<AdjacentUnitFreePromotion>PROMOTION_BERMUDA</AdjacentUnitFreePromotion>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
-		<Row>
-			<Type>FEATURE_BERMUDA_C</Type>
-			<Description>TXT_KEY_FEATURE_BERMUDA</Description>
-			<Civilopedia>TXT_KEY_CIV5_FEATURES_BERMUDA_TEXT</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_BERMUDA_C</ArtDefineTag>
-			<Movement>10</Movement>
-			<SeeThrough>0</SeeThrough>
-			<Impassable>false</Impassable>
-			<InfluenceCost>-3</InfluenceCost>
-			<NaturalWonder>false</NaturalWonder>
-			<PseudoNaturalWonder>true</PseudoNaturalWonder>
-			<NoCity>true</NoCity>
-			<NoImprovement>true</NoImprovement>
-			<Rough>true</Rough>
-			<YieldNotAdditive>true</YieldNotAdditive>
-			<PortraitIndex>81</PortraitIndex>
-			<InBorderHappiness>0</InBorderHappiness>
-			<TurnDamage>33</TurnDamage>
-			<AdjacentUnitFreePromotion>PROMOTION_BERMUDA</AdjacentUnitFreePromotion>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
-
-
-
+		
 
 		<!--丹霞-->
 		<Row>
@@ -581,7 +497,7 @@
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_DANXIA_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_DANXIA</ArtDefineTag>
 			<Movement>0</Movement>
-			<SeeThrough>2</SeeThrough>
+			<SeeThrough>0</SeeThrough>
 			<Impassable>true</Impassable>
 			<InfluenceCost>-3</InfluenceCost>
 			<NaturalWonder>false</NaturalWonder>
@@ -1056,17 +972,7 @@
 
 			<SetAdjacentTilesToShallowWater>0</SetAdjacentTilesToShallowWater>
 		</Row>
-		<Row>
-			<NaturalWonderType>FEATURE_BERMUDA_B</NaturalWonderType>
-			<OccurrenceFrequency>0</OccurrenceFrequency>
-			<EligibilityMethodNumber>100</EligibilityMethodNumber>
-		</Row>
-		<Row>
-			<NaturalWonderType>FEATURE_BERMUDA_C</NaturalWonderType>
-			<OccurrenceFrequency>0</OccurrenceFrequency>
-			<EligibilityMethodNumber>100</EligibilityMethodNumber>
-		</Row>
-		
+
 		
 		<!-- Eye of Sahara -->
 		<Row>
@@ -1212,16 +1118,7 @@
 
 			<SetAdjacentTilesToShallowWater>0</SetAdjacentTilesToShallowWater>
 		</Row>
-		<Row>
-			<NaturalWonderType>FEATURE_EYE_OF_SAHARA_B</NaturalWonderType>
-			<OccurrenceFrequency>0</OccurrenceFrequency>
-			<EligibilityMethodNumber>100</EligibilityMethodNumber>
-		</Row>
-		<Row>
-			<NaturalWonderType>FEATURE_EYE_OF_SAHARA_C</NaturalWonderType>
-			<OccurrenceFrequency>0</OccurrenceFrequency>
-			<EligibilityMethodNumber>100</EligibilityMethodNumber>
-		</Row>
+		
 
 		<!-- Zhangjiajie -->
 		<Row>

@@ -74,38 +74,9 @@ GameEvents.PlayerDoTurn.Add(JurassicParkBonus)
 
 
 
-GameEvents.PlayerCanFoundCityRegardless.Add(function(iPlayer, iPlotX, iPlotY) return false end) 
 
 
 
-function OnUnitCanRangeAttackAt(iPlayer,iPlotX, iPlotY)
-	local pPlayer = Players[iPlayer]
-	local pPlot = Map.GetPlot(iPlotX, iPlotY)
-	
-	if (pUnitInfo.RangedPillage > 0) then
-		local pPlot = Map.GetPlot(iX, iY)
-		local ePlayer = Players[pPlot:GetOwner()]
-		local iRangedPillage = pUnitInfo.RangedPillage
-
-    	if (pPlot:GetImprovementType() ~= -1 and PlayersAtWar(ePlayer, pPlayer)) then
-      		print(string.format("%s can range pillage the improvement at (%i, %i)", pUnit:GetName(), iX, iY))
-
-      		if (iRangedPillage == 1 or not pPlot:IsImprovementPillaged()) then
-        		-- TODO - for an AI player, does this unit want to pillage the tile?  This opens a whole can of worms!
-	    		return pPlayer:IsHuman();
-	  		end
-		elseif (pPlot:IsRoute()) then
-      	print(string.format("%s can range pillage the route at (%i, %i)", pUnit:GetName(), iX, iY))
-
-      		if (iRangedPillage == 1 or not pPlot:IsRoutePillaged()) then
-        		-- TODO - for an AI player, does this unit want to pillage the tile?  This opens a whole can of worms!
-	   	 		return pPlayer:IsHuman();
-	  		end
-		end
-  	end
-  return false;
-end
-GameEvents.UnitCanRangeAttackAt.Add(OnUnitCanRangeAttackAt)
 
 local tMissions = {
 iMove = MissionTypes.MISSION_MOVE_TO,
@@ -137,125 +108,6 @@ GameEvents.CanStartMission.Add(ImmobileWhileDamaged)
 
 
 
-
-
-
-
-
-#if defined(MOD_ROG_CORE)
-				if (pkDefender->GetIgnoreDamageChance() > 0)
-				{
-					int iRand = GC.getGame().getJonRandNum(100, "Ignore Damage Chance");
-					if (iRand <= pkDefender->GetIgnoreDamageChance())
-					{
-						iDamage = 0;
-					}
-				}
-#endif
-		
-		<Row Tag="TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_GARRISONED_UNIT">
-			<Text>[NEWLINE][ICON_BULLET]{1_Num}{2_IconString} 来自驻军</Text>
-		</Row>
-
-
-
-int CvCity::getCrimeFromGarrisonedUnit() const
-{
-	int iCrimeFromGarrisonedUnit = 0;
-	// Garrisoned Unit
-	CvUnit* pGarrisonedUnit = GetGarrisonedUnit();
-	if (pGarrisonedUnit)
-	{
-		int iGarrisonedStrength = 0;
-		iGarrisonedStrength = pGarrisonedUnit->GetBaseCombatStrength();
-
-		if (iGarrisonedStrength <= 30)
-		{
-			iCrimeFromGarrisonedUnit = 3;
-		}
-		else if (iGarrisonedStrength >30 && iGarrisonedStrength<= 60)
-		{
-			iCrimeFromGarrisonedUnit = 5;
-		}
-		else if (iGarrisonedStrength > 60 && iGarrisonedStrength <= 100)
-		{
-			iCrimeFromGarrisonedUnit = 7;
-		}
-		else if (iGarrisonedStrength > 100 && iGarrisonedStrength <= 200)
-		{
-			iCrimeFromGarrisonedUnit = 10;
-		}
-		else if (iGarrisonedStrength > 200 )
-		{
-			iCrimeFromGarrisonedUnit = 15;
-		}
-	}
-	return iCrimeFromGarrisonedUnit;
-}
-
-
-	if (eIndex == YIELD_LOYALTY && owner.isGoldenAge())
-	{
-		iTempMod = GC.getCITY_LOYALTY_GOLDEN_AGE_YIELD();
-		iModifier += iTempMod;
-		if (iTempMod != 0 && toolTipSink)
-			GC.getGame().BuildProdModHelpText(toolTipSink, "TXT_KEY_PRODMOD_YIELD_GOLDEN_AGE", iTempMod);
-	}
-
-
-	   int NumForeignSpy = getNumForeignSpy();
-			iValue += NumForeignSpy * GC.getCITY_CRIME_SPY_YIELD();
-			if (GetCityEspionage()->m_aiSpyAssignment[getOwner()] != -1)
-			{
-				iValue -= GC.getCITY_CRIME_SPY_YIELD();
-			}
-
-
-
-			int NumForeignSpy = getNumForeignSpy();
-		iBaseValue = NumForeignSpy * GC.getCITY_CRIME_SPY_YIELD();
-		if (GetCityEspionage()->m_aiSpyAssignment[getOwner()] != -1)
-		{
-			iBaseValue -= GC.getCITY_CRIME_SPY_YIELD();
-		}
-		if (iBaseValue != 0)
-		{
-			szRtnValue += GetLocalizedText("TXT_KEY_CITYVIEW_BASE_YIELD_TT_FROM_SPIES", iBaseValue, YieldIcon);
-		}
-
-
-
-		GetCityReligions()->GetReligiousMajority()
-
-
-		ReligionTypes eMajority = GetCityReligions()->GetReligiousMajority();
-	const CvReligion* pReligion = GC.getGame().GetGameReligions()->GetReligion(eMajority, getOwner());
-	if(pReligion)
-	{
-		int iReligionYieldMaxFollowers = pReligion->m_Beliefs.GetMaxYieldModifierPerFollower(eIndex);
-		int iFollowers = GetCityReligions()->GetNumFollowers(eMajority);
-		iTempMod = 0;
-
-		GetPressurePerTurn
-
-int CvCity::getHeresyFromDiscord() const
-{
-	int  iHeresyPerTurnFromDiscord = 0;
-
-	for (int i = 0; i < MAX_MAJOR_CIVS; i++)
-	{
-		PlayerTypes eTargetPlayer = (PlayerTypes)i;
-
-		if (GET_PLAYER(eTargetPlayer).isEverAlive() && GET_PLAYER(eTargetPlayer).GetReligions()->HasCreatedReligion() && eTargetPlayer!= getOwner())
-		{
-			iHeresyPerTurnFromDiscord+= GetCityReligions()->GetNumFollowers(GET_PLAYER(eTargetPlayer).GetReligions()->GetReligionCreatedByPlayer(true));
-
-			if (iHeresyPerTurnFromDiscord== getPopulation());
-		}
-
-	}
-	return iHeresyPerTurnFromDiscord;
-}
 
 
 	if (eIndex == YIELD_HERESY)

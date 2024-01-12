@@ -418,15 +418,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 	
 	insert( tips, "----------------" )
 
-	if orbitalInfo then
-		append( tips, " ("..L"TXT_KEY_ORBITAL_UNITS"..")" )
-		-- Orbital Duration
-		if activePlayer then
-			insert( tips, L("TXT_KEY_PRODUCTION_ORBITAL_DURATION", activePlayer:GetTurnsUnitAllowedInOrbit(unit.ID, true) ) ) --todo xml
-		end
-		-- Orbital Effect Range
-		insert( tips, L( "TXT_KEY_PRODUCTION_ORBITAL_EFFECT_RANGE", orbitalInfo.EffectRange or 0  ) )
-	elseif unitDomainType ~= "DOMAIN_AIR" then
+	if unitDomainType ~= "DOMAIN_AIR" then
 		-- Movement:
 		insert( tips, L"TXT_KEY_PEDIA_MOVEMENT_LABEL" .. " " .. unitMoves .. "[ICON_MOVES]" )
 	end
@@ -456,7 +448,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 		insert( tips, L"TXT_KEY_PEDIA_RANGEDCOMBAT_LABEL" .. " " .. rangedStrength .. "[ICON_RANGE_STRENGTH]" .. unitRange )
 	end
 
-			-- workrate:
+	-- workrate:
 	if workrate ~=nil then
 		insert( tips, L"TXT_KEY_PEDIA_WORKRATE_LABEL" ..workrate  )
 	end
@@ -4190,859 +4182,417 @@ if Game then
 
 		return concat( tips, "[NEWLINE]" )
 	end
+	
+end
 
-	if IsCivBE then
-		-- ===========================================================================
-		-- PLAYER PERK (civ BE only)
-		-- ===========================================================================
 
-		function GetHelpTextForPlayerPerk( perkID )
 
-			local perkInfo = GameInfo.PlayerPerks[ perkID ]
 
-			-- Name
-			local tips = { Locale_ToUpper( perkInfo.Description or "???" ), "----------------" }
 
-			-- Yield from Buildings
-			for playerPerkBuildingYieldEffect in GameInfo.PlayerPerks_BuildingYieldEffects{ PlayerPerkType = perkInfo.Type } do
-				local building = GameInfo.BuildingClasses[ playerPerkBuildingYieldEffect.BuildingClassType ]
-				local yield = building and GameInfo.Yields[ playerPerkBuildingYieldEffect.YieldType ]
-				if yield then
-					insert( tips, L( "TXT_KEY_PLAYERPERK_ALL_BUILDING_YIELD_EFFECT", playerPerkBuildingYieldEffect.FlatYield, yield.IconString, yield.Description or "???", building.Description or "???" ) )
-				end
-			end
 
-			-- Pre-written Help text
-			return AddPreWrittenHelpTextAndConcat( tips, perkInfo )
-		end
-
-		local getHelpTextForUnitAttributes, getHelpTextForUnitPlayerPerkBuffs, getHelpTextForUnitInherentPromotions, getHelpTextForUnitPromotions, getHelpTextForUnitPerks, getHelpTextForAffinityLevel
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		-- UNIT COMBO THINGS
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		function GetHelpTextForSpecificUnit(unit)
-			local s = "";
-
-			-- Attributes
-			s = s .. getHelpTextForUnitAttributes(unit:GetUnitType(), "[ICON_BULLET]");
-
-			-- Player Perks
-			local temp = getHelpTextForUnitPlayerPerkBuffs(unit:GetUnitType(), unit:GetOwner(), "[ICON_BULLET]");
-			if temp ~= "" then
-				if s ~= "" then
-					s = s .. "[NEWLINE]";
-				end
-				s = s .. temp;
-			end
-
-			-- Promotions
-			temp = getHelpTextForUnitPromotions(unit, "[ICON_BULLET]");
-			if temp ~= "" then
-				if s ~= "" then
-					s = s .. "[NEWLINE]";
-				end
-				s = s .. temp;
-			end
-
-			-- Upgrades and Perks
-			local player = Players[unit:GetOwner()];
-			if player then
-				local allPerks = player:GetPerksForUnit(unit:GetUnitType());
-				local tempPerks = player:GetFreePerksForUnit(unit:GetUnitType());
-				for _, perk in ipairs(tempPerks) do
-					insert(allPerks, perk);
-				end
-				local ignoreCoreStats = true;
-				temp = getHelpTextForUnitPerks(allPerks, ignoreCoreStats, "[ICON_BULLET]");
-				if temp ~= "" then
-					if s ~= "" then
-						s = s .. "[NEWLINE]";
-					end
-					s = s .. temp;
-				end
-			end
-
-			return s;
-		end
-
-		function GetHelpTextForUnitType(unitType, playerID, includeFreePromotions)
-			local s = "";
-
-			-- Attributes
-			s = s .. getHelpTextForUnitAttributes(unitType, nil);
-
-			-- Player Perks
-			if includeFreePromotions and includeFreePromotions == true then
-				local temp = getHelpTextForUnitPlayerPerkBuffs(unitType, playerID, nil);
-				if temp ~= "" then
-					if s ~= "" then
-						s = s .. "[NEWLINE]";
-					end
-					s = s .. temp;
-				end
-			end
-
-			-- Promotions
-			if includeFreePromotions and includeFreePromotions == true then
-				local temp = getHelpTextForUnitInherentPromotions(unitType, nil);
-				if temp ~= "" then
-					if s ~= "" then
-						s = s .. "[NEWLINE]";
-					end
-					s = s .. temp;
-				end
-			end
-
-			-- Upgrades and Perks
-			local player = Players[playerID];
-			if player then
-				local allPerks = player:GetPerksForUnit(unitType);
-				local tempPerks = player:GetFreePerksForUnit(unitType);
-				for _, perk in ipairs(tempPerks) do
-					insert(allPerks, perk);
-				end
-				local ignoreCoreStats = true;
-				local temp = getHelpTextForUnitPerks(allPerks, ignoreCoreStats, nil);
-				if temp ~= "" then
-					if s ~= "" then
-						s = s .. "[NEWLINE]";
-					end
-					s = s .. temp;
-				end
-			end
-
-			return s;
-		end
-
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		-- UNIT MISCELLANY
-		-- Stuff not covered by promotions or perks
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		function GetUpgradedUnitDescriptionKey(player, unitType)
-			local descriptionKey = "";
-			local unitInfo = GameInfo.Units[unitType];
-			if unitInfo then
-				descriptionKey = L(unitInfo.Description) or "???";
-				if player then
-					local bestUpgrade = player:GetBestUnitUpgrade(unitType);
-					if bestUpgrade ~= -1 then
-						local bestUpgradeInfo = GameInfo.UnitUpgrades[bestUpgrade];
-						if bestUpgradeInfo then
-							descriptionKey = L(bestUpgradeInfo.Description) or "???";
-						end
-					end
-				end
-			end
-			return descriptionKey;
-		end
-
-		--TODO: antonjs: Once we have a text budget and refactor time,
-		--roll these miscellaneous things (player perks, attributes in
-		--the base unit XML) in with existing unit buff systems
-		--instead of being special case like this.
-		function GetHelpTextForUnitAttributes(unitType, prefix)
-			local s = "";
-			local unitInfo = GameInfo.Units[unitType];
-			if unitInfo then
-				if unitInfo.OrbitalAttackRange >= 0 then
-					if s ~= "" then
-						s = s .. "[NEWLINE]";
-					end
-					if prefix then
-						s = s .. prefix;
-					end
-					s = s .. L"TXT_KEY_INTERFACEMODE_ORBITAL_ATTACK";
-				end
-			end
-			return s;
-		end
-		getHelpTextForUnitAttributes = GetHelpTextForUnitAttributes
-
-		function GetHelpTextForUnitPlayerPerkBuffs(unitType, playerID, prefix)
-			local s = "";
-			local player = Players[playerID];
-			local unitInfo = GameInfo.Units[ unitType ]
-			if player and unitInfo then
-				for info in GameInfo.PlayerPerks() do
-					if player:HasPerk(info.ID) then
-						if info.MiasmaBaseHeal > 0 or info.UnitPercentHealChange > 0 then
-							if s ~= "" then
-								s = s .. "[NEWLINE]";
-							end
-							if prefix then
-								s = s .. prefix;
-							end
-							s = s .. L(GameInfo.PlayerPerks[info.ID].Help);
-						end
-
-						-- Help text for this player perk is inaccurate. Commencing hax0rs.
-						if info.UnitFlatVisibilityChange > 0 then
-							if s ~= "" then
-								s = s .. "[NEWLINE]";
-							end
-							if prefix then
-								s = s .. prefix;
-							end
-							s = s .. L("TXT_KEY_UNITPERK_VISIBILITY_CHANGE", info.UnitFlatVisibilityChange);
-						end
-					end
-				end
-			end
-			return s;
-		end
-		getHelpTextForUnitPlayerPerkBuffs = GetHelpTextForUnitPlayerPerkBuffs
-
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		-- UNIT PROMOTIONS
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		function GetHelpTextForUnitInherentPromotions(unitType, prefix)
-			local s = "";
-			local unitInfo = GameInfo.Units[unitType];
-			if unitInfo then
-				for pairInfo in GameInfo.Unit_FreePromotions{ UnitType = unitInfo.Type } do
-					local promotionInfo = GameInfo.UnitPromotions[pairInfo.PromotionType];
-					if promotionInfo and promotionInfo.Help then
-						if s ~= "" then
-							s = s .. "[NEWLINE]";
-						end
-						if prefix then
-							s = s .. prefix;
-						end
-						s = s .. L(promotionInfo.Help);
-					end
-				end
-			end
-			return s;
-		end
-		getHelpTextForUnitInherentPromotions = GetHelpTextForUnitInherentPromotions
-
-		function GetHelpTextForUnitPromotions(unit, prefix)
-			local s = "";
-			for promotionInfo in GameInfo.UnitPromotions() do
-				if unit:IsHasPromotion(promotionInfo.ID) then
-					if s ~= "" then
-						s = s .. "[NEWLINE]";
-					end
-					if prefix then
-						s = s .. prefix;
-					end
-					s = s .. L(promotionInfo.Help);
-				end
-			end
-			return s;
-		end
-
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		-- UNIT PERKS
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-
-		local function ComposeUnitPerkNumberHelpText(perkIDTable, textKey, numberKey, firstEntry, prefix)
-			local s = "";
-			local number = 0;
-			for _, perkID in ipairs(perkIDTable) do
-				local perkInfo = GameInfo.UnitPerks[perkID];
-				if perkInfo and perkInfo[numberKey] and perkInfo[numberKey] ~= 0 then
-					number = number + perkInfo[numberKey];
-				end
-			end
-
-			if number ~= 0 then
-				if not firstEntry then
-					s = s .. "[NEWLINE]";
-				end
-				if prefix then
-					s = s .. prefix;
-				end
-				s = s .. L(textKey, number);
-			end
-
-			return s;
-		end
-
-		local function ComposeUnitPerkFlagHelpText(perkIDTable, textKey, flagKey, firstEntry, prefix)
-			local s = "";
-			local flag = false;
-			for _, perkID in ipairs(perkIDTable) do
-				local perkInfo = GameInfo.UnitPerks[perkID];
-				if perkInfo and perkInfo[flagKey] and perkInfo[flagKey] then
-					flag = true;
-					break;
-				end
-			end
-
-			if flag then
-				if not firstEntry then
-					s = s .. "[NEWLINE]";
-				end
-				if prefix then
-					s = s .. prefix;
-				end
-				s = s .. L(textKey);
-			end
-
-			return s;
-		end
-
-
-		local function ComposeUnitPerkDomainCombatModHelpText(perkIDTable, textKey, domainKey, firstEntry, prefix)
-			local s = "";
-			local number = 0;
-			for _, perkID in ipairs(perkIDTable) do
-				local perkInfo = GameInfo.UnitPerks[perkID];
-				if perkInfo then
-					for domainCombatInfo in GameInfo.UnitPerks_DomainCombatMods("UnitPerkType = \"" .. perkInfo.Type .. "\" AND DomainType = \"" .. domainKey .. "\"") do
-						if domainCombatInfo.CombatMod ~= 0 then
-							number = number + domainCombatInfo.CombatMod;
-						end
-					end
-				end
-			end
-
-			if number ~= 0 then
-				if not firstEntry then
-					s = s .. "[NEWLINE]";
-				end
-				if prefix then
-					s = s .. prefix;
-				end
-				s = s .. L(textKey, number);
-			end
-
-			return s;
-		end
-
-		function getHelpTextForUnitPerks(perkIDTable, ignoreCoreStats, prefix)
-			local s = "";
-
-			-- Text key overrides
-			local filteredPerkIDTable = {};
-			for _, perkID in ipairs(perkIDTable) do
-				local perkInfo = GameInfo.UnitPerks[perkID];
-				if perkInfo then
-					if perkInfo.Help then
-						if s ~= "" then
-							s = s .. "[NEWLINE]";
-						end
-						if prefix then
-							s = s .. prefix;
-						end
-						s = s .. L(perkInfo.Help);
-					else
-						insert(filteredPerkIDTable, perkID);
-					end
-				end
-			end
-
-			-- Basic Attributes
-			if not ignoreCoreStats then
-				s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_EXTRA_COMBAT_STRENGTH", "ExtraCombatStrength", s == "", prefix);
-				s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_EXTRA_RANGED_COMBAT_STRENGTH", "ExtraRangedCombatStrength", s == "", prefix);
-			end
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_RANGE_CHANGE", "RangeChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_RANGE_AT_FULL_HEALTH_CHANGE", "RangeAtFullHealthChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_RANGE_AT_FULL_MOVES_CHANGE", "RangeAtFullMovesChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_RANGE_FOR_ONBOARD_CHANGE", "RangeForOnboardChange", s == "", prefix);
-			if not ignoreCoreStats then
-				s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_MOVES_CHANGE", "MovesChange", s == "", prefix);
-			end
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_VISIBILITY_CHANGE", "VisibilityChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_CARGO_CHANGE", "CargoChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_RANGE_AGAINST_ORBITAL_CHANGE", "RangeAgainstOrbitalChange", s == "", prefix);
-			-- General combat
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_MOD", "AttackMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_FORTIFIED_MOD", "AttackFortifiedMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_WOUNDED_MOD", "AttackWoundedMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_WHILE_IN_MIASMA_MOD", "AttackWhileInMiasmaMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_CITY_MOD", "AttackCityMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_FOR_ONBOARD_MOD", "AttackForOnboardMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DEFEND_MOD", "DefendMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DEFEND_RANGED_MOD", "DefendRangedMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DEFEND_WHILE_IN_MIASMA_MOD", "DefendWhileInMiasmaMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DEFEND_FOR_ONBOARD_MOD", "DefendForOnboardMod", s == "", prefix);
-			-- Air combat
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_WITH_AIR_SWEEP_MOD", "AttackWithAirSweepMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ATTACK_WITH_INTERCEPTION_MOD", "AttackWithInterceptionMod", s == "", prefix);
-			-- Territory
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_FRIENDLY_LANDS_MOD", "FriendlyLandsMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_OUTSIDE_FRIENDLY_LANDS_MOD", "OutsideFriendlyLandsMod", s == "", prefix);
-			-- Battlefield position
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ADJACENT_FRIENDLY_MOD", "AdjacentFriendlyMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_PER_ADJACENT_FRIENDLY_MOD", "PerAdjacentFriendlyMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_NO_ADJACENT_FRIENDLY_MOD", "NoAdjacentFriendlyMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_FLANKING_MOD", "FlankingMod", s == "", prefix);
-			-- Other conditional bonuses
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ALIEN_COMBAT_MOD", "AlienCombatMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_FORTIFIED_MOD", "FortifiedMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_CITY_MOD", "CityMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_PER_UNUSED_MOVE_MOD", "PerUnusedMoveMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DAMAGE_TO_ADJACENT_UNITS_ON_DEATH", "DamageToAdjacentUnitsOnDeath", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DAMAGE_TO_ADJACENT_UNITS_ON_ATTACK", "DamageToAdjacentUnitsOnAttack", s == "", prefix);
-			-- Attack logistics
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_IGNORE_RANGED_ATTACK_LINE_OF_SIGHT", "IgnoreRangedAttackLineOfSight", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_MELEE_ATTACK_HEAVY_CHARGE", "MeleeAttackHeavyCharge", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_EXTRA_ATTACKS", "ExtraAttacks", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_EXTRA_INTERCEPTIONS", "ExtraInterceptions", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_RANGED_ATTACK_SETUPS_NEEDED_MOD", "RangedAttackSetupsNeededMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_RANGED_ATTACK_SCATTER_CHANCE_MOD", "RangedAttackScatterChanceMod", s == "", prefix);
-			-- Movement logistics
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_MOVE_AFTER_ATTACKING", "MoveAfterAttacking", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_IGNORE_TERRAIN_COST", "IgnoreTerrainCost", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_IGNORE_PILLAGE_COST", "IgnorePillageCost", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_IGNORE_ZONE_OF_CONTROL", "IgnoreZoneOfControl", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_FLAT_MOVEMENT_COST", "FlatMovementCost", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_MOVE_ANYWHERE", "MoveAnywhere", s == "", prefix);
-			-- Don't show "Hover", since it is redundant with the descriptions for "FlatMovementCost" and "MoveAnywhere"
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_WITHDRAW_FROM_MELEE_CHANCE_MOD", "WithdrawFromMeleeChanceMod", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_FREE_REBASES", "FreeRebases", s == "", prefix);
-			-- Healing
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ALWAYS_HEAL", "AlwaysHeal", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_HEAL_OUTSIDE_FRIENDLY_TERRITORY", "HealOutsideFriendlyTerritory", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ENEMY_HEAL_CHANGE", "EnemyHealChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_NEUTRAL_HEAL_CHANGE", "NeutralHealChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_FRIENDLY_HEAL_CHANGE", "FriendlyHealChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_MIASMA_HEAL_CHANGE", "MiasmaHealChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ADJACENT_UNIT_HEAL_CHANGE", "AdjacentUnitHealChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_SAME_TILE_HEAL_CHANGE", "SameTileHealChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_KILL_UNIT_HEAL_CHANGE", "KillUnitHealChange", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_PILLAGE_HEAL_CHANGE", "PillageHealChange", s == "", prefix);
-			-- Orbital layer
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_GENERATE_MIASMA_IN_ORBIT", "GenerateMiasmaInOrbit", s == "", prefix);
-			s = s .. ComposeUnitPerkFlagHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ALLOW_MANUAL_DEORBIT", "AllowManualDeorbit", s == "", prefix);
-			s = s .. ComposeUnitPerkNumberHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_ORBITAL_COVERAGE_RADIUS_CHANGE", "OrbitalCoverageRadiusChange", s == "", prefix);
-			-- Attrition
-			-- Actions
-			-- Domain combat mods
-			s = s .. ComposeUnitPerkDomainCombatModHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DOMAIN_COMBAT_MOD_LAND", "DOMAIN_LAND", s == "", prefix);
-			s = s .. ComposeUnitPerkDomainCombatModHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DOMAIN_COMBAT_MOD_SEA", "DOMAIN_SEA", s == "", prefix);
-			s = s .. ComposeUnitPerkDomainCombatModHelpText(filteredPerkIDTable, "TXT_KEY_UNITPERK_DOMAIN_COMBAT_MOD_AIR", "DOMAIN_AIR", s == "", prefix);
-
-			return s;
-		end
-		GetHelpTextForUnitPerks = getHelpTextForUnitPerks
-
-		function GetHelpTextForUnitPerk( perkID )
-			return getHelpTextForUnitPerks( {perkID}, false )
-		end
-
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		-- VIRTUES
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-
-		local function ComposeVirtueNumberHelpText(virtueIDTable, textKey, numberKey, firstEntry, postProcessFunction)
-			local s = "";
-			local number = 0;
-			for _, virtueID in ipairs(virtueIDTable) do
-				local virtueInfo = GameInfo.Policies[virtueID];
-				if virtueInfo and virtueInfo[numberKey] and virtueInfo[numberKey] ~= 0 then
-					number = number + virtueInfo[numberKey];
-				end
-			end
-
-			if number ~= 0 then
-				if postProcessFunction then
-					number = postProcessFunction(number);
-				end
-				if not firstEntry then
-					s = s .. "[NEWLINE]";
-				else
-					firstEntry = false;
-				end
-				s = s .. "[ICON_BULLET]";
-				s = s .. L(textKey, number);
-			end
-
-			return s;
-		end
-
-		local function ComposeVirtueFlagHelpText(virtueIDTable, textKey, flagKey, firstEntry)
-			local s = "";
-			local flag = false;
-			for _, virtueID in ipairs(virtueIDTable) do
-				local virtueInfo = GameInfo.Policies[virtueID];
-				if virtueInfo and virtueInfo[flagKey] and virtueInfo[flagKey] then
-					flag = true;
-					break;
-				end
-			end
-
-			if flag then
-				if not firstEntry then
-					s = s .. "[NEWLINE]";
-				else
-					firstEntry = false;
-				end
-				s = s .. "[ICON_BULLET]";
-				s = s .. L(textKey);
-			end
-
-			return s;
-		end
-
-		local function ComposeVirtueInterestHelpText(virtueIDTable, textKey, numberKey, firstEntry)
-			local s = "";
-			local interestPercent = 0;
-			for _, virtueID in ipairs(virtueIDTable) do
-				local virtueInfo = GameInfo.Policies[virtueID];
-				if virtueInfo and virtueInfo[numberKey] and virtueInfo[numberKey] ~= 0 then
-					interestPercent = interestPercent + virtueInfo[numberKey];
-				end
-			end
-
-			if interestPercent ~= 0 then
-				local maximum = (interestPercent * GameDefines["ENERGY_INTEREST_PRINCIPAL_MAXIMUM"]) / 100;
-				if not firstEntry then
-					s = s .. "[NEWLINE]";
-				else
-					firstEntry = false;
-				end
-				s = s .. "[ICON_BULLET]";
-				s = s .. L(textKey, interestPercent, maximum);
-			end
-
-			return s;
-		end
-
-		local function ComposeVirtueYieldHelpText(virtueIDTable, textKey, tableKey, firstEntry, postProcessFunction)
-			local s = "";
-			for _, virtueID in ipairs(virtueIDTable) do
-				local virtueInfo = GameInfo.Policies[virtueID];
-				if virtueInfo and GameInfo[tableKey] then
-					for tableInfo in GameInfo[tableKey]("PolicyType = \"" .. virtueInfo.Type .. "\"") do
-						if tableInfo.YieldType and tableInfo.Yield then
-							local yieldInfo = GameInfo.Yields[tableInfo.YieldType];
-							local yieldNumber = tableInfo.Yield;
-							if yieldNumber ~= 0 then
-								if postProcessFunction then
-									yieldNumber = postProcessFunction(yieldNumber);
-								end
-								if not firstEntry then
-									s = s .. "[NEWLINE]";
-								else
-									firstEntry = false;
-								end
-								s = s .. "[ICON_BULLET]";
-								s = s .. L( textKey, yieldNumber, yieldInfo.IconString or "?", yieldInfo.Description or "???" );
-							end
-						end
-					end
-				end
-			end
-			return s;
-		end
-
-		local function ComposeVirtueResourceClassYieldHelpText(virtueIDTable, textKey, firstEntry)
-			local s = "";
-			for _, virtueID in ipairs(virtueIDTable) do
-				local virtueInfo = GameInfo.Policies[virtueID];
-				if virtueInfo then
-					for tableInfo in GameInfo.Policy_ResourceClassYieldChanges("PolicyType = \"" .. virtueInfo.Type .. "\"") do
-						local resourceClassInfo = GameInfo.ResourceClasses[tableInfo.ResourceClassType];
-						local yieldInfo = GameInfo.Yields[tableInfo.YieldType];
-						local yieldNumber = tableInfo.YieldChange;
-						if yieldNumber ~= 0 then
-							if not firstEntry then
-								s = s .. "[NEWLINE]";
-							else
-								firstEntry = false;
-							end
-							s = s .. "[ICON_BULLET]";
-							s = s .. L( textKey, yieldNumber, yieldInfo.IconString or "?", yieldInfo.Description or "???", resourceClassInfo.Description or "???" );
-						end
-					end
-				end
-			end
-			return s;
-		end
-
-		local function ComposeVirtueImprovementYieldHelpText(virtueIDTable, textKey, firstEntry)
-			local s = "";
-			for _, virtueID in ipairs(virtueIDTable) do
-				local virtueInfo = GameInfo.Policies[virtueID];
-				if virtueInfo then
-					for tableInfo in GameInfo.Policy_ImprovementYieldChanges("PolicyType = \"" .. virtueInfo.Type .. "\"") do
-						local improvementInfo = GameInfo.Improvements[tableInfo.ImprovementType];
-						local yieldInfo = GameInfo.Yields[tableInfo.YieldType];
-						local yieldNumber = tableInfo.Yield;
-						if yieldNumber ~= 0 then
-							if not firstEntry then
-								s = s .. "[NEWLINE]";
-							else
-								firstEntry = false;
-							end
-							s = s .. "[ICON_BULLET]";
-							s = s .. L(textKey, yieldNumber, yieldInfo.IconString or "?", yieldInfo.Description or "???", improvementInfo.Description or "???" );
-						end
-					end
-				end
-			end
-			return s;
-		end
-
-		local function ComposeVirtueFreeUnitHelpText(virtueIDTable, textKey, firstEntry)
-			local s = "";
-			for _, virtueID in ipairs(virtueIDTable) do
-				local virtueInfo = GameInfo.Policies[virtueID];
-				if virtueInfo then
-					for tableInfo in GameInfo.Policy_FreeUnitClasses("PolicyType = \"" .. virtueInfo.Type .. "\"") do
-						local unitClassInfo = GameInfo.UnitClasses[tableInfo.UnitClassType];
-						local unitInfo = GameInfo.Units[unitClassInfo.DefaultUnit];
-						if unitInfo then
-							if not firstEntry then
-								s = s .. "[NEWLINE]";
-							else
-								firstEntry = false;
-							end
-							s = s .. "[ICON_BULLET]";
-							s = s .. L(textKey, unitInfo.Description or "???");
-						end
-					end
-				end
-			end
-			return s;
-		end
-
-		local function getHelpTextForVirtues(virtueIDTable)
-			local s = "";
-
-			-- Post-processing functions to display values more clearly to player
-			local divByHundred = function(number)
-				-- Some database values are in multiplied by 100 to match game core usage
-				number = number * 0.01;
-				return number;
-			end;
-			local flipSign = function(number)
-				number = number * -1;
-				return number;
-			end;
-			local modByGameResearchSpeed = function(number)
-				local gameSpeedResearchMod = 1;
-				if Game then
-					gameSpeedResearchMod = Game.GetResearchPercent() / 100;
-				end
-				number = number * gameSpeedResearchMod;
-				number = floor(number); -- for display, truncate trailing decimals
-				return number;
-			end;
-
-			s = s .. ComposeVirtueFlagHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CAPTURE_OUTPOSTS_FOR_SELF", "CaptureOutpostsForSelf", s == "");
-
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_BARBARIAN_COMBAT_BONUS", "BarbarianCombatBonus", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_RESEARCH_FROM_BARBARIAN_KILLS", "ResearchFromBarbarianKills", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_RESEARCH_FROM_BARBARIAN_CAMPS", "ResearchFromBarbarianCamps", s == "", modByGameResearchSpeed); --value modified by game speed
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_EXP_MODIFIER", "ExpModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_MILITARY_PRODUCTION_MODIFIER", "MilitaryProductionModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_HEALTH_PER_MILITARY_UNIT_TIMES_100", "HealthPerMilitaryUnitTimes100", s == "", divByHundred); --value in hundredths
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_TECH_AFFINITY_XP_MODIFIER", "TechAffinityXPModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_COVERT_OPS_INTRIGUE_MODIFIER", "CovertOpsIntrigueModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_NUM_FREE_AFFINITY_LEVELS", "NumFreeAffinityLevels", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_UNIT_PRODUCTION_MODIFIER_PER_UPGRADE", "UnitProductionModifierPerUpgrade", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_STRATEGIC_RESOURCE_MOD", "StrategicResourceMod", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_ORBITAL_COVERAGE_RADIUS_FROM_STATION_TRADE", "OrbitalCoverageRadiusFromStationTrade", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_UNIT_GOLD_MAINTENANCE_MOD", "UnitGoldMaintenanceMod", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_COMBAT_MODIFIER", "CombatModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_OUTPOST_GROWTH_MODIFIER", "OutpostGrowthModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_FOOD_KEPT_AFTER_GROWTH_PERCENT", "FoodKeptAfterGrowthPercent", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_WORKER_SPEED_MODIFIER", "WorkerSpeedModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_PLOT_CULTURE_COST_MODIFIER", "PlotCultureCostModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_EXPLORER_EXPEDITION_CHARGES", "ExplorerExpeditionCharges", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_LAND_TRADE_ROUTE_GOLD_CHANGE", "LandTradeRouteGoldChange", s == "", divByHundred); --value in hundredths
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_SEA_TRADE_ROUTE_GOLD_CHANGE", "SeaTradeRouteGoldChange", s == "", divByHundred); --value in hundredths
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_NEW_CITY_EXTRA_POPULATION", "NewCityExtraPopulation", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_EXTRA_HEALTH", "ExtraHealth", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_EXTRA_HEALTH_PER_LUXURY", "HealthPerBasicResourceTypeTimes100", s == "", divByHundred); --value in hundredths
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_UNHEALTH_MOD", "UnhealthMod", s == "", flipSign); --less confusing to show as a positive number in text
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_RESEARCH_MOD_PER_EXTRA_CONNECTED_TECH", "ResearchModPerExtraConnectedTech", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_HEALTH_TO_SCIENCE", "HealthToScience", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_HEALTH_TO_CULTURE", "HealthToCulture", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_POLICY_COST_MODIFIER", "PolicyCostModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_PERCENT_CULTURE_RATE_TO_ENERGY", "PercentCultureRateToEnergy", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_HEALTH_PER_X_POPULATION", "HealthPerXPopulation", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_NUM_CITIES_RESEARCH_COST_DISCOUNT", "NumCitiesResearchCostDiscount", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_NUM_CITIES_POLICY_COST_DISCOUNT", "NumCitiesPolicyCostDiscount", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_LEAF_TECH_RESEARCH_MODIFIER", "LeafTechResearchModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_PERCENT_CULTURE_RATE_TO_RESEARCH", "PercentCultureRateToResearch", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CULTURE_PER_WONDER", "CulturePerWonder", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_BUILDING_PRODUCTION_MODIFIER", "BuildingProductionModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_WONDER_PRODUCTION_MODIFIER", "WonderProductionModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_BUILDING_ALREADY_IN_CAPITAL_MODIFIER", "BuildingAlreadyInCapitalModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_INTERNAL_TRADE_ROUTE_YIELD_MODIFIER", "InternalTradeRouteYieldModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_HEALTH_PER_TRADE_ROUTE_TIMES_100", "HealthPerTradeRouteTimes100", s == "", divByHundred); --value in hundredths
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_ORBITAL_PRODUCTION_MODIFIER", "OrbitalProductionModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_ORBITAL_DURATION_MODIFIER", "OrbitalDurationModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_UNIT_PURCHASE_COST_MODIFIER", "UnitPurchaseCostModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_HEALTH_PER_BUILDING_TIMES_100", "HealthPerBuildingTimes100", s == "", divByHundred); --value in hundredths
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_EXTRA_HEALTH_PER_CITY", "ExtraHealthPerCity", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_NUM_FREE_TECHS", "NumFreeTechs", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_NUM_FREE_POLICIES", "NumFreePolicies", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_NUM_FREE_COVERT_AGENTS", "NumFreeCovertAgents", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_ORBITAL_COVERAGE_MODIFIER", "OrbitalCoverageModifier", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_RESEARCH_FROM_EXPEDITIONS", "ResearchFromExpeditions", s == "", modByGameResearchSpeed); --value modified by game speed
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CITY_GROWTH_MOD", "CityGrowthMod", s == "");
-			s = s .. ComposeVirtueNumberHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CAPITAL_GROWTH_MOD", "CapitalGrowthMod", s == "");
-
-			s = s .. ComposeVirtueInterestHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_ENERGY_INTEREST_PERCENT_PER_TURN", "EnergyInterestPercentPerTurn", s == "");
-
-			s = s .. ComposeVirtueYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_YIELD_MODIFIER", "Policy_YieldModifiers", s == "");
-			s = s .. ComposeVirtueYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CAPITAL_YIELD_MODIFIER", "Policy_CapitalYieldModifiers", s == "");
-			s = s .. ComposeVirtueYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CITY_YIELD_CHANGE", "Policy_CityYieldChanges", s == "");
-			s = s .. ComposeVirtueYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CITY_YIELD_PER_POP_CHANGE", "Policy_CityYieldPerPopChanges", s == "", divByHundred); --value in hundredths
-			s = s .. ComposeVirtueYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_CAPITAL_YIELD_CHANGE", "Policy_CapitalYieldChanges", s == "");
-			s = s .. ComposeVirtueYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_SPECIALIST_EXTRA_YIELD", "Policy_SpecialistExtraYields", s == "");
-			s = s .. ComposeVirtueYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_TRADE_ROUTE_WITH_STATION_PER_TIER_YIELD_CHANGE", "Policy_TradeRouteWithStationPerTierYieldChanges", s == "");
-
-			s = s .. ComposeVirtueResourceClassYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_RESOURCE_CLASS_YIELD_CHANGE", s == "");
-
-			s = s .. ComposeVirtueImprovementYieldHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_IMPROVEMENT_YIELD_CHANGE", s == "");
-
-			s = s .. ComposeVirtueFreeUnitHelpText(virtueIDTable, "TXT_KEY_POLICY_EFFECT_FREE_UNIT_CLASS", s == "");
-
-			return s;
-		end
-		GetHelpTextForVirtues = getHelpTextForVirtues
-
-		function GetHelpTextForVirtue(virtueID)
-			return getHelpTextForVirtues{virtueID}
-		end
-
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		-- AFFINITIES
-		----------------------------------------------------------------
-		----------------------------------------------------------------
-		function GetHelpTextForAffinity(affinityID, player)
-			local s = "";
-			local affinityInfo = GameInfo.Affinity_Types[affinityID]
-			if affinityInfo then
-
-				local currentLevel = -1;
-				if player then
-					-- Current level
-					s = s .. L("TXT_KEY_AFFINITY_STATUS_DETAIL", affinityInfo.IconString or "?", affinityInfo.ColorType, affinityInfo.Description or "???", player:GetAffinityLevel(affinityInfo.ID));
-					s = s .. "[NEWLINE][NEWLINE]";
-					currentLevel = player:GetAffinityLevel(affinityID);
-				end
-
-				-- Player perks we can earn
-				local firstEntry = true;
-				for levelInfo in GameInfo.Affinity_Levels() do
-					local levelText = getHelpTextForAffinityLevel(affinityID, levelInfo.ID);
-					if levelText ~= "" then
-						levelText = ( affinityInfo.IconString or "?" ) .. "[" .. affinityInfo.ColorType .. "]" .. levelInfo.ID .. "[ENDCOLOR] : " .. levelText;
-
-						if levelInfo.ID <= currentLevel then
-							levelText = "[" .. affinityInfo.ColorType .. "]" .. levelText .. "[ENDCOLOR]";
-						end
-
-						if firstEntry then
-							firstEntry = false;
-						else
-							s = s .. "[NEWLINE]";
-						end
-
-						s = s .. levelText;
-					end
-				end
-
-				if player then
-					local nextLevel = player:GetAffinityLevel(affinityID) + 1;
-					local nextLevelInfo = GameInfo.Affinity_Levels[nextLevel];
-
-					-- Progress towards next level
-					if nextLevelInfo then
-						s = s .. "[NEWLINE][NEWLINE]";
-						s = s .. L("TXT_KEY_AFFINITY_STATUS_PROGRESS", player:GetAffinityScoreTowardsNextLevel(affinityInfo.ID), player:CalculateAffinityScoreNeededForNextLevel(affinityInfo.ID));
-					else
-						s = s .. "[NEWLINE][NEWLINE]";
-						s = s .. L"TXT_KEY_AFFINITY_STATUS_MAX_LEVEL";
-					end
-
-					-- Dominance
-					local isDominant = affinityInfo.ID == player:GetDominantAffinityType();
-					if nextLevelInfo then
-						local penalty = nextLevelInfo.AffinityValueNeededAsNonDominant - nextLevelInfo.AffinityValueNeededAsDominant;
-						-- Only show dominance once we are at the point where the level curve diverges
-						if penalty > 0 then
-							if isDominant then
-								s = s .. "[NEWLINE][NEWLINE]";
-								s = s .. L"TXT_KEY_AFFINITY_STATUS_DOMINANT";
-							else
-								s = s .. "[NEWLINE][NEWLINE]";
-								s = s .. L("TXT_KEY_AFFINITY_STATUS_NON_DOMINANT_PENALTY", penalty);
-							end
-						end
-					elseif isDominant then
-						-- Or once we have reached max level
-						s = s .. "[NEWLINE][NEWLINE]";
-						s = s .. L"TXT_KEY_AFFINITY_STATUS_DOMINANT";
-					end
-				end
-			end
-			return s;
-		end
-
-		local g_playerPerkKey = { [GameInfoTypes.AFFINITY_TYPE_HARMONY] = "HarmonyPlayerPerk", [GameInfoTypes.AFFINITY_TYPE_PURITY] = "PurityPlayerPerk", [GameInfoTypes.AFFINITY_TYPE_SUPREMACY] = "SupremacyPlayerPerk" }
-		-- Does not include unit upgrade unlocks
-		function getHelpTextForAffinityLevel( affinityID, affinityLevel )
-			local tips = {}
-			local tip
-			local affinityInfo = GameInfo.Affinity_Types[ affinityID ]
-			local affinityLevelInfo = GameInfo.Affinity_Levels[ affinityLevel ]
-			if affinityInfo and affinityLevelInfo then
-
-				-- Gained a Player Perk?
-				local perkInfo = GameInfo.PlayerPerks[ affinityLevelInfo[ g_playerPerkKey[affinityID] ] ]
-				if perkInfo then
-					insert( tips, L( perkInfo.Help ) )
-				end
-
-				-- Unlocked Covert Ops?
-				for row in GameInfo.CovertOperation_AffinityPrereqs{ AffinityType = affinityInfo.Type, Level = affinityLevel } do
-					local covertOpInfo = GameInfo.CovertOperations[ row.CovertOperationType ] or {}
-					insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_UP_DETAILS_COVERT_OP_UNLOCKED", covertOpInfo.Description or "???" ) )
-				end
-
-				-- Unlocked Projects (for Victory)?
-				for row in GameInfo.Project_AffinityPrereqs{ AffinityType = affinityInfo.Type, Level = affinityLevel } do
-					local projectInfo = GameInfo.Projects[ row.ProjectType ] or {}
-					local victoryInfo = GameInfo.Victories[ projectInfo.VictoryPrereq ] or {}
-					insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_UP_DETAILS_PROJECT_UNLOCKED", projectInfo.Description or "???", victoryInfo.Description or "???" ) )
-				end
-
-				-- Unlocked Units
-				for affinity in GameInfo.Unit_AffinityPrereqs{ AffinityType = affinityInfo.Type, Level = affinityLevel } do
-					local unit = GameInfo.Units[affinity.UnitType]
-					if unit then
-						tip = format( "%s %s", ( unit.Special and unit.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( unit.Type ) or "" ), UnitColor( L(unit.Description) ) )
-						if (unit.RangedCombat or 0) > 0 then
-							tip = format("%s %i[ICON_RANGE_STRENGTH]", tip, unit.RangedCombat )
-						elseif (unit.Combat or 0) > 0 then
-							tip = format("%s %i[ICON_STRENGTH]", tip, unit.Combat )
-						end
-						insert( tips, tip )
-					end
-				end
-
-				-- Unlocked Buildings
-				for affinity in GameInfo.Building_AffinityPrereqs{ AffinityType = affinityInfo.Type, Level = affinityLevel } do
-					local building = GameInfo.Buildings[ affinity.BuildingType ]
-					if building then
-						insert( tips, BuildingColor( L(building.Description) ) )
-					end
-				end
-			end
-			return concat( tips, ", " )
-		end
-		GetHelpTextForAffinityLevel = getHelpTextForAffinityLevel
-		function CacheDatabaseQueries() end
+function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
+	local unit = GameInfo.Units[ unitID ]
+	if not unit then
+		return "<Unit undefined in game database>"
 	end
+	-- Unit XML stats
+	local unitClass = GameInfo.UnitClasses[ unit.Class ]
+	local unitClassID = unitClass and unitClass.ID
+	local maxGlobalInstances = unitClass and tonumber(unitClass.MaxGlobalInstances) or -1
+	local maxTeamInstances = unitClass and tonumber(unitClass.MaxTeamInstances) or -1
+	local maxPlayerInstances = unitClass and tonumber(unitClass.MaxPlayerInstances) or -1
+	local productionCost = unit.Cost 
+	local rangedStrength = unit.RangedCombat
+	local unitRange = unit.Range 
+	local combatStrength = unit.Combat
+	local workrate = unit.WorkRate
+	local unitMoves = unit.Moves
+	local unitSight = unit.BaseSightRange
+	local unitDomainType = unit.Domain
+	local HitModifier = 0
+	local HitChange = 0
+	local thisUnitType = { UnitType = unit.Type }
+	local thisUnitClass =  { UnitClassType = unit.Class }
+
+	local city, item, resource
+
+	------------------------------------------------新增晋升显示------------------------------------------------
+    for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
+		item = GameInfo.UnitPromotions[ row.PromotionType ]
+		if item then
+		HitModifier= HitModifier + item.MaxHitPointsModifier
+		HitChange= HitChange + item.MaxHitPointsChange
+		unitRange = unitRange + (item.RangeChange or 0)
+		unitMoves = unitMoves + (item.MovesChange or 0)
+		unitSight = unitSight + (item.VisibilityChange or 0)
+		end
+	end
+
+	local unitName = unit.Description
+
+	if activePlayer then
+		productionCost = activePlayer:GetUnitProductionNeeded( unitID )
+		city = GetHeadSelectedCity()
+		if city and city:GetOwner() ~= activePlayerID then
+			city = nil
+		end
+		city = city or activePlayer:GetCapitalCity() or activePlayer:Cities()(activePlayer)
+	end
+
+	-- Name
+	item = unit.CombatClass and GameInfo.UnitCombatInfos[ unit.CombatClass ]
+	local tip =  format( "%s %s", ( unit.Special and unit.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( unit.Type ) or "" ), UnitColor( Locale_ToUpper( unitName ) ) )
+	if item then
+		tip = tip .. " (" .. L(item.Description or "???") .. ")"
+	end
+
+	local tips = { tip }
+	
+	insert( tips, "----------------" )
+
+	if unitDomainType ~= "DOMAIN_AIR" then
+		-- Movement:
+		insert( tips, L"TXT_KEY_PEDIA_MOVEMENT_LABEL" .. " " .. unitMoves .. "[ICON_MOVES]" )
+	end
+
+		-- Combat:
+	if combatStrength > 0 then
+		insert( tips, format( "%s %g[ICON_STRENGTH]", L"TXT_KEY_PEDIA_COMBAT_LABEL", combatStrength ) )
+	end
+
+	-- maxhp:
+	if unit.MaxHitPoints~=nil then--最大血量
+
+	if HitModifier==0 then
+	maxhp = unit.MaxHitPoints + HitChange
+	insert( tips, L"TXT_KEY_PEDIA_MAXHP_LABEL".. maxhp .. "[ICON_SILVER_FIST]")
+	else
+	maxhp = ((unit.MaxHitPoints)*HitModifier/100)+ HitChange
+		insert( tips, L"TXT_KEY_PEDIA_MAXHP_LABEL".. maxhp .. "[ICON_SILVER_FIST]")	
+		end
+	end
+
+
+
+	-- Ranged Combat:
+	if rangedStrength > 0 then
+		insert( tips, L"TXT_KEY_PEDIA_RANGEDCOMBAT_LABEL" .. " " .. rangedStrength .. "[ICON_RANGE_STRENGTH]" .. unitRange )
+	end
+
+	-- workrate:
+	if workrate ~=nil then
+		insert( tips, L"TXT_KEY_PEDIA_WORKRATE_LABEL" ..workrate  )
+	end
+
+	-----新增Sight:视野--------------------------------------------------- 
+	if unitSight > 0 then
+		insert( tips, L"TXT_KEY_PEDIA_SIGHT_LABEL" .. " " .. unitSight .. "[ICON_PROMOTION_SIGHT_1]" )
+	end
+
+	-- Ability to create building in city (e.g. vanilla great general)
+	for row in GameInfo.Unit_Buildings( thisUnitType ) do
+		item = GameInfo.Buildings[ row.BuildingType ]
+		if item then
+			insert( tips, "[ICON_BULLET]"..L"TXT_KEY_MISSION_CONSTRUCT".." " .. BuildingColor( L(item.Description) ) )
+		end
+	end
+
+	-- Actions	--TXT_KEY_PEDIA_WORKER_ACTION_LABEL
+	for row in GameInfo.Unit_Builds( thisUnitType ) do
+		local build = GameInfo.Builds[ row.BuildType ]
+		if build then
+			item = build.ImprovementType and GameInfo.Improvements[ build.ImprovementType ]
+			if not item or not item.SpecificCivRequired or not activePlayer or GameInfoTypes[ GameInfo.Civilizations[ item.CivilizationType ] ] == activePlayer:GetCivilizationType() then -- GameInfoTypes not available pregame: works because activePlayer is also nil
+				item = build.PrereqTech and GameInfo.Technologies[ build.PrereqTech ]
+				insert( tips, "[ICON_BULLET]" .. (item and TechColor( L(item.Description) ) .. " " or "") .. BuildColor( L(build.Description) ) )
+			end
+		end
+	end
+	-- Great Engineer
+	if (unit.BaseHurry or 0) > 0 then
+		insert( tips, format( "[ICON_BULLET]%s %i[ICON_PRODUCTION]%+i[ICON_PRODUCTION]/[ICON_CITIZEN]", L"TXT_KEY_MISSION_HURRY_PRODUCTION", unit.BaseHurry, unit.HurryMultiplier or 0 ) )
+	end
+
+	-- Great Merchant
+	if (unit.BaseGold or 0) > 0 then
+		insert( tips, format( "[ICON_BULLET]%s %i%s%+i[ICON_INFLUENCE]", L"TXT_KEY_MISSION_CONDUCT_TRADE_MISSION", unit.BaseGold + ( unit.NumGoldPerEra or 0 ) * ( Game and Teams[Game.GetActiveTeam()]:GetCurrentEra() or PreGame.GetEra() ), g_currencyIcon, GameDefines.MINOR_FRIENDSHIP_FROM_TRADE_MISSION or 0 ) )
+	end
+
+	-- Other tags
+	local unitFlag = {
+		MoveAfterPurchase = L"TXT_KEY_MOVE_AFTER_PC",			-- TODO, LANDSKNECHT
+		Immobile = L"TXT_KEY_DOMAIN_IMMOBILE",				-- bombs, missiles, aircraft etc...
+		RivalTerritory = "[ICON_PROMOTION_GOLDEN_AGE_POINTS]" .. L"TXT_KEY_PROMOTION_RIVAL_TERRITORY",		-- unused
+		Found = "[ICON_PROMOTION_SIEGE_3]" .. L"TXT_KEY_MISSION_BUILD_CITY",
+		FoundAbroad = "[ICON_PROMOTION_SIEGE_2]" .. L"TXT_KEY_MISSION_BUILD_CITY" .. " <> " .. L"TXT_KEY_PGSCREEN_CONTINENTS",
+		Suicide = "[ICON_PROMOTION_AMBUSH_1]" .. L"TXT_KEY_SUICIDE",	-- TODO, although obvious for base game may be less so in mods
+		RushBuilding = L"TXT_KEY_MISSION_HURRY_PRODUCTION",
+		SpreadReligion = "[ICON_MISSIONARY]" .. L"TXT_KEY_MISSION_SPREAD_RELIGION",
+		RemoveHeresy = L"TXT_KEY_MISSION_REMOVE_HERESY",
+		FoundReligion = "[ICON_PROPHET]" .. L"TXT_KEY_MISSION_FOUND_RELIGION",
+		RequiresEnhancedReligion = L"TXT_KEY_REQUIRES_E",			-- TODO (inquisitors)
+		ProhibitsSpread = "[ICON_INQUISITOR]" .. L"TXT_KEY_PROHIBITS_SPREAD",	-- TODO (inquisitors)
+		CanBuyCityState = "[ICON_PROMOTION_TRADE_MISSION_BONUS]" .. L"TXT_KEY_MISSION_BUY_CITY_STATE",
+		RangeAttackIgnoreLOS = "[ICON_PROMOTION_INDIRECT_FIRE]" .. L"TXT_KEY_PROMOTION_INDIRECT_FIRE",
+		Trade = "[ICON_TRADE]" .. L"TXT_KEY_MISSION_ESTABLISH_TRADE_ROUTE",
+		NoMaintenance = L"TXT_KEY_PEDIA_MAINT_LABEL" .. " 0",
+	}
+	local unitData = {
+		CultureBombRadius = L"TXT_KEY_MISSION_CULTURE_BOMB" .. " ([ICON_RANGE_STRENGTH]%i)",	-- unused
+		GoldenAgeTurns = L"TXT_KEY_MISSION_START_GOLDENAGE" .. " (%i " .. L"TXT_KEY_TURNS"..")",	-- Artist
+		FreePolicies = L"TXT_KEY_MISSION_GIVE_POLICIES" .. " (%ix[ICON_CULTURE])",	-- unused
+		OneShotTourism = L"TXT_KEY_MISSION_ONE_SHOT_TOURISM" .. " (%ix[ICON_TOURISM])",	-- Musician
+		AirInterceptRange = L"TXT_KEY_MISSION_INTERCEPT" .. " [ICON_RANGE_STRENGTH]%i",
+		NumFreeTechs = L"TXT_KEY_MISSION_DISCOVER_TECH" .. " (%i)",
+		BaseBeakersTurnsToCount = L"TXT_KEY_MISSION_DISCOVER_TECH" .. " (%i " .. L"TXT_KEY_TURNS"..")", -- Scientist
+		BaseCultureTurnsToCount = L"TXT_KEY_MISSION_GIVE_POLICIES" .. " (%i " .. L"TXT_KEY_TURNS"..")",	-- Writer
+		ReligionSpreads = L"TXT_KEY_UPANEL_SPREAD_RELIGION_USES" .. ": %i",
+		ReligiousStrength = L"TXT_KEY_REL_STR" .. " %i", -- TODO
+		NumExoticGoods = L"TXT_KEY_MISSION_SELL_EXOTIC_GOODS" .. ": %i",
+		ExtraMaintenanceCost = L"TXT_KEY_PEDIA_MAINT_LABEL" .. " -%i" .. g_currencyIcon,
+	}
+	
+	for k,v in pairs( unit ) do
+		if v and v ~= 0 and v~=-1 then
+			tip = unitFlag[k]
+			if tip then
+				insert( tips, "[ICON_BULLET]" .. tip )
+			else
+			    tip = unitData[k]
+			    v = tonumber(v) or 0
+			    if tip and v > 0 then
+				if #tip == 0 then
+					tip = k .. " %i"
+				end
+				insert( tips, "[ICON_BULLET]" .. format( tip, v ) )
+			    end
+			end
+		end
+	end
+	-- Technology_DomainExtraMoves
+	for row in GameInfo.Technology_DomainExtraMoves{ DomainType = unitDomainType } do
+		item = GameInfo.Technologies[ row.TechType ]
+		if item and (row.Moves or 0)~=0 then
+			insert( tips, format( "[ICON_BULLET]%s %+i[ICON_MOVES]", TechColor( L(item.Description) ), row.Moves ) )
+		end
+	end
+--TODO Technology_TradeRouteDomainExtraRange
+
+	-- Ability to generate tourism upon spawn
+	if IsCiv5BNW then
+		for row in GameInfo.Policy_TourismOnUnitCreation( thisUnitClass ) do
+			item = GameInfo.Policies[ row.PolicyType ]
+			if item and (row.Tourism or 0)~=0 then
+				insert( tips, format( "[ICON_BULLET]%s %+i[ICON_TOURISM]", PolicyColor( L(item.Description) ), row.Tourism ) )
+			end
+		end
+	end
+
+	-- Resources required:
+	if Game then
+		for resource in GameInfo.Resources() do
+			item = Game.GetNumResourceRequiredForUnit( unitID, resource.ID )
+			if resource and item ~= 0 then
+				insert( tips, ResourceQuantity( resource, -item ) )
+			end
+		end
+	else
+		for row in GameInfo.Unit_ResourceQuantityRequirements( thisUnitType ) do
+			resource = GameInfo.Resources[ row.ResourceType ]
+			if resource and (row.Cost or 0)~=0 then
+				insert( tips, ResourceQuantity( resource, -row.Cost ) )
+			end
+		end
+	end
+
+	insert( tips, "----------------" )
+
+	-- Cost:
+	local costTip
+	if productionCost > 1 then -- Production cost
+		if not unit.PurchaseOnly then
+			costTip = productionCost .. "[ICON_PRODUCTION]"
+		end
+		local goldCost = 0
+		if city then
+			goldCost = city:GetUnitPurchaseCost( unitID )
+		elseif (unit.HurryCostModifier or 0) > 0 then
+			goldCost = (productionCost * GameDefines.GOLD_PURCHASE_GOLD_PER_PRODUCTION ) ^ GameDefines.HURRY_GOLD_PRODUCTION_EXPONENT
+			goldCost = (unit.HurryCostModifier + 100) * goldCost / 100
+			goldCost = goldCost - ( goldCost % GameDefines.GOLD_PURCHASE_VISIBLE_DIVISOR )
+		end
+		if goldCost > 0 then
+			if costTip then
+				costTip = costTip .. ("(%i%%)"):format(productionCost*100/goldCost)
+				if IsCiv5Vanilla then
+					costTip = costTip .. " / " .. goldCost .. g_currencyIcon
+				else
+					costTip = L("TXT_KEY_PEDIA_A_OR_B", costTip, goldCost .. g_currencyIcon )
+				end
+			else
+				costTip = goldCost .. g_currencyIcon
+			end
+		end
+	end -- production cost
+	if g_isReligionEnabled then -- Faith cost
+		local faithCost = 0
+		if city then
+			faithCost = city:GetUnitFaithPurchaseCost( unitID, true )
+		elseif Game then
+			faithCost = Game.GetFaithCost( unitID )
+		elseif unit.RequiresFaithPurchaseEnabled and unit.FaithCost then
+			faithCost = unit.FaithCost
+		end
+		if ( faithCost or 0 ) > 0 then
+			if costTip then
+				costTip = L("TXT_KEY_PEDIA_A_OR_B", costTip, faithCost .. "[ICON_PEACE]" )
+			else
+				costTip = faithCost .. "[ICON_PEACE]"
+			end
+		end
+	end --faith cost
+	if costTip then
+		insert( tips, L"TXT_KEY_PEDIA_COST_LABEL" .. " " .. ( costTip or L"TXT_KEY_FREE" ) )
+	end
+
+	-- build using food / stop city growth
+	if unit.Food then
+		insert( tips, L"TXT_KEY_CITYVIEW_STAGNATION_TEXT" .. " (" .. L"TXT_KEY_POPULATION_SUPPLY" .. ")" )
+	end
+	-- Settler Specifics
+	if unit.Found or unit.FoundAbroad then
+		append( tips, L("TXT_KEY_NO_ACTION_SETTLER_SIZE_LIMIT", GameDefines.CITY_MIN_SIZE_FOR_SETTLERS) )
+	end
+
+	-- Civilization:
+	local civs = {}
+	for requiredCivilizationType in GameInfo.Civilization_UnitClassOverrides( thisUnitType ) do
+		item = GameInfo.Civilizations[ requiredCivilizationType.CivilizationType ]
+		if item then
+			insert( civs, L(item.ShortDescription) )
+		end
+	end
+	if #civs > 0 then
+		insert( tips, L"TXT_KEY_PEDIA_CIVILIZATIONS_LABEL".." "..concat( civs, ", ") )
+	end
+
+	-- Replaces:
+	item = unitClass and GameInfo.Units[ unitClass.DefaultUnit ]
+	if item and item ~= unit then
+		insert( tips, L"TXT_KEY_PEDIA_REPLACES_LABEL".." "..format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) )--!!! row
+	end
+
+
+
+	-- Required Policies:
+	item = unit.PolicyType and GameInfo.Policies[ unit.PolicyType ]
+	if unit.PolicyType then
+		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
+	end
+
+	-- Required Buildings:
+	local buildings = {}
+	for row in GameInfo.Unit_BuildingClassRequireds( thisUnitType ) do
+		item = GetCivBuilding( activeCivilizationType, row.BuildingClassType )
+		if item then
+			insert( buildings, BuildingColor( L(item.Description) ) )
+		end
+	end
+	item = unit.ProjectPrereq and GameInfo.Projects[ unit.ProjectPrereq ]
+	if unit.ProjectPrereq then
+		insert( buildings, BuildingColor( L(item.Description) ) )
+	end
+	if #buildings > 0 then
+		insert( tips, L"TXT_KEY_PEDIA_REQ_BLDG_LABEL" .. " " .. concat( buildings, ", ") ) -- TXT_KEY_NO_ACTION_UNIT_REQUIRES_BUILDING
+	end
+
+	-- Prerequisite Techs:
+	item = unit.PrereqTech and GameInfo.Technologies[ unit.PrereqTech ]
+	if item and item.ID > 0 then
+		insert( tips, L"TXT_KEY_PEDIA_PREREQ_TECH_LABEL" .. " " .. TechColor( L(item.Description) ) )
+	end
+
+	-- Upgrade from:
+	local unitClassUpgrades = {}
+	for unitUpgrade in GameInfo.Unit_ClassUpgrades( thisUnitClass ) do
+		unitUpgrade = GameInfo.Units[ unitUpgrade.UnitType ]
+		SetKey( unitClassUpgrades, unitUpgrade and unitUpgrade.Class )
+	end
+	local unitUpgrades = {}
+	for unitToUpgrade in pairs( unitClassUpgrades ) do
+		item = GetCivUnit( activeCivilizationType, unitToUpgrade )
+		if item then
+			insert( unitUpgrades, format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) .. " ("..unitUpgradePrice( item, unit, activePlayer and activePlayer:GetUnitProductionNeeded( item.ID ), productionCost )..g_currencyIcon..")" )
+		end
+	end
+	if #unitUpgrades > 0 then
+		insert( tips, L"TXT_KEY_GOLD_UPGRADE_UNITS_HEADING3_TITLE" .. ": " .. concat( unitUpgrades, ", ") )
+	end
+
+	-- Becomes Obsolete with:
+	item = unit.ObsoleteTech and GameInfo.Technologies[ unit.ObsoleteTech ]
+	if item then
+		insert( tips, L"TXT_KEY_PEDIA_OBSOLETE_TECH_LABEL" .. " " .. TechColor( L(item.Description) ) )
+	end
+
+	-- Upgrade unit
+	if Game then
+		local item = Game.GetUnitUpgradesTo( unit.ID )
+		item = item and GameInfo.Units[ Game.GetUnitUpgradesTo( unit.ID ) ]
+		if item and activeCivilizationType then
+			item = GetCivUnit( activeCivilizationType, item.Class )
+			insert( tips, L"TXT_KEY_COMMAND_UPGRADE" .. ": " .. format( "%s %s", ( item.Special and item.Special == "SPECIALUNIT_PEOPLE" and GreatPeopleIcon( item.Type ) or "" ), UnitColor( L(item.Description) ) ) .. " ("..unitUpgradePrice( unit, item, productionCost, activePlayer:GetUnitProductionNeeded( item.ID ) )..g_currencyIcon..")" )
+		end
+	else
+		local unitClassUpgrades = {}
+		for unitClassUpgrade in GameInfo.Unit_ClassUpgrades( thisUnitType ) do
+			SetKey( unitClassUpgrades, unitClassUpgrade.UnitClassType )
+		end
+		local unitUpgrades = {}
+		for unitUpgrade in pairs( unitClassUpgrades ) do
+			item = GetCivUnit( activeCivilizationType, unitUpgrade )
+			if item then
+				insert( unitUpgrades, UnitColor( L(item.Description) ) .. " ("..unitUpgradePrice( unit, item, productionCost )..g_currencyIcon..")" )
+			end
+		end
+		if #unitUpgrades > 0 then
+			insert( tips, L"TXT_KEY_COMMAND_UPGRADE" .. ": " .. concat( unitUpgrades, ", ") )
+		end
+	end
+
+	-- Built <> Buiding Class Count
+	local countText = {};
+	if activePlayer then
+	    if activePlayer:GetUnitClassCount( unitClassID ) == 0 and activePlayer:GetUnitClassMaking( unitClassID ) == 0 then
+	    else
+		if activePlayer:GetUnitClassCount( unitClassID ) > 0 then
+			insert( countText, "[NEWLINE]" .. L( "TXT_KEY_ACTION_CLASS_BUILT_COUNT", activePlayer:GetUnitClassCount( unitClassID ) ) );
+			if activePlayer:GetUnitClassMaking( unitClassID ) > 0 then
+				append( countText, " <> "  .. L( "TXT_KEY_ACTION_CLASS_BUILDING_COUNT", activePlayer:GetUnitClassMaking( unitClassID ) ) );
+			end
+		else
+			insert( countText, "[NEWLINE]" .. L( "TXT_KEY_ACTION_CLASS_BUILDING_COUNT", activePlayer:GetUnitClassMaking( unitClassID ) ) );
+		end
+	    end
+	end
+	if #countText > 0 then
+		insert( tips, concat( countText, "") );
+	end
+
+	-- Limited number can be built
+	if #countText == 0 and (maxGlobalInstances > 0 or maxTeamInstances > 0 or maxPlayerInstances > 0) then
+		append( tips, "[NEWLINE]" );
+	end
+	if maxGlobalInstances > 0 then
+		append( tips, "[COLOR_YELLOW]" .. L( "TXT_KEY_NO_ACTION_GAME_COUNT_MAX", maxGlobalInstances ) .. "[ENDCOLOR]" );
+	end
+	if maxTeamInstances > 0 then
+		append( tips, "[COLOR_YELLOW]" .. L( "TXT_KEY_NO_ACTION_TEAM_COUNT_MAX", maxTeamInstances ) .. "[ENDCOLOR]" );
+	end
+	if maxPlayerInstances > 0 then
+		append( tips, "[COLOR_YELLOW]" .. L( "TXT_KEY_NO_ACTION_PLAYER_COUNT_MAX", maxPlayerInstances ) .. "[ENDCOLOR]" );
+	end
+
+	-- Pre-written Help text
+	return AddPreWrittenHelpTextAndConcat( tips, unit )
 end

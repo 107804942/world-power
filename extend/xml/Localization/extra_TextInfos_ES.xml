@@ -1077,7 +1077,9 @@
 			</Text>
 		</Row>
 
-
+		<Row Tag="TXT_KEY_PEDIA_MAXHP">
+			<Text>单位生命值：</Text>
+		</Row>
 		<Row Tag="TXT_KEY_PEDIA_MAXHP_LABEL">
 			<Text>生命值上限：</Text>
 		</Row>
@@ -1378,7 +1380,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GOLEM_HELP">
 			<Text>
-				3格范围内的机器人和机甲单位+100%[ICON_STRENGTH]战斗力。魔像受到远程攻击时会对攻击单位施加反弹伤害。
+				3格范围内的机器人和机甲单位+100%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 
@@ -4365,13 +4367,11 @@
 		</Replace>
 
 
-
-
 		<Row Tag="TXT_KEY_PROMOTION_SIEGE6">
 			<Text>攻坚</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SIEGE6_HELP" >
-			<Text>攻击城市与堡垒时+100%[ICON_STRENGTH]战斗力。攻击城市或者堡垒后若还有剩余移动力则可以自由行动。</Text>
+			<Text>攻击城市与堡垒时+100%[ICON_STRENGTH]战斗力。攻击城市后若还有剩余移动力则可以自由行动。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_4">
@@ -8133,17 +8133,6 @@
 
 
 
-		<Row Tag="TXT_KEY_PROMOTION_NO_CHARGE_BONUS">
-			<Text>精疲力竭</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NO_CHARGE_BONUS_HELP">
-			<Text>
-				周围单位死亡时不再获得移动力。
-			</Text>
-		</Row>
-
-
-
 
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS">
 			<Text>步马协同</Text>
@@ -8164,17 +8153,16 @@
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE_HELP">
 			<Text>受到攻击的最终伤害减少10。</Text>
 		</Row>
-		
+
 		<!--Transport-->
 		<Row Tag='TXT_KEY_TITLE_IRON_BUDDHA_CHARGE'>
 			<Text>铁马嘶风万里秋</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_IRON_BUDDHA_CHARGE'>
 			<Text>
-				以所在格子为中心，沿着所在六边形网格的任一边的法向5格内的非城市、山脉、水域单元可设置为冲锋目标。执行任务后单位将移动到目标格子上、损失150血量且失去全部移动力（本回合内周边单位死亡时将不再获得移动力）。目标格子上的敌方单位后撤一格，对应路线上（包括目标格子）的所有单位将受到300%的伤害。
+				以所在格子为中心，沿着所在六边形网格的任一边的法向5格内的非城市、山脉、水域单元可设置为冲锋目标。执行任务后单位将移动到目标格子上、损失150血量且失去全部移动力。目标格子上的敌方单位后撤一格，对应路线上（包括目标格子）的所有单位将受到300%的伤害。
 			</Text>
 		</Row>
-
 
 
 
@@ -8780,7 +8768,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_AQUARIUM_HELP">
 			<Text>
-				+2[ICON_HAPPINESS_1]满意度。本城+10%[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
+				+2[ICON_HAPPINESS_1]满意度。本城+10[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出，本城范围内每个自然奇观+10%[ICON_RESEARCH]科研、[ICON_CULTURE]文化。[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_AQUARIUM_TEXT">
@@ -9644,7 +9632,7 @@
 			<Text>病毒蠕虫</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_EVIL_HELP">
-			<Text>每杀死一个敌人+10点基础[ICON_STRENGTH]战斗力（当单位基础[ICON_STRENGTH]战斗力达到600时不再增加）杀死敌人时你的所有军事单位立即恢复20点生命值，每回合可自动恢复33点生命值，可进入未开边国家。+1攻击次数且攻击后可移动，无受伤战斗力惩罚。</Text>
+			<Text>每杀死一个敌人+5点基础[ICON_STRENGTH]战斗力，杀死敌人时你的所有军事单位立即恢复20点生命值，每回合可自动恢复33点生命值，可进入未开边国家。+1攻击次数且攻击后可移动，无受伤战斗力惩罚。</Text>
 		</Row>
 
 
@@ -9752,15 +9740,6 @@
 		<Row Tag="TXT_KEY_PROMOTION_HALF_MOVE_HELP">
 			<Text>在山脉移动消耗双倍移动力</Text>
 		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_ANTIMATTER_EXPLOSION">
-			<Text>反物质</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_ANTIMATTER_EXPLOSION_HELP">
-			<Text>攻击时可对被袭击地格及其7格范围内的单位与城市造成毁灭性伤害。</Text>
-		</Row>
-
 
 
 

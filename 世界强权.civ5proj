@@ -523,6 +523,7 @@
     <Folder Include="extend\art\nature\bermuda" />
     <Folder Include="extend\art\nature\Monument Valley" />
     <Folder Include="extend\art\nature\danxia Mountain" />
+    <Folder Include="extend\art\nature\Volcan" />
     <Folder Include="extend\art\nature\Zhangjiajie" />
     <Folder Include="extend\art\nature\whitedesert" />
     <Folder Include="extend\art\nature\retba" />
@@ -693,6 +694,7 @@
     <Folder Include="extend\lua\map" />
     <Folder Include="extend\lua\SpuerUi" />
     <Folder Include="extend\lua\SpuerUi\function" />
+    <Folder Include="extend\lua\SpuerUi\loadscreen" />
     <Folder Include="extend\lua\Top panel" />
     <Folder Include="extend\lua\Music Changer" />
     <Folder Include="extend\lua\CityView" />
@@ -4110,15 +4112,15 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\nature\EyeOfTheSahara\eye_of_the_sahara_3_tile_version.dds">
+    <Content Include="extend\art\nature\EyeOfTheSahara\eye of the sahara.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\nature\EyeOfTheSahara\eye_of_the_sahara_3_tile_version.fxsxml">
+    <Content Include="extend\art\nature\EyeOfTheSahara\eye_of_the_sahara.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\nature\EyeOfTheSahara\eye_of_the_sahara_3_tile_version.gr2">
+    <Content Include="extend\art\nature\EyeOfTheSahara\eye_of_the_sahara.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -4455,6 +4457,90 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\nature\salar\sv_Salar_S.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_1.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_3.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_4.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_5.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_6.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_7.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_lava_1.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_lava_2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_lava_3.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apacopyptic_volcano_lava_4.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_1.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_1.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_2.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_2.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_3.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_3.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_4.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_4.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_5.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Volcan\apocalyptic_volcano_5.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -16323,6 +16409,18 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\SpuerUi\InstanceManager.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\loadscreen\LoadScreen.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\loadscreen\LoadScreen.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\loadscreen\PopulateUniques.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
