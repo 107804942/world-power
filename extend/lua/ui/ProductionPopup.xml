@@ -192,4 +192,32 @@
 			<Label Anchor="C,C" Offset="28,-1" ColorSet="Beige_Black_Alpha" Font="TwCenMT18" FontStyle="Shadow" ID="PurchaseString"/>
 		</GridButton>
 	</Grid>
+
+
+
+
+
+	<!-- Promotion Instances for unit tooltip -->
+	<Instance Name="PromotionIcon3">
+		<Image ID="Image3" Size="32,32" Sampler="Linear" />
+	</Instance>
+
+	<AlphaAnim ID="UnittipTimer3" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
+
+	<!-- Unit Tooltip -->
+	<ToolTipType Name="City_UnitTooltip" >
+		<Grid ID="Grid3" Size="300,50" Padding="5,5" Style="GridBlack8" NoClip="1" >
+			<Stack Offset="12,12" StackGrowth="Down" Padding="8">
+				<Label ID="Text3" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
+				<Label ID="Details3" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
+				<Stack ID="PromotionStack3" StackGrowth="Right">
+					<Stack ID="IconStack3" StackGrowth="Right" WrapGrowth="Bottom" WrapPadding="-6" Padding="-6" WrapWidth="260"/>
+					<Label ID="PromotionText3" Offset="0,10" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5" />
+				</Stack>
+			</Stack>
+		</Grid>
+	</ToolTipType>
+	
+	
+	
 </Context>

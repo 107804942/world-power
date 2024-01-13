@@ -449,7 +449,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 	end
 
 	-- workrate:
-	if workrate ~=nil then
+	if workrate ~=0 then
 		insert( tips, L"TXT_KEY_PEDIA_WORKRATE_LABEL" ..workrate  )
 	end
 

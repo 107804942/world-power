@@ -1268,7 +1268,11 @@ function AddProductionButton( id, description, orderType, turnsLeft, column, isD
 			end
 		end
 		
-		controlTable.Button:SetToolTipString(strToolTip);
+	
+ controlTable.Button:SetVoid2(iUnit)
+ controlTable.Button:SetToolTipCallback(ToolTipHandler);---新增
+ controlTable.Button:SetToolTipType( "City_UnitTooltip" ) ---新增
+
 		
 	elseif column == 2 or column == 3 then -- we are a building, wonder, or project
 		if column == 2 then
@@ -1530,3 +1534,83 @@ function OnActivePlayerChanged()
 	end
 end
 Events.GameplaySetActivePlayer.Add(OnActivePlayerChanged);
+
+
+
+--==========================================================
+-- 
+-- 
+--==========================================================
+include "GameInfoActualCache"
+local GameInfo = GameInfoCache
+
+include "StackInstanceManager"
+include "IconHookup"
+
+
+local g_TooltipControls = {}
+TTManager:GetTypeControlTable( "City_UnitTooltip", g_TooltipControls )
+
+	Controls.UnittipTimer3:RegisterAnimCallback( function()
+		local controls = g_TooltipControls
+		controls.PortraitFrame3:SetHide( false )
+		controls.Details3:SetHide( false )
+		controls.IconStack3:SetWrapWidth( 32 )
+		controls.IconStack3:CalculateSize()
+		controls.PromotionText3:SetHide( false )
+		controls.Grid3:ReprocessAnchoring()
+		controls.Grid3:DoAutoSize()
+	end)
+
+local City_PromotionIconIM = StackInstanceManager( "PromotionIcon3", "Image3", g_TooltipControls.IconStack3 )
+
+--==========================================================
+-- city Tooltips
+--==========================================================
+function ToolTipHandler( button )
+
+		local id = button:GetVoid2()
+		local controls = g_TooltipControls
+
+		tip = GetHelpTextForUnit2(id)
+        local thisUnitInfo = GameInfo.Units[id]
+		---local playerID = unit:GetOwner()
+
+		controls.Text3:SetText( tip )
+		local i = 0
+		local promotionText = {}
+		local promotionIcon
+		City_PromotionIconIM:ResetInstances()
+		
+		if not( thisUnitInfo.IsTrade ) then
+		local thisUnitType = { UnitType = thisUnitInfo.Type }
+		
+        for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
+		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
+		if unitPromotion~=nil  then
+		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
+		    promotionIcon = N_PromotionIconIM:GetInstance()
+			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image3 )
+			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
+			    end
+			end
+		end
+		end
+
+		local iconIndex, iconAtlas = UI.GetUnitPortraitIcon( id, Game.GetActivePlayer())
+		IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait3 )
+		controls.PortraitFrame3:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
+	
+		controls.Details3:SetHide( true )
+		controls.PromotionText3:SetText( table.concat( promotionText, "[NEWLINE]" ) )
+		controls.PromotionText3:SetHide( #promotionText ~= 1 )
+		controls.IconStack3:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
+		controls.IconStack3:CalculateSize()
+		controls.Grid3:ReprocessAnchoring()
+		controls.Grid3:DoAutoSize()
+		Controls.UnittipTimer3:SetToBeginning()
+        Controls.UnittipTimer3:SetPauseTime(0) 
+		Controls.UnittipTimer3:Reverse()
+		
+end
+--==========================================================

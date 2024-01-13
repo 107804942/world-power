@@ -383,7 +383,7 @@ function GetUnitsString(plot)
 			--end
 			
 			-- Promotion
-			local bIsFirstPromotion = true;
+			--[[local bIsFirstPromotion = true;
 			local propertyPromotions = {};
 			local rankedPromotions = {};
 			local groupedPromotions = {};
@@ -490,7 +490,9 @@ function GetUnitsString(plot)
 				if promotion[2] > 1 then
 					strUnitText = strUnitText .. "x" .. promotion[2];
 				end
-			end
+			end]]
+
+
 		end
 	end
 	if unitNum > 0 then
