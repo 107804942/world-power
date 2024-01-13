@@ -2040,15 +2040,6 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	end
 
 
-	if IsCivBE then
-		-- Affinity Level Requirement
-		for affinityPrereq in GameInfo.Building_AffinityPrereqs( thisBuildingType ) do
-			local affinityInfo = (tonumber( affinityPrereq.Level) or 0 ) > 0 and GameInfo.Affinity_Types[ affinityPrereq.AffinityType ]
-			if affinityInfo then
-				insert( tips, L( "TXT_KEY_AFFINITY_LEVEL_REQUIRED", affinityInfo.ColorType, affinityPrereq.Level, affinityInfo.IconString or "?", affinityInfo.Description or "???" ) )
-			end
-		end
-	end
 
 	-- Civilization:
 	local civs = {}
@@ -4280,7 +4271,7 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 	end
 
 	-- workrate:
-	if workrate ~=nil then
+	if workrate ~=0 then
 		insert( tips, L"TXT_KEY_PEDIA_WORKRATE_LABEL" ..workrate  )
 	end
 

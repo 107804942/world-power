@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+
+	<Instance Name="Row0" >
+		<Stack ID="Row0" Anchor="C,C" StackGrowth="Right" />
+	</Instance>
+
+	<Instance Name="Row2" >
+		<Stack ID="Row2" Anchor="C,C" StackGrowth="Right" Padding="-40" />
+	</Instance>
+
+	<Instance Name="Improvement" >
+		<Image ID="Improvement" Size="150,150" Sampler="Linear" />
+	</Instance>
+
+	<Instance Name="Resource" >
+		<Image ID="Resource" Size="150,150" Sampler="Linear" />
+	</Instance>
+
+	<Instance Name="Yield" >
+		<Image ID="Yield" Size="128,128" Sampler="Linear" />
+	</Instance>
+
+	<Instance Name="Anchor" >
+		<WorldAnchor ID="Anchor" Scaling="True" DepthAdjust="-25" >
+			<Stack ID="Stack" Anchor="C,C" StackGrowth="Bottom" Padding="-40">
+				<Stack ID="Row1" Anchor="C,C" StackGrowth="Right" Padding="-40" />
+			</Stack>
+		</WorldAnchor>
+	</Instance>
+
+	<Instance Name="CheckBox">
+		<Image ID="Portrait" Size="64.64">
+			<CheckBox ID="CheckBox" ButtonSize="64.64" CheckSize="64.64" ButtonTexture="Blank.dds" Size="64.64"/>
+		</Image>
+	</Instance>
+
+	<Instance Name="OptionsEnable">
+		<CheckBox ID="OptionsEnable" Anchor="L,T"  TextAnchorSide="Right" TextOffset="40,0" Font="TwCenMT20" ColorSet="Beige_Black_Alpha" />
+	</Instance>
+
+	<Instance Name="OptionsStack">
+		<Stack ID="OptionsStack" Anchor="L,T" StackGrowth="Right" WrapWidth="384" WrapGrowth="Down"/>
+	</Instance>
+
+	<Container ID="Scrap" Hidden="1" >
+		<Grid ID="OptionsPanel" Anchor="l,b" AnchorSide="o,i" Style="Grid9DetailSix140" Padding="30,46" ConsumeMouse="1" >
+			<ScrollPanel ID="OptionsScrollPanel" Anchor="L,C" Offset="20,0" Vertical="1" AutoScrollBar="1" >
+				<Stack ID="OptionsStack" Anchor="L,T" StackGrowth="Down"/>
+				<ScrollBar Style="VertSlider" Anchor="R,C" Length="284" AnchorSide="o,i"/>
+				<UpButton Style="ScrollBarUp" Anchor="R,T" AnchorSide="o,i"/>
+				<DownButton Style="ScrollBarDown" Anchor="R,B" AnchorSide="o,i"/>
+			</ScrollPanel>
+		</Grid>
+	</Container>
+	<WorldAnchor ID="CityAnchor" Scaling="True" Hidden="1">
+		<Image ID="CityIcon" Size="256,256" Anchor="c,c" Texture="SV_ancient_africa_large_city.dds" Sampler="Linear"/>
+	</WorldAnchor>
+	<Container ID="YieldStore" Offset="0,-60" />
+
+</Context>

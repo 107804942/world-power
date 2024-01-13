@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+	<LuaContext ID="PathHelpManager" FileName="PathHelpManager"/>
+
+	<LuaContext ID="NewTurn" FileName="NewTurn"/>
+	<LuaContext ID="TurnProcessing" FileName="TurnProcessing"/>
+
+<!--bc1
+	<LuaContext ID="PlotHelpText" FileName="PlotHelpText" />
+/bc1-->
+	<LuaContext ID="MPTurnPanel" FileName="MPTurnPanel" />  
+	<LuaContext ID="MiniMapPanel" FileName="MiniMapPanel" />
+	<LuaContext ID="MPList" FileName="MPList" Hidden="1" />
+
+	<LuaContext ID="UnitMemberOverlay" FileName="UnitMemberOverlay"/>
+
+	<LuaContext ID="InfoCorner" FileName="InfoCorner"/>
+	<LuaContext ID="DiploCorner" FileName="DiploCorner" />
+<!--bc1 moved down-->
+
+	<LuaContext ID="UnitPanel" FileName="UnitPanel" Hidden="1" />
+	<LuaContext ID="EnemyUnitPanel" FileName="EnemyUnitPanel" Hidden="1" />
+	<LuaContext ID="ActionInfoPanel" FileName="ActionInfoPanel" />
+
+	<!--LuaContext ID="EconomicPanel" FileName="EconomicPanel" />
+	<LuaContext ID="ForeignPanel" FileName="ForeignPanel"   /-->
+
+	<LuaContext ID="TaskList" FileName="TaskList" Hidden="1"/>
+
+	<LuaContext ID="Advisors" FileName="Advisors" Hidden="1"/>
+
+	<LuaContext ID="Tutorial" FileName="Tutorial" Hidden="1"/>
+
+</Context>

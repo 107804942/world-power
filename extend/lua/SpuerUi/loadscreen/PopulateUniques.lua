@@ -77,29 +77,26 @@ local function newBlankIcon( parentControl )
 end
 
 local function populateIcon( controls, item, isTip, tip, pedia )
-	local thisText = controls.Text;
-	local thisIcon = controls.Portrait;
-	local description = item.Description;
 	-- set the item picture
-	local textureOffset, textureAtlas = IconLookup( item.PortraitIndex, thisIcon:GetSizeX(), item.IconAtlas );
+	local textureOffset, textureAtlas = IconLookup( item.PortraitIndex, controls.Portrait:GetSizeX(), item.IconAtlas );
 	if textureAtlas then
-		thisIcon:SetTexture( textureAtlas );
-		thisIcon:SetTextureOffset( textureOffset );
+		controls.Portrait:SetTexture( textureAtlas );
+		controls.Portrait:SetTextureOffset( textureOffset );
 	end
 	-- set the item tooltip
 	if isTip then
-		thisIcon:SetToolTipString( tip )
-	elseif description then
-		thisIcon:LocalizeAndSetToolTip( description );
+		controls.Portrait:SetToolTipString( tip )
+	elseif item.Description then
+		controls.Portrait:LocalizeAndSetToolTip( item.Description );
 	end
 	-- set the item description
-	if thisText and description then
-		thisText:LocalizeAndSetText( description );
+	if  controls.Text and item.Description then
+		controls.Text:LocalizeAndSetText( item.Description );
 	end
 	-- set the pedia callback
-	pedia = CivilopediaControl and ( pedia or description );
+	pedia = CivilopediaControl and ( pedia or item.Description);
 	if pedia then
-		thisIcon:RegisterCallback( Mouse.eRClick, function() getPedia( pedia ) end );
+		controls.Portrait:RegisterCallback( Mouse.eRClick, function() getPedia( pedia ) end );
 	end
 end
 

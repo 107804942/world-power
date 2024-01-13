@@ -35,6 +35,15 @@
 
 
 
+		
+         <Row Tag="TXT_KEY_EUI_CITY_BANNERS">
+		      <Text>城市浮动条</Text>
+	     </Row>
+		
+		<Row Tag="TXT_KEY_EUI_PLOT_HELP_TOOLTIP">
+			<Text>地块产出细节提示</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_SP_UI_BTN_CLEAR_ALL_ORDER_SHORT">
 			<Text>[ICON_CLEAR_ALL_ORDER]取消统一规划</Text>
 		</Replace>
