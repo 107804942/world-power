@@ -124,7 +124,7 @@
 			</Stack>
 
             <!-- Work in Progress Image -->
-            <Grid Anchor="L,B" Size="50,50" Offset="165,12"  Style="Grid9BlueFrame"  Hidden="0" ID="WorkerProgressIconFrame">
+            <Grid Anchor="L,B" Size="50,50" Offset="165,76"  Style="Grid9BlueFrame"  Hidden="0" ID="WorkerProgressIconFrame">
                 <!-- Work in Progress Bar WorkerMeter -->
                 <Box Anchor="C,C" Size="46,45" Offset="0,0" Color="White,0" ID="WorkerProgressFrame" >
                     <Label  Anchor="R,B"  AnchorSide="O.I"  Offset="8,8" TruncateWidth="180" Font="TwCenMT16" FontStyle="Shadow" String="TXT_KEY_UPANEL_REPAIR_TILE_3" ID="WorkerProgressLabel"/>

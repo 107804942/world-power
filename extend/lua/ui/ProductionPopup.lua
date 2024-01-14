@@ -1,4 +1,4 @@
--------------------------------------------------
+------------------------------------------------
 -- Production Chooser Popup
 -------------------------------------------------
 include("IconSupport");
@@ -1269,9 +1269,9 @@ function AddProductionButton( id, description, orderType, turnsLeft, column, isD
 		end
 		
 	
- controlTable.Button:SetVoid2(iUnit)
- controlTable.Button:SetToolTipCallback(ToolTipHandler);---新增
- controlTable.Button:SetToolTipType( "City_UnitTooltip" ) ---新增
+          controlTable.Button:SetVoid2(iUnit)
+          controlTable.Button:SetToolTipCallback(ToolTipHandler);---新增
+          controlTable.Button:SetToolTipType( "City_UnitTooltip" ) ---新增
 
 		
 	elseif column == 2 or column == 3 then -- we are a building, wonder, or project
@@ -1340,6 +1340,7 @@ function AddProductionButton( id, description, orderType, turnsLeft, column, isD
 		end
 		
 		controlTable.Button:SetToolTipString(strToolTip);
+
 		
 	elseif column == 4 then -- processes
 		
@@ -1553,7 +1554,6 @@ TTManager:GetTypeControlTable( "City_UnitTooltip", g_TooltipControls )
 
 	Controls.UnittipTimer3:RegisterAnimCallback( function()
 		local controls = g_TooltipControls
-		controls.PortraitFrame3:SetHide( false )
 		controls.Details3:SetHide( false )
 		controls.IconStack3:SetWrapWidth( 32 )
 		controls.IconStack3:CalculateSize()
@@ -1589,7 +1589,7 @@ function ToolTipHandler( button )
 		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
 		if unitPromotion~=nil  then
 		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
-		    promotionIcon = N_PromotionIconIM:GetInstance()
+		    promotionIcon = City_PromotionIconIM:GetInstance()
 			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image3 )
 			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
 			    end
@@ -1597,9 +1597,9 @@ function ToolTipHandler( button )
 		end
 		end
 
-		local iconIndex, iconAtlas = UI.GetUnitPortraitIcon( id, Game.GetActivePlayer())
-		IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait3 )
-		controls.PortraitFrame3:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
+		---local iconIndex, iconAtlas = UI.GetUnitPortraitIcon( id, Game.GetActivePlayer())
+		---IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait3 )
+		--controls.PortraitFrame3:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
 	
 		controls.Details3:SetHide( true )
 		controls.PromotionText3:SetText( table.concat( promotionText, "[NEWLINE]" ) )
@@ -1613,4 +1613,3 @@ function ToolTipHandler( button )
 		Controls.UnittipTimer3:Reverse()
 		
 end
---==========================================================

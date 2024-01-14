@@ -217,12 +217,15 @@ function OnCityHealthListPopup()
 end
 LuaEvents.PLAGUE_CityHealthListPopup.Add( OnCityHealthListPopup )
 --------------------------------------------------------------------
-function OnAdditionalInformationDropdownGatherEntries(additionalEntries)
+
+
+
+--[[function OnAdditionalInformationDropdownGatherEntries(additionalEntries)
 	table.insert(additionalEntries, {text=Locale.ConvertTextKey("TXT_KEY_CH_DIPLO_CORNER_HOOK"), call=OnCityHealthListPopup})
 end
 --------------------------------------------------------------------
 LuaEvents.AdditionalInformationDropdownGatherEntries.Add(OnAdditionalInformationDropdownGatherEntries)
-LuaEvents.RequestRefreshAdditionalInformationDropdownEntries()
+LuaEvents.RequestRefreshAdditionalInformationDropdownEntries()]]
 --------------------------------------------------------------------
 Events.GameplaySetActivePlayer.Add(OnClose)
 

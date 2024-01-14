@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>33</ModVersion>
+    <ModVersion>34</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于SP10.0的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于SP10.0的拓展模组[/COLOR]</Description>
@@ -693,9 +693,13 @@
     <Folder Include="extend\lua\Complex function" />
     <Folder Include="extend\lua\map" />
     <Folder Include="extend\lua\SpuerUi" />
+    <Folder Include="extend\lua\SpuerUi\EUI\zArt0" />
+    <Folder Include="extend\lua\SpuerUi\EUI\zArt1" />
+    <Folder Include="extend\lua\SpuerUi\EUI\zArt2" />
     <Folder Include="extend\lua\SpuerUi\function" />
     <Folder Include="extend\lua\SpuerUi\loadscreen" />
     <Folder Include="extend\lua\SpuerUi\EUI" />
+    <Folder Include="extend\lua\SpuerUi\ActionInfoPanel" />
     <Folder Include="extend\lua\SpuerUi\UnitPanel" />
     <Folder Include="extend\lua\SpuerUi\YieldIconManager" />
     <Folder Include="extend\lua\Top panel" />
@@ -16355,6 +16359,42 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\ActionInfoPanel.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\ActionInfoPanel.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\DiploCorner.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\DiploList.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\DiploList.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\DiploTrade.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\LeaderHeadRoot.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\LeaderHeadRoot.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\ActionInfoPanel\TradeLogic.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\lua\SpuerUi\EUI\EUI_context.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -16407,6 +16447,498 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\buttonsides_left.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframeicon16-index.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframeicon16.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframeicon32-index.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframeicon32.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframequartered-index.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframequartered.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframequartered_black-index.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\citystatemeterframequartered_black.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\CityStatePopupTop.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\CivilopediaTopButtonsReligion.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\Civilopedia_SearchIcon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\EspionageSpyIcons80_Expansion.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\LowerRightCorner_MiniMap-index.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\LowerRightCorner_MiniMap.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\notificationcitycanbombard80-index.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationCityCanBombard80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\notificationcitycanbombardglow80-index.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationCityCanBombardGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationDiploMarriage80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationDiploMarriageGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationEnhanceReligion80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationEnhanceReligionGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationFaithStopped80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationFaithStoppedGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFaith80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFaithGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFreeEnhanceReligion.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFreeEnhanceReligionGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFreeFoundReligion.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFreeFoundReligionGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFreePantheon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsFreePantheonGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsGoldSpySteelTech.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsGoldSpySteelTechGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsNewEra80_Expansion.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsNewEraGLow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsRedSpyKilled.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsRedSpyKilledGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsSpyKilled80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsSpyKilledGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsSpyNew80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationIconsSpyNewGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationPantheon80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationPantheonGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationReligion80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationReligionGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationSpreadReligion80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationSpreadReligionForced80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationSpreadReligionForcedGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationSpreadReligionGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationSpyGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationTradeRoute80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationTradeRouteCanceled80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationTradeRouteCanceledGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\NotificationTradeRouteGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt0\ReligiousSymbolsWhite32_Expansion.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\CityStatePopupTop.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\CivilopediaTopButtonsWorldCongress.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_AdvisorCounsel.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_Culture.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_Demographics.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_DiploList.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_DiplomacyOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_EconomicOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_EspionageOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_Generic.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_InfoAddict.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_MilitaryOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_NotificationLog.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_ReligionOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_TechTree.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_TradeRouteOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_VictoryProgress.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\DC45_WorldCongress.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\GreatWorks.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\IdeologyPortrait80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\IdeologyPortraitGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationGreatWorks80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationGreatWorks80Glow.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationGreatWorks80Glow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconPickIdeology.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconPickIdeologyGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsArchaeologicalDig.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsArchaeologicalDigGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsInfluenceGained80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsInfluenceGainedGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsInternationalProject80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsInternationalProjectGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsReformationBeliefAdded.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsReformationBeliefAddedGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsWCMakeProposal.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsWCMakeProposalGlow2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsWCVote128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsWCVote80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsWCVoteGlow2_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsWCVoteGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationIconsWCVoteGlow_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationInfluenceLost80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationInfluenceLostGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationReformationBeliefAdded80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt1\NotificationReformationBeliefAddedGlow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\Blank.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\CityStatePopupTop.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_Advisor.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_AdvisorCounsel.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_Culture.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_Demographics.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_DiploList.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_DiplomacyOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_EconomicOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_EspionageOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_Generic.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_Greatworks.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_InfoAddict.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_MilitaryOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_NotificationLog.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_ReligionOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_TechTree.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_TradeRouteOverview.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_VictoryProgress.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\DC45_WorldCongress.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\EUI\zArt2\TileFrame256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\lua\SpuerUi\function\GetUnitBuildProgressData.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -16436,6 +16968,14 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\lua\SpuerUi\loadscreen\PopulateUniques.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\PlotHelpText.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\lua\SpuerUi\PlotHelpText.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

@@ -3,6 +3,11 @@ include( "Plague_UI.lua" );
 include( "Health_Events.lua" );
 ------------------------------------------------- 
 -- CityBannerManager
+-- PLAGUE MOD
+include( "Plague_UI.lua" );
+include( "Health_Events.lua" );
+------------------------------------------------- 
+-- CityBannerManager
 -------------------------------------------------
 include( "IconSupport" );
 include( "InstanceManager" );
@@ -790,10 +795,10 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 					local cityProductionProcess = city:GetProductionProcess()
 					local tooltipString = GetHelpTextForProcess(cityProductionProcess, false)
 					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
-				elseif city:IsProductionUnit() then
-					local cityProductionUnit = city:GetProductionUnit()
-					local tooltipString = GetHelpTextForUnit(cityProductionUnit)
-					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
+				---elseif city:IsProductionUnit() then
+					--local cityProductionUnit = city:GetProductionUnit()
+					---local tooltipString = GetHelpTextForUnit(cityProductionUnit)
+					--controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
 				elseif city:IsProductionBuilding() then
 					local cityProductionBuilding = city:GetProductionBuilding()
 					local tooltipString = GetHelpTextForBuilding(cityProductionBuilding, true, true, true, city)
@@ -833,39 +838,80 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 				local portraitOffset, portraitAtlas = UI.GetUnitPortraitIcon(unitProduction, city:GetOwner());			
 				if IconHookup( portraitOffset, 45, portraitAtlas, controls.CityBannerProductionImage ) then
 					controls.CityBannerProductionImage:SetHide( false );
+					--------------------------------------------------------
+		           local tip = GetHelpTextForUnit2(unitProduction)
+					ShowTextToolTipAndPicture3( tip,unitProduction ,portraitOffset, portraitAtlas)
+					controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )
+					--------------------------------------------------------
+					
 				else
 					controls.CityBannerProductionImage:SetHide( true );
 				end
+				
+				
 			elseif buildingProduction ~= -1 then
 				local thisBuildingInfo = GameInfo.Buildings[buildingProduction];
 				if IconHookup( thisBuildingInfo.PortraitIndex, 45, thisBuildingInfo.IconAtlas, controls.CityBannerProductionImage ) then
 					controls.CityBannerProductionImage:SetHide( false );
+					
+						
+					--------------------------------------------------------
+		           local tip = GetHelpTextForBuilding(buildingProduction)
+					ShowTextToolTipAndPicture4( tip,thisBuildingInfo.PortraitIndex, thisBuildingInfo.IconAtlas)
+					-------------------------------------------------
+					controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )
+					
 				else
 					controls.CityBannerProductionImage:SetHide( true );
 				end
+				
+				
 			elseif projectProduction ~= -1 then
 				local thisProjectInfo = GameInfo.Projects[projectProduction];
 				if IconHookup( thisProjectInfo.PortraitIndex, 45, thisProjectInfo.IconAtlas, controls.CityBannerProductionImage ) then
 					controls.CityBannerProductionImage:SetHide( false );
+					
+					--------------------------------------------------------
+		            local tip = GetHelpTextForProject( projectProduction, true )
+					ShowTextToolTipAndPicture4( tip,thisProjectInfo.PortraitIndex, thisProjectInfo.IconAtlas)
+					--------------------------------------------------------
+					controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )
+					
 				else
 					controls.CityBannerProductionImage:SetHide( true );
 				end
+
 			elseif processProduction ~= -1 then
 				local thisProcessInfo = GameInfo.Processes[processProduction];
 				if IconHookup( thisProcessInfo.PortraitIndex, 45, thisProcessInfo.IconAtlas, controls.CityBannerProductionImage ) then
 					controls.CityBannerProductionImage:SetHide( false );
+					
+					--------------------------------------------------------
+		           local tip =  GetHelpTextForProcess( processProduction, true )
+					ShowTextToolTipAndPicture4( tip,thisProcessInfo.PortraitIndex, thisProcessInfo.IconAtlas)
+					--------------------------------------------------------
+						controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )		
 				else
 					controls.CityBannerProductionImage:SetHide( true );
 				end
+				
+				
+				
+				
 			else -- really should have an error texture
 				controls.CityBannerProductionImage:SetHide(true);
 			end
+			
 			
 			if isActivePlayerCity then
     			controls.CityBannerProductionButton:RegisterCallback( Mouse.eLClick, OnProdClick );
     			controls.CityBannerProductionButton:SetVoids( city:GetID(), nil );
     			controls.BannerButton:SetDisabled( false );
+
+
 			end
+
+
 			
 		end
 		
@@ -1772,3 +1818,94 @@ if( ContextPtr:IsHotLoad() ) then
     end
 end
 	
+
+
+--==========================================================
+-- 
+-- 
+--==========================================================
+include "GameInfoActualCache"
+local GameInfo = GameInfoCache
+
+include "StackInstanceManager"
+include "IconHookup"
+
+
+local g_TooltipControls = {}
+TTManager:GetTypeControlTable( "City_Tooltip", g_TooltipControls )
+
+
+
+
+Controls.UnittipTimer4:RegisterAnimCallback( function()
+		local controls = g_TooltipControls
+		controls.Details4:SetHide( false )
+		controls.IconStack4:SetWrapWidth( 32 )
+		controls.IconStack4:CalculateSize()
+		controls.PromotionText4:SetHide( false )
+		controls.Grid4:ReprocessAnchoring()
+		controls.Grid4:DoAutoSize()
+end)
+
+local City_PromotionIconIM = StackInstanceManager( "PromotionIcon4", "Image4", g_TooltipControls.IconStack4 )
+
+--==========================================================
+-- city Tooltips
+--==========================================================
+
+function ShowTextToolTipAndPicture4( tip, index, altlas )
+    local controls = g_TooltipControls
+
+	City_PromotionIconIM:ResetInstances()
+
+    controls.PromotionText4:SetText("")
+	controls.PromotionText4:SetHide(true)
+	controls.Text4:SetText( tip )
+	controls.PortraitFrame4:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.UnitPortrait4) ) )
+	controls.PortraitFrame4:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
+	controls.Grid4:ReprocessAnchoring()
+	controls.Grid4:DoAutoSize()
+end
+
+
+
+function ShowTextToolTipAndPicture3( tip,itemID ,index, altlas )
+	    local controls = g_TooltipControls
+		controls.Text4:SetText( tip ) 
+		local unit = GameInfo.Units[itemID]
+		local i = 0
+		local unitPromotion
+		local promotionText = {}
+		local promotionIcon
+		City_PromotionIconIM:ResetInstances()
+
+		if not( unit.Trade ) then
+		local thisUnitType = { UnitType = unit.Type }
+        for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
+		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
+		if unitPromotion~=nil  then
+		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
+		    promotionIcon = City_PromotionIconIM:GetInstance()
+			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image4 )
+			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
+			    end
+			end
+		end
+	
+	    controls.PortraitFrame4:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.UnitPortrait4) ) )
+	    controls.PortraitFrame4:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
+
+		controls.PromotionText4:SetText( table.concat( promotionText, "[NEWLINE]" ) )
+		controls.PromotionText4:SetHide( #promotionText ~= 1 )
+
+		controls.IconStack4:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
+		controls.IconStack4:CalculateSize()
+
+		controls.Grid4:ReprocessAnchoring()
+	     controls.Grid4:DoAutoSize()
+
+		Controls.UnittipTimer4:SetToBeginning()
+        Controls.UnittipTimer4:SetPauseTime(0) 
+		Controls.UnittipTimer4:Reverse()	
+		end
+end

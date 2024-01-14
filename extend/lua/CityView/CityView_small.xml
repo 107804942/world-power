@@ -5,7 +5,7 @@
 	<Image Anchor="L,C" Offset="0,0" Texture="assets\UI\Art\WorldView\1920_LeftSide.DDS" Size="100.1200"/>
 	<Image Anchor="R,C" Offset="0,0" Texture="assets\UI\Art\WorldView\1920_RightSide.DDS" Size="100.1200"/>
 	<!-- City Information -->
-	<Grid Size="225,643" Anchor="L,T" Offset="-16,-9" Style="Grid9DetailSix140" Hidden="0" ID="TopLeft" ConsumeMouse="1">
+	<Grid Size="225,536" Anchor="L,T" Offset="-16,-9" Style="Grid9DetailSix140" Hidden="0" ID="TopLeft" ConsumeMouse="1">
 		<Stack Anchor="L,T" Offset="18,8" Size="0,0" StackGrowth="Bottom" Padding="0">
 
 			<!-- Population Info -->
@@ -23,33 +23,33 @@
 
 
 			<!-- Local xp Header -->
-			<Box Offset="0, 10" Anchor="L,T" Size="196,28" Color="255,255,255,-2">
+			<!--<Box Offset="0, 10" Anchor="L,T" Size="196,28" Color="255,255,255,-2">
 				<Image Offset="0,0" Anchor="L,T" Size="196,28" Texture="yieldheaderbox.dds"/>
 				<Label Anchor="C,C" Offset="0,-2" String="TXT_KEY_CITYVIEW_LOCALYIELDS_XP_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
-			</Box>
+			</Box>-->
 
 			<!-- LAND Info -->
-			<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="LandBox">
+			<!--<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="LandBox">
 				<Image Offset="0,0" Anchor="L,T" Size="196,28" Texture="yieldbox.dds"/>
 				<Label Anchor="L,C" Offset="8,0" String="[ICON_WAR]"/>
 				<Label Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_LAND_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
 				<Label ID="LandXpLabel" Anchor="R,C" Offset="5,-2" String="" Color0="Science.255" Color1="0.0.0.128" Color2="255.255.200.255" Font="TwCenMT20" FontStyle="Shadow"/>
-			</Box>
+			</Box>-->
 
 			<!-- SEA Info -->
-			<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="SeaBox">
+			<!--<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="SeaBox">
 				<Image Offset="0,0" Anchor="L,T" Size="196,28" Texture="yieldbox.dds"/>
 				<Label Anchor="L,C" Offset="8,0" String="[ICON_WAR]"/>
 				<Label Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_SEA_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
 				<Label ID="SeaXpLabel" Anchor="R,C" Offset="5,-2" String="" Font="TwCenMT20" FontStyle="Shadow"/>
-			</Box>
+			</Box>-->
 			<!-- AIR Info -->
-			<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="AirBox">
+			<!--<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="AirBox">
 				<Image Offset="0,0" Anchor="L,T" Size="196,28" Texture="yieldbox.dds"/>
 				<Label Anchor="L,C" Offset="8,0" String="[ICON_WAR]"/>
 				<Label Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_AIR_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
 				<Label ID="AirXpLabel" Anchor="R,C" Offset="5,-2" String="" Font="TwCenMT20" FontStyle="Shadow"/>
-			</Box>
+			</Box>-->
 			<!-- end -->
 
 			<!-- Local Yields Header -->

@@ -59,8 +59,7 @@ local GetFaithTooltip = GetFaithTooltip
 local GetReligionTooltip = GetReligionTooltip
 local GetTourismTooltip = GetTourismTooltip
 local GetMoodInfo = GetMoodInfo
-local GetHelpTextForPlayerPerk = GetHelpTextForPlayerPerk -- BE only
-local GetHelpTextForAffinity = GetHelpTextForAffinity -- BE only
+
 
 include "TechHelpInclude"
 local GetHelpTextForTech = GetHelpTextForTech
@@ -157,16 +156,24 @@ TTManager:GetTypeControlTable( "EUI_TopPanelProgressTooltip", g_TechProgressTool
 
 local g_isCityStateLeaders, g_isBasicHelp, g_isScienceEnabled, g_isReligionEnabled, g_isHappinessEnabled, g_isPoliciesEnabled, g_isHealthEnabled, g_isEspionageDisabled, g_isAlwaysWar, g_isOneCityChallenge
 
+local g_UnitTooltipTimer = Controls.UnitTooltipTimer
+
+
+local g_ItemTooltipControls = {}
+TTManager:GetTypeControlTable( "EUI_ItemTooltip", g_ItemTooltipControls )
+
+local g_PromotionIconIM2 = StackInstanceManager( "PromotionIcon2", "Image2", g_ItemTooltipControls.IconStack2 )
+
+
+
 do
-	Controls.UnitTooltipTimer:RegisterAnimCallback( function()
-		g_UnitTooltipControls.PromotionText:SetHide( false )
-		g_UnitTooltipControls.IconStack:SetWrapWidth( 32 )
-		g_UnitTooltipControls.IconStack:CalculateSize()
-		g_UnitTooltipControls.Box:DoAutoSize()
+	g_UnitTooltipTimer:RegisterAnimCallback( function()
+	    local controls = g_UnitTooltipControls
+		controls.PromotionText:SetHide( false )
+		controls.IconStack:SetWrapWidth( 32 )
+		controls.IconStack:CalculateSize()
+		controls.Box:DoAutoSize()
 	end)
-
-
-
 
 
 	-----ÐÂÔö
@@ -192,8 +199,8 @@ local WpModActive = IsUsingWP()
 		g_isAlwaysWar = Game.IsOption( GameOptionTypes.GAMEOPTION_ALWAYS_WAR )
 		g_isOneCityChallenge = Game.IsOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		g_isBasicHelp = IsCivBE or not OptionsManager.IsNoBasicHelp()
-		Controls.UnitTooltipTimer:SetToBeginning()
-		Controls.UnitTooltipTimer:SetPauseTime( GetTooltip2Seconds() / 100 )
+		g_UnitTooltipTimer:SetToBeginning()
+		g_UnitTooltipTimer:SetPauseTime( GetTooltip2Seconds() / 100 )
 		g_isCityStateLeaders = UserInterfaceSettings.CityStateLeaders ~= 0
 	end
 	Events.GameOptionsChanged.Add( UpdateOptions )
@@ -374,6 +381,19 @@ local function TooltipSelect( tooltipTable, control, ... )
 	end
 end
 
+
+local function ShowTextToolTipAndPicture( tip, index, altlas )
+	local controls = g_ItemTooltipControls
+
+	g_PromotionIconIM2:ResetInstances()
+	controls.PromotionText2:SetHide(true)
+	controls.Text2:SetText( tip )
+	controls.PortraitFrame2:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait2 ) ) )
+	controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,C" or "R,C" )
+	controls.Box:ReprocessAnchoring()
+	controls.Box:DoAutoSize()
+end
+LuaEvents.ShowTextToolTipAndPicture.Add( ShowTextToolTipAndPicture )
 
 
 local function ShowTextToolTip( ... )
@@ -1960,28 +1980,6 @@ end)
 --==========================================================
 -- Tech Tooltips
 --==========================================================
-local g_ItemTooltipControls = {}
-TTManager:GetTypeControlTable( "EUI_ItemTooltip", g_ItemTooltipControls )
-
-local g_PromotionIconIM2 = StackInstanceManager( "PromotionIcon2", "Image2", g_ItemTooltipControls.IconStack2 )
-
-local function ShowTextToolTipAndPicture( tip, index, altlas )
-	local controls = g_ItemTooltipControls
-
-	g_PromotionIconIM2:ResetInstances()
-	--local controlTable = g_PromotionIconIM2:GetInstance();
-	--controlTable.PromotionIcon2:SetHide( true)
-	--controlTable.Image2:SetHide(true )
-	--controls.IconStack2:SetWrapWidth( 0 )
-	--controls.IconStack2:SetHide(true)
-	controls.PromotionText2:SetHide(true)
-	controls.Text2:SetText( tip )
-	controls.PortraitFrame2:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait2 ) ) )
-	controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
-	controls.Box:ReprocessAnchoring()
-	controls.Box:DoAutoSize()
-end
-LuaEvents.ShowTextToolTipAndPicture.Add( ShowTextToolTipAndPicture )
 
 
 Controls.UnitTooltipTimer2:RegisterAnimCallback( function()
@@ -2022,7 +2020,7 @@ function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
 		end
 	
 	    controls.PortraitFrame2:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait2 ) ) )
-	    controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
+	    controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,C" or "R,C" )
 
 		controls.PromotionText2:SetText( table.concat( promotionText, "[NEWLINE]" ) )
 		controls.PromotionText2:SetHide( #promotionText ~= 1 )
@@ -3338,4 +3336,5 @@ LuaEvents.TopPanelTooltips.Add( function( control )
 end)
 
 print( "EUI tooltip server loaded." )
+
 

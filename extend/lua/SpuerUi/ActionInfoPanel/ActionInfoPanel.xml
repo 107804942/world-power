@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context ColorSet="Beige_Black_Alpha" FontStyle="SoftShadow" Font="TwCenMT16" >
+
+	<GridButton ID="EndTurnButton" Size="320,36" Anchor="R,B" Offset="16,200" ConsumeMouse="1" >
+		<GridData Style="Grid9DarkBlue8Button"/>
+
+		<!-- Production Highlight TopFrame2 -->
+		<AlphaAnim ID="EndTurnButtonProductionAlpha" Anchor="C,C" Size="300,36" Cycle="Bounce" Speed="1" AlphaStart=".55" AlphaEnd=".6" Hidden="1" >
+			<Grid Size="320,36" Anchor="C,C" Style="Grid9Production8"/>
+			<ScrollAnim Offset="0,-6" Size="320.48" Speed="0.05" Texture="Production256.dds" MaskTexture="BubblesMask336x48.dds"/>
+		</AlphaAnim>
+
+		<!-- Science Highlight -->
+		<AlphaAnim ID="EndTurnButtonScienceAlpha" Anchor="C,C" Size="300,36" Cycle="Bounce" Speed="1" AlphaStart=".25" AlphaEnd=".6" Hidden="1">
+			<Grid Size="320,36" Anchor="C,C" Style="Grid9Science8"/>
+			<ScrollAnim Offset="0,-6" Size="320.48" Speed="0.25" Texture="Bubbles256.dds" MaskTexture="BubblesMask336x48.dds"/>
+		</AlphaAnim>
+
+		<!-- Free Tech Highlight -->
+		<AlphaAnim ID="EndTurnButtonFreeTechAlpha" Anchor="C,C" Size="300,36" Cycle="Bounce" Speed="1" AlphaStart=".75" AlphaEnd=".6" Hidden="1">
+			<Grid Size="320,36" Anchor="C,C" Style="Grid9Production8"/>
+			<ScrollAnim Offset="0,-6" Size="320.48" Speed="0.25" Texture="Bubbles256Orange.dds" MaskTexture="BubblesMask336x48.dds"/>
+		</AlphaAnim>
+
+		<!-- Generic Highlight -->
+		<AlphaAnim ID="EndTurnButtonEndTurnAlpha" Anchor="C,C" Size="300,36" Cycle="Bounce" Speed="1" AlphaStart=".25" AlphaEnd=".6" Hidden="1">
+			<Grid Size="320,36" Anchor="C,C" Style="Grid9Highlight8"/>
+		</AlphaAnim>
+
+		<Label ID="EndTurnText" Anchor="C,C" Offset="0,-2" String="END TURN" Color0="255.255.200.255" Color1="0.0.0.128" Color2="255.255.200.255" Font="TwCenMT24" FontStyle="SoftShadow"/>
+		<Grid Anchor="C,C" Size="324,40" Style="Grid9Frame"/>
+
+		<ShowOnMouseOver>
+			<AlphaAnim ID="EndTurnButtonMouseOverAlpha" Size="320,36" Cycle="Bounce" Speed="1" AlphaStart=".25" AlphaEnd=".6">
+				<Grid Size="320,36" Style="Grid9Highlight8"/>
+			</AlphaAnim>
+			<AlphaAnim Anchor="R,C" AnchorSide="O.O" Offset="-2,0" Size="16,32" TextureOffset="16.0" Texture="buttonsidesglow.dds" Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".25"/>
+			<AlphaAnim Anchor="L,C" AnchorSide="O.O" Offset="-2,0" Size="16,32" Texture="buttonsidesglow.dds" Cycle="Bounce" Speed="1" AlphaStart=".99" AlphaEnd=".25"/>
+			<Image Anchor="R,C" Offset="-2,0" TextureOffset="8.0" AnchorSide="O.O" Texture="buttonsides.dds" Size="8,16"/>
+			<Image Anchor="L,C" Offset="-2,0" AnchorSide="O.O" Texture="buttonsides.dds" Size="8,16"/>
+		</ShowOnMouseOver>
+	</GridButton>
+
+	<!--=======================================================================================================================-->
+	<!-- CityState Instance -->
+	<!--=======================================================================================================================-->
+	<Instance Name="CityState">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationBlack.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationPurple.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".3" AlphaEnd="0"/>
+					<Image Color="Beige.255" Size="80,80" Texture="CityState80.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- CityStateRequest (unused) -->
+	<!--=======================================================================================================================-->
+	<Instance Name="CityStateRequest">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationBlack.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationPurple.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".3" AlphaEnd="0"/>
+					<Image Color="Beige.255" Size="80,80" Texture="CityState80.dds"/>
+					<Image Offset="35,35" Size="45,45" Texture="NotificationGeneric45.dds">
+						<AlphaAnim Size="45,45" Texture="NotificationGeneric45Glow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</Image>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Someone else MADE PEACE with someone  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="PeaceOther">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+					<Image Size="80,80" Texture="NotificationOrange.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<Image Size="64,64" Offset="8,8" Texture="Peace.dds"/>
+					<Image Offset="17,-3" Size="45,45" Texture="CivSymbolsFrame360.dds">
+						<Image ID="Civ1IconBG" Size="45,45"/>
+						<Image ID="Civ1IconShadow" Size="32,32" Offset="7,7"/>
+						<Image ID="Civ1Icon" Size="32,32" Offset="6,6"/>
+					</Image>
+					<Image Offset="17,35" Size="45,45" Texture="CivSymbolsFrame360.dds">
+						<Image ID="Civ2IconBG" Size="45,45"/>
+						<Image ID="Civ2IconShadow" Size="32,32" Offset="7,7"/>
+						<Image ID="Civ2Icon" Size="32,32" Offset="6,6"/>
+					</Image>
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Someone else DECLARED WAR with someone  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="WarOther">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+					<Image Size="80,80" Texture="NotificationOrange.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<Image Offset="-3,17" Size="45,45" Texture="CivSymbolsFrame360.dds">
+						<Image ID="Civ1IconBG" Size="45,45"/>
+						<Image ID="Civ1IconShadow" Size="32,32" Offset="7,7"/>
+						<Image ID="Civ1Icon" Size="32,32" Offset="6,6"/>
+					</Image>
+					<Image Offset="36,17" Size="45,45" Texture="CivSymbolsFrame360.dds">
+						<Image ID="Civ2IconBG" Size="45,45"/>
+						<Image ID="Civ2IconShadow" Size="32,32" Offset="7,7"/>
+						<Image ID="Civ2Icon" Size="32,32" Offset="6,6"/>
+					</Image>
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="20" Pause="0" StepSize="64,64" FrameCount="31" Texture="UnitAttackAnimation.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- EnemyInTerritory -->
+	<!--=======================================================================================================================-->
+	<Instance Name="EnemyInTerritory">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFingerRed"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="UnitIcon" Size="80,80"/>
+					<AlphaAnim Size="80,80" Texture="NotificationTargetGlow.dds" Pause="0" Cycle="Bounce" Speed="1.4" AlphaStart="0" AlphaEnd=".6"/>
+					<Image Size="80,80" Texture="NotificationTarget.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Generic Notification Items -->
+	<!--=======================================================================================================================-->
+	<Instance Name="Generic">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="Texture1" Size="80,80"/>
+					<AlphaAnim ID="Texture2" Size="80,80" Texture="blank.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<Instance Name="GenericRed">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFingerRed"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="Texture1" Size="80,80"/>
+					<AlphaAnim ID="Texture2" Size="80,80" Texture="blank.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Buy a New Tile -->
+	<!--=======================================================================================================================-->
+	<Instance Name="BuyTile">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationClearBase.dds">
+					<Image Size="80,80" Texture="NotificationTileFrame.dds"/>
+					<Image Size="80,80" Texture="NotificationTileGlass.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationTileGlow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="11,8" Columns="15" Speed="20" EndPause="2" StepSize="64,0" FrameCount="15" Texture="NotificationTilePurchaseAni.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- City Acquired a New Tile -->
+	<!--=======================================================================================================================-->
+	<Instance Name="CityTile">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationClearBase.dds">
+					<Image Size="80,80" Texture="NotificationTileFrame.dds"/>
+					<Image ID="TileIcon1" Size="64,64" Offset="7,7" Sampler="Linear" MaskTexture="ActionItemsMask.dds"/>
+					<Image ID="TileIcon2" Size="64,64" Offset="7,7" Sampler="Linear" MaskTexture="ActionItemsMask.dds"/>
+					<Label ID="TileResourceCount" Offset="35,50" Font="TwCenMT20" Color0="140,255,140,255" Color1="Black,200" FontStyle="Stroke"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Wonder Built -->
+	<!--=======================================================================================================================-->
+	<Instance Name="WonderConstructed">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationYellow.dds"/>
+					<AlphaAnim ID="BuildingIcon" Offset="0,-1" Size="80.80" Texture="blank.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<Image Offset="35,35" Size="45,45" Texture="CivSymbolsFrame360.dds">
+						<Image ID="CivIconBG" Size="45,45"/>
+						<Image ID="CivIconShadow" Size="32,32" Offset="7,7"/>
+						<Image ID="CivIcon2" Size="32,32" Offset="6,6"/>
+					</Image>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Great Work Built -->
+	<!--=======================================================================================================================-->
+	<Instance Name="GreatWork">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationGreatWorks80.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationGreatWorks80.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationGreatWorks80Glow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<AlphaAnim ID="GreatWorkAlphaAnim" Offset="0,-1" Size="80.80" Texture="NotificationGreatWorks80Glow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<Image Offset="35,35" Size="45,45" Texture="CivSymbolsFrame360.dds">
+						<Image ID="CivIconBG" Size="45,45"/>
+						<Image ID="CivIconShadow" Size="32,32" Offset="7,7"/>
+						<Image ID="CivIcon2" Size="32,32" Offset="6,6"/>
+					</Image>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Project Built -->
+	<!--=======================================================================================================================-->
+	<Instance Name="ProjectConstructed">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationYellow.dds"/>
+					<AlphaAnim ID="ProjectIcon" Offset="0,-1" Size="80.80" Texture="blank.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<Image Offset="35,35" Size="45,45" Texture="CivSymbolsFrame360.dds">
+						<Image ID="CivIconBG" Size="45,45"/>
+						<Image ID="CivIconShadow" Size="32,32" Offset="7,7"/>
+						<Image ID="CivIcon2" Size="32,32" Offset="6,6"/>
+					</Image>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Golden Age Complete -->
+	<!--=======================================================================================================================-->
+	<Instance Name="GoldenAgeComplete">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationGoldenAge.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationGoldenAgeGlow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="17" Pause="0" StepSize="64,64" FrameCount="32" Texture="Diplomacy_X.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- PEACE -->
+	<!--=======================================================================================================================-->
+	<Instance Name="Peace">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="CivIconBG" Size="80.80"/>
+					<Image ID="CivIconShadow" Size="64,64" Offset="7,7"/>
+					<Image ID="CivIcon1" Size="64,64" Offset="8,8"/>
+					<Image Size="64,64" Offset="8,8" Texture="Peace.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- War -->
+	<!--=======================================================================================================================-->
+	<Instance Name="War">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFingerRed"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="CivIconBG" Size="80.80"/>
+					<Image ID="CivIconShadow" Size="64,64" Offset="7,7"/>
+					<Image ID="CivIcon1" Size="64,64" Offset="8,8"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="20" Pause="0" StepSize="64,64" FrameCount="31" Texture="UnitAttackAnimation.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Victory Trophy -->
+	<!--=======================================================================================================================-->
+	<Instance Name="Victory">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationOrange.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Columns="8" Offset="8,8" Speed="16" Pause="0" StepSize="64,64" FrameCount="30" Texture="TrophySpin.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Unit to be Promoted  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="UnitPromoted">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="UnitIcon" Size="80,80"/>
+					<FlipAnim Size="64,64" Columns="4" Speed="10" Pause=".5" StepSize="64,64" FrameCount="8" Texture="PromotionAnimation.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Unit Killed -->
+	<!--=======================================================================================================================-->
+	<Instance Name="UnitDied">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFingerRed"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="UnitIcon" Size="80,80"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="20" Pause="0" StepSize="64,64" FrameCount="31" Texture="UnitAttackAnimation.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Expired Declaration of Friendship  (todo- currently same as DiplomacyX) -->
+	<!--=======================================================================================================================-->
+	<Instance Name="FriendshipX">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationOrange.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="12" Pause="0" StepSize="64,64" FrameCount="30" Texture="Diplomacy.dds"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="17" Pause="0" StepSize="64,64" FrameCount="32" Texture="Diplomacy_X.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Expired Research Agreement  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="ResearchAgreementX">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="92,92" Offset="-5,-6" Texture="NotificationIconsScience.dds" StretchMode="UniformToFill" Sampler="Linear"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="17" Pause="0" StepSize="64,64" FrameCount="32" Texture="Diplomacy_X.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Discovered Tech  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="TechAward">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationYellow.dds"/>
+					<AlphaAnim ID="TechIcon" Offset="0,-1" Size="80.80" Texture="blank.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Discovered Resource  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="Resource">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationYellow.dds"/>
+					<AlphaAnim ID="ResourceIcon" Size="80,80" Texture="blank.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<Image ID="Texture1" Size="80,80"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Capital Recovered  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="CapitalRecovered">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationBlue.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="8,14" Columns="8" Speed="20" Pause=".5" StepSize="64,64" FrameCount="31" Texture="CapitalAnimation.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Capital Lost  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="CapitalLost">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFingerRed"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationYellow.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationRed.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<FlipAnim Size="64,64"  Offset="8,14" Columns="8" Speed="20" Pause=".5" StepSize="64,64" FrameCount="31" Texture="capitollost.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Great Person  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="GreatPerson">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationYellow.dds"/>
+					<AlphaAnim ID="UnitIcon" Size="80,80" Texture="blank.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- DiplomacyVote  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="DiplomacyVote">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationOrange.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="12" Pause="0" StepSize="64,64" FrameCount="30" Texture="Diplomacy.dds"/>
+					<AlphaAnim Size="80,80" Texture="DiplomacyVote.dds" Pause="0" Cycle="Bounce" Speed="2" AlphaStart="0" AlphaEnd="1"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Diplomacy  -->
+	<!--=======================================================================================================================-->
+	<Instance Name="Diplomacy">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationOrange.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="12" Pause="0" StepSize="64,64" FrameCount="30" Texture="Diplomacy.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Diplomacy X -->
+	<!--=======================================================================================================================-->
+	<Instance Name="DiplomacyX">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="NotificationOrange.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart=".5" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="12" Pause="0" StepSize="64,64" FrameCount="30" Texture="Diplomacy.dds"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="17" Pause="0" StepSize="64,64" FrameCount="32" Texture="Diplomacy_X.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Natural Wonder -->
+	<!--=======================================================================================================================-->
+	<Instance Name="NaturalWonder">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image ID="FeatureIcon" Size="80,80"/>
+					<AlphaAnim Size="80,80" Texture="NotificationYellow.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="0.125"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Spy Promotion-->
+	<!--=======================================================================================================================-->
+	<Instance Name="SpyPromotion">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="EspionageSpyIcons80_Expansion.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationSpyGlow80.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Columns="4" Speed="10" Pause=".5" StepSize="64,64" FrameCount="8" Texture="PromotionAnimation.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--=======================================================================================================================-->
+	<!-- Spy Cannot Steal -->
+	<!--=======================================================================================================================-->
+	<Instance Name="SpyCannotSteal">
+		<Container ID="Container" Size="80,80" ConsumeMouseButton="1">
+			<SlideAnim Style="NotificationSlide">
+				<AlphaAnim Style="NewFinger"/>
+				<Button ID="Button" Size="80,80" Texture="NotificationFrameBase.dds">
+					<ShowOnMouseOver>
+						<Image Size="80,80" Texture="NotificationFrameBase.dds"/>
+						<AlphaAnim Size="80,80" Texture="NotificationFrameGlow2.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="1" AlphaEnd="0"/>
+					</ShowOnMouseOver>
+					<Image Size="80,80" Texture="EspionageSpyIcons80_Expansion.dds"/>
+					<AlphaAnim Size="80,80" Texture="NotificationSpyGlow80.dds" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="0" AlphaEnd="1"/>
+					<FlipAnim Size="64,64" Offset="8,8" Columns="8" Speed="17" Pause="0" StepSize="64,64" FrameCount="32" Texture="Diplomacy_X.dds"/>
+				</Button>
+			</SlideAnim>
+		</Container>
+	</Instance>
+	<!--====================-->
+	<!-- Notification Stack	-->
+	<!--====================-->
+<!--===============================
+OuterStack
+	BigStack
+		ProductionButton
+		TechButton
+		FreeTechButton
+		StealTechButton
+		FreePolicyButton
+		FreeGreatPersonButton
+		FoundPantheonButton
+		FoundReligionButton
+		EnhanceReligionButton
+	SmallScrollPanel
+		ScrollBar
+		UpButton
+		DownButton
+		SmallStack
+================================-->
+	<Container ID="Scrap" Hidden="1">
+		<Container ID="DarkBordersContainer" Size="Full,Full">
+			<Grid ID="DarkBorders" Anchor="R,T" Size="140,1"
+					Texture="Grid9BlackIndentFade8.dds"
+					LSize="34,1" 	LTexStart="9,20"
+					CSize="1,1"		CTexStart="42,20"
+					LLSize="32,8"	LLTexStart="9,35"
+					LCSize="1,8"	LCTexStart="37,35"
+					Color="255,255,255,96"/>
+		</Container>
+	</Container>
+
+
+	<Stack ID="OuterStack" Anchor="R,B" StackGrowth="Top" Offset="0,240" >
+
+		<Stack ID="BigStack" Anchor="R,B" StackGrowth="Left" >
+
+			<!-- Notification Production  NotificationClearBase-->
+			<Button ID="Production" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsProduction.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationProductionGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationProductionGlow.dds"/>
+				</ShowOnMouseOver>
+			</Button>
+			<!-- Notification Science -->
+			<Button ID="Tech" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsScience.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationScienceGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+				<ScrollAnim Anchor="C,C" Size="100.100" Speed=".3" Texture="NotificationScienceBubbles.dds" MaskTexture="NotificationScienceMask.dds"/>
+			</Button>
+			<!-- Notification Free Tech -->
+			<Button ID="FreeTech" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsFreeScience.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationFreeScienceGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+				<ScrollAnim Anchor="C,C" Size="100.100" Speed=".3" Texture="Bubbles256Orange.dds" MaskTexture="NotificationScienceMask.dds"/>
+			</Button>
+			<!-- Notification Steal Tech -->
+			<Button ID="StealTech" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsGoldSpySteelTech.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsGoldSpySteelTechGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Notification Free Policy -->
+			<Button ID="FreePolicy" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsFreeSocialPolicy.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsFreeSocialPolicyGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Notification Free Great Person -->
+			<Button ID="FreeGreatPerson" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsFreeGreatPerson.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsFreeGreatPersonGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Notification Found Pantheon -->
+			<Button ID="FoundPantheon" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsFreePantheon.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsFreePantheonGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Notification Found Religion -->
+			<Button ID="FoundReligion" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsFreeFoundReligion.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsFreeFoundReligionGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Notification Enhance Religion -->
+			<Button ID="EnhanceReligion" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsFreeEnhanceReligion.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsFreeEnhanceReligionGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Add Reformation Belief -->
+			<Button ID="AddReformationBelief" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsReformationBeliefAdded.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsReformationBeliefAddedGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Notification League Call For Proposals-->
+			<Button ID="LeagueCallForProposals" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsWCVoteGlow_128.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsWCMakeProposal.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsWCMakeProposalGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Choose Archaeology -->
+			<Button ID="ChooseArchaeology" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsArchaeologicalDig.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsArchaeologicalDigGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Notification League Call For Votes-->
+			<Button ID="LeagueCallForVotes" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsWCVoteGlow_128.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconsWCVote128.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconsWCVoteGlow2_128.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- Choose Ideology -->
+			<Button ID="ChooseIdeology" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="NotificationIconPickIdeology.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="NotificationIconPickIdeologyGlow2.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- CPP -->
+			<Button ID="CityEventChoiceButton" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="notificationcityeventorange.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="notificationcityeventglow.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+			<!-- CPP -->
+			<Button ID="EventChoiceButton" Size="88,88" TextureOffset="6,6" Texture="NotificationIconsFrame.dds" Hidden="1" ConsumeMouseOver="1">
+				<ShowOnMouseOver>
+					<Image Anchor="C,C" Size="128,128" Texture="NotificationScienceGlow.dds"/>
+				</ShowOnMouseOver>
+				<Image Anchor="C,C" Size="128,128" Texture="notificationeventorange.dds"/>
+				<AlphaAnim Anchor="C,C" Size="128.128" Texture="notificationeventglow.dds" Pause="0" Cycle="Bounce" Speed=".75" AlphaStart="0.6" AlphaEnd="0"/>
+			</Button>
+		</Stack>
+		<ScrollPanel ID="SmallScrollPanel" Anchor="R,B" Vertical="1" Size="80,80" AutoScollbar="1" ConsumeMouseOver="1">
+			<ScrollBar Style="VertSlider" Anchor="R,C" Length="18" AnchorSide="o,i"/>
+			<UpButton Style="ScrollBarUp" Anchor="R,T" AnchorSide="o,i"/>
+			<DownButton Style="ScrollBarDown" Anchor="R,B" AnchorSide="o,i"/>
+			<Stack ID="SmallStack" Anchor="R,B" StackGrowth="Top" Offset="-6,0" Padding="-8"/>
+		</ScrollPanel>
+	</Stack>
+
+	<!--====================-->
+	<!-- Diplomacy Stack	-->
+	<!--====================-->
+<!--===============================
+CivPanel
+	CivStack
+		MajorStack
+		MinorStack
+================================-->
+	<Container ID="CivPanelContainer" Anchor="R,T" Offset="0,30" >
+		<Container ID="CivPanel" Anchor="R,T" >
+			<ScrollPanel ID="CivScrollPanel" Anchor="R,T" Offset="18,0" Vertical="1" AutoScrollBar="1" Size="120,60" ConsumeMouseOver="1" ConsumeMouseButton="1" >
+
+				<!-- Scroll Controls -->
+				<ScrollBar Style="VertSlider" Anchor="R,C" Length="18" AnchorSide="o,i"/>
+				<UpButton Style="ScrollBarUp" Anchor="R,T" AnchorSide="o,i"/>
+				<DownButton Style="ScrollBarDown" Anchor="R,B" AnchorSide="o,i"/>
+
+				<Stack ID="CivStack" Anchor="R,T" StackGrowth="Bottom" >
+
+					<Stack ID="MajorStack" Anchor="R,T" Padding="-4" StackGrowth="Bottom"/>
+
+					<Stack ID="MinorStack" Anchor="R,T" Padding="0" StackGrowth="Bottom"/>
+
+				</Stack>
+			</ScrollPanel>
+		</Container>
+	</Container>
+
+	<!-- LeaderButtonInstance -->
+	<Instance Name="LeaderButtonInstance" >
+		<Button ID="Button" Size="64,64" Offset="4,0" Texture="64x64FrameButtons.dds" >
+
+			<!-- Leader & Civ Icons -->
+			<AlphaAnim ID="Active" Size="84,84" Offset="-10,-10" Pause="0" Cycle="Bounce" Speed="3" AlphaStart="0.25" AlphaEnd="0" Hidden="1" >
+				<Image Size="84,84" Texture="CivIconFrame84.dds" Color="0,0,0,256"/>
+			</AlphaAnim>
+			<Image ID="Portrait" Size="64,64" Texture="LeaderPortraits512.dds" >
+				<Image ID="CivIconBG" Size="32,32" Offset="34,34">
+					<Image ID="CivIconShadow" Size="24,24" Offset="4,4"/>
+					<Image ID="CivIcon" Size="24,24" Offset="4,4"/>
+				</Image>
+			</Image>
+
+			<!-- Misc Status Icons & Info -->
+			<Stack Anchor="R,C" Offset="60,-10" Padding="4" StackGrowth="Left" >
+				<Label ID="Score" Font="TwCenMT16" FontStyle="Stroke" Color0="Beige,255" Color1="Black,155"/>
+				<Label ID="TheirTradeItems" Font="TwCenMT16" FontStyle="Stroke" Color0="Beige,255" Color1="Black,155"/> 
+			</Stack>
+			<Stack Anchor="R,C" Offset="60,10" Padding="4" StackGrowth="Left" >
+				<Button ID="Connection" Anchor="C,C" Size="24,24" NoStateChange="1" Texture="MarcPips.dds"/>
+				<Image ID="Diplomacy" Anchor="C,C" Texture="Diplomacy_24.dds" Size="24,24"/>
+				<Label ID="Gold" Anchor="C,C" Font="TwCenMT16" FontStyle="Stroke" Color0="Gold,255" Color1="Black,155"/>
+				<Label ID="OurTradeItems" Anchor="C,C" Font="TwCenMT16" FontStyle="Stroke" Color0="Beige,255" Color1="Black,155"/> 
+			</Stack>
+			<!-- Icon Flags -->
+			<Label ID="DeclarationOfFriendship" Anchor="C,C" Offset="21,-18" String="[ICON_FLOWER]"/>
+			<Label ID="ResearchAgreement" Anchor="C,C" Offset="-21,17" String="[ICON_RESEARCH]"/>
+			<Label ID="DefenseAgreement" Anchor="C,C" Offset="21,-2" String="[ICON_STRENGTH]"/>
+			<Label ID="TheirBordersClosed" Anchor="C,C" Offset="-22,-18" Font="TwCenMT16" FontStyle="Stroke" Color0="255,0,0,255" Color1="Black,155" String=">"/>
+			<Label ID="OurBordersClosed" Anchor="C,C" Offset="-22,-4" Font="TwCenMT16" FontStyle="Stroke" Color0="255,0,0,255" Color1="Black,155" String="<"/>
+			<Label ID="TheirBordersOpen" Anchor="C,C" Offset="-22,-18" Font="TwCenMT16" FontStyle="Stroke" Color0="0,255,0,255" Color1="Black,155" String=">"/>
+			<Label ID="OurBordersOpen" Anchor="C,C" Offset="-22,-4" Font="TwCenMT16" FontStyle="Stroke" Color0="0,255,0,255" Color1="Black,155" String="<"/>
+			<Label ID="ActivePlayer" Anchor="C,C" Offset="-21,-17" String="[ICON_CAPITAL]"/>
+			<Label ID="TeamIcon" Anchor="C,C" Offset="21,18" String="[ICON_TEAM_1]"/>
+			<Label ID="War" Anchor="C,C" Offset="-21,17" String="[ICON_WAR]"/>
+<!--
+			<Label ID="ActivePlayer" Anchor="C,C" Offset="-21,-17" String="[ICON_CAPITAL]"/>
+			<Image ID="DeadIcon" Anchor="C,C" Size="64,64" Texture="Swords64.dds"/>
+			<Image ID="DeclarationOfFriendship" Anchor="C,C" Offset="22,-16" Size="32,32" TextureOffset="32,32" Texture="ResourcesHappy64.dds" ToolTip="{TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP:lower}"/>
+			<Image ID="ResearchAgreement" Anchor="C,C" Offset="-22,16" Size="32,32" Texture="32x32_science.dds" ToolTip="{TXT_KEY_DIPLO_RESCH_AGREEMENT:lower}"/>
+			<Image ID="DefenseAgreement" Anchor="C,C" Offset="22,0" Size="32,32" TextureOffset="32,32" Texture="ResourcesStrategic64.dds" ToolTip="{TXT_KEY_DIPLO_DEF_PACT:lower}"/>
+			<Label ID="Score" Anchor="C,C" FontStyle="Stroke" String="0"/>
+			<Image ID="ActivePlayer" Anchor="C,C" Offset="-20,-18" Size="32,32" Texture="PlayerIndicator32.dds" ToolTip="TXT_KEY_YOU"/>
+			<Image ID="War" Anchor="C,C" Offset="-20,18" Size="32,32" Texture="Swords32.dds" ToolTip="TXT_KEY_WAR_CAPS"/>
+-->
+		</Button>
+	</Instance>
+
+	<Instance Name="CityStateInstance" >
+		<Button ID="Button" Size="32,32" Texture="32x32CityWorker.dds">
+			<!-- Minor Icon -->
+			<Image ID="Active" Offset="-11,-11" Size="54,54" Texture="CivColor54x54Overlay.dds" BranchAlpha="4" Hidden="1"/>
+			<Image ID="Portrait" Texture="CityStateMeterBlack32.dds" Size="32,32"/>
+			<Image ID="StatusIcon" Texture="CityStateMilitaristic.dds" Size="32,32"/>
+			<!-- Misc Status Icons & Info -->
+			<Image ID="Pledge1" Offset="15,12" Size="22,22" TextureOffset="176,0" Texture="FontIcons.dds" Hidden="1" Color="255.200.200.255"/>
+			<Image ID="Pledge2" Offset="15,12" Size="22,22" TextureOffset="176,0" Texture="FontIcons.dds" Hidden="1"/>
+			<Label ID="War" Offset="14,13" String="[ICON_WAR]"/>
+			<Stack Anchor="R,C" Offset="32,0" StackGrowth="Left" >
+				<!-- Ally Civ Icon -->
+				<Container ID="Ally" Anchor="R,C" Size="26,22" >
+					<Image ID="AllyBG"  Anchor="C,C" Size="32,32">
+						<Image ID="AllyShadow" Size="24,24" Offset="4,4"/>
+						<Image ID="AllyIcon" Size="24,24" Offset="4,4"/>
+					</Image>
+				</Container>
+				<TextButton ID="Spy" Anchor="R,C" String="[ICON_SPY]"/>
+				<TextButton ID="Quests" Anchor="R,C"/>
+			</Stack>
+		</Button>
+	</Instance>
+
+	<Label ID="HotJoinNotice" Anchor="C,C" Font="TwCenMT24" ColorSet="Beige_Black_Alpha" FontStyle="Stroke" String="TXT_KEY_MP_HOT_JOIN_NOTICE" Hidden="1"/>
+	<LuaContext ID="ConfirmKick" FileName="ConfirmKick" Hidden="1"/>
+
+</Context>

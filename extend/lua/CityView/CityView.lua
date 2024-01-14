@@ -2151,7 +2151,7 @@ function OnCityViewUpdate()
 
 
 		----------------------------------------land----------------------------------------
-		local domainAirID = GameInfo.Domains["DOMAIN_AIR"].ID
+		--[[local domainAirID = GameInfo.Domains["DOMAIN_AIR"].ID
 		local domainLandID = GameInfo.Domains["DOMAIN_LAND"].ID
 	    local domainSeaID = GameInfo.Domains["DOMAIN_SEA"].ID
 
@@ -2175,7 +2175,7 @@ function OnCityViewUpdate()
 		Controls.SeaXpLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_XP_TEXT", XPSea) );
 
 		----------------------------------------air----------------------------------------
-		Controls.AirXpLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_XP_TEXT", XPAir) );
+		Controls.AirXpLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_XP_TEXT", XPAir) );]]
 	----------------------------------------end----------------------------------------
 
 
@@ -2524,19 +2524,19 @@ function DoUpdateUpperLeftTooltips()
 	--新增land 
 
 
-	local strLandToolTip = GetLandXpTooltip(pCity);
-	Controls.LandBox:SetToolTipString(strLandToolTip);
+	--local strLandToolTip = GetLandXpTooltip(pCity);
+	--Controls.LandBox:SetToolTipString(strLandToolTip);
 	--end addition
 
 
 	--新增sea
-	local strSeaToolTip = GetSeaXpTooltip(pCity);
-	Controls.SeaBox:SetToolTipString(strSeaToolTip);
+	--local strSeaToolTip = GetSeaXpTooltip(pCity);
+	--Controls.SeaBox:SetToolTipString(strSeaToolTip);
 	--end addition
 
 	--新增air
-	local strAirToolTip = GetAirXpTooltip(pCity);
-	Controls.AirBox:SetToolTipString(strAirToolTip);
+	--local strAirToolTip = GetAirXpTooltip(pCity);
+	--Controls.AirBox:SetToolTipString(strAirToolTip);
 	--end addition
 
 	local strTourismToolTip = GetTourismTooltip(pCity);
@@ -3459,7 +3459,7 @@ Controls.BTNCityAuto:RegisterCheckHandler(OnCityAutomation)
 
 
 --Player:GetCityGAPTooltip
-function GetLandXpTooltip(city)
+--[[function GetLandXpTooltip(city)
 local domainLandID = GameInfo.Domains["DOMAIN_LAND"].ID
 local XP = city:GetFreeExperience()
 local XP2 = Players[city:GetOwner()]:GetFreeExperience()  
@@ -3490,7 +3490,7 @@ local XP3 = city:GetSpecialistFreeExperience()
 local XP4 = city:GetDomainFreeExperience(domainAirID)+city:GetDomainFreeExperienceFromGreatWorks(domainAirID)+city:GetDomainFreeExperienceFromGreatWorksGlobal(domainAirID) +Players[city:GetOwner()]:GetDomainFreeExperience(domainAirID)
 local XPAir = XP+ XP2+ XP3+ XP4
 return Locale.ConvertTextKey("TXT_KEY_ROG_CITYVIEW_AIR_TEXT_TT",XPAir)
-end	
+end	]]
 
 
 
