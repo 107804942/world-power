@@ -590,7 +590,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			end
 
 			------新增黄金时代加成
-			iModifier = pMyUnit:GoldenAgeMod();
+			iModifier = pMyUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pMyPlayer:IsGoldenAge()) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS");
@@ -748,14 +748,6 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 			
-			-- Civ Trait Bonus
-			iModifier = pMyPlayer:GetTraitGoldenAgeCombatModifier();
-			if (iModifier ~= 0 and pMyPlayer:IsGoldenAge()) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE" );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-			end
-
 			iModifier = pMyPlayer:GetTraitCityStateCombatModifier();
 			if (iModifier ~= 0 and pTheirPlayer:IsMinorCiv()) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1651,7 +1643,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 			------新增黄金时代加成
-			iModifier = pMyUnit:GoldenAgeMod();
+			iModifier = pMyUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pMyPlayer:IsGoldenAge()) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS");
@@ -2090,14 +2082,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 
-			-- Civ Trait Bonus
-			iModifier = pMyPlayer:GetTraitGoldenAgeCombatModifier();
-			if (iModifier ~= 0 and pMyPlayer:IsGoldenAge()) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE" );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-			end
-
 			iModifier = pMyPlayer:GetTraitCityStateCombatModifier();
 			if (iModifier ~= 0 and pTheirPlayer:IsMinorCiv()) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -2351,7 +2335,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			--end
 
 			------新增黄金时代加成
-			iModifier = pTheirUnit:GoldenAgeMod();
+			iModifier = pTheirUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pTheirPlayer:IsGoldenAge()) then
 				controlTable = g_TheirCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS");
@@ -2824,14 +2808,6 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					end
 				end
 
-				
-				-- Civ Trait Bonus
-				iModifier = pTheirPlayer:GetTraitGoldenAgeCombatModifier();
-				if (iModifier ~= 0 and pTheirPlayer:IsGoldenAge()) then
-					controlTable = g_TheirCombatDataIM:GetInstance();
-					controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE" );
-					controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
-				end
 				iModifier = pTheirPlayer:GetTraitCityStateFriendshipModifier();
 				if (iModifier ~= 0) then
 					controlTable = g_TheirCombatDataIM:GetInstance();
@@ -3147,7 +3123,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			end
 		
 			------新增黄金时代加成
-			iModifier = theirUnit:GoldenAgeMod();
+			iModifier = theirUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pTheirPlayer:IsGoldenAge()) then
 				controlTable = g_TheirCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GOLDENAGE_BONUS");
@@ -3355,14 +3331,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CITY_SAPPED" );
 			controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 		end
-		
-		-- Civ Trait Bonus
-		iModifier = theirPlayer:GetTraitGoldenAgeCombatModifier();
-		if (iModifier ~= 0 and theirPlayer:IsGoldenAge()) then
-			controlTable = g_TheirCombatDataIM:GetInstance();
-			controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_BONUS_GOLDEN_AGE" );
-			controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
-		end
+
 		iModifier = theirPlayer:GetTraitCityStateFriendshipModifier();
 		if (iModifier ~= 0) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
