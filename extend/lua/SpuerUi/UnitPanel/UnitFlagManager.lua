@@ -40,6 +40,20 @@ local g_SelectedContainer     = ContextPtr:LookUpControl("../SelectedUnitContain
 local g_SelectedFlag          = nil;
 local CityWorldPositionOffset = { x = 0, y = 0, z = 35 };
 
+
+
+--==========================================================
+-- rog
+--==========================================================
+
+local UnitFlagToolTipCall = LuaEvents.UnitFlagToolTip.Call
+local function UnitFlagToolTip( button )
+	button:SetToolTipCallback( UnitFlagToolTipCall )
+	button:SetToolTipType( "EUI_UnitTooltip" )
+end
+
+
+
 local g_UnitFlagClass         =
 {
     ------------------------------------------------------------------
@@ -534,11 +548,9 @@ local g_UnitFlagClass         =
         if pUnit == nil then
             return;
         end    
-        self.m_Instance.NormalButton:SetToolTipCallback(TipHandler);
-        self.m_Instance.HealthBarButton:SetToolTipCallback(TipHandler);
 
-		self.m_Instance.NormalButton:SetToolTipType( "ROG_UnitTooltip" )
-        self.m_Instance.HealthBarButton:SetToolTipType( "ROG_UnitTooltip" )
+		self.m_Instance.NormalButton:SetToolTipCallback(UnitFlagToolTip);   ----简化
+        self.m_Instance.HealthBarButton:SetToolTipCallback(UnitFlagToolTip);  ----简化
     end,
     ------------------------------------------------------------------
     -- used by CheckPolt to maintain the same Plot Units -(CaptainCWB)
@@ -1864,11 +1876,9 @@ function OnActivePlayerChanged(iActivePlayer, iPrevActivePlayer)
                         pFlag.m_Instance.HealthBarButton:SetConsumeMouseOver(false);
                     end
 
-                    -- pFlag.m_Instance.UnitIcon:SetToolTipString( toolTipString );
-                    pFlag.m_Instance.NormalButton:SetToolTipCallback(TipHandler);
-                    pFlag.m_Instance.HealthBarButton:SetToolTipCallback(TipHandler);
-					pFlag.m_Instance.NormalButton:SetToolTipType( "ROG_UnitTooltip" )  --新增
-					pFlag.m_Instance.HealthBarButton:SetToolTipType( "ROG_UnitTooltip" ) --新增
+						pFlag.m_Instance.NormalButton:SetToolTipCallback(UnitFlagToolTip);   ----简化
+                        pFlag.m_Instance.HealthBarButton:SetToolTipCallback(UnitFlagToolTip);  ----简化
+
                     pFlag:UpdateFlagOffset();
                 end
             end
@@ -1878,130 +1888,6 @@ end
 
 Events.GameplaySetActivePlayer.Add(OnActivePlayerChanged);
 
---==========================================================
--- rog
---==========================================================
-include "GameInfoActualCache"
-local GameInfo = GameInfoCache
-
-include "StackInstanceManager"
-include "IconHookup"
-include "ShortUnitTip"
-include "InfoTooltipInclude"
-
-local function GetCivBuilding( civilizationType, buildingClassType )
-	if buildingClassType then
-		if civilizationType and GameInfo.Civilization_BuildingClassOverrides{ CivilizationType = civilizationType, BuildingClassType = buildingClassType }() then
-			local building = GameInfo.Civilization_BuildingClassOverrides{ CivilizationType = civilizationType, BuildingClassType = buildingClassType }()
-			return building and GameInfo.Buildings[ building.BuildingType ]
-		end
-		local buildingClass = GameInfo.BuildingClasses[ buildingClassType ]
-		return buildingClass and GameInfo.Buildings[ buildingClass.DefaultBuilding ]
-	end
-end
-
-local function TextColor( c, s )
-	return c..s.."[ENDCOLOR]"
-end
-
-local function UnitColor( s )
-	return TextColor("[COLOR_UNIT_TEXT]", s)
-end
-
-local function BuildingColor( s )
-	return TextColor("[COLOR_YIELD_FOOD]", s)
-end
-
-local function PolicyColor( s )
-	return TextColor("[COLOR_MAGENTA]", s)
-end
-
-local function TechColor( s )
-	return TextColor("[COLOR_CYAN]", s)
-end
-
-local function BeliefColor( s )
-	return TextColor("[COLOR_WHITE]", s)
-end
 
 
 
-
-local g_UnitTooltipControls = {}
-TTManager:GetTypeControlTable( "ROG_UnitTooltip", g_UnitTooltipControls )
-
----local g_UnitTooltipTimer = Controls.UnitTooltipTimer
-
-	Controls.UnitTooltipTimer:RegisterAnimCallback( function()
-		local controls = g_UnitTooltipControls
-		--controls.PortraitFrame:SetHide( not g_isShowUnitIcon )
-		controls.PortraitFrame:SetHide( false )
-		controls.Details:SetHide( false )
-		controls.IconStack:SetWrapWidth( 32 )
-		controls.IconStack:CalculateSize()
-		controls.PromotionText:SetHide( false )
-		controls.Grid:ReprocessAnchoring()
-		controls.Grid:DoAutoSize()
-	end)
-
-
-local g_PromotionIconIM = StackInstanceManager( "PromotionIcon", "Image", g_UnitTooltipControls.IconStack )
-
---==========================================================
--- Unit Tooltips
---==========================================================
-function TipHandler( button )
-
-    local iPlayer = button:GetVoid1();
-    local iUnit = button:GetVoid2();
-
-    if Players[iPlayer] and Players[iPlayer]:GetUnitByID(iUnit) then
-        local player = Players[iPlayer];
-        local unit = player:GetUnitByID(iUnit);
-		------------------------------------------------------------
-
-		local controls = g_UnitTooltipControls
-		local toolTipString = ShortUnitTip( unit )
-		local playerID = unit:GetOwner()
-		if playerID == Game.GetActivePlayer() and ( unit:IsCombatUnit() or unit:CanAirAttack() ) then
-			toolTipString = toolTipString .."[NEWLINE]".. Locale.ConvertTextKey( "TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ):gsub("%[NEWLINE]"," ")
-		end
-		controls.Text:SetText( toolTipString )
-		local i = 0
-		local promotionText = {}
-		local promotionIcon
-		g_PromotionIconIM:ResetInstances()
-		if not( unit.IsTrade and unit:IsTrade() ) then
-			for unitPromotion in GameInfo.UnitPromotions() do
-				if unit:IsHasPromotion(unitPromotion.ID) and unitPromotion.ShowInUnitPanel ~= 0 then
-					promotionIcon = g_PromotionIconIM:GetInstance()
-					IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image )
-					table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
-				end
-			end
-		end
-
-
-		local iconIndex, iconAtlas = UI.GetUnitPortraitIcon( unit )
-		IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait )
-		CivIconHookup( playerID, 64, controls.CivIcon, controls.CivIconBG, controls.CivIconShadow, false, true )
-		--controls.PortraitFrame:SetHide(false)
-		controls.PortraitFrame:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
-		
-		controls.Details:SetHide( true )
-		controls.PromotionText:SetText( table.concat( promotionText, "[NEWLINE]" ) )
-		controls.PromotionText:SetHide( #promotionText ~= 1 )
-		controls.IconStack:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
-		controls.IconStack:CalculateSize()
-		controls.Grid:ReprocessAnchoring()
-		controls.Grid:DoAutoSize()
-		Controls.UnitTooltipTimer:SetToBeginning()
-        Controls.UnitTooltipTimer:SetPauseTime(0) ---决定晋升图标出现的延迟时间
-		g_UnitTooltipControls.PortraitFrame:SetHide( false )
-		--g_UnitTooltipControls.UnitPortrait:UnloadTexture()  ---保留大红底色方形图
-		Controls.UnitTooltipTimer:Reverse()	
-	end	
-end
-
---==========================================================
-print( "rog ToolTips loaded." )

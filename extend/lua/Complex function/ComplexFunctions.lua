@@ -4,26 +4,10 @@ include("Rog_SaveUtils.lua"); MY_MOD_NAME = "世界强权";
 include("PlotIterators.lua");
 include("FunctionUtilities.lua")
 include("FLuaVector.lua")
-include("IconSupport.lua");
-include("InstanceManager")
-include("CityView.lua")
-include("InfoTooltipInclude");
 
 
-function IsUsingWP()
-	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
-	for _, mod in pairs(Modding.GetActivatedMods()) do
-		if (mod.ID == WPID) then
-			return true
-		end
-	end
-	return false
-end
 
-
-local WpModActive = IsUsingWP()
-
-if    WpModActive  then
+if Game.IsWPActive() then
 
 local ANGEnergy = 
 	{[0] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_0, [1] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_1, 

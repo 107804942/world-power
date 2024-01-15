@@ -2209,7 +2209,7 @@
 			<PortraitIndex>150</PortraitIndex>
 			<WonderSplashImage>MALBORK.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,T</WonderSplashAnchor>
-			<FreePromotion>PROMOTION_GOLDEN_BUFF</FreePromotion>
+			<GoldenAgeUnitCombatModifier>20</GoldenAgeUnitCombatModifier>
 		</Row>
 
 		<!--凡尔赛宫-->

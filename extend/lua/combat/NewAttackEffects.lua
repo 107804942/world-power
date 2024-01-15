@@ -6,23 +6,6 @@ include("Rog_SaveUtils.lua"); MY_MOD_NAME = "世界强权";
 --新效果
 --------------------------------------------------------------------------------------------------------------------------
 
-function IsUsingWP()
-	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
-	for _, mod in pairs(Modding.GetActivatedMods()) do
-		if (mod.ID == WPID) then
-			return true
-		end
-	end
-	return false
-end
-
-local WpModActive = IsUsingWP()
-
-
-function PositionCalculator(i1, i2)
-	return HexToWorld(ToHexFromGrid(Vector2(i1, i2)))
-end
-
 
 local NewAttackOff = GameInfo.SPNewEffectControler.SP_NEWATTACK_OFF.Enabled
 local UnitDeathCounterOff = GameInfo.SPNewEffectControler.UNIT_DEATH_COUNTER_OFF.Enabled

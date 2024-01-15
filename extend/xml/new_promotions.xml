@@ -2071,20 +2071,6 @@
 
 
 
-		<!--反物质-->
-		<Row>
-			<Type>PROMOTION_ANTIMATTER_EXPLOSION</Type>
-			<Description>TXT_KEY_PROMOTION_ANTIMATTER_EXPLOSION</Description>
-			<Help>TXT_KEY_PROMOTION_ANTIMATTER_EXPLOSION_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ANTIMATTER_EXPLOSION</PediaEntry>
-		</Row>
 
 
 	</UnitPromotions>
@@ -4578,21 +4564,6 @@
 		</Row>
 
 
-		<!--*************黄金时代战斗力加成**************-->
-		<Row>
-			<Type>PROMOTION_GOLDEN_BUFF</Type>
-			<Description>TXT_KEY_PROMOTION_GOLDEN_BUFF</Description>
-			<Help>TXT_KEY_PROMOTION_GOLDEN_BUFF_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_GOLDEN_BUFF</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
-			<GoldenAgeMod>20</GoldenAgeMod>
-		</Row>
 
 
 	</UnitPromotions>

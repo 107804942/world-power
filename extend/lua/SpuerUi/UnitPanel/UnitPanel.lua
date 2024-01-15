@@ -769,10 +769,13 @@ end
  		Controls.XPFrame:SetHide( true );
    end
 
-  
-	 ---Controls.UnitPortraitButton:SetToolTipString(strToolTip);
-	 Controls.UnitPortraitButton:SetToolTipCallback(ToolTipHandler);---新增
-	 Controls.UnitPortraitButton:SetToolTipType( "NEW_UnitTooltip" ) ---新增
+
+
+	 local UnitToolTipCall = LuaEvents.UnitToolTip.Call
+	Controls.UnitPortraitButton:SetToolTipCallback( function( control )
+    control:SetToolTipCallback( function() return UnitToolTipCall( UI.GetHeadSelectedUnit(), Locale.ConvertTextKey("TXT_KEY_CURRENTLY_SELECTED_UNIT"), "----------------" ) end )
+	control:SetToolTipType( "EUI_UnitTooltip" )
+	end)
     
     local thisUnitInfo = GameInfo.Units[unit:GetUnitType()];
 	--local flagOffset, flagAtlas = UI.GetUnitFlagIcon(unit);	    
@@ -2412,84 +2415,8 @@ OnInfoPaneDirty();
 
 
 
---==========================================================
--- 夏皮罗的棒子
--- Compatible with EUI v1.29i using switches
---==========================================================
-include "GameInfoActualCache"
-local GameInfo = GameInfoCache
-
-include "StackInstanceManager"
-include "IconHookup"
-include "ShortUnitTip"
-include "InfoTooltipInclude"
 
 
-local g_TooltipControls = {}
-TTManager:GetTypeControlTable( "NEW_UnitTooltip", g_TooltipControls )
-
-
-	Controls.UnittipTimer:RegisterAnimCallback( function()
-		local controls = g_TooltipControls
-		controls.PortraitFrame2:SetHide( false )
-		controls.Details2:SetHide( false )
-		controls.IconStack2:SetWrapWidth( 32 )
-		controls.IconStack2:CalculateSize()
-		controls.PromotionText2:SetHide( false )
-		controls.Grid2:ReprocessAnchoring()
-		controls.Grid2:DoAutoSize()
-	end)
-
-
-local N_PromotionIconIM = StackInstanceManager( "PromotionIcon2", "Image", g_TooltipControls.IconStack2 )
-
-
---==========================================================
--- Unit Tooltips
---==========================================================
-function ToolTipHandler( button )
-    local player = Players[ button:GetVoid1()]
-	local unit = UI.GetHeadSelectedUnit()
-	local g_MaxDamage = unit:GetMaxHitPoints();
-		
-		local controls = g_TooltipControls
-		local toolTipString = UnitPlaneTip( unit ) 
-		local playerID = unit:GetOwner()
-
-		controls.Text2:SetText( toolTipString )
-		local i = 0
-		local promotionText = {}
-		local promotionIcon
-		N_PromotionIconIM:ResetInstances()
-		if not( unit.IsTrade and unit:IsTrade() ) then
-			for unitPromotion in GameInfo.UnitPromotions() do
-				if unit:IsHasPromotion(unitPromotion.ID) and unitPromotion.ShowInUnitPanel ~= 0 then
-					promotionIcon = N_PromotionIconIM:GetInstance()
-					IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image )
-					table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
-				end
-			end
-		end
-
-		local iconIndex, iconAtlas = UI.GetUnitPortraitIcon( unit )
-		IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait2 )
-		CivIconHookup( playerID, 64, controls.CivIcon2, controls.CivIconBG2, controls.CivIconShadow2, false, true )
-		controls.PortraitFrame2:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
-	
-		controls.Details2:SetHide( true )
-		controls.PromotionText2:SetText( table.concat( promotionText, "[NEWLINE]" ) )
-		controls.PromotionText2:SetHide( #promotionText ~= 1 )
-		controls.IconStack2:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
-		controls.IconStack2:CalculateSize()
-		controls.Grid2:ReprocessAnchoring()
-		controls.Grid2:DoAutoSize()
-		Controls.UnittipTimer:SetToBeginning()
-        Controls.UnittipTimer:SetPauseTime(0) 
-		g_TooltipControls.PortraitFrame2:SetHide( false )
-		Controls.UnittipTimer:Reverse()		
-end
-
---==========================================================
 
 
 

@@ -391,7 +391,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 		unitMoves = unitMoves + (item.MovesChange or 0)
 		unitSight = unitSight + (item.VisibilityChange or 0)
 		if  item.ShowInUnitPanel ~= 0 and item.ShowInTooltip ~= 0 then
-			insert( freePromotions, item.IconString2.. L(item.Description) )
+			insert( freePromotions, L(item.Description) )
 			end
 		end
 	end
@@ -1698,7 +1698,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	-- free promotion to units trained in this city
 	item = building.TrainedFreePromotion and GameInfo.UnitPromotions[ building.TrainedFreePromotion ]
 	if item then
-		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL".." ("..L( "TXT_KEY_NOTIFICATION_SUMMARY_CITY_STATE_UNIT_SPAWN", "TXT_KEY_CITY" )..") +"..( item.IconString2 or "?" )..L( item.Help or "???" ) )
+		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL".." ("..L( "TXT_KEY_NOTIFICATION_SUMMARY_CITY_STATE_UNIT_SPAWN", "TXT_KEY_CITY" )..") +"..L( item.Help or "???" ) )
 	end
 
 
@@ -1706,17 +1706,17 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	--ÐÂÔö free promotion for all units *********************************************************************************************************
 	item = building.FreePromotion and GameInfo.UnitPromotions[ building.FreePromotion ]
 	if item then
-		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA".." +"..( item.IconString2 or "?" )..L( item.Help or "???" ) )
+		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA"..L( item.Help or "???" ) )
 	end
 
 	item = building.FreePromotion2 and GameInfo.UnitPromotions[ building.FreePromotion2 ]
 	if item then
-		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA".." +"..( item.IconString2 or "?" )..L( item.Help or "???" ) )
+		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA"..L( item.Help or "???" ) )
 	end
 
 	item = building.FreePromotion3 and GameInfo.UnitPromotions[ building.FreePromotion3 ]
 	if item then
-		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA".." +"..( item.IconString2 or "?" )..L( item.Help or "???" ) )
+		insert( tips, L"TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL_EXTRA"..L( item.Help or "???" ) )
 	end
 
 

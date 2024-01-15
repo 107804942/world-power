@@ -1209,6 +1209,7 @@ Controls.ProductionPortraitButton:RegisterCallback( Mouse.eRClick, OnPortraitRCl
 
 
 
+
 local defaultErrorTextureSheet = "TechAtlasSmall.dds";
 local nullOffset = Vector2( 0, 0 );
 
@@ -1269,9 +1270,9 @@ function AddProductionButton( id, description, orderType, turnsLeft, column, isD
 		end
 		
 	
-          controlTable.Button:SetVoid2(iUnit)
-          controlTable.Button:SetToolTipCallback(ToolTipHandler);---新增
-          controlTable.Button:SetToolTipType( "City_UnitTooltip" ) ---新增
+         controlTable.Button:SetVoid2(iUnit)
+         controlTable.Button:SetToolTipCallback(ToolTipHandler);---新增
+         controlTable.Button:SetToolTipType( "City_UnitTooltip" ) ---新增
 
 		
 	elseif column == 2 or column == 3 then -- we are a building, wonder, or project

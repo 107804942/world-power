@@ -2,21 +2,10 @@
 --Timestamp: 2015.09.11 13:38:51
 
 include("MapGenerator");
+include("FunctionUtilities");
 
 
-
-function IsUsingTNL()
-	local TNLID = "4e394966-aec9-4473-807f-0ddf8c1dddc1"
-	for _, mod in pairs(Modding.GetActivatedMods()) do
-		if (mod.ID == TNLID) then
-			return true
-		end
-	end
-	return false
-end
-
-local TNLModActive = IsUsingTNL()
-if   TNLModActive  then
+if  Game.IsTNLActive()  then
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 

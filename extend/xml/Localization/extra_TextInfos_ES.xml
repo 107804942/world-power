@@ -5160,13 +5160,6 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF">
-			<Text>盛世</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_GOLDEN_BUFF_HELP">
-			<Text>处于黄金时代时单位+20%[ICON_STRENGTH]战斗力。</Text>
-		</Row>
-
 
 		<!--Smithsonian Institute-->
 		<Row Tag="TXT_KEY_BUILDING_SMITHSONIAN">

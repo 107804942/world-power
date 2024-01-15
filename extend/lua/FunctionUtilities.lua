@@ -1,4 +1,31 @@
 
+include("FLuaVector.lua")
+
+--Game.IsModActive
+function Game.IsModActive(modID)
+	for _, mod in pairs(Modding.GetActivatedMods()) do
+			if mod.ID == modID then
+			return true
+		end
+	end
+	return false
+end
+
+--Game.IsWPActive
+function Game.IsWPActive()
+		return Game.IsModActive("41450919-c52c-406f-8752-5ea34be32b2d")
+end
+
+--Game.IsTNLActive
+function Game.IsTNLActive()
+		return Game.IsModActive("4e394966-aec9-4473-807f-0ddf8c1dddc1")
+end
+
+function PositionCalculator(i1, i2)
+	return HexToWorld(ToHexFromGrid(Vector2(i1, i2)))
+end
+
+
 function IsNotEnemySpaceShipPlot(pUnit,plot)
         if plot == nil then
         return false
@@ -182,9 +209,6 @@ end
 
 
 
-function PositionCalculator(i1, i2)
-	return HexToWorld(ToHexFromGrid(Vector2(i1, i2)))
-end
 
 
 
@@ -516,33 +540,7 @@ end
 		
 
 
-
--- ****************************************
--- 是否和平
--- ****************************************	
---Team:GetAtWarCount(bool ignoreMinors)
---Player:IsAtPeace() 
---Player:IsAtPeaceAllMajors() const
---Player:IsAtPeaceAllMinors()
---Player:IsAtPeaceWith(iPlayer)
---Player:IsAtWarWith(iPlayer)
-
-
--- ****************************************
--- 硅谷城市
--- ****************************************		 
-	 
-function GetGuiGuCity(Player)
- local GuiGuCity = Player:GetCapitalCity() 
- for city in Player:Cities() do
- if  city:IsHasBuilding(GameInfoTypes.BUILDING_GUIGU) then
- GuiGuCity =city
-    end
- end
- return  GuiGuCity
-end	 
-	       
-		   
+	   
 -- ****************************************
 -- 主要宗教
 -- ****************************************		 		   

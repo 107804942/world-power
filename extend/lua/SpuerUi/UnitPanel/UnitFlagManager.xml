@@ -166,34 +166,4 @@
     </Instance>
 
 
-
-<!-- Promotion Instances for unit tooltip -->
-	<Instance Name="PromotionIcon">
-		<Image ID="Image" Size="32,32" Sampler="Linear" />
-	</Instance>
-	
-	<AlphaAnim ID="UnitTooltipTimer" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
-
-	<!-- Unit Tooltip -->
-	<ToolTipType Name="ROG_UnitTooltip" >
-		<Grid ID="Grid" Size="300,50" Padding="5,5" Style="GridBlack8" NoClip="1" >
-			<Stack Offset="12,12" StackGrowth="Down" Padding="8">
-				<Label ID="Text" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-				<Label ID="Details" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-				<Stack ID="PromotionStack" StackGrowth="Right">
-					<Stack ID="IconStack" StackGrowth="Right" WrapGrowth="Bottom" WrapPadding="-6" Padding="-6" WrapWidth="260"/>
-					<Label ID="PromotionText" Offset="0,10" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5" />
-				</Stack>
-			</Stack>
-			<Image ID="PortraitFrame" Offset="-40,-40" AnchorSide="O.i" Texture="256x256Frame.dds" Size="256,256" >
-				<Image ID="UnitPortrait" Size="256,256" />
-				<Image ID="CivIconFrame" Anchor="L,B" Offset="20,20" Size="64,64" Texture="IconFrame64.dds">
-					<Image ID="CivIconBG" Size="64,64"/>
-					<Image ID="CivIconShadow" Size="48,48" Offset="9,9"/>
-					<Image ID="CivIcon" Size="48,48" Offset="8,8"/>
-				</Image>
-			</Image>
-		</Grid>
-	</ToolTipType>
-
 </Context>
