@@ -374,8 +374,9 @@ local function OnEndTurnClicked( isEndTurn, isRemove )
 				print( "UI thinks that we can't end turn, but the notification system disagrees", activePlayer:GetEndTurnBlockingType(), EndTurnState[ activePlayer:GetEndTurnBlockingType() ] )
 			end
 		end
+
 		if isEndTurn then
-			if g_isWorkerFocus then
+			--[[if g_isWorkerFocus then
 				for unit in activePlayer:Units() do
 					if unit:IsWork() and unit:CanMove() then
 						local plot = unit:GetPlot()
@@ -428,7 +429,7 @@ local function OnEndTurnClicked( isEndTurn, isRemove )
 						end
 					end
 				end
-			end
+			end]]
 			return Game.DoControl( GameInfoTypes.CONTROL_ENDTURN )
 		end
 	end

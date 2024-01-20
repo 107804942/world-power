@@ -26,7 +26,7 @@
 			<Combat>15</Combat>
 			<RangedCombat>18</RangedCombat>
 			<Cost>40</Cost>
-			<Moves>4</Moves>
+			<Moves>2</Moves>
 			<Range>2</Range>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
@@ -801,8 +801,8 @@
 			<Type>UNIT_SPACESHIP</Type>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PrereqTech>TECH_EARTH</PrereqTech>
-			<Combat>3000</Combat>
-			<RangedCombat>3000</RangedCombat>
+			<Combat>5000</Combat>
+			<RangedCombat>5000</RangedCombat>
 			<Cost>80000</Cost>
 			<Moves>20</Moves>
 			<Range>20</Range>
@@ -1121,8 +1121,8 @@
 			<AirInterceptRange>5</AirInterceptRange>
 			<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
 			<HurryCostModifier>-1</HurryCostModifier>
-			<Combat>780</Combat>
-			<RangedCombat>870</RangedCombat>
+			<Combat>800</Combat>
+			<RangedCombat>900</RangedCombat>
 			<Cost>15000</Cost>
 			<Moves>5</Moves>
 			<Immobile>0</Immobile>

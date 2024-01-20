@@ -1508,6 +1508,54 @@
 		</Row>
 
 
+		<Row>
+			<Type>PROMOTION_FLANK_1</Type>
+			<Description>TXT_KEY_PROMOTION_FLANK_1</Description>
+			<Help>TXT_KEY_PROMOTION_FLANK_1_HELP</Help>
+			<PromotionPrereqOr1>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_ANTI_TANK</PromotionPrereqOr2>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>5</OrderPriority>
+			<FlankAttackModifier>50</FlankAttackModifier>
+			<RangedFlankAttackModifierPercent>50</RangedFlankAttackModifierPercent>
+			<PortraitIndex>14</PortraitIndex>
+			<IconAtlas>VALERY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_FLANK_1</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_FLANK_2</Type>
+			<Description>TXT_KEY_PROMOTION_FLANK_2</Description>
+			<Help>TXT_KEY_PROMOTION_FLANK_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_FLANK_1</PromotionPrereqOr1>
+			<OrderPriority>5</OrderPriority>
+			<FlankAttackModifier>50</FlankAttackModifier>
+			<RangedFlankAttackModifierPercent>50</RangedFlankAttackModifierPercent>
+			<PortraitIndex>15</PortraitIndex>
+			<IconAtlas>VALERY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_FLANK_2</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_FLANK_3</Type>
+			<Description>TXT_KEY_PROMOTION_FLANK_3</Description>
+			<Help>TXT_KEY_PROMOTION_FLANK_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_FLANK_2</PromotionPrereqOr1>
+			<OrderPriority>5</OrderPriority>
+			<FlankAttackModifier>50</FlankAttackModifier>
+			<RangedFlankAttackModifierPercent>50</RangedFlankAttackModifierPercent>
+			<PortraitIndex>16</PortraitIndex>
+			<IconAtlas>VALERY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_FLANK_3</PediaEntry>
+		</Row>
+		
+		
+		
+		
+
 	</UnitPromotions>
 
 
@@ -1645,6 +1693,19 @@
 
 
 	<UnitPromotions_UnitCombats>
+		<Row>
+			<PromotionType>PROMOTION_FLANK_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLANK_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLANK_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		
 		<Row>
 			<PromotionType>PROMOTION_GUN_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -3881,6 +3942,7 @@
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 			<OnlyDefensive>true</OnlyDefensive>
+			<MovesChange>2</MovesChange>
 			<MoraleBreakChance>100</MoraleBreakChance>
 			<!--<NearbyEnemyCombatMod>-33</NearbyEnemyCombatMod>
 			<NearbyEnemyCombatRange>3</NearbyEnemyCombatRange>-->		

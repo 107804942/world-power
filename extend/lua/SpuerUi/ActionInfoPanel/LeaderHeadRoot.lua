@@ -12,6 +12,7 @@ local GameplayUtilities = GameplayUtilities
 
 include "StackInstanceManager"
 
+include( "InfoTooltipInclude" );
 --==========================================================
 -- Minor lua optimizations
 --==========================================================
@@ -69,12 +70,14 @@ local g_isAnimateOutComplete = false
 local g_isAnimatingIn = false
 local g_bRootWasShownThisEvent = false
 
-local CivilizationStatusToolTip = LuaEvents.CivilizationStatusToolTip.Call
-local civilizationStatusToolTip = function( button )
-	return CivilizationStatusToolTip( button:GetVoid1() )
-end
-Controls.MoodText:SetToolTipType( "EUI_CivilizationTooltip" )
-Controls.MoodText:SetToolTipCallback( function() return CivilizationStatusToolTip( g_diploPlayerID ) end )
+--local CivilizationStatusToolTip = LuaEvents.CivilizationStatusToolTip.Call
+--local civilizationStatusToolTip = function( button )
+	--return CivilizationStatusToolTip( button:GetVoid1() )
+--end
+---Controls.MoodText:SetToolTipType( "EUI_CivilizationTooltip" )
+---Controls.MoodText:SetToolTipCallback( function() return CivilizationStatusToolTip( g_diploPlayerID ) end )
+
+
 
 -- ===========================================================================
 -- Coop War, Denounce, War & Peace
@@ -241,6 +244,11 @@ local function SetupDisplay( diploPlayerID, diploUIstateID, diploMessage, diploD
 	Controls.MoodText:LocalizeAndSetText( moodText, diploLeader.Description )
 	-- /Mood
 
+	---ÐÂÔö
+	local strMoodInfo = GetMoodInfo(g_diploPlayerID);
+    Controls.MoodText:SetToolTipString(strMoodInfo);
+	---end
+
 	SetLeaderSpeech( diploMessage )
 
 	--Initialize buttons
@@ -287,10 +295,6 @@ local function SetupDisplay( diploPlayerID, diploUIstateID, diploMessage, diploD
 			end
 		end
 		Controls.WarButton:SetDisabled( isDisabled )
-		if IsCivBE then
-			Controls.TalkOptionStack:CalculateSize()
-			Controls.TalkOptionStack:ReprocessAnchoring()
-		end
 	end
 	ClosePanels()
 	Controls.ButtonStack:SetHide( not g_canGoBack )
@@ -415,16 +419,7 @@ end)
 ContextPtr:SetShowHideHandler(
 function( isHide, isInit )
 	if isInit then
-		if IsCivBE then
-			-- set blackbar based on %
-			local screenWidth, screenHeight = UIManager:GetScreenSizeVal()
-			local blackBarTopSize			= (screenHeight * .20) / 2		-- slightly less, male model's head is cropped otherwise in min-spec
-			local blackBarBottomSize		= (screenHeight * .26) / 2
-			Controls.BlackBarTop:SetSizeY( blackBarTopSize )
-			Controls.BlackBarBottom:SetSizeY( blackBarBottomSize )
-			Controls.AnimBarTop:SetBeginVal(0, -blackBarTopSize)
-			Controls.AnimBarBottom:SetBeginVal(0, blackBarBottomSize)
-		end
+
 	elseif isHide then
 		UIManager:SetUICursor(g_UICursor) -- hiding screen: make sure we retrun the cursor to the previous state
 	else
@@ -455,124 +450,6 @@ do
 	end)
 end
 
-
--- ===========================================================================
-
-if IsCivBE then
-	-- ===========================================================================
-	--	Animate all controls for when the screen first comes up
-	--	Kicked off by the game engine
-	-- ===========================================================================
-	function OnAnimateIn()
-
-		if g_isAnimatingIn then
-			return
-		end
-
-		-- Reset
-		g_isAnimatingIn = true
-		Controls.AnimBarTop:RegisterAnimCallback( function() end )
-		Controls.AnimBarBottom:RegisterAnimCallback( function() end )
-		Controls.GamestateTransitionAnimOut:SetToBeginning()
-
-		Controls.AnimBarTop:SetToBeginning()
-		Controls.AnimBarBottom:SetToBeginning()
-		Controls.AnimAlphaTop:SetToBeginning()
-		Controls.AnimAlphaBottom:SetToBeginning()
-
-		Controls.AnimBarTop:Play()
-		Controls.AnimBarBottom:Play()
-		Controls.AnimAlphaTop:Play()
-		Controls.AnimAlphaBottom:Play()
-		Controls.BackButton:SetDisabled( false )
-	end
-	Controls.GamestateTransitionAnimIn:RegisterAnimCallback( OnAnimateIn )
-
-	-- ===========================================================================
-	--	Animate all controls for when the screen is being dismissed
-	-- ===========================================================================
-	function OnAnimateOut()
-
-		-- Reset variables for next animation in.
-		g_isAnimatingIn			= false
-		g_isAnimateOutComplete	= false
-		Controls.GamestateTransitionAnimIn:SetToBeginning()
-
-		-- Play controls backwards
-
-		Controls.AnimBarTop:Reverse()
-		Controls.AnimBarTop:Play()
-		Controls.AnimBarTop:RegisterAnimCallback( OnUpdateAnimate )
-
-		Controls.AnimBarBottom:Reverse()
-		Controls.AnimBarBottom:Play()
-		Controls.AnimBarBottom:RegisterAnimCallback( OnUpdateAnimate )
-
-		Controls.AnimAlphaTop:Reverse()
-		Controls.AnimAlphaTop:Play()
-
-		Controls.AnimAlphaBottom:Reverse()
-		Controls.AnimAlphaBottom:Play()
-
-		Controls.BackButton:SetDisabled( true )
-	end
-	Controls.GamestateTransitionAnimOut:RegisterAnimCallback( OnAnimateOut )
-
-	-- ===========================================================================
-	--	Callback, per-frame, for animation
-	-- ===========================================================================
-	function OnUpdateAnimate()
-		if Controls.AnimBarTop:IsStopped() and Controls.AnimBarBottom:IsStopped() then
-			OnAnimateOutComplete()
-		end
-	end
-
-	-- ===========================================================================
-	--	Called once when completed animating out
-	-- ===========================================================================
-	function OnAnimateOutComplete()
-		if g_isAnimateOutComplete then
-			return
-		end
-
-		g_isAnimateOutComplete	= true
-		ContextPtr:SetHide( true )
-		UIManager:DequeuePopup( ContextPtr )
-	end
-
-
-	-- ===========================================================================
-	--	Raised from sub-screens when they are closed
-	-- ===========================================================================
-	function OnLeaderheadPopupClosed()
-
-		-- If the popup screen was raised through the menu, just bring the menu (root) options back
-		-- otherwise dismiss the whole leaderhead system because the pop-up was directly invoked.
-		if g_bRootWasShownThisEvent then
-			Controls.RootOptions:SetHide( false )
-		else
-			UI.SetLeaderHeadRootUp( false )
-			UI.RequestLeaveLeader()
-		end
-	end
-	LuaEvents.LeaderheadPopupClosed.Add( OnLeaderheadPopupClosed )
-
-
-	-- ===========================================================================
-	--	Raised from sub-screens as they exit (e.g., Trade logic)
-	-- ===========================================================================
-	function OnLeaderheadShow()
-		-- If this wasn't shown, ignore the event as it may be raised by shared
-		-- subscreend (e.g., tradelogic in multiplayer.)
-		if g_bRootWasShownThisEvent then
-			Controls.RootOptions:SetHide( false )
-			ContextPtr:SetHide( false )
-		else
-			LuaEvents.LeaderheadPopupClosed()
-		end
-	end
-	LuaEvents.LeaderheadRootShow.Add( OnLeaderheadShow )
-end
 
 -- ===========================================================================
 --	DIPLO PROCESSES TABLE

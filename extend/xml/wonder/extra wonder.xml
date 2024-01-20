@@ -2644,7 +2644,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>92</PortraitIndex>
+			<PortraitIndex>91</PortraitIndex>
 			<WonderSplashImage>SkyCity_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,T</WonderSplashAnchor>
 		</Row>
@@ -2795,8 +2795,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<FreePromotion>PROMOTION_DIABLO</FreePromotion>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>120</PortraitIndex>
 			<WonderSplashImage>DIABLO.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>

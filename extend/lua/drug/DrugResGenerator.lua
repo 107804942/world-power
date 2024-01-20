@@ -1,22 +1,7 @@
 
 include("DrugResGeneratorFunctions.lua");
 
-
-
-
-
-function IsUsingTNLWORLD()
-	local TNLWORLDID = "4e394966-aec9-4473-807f-0ddf8c1dddc1"
-	for _, mod in pairs(Modding.GetActivatedMods()) do
-		if (mod.ID == TNLWORLDID) then
-			return true
-		end
-	end
-	return false
-end
-
-
-local TNLWORLDModActive = IsUsingTNLWORLD()
+include("FunctionUtilities");
 
 
 -- ====================== Regions Boundaries ========================.
@@ -203,7 +188,7 @@ function OnMapResourceGenerator(New_ResourceType , ExecludesTable )
 
 	local resource_option =5
 
-	if not TNLWORLDModActive then
+	if not Game.IsTNLActive() then
 	local resource_option = PreGame.GetMapOption(5); --PreGame.GetMapOption(option.ID) , option.ID for resources option = 5
 	end  
 

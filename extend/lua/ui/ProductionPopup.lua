@@ -876,7 +876,7 @@ function UpdateWindow( city )
 		noProduction = true;
 	end
 	
-	Controls.ProductionPortrait:SetToolTipString( strToolTip );
+	Controls.ProductionPortrait:SetToolTipString( strToolTip ); -------需新增
 	
 	if (not bJustFinishedSomething) then
 		
@@ -1270,6 +1270,8 @@ function AddProductionButton( id, description, orderType, turnsLeft, column, isD
 		end
 		
 	
+
+
          controlTable.Button:SetVoid2(iUnit)
          controlTable.Button:SetToolTipCallback(ToolTipHandler);---新增
          controlTable.Button:SetToolTipType( "City_UnitTooltip" ) ---新增

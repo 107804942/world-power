@@ -250,33 +250,5 @@
 
 
 
-
-
-
-
-
-	<!-- Promotion Instances for unit tooltip -->
-	<Instance Name="PromotionIcon4">
-		<Image ID="Image4" Size="32,32" Sampler="Linear" />
-	</Instance>
-
-	<AlphaAnim ID="UnittipTimer4" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
-
-	<!-- Unit Tooltip -->
-	<ToolTipType Name="City_Tooltip" >
-		<Grid ID="Grid4" Size="300,50" Padding="5,5" Style="GridBlack8" NoClip="1" >
-			<Stack Offset="12,12" StackGrowth="Down" Padding="8">
-				<Label ID="Text4" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-				<Label ID="Details4" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-				<Stack ID="PromotionStack4" StackGrowth="Right">
-					<Stack ID="IconStack4" StackGrowth="Right" WrapGrowth="Bottom" WrapPadding="-6" Padding="-6" WrapWidth="260"/>
-					<Label ID="PromotionText4" Offset="0,10" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5" />
-				</Stack>
-			</Stack>
-			<Image ID="PortraitFrame4" Offset="-40,-40" AnchorSide="O.i" Texture="256x256Frame.dds" Size="256,256" >
-				<Image ID="UnitPortrait4" Size="256,256" />
-			</Image>
-		</Grid>
-	</ToolTipType>
 	
 </Context>

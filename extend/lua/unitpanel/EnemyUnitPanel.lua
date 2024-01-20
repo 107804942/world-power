@@ -1744,103 +1744,46 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 ----------------------------------------------------------------晋升对晋升的显示效果----------------------------------------------------------------
-		-- Promotions
-		local otherPromotions = {};
-		local otherPromotions2 = {};
-		local otherPromotions3 = {};
-			for row in GameInfo.UnitPromotions_PromotionModifiers() do
-			local PromotionInfo = GameInfo.UnitPromotions[row.OtherPromotionType] 
-			local PromotionInfoMain = GameInfo.UnitPromotions[row.PromotionType]
-			if PromotionInfo~=nil then 
-		    if pTheirUnit:IsHasPromotion(PromotionInfo.ID) then
-			if pMyUnit:IsHasPromotion(PromotionInfoMain.ID) then
+		
+		
+		----------------------------------------------------------------------------
+			-- BONUSES FROM UnitPromotions_PromotionModifiers
+			----------------------------------------------------------------------------
+			for row in GameInfo.UnitPromotions() do
+				if pTheirUnit:IsHasPromotion(row.ID) then
+					local mod = pMyUnit:OtherPromotionModifier(row.ID);
+					local attackMod = pMyUnit:OtherPromotionAttackModifier(row.ID);
 
+					if (mod ~= 0) then
+						controlTable = g_MyCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, mod, true, true));
+					end
 
-
-			if (row.Modifier > 0) then
-				row.Modifier = "[COLOR_POSITIVE_TEXT]+" .. row.Modifier .. "[ENDCOLOR]";
-			elseif (row.Modifier < 0) then
-				row.Modifier = "[COLOR_NEGATIVE_TEXT]" .. row.Modifier .. "[ENDCOLOR]";
-			   end
-			
-			if (row.Attack > 0) then
-				row.Attack = "[COLOR_POSITIVE_TEXT]+" .. row.Attack .. "[ENDCOLOR]";
-			elseif (row.Attack < 0) then
-				row.Attack = "[COLOR_NEGATIVE_TEXT]" .. row.Attack .. "[ENDCOLOR]";
+					if (attackMod ~= 0) then
+						controlTable = g_MyCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_ATTACK", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, attackMod, true, true));
+					end
 				end
-			
-	
-			if (row.Defense > 0) then
-				row.Defense = "[COLOR_POSITIVE_TEXT]+" .. row.Defense .. "[ENDCOLOR]";
-			elseif (row.Defense < 0) then
-				row.Defense = "[COLOR_NEGATIVE_TEXT]" .. row.Defense .. "[ENDCOLOR]";
-				end
-			
-			            if row.Modifier~=0 then
-						table.insert( otherPromotions, PromotionInfo.IconString2 .." :  " .. Locale.ConvertTextKey( row.Modifier.. "%" ) );
-						end
-						if row.Attack~=0 then
-						table.insert( otherPromotions2, PromotionInfo.IconString2 .." :  " ..Locale.ConvertTextKey( row.Attack.. "%"  ) );
-						end
-						if row.Defense~=0 then
-						table.insert( otherPromotions3, PromotionInfo.IconString2 .." :  ".. Locale.ConvertTextKey( row.Defense.. "%" ) );
-						end
 
+				if pMyUnit:IsHasPromotion(row.ID) then
+					local mod = pTheirUnit:OtherPromotionModifier(row.ID);
+					local defenseMod = pTheirUnit:OtherPromotionDefenseModifier(row.ID);
+
+					if (mod ~= 0) then
+						controlTable = g_TheirCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_GENERIC", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, mod, false, true));
+					end
+
+					if (defenseMod ~= 0) then
+						controlTable = g_TheirCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_PROMOTION_PROMOTION_DEFENSE", Locale.ConvertTextKey(row.Description));
+						controlTable.Value:SetText(GetFormattedText(strText, defenseMod, false, true));
 					end
 				end
 			end
-		end
-		local promotionText = {};
-		local promotionText2 = {};
-		local promotionText3 = {};
-		for _,promotion in pairs(otherPromotions) do
-			table.insert(promotionText, promotion);
-		end
-		for _,promotion in pairs(otherPromotions2) do
-			table.insert(promotionText2, promotion);
-		end
-		for _,promotion in pairs(otherPromotions3) do
-			table.insert(promotionText3, promotion);
-		end
-
-
-			-- UnitPromotions_PromotionModifiers 
-		    local iModifier =0
-			for row in GameInfo.UnitPromotions_PromotionModifiers() do
-			local PromotionInfo = GameInfo.UnitPromotions[row.OtherPromotionType] 
-			local PromotionInfoMain = GameInfo.UnitPromotions[row.PromotionType] 
-		    if PromotionInfo~=nil then
-		    if pTheirUnit:IsHasPromotion(PromotionInfo.ID) then
-			if pMyUnit:IsHasPromotion(PromotionInfoMain.ID) then
-			iModifier=iModifier+row.Modifier 
-			         end
-			      end
-			   end
-			end
-	      	if (iModifier ~= 0) then
-				controlTable = g_MyCombatDataIM:GetInstance();			
-				controlTable.Text:LocalizeAndSetText( Locale.ConvertTextKey("TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION").."".."[NEWLINE]" ..table.concat( promotionText, "[NEWLINE]" ) );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-            end
-
-   			-- UnitPromotions_PromotionAttack
-		    local iModifier =0
-			for row in GameInfo.UnitPromotions_PromotionModifiers() do
-			local PromotionInfo = GameInfo.UnitPromotions[row.OtherPromotionType] 
-			local PromotionInfoMain = GameInfo.UnitPromotions[row.PromotionType] 
-		    if PromotionInfo~=nil then
-		    if pTheirUnit:IsHasPromotion(PromotionInfo.ID) then
-			if pMyUnit:IsHasPromotion(PromotionInfoMain.ID) then
-			iModifier=iModifier+row.Attack 
-			         end
-			      end
-			   end
-			end
-	      	if (iModifier ~= 0) then
-				controlTable = g_MyCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText( Locale.ConvertTextKey("TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION_ATTACK").."".."[NEWLINE]" ..table.concat( promotionText2, "[NEWLINE]" ) )
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
-            end
 
 
     		
@@ -2237,94 +2180,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-	----------------------------------------------------------------晋升对晋升的显示效果----------------------------------------------------------------
-		-- Promotions
-		local AnotherPromotions = {};
-		local AnotherPromotions3 = {};
-			for row in GameInfo.UnitPromotions_PromotionModifiers() do
-			local PromotionInfo = GameInfo.UnitPromotions[row.OtherPromotionType] 
-			local PromotionInfoMain = GameInfo.UnitPromotions[row.PromotionType]
-			if PromotionInfo~=nil then 
-		    if pTheirUnit:IsHasPromotion(PromotionInfoMain.ID) then
-			if pMyUnit:IsHasPromotion(PromotionInfo.ID) then
-
-
-
-			if (row.Modifier > 0) then
-				row.Modifier = "[COLOR_POSITIVE_TEXT]+" .. row.Modifier .. "[ENDCOLOR]";
-			elseif (row.Modifier < 0) then
-				row.Modifier = "[COLOR_NEGATIVE_TEXT]" .. row.Modifier .. "[ENDCOLOR]";
-			   end
-			
-
-			if (row.Defense > 0) then
-				row.Defense = "[COLOR_POSITIVE_TEXT]+" .. row.Defense .. "[ENDCOLOR]";
-			elseif (row.Defense < 0) then
-				row.Defense = "[COLOR_NEGATIVE_TEXT]" .. row.Defense .. "[ENDCOLOR]";
-				end
-			
-			            if row.Modifier~=0 then
-						table.insert( AnotherPromotions, PromotionInfo.IconString2 .." :  " .. Locale.ConvertTextKey( row.Modifier.. "%" ) );
-						end
-
-						if row.Defense~=0 then
-						table.insert( AnotherPromotions3, PromotionInfo.IconString2 .." :  ".. Locale.ConvertTextKey( row.Defense.. "%" ) );
-						end
-
-					end
-				end
-			end
-		end
-		local AnotherpromotionText = {};
-		local AnotherpromotionText3 = {};
-		for _,promotion in pairs(AnotherPromotions) do
-			table.insert(AnotherpromotionText, promotion);
-		end
-		for _,promotion in pairs(AnotherPromotions3) do
-			table.insert(AnotherpromotionText3, promotion);
-		end
-
-
-			-- UnitPromotions_PromotionModifiers 
-		    local iModifier =0
-			for row in GameInfo.UnitPromotions_PromotionModifiers() do
-			local PromotionInfo = GameInfo.UnitPromotions[row.OtherPromotionType] 
-			local PromotionInfoMain = GameInfo.UnitPromotions[row.PromotionType] 
-		    if PromotionInfo~=nil then
-		    if pTheirUnit:IsHasPromotion(PromotionInfoMain.ID) then
-			if pMyUnit:IsHasPromotion(PromotionInfo.ID) then
-			iModifier=iModifier+row.Modifier 
-			         end
-			      end
-			   end
-			end
-	      	if (iModifier ~= 0) then
-				controlTable = g_TheirCombatDataIM:GetInstance();			
-				controlTable.Text:LocalizeAndSetText( Locale.ConvertTextKey("TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION").."".."[NEWLINE]" ..table.concat(AnotherpromotionText, "[NEWLINE]" ) );
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier,  false, true) );
-            end
-
-
-				-- UnitPromotions_PromotionDefense
-		    local iModifier =0
-			for row in GameInfo.UnitPromotions_PromotionModifiers() do
-			local PromotionInfo = GameInfo.UnitPromotions[row.OtherPromotionType] 
-			local PromotionInfoMain = GameInfo.UnitPromotions[row.PromotionType] 
-		    if PromotionInfo~=nil then
-		    if pTheirUnit:IsHasPromotion(PromotionInfoMain.ID) then
-			if pMyUnit:IsHasPromotion(PromotionInfo.ID) then
-			iModifier=iModifier+row.Defense
-			        end
-			     end
-			  end
-			end
-	      	if (iModifier ~= 0) then
-				controlTable = g_TheirCombatDataIM:GetInstance();
-				controlTable.Text:LocalizeAndSetText( Locale.ConvertTextKey("TXT_KEY_EUPANEL_BONUS_VS_OTHER_PROMOTION_DEFENSE").."".."[NEWLINE]" ..table.concat( AnotherpromotionText3, "[NEWLINE]" ) )
-				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
-            end
-  ----------------------------------------------------------------晋升对晋升的显示效果end----------------------------------------------------------------
-
+	
 
         	------新增高度坐标加成
 			--iModifier = pTheirUnit:GetTotalHeightMod(pFromPlot);

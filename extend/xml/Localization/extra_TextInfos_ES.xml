@@ -6,7 +6,55 @@
 
 	<Language_en_US>
 
+		<!-- MISC EUI tooltips -->
+		<Row Tag="TXT_KEY_CBE91AF606834326BC7758BB489E509F_DESCRIPTION">
+			<Text>Tablet Data 1</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_OPEN_BORDERS_YOUR">
+			<Text>你已对他们开放边境</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_OPEN_BORDERS_THEIR">
+			<Text>他们已对你开放边境</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_CLOSED_BORDERS_YOUR">
+			<Text>你未对他们开放边境</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_CLOSED_BORDERS_THEIR">
+			<Text>他们未对你开放边境</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_BUILT_IN_X_CITIES">
+			<Text> </Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_WONDER_BUILT_BY">
+			<Text>已被{@1_CivName}建造于{@2_CityName}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_UNKNOWN_CITY">
+			<Text>未知城市</Text>
+		</Row>
+		<Row Tag="TXT_KEY_AIR_STRENGTH_DEFENSE">
+			<Text>空袭防御：</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_GLOBAL">
+			<Text>[COLOR_HIGHLIGHT_TEXT]全局[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUI_EMPIRE">
+			<Text>[COLOR_HIGHLIGHT_TEXT]文明[ENDCOLOR]</Text>
+		</Row>
 
+		<Row Tag="TXT_KEY_EUI_RESOURCES_QUANTITY_TOTAL_REQUIRED">
+			<Text>开发需求</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_EUI_RESOURCES_QUANTITY_TOTAL_REQUIRED_UNIT_PANEL">
+			<Text>开发资源需求：</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_RESET_SPEC">
+			<Text>重置专家</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_RESET_SPEC_TT">
+			<Text>点击此处重置当前专家席位</Text>
+		</Row>
 
 		<!-- VOLCANOS -->
 		<Row Tag="TXT_KEY_GAMEOPTION_NEW_VOLCANO">
@@ -8045,6 +8093,29 @@
 		</Row>
 
 
+		<Row Tag="TXT_KEY_PROMOTION_FLANK_1">
+			<Text>夹击一级</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FLANK_1_HELP">
+			<Text>夹击加成+50%。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FLANK_2">
+			<Text>夹击二级</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FLANK_2_HELP">
+			<Text>夹击加成+50%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_FLANK_3">
+			<Text>夹击三级</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_FLANK_3_HELP">
+			<Text>夹击加成+50%。</Text>
+		</Row>
+
 
 		<Row Tag="TXT_KEY_PROMOTION_GUN_2">
 			<Text>器械精通</Text>
@@ -8727,7 +8798,7 @@
 
 		<Row Tag="TXT_KEY_WONDER_NAVAL_ACADEMY_HELP">
 			<Text>
-				新建海军单位+50生命值上限。
+				海军单位+50生命值上限。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_ACADEMY">
@@ -9716,11 +9787,11 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_BLIALI">
-			<Text>投射精通</Text>
+			<Text>投射战术</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_BLIALI_HELP">
 			<Text>
-				攻击次数+2，可攻击后移动。+50%近战[ICON_STRENGTH]防御力，攻击时可造成50%溅射伤害。远程攻击时有100%几率击退敌人，不可近战攻击。
+				攻击次数+2，移动次数+2，可攻击后移动。+50%近战[ICON_STRENGTH]防御力，攻击时可造成50%溅射伤害。远程攻击时有100%几率击退敌人，不可近战攻击。
 			</Text>
 		</Row>
 

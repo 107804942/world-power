@@ -580,6 +580,8 @@ function CityHasHolySite(pCity)
 	end
 end	
 
+
+
 -- 被封锁的地块数
 function GetNumBlockadedPlots(city)
       local numBlockadedPlots = 0

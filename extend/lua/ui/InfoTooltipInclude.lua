@@ -460,7 +460,7 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 
 	-- ÐÂÔöAbilities:	--TXT_KEY_PEDIA_FREEPROMOTIONS_LABEL
 	if #freePromotions > 0 then
-		insert( tips, L"TXT_KEY_FREEPROMOTIONS".."".."[NEWLINE]" .. concat( freePromotions,"[NEWLINE]" ).."[NEWLINE]----------------" )
+		insert( tips, L"TXT_KEY_FREEPROMOTIONS".."".."[NEWLINE][ICON_BULLET]" .. concat( freePromotions,"[NEWLINE][ICON_BULLET]" ).."[NEWLINE]----------------" )
 	end
 
 	-- Ability to create building in city (e.g. vanilla great general)
@@ -1811,12 +1811,16 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	items = {}
 	-- Yields enhanced by Policy
 	for row in GameInfo.Policy_BuildingClassYieldChanges( thisBuildingClassType ) do
-		if row.PolicyType and (row.YieldChange or 0) ~= 0 then
+		if row.PolicyType and (row.YieldChange or 0) ~= 0 
+			and GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
+			then
 			items[row.PolicyType] = format( "%s %+i%s", items[row.PolicyType] or "", row.YieldChange, YieldIcons[row.YieldType] or "?" )
 		end
 	end
 	for row in GameInfo.Policy_BuildingClassCultureChanges( thisBuildingClassType ) do
-		if row.PolicyType and (row.CultureChange or 0) ~= 0 then
+		if row.PolicyType and (row.CultureChange or 0) ~= 0 
+		and GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
+		then
 			items[row.PolicyType] = format( "%s %+i[ICON_CULTURE]", items[row.PolicyType] or "", row.CultureChange )
 		end
 	end
@@ -1841,7 +1845,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 		end
 		for row in GameInfo.Policy_BuildingClassHappiness( thisBuildingClassType ) do
-			if row.PolicyType and (row.Happiness or 0) ~= 0 then
+			if row.PolicyType and (row.Happiness or 0) ~= 0 
+			and GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
+			then
 				items[row.PolicyType] = format( "%s %+i[ICON_HAPPINESS_1]", items[row.PolicyType] or "", row.Happiness )
 			end
 		end
@@ -2034,7 +2040,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	-- Production Modifiers
 	for row in GameInfo.Policy_BuildingClassProductionModifiers( thisBuildingClassType ) do
 		local policy = GameInfo.Policies[ row.PolicyType ]
-		if policyFilter( policy ) and (row.ProductionModifier or 0) ~= 0 then
+		if policyFilter( policy ) and (row.ProductionModifier or 0) ~= 0 
+		and policy.Dummy~=1  --New
+		then
 			insert( tips, format( "[ICON_BULLET]%s +%i%%[ICON_PRODUCTION]", PolicyColor( L(policy.Description) ), row.ProductionModifier ) )
 		end
 	end
@@ -2573,10 +2581,16 @@ function GetHelpTextForImprovement( improvementID )
 	items = {}
 	condition = { ImprovementType = improvement.Type }
 	for row in GameInfo.Policy_ImprovementYieldChanges( thisImprovementType ) do
+		if GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
+		then
 		SetKey( items, row.PolicyType )
+		end
 	end
 	for row in GameInfo.Policy_ImprovementCultureChanges( thisImprovementType ) do
+		if GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
+		then
 		SetKey( items, row.PolicyType )
+		end
 	end
 	for policyType in pairs( items ) do
 		item = GameInfo.Policies[ policyType ]
@@ -4373,7 +4387,9 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 	if IsCiv5BNW then
 		for row in GameInfo.Policy_TourismOnUnitCreation( thisUnitClass ) do
 			item = GameInfo.Policies[ row.PolicyType ]
-			if item and (row.Tourism or 0)~=0 then
+			if item and (row.Tourism or 0)~=0 
+			and item.Dummy~=1  --New
+			then
 				insert( tips, format( "[ICON_BULLET]%s %+i[ICON_TOURISM]", PolicyColor( L(item.Description) ), row.Tourism ) )
 			end
 		end
@@ -4477,7 +4493,9 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 
 	-- Required Policies:
 	item = unit.PolicyType and GameInfo.Policies[ unit.PolicyType ]
-	if unit.PolicyType then
+	if unit.PolicyType 
+	and GameInfo.Policies[ unit.PolicyType].Dummy~=1  --New 
+	then
 		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
 	end
 

@@ -2722,8 +2722,8 @@
 			<GridX>28</GridX>
 			<GridY>4</GridY>
 			<Quote>TXT_KEY_TECH_OPTICALCOMPUTERS_QUOTE</Quote>
-			<PortraitIndex>120</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>121</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 
@@ -2794,8 +2794,8 @@
 			<GridX>29</GridX>
 			<GridY>1</GridY>
 			<Quote>TXT_KEY_TECH_FW_COGNITIVE_QUOTE</Quote>
-			<PortraitIndex>132</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>98</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 

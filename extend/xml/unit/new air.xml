@@ -130,7 +130,7 @@
 			<Class>UNITCLASS_DRONE_FIGHTER</Class>
 			<Type>UNIT_DRONE_FIGHTER</Type>
 			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
-			<RangedCombat>780</RangedCombat>
+			<RangedCombat>800</RangedCombat>
 			<Cost>8000</Cost>
 			<Moves>2</Moves>
 			<Immobile>true</Immobile>

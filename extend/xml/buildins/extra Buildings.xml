@@ -787,8 +787,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>75</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>67</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>99</PortraitIndex>
 			</Row>
 			
 			
@@ -1458,8 +1458,8 @@
 				<SpecialistCount>2</SpecialistCount>
 				<ConquestProb>100</ConquestProb>
 				<HurryCostModifier>120</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-				<PortraitIndex>91</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>120</PortraitIndex>
 				<GoldMaintenance>100</GoldMaintenance>
 			</Row>
 
