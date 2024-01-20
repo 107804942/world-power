@@ -742,7 +742,6 @@
     <Folder Include="extend\xml" />
     <Folder Include="extend\xml\extra Resources" />
     <Folder Include="extend\xml\extra Resources\Art Defines" />
-    <Folder Include="extend\xml\extra Resources\Art Defines\policies\" />
     <Folder Include="extend\xml\extra Resources\Improvements" />
     <Folder Include="extend\xml\extra Resources\Resources" />
     <Folder Include="extend\xml\Terrain" />
@@ -21198,10 +21197,6 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\xml\Buinding Effect.sql">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\xml\extra Resources\Art Defines\policies\new policieseffect.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
