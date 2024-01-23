@@ -866,8 +866,8 @@
 		<Row>
 			<Type>BUILDING_KARRUPP</Type>
 			<BuildingClass>BUILDINGCLASS_KARRUPP</BuildingClass>
-			<Cost>3500</Cost>
-			<PrereqTech>TECH_BLITZKRIEG</PrereqTech>
+			<Cost>2500</Cost>
+			<PrereqTech>TECH_DYNAMITE</PrereqTech>
 			<Description>TXT_KEY_BUILDING_KARRUPP</Description>
 			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_KARRUPP_TEXT</Civilopedia>
 			<Help>TXT_KEY_BUILDING_KARRUPP_HELP</Help>

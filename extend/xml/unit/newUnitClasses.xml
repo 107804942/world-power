@@ -272,29 +272,6 @@
 		
 		
 
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_ALIEN_SIEGE_WORM</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_ALIEN_SIEGE_WORM</UnitClassType>
-			<UnitType/>
-		</Row>
-
-
-
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_HOVER_WORM</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_HOVER_WORM</UnitClassType>
-			<UnitType/>
-		</Row>
 
 
 
@@ -507,6 +484,31 @@
 			<UnitType/>
 		</Row>
 
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_ALIEN_SIEGE_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_ALIEN_SIEGE_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+
+
+
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_HOVER_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_HOVER_WORM</UnitClassType>
+			<UnitType/>
+		</Row>
+		
 
 
 		<Row>

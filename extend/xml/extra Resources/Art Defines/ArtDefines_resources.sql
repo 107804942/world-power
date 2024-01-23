@@ -49,7 +49,7 @@ INSERT INTO ArtDefine_Landmarks (Era,				State,						Scale,		ImprovementType,			
 -------------------------------------œı Ø-------------------------------------------------------
 
 INSERT INTO ArtDefine_StrategicView (StrategicViewType,				TileType,			Asset) Values
-									('ART_DEF_RESOURCE_TIN',		'Resource',	'sv_new_resource.dds');
+									('ART_DEF_RESOURCE_TIN',		'Resource',	'sv_Tin.dds');
 
 
 INSERT INTO ArtDefine_LandmarkTypes (Type,										LandmarkType,	FriendlyName) VALUES			
@@ -69,7 +69,7 @@ INSERT INTO ArtDefine_Landmarks (Era,				State,						Scale,		ImprovementType,			
 -------------------------------------¡Úª«-------------------------------------------------------
 
 INSERT INTO ArtDefine_StrategicView (StrategicViewType,				TileType,			Asset) Values
-									('ART_DEF_RESOURCE_SULFUR',		'Resource',	'sv_new_resource.dds');
+									('ART_DEF_RESOURCE_SULFUR',		'Resource',	'sv_Sulfur.dds');
 
 
 INSERT INTO ArtDefine_LandmarkTypes (Type,										LandmarkType,	FriendlyName) VALUES			

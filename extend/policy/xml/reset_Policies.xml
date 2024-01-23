@@ -861,7 +861,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_INDUSTRY_4</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_WEIGH_HOUSE</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_MINGING_FACTORY</BuildingClassType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<YieldChange>3</YieldChange>
 		</Row>

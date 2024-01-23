@@ -856,3 +856,19 @@ alter table UnitPromotions add column 'SiegeInflictDamageChangeMaxHPPercent' int
 <ExtraResourceType>RESOURCE_HORSE</ExtraResourceType>
 			<ExtraResourceCombatModifier>1</ExtraResourceCombatModifier>
 			<ExtraResourceCombatModifierMax>25</ExtraResourceCombatModifierMax>
+
+
+
+
+
+
+
+
+
+
+	<Table name="GreatWorkYieldModifiers">
+		<Column name="GreatType" type="text" reference="GreatWorks(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+

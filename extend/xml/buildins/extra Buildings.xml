@@ -701,25 +701,6 @@
 
 
 
-			<!--称重房-->
-			<Row>
-				<Type>BUILDING_WEIGH_HOUSE</Type>
-				<BuildingClass>BUILDINGCLASS_WEIGH_HOUSE</BuildingClass>
-				<Cost>250</Cost>
-				<PrereqTech>TECH_MANUFACTURING</PrereqTech>
-				<Help>TXT_KEY_BUILDING_WEIGH_HOUSE_HELP</Help>
-				<Description>TXT_KEY_BUILDING_WEIGH_HOUSE</Description>
-				<Civilopedia>TXT_KEY_BUILDING_WEIGH_HOUSE_PEDIA</Civilopedia>
-				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>FORGE</ArtDefineTag>
-				<MinAreaSize>-1</MinAreaSize>
-				<ConquestProb>66</ConquestProb>
-				<HurryCostModifier>25</HurryCostModifier>
-				<TradeRouteSeaGoldBonus>100</TradeRouteSeaGoldBonus>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>234</PortraitIndex>
-			</Row>
-
 
 			
 			<!--炸药厂-->
@@ -1965,10 +1946,6 @@
 
 
 
-		<Row>
-			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
-		</Row>
 
 		<Row>
 			<BuildingType>BUILDING_OIL_WELL</BuildingType>

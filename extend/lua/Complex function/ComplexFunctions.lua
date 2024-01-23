@@ -56,6 +56,58 @@ end
 GameEvents.PlayerDoTurn.Add(SomeUnitEffects)
 
 
+-- **********************************************************************************************************************************************
+-- ∏° Ø’¬”„
+-- **********************************************************************************************************************************************
+local PlagueMissionButton = {
+		Name = "TXT_KEY_NAME_CREAT_PLAGUE",
+		Title = "TXT_KEY_TITLE_CREAT_PLAGUE",
+		OrderPriority = 300,
+		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
+		PortraitIndex = 25,
+		ToolTip = function(action, unit)
+			local sTooltip;
+			local pPlayer = Players[Game:GetActivePlayer()];
+			local bIsValid = CheckPlagueMissionButtonValidity( unit);
+			if bIsValid then
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_CREAT_PLAGUE");
+			else
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_CREAT_PLAGUE_2" );
+			end
+			return sTooltip
+		end, -- or a TXT_KEY_ or a function
+		Condition = function(action, unit)
+			if unit:GetMoves() <= 0 then
+				return false
+			end
+				if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_HOVER_WORM"].ID) then
+					return true
+				else
+					return false
+			end
+			
+		end, -- or nil or a boolean, default is true
+		Disabled = function(action, unit)
+			local bIsValid = CheckPlagueMissionButtonValidity(unit);
+			if bIsValid then
+				return false
+			end
+			return true;
+		end, -- or nil or a boolean, default is false
+		Action = function(action, unit, eClick)
+		if eClick == Mouse.eRClick then
+			return
+		end
+		    local city = unit:GetPlot():GetPlotCity() or unit:GetPlot():GetWorkingCity()
+			if 	city~=nil then
+			unit:SetMoves(0)
+			local zombie = Players[63]:InitUnit(GameInfoTypes["UNIT_ZOMBIE"], city:GetX()+1, city:GetY())
+			zombie:JumpToNearestValidPlot()
+	  end
+  end
+}
+LuaEvents.UnitPanelActionAddin(PlagueMissionButton)
+
 -----------------------------------------------------ª˙º◊-----------------------------------------------------------------------
 
 MechRiotControlButton = {

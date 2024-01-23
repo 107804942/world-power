@@ -5160,19 +5160,7 @@
 		</Replace>
 
 
-		<!--Customs House-->
-		<Row Tag="TXT_KEY_BUILDING_WEIGH_HOUSE">
-			<Text>[ICON_GOLD]计量所</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_WEIGH_HOUSE_HELP">
-			<Text>本城+3[ICON_GOLD]金钱、+25%[ICON_GOLD]金钱产出。本城每个贸易站，海关+1[ICON_GOLD]金钱。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_WEIGH_HOUSE_PEDIA">
-			<Text>计量所是指称重货物的建筑物，以便可以可靠地对城市内的贸易征税，并且可以准确解决有关贸易货物数量和质量的争议。 此类建筑可能由城市、商人行会控制，或者在更罕见的情况下，外国商人在城市内授予特殊特权。 在国际标准测量方法普及之前，典型的称重屋位于城市的市场或中心附近，或者在市政厅、行会大厅或法院内。</Text>
-		</Row>
-
-
-
+	
 
 		<!--Summer Palace-->
 		<Row Tag="TXT_KEY_BUILDING_SUMMER_PALACE">
@@ -5575,12 +5563,11 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_SIGHT">
-			<Text>精确定位</Text>
+			<Text>船舰补给</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_SIGHT_HELP">
-			<Text>海军单位+1视野。</Text>
+			<Text>海军单位每回合恢复15点生命值。</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_CITY_BOMB_HELP">
 			<Text>城市焚毁行动将立即完成。</Text>
@@ -6946,7 +6933,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_TORRE_HELP">
 			<Text>
-				源自该城市的海上贸易路线的航程+50%，并为双方额外提供+4[ICON_GOLD]金钱。全国每个港口+5%[ICON_GOLD]金钱，每个海运码头+10%[ICON_GOLD]金钱，每个计量所+15%[ICON_GOLD]金钱。
+				源自该城市的海上贸易路线的航程+50%，并为双方额外提供+4[ICON_GOLD]金钱。全国每个港口+5%[ICON_GOLD]金钱，每个海运码头+10%[ICON_GOLD]金钱。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_TORRE_QUOTE">
@@ -7588,7 +7575,7 @@
 			<Text>工业主义</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_4_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]工业主义[ENDCOLOR][NEWLINE]建筑维护成本-33%。布厂、计量所、炸药厂+3[ICON_PRODUCTION]产能。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]工业主义[ENDCOLOR][NEWLINE]建筑维护成本-33%。布厂、家具厂、炸药厂+3[ICON_PRODUCTION]产能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_4_TEXT">
 			<Text>

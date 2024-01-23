@@ -198,3 +198,4 @@ end
 GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
 
 
+	

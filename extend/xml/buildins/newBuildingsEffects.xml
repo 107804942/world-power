@@ -1466,12 +1466,6 @@
 		</Row>
 
 
-		<Row>
-			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>1</Cost>
-		</Row>
-
 
 
 		<Row>
@@ -1934,13 +1928,6 @@
 			<BuildingType>BUILDING_CLOTH_MILL</BuildingType>
 			<FlavorType>FLAVOR_GOLD</FlavorType>
 			<Flavor>15</Flavor>
-		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
-			<FlavorType>FLAVOR_GOLD</FlavorType>
-			<Flavor>25</Flavor>
 		</Row>
 
 		<!--炸药厂-->
@@ -2523,14 +2510,7 @@
 		</Row>
 		
 		
-		<Row>
-			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>25</Yield>
-		</Row>
-		
-		
-
+	
 		
 
 		<Row>
@@ -3027,12 +3007,6 @@
 			<Yield>1</Yield>
 		</Row>
 
-
-		<Row>
-			<BuildingType>BUILDING_WEIGH_HOUSE</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>3</Yield>
-		</Row>
 
 
 		<Row>

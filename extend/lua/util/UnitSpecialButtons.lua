@@ -990,6 +990,21 @@ function bUnitCanEstablishCorps(unit)
     or unit:GetPlot():IsWater()
     --CitadelUnits can't establish
     or unit:IsEmbarked() or unit:IsImmobile() or not unit:CanMove()
+
+	or unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_MECH"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_GOLEM"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_CNDR"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_GHOST"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_SIEGE04H"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_LEVDESTROYER"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_ANGEL"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03S"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_NAVAL_MONSTER"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_HOVER_WORM"]
+	or unit:GetUnitType() == GameInfoTypes["UNIT_PARTICLE_CANNON"]
     then
         return false
     end

@@ -186,12 +186,7 @@
 			<DefaultBuilding>BUILDING_CLOTH_MILL</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_CLOTH_MILL</Description>
 		</Row>
-		<!--称重房-->
-		<Row>
-			<Type>BUILDINGCLASS_WEIGH_HOUSE</Type>
-			<DefaultBuilding>BUILDING_WEIGH_HOUSE</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_WEIGH_HOUSE</Description>
-		</Row>
+	
 		
 		
 		<!--炸药厂-->
