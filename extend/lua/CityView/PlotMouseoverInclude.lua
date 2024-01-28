@@ -634,6 +634,12 @@ function GetYieldString(plot)
 		strYield = strYield .. "[ICON_HEALTH] " .. iNumHealth .. " ";
 	end
 
+	   --CRIME
+	local iCRIME = plot:CalculateYield(12, true); 
+	if (iCRIME ~= 0) then
+		strYield = strYield .. "[ICON_CRIME] " .. iCRIME .. " ";
+	end
+
 	---GENERAL
 	local iGENERAL = plot:CalculateYield(8, true); 
 	if (iGENERAL ~= 0) then

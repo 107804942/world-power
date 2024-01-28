@@ -1,17 +1,9 @@
 include("IconSupport")
 include("InstanceManager")
 
-
 -- PLAGUE MOD
 include( "Plague_UI.lua" );
 include( "Health_Events.lua" );
-
-------------------------------------------------------------------
---local bAbandonCity	 = (PreGame.GetGameOption("GAMEOPTION_PLAGUE_DESTROYS_CITIES") == 1)
-
---local plagueThreshold		   = 150
---if Game then plagueThreshold = (GameDefines["HEALTH_PLAGUE_MIN_THRESHOLD_" .. GameInfo.GameSpeeds[Game.GetGameSpeedType()].Type] or 150) end
-
 --------------------------------------------------------------------
 local g_ProductionManager = InstanceManager:new("CityHealth", "City", Controls.HealthStack)
 
@@ -117,8 +109,9 @@ function UpdateData(iPlayer)
 
     instance.Name:RegisterCallback(Mouse.eLClick, function() OnCity(pCity) end)
 
+	local totalHealth = pCity:GetYieldRate(GameInfoTypes["YIELD_HEALTH"])
+	local totalDisease = pCity:GetYieldRate(GameInfoTypes["YIELD_DISEASE"])
 
-	local totalHealth, totalDisease = Players[pCity:GetOwner()]:GetCityHealthTotal(pCity, true)
 	local cityHealth =totalHealth-totalDisease
 	local strHealthToolTip = Players[pCity:GetOwner()]:GetCityHealthTT(pCity)
 
@@ -141,7 +134,8 @@ function GetCityRiskString(pCity)
 	local strRisk = "TXT_KEY_CH_RISK_LOW"
 	local plagueCounter, plagueThreshold, plagueTurns = Players[pCity:GetOwner()]:GetCityPlagueCounterDetails(pCity, true, true)
 
-	local totalHealth, totalDisease = Players[pCity:GetOwner()]:GetCityHealthTotal(pCity, true)
+	local totalHealth = pCity:GetYieldRate(GameInfoTypes["YIELD_HEALTH"])
+	local totalDisease = pCity:GetYieldRate(GameInfoTypes["YIELD_DISEASE"])
 
 	--if (not bAbandonCity) or totalHealth-totalDisease >= 0  then  ---нчнаръ╥Гоу
 

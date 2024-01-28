@@ -307,7 +307,8 @@ function UpdateWindow( city )
 	Controls.Faith:SetText( "[ICON_PEACE]" .. city:GetFaithPerTurn() );
 
 	---ÐÂÔö
-	local totalHealth, totalDisease = player:GetCityHealthTotal(city, true)
+	local totalHealth = city:GetYieldRate(GameInfoTypes["YIELD_HEALTH"])
+	local totalDisease = city:GetYieldRate(GameInfoTypes["YIELD_DISEASE"])
 	local cityhealth=totalHealth-totalDisease
 	Controls.Health:SetText( "[ICON_HEALTH]" .. cityhealth);
 	---------------end

@@ -133,7 +133,7 @@ local function populateUniques( parentControl, civType )
 		iconControls.Text:LocalizeAndSetText( unit.Description );
 	    end
 	    -- set the pedia callback
-	    pedia = CivilopediaControl and ( pedia or unit.Description);
+	    local pedia = CivilopediaControl and ( pedia or unit.Description);
 	    if pedia then
 		iconControls.Portrait:RegisterCallback( Mouse.eRClick, function() getPedia( pedia ) end );
 	    end

@@ -1,4 +1,9 @@
 ﻿
+
+	---std::stable_sort( vSettlePlots.begin(), vSettlePlots.end() );
+
+		--std::stable_sort(it->second.begin(), it->second.end());
+
 g_TotalBuildingIDs = 0
 for eBuilding, pBuilding in GameInfo.Buildings() do
 	g_TotalBuildingIDs = g_TotalBuildingIDs + 1

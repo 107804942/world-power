@@ -1,5 +1,5 @@
 
-include("DrugResGeneratorFunctions.lua");
+include("MainResGeneratorFunctions.lua");
 
 include("FunctionUtilities");
 

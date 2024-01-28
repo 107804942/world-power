@@ -70,6 +70,7 @@
 		<Replace Name="IMPROVEMENT_FUNCTION" Value="1"/>
 		<Replace Name="BUILDING_IMPROVEMENT_RESOURCES" Value="1"/>
 		<Replace Name="ROG_CORE" Value="1"/>
+		<Replace Name="DISEASE_BREAK" Value="1"/>
 		<Replace Name="VOLCANO_BREAK" Value="1"/>
 		<Replace Name="EVENTS_GREAT_WORK_CREATED" Value="1"/>
 		<Replace Name="EVENTS_GREAT_PEOPLE_BOOST" Value="1"/>
@@ -986,6 +987,19 @@
 			<Where Name="RELIGION_MIN_FAITH_FIRST_PROPHET" />
 		</Update>
 
+
+
+
+
+		<Update>
+			<Set Value="3"/>
+			<Where Name="FOOD_CONSUMPTION_PER_POPULATION" />
+		</Update>
+
+		<Update>
+			<Set Value="5"/>
+			<Where Name="MAX_SPECIALISTS_FROM_BUILDING" />
+		</Update>
 	</Defines>
 
 
@@ -1047,6 +1061,10 @@
 			<TaperSoundtrackVolume>0.75</TaperSoundtrackVolume>
 		</Row>
 	</Audio_2DSounds>
+
+
+
+
 
 
 </GameData>

@@ -3,16 +3,16 @@
 <GameData>
 	<Language_zh_Hant_HK>
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
+			<Text>犯罪率</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_DETAIL">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR][NEWLINE]{1_Crime}</Text>
+			<Text>[ICON_CRIME]犯罪率[NEWLINE]{1_Crime}</Text>
 		</Row>
 
 	
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
-			<Text>腐败</Text>
+			<Text>犯罪率</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
 			<Text>盗窃</Text>
@@ -22,22 +22,47 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_YIELD_HERESY">
 			<Text>邪教</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱，每3个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。每3个[ICON_CITIZEN]人口-1[ICON_CRIME]犯罪率。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_MERITOCRACY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]产能，-2[ICON_CRIME]犯罪率。城市建造建筑时+10%[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]城市完成移民、建筑或国家奇观后，获得数值相当于其产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出（购买建筑无效）。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高3%，[ICON_CRIME]犯罪率-3%。
+				[NEWLINE][ICON_BULLET]海运码头、船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高5%，[ICON_CRIME]犯罪率-5%。
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头、海运码头、船坞+4[ICON_GOLD]金钱，-4[ICON_CRIME]犯罪率。
+			</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 
 
 	<Language_zh_CN>
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
+			<Text>犯罪率</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_DETAIL">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR][NEWLINE]{1_Crime}</Text>
+			<Text>[ICON_CRIME]犯罪率[NEWLINE]{1_Crime}</Text>
 		</Row>
 
-		
+
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
-			<Text>腐败</Text>
+			<Text>犯罪率</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
 			<Text>盗窃</Text>
@@ -47,23 +72,48 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_YIELD_HERESY">
 			<Text>邪教</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱，每3个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。每3个[ICON_CITIZEN]人口-1[ICON_CRIME]犯罪率。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_MERITOCRACY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]产能，-2[ICON_CRIME]犯罪率。城市建造建筑时+10%[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]城市完成移民、建筑或国家奇观后，获得数值相当于其产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出（购买建筑无效）。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高3%，[ICON_CRIME]犯罪率-3%。
+				[NEWLINE][ICON_BULLET]海运码头、船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高5%，[ICON_CRIME]犯罪率-5%。
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头、海运码头、船坞+4[ICON_GOLD]金钱，-4[ICON_CRIME]犯罪率。
+			</Text>
 		</Replace>
 	</Language_zh_CN>
 
 
 	<Language_en_US>
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR]</Text>
+			<Text>犯罪率</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_DETAIL">
-			<Text>[ICON_CRIME]犯罪率[ENDCOLOR][NEWLINE]{1_Crime}</Text>
+			<Text>[ICON_CRIME]犯罪率[NEWLINE]{1_Crime}</Text>
 		</Row>
 
-		
+
 
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
-			<Text>腐败</Text>
+			<Text>犯罪率</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
 			<Text>盗窃</Text>
@@ -73,6 +123,32 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_YIELD_HERESY">
 			<Text>邪教</Text>
+		</Replace>
+
+
+		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]君主政体[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]城市规模导致的[ICON_HAPPINESS_4]不满减半。
+				[NEWLINE][ICON_BULLET][ICON_CAPITAL]首都每个[ICON_CITIZEN]人口+1[ICON_GOLD]金钱，每3个[ICON_CITIZEN]人口+1[ICON_FOOD]食物、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能、[ICON_RESEARCH]科研。每3个[ICON_CITIZEN]人口-1[ICON_CRIME]犯罪率。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_MERITOCRACY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英政治[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_PRODUCTION]产能，-2[ICON_CRIME]犯罪率。城市建造建筑时+10%[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]城市完成移民、建筑或国家奇观后，获得数值相当于其产能的10%的一次性[ICON_RESEARCH]科研、[ICON_CULTURE]文化产出（购买建筑无效）。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_COASTAL_ADMINISTRATION_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]海事管理[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高3%，[ICON_CRIME]犯罪率-3%。
+				[NEWLINE][ICON_BULLET]海运码头、船坞使所在城市的[ICON_PRODUCTION]产能和[ICON_RESEARCH]科研产出提高5%，[ICON_CRIME]犯罪率-5%。
+				[NEWLINE][ICON_BULLET]灯塔、港口、码头、海运码头、船坞+4[ICON_GOLD]金钱，-4[ICON_CRIME]犯罪率。
+			</Text>
 		</Replace>
 	</Language_en_US>
 </GameData>

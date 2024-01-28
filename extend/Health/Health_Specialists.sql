@@ -10,7 +10,7 @@
 INSERT INTO Missions	
 		(Type, 							Time,	OrderPriority,	EntityEventType,				Visible,	Description, 						Help, 									DisabledHelp, 									EntityEventType,			IconAtlas,				IconIndex)
 VALUES	('MISSION_DOCTOR_CURE_CITY', 	20,		199,			'ENTITY_EVENT_GREAT_EVENT',		1,			'TXT_KEY_MISSION_DOCTOR_CURE_CITY', 	'TXT_KEY_MISSION_DOCTOR_CURE_CITY_HELP',	'TXT_KEY_MISSION_DOCTOR_CURE_DISABLED',		'ENTITY_EVENT_GREAT_EVENT',	'UNIT_ACTION_ATLAS',	40),
-		('MISSION_DOCTOR_CURE_UNIT', 	20,		199,			'ENTITY_EVENT_GREAT_EVENT',		1,			'TXT_KEY_MISSION_DOCTOR_CURE_UNIT', 	'TXT_KEY_MISSION_DOCTOR_CURE_UNIT_HELP',	'TXT_KEY_MISSION_DOCTOR_CURE_DISABLED',		'ENTITY_EVENT_GREAT_EVENT',	'UNIT_ACTION_ATLAS',	3),
+		--('MISSION_DOCTOR_CURE_UNIT', 	20,		199,			'ENTITY_EVENT_GREAT_EVENT',		1,			'TXT_KEY_MISSION_DOCTOR_CURE_UNIT', 	'TXT_KEY_MISSION_DOCTOR_CURE_UNIT_HELP',	'TXT_KEY_MISSION_DOCTOR_CURE_DISABLED',		'ENTITY_EVENT_GREAT_EVENT',	'UNIT_ACTION_ATLAS',	3),
 		('MISSION_CONSTRUCT_CITY',      20,		199,	        'ENTITY_EVENT_GREAT_EVENT',		1,	        'TXT_KEY_MISSION_GREAT_DOCTOR_CONSTRUCT_CITY', 	'TXT_KEY_MISSION_GREAT_DOCTOR_CONSTRUCT_CITY_HELP',	'TXT_KEY_MISSION_GREAT_DOCTOR_CONSTRUCT_CITY_DISABLED',		'ENTITY_EVENT_GREAT_EVENT',	'UNIT_ACTION_ATLAS',	40),
 		('MISSION_GREAT_DOCTOR_CURE', 	20,		199,			'ENTITY_EVENT_GREAT_EVENT',		1,			'TXT_KEY_MISSION_GREAT_DOCTOR_CURE', 	'TXT_KEY_MISSION_GREAT_DOCTOR_CURE_HELP',	'TXT_KEY_MISSION_GREAT_DOCTOR_CURE_DISABLED',		'ENTITY_EVENT_GREAT_EVENT',	'UNIT_ACTION_ATLAS',	3);
 
@@ -218,6 +218,10 @@ FROM Improvement_ValidTerrains WHERE ImprovementType = 'IMPROVEMENT_HOLY_SITE';
 
 
 
+INSERT INTO UnitPromotions 
+(Type, 									Description, 					Help, 						Sound, 		CannotBeChosen,		PortraitIndex,		IconAtlas, 			PediaEntry,  PediaType )
+VALUES	('PROMOTION_HUIHUIPAO',  'TXT_KEY_PROMOTION_HUIHUIPAO', 'TXT_KEY_PROMOTION_HUIHUIPAO_HELP',   'AS2D_IF_LEVELUP',		1,		28,		'promoMUC_atlas_00', 	 'TXT_KEY_PROMOTION_HUIHUIPAO',  'PEDIA_ATTRIBUTES' );
+
 
 
 --==========================================================================================================================
@@ -235,6 +239,8 @@ INSERT INTO Audio_2DSounds
 		(ScriptID, 								SoundID, 					SoundType, 				TaperSoundtrackVolume,	MinVolume, 	MaxVolume,  IsMusic, Looping)
 VALUES	('AS2D_SOUND_DOCTOR',				'SND_SOUND_DOCTOR', 			'GAME_SFX', 			-1.0,					100, 		100, 		0, 		 0);
 --==========================================================================================================================
+
+
 
 
 -----------------------------------------------------------------------------------------------------

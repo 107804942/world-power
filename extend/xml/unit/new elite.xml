@@ -1487,8 +1487,23 @@
 		</Row>
 
 
-
-
+		
+		<Row>
+		<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+		<PromotionType>PROMOTION_ADDITIONAL_CARGO_II</PromotionType>
+	</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<PromotionType>PROMOTION_CARGO_II</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
 			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>

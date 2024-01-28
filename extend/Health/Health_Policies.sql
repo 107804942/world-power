@@ -6,10 +6,6 @@
 
 
 
-INSERT INTO Policy_HealthMods (PolicyType, PlagueMod) 
-SELECT 'POLICY_AI_REDUCE',	25;  
-
-
 --INSERT INTO Policy_CityYieldPerXPopChanges (PolicyType,	YieldType,			Yield)
 --SELECT 'POLICY_AI_REDUCE',	'YIELD_HEALTH',		5 UNION ALL
 --SELECT 'POLICY_LEGALISM',	'YIELD_HEALTH',		5;

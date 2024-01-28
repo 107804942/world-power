@@ -2587,7 +2587,12 @@
 
 
 
-
+		<!--犯罪率 -->
+		<Row>
+			<IconName>ICON_CRIME</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>62</IconMapping>
+		</Row>
 
 
 

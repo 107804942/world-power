@@ -648,11 +648,11 @@ ALTER TABLE Buildings ADD COLUMN 'LiberatedInfluence' INTEGER DEFAULT 0;
 	</Table>
 
 
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT -1;
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;   ----瘟疫传播几率
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);   通过当前瘟疫id可传播的瘟疫晋升
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;       瘟疫id
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;   传播的权重
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT -1;  免疫的瘟疫id
 
 
 
@@ -822,21 +822,11 @@ UPDATE UnitPromotions SET AntiHigherPopMod=100 WHERE Type='PROMOTION_GOLEM';
 #endif
 
 
----全局专家产出
-INSERT INTO Building_SpecialistYieldModifiersGlobal(BuildingType,	SpecialistType,	YieldType,	  Yield)
-SELECT     'BUILDING_GUIGU',	              'SPECIALIST_SCIENTIST',	    'YIELD_SCIENCE',	 10  UNION ALL
-SELECT     'BUILDING_GUIGU',	              'SPECIALIST_MUSICIAN',	    'YIELD_TOURISM',	 10  UNION ALL
-SELECT     'BUILDING_GUIGU',	               'SPECIALIST_WRITER',	        'YIELD_CULTURE', 10 UNION ALL
-SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ARTIST',	                'YIELD_CULTURE',	 10 UNION ALL
-SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ENGINEER',	            'YIELD_PRODUCTION',	 10  UNION ALL
-SELECT     'BUILDING_GUIGU',	      'SPECIALIST_MERCHANT',	            'YIELD_GOLD',	 10 ;
 
 INSERT INTO Building_YieldFromYieldPercentGlobal
 		(BuildingType, 						YieldIn, 		YieldOut, 			Value)
 VALUES	('BUILDING_WALLS', 	'YIELD_GOLD', 	'YIELD_CULTURE', 	1);
 
-
-('BUILDING_OIL_WELL', 'RESOURCE_OIL','IMPROVEMENT_WELL',1),
 
 
 ALTER TABLE Buildings ADD COLUMN 'CityCollateralDamage' BOOLEAN DEFAULT 0;
@@ -862,13 +852,45 @@ alter table UnitPromotions add column 'SiegeInflictDamageChangeMaxHPPercent' int
 
 
 
+ALTER TABLE Buildings ADD COLUMN 'PlagueMod' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'PlagueModGlobal' INTEGER DEFAULT 0;
 
 
 
 
-	<Table name="GreatWorkYieldModifiers">
-		<Column name="GreatType" type="text" reference="GreatWorks(Type)"/>
+int CvCity::getPlagueThreshold() const
+{
+	int defineCIDHealthPlagueMinThreshold = 150;
+	defineCIDHealthPlagueMinThreshold = 5*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType())->GetDealDuration();
+	return defineCIDHealthPlagueMinThreshold;
+}
+
+	HEALTH_DISEASE_CONNECTION_MOD
+	HEALTH_DISEASE_TRADE_MOD
+
+
+	MOD_DISEASE_BREAK
+
+
+
+	-- Trade Routes can be plundered without being at war
+ALTER TABLE Traits ADD COLUMN 'CanPlunderWithoutWar' BOOLEAN DEFAULT 0;
+
+-- can buy boats with faith (need faith cost on units to do so).
+ALTER TABLE Traits ADD COLUMN 'CanPurchaseNavalUnitsFaith' BOOLEAN DEFAULT 0;
+
+
+	<!-- Promotion: Unit gains a bonus from revealing tiles. Value is equal to the number of tiles explored this turn. -->
+	<Table name="UnitPromotions_YieldFromScouting">
+		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
 		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer" notnull="true"/>
+		<Column name="Yield" type="integer"/>
 	</Table>
 
+
+
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;   ----瘟疫传播几率
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);   通过当前瘟疫id可传播的瘟疫晋升
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;       瘟疫id
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;   传播的权重
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT -1;  免疫的瘟疫id

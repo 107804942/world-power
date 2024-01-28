@@ -151,9 +151,6 @@ LuaEvents.UnitPanelActionAddin(MechRiotControlButton);
 
 -------------------------------------------------------------EMP BOMB Mode Switch---------------------------------------------------------------------------
 
--- ********************************************************
--- emp
--- ******************************************************** 
   UnitEmpBombOnButton = {
   Name = "Emp Bomb On",
   Title = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON_SHORT", -- or a TXT_KEY
@@ -1311,8 +1308,6 @@ function Processes_CanMaintain(playerID, cityID, processID)
 	return true
 end
 GameEvents.CityCanMaintain.Add(Processes_CanMaintain)
-
-
 -- ********************************************************
 -- 
 -- ********************************************************

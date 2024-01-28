@@ -1,6 +1,13 @@
 <GameData>
 <Language_zh_CN>
 
+	<Row Tag="TXT_KEY_PROMOTION_HUIHUIPAO">
+		<Text>战争之火</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PROMOTION_HUIHUIPAO_HELP">
+		<Text>攻击城市时使该城市瘟疫进度增加两点。</Text>
+	</Row>
+	
 	<!--PLAGUES-->
 	<Row Tag="TXT_KEY_PLAGUE_AIDS">
 		<Text>艾滋病</Text>
@@ -18,7 +25,7 @@
 		<Text>黑死病</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_CANCER">
-		<Text>癌症</Text>
+		<Text>风疹</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_CHOLERA">
 		<Text>霍乱</Text>
@@ -133,7 +140,7 @@
 	</Row>
 	<Row Tag="TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY">
 		<Text>
-			可执行治疗任务或者在城市中建造一座医馆。当执行治疗时，会将你所拥有的所有城市的[ICON_HEALTH]健康度恢复至最大值，并且会清除所有城市与单位的[ICON_PLAGUE]瘟疫状态。
+			可执行治疗任务或者在城市中建造一座医馆。当执行治疗时，会将你所拥有的所有城市的[ICON_HEALTH]健康度恢复至最大值，并且会清除所有城市的[ICON_PLAGUE]瘟疫状态。
 			[NEWLINE]可执行3次治疗，次数耗尽后被消耗。
 		</Text>
 	</Row>
@@ -394,24 +401,17 @@
 
 
 
-
-
-
-
-	
-
-
-
-
-
 	<!--Disease-->
 	<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_CITY_CONNECTION">
-		<Text>[NEWLINE][ICON_BULLET]+{1_Num}[ICON_DISEASE]来自城市连接</Text>
+		<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自城市连接</Text>
 	</Row>
 
 	<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TT_FROM_TRADE">
-		<Text>[NEWLINE][ICON_BULLET]+{1_Num}[ICON_DISEASE]来自贸易路线</Text>
+		<Text>[NEWLINE][ICON_BULLET]{1_Num}[ICON_DISEASE]来自贸易路线</Text>
 	</Row>
+
+
+
 
 
 
@@ -425,11 +425,13 @@
 		<Text>{1_ColourHL}城市将在{2_Num}回合后爆发[ICON_PLAGUE]瘟疫[ENDCOLOR]</Text>
 	</Row>
 	<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TEXT_TT">
-		<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当健康度不足以抵消疾病时将积累瘟疫点数，当瘟疫点数到上限时城市会爆发[ICON_PLAGUE]瘟疫。瘟疫点数的阈值会受政策、建筑、领袖特质等因素加成。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
+		<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当健康度不足以抵消疾病时将积累瘟疫点数，当瘟疫点数到上限时城市会爆发[ICON_PLAGUE]瘟疫。瘟疫的阈值会受建筑加成。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
 	</Row>
 	<Row Tag="TXT_KEY_CITYVIEW_HEALTH_TEXT_TT_FOOD">
-		<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当[ICON_HEALTH]健康度不足以抵消疾病时将积累[ICON_PLAGUE]瘟疫点数，当瘟疫点数到上限值时城市会爆发[ICON_PLAGUE]瘟疫。[NEWLINE][ICON_PLAGUE]瘟疫的阈值会受政策、建筑、领袖特质等因素加成。富余的健康度将按照一定数值（每回合刷新）转换为其他产出。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
+		<Text>[ICON_HEALTH]健康度用于对抗[ICON_DISEASE]疾病,当[ICON_HEALTH]健康度不足以抵消疾病时将积累[ICON_PLAGUE]瘟疫点数，当瘟疫点数到上限值时城市会爆发[ICON_PLAGUE]瘟疫。[NEWLINE][ICON_PLAGUE]瘟疫的阈值会受建筑加成。[NEWLINE]{1_DiseaseBreakdown}[NEWLINE]{3_HealthBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_DISEASE][ENDCOLOR][NEWLINE][COLOR_POSITIVE_TEXT]{4_Num}总计[ICON_HEALTH][ENDCOLOR]</Text>
 	</Row>
+
+
 
 
 	<Row Tag="TXT_KEY_CITYVIEW_DISEASE_TEXT">
@@ -458,11 +460,6 @@
 
 
 
-	<Row Tag="TXT_KEY_YIELD_FROM_CRIME">
-		<Text>{1_Num}{2_IconString} 来自城市犯罪率</Text>
-	</Row>
-
-
 	<Replace Tag="TXT_KEY_BUILDING_CITY_SIZE_SMALL_HELP">
 		<Text>[ICON_BULLET][ICON_CITIZEN]市民工作范围：4格。[NEWLINE][NEWLINE][ICON_BULLET]+6[ICON_RES_MANPOWER]人力。[NEWLINE][ICON_BULLET]+3[ICON_DISEASE]疾病。[NEWLINE][ICON_BULLET]消耗6[ICON_RES_ELECTRICITY]电力。[NEWLINE][ICON_BULLET]消耗6[ICON_RES_CONSUMER]商品。[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]没有交通和污染问题[ENDCOLOR]。[NEWLINE][ICON_BULLET]当人口达到15时升级为[COLOR_POSITIVE_TEXT]中型城市[ENDCOLOR]。</Text>
 	</Replace>
@@ -486,12 +483,12 @@
 	<Row Tag="TXT_KEY_PM_CITY_PLAGUED">
 		<Text>城市处于{1_PlagueIcon}瘟疫{1_Turns}回合中![ICON_CITIZEN]人口将减少,临近城市一格内的单位会受到伤害。</Text>
 	</Row>
-	
+
 
 	<Row Tag="TXT_KEY_CITYBANNER_HEALTH_TEXT_TT_PLAGUE">
 		<Text>城市爆发了{1_PlagueIcon}{2_PlagueDesc}，疾病状态持续{3_Num}回合![ICON_CITIZEN]人口将减少,临近城市一格内的单位会受到伤害。</Text>
 	</Row>
-	
+
 
 	<Row Tag="TXT_KEY_IMPROVEMENT_SANATORIUM">
 		<Text>疗养院</Text>
@@ -524,7 +521,6 @@
 	<Row Tag="TXT_KEY_CITY_PLAGUE_ENDS_NOTIFICATION">
 		<Text>位于{3_CityName}的传染病{1_PlagueIcon}{2_PlagueDesc}已经被消灭!</Text>
 	</Row>
-	
 
 	<Row Tag="TXT_KEY_CITY_PLAGUE_REDUCE_NOTIFICATION_SHORT">
 		<Text>瘟疫缓解!</Text>
@@ -533,8 +529,8 @@
 	<Row Tag="TXT_KEY_CITY_PLAGUE_REDUCE_NOTIFICATION">
 		<Text>位于{3_CityName}的传染病{1_PlagueIcon}{2_PlagueDesc}已减少{4_Num}回合持续时间!</Text>
 	</Row>
-	
-	
+
+
 
 	<Row Tag="TXT_KEY_CITY_PLAGUE_NOTIFICATION_SHORT">
 		<Text>瘟疫!</Text>
@@ -543,30 +539,16 @@
 		<Text>由于持续性的健康度不足，在{3_CityName}爆发了{1_PlagueIcon}{2_PlagueDesc}流行!</Text>
 	</Row>
 
-	<Row Tag="TXT_KEY_PROMOTION_PLAGUED">
-		<Text>疾病缠身</Text>
-	</Row>
-	<Row Tag="TXT_KEY_PROMOTION_PLAGUED_HELP">
-		<Text>-50%攻击力与防御力。</Text>
-	</Row>
-
-
-
-
 	<Row Tag="TXT_KEY_BUILDING_OPEN_HEAITH">
 		<Text>开启瘟疫</Text>
 	</Row>
 
 	<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_DISABLED">
-		<Text>未满足条件，无法执行治疗。（处于瘟疫状态的城市中可治疗城市；临近一格内有患病的己方单位时可治疗单位）</Text>
+		<Text>未满足条件，无法执行治疗。（处于瘟疫状态的城市中可治疗城市）</Text>
 	</Row>
 
-	<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_UNIT">
-		<Text>治疗患病单位</Text>
-	</Row>
-
-	<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_UNIT_HELP">
-		<Text>执行该指令可以治愈临近一格内所有患病的己方单位。</Text>
+	<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CURE_HELP">
+		<Text>执行该指令可以治愈你当前所有城市。</Text>
 	</Row>
 
 	<Row Tag="TXT_KEY_MISSION_DOCTOR_CURE_CITY">
@@ -578,12 +560,6 @@
 			执行该指令可以治疗城市中的瘟疫。
 		</Text>
 	</Row>
-	<Row Tag="TXT_KEY_DOCTOR_CURED_UNIT_SHORT">
-		<Text>治愈！</Text>
-	</Row>
-	<Row Tag="TXT_KEY_DOCTOR_CURED_UNIT">
-		<Text>医生执行了治疗方案，附近患病单位被治愈！</Text>
-	</Row>
 
 
 	<Row Tag="TXT_KEY_PROMOTION_DOCTOR">
@@ -592,7 +568,7 @@
 
 	<Row Tag="TXT_KEY_PROMOTION_DOCTOR_HELP">
 		<Text>
-			可以用于治疗城市瘟疫或者治疗临近一格内感染疾病的单位（治疗城市后立即被消耗，治疗单位可以使用三次）。
+			可以用于治疗城市瘟疫，治疗城市后立即被消耗。
 		</Text>
 	</Row>
 
@@ -602,7 +578,7 @@
 		<Text>治愈！</Text>
 	</Row>
 	<Row Tag="TXT_KEY_DOCTOR_CURED">
-		<Text>大医学家执行了治疗方案，你的所有城市及单位均被治愈！</Text>
+		<Text>大医学家执行了治疗方案，你的所有城市均被治愈！</Text>
 	</Row>
 
 	<Row Tag="TXT_KEY_DOCTOR_CONSTRUCT_SHORT">
@@ -619,16 +595,13 @@
 	</Row>
 
 	<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CURE_DISABLED">
-		<Text>未满足条件，无法执行治疗。（当前国内不存在任何瘟疫单位或城市）</Text>
+		<Text>未满足条件，无法执行治疗。（当前国内不存在任何瘟疫城市）</Text>
 	</Row>
 
 	<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CURE">
 		<Text>救死扶伤</Text>
 	</Row>
 
-	<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CURE_HELP">
-		<Text>执行该指令可以治愈你当前所有城市与单位，并且接下来的3回合城市将免疫因健康度不足造成的健康度消耗。</Text>
-	</Row>
 
 	<Row Tag="TXT_KEY_MISSION_GREAT_DOCTOR_CONSTRUCT_CITY">
 		<Text>建立医疗场所</Text>
@@ -659,12 +632,12 @@
 
 	<Row Tag="TXT_KEY_UNIT_HELP_DOCTOR">
 		<Text>
-			可用于治疗瘟疫城市，或者治疗患病单位。只能在城市中建造，建造成本随时代增加。
+			可用于治疗瘟疫城市。只能在城市中建造，建造成本随时代增加。
 		</Text>
 	</Row>
 
 	<Row Tag="TXT_KEY_UNIT_DOCTOR_STRATEGY">
-		<Text>可用于治疗瘟疫城市，或者治疗患病单位。当治疗城市，或者完成三次单位治疗后将被消耗。</Text>
+		<Text>可用于治疗瘟疫城市。治疗城市后将被消耗。</Text>
 	</Row>
 
 	<Row Tag="TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT">
@@ -698,18 +671,15 @@
 
 
 
-	
+
 
 	<Row Tag="TXT_KEY_PM_CITY_PLAGUED_NOT_OPEN">
 		<Text>未开启瘟疫：城市不会爆发[ICON_PLAGUE]瘟疫。</Text>
 	</Row>
 
-
-
 	<Row Tag="TXT_KEY_TP_HEALTH_EXPLANATION">
 		<Text>点击可打开城市[ICON_HEALTH]健康度总览界面。</Text>
 	</Row>
-	
 
 
 	<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT2">
@@ -718,6 +688,8 @@
 	<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_NEGATIVE2">
 		<Text>[COLOR_SAVAGE]{1_perTurn:number "#.##"}[ENDCOLOR]  [COLOR_SAVAGE]{2_Num}/{3_Num}[ENDCOLOR]</Text>
 	</Row>
+
+
 
 
 
@@ -736,15 +708,15 @@
 	</Row>
 
 
+	<Row Tag="TXT_KEY_YIELD_FROM_HEALTH">
+		<Text>{1_Num}{2_IconString} 来自城市健康度</Text>
+	</Row>
 
-</Language_zh_CN>
+	<Row Tag="TXT_KEY_YIELD_FROM_CRIME">
+		<Text>{1_Num}{2_IconString} 来自城市犯罪率</Text>
+	</Row>
 
 
-
-
-
-<!--City View Screen-->
-<Language_zh_CN>
 
 	<Row Tag="TXT_KEY_SPECIALIST_DOCTOR">
 		<Text>医学家</Text>
@@ -758,8 +730,8 @@
 	<Row Tag="TXT_KEY_SPECIALIST_DOCTOR_TITLE">
 		<Text>大医学家点数:</Text>
 	</Row>
-	
-	
+
+
 	<Row Tag="TXT_KEY_PM_DISEASE_TOTAL">
 		<Text>城市健康度总量:</Text>
 	</Row>
@@ -769,7 +741,7 @@
 		<Text>[COLOR_SAVAGE]健康[ENDCOLOR]</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PM_HEALTH_HELP_INFO">
-		<Text>[ICON_HEALTH]健康度不足的城市相关基础产出会减少（减少的数值与城市当前健康度数值关联）。当城市健康度总量耗尽时，城市会爆发[ICON_PLAGUE]瘟疫。</Text>
+		<Text>[ICON_HEALTH]健康度不足的城市基础食物产出会减少（减少的数值与城市当前健康度数值关联）。当城市健康度总量耗尽时，城市会爆发[ICON_PLAGUE]瘟疫。</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PM_HEALTH_HELP_PLAGUE_INFO">
 		<Text>当城市处于[ICON_PLAGUE]瘟疫时,[ICON_CITIZEN]人口将减少,且每回合会损失部分生命值。临近城市一格内的单位会受到伤害。</Text>
@@ -778,15 +750,15 @@
 
 
 
-	
+
 	<Row Tag="TXT_KEY_CITIES_HEALTH_HEADING3_TITLE">
 		<Text>[COLOR_POSITIVE_TEXT]城市健康度[ENDCOLOR]</Text>
 	</Row>
 	<Row Tag="TXT_KEY_CITIES_HEALTH_HEADING3_BODY">
 		<Text>
-			城市的[ICON_HEALTH]健康度基于是否临近淡水,资源,地貌特征,人口,建筑，政策，改良设施等。城市健康度被全局健康度影响。(参见[COLOR_POSITIVE_TEXT]全局健康度[ENDCOLOR])。
-			[NEWLINE]城市健康度可以每回合影响[ICON_FOOD]基础产出:健康度不足时减少食物储备。健康度不会直接影响城市人口。
-			[NEWLINE]健康度不足的城市在消耗完所有基础健康度后将随机爆发一种类型的[ICON_PLAGUE]瘟疫。
+			城市的[ICON_HEALTH]健康度基于是否临近淡水,资源,地貌特征,人口,建筑，政策，改良设施等。
+			[NEWLINE]城市健康度可以每回合影响[ICON_FOOD]基础产出:健康度不足时减少食物产出。
+			[NEWLINE]健康度不足的城市在消耗完所有基础健康度后将随机爆发一种类型的[ICON_PLAGUE]瘟疫，此时在瘟疫持续时间内人口会不断减少。
 		</Text>
 	</Row>
 	<Row Tag="TXT_KEY_EMPIRE_HEALTH_HEADING3_TITLE">
@@ -803,13 +775,11 @@
 	<Row Tag="TXT_KEY_CITIES_PLAGUE_HEADING3_BODY">
 		<Text>
 			[ICON_PLAGUE]瘟疫只会出现在[ICON_HEALTH]健康度耗尽的城市。瘟疫可能蔓延到附近的城市。
-			[NEWLINE]
 			[NEWLINE][COLOR_POSITIVE_TEXT]瘟疫效果[ENDCOLOR]
 			[NEWLINE][ICON_BULLET]如果城市爆发了瘟疫，将导致额外的人口损失。
 			[NEWLINE][ICON_BULLET]使用大医学家，可以立即治愈饱受困扰的城市。
 			[NEWLINE][ICON_BULLET]受瘟疫困扰的城市无法恢复生命值，而且有几率将瘟疫传播到附近的城市。
 			[NEWLINE][ICON_BULLET]在瘟疫城市附近的单位每回合都会受到伤害。
-			[NEWLINE][ICON_BULLET]当临近瘟疫城市时，单位会染上[COLOR_NEGATIVE_TEXT]疾病[ENDCOLOR]。效果:战斗力降低。
 		</Text>
 	</Row>
 
@@ -829,22 +799,16 @@
 		<Text>疾病风险</Text>
 	</Row>
 
-
-	
-	
 	<Row Tag="TXT_KEY_CH_STATUS_PLAGUED_TT">
 		<Text>城市爆发了{1_PlagueIcon}{2_PlagueDesc}，持续{3_turns}回合</Text>
 	</Row>
-	
+
 	<Row Tag="TXT_KEY_CH_CITY_TT">
 		<Text>点击进入城市界面</Text>
 	</Row>
-	
 	<Row Tag="TXT_KEY_CH_SORT_STATUS_TT">
 		<Text>当前疾病状态</Text>
 	</Row>
-	
-	
 	<Row Tag="TXT_KEY_CH_SORT_NAME_TT">
 		<Text>单击按城市名字排序</Text>
 	</Row>
@@ -885,13 +849,14 @@
 		<Text>{1_PlagueName}导致的[ICON_PLAGUE]瘟疫传播到了{2_CityName}</Text>
 	</Row>
 
-	
 	<Row Tag="TXT_KEY_PLAGUE_DEATH_SHORT">
 		<Text>疾病肆虐!</Text>
 	</Row>
 	<Row Tag="TXT_KEY_PLAGUE_DEATH">
 		<Text>受{1_PlagueIcon}{2_PlagueDesc}的影响，{3_CityName}失去了{4_PopNum}人口。</Text>
 	</Row>
+
+
 
 
 
@@ -909,6 +874,9 @@
 	</Row>
 
 
+
+
+
 	<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
 		<Text>
 			[ICON_BULLET]每座城市+4[ICON_GOLD]金钱产出+2[ICON_RES_CONSUMER]消费品+2[ICON_HAPPINESS_1]本地快乐+1工作范围。
@@ -918,12 +886,14 @@
 		</Text>
 	</Replace>
 
+
+
 	<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
 		<Text>
 			[ICON_BULLET]所有城市额外+2[ICON_RES_MANPOWER]人力资源，每处沿河地块+1[ICON_GOLD]金，每处冲积平原地块+1[ICON_PRODUCTION]产能。
-			[NEWLINE][ICON_BULLET]沙漠地貌+1[ICON_HEALTH]健康度，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。</Text>
+			[NEWLINE][ICON_BULLET]沙漠地貌+1[ICON_HEALTH]健康度，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+		</Text>
 	</Replace>
-	
 </Language_zh_CN>
 
 

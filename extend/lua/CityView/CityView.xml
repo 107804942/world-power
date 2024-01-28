@@ -96,7 +96,7 @@
 			<!-- Crime Info -->
 			<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="CrimeBox">
 				<Image Offset="0,0" Anchor="L,T" Size="196,28" Texture="yieldbox.dds"/>
-				<Label Anchor="L,C" Offset="8,0" String="[ICON_SILVER_FIST]"/>
+				<Label Anchor="L,C" Offset="8,0" String="[ICON_CRIME]"/>
 				<Label Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_CRIME_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
 				<Label ID="CrimePerTurnLabel" Anchor="R,C" Offset="5,-2" String="" Font="TwCenMT20" FontStyle="Shadow"/>
 			</Box>
@@ -291,8 +291,8 @@
 		</Stack>
 		<Stack Anchor="L,T" Offset="280,-36" Size="0,0" StackGrowth="Bottom" Padding="4">
 			<!-- Purchase Production Button -->
-			<GridButton ID="PurchaseButton" Anchor="L,C" Size="160,27" Offset="0,0" Style="SmallButton" ToolTip="TXT_KEY_CITYVIEW_PURCHASE_TT">
-				<Label Anchor="L,C" Offset="5,-1" String="[ICON_GOLD]/[ICON_PEACE]" ColorSet="Beige_Black_Alpha" Font="TwCenMT18" FontStyle="Shadow"/>
+			<GridButton ID="PurchaseButton" Anchor="L,C" Size="220,36" Offset="0,0" Style="SmallButton" ToolTip="TXT_KEY_CITYVIEW_PURCHASE_TT">
+				<Label Anchor="C,C" Offset="-20,-1" String="[ICON_GOLD]/[ICON_PEACE]" ColorSet="Beige_Black_Alpha" Font="TwCenMT18" FontStyle="Shadow"/>
 				<Label Anchor="C,C" Offset="25,-1" String="TXT_KEY_CITYVIEW_PURCHASE_BUTTON" ColorSet="Beige_Black_Alpha" Font="TwCenMT18" FontStyle="Shadow"/>
 			</GridButton>
 			<!-- Choose/Change/Add Production Button -->

@@ -1142,33 +1142,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		if tip ~= "" then
 			insert( tips, L"TXT_KEY_PEDIA_HAPPINESS_LABEL" .. tip )
 		end
-	else
-		-- Health
-		local healthChange = (tonumber(building.Health) or 0) + (tonumber(building.UnmoddedHealth) or 0)
-		local healthModifier = tonumber(building.HealthModifier) or 0
-		if activePlayer then
-			-- Health from Virtues
-			healthChange = healthChange + activePlayer:GetExtraBuildingHealthFromPolicies( buildingID )
-			-- Player Perks
-			for i = 1, #activePerkTypes do
-				healthChange = healthChange + Game.GetPlayerPerkBuildingClassPercentHealthChange( activePerkTypes[i], buildingClassID )
-				healthModifier = healthModifier + Game.GetPlayerPerkBuildingClassPercentHealthChange( activePerkTypes[i], buildingClassID )
-				defenseChange = defenseChange + Game.GetPlayerPerkBuildingClassCityStrengthChange( activePerkTypes[i], buildingClassID )
-				hitPointChange = hitPointChange + Game.GetPlayerPerkBuildingClassCityHPChange( activePerkTypes[i], buildingClassID )
-				maintenanceCost = maintenanceCost + Game.GetPlayerPerkBuildingClassEnergyMaintenanceChange( activePerkTypes[i], buildingClassID )
-			end
-		end
-		if healthChange ~= 0 then
-			tip = format(" %+i[ICON_HEALTH_1]", healthChange )
-		else
-			tip = ""
-		end
-		if healthModifier ~= 0 then
-			tip = format("%s %+i%%[ICON_HEALTH_1]", tip, healthModifier )
-		end
-		if tip ~= "" then
-			insert( tips, L"TXT_KEY_HEALTH" .. ":" .. tip )
-		end
+	
 	end
 
 	-- Defense:
@@ -1549,15 +1523,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		-- Terrain Yields enhanced by Building
 		for terrain in GameInfo.Terrains() do
 			tip = GetYieldString( GameInfo.Building_TerrainYieldChanges{ BuildingType = buildingType, TerrainType = terrain.Type } )
-			if IsCivBE then
-				local health = 0
-				for row in GameInfo.Building_TerrainHealthChange{ BuildingType = buildingType, TerrainType = terrain.Type } do
-					health = health + ( tonumber( row.Quantity ) or 0 )
-				end
-				if health ~= 0 then
-					tip = format( "%s %+i[ICON_HEALTH_1]", tip, health )
-				end
-			end
+			
 			if tip ~= "" then
 				insert( tips, ResourceColor( L(terrain.Description) ) .. ":" .. tip )
 			end

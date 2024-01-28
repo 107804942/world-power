@@ -349,13 +349,23 @@
         <Type>UpdateDatabase</Type>
         <FileName>extend/Crime/Crime_Buildings.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>extend/Crime/Crime_Defines.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>extend/Crime/Crime_Policies.sql</FileName>
+      </Action>
     </ModActions>
     <ModContent>
       <Content>
         <Type>InGameUIAddin</Type>
         <Name>drugresources</Name>
         <Description />
-        <FileName>extend/lua/drug/DrugResourceList.lua</FileName>
+        <FileName>extend/lua/drug/MainResourceList.lua</FileName>
       </Content>
       <Content>
         <Type>InGameUIAddin</Type>
@@ -416,6 +426,12 @@
         <Name>NewAttackEffects</Name>
         <Description />
         <FileName>extend/lua/combat/NewAttackEffects.lua</FileName>
+      </Content>
+      <Content>
+        <Type>InGameUIAddin</Type>
+        <Name>Crime_Events</Name>
+        <Description />
+        <FileName>extend/Crime/Crime_Events.lua</FileName>
       </Content>
     </ModContent>
     <ModProperties />
@@ -526,7 +542,6 @@
     <Folder Include="extend\art\nature\salar" />
     <Folder Include="extend\art\Notification" />
     <Folder Include="extend\art\units\M109Generic" />
-    <Folder Include="extend\art\YieldAtlas" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
     <Folder Include="extend\art\RESOURCES\models\more\Barley" />
     <Folder Include="extend\art\RESOURCES\models\more\Saffron" />
@@ -675,6 +690,7 @@
     <Folder Include="extend\art\units\sutosled" />
     <Folder Include="extend\art\units\type212" />
     <Folder Include="extend\art\units\yf23" />
+    <Folder Include="extend\Crime\art" />
     <Folder Include="extend\Health\font" />
     <Folder Include="extend\Health\lua" />
     <Folder Include="extend\lua" />
@@ -4620,6 +4636,10 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\Notification\notificationcityeventglow80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\Notification\notificationcityeventorange.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -4941,10 +4961,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\RESOURCES\icon\NEW_Resources_Atlas_256.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\RESOURCES\icon\sv_new_resource.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -5544,6 +5560,10 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\RESOURCES\models\more\Sulfur\sv_Sulfur.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\RESOURCES\models\Peyote\hb_plantation_ind_drug_peyote.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -5669,6 +5689,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\RESOURCES\models\tin\PL_Tin_Quarry_Rock_S.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\RESOURCES\models\tin\sv_Tin.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -16108,31 +16132,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\YieldAtlas\yieldatlas_128_admiral.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\YieldAtlas\yieldatlas_128_culturelocal.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\YieldAtlas\YieldAtlas_128_Defense.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\YieldAtlas\YieldAtlas_128_Development.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\YieldAtlas\YieldAtlas_128_Disease.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\YieldAtlas\yieldatlas_128_general.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\YieldAtlas\YieldAtlas_128_Health.dds">
+    <Content Include="extend\Crime\art\yieldatlas_128_crime.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -16145,6 +16145,18 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\Crime\Crime_Buildings.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\Crime\Crime_Defines.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\Crime\Crime_Events.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\Crime\Crime_Policies.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -16752,15 +16764,15 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\lua\drug\DrugResGenerator.lua">
+    <Content Include="extend\lua\drug\MainResGenerator.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\lua\drug\DrugResGeneratorFunctions.lua">
+    <Content Include="extend\lua\drug\MainResGeneratorFunctions.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\lua\drug\DrugResourceList.lua">
+    <Content Include="extend\lua\drug\MainResourceList.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

@@ -22,8 +22,30 @@
 			<Where Type="PROMOTION_FRANCE_MISTRAL" />
 		</Update>
 
-		
+		<Update>
+			<Set IconAtlas="promoVP_atlas_00" PortraitIndex="24" PediaType="PEDIA_ATTRIBUTES"/>
+			<Where Type="PROMOTION_POWERFUL_CANNON" />
+		</Update>
 
+		<Update>
+			<Set IconAtlas="promoVP_atlas_02" PortraitIndex="26" />
+			<Where Type="PROMOTION_INDIRECT_FIRE" />
+		</Update>
+
+
+		<Update>
+			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="3" />
+			<Where Type="PROMOTION_AIR_SIEGE_1" />
+		</Update>
+		<Update>
+			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="4" />
+			<Where Type="PROMOTION_AIR_SIEGE_2" />
+		</Update>
+		<Update>
+			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="5" />
+			<Where Type="PROMOTION_AIR_SIEGE_3" />
+		</Update>
+		
 		<Row>
 			<ID>0</ID>
 			<Type>PROMOTION_INSTA_HEAL</Type>
@@ -384,30 +406,7 @@
 		</Row>
 
 
-		<!--海洋定位-->
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_SIGHT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_SIGHT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_SIGHT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_NAVAL_SIGHT</PromotionType>
-			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
-		</Row>
-
+	
 
 		<!--火力覆盖-->
 		<Row>
@@ -815,17 +814,12 @@
 			<Description>TXT_KEY_PROMOTION_NAVAL_SIGHT</Description>
 			<Help>TXT_KEY_PROMOTION_NAVAL_SIGHT_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>		
-			<AlwaysHeal>true</AlwaysHeal>
-			<EnemyHealChange>15</EnemyHealChange>
-			<NeutralHealChange>15</NeutralHealChange>
-			<FriendlyHealChange>15</FriendlyHealChange>
-			<HealOutsideFriendly>true</HealOutsideFriendly>		
-			<PortraitIndex>32</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_HEAL</PediaType>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
+			<ExtraAttacks>1</ExtraAttacks>	
+			<PortraitIndex>63</PortraitIndex>
+			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_SIGHT</PediaEntry>
 		</Row>
 
@@ -1204,6 +1198,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ROBORT_COMBAT</PediaEntry>
 			<CityAttack>100</CityAttack>
+			<PlagueImmune>1</PlagueImmune>
 			<CannotBeChosen>true</CannotBeChosen>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 		</Row>
@@ -1375,8 +1370,9 @@
 			<Help>TXT_KEY_PROMOTION_GUN_1_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>41</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>59</PortraitIndex>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<IconAtlas>promoVP_atlas_00</IconAtlas>
 			<PediaEntry>TXT_KEY_PROMOTION_GUN_1</PediaEntry>
 			<RangedSupportFire>true</RangedSupportFire>
 			<LostWithUpgrade>true</LostWithUpgrade>
@@ -1386,6 +1382,20 @@
 		</Row>
 
 
+		<Row>
+			<Type>PROMOTION_GUN_2</Type>
+			<Description>TXT_KEY_PROMOTION_GUN_2</Description>
+			<Help>TXT_KEY_PROMOTION_GUN_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>11</OrderPriority>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PortraitIndex>58</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
+			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<PediaEntry>TXT_KEY_PROMOTION_GUN_2</PediaEntry>
+			<RangedSupportFireMod>100</RangedSupportFireMod>
+		</Row>
 
 
 		<Row>
@@ -1498,19 +1508,6 @@
 
 
 
-		<Row>
-			<Type>PROMOTION_GUN_2</Type>
-			<Description>TXT_KEY_PROMOTION_GUN_2</Description>
-			<Help>TXT_KEY_PROMOTION_GUN_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>18</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_GUN_2</PediaEntry>
-			<RangedSupportFireMod>100</RangedSupportFireMod>
-		</Row>
 
 
 		<Row>
@@ -1893,6 +1890,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_HEAVY_ROBORT</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
+			<PlagueImmune>1</PlagueImmune>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 			<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
 		</Row>
@@ -2881,6 +2879,7 @@
 			<IgnoreTerrainDamage>true</IgnoreTerrainDamage>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 			<ImmueMeleeAttack>1</ImmueMeleeAttack>
+			<PlagueImmune>1</PlagueImmune>
 		</Row>
 
 		<Row>
@@ -4072,6 +4071,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DOCTOR</PediaEntry>
 			<ShowInPedia>0</ShowInPedia>
+			<PlagueImmune>1</PlagueImmune>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
@@ -4086,6 +4086,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DOCTOR</PediaEntry>
 			<ShowInPedia>0</ShowInPedia>
+			<PlagueImmune>1</PlagueImmune>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 

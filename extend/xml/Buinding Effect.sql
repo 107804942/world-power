@@ -651,7 +651,7 @@ VALUES('BUILDING_ULTIMATOWER', 'YIELD_SCIENCE',50),
 
 --硅谷等全局百分比加成
 INSERT  INTO Building_GlobalYieldModifiers(BuildingType,YieldType,Yield)
-SELECT  'BUILDING_GUIGU', Type, 10 FROM Yields WHERE Type ='YIELD_GOLD' OR Type ='YIELD_SCIENCE'OR Type ='YIELD_CULTURE'OR Type ='YIELD_PRODUCTION';
+SELECT  'BUILDING_GUIGU', Type, 50 FROM Yields WHERE Type ='YIELD_GOLD' OR Type ='YIELD_SCIENCE'OR Type ='YIELD_CULTURE'OR Type ='YIELD_PRODUCTION';
 
 
 INSERT  INTO Building_GlobalYieldModifiers(BuildingType,YieldType,Yield)
@@ -704,9 +704,6 @@ SELECT 'BUILDING_KRAK_DES_CHEVALIERS', Class, 'YIELD_FAITH',500 FROM Units WHERE
 ------------------------------------------------------------------------------------------------------------------------
 -- 城市等级产出加成
 ------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 INSERT INTO Building_BuildingClassYieldModifiers(BuildingType, BuildingClassType,YieldType,Modifier) VALUES  
   ('BUILDING_HELIOS', 'BUILDINGCLASS_SOLAR_PLANT', 'YIELD_PRODUCTION',10),

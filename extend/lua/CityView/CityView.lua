@@ -2089,9 +2089,8 @@ function OnCityViewUpdate()
 		----------------------------------------新增PLAGUE 计数----------------------------------------
 
 		local plagueCounter, plagueThreshold, plagueTurns = pPlayer:GetCityPlagueCounterDetails(pCity, true, true)
-
-		local totalHealth, totalDisease = pPlayer:GetCityHealthTotal(pCity, true)
-
+		local totalHealth = pCity:GetYieldRate(GameInfoTypes["YIELD_HEALTH"])
+	    local totalDisease = pCity:GetYieldRate(GameInfoTypes["YIELD_DISEASE"])
 		local iCityHealthIndex=totalHealth-totalDisease
 		local HealthCounter =plagueThreshold-plagueCounter
 		if  iCityHealthIndex < 0 then   ---健康度不足
@@ -2108,8 +2107,7 @@ function OnCityViewUpdate()
 
 
 		----------------------------------------新增犯罪率----------------------------------------
-		local CRIMEID   = GameInfo.Yields["YIELD_CRIME"].ID
-		local iCrimePerTurn = pCity:GetBaseYieldRate(CRIMEID)
+		local iCrimePerTurn = pCity:GetYieldRate(GameInfoTypes["YIELD_CRIME"])
 		Controls.CrimePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT", iCrimePerTurn) );
         ---------------------------------------end----------------------------------------
 		

@@ -2038,7 +2038,7 @@
 			<Civilopedia>TXT_KEY_WONDER_KNOSSOS_CIVILOPEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_KNOSSOS_WONDER_QUOTE</Quote>
 			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
-			<SpecialistCount>1</SpecialistCount>
+			<SpecialistCount>5</SpecialistCount>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<NukeImmune>true</NukeImmune>
@@ -3993,41 +3993,7 @@
 
 
 
-		<Row>
-			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_MILITARY_AIRBASE</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-
-
-		<Row>
-			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_MISSILE_BASE</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-
-		<Row>
-			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_DEFENSE_NETWORK</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_SPACE_FORTRESS</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_NAVAL_BASE</BuildingClassType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>3</YieldChange>
-		</Row>
+	
 
 		
 		

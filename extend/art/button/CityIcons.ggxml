@@ -64,13 +64,16 @@
 		<glyph ch="51" u="110" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
 		<glyph ch="52" u="132" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
 		<glyph ch="53" u="154" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
-		<glyph ch="54" u="176" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
-		<glyph ch="55" u="198" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
-		<glyph ch="56" u="220" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
-		<glyph ch="57" u="0" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
-		<glyph ch="58" u="22" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
-		<glyph ch="59" u="44" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
-		<glyph ch="60" u="66" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="54" u="176" v="110" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />	
+		<glyph ch="55" u="0" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="56" u="22" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="57" u="44" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="58" u="66" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="59" u="88" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="60" u="110" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="61" u="132" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="62" u="154" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="63" u="176" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
 	</glyphs>
 	<imports />
 	<toolonly>

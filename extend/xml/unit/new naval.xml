@@ -147,7 +147,7 @@
 			<RangedCombat>1000</RangedCombat>
 			<Cost>9500</Cost>
 			<Moves>8</Moves>
-			<Range>5</Range>
+			<Range>7</Range>
 			<HurryCostModifier>250</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>

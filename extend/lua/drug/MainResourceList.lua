@@ -2,7 +2,7 @@
 
 
 include("Rog_SaveUtils"); MY_MOD_NAME = "世界强权";
-include("DrugResGenerator.lua");
+include("MainResGenerator.lua");
 
 if load(Players[Game.GetActivePlayer()],"Resources_Generation_Completed") ~= nil then
 	if load(Players[Game.GetActivePlayer()],"Resources_Generation_Completed") == 1 then

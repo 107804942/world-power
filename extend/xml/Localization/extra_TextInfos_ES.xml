@@ -2536,7 +2536,7 @@
 			<Text>[NEWLINE]"任何战术都只适用于一定的历史阶段；如果武器改进了，技术有了新的进步，那么军事组织的形式、军队指挥的方法也会随着改变。"[NEWLINE]        ——伏龙芝（苏）[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SPACE_FORTRESS_HELP">
-			<Text>建成后获得四个单位。城市攻击次数+2，所有海军基地、空军基地、导弹基地、指挥中心、星际基地+3[ICON_GOLD]金钱。所有城市防御效率提升100%。本城市轰炸范围+1，购买或建造的单位可以立即行动。</Text>
+			<Text>建成后获得四个单位。城市攻击次数+2，所有海军基地、空军基地、导弹基地、指挥中心、星际基地-3[ICON_CRIME]犯罪率。所有城市防御效率提升100%。本城市轰炸范围+1，购买或建造的单位可以立即行动。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SERVER_HUB_DESC">
 			<Text>[ICON_RESEARCH]超级计算机中心</Text>
@@ -5545,7 +5545,7 @@
 			<Text>船舰补给</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_SIGHT_HELP">
-			<Text>海军单位每回合恢复15点生命值。</Text>
+			<Text>海军旗舰单位可攻击后移动，额外获得一次攻击次数。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CITY_BOMB_HELP">
@@ -7552,7 +7552,7 @@
 			<Text>都市主义</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_5_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]都市主义[ENDCOLOR][NEWLINE]购买建筑的所需[ICON_GOLD]金钱-25%,每城+2[ICON_HEALTH]健康度。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]都市主义[ENDCOLOR][NEWLINE]购买建筑的所需[ICON_GOLD]金钱-25%,每城+2[ICON_HEALTH]健康度，-2[ICON_CRIME]犯罪率。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_5_TEXT">
 			<Text>
@@ -7626,7 +7626,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_TRADITION_LOYALTY_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]公共执行[ENDCOLOR][NEWLINE]地牢，监禁所，法院，治安署，警察局，审计署，地检署+1[ICON_HAPPINESS_1]快乐。所有杰作+1[ICON_GOLDEN_AGE]黄金时代点数。建造奇观时+15%[ICON_PRODUCTION]产能。
+				[COLOR_POSITIVE_TEXT]公共执行[ENDCOLOR][NEWLINE]地牢，监禁所，法院，治安署，警察局，审计署，地检署+1[ICON_HAPPINESS_1]快乐,-2%[ICON_CRIME]犯罪率。所有杰作+1[ICON_GOLDEN_AGE]黄金时代点数。建造奇观时+15%[ICON_PRODUCTION]产能，本城-5[ICON_CRIME]犯罪率。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_TRADITION_LOYALTY_TEXT">
@@ -7641,7 +7641,7 @@
 
 
 		<Row Tag="TXT_KEY_GRANDEUR_1_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR][NEWLINE]每处战略资源+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR][NEWLINE]每处战略资源+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱，-3[ICON_CRIME]犯罪率。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_1_TEXT">
 			<Text>
@@ -7677,9 +7677,8 @@
 		<Row Tag="TXT_KEY_GRANDEUR_4">
 			<Text>国家纪念日</Text>
 		</Row>
-
 		<Row Tag="TXT_KEY_GRANDEUR_4_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]国家纪念日[ENDCOLOR][NEWLINE]黄金时代长度+33%，伟人诞生速率+10%，每个处于我们爱领袖日的城市+25%[ICON_GOLD]金钱、[ICON_RESEARCH]科研、[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]国家纪念日[ENDCOLOR][NEWLINE]黄金时代长度+33%，伟人诞生速率+10%，每个处于我们爱领袖日的城市-25%[ICON_CRIME]犯罪率、+25%[ICON_GOLD]金钱、[ICON_RESEARCH]科研、[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_4_TEXT">
 			<Text>
@@ -7825,7 +7824,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_5_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]每个活跃的间谍可为城市提供4%[ICON_RESEARCH]科研加成。地牢、监禁所、警察局+2[ICON_RESEARCH]科研。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]每个活跃的间谍可为城市+4%[ICON_RESEARCH]科研,-4%[ICON_CRIME]犯罪率。地牢、监禁所、警察局+2[ICON_RESEARCH]科研,-2[ICON_CRIME]犯罪率。</Text>
 		</Row>
 
 
@@ -8506,7 +8505,7 @@
 
 		<Row Tag="TXT_KEY_WONDER_GUIGU_HELP">
 			<Text>
-				所有专家对应的基础产出数值+4。+10%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。所有城市中每个专家增加2%各自城市的对应基础产出。
+				所有专家对应的基础产出数值+4。+50%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。所有城市中每个专家增加2%各自城市的对应基础产出。
 			</Text>
 		</Row>
 
@@ -9099,7 +9098,7 @@
 			<Text>美联社</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_AP_HELP">
-			<Text>本地[ICON_GREAT_WRITER]文学家+1[ICON_CULTURE]文化，出版社+1[ICON_CULTURE]文化,+1[ICON_GOLD]金钱。本城+50%[ICON_CULTURE]文化，每4人口+1[ICON_CULTURE]文化。当你被谴责时，对方将失去对城邦一定数值的[ICON_INFLUENCE]影响力。</Text>
+			<Text>本地[ICON_GREAT_WRITER]文学家+1[ICON_CULTURE]文化，出版社+1[ICON_CULTURE]文化,+1[ICON_GOLD]金钱。本城+50%[ICON_CULTURE]文化，每4人口+1[ICON_CULTURE]文化。当你被谴责时，对方对城邦的[ICON_INFLUENCE]影响力减少80。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_AP_TEXT">
 			<Text>
@@ -9653,15 +9652,14 @@
 
 
 
-
 		<Row Tag='TXT_KEY_NAME_CREAT_PLAGUE'>
-			<Text>[COLOR_POSITIVE_TEXT]散播病毒[ENDCOLOR]</Text>
+			<Text>[COLOR_POSITIVE_TEXT]投放蠕虫[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_TITLE_CREAT_PLAGUE'>
-			<Text>[COLOR_POSITIVE_TEXT]散播病毒[ENDCOLOR]</Text>
+			<Text>[COLOR_POSITIVE_TEXT]投放蠕虫[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_CREAT_PLAGUE'>
-			<Text>处于与你交战中的主要文明的城市地块时，可投放瘟疫病毒。当前城市会立即进入瘟疫状态(未开启瘟疫爆发功能或者该城市因其他因素免疫瘟疫时则效果变更为进入抵抗状态3回合)，同时该城市附近会出现病毒蠕虫。</Text>
+			<Text>处于与你交战中的主要文明的城市地块时，可执行任务，该城市附近会出现病毒蠕虫。</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_CREAT_PLAGUE_2'>
 			<Text>[COLOR_UNIQUE]未处于与你交战中的主要文明的城市附近[ENDCOLOR]</Text>
@@ -9731,7 +9729,7 @@
 		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]所有神祠、神庙、寺院和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。
+				[NEWLINE][ICON_BULLET]所有神祠、神庙和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化，-1[ICON_CRIME]犯罪率。
 				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化产出。
 			</Text>
 		</Replace>
@@ -9835,7 +9833,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_HELP">
 			<Text>
-				本城+10[ICON_PRODUCTION]产能，+5%[ICON_PRODUCTION]产能,-5[ICON_DISEASE]疾病，-20%[ICON_DISEASE]疾病。每座城市可重复建造3次，但每次建造后会使建造成本+1000[ICON_PRODUCTION]产能。
+				本城-5[ICON_DISEASE]疾病、[ICON_CRIME]犯罪率，-20%[ICON_DISEASE]疾病、[ICON_CRIME]犯罪率。
+				[NEWLINE]每座城市可重复建造3次，但每次建造后会使建造成本+1000[ICON_PRODUCTION]产能。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA">

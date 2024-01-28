@@ -38,8 +38,8 @@
 			<Description>TXT_KEY_PROMOTION_BERMUDA</Description>
 			<Help>TXT_KEY_PROMOTION_BERMUDA_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>54</PortraitIndex>
+			<IconAtlas>promoVP_atlas_03</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PediaEntry>TXT_KEY_PROMOTION_BERMUDA</PediaEntry>

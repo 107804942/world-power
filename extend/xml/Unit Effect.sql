@@ -1,9 +1,19 @@
 ---远程夹击
 UPDATE UnitPromotions SET RangedFlankAttackModifier = '10' WHERE Type  = 'PROMOTION_ANTI_MOUNTED' OR Type= 'PROMOTION_ANTI_TANK' OR Type= 'PROMOTION_NAVAL_RANGED_CRUISER'OR Type= 'PROMOTION_NAVAL_RANGED_SHIP';
 
----后期免疫俘虏
+
+
+
+
+
+
 INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)
 SELECT  Type, 'PROMOTION_NO_CAPTURED' FROM Units WHERE HurryCostModifier = -1 AND Combat>=500;
+
+
+---回回炮
+INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)VALUES
+ ('UNIT_MONGOLIAN_HUIHUIPAO',	'PROMOTION_HUIHUIPAO');
 
 
 ---步马协同
@@ -51,6 +61,10 @@ VALUES('PROMOTION_PARATROOPER_BUFF', 'DOMAIN_AIR',50);
 
 
 ---晋升关联单位种类
+INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
+SELECT  'PROMOTION_NAVAL_SIGHT', UnitType FROM Unit_FreePromotions WHERE PromotionType= 'PROMOTION_NAVAL_CAPITAL_SHIP';
+
+
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_CAUSEWAY', Type FROM UnitCombatInfos WHERE ID >= 0;
 
@@ -113,8 +127,6 @@ SELECT  'PROMOTION_SKYNET_LINK', Type FROM UnitCombatInfos;
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_DIABLO', Type FROM UnitCombatInfos;
 
-INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
-SELECT  'PROMOTION_GOLDEN_BUFF', Type FROM UnitCombatInfos;
 ------------------------------------------------------------------------------------------------------------------------
 -- 单位战略视图
 ------------------------------------------------------------------------------------------------------------------------

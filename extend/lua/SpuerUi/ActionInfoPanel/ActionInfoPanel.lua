@@ -668,7 +668,7 @@ end
 for alias,				name, 		texture1,									texture2
 in ([[
 Plague					Resource		HealthNotificationAtlas_80.dds			HealthNotificationGlowingAtlas_80.dds
-CityEventChoiceFin		Resource		notificationcityeventglow.dds			notificationcityeventglow.dds
+CityEventChoiceFin		Resource		notificationcityeventglow80.dds			notificationcityeventglow80.dds
 
 Generic					Generic		NotificationGeneric.dds						NotificationGenericGlow.dds
 SocialPolicy			Generic		SocialPolicy80.dds							SocialPolicyActive80.dds

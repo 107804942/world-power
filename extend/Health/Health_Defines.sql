@@ -7,39 +7,25 @@
 
 
 UPDATE Yields SET GoldenAgeYieldMod = 20 WHERE Type = 'YIELD_HEALTH';
---UPDATE Yields SET GoldenAgeYield = 1 ,GoldenAgeYieldThreshold= 1 WHERE Type = 'YIELD_HEALTH';
 
 
-INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_DISEASE_PER_POPULATION',					1;
+UPDATE Defines SET Value =1 WHERE Type = 'HEALTH_DISEASE_CONNECTION_MOD';
+UPDATE Defines SET Value =1 WHERE Type = 'HEALTH_DISEASE_TRADE_MOD';
 
-INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_DISEASE_CITY_CONNECTION_MODIFIER',			5;
+
 
 INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_DISEASE_TRADE_ROUTE_MODIFIER',				3;
-
-INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_PLAGUE_FOOD_CONSUMPTION',					1;
-
-INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_EPIC',		250;
-
-INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_MARATHON',	350;
-
-INSERT INTO Defines(Name,									Value)
-SELECT	'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_QUICK',		150;
-
-INSERT INTO Defines  (Name,									Value)
-SELECT	'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_STANDARD',	200;
+SELECT 'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_EPIC',		250 UNION ALL
+SELECT 'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_MARATHON',	350 UNION ALL
+SELECT 'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_QUICK',		150 UNION ALL	
+SELECT 'HEALTH_PLAGUE_MIN_THRESHOLD_GAMESPEED_STANDARD',	200 ; 
 
 
 -----------------------------------------------------------------------------------------------------
 --Promotions
 ----------------------------------------------------------------------------------------------------- 
-INSERT INTO UnitPromotions (Type,CannotBeChosen, AttackMod,  DefenseMod,	        Description,					Help,								PediaEntry,						IconAtlas,					PortraitIndex,	Sound,				PediaType)
-SELECT 'PROMOTION_PLAGUED',			 1,           	-50,		-50,		'TXT_KEY_PROMOTION_PLAGUED',	'TXT_KEY_PROMOTION_PLAGUED_HELP',	'TXT_KEY_PROMOTION_PLAGUED',	'VALERY_ATLAS',	25,				'AS2D_IF_LEVELUP',	'PEDIA_ATTRIBUTES';	
+--INSERT INTO UnitPromotions (Type,CannotBeChosen, AttackMod,  DefenseMod,	        Description,					Help,								PediaEntry,						IconAtlas,					PortraitIndex,	Sound,				PediaType)
+--SELECT 'PROMOTION_PLAGUED',			 1,           	-50,		-50,		'TXT_KEY_PROMOTION_PLAGUED',	'TXT_KEY_PROMOTION_PLAGUED_HELP',	'TXT_KEY_PROMOTION_PLAGUED',	'VALERY_ATLAS',	25,				'AS2D_IF_LEVELUP',	'PEDIA_ATTRIBUTES';	
 
 -----------------------------------------------------------------------------------------------------
 --Pedia Entries

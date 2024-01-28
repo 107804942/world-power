@@ -22,29 +22,7 @@ Building_HealthMods (
 	HealthToFoodMod												integer												default 0,
 	PlagueMod													integer												default 0,
 	IsLocal														boolean												default 0);	
---------------------
---------------------------------------------------------------------------------------------------------------------------
--- Policy_HealthMods
---------------------------------------------------------------------------------------------------------------------------	
-CREATE TABLE IF NOT EXISTS 
-Policy_HealthMods (
-	PolicyType													text		REFERENCES Policies(Type)				default null,
-	DiseaseConnectionMod										integer												default 0,
-	DiseasePopMod												integer												default 0,
-	DiseaseTRMod												integer												default 0,
-	HealthToFoodMod												integer												default 0,
-	PlagueMod													integer												default 0);	
------------------------------------------------------------------------------------------------------------------------
--- Trait_HealthMods
---------------------------------------------------------------------------------------------------------------------------	
-CREATE TABLE IF NOT EXISTS 
-Trait_HealthMods (
-	TraitType													text		REFERENCES Traits(Type)					default null,
-	DiseaseConnectionMod										integer												default 0,
-	DiseasePopMod												integer												default 0,
-	DiseaseTRMod												integer												default 0,
-	HealthToFoodMod												integer												default 0,
-	PlagueMod													integer												default 0);	
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- Colors
 --------------------------------------------------------------------------------------------------------------------------	
