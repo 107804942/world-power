@@ -1348,29 +1348,6 @@ function Denounce_BUFF(PlayerID, OtherPlayerID)
 end
 GameEvents.DoDenounce.Add(Denounce_BUFF)
 
--- **********************************************************************************************************************************************
---/* Current assignments of members of popupInfo
---Data1 is the player id 
---Data2 is the gift "value" (Gold/Culture/Faith/Food amount, UnitId)
---Data3 is the friendship boost
---Option1 is first met (unchanged)
---Option2 is nil (unchanged)
---Text is suffix for the TXT_KEY_ to format with
--- **********************************************************************************************************************************************
-function GiftBonus(iPlayer, iCS, iGold, iUnitType, iPlotX, iPlotY) 
-   local Player = Players[iPlayer]
-   local MinorPlayer=Players[iCS]
-
-   if Player == nil or MinorPlayer== nil   then
-      return
-   end
-
-    if  Player:CountNumBuildings(GameInfoTypes["BUILDING_FOREIGN_OFFICE"]) > 0 then
-		MinorPlayer:ChangeMinorCivFriendshipWithMajor(iPlayer,50)  
-    end
-end 	
-GameEvents.PlayerGifted.Add(GiftBonus)  
-
 
 -- **********************************************************************************************************************************************
 --
@@ -1405,7 +1382,7 @@ function EspionageStateResult(iPlayer, iSpy, iState, iCityX, iCityY)
    and otherPlayer~= Player then
 
    ----------------------------------------------------------------
-   if Player:HasWonder(GameInfoTypes.BUILDING_KGB) then
+   if Player:HasWonder(GameInfoTypes.BUILDING_FOREIGN_OFFICE) then
             local iTeamID = Player:GetTeam()
             local iTeam = Teams[iTeamID]
 			local iTeamTechs = iTeam:GetTeamTechs()
@@ -1625,18 +1602,6 @@ function CanHavePromotion(iPlayer, iUnit, iPromotionType)
    return true
 end
 GameEvents.CanHavePromotion.Add(CanHavePromotion)
-
-
-function TourismToGold(iPlayer, iUnit, iX, iY, bIsGreatPerson)
-local pPlayer = Players[iPlayer]
-local pUnit = pPlayer:GetUnitByID(iUnit)
-if bIsGreatPerson 
-and pPlayer:HasWonder(GameInfoTypes.BUILDING_KARLSTEJN) then
-local gold = pPlayer:CalculateGoldRate()
-pPlayer:ChangeGold(3*gold)
-   end
-end
-GameEvents.TourismDiscover.Add(TourismToGold)
 
 
 

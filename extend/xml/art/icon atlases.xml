@@ -2595,6 +2595,35 @@
 		</Row>
 
 
+		<Row>
+			<IconName>ICON_VIOLENCE</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>62</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_THEFT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>58</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_CULT</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>63</IconMapping>
+		</Row>
+
+		<Row>
+			<IconName>ICON_REVOLUTION</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CITY_ICONS</IconFontTexture>
+			<IconMapping>52</IconMapping>
+		</Row>
+		
+		
+		
+		
+		
+		
 
 		<Row>
 			<IconName>ICON_RES_SAFFRON</IconName>

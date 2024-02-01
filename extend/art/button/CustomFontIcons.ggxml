@@ -88,11 +88,31 @@
         <glyph ch="75" u="176" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
         <glyph ch="76" u="198" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
         <glyph ch="77" u="220" v="132" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		
         <glyph ch="78" u="0" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
         <glyph ch="79" u="22" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
 		<glyph ch="80" u="44" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
 		<glyph ch="81" u="66" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
 		<glyph ch="82" u="88" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="83" u="110" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="84" u="132" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="85" u="154" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="86" u="176" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="87" u="198" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="88" u="220" v="154" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+
+		<glyph ch="89" u="0" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="90" u="22" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="91" u="44" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="92" u="66" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="93" u="88" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="94" u="110" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="95" u="132" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="96" u="154" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="97" u="176" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="98" u="198" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		<glyph ch="99" u="220" v="176" width="22" height="22" a="0" b="22" c="0" originx="0" originy="22" />
+		
     </glyphs>
     <imports count="79">
         <import ch="1" src="D:\artdev\Civilization5\UI\Icons\Font Icons\PNG\000 bullet point.png" originx="0" originy="22" />

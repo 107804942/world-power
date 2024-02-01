@@ -14,15 +14,18 @@
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
 			<Text>犯罪率</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
-			<Text>盗窃</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_VIOLENCE">
+		<Row Tag="TXT_KEY_CRIME_VIOLENCE">
 			<Text>暴力</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_HERESY">
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_THEFT">
+			<Text>盗窃</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_CULT">
 			<Text>邪教</Text>
-		</Replace>
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_REVOLUTION">
+			<Text>革命</Text>
+		</Row>
 
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
 			<Text>
@@ -64,15 +67,22 @@
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
 			<Text>犯罪率</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
-			<Text>盗窃</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_VIOLENCE">
+		
+	
+		
+		<Row Tag="TXT_KEY_CRIME_VIOLENCE">
 			<Text>暴力</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_HERESY">
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_THEFT">
+			<Text>盗窃</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_CULT">
 			<Text>邪教</Text>
-		</Replace>
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_REVOLUTION">
+			<Text>革命</Text>
+		</Row>
+		
 
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
 			<Text>
@@ -115,15 +125,18 @@
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
 			<Text>犯罪率</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_LOYALTY">
-			<Text>盗窃</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_VIOLENCE">
+		<Row Tag="TXT_KEY_CRIME_VIOLENCE">
 			<Text>暴力</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_YIELD_HERESY">
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_THEFT">
+			<Text>盗窃</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_CULT">
 			<Text>邪教</Text>
-		</Replace>
+		</Row>
+		<Row Tag="TXT_KEY_CRIME_REVOLUTION">
+			<Text>革命</Text>
+		</Row>
 
 
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">

@@ -849,7 +849,6 @@
 			<Moves>3</Moves>
 			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_P1500</Description>
 			<Civilopedia>TXT_KEY_CIV5_INDUSTRIAL_P1500_TEXT</Civilopedia>
@@ -1525,11 +1524,6 @@
 			<UnitType>UNIT_P1500</UnitType>
 			<PromotionType>PROMOTION_TANK_COMBAT</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_P1500</UnitType>
-			<PromotionType>PROMOTION_CARGO_VI</PromotionType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_P1500</UnitType>

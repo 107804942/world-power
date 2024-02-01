@@ -166,20 +166,7 @@ function CitySetDoctor(iPlayer)
 		 print ("great doctor cure health for ai !")
 		 end
 	 end
-	
-	 else  
-	 if  #GreatDoctorTAB > 0  then   
-	 local randomNumber5 = ROG_GetTrueRandom(1,#GreatDoctorTAB) 
-	 local tUNIT4 = GreatDoctorTAB[randomNumber5]
-	 local city = tUNIT4:GetPlot():GetPlotCity() or tUNIT4:GetPlot():GetWorkingCity();
-	 if city~=nil 
-	 and city:GetOwner()==iPlayer 
-	 and not city:IsHasBuilding(GameInfoTypes.BUILDING_LOCAL_HOSPITAL) then 
-	 city:SetNumRealBuilding(GameInfoTypes["BUILDING_LOCAL_HOSPITAL"], 1)
-	 tUNIT4:Kill() 
-	    end
-	 end
-	     
+	 		     
 	end
 end
 GameEvents.PlayerDoneTurn.Add(CitySetDoctor)

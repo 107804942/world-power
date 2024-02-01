@@ -271,3 +271,56 @@ end
 
     		
    ----------------------------------------------------------------晋升对晋升的显示效果end----------------------------------------------------------------
+   int CvCity::getDiseaseFromConnectionAndTradeRoute() const
+{
+	int DiseaseFromConnectionAndTradeRoute = 0;
+
+
+	CvCity* theCapital = GET_PLAYER(getOwner()).getCapitalCity();
+
+	if (theCapital != NULL && !isCapital() && theCapital->HasPlague() && IsConnectedToCapital() )
+	{
+		int diseaseConnections = ((theCapital->getYieldRate(YIELD_DISEASE, false) * GC.getHEALTH_DISEASE_CONNECTION_MOD()) / 100);
+		DiseaseFromConnectionAndTradeRoute += std::max(0, (int)ceil(diseaseConnections / 1.0));
+	}
+
+	CvGameTrade* pTrade = GC.getGame().GetGameTrade();
+	for (uint ui = 0; ui < pTrade->m_aTradeConnections.size(); ui++)
+	{
+		if (pTrade->IsTradeRouteIndexEmpty(ui))
+		{
+			continue;
+		}
+
+		TradeConnection* pConnection = &(pTrade->m_aTradeConnections[ui]);
+
+		CvCity* pFromCity = GC.getMap().plot(pConnection->m_iOriginX, pConnection->m_iOriginY)->getPlotCity();
+		CvCity* pToCity = GC.getMap().plot(pConnection->m_iDestX, pConnection->m_iDestY)->getPlotCity();
+
+		if (pFromCity == this);
+		{
+			DiseaseFromConnectionAndTradeRoute += std::max(0, (pToCity->getYieldRate(YIELD_DISEASE, false) * GC.getHEALTH_DISEASE_TRADE_MOD() / 100));
+		}
+	}
+
+	return DiseaseFromConnectionAndTradeRoute;
+}
+
+
+	<Row Tag="TXT_KEY_PRODMOD_YIELD_FROM_INTER_TRADE_MOD">
+			<Text>[NEWLINE][ICON_BULLET]国际商路数量的修正值: {1_Num}%</Text>
+		</Row>
+
+		TXT_KEY_PRODMOD_YIELD_FROM_INTER_TRADE_MOD
+
+
+		int CvCity::getDiseaseFromConnectionAndTradeRoute() const
+{
+	int DiseaseFromConnectionAndTradeRoute = 0;
+	DiseaseFromConnectionAndTradeRoute -= getTradeRouteNum() * getPopulation() * GC.getHEALTH_DISEASE_CONNECTION_MOD() / 100;
+	return DiseaseFromConnectionAndTradeRoute;
+}
+
+
+
+		HEALTH_DISEASE_TRADE_MOD=100
