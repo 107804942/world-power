@@ -1226,14 +1226,7 @@
 	
 	<Unit_Builds>
 
-		<!-- 桨帆船 -->
-		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
-		<!-- 炮艇 -->
-		<Delete UnitType="UNIT_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete UnitType="UNIT_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
+	
 
 		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
 		
@@ -1248,19 +1241,6 @@
 
 		
 		
-
-		<Row>
-			<UnitType>UNIT_WORKER</UnitType>
-			<BuildType>BUILD_COASTAL_FORT</BuildType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
-			<BuildType>BUILD_COASTAL_FORT</BuildType>
-		</Row>
-
-
-
-	
 		<Row>
 			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
 			<BuildType>BUILD_LATIFUNDIUM</BuildType>
@@ -1371,8 +1351,14 @@
 			<BuildType>BUILD_ROAD</BuildType>
 		</Row>
 		
-	
+		
 
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<BuildType>BUILD_COASTAL_FORT</BuildType>
+		</Row>
+
+		
 	</Unit_Builds>
 
 

@@ -125,17 +125,6 @@
 
 	<Unit_FreePromotions>
 
-	
-
-		<Row>
-			<UnitType>UNIT_SABR</UnitType>
-			<PromotionType>PROMOTION_CARGO_II</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SABR</UnitType>
-			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
-		</Row>
-
 		<Row>
 			<UnitType>UNIT_SABR</UnitType>
 			<PromotionType>PROMOTION_ARCHERY_COMBAT</PromotionType>
@@ -166,21 +155,13 @@
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_HOVERTANK</UnitType>
-			<PromotionType>PROMOTION_CARGO_II</PromotionType>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_HOVERTANK</UnitType>
 			<PromotionType>PROMOTION_HOVERING_UNIT</PromotionType>
 		</Row>
 		
-		
-		<Row>
-			<UnitType>UNIT_HOVERTANK</UnitType>
-			<PromotionType>PROMOTION_MISSILE_CARRIER</PromotionType>
-		</Row>
+
 		<Row>
 			<UnitType>UNIT_SUPER_ROCKET</UnitType>
 			<PromotionType>PROMOTION_SPLASH_DAMAGE</PromotionType>

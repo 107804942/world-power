@@ -4256,7 +4256,7 @@
 			<Text>攻城掠地</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PLUNDERED_HELP">
-			<Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可额外获得一移动力与一攻击次数。</Text>
+			<Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可额外获得一移动力与一攻击次数并且对临近一格内的敌人造成25点伤害。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_EQUICK">
@@ -8365,21 +8365,6 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_IGNORE_PLOT_DAMAGE">
-			<Text>适应性</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_IGNORE_PLOT_DAMAGE_HELP">
-			<Text>在特殊地形与地貌（辐射区、山脉）停留时，不会受到伤害。</Text>
-		</Row>
-
-
-
-
-
-
-
-
-
 		<Row Tag="TXT_KEY_BUILDING_BIOLOGICAL_FACTORIES">
 			<Text>[ICON_HEALTH][ICON_RESEARCH]生物制剂工厂</Text>
 		</Row>
@@ -9936,6 +9921,17 @@
 		<Row Tag="TXT_KEY_PROMOTION_NO_CAPTURED_HELP">
 			<Text>被击败时免疫俘虏。</Text>
 		</Row>
+
+
+		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER02">
+			<Text>[COLOR_MAGENTA]海滨突击舰[ENDCOLOR]</Text>
+			<Plurality>2</Plurality>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER02_PEDIA">
+			<Text>
+				易于根据不同的作战角色而重新配置，包括反潜、反水雷、反水面舰艇、情报、监控和侦察，国土防御、海上拦截、特种作战、后勤保障。得益于它的模组化设计，它能替代更慢、更特制的舰艇如扫雷艇和攻击艇。</Text>
+		</Row>
+
 	</Language_zh_CN>
 
 

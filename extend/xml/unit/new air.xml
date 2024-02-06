@@ -365,10 +365,6 @@
 		</Row>
 
 
-
-
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
-		<Delete UnitType="UNIT_ASSYRIAN_SCUD_MISSILE"/>
 	</Unit_FreePromotions>
 
 
@@ -376,7 +372,7 @@
 	<!--************************************资源消耗********************************-->
 	<Unit_ResourceQuantityRequirements>
 		
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+	
 		
 		<Row>
 			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
@@ -512,7 +508,7 @@
 	<Unit_AITypes>
 
 
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+
 		
 		
 		<Row>
@@ -575,9 +571,7 @@
 
 	<!--************************************倾向********************************-->
 	<Unit_Flavors>
-		
-        <Delete UnitType="UNIT_ASSYRIAN_SCUD_MISSILE"/>
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
+
 
 		<Row>
 			<UnitType>UNIT_SATELLITE_SOLAR</UnitType>
@@ -666,10 +660,6 @@
 		</Update>
 
 
-		
-	<Delete Type="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
-		
-
 
 	<Update>
 		<Set  UnitArtInfo="ART_DEF_UNIT_F-14" IconAtlas="ROBOT_ICON_ATLAS2" PortraitIndex="49"  />
@@ -698,11 +688,6 @@
 	</Units>
 
 
-	<Unit_ClassUpgrades>
 
-
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
-		
-	</Unit_ClassUpgrades>
 	
 </GameData>

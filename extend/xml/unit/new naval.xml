@@ -5,19 +5,7 @@
 
 	
 	<Units>
-		<!-- 桨帆船 -->
-		<Delete Class="UNITCLASS_NAVAL_MILITIA"/>
-		<!-- 炮艇 -->
-		<Delete Class="UNITCLASS_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete Class="UNITCLASS_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete Class="UNITCLASS_LITTORAL_COMBAT_SHIP"/>
 
-		
-		
-		
-		
 
 		<Delete Type="UNIT_CHINESE_052D"/>
 
@@ -235,7 +223,7 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NAVALFIGHTER04P</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVALFIGHTER04P_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAVALFIGHTER04P_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SP_UNITS_NAVAL_HIT_AND_RUN_SHIPS_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SSBN_HELP</Help>
 			<ProjectPrereq>PROJECT_MANHATTAN_PROJECT</ProjectPrereq>
 			<MilitarySupport>true</MilitarySupport>
@@ -260,6 +248,41 @@
 		</Row>
 
 
+		<!--****************海滨突击舰****************-->
+		<Row>
+			<Class>UNITCLASS_NAVALFIGHTER02</Class>
+			<Type>UNIT_NAVALFIGHTER02</Type>
+			<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
+			<BaseSightRange>3</BaseSightRange>
+			<Combat>320</Combat>
+			<RangedCombat>320</RangedCombat>
+			<Cost>1000</Cost>
+			<Moves>7</Moves>
+			<Range>1</Range>
+			<CombatClass>UNITCOMBAT_RECON</CombatClass>
+			<Domain>DOMAIN_SEA</Domain>
+			<DefaultUnitAI>UNITAI_ESCORT_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER02</Description>
+			<Civilopedia>TXT_KEY_UNIT_NAVALFIGHTER02_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_SP_UNITS_MILITIA_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_MILITIA_NAVAL_HELP</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<Mechanized>true</Mechanized>
+			<AdvancedStartCost>10</AdvancedStartCost>
+			<MinAreaSize>10</MinAreaSize>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER01</UnitArtInfo>
+			<UnitFlagIconOffset>48</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>70</PortraitIndex>
+			<MoveRate>BOAT</MoveRate>
+			<ExtraMaintenanceCost>8</ExtraMaintenanceCost>
+			<WorkRate>100</WorkRate>
+		</Row>
 
 
 	</Units>
@@ -267,19 +290,6 @@
 
 
 	<Unit_ClassUpgrades>
-
-	<Delete UnitType="UNIT_NAVAL_MILITIA"/>
-		<!-- 桨帆船 -->
-		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
-		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
-
-		<!-- 炮艇 -->
-		<Delete UnitType="UNIT_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete UnitType="UNIT_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
-
 
 
 		<Row>
@@ -293,19 +303,19 @@
 	
 
 	<Unit_FreePromotions>
-		
-	
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<PromotionType>PROMOTION_MILITIA_COMBAT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<PromotionType>PROMOTION_OCEAN_IMPASSABLE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
+		</Row>
 
-		<!-- 桨帆船 -->
-		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
-		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
-
-		<!-- 炮艇 -->
-		<Delete UnitType="UNIT_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete UnitType="UNIT_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
 		
 
 		<Row>
@@ -408,7 +418,17 @@
 
 	<Unit_ResourceQuantityRequirements>
 
-
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<ResourceType>RESOURCE_OIL</ResourceType>
+			<Cost>1</Cost>
+		</Row>
+		
 
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER02</UnitType>
@@ -578,18 +598,10 @@
 	</Unit_ResourceQuantityRequirements>
 
 	<Unit_AITypes>
-
-		<!-- 桨帆船 -->
-		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
-		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
-		<!-- 炮艇 -->
-		<Delete UnitType="UNIT_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete UnitType="UNIT_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
-	
-
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
+		</Row>
 		
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
@@ -633,20 +645,18 @@
 
 
 	<Unit_Flavors>
-
-		<!-- 桨帆船 -->
-		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
-		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
-
-		<!-- 炮艇 -->
-		<Delete UnitType="UNIT_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete UnitType="UNIT_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
-
-
-	
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<FlavorType>FLAVOR_NAVAL</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>65</Flavor>
+		</Row>
+		
+		
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_NUKE</FlavorType>
@@ -820,17 +830,11 @@
 			<Where Type="UNIT_KIROV_BATTLECRUISER" />
 		</Update>
 
-
-	
-
 		<Update>
 			<Set  IconAtlas="ROBOT_ICON_ATLAS3"  PortraitIndex="232"/>
 			<Where Type="UNIT_SONGHAI_EXPEDITION_FLEET" />
 		</Update>
-
-
-
-
+		
 		<Update>
 			<Set   PrereqTech="TECH_NAUTICAL_SCIENCE" />
 			<Where Class="UNITCLASS_SHIP_OF_THE_LINE" />

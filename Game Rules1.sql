@@ -1,3 +1,26 @@
+
+
+ALTER TABLE Buildings ADD COLUMN 'PlagueMod' INTEGER DEFAULT 0;
+ALTER TABLE Buildings ADD COLUMN 'PlagueModGlobal' INTEGER DEFAULT 0;
+
+
+
+
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;   ----瘟疫传播几率
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);   通过当前瘟疫id可传播的瘟疫晋升
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;       瘟疫id
+ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;   传播的权重
+ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT -1;  免疫的瘟疫id
+
+
+
+
+
+
+
+
+
+
 -- Insert SQL Rules Here 
 
 UPDATE UnitPromotions SET NearbyUnitPromotionBonus=100,NearbyUnitPromotionBonusRange=6,CombatBonusFromNearbyUnitPromotion= 'PROMOTION_WEAPON_SHIP' WHERE Type='PROMOTION_NAVAL_RANGED_CRUISER';

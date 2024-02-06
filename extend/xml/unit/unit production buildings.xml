@@ -7,8 +7,6 @@
 
 		<Delete UnitType="UNIT_XCOM_SQUAD"/>
 		<Delete UnitType="UNIT_BAZOOKA"/>
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
-		<Delete UnitType="UNIT_PERSIAN_MINISUB"/>
 		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
 
 
@@ -451,11 +449,6 @@
 			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
 			<Where UnitType="UNIT_NUCLEAR_SUBMARINE" />
 		</Update>
-		<Update>
-			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
-			<Where UnitType="UNIT_PERSIAN_MINISUB" />
-		</Update>
-
 
 		<Update>
 			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
@@ -463,7 +456,7 @@
 		</Update>
 		<Update>
 			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>
-			<Where UnitType="UNIT__KIROV_BATTLECRUISER" />
+			<Where UnitType="UNIT_KIROV_BATTLECRUISER" />
 		</Update>
 		<Update>
 			<Set  BuildingClassType="BUILDINGCLASS_ZXZCC"/>

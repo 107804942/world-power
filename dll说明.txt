@@ -803,17 +803,11 @@ GetProjectCount()
 
 
 
--- Adds minimum national population requirement for a building.
-ALTER TABLE Buildings ADD COLUMN 'NationalPopRequired' INTEGER DEFAULT 0;
-
-
 ALTER TABLE Units ADD COLUMN 'ProductionCostAddedPerEra' integer default 0;
 
 
 INSERT  INTO UnitPromotions_CombatModPerAdjacentUnitCombat(PromotionType,UnitCombatType ,Modifier,Attack,Defense)
 VALUES ('PROMOTION_COMBAT_TO_DEATH','UNITCOMBAT_ARMOR',50,100,25);
-
-UPDATE UnitPromotions SET AntiHigherPopMod=100 WHERE Type='PROMOTION_GOLEM';
 
 
 
@@ -849,48 +843,8 @@ alter table UnitPromotions add column 'SiegeInflictDamageChangeMaxHPPercent' int
 
 
 
-
-
-
-ALTER TABLE Buildings ADD COLUMN 'PlagueMod' INTEGER DEFAULT 0;
-ALTER TABLE Buildings ADD COLUMN 'PlagueModGlobal' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD AOEDamageOnPillage INTEGER DEFAULT 0;
 
 
 
 
-int CvCity::getPlagueThreshold() const
-{
-	int defineCIDHealthPlagueMinThreshold = 150;
-	defineCIDHealthPlagueMinThreshold = 5*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType())->GetDealDuration();
-	return defineCIDHealthPlagueMinThreshold;
-}
-
-	HEALTH_DISEASE_CONNECTION_MOD
-	HEALTH_DISEASE_TRADE_MOD
-
-
-	MOD_DISEASE_BREAK
-
-
-
-	-- Trade Routes can be plundered without being at war
-ALTER TABLE Traits ADD COLUMN 'CanPlunderWithoutWar' BOOLEAN DEFAULT 0;
-
--- can buy boats with faith (need faith cost on units to do so).
-ALTER TABLE Traits ADD COLUMN 'CanPurchaseNavalUnitsFaith' BOOLEAN DEFAULT 0;
-
-
-	<!-- Promotion: Unit gains a bonus from revealing tiles. Value is equal to the number of tiles explored this turn. -->
-	<Table name="UnitPromotions_YieldFromScouting">
-		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
-		<Column name="YieldType" type="text" reference="Yields(Type)"/>
-		<Column name="Yield" type="integer"/>
-	</Table>
-
-
-
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueChance' INTEGER DEFAULT 0;   ----瘟疫传播几率
-ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePromotion' TEXT DEFAULT NULL REFERENCES UnitPromotions(Type);   通过当前瘟疫id可传播的瘟疫晋升
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueID' INTEGER DEFAULT -1;       瘟疫id
-ALTER TABLE UnitPromotions ADD COLUMN 'PlaguePriority' INTEGER DEFAULT 0;   传播的权重
-ALTER TABLE UnitPromotions ADD COLUMN 'PlagueIDImmunity' INTEGER DEFAULT -1;  免疫的瘟疫id

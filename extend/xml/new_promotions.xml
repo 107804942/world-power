@@ -28,7 +28,7 @@
 		</Update>
 
 		<Update>
-			<Set IconAtlas="promoVP_atlas_02" PortraitIndex="26" />
+			<Set IconAtlas="promoVP_atlas_02" PortraitIndex="26" OrderPriority="11" />
 			<Where Type="PROMOTION_INDIRECT_FIRE" />
 		</Update>
 
@@ -3953,25 +3953,6 @@
 	   </Row>
 
 
-
-		<Row>
-			<Type>PROMOTION_IGNORE_PLOT_DAMAGE</Type>
-			<Description>TXT_KEY_PROMOTION_IGNORE_PLOT_DAMAGE</Description>
-			<Help>TXT_KEY_PROMOTION_IGNORE_PLOT_DAMAGE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_IGNORE_PLOT_DAMAGE</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<IgnoreTerrainDamage>true</IgnoreTerrainDamage>
-			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
-		</Row>
-
-
-
 		<!--*************突击虎火力支援**************-->
 		<Row>
 			<Type>PROMOTION_STURMTIGER</Type>
@@ -4164,7 +4145,7 @@
 			<Help>TXT_KEY_PROMOTION_PLUNDERED_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>9</PortraitIndex>
-			<!--<MustSetUpToRangedAttack>false</MustSetUpToRangedAttack>-->
+			<AOEDamageOnPillage>25</AOEDamageOnPillage>
 			<FreePillageMoves>true</FreePillageMoves>
 			<PillageReplenishMoves>1</PillageReplenishMoves>
 			<PillageReplenishAttck>1</PillageReplenishAttck>
@@ -4226,7 +4207,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DEBUFF</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<IgnoreGreatGeneralBenefit>true</IgnoreGreatGeneralBenefit>
+			<!--<IgnoreGreatGeneralBenefit>true</IgnoreGreatGeneralBenefit>-->
 			<IgnoreTerrainDamage>true</IgnoreTerrainDamage>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
@@ -4292,25 +4273,6 @@
 			<RemoveAfterXTurns>3</RemoveAfterXTurns>
 			<PediaEntry>TXT_KEY_PROMOTION_FREEZE_EFFECT</PediaEntry>
 		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_ROUGH_TERRAIN_ENDS_TURN</Type>
-			<Description>TXT_KEY_PROMOTION_ROUGH_TERRAIN_ENDS</Description>
-			<Help>TXT_KEY_PROMOTION_ROUGH_TERRAIN_ENDS_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<RoughTerrainEndsTurn>true</RoughTerrainEndsTurn>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_ROUGH_TERRAIN_ENDS</PediaEntry>
-		</Row>
-
-
-
-
-
 
 
 

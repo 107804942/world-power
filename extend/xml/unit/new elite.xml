@@ -904,8 +904,10 @@
 			<AirUnitCap>1</AirUnitCap>
 			<RangedCombatLimit>1000</RangedCombatLimit>
 			<CombatLimit>0</CombatLimit>
+			<NoFallout>true</NoFallout>
+			<ExtraNukeBlastRadius>5</ExtraNukeBlastRadius>
 			<XPValueDefense>0</XPValueDefense>
-			<NukeDamageLevel>4</NukeDamageLevel>
+			<NukeDamageLevel>5</NukeDamageLevel>
 			<UnitArtInfo>ART_DEF_UNIT_NUCLEAR_MISSILE</UnitArtInfo>
 			<UnitFlagAtlas>TTMOD_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>8</UnitFlagIconOffset>

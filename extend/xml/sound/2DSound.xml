@@ -1098,31 +1098,23 @@
 			<SelectionSound>AS2D_BUILD_RANGEDMARINE04SP</SelectionSound>
 			<FirstSelectionSound>AS2D_BUILD_RANGEDMARINE04SP</FirstSelectionSound>
 		</Row>
+
+		
+		
+		<Row>
+			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
+			<SelectionSound>AS2D_BUILD_UNIT</SelectionSound>
+			<FirstSelectionSound>AS2D_BUILD_UNIT</FirstSelectionSound>
+		</Row>
+
 		
 
-
-		<!-- 桨帆船 -->
-		<Delete UnitType="UNIT_NAVAL_MILITIA"/>
-		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
-
-		<!-- 炮艇 -->
-		<Delete UnitType="UNIT_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete UnitType="UNIT_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete UnitType="UNIT_LITTORAL_COMBAT_SHIP"/>
-
-		<!-- 加拿大空军 -->
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
-
-
 		<Delete UnitType="UNIT_BAZOOKA"/>
-		<Delete UnitType="UNIT_SHOSHONE_PATHFINDER"/>
-		
-		<Delete UnitType="UNIT_BAZOOKA"/>
+	
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
-		<Delete UnitType="UNIT_ASSYRIAN_SCUD_MISSILE"/>
 		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
+		
+		
 	</UnitGameplay2DScripts>
 
 </GameData>

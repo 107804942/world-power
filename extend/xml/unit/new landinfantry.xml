@@ -32,7 +32,7 @@
 
 
 		<Delete Type="UNIT_GUIDED_MISSILE"/>
-		<Delete Type="UNIT_ASSYRIAN_SCUD_MISSILE"/>
+
 
 		<Delete Type="UNIT_CITADEL_LATE"/>
 		<Delete Type="UNIT_CITADEL_MID"/>
@@ -40,14 +40,8 @@
 
 
 
-
-
 		<Update>
-			<Set Combat="200"  PrereqTech="TECH_GRID_COMPUTING" Cost="1800" Moves="4"/>
-			<Where Type="UNIT_XCOM_SQUAD" />
-		</Update>
-		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_EXOTIC_UNIT_CONDOTTIERI" UnitFlagAtlas="SMAN_EXOTIC_UNIT_FLAG_ATLAS" UnitFlagIconOffset="27"/>
+			<Set UnitArtInfo="ART_DEF_UNIT_EXOTIC_UNIT_CONDOTTIERI"/>
 			<Where Type="UNIT_LONGSWORDSMAN" />
 		</Update>
 
@@ -655,10 +649,7 @@
 			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>
-			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
-		</Row>
+	
 		
 		<Row>
 			<UnitType>UNIT_ROBOT_INFANTRY</UnitType>

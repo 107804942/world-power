@@ -181,16 +181,8 @@
 
 	<Civilization_UnitClassOverrides>
 
-	
-
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
-		<Delete UnitType="UNIT_DANISH_ABSALON"/>
-		<Delete UnitType="UNIT_IROQUOIAN_CANADIAN_FIGHTER"/>
-		<Delete UnitType="UNIT_PERSIAN_MINISUB"/>
 		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
-
-		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
-		<Delete UnitClassType="UNITCLASS_NAVAL_MILITIA"/>
 
 
 
@@ -269,22 +261,6 @@
 		</Row>
 		
 		
-		
-		
-
-
-
-
-		<!--<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_EXPLORATION</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_EXPLORATION</UnitClassType>
-			<UnitType/>
-		</Row>-->
 
 
 		<Row>
@@ -542,14 +518,7 @@
 	
 	
 	<UnitClasses>
-		<!-- 桨帆船 -->
-		<Delete Type="UNITCLASS_NAVAL_MILITIA"/>
-		<!-- 炮艇 -->
-		<Delete Type="UNITCLASS_MONITOR_SHIP"/>
-		<!-- 护卫舰 -->
-		<Delete Type="UNITCLASS_CORVETTE"/>
-		<!-- 滨海战斗舰 -->
-		<Delete Type="UNITCLASS_LITTORAL_COMBAT_SHIP"/>
+	
 			
 		<!-- 核火箭筒 -->
 		<Delete Type="UNITCLASS_BAZOOKA"/>
@@ -563,13 +532,7 @@
 		
 	
 
-		<!--************************************陆军远程********************************-->
 
-		<!--<Row>
-			<Type>UNITCLASS_SAND_WORM</Type>
-			<Description>TXT_KEY_UNIT_SAND_WORM</Description>
-			<DefaultUnit>UNIT_SAND_WORM</DefaultUnit>
-		</Row>-->
 
 
 		<Row>
@@ -778,18 +741,7 @@
 		</Row>
 
 
-		<!--<Row>
-			<Type>UNITCLASS_LEVTANK</Type>
-			<Description>TXT_KEY_UNIT_LEVTANK</Description>
-			<DefaultUnit>UNIT_LEVTANK</DefaultUnit>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>-->
-		<!--<Row>
-			<Type>UNITCLASS_EXPLORATION</Type>
-			<Description>TXT_KEY_UNIT_EXPLORATION</Description>
-			<DefaultUnit>UNIT_EXPLORATION</DefaultUnit>
-			<MaxPlayerInstances>1</MaxPlayerInstances>
-		</Row>-->
+
 
 		<Row>
 			<Type>UNITCLASS_STURMTIGER</Type>
@@ -860,6 +812,13 @@
 		</Row>
 
 		<!--************************************海军单位********************************-->
+		<Row>
+			<Type>UNITCLASS_NAVALFIGHTER02</Type>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER02</Description>
+			<DefaultUnit>UNIT_NAVALFIGHTER02</DefaultUnit>
+			<MaxPlayerInstances>10</MaxPlayerInstances>
+		</Row>
+		
 		<Row>
 			<Type>UNITCLASS_NAVALCARRIER02</Type>
 			<Description>TXT_KEY_UNIT_NAVALCARRIER02</Description>
