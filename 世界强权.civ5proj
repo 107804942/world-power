@@ -611,6 +611,7 @@
     <Folder Include="extend\art\units\hongjian10" />
     <Folder Include="extend\art\units\japan battleship" />
     <Folder Include="extend\art\units\mech3" />
+    <Folder Include="extend\art\units\Independence" />
     <Folder Include="extend\art\units\rangedmarine04sp" />
     <Folder Include="extend\art\units\RangedMarine04s" />
     <Folder Include="extend\art\units\Slinger" />
@@ -4701,10 +4702,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\PROMOTION\FWPromotionIconAtlas128.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\PROMOTION\FWPromotionIconAtlas16.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -9765,6 +9762,26 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\huge Bombs\HUGE_BOMB2.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Independence\AM2 AM3.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Independence\AM3.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Independence\AM4.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Independence\Independence.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Independence\Independence.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

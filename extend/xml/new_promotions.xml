@@ -12,6 +12,13 @@
 			<Where Type="PROMOTION_FIRST_STRIKE"/>
 		</Update>
 
+
+		<Update>
+			<Set IconAtlas="CIV_COLOR_ATLAS_FW_PROMOTIONS" PortraitIndex="36"/>
+			<Where Type="PROMOTION_SP_ATTACK_25"/>
+		</Update>
+		
+
 		<Update>
 			<Set IconAtlas="MainRobotPromo_Atlas" PortraitIndex="23"/>
 			<Where Type="PROMOTION_NO_CASUALTIES"/>
@@ -2716,6 +2723,7 @@
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
 			<SplashDamageFixed>1</SplashDamageFixed>
+			<CannotBeCaptured>true</CannotBeCaptured>
 			<AdjacentEnemySapMovement>1</AdjacentEnemySapMovement>
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
@@ -3280,8 +3288,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<InterceptChanceChange>100</InterceptChanceChange>
 			<NumInterceptionChange>8</NumInterceptionChange>
-			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<PortraitIndex>16</PortraitIndex>
+			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_INTERCEPTION_EXTREME</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -4105,9 +4113,9 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<IgnoreZOC>true</IgnoreZOC>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>25</PortraitIndex>
+			<PortraitIndex>19</PortraitIndex>
 			<PediaType>PEDIA_MELEE</PediaType>
-			<IconAtlas>VALERY_ATLAS</IconAtlas>
+			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
 			<IsCanParadropUnLimit>1</IsCanParadropUnLimit>
 			<FightWellDamaged>1</FightWellDamaged>
 			<SplashDamageImmune>1</SplashDamageImmune>
@@ -4163,8 +4171,8 @@
 			<Description>TXT_KEY_PROMOTION_CARCASSONNE</Description>
 			<Help>TXT_KEY_PROMOTION_CARCASSONNE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>47</PortraitIndex>
+			<IconAtlas>promoVP_atlas_03</IconAtlas>
 			<!--<ShowInUnitPanel>0</ShowInUnitPanel>
 			<ShowInPedia>0</ShowInPedia>
 			<ExtraResourceType>RESOURCE_FOIEGRAS</ExtraResourceType>
@@ -4586,8 +4594,8 @@
 			<Help>TXT_KEY_PROMOTION_PARATROOPER_BUFF_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>31</PortraitIndex>
+			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<ShowInPedia>0</ShowInPedia>
 			<PediaEntry>TXT_KEY_PROMOTION_PARATROOPER_BUFF</PediaEntry>

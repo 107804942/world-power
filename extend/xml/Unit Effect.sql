@@ -4,7 +4,7 @@ UPDATE UnitPromotions SET RangedFlankAttackModifier = '10' WHERE Type  = 'PROMOT
 
 
 ---核武器调整
---UPDATE Units SET ExtraNukeBlastRadius = -1 WHERE Class  = 'UNITCLASS_ATOMIC_BOMB';
+UPDATE Units SET ExtraNukeBlastRadius = -1 WHERE Class  = 'UNITCLASS_ATOMIC_BOMB';
 UPDATE Units SET ExtraNukeBlastRadius = 1 WHERE Class  = 'UNITCLASS_ICBM_MISSILE';
 
 
@@ -32,10 +32,10 @@ UPDATE Units SET CombatClass = 'UNITCOMBAT_WORKER' WHERE Class = 'UNITCLASS_WORK
 
 
 ---更新单位需求产能
-UPDATE Units SET Cost = 42 WHERE Class  = 'UNITCLASS_NAVAL_MILITIA';
-UPDATE Units SET Cost = 190 WHERE Class  = 'UNITCLASS_MONITOR_SHIP';
-UPDATE Units SET Cost = 300 WHERE Class  = 'UNITCLASS_CORVETTE';
-UPDATE Units SET Cost = 420 WHERE Class  = 'UNITCLASS_LITTORAL_COMBAT_SHIP';
+UPDATE Units SET Cost = 42 ,WorkRate= 200 WHERE Class  = 'UNITCLASS_NAVAL_MILITIA';
+UPDATE Units SET Cost = 190,WorkRate= 200 WHERE Class  = 'UNITCLASS_MONITOR_SHIP';
+UPDATE Units SET Cost = 300,WorkRate= 200 WHERE Class  = 'UNITCLASS_CORVETTE';
+UPDATE Units SET Cost = 420,Combat=200 ,RangedCombat=200 ,UnitArtInfo='ART_DEF_UNIT_IND',UnitFlagAtlas='UNIT_FLAG_ATLAS_2',UnitFlagIconOffset=7, Moves=5 WHERE Class  = 'UNITCLASS_LITTORAL_COMBAT_SHIP';
 
 ---更新单位需求科技
 UPDATE Units SET PrereqTech = 'TECH_CARTOGRAPHY' ,ObsoleteTech = 'TECH_NAUTICAL_SCIENCE' WHERE Class  = 'UNITCLASS_GREAT_GALLEASS';

@@ -76,8 +76,8 @@
 			<XPValueAttack>4</XPValueAttack>
 			<XPValueDefense>4</XPValueDefense>
 			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER03S</UnitArtInfo>
-			<UnitFlagIconOffset>7</UnitFlagIconOffset>
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<UnitFlagIconOffset>12</UnitFlagIconOffset>
+			<UnitFlagAtlas>RFEMOD_FLAG_ATLAS</UnitFlagAtlas>
 			<PortraitIndex>42</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
@@ -277,11 +277,11 @@
 			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER01</UnitArtInfo>
 			<UnitFlagIconOffset>48</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>70</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>108</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>8</ExtraMaintenanceCost>
-			<WorkRate>100</WorkRate>
+			<WorkRate>200</WorkRate>
 		</Row>
 
 

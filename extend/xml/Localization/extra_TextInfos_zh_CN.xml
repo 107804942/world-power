@@ -1437,9 +1437,8 @@
 
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_WEAPON_SHIP">
-			<Text>[COLOR_MIGHT]超级旗舰[ENDCOLOR]</Text>
+			<Text>超级旗舰</Text>
 		</Row>
 
 
@@ -3790,7 +3789,7 @@
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1">
-			<Text>[COLOR_YELLOW]复合材料[ENDCOLOR]</Text>
+			<Text>复合材料</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1_HELP">
 			<Text>末日机甲+200最大生命值,获得镇暴能力（可对抵抗中的城市进行镇暴，一次性消除所有抵抗时间，但城市会损失一半人口）</Text>
@@ -5933,12 +5932,9 @@
 		</Row>
 
 
-
 		<Replace Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
-			<Text>固定火力点，当建成[COLOR_POSITIVE_TEXT]军事要塞[ENDCOLOR]时产生。[NEWLINE][NEWLINE]拥有防御加成，不受[COLOR_POSITIVE_TEXT]负面效果[ENDCOLOR]影响，但如果所在城市被敌方攻占，每回合会-50HP且-50%[ICON_STRENGTH]战斗力。[NEWLINE]不能[COLOR_NEGATIVE_TEXT]移动[ENDCOLOR]，不能获得[COLOR_NEGATIVE_TEXT]晋升[ENDCOLOR]，攻击时对被轰炸地块周围一格的单位造成50%溅射伤害，被[COLOR_NEGATIVE_TEXT]攻城单位[ENDCOLOR]克制。[NEWLINE]+400%最大生命值。</Text>
+			<Text>固定火力点，当建成[COLOR_POSITIVE_TEXT]军事要塞[ENDCOLOR]时产生。[NEWLINE][NEWLINE]拥有防御加成，不受[COLOR_POSITIVE_TEXT]负面效果[ENDCOLOR]影响，但如果所在城市被敌方攻占，每回合会-50HP且-50%[ICON_STRENGTH]战斗力。[NEWLINE]不能[COLOR_NEGATIVE_TEXT]移动[ENDCOLOR]，不能获得[COLOR_NEGATIVE_TEXT]晋升[ENDCOLOR]，攻击时对被轰炸地块周围一格的单位造成50%溅射伤害，被[COLOR_NEGATIVE_TEXT]攻城单位[ENDCOLOR]克制。</Text>
 		</Replace>
-
-
 
 
 
@@ -9931,7 +9927,9 @@
 			<Text>
 				易于根据不同的作战角色而重新配置，包括反潜、反水雷、反水面舰艇、情报、监控和侦察，国土防御、海上拦截、特种作战、后勤保障。得益于它的模组化设计，它能替代更慢、更特制的舰艇如扫雷艇和攻击艇。</Text>
 		</Row>
-
+		<Replace Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
+			<Text>游戏中的第一种核武器，引爆时会杀伤甚至摧毁距离1个区块内的单位核设施，并对城市造成严重破坏，但不能够摧毁城市。原子弹的载机占用三个停机位。不能部署在航空母舰上。</Text>
+		</Replace>
 	</Language_zh_CN>
 
 

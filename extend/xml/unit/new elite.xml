@@ -682,6 +682,7 @@
 			<XPValueDefense>2</XPValueDefense>
 			<UnitArtInfo>ART_DEF_UNIT_SIEGE_WORM</UnitArtInfo>
 			<MoveRate>WHEELED</MoveRate>
+			<NoMinorGifts>1</NoMinorGifts>
 			<MaxHitPoints>500</MaxHitPoints>
 			<UnitFlagIconOffset>42</UnitFlagIconOffset>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
@@ -712,6 +713,7 @@
 			<MilitarySupport>false</MilitarySupport>
 			<MilitaryProduction>false</MilitaryProduction>
 			<Pillage>false</Pillage>
+			<NoMinorGifts>1</NoMinorGifts>
 			<AdvancedStartCost>60</AdvancedStartCost>
 			<XPValueAttack>0</XPValueAttack>
 			<XPValueDefense>0</XPValueDefense>
@@ -736,6 +738,7 @@
 			<PrereqTech>TECH_MATTERTRANSMISSION</PrereqTech>
 			<CombatClass>UNITCOMBAT_NAVALMELEE</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
+			<NoMinorGifts>1</NoMinorGifts>
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NAVAL_MONSTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MONSTER_PEDIA</Civilopedia>
@@ -818,6 +821,7 @@
 			<MilitarySupport>false</MilitarySupport>
 			<MilitaryProduction>false</MilitaryProduction>
 			<Pillage>false</Pillage>
+			<NoMinorGifts>1</NoMinorGifts>
 			<!--<NukeDamageLevel>2</NukeDamageLevel>-->
 			<AdvancedStartCost>120</AdvancedStartCost>
 			<XPValueAttack>2</XPValueAttack>
@@ -905,6 +909,7 @@
 			<RangedCombatLimit>1000</RangedCombatLimit>
 			<CombatLimit>0</CombatLimit>
 			<NoFallout>true</NoFallout>
+			<NoMinorGifts>1</NoMinorGifts>
 			<ExtraNukeBlastRadius>5</ExtraNukeBlastRadius>
 			<XPValueDefense>0</XPValueDefense>
 			<NukeDamageLevel>5</NukeDamageLevel>
@@ -943,6 +948,7 @@
 			<MilitarySupport>false</MilitarySupport>
 			<MilitaryProduction>false</MilitaryProduction>
 			<Pillage>true</Pillage>
+			<NoMinorGifts>1</NoMinorGifts>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<Mechanized>true</Mechanized>
 			<AdvancedStartCost>120</AdvancedStartCost>
@@ -1012,6 +1018,7 @@
 			<Moves>8</Moves>
 			<Range>15</Range>
 			<Immobile>0</Immobile>
+			<NoMinorGifts>1</NoMinorGifts>
 			<BaseSightRange>8</BaseSightRange>
 			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
 			<Domain>DOMAIN_HOVER</Domain>
@@ -1106,6 +1113,7 @@
 			<UnitFlagAtlas>FLAG_ATLAS_FUTURE_5</UnitFlagAtlas>
 			<UnitFlagIconOffset>2</UnitFlagIconOffset>
 			<PortraitIndex>97</PortraitIndex>
+			<NoMinorGifts>1</NoMinorGifts>
 			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
 			<ExtraMaintenanceCost>10000</ExtraMaintenanceCost>
 			<ProjectPrereq>PROJECT_SIEGE04H</ProjectPrereq>
