@@ -160,12 +160,6 @@ UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Minor_Building_Ov
 ------------------------------------------------------------------------------------------------------------------------
 -- 科技或建筑免费晋升关联单位种类
 ------------------------------------------------------------------------------------------------------------------------
-
-
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT  'PROMOTION_NAVAL_SIGHT', Type  FROM Units WHERE Domain ='DOMAIN_SEA';
-
 ------特种金属
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
 SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_SUPER_ROCKET';

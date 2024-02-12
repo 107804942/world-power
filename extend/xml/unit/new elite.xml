@@ -1169,8 +1169,8 @@
 			<Type>UNIT_NAVALCARRIER03P</Type>
 			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
-			<Combat>1100</Combat>
-			<RangedCombat>1100</RangedCombat>
+			<Combat>1000</Combat>
+			<RangedCombat>1000</RangedCombat>
 			<Range>2</Range>
 			<Cost>17000</Cost>
 			<Moves>11</Moves>

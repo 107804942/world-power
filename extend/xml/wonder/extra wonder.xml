@@ -633,16 +633,6 @@
 
 
 
-		<!-- Kamuthi光伏电站-->
-		<Row>
-			<Type>BUILDINGCLASS_KAMUTHI</Type>
-			<DefaultBuilding>BUILDING_KAMUTHI</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_KAMUTHI</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-
-
-
 		<!-- 太阳能卫星-->
 		<Row>
 			<Type>BUILDINGCLASS_SATELLITE_SOLAR</Type>
@@ -2289,35 +2279,7 @@
 			<PortraitIndex>50</PortraitIndex>
 		</Row>
 
-		<!--Kamuthi光伏电站-->
-		<Row>
-			<Type>BUILDING_KAMUTHI</Type>
-			<BuildingClass>BUILDINGCLASS_KAMUTHI</BuildingClass>
-			<Cost>3000</Cost>
-			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
-			<Help>TXT_KEY_WONDER_KAMUTHI_HELP</Help>
-			<Description>TXT_KEY_BUILDING_KAMUTHI</Description>
-			<Civilopedia>TXT_KEY_WONDER_KAMUTHI_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_KAMUTHI_QUOTE</Quote>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>64</PortraitIndex>
-			<FreeTechs>1</FreeTechs>
-			<WonderSplashImage>KAMUTHI_Splash.dds</WonderSplashImage>
-			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-		</Row>
-
-
-
-
-
-		
-
+	
 
 
 		<!--总统山-->
@@ -3319,16 +3281,6 @@
 		</Row>
 
 
-		<!--光伏电站-->
-		<Row>
-			<BuildingType>BUILDING_KAMUTHI</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>9</Cost>
-		</Row>
-
-
-
-
 		<!--总统山-->
 		<Row>
 			<BuildingType>BUILDING_RUSHMORE</BuildingType>
@@ -4318,11 +4270,7 @@
 		</Row>
 		
 		
-		<Row>
-			<BuildingType>BUILDING_KAMUTHI</BuildingType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Quantity>35</Quantity>
-		</Row>
+
 
 
 		<Row>

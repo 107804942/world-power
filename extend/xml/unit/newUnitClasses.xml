@@ -188,7 +188,16 @@
 
 		<!--************ 禁止城邦野蛮人建造**********************************	-->
 
-		
+		<Row>
+			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
+			<UnitClassType>UNITCLASS_ZOMBIE</UnitClassType>
+			<UnitType/>
+		</Row>
+		<Row>
+			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
+			<UnitClassType>UNITCLASS_ZOMBIE</UnitClassType>
+			<UnitType/>
+		</Row>
 		
 
 		<Row>

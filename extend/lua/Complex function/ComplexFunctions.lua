@@ -1246,8 +1246,6 @@ function LatifundiumCheck(iPlayer, iUnit, iX, iY, iBuild)
 GameEvents.PlayerCanBuild.Add(LatifundiumCheck)
 
 
-
-
 function Processes_CanMaintain(playerID, cityID, processID)
 	local player = Players[playerID]
 	--local process = GameInfo.Processes[processID]

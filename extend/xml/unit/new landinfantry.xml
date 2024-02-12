@@ -88,8 +88,8 @@
 			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_ZOMBIE_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_LAND_INFANTRY_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_ZOMBIE_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
+			<MilitarySupport>false</MilitarySupport>
+			<MilitaryProduction>false</MilitaryProduction>
 			<Pillage>true</Pillage>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
 			<AdvancedStartCost>70</AdvancedStartCost>

@@ -2008,16 +2008,16 @@ function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
 		local promotionIcon
 		g_PromotionIconIM2:ResetInstances()
 
-		if not( unit.Trade ) then
+		--if not( unit.Trade ) then
 		local thisUnitType = { UnitType = unit.Type }
         for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
-		if unitPromotion~=nil  then
+		if  unitPromotion~=nil  then
 		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
 		    promotionIcon = g_PromotionIconIM2:GetInstance()
 			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image2 )
 			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
-			    end
+			   -- end
 			end
 		end
 	

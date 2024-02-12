@@ -556,6 +556,11 @@
 			<PortraitIndex>84</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>-->
+
+
+
+
+		
 		
 	</Features>
 
@@ -563,6 +568,7 @@
 	
 	<Natural_Wonder_Placement>
 
+	
 
 		<!-- 碑谷 -->
 		<Row>

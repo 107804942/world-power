@@ -189,6 +189,7 @@ function PlagueEnds(city)
 	--city:SetAdditionalFood(0)
 	city:SetPlagueType(-1)
 	city:SetPlagueCounter(0)
+	city:SetPlagueTurns(0)
 end
 
 
@@ -372,6 +373,7 @@ function Health_CurePlagueMission(playerID, unit, city)
 	Events.AudioPlay2DSound("AS2D_SOUND_DOCTOR")
 	city:SetPlagueType(-1)
 	city:SetPlagueCounter(0)
+	city:SetPlagueTurns(0)
 	------------------------------------------大于六回合减少回合数
 	else  
 	 -- Notification

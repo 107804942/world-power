@@ -6632,27 +6632,6 @@
 
 
 
-
-
-		<Row Tag="TXT_KEY_BUILDING_KAMUTHI">
-			<Text>卡努尔太阳能公园</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_KAMUTHI_HELP">
-			<Text>只能建造临近沙漠的城市中，提供35[ICON_RES_ELECTRICITY]电力。本城每处沙漠区域+2[ICON_RESEARCH]科研，建成后获得一个免费科技。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_WONDER_KAMUTHI_QUOTE">
-			<Text>
-				[NEWLINE]"阳光越是强烈的地方，阴影就越是深邃。"[NEWLINE]        ——歌德[NEWLINE]
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_KAMUTHI_PEDIA">
-			<Text>
-				卡努尔太阳能公园占地 5,683.22英亩（22.99 平方公里），位于安得拉邦的Kurnool区。该太阳能园区总发电量为1,000兆瓦，投资约10亿美元。[NEWLINE]该项目由SBG清洁技术项目（350MW）、Greenko Group（500MW）、Azure Power（100MW）和Prayatna Developers（50MW）实施。 园区安装了超过400万块太阳能电池板，每块太阳能电池板的容量在315W到320W之间。该站点在晴天可产生超过800万千瓦时的电力，几乎可以满足 Kurnool 区的全部电力需求。
-			</Text>
-		</Row>
-
-
 		<Row Tag="TXT_KEY_BUILDING_OIL_WELL">
 			<Text>[ICON_RES_OIL]超深油井</Text>
 		</Row>
@@ -9320,7 +9299,20 @@
 
 
 		<!--EXTRA NATURAL WONDERS-->
-
+		<!--PUMUKKALE -->
+		<Row Tag="TXT_KEY_FEATURE_PUMUKKALE">
+			<Text>棉花堡</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_PUMUKKALE_TEXT">
+			<Text>
+				位于土耳其爱琴海边的“棉花堡”并不像它名字那样柔软，但由温泉溢出的方解石所形成的梯田却是格外壮观。这里不仅仅对现代游客来说是一处治愈放松的场所，对于古人而言亦是如此：其上方便是希拉波利斯，一座古罗马温泉城的遗迹。看来在温暖的水中放松放松，对于任何时代的人来说，都是一个不错的选择。
+				[NEWLINE]这处自然景观形成的时间超过了一千年，每年都在缓慢堆叠。温泉水中的碳酸钙逐渐重叠变厚，最终在到达水面后形成结晶，进而转变为石灰华沉积岩。而这种沉积岩则形成了钟乳石、梯田和连绵超过1600米的“白云”。
+			</Text>
+		</Row>
+		
+		
+		
 		<!--BERMUDA -->
 		<Row Tag="TXT_KEY_FEATURE_BERMUDA">
 			<Text>百慕大三角</Text>
@@ -9948,6 +9940,12 @@
 		<Replace Tag="TXT_KEY_UNIT_HELP_ATOMIC_BOMB">
 			<Text>游戏中的第一种核武器，引爆时会杀伤甚至摧毁距离1个区块内的单位核设施，并对城市造成严重破坏，但不能够摧毁城市。原子弹的载机占用三个停机位。不能部署在航空母舰上。</Text>
 		</Replace>
+
+
+
+
+
+
 	</Language_zh_Hant_HK>
 
 

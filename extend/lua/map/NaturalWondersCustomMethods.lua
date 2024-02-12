@@ -505,6 +505,8 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 
 
+
+
 	
 		-- reserved: µ¤Ï¼
         elseif method_number == 17 then
@@ -2026,6 +2028,7 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		end
 
 
+		
 
 
     --¿ÆÂ¡Èºµº

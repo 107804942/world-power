@@ -1,4 +1,43 @@
 
+		<Row Tag="TXT_KEY_IMPROVEMENT_SOLAR_PANNELS">
+			<Text>太阳能农场</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_SOLAR_PANNELS_TEXT">
+			<Text>
+				太阳能农场是一种利用大量太阳能电池阵列，将太阳的能量转化为消费者所用电力的电厂。每组阵列均由太阳能面板组成，并有多种安装方式。有的阵列可根据太阳移动轨迹进行转动，而一些则是固定的（虽然每年都会根据太阳与地球角度的变化进行调整）。每种阵列的安装方式都有各自的考虑，像是能源输出、成本和有效运行的空间。
+				[NEWLINE]许多企业甚至是个人家庭为私人用途已经开始涉足太阳能，而政府的激励措施也继续在小范围内推动这项科技的发展。现今，中国在大规模太阳能农场的运营方面领先全球，紧随其后的是德国，而太阳能农场同时也在世界其他地区不断涌现。世界上第一座太阳能农场由阿尔科太阳能公司于1982年在加利福尼亚建立，不过现在已关闭。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_IMPROVEMENT_SOLAR_PANNELS_HELP">
+			<Text>+1[ICON_GOLD]金钱，+1[ICON_PRODUCTION]产能，提供3份[ICON_FOOD]电力资源。只能在平坦的沙漠地块建造。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SOLAR_PANNELS">
+			<Text>太阳能农场</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SOLAR_PANNELS_HELP">
+			<Text>建造一个太阳能农场，+1[ICON_GOLD]金钱，+1[ICON_PRODUCTION]产能,提供3份[ICON_FOOD]电力资源。只能在平坦的沙漠地块建造。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_SOLAR_PANNELS_REC">
+			<Text>
+				+1[ICON_GOLD]金钱，+1[ICON_PRODUCTION]产能,提供3份[ICON_FOOD]电力资源。只能在平坦的沙漠地块建造。
+			</Text>
+		</Row>
+
+
+		--==========================================================================================================================
+-- 太阳能
+--==========================================================================================================================
+INSERT INTO ArtDefine_LandmarkTypes(Type, LandmarkType, FriendlyName)
+SELECT 'ART_DEF_IMPROVEMENT_SOLAR_PANNELS', 'Improvement', 'SOLAR PANNELS';
+
+
+INSERT INTO ArtDefine_Landmarks(Era, State, Scale, ImprovementType, LayoutHandler, ResourceType, Model, TerrainContour)
+SELECT 'Any', 'UnderConstruction', 0.8,  'ART_DEF_IMPROVEMENT_SOLAR_PANNELS', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'solar pannels_hb.fxsxml', 1 UNION ALL
+SELECT 'Any', 'Constructed', 0.8,  'ART_DEF_IMPROVEMENT_SOLAR_PANNELS', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'solar pannels.fxsxml', 1 UNION ALL
+SELECT 'Any', 'Pillaged', 0.8,  'ART_DEF_IMPROVEMENT_SOLAR_PANNELS', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'solar pannels_pl.fxsxml', 1;
+
+
+
 
 ALTER TABLE Buildings ADD COLUMN 'PlagueMod' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'PlagueModGlobal' INTEGER DEFAULT 0;

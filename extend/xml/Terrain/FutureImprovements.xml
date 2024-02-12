@@ -7,8 +7,11 @@
 
 		<Improvements>
 
+		
 
-
+			
+			
+			
 			<!--*******************沙漠改造********************* -->
 
 
@@ -257,6 +260,10 @@
 	
 	
 	<Improvement_Yields>
+		
+		
+		
+		
 		<Row>
 			<ImprovementType>IMPROVEMENT_FW_GENERATOR</ImprovementType>
 			<YieldType>YIELD_GOLD</YieldType>
@@ -371,6 +378,9 @@
 	<!--*******************关联地形*********************-->
 	
 	<Improvement_ValidTerrains>
+
+		
+		
 		<Row>
 			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
 			<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -807,7 +817,8 @@
 
 	<Builds>
 
-
+		
+		
 		<Row>
 			<Type>BUILD_FW_GENERATOR</Type>
 			<Time>1100</Time>
@@ -1225,10 +1236,8 @@
 	</BuildFeatures>
 	
 	<Unit_Builds>
+		
 
-	
-
-		<Delete UnitType="UNIT_BARBARIAN_GALLEY"/>
 		
 		<Row>
 			<UnitType>UNIT_WORKER</UnitType>
@@ -1569,10 +1578,10 @@
 		</Update>
 
 
-		<Update>
+		<!--<Update>
 			<Set  PrereqTech="TECH_STONE_TOOLS"/>
 			<Where Type="BUILD_QUARRY"/>
-		</Update>
+		</Update>-->
 
 
 		<Update>

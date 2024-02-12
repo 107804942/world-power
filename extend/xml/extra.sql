@@ -186,7 +186,8 @@ INSERT INTO Improvement_TechYieldChanges (ImprovementType, TechType, YieldType, 
 VALUES
     ('IMPROVEMENT_PLANTATION',	   'TECH_IMPERIALISM',      'YIELD_GOLD',       1),
 	('IMPROVEMENT_MANUFACTORY',	   'TECH_REFINING',         'YIELD_PRODUCTION', 1),
-	--('IMPROVEMENT_CAMP',	       'TECH_NATURAL_HISTORY',  'YIELD_CULTURE',    2),
+	('IMPROVEMENT_SAND_BASE',	   'TECH_SOLAR_POWER',      'YIELD_GOLD', 1),
+	('IMPROVEMENT_SAND_BASE',	   'TECH_SOLAR_POWER',      'YIELD_PRODUCTION', 1),
 	('IMPROVEMENT_CUSTOMS_HOUSE',  'TECH_STEAM_POWER',      'YIELD_PRODUCTION', 2);
 
 --UPDATE Improvement_TechYieldChanges SET TechType = 'TECH_REFINING' WHERE ImprovementType = 'IMPROVEMENT_MINE' AND TechType = 'TECH_CHEMISTRY';
@@ -693,11 +694,7 @@ FROM ArtDefine_UnitMemberInfos			WHERE Type = 'ART_DEF_UNIT_MEMBER_SCOUT';
 
 --==========================================================================================================================
 -- ∑¿…≥π§≥Ã
---==========================================================================================================================
-INSERT INTO ArtDefine_StrategicView 
-		(StrategicViewType, 				TileType,		Asset)
-VALUES	('ART_DEF_IMPROVEMENT_YERBAMATE',	'Improvement',	'SV_Improvement_Yerbamate.dds');
-		
+--==========================================================================================================================		
 INSERT INTO ArtDefine_LandmarkTypes
 		(Type,								LandmarkType,	FriendlyName)
 VALUES	('ART_DEF_IMPROVEMENT_YERBAMATE',	'Improvement',	'Yerbamate Plantation');
@@ -721,10 +718,6 @@ INSERT INTO ArtDefine_Landmarks(Era, State, Scale, ImprovementType, LayoutHandle
 SELECT 'Any', 'UnderConstruction', 0.8,  'ART_DEF_IMPROVEMENT_KIBBUTZ', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'kibbutz_hb.fxsxml', 1 UNION ALL
 SELECT 'Any', 'Constructed', 0.8,  'ART_DEF_IMPROVEMENT_KIBBUTZ', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'kibbutz.fxsxml', 1 UNION ALL
 SELECT 'Any', 'Pillaged', 0.6,  'ART_DEF_IMPROVEMENT_KIBBUTZ', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'kibbutz_pl.fxsxml', 1;
-
-
-INSERT INTO ArtDefine_StrategicView(StrategicViewType, TileType, Asset)
-SELECT 'ART_DEF_IMPROVEMENT_KIBBUTZ', 'Improvement', 'sv_KIBBUTZ.dds';
 
 
 --==========================================================================================================================
@@ -753,6 +746,10 @@ VALUES		('ART_DEF_IMPROVEMENT_MBANZA',			'Any', 	'UnderConstruction',	1,	'SNAPSH
 			('ART_DEF_IMPROVEMENT_MBANZA',			'Any', 	'Pillaged',				 1,	'SNAPSHOT',		'ART_DEF_RESOURCE_ALL', 'Mbanza_PL.fxsxml', 1);
 
 
+
+--==========================================================================================================================
+--
+--==========================================================================================================================
 
 
 INSERT OR REPLACE INTO Plot_AdjacentFeatureYieldChanges 
@@ -910,6 +907,7 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 		('FEATURE_EYE_OF_SAHARA_A',		'YIELD_PRODUCTION',		5),
 
 
+
 		('FEATURE_DALLOL',		'YIELD_PRODUCTION',		4),
 		('FEATURE_DALLOL',		'YIELD_SCIENCE',		3),
 		('FEATURE_DALLOL',		'YIELD_TOURISM',		2);
@@ -921,6 +919,9 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 
 INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	Yield,	IgnoreNaturalWonderPlots)VALUES	
  
+    
+
+
         ('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_GOLDEN_AGE_POINTS',2,	0),
 		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_PRODUCTION',     2,		0),
 		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_TOURISM',        1,		0),
@@ -1107,8 +1108,8 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 		('ART_DEF_FEATURE_GALAPAGOS_B',		'Resource',		'Galapagos B'),
 
 		('ART_DEF_FEATURE_BERMUDA_A',	'Resource',		'Bermuda Triangle A'),
-
-
+		--('ART_DEF_FEATURE_PUMUKKALE_B',	'Resource',		'pamukkale b'),
+		--	('ART_DEF_FEATURE_PUMUKKALE',	'Resource',		'pamukkale'),
 		-- ('ART_DEF_FEATURE_VALLEY_B',	'Resource',		'Valley B'),
 		  ('ART_DEF_FEATURE_VALLEY_A',	'Resource',		'Valley A'),
 
@@ -1120,6 +1121,9 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 
 
 INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHandler,	ResourceType,	Model,	TerrainContour) VALUES
+--('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_PUMUKKALE',	'pamukkale.fxsxml',1),       --important!
+--('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_PUMUKKALE_B',	'pamukkale_b.fxsxml',1),       --important!
+
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VOLCANO_1',	'apocalyptic_volcano_1.fxsxml',1),       --important!
 
 --('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_B',	'Monument_valley_1.fxsxml',1),       --important!
@@ -1189,7 +1193,7 @@ INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_A','Feature',		'sv_Sahara_Eye.dds'),
 
 		('ART_DEF_FEATURE_BERMUDA_A','Feature',		'sv_Bermuda.dds'),
-
+		('ART_DEF_FEATURE_PUMUKKALE','Feature',		'SV_pamukkale.dds'),
 		('ART_DEF_FEATURE_VALLEY_A','Feature',		'sv_VALLEY.dds'),
 		--('ART_DEF_FEATURE_VALLEY_B','Feature',		'sv_VALLEY.dds'),
 
