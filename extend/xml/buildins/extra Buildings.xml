@@ -351,12 +351,12 @@
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<ConquestProb>66</ConquestProb>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<ConquestProb>189</ConquestProb>
 				<Happiness>2</Happiness>
 				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 				<SpecialistCount>1</SpecialistCount>
-				<PortraitIndex>109</PortraitIndex>
+				<PortraitIndex>189</PortraitIndex>
 			</Row>
 
 			<!--出版社-->
@@ -420,9 +420,9 @@
 				<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 				<GreatPeopleRateChange>1</GreatPeopleRateChange>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<ConquestProb>55</ConquestProb>
-				<PortraitIndex>126</PortraitIndex>
+				<PortraitIndex>206</PortraitIndex>
 			</Row>
 			
 			
@@ -675,8 +675,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>100</HurryCostModifier>
 				<ConquestProb>55</ConquestProb>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>56</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>215</PortraitIndex>
 			</Row>
 			
 			
@@ -695,8 +695,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>66</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>94</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>174</PortraitIndex>
 			</Row>
 
 
@@ -722,8 +722,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>100</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>97</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>111</PortraitIndex>
 			</Row>
 
 
@@ -790,8 +790,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>75</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>82</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>162</PortraitIndex>
 			</Row>
 
 
@@ -816,8 +816,8 @@
 				<AllowsRangeStrike>1</AllowsRangeStrike>
 				<ConquestProb>66</ConquestProb>
 				<NukeImmune>false</NukeImmune>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>79</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>159</PortraitIndex>
 			</Row>
 
 			
@@ -980,8 +980,8 @@
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
 				<HurryCostModifier>25</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>91</PortraitIndex>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>171</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			</Row>
 			
 
@@ -1130,9 +1130,8 @@
 				<Defense>5000</Defense>
 				<ExtraCityHitPoints>50</ExtraCityHitPoints>
 				<HurryCostModifier>40</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>111</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>191</PortraitIndex>
 				<ObsoleteTech>TECH_LARGE_CALIBRE</ObsoleteTech>
 				<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
 				<TechEnhancedTourism>2</TechEnhancedTourism>
@@ -1458,9 +1457,8 @@
 				<ArtDefineTag>ART_DEF_BUILDING_LABORATORY</ArtDefineTag>
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>50</ConquestProb>
-				<HurryCostModifier>0</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>21</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>148</PortraitIndex>
 			</Row>
 
 
@@ -1522,8 +1520,8 @@
 				<Defense>2500</Defense>
 				<ConquestProb>75</ConquestProb>
 				<HurryCostModifier>75</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>19</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>146</PortraitIndex>
 			</Row>
 
 
@@ -1617,8 +1615,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-				<PortraitIndex>18</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>145</PortraitIndex>
 			</Row>
 
 
@@ -1853,8 +1851,8 @@
 			<FoodKept>-20</FoodKept>
 			<NeverCapture>true</NeverCapture>
 			<HurryCostModifier>50</HurryCostModifier>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>117</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>197</PortraitIndex>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>2</SpecialistCount>
 		</Row>
@@ -1875,8 +1873,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<HurryCostModifier>50</HurryCostModifier>
-				<PortraitIndex>90</PortraitIndex>
-				<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+				<PortraitIndex>170</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			</Row>
 			
 		</Buildings>

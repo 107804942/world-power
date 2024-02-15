@@ -41,8 +41,8 @@
 			<Help>TXT_KEY_PROCESS_DEFENSE_HELP</Help>
 			<Strategy>TXT_KEY_PROCESS_DEFENSE_STRATEGY</Strategy>
 			<TechPrereq>TECH_PHYSICS</TechPrereq>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>208</PortraitIndex>
 			<DefenseValue>10</DefenseValue>			
 		</Row>
 		

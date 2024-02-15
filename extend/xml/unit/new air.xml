@@ -209,6 +209,7 @@
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ShowInPedia>false</ShowInPedia>
+			<ShowInTechTree>0</ShowInTechTree>
 			<ExtraMaintenanceCost>170</ExtraMaintenanceCost>
 		</Row>
 		
@@ -662,7 +663,7 @@
 
 
 	<Update>
-		<Set  UnitArtInfo="ART_DEF_UNIT_F-14" IconAtlas="ROBOT_ICON_ATLAS2" PortraitIndex="49"  />
+		<Set  UnitArtInfo="ART_DEF_UNIT_F-14" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="157"  />
 		<Where Type="UNIT_ATTACK_AIRCRAFT" />
 	</Update>
 

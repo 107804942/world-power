@@ -442,7 +442,7 @@ local function ShowResourceToolTip( resourceID, tips )
 		insert( tips, Colorize(numResourceLocal) .. " " .. L"TXT_KEY_EO_LOCAL_RESOURCES" )
 
 		-- Resources from city terrain
-		for city in activePlayer:Cities() do
+		--[[for city in activePlayer:Cities() do
 			local numConnectedResource = 0
 			local numUnconnectedResource = 0
 			for plot in CityPlots( city ) do
@@ -512,14 +512,14 @@ local function ShowResourceToolTip( resourceID, tips )
 					end
 				end
 			end
-		end
+		end]]
 		----------------------------
 		-- Import & Export Breakdown
 		----------------------------
 
 		-- Get specified resource traded with the active player
 
-		local itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID
+		--[[local itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID
 		local gameTurn = Game.GetGameTurn()-1
 		local Exports = {}
 		local Imports = {}
@@ -549,12 +549,12 @@ local function ShowResourceToolTip( resourceID, tips )
 				end
 			until not itemType
 		end
-		PopScratchDeal()
+		PopScratchDeal()]]
 
 		----------------------------
 		-- Resource Imports
 		----------------------------
-		if numResourceImport > 0 then
+		--[[if numResourceImport > 0 then
 			insert( tips, "" )
 			insert( tips, Colorize(numResourceImport) .. " " .. L"TXT_KEY_RESOURCES_IMPORTED" )
 			for playerID, row in pairs( Imports ) do
@@ -577,11 +577,11 @@ local function ShowResourceToolTip( resourceID, tips )
 					end
 				end
 			end
-		end
+		end]]
 		----------------------------
 		-- Resource Exports
 		----------------------------
-		if numResourceExport > 0 then
+		--[[if numResourceExport > 0 then
 			insert( tips, "" )
 			insert( tips, Colorize(-numResourceExport) .. " " .. L"TXT_KEY_RESOURCES_EXPORTED" )
 			for playerID, row in pairs( Exports ) do
@@ -595,7 +595,7 @@ local function ShowResourceToolTip( resourceID, tips )
 					insert( tips, "[ICON_BULLET]" .. Players[ playerID ]:GetCivilizationShortDescription() .. tip )
 				end
 			end
-		end
+		end]]
 
 		----------------------------
 		-- Resource Usage Breakdown  /Output
@@ -604,8 +604,8 @@ local function ShowResourceToolTip( resourceID, tips )
 		insert( tips, (numResourceUsed~=0 and (Colorize(-numResourceUsed) .. " ") or"") .. L"TXT_KEY_PEDIA_REQ_RESRC_LABEL" )
 		local tipIndex = #tips
 
-		for unit in GameInfo.Units() do
-			local unitID = unit.ID
+		--for unit in GameInfo.Units() do
+			--[[ local unitID = unit.ID
 			local numResource = Game.GetNumResourceRequiredForUnit( unitID, resourceID )
 			if numResource > 0 then
 				-- count how many such units player has
@@ -715,7 +715,8 @@ local function ShowResourceToolTip( resourceID, tips )
 			if ( IsCiv5notVanilla or minorPlayer:GetActiveQuestForPlayer()==MINOR_CIV_QUEST_CONNECT_RESOURCE ) and minorPlayer:GetQuestData1(activePlayerID, MINOR_CIV_QUEST_CONNECT_RESOURCE) == resourceID then
 				insert( tips, "[ICON_CITY_STATE] " .. minorPlayer:GetCivilizationShortDescription() )
 			end
-		end
+		end]]
+
 		----------------------------
 		-- Available for Import
 		----------------------------
@@ -2012,12 +2013,13 @@ function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
 		local thisUnitType = { UnitType = unit.Type }
         for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
+
 		if  unitPromotion~=nil  then
-		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
+		    if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
 		    promotionIcon = g_PromotionIconIM2:GetInstance()
 			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image2 )
 			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
-			   -- end
+			    end
 			end
 		end
 	
@@ -2036,7 +2038,6 @@ function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
 		Controls.UnitTooltipTimer2:SetToBeginning()
         Controls.UnitTooltipTimer2:SetPauseTime(0) ---决定晋升图标出现的延迟时间
 		Controls.UnitTooltipTimer2:Reverse()	
-		end
 end
 
 

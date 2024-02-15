@@ -78,8 +78,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER03S</UnitArtInfo>
 			<UnitFlagIconOffset>12</UnitFlagIconOffset>
 			<UnitFlagAtlas>RFEMOD_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>42</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>123</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
@@ -93,7 +93,7 @@
 			<Class>UNITCLASS_NAVALFIGHTER04S</Class>
 			<Type>UNIT_NAVALFIGHTER04S</Type>
 			<BaseSightRange>4</BaseSightRange>
-			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<Combat>700</Combat>
 			<RangedCombat>550</RangedCombat>
 			<Cost>5500</Cost>
@@ -117,8 +117,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04S</UnitArtInfo>
 			<UnitFlagIconOffset>27</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>39</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>124</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<ExtraMaintenanceCost>300</ExtraMaintenanceCost>
@@ -156,8 +156,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04SP</UnitArtInfo>
 			<UnitFlagIconOffset>113</UnitFlagIconOffset>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>60</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>139</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
@@ -200,8 +200,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER02</UnitArtInfo>
 			<UnitFlagIconOffset>3</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>141</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
 		</Row>
@@ -241,8 +241,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_SUB04S</UnitArtInfo>
 			<UnitFlagIconOffset>29</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>114</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>153</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>SUB</MoveRate>
 			<ExtraMaintenanceCost>180</ExtraMaintenanceCost>
 		</Row>

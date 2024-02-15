@@ -36,8 +36,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_SABR</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>14</UnitFlagIconOffset>
-			<PortraitIndex>11</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>136</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<ExtraMaintenanceCost>50</ExtraMaintenanceCost>
 		</Row>
 
@@ -155,10 +155,13 @@
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 
-
 		<Row>
 			<UnitType>UNIT_HOVERTANK</UnitType>
 			<PromotionType>PROMOTION_HOVERING_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_HOVERTANK</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
 		
 
@@ -395,7 +398,7 @@
 			<Where Type="UNIT_CULVERIN" />
 		</Update>
 		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_UNION_ARTILLERY_PARROTT" IconAtlas="ROBOT_ICON_ATLAS2" PortraitIndex="92"/>
+			<Set  UnitArtInfo="ART_DEF_UNIT_UNION_ARTILLERY_PARROTT" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="172"/>
 			<Where Type="UNIT_CANNON" />
 		</Update>
 		<Update>

@@ -2832,7 +2832,7 @@
 		</Row>
 
 
-		<Row>
+		<!--<Row>
 			<Type>PROMOTION_CAN_RANGE_ATTACK</Type>
 			<Description>TXT_KEY_PROMOTION_CAN_RANGE_ATTACK</Description>
 			<Help>TXT_KEY_PROMOTION_CAN_RANGE_ATTACK_HELP</Help>
@@ -2844,7 +2844,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_CAN_RANGE_ATTACK</PediaEntry>
 			<RangeChange>2</RangeChange>
 			<RangeAttackIgnoreLOS>true</RangeAttackIgnoreLOS>
-		</Row>
+		</Row>-->
 
 
 		<Row>

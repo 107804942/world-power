@@ -3,6 +3,8 @@
 --ALTER TABLE UnitPromotions ADD COLUMN 'ShowInTooltip' INTEGER DEFAULT 1;
 
 
+ -----科技树显示单位
+ALTER TABLE Units ADD COLUMN 'ShowInTechTree' INTEGER DEFAULT 1;
 
 -- 精英单位升级后移动
 UPDATE Units SET MoveAfterUpgrade=1 WHERE HurryCostModifier='-1' AND ProjectPrereq != 'NULL';

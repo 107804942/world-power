@@ -748,16 +748,16 @@
 			<Where Name="GOLDEN_AGE_BASE_THRESHOLD_HAPPINESS" />
 		</Update>
 		<Update>
-			<Set Value="0.02"/>
+			<Set Value="0.03"/>
 			<Where Name="GOLDEN_AGE_THRESHOLD_CITY_MULTIPLIER" />
 		</Update>
 		<Update>
-			<Set Value="400"/>
+			<Set Value="500"/>
 			<Where Name="GOLDEN_AGE_EACH_GA_ADDITIONAL_HAPPINESS" />
 		</Update>
 
 		<Update>
-			<Set Value="5"/>
+			<Set Value="4"/>
 			<Where Name="GOLDEN_AGE_LENGTH" />
 		</Update>
 		

@@ -36,8 +36,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_MARINE02</UnitArtInfo>
 			<UnitFlagAtlas>THIRD_ARMY_INFANTRY_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<PortraitIndex>68</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>134</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
 		</Row>
 
@@ -70,8 +70,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_BATTLESUIT</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>9</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>101</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>181</PortraitIndex>
 			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
 			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
 		</Row>
@@ -109,8 +109,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_AEGIS</UnitArtInfo>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>54</UnitFlagIconOffset>
-			<PortraitIndex>68</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>132</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
 		</Row>
 
@@ -220,8 +220,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_SUPER_HELICOPTER</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_FUTURE</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>95</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>175</PortraitIndex>
 			<MoveRate>WHEELED</MoveRate>
 		</Row>
 

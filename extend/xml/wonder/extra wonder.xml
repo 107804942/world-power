@@ -1700,9 +1700,9 @@
 			<Defense>2500</Defense>
 			<WorkerSpeedModifier>25</WorkerSpeedModifier>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<FreePromotion>PROMOTION_ISHTARGATE</FreePromotion>
-			<PortraitIndex>89</PortraitIndex>
+			<PortraitIndex>169</PortraitIndex>
 			<WonderSplashImage>ISHTAR.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,B</WonderSplashAnchor>
 		</Row>
@@ -1761,8 +1761,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>84</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>164</PortraitIndex>
 			<!--<MinorFriendshipChange>100</MinorFriendshipChange>-->
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<WonderSplashImage>DionysusSplash.dds</WonderSplashImage>
@@ -1841,8 +1841,8 @@
 			<FreshWater>true</FreshWater>
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>-1</HurryCostModifier>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>9</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>222</PortraitIndex>
 			<FreePromotion>PROMOTION_YUEYANG</FreePromotion>
 			<WonderSplashImage>YUEYANG_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
@@ -1892,8 +1892,8 @@
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>70</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>218</PortraitIndex>
 			<WonderSplashImage>ZHENGGUOQU_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>		
     	</Row>
@@ -2171,8 +2171,8 @@
 			<FreeBuilding>BUILDINGCLASS_MUSEUM</FreeBuilding>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
 			<GreatWorkCount>2</GreatWorkCount>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>93</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>173</PortraitIndex>
 			<WonderSplashImage>SMITHSONIAN_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
@@ -2371,8 +2371,8 @@
 			<ConquestProb>100</ConquestProb>
 			<PrereqTech>TECH_SDI</PrereqTech>
 			<AirModifier>1</AirModifier>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>75</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>207</PortraitIndex>
 			<WonderSplashImage>Lift_Splash.dds</WonderSplashImage>
 			<WaterTileTurnDamageGlobal>10</WaterTileTurnDamageGlobal>
 			<WaterTileMovementReduceGlobal>1</WaterTileMovementReduceGlobal>
@@ -2400,8 +2400,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>97</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>213</PortraitIndex>
 			<Flat>true</Flat>
 			<NearbyTerrainRequired>TERRAIN_COAST</NearbyTerrainRequired>
 			<WonderSplashImage>JurassicPark_Splash.dds</WonderSplashImage>
@@ -2489,8 +2489,8 @@
 			<GlobalEspionageModifier>-40</GlobalEspionageModifier>
 			<AffectSpiesNow>true</AffectSpiesNow>
 			<NeverCapture>true</NeverCapture>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>73</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>190</PortraitIndex>
 		</Row>
 
 
@@ -2539,8 +2539,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>52</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>217</PortraitIndex>
 			<WonderSplashImage>death_laser.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
@@ -2684,8 +2684,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>55</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>214</PortraitIndex>
 			<WonderSplashImage>FOLDING.dds</WonderSplashImage>
 		</Row>
 
@@ -2701,14 +2701,14 @@
 			<Quote>TXT_KEY_WONDER_LIBERATION_GATE_QUOTE</Quote>
 			<Cost>60000</Cost>
 			<PolicyBranchType>POLICY_BRANCH_AUTOCRACY</PolicyBranchType>
-			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<NukeImmune>true</NukeImmune>
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<Happiness>-100</Happiness>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
-			<PortraitIndex>61</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>211</PortraitIndex>
 			<FreePromotion>PROMOTION_LIBERATION_STRENGTH</FreePromotion>
 			<WonderSplashImage>victory_emancipation.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>

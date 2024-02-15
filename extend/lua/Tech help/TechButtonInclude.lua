@@ -308,6 +308,8 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 	local override, ok, improvement, yield
 	for row in GameInfo.Units( thisPrereqTech ) do
 		--CivilizationType, UnitClassType, UnitType
+
+		if row.ShowInTechTree==1 then
 		overrideSearch.UnitClassType = row.Class
 		override = GameInfo.Civilization_UnitClassOverrides(overrideSearch)()
 		if override then
@@ -318,7 +320,8 @@ function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButt
 		end
 		if ok and not addSmallArtButton( row, ORDER_TRAIN, UI.GetUnitPortraitIcon(row.ID) ) then
 			break
-		end
+		   end
+	   end
 	end
 	overrideSearch.UnitClassType = nil
 

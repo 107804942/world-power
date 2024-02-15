@@ -261,8 +261,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_SIEGE03P</UnitArtInfo>
 			<UnitFlagIconOffset>1</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_MOD_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>32</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS2</IconAtlas>
+			<PortraitIndex>143</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>150</ExtraMaintenanceCost>
 			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
@@ -338,7 +338,7 @@
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>1</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>96</PortraitIndex>
+			<PortraitIndex>68</PortraitIndex>
 			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
 			<WorkRate>150</WorkRate>
 		</Row>
@@ -378,8 +378,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_CARVR</UnitArtInfo>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>14</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>65</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>109</PortraitIndex>
 			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
 		</Row>
 
@@ -522,15 +522,14 @@
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
 			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
-			<ObsoleteTech></ObsoleteTech>
 			<AdvancedStartCost>80</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
 			<UnitArtInfo>ART_DEF_UNIT_RANGEDMARINE04S</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>2</UnitFlagIconOffset>
-			<PortraitIndex>98</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>133</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<WorkRate>100</WorkRate>
 			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
 		</Row>
@@ -617,7 +616,10 @@
 			<UnitType>UNIT_RAILGUN_TANK</UnitType>
 			<PromotionType>PROMOTION_HALF_CASUALTIES</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
 
 
 
