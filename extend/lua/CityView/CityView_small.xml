@@ -313,9 +313,9 @@
 	<Instance Name="Work">
 		<Button ID="Button" Size="32,32"/>
 	</Instance>
-	
-	
-	
+
+
+
 	<!-- Great Person Meter Instances -->
 	<Instance Name="GPInstance">
 		<Box Anchor="L,T" Color="255.255.255.0" Offset="0,0" Size="254,70" Hidden="0" ID="GPBox">
@@ -558,7 +558,7 @@
 
 
 				<!-- Infixo Great Works  新增著作槽位-->
-				<Button Anchor="L,B" Size="254,27" Offset="2,0" Texture="CivilopediaButtons272x27.dds" ID="GreatWorksHeader">
+			<Button Anchor="L,B" Size="254,27" Offset="2,0" Texture="CivilopediaButtons272x27.dds" ID="GreatWorksHeader">
 					<Label Anchor="L,C" Offset="40,-2" Font="TwCenMT18" String="" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" ID="GreatWorksHeaderLabel"/>
 				</Button>
 				<Stack ID="GreatWorksStack" Anchor="L,T" StackGrowth="B">

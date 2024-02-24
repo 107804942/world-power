@@ -1,7 +1,6 @@
 -- Insert SQL Rules Here 
 INSERT INTO Improvement_ResourceTypes	(ImprovementType,			ResourceType,			ResourceMakesValid, ResourceTrade,	DiscoveryRand,	QuantityRequirement) VALUES
                                            ('IMPROVEMENT_QUARRY',		'RESOURCE_SULFUR',			1,					1,				0,				0),
-										   ('IMPROVEMENT_QUARRY',		'RESOURCE_TIN',	1,					1,				0,				0),
                                            ('IMPROVEMENT_MINE',		'RESOURCE_TITANIUM',	1,					1,				0,				0),
 										('IMPROVEMENT_LANDMARK',	'RESOURCE_TITANIUM',	1,					1,				0,				0),
 										('IMPROVEMENT_CUSTOMS_HOUSE', 'RESOURCE_TITANIUM',	1,					1,				0,				0),

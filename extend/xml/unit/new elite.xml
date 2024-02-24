@@ -21,7 +21,7 @@
 		<Row>
 			<Class>UNITCLASS_BLIALI</Class>
 			<Type>UNIT_BLIALI</Type>
-			<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
+			<PrereqTech>TECH_MINING</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>15</Combat>
 			<RangedCombat>18</RangedCombat>

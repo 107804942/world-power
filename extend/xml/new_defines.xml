@@ -297,16 +297,12 @@
 
 
 	<Building_ResourceQuantity>
-		<Row>
-			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-			<Quantity>5</Quantity>
-		</Row>
+
 
 		<Row>
 			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
 			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
-			<Quantity>5</Quantity>
+			<Quantity>20</Quantity>
 		</Row>
 		
 
@@ -314,7 +310,7 @@
 		<Row>
 			<BuildingType>BUILDING_CITYSTATE_RESOURCE</BuildingType>
 			<ResourceType>RESOURCE_LUMBER</ResourceType>
-			<Quantity>5</Quantity>
+			<Quantity>20</Quantity>
 		</Row>
 
 	</Building_ResourceQuantity>

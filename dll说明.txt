@@ -837,14 +837,11 @@ alter table UnitPromotions add column 'DefenseInflictDamageChangeMaxHPPercent' i
 alter table UnitPromotions add column 'SiegeInflictDamageChange' integer not null default 0;
 alter table UnitPromotions add column 'SiegeInflictDamageChangeMaxHPPercent' integer not null default 0;
 
-<ExtraResourceType>RESOURCE_HORSE</ExtraResourceType>
-			<ExtraResourceCombatModifier>1</ExtraResourceCombatModifier>
-			<ExtraResourceCombatModifierMax>25</ExtraResourceCombatModifierMax>
+
 
 
 
 ALTER TABLE UnitPromotions ADD AOEDamageOnPillage INTEGER DEFAULT 0;
-
 
 
 

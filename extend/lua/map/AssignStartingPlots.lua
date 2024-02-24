@@ -636,8 +636,8 @@ function AssignStartingPlots:__Init()
 			self.raspberryz_ID = resourceID;
 		elseif resourceType == "RESOURCE_SAFFRON" then	-- MOD.Barathor: New
 			self.saffron_ID = resourceID;
-		elseif resourceType == "RESOURCE_TIN" then	-- MOD.Barathor: New
-			self.tin_ID = resourceID;
+		--elseif resourceType == "RESOURCE_TIN" then	-- MOD.Barathor: New
+			--self.tin_ID = resourceID;
 		elseif resourceType == "RESOURCE_SULFUR" then	-- MOD.Barathor: New
 			self.sulfur_ID = resourceID;
 		elseif resourceType == "RESOURCE_BARLEY" then	-- MOD.Barathor: New

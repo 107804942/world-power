@@ -1258,6 +1258,8 @@ function Processes_CanMaintain(playerID, cityID, processID)
 	return true
 end
 GameEvents.CityCanMaintain.Add(Processes_CanMaintain)
+
+
 -- ********************************************************
 -- 
 -- ********************************************************
@@ -1698,8 +1700,8 @@ GameEvents.ParadropAt.Add(ghostdamage)
 
 
 
-local iFreezeCollectionID = GameInfoTypes["PROMOTION_COLLECTION_FREEZE_BOMB"];
-local iFreezedCollectionID = GameInfoTypes["PROMOTION_COLLECTION_FREEZE_EFFECT"];
+local iFreezeCollectionID = GameInfoTypes["PROMOTION_COLLECTION_FREEZE_BOMB"]
+local iFreezedCollectionID = GameInfoTypes["PROMOTION_COLLECTION_FREEZE_EFFECT"]
 GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisPromotionCollection, eThisBattleType, iThisPlayer,
  iThisUnit, iThisUnitType, eThatPromotionType,eThatPromotionCollection, iThatPlayer, iThatUnit, iThatUnitType)
 

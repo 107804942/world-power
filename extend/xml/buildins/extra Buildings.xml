@@ -742,7 +742,7 @@
 				<ArtDefineTag>NONE</ArtDefineTag>
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>75</HurryCostModifier>
-				<NeverCapture>true</NeverCapture>
+				<ConquestProb>100</ConquestProb>
 				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 				<PortraitIndex>21</PortraitIndex>
 			</Row>

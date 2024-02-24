@@ -8,8 +8,6 @@ INSERT INTO Resources	(Type,					Description,							Civilopedia,								Help,			
 
 				('RESOURCE_SAFFRON',      'TXT_KEY_RESOURCE_SAFFRON',			'TXT_KEY_CIV5_RESOURCE_SAFFRON_TEXT',	       null,			'RESOURCECLASS_LUXURY',         'ART_DEF_RESOURCE_SAFFRON',       null,								null,								null,                       'TECH_CALENDAR',                           null,                        'TECH_CALENDAR',               null,               null,               4,			0,                      null,                           0,							0,	            0,					0,              3,              50,					3,              0,	            90,	            25,			25,			0,			0,			0,		5,			0,				0,			0,			0,				0,                      0,		0,		1,			0,				0,	            '[ICON_RES_SAFFRON]',          41,             'NEW_RESOURCE_ATLAS'),
 
-
-				('RESOURCE_TIN',	    'TXT_KEY_RESOURCE_TIN',			        'TXT_KEY_CIV5_RESOURCE_TIN_TEXT',		'TXT_KEY_RESOURCE_TIN_HELP',			'RESOURCECLASS_MODERN',			'ART_DEF_RESOURCE_TIN',		'ART_DEF_RESOURCE_TIN',	'ART_DEF_RESOURCE_TIN',	 null,					'TECH_MINING',			            null,						  'TECH_MINING',		        null,				null,				0,			0,						null,							0,							0,				20,					0,				4,				50,					3,				0,				90,				25,			25,			0,			0,			0,		5,			0,				0,			0,			1,				0,						0,		1,		1,			0,				0,				'[ICON_RES_TNT]',			     6,				'NEW_RESOURCE_ATLAS'),
 				('RESOURCE_GUNPOWDER',	'TXT_KEY_RESOURCE_GUNPOWDER',			'TXT_KEY_CIV5_RESOURCE_GUNPOWDER_TEXT',		 null,			'RESOURCECLASS_MODERN',			    null,		                    null,	                            null,	                            null,					'TECH_CHEMISTRY',			        null,						'TECH_CHEMISTRY',		    	null,			  	null,				0,			0,						null,				            0,							0,				20,					0,				4,				50,					3,				0,				90,				25,			25,			0,			0,			0,		5,			0,				0,			0,			1,				0,						0,		1,		1,			0,				0,				'[ICON_RES_GUNPOWDER]',			39,				'NEW_RESOURCE_ATLAS'),
 				('RESOURCE_SULFUR',	    'TXT_KEY_RESOURCE_SULFUR',		        'TXT_KEY_RESOURCE_SULFUR_TEXT',			     null,	            'RESOURCECLASS_LUXURY',	            'ART_DEF_RESOURCE_SULFUR',          null,								null, 	    		                null, 	                   'TECH_MINING',                   null,                        'TECH_MINING',                 null,               null,             	3,			0,	                    null,                           0,                          0,	            0,					0,              3,				50,					3,				0,				90,	            25,			25,			0,			0,			0,      5,          0,				0,			0,			0,				0,						0,	    1,		0,			0,				0,				'[ICON_RES_SULFUR]',            2,            'NEW_RESOURCE_ATLAS');
 
@@ -37,10 +35,7 @@ INSERT INTO Resource_Flavors	(ResourceType,			FlavorType,				Flavor) VALUES
 								('RESOURCE_TITANIUM',	'FLAVOR_DEFENSE',		10),
 								('RESOURCE_TITANIUM',	'FLAVOR_OFFENSE',		10),
 								('RESOURCE_TITANIUM',	'FLAVOR_PRODUCTION',	10),
-								('RESOURCE_TIN',	    'FLAVOR_SCIENCE',		10),
-								('RESOURCE_TIN',	    'FLAVOR_DEFENSE',		10),
-								('RESOURCE_TIN',	    'FLAVOR_OFFENSE',		10),
-								('RESOURCE_TIN',	    'FLAVOR_PRODUCTION',	10),
+
 								('RESOURCE_LAVENDER',	'FLAVOR_GOLD',			10),
 								('RESOURCE_LUMBER',	    'FLAVOR_SCIENCE',		10),
 								('RESOURCE_LUMBER',	    'FLAVOR_DEFENSE',		10),
@@ -63,8 +58,6 @@ INSERT INTO Resource_Flavors	(ResourceType,			FlavorType,				Flavor) VALUES
 INSERT INTO Resource_QuantityTypes	(ResourceType,			Quantity) VALUES
 									('RESOURCE_LUMBER',		'6'),
 									('RESOURCE_LUMBER',		'5'),
-									('RESOURCE_TIN',		'8'),
-									('RESOURCE_TIN',		'7'),
 									('RESOURCE_TITANIUM',	'6'),
 									('RESOURCE_TITANIUM',	'8');
 
@@ -76,10 +69,6 @@ INSERT INTO Resource_TerrainBooleans	(ResourceType,			TerrainType) VALUES       
 										('RESOURCE_TITANIUM',	'TERRAIN_PLAINS'),
 										('RESOURCE_LAVENDER',	'TERRAIN_PLAINS'),
 										('RESOURCE_LAVENDER',	'TERRAIN_GRASS'	),
-										('RESOURCE_TIN',	    'TERRAIN_HILL'	),
-										('RESOURCE_TIN',	    'TERRAIN_TUNDRA'),
-										('RESOURCE_TIN',	    'TERRAIN_DESERT'),
-										('RESOURCE_TIN',	    'TERRAIN_PLAINS'),
 										('RESOURCE_SULFUR',		'TERRAIN_PLAINS'),
 										('RESOURCE_SULFUR',		'TERRAIN_HILL'	),
 										('RESOURCE_SULFUR',		'TERRAIN_GRASS' ),
@@ -93,8 +82,6 @@ INSERT INTO Resource_TerrainBooleans	(ResourceType,			TerrainType) VALUES       
 
 INSERT INTO Resource_YieldChanges	(ResourceType,			YieldType,				Yield) VALUES
                                      ('RESOURCE_LAVENDER',	'YIELD_GOLD',			1),
-                                     ('RESOURCE_TIN',	     'YIELD_PRODUCTION',	1),
-									 ('RESOURCE_TIN',	     'YIELD_FOOD',	-2),
 									  ('RESOURCE_IRON',	     'YIELD_FOOD',	-1),
 									 ('RESOURCE_URANIUM',	     'YIELD_FOOD',	-5),
 									 ('RESOURCE_ALUMINUM',	     'YIELD_FOOD',	-3),

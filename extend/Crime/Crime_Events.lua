@@ -19,7 +19,7 @@ function Crime_PlayerDoTurn(playerID)
 		end
 	end
 end
-GameEvents.PlayerDoTurn.Add(Crime_PlayerDoTurn)
+--GameEvents.PlayerDoTurn.Add(Crime_PlayerDoTurn)
 
 
 

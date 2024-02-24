@@ -988,18 +988,7 @@
 
 	<Policy_ResourceYieldChanges>
 
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_GRANDEUR_1</PolicyType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
+
 		
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_1</PolicyType>

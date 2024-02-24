@@ -1635,7 +1635,7 @@ function OnCityViewUpdate()
 		-- MOD by CaptainCWB - End
 
  
-			-----------------------------
+		-----------------------------
 		-- Infixo: Great Works Box 新增著作槽位--
 		-----------------------------		
 		local totalGreatWorkCount = 0;

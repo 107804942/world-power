@@ -45,25 +45,6 @@ INSERT INTO ArtDefine_Landmarks (Era,				State,						Scale,		ImprovementType,			
 								('Any',				'Any',						1.1,		'ART_DEF_IMPROVEMENT_NONE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TITANIUM_HEAVY',			'titanium_heavy.fxsxml',							1);
 																									
 				
-		
--------------------------------------œı Ø-------------------------------------------------------
-
-INSERT INTO ArtDefine_StrategicView (StrategicViewType,				TileType,			Asset) Values
-									('ART_DEF_RESOURCE_TIN',		'Resource',	'sv_Tin.dds');
-
-
-INSERT INTO ArtDefine_LandmarkTypes (Type,										LandmarkType,	FriendlyName) VALUES			
-									('ART_DEF_RESOURCE_TIN',				'Resource',		'Tin');
-
-INSERT INTO ArtDefine_Landmarks (Era,				State,						Scale,		ImprovementType,							LayoutHandler,			ResourceType,								Model,								TerrainContour) VALUES									
-			                    ('Any',				'Any',						1,		'ART_DEF_IMPROVEMENT_NONE',					'SNAPSHOT',				'ART_DEF_RESOURCE_TIN',		                 'Tin.fxsxml',									1),
-								('Ancient',			'UnderConstruction',		1,		'ART_DEF_IMPROVEMENT_QUARRY',				'SNAPSHOT',				'ART_DEF_RESOURCE_TIN',		                   'HB_Anc_Tin_Quarry.fxsxml',						1),
-								('Ancient',			'Constructed',				1,		'ART_DEF_IMPROVEMENT_QUARRY',				'SNAPSHOT',				'ART_DEF_RESOURCE_TIN',		                   'Anc_Tin_Quarry.fxsxml',							1),
-								('Ancient',			'Pillaged',					1,		'ART_DEF_IMPROVEMENT_QUARRY',				'SNAPSHOT',				'ART_DEF_RESOURCE_TIN',		                  'PL_Anc_Tin_Quarry.fxsxml',						1),
-								('Industrial',		'UnderConstruction',		1,		'ART_DEF_IMPROVEMENT_QUARRY',				'SNAPSHOT',				'ART_DEF_RESOURCE_TIN',		                      'HB_IND_Tin_Quarry.fxsxml',						1),
-								('Industrial',		'Constructed',				1,		'ART_DEF_IMPROVEMENT_QUARRY',				'SNAPSHOT',				'ART_DEF_RESOURCE_TIN',		                     'IND_Tin_Quarry.fxsxml',							1),
-								('Industrial',		'Pillaged',					1,		'ART_DEF_IMPROVEMENT_QUARRY',				'SNAPSHOT',				'ART_DEF_RESOURCE_TIN',		                     'PL_IND_Tin_Quarry.fxsxml',						1);
-
 
 
 -------------------------------------¡Úª«-------------------------------------------------------

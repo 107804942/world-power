@@ -14,10 +14,7 @@
 			<ResourceType>RESOURCE_STONE</ResourceType>
 		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-		</Row>
+	
 
 		<Row>
 			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
@@ -676,12 +673,7 @@
 			<Yield>2</Yield>
 		</Row>
 
-		<Row>
-			<BuildingType>BUILDING_ALCHEMIST</BuildingType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
-		</Row>
+
 		
 
 		<Row>
@@ -852,16 +844,6 @@
 		
 
 
-
-		<!--****火药库***-->
-
-		<Row>
-			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-		
 		
 		
 		<!--****矿业公司***-->
@@ -1253,16 +1235,6 @@
 			<BuildingType>BUILDING_TELEPRESENCE_HUB</BuildingType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>2</Cost>
-		</Row>
-
-		
-
-
-		<!--火药铺-->
-		<Row>
-			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
-			<ResourceType>RESOURCE_TIN</ResourceType>
-			<Cost>5</Cost>
 		</Row>
 
 
@@ -2735,7 +2707,7 @@
 		<Row>
 			<BuildingType>BUILDING_GUN_POWDER_HOUSE</BuildingType>
 			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
-			<Quantity>5</Quantity>
+			<Quantity>10</Quantity>
 		</Row>
 	
 		<Row>

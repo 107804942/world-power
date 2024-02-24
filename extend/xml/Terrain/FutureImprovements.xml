@@ -1578,10 +1578,10 @@
 		</Update>
 
 
-		<!--<Update>
+	   <Update>
 			<Set  PrereqTech="TECH_STONE_TOOLS"/>
 			<Where Type="BUILD_QUARRY"/>
-		</Update>-->
+		</Update>
 
 
 		<Update>

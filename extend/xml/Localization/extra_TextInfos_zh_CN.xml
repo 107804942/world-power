@@ -6205,7 +6205,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_ALCHEMIST_HELP">
 			<Text>
-				+1[ICON_PEACE]信仰和[ICON_RESEARCH]科研。每处[ICON_RES_SULFUR]硫磺、[ICON_RES_TNT]硝石、[ICON_RES_COPPER]铜、[ICON_RES_GEMS]宝石、[ICON_RES_GOLD]黄金和[ICON_RES_SILVER]银资源+2[ICON_RESEARCH]科研。
+				+1[ICON_PEACE]信仰和[ICON_RESEARCH]科研。每处[ICON_RES_SULFUR]硫磺、[ICON_RES_COPPER]铜、[ICON_RES_GEMS]宝石、[ICON_RES_GOLD]黄金和[ICON_RES_SILVER]银资源+2[ICON_RESEARCH]科研。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_ALCHEMIST_PEDIA">
@@ -6632,7 +6632,7 @@
 			<Text>[ICON_WAR]火药库</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_GUN_POWDER_HOUSE_HELP">
-			<Text>提供5单位[ICON_RES_GUNPOWDER]火药资源。当全国范围内拥有已开发的[ICON_RES_TNT]硝石资源时可建造，但会消耗5[ICON_RES_TNT]硝石。</Text>
+			<Text>提供10单位[ICON_RES_GUNPOWDER]火药资源。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_GUN_POWDER_HOUSE_PEDIA">
@@ -8499,24 +8499,6 @@
 				所有专家对应的基础产出数值+4。+50%全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能产出。每条自由政策+8[ICON_TOURISM]魅力。所有城市中每个专家增加2%各自城市的对应基础产出。
 			</Text>
 		</Row>
-
-
-
-
-
-
-		<Replace Tag="TXT_KEY_PROMOTION_CORPS_1_HELP">
-			<Text>+100%最大生命值。</Text>
-		</Replace>
-
-		<Replace Tag="TXT_KEY_PROMOTION_CORPS_2_HELP">
-			<Text>+100%最大生命值。</Text>
-		</Replace>
-
-
-
-		
-
 
 
 

@@ -215,7 +215,7 @@
 			<Description>TXT_KEY_PROJECT_BLIALI</Description>
 			<Help>TXT_KEY_PROJECT_BLIALI_HELP</Help>
 			<Civilopedia>TXT_KEY_PROJECT_BLIALI_PEDIA</Civilopedia>
-			<TechPrereq>TECH_STONE_TOOLS</TechPrereq>
+			<TechPrereq>TECH_MINING</TechPrereq>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 			<MaxTeamInstances>1</MaxTeamInstances>
 			<Cost>40</Cost>
