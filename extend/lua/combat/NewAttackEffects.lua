@@ -165,30 +165,6 @@ if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FIRE_WEAPON"].ID)  
     end
 end
 
-
--- ********************************************************
--- ºÕÌÝ
--- ******************************************************** 
-if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH"].ID)  then
-
-if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH_4"].ID)  then
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_5, true)
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_4, false)
-elseif attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH_3"].ID) then   
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_4, true)
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_3, false)
-elseif attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH_2"].ID) then  
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_3, true)
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_2, false)
-elseif attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH_1"].ID) then   
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_2, true)
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_1, false)
-elseif attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH_0"].ID) then  
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_1, true)
-   attUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_0, false)
-   end
-end
-
 -- ********************************************************
 -- ¹¥»÷³ÇÊÐ
 -- ********************************************************  

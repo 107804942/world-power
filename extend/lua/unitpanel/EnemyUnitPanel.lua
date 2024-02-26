@@ -555,6 +555,14 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			end
 
 
+			iModifier = pMyUnit:GetNumTimesDoFallBackThisTurn() * pMyUnit:GetDoFallBackAttackMod()
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_CAUSE_FALLBACK_MOD");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+
 			iModifier = pMyUnit:GetNumAttacksMadeThisTurnAttackMod()*pMyUnit:GetNumAttacksMadeThisTurn();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
@@ -1562,6 +1570,15 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
+			iModifier = pMyUnit:GetNumTimesDoFallBackThisTurn() * pMyUnit:GetDoFallBackAttackMod()
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_ATTACK_CAUSE_FALLBACK_MOD");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+
+
+
 			iModifier = pMyUnit:GetNumAttacksMadeThisTurnAttackMod()*pMyUnit:GetNumAttacksMadeThisTurn();
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
@@ -2130,7 +2147,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				iModifierFinal = pTheirUnit:GetDefenseModifier()+pTheirUnit:GetRangedDefenseModifier()
 
 				if iModifierFinal ~= 0 then
-				if  pMyUnit:GetBaseRangedCombatStrength() >0  then
+				if pMyUnit:GetBaseRangedCombatStrength() >0  then
 				if UI.GetInterfaceMode()~=InterfaceModeTypes.INTERFACEMODE_ATTACK and UI.GetInterfaceMode() ~= InterfaceModeTypes.INTERFACEMODE_MOVE_TO then
 					    controlTable = g_TheirCombatDataIM:GetInstance();
 						controlTable.Text:LocalizeAndSetText( "TXT_KEY_SP_ENEMY_COVER_PENALTY" );
@@ -2150,6 +2167,18 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 				   end
 		        end
+
+              
+			  
+			-- 新增 Defense Modifier
+		    local iModifier = pTheirUnit:GetNumTimesBeFallBackThisTurn() * pTheirUnit:GetBeFallBackDefenseMod()
+			if (iModifier ~= 0) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_DEFENSE_BE_FALLBACK_MOD");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+			end
+
+
 
 			--Extra Resouce and Happiness Bonus
 			iModifier = pTheirUnit:GetStrengthModifierFromExtraResource();
@@ -2950,6 +2979,16 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_DEFENSE_BONUS" );
 			controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 		end
+
+
+			-- 新增 Defense Modifier
+		    local iModifier = theirUnit:GetNumTimesBeFallBackThisTurn() * theirUnit:GetBeFallBackDefenseMod()
+			if (iModifier ~= 0) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_DEFENSE_BE_FALLBACK_MOD");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+			end
+
 
 			--Extra Resouce and Happiness Bonus
 			local iModifier = theirUnit:GetStrengthModifierFromExtraResource();

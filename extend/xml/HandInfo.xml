@@ -523,13 +523,7 @@
 	</Policy_SpecialistYieldChanges>
 
 
-	<Policy_CityResources>
-		<Row>
-			<PolicyType>POLICY_AI_REDUCE</PolicyType>
-			<ResourceType>RESOURCE_GUNPOWDER</ResourceType>
-			<Quantity>30</Quantity>
-		</Row>
-	</Policy_CityResources>	
+
 		
 
 	<Policy_CityYieldChanges>

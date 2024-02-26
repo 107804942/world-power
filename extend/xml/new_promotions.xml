@@ -4091,7 +4091,9 @@
 			<OrderPriority>11</OrderPriority>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
-			<!--<CaptureDefeatedEnemyChance>60</CaptureDefeatedEnemyChance>-->
+			<SplashDamageImmune>1</SplashDamageImmune>
+			<CollateralDamageImmune>1</CollateralDamageImmune>
+			<!--<IgnoreDamageChance>33</IgnoreDamageChance>-->
 			<PediaEntry>TXT_KEY_PROMOTION_COMBAT_TO_DEATH</PediaEntry>
 			<SplashDamagePercent>50</SplashDamagePercent>
 			<SplashDamageRadius>1</SplashDamageRadius>

@@ -218,7 +218,18 @@
 		<Row Tag="TXT_KEY_EUPANEL_ATTACK_NUM_MOD">
 			<Text>已用攻击次数加成</Text>
 		</Row>
-		
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_CAUSE_FALLBACK_MOD">
+			<Text>击退次数攻击加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_DEFENSE_CAUSE_FALLBACK_MOD">
+			<Text>击退次数防御加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_ATTACK_BE_FALLBACK_MOD">
+			<Text>撤退次数攻击加成</Text>
+		</Row>
+		<Row Tag="TXT_KEY_EUPANEL_DEFENSE_BE_FALLBACK_MOD">
+			<Text>撤退次数防御加成</Text>
+		</Row>
 		<Row Tag="TXT_KEY_EUPANEL_RANGED_SUPPORT" >
 			<Text>[COLOR_ENDURANCE]额外远程攻击能力[ENDCOLOR]</Text>
 		</Row>
@@ -1793,6 +1804,10 @@
 		<Replace Tag="TXT_KEY_UNIT_ICBM_MISSILE">
 			<Text>[COLOR_NEGATIVE_TEXT]洲际核弹道导弹[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_UNIT_ICBM_MISSILE_HELP">
+			<Text>噩梦般恐怖的核武器。洲际核弹道导弹是游戏中最强大的武器，引爆时会摧毁距离3个区块内的单位和设施，并将非首都城市完全摧毁。洲际核弹道导弹占用三个停机位。能够部署在弹道导弹核潜艇上。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_UNIT_ATOMIC_BOMB">
@@ -7033,49 +7048,11 @@
 
 
 
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY">
-			<Text>[COLOR_MIGHT]勇武值(0)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_1">
-			<Text>[COLOR_MIGHT]勇武值(20)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_2">
-			<Text>[COLOR_MIGHT]勇武值(40)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_3">
-			<Text>[COLOR_MIGHT]勇武值(60)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_4">
-			<Text>[COLOR_MIGHT]勇武值(80)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_5">
-			<Text>[COLOR_MIGHT]勇武值(100)[ENDCOLOR]</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_HELP">
-			<Text>未受到任何加成。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_1_HELP">
-			<Text>[ICON_STRENGTH]攻击力+5%，[ICON_STRENGTH]防御力+10%。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_2_HELP">
-			<Text>[ICON_STRENGTH]攻击力+10%，[ICON_STRENGTH]防御力+20%。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_3_HELP">
-			<Text>[ICON_STRENGTH]攻击力+15%，[ICON_STRENGTH]防御力+30%。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_4_HELP">
-			<Text>[ICON_STRENGTH]攻击力+20%，[ICON_STRENGTH]防御力+40%。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ANGRY_5_HELP">
-			<Text>[ICON_STRENGTH]攻击力+25%，[ICON_STRENGTH]防御力+50%。</Text>
-		</Row>
-
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH">
 			<Text>重装冲锋</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
-			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。攻击敌军时获得20点勇武值。每20点勇武值增加5%[ICON_STRENGTH]攻击力与10%[ICON_STRENGTH]防御力。当勇武值达到最大值时，免疫溅射和穿透伤害。</Text>
+			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。免疫溅射和穿透伤害。</Text>
 		</Row>
 
 
@@ -7177,19 +7154,6 @@
 
 
 
-
-
-		<Row Tag='TXT_KEY_TITLE_ANGRY'>
-			<Text>[COLOR_MANA]组建军队[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag='TXT_KEY_SP_BTNNOTE_UNIT_ANGRY'>
-			<Text>消耗100点勇武值与一[ICON_MOVES]移动力并在指定地块组建军队，该单位自带60点经验。(组建的军队为同时代步兵系单位）</Text>
-		</Row>
-		<Row Tag='TXT_KEY_SP_BTNNOTE_UNIT_CANT_ANGRY'>
-			<Text>[COLOR_UNIQUE]勇武值不足，不可组建军队。[ENDCOLOR]</Text>
-		</Row>
-
-
 		<Row Tag="TXT_KEY_UNIT_HITTITE_WAR_CHARIOT">
 			<Text>[COLOR_YELLOW]赫梯战车[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
@@ -7199,8 +7163,7 @@
 				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
 				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]善战无前[ENDCOLOR]：发动攻击将累积[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]，当[COLOR_YIELD_FOOD]勇武值[ENDCOLOR]到达[COLOR_POSITIVE_TEXT]100[ENDCOLOR]时，可消耗1[ICON_MOVES]移动力组建一支[ICON_PROMOTION_NEW_INFANTRY_COMBAT][COLOR_POSITIVE_TEXT]重装步兵[ENDCOLOR]/[ICON_PROMOTION_NEW_GUNPOWDER_INFANTRY][COLOR_POSITIVE_TEXT]火药步兵[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：能够冲锋击退敌方单位，攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
 			</Text>
 		</Row>
 
@@ -9773,7 +9736,7 @@
 		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_HELP">
 			<Text>
 				本城-5[ICON_DISEASE]疾病、[ICON_CRIME]犯罪率，-20%[ICON_DISEASE]疾病、[ICON_CRIME]犯罪率。
-				[NEWLINE]每座城市可重复建造3次，但每次建造后会使建造成本+1000[ICON_PRODUCTION]产能。
+				[NEWLINE]每座城市可重复建造3次，但每次建造后会使下次建造该工程所需的[ICON_PRODUCTION]产能+1000。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROJECT_COMMOM_ORGANIZED_PEDIA">
@@ -9789,7 +9752,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP">
 			<Text>[ICON_BULLET]攻击时可在一定范围内附带核爆伤害（伤害数值等同于原子弹）。[NEWLINE][ICON_BULLET]攻击城市时摧毁目标城市60%的[COLOR_POSITIVE_TEXT]人口[ENDCOLOR]（如果目标城市拥有防空洞则为15%）[NEWLINE][ICON_BULLET]不会造成辐射。</Text>
 		</Replace>
-		
+
 		<Row Tag="TXT_KEY_BUILDING_DIABLO">
 			<Text>预知计划</Text>
 		</Row>
@@ -9812,9 +9775,8 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DIABLO_HELP">
-			<Text>被攻击时，有33%几率规避此次伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+			<Text>单位被攻击时，有33%几率规避此次伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
 		</Row>
-
 
 
 		<Row Tag="TXT_KEY_BUILDING_GEOLOGICAL_ANVIL">

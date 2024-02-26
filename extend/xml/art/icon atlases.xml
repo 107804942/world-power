@@ -296,6 +296,13 @@
 		</Row>
 		<Row>
 			<Atlas>NEW_RESOURCE_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>NEW_Resources_Atlas_128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>NEW_RESOURCE_ATLAS</Atlas>
 			<IconSize>256</IconSize>
 			<Filename>NEW_Resources_Atlas_256.dds</Filename>
 			<IconsPerRow>8</IconsPerRow>
@@ -786,6 +793,13 @@
 			<IconsPerColumn>1</IconsPerColumn>
 		</Row>
 
+		<Row>
+			<Atlas>BF2142_FLAG_ATLAS2</Atlas>
+			<IconSize>32</IconSize>
+			<Filename>BF2142EUFlagAtlas.dds</Filename>
+			<IconsPerRow>4</IconsPerRow>
+			<IconsPerColumn>1</IconsPerColumn>
+		</Row>
 
 
 

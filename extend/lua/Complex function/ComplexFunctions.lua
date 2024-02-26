@@ -9,11 +9,6 @@ include("FLuaVector.lua")
 
 if Game.IsWPActive() then
 
-local ANGEnergy = 
-	{[0] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_0, [1] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_1, 
-	 [2] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_2, [3] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_3,
-	 [4] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_4, [5] = GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_5}
-
 
 local ATBTEnergy = 
 	{[0] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA,   [1] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_1, 
@@ -640,76 +635,7 @@ LuaEvents.UnitPanelActionAddin(FranceCruiserMissionButton)
 
 
 
-function  CheckAngryButtonValidity(unit)
-	for i = 0, 4 do
-			if unit:IsHasPromotion(ANGEnergy[i]) then
-				return false;
-			end
-		end
-	return true;
-end
 
-
-local UnitAngryButton = {
-		Name = "ANGRY",
-		Title = "TXT_KEY_TITLE_ANGRY",
-		OrderPriority = 300,
-		IconAtlas = "SP_UNIT_ACTION_ATLAS",
-		PortraitIndex = 44,
-		ToolTip = function(action, unit)
-			local sTooltip;
-			local bIsValid = CheckAngryButtonValidity(unit)
-			if bIsValid then
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_SP_BTNNOTE_UNIT_ANGRY");
-			else
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_SP_BTNNOTE_UNIT_CANT_ANGRY" );
-			end
-			return sTooltip
-		end, -- or a TXT_KEY_ or a function
-		Condition = function(action, unit)
-			if unit:GetMoves() <= 0 then
-				return false
-			end
-				if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH"].ID) then
-					return true
-				else
-					return false
-			end		
-		end, -- or nil or a boolean, default is true
-		Disabled = function(action, unit)
-			local bIsValid = CheckAngryButtonValidity(unit)
-			if bIsValid then
-				return false
-			end
-			return true;
-		end, -- or nil or a boolean, default is false
-		Action = function(action, unit, eClick)
-		if eClick == Mouse.eRClick then
-			return
-		end
-
-		local pPlayer = Players[Game:GetActivePlayer()];
-		local pTeam = Teams[pPlayer:GetTeam()]
-		if pPlayer:IsHuman() then
-		local plot=unit:GetPlot()
-
-		for iPlot in PlotAreaSpiralIterator(plot, 2, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		if  not iPlot:IsMountain() then
-		if  not iPlot:IsWater() then
-		if  not iPlot:IsCity() then
-		if  iPlot:GetNumUnits()==0  
-		then
-			Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(iPlot:GetX(), iPlot:GetY())), true, Vector4(0.0, 1.0, 1.0, 1.0))
-			          end	
-			       end
-			    end
-			 end		   
-		    SpaceBattleCruiserSkill = 5
-		end
-	end
-end
-}
-LuaEvents.UnitPanelActionAddin(UnitAngryButton)
 
 
 
@@ -1035,32 +961,7 @@ function InputHandler( uiMsg, wParam, lParam )
 				 end		
 				 Events.ClearHexHighlights()
 				 SpaceBattleCruiserSkill = 0
-				 --------------------------------------------------------------------------------------
-			   
-				elseif SpaceBattleCruiserSkill == 5 then
-		        local pSUnit = UI.GetHeadSelectedUnit()
-		        local sUnitPlot = pSUnit:GetPlot()
-				local pPlayer = Players[Game:GetActivePlayer()]		
-				local distance = Map.PlotDistance(pPlot:GetX(), pPlot:GetY(), sUnitPlot:GetX(), sUnitPlot:GetY())
-				if distance <= 2 and distance > 0 
-				and pSUnit:GetMoves() ~= 0 
-				and (not pPlot:IsMountain()) 
-				and (not pPlot:IsWater()) 
-				and (not pPlot:IsCity()) 
-				and pPlot:GetNumUnits() == 0  then
-				
-				if pSUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_COMBAT_TO_DEATH"].ID)  then							
-                GetUniqueFreeMeleeUnit(pPlayer, pPlot)
-
-				end
-
-				 pSUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
-				 pSUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_0, true)
-		         pSUnit:SetHasPromotion(GameInfoTypes.PROMOTION_COMBAT_TO_DEATH_5, false)
-
-				 end		
-				 Events.ClearHexHighlights()
-				 SpaceBattleCruiserSkill = 0
+		
 				 --------------------------------------------------------------------------------------    
 	            elseif SpaceBattleCruiserSkill == 6 then
 		        local pSUnit = UI.GetHeadSelectedUnit();
@@ -1478,6 +1379,10 @@ function AiIntoNewEra(ePlayer, eEra, bFirst)
 		local pPlayer = Players[ePlayer]
 	    if   handicap >= 7 and pPlayer:IsAlive() then
 		if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
+
+		if eEra == GameInfoTypes["ERA_INDUSTRIAL"] then
+		pPlayer:ChangeNumResourceTotal(GameInfoTypes.RESOURCE_GUNPOWDER,200);
+		end
 
 		if Difficult9Active or  Difficult10Active then
 		pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())

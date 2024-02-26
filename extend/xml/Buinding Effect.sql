@@ -752,7 +752,7 @@ INSERT INTO Building_YieldFromOtherYield(BuildingType, InYieldType,InYieldValue,
 -- 情报局免费晋升关联战斗类型
 ------------------------------------------------------------------------------------------------------------------------
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
-SELECT  'PROMOTION_SPY_ADJACENCY_BUFF', Type  FROM UnitCombatInfos WHERE ID !=-1;
+SELECT  'PROMOTION_SPY_ADJACENCY_BUFF', Type  FROM UnitCombatInfos WHERE ID !=-1 AND Type!= 'UNITCOMBAT_WORKER' AND Type!= 'UNITCOMBAT_SETTLER';
 
 
 ------------------------------------------------------------------------------------------------------------------------

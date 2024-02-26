@@ -142,8 +142,8 @@
 			<XPValueDefense>3</XPValueDefense>
 			<!--<UnitArtInfo>ART_DEF_UNIT_MECH2</UnitArtInfo>-->
 			<UnitArtInfo>ART_DEF_UNIT_MECH2142</UnitArtInfo>			
-			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>33</UnitFlagIconOffset>
+			<UnitFlagAtlas>BF2142_FLAG_ATLAS2</UnitFlagAtlas>
+			<UnitFlagIconOffset>2</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>205</PortraitIndex>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>

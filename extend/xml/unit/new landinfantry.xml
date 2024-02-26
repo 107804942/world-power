@@ -418,8 +418,8 @@
 			<XPValueDefense>4</XPValueDefense>
 			<Conscription>7</Conscription>
 			<UnitArtInfo>ART_DEF_UNIT_AUTOMATON</UnitArtInfo>
-			<UnitFlagIconOffset>26</UnitFlagIconOffset>
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<UnitFlagIconOffset>3</UnitFlagIconOffset>
+			<UnitFlagAtlas>BF2142_FLAG_ATLAS2</UnitFlagAtlas>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 			<PortraitIndex>79</PortraitIndex>
 			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>

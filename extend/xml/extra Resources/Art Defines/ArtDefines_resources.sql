@@ -71,7 +71,8 @@ INSERT INTO ArtDefine_Landmarks (Era,				State,						Scale,		ImprovementType,			
 
 -------------------------------------ัวย้-------------------------------------------------------
 INSERT INTO ArtDefine_StrategicView (StrategicViewType,				TileType,			Asset) Values
-									('ART_DEF_RESOURCE_FLAX',		'Resource',			'SV_Flax.dds');
+('ART_DEF_RESOURCE_RASPBERRY',	'Resource',			'SV_Raspberries.dds'),
+('ART_DEF_RESOURCE_FLAX',		'Resource',			'SV_Flax.dds');
 
 INSERT INTO ArtDefine_LandmarkTypes (Type,										LandmarkType,			FriendlyName) VALUES
                                    ('ART_DEF_RESOURCE_RASPBERRY',				'Resource',				'Raspberries'),

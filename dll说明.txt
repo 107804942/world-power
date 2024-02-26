@@ -845,3 +845,6 @@ ALTER TABLE UnitPromotions ADD AOEDamageOnPillage INTEGER DEFAULT 0;
 
 
 
+ALTER TABLE UnitPromotions ADD 'DoFallBackAttackMod' INTEGER DEFAULT 0;
+ALTER TABLE UnitPromotions ADD 'BeFallBackDefenseMod' INTEGER DEFAULT 0;
+
