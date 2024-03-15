@@ -2728,6 +2728,7 @@
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
 		</Row>
 
 

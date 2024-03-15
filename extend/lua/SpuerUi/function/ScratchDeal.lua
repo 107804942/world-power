@@ -72,6 +72,12 @@ local g_deal_functions = {
 	[ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or-1] = function( from, item )
 		return ScratchDeal:AddResearchAgreement( from, item[2] )
 	end,
+	[ TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE or-1] = function( from, item )
+		return ScratchDeal:AddDiplomaticMarriage( from, item[2] )
+	end,
+	[ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or-1] = function( from, item )
+		return ScratchDeal:AddDualEmpireTreaty( from )
+	end,
 	[ TradeableItems.TRADE_ITEM_ALLOW_EMBASSY or-1] = function( from )
 		return ScratchDeal:AddAllowEmbassy( from )
 	end,

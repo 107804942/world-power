@@ -177,6 +177,8 @@ local g_itemControls = {
 [ TradeableItems.TRADE_ITEM_OPEN_BORDERS or false ] = { Controls.UsPocketOpenBorders, Controls.UsTableOpenBorders, Controls.ThemPocketOpenBorders, Controls.ThemTableOpenBorders },
 [ TradeableItems.TRADE_ITEM_DEFENSIVE_PACT or false ] = { Controls.UsPocketDefensivePact, Controls.UsTableDefensivePact, Controls.ThemPocketDefensivePact, Controls.ThemTableDefensivePact },
 [ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or false ] = { Controls.UsPocketResearchAgreement, Controls.UsTableResearchAgreement, Controls.ThemPocketResearchAgreement, Controls.ThemTableResearchAgreement },
+[ TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE or false ] = { Controls.UsPocketMarriage, Controls.UsTableMarriage, Controls.ThemPocketMarriage, Controls.ThemTableMarriage },
+[ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or false ] = { Controls.UsPocketDualEmpire, Controls.UsTableDualEmpire, Controls.ThemPocketDualEmpire, Controls.ThemTableDualEmpire },
 [ TradeableItems.TRADE_ITEM_TRADE_AGREEMENT or false ] = { Controls.UsPocketTradeAgreement, Controls.UsTableTradeAgreement, Controls.ThemPocketTradeAgreement, Controls.ThemTableTradeAgreement },
 [ TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP or false ] = { Controls.UsPocketDoF, Controls.UsTableDoF, Controls.ThemPocketDoF, Controls.ThemTableDoF, Controls.ThemTableDoF },
 }
@@ -195,6 +197,10 @@ local g_pocketControls = {
 	Controls.ThemPocketDefensivePact,
 	Controls.UsPocketResearchAgreement,
 	Controls.ThemPocketResearchAgreement,
+	Controls.UsPocketMarriage,
+	Controls.ThemPocketMarriage,
+	Controls.UsPocketDualEmpire,
+	Controls.ThemPocketDualEmpire,
 --	Controls.UsPocketTradeAgreement, --Trade agreement disabled for now
 --	Controls.ThemPocketTradeAgreement, --Trade agreement disabled for now
 	Controls.UsPocketAllowEmbassy,
@@ -571,6 +577,16 @@ local function SetPocketCities( instanceManager, fromPlayer, fromPlayerID, toPla
 				local button = instance.Button
 				button:SetVoids( fromPlayerID, cityID )
 				button:RegisterCallback( Mouse.eLClick, AddCityTrade )
+
+				--SP Special Rule: Trade a City needs the city Founded by either side or has 4+ Population and not in Resistance
+				if (city:GetPopulation() < 4 or city:IsResistance()) 
+				and (city:GetOriginalOwner() ~= fromPlayerID and city:GetOriginalOwner() ~= toPlayerID) 
+				then
+					instance.Button:SetDisabled(true);
+				else
+					instance.Button:SetDisabled(false);
+				end
+
 			end
 		end
 	end
@@ -882,6 +898,27 @@ function ResetDisplay( diploMessage )
 		Controls.UsPocketResearchAgreement:SetHide( isSameTeam or ourTeam:IsHasResearchAgreement( theirTeamID ) )
 		Controls.ThemPocketResearchAgreement:SetHide( isSameTeam or theirTeam:IsHasResearchAgreement( ourTeamID ) )
 
+		----------------------------------------------------------------------------------
+		-- pocket Marriage
+		----------------------------------------------------------------------------------
+		toolTip = L"TXT_KEY_DIPLOMACY_MARRIAGE_BODY"
+		SetEnabledAndToolTip( Controls.UsPocketMarriage, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketMarriage, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iDealDuration ), toolTip )
+		local bShowPocketMarriage = ourPlayer:IsCanDiplomaticMarriage() or theirPlayer:IsCanDiplomaticMarriage()
+		Controls.UsPocketMarriage:SetHide( isSameTeam or not bShowPocketMarriage )
+		Controls.ThemPocketMarriage:SetHide( isSameTeam or not bShowPocketMarriage )
+		
+
+		----------------------------------------------------------------------------------
+		-- pocket Dual Empire
+		----------------------------------------------------------------------------------
+		toolTip = L"TXT_KEY_DIPLOMACY_DUAL_EMPIRE_TREATY_BODY"
+		SetEnabledAndToolTip( Controls.UsPocketDualEmpire, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration ), toolTip )
+		SetEnabledAndToolTip( Controls.ThemPocketDualEmpire, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iDealDuration ), toolTip )
+		local bShowPocketDualEmpire = ourPlayer:IsAbleToDualEmpire() or theirPlayer:IsAbleToDualEmpire()
+		Controls.UsPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
+		Controls.ThemPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
+		
 		----------------------------------------------------------------------------------
 		-- pocket Trade Agreement
 		----------------------------------------------------------------------------------
@@ -1804,6 +1841,50 @@ do
 	end
 	Controls.UsTableResearchAgreement:RegisterCallback( Mouse.eLClick, RemoveResearchAgreement )
 	Controls.ThemTableResearchAgreement:RegisterCallback( Mouse.eLClick, RemoveResearchAgreement )
+end
+
+-----------------------------------------------------------------------------------------------------------------------
+-- pocket Marriage
+-----------------------------------------------------------------------------------------------------------------------
+do
+	local function AddMarriageAgreement()
+		g_Deal:AddDiplomaticMarriage( g_iUs, g_iDealDuration )
+		g_Deal:AddDiplomaticMarriage( g_iThem, g_iDealDuration )
+		return DoUIDealChangedByHuman()
+	end
+	Controls.UsPocketMarriage:RegisterCallback( Mouse.eLClick, AddMarriageAgreement )
+	Controls.ThemPocketMarriage:RegisterCallback( Mouse.eLClick, AddMarriageAgreement )
+
+	local function RemoveMarriageAgreement()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableMarriage:RegisterCallback( Mouse.eLClick, RemoveMarriageAgreement )
+	Controls.ThemTableMarriage:RegisterCallback( Mouse.eLClick, RemoveMarriageAgreement )
+end
+
+-----------------------------------------------------------------------------------------------------------------------
+-- pocket Dual Empire
+-----------------------------------------------------------------------------------------------------------------------
+do
+	local function AddDualEmpireAgreement()
+		g_Deal:AddDualEmpireTreaty( g_iUs )
+		g_Deal:AddDualEmpireTreaty( g_iThem )
+		return DoUIDealChangedByHuman()
+	end
+	Controls.UsPocketDualEmpire:RegisterCallback( Mouse.eLClick, AddDualEmpireAgreement )
+	Controls.ThemPocketDualEmpire:RegisterCallback( Mouse.eLClick, AddDualEmpireAgreement )
+
+	local function RemoveDualEmpireAgreement()
+		-- Remove from BOTH sides of the table
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iUs )
+		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY, g_iThem )
+		return DoUIDealChangedByHuman( true )
+	end
+	Controls.UsTableDualEmpire:RegisterCallback( Mouse.eLClick, RemoveDualEmpireAgreement )
+	Controls.ThemTableDualEmpire:RegisterCallback( Mouse.eLClick, RemoveDualEmpireAgreement )
 end
 
 -----------------------------------------------------------------------------------------------------------------------
