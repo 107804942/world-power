@@ -58,7 +58,7 @@ end
 local IsPlayerUsingCustomColor = setmetatable( {}, { __index = function( table, playerID )
 	local playerCivilizationInfo = PlayerCivilizationInfo[ playerID ]
 	local defaultColorSet = playerCivilizationInfo and GameInfoPlayerColors[ playerCivilizationInfo.DefaultPlayerColor ]
-	return Cache( not defaultColorSet or playerCivilizationInfo.Type == "CIVILIZATION_MINOR" or defaultColorSet.ID ~= GetCivilizationColor( playerID ), table, playerID )
+	return Cache( not defaultColorSet or playerCivilizationInfo.Type == "CIVILIZATION_MINOR" or (playerID and defaultColorSet.ID ~= GetCivilizationColor( playerID )), table, playerID )
 end})
 
 PrimaryColors = setmetatable( {}, { __index = function( table, playerID )

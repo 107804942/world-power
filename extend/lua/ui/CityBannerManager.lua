@@ -192,6 +192,8 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		local isCapital = city:IsCapital() or Players[city:GetOriginalOwner()]:IsMinorCiv();
 		if (city:IsCapital() and not player:IsMinorCiv()) then		
 			convertedKey = "[ICON_CAPITAL]" .. convertedKey;
+		elseif city:IsSecondCapital() then
+			convertedKey = "[ICON_FLOWER]" .. convertedKey
 		end
 		
 			--------------------------------------------SP City Show City Focus--------------------------

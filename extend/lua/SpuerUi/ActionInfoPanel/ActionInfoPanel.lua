@@ -1546,7 +1546,7 @@ local function UpdateCivList()
 				local ally = Players[ allyID ]
 
 				if ally then
-					CivIconHookup( activeTeam:IsHasMet( ally:GetTeam() ) and allyID, 32, instance.AllyIcon, instance.AllyBG, instance.AllyShadow )
+					CivIconHookup( activeTeam:IsHasMet( ally:GetTeam() ) and allyID or -1, 32, instance.AllyIcon, instance.AllyBG, instance.AllyShadow )
 					instance.Ally:SetHide(false)
 				else
 					instance.Ally:SetHide(true)

@@ -1255,6 +1255,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		CityConnectionTradeRouteModifier = L"TXT_KEY_CCTRM22" .. "%+i%%".."[ICON_GOLD]",-- TOTO
 		CapturePlunderModifier = L"TXT_KEY_CPM3" .. "%+i%%".."[ICON_GOLD]",		-- TOTO
 		PolicyCostModifier = L"TXT_KEY_PCM22" .. "%+i%%".."[ICON_CULTURE]",		-- TOTO
+		CorruptionPolicyCostModifier = L"TXT_KEY_CPCM22" .. "%+i%%[ICON_CULTURE]", -- TOTO
 		PlotCultureCostModifier = L"TXT_KEY_PCCM4" .. "%+i%%".."[ICON_CULTURE]",	-- TOTO
 		GlobalPlotCultureCostModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_PCCM4" .. "%+i%%".."[ICON_CULTURE]",-- TOTO
 		PlotBuyCostModifier = L"TXT_KEY_PBCM5" .. "%+i%%".."[ICON_GOLD]",		-- TOTO
@@ -1266,8 +1267,10 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		FreeGreatPeople = L"TXT_KEY_GP111" .. "%i",				-- TOTO
 		MedianTechPercentChange = L"TXT_KEY_MTPC_444" .. "2*%+i%%".."[ICON_RESEARCH]",-- TOTO
 		Gold = L"TXT_KEY_PEDIA_GOLD_LABEL" .. " %i",				-- TOTO
-		GlobalDefenseMod = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_DM_0" .. "%+i%%".."[ICON_STRENGTH]",-- TOTO
+		GlobalDefenseMod = L"TXT_KEY_EXIST_CITY" .. L"TXT_KEY_DM_0" .. "%+i%%[ICON_STRENGTH]",-- TOTO
+		CityDefenseModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_DM_0" .. "%+i%%[ICON_STRENGTH]",-- TOTO
 		MinorFriendshipChange = L"TXT_KEY_MFC_23" .. "%+i%%",			-- TOTO
+		MinorFriendshipAnchorChange = L"TXT_KEY_MFAC_23" .. "%+i", -- TOTO
 		ExtraMissionarySpreads = L"TXT_KEY_EMS_5" .. " %+i".."[ICON_MISSIONARY]",-- TOTO
 		ReligiousPressureModifier = L"TXT_KEY_RPM_10" .. "%+i%%",		-- TOTO
 		EspionageModifier = L"TXT_KEY_EM561" .. "%+i%%",			-- TOTO
@@ -2829,6 +2832,12 @@ if Game then
 			[ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or-1] = function( from, item )
 				return ScratchDeal:AddResearchAgreement( from, item[2] )
 			end,
+			[ TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE or-1] = function( from, item )
+				return ScratchDeal:AddDiplomaticMarriage( from, item[2] )
+			end,
+			[ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or-1] = function( from, item )
+				return ScratchDeal:AddDualEmpireTreaty( from )
+			end,
 			[ TradeableItems.TRADE_ITEM_ALLOW_EMBASSY or-1] = function( from )
 				return ScratchDeal:AddAllowEmbassy( from )
 			end,
@@ -3590,6 +3599,8 @@ if Game then
 				if activePlayer:IsDenouncedPlayer( playerID ) then
 					turnsRemaining = relationshipDuration - activePlayer:GetDenouncedPlayerCounter( playerID );
 				end
+			elseif bnw_be and itemID == TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE then -- Marriage
+				turnsRemaining = relationshipDuration - activePlayer:GetMarriageCounter( playerID )
 			elseif itemID then
 				local finalTurn = dealsFinalTurn[ itemID ]
 				if finalTurn then
@@ -3825,6 +3836,15 @@ if Game then
 					)
 				end
 
+				isTradeable = ScratchDeal:IsPossibleToTradeItem( playerID, activePlayerID, TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE, g_dealDuration )
+				isActiveDeal = activePlayer:IsMarriageAccepted(playerID)
+				if isTradeable or isActiveDeal then
+					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "[ICON_FLOWER]"
+							.. L"TXT_KEY_DIPLO_MARRIAGE"
+							.. "[ENDCOLOR]" .. GetDealTurnsRemaining( TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE )
+					)
+				end
+
 				-- Research Agreement
 	--			isTradeable = (activeTeam:IsResearchAgreementTradingAllowed() or team:IsResearchAgreementTradingAllowed())
 	--				and not activeTeam:GetTeamTechs():HasResearchedAllTechs() and not team:GetTeamTechs():HasResearchedAllTechs()
@@ -3858,17 +3878,6 @@ if Game then
 					)
 				end
 
-				-- We've fought before
-				if IsCiv5Vanilla and activePlayer:GetNumWarsFought(playerID) > 0 then
-					-- They don't appear to be mad
-					if visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_FRIENDLY or
-						visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_NEUTRAL then
-						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_NEUTRAL" )
-					-- They aren't happy with us
-					else
-						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_BAD" )
-					end
-				end
 			end
 
 			if player.GetOpinionTable then
@@ -3894,6 +3903,18 @@ if Game then
 				-- Neutral things
 				if visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_AFRAID then
 					insert( opinions, L"TXT_KEY_DIPLO_AFRAID" )
+				end
+
+				-- We've fought before
+				if IsCiv5Vanilla and activePlayer:GetNumWarsFought(playerID) > 0 then
+					-- They don't appear to be mad
+					if visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_FRIENDLY or
+						visibleApproachID == MajorCivApproachTypes.MAJOR_CIV_APPROACH_NEUTRAL then
+						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_NEUTRAL" )
+					-- They aren't happy with us
+					else
+						insert( opinions, L"TXT_KEY_DIPLO_PAST_WAR_BAD" )
+					end
 				end
 
 				-- Bad things

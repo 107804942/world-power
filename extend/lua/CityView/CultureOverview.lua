@@ -2135,17 +2135,17 @@ function RefreshCultureVictory()
 					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_UNHAPPINESS")
 				end
 				
-				if     pPlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) and activePlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-				elseif pPlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_IRON_CURTAIN")
-				elseif activePlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_TREATY_ORGANIZATION")
+				if pPlayer:GetImmigrationInRateFromPolicy() ~= 0 then
+					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_THEM", pPlayer:GetImmigrationInRateFromPolicy())
+                end
+                if activePlayer:GetImmigrationOutRateFromPolicy() ~= 0 then
+					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_YOU", -activePlayer:GetImmigrationOutRateFromPolicy())
+                end
+                if activePlayer:GetImmigrationInRateFromPolicy() ~= 0 then
+					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_IN_POLICY_YOU", activePlayer:GetImmigrationInRateFromPolicy())
 				end
-				if     activePlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) and pPlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-				elseif activePlayer:HasPolicy(GameInfoTypes["POLICY_IRON_CURTAIN"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_IRON_CURTAIN")
-				elseif pPlayer:HasPolicy(GameInfoTypes["POLICY_TREATY_ORGANIZATION"]) then
-					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip.."[NEWLINE][ICON_BULLET]"..Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_TREATY_ORGANIZATION")
+				if pPlayer:GetImmigrationOutRateFromPolicy() ~= 0 then
+					strInternationalImmigrationToolTip = strInternationalImmigrationToolTip .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_CO_SP_MOVE_OUT_POLICY_THEM", -pPlayer:GetImmigrationOutRateFromPolicy())
 				end
 				
 				if  activePlayer:GetExcessHappiness() > pPlayer:GetExcessHappiness()

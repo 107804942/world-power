@@ -147,7 +147,10 @@ function ShortUnitTip( unit )
 
 
 	---more
-
+		--can Establish Corps
+		if unit:IsCanEstablishCorps() then
+			toolTipString = toolTipString .. Locale.ConvertTextKey("TXT_KEY_SP_UNIT_CAN_ESTABLISH_CORPS_OR_ARMEE")
+		end
 	-- Level, Experience for ActivePlayer
 		if  unit:IsCombatUnit() or unit:CanAirAttack()  then
 			unitTip = unitTip .."[NEWLINE]".. Locale.ConvertTextKey( "TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ):gsub("%[NEWLINE]"," ")

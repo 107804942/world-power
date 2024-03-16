@@ -1652,7 +1652,11 @@ function TipHandler( control )
 					strDisabledString = strDisabledString .. "[NEWLINE][NEWLINE]";
 				end
 				
-				strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_UPGRADE_HELP_DISABLED_CITY");
+				if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_FIGHTER"].ID) then
+					strDisabledString = strDisabledString .. "[COLOR_NEGATIVE_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_SP_SETUP_SCREEN_HELP_12") .. "[ENDCOLOR]";
+				else
+					strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_UPGRADE_HELP_DISABLED_CITY");
+				end
 			end
 			
 			-- Can't upgrade because we lack the Gold
@@ -1852,10 +1856,10 @@ function TipHandler( control )
 		strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_MISSION_GIVE_POLICIES_HELP");
 
 		----------------------------------------½Ü×÷¼Ó³É----------------------------------------
-		local GWBouns = GameInfo.Units[unit:GetUnitType()].ScaleFromNumGWs;
-			if GWBouns > 0 then
-				strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_GREAT_WRITER_GW_BOUNS", GWBouns, pActivePlayer:GetNumGreatWorks() * GWBouns);
-			end
+		local GWBouns = unit:GetGreatPersonOutputModifierFromGWs();
+		if GWBouns > 0 then
+			strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_GREAT_WRITER_GW_BOUNS", GWBouns);
+		end
         ------------------------------------------------------------------------------------------------------------------------
 		
 		if (not bDisabled) then
@@ -1873,6 +1877,10 @@ function TipHandler( control )
 		end
 		
 		strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_MISSION_ONE_SHOT_TOURISM_HELP");
+		local GWBouns = unit:GetGreatPersonOutputModifierFromGWs();
+		if GWBouns > 0 then
+			strToolTip = strToolTip .. "[NEWLINE]" .. Locale.Lookup("TXT_KEY_GREAT_WRITER_GW_BOUNS", GWBouns);
+		end
 		
 		if (not bDisabled) then
 			strToolTip = strToolTip .. "[NEWLINE]----------------[NEWLINE]";
