@@ -7052,7 +7052,7 @@
 			<Text>重装冲锋</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
-			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。免疫溅射和穿透伤害。</Text>
+			<Text>生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。免疫溅射和穿透伤害,能够为5格内重步单位提供33%[ICON_STRENGTH]战斗力加成。</Text>
 		</Row>
 
 
@@ -7161,7 +7161,7 @@
 		<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
 			<Text>
 				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
-				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。
+				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。能够为5格内重步单位提供33%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：能够冲锋击退敌方单位，攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
 			</Text>

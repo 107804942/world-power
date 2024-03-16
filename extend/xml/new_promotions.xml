@@ -1167,6 +1167,7 @@
 
 	<!--*********************************步兵系******************************-->
 	<UnitPromotions>
+		<Delete Type="PROMOTION_INFANTRY_COMBAT"/>
 		<Delete Type="PROMOTION_GUNPOWDER_INFANTRY_COMBAT"/>
 		<Delete Type="PROMOTION_SHOCK_1"/>
 		<Delete Type="PROMOTION_SHOCK_2"/>
@@ -1174,6 +1175,24 @@
 		<Delete Type="PROMOTION_COVER_1"/>
 
 
+		<Row>
+			<Type>PROMOTION_INFANTRY_COMBAT</Type>
+			<Description>TXT_KEY_PROMOTION_INFANTRY_COMBAT</Description>
+			<Help>TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<OrderPriority>11</OrderPriority>
+			<PortraitIndex>40</PortraitIndex>
+			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_INFANTRY_COMBAT</PediaEntry>
+			<CityAttack>50</CityAttack>
+			<NearbyUnitPromotionBonus>33</NearbyUnitPromotionBonus>
+			<NearbyUnitPromotionBonusRange>5</NearbyUnitPromotionBonusRange>
+			<CombatBonusFromNearbyUnitPromotion>PROMOTION_COMBAT_TO_DEATH</CombatBonusFromNearbyUnitPromotion>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		
 
 		<Row>
 			<Type>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</Type>
@@ -1187,6 +1206,9 @@
 			<PediaEntry>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PediaEntry>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<CityAttack>50</CityAttack>
+			<NearbyUnitPromotionBonus>33</NearbyUnitPromotionBonus>
+			<NearbyUnitPromotionBonusRange>5</NearbyUnitPromotionBonusRange>
+			<CombatBonusFromNearbyUnitPromotion>PROMOTION_COMBAT_TO_DEATH</CombatBonusFromNearbyUnitPromotion>
 			<RangedSupportFire>true</RangedSupportFire>
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
@@ -1205,6 +1227,9 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ROBORT_COMBAT</PediaEntry>
 			<CityAttack>100</CityAttack>
+			<NearbyUnitPromotionBonus>33</NearbyUnitPromotionBonus>
+			<NearbyUnitPromotionBonusRange>5</NearbyUnitPromotionBonusRange>
+			<CombatBonusFromNearbyUnitPromotion>PROMOTION_COMBAT_TO_DEATH</CombatBonusFromNearbyUnitPromotion>
 			<PlagueImmune>1</PlagueImmune>
 			<CannotBeChosen>true</CannotBeChosen>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>

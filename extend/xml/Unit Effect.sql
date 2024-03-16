@@ -18,8 +18,8 @@ INSERT  INTO Unit_FreePromotions(UnitType ,PromotionType)VALUES
 
 
 ---步马协同
-INSERT  INTO UnitPromotions_CombatModPerAdjacentUnitCombat(PromotionType,UnitCombatType ,Modifier,Attack,Defense)
-VALUES ('PROMOTION_ANTI_ANTI_MOUNTED_BONUS','UNITCOMBAT_MELEE',8,0,0);
+INSERT  INTO UnitPromotions_CombatModPerAdjacentUnitCombat(PromotionType,UnitCombatType ,Modifier,Attack,Defense)VALUES 
+('PROMOTION_ANTI_ANTI_MOUNTED_BONUS','UNITCOMBAT_MELEE',8,0,0);
 
 
 

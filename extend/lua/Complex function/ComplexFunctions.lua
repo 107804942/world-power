@@ -743,7 +743,7 @@ local IronPagodaChargeButton = {
 		end
 		local pPlayer = Players[Game:GetActivePlayer()];
 		if unit:CanMove() and unit:IsHasPromotion(GameInfoTypes.PROMOTION_ANTI_ANTI_MOUNTED_BONUS)
-		and unit:GetCurrHitPoints() > 150
+		and unit:GetCurrHitPoints() > 99
 		then
 			return true
 		end
@@ -947,8 +947,8 @@ function InputHandler( uiMsg, wParam, lParam )
 
                 else 
 
-				local unit  = pPlayer:InitUnit(GameInfoTypes["UNIT_FW_BATTLESUIT"], pPlot:GetX(),pPlot:GetY())
-				local unit2 = pPlayer:InitUnit(GameInfoTypes["UNIT_FW_BATTLESUIT"], pPlot:GetX(),pPlot:GetY())
+				local unit  = pPlayer:InitUnit(GameInfoTypes["UNIT_GARIO_BATTLESUIT"], pPlot:GetX(),pPlot:GetY())
+				local unit2 = pPlayer:InitUnit(GameInfoTypes["UNIT_GARIO_BATTLESUIT"], pPlot:GetX(),pPlot:GetY())
 			
 			    SetAbilityForFranceMistralUnit2(unit)
 				SetAbilityForFranceMistralUnit2(unit2)
@@ -1044,7 +1044,7 @@ function InputHandler( uiMsg, wParam, lParam )
 						-- Ìú¸¡ÍÀµôÑªÊ§È¥ÒÆ¶¯Á¦
 						pSUnit:SetXY(pPlot:GetX(), pPlot:GetY())
 						pSUnit:SetMoves(0)
-						pSUnit:ChangeDamage(150)
+						pSUnit:ChangeDamage(99)
 						local hex = ToHexFromGrid(Vector2(pPlot:GetX(), pPlot:GetY()))		
 						--Events.AudioPlay2DSound("AS2D_HORSE")
 						Events.AddPopupTextEvent(HexToWorld(hex), Locale.ConvertTextKey("TXT_KEY_TITLE_IRON_BUDDHA_CHARGE"))

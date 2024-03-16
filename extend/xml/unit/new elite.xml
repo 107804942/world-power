@@ -1880,10 +1880,7 @@
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_HITTITE_WAR_CHARIOT</UnitType>
-			<PromotionType>PROMOTION_COMBAT_TO_DEATH_0</PromotionType>
-		</Row>
+
 
 
 		<Row>
