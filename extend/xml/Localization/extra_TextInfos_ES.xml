@@ -9767,7 +9767,7 @@
 			<Text>[NEWLINE]"睁开双眼，睁开双眼。专注前方，专注前方。"[NEWLINE]        ——卡维萨·塔库尔《出世经经典籍》[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_DIABLO_HELP">
-			<Text>单位被攻击时，有33%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
+			<Text>作战时，有33%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_DIABLO">
