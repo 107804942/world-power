@@ -27,6 +27,8 @@ WHERE Type IN ('WORLD_POWER_PATCH')
 AND EXISTS (SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_KGB');
 
 
+
+
 -----ÂòµØ
 UPDATE Traits SET BuyOwnedTiles = 1 WHERE Type ='TRAIT_RIVER_EXPANSION'; 
 

@@ -6831,7 +6831,9 @@
 		</Row>
 
 
-
+		<Row Tag="TXT_KEY_GREAT_WORK_ISHTARGATE">
+			<Text>吉尔伽美什史诗</Text>
+		</Row>
 		<Row Tag="TXT_KEY_BUILDING_ISHTARGATE">
 			<Text>伊斯塔尔门</Text>
 		</Row>
@@ -9637,14 +9639,27 @@
 		</Replace>
 
 
-		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度，+2[ICON_RES_CONSUMER]商品。
-				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱、[ICON_FOOD]食物，+2[ICON_HEALTH]健康度，+2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]全局产能。
 			</Text>
 		</Replace>
-
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]自主政策[ENDCOLOR]适合渴求快速扩张的文明。
+				[NEWLINE][NEWLINE]启用自主政策：
+				[NEWLINE][ICON_BULLET]使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研，+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]工人修建地块设施速度+25%。
+				[NEWLINE][ICON_BULLET]所有城市的行政成本下降-15%。
+				[NEWLINE][ICON_BULLET]允许建造大金字塔。
+				[NEWLINE][NEWLINE]推行所有自主政策：
+				[NEWLINE][ICON_BULLET]在首都[ICON_CAPITAL]附近出现一位大工程师。
+				[NEWLINE][ICON_BULLET]立即开启一次黄金时代。
+				[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与传统政策同时开启。[ENDCOLOR]
+			</Text>
+		</Replace>
 
 		<Row Tag="TXT_KEY_PROJECT_BLIALI">
 			<Text>巴利阿里投石兵</Text>

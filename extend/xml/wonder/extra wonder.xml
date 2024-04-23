@@ -1,7 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2020/3/17 16:51:16 -->
 <GameData>
-	
+
+
+	<GreatWorks>
+		<Row>
+			<Type>GREAT_WORK_ISHTARGATE</Type>
+			<GreatWorkClassType>GREAT_WORK_LITERATURE</GreatWorkClassType>
+			<Description>TXT_KEY_GREAT_WORK_ISHTARGATE</Description>
+			<Audio>AS2D_GREAT_ARTIST_ARTWORK</Audio>
+			<Image>GreatWriter_Background.dds</Image>
+		</Row>
+	</GreatWorks>
+		
+		
 	<BuildingClasses>
 
 		<!-- 时态演算 -->
@@ -1685,8 +1697,6 @@
 			<Quote>TXT_KEY_WONDER_ISHTARGATE_QUOTE</Quote>
 			<Cost>130</Cost>
 			<FreeBuilding>BUILDINGCLASS_WALLS</FreeBuilding>
-			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
-			<GreatWorkCount>2</GreatWorkCount>
 			<PolicyBranchType>POLICY_BRANCH_TRADITION</PolicyBranchType>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -1697,6 +1707,9 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<AllowsRangeStrike>true</AllowsRangeStrike>
+			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
+			<FreeGreatWork>GREAT_WORK_ISHTARGATE</FreeGreatWork>
+			<GreatWorkCount>2</GreatWorkCount>
 			<Defense>2500</Defense>
 			<WorkerSpeedModifier>25</WorkerSpeedModifier>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>

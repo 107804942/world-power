@@ -733,6 +733,13 @@
 			<YieldType>YIELD_HEALTH</YieldType>
 			<Yield>2</Yield>
 		</Row>
+
+
+		<Row>
+			<PolicyType>POLICY_LIBERTY</PolicyType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
 		
 	</Policy_CityYieldChanges>
 	

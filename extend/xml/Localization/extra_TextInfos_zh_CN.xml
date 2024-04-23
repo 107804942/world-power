@@ -6867,8 +6867,12 @@
 				炸药厂，生产军用或民用爆炸物质的工厂。生产军用爆炸物质的炸药厂有单独生产单质炸药，如梯恩梯、太安、奥克托今或黑索金的工厂，也有生产混合炸药（如梯黑炸药、含铝炸药、塑性炸药等）的工厂。生产民用工业炸药的有铵梯炸药厂、胶质炸药厂、水胶炸药厂和乳化炸药厂等。炸药厂一般多与硝酸厂配套生产，也有的国家为了充分利用与硝酸配套这一特点，为了降低成本，与染料中间体以及其他需用硝酸为原料的精细化工厂组成联合化工企业，如杜邦公司。炸药厂的特点是：①炸药生产不仅成品有爆炸危险，就是在生产过程中都有易燃、易爆、腐蚀、有毒的特点，因此安全极为重要。除在危险生产岗位应设置自动喷淋系统等安全设施外，在危险性大的生产工房周围要建造土围，以防止热辐射和冲击波的传播和低角度的碎片飞散。在危险工房之间，依药量和危险级别，应有规定的安全距离。厂区和库区对邻近的企业、村镇、住宅、铁道、公路、航道、高压输电线等均应有规定的安全距离。②炸药厂一般远离城镇，占地较大，投资也较多。③炸药生产中硝酸烟雾和炸药粉尘较多，对人体有毒害，对设备和建筑物则有腐蚀作用，因此要加强生产技术管理和劳动保护措施。如采用密闭、耐蚀设备，尽可能采用远距离控制或自动控制，设立酸回收和硝烟吸收装置等。
 			</Text>
 		</Row>
+		
+		
 
-
+		<Row Tag="TXT_KEY_GREAT_WORK_ISHTARGATE">
+			<Text>吉尔伽美什史诗</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_ISHTARGATE">
 			<Text>伊斯塔尔门</Text>
@@ -9671,14 +9675,29 @@
 			</Text>
 		</Replace>
 
-
-		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
+		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度，+2[ICON_RES_CONSUMER]商品。
-				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]产能加成。
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱、[ICON_FOOD]食物，+2[ICON_HEALTH]健康度，+2[ICON_RES_CONSUMER]商品。
+				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]全局产能。
 			</Text>
 		</Replace>
+
+		<Replace Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]自主政策[ENDCOLOR]适合渴求快速扩张的文明。
+				[NEWLINE][NEWLINE]启用自主政策：
+				[NEWLINE][ICON_BULLET]使每座城市+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研，+1[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]工人修建地块设施速度+25%。
+				[NEWLINE][ICON_BULLET]所有城市的行政成本下降-15%。
+				[NEWLINE][ICON_BULLET]允许建造大金字塔。
+				[NEWLINE][NEWLINE]推行所有自主政策：
+				[NEWLINE][ICON_BULLET]在首都[ICON_CAPITAL]附近出现一位大工程师。
+				[NEWLINE][ICON_BULLET]立即开启一次黄金时代。
+				[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]不能与传统政策同时开启。[ENDCOLOR]
+			</Text>
+		</Replace>
+
 
 
 		<Row Tag="TXT_KEY_PROJECT_BLIALI">
