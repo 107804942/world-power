@@ -45,7 +45,7 @@ VALUES  ('SND_TECH_FISHING',                    'TechFishing',     'DynamicResid
 -- Audio_2DSounds
 ------------------------------
 INSERT INTO Audio_2DSounds 
-			(ScriptID, 							SoundID, 								SoundType, 	MinVolume, 	MaxVolume,	IsMusic)
+		(ScriptID, 							SoundID, 								SoundType, 	MinVolume, 	MaxVolume,	IsMusic)
 VALUES	('AS2D_PLAGUE',			             'SND_PLAGUE',				            'GAME_SFX',		    100,			100,		0),
         ('AS2D_HORSE',			             'SND_HORSE',				             'GAME_SFX',		200,			200,		0),
 	    ('AS2D_SATELLITE_CANNON',			 'SND_SATELLITE_CANNON',				'GAME_SFX',			65,				65,			0),

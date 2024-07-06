@@ -2,6 +2,92 @@
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
 
+
+
+	<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB">
+		<Text>高能脉冲炮</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB_HELP">
+		<Text>可开启大范围高能脉冲炮，可让范围内的任意敌军及城市陷入瘫痪。攻击时对目标相邻区域造成100%伤害。</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PEDIA_PROMOTION_EMP_BOMB">
+		<Text>可开启大范围高能脉冲炮，可让范围内的任意敌军及城市陷入瘫痪。攻击时对目标相邻区域造成100%伤害。</Text>
+	</Row>
+
+
+
+
+
+	<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB_ON">
+		<Text>高能脉冲炮</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB_ON_HELP">
+		<Text>攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PEDIA_PROMOTION_EMP_BOMB_ON">
+		<Text>攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。</Text>
+	</Row>
+
+
+
+
+
+
+	<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON_SHORT">
+		<Text>高能脉冲炮</Text>
+	</Row>
+
+	<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON">
+		<Text>启动高能脉冲炮，攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。</Text>
+	</Row>
+
+
+	<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF_SHORT">
+		<Text>关闭高能脉冲炮</Text>
+	</Row>
+
+
+	<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF">
+		<Text>关闭高能脉冲炮：取消额外攻击效果。消耗本回合內所有剩余[ICON_MOVES]移动力。</Text>
+	</Row>
+
+	<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_US_LVD_SHORT">
+		<Text>你受到了敌方高能脉冲炮攻击！</Text>
+	</Row>
+	<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_US_LVD">
+		<Text>你的所有单位由于受到敌方高能脉冲炮效果影响，丧失全部[ICON_MOVES]移动力！[NEWLINE]所有城市也会瘫痪一回合！</Text>
+	</Row>
+	<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_ENEMY_LVD_SHORT">
+		<Text>高能脉冲炮命中目标！</Text>
+	</Row>
+	<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_ENEMY_LVD">
+		<Text>敌方所有单位由于受到你的高能脉冲炮效果影响，丧失全部[ICON_MOVES]移动力！[NEWLINE]其所有城市也会瘫痪一回合！</Text>
+	</Row>
+	
+	
+	
+	
+
+	<Row Tag="TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_ON">
+		<Text>启动超级粒子炮：攻击次数+1，远程[ICON_STRENGTH]攻击力+25%。</Text>
+	</Row>
+
+	<Row Tag="TXT_KEY_TITLE_PLASMA_CANNON_ON">
+		<Text>启动超级粒子炮</Text>
+	</Row>
+
+
+	<Row Tag="TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_OFF">
+		<Text>关闭超级粒子炮，取消其带来的额外效果。</Text>
+	</Row>
+
+	<Row Tag="TXT_KEY_TITLE_PLASMA_CANNON_OFF">
+		<Text>关闭超级粒子炮</Text>
+	</Row>
+
+	
+	
+
 	<Row>
 		<Type>PROMOTION_ROUGH_TERRAIN_ENDS_TURN</Type>
 		<Description>TXT_KEY_PROMOTION_ROUGH_TERRAIN_ENDS</Description>

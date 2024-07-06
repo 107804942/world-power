@@ -396,12 +396,12 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER03P</UnitClassType>
+			<UnitClassType>UNITCLASS_SPACE_CARRIER</UnitClassType>
 			<UnitType/>
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER03P</UnitClassType>
+			<UnitClassType>UNITCLASS_SPACE_CARRIER</UnitClassType>
 			<UnitType/>
 		</Row>
 
@@ -814,9 +814,9 @@
 
 
 		<Row>
-			<Type>UNITCLASS_NAVALCARRIER03P</Type>
-			<Description>TXT_KEY_UNIT_NAVALCARRIER03P</Description>
-			<DefaultUnit>UNIT_NAVALCARRIER03P</DefaultUnit>
+			<Type>UNITCLASS_SPACE_CARRIER</Type>
+			<Description>TXT_KEY_UNIT_SPACE_CARRIER</Description>
+			<DefaultUnit>UNIT_SPACE_CARRIER</DefaultUnit>
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
 

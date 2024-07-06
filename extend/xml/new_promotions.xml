@@ -6,6 +6,18 @@
 
 		<Delete Type="PROMOTION_INSTA_HEAL"/>
 		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
+
+		<Update>
+			<Set OriginalCapitalDamageFix="2"/>
+			<Where Type="PROMOTION_NEW_ORDER"/>
+		</Update>
+		
+		
+		<Update>
+			<Set SiegeInflictDamageChangeMaxHPPercent="5"/>
+			<Where Type="PROMOTION_CITY_DAMAGE_MAXHP_PERCENT"/>
+		</Update>
+		
 		
 		<Update>
 			<Set ShowInUnitPanel="0"/>
@@ -3052,19 +3064,6 @@
 
 
 
-		<Row>
-			<Type>PROMOTION_PLASMA_CANNON_ON</Type>
-			<Description>TXT_KEY_PROMOTION_PLASMA_CANNON_ON</Description>
-			<Help>TXT_KEY_PROMOTION_PLASMA_CANNON_ON_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>54</PortraitIndex>
-			<ExtraAttacks>1</ExtraAttacks>
-			<IconAtlas>promoVP_atlas_03</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_PLASMA_CANNON_ON</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<RangedAttackModifier>20</RangedAttackModifier>
-		</Row>
-
 
 
 
@@ -3079,6 +3078,8 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_PLASMA_CANNON</PediaEntry>
 			<InsightEnemyDamageModifier>100</InsightEnemyDamageModifier>
+			<ExtraAttacks>1</ExtraAttacks>
+			<RangedAttackModifier>20</RangedAttackModifier>
 		</Row>
 
 
@@ -3259,17 +3260,6 @@
 
 
 
-		<Row>
-			<Type>PROMOTION_EMP_BOMB_ON</Type>
-			<Description>TXT_KEY_PROMOTION_EMP_BOMB_ON</Description>
-			<Help>TXT_KEY_PROMOTION_EMP_BOMB_ON_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>7</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_EMP_BOMB_ON</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
 
 
 		<Row>
@@ -3389,10 +3379,6 @@
 		<Delete Type="PROMOTION_CQB_COMBAT_2"/>
 
 
-		<Update>
-			<Set CityAttack="150"  AttackFortifiedMod="50"/>
-			<Where Type="PROMOTION_CITY_SIEGE" />
-		</Update>
 
 
 
@@ -4435,7 +4421,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PortraitIndex>59</PortraitIndex>
-			<NumWonderAttackMod>2</NumWonderAttackMod>
+			<NumWonderAttackMod>1</NumWonderAttackMod>
 			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<ShowInUnitPanel>0</ShowInUnitPanel>
 			<PediaEntry>TXT_KEY_PROMOTION_ISHTARGATE</PediaEntry>

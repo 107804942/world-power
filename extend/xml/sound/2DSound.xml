@@ -986,9 +986,9 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
-			<SelectionSound>AS2D_SELECT_CARRIER</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_CARRIER</FirstSelectionSound>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
+			<SelectionSound>AS2D_SELECT_SPACESHIP</SelectionSound>
+			<FirstSelectionSound>AS2D_BIRTH_SPACESHIP</FirstSelectionSound>
 		</Row>
 
 

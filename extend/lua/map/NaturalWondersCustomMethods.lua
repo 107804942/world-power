@@ -505,7 +505,41 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 
 
+		-- reserved: 玻璃屋山
+		elseif method_number == 26 then
+	
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
+		--if pMainPlot:IsRiver() then return false end  ---不可沿河
+		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
+  
+		local pMainTerrainType = pMainPlot:GetTerrainType()
 
+		if pMainTerrainType ~= eTerrainGrass then return false end  
+		
+		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
+
+		--if pMainAreaNear < 20 then return false end 
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+
+			if sAdjacentTerrainType ~= eTerrainGrass then return false end  ----附近地块非
+
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			
+			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
+			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
+
+		end
+
+		return true
 
 	
 		-- reserved: 丹霞
@@ -2028,7 +2062,28 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		end
 
 
+		-- 玻璃屋山
+		elseif method_number == 26 then
 		
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainGrass, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
+
+		-- setting up Plains around and cleaning Forests and Jungles
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainGrass then
+				pAdjacentPlot:SetTerrainType(eTerrainGrass, false, false)
+				
+				if pAdjacentPlot:GetFeatureType() == eFeatureNo then
+				--if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
+					pAdjacentPlot:SetFeatureType(eFeatureForest)
+				end
+			end
+		end
 
 
     --科隆群岛

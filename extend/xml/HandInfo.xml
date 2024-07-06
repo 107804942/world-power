@@ -474,7 +474,7 @@
 		<Row>
 			<PolicyType>POLICY_AI_REDUCE</PolicyType>
 			<YieldType>YIELD_DISEASE</YieldType>
-			<Yield>-100</Yield>
+			<Yield>-25</Yield>
 		</Row>
 	</Policy_YieldModifiers>
 

@@ -434,10 +434,10 @@
 
 
 		<Row>
-			<Type>PROJECT_NAVALCARRIER03P</Type>
-			<Description>TXT_KEY_PROJECT_NAVALCARRIER03P</Description>
-			<Help>TXT_KEY_PROJECT_NAVALCARRIER03P_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_NAVALCARRIER03P_PEDIA</Civilopedia>
+			<Type>PROJECT_SPACE_CARRIER</Type>
+			<Description>TXT_KEY_PROJECT_SPACE_CARRIER</Description>
+			<Help>TXT_KEY_PROJECT_SPACE_CARRIER_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_SPACE_CARRIER_PEDIA</Civilopedia>
 			<TechPrereq>TECH_PLASMA_PROPULSION</TechPrereq>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 			<MaxTeamInstances>1</MaxTeamInstances>

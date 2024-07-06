@@ -829,7 +829,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<!--<SpyRankChange>1</SpyRankChange>-->
-			<ForbiddenForeignSpyGlobal>1</ForbiddenForeignSpyGlobal>
+			<ForbiddenForeignSpy>1</ForbiddenForeignSpy>
 			<ConquestProb>100</ConquestProb>
 			<!--<EspionageModifier>-999</EspionageModifier>-->
 			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
@@ -2048,7 +2048,7 @@
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<Defense>3000</Defense>
+			<Defense>2000</Defense>
 			<ExtraCityHitPoints>75</ExtraCityHitPoints>
 			<BuildingProductionModifier>10</BuildingProductionModifier>
 			<ConquestProb>100</ConquestProb>
@@ -2085,7 +2085,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<Defense>10000</Defense>
+			<Defense>5000</Defense>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
 			<Water>true</Water>
 			<GlobalDefenseMod>10</GlobalDefenseMod>
@@ -2153,7 +2153,7 @@
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>5</PortraitIndex>
 			<FreePromotion>PROMOTION_FASIL_GHEBBI</FreePromotion>
-			<GlobalCityStrengthMod>25</GlobalCityStrengthMod>
+			<!--<GlobalCityStrengthMod>25</GlobalCityStrengthMod>-->
 			<GlobalRangedStrikeModifier>20</GlobalRangedStrikeModifier>
 			<WonderSplashImage>FasilGhebbi_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
@@ -4955,11 +4955,11 @@
 
 	<Building_PrereqBuildingClasses>
 		
-        <Row>
+        <!--<Row>
 			<BuildingType>BUILDING_MOON_BASE</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 			<NumBuildingNeeded>-1</NumBuildingNeeded>
-		</Row>
+		</Row>-->
 
 		<Row>
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>

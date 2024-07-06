@@ -1479,36 +1479,14 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON_HELP">
 			<Text>
-				攻击时对视野中的所有敌军单位造成100%伤害。
-				[NEWLINE]可开启超级粒子炮:攻击次数+1，远程[ICON_STRENGTH]攻击力+25%。
+				攻击次数+1，远程[ICON_STRENGTH]攻击力+20%。
+				[NEWLINE]攻击时对视野中的所有敌军单位造成100%伤害。
 			</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON_ON">
-			<Text>超级粒子炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_PLASMA_CANNON_ON_HELP">
-			<Text>攻击次数+1，远程[ICON_STRENGTH]攻击力+25%。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_ON">
-			<Text>启动超级粒子炮：攻击次数+1，远程[ICON_STRENGTH]攻击力+25%。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TITLE_PLASMA_CANNON_ON">
-			<Text>启动超级粒子炮</Text>
-		</Row>
 
 
-		<Row Tag="TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_OFF">
-			<Text>关闭超级粒子炮，取消其带来的额外效果。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TITLE_PLASMA_CANNON_OFF">
-			<Text>关闭超级粒子炮</Text>
-		</Row>
-		
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SPLASH_DAMAGE2">
@@ -1668,12 +1646,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_1_HELP" >
 			<Text>对[COLOR_POSITIVE_TEXT]驻防单位[ENDCOLOR]+50%[ICON_STRENGTH]战斗力，对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE">
-			<Text>攻城武器</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_CITY_SIEGE_HELP" >
-			<Text>攻击[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+150%[ICON_STRENGTH]战斗力，攻击[COLOR_POSITIVE_TEXT]军事要塞火力点[ENDCOLOR]+400%[ICON_STRENGTH]攻击力，攻击[COLOR_POSITIVE_TEXT]驻扎单位[ENDCOLOR]+50%[ICON_STRENGTH]战斗力，攻击[COLOR_POSITIVE_TEXT]陆军远程[ENDCOLOR]+100%[ICON_STRENGTH]攻击力，被[COLOR_NEGATIVE_TEXT]近战[ENDCOLOR]单位克制。[NEWLINE]攻击目标时对同一格单位造成50%伤害。[NEWLINE]攻击木制船只有几率造成[COLOR_NEGATIVE_TEXT]局部损伤[ENDCOLOR]或[COLOR_NEGATIVE_TEXT]严重损伤[ENDCOLOR][NEWLINE]没有地形防御加成。</Text>
-		</Replace>
+
 
 
 
@@ -3510,53 +3483,16 @@
 
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB">
 			<Text>高能脉冲炮</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB_HELP">
-			<Text>可开启大范围高能脉冲炮，可让范围内的任意敌军及城市陷入瘫痪。攻击时对目标相邻区域造成100%伤害。</Text>
+			<Text>攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。攻击时对目标相邻区域造成100%伤害。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PEDIA_PROMOTION_EMP_BOMB">
-			<Text>可开启大范围高能脉冲炮，可让范围内的任意敌军及城市陷入瘫痪。攻击时对目标相邻区域造成100%伤害。</Text>
+			<Text>攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。攻击时对目标相邻区域造成100%伤害。</Text>
 		</Row>
 
-
-
-
-
-		<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB_ON">
-			<Text>高能脉冲炮</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB_ON_HELP">
-			<Text>攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PEDIA_PROMOTION_EMP_BOMB_ON">
-			<Text>攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。</Text>
-		</Row>
-
-
-
-
-
-
-		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON_SHORT">
-			<Text>高能脉冲炮</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON">
-			<Text>启动高能脉冲炮，攻击时释放高能脉冲，可让全图范围内的任意敌方单位与城市陷入瘫痪。</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF_SHORT">
-			<Text>关闭高能脉冲炮</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF">
-			<Text>关闭高能脉冲炮：取消额外攻击效果。消耗本回合內所有剩余[ICON_MOVES]移动力。</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_SP_NOTIFICATION_UNIT_US_LVD_SHORT">
 			<Text>你受到了敌方高能脉冲炮攻击！</Text>
@@ -3741,33 +3677,33 @@
 
 
 
-
-
-
-		<Row Tag="TXT_KEY_PROJECT_NAVALCARRIER03P">
-			<Text>双体超级航母项目</Text>
+		<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER">
+			<Text>空天母舰项目</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROJECT_NAVALCARRIER03P_HELP">
+		<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER_HELP">
 			<Text>
-				只有[COLOR_POSITIVE_TEXT]首個[ENDCOLOR]完成此項目的文明可以建造超级航母单位：[COLOR_YIELD_GOLD]双体超级航母[ENDCOLOR]。
+				只有[COLOR_POSITIVE_TEXT]首個[ENDCOLOR]完成此項目的文明可以建造超级航母单位：[COLOR_YIELD_GOLD]空天母舰[ENDCOLOR]。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROJECT_NAVALCARRIER03P_PEDIA">
-			<Text>双体超级航母被设计为多功能的海上移动作战平台。</Text>
+		<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER_PEDIA">
+			<Text>
+				空天母舰是一种巨大的、空天一体宇宙飞船，空天母舰是以舰载机为主要武器并作为其空中活动基地的大型空中战斗群。
+				依靠空天母舰，一个国家可以在远离其国土的地方，不依赖当地的机场施加军事压力和进行作战行动。
+			</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER03P">
-			<Text>[COLOR_YELLOW]双体超级航母[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER">
+			<Text>[COLOR_YELLOW]空天母舰[ENDCOLOR]</Text>
 			<Plurality>2</Plurality>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER03P_TEXT">
-			<Text>双体超级航母可搭载数量庞大的机群，且经合理化改造后拥有近似于同时代超级武库舰的攻击力，并且可以主动攻击。</Text>
+		<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER_TEXT">
+			<Text>空天母舰可搭载数量庞大的机群，并且可以主动攻击。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER03P_STRATEGY">
-			<Text>双体超级航母是具备多层复合结构的大型水面机动舰载机平台，具有更大的载机量，而且配备了反舰导弹及大口径舰炮，可以主动攻击敌军海军单位，每回合都能自动补充舰载机。</Text>
+		<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER_STRATEGY">
+			<Text>空天母舰是具备多层复合结构的大型机动舰载机平台，具有更大的载机量，而且配备了反舰导弹及大口径舰炮，可以主动攻击敌军海军单位，每回合都能自动补充舰载机。</Text>
 		</Row>
 
 
@@ -3775,21 +3711,12 @@
 
 
 		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER02">
-			<Text>核聚变超级航母</Text>
+			<Text>双体超级航母</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER02_TEXT">
 			<Text>随着未来时代的飞行器开始进化，舰载机所配套的航空母舰也开始进化。实验性的设计导致了新型航母的出现，这些与以往不同的航空母舰，有助于将空中力量快速投射到战争区域。</Text>
 		</Row>
-
-
-		<Row Tag="TXT_KEY_PROMOTION_ARMORER">
-			<Text>应对空袭时，[ICON_STRENGTH]防御力增加100%。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_ARMORER_X">
-			<Text>侦察雷达</Text>
-		</Row>
-
 
 
 
@@ -5275,7 +5202,7 @@
 			<Text>法西尔盖比城堡</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_FASIL_GHEBBI_HELP">
-			<Text>所有城市[ICON_STRENGTH]战斗力提升25%，所有城市+20%[ICON_RANGE_STRENGTH]远程攻击力。陆军单位在对抗陆军时+20%[ICON_STRENGTH]防御力。</Text>
+			<Text>所有城市+20%[ICON_RANGE_STRENGTH]远程攻击力。陆军单位在对抗陆军时+20%[ICON_STRENGTH]防御力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_FASIL_GHEBBI_QUOTE">
 			<Text>[NEWLINE]"当蜘蛛联合起来，它们可以杀死一头狮子。"[NEWLINE]        ——埃塞俄比亚谚语[NEWLINE]</Text>
@@ -5733,7 +5660,7 @@
 			<Text>[NEWLINE][TAB][TAB]"任何一个伟大的发明，从火到飞行，都曾被视为对某个上帝的侮辱。没有例外。"[NEWLINE]        ——J.B.S.霍尔丹[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_KNOSSOS_HELP">
-			<Text>本地工程师+1[ICON_PRODUCTION]产能，建造建筑时+10%[ICON_PRODUCTION]产能，敌方单位在该奇观所在城市范围内移动或者结束回合时会受到10点伤害。为城市提供30[ICON_STRENGTH]防御力加成，且生命值+75。</Text>
+			<Text>本地工程师+1[ICON_PRODUCTION]产能，建造建筑时+10%[ICON_PRODUCTION]产能，敌方单位在该奇观所在城市范围内移动或者结束回合时会受到10点伤害。为城市提供20点[ICON_STRENGTH]防御力加成，且生命值+75。</Text>
 		</Row>
 
 
@@ -6896,7 +6823,7 @@
 			<Text>伊斯塔尔门</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ISHTARGATE_HELP">
-			<Text>工人工作效率+25%，+1[ICON_GOLDEN_AGE]黄金时代点数，所有城墙+2[ICON_GOLD]金钱、+2[ICON_RESEARCH]科研、+2[ICON_CULTURE]文化。单位获得属性：你每拥有一个世界奇观则单位+2%[ICON_STRENGTH]攻击力。</Text>
+			<Text>工人工作效率+25%，+1[ICON_GOLDEN_AGE]黄金时代点数，所有城墙+2[ICON_GOLD]金钱、+2[ICON_RESEARCH]科研、+2[ICON_CULTURE]文化。单位获得属性：你每拥有一个世界奇观则单位+1%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ISHTARGATE_QUOTE">
 			<Text>[NEWLINE]"如果你不开门让我进去，我将打碎门、拧坏门锁、粉碎门栓，我会砸烂门柱，我将把门搬走，我将提升死者来吃活人。让死者在数量上数量超过活人。”[NEWLINE]        ——伊什塔尔（伊什塔尔女神降临下界）[NEWLINE]</Text>
@@ -6910,7 +6837,7 @@
 			<Text>国家荣誉</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ISHTARGATE_HELP">
-			<Text>你每拥有一个世界奇观则+2%[ICON_STRENGTH]攻击力。</Text>
+			<Text>你每拥有一个世界奇观则+1%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 
 
@@ -7473,7 +7400,13 @@
 			<Text>工业</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BRANCH_INDUSTRY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]工业[ENDCOLOR]适用于希望快速提高城市生产力的文明。[NEWLINE][NEWLINE]采用工业可使首都的[ICON_PRODUCTION]产能提高20%。[NEWLINE][NEWLINE]采用工业树中的所有政策可使每个城市+10[ICON_PRODUCTION]产能，+50%来自国内贸易路线的[ICON_PRODUCTION]产能和[ICON_FOOD]食物。陆地商路+10[ICON_GOLD]金钱、10[ICON_RESEARCH]科研。海洋商路+15[ICON_GOLD]金钱、15[ICON_RESEARCH]科研。采石场+1[ICON_HEALTH]健康度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]工业[ENDCOLOR]适用于希望快速提高城市生产力的文明。
+				[NEWLINE][NEWLINE]启用工业政策：
+				[NEWLINE][ICON_BULLET]首都[ICON_PRODUCTION]产能提高20%。
+				[NEWLINE][NEWLINE]推行所有工业政策：
+				[NEWLINE][ICON_BULLET]每个城市+10[ICON_PRODUCTION]产能，+50%来自国内贸易路线的[ICON_PRODUCTION]产能和[ICON_FOOD]食物。
+				[NEWLINE][ICON_BULLET]陆地商路+10[ICON_GOLD]金钱、10[ICON_RESEARCH]科研。海洋商路+15[ICON_GOLD]金钱、15[ICON_RESEARCH]科研。采石场+1[ICON_HEALTH]健康度。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_TEXT">
 			<Text>
@@ -7488,7 +7421,11 @@
 			<Text>手工产业</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_1_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]手工产业[ENDCOLOR][NEWLINE]专家+1[ICON_PRODUCTION]产能。木工坊、家具厂+1[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]手工产业[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]专家+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]木工坊、家具厂+1[ICON_PRODUCTION]产能。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_1_TEXT">
 			<Text>手工业是指使用简单工具，依靠手工劳动，从事小规模生产的工业。它最初与农业融为一体，属于农民副业性质的家庭手工业。农民把自己生产的农副产品作为原料进行加工，或者制造某些劳动工具和日用器皿。其产品除满足自己的需要外，多余的予以出卖。随着第二次社会大分工，手工业从农业中分离出来，形成了独立的个体手工业。个体手工业的特点是以一家一户为单位，使用私有的生产资料分散经营，一般不雇用工人或只雇用做辅助性工作的助手和学徒，并以本人的手工劳动为生活的主要来源。</Text>
@@ -7498,7 +7435,10 @@
 			<Text>劳工帮派</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_2_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]劳工帮派[ENDCOLOR][NEWLINE]制造厂、工业综合体+5[ICON_PRODUCTION]产能，矿井和采石场+1[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]劳工帮派[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]制造厂、工业综合体+5[ICON_PRODUCTION]产能，矿井和采石场+1[ICON_PRODUCTION]产能。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_2_TEXT">
 			<Text>
@@ -7511,7 +7451,11 @@
 			<Text>建筑工会</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_3_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]建筑工会[ENDCOLOR][NEWLINE]大工程师获取速率+50%。使用大工程师加速建造时，额外获得50%[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]建筑工会[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]大工程师获取速率+50%。
+				[NEWLINE][ICON_BULLET]使用大工程师加速建造时，额外获得50%[ICON_PRODUCTION]产能。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_3_TEXT">
 			<Text>
@@ -7524,7 +7468,11 @@
 			<Text>工业主义</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_4_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]工业主义[ENDCOLOR][NEWLINE]建筑维护成本-33%。布厂、家具厂、炸药厂+3[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]工业主义[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]建筑维护成本-33%。
+				[NEWLINE][ICON_BULLET]布厂、家具厂、炸药厂+3[ICON_PRODUCTION]产能。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_4_TEXT">
 			<Text>
@@ -7538,7 +7486,11 @@
 			<Text>都市主义</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_5_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]都市主义[ENDCOLOR][NEWLINE]购买建筑的所需[ICON_GOLD]金钱-25%,每城+2[ICON_HEALTH]健康度，-2[ICON_CRIME]犯罪率。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]都市主义[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]购买建筑的所需[ICON_GOLD]金钱-25%。
+				[NEWLINE][ICON_BULLET]每城+2[ICON_HEALTH]健康度，-2[ICON_CRIME]犯罪率。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_5_TEXT">
 			<Text>
@@ -7553,7 +7505,11 @@
 
 
 		<Row Tag="TXT_KEY_INDUSTRY_6_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]产业扩张[ENDCOLOR][NEWLINE]工程师+1[ICON_PRODUCTION]产能。每座城市+6[ICON_RES_ELECTRICITY]电力，+5[ICON_RES_HARDWOOD]木材，+5[ICON_RES_GUNPOWDER]火药。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]产业扩张[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]工程师+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]每座城市+6[ICON_RES_ELECTRICITY]电力，+5[ICON_RES_HARDWOOD]木材，+5[ICON_RES_GUNPOWDER]火药。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_6_TEXT">
@@ -7569,7 +7525,10 @@
 			<Text>例外论</Text>
 		</Row>
 		<Row Tag="TXT_KEY_INDUSTRY_7_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]例外论[ENDCOLOR][NEWLINE]可选择获得一个任意类型的[ICON_GREAT_PEOPLE]伟人。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]例外论[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]可选择获得一个任意类型的[ICON_GREAT_PEOPLE]伟人。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_7_TEXT">
 			<Text>
@@ -7597,8 +7556,12 @@
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_BRANCH_GRANDEUR_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]宏伟[ENDCOLOR]适宜于构建综合性的繁华帝国。[NEWLINE][NEWLINE]启用宏伟政策将使每座城市+2[ICON_HEALTH]健康度。立即进入黄金时代，处于黄金时代时，大科学家、大工程师诞生速率+25%。允许建造加尔桥。
-				[NEWLINE][NEWLINE]推行所有政策后获得一个任意类型的伟人，科学家+1[ICON_RESEARCH]科研，商业家+1[ICON_GOLD]金钱，工程师+1[ICON_PRODUCTION]产能，艺术家+1[ICON_GOLDEN_AGE]黄金时代点数，文学家+1[ICON_CULTURE]文化，音乐家+1[ICON_TOURISM]魅力。
+				[COLOR_POSITIVE_TEXT]宏伟[ENDCOLOR]适宜于构建综合性的繁华帝国。
+				[NEWLINE][NEWLINE]启用宏伟政策：
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。立即进入黄金时代，处于黄金时代时，大科学家、大工程师诞生速率+25%。允许建造加尔桥。
+				[NEWLINE][NEWLINE]推行所有宏伟政策：
+				[NEWLINE][ICON_BULLET]获得一个任意类型的伟人。
+				[NEWLINE][ICON_BULLET]科学家+1[ICON_RESEARCH]科研，商业家+1[ICON_GOLD]金钱，工程师+1[ICON_PRODUCTION]产能，艺术家+1[ICON_GOLDEN_AGE]黄金时代点数，文学家+1[ICON_CULTURE]文化，音乐家+1[ICON_TOURISM]魅力。
 			</Text>
 		</Row>
 
@@ -7613,7 +7576,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_TRADITION_LOYALTY_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]公共执行[ENDCOLOR][NEWLINE]地牢，监禁所，法院，治安署，警察局，审计署，地检署+1[ICON_HAPPINESS_1]快乐,-2%[ICON_CRIME]犯罪率。所有杰作+1[ICON_GOLDEN_AGE]黄金时代点数。建造奇观时+15%[ICON_PRODUCTION]产能，本城-5[ICON_CRIME]犯罪率。
+				[COLOR_POSITIVE_TEXT]公共执行[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]地牢，监禁所，法院，治安署，警察局，审计署，地检署+1[ICON_HAPPINESS_1]快乐,-2%[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET]所有杰作+1[ICON_GOLDEN_AGE]黄金时代点数。建造奇观时+15%[ICON_PRODUCTION]产能，本城-5[ICON_CRIME]犯罪率。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_TRADITION_LOYALTY_TEXT">
@@ -7626,7 +7591,11 @@
 			<Text>市场监管</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GRANDEUR_1_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR][NEWLINE]每处战略资源+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱，-3[ICON_CRIME]犯罪率。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]市场监管[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每处战略资源+1[ICON_PRODUCTION]产能、+1[ICON_GOLD]金钱。
+				[NEWLINE][ICON_BULLET]客栈、市场、银行、证交所、金融公司+2[ICON_GOLD]金钱，-3[ICON_CRIME]犯罪率。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_1_TEXT">
 			<Text>
@@ -7638,7 +7607,11 @@
 			<Text>英勇伦理</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GRANDEUR_2_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]英勇伦理[ENDCOLOR][NEWLINE]兵营、军械所、兵工厂、军事基地+2[ICON_RESEARCH]科研，新建单位+15XP。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]英勇伦理[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]兵营、军械所、兵工厂、军事基地+2[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]新建单位+15XP。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_2_TEXT">
 			<Text>
@@ -7650,7 +7623,11 @@
 			<Text>强迫劳役</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GRANDEUR_3_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]强迫劳役[ENDCOLOR][NEWLINE]农场、圩田、梯田+1[ICON_FOOD]食物，矿井、采石场+1[ICON_PRODUCTION]产能。失业人口+1[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]强迫劳役[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]农场、圩田、梯田+1[ICON_FOOD]食物，矿井、采石场+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]失业人口+1[ICON_PRODUCTION]产能。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_3_TEXT">
 			<Text>
@@ -7662,8 +7639,13 @@
 		<Row Tag="TXT_KEY_GRANDEUR_4">
 			<Text>国家纪念日</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_GRANDEUR_4_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]国家纪念日[ENDCOLOR][NEWLINE]黄金时代长度+33%，伟人诞生速率+10%，每个处于我们爱领袖日的城市-25%[ICON_CRIME]犯罪率、+25%[ICON_GOLD]金钱、[ICON_RESEARCH]科研、[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]国家纪念日[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]黄金时代长度+33%，伟人诞生速率+10%。
+				[NEWLINE][ICON_BULLET]每个处于我们爱领袖日的城市-25%[ICON_CRIME]犯罪率、+25%[ICON_GOLD]金钱、[ICON_RESEARCH]科研、[ICON_PEACE]信仰、[ICON_CULTURE]文化、[ICON_PRODUCTION]产能。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_4_TEXT">
 			<Text>
@@ -7677,8 +7659,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_GRANDEUR_5_HELP">
 			<Text>
-				[COLOR_POSITIVE_TEXT]碑铭主义[ENDCOLOR][NEWLINE]每个世界奇观与自然奇观+3[ICON_CULTURE]文化、+3[ICON_PEACE]信仰、+3[ICON_GOLDEN_AGE]黄金时代点数。所有自然奇观+3[ICON_HEALTH]健康度。
-				[NEWLINE]拥有世界奇观的城市+10%[ICON_GOLD]金钱，[ICON_CULTURE]文化，[ICON_RESEARCH]科研。[NEWLINE]
+				[COLOR_POSITIVE_TEXT]碑铭主义[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每个世界奇观与自然奇观+3[ICON_CULTURE]文化、+3[ICON_PEACE]信仰、+3[ICON_GOLDEN_AGE]黄金时代点数。所有自然奇观+3[ICON_HEALTH]健康度。
+				[NEWLINE][ICON_BULLET]拥有世界奇观的城市+10%[ICON_GOLD]金钱，[ICON_CULTURE]文化，[ICON_RESEARCH]科研。
 			</Text>
 		</Row>
 
@@ -7694,7 +7677,10 @@
 			<Text>边防军</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GRANDEUR_6_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]边防军[ENDCOLOR][NEWLINE]拥有驻军的城市+50%[ICON_RANGE_STRENGTH]远程攻击力，城市防御效率+25%。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]边防军[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]拥有驻军的城市+50%[ICON_RANGE_STRENGTH]远程攻击力，城市防御效率+25%。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_6_TEXT">
 			<Text>边防军（Limitanei）是西罗马帝国末期和拜占庭帝国早期的边界驻军，其得名于描述军事边界区的英文单词“limes”。随着时间推移，这些军队逐渐演变为隶属于罗马帝国的本地民兵组织，名望和专业性也逐渐逊于帝国的其他部队。</Text>
@@ -7705,7 +7691,10 @@
 			<Text>文明扩张</Text>
 		</Row>
 		<Row Tag="TXT_KEY_GRANDEUR_7_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]文明扩张[ENDCOLOR][NEWLINE]你拥有的城市数量将增益全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_PRODUCTION]产能产出（每有一座城市则+1%）。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]文明扩张[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]你拥有的城市数量将增益全局[ICON_RESEARCH]科研、[ICON_GOLD]金钱、[ICON_PRODUCTION]产能产出（每有一座城市则+1%）。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_7_TEXT">
 			<Text>
@@ -7726,14 +7715,15 @@
 		<Row Tag="TXT_KEY_POLICY_BRANCH_KNOWLEDGE_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]智慧[ENDCOLOR]适宜于专注于科学发展的文明。
-				[NEWLINE][NEWLINE]启用智慧政策将使得各个不同规模的城市获得相应的额外科研：
+				[NEWLINE][NEWLINE]启用智慧政策：
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+5[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+10[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_LARGE]大型城市（26[ICON_CITIZEN]人口）：+20[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XL]特大城市（40[ICON_CITIZEN]人口）：+35[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XXL]巨型城市（60[ICON_CITIZEN]人口）：+55[ICON_RESEARCH]科研。
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_GLOBAL]大都会（80[ICON_CITIZEN]人口）：+80[ICON_RESEARCH]科研。
-				[NEWLINE][NEWLINE]推行所有政策后草药铺，医院+10%[ICON_RESEARCH]科研。
+				[NEWLINE][NEWLINE]推行所有智慧政策：
+				[NEWLINE][ICON_BULLET]草药铺，医院+10%[ICON_RESEARCH]科研。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_TEXT">
@@ -7759,7 +7749,11 @@
 			<Text>口头传统</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_2_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]口头传统[ENDCOLOR][NEWLINE]纪念碑+1[ICON_RESEARCH]科研，当使用大科学家获得一次性科研产出时，可额外获得15%[ICON_RESEARCH]科研产出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]口头传统[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]纪念碑、图书馆+1[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]当使用大科学家获得一次性科研产出时，可额外获得20%[ICON_RESEARCH]科研产出。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_2_TEXT">
 			<Text>
@@ -7771,7 +7765,11 @@
 			<Text>佣书业</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_3_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]佣书业[ENDCOLOR][NEWLINE]可获得一个免费科技。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]佣书业[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]获得一个免费科技。
+				[NEWLINE][ICON_BULLET]所有城市获得一个额外的科学家席位。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_3_TEXT">
 			<Text>
@@ -7784,7 +7782,11 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_4_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]精英学派[ENDCOLOR][NEWLINE]科学家+1[ICON_RESEARCH]科研、医学家+1[ICON_HEALTH]健康度。使用医生治疗瘟疫能额外减少两回合持续时间。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]精英学派[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]科学家+2[ICON_RESEARCH]科研、医学家+1[ICON_HEALTH]健康度。
+				[NEWLINE][ICON_BULLET]使用医生治疗瘟疫能额外减少两回合持续时间。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_4_TEXT">
@@ -7809,15 +7811,21 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_5_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR][NEWLINE]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。[ICON_SPY]每个活跃的间谍可为城市+4%[ICON_RESEARCH]科研,-4%[ICON_CRIME]犯罪率。地牢、监禁所、警察局+2[ICON_RESEARCH]科研,-2[ICON_CRIME]犯罪率。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]情报网络[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]获得一个[ICON_SPY]间谍，间谍偷科技速度+50%。每个活跃的[ICON_SPY]间谍可为城市+4%[ICON_RESEARCH]科研,-4%[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET]地牢、监禁所、警察局+2[ICON_RESEARCH]科研,-2[ICON_CRIME]犯罪率。
+			</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_6">
 			<Text>自然哲学</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_6_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]自然哲学[ENDCOLOR][NEWLINE]所有自然奇观+2[ICON_RESEARCH]科研，每处未开发的丛林、森林、沼泽地貌+2[ICON_RESEARCH]科研。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]自然哲学[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]所有自然奇观+2[ICON_RESEARCH]科研，每处种植园+2[ICON_RESEARCH]科研。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_6_TEXT">
 			<Text>
@@ -7830,7 +7838,10 @@
 			<Text>科学基金会</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_7_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]科学基金会[ENDCOLOR][NEWLINE]大学、公立学校+8%[ICON_RESEARCH]科研、+2[ICON_HEALTH]健康度。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]科学基金会[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]大学、公立学校+8%[ICON_RESEARCH]科研、+2[ICON_HEALTH]健康度。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_7_TEXT">
 			<Text>
@@ -7839,7 +7850,10 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_POLICY_FIVE_YEAR_PLAN_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]五年计划[ENDCOLOR][NEWLINE]每处矿井、采石场、伐木场、油井、海上钻井平台、捕捞船、工业综合体+1[ICON_PRODUCTION]产能。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]五年计划[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每处矿井、采石场、伐木场、油井、海上钻井平台、捕捞船、工业综合体+1[ICON_PRODUCTION]产能。
+			</Text>
 		</Replace>
 
 
@@ -7850,6 +7864,8 @@
 				[NEWLINE]军营，军械所，城墙，城堡,马厩和军事学院+1[ICON_HAPPINESS_1]快乐。
 			</Text>
 		</Replace>
+
+
 
 
 		<!-- UI -->
@@ -9069,7 +9085,7 @@
 			<Text>克格勃</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KGB_HELP">
-			<Text>即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止外来间谍进入本文明拥有的城市。</Text>
+			<Text>即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止外来间谍进入本奇观所在城市。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_KGB_TEXT">
 			<Text>
@@ -9250,9 +9266,21 @@
 				[NEWLINE]这处自然景观形成的时间超过了一千年，每年都在缓慢堆叠。温泉水中的碳酸钙逐渐重叠变厚，最终在到达水面后形成结晶，进而转变为石灰华沉积岩。而这种沉积岩则形成了钟乳石、梯田和连绵超过1600米的“白云”。
 			</Text>
 		</Row>
-		
-		
-		
+
+
+		<!-- Glass House Mountains -->
+		<Row Tag="TXT_KEY_FEATURE_GLASS_HOUSE_MOUNTAIN">
+			<Text>玻璃屋山</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_GLASS_HOUSE_MOUNTAIN_TEXT">
+			<Text>
+				玻璃屋山脉是澳大利亚昆士兰州东南部山脉，在布利斯本(Brisbane)以北70公里(45哩)。
+				[NEWLINE]包括11个高峰，最高比尔瓦峰(Beerwah Peak)海拔556公尺(1,824呎)。群峰由火山粗面岩构成，从海滨平原陡然升高，每座山峰均为国家公园。玻璃屋山脉镇是当地旅游基地，也是附近林区和烟草、凤梨产区的商业中心，有公路通布利斯本。
+			</Text>
+		</Row>
+
+
 		<!--BERMUDA -->
 		<Row Tag="TXT_KEY_FEATURE_BERMUDA">
 			<Text>百慕大三角</Text>
@@ -9692,13 +9720,7 @@
 			</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP">
-			<Text>
-				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱、[ICON_FOOD]食物，+2[ICON_HEALTH]健康度，+2[ICON_RES_CONSUMER]商品。
-				[NEWLINE][ICON_BULLET]每座城市+1%[ICON_FOOD]全局粮食和[ICON_PRODUCTION]全局产能。
-			</Text>
-		</Replace>
+
 
 		<Replace Tag="TXT_KEY_POLICY_BRANCH_LIBERTY_HELP">
 			<Text>
@@ -9894,9 +9916,27 @@
 
 
 
+		<Replace Tag="TXT_KEY_POLICY_NEW_ORDER_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]威权政府[ENDCOLOR]
+				[NEWLINE]每占领一个原始首都，正规军单位攻击伤害固定+2。
+			</Text>
+		</Replace>
 
+		<Replace Tag="TXT_KEY_POLICY_MILITARY_CASTE_HELP">
+			<Text>
+				[COLOR_POSITIVE_TEXT]军事操练[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]在[ICON_CAPITAL]首都附近出现一位[ICON_GREAT_GENERAL]陆军统帅。
+				[NEWLINE][ICON_BULLET]获得[ICON_GREAT_GENERAL]陆军统帅的速度+50%。
+				[NEWLINE][ICON_BULLET]陆军远程单位(投射单位、攻城武器、游猎单位)远程攻击以及遭到远程攻击时+15%战斗力。
+				[NEWLINE][ICON_BULLET]投射单位与游猎单位攻击造成伤害固定+5。
+				[NEWLINE][ICON_BULLET]攻城单位和空军单位对城市额外造成相当于5%城市最大生命值的伤害。
+			</Text>
+		</Replace>
 
-
+		<Replace Tag="TXT_KEY_PROMOTION_CITY_DAMAGE_MAXHP_PERCENT_HELP">
+			<Text>增加城市最大血量5%伤害。</Text>
+		</Replace>
 	</Language_zh_Hant_HK>
 
 

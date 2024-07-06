@@ -3,7 +3,31 @@
 <GameData>
 
 
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_KNOWLEDGE_3</Type>
+			<DefaultBuilding>BUILDING_KNOWLEDGE_3</DefaultBuilding>
+			<Description>TXT_KEY_KNOWLEDGE_3</Description>
+		</Row>
+	</BuildingClasses>
 
+	<Buildings>
+		<Row>
+			<Type>BUILDING_KNOWLEDGE_3</Type>
+			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_3</BuildingClass>
+			<Cost>-1</Cost>
+			<NeverCapture>true</NeverCapture>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<PortraitIndex>34</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+			<Description>TXT_KEY_KNOWLEDGE_3</Description>
+			<DummyBuilding>true</DummyBuilding>
+		</Row>
+	</Buildings>
+	
 	<IconTextureAtlases>
 		<Row>
 			<Atlas>POLYNESIA_POLICY_ATLAS</Atlas>
@@ -566,7 +590,7 @@
 			<GridX>3</GridX>
 			<GridY>1</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
-			<GreatScientistBeakerPolicyModifier>15</GreatScientistBeakerPolicyModifier>
+			<GreatScientistBeakerPolicyModifier>20</GreatScientistBeakerPolicyModifier>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>1</PortraitIndex>
 			<IconAtlas>SCRAMBLE_POLICY_ATLAS</IconAtlas>
@@ -585,6 +609,7 @@
 			<IconAtlas>RAF_POLICIES</IconAtlas>
 			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
 			<NumFreeTechs>1</NumFreeTechs>
+			<FreeBuildingClass>BUILDINGCLASS_KNOWLEDGE_3</FreeBuildingClass>
 		</Row>
 		<Row>
 			<Type>POLICY_KNOWLEDGE_4</Type>
@@ -1116,6 +1141,15 @@
 	<Policy_ImprovementYieldChanges>
 
 		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		
+		
+
+		<Row>
 			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
 			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
@@ -1310,19 +1344,16 @@
 		</Row>
 		
 		
+
 		
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
-			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
-			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
 		</Row>
+		
+		
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_7</PolicyType>
 			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
@@ -1336,7 +1367,7 @@
 			<PolicyType>POLICY_KNOWLEDGE_4</PolicyType>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 	
 		<Row>
@@ -1443,10 +1474,15 @@
 			<YieldType>YIELD_GOLD</YieldType>
 			<YieldChange>1</YieldChange>
 		</Row>
-		
-		
-		
-		
+
+
+
+		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_2</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
 		
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_2</PolicyType>
@@ -1472,27 +1508,6 @@
 
 
 
-	<Policy_UnimprovedFeatureYieldChanges>
-		<Row>
-			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
-			<FeatureType>FEATURE_MARSH</FeatureType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
-			<FeatureType>FEATURE_JUNGLE</FeatureType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
-			<FeatureType>FEATURE_FOREST</FeatureType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-
-	</Policy_UnimprovedFeatureYieldChanges>
 
 
 

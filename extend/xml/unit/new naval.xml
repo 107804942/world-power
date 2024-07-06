@@ -196,11 +196,11 @@
 			<XPValueDefense>10</XPValueDefense>
 			<SpecialCargo>SPECIALUNIT_FIGHTER</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<!--<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03P</UnitArtInfo>-->
-			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER02</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03S</UnitArtInfo>
+			<!--<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER02</UnitArtInfo>-->
 			<UnitFlagIconOffset>3</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>141</PortraitIndex>
+			<PortraitIndex>140</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
@@ -241,7 +241,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_SUB04S</UnitArtInfo>
 			<UnitFlagIconOffset>29</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>153</PortraitIndex>
+			<PortraitIndex>225</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>SUB</MoveRate>
 			<ExtraMaintenanceCost>180</ExtraMaintenanceCost>

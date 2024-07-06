@@ -144,107 +144,6 @@ LuaEvents.UnitPanelActionAddin(MechRiotControlButton);
 
 
 
--------------------------------------------------------------EMP BOMB Mode Switch---------------------------------------------------------------------------
-
-  UnitEmpBombOnButton = {
-  Name = "Emp Bomb On",
-  Title = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON_SHORT", -- or a TXT_KEY
-  OrderPriority = 200, -- default is 200
-  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
-  PortraitIndex = 28,
-  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_ON", -- or a TXT_KEY_ or a function
-  
- 
-  
-  Condition = function(action, unit)
-   return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID) 
-   and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID);
-  end, -- or nil or a boolean, default is true
-  
-  Disabled = function(action, unit)   
-    return false;
-  end, -- or nil or a boolean, default is false
-  
-  Action = function(action, unit, eClick) 
-  	 	
-   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID, true) 
-  end
-};
-LuaEvents.UnitPanelActionAddin(UnitEmpBombOnButton);
-
-
-UnitEmpBombOffButton = {
-  Name = "Emp Bomb Mode Off",
-  Title = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF_SHORT", -- or a TXT_KEY
-  OrderPriority = 200, -- default is 200
-  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
-  PortraitIndex = 11,
-  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_EMP_BOMB_OFF", -- or a TXT_KEY_ or a function
-  
-
-  Condition = function(action, unit)
-    return unit:CanMove() and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID);
-  end, -- or nil or a boolean, default is true
-  
-  Disabled = function(action, unit)   
-    return false;
-  end, -- or nil or a boolean, default is false
-
-  Action = function(action, unit, eClick) 
-  	 	
-   	unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID, false)
-   	unit:SetMoves(0)
-   	print ("Emp Bomb Off!")	
-  end
-};
-LuaEvents.UnitPanelActionAddin(UnitEmpBombOffButton);
-
-
-
--- ********************************************************
--- 粒子炮
--- ******************************************************** 
-local SuperChainButtonOn = {
-		Name = "TXT_KEY_NAME_PLASMA_CANNON_ON",
-		Title = "TXT_KEY_TITLE_PLASMA_CANNON_ON",
-		OrderPriority = 300,
-		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
-		PortraitIndex = 8,
-		ToolTip = "TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_ON", -- or a TXT_KEY_ or a function
-		Condition = function(action, unit)
-		return   unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON"].ID) 
-        and unit:CanMove()
-		and not  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID)  end, 
-		Disabled = function(action, unit)   
-    return false;
-  end, -- or nil or a boolean, default is false
-		Action = function(action, unit, eClick)
-			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID, true)
-		end
-};
-LuaEvents.UnitPanelActionAddin( SuperChainButtonOn);
-
-local SuperChainButtonOff = {
-		Name = "TXT_KEY_NAME_PLASMA_CANNON_OFF",
-		Title = "TXT_KEY_TITLE_PLASMA_CANNON_OFF",
-		OrderPriority = 300,
-		IconAtlas = "SP_UNIT_ACTION_ATLAS2",
-		PortraitIndex = 20,
-		ToolTip = "TXT_KEY_SP_BTNNOTE_PLASMA_CANNON_OFF", -- or a TXT_KEY_ or a function
-		Condition = function(action, unit)
-		return unit:CanMove()  
-		and  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID)  end, 
-		Disabled = function(action, unit)   
-    return false;
-  end, -- or nil or a boolean, default is false
-		Action = function(action, unit, eClick)
-			unit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_PLASMA_CANNON_ON"].ID, false)
-			unit:SetMoves(0)
-		end
-};
-LuaEvents.UnitPanelActionAddin(SuperChainButtonOff);
-
-
 
 local lButtonDown = false
 local rButtonDown = false
@@ -1642,6 +1541,56 @@ GameEvents.OnTriggerAddEnemyPromotion.Add(function(eThisPromotionType, eThisProm
     end
 end);
               
+
+----------------------------------------------------------------------------------------------------------------------------
+-- 
+----------------------------------------------------------------------------------------------------------------------------
+-- 根据游戏速度调整升级事件
+local iGameSpeed = GameInfo.GameSpeeds[Game.GetGameSpeedType()].GrowthPercent / 100
+local TownFortLv1_Threshold = 10 * iGameSpeed
+local TownFortLv2_Threshold = 15 * iGameSpeed
+local TownFortLv1 = GameInfoTypes["IMPROVEMENT_TRADING_POST"] 
+local TownFortLv2 = GameInfoTypes["IMPROVEMENT_TOWN"]  
+local TownFortLv3 = GameInfoTypes["IMPROVEMENT_LARGE_TOWN"]  
+
+function GetTownFortXPPerTurn(iX, iY, iImprovementType, iCurrentXP, iOwner, iWorkCity)
+	if Players[iOwner] == nil
+	or Players[iOwner]:GetCityByID(iWorkCity) == nil 
+	or Map.GetPlot(iX, iY) == nil
+    then
+		return;
+	end
+
+	local pPlayer = Players[iOwner];
+	local pCity = pPlayer:GetCityByID(iWorkCity);
+	local plot = Map.GetPlot(iX, iY);
+	-- print("iImprovementType="..iImprovementType);
+	if iImprovementType == TownFortLv1 then
+		-- 每回合5点经验
+		if not plot:IsImprovementPillaged() then
+	    	if plot:IsBeingWorked() then
+				return 100 / TownFortLv1_Threshold;
+				-- return 5;
+			end
+		end
+	elseif iImprovementType == TownFortLv2 then
+		if not plot:IsImprovementPillaged() then
+	    	if plot:IsBeingWorked() then
+				return 100 / TownFortLv2_Threshold;
+			end	
+		end
+		return -50 / TownFortLv2_Threshold;
+	elseif iImprovementType == TownFortLv3 then
+		if not plot:IsImprovementPillaged() then
+	    	if plot:IsBeingWorked() then
+				return 5;
+			end
+		end
+		return -2;
+	end
+	return 0;
+end
+GameEvents.GetImprovementXPPerTurn.Add(GetTownFortXPPerTurn)
 
 
 

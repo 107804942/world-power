@@ -64,6 +64,21 @@ SELECT 'POLICY_AI_REDUCE',	                            'BUILDINGCLASS_ORE_REFINE
 -----------------------------------------------------------------------------------------------------
 --Tooltip Addenda
 ----------------------------------------------------------------------------------------------------- 
+
+
+UPDATE LocalizedText
+	SET Text = Text||'[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。'
+	WHERE Tag IN (SELECT Help FROM Policies WHERE Type='POLICY_REPUBLIC');
+
+
+
+
+
+
+
+
+
+
 UPDATE LocalizedText
 	SET Text = Text||'消除因城市未临近淡水带来的[ICON_HEALTH]健康度惩罚。'
 	WHERE Tag IN (SELECT Help FROM Buildings WHERE AddsFreshWater = 1);

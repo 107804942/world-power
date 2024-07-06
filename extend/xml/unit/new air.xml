@@ -176,7 +176,7 @@
 			<Class>UNITCLASS_CARRIER_FIGHTER_STORM</Class>
 			<Type>UNIT_CARRIER_FIGHTER_STORM</Type>
 			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
-			<RangedCombat>530</RangedCombat>
+			<RangedCombat>700</RangedCombat>
 			<Cost>-1</Cost>
 			<Moves>4</Moves>
 			<Immobile>true</Immobile>

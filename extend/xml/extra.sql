@@ -457,6 +457,7 @@ SELECT 'ART_DEF_IMPROVEMENT_FIXED_AA_BATTERY', 'Improvement', 'SV_CoastalArt256.
 
 
 
+
 --角斗士
 INSERT INTO ArtDefine_UnitInfos (Type,DamageStates,Formation) VALUES ('ART_DEF_UNIT_GLADIATOR', 1, "DefaultMelee");	
 
@@ -807,7 +808,14 @@ VALUES	('FEATURE_LAKE_VICTORIA',	'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 -- 新自然奇观
 --=======================================================================================================================
 
-INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES	
+INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
+
+        ('FEATURE_GLASS_HOUSE_MOUNTAIN',	'YIELD_GOLD',			3),
+		--('FEATURE_GLASS_HOUSE_MOUNTAIN',	'YIELD_SCIENCE',		2),
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',	'YIELD_FOOD',		    7),
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',	'YIELD_TOURISM',		3),
+		--('FEATURE_GLASS_HOUSE_MOUNTAIN',	'YIELD_CULTURE',		5),
+			
         ('FEATURE_VALLEY_A',	'YIELD_GOLDEN_AGE_POINTS',3),
 		('FEATURE_VALLEY_A',	'YIELD_PRODUCTION',5),
 		('FEATURE_VALLEY_A',	'YIELD_TOURISM',2),
@@ -921,8 +929,13 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 
 INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	Yield,	IgnoreNaturalWonderPlots)VALUES	
  
-    
+        ('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_HILLS',		'YIELD_GOLD',		    2,		0),
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_MOUNTAIN',	'YIELD_GOLD',		    3,		0),
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_LAND',		'YIELD_GOLD',		    1,		0),
 
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_HILLS',		'YIELD_FOOD',		    2,		0),
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_MOUNTAIN',	'YIELD_FOOD',		    2,		0),
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_LAND',		'YIELD_FOOD',		    1,		0),
 
         ('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_GOLDEN_AGE_POINTS',2,	0),
 		('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_PRODUCTION',     2,		0),
@@ -1119,10 +1132,14 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 
 		('ART_DEF_FEATURE_VOLCANO_1',	'Resource',		'Volcan 1'),
 
+		('ART_DEF_FEATURE_GLASS_HOUSE_MOUNTAIN',	'Resource',		'Glass House'),
+
 		('ART_DEF_FEATURE_RETBA',		'Resource',		'Lake Retba');
 
 
 INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHandler,	ResourceType,	Model,	TerrainContour) VALUES
+('Any',		'Any',	1.2,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_GLASS_HOUSE_MOUNTAIN',	'feature_GlassHouse.fxsxml',1),       --important!
+
 --('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_PUMUKKALE',	'pamukkale.fxsxml',1),       --important!
 --('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_PUMUKKALE_B',	'pamukkale_b.fxsxml',1),       --important!
 
@@ -1175,6 +1192,7 @@ DELETE FROM ArtDefine_StrategicView WHERE StrategicViewType = 'ART_DEF_FEATURE_N
 CREATE TABLE Feature_ArtDefine_StrategicView AS SELECT * FROM ArtDefine_StrategicView WHERE TileType = 'Feature';
 DELETE FROM ArtDefine_StrategicView WHERE TileType = 'Feature';
 INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		Asset)VALUES	
+        ('ART_DEF_FEATURE_GLASS_HOUSE_MOUNTAIN','Feature',		'sv_GlassHouse.dds'),
         ('ART_DEF_FEATURE_HA_LONG_A',	'Feature',	'sv_Ha_Long_A.dds'),
         ('ART_DEF_FEATURE_HA_LONG_B',	'Feature',	'sv_Ha_Long_B.dds'),
 		('ART_DEF_FEATURE_MT_PAEKTU',	'Feature',	'sv_Paektu.dds'),

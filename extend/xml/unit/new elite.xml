@@ -977,7 +977,7 @@
 			<Combat>1700</Combat>
 			<RangedCombat>1700</RangedCombat>
 			<HurryCostModifier>-1</HurryCostModifier>
-			<Cost>19000</Cost>
+			<Cost>25000</Cost>
 			<Moves>9</Moves>
 			<Range>9</Range>
 			<BaseSightRange>8</BaseSightRange>
@@ -1002,7 +1002,7 @@
 			<PortraitIndex>154</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
-			<MaxHitPoints>300</MaxHitPoints>
+			<MaxHitPoints>600</MaxHitPoints>
 			<ProjectPrereq>PROJECT_NAVALCARRIER03S</ProjectPrereq>
 			<ExtraMaintenanceCost>1800</ExtraMaintenanceCost>
 		</Row>
@@ -1047,39 +1047,47 @@
 
 
 
+	
+
 		<Row>
-			<Class>UNITCLASS_GHOST</Class>
-			<Type>UNIT_GHOST</Type>
-			<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
+			<Class>UNITCLASS_SPACE_CARRIER</Class>
+			<Type>UNIT_SPACE_CARRIER</Type>
+			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
-			<Combat>350</Combat>
-			<RangedCombat>350</RangedCombat>
-			<Cost>7000</Cost>
-			<Moves>5</Moves>
-			<Range>2</Range>
-			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GHOST</Description>
-			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_GHOST_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GHOST_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_GHOST</Help>
+			<Combat>1500</Combat>
+			<!--<RangedCombat>1500</RangedCombat>
+			<Range>2</Range>-->
+			<Cost>60000</Cost>
+			<Moves>11</Moves>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
+			<!--<Domain>DOMAIN_SEA</Domain>-->
+			<Domain>DOMAIN_HOVER</Domain>
+			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_SPACE_CARRIER</Description>
+			<Civilopedia>TXT_KEY_UNIT_SPACE_CARRIER_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_SPACE_CARRIER_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROMOTION_CARRIER_UNIT_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<Mechanized>true</Mechanized>
 			<AdvancedStartCost>120</AdvancedStartCost>
+			<MinAreaSize>10</MinAreaSize>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_RANGEDMARINE04HS</UnitArtInfo>
-			<UnitFlagIconOffset>32</UnitFlagIconOffset>
+			<!--<SpecialCargo>SPECIALUNIT_FIGHTER</SpecialCargo>-->
+			<DomainCargo>DOMAIN_AIR</DomainCargo>
+			<UnitArtInfo>ART_DEF_UNIT_GX3</UnitArtInfo>
+			<UnitFlagIconOffset>15</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>70</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<MaxHitPoints>300</MaxHitPoints>
-			<ProjectPrereq>PROJECT_GHOST</ProjectPrereq>
-			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
+			<PortraitIndex>224</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<MoveRate>BOAT</MoveRate>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<ProjectPrereq>PROJECT_SPACE_CARRIER</ProjectPrereq>
+			<ExtraMaintenanceCost>1000</ExtraMaintenanceCost>
 		</Row>
 
 
@@ -1125,6 +1133,41 @@
 
 
 		<Row>
+			<Class>UNITCLASS_GHOST</Class>
+			<Type>UNIT_GHOST</Type>
+			<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<BaseSightRange>4</BaseSightRange>
+			<Combat>350</Combat>
+			<RangedCombat>350</RangedCombat>
+			<Cost>7000</Cost>
+			<Moves>5</Moves>
+			<Range>2</Range>
+			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_GHOST</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_GHOST_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_GHOST_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_GHOST</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
+			<AdvancedStartCost>120</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_RANGEDMARINE04HS</UnitArtInfo>
+			<UnitFlagIconOffset>32</UnitFlagIconOffset>
+			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<PortraitIndex>70</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<MaxHitPoints>300</MaxHitPoints>
+			<ProjectPrereq>PROJECT_GHOST</ProjectPrereq>
+			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
+		</Row>
+		
+		<Row>
 			<Class>UNITCLASS_ANGEL</Class>
 			<Type>UNIT_ANGEL</Type>
 			<BaseSightRange>3</BaseSightRange>
@@ -1165,47 +1208,7 @@
 
 
 
-		<Row>
-			<Class>UNITCLASS_NAVALCARRIER03P</Class>
-			<Type>UNIT_NAVALCARRIER03P</Type>
-			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>1000</Combat>
-			<RangedCombat>1000</RangedCombat>
-			<Range>2</Range>
-			<Cost>17000</Cost>
-			<Moves>11</Moves>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NAVALCARRIER03P</Description>
-			<Civilopedia>TXT_KEY_UNIT_NAVALCARRIER03P_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAVALCARRIER03P_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CARRIER_UNIT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>120</AdvancedStartCost>
-			<MinAreaSize>10</MinAreaSize>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<SpecialCargo>SPECIALUNIT_FIGHTER</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03S</UnitArtInfo>
-			<UnitFlagIconOffset>15</UnitFlagIconOffset>
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>140</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<MoveRate>BOAT</MoveRate>
-			<MaxHitPoints>300</MaxHitPoints>
-			<ProjectPrereq>PROJECT_NAVALCARRIER03P</ProjectPrereq>
-			<ExtraMaintenanceCost>1000</ExtraMaintenanceCost>
-		</Row>
-
-
+		
 
 	</Units>
 
@@ -1466,16 +1469,16 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_ARMORER</PromotionType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 
@@ -1484,51 +1487,52 @@
 			<PromotionType>PROMOTION_GAIN_EXPERIENCE</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARRIER_SUPPLY_1</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARRIER_SUPPLY_2</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_MEDIC</PromotionType>
 		</Row>
-
-
-		
 		<Row>
-		<UnitType>UNIT_NAVALCARRIER03P</UnitType>
-		<PromotionType>PROMOTION_ADDITIONAL_CARGO_II</PromotionType>
-	</Row>
-		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
-			<PromotionType>PROMOTION_CARGO_II</PromotionType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
+			<PromotionType>PROMOTION_SPACESHIP</PromotionType>
 		</Row>
+
+
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARGO_VI</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
 		</Row>
-
-
-
+		<Row>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
+			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
+			<PromotionType>PROMOTION_FW_EXPLOSION</PromotionType>
+		</Row>
+		
 
 
 		<Row>
@@ -1860,14 +1864,6 @@
 			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
 		</Row>
 
-
-	
-
-
-		<Row>
-			<UnitType>UNIT_LEVDESTROYER</UnitType>
-			<PromotionType>PROMOTION_CARGO_VI</PromotionType>
-		</Row>
 
 		<Row>
 			<UnitType>UNIT_LEVDESTROYER</UnitType>

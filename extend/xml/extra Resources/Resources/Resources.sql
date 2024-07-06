@@ -82,6 +82,7 @@ INSERT INTO Resource_TerrainBooleans	(ResourceType,			TerrainType) VALUES       
 
 INSERT INTO Resource_YieldChanges	(ResourceType,			YieldType,				Yield) VALUES
                                      ('RESOURCE_LAVENDER',	'YIELD_GOLD',			1),
+									  ('RESOURCE_LAVENDER',	'YIELD_PRODUCTION',			1),
 									  ('RESOURCE_IRON',	     'YIELD_FOOD',	-1),
 									 ('RESOURCE_URANIUM',	     'YIELD_FOOD',	-5),
 									 ('RESOURCE_ALUMINUM',	     'YIELD_FOOD',	-3),

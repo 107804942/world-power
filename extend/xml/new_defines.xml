@@ -59,8 +59,11 @@
 		</Update>
 		
     </Specialists>
+	
+	
 
-
+	
+	
 	<!--***********************基础设置***********************-->
 	<CustomModOptions>
 		<!--*****额外新增功能******-->
@@ -680,7 +683,7 @@
 			<Where Name="CITY_RANGED_ATTACK_STRENGTH_MULTIPLIER" />
 		</Update>
 		<Update>
-			<Set Value="250"/>
+			<Set Value="400"/>
 			<Where Name="CITY_STRENGTH_UNIT_DIVISOR"/>
 		</Update>
 		<!-- Other-->
@@ -970,7 +973,7 @@
 		</Update>
 
 
-		<Update>
+		<!--<Update>
 			<Set Value="10"/>
 			<Where Name="RELIGION_MIN_FAITH_FIRST_PANTHEON" />
 		</Update>
@@ -981,7 +984,7 @@
 		<Update>
 			<Set Value="250"/>
 			<Where Name="RELIGION_MIN_FAITH_FIRST_PROPHET" />
-		</Update>
+		</Update>-->
 
 
 
