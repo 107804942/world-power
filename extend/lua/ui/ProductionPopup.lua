@@ -383,7 +383,7 @@ function UpdateWindow( city )
 	function GetUnitSortPriority(unitInfo)
 		local eraPriority = 0;
 		if(unitInfo.PrereqTech ~= nil) then
-			eraPriority = erasByTech[unitInfo.PrereqTech];
+			eraPriority = erasByTech[unitInfo.PrereqTech] or 0;
 		end
 	
 		if(unitInfo.CivilianAttackPriority ~= nil) then

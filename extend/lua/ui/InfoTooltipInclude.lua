@@ -1750,6 +1750,8 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_BUILDING_MODIFIER", building.GlobalProductionNeededBuildingModifier or 0 )
 	insertLocalizedIfNonZero( tips, "TXT_KEY_PRODUCTION_NEEDED_PROJECT_MODIFIER", building.GlobalProductionNeededProjectModifier or 0 )
 
+	insertLocalizedIfNonZero( tips, "TXT_KEY_GLOBAL_GROWTH_FOOD_NEEDED_MODIFIER", building.GlobalGrowthFoodNeededModifier or 0 )
+
 	if PreGame.GetGameOption("GAMEOPTION_SP_CORPS_MODE_DISABLE") == 0 then
 		local TroopRow = GameInfo.Building_DomainTroops{BuildingType = buildingType, DomainType = "DOMAIN_SEA"}()
 		if TroopRow then
@@ -1768,6 +1770,14 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 	end
 
+	for row in GameInfo.Building_TradeRouteFromTheCityYields(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.YieldValue or 0
+		if yieldInfo and (value or 0) > 0 then
+			insert(tips,
+				("[ICON_INTERNATIONAL_TRADE]" .. L("TXT_KEY_TRADE_TO_OTHER_CITY_BONUS") .. " +" .. value .. L(yieldInfo.IconString) .. " [ICON_ARROW_LEFT]"))
+		end
+	end
 
 	-- Yields enhanced by Technology
 	if techFilter( enhancedYieldTech ) then
@@ -2994,7 +3004,7 @@ if Game then
 		-- Food eaten by pop
 		if yieldID == YieldTypes.YIELD_FOOD then
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FOOD_FROM_TRADE_ROUTES", city:GetYieldRate( yieldID, false ) - city:GetYieldRate( yieldID, true ) )
-			strModifiersString = "[NEWLINE][ICON_BULLET]" .. L( "TXT_KEY_YIELD_EATEN_BY_POP", city:FoodConsumption( true, 0 ), yieldIconString ) .. strModifiersString
+			strModifiersString = "[NEWLINE][ICON_BULLET]" .. L( "TXT_KEY_YIELD_EATEN_BY_POP_PULS", city:FoodConsumption( true, 0 ), yieldIconString, city:GetFoodConsumptionPerPopTimes100() / 100) .. strModifiersString
 		elseif IsCivBE then
 			local yieldFromTrade = city:GetYieldPerTurnFromTrade( yieldID )
 			if yieldFromTrade ~= 0 then
