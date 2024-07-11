@@ -7,10 +7,10 @@
 		<Delete Type="PROMOTION_INSTA_HEAL"/>
 		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
 
-		<Update>
+		<!--<Update>
 			<Set OriginalCapitalDamageFix="2"/>
 			<Where Type="PROMOTION_NEW_ORDER"/>
-		</Update>
+		</Update>-->
 		
 		
 		<Update>

@@ -1483,7 +1483,7 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_GAIN_EXPERIENCE</PromotionType>
 		</Row>
 		<Row>
@@ -2053,29 +2053,29 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>35</Cost>
 		</Row>
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>20</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Cost>10</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>30</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>15</Cost>
 		</Row>
@@ -2342,7 +2342,7 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<UnitAIType>UNITAI_CARRIER_SEA</UnitAIType>
 		</Row>
 
@@ -2525,18 +2525,18 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03P</UnitType>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
