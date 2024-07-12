@@ -415,6 +415,9 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				
 			end
 
+			--Fixed damage increase
+			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToCity(pCity)
+
 		--------------------------------------------------新增抵扣的最终伤害--------------------------------------------------
 			if  pCity:GetChangeDamageValue() ~= 0 then
 				iMyDamageInflicted= iMyDamageInflicted+pCity:GetChangeDamageValue()
@@ -531,6 +534,12 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			
 			-- Their Strength
 			Controls.TheirStrengthValue:SetText( Locale.ToNumber(iTheirStrength / 100, "#.##") );
+			local UnitFixDamageValue = pMyUnit:GetDamageFixValueToCity(pCity)
+            if UnitFixDamageValue ~= 0 then
+                controlTable = g_MyCombatDataIM:GetInstance();
+                controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
+                controlTable.Value:SetText(": [COLOR_CYAN]".. UnitFixDamageValue .. "[ENDCOLOR]");
+            end
 			
 			
 			----------------------------------------------------------------------------
@@ -1085,6 +1094,9 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				
 			end
 
+			--Fixed damage increase
+			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
+			iTheirDamageInflicted = iTheirDamageInflicted + pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false)
 
 			--------------------------------------------------新增抵扣的最终伤害--------------------------------------------------
 			if  pTheirUnit:GetForcedDamageValue() ~= 0 then
@@ -1230,6 +1242,12 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			-------------------------
 			-- force damage --
 			-------------------------
+			local UnitFixDamageValue = pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
+            if UnitFixDamageValue ~= 0 then
+                controlTable = g_MyCombatDataIM:GetInstance();
+                controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
+                controlTable.Value:SetText(": [COLOR_CYAN]".. UnitFixDamageValue .. "[ENDCOLOR]");
+            end
 			if(pMyUnit:GetChangeDamageValue() < 0 and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
 			    local ChangeDamageValue=pMyUnit:GetChangeDamageValue()
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -2087,6 +2105,12 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			--local ChangeDamageValue=pTheirUnit:GetChangeDamageValue()
 			--local finalDamageValueReset=ForcedDamageValue+ChangeDamageValue
 
+			local UnitFixDamageValue = pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false)
+			if UnitFixDamageValue ~= 0 then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
+                controlTable.Value:SetText(UnitFixDamageValue .." :[COLOR_CYAN]"..  "[ENDCOLOR]");
+			end
 			--if finalDamageValueReset<0 then
 			if(pTheirUnit:GetChangeDamageValue() < 0 and pTheirUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR) then
 			    local ChangeDamageValue=pTheirUnit:GetChangeDamageValue()
