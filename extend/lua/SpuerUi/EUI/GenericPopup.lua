@@ -154,7 +154,7 @@ function SetPopupText( ... )
 end
 
 -- Add a button to popup
-function AddButton( buttonText, buttonClickFunc, strToolTip, bPreventClose )
+function AddButton( buttonText, buttonClickFunc, strToolTip, bPreventClose, buttonClickFuncRight)
 	buttonIndex = buttonIndex + 1
 	local button = buttonList[ buttonIndex ]
 	if button then
@@ -177,6 +177,9 @@ function AddButton( buttonText, buttonClickFunc, strToolTip, bPreventClose )
 		button:RegisterCallback( Mouse.eLClick, buttonClickFunc )
 	else
 		button:RegisterCallback( Mouse.eLClick, function() buttonClickFunc() return HideWindow() end )
+		if buttonClickFuncRight ~= nil then
+			button:RegisterCallback( Mouse.eRClick, function() buttonClickFuncRight() return HideWindow() end )
+		end
 	end
 	return button
 end
