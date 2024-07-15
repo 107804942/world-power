@@ -2108,7 +2108,15 @@ function OnCityViewUpdate()
 
 		----------------------------------------新增犯罪率----------------------------------------
 		local iCrimePerTurn = pCity:GetYieldRate(GameInfoTypes["YIELD_CRIME"])
-		Controls.CrimePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT", iCrimePerTurn) );
+
+		local CrimeCounter, CrimeThreshold = pPlayer:GetCityCrimeCounterDetails(pCity, true, true) 
+
+		Controls.CrimePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME", iCrimePerTurn, CrimeCounter, CrimeThreshold) );
+
+		--新增(详细说明)
+	   local strCrimeToolTip = pPlayer:GetCityCrimeTT(pCity)
+	   Controls.CrimeBox:SetToolTipString(strCrimeToolTip);
+
         ---------------------------------------end----------------------------------------
 		
 

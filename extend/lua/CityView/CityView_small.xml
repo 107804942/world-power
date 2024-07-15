@@ -95,8 +95,10 @@
 			<!-- Crime Info -->
 			<Box Offset="0,0" Anchor="L,T" Size="196,28" Color="255,255,255,-2" ID="CrimeBox">
 				<Image Offset="0,0" Anchor="L,T" Size="196,28" Texture="yieldbox.dds"/>
-				<Label Anchor="L,C" Offset="8,0" String="[ICON_CRIME]"/>
-				<Label Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_CRIME_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
+				<!--<Label Anchor="L,C" Offset="8,0" String="[ICON_CRIME]"/>
+				<Label Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_CRIME_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>-->
+				<Label ID="CrimeIcon" Anchor="L,C" Offset="8,0" String="[ICON_CRIME]"/>
+				<Label ID="CrimeText" Anchor="L,C" Offset="32,-2" String="TXT_KEY_CITYVIEW_CRIME_TEXT" Font="TwCenMT20" FontStyle="Shadow"/>
 				<Label ID="CrimePerTurnLabel" Anchor="R,C" Offset="5,-2" String="" Font="TwCenMT20" FontStyle="Shadow"/>
 			</Box>
 

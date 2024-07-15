@@ -10,7 +10,33 @@
 			<Text>[ICON_CRIME]犯罪率[NEWLINE]{1_Crime}</Text>
 		</Row>
 
-	
+
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME">
+			<Text>+{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_SENTIMENT_TEXT_TT">
+			<Text>[ICON_CRIME]叛乱进度:{1_Num}/{2_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TURNS_TEXT_TT">
+			<Text>城市将在{1_Num}回合后爆发[ICON_PLAGUE]叛乱</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_FOOD">
+			<Text>
+				[ICON_CRIME]犯罪率代表城市的稳定程度。多余的[ICON_CRIME]犯罪率会不断积累叛乱进度。
+				[NEWLINE][ICON_CRIME]犯罪率高于35时，每回合在该城市附近将有一定几率出现野蛮人反叛军。
+				[NEWLINE][ICON_CRIME]犯罪率高于75时，除前面的效果外该城市每回合还将有一定几率陷入抵抗状态。
+				[NEWLINE]叛乱进度达到阈值上限后，城市将起义并成为自由城市（临近10格内无属于其它与你处于敌对关系的主要文明城市）或加入你的敌对阵营。自由城市不属于任何文明，可以使用武力进行收复。
+				[NEWLINE][ICON_CRIME]叛乱的阈值会受建筑加成。[NEWLINE]{1_CrimeBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_CRIME][ENDCOLOR]
+			</Text>
+		</Row>
+
+
+
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
 			<Text>犯罪率</Text>
 		</Replace>
@@ -64,12 +90,34 @@
 		</Row>
 
 
+		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME">
+			<Text>+{1_perTurn:number "#.##"}   {2_Num}/{3_Num}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_SENTIMENT_TEXT_TT">
+			<Text>[ICON_CRIME]叛乱进度:{1_Num}/{2_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TURNS_TEXT_TT">
+			<Text>城市将在{1_Num}回合后爆发[ICON_PLAGUE]叛乱</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_FOOD">
+			<Text>
+				[ICON_CRIME]犯罪率代表城市的稳定程度。多余的[ICON_CRIME]犯罪率会不断积累叛乱进度。
+				[NEWLINE][ICON_CRIME]犯罪率高于35时，每回合在该城市附近将有一定几率出现野蛮人反叛军。
+				[NEWLINE][ICON_CRIME]犯罪率高于75时，除前面的效果外该城市每回合还将有一定几率陷入抵抗状态。
+				[NEWLINE]叛乱进度达到阈值上限后，城市将起义并成为自由城市（临近10格内无属于其它与你处于敌对关系的主要文明城市）或加入你的敌对阵营。自由城市不属于任何文明，可以使用武力进行收复。
+				[NEWLINE][ICON_CRIME]叛乱的阈值会受建筑加成。[NEWLINE]{1_CrimeBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_CRIME][ENDCOLOR]
+			</Text>
+		</Row>
+
+
+
 		<Replace Tag="TXT_KEY_YIELD_CRIME">
 			<Text>犯罪率</Text>
 		</Replace>
-		
-	
-		
+
+
+
 		<Row Tag="TXT_KEY_CRIME_VIOLENCE">
 			<Text>暴力</Text>
 		</Row>
@@ -82,7 +130,7 @@
 		<Row Tag="TXT_KEY_CRIME_REVOLUTION">
 			<Text>革命</Text>
 		</Row>
-		
+
 
 		<Replace Tag="TXT_KEY_POLICY_MONARCHY_HELP">
 			<Text>
@@ -120,6 +168,27 @@
 			<Text>[ICON_CRIME]犯罪率[NEWLINE]{1_Crime}</Text>
 		</Row>
 
+
+		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME">
+			<Text>+{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_SENTIMENT_TEXT_TT">
+			<Text>[ICON_CRIME]叛乱进度:{1_Num}/{2_Num}</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TURNS_TEXT_TT">
+			<Text>城市将在{1_Num}回合后爆发[ICON_PLAGUE]叛乱</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CITYVIEW_CRIME_TEXT_TT_FOOD">
+			<Text>
+				[ICON_CRIME]犯罪率代表城市的稳定程度。多余的[ICON_CRIME]犯罪率会不断积累叛乱进度。
+				[NEWLINE][ICON_CRIME]犯罪率高于35时，每回合在该城市附近将有一定几率出现野蛮人反叛军。
+				[NEWLINE][ICON_CRIME]犯罪率高于75时，除前面的效果外该城市每回合还将有一定几率陷入抵抗状态。
+				[NEWLINE]叛乱进度达到阈值上限后，城市将起义并成为自由城市（临近10格内无属于其它与你处于敌对关系的主要文明城市）或加入你的敌对阵营。自由城市不属于任何文明，可以使用武力进行收复。
+				[NEWLINE][ICON_CRIME]叛乱的阈值会受建筑加成。[NEWLINE]{1_CrimeBreakdown}[NEWLINE]------------------[NEWLINE][COLOR_NEGATIVE_TEXT]{2_Num}总计[ICON_CRIME][ENDCOLOR]
+			</Text>
+		</Row>
 
 
 		<Replace Tag="TXT_KEY_YIELD_CRIME">

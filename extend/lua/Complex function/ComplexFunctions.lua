@@ -1146,6 +1146,7 @@ function EspionageStateResult(iPlayer, iSpy, iState, iCityX, iCityY)
 end 	
 GameEvents.EspionageState.Add(EspionageStateResult)  
 
+
 function LOCKUP(iPlayer, iSpy, iResult, iCityX, iCityY) 
    local Player = Players[iPlayer]
    local CityPlot = Map.GetPlot(iCityX,iCityY )
@@ -1190,7 +1191,6 @@ GameEvents.EspionageResult.Add(LOCKUP)
 --==========================================================================================================================
 --GetUserSetting (DIFFICULTY_9!)
 ----------------------------------------------------------------------------------------------------------------------------
-
 function RemoveErrorResources()
 	-- loop through all plots
 	for iPlot = 0, Map.GetNumPlots() - 1 do
@@ -1233,8 +1233,7 @@ local Difficult10Active = IsUsingDifficult10()
 function AI_DIFFICULTY_REDUCE()
 	    for i=0, GameDefines.MAX_MAJOR_CIVS-1, 1 do
 		local Player = Players[i]
-		if Player:IsAlive() and Player:IsMajorCiv() then
-	    if not Player:IsHuman()  then
+		if Player:IsAlive() and not Player:IsHuman()  then
 
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_AI_REDUCE"].ID,true)
 
@@ -1246,8 +1245,6 @@ function AI_DIFFICULTY_REDUCE()
 		Player:SetHasPolicy(GameInfo.Policies["POLICY_DIFFICULTY_10"].ID,true)
 		end
 
-
-		   end
 		end
 	end
 end

@@ -12,5 +12,12 @@ SELECT 'CRIME_THEFT',				'TXT_KEY_CRIME_THEFT',			'[ICON_THEFT]' UNION ALL
 SELECT 'CRIME_CULT',					'TXT_KEY_CRIME_CULT',				'[ICON_CULT]'UNION ALL
 SELECT 'CRIME_REVOLUTION',					'TXT_KEY_CRIME_REVOLUTION',				'[ICON_REVOLUTION]';	
 
+
+INSERT INTO Defines(Name,							Value)
+SELECT 'CRIME_MIN_THRESHOLD_GAMESPEED_EPIC',		500 UNION ALL
+SELECT 'CRIME_MIN_THRESHOLD_GAMESPEED_MARATHON',	600 UNION ALL
+SELECT 'CRIME_MIN_THRESHOLD_GAMESPEED_QUICK',	    300 UNION ALL	
+SELECT 'CRIME_MIN_THRESHOLD_GAMESPEED_STANDARD',	400 ; 
+
 --==========================================================================================================================
 --==========================================================================================================================
