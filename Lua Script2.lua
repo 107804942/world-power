@@ -104,18 +104,3 @@ local mathMax		 = math.max
 local mathMin		 = math.min
 
 
-
-int CvLuaCity::lIsResistance(lua_State* L)
-{
-	return BasicLuaMethod(L, &CvCity::IsResistance);
-}
-//int GetResistanceTurns();
-int CvLuaCity::lGetResistanceTurns(lua_State* L)
-{
-	return BasicLuaMethod(L, &CvCity::GetResistanceTurns);
-}
-//int ChangeResistanceTurns();
-int CvLuaCity::lChangeResistanceTurns(lua_State* L)
-{
-	return BasicLuaMethod(L, &CvCity::ChangeResistanceTurns);
-}

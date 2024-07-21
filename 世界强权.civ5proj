@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>49</ModVersion>
+    <ModVersion>50</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于SP10.0的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于SP10.0的拓展模组[/COLOR]</Description>
@@ -437,6 +437,12 @@
         <Name>Crime_Events</Name>
         <Description />
         <FileName>extend/Crime/Crime_Events.lua</FileName>
+      </Content>
+      <Content>
+        <Type>InGameUIAddin</Type>
+        <Name>CityCrime</Name>
+        <Description />
+        <FileName>extend/Crime/CityCrime.xml</FileName>
       </Content>
     </ModContent>
     <ModProperties />
@@ -16486,9 +16492,21 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\Crime\art\Crime_Icon64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\Crime\art\yieldatlas_128_crime.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\Crime\CityCrime.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\Crime\CityCrime.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\Crime\CrimeText.xml">
       <SubType>Lua</SubType>

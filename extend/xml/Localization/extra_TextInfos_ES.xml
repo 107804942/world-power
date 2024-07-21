@@ -849,11 +849,6 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_CITY_PLAGUED_FOR_UI">
-			<Text>{3_CityName}[COLOR_SAVAGE]({1_num}/{2_num})[ENDCOLOR]</Text>
-		</Row>
-
-
 		<Row Tag="TXT_KEY_BUILD_GOLDEN_AGE_POINTS_STRING">
 			<Text>{1_Total}[ENDCOLOR][ICON_GOLDEN_AGE]黄金时代点数</Text>
 		</Row>
@@ -6774,7 +6769,10 @@
 			<Text>伊斯塔尔门</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ISHTARGATE_HELP">
-			<Text>工人工作效率+25%，+1[ICON_GOLDEN_AGE]黄金时代点数，所有城墙+2[ICON_GOLD]金钱、+2[ICON_RESEARCH]科研、+2[ICON_CULTURE]文化。单位获得属性：你每拥有一个世界奇观则单位+1%[ICON_STRENGTH]攻击力。</Text>
+			<Text>
+				工人工作效率+25%，+1[ICON_GOLDEN_AGE]黄金时代点数,-10[ICON_CRIM]犯罪率。
+				[NEWLINE]所有城墙+2[ICON_GOLD]金钱、+2[ICON_RESEARCH]科研、+2[ICON_CULTURE]文化、-2[ICON_CRIM]犯罪率。
+				[NEWLINE]单位获得属性：你每拥有一个世界奇观则单位+1%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ISHTARGATE_QUOTE">
 			<Text>[NEWLINE]"如果你不开门让我进去，我将打碎门、拧坏门锁、粉碎门栓，我会砸烂门柱，我将把门搬走，我将提升死者来吃活人。让死者在数量上数量超过活人。”[NEWLINE]        ——伊什塔尔（伊什塔尔女神降临下界）[NEWLINE]</Text>
@@ -7505,7 +7503,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]宏伟[ENDCOLOR]适宜于构建综合性的繁华帝国。
 				[NEWLINE][NEWLINE]启用宏伟政策：
-				[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。立即进入黄金时代，处于黄金时代时，大科学家、大工程师诞生速率+25%。允许建造加尔桥。
+				[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度，-2[ICON_CRIME]犯罪率。立即进入黄金时代，处于黄金时代时，大科学家、大工程师诞生速率+25%。允许建造加尔桥。
 				[NEWLINE][NEWLINE]推行所有宏伟政策：
 				[NEWLINE][ICON_BULLET]获得一个任意类型的伟人。
 				[NEWLINE][ICON_BULLET]科学家+1[ICON_RESEARCH]科研，商业家+1[ICON_GOLD]金钱，工程师+1[ICON_PRODUCTION]产能，艺术家+1[ICON_GOLDEN_AGE]黄金时代点数，文学家+1[ICON_CULTURE]文化，音乐家+1[ICON_TOURISM]魅力。
@@ -7524,8 +7522,9 @@
 		<Row Tag="TXT_KEY_POLICY_TRADITION_LOYALTY_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]公共执行[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座城市-2[ICON_CRIME]犯罪率。
 				[NEWLINE][ICON_BULLET]地牢，监禁所，法院，治安署，警察局，审计署，地检署+1[ICON_HAPPINESS_1]快乐,-2%[ICON_CRIME]犯罪率。
-				[NEWLINE][ICON_BULLET]所有杰作+1[ICON_GOLDEN_AGE]黄金时代点数。建造奇观时+15%[ICON_PRODUCTION]产能，本城-5[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET]所有杰作+1[ICON_GOLDEN_AGE]黄金时代点数。建造奇观时+15%[ICON_PRODUCTION]产能。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_TRADITION_LOYALTY_TEXT">
@@ -7663,12 +7662,12 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]智慧[ENDCOLOR]适宜于专注于科学发展的文明。
 				[NEWLINE][NEWLINE]启用智慧政策：
-				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+5[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+10[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_LARGE]大型城市（26[ICON_CITIZEN]人口）：+20[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XL]特大城市（40[ICON_CITIZEN]人口）：+35[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XXL]巨型城市（60[ICON_CITIZEN]人口）：+55[ICON_RESEARCH]科研。
-				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_GLOBAL]大都会（80[ICON_CITIZEN]人口）：+80[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_SMALL]小型城市（6[ICON_CITIZEN]人口）：+5[ICON_RESEARCH]科研，-5[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_MEDIUM]中型城市（15[ICON_CITIZEN]人口）：+10[ICON_RESEARCH]科研，-10[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_LARGE]大型城市（26[ICON_CITIZEN]人口）：+20[ICON_RESEARCH]科研，-15[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XL]特大城市（40[ICON_CITIZEN]人口）：+35[ICON_RESEARCH]科研，-20[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_XXL]巨型城市（60[ICON_CITIZEN]人口）：+55[ICON_RESEARCH]科研，-25[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_GLOBAL]大都会（80[ICON_CITIZEN]人口）：+80[ICON_RESEARCH]科研，-30[ICON_CRIME]犯罪率。
 				[NEWLINE][NEWLINE]推行所有智慧政策：
 				[NEWLINE][ICON_BULLET]草药铺，医院+10%[ICON_RESEARCH]科研。
 			</Text>
@@ -8652,7 +8651,8 @@
 
 		<Row Tag="TXT_KEY_WONDER_BEILUN_TOWER_HELP">
 			<Text>
-				本城+25[ICON_STRENGTH]防御力，+50生命值上限。所有地牢、庄园、港口+2[ICON_GOLD]金钱。海军单位击杀敌军后额外恢复20点生命值，且每当获得晋升时，可立即恢复50生命值。获得一位海军统帅。
+				本城+25[ICON_STRENGTH]防御力，+50生命值上限。所有地牢、庄园、港口+3[ICON_GOLD]金钱，-3[ICON_CRIME]犯罪率。
+				[NEWLINE]海军单位击杀敌军后额外恢复20点生命值，且每当获得晋升时，可立即恢复50生命值。获得一位海军统帅。
 				[NEWLINE]只能在临近海岸的城市建造。
 			</Text>
 		</Row>
@@ -9041,7 +9041,11 @@
 			<Text>克格勃</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KGB_HELP">
-			<Text>即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。能阻止外来间谍进入本奇观所在城市。</Text>
+			<Text>
+				即使你的[ICON_SPY]间谍在执行任务时被杀，仍然能提供一次性的[ICON_RESEARCH]科研点数。
+				[NEWLINE]能阻止外来间谍进入本奇观所在城市。
+				[NEWLINE]所有科研专家-1[ICON_CRIME]犯罪率。
+			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_KGB_TEXT">
 			<Text>
@@ -9657,7 +9661,7 @@
 				[COLOR_POSITIVE_TEXT]军事纪律[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]每个与本战场相邻的己方单位获得+25%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE][ICON_BULLET]夹击加成由10%增加至15%。
-				[NEWLINE][ICON_BULLET]军营+1[ICON_HEALTH]健康度。
+				[NEWLINE][ICON_BULLET]军营、军械所+1[ICON_HEALTH]健康度。
 			</Text>
 		</Replace>
 
@@ -9674,7 +9678,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]所有神祠、神庙和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化，-1[ICON_CRIME]犯罪率。
-				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化产出。
+				[NEWLINE][ICON_BULLET]所有宗教奇观+4[ICON_CULTURE]文化，-4[ICON_CRIME]犯罪率。
 			</Text>
 		</Replace>
 

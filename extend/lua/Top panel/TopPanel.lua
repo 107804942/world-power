@@ -262,10 +262,12 @@ function UpdateData()
 
 
 		-----------------------------
-		-- Update Health 健康度
+		-- Update Health 健康度,犯罪率
 		-----------------------------
+
 		    Controls.HealthString:SetText("[ICON_HEALTH]")
-			
+
+			Controls.CrimeString:SetText("[ICON_CRIME]")
 			-----------------------------
 			-- Update Culture
 			-----------------------------
@@ -549,12 +551,17 @@ end
 Controls.InternationalTradeRoutes:RegisterCallback( Mouse.eLClick, OnTradeRouteClicked );
 
 -------------------------------------------------
---PLAGUE MOD 新增
+--PLAGUE MOD 犯罪率 新增
 -------------------------------------------------
 function OnHealthClicked()
 	LuaEvents.PLAGUE_CityHealthListPopup()
 end
 Controls.HealthString:RegisterCallback( Mouse.eLClick, OnHealthClicked );
+
+function OnCrimeClicked()
+	LuaEvents.Crime_CityHealthListPopup()
+end
+Controls.CrimeString:RegisterCallback( Mouse.eLClick, OnCrimeClicked );
 -------------------------------------------------
 -- TOOLTIPS
 -------------------------------------------------
@@ -563,6 +570,7 @@ Controls.HealthString:RegisterCallback( Mouse.eLClick, OnHealthClicked );
 -- Tooltip init
 function DoInitTooltips()
     Controls.HealthString:SetToolTipCallback( HealthTipHandler ); --新增PLAGUE MOD
+	Controls.CrimeString:SetToolTipCallback( CrimeTipHandler ); --新增犯罪率
 	Controls.SciencePerTurn:SetToolTipCallback( ScienceTipHandler );
 	Controls.GoldPerTurn:SetToolTipCallback( GoldTipHandler );
 	Controls.HappinessString:SetToolTipCallback( HappinessTipHandler );
@@ -595,6 +603,25 @@ function HealthTipHandler( control )
     tipControlTable.TopPanelMouseover:DoAutoSize();
 	
 end
+
+
+--犯罪
+function CrimeTipHandler( control )
+
+	--local iPlayerID = Game.GetActivePlayer();
+	--local pPlayer = Players[iPlayerID];
+
+	local strText = "";
+    strText =Locale.ConvertTextKey("TXT_KEY_TP_CRIME_EXPLANATION")
+
+	tipControlTable.TooltipLabel:SetText( strText );
+	tipControlTable.TopPanelMouseover:SetHide(false);
+    
+    -- Autosize tooltip
+    tipControlTable.TopPanelMouseover:DoAutoSize();
+	
+end
+
 
 
 function ScienceTipHandler( control )

@@ -9,7 +9,9 @@
 		<Row Tag="TXT_KEY_PROMOTION_HUIHUIPAO_HELP">
 			<Text>攻击城市时使该城市瘟疫进度增加两点。</Text>
 		</Row>
-		
+		<Row Tag="TXT_KEY_CITY_PLAGUED_FOR_UI">
+			<Text>{3_CityName}[COLOR_SAVAGE]({1_num}/{2_num})[ENDCOLOR]</Text>
+		</Row>
 		<!--PLAGUES-->
 		<Row Tag="TXT_KEY_PLAGUE_AIDS">
 			<Text>艾滋病</Text>
@@ -683,7 +685,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_TP_HEALTH_EXPLANATION">
-			<Text>点击可打开城市[ICON_HEALTH]健康度总览界面。</Text>
+			<Text>点击开启城市[ICON_HEALTH]健康度总览界面。</Text>
 		</Row>
 
 

@@ -1640,7 +1640,7 @@
 			<Defense>5000</Defense>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
 			<ExtraDamageHeal>50</ExtraDamageHeal>
-			<ReduceDamageValue>-25</ReduceDamageValue>						
+			<ReduceDamageValue>-15</ReduceDamageValue>						
 			<Quote>TXT_KEY_BUILDING_MONT_SAINT_MICHEL_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<WonderSplashImage>MontStMichel_Splash.dds</WonderSplashImage>
@@ -3718,19 +3718,19 @@
 			<BuildingType>BUILDING_BEILUN_TOWER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_JAIL</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
+			<YieldChange>3</YieldChange>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BEILUN_TOWER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_DUNGEON</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
+			<YieldChange>3</YieldChange>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_BEILUN_TOWER</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<YieldChange>2</YieldChange>
+			<YieldChange>3</YieldChange>
 		</Row>
 		
 

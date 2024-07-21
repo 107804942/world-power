@@ -476,6 +476,12 @@
 			<YieldType>YIELD_DISEASE</YieldType>
 			<Yield>-25</Yield>
 		</Row>
+
+		<Row>
+			<PolicyType>POLICY_AI_REDUCE</PolicyType>
+			<YieldType>YIELD_CRIME</YieldType>
+			<Yield>-33</Yield>
+		</Row>
 	</Policy_YieldModifiers>
 
 

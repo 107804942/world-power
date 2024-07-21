@@ -29,6 +29,7 @@
     <TextButton Anchor="C,T" String="FAITH!" ColorLayer0="255,255,200,255"  ID="FaithString" ToolTipType="TooltipTypeTopPanel"/>
 
 	<TextButton Anchor="C,T" String="HEALTH!" ColorLayer0="255,255,200,255"  ID="HealthString" ToolTipType="TooltipTypeTopPanel"/>
+		<TextButton Anchor="C,T" String="CRIME!" ColorLayer0="255,255,200,255"  ID="CrimeString" ToolTipType="TooltipTypeTopPanel"/>
 		<!--PLAGUE MOD-->
 
 

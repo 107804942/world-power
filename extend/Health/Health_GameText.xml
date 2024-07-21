@@ -419,7 +419,10 @@
 
 		<!--CITY VIEW-->
 
-
+		<Row Tag="TXT_KEY_CITY_PLAGUED_FOR_UI">
+			<Text>{3_CityName}[COLOR_SAVAGE]({1_num}/{2_num})[ENDCOLOR]</Text>
+		</Row>
+		
 		<Row Tag="TXT_KEY_CITYVIEW_HEALTH_PLAGUE_SENTIMENT_TEXT_TT">
 			<Text>{1_ColourHL}[ICON_PLAGUE]瘟疫进度:{2_Num}/{3_Num}[ENDCOLOR]</Text>
 		</Row>
@@ -679,7 +682,7 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_TP_HEALTH_EXPLANATION">
-			<Text>点击可打开城市[ICON_HEALTH]健康度总览界面。</Text>
+			<Text>点击开启城市[ICON_HEALTH]健康度总览界面。</Text>
 		</Row>
 		
 		
