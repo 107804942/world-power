@@ -853,3 +853,12 @@ ALTER TABLE UnitPromotions ADD 'BeFallBackDefenseMod' INTEGER DEFAULT 0;
 	<NearbyUnitPromotionBonus>25</NearbyUnitPromotionBonus>
 			<NearbyUnitPromotionBonusRange>5</NearbyUnitPromotionBonusRange>
 			<CombatBonusFromNearbyUnitPromotion>PROMOTION_GREAT_GENERAL</CombatBonusFromNearbyUnitPromotion>
+
+
+
+	<Table name="Policy_YieldPerPopChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+

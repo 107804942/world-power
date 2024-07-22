@@ -5221,14 +5221,15 @@
 
 
 		<!--Bastion-->
-		<Row Tag="TXT_KEY_BUILDING_EE_BASTION">
+
+		<Row Tag="TXT_KEY_BUILDING_BASTION">
 			<Text>[ICON_WAR]棱堡</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILDING_EE_BASTION_HELP">
+		<Row Tag="TXT_KEY_BUILDING_BASTION_HELP">
 			<Text>棱堡是独特的防御性建筑，它增强了所在区域的防御力量。在建造棱堡之前，城市必须拥有一座城堡。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_EE_BASTION_PEDIA">
+		<Row Tag="TXT_KEY_BUILDING_BASTION_PEDIA">
 			<Text>当大炮被引入战斗之中时，那些陈旧、高耸、笔挺的城墙没能像以前一样显得那么坚固了。由于文艺复兴时期发生在意大利的无情的战争，那里的军事工程师在公元15世纪中叶发明出了“星形要塞”（更确切地说，应该称作棱堡）。通过任何草图都可以明显看出星形要塞的设计：这是由许许多多三角堡垒组成的平坦的、又低又厚的倾斜墙壁结构，从而可以给彼此提供掩护火力，并且四周都是斜坡以偏转炮弹，周围的沟渠还可以阻止步兵。米切朗基罗在他的佛罗伦萨防御设计中使用了星形要塞，此后星形要塞的概念又被工程师佩鲁齐（来自锡耶纳）和作家斯卡莫齐进一步精炼。为了抵御法国人和哈普斯堡王朝的再三侵略，意大利各城市很快就放弃使用传统的防御工事，转而将城市置于星形要塞的包围之中。这一行之有效的设计于16世纪30年代和40年代传播到意大利以外的地方，到了伟大的军事工程师沃邦生活的时期，它已经变成了全欧洲的标准。然而，随着19世纪火炮的进步，这些防御措施最终还是过时了。</Text>
 		</Row>
 
@@ -7712,6 +7713,8 @@
 				[NEWLINE][ICON_BULLET][ICON_CITYBANNER_CITY_GLOBAL]大都会（80[ICON_CITIZEN]人口）：+80[ICON_RESEARCH]科研，-30[ICON_CRIME]犯罪率。
 				[NEWLINE][NEWLINE]推行所有智慧政策：
 				[NEWLINE][ICON_BULLET]草药铺，医院+10%[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]赠送一个大科学家。
+				[NEWLINE][ICON_BULLET]所有杰作-1[ICON_CRIME]犯罪率。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_TEXT">

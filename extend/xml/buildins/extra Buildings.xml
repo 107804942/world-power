@@ -1115,13 +1115,13 @@
 
 			<!--棱堡-->
 			<Row>
-				<Type>BUILDING_EE_BASTION</Type>
-				<BuildingClass>BUILDINGCLASS_EE_BASTION</BuildingClass>
+				<Type>BUILDING_BASTION</Type>
+				<BuildingClass>BUILDINGCLASS_BASTION</BuildingClass>
 				<Cost>260</Cost>
 				<PrereqTech>TECH_FORTIFICATION</PrereqTech>
-				<Help>TXT_KEY_BUILDING_EE_BASTION_HELP</Help>
-				<Description>TXT_KEY_BUILDING_EE_BASTION</Description>
-				<Civilopedia>TXT_KEY_BUILDING_EE_BASTION_PEDIA</Civilopedia>
+				<Help>TXT_KEY_BUILDING_BASTION_HELP</Help>
+				<Description>TXT_KEY_BUILDING_BASTION</Description>
+				<Civilopedia>TXT_KEY_BUILDING_BASTION_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
 				<ArtDefineTag>CASTLE</ArtDefineTag>
 				<MinAreaSize>-1</MinAreaSize>
@@ -1960,7 +1960,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_EE_BASTION</BuildingType>
+			<BuildingType>BUILDING_BASTION</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
 		</Row>
 		<Row>

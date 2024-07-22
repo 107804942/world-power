@@ -1994,7 +1994,7 @@
 	<Policy_BuildingClassCultureChanges>
 		<Row>
 			<PolicyType>POLICY_WARRIOR_CODE</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_EE_BASTION</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BASTION</BuildingClassType>
 			<CultureChange>2</CultureChange>
 		</Row>
 
@@ -2012,7 +2012,7 @@
 	<Policy_BuildingClassHappiness>
 		<Row>
 			<PolicyType>POLICY_MILITARY_TRADITION</PolicyType>
-			<BuildingClassType>BUILDINGCLASS_EE_BASTION</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BASTION</BuildingClassType>
 			<Happiness>1</Happiness>
 		</Row>
 

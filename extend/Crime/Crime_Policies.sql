@@ -107,6 +107,25 @@ SELECT 'POLICY_TRADITION_LOYALTY','BUILDINGCLASS_FINANCE_COMPANY',	'YIELD_CRIME'
 INSERT  INTO Policy_CityLoveKingDayYieldMod(PolicyType,YieldType,Yield)VALUES
 ('POLICY_GRANDEUR_4', 'YIELD_CRIME',-25);
 
+------------------------------------------------------------------------------------------------------------------------
+-- 人口加成
+------------------------------------------------------------------------------------------------------------------------
+INSERT  INTO Policy_YieldPerPopChanges(PolicyType,YieldType,Yield)VALUES
+('POLICY_AI_REDUCE', 'YIELD_CRIME',-50); 
+
+------------------------------------------------------------------------------------------------------------------------
+-- 商路加成
+------------------------------------------------------------------------------------------------------------------------
+INSERT  INTO Policy_TradeRouteYieldChange(PolicyType,DomainType,YieldType,Yield)
+SELECT 'POLICY_PROTECTIONISM',	'DOMAIN_LAND', 'YIELD_CRIME',		-3  UNION ALL   
+SELECT 'POLICY_PROTECTIONISM',	'DOMAIN_SEA', 'YIELD_CRIME',		-3;    
+
+------------------------------------------------------------------------------------------------------------------------
+-- 杰作加成
+------------------------------------------------------------------------------------------------------------------------
+INSERT  INTO Policy_GreatWorkYieldChanges(PolicyType,YieldType,Yield)
+SELECT 'POLICY_KNOWLEDGE_FINISHER',	'YIELD_CRIME',		-1;     --智慧关门
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- 全局加成
@@ -119,10 +138,16 @@ SELECT 'POLICY_RELIGIOUS_POLITICS',	'YIELD_CRIME',		-10;     --教法社会
 -- 城市数量全局加成
 ------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Policy_CityNumberCityYieldModifier(PolicyType, YieldType, Yield)
+SELECT 'POLICY_REPUBLIC',	'YIELD_CRIME',		-8;     --教法社会
 SELECT 'POLICY_REPUBLIC',	'YIELD_CRIME',		-1;     --教法社会
 -----------------------------------------------------------------------------------------------------
 --Tooltip Addenda
 ----------------------------------------------------------------------------------------------------- 
+UPDATE LocalizedText
+	SET Text = Text||'[NEWLINE][ICON_BULLET]所有商路-3[ICON_CRIME]犯罪率。'
+	WHERE Tag IN (SELECT Help FROM Policies WHERE Type = 'POLICY_PROTECTIONISM');
+
+
 UPDATE LocalizedText
 	SET Text = Text||'[NEWLINE][ICON_BULLET]全局[ICON_CRIME]犯罪率-10%。'
 	WHERE Tag IN (SELECT Help FROM Policies WHERE Type = 'POLICY_RELIGIOUS_POLITICS');

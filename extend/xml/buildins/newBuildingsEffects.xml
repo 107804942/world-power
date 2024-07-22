@@ -1470,7 +1470,7 @@
 
 
 		<Row>
-			<BuildingType>BUILDING_EE_BASTION</BuildingType>
+			<BuildingType>BUILDING_BASTION</BuildingType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
@@ -2148,7 +2148,7 @@
 			<Flavor>50</Flavor>
 		</Row>
 		<Row>
-			<BuildingType>BUILDING_EE_BASTION</BuildingType>
+			<BuildingType>BUILDING_BASTION</BuildingType>
 			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
 			<Flavor>60</Flavor>
 		</Row>

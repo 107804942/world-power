@@ -4007,7 +4007,7 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_MALBORK</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_EE_BASTION</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_BASTION</BuildingClassType>
 			<YieldType>YIELD_FAITH</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>

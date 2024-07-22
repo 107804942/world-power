@@ -465,9 +465,9 @@
 		</Row>
 
 		<Row>
-			<Type>BUILDINGCLASS_EE_BASTION</Type>
-			<DefaultBuilding>BUILDING_EE_BASTION</DefaultBuilding>
-			<Description>DESC_EE_BASTION</Description>
+			<Type>BUILDINGCLASS_BASTION</Type>
+			<DefaultBuilding>BUILDING_BASTION</DefaultBuilding>
+			<Description>DESC_BASTION</Description>
 		</Row>
 
 		<Row>
