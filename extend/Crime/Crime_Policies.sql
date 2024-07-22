@@ -111,6 +111,7 @@ INSERT  INTO Policy_CityLoveKingDayYieldMod(PolicyType,YieldType,Yield)VALUES
 -- 人口加成
 ------------------------------------------------------------------------------------------------------------------------
 INSERT  INTO Policy_YieldPerPopChanges(PolicyType,YieldType,Yield)VALUES
+('POLICY_INDUSTRY', 'YIELD_CRIME',-20),
 ('POLICY_AI_REDUCE', 'YIELD_CRIME',-50); 
 
 ------------------------------------------------------------------------------------------------------------------------
