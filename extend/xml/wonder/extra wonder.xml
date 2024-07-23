@@ -828,7 +828,7 @@
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<!--<SpyRankChange>1</SpyRankChange>-->
+			<GlobalEspionageSpeedModifier>25</GlobalEspionageSpeedModifier>
 			<ForbiddenForeignSpy>1</ForbiddenForeignSpy>
 			<ConquestProb>100</ConquestProb>
 			<!--<EspionageModifier>-999</EspionageModifier>-->
@@ -1413,7 +1413,7 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
 			<GreatWorkCount>2</GreatWorkCount>
-			<GreatScientistBeakerModifier>20</GreatScientistBeakerModifier>
+			<ResearchTotalCostModifier>-10</ResearchTotalCostModifier>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>

@@ -308,7 +308,7 @@ ALTER TABLE Buildings ADD COLUMN 'LandTileDamageGlobal' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'LandTileMovementReduceGlobal' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'LandTileTurnDamageGlobal' INTEGER DEFAULT 0;
 
-
+ALTER TABLE Buildings ADD COLUMN 'ResearchTotalCostModifier' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD 'HumanOnly' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'MinorCivFriendship' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'MoveAfterCreated' INTEGER DEFAULT 0; 
@@ -790,7 +790,7 @@ ALTER TABLE UnitPromotions ADD AirInterceptRangeChange INTEGER DEFAULT 0;
 -------------------------------------------------------------------------------------------------
 ALTER TABLE UnitPromotions ADD  'IsCanParadropUnLimit' BOOLEAN DEFAULT 0;
 
-
+ALTER TABLE Buildings ADD COLUMN 'GlobalEspionageSpeedModifier' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpyGlobal' BOOLEAN DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'ForbiddenForeignSpy' BOOLEAN DEFAULT 0;
 
@@ -860,5 +860,4 @@ ALTER TABLE UnitPromotions ADD 'BeFallBackDefenseMod' INTEGER DEFAULT 0;
 
 
 
-	
 
