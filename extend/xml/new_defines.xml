@@ -453,7 +453,7 @@
 		</Update>
 
 		<Update>
-			<Where Type="IMPROVEMENT_FW_CORE"/>
+			<Where Type="IMPROVEMENT_FUTURE_CORE"/>
 			<Set NoFollowup="1"/>
 		</Update>
 		<Update>

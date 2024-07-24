@@ -1970,47 +1970,47 @@
 			<Text>不要做别人能为你做的事,这也是一种浪费。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX">
+		<Row Tag="TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX">
 			<Text>工业综合体</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX_TEXT">
+		<Row Tag="TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX_TEXT">
 			<Text>随着技术的进步，工业取得极大进步进步。工厂、组装厂、铸造厂和其他此类工业建筑的规模越来越大，而且越来越复杂，因为工业被集中在一起，有助于促进生产和鼓励规模经济。虽然工业用地没有工厂那么有效，但它仍能大大提高产量。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_INDUSTRIAL_COMPLEX_HELP">
+		<Row Tag="TXT_KEY_IMPROVEMENT_INDUSTRIAL_COMPLEX_HELP">
 			<Text>该改良设施为所建成地块提供4[ICON_PRODUCTION]产能以及[ICON_GOLD]2金钱产出。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_INDUSTRIAL_COMPLEX">
+		<Row Tag="TXT_KEY_BUILD_INDUSTRIAL_COMPLEX">
 			<Text>工业综合体</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_INDUSTRIAL_COMPLEX_HELP">
+		<Row Tag="TXT_KEY_BUILD_INDUSTRIAL_COMPLEX_HELP">
 			<Text>建造一个工业综合体，提高地块产能和少量金钱产出,但会造成健康度惩罚。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_INDUSTRIAL_COMPLEX_REC">
+		<Row Tag="TXT_KEY_BUILD_INDUSTRIAL_COMPLEX_REC">
 			<Text>
 				该改良设施可以增加地块的产能与金钱产出，但会造成健康度惩罚。
 			</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_ARCOLOGY">
+		<Row Tag="TXT_KEY_IMPROVEMENT_ARCOLOGY">
 			<Text>生态城市</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_ARCOLOGY_TEXT">
+		<Row Tag="TXT_KEY_IMPROVEMENT_ARCOLOGY_TEXT">
 			<Text>
 				生态城市是一个庞大的结构，可以自我维持平衡，为大量的公民提供一个完全封闭的工作和生活环境，这个地表设施提供5[ICON_FOOD]食物、3[ICON_HEALTH]健康度产出，并且为驻扎单位提供50%[ICON_STRENGTH]防御加成。在此基础上，如果毗邻城市，则额外+1[ICON_FOOD]食物；如果毗邻海岸，则+1[ICON_GOLD]黄金。不能与其他的生态城市相邻。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_ARCOLOGY_HELP">
+		<Row Tag="TXT_KEY_IMPROVEMENT_ARCOLOGY_HELP">
 			<Text>这个改良设施提供5[ICON_FOOD]食物、3[ICON_HEALTH]健康度产出，且每个临近的自然奇观为该改良设施所在地块额外增加10点[ICON_FOOD]食物、10点[ICON_RESEARCH]科技和10点[ICON_GOLD]金钱产出。驻扎单位获得50%[ICON_STRENGTH]防御加成。在此基础上，如果毗邻城市，则额外+1[ICON_FOOD]食物；如果毗邻海岸，则+1[ICON_GOLD]黄金。不能与其他的生态城市相邻。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILD_FW_ARCOLOGY">
+		<Row Tag="TXT_KEY_BUILD_ARCOLOGY">
 			<Text>生态城市</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_ARCOLOGY_HELP">
+		<Row Tag="TXT_KEY_BUILD_ARCOLOGY_HELP">
 			<Text>建立一个增加[ICON_FOOD]食物和[ICON_HEALTH]健康度产出的生态城市。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_ARCOLOGY_REC">
+		<Row Tag="TXT_KEY_BUILD_ARCOLOGY_REC">
 			<Text>
 				增加地块的[ICON_FOOD]食物和健康度[ICON_HEALTH]产出，临近自然奇观时获得大量额外加成并且为驻扎单位提供50%[ICON_STRENGTH]防御加成。
 			</Text>
@@ -2063,22 +2063,22 @@
 			<Text>为了优化军事远程火炮单位，设计者可以提供更多的打击力度，或削弱敌方目标。后一点似乎很难控制，但每一个军事目标都有弱点。一个总是能打击敌军弱点的武器系统可能在其输出的力量之外具有额外的效力。这也与霸权意识形态的某些张力产生了共鸣。定向能量炮是为了对付各种各样的目标而研制的，这种武装战车可以使传统上效率低下的炮兵拥有剑一样的精确度。它的独特之处不仅在于它拥有多门特别的速射能量炮 ，而且还能够在极短的时间将大量的火力投放到正确的位置，从而使伤害最大化。而缺点是，它高度依赖于其传感器网络的计算处理。该网络收集和分析关于它所针对的目标的庞大数据。它使用气象传感器来校正天气影响，它还使用打击伤害评估系统来更新连续几轮的发射方案(反馈这些系统需要一些时间来收集和整合)。最后，还有一个目标情报和目标识别系统的动态目录，可以让其识别它所面临的情况、目标的藏身地点以及哪个系统最适合摧毁它们。因此遭遇近战时则会显得十分被动。当目标命中 / 目标杀伤比接近1时，能够在它的火力轰炸中存活下来通常被认为是电影才有的情节。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_CORE">
+		<Row Tag="TXT_KEY_IMPROVEMENT_FUTURE_CORE">
 			<Text>防御点</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_CORE_TEXT">
+		<Row Tag="TXT_KEY_IMPROVEMENT_FUTURE_CORE_TEXT">
 			<Text>作战环境因技术的发展变得更加复杂，在各处分散设立的战争防御网节点能为单位提供临时庇护和紧急补给。为驻扎单位提供150%防御加成，每回合对临近敌人造成20点伤害。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_CORE_HELP">
+		<Row Tag="TXT_KEY_IMPROVEMENT_FUTURE_CORE_HELP">
 			<Text>作战环境因技术的发展变得更加复杂，在各处分散设立的战争防御网节点能为单位提供临时庇护和紧急补给。为驻扎单位提供150%防御加成，每回合对临近敌人造成20点伤害。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_CORE">
+		<Row Tag="TXT_KEY_BUILD_FUTURE_CORE">
 			<Text>防御点</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_CORE_HELP">
+		<Row Tag="TXT_KEY_BUILD_FUTURE_CORE_HELP">
 			<Text>为驻扎单位提供150%防御加成，每回合对临近敌人造成20点伤害。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_CORE_REC">
+		<Row Tag="TXT_KEY_BUILD_FUTURE_CORE_REC">
 			<Text>
 				增加所在地块的单位防御力，每回合对临近敌人造成20点伤害。
 			</Text>
@@ -3008,44 +3008,41 @@
 
 
 
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_COMM_ARRAY">
+		<Row Tag="TXT_KEY_IMPROVEMENT_COMM_ARRAY">
 			<Text>通信列阵</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_COMM_ARRAY_TEXT">
+		<Row Tag="TXT_KEY_IMPROVEMENT_COMM_ARRAY_TEXT">
 			<Text>通信阵列是一种专门用于帮助促进跨区域信息交换的装置。根据已经研究的技术，可提供额外的文化或科学。但是，通信阵列不能相邻建造，这限制了可以建造的数量。该改良设施消耗3[ICON_GOLD]金钱提供5[ICON_CULTURE]文化。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_COMM_ARRAY_HELP">
+		<Row Tag="TXT_KEY_IMPROVEMENT_COMM_ARRAY_HELP">
 			<Text>-3[ICON_GOLD]金钱，+5[ICON_CULTURE]文化，-2[ICON_RES_ELECTRICITY]电力。不能建立在其他临近的通信列阵旁边。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_COMM_ARRAY">
+		<Row Tag="TXT_KEY_BUILD_COMM_ARRAY">
 			<Text>通信列阵</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_COMM_ARRAY_HELP">
+		<Row Tag="TXT_KEY_BUILD_COMM_ARRAY_HELP">
 			<Text>建立一个通讯阵列，增加地块的文化产出。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_COMM_ARRAY_REC">
+		<Row Tag="TXT_KEY_BUILD_COMM_ARRAY_REC">
 			<Text>该改良设施可以提升地块文化产出。</Text>
 		</Row>
 
 
-
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_GENERATOR">
+		<Row Tag="TXT_KEY_IMPROVEMENT_GENERATOR">
 			<Text>发电机</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_GENERATOR_TEXT">
+		<Row Tag="TXT_KEY_IMPROVEMENT_GENERATOR_TEXT">
 			<Text>随着越来越多的工业自动化，人们对可用的发电厂和发电机的电力需求也越来越大。工业化程度最高和自动化程度最高的地区开始开发许多辅助发电机，以帮助为工业提供更多电力。[NEWLINE][NEWLINE]这个改良设施为其所在的地块提供2[ICON_PRODUCTION]产能，提供2[ICON_RES_ELECTRICITY]电力资源。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_FW_GENERATOR_HELP">
+		<Row Tag="TXT_KEY_IMPROVEMENT_GENERATOR_HELP">
 			<Text>所处地块-5[ICON_GOLD]金钱，+6[ICON_RES_ELECTRICITY]电力。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_GENERATOR">
+		<Row Tag="TXT_KEY_BUILD_GENERATOR">
 			<Text>发电机</Text>
 		</Row>
-		<Row Tag="TXT_KEY_BUILD_FW_GENERATOR_HELP">
+		<Row Tag="TXT_KEY_BUILD_GENERATOR_HELP">
 			<Text>建造一个发电机，可提供电力资源。</Text>
 		</Row>
-
-
 
 
 
@@ -6401,7 +6398,7 @@
 			<Text>丝绸之路是连接东西方的商队和贸易路线的古老网络，从朝鲜半岛和日本一直延伸到地中海，在亚洲和中东文明的发展中发挥了重要作用。它的名字源于汉朝（公元前207年-公元220年）开始的丝绸贸易，但许多其他商品的贸易以及艺术、技术和宗教的文化交流。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_SILKROAD_HELP">
-			<Text>全国每处商站+2[ICON_GOLD]金钱。+2[ICON_RES_SILK]丝绸、[ICON_RES_TEA]茶叶、[ICON_RES_PORCELAIN]瓷器资源，城市附近每种已经开发的奢侈资源将额外提供一份。解锁独有改良设施：商站。</Text>
+			<Text>全国每处贸易站+2[ICON_GOLD]金钱,小镇+3[ICON_GOLD]金钱，城镇+4[ICON_GOLD]金钱。+2[ICON_RES_SILK]丝绸、[ICON_RES_TEA]茶叶、[ICON_RES_PORCELAIN]瓷器资源，城市附近每种已经开发的奢侈资源将额外提供一份。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SILKROAD_QUOTE">
 			<Text>
@@ -6410,33 +6407,6 @@
 				[NEWLINE]  ——《七绝·重走丝绸之路》
 			</Text>
 		</Row>
-
-
-		<Row Tag="TXT_KEY_IMPROVEMENT_LATIFUNDIUM">
-			<Text>商站</Text>
-		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_LATIFUNDIUM_TEXT">
-			<Text>古代的杂货店一般分两大类：一是固定的店铺，属于坐商，被称为铺子或者肆，二是流动的挑着杂货走街串巷叫卖的，属于行商，被称为货郎。古代店铺多种多样，例如：客栈、典当行、茶肆、古玩店、香烛铺、酒楼、画舫、杂货铺。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_IMPROVEMENT_LATIFUNDIUM_HELP">
-			<Text>该改良设施为所建成地块+2[ICON_GOLD]金钱、+1[ICON_PRODUCTION]产能。同一地块有铁路或道路时，额外+1[ICON_GOLD]金钱产出。临近的每处奢侈资源为其+1[ICON_GOLD]金钱产出。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_LATIFUNDIUM">
-			<Text>商站</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_LATIFUNDIUM_HELP">
-			<Text>建造一个商站，为地块提供[ICON_PRODUCTION]产能、[ICON_GOLD]金钱产出。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_LATIFUNDIUM_REC">
-			<Text>
-				该改良设施可以增加地块的[ICON_PRODUCTION]产能、[ICON_GOLD]金钱产出。
-			</Text>
-		</Row>
-
-
-
-
-
 
 
 

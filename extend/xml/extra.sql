@@ -113,19 +113,6 @@ UPDATE Improvements SET NearbyFriendHeal=50 WHERE Type='IMPROVEMENT_SANATORIUM';
 ------------------------------------------------------------------------------------------------------------------------
 --UPDATE Improvements SET ImprovementResource='RESOURCE_MANPOWER',ImprovementResourceQuantity=1 WHERE Type='IMPROVEMENT_MANUFACTORY';
 
-------------------------------------------------------------------------------------------------------------------------
--- 商站新属性
-------------------------------------------------------------------------------------------------------------------------
-INSERT  INTO Improvement_AdjacentResourceYieldChanges(ImprovementType,ResourceType,YieldType,Yield)
-SELECT  'IMPROVEMENT_LATIFUNDIUM', Type, 'YIELD_GOLD' ,1  FROM Resources WHERE ResourceClassType='RESOURCECLASS_LUXURY';
-
-CREATE TRIGGER Improvement_AdjacentResourceYieldChanges_LATIFUNDIUM
-AFTER INSERT ON Resources
-WHEN NEW.ResourceClassType = 'RESOURCECLASS_LUXURY' 
-BEGIN
-  INSERT INTO Improvement_AdjacentResourceYieldChanges(ImprovementType,ResourceType,YieldType,Yield)
-    VALUES('IMPROVEMENT_LATIFUNDIUM',NEW.Type,'YIELD_GOLD',1);
-END;
 
 ------------------------------------------------------------------------------------------------------------------------
 -- 学院新属性
@@ -146,7 +133,7 @@ END;
 -- 生态城市新属性
 ------------------------------------------------------------------------------------------------------------------------
 INSERT  INTO Improvement_AdjacentFeatureYieldChanges(ImprovementType,FeatureType,YieldType,Yield)
-SELECT 'IMPROVEMENT_FW_ARCOLOGY', p.Type, h.Type, 10
+SELECT 'IMPROVEMENT_ARCOLOGY', p.Type, h.Type, 10
 FROM Features AS p, Yields AS h 
 WHERE (p.NaturalWonder ='1'OR p.PseudoNaturalWonder = '1') AND (h.Type = 'YIELD_GOLD' OR h.Type = 'YIELD_SCIENCE'OR h.Type = 'YIELD_FOOD');
 
@@ -289,13 +276,12 @@ UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_OFFSHORE_
 
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_BE_ACADEMY';
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_TERRASCAPE';
-UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_FW_GENERATOR';
-UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_FW_COMM_ARRAY';
-UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_FW_INDUSTRIAL_COMPLEX';
-UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_FW_ARCOLOGY';
+UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_GENERATOR';
+UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_COMM_ARRAY';
+UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_INDUSTRIAL_COMPLEX';
+UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_ARCOLOGY';
 
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_CAIRN';
-UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_LATIFUNDIUM';
 UPDATE Improvements    SET  ShowInTechTree=1   WHERE Type='IMPROVEMENT_SANATORIUM';
 
 

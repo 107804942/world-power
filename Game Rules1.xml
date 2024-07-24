@@ -4,6 +4,69 @@
 
 
 
+
+
+	<Row>
+		<Era>Any</Era>
+		<State>UnderConstruction</State>
+		<Scale>1.0</Scale>
+		<ImprovementType>ART_DEF_IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+		<LayoutHandler>SNAPSHOT</LayoutHandler>
+		<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+		<Model>Mediterranean Villa_HB.fxsxml</Model>
+	</Row>
+	<Row>
+		<Era>Any</Era>
+		<State>Constructed</State>
+		<Scale>1.0</Scale>
+		<ImprovementType>ART_DEF_IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+		<LayoutHandler>SNAPSHOT</LayoutHandler>
+		<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+		<Model>Mediterranean Villa_B.fxsxml</Model>
+	</Row>
+	<Row>
+		<Era>Any</Era>
+		<State>Pillaged</State>
+		<Scale>1.0</Scale>
+		<ImprovementType>ART_DEF_IMPROVEMENT_LATIFUNDIUM</ImprovementType>
+		<LayoutHandler>SNAPSHOT</LayoutHandler>
+		<ResourceType>ART_DEF_RESOURCE_ALL</ResourceType>
+		<Model>Mediterranean Villa_PL.fxsxml</Model>
+	</Row>
+
+
+
+
+
+
+
+
+
+
+
+	<Row Tag="TXT_KEY_IMPROVEMENT_LATIFUNDIUM">
+		<Text>商站</Text>
+	</Row>
+	<Row Tag="TXT_KEY_IMPROVEMENT_LATIFUNDIUM_TEXT">
+		<Text>古代的杂货店一般分两大类：一是固定的店铺，属于坐商，被称为铺子或者肆，二是流动的挑着杂货走街串巷叫卖的，属于行商，被称为货郎。古代店铺多种多样，例如：客栈、典当行、茶肆、古玩店、香烛铺、酒楼、画舫、杂货铺。</Text>
+	</Row>
+	<Row Tag="TXT_KEY_IMPROVEMENT_LATIFUNDIUM_HELP">
+		<Text>该改良设施为所建成地块+2[ICON_GOLD]金钱、+1[ICON_PRODUCTION]产能。同一地块有铁路或道路时，额外+1[ICON_GOLD]金钱产出。临近的每处奢侈资源为其+1[ICON_GOLD]金钱产出。</Text>
+	</Row>
+	<Row Tag="TXT_KEY_BUILD_LATIFUNDIUM">
+		<Text>商站</Text>
+	</Row>
+	<Row Tag="TXT_KEY_BUILD_LATIFUNDIUM_HELP">
+		<Text>建造一个商站，为地块提供[ICON_PRODUCTION]产能、[ICON_GOLD]金钱产出。</Text>
+	</Row>
+	<Row Tag="TXT_KEY_BUILD_LATIFUNDIUM_REC">
+		<Text>
+			该改良设施可以增加地块的[ICON_PRODUCTION]产能、[ICON_GOLD]金钱产出。
+		</Text>
+	</Row>
+	
+	
+
 	<Row Tag="TXT_KEY_PROMOTION_EMP_BOMB">
 		<Text>高能脉冲炮</Text>
 	</Row>

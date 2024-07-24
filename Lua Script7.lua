@@ -1,25 +1,15 @@
 ﻿
-//	--------------------------------------------------------------------------------
-// returns true if unit can initiate a war action with plot (possibly by declaring war)
-bool CvUnit::potentialWarAction(const CvPlot* pPlot) const
-{
-	VALIDATE_OBJECT
-	TeamTypes ePlotTeam = pPlot->getTeam();
+function Processes_CanMaintain(playerID, cityID, processID)
+	local player = Players[playerID]
+	--local process = GameInfo.Processes[processID]
+	local city = player:GetCityByID(cityID)
+	if processID == GameInfoTypes["PROCESS_FAITH"] 
+	or processID == GameInfoTypes["PROCESS_GOLDEN_AGE"]
+	    then
+		return city:IsCapital()
+	end	
+	return true
+end
+GameEvents.CityCanMaintain.Add(Processes_CanMaintain)
 
-	if(ePlotTeam == NO_TEAM)
-	{
-		return false;
-	}
 
-	if(isEnemy(ePlotTeam, pPlot))
-	{
-		return true;
-	}
-
-	if(IsDeclareWar())
-	{
-		return true;
-	}
-
-	return false;
-}

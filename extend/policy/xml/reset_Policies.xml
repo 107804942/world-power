@@ -1151,7 +1151,7 @@
 
 		<Row>
 			<PolicyType>POLICY_FIVE_YEAR_PLAN</PolicyType>
-			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<ImprovementType>IMPROVEMENT_INDUSTRIAL_COMPLEX</ImprovementType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>1</Yield>
 		</Row>
@@ -1323,7 +1323,7 @@
 		</Row>
 		<Row>
 			<PolicyType>POLICY_INDUSTRY_2</PolicyType>
-			<ImprovementType>IMPROVEMENT_FW_INDUSTRIAL_COMPLEX</ImprovementType>
+			<ImprovementType>IMPROVEMENT_INDUSTRIAL_COMPLEX</ImprovementType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
 			<Yield>5</Yield>
 		</Row>
