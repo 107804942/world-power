@@ -1307,14 +1307,9 @@
 			<PromotionType>PROMOTION_KNIGHT_COMBAT</PromotionType>
 		</Row>
 
-		
-		
-		
 
-		<Row>
-			<UnitType>UNIT_GLADIATOR</UnitType>
-			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
-		</Row>
+
+	
 
 		<!--******猛火油柜*****-->
 		<Row>
@@ -2909,7 +2904,14 @@
 			<UnitType>UNIT_GLADIATOR</UnitType>
 			<PromotionType>PROMOTION_GLADIATOR</PromotionType>
 		</Row>
+	
 
+		<Row>
+			<UnitType>UNIT_GLADIATOR</UnitType>
+			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
+		</Row>
+		
+		
 
 		<Row>
 			<UnitType>UNIT_UNDERWATER_CARRIER</UnitType>

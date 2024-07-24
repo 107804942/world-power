@@ -2111,7 +2111,13 @@ function OnCityViewUpdate()
 
 		local CrimeCounter, CrimeThreshold = pPlayer:GetCityCrimeCounterDetails(pCity, true, true) 
 
-		Controls.CrimePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME", iCrimePerTurn, CrimeCounter, CrimeThreshold) );
+		if  iCrimePerTurn < 0 then   
+		    
+			Controls.CityHealthLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME_WELL", iCrimePerTurn, CrimeCounter, CrimeThreshold) );
+		else
+			Controls.CityHealthLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME", iCrimePerTurn, CrimeCounter, CrimeThreshold) )
+		end
+
 
 		--新增(详细说明)
 	   local strCrimeToolTip = pPlayer:GetCityCrimeTT(pCity)

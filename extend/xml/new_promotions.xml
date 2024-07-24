@@ -4051,6 +4051,8 @@
 			<CurrentHitPointAttackMod>2</CurrentHitPointAttackMod>
 			<CurrentHitPointDefenseMod>3</CurrentHitPointDefenseMod>
 			<ExtraAttacks>1</ExtraAttacks>
+			<!--<RivalTerritory>true</RivalTerritory>
+			<CanPlunderWithoutWar>1</CanPlunderWithoutWar>-->
 			<PediaEntry>TXT_KEY_PROMOTION_GLADIATOR</PediaEntry>
 			<CaptureDefeatedEnemy>true</CaptureDefeatedEnemy>
 			<NearNumEnemyAttackMod>10</NearNumEnemyAttackMod>

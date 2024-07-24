@@ -748,6 +748,12 @@ ALTER TABLE UnitPromotions ADD COLUMN 'CanDoNukeDamage' BOOLEAN DEFAULT 0;
 ---任意地形空降
 ALTER TABLE UnitPromotions ADD  'CanParadropAnyWhere' BOOLEAN DEFAULT 0;
 
+
+-- 无需宣战即可掠劫
+ALTER TABLE UnitPromotions ADD 'CanPlunderWithoutWar' BOOLEAN DEFAULT 0;
+
+
+
 --掠劫相关
 ALTER TABLE UnitPromotions ADD COLUMN 'PillageReplenishMoves' INTEGER DEFAULT 0;
 ALTER TABLE UnitPromotions ADD COLUMN 'PillageReplenishAttck'  BOOLEAN DEFAULT 0;

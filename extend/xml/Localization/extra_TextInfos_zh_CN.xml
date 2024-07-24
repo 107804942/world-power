@@ -6224,7 +6224,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_HELP">
 			<Text>
-				单位获得属性：防御力+33%。赠送3份[ICON_RES_FOIEGRAS]鹅肝。所有城市[ICON_STRENGTH]城防+15%，本城+2攻击次数。
+				单位+33%[ICON_STRENGTH]防御力。赠送3份[ICON_RES_FOIEGRAS]鹅肝。所有城市[ICON_STRENGTH]城防+15%，本城+2攻击次数。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_PEDIA">
@@ -7900,6 +7900,7 @@
 			<Text>
 				[COLOR_YIELD_GOLD]精英历战剑士[ENDCOLOR]，具备强大的生存能力，战斗力会随着生命降低而逐渐提升。需要完成竞技计划解锁，仅能组建一队。[NEWLINE]
 				[NEWLINE][ICON_BULLET]自带[ICON_MOVES]移动不受地形影响晋升，[ICON_PROMOTION_NEW_HUNTDOWN_1]攻击次数+1，[ICON_SGM_GROUP_OFF]移动无视敌方控制区域。
+				[NEWLINE][ICON_BULLET]临近一格内每存在一个敌人则+10%[ICON_STRENGTH]战斗力。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]受虐荣光[ENDCOLOR]：对抗受伤单位[ICON_STRENGTH]战斗力+50%，[ICON_PIRATE]击败敌军有几率捕获为[COLOR_POSITIVE_TEXT]己方单位[ENDCOLOR]。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]殇兽死搏[ENDCOLOR]：每损失一点生命值（上限100）则+2%[ICON_STRENGTH]攻击力，+3%[ICON_STRENGTH]防御力。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]向死而生[ENDCOLOR]：当受到攻击时，对敌方造成的[ICON_PROMOTION_NEW_CQB_COMBAT_1][COLOR_POSITIVE_TEXT]反击伤害[ENDCOLOR]大于[COLOR_NEGATIVE_TEXT]25[ENDCOLOR]，则自身恢复[COLOR_POSITIVE_TEXT]50[ENDCOLOR][ICON_HP]生命。
@@ -8208,7 +8209,7 @@
 		</Row>
 		<Row Tag='TXT_KEY_COND_IRON_BUDDHA_CHARGE'>
 			<Text>
-				以所在格子为中心，沿着所在六边形网格的任一边的法向5格内的非城市、山脉、水域单元可设置为冲锋目标。执行任务后单位将移动到目标格子上、损失150血量且失去全部移动力。目标格子上的敌方单位后撤一格，对应路线上（包括目标格子）的所有单位将受到300%的伤害。
+				以所在格子为中心，沿着所在六边形网格的任一边的法向5格内的非城市、山脉、水域单元可设置为冲锋目标。执行任务后单位将移动到目标格子上、损失99血量且失去全部移动力。目标格子上的敌方单位后撤一格，对应路线上（包括目标格子）的所有单位将受到300%的伤害。
 			</Text>
 		</Row>
 
@@ -8271,7 +8272,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GLADIATOR_HELP">
 			<Text>
-				+1攻击次数，无视敌方控制区,攻击时有几率俘虏敌军。每损失一点生命值（上限100）则+2%[ICON_STRENGTH]攻击力，+3%[ICON_STRENGTH]防御力。对受伤单位+50%[ICON_STRENGTH]战斗力，该单位被攻击时，若敌方单位攻击该单位时损失的HP超过25，则本单位恢复50生命值。
+				+1攻击次数，无视敌方控制区,临近一格内每存在一个敌人则+10%[ICON_STRENGTH]战斗力。攻击时有几率俘虏敌军。每损失一点生命值（上限100）则+2%[ICON_STRENGTH]攻击力，+3%[ICON_STRENGTH]防御力。对受伤单位+50%[ICON_STRENGTH]战斗力，该单位被攻击时，若敌方单位攻击该单位时损失的生命值超过25，则本单位恢复50生命值。
 			</Text>
 		</Row>
 

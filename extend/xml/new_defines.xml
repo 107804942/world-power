@@ -568,7 +568,7 @@
 		</Update>
 		<Update>
 			<Where Name="PILLAGE_HEAL_AMOUNT"/>
-			<Set Value="33"/>
+			<Set Value="25"/>
 		</Update>
 		<Update>
 			<Where Name="CIRCUMNAVIGATE_FREE_MOVES"/>
