@@ -1170,7 +1170,7 @@
 
 		<Row>
 			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>
-			<BuildType>BUILD_ACADEMY</BuildType>
+			<BuildType>BUILD_BE_ACADEMY</BuildType>
 		</Row>
 		<Row>
 			<UnitType>UNIT_BRAZILIAN_LABOR</UnitType>

@@ -3208,36 +3208,7 @@
 		</Row>
 
 
-		<Row>
-			<Type>PROMOTION_FIRE_SUPPORT5</Type>
-			<Description>TXT_KEY_PROMOTION_FIRE_SUPPORT5</Description>
-			<Help>TXT_KEY_PROMOTION_FIRE_SUPPORT5_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CityAttack>100</CityAttack>
-			<RangeChange>1</RangeChange>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FIRE_SUPPORT5</PediaEntry>
-		</Row>
-
-
-
-		<!--<Row>
-			<Type>PROMOTION_HUGE_BOMB</Type>
-			<Description>TXT_KEY_PROMOTION_HUGE_BOMB</Description>
-			<Help>TXT_KEY_PROMOTION_HUGE_BOMB_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_HUGE_BOMB</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<ShowInPedia>0</ShowInPedia>
-		</Row>-->
-
-
-
+		
 		<Row>
 			<Type>PROMOTION_EMP_BOMB</Type>
 			<Description>TXT_KEY_PROMOTION_EMP_BOMB</Description>

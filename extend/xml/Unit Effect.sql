@@ -271,8 +271,8 @@ SELECT  'PROMOTION_MAGINOT_LINE', Type  FROM Units WHERE Domain ='DOMAIN_LAND';
 ------------------------------------------------------------------------------------------------------------------------
 -- 游猎系
 ------------------------------------------------------------------------------------------------------------------------
-UPDATE UnitPromotions SET ExtraAttacks=1,ExtraWithdrawal=50,AttackFullyHealedMod=50 WHERE Type='PROMOTION_HELI_ATTACK';
-UPDATE UnitPromotions SET ExtraAttacks=1,ExtraWithdrawal=50,AttackFullyHealedMod=50 WHERE Type='PROMOTION_HITANDRUN';
+--UPDATE UnitPromotions SET ExtraAttacks=1,ExtraWithdrawal=50,AttackFullyHealedMod=50 WHERE Type='PROMOTION_HELI_ATTACK';
+--UPDATE UnitPromotions SET ExtraAttacks=1,ExtraWithdrawal=50,AttackFullyHealedMod=50 WHERE Type='PROMOTION_HITANDRUN';
 ------------------------------------------------------------------------------------------------------------------------
 -- 全地貌防御加成
 ------------------------------------------------------------------------------------------------------------------------

@@ -139,7 +139,6 @@ SELECT 'POLICY_RELIGIOUS_POLITICS',	'YIELD_CRIME',		-10;     --教法社会
 -- 城市数量全局加成
 ------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Policy_CityNumberCityYieldModifier(PolicyType, YieldType, Yield)
-SELECT 'POLICY_REPUBLIC',	'YIELD_CRIME',		-8;     --教法社会
 SELECT 'POLICY_REPUBLIC',	'YIELD_CRIME',		-1;     --教法社会
 -----------------------------------------------------------------------------------------------------
 --Tooltip Addenda

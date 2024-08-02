@@ -363,8 +363,8 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<ShowInPedia>0</ShowInPedia>
-			<CityAttack>50</CityAttack>
-			<SiegeInflictDamageChangeMaxHPPercent>8</SiegeInflictDamageChangeMaxHPPercent>
+			<CityAttack>100</CityAttack>
+			<SiegeInflictDamageChangeMaxHPPercent>10</SiegeInflictDamageChangeMaxHPPercent>
 			<PediaEntry>TXT_KEY_PROMOTION_DIFFICULTY_10</PediaEntry>
 		</Row>
 		
@@ -406,11 +406,11 @@
 		<Row>
 			<Type>POLICY_DIFFICULTY_10</Type>
 			<Description>TXT_KEY_HANDICAP_IMPOSSIBLE_EXTREM</Description>
-			<ExtraHappinessPerCity>5</ExtraHappinessPerCity>
+			<ExtraHappinessPerCity>8</ExtraHappinessPerCity>
 			<Dummy>1</Dummy>
-			<WonderProductionModifier>33</WonderProductionModifier>
+			<WonderProductionModifier>50</WonderProductionModifier>
 			<WorkerSpeedModifier>50</WorkerSpeedModifier>
-			<CulturePerCity>2</CulturePerCity>
+			<CulturePerCity>4</CulturePerCity>
 		</Row>
 		
 
@@ -482,6 +482,13 @@
 			<YieldType>YIELD_CRIME</YieldType>
 			<Yield>-66</Yield>
 		</Row>
+
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_DISEASE</YieldType>
+			<Yield>-50</Yield>
+		</Row>
+		
 	</Policy_YieldModifiers>
 
 
@@ -611,38 +618,44 @@
 		</Row>
 
 
-	
+		
+		
+		<Row>
+			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>60</Yield>
+		</Row>
 				
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
 			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
+			<Yield>40</Yield>
 		</Row>
 
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>25</Yield>
+			<Yield>35</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>10</Yield>
+			<Yield>60</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>3</Yield>
+			<Yield>40</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>3</Yield>
+			<Yield>40</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
 			<YieldType>YIELD_FOOD</YieldType>
-			<Yield>3</Yield>
+			<Yield>5</Yield>
 		</Row>
 
 	</Policy_CityYieldChanges>
@@ -850,7 +863,10 @@
 		</Row>
 	</UnitPromotions_UnitCombats>
 
+	
+	
 	<Language_zh_CN>
+		
 		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9">
 			<Text>军备竞赛</Text>
 		</Row>

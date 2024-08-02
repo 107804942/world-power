@@ -146,7 +146,7 @@ if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FIRE_WEAPON"].ID)  
 -- ********************************************************
 -- Ðü¸¡»ÙÃðÕß
 -- ********************************************************	
-	if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB_ON"].ID) then
+	if attUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_EMP_BOMB"].ID) then
 	for unit in defPlayer:Units() do  
 	unit:SetMoves(0)
 	end
