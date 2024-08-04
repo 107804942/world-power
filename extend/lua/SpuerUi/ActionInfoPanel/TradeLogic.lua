@@ -976,7 +976,7 @@ function ResetDisplay( diploMessage )
 			if deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_RESOURCES, resourceID, 1 ) then	-- 1 here is 1 quanity of the Resource, which is the minimum possible
 				instance.Button:SetHide( false )
 				local resource = GameInfo.Resources[resourceID]
-				instance.Button:SetText( resource.IconString .. resource._Name .. " (" .. ourPlayer:GetNumResourceAvailable( resourceID, false ) .. ")" )
+				instance.Button:SetText( resource.IconString .. resource._Name .. " (" .. g_Deal:GetNumResource(ourPlayerID, resourceID) .. ")" )
 			else
 				instance.Button:SetHide( true )
 			end
@@ -990,7 +990,7 @@ function ResetDisplay( diploMessage )
 				instance.Button:SetHide( false )
 				local resource = GameInfo.Resources[resourceID]
 
-				instance.Button:SetText( resource.IconString .. " " .. resource._Name .. " (" .. theirPlayer:GetNumResourceAvailable( resourceID, false ) .. ")" )
+				instance.Button:SetText( resource.IconString .. " " .. resource._Name .. " (" .. g_Deal:GetNumResource(theirPlayerID, resourceID) .. ")" )
 			else
 				instance.Button:SetHide( true )
 			end
@@ -1919,7 +1919,7 @@ do
 	local function AddResourceTrade( playerID, resourceID )
 		local player = Players[ playerID ]
 		if player then
-			g_Deal:AddResourceTrade( playerID, resourceID, min( player:GetNumResourceAvailable( resourceID, false ), Game.GetResourceUsageType(resourceID) == ResourceUsageTypes.RESOURCEUSAGE_STRATEGIC and UI.ShiftKeyDown() and huge or 1 ), g_iDealDuration )
+			g_Deal:AddResourceTrade( playerID, resourceID, min( g_Deal:GetNumResource(playerID, resourceID), Game.GetResourceUsageType(resourceID) == ResourceUsageTypes.RESOURCEUSAGE_STRATEGIC and UI.ShiftKeyDown() and huge or 1 ), g_iDealDuration )
 			return DoUIDealChangedByHuman()
 		end
 	end
@@ -1962,7 +1962,7 @@ do
 		-- Can't offer more than someone has, excluding imports (=>false)
 		local player = Players[ playerID ]
 		if player then
-			local resourceQuantity = min( player:GetNumResourceAvailable( resourceID, false ), tonumber(string) or 0 )
+			local resourceQuantity = min( g_Deal:GetNumResource(playerID, resourceID), tonumber(string) or 0 )
 			control:SetText( resourceQuantity )
 			g_Deal:ChangeResourceTrade( playerID, resourceID, resourceQuantity, g_iDealDuration )
 		end
