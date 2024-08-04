@@ -7264,16 +7264,7 @@
 
 
 
-		<Replace Tag="TXT_KEY_PROMOTION_HELI_ATTACK_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]悬浮[ENDCOLOR]移动。[NEWLINE]可进行远程攻击亦可近战攻击。[NEWLINE]+1攻击次数，可攻击后移动。[NEWLINE]克制[COLOR_POSITIVE_TEXT]攻城[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]防空[ENDCOLOR]单位克制。[NEWLINE]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]战斗力-75%。[NEWLINE]没有地形防御加成。[NEWLINE]对未受损单位+50%[ICON_STRENGTH]攻击力。[NEWLINE]遭遇近战攻击时，有50%的几率撤退。</Text>
-		</Replace>
-
-		<Replace Tag="TXT_KEY_PROMOTION_HITANDRUN_HELP">
-			<Text>可进行远程攻击亦可近战攻击。[NEWLINE]+1攻击次数，可攻击后移动。[NEWLINE]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]战斗力-50%。[NEWLINE]没有地形防御加成。[NEWLINE]对未受损单位+50%[ICON_STRENGTH]攻击力。[NEWLINE]遭遇近战攻击时，有50%的几率撤退。</Text>
-		</Replace>
-
-
-
+	
 
 		<!-- ********************************新政策******************************* -->
 		<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING_HELP">
@@ -8121,6 +8112,7 @@
 				[NEWLINE]5格范围内每死亡一个战斗单位，则该单位+1[ICON_MOVES]移动力(仅当本单位剩余移动力不超过5时可触发移动力增加效果)。
 				[NEWLINE]临近一格内每存在一个步兵系单位则增加8%[ICON_STRENGTH]战斗力。
 				[NEWLINE]当剩余生命值超过150移动力不为0时，可使用特殊冲锋技能。
+				[NEWLINE]本回合每次攻击后[ICON_STRENGTH]攻击力+5%。
 			</Text>
 		</Row>
 

@@ -4002,7 +4002,7 @@
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<!--<NumAttacksMadeThisTurnAttackMod>8</NumAttacksMadeThisTurnAttackMod>-->	
+			<NumAttacksMadeThisTurnAttackMod>5</NumAttacksMadeThisTurnAttackMod>
 	     </Row>
 
 

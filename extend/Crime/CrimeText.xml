@@ -25,10 +25,10 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME">
-			<Text>+{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+			<Text>+{1_perTurn:number "#.##"}  {2_Num}/{3_Num}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME_WELL">
-			<Text>{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+			<Text>{1_perTurn:number "#.##"}  {2_Num}/{3_Num}</Text>
 		</Row>
 		
 		<Row Tag="TXT_KEY_CITY_CRIME_FOR_UI">
@@ -122,10 +122,10 @@
 		</Row>
 
 		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME">
-			<Text>+{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+			<Text>+{1_perTurn:number "#.##"}  {2_Num}/{3_Num}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME_WELL">
-			<Text>{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+			<Text>{1_perTurn:number "#.##"}  {2_Num}/{3_Num}</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_SENTIMENT_TEXT_TT">
@@ -223,10 +223,10 @@
 			<Text>叛乱风险</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME">
-			<Text>+{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+			<Text>+{1_perTurn:number "#.##"}  {2_Num}/{3_Num}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME_WELL">
-			<Text>{1_perTurn:number "#.##"}{2_Num}/{3_Num}</Text>
+			<Text>{1_perTurn:number "#.##"}  {2_Num}/{3_Num}</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_CITYVIEW_CRIME_SENTIMENT_TEXT_TT">

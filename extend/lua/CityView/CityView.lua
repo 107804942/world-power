@@ -2113,9 +2113,9 @@ function OnCityViewUpdate()
 
 		if  iCrimePerTurn < 0 then   
 		    
-			Controls.CityHealthLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME_WELL", iCrimePerTurn, CrimeCounter, CrimeThreshold) );
+			Controls.CrimePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME_WELL", iCrimePerTurn, CrimeCounter, CrimeThreshold) );
 		else
-			Controls.CityHealthLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME", iCrimePerTurn, CrimeCounter, CrimeThreshold) )
+			Controls.CrimePerTurnLabel:SetText( Locale.ConvertTextKey("TXT_KEY_CITYVIEW_PERTURN_TEXT_CRIME", iCrimePerTurn, CrimeCounter, CrimeThreshold) )
 		end
 
 
