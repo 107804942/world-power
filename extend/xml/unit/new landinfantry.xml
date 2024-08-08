@@ -666,7 +666,10 @@
 			<UnitType>UNIT_CNDR</UnitType>
 			<PromotionType>PROMOTION_GUN_1</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_CNDR</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_CNDR</UnitType>
 			<PromotionType>PROMOTION_ROBORT_COMBAT</PromotionType>

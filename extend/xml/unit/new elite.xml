@@ -1252,7 +1252,10 @@
 			<PromotionType>PROMOTION_LOGISTICS</PromotionType>
 		</Row>
 
-
+		<Row>
+			<UnitType>UNIT_HOVER_WORM</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_HOVER_WORM</UnitType>
 			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
@@ -1332,7 +1335,11 @@
 			<UnitType>UNIT_NAVAL_MONSTER</UnitType>
 			<PromotionType>PROMOTION_NAVAL_MONSTER</PromotionType>
 		</Row>
-		
+		<Row>
+			<UnitType>UNIT_NAVAL_MONSTER</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
+
 		<Row>
 			<UnitType>UNIT_NAVAL_MONSTER</UnitType>
 			<PromotionType>PROMOTION_ANTI_EMP</PromotionType>
@@ -1395,7 +1402,10 @@
 			<UnitType>UNIT_ANGEL</UnitType>
 			<PromotionType>PROMOTION_MOVE_ALL_TERRAIN</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_ANGEL</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_ANGEL</UnitType>
@@ -1428,7 +1438,10 @@
 		</Row>
 
 
-
+		<Row>
+			<UnitType>UNIT_SIEGE04H</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_SIEGE04H</UnitType>
 			<PromotionType>PROMOTION_VOLLEY_2</PromotionType>
@@ -1461,7 +1474,10 @@
 		</Row>
 
 
-
+		<Row>
+			<UnitType>UNIT_SPACE_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_SPACE_CARRIER</UnitType>
@@ -1554,6 +1570,10 @@
 
 
 
+		<Row>
+			<UnitType>UNIT_SPACESHIP</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_SPACESHIP</UnitType>
@@ -1636,7 +1656,10 @@
 		</Row>
 
 
-
+		<Row>
+			<UnitType>UNIT_ALIEN_SIEGE_WORM</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_ALIEN_SIEGE_WORM</UnitType>
 			<PromotionType>PROMOTION_WORM</PromotionType>
@@ -1680,7 +1703,10 @@
 			<PromotionType>PROMOTION_WEAPON_SHIP</PromotionType>
 		</Row>
 
-
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
@@ -1740,7 +1766,10 @@
 			<UnitType>UNIT_GHOST</UnitType>
 			<PromotionType>PROMOTION_GHOST_POWER</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_GHOST</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_GHOST</UnitType>
 			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
@@ -1794,13 +1823,16 @@
 			<PromotionType>PROMOTION_EXTENDED_PARADROP</PromotionType>
 		</Row>
 
-
+		
 
 		<Row>
 			<UnitType>UNIT_GOLEM</UnitType>
 			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_GOLEM</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_GOLEM</UnitType>
@@ -1829,7 +1861,10 @@
 			<UnitType>UNIT_LEVDESTROYER</UnitType>
 			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_LEVDESTROYER</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 
 		<Row>
@@ -2866,8 +2901,15 @@
 			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
 			<PromotionType>PROMOTION_ANTI_EMP</PromotionType>
 		</Row>
-
-
+		<Row>
+			<UnitType>UNIT_PARTICLE_CANNON</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
+		
+		<Row>
+			<UnitType>UNIT_MECH</UnitType>
+			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_MECH</UnitType>

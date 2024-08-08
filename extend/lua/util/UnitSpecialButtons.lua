@@ -986,28 +986,6 @@ local CorpsID = GameInfo.UnitPromotions["PROMOTION_CORPS_1"].ID
 local ArmeeID = GameInfo.UnitPromotions["PROMOTION_CORPS_2"].ID
 local iArsenal = GameInfoTypes["BUILDINGCLASS_ARSENAL"]
 local iMilitaryBase = GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]
-function bUnitCanEstablishCorps(unit)
-    if not unit:IsCanBeEstablishedCorps()
-
-	or unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_MECH"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_GOLEM"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_CNDR"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_GHOST"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_SIEGE04H"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_LEVDESTROYER"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_ANGEL"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03S"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_NAVAL_MONSTER"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_HOVER_WORM"]
-	or unit:GetUnitType() == GameInfoTypes["UNIT_PARTICLE_CANNON"]
-    then
-        return false
-    end
-    return true
-end
 local tUnit = nil;
 local nUnit = nil;
 -- Establish Corps & Armee
@@ -1027,7 +1005,7 @@ EstablishCorpsButton = {
 		if player:GetDomainTroopsActive() <= 0
         or plot:GetNumUnits() ~= 2 or plot:IsWater()
 		or city == nil or city:GetOwner() ~= playerID
-		or not (unit:IsCanEstablishCorps() or bUnitCanEstablishCorps(unit))
+		or not (unit:IsCanEstablishCorps() or unit:IsCanBeEstablishedCorps())
 		then
 			return false
 		end
@@ -1055,7 +1033,7 @@ EstablishCorpsButton = {
                 end
                 --unit is Great Person
                 if tUnit == nil then
-                    if not bUnitCanEstablishCorps(iUnit) then
+                    if not iUnit:IsCanBeEstablishedCorps() then
                         return false
                     end
                     tUnit = iUnit
@@ -1217,7 +1195,11 @@ MoralBoostButton = {
     ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_MORAL_BOOST", -- or a TXT_KEY_ or a function
 
     Condition = function(action, unit)
-        return unit:CanMove() and (unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID or unit:GetUnitType() == GameInfoTypes["UNIT_POLISH_PZLW3_HELICOPTER"] or unit:GetUnitType() == GameInfoTypes["UNIT_HUN_SHAMAN"]);
+        return unit:CanMove() 
+		and (unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
+		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
+		--or unit:GetUnitType() == GameInfoTypes["UNIT_POLISH_PZLW3_HELICOPTER"] 
+		or unit:GetUnitType() == GameInfoTypes["UNIT_HUN_SHAMAN"]);
     end, -- or nil or a boolean, default is true
 
     Disabled = function(action, unit)
