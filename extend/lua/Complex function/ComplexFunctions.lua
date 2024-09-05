@@ -1024,27 +1024,10 @@ function BuffForNaturalWonderDiscovered(iTeam, iFeature, iX, iY, bFirst)
 	 	return
 	         end
 		if pPlayer:HasWonder(GameInfoTypes.BUILDING_SPHINX) then
-		pPlayer:ChangeGold(500)
+		pPlayer:ChangeGold(1000)
 	end
 end
 GameEvents.NaturalWonderDiscovered.Add(BuffForNaturalWonderDiscovered)
-
-
--- ********************************************************
--- 
--- ******************************************************** 
-function LatifundiumCheck(iPlayer, iUnit, iX, iY, iBuild)
-   if iBuild == GameInfoTypes.BUILD_LATIFUNDIUM  then
-   local pPlayer = Players[iPlayer]
-   if pPlayer:HasWonder(GameInfoTypes.BUILDING_SILKROAD) then
-     return true
-		 end   
-	 return false
-	  end
-	  return true
- end
-GameEvents.PlayerCanBuild.Add(LatifundiumCheck)
-
 
 -- ********************************************************
 -- 

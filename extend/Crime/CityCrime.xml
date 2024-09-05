@@ -54,7 +54,7 @@
 					<Stack ID="CrimeStack" StackGrowth="Bottom" Offset="10,0" Padding="0" />
 				</ScrollPanel>
 			</Box>
-			<Image Anchor="C,B" Offset="0,174" Texture="HorizontalTrim.dds" Size="676,5" />
+			<!-- <Image Anchor="C,B" Offset="0,174" Texture="HorizontalTrim.dds" Size="676,5" />-->
 		</Box>
 
 		<Box Anchor="C,B" AnchorSide="I,I" Offset="0,54" Size="680,56" Color="255,255,255,0" >

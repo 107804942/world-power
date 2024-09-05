@@ -813,24 +813,8 @@
 			<Text>神祠、神庙、寺院+1[ICON_HEALTH]健康度</Text>
 		</Row>
 
-		<Replace Tag="TXT_KEY_POLICY_STATECRAFT_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]经世致用[ENDCOLOR][NEWLINE]所有图书馆、学院、大学、公立学校和研发实验室+2[ICON_CULTURE]文化,所有图书馆、学院、大学、公立学校+2[ICON_HEALTH]健康度。</Text>
-		</Replace>
-
-
-
-		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR][NEWLINE]所有神祠、神庙、寺院+1[ICON_HAPPINESS_1]本地快乐，+1[ICON_HEALTH]健康度。[NEWLINE]立刻开启一次黄金时代。</Text>
-		</Replace>
-
-		<Replace Tag="TXT_KEY_POLICY_ORGANIZED_RELIGION_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]道德经[ENDCOLOR][NEWLINE]所有神祠、神庙、寺院和[ICON_PEACE]信仰购买建筑+1[ICON_CULTURE]文化产出。[NEWLINE]所有宗教奇观+4[ICON_CULTURE]文化产出。</Text>
-		</Replace>
-
-
-		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR][NEWLINE]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度,+2[ICON_RES_CONSUMER]商品。</Text>
-		</Replace>
+	
+	
 
 		<Replace Tag="TXT_KEY_BELIEF_GODDESS_STRATEGY">
 			<Text>城墙和城堡+2[ICON_PEACE]信仰，城市远程攻击力+20%</Text>
@@ -5769,7 +5753,7 @@
 			<Text>狮身人面像</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SPHINX_HELP">
-			<Text>+25[ICON_RES_MANPOWER]人力，每两人口+1[ICON_GOLD]金钱产出。每当发现一个新的自然奇观时，获得500[ICON_GOLD]金钱。</Text>
+			<Text>+25[ICON_RES_MANPOWER]人力，每两人口+1[ICON_GOLD]金钱产出。每当发现一个新的自然奇观时，获得1000[ICON_GOLD]金钱。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_WONDER_SPHINX_QUOTE">
@@ -9607,6 +9591,12 @@
 
 
 
+		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
+			<Text>
+				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度,+2[ICON_RES_CONSUMER]商品。
+			</Text>
+		</Replace>
 
 
 		<Replace Tag="TXT_KEY_POLICY_STATECRAFT_HELP">
