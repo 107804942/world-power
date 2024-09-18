@@ -968,6 +968,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_VISIBLE_AA_UNITS", iNumVisibleAAUnits);
 				controlTable.Value:SetText("");
 			end
+			-- Away From Capital Combat Modifier
 			if (pMyPlayer:GetAwayFromCapitalCombatModifier() >0) then
 				iModifier = pMyPlayer:GetAwayFromCapitalCombatModifier();
 				local AFCmax = pMyPlayer:GetAwayFromCapitalCombatModifierMax();
