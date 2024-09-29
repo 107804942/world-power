@@ -23,8 +23,8 @@
 			<Type>UNIT_BLIALI</Type>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<BaseSightRange>2</BaseSightRange>
-			<Combat>15</Combat>
-			<RangedCombat>18</RangedCombat>
+			<Combat>16</Combat>
+			<RangedCombat>16</RangedCombat>
 			<Cost>40</Cost>
 			<Moves>2</Moves>
 			<Range>2</Range>

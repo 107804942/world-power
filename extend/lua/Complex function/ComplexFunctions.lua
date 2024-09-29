@@ -1244,15 +1244,24 @@ function AiIntoNewEra(ePlayer, eEra, bFirst)
 		local pPlayer = Players[ePlayer]
 	    if   handicap >= 7 and pPlayer:IsAlive() then
 		if pPlayer:IsMajorCiv() and  not pPlayer:IsHuman()  then
-
+		--------------------------------------------------
 		if eEra == GameInfoTypes["ERA_INDUSTRIAL"] then
 		pPlayer:ChangeNumResourceTotal(GameInfoTypes.RESOURCE_GUNPOWDER,200);
 		end
+        --------------------------------------------------
+		if eEra == GameInfoTypes["ERA_MODERN"] then
+		pPlayer:ChangeOverflowResearch(6*pPlayer:GetScience())
+		end
+		--------------------------------------------------
+		if eEra == GameInfoTypes["ERA_POSTMODERN"] then
+		pPlayer:ChangeOverflowResearch(9*pPlayer:GetScience())
+		end
 
+		--------------------------------------------------
 		if Difficult9Active or  Difficult10Active then
 		pPlayer:ChangeOverflowResearch(4*pPlayer:GetScience())
 		end
-
+		--------------------------------------------------
 		pPlayer:ChangeGold(2000*(pPlayer:GetCurrentEra()+1))
 		pPlayer:ChangeOverflowResearch(5*pPlayer:GetScience())
 

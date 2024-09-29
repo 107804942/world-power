@@ -4078,7 +4078,7 @@
 			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
 			<SplashDamageImmune>1</SplashDamageImmune>
 			<CollateralDamageImmune>1</CollateralDamageImmune>
-			<!--<IgnoreDamageChance>33</IgnoreDamageChance>-->
+			<IgnoreDamageChance>20</IgnoreDamageChance>
 			<PediaEntry>TXT_KEY_PROMOTION_COMBAT_TO_DEATH</PediaEntry>
 			<SplashDamagePercent>50</SplashDamagePercent>
 			<SplashDamageRadius>1</SplashDamageRadius>
@@ -4556,7 +4556,7 @@
 			<OrderPriority>11</OrderPriority>
 			<ShowInUnitPanel>0</ShowInUnitPanel>
 			<MoveUsedAttackMod>6</MoveUsedAttackMod>
-			<ChangeDamageValue>-10</ChangeDamageValue>
+			<ChangeDamageValue>-5</ChangeDamageValue>
 		</Row>
 
 		<!--法西尔盖比-->

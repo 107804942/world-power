@@ -1554,7 +1554,7 @@
 			<NearbyMountainRequired>true</NearbyMountainRequired>
 			<Quote>TXT_KEY_BUILDING_OSARAGI_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<LiberatedInfluence>50</LiberatedInfluence>
+			<LiberatedInfluence>40</LiberatedInfluence>
 			<ReligiousPressureModifier>300</ReligiousPressureModifier>
 			<WonderSplashImage>OSARAGI.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
@@ -2284,7 +2284,7 @@
 			<DisplayPosition>1</DisplayPosition>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<EspionageModifier>-15</EspionageModifier>
-			<ExtraSpies>2</ExtraSpies>
+			<ExtraSpies>1</ExtraSpies>
 			<MedianTechPercentChange>25</MedianTechPercentChange>
 			<Espionage>true</Espionage>
 			<FreeTechs>1</FreeTechs>
