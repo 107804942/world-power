@@ -3,7 +3,7 @@
 -------------------------------------------------
 include( "IconSupport" );
 include( "InstanceManager" );
-include( "FunctionUtilities" ); ---ĞÂÔö
+include( "FunctionUtilities" ); ---æ–°å¢
 
 local g_MyCombatDataIM = InstanceManager:new( "UsCombatInfo", "Text", Controls.MyCombatResultsStack );
 local g_TheirCombatDataIM = InstanceManager:new( "ThemCombatInfo", "Text", Controls.TheirCombatResultsStack );
@@ -418,7 +418,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			--Fixed damage increase
 			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToCity(pCity)
 
-		--------------------------------------------------ĞÂÔöµÖ¿ÛµÄ×îÖÕÉËº¦--------------------------------------------------
+		--------------------------------------------------æ–°å¢æŠµæ‰£çš„æœ€ç»ˆä¼¤å®³--------------------------------------------------
 			if  pCity:GetChangeDamageValue() ~= 0 then
 				iMyDamageInflicted= iMyDamageInflicted+pCity:GetChangeDamageValue()
 				if iMyDamageInflicted < 0 then
@@ -427,7 +427,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
             end
 
 			----------------------------------------------------------------------------------------------------------------------
-			--------------------------------------------------ĞÂÔöµÖ¿ÛµÄ×îÖÕÉËº¦--------------------------------------------------
+			--------------------------------------------------æ–°å¢æŠµæ‰£çš„æœ€ç»ˆä¼¤å®³--------------------------------------------------
 			if  pMyUnit:GetForcedDamageValue() ~= 0 then
 			    if pMyUnit:GetForcedDamageValue() > 0 then
 			    iTheirDamageInflicted= pMyUnit:GetForcedDamageValue()
@@ -522,7 +522,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			-- Their Damage
 			Controls.TheirDamageValue:SetText("[COLOR_RED]" .. iTheirDamageInflicted .. "[ENDCOLOR]");
 
-			--------------------------------------------------ĞÂÔöµÖ¿ÛµÄ×îÖÕÉËº¦--------------------------------------------------
+			--------------------------------------------------æ–°å¢æŠµæ‰£çš„æœ€ç»ˆä¼¤å®³--------------------------------------------------
 			if  pCity:GetChangeDamageValue() ~= 0 then
 				local ChangeDamageValue= pCity:GetChangeDamageValue()
 				controlTable = g_TheirCombatDataIM:GetInstance();
@@ -543,10 +543,10 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			
 			
 			----------------------------------------------------------------------------
-			-- È«¾Ö¹¥»÷¼Ó³ÉÒÔ¼°¾³Íâ¼Ó³É
+			-- å…¨å±€æ”»å‡»åŠ æˆä»¥åŠå¢ƒå¤–åŠ æˆ
 			----------------------------------------------------------------------------
 
-		   -----------------------------------------------ĞÂÔöµÖ¿ÛµÄ×îÖÕÉËº¦------------
+		   -----------------------------------------------æ–°å¢æŠµæ‰£çš„æœ€ç»ˆä¼¤å®³------------
 		    local UnitChangeDamageValue= pMyUnit:GetChangeDamageValue()
 			if  UnitChangeDamageValue ~= 0 
 			and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR 
@@ -602,7 +602,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔöÔ­Ê¼Ê×¶¼ÊıÁ¿¼Ó³É
+			------æ–°å¢åŸå§‹é¦–éƒ½æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumOriginalCapitalAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumOriginalCapital()>1 ) then
 			 local inum =pMyPlayer:GetNumOriginalCapital()-1
@@ -615,7 +615,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔö»Æ½ğÊ±´ú¼Ó³É
+			------æ–°å¢é»„é‡‘æ—¶ä»£åŠ æˆ
 			iModifier = pMyUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pMyPlayer:IsGoldenAge()) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
@@ -623,7 +623,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-				------ĞÂÔö¶Ô¸ßÈË¿Ú¼Ó³É
+				------æ–°å¢å¯¹é«˜äººå£åŠ æˆ
 			iModifier = pMyUnit:GetAntiHigherPopMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetTotalPopulation()<pTheirPlayer:GetTotalPopulation() ) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
@@ -631,7 +631,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔöÓëÊ×¶¼Í¬´óÂ½¼Ó³É
+			------æ–°å¢ä¸é¦–éƒ½åŒå¤§é™†åŠ æˆ
 			  iModifier = pMyUnit:GetOnCapitalLandAttackMod();
 			  if pMyPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
@@ -644,7 +644,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				end
 			end
 
-			------ĞÂÔöÓëÊ×¶¼²»Í¬´óÂ½¼Ó³É
+			------æ–°å¢ä¸é¦–éƒ½ä¸åŒå¤§é™†åŠ æˆ
 			  iModifier = pMyUnit:GetOutsideCapitalLandAttackMod();
 			  if pMyPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
@@ -657,7 +657,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				end
 			end
 
-			------ĞÂÔöÊ£ÓàÒÆ¶¯Á¦¼Ó³É
+			------æ–°å¢å‰©ä½™ç§»åŠ¨åŠ›åŠ æˆ
 			iModifier = pMyUnit:MoveLfetAttackMod();
 			if (iModifier ~= 0 and pMyUnit:MovesLeft()>0) then
 			    iModifier = pMyUnit:MoveLfetAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
@@ -667,7 +667,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			end
 
 
-		------ĞÂÔöÒÑÓÃÒÆ¶¯Á¦¼Ó³É
+		------æ–°å¢å·²ç”¨ç§»åŠ¨åŠ›åŠ æˆ
 			iModifier = pMyUnit:MoveUsedAttackMod();
 			if (iModifier ~= 0 and  (pMyUnit:MaxMoves() > pMyUnit:MovesLeft())) then
 			    iModifier = pMyUnit:MoveUsedAttackMod()* (pMyUnit:MaxMoves() - pMyUnit:MovesLeft())/ GameDefines["MOVE_DENOMINATOR"]
@@ -676,7 +676,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔö½Ü×÷ÊıÁ¿¼Ó³É
+			------æ–°å¢æ°ä½œæ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumWorkAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumGreatWorks()>0) then
 			    iModifier =pMyUnit:GetNumWorkAttackMod()*pMyPlayer:GetNumGreatWorks()
@@ -685,7 +685,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔöÁÙ½üµĞ¾üÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸´è¿‘æ•Œå†›æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNearNumEnemyAttackMod();
 			local bonus = pMyUnit:GetNumEnemyAdjacent()
 			iModifier =iModifier*bonus
@@ -695,7 +695,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
 			end
 				
-			------ĞÂÔöËğÊ§ÑªÁ¿¼Ó³É
+			------æ–°å¢æŸå¤±è¡€é‡åŠ æˆ
 			iModifier = pMyUnit:GetCurrentHitPointAttackMod();
 			local Hitbonus = pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()
 			if pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()>100 then
@@ -708,7 +708,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
 			end
 
-			------ĞÂÔöÊÀ½çÆæ¹ÛÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸–ç•Œå¥‡è§‚æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumWonderAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumWorldWonders()>0) then
 			    iModifier =pMyUnit:GetNumWonderAttackMod()*pMyPlayer:GetNumWorldWonders()
@@ -717,7 +717,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔö¼äµıÊıÁ¿¼Ó³É
+			------æ–°å¢é—´è°æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumSpyAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumSpies()>0) then
 			    iModifier =pMyUnit:GetNumSpyAttackMod()*pMyPlayer:GetNumSpies()
@@ -789,7 +789,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			end
 
 
-			-- ÖØ¸´¹¥»÷¼Ó³É
+			-- é‡å¤æ”»å‡»åŠ æˆ
 			iModifier = pMyUnit:GetMultiAttackBonusCity(pCity);
 			if (iModifier ~= 0 ) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -838,7 +838,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			
 			-- Great General bonus
 			if (pMyUnit:IsNearGreatGeneral()) then
-				iModifier = GetBonusEffect(pMyUnit) ---dllĞÂÔöµÄ¹â»·Ğ§¹û
+				iModifier = GetBonusEffect(pMyUnit) ---dllæ–°å¢çš„å…‰ç¯æ•ˆæœ
 				controlTable = g_MyCombatDataIM:GetInstance();
 				if (pMyUnit:GetDomainType() == DomainTypes.DOMAIN_LAND) then
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GG_NEAR" );
@@ -878,7 +878,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_IMPROVEMENT_NEAR" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
------------------------------------------------------¶îÍâbuff--------------------------------------------------
+-----------------------------------------------------é¢å¤–buff--------------------------------------------------
 -- Nearby UnitClass modifier
 		if (pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion() ~= 0) then
 				iModifier = pMyUnit:GetNearbyUnitPromotionModifierFromUnitPromotion();
@@ -968,6 +968,22 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_VISIBLE_AA_UNITS", iNumVisibleAAUnits);
 				controlTable.Value:SetText("");
 			end
+			-- Away From Capital Combat Modifier
+			if (pMyPlayer:GetAwayFromCapitalCombatModifier() >0) then
+				iModifier = pMyPlayer:GetAwayFromCapitalCombatModifier();
+				local AFCmax = pMyPlayer:GetAwayFromCapitalCombatModifierMax();
+				local pCapital = pMyPlayer:GetCapitalCity();
+				local plotDistance = Map.PlotDistance(pMyUnit:GetX(), pMyUnit:GetY(), pCapital:GetX(), pCapital:GetY())
+				iModifier = iModifier * plotDistance
+				if (iModifier > AFCmax) then
+					iModifier = AFCmax
+				end
+				if (iModifier ~= 0) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_AFC_COMBAT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+			end
 		end
 	end
 	
@@ -1022,7 +1038,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			
 			-- Start with logic of combat estimation
 			local iMyDamageInflicted = 0;
-			local iMyRangedSupportDamageInflicted = 0; --ĞÂÔö
+			local iMyRangedSupportDamageInflicted = 0; --æ–°å¢
 			local iTheirDamageInflicted = 0;
 			local iTheirFireSupportCombatDamage = 0;
 
@@ -1036,7 +1052,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					iTheirStrength = pTheirUnit:GetEmbarkedUnitDefense();
 				else
 					--iTheirStrength = pTheirUnit:GetMaxRangedCombatStrength(pMyUnit, nil, false, true);
-					----ĞŞ¸´·ÀÓù·½Ô¤ÀÀÕ½¶·Á¦´íÎó
+					----ä¿®å¤é˜²å¾¡æ–¹é¢„è§ˆæˆ˜æ–—åŠ›é”™è¯¯
 					iTheirStrength = pTheirUnit:GetMaxRangedCombatStrength(pMyUnit, nil, false, false);
 				end
 				
@@ -1072,24 +1088,24 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 							
 				local pFireSupportUnit = pMyUnit:GetFireSupportUnit(pTheirUnit:GetOwner(), pToPlot:GetX(), pToPlot:GetY());
 				if (pFireSupportUnit ~= nil) then
-					--local iTheirDamage = pTheirUnit:GetDamage(); ----ËûÃÇµÄµ¥Î»ÒÑ¾­ÊÜµ½µÄÉËº¦
+					--local iTheirDamage = pTheirUnit:GetDamage(); ----ä»–ä»¬çš„å•ä½å·²ç»å—åˆ°çš„ä¼¤å®³
 					--local iTheirDamageModifier = pTheirUnit:GetDamageCombatModifier(false, iTheirDamage + pMyUnit:GetRangeCombatDamage(pTheirUnit, nil, false));
 					--iTheirStrength = iTheirStrength * (100 + iTheirDamageModifier) / 100;
 					iTheirFireSupportCombatDamage = pFireSupportUnit:GetRangeCombatDamage(pMyUnit, nil, false);
 				end
 				
-				iMyDamageInflicted = pMyUnit:GetCombatDamage(iMyStrength, iTheirStrength, pMyUnit:GetDamage() + iTheirFireSupportCombatDamage, false, false, false);  --ÎÒ¶ÔaiµÄÉËº¦
-				iMyDamageInflicted = iMyDamageInflicted + iMyRangedSupportDamageInflicted;  ---ÏÈÊÖÔ¶³Ì´ò»÷Ò»²¢¼ÆËã
+				iMyDamageInflicted = pMyUnit:GetCombatDamage(iMyStrength, iTheirStrength, pMyUnit:GetDamage() + iTheirFireSupportCombatDamage, false, false, false);  --æˆ‘å¯¹aiçš„ä¼¤å®³
+				iMyDamageInflicted = iMyDamageInflicted + iMyRangedSupportDamageInflicted;  ---å…ˆæ‰‹è¿œç¨‹æ‰“å‡»ä¸€å¹¶è®¡ç®—
 
 				if (pTheirUnit:IsEmbarked()) then
 				    iTheirDamageInflicted = 0
 				else
-    				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false);  --ai¶ÔÎÒµÄÉËº¦
+    				iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false);  --aiå¯¹æˆ‘çš„ä¼¤å®³
     		    end
 				iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
 
 
-				--iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false); --ai¶ÔÎÒµÄÉËº¦
+				--iTheirDamageInflicted = pTheirUnit:GetCombatDamage(iTheirStrength, iMyStrength, pTheirUnit:GetDamage(), false, false, false); --aiå¯¹æˆ‘çš„ä¼¤å®³
 				---iTheirDamageInflicted = iTheirDamageInflicted + iTheirFireSupportCombatDamage;
 				
 			end
@@ -1098,7 +1114,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
 			iTheirDamageInflicted = iTheirDamageInflicted + pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false)
 
-			--------------------------------------------------ĞÂÔöµÖ¿ÛµÄ×îÖÕÉËº¦--------------------------------------------------
+			--------------------------------------------------æ–°å¢æŠµæ‰£çš„æœ€ç»ˆä¼¤å®³--------------------------------------------------
 			if  pTheirUnit:GetForcedDamageValue() ~= 0 then
 			    if pTheirUnit:GetForcedDamageValue() > 0 then
 			    iMyDamageInflicted= pTheirUnit:GetForcedDamageValue()
@@ -1126,7 +1142,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				iTheirDamageInflicted=0
 				end
             end
-			--------------------------------------------------ĞÂÔöµÖ¿ÛµÄ×îÖÕÉËº¦--------------------------------------------------
+			--------------------------------------------------æ–°å¢æŠµæ‰£çš„æœ€ç»ˆä¼¤å®³--------------------------------------------------
 
 			local iMyDie = false;  --Modified
 			local iTheydie = false;
@@ -1272,7 +1288,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 			-------------------------
-			--²»¿É±»·ı--
+			--ä¸å¯è¢«ä¿˜--
 			-------------------------
 			if(pMyUnit:IsCannotBeCapturedUnit() == true) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1307,7 +1323,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 		
 			----------------------------------------------------------------------------
-			-- ½áÊø
+			-- ç»“æŸ
 			----------------------------------------------------------------------------
 
 
@@ -1346,7 +1362,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			
 			-- Great General bonus
 			if (pMyUnit:IsNearGreatGeneral()) then
-				iModifier = GetBonusEffect(pMyUnit)  ---dllĞÂÔöµÄ¹â»·Ğ§¹û
+				iModifier = GetBonusEffect(pMyUnit)  ---dllæ–°å¢çš„å…‰ç¯æ•ˆæœ
 				controlTable = g_MyCombatDataIM:GetInstance();
 				if (pMyUnit:GetDomainType() == DomainTypes.DOMAIN_LAND) then
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GG_NEAR" );
@@ -1481,7 +1497,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-			-- ¶Ô¸ßÈË¿ÚÊıÁ¿¼Ó³É
+			-- å¯¹é«˜äººå£æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetAntiHigherPopMod();
 			if (iModifier ~= 0 and pTheirUnit:IsHigherPopThan(pMyUnit)) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1539,7 +1555,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			--ÊÜÉË¼Ó³É
+			--å—ä¼¤åŠ æˆ
 			iModifier = pMyUnit:GetDamageCombatModifier();
 			if (iModifier ~= 0 ) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1579,7 +1595,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 				
-	--ÁÙ½üÕ½¶·ÀàĞÍ¼Ó³É
+	--ä¸´è¿‘æˆ˜æ–—ç±»å‹åŠ æˆ
 			iModifier = pMyUnit:PerAdjacentUnitCombatModifier() + pMyUnit:PerAdjacentUnitCombatAttackMod();
 			if (iModifier ~= 0 ) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1636,7 +1652,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
 			end
 
-			-- ¶àÖØ¹¥»÷¼Ó³É
+			-- å¤šé‡æ”»å‡»åŠ æˆ
 			iModifier = pMyUnit:GetMultiAttackBonus(pTheirUnit);
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1645,7 +1661,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-			------ĞÂÔöÔ­Ê¼Ê×¶¼ÊıÁ¿¼Ó³É
+			------æ–°å¢åŸå§‹é¦–éƒ½æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumOriginalCapitalAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumOriginalCapital()>1 ) then
 			 local inum =pMyPlayer:GetNumOriginalCapital()-1
@@ -1659,7 +1675,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-			------ĞÂÔöÓëÊ×¶¼Í¬´óÂ½¼Ó³É
+			------æ–°å¢ä¸é¦–éƒ½åŒå¤§é™†åŠ æˆ
 			  iModifier = pMyUnit:GetOnCapitalLandAttackMod();
 			  if pMyPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
@@ -1671,7 +1687,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			    end
 			end
-			------ĞÂÔöÓëÊ×¶¼²»Í¬´óÂ½¼Ó³É
+			------æ–°å¢ä¸é¦–éƒ½ä¸åŒå¤§é™†åŠ æˆ
 			  iModifier = pMyUnit:GetOutsideCapitalLandAttackMod();
 			  if pMyPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pMyPlayer:GetCapitalCity():GetX(),pMyPlayer:GetCapitalCity():GetY())
@@ -1686,7 +1702,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 			
-			------ĞÂÔö¸ß¶È×ø±ê¼Ó³É
+			------æ–°å¢é«˜åº¦åæ ‡åŠ æˆ
 			iModifier = pMyUnit:GetTotalHeightMod(pToPlot);
 			if (iModifier ~= 0 ) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
@@ -1695,7 +1711,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-			------ĞÂÔö»Æ½ğÊ±´ú¼Ó³É
+			------æ–°å¢é»„é‡‘æ—¶ä»£åŠ æˆ
 			iModifier = pMyUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pMyPlayer:IsGoldenAge()) then
 				controlTable = g_MyCombatDataIM:GetInstance();		
@@ -1706,7 +1722,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 
-			------ĞÂÔöÊ£ÓàÒÆ¶¯Á¦¼Ó³É
+			------æ–°å¢å‰©ä½™ç§»åŠ¨åŠ›åŠ æˆ
 			iModifier = pMyUnit:MoveLfetAttackMod();
 			if (iModifier ~= 0 and pMyUnit:MovesLeft()>0) then
 			    iModifier = pMyUnit:MoveLfetAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
@@ -1715,7 +1731,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔöÒÑÓÃÒÆ¶¯Á¦¼Ó³É
+			------æ–°å¢å·²ç”¨ç§»åŠ¨åŠ›åŠ æˆ
 			iModifier = pMyUnit:MoveUsedAttackMod();
 			if (iModifier ~= 0 and  (pMyUnit:MaxMoves() > pMyUnit:MovesLeft())) then
 			    iModifier = pMyUnit:MoveUsedAttackMod()* (pMyUnit:MaxMoves() - pMyUnit:MovesLeft())/ GameDefines["MOVE_DENOMINATOR"]
@@ -1725,7 +1741,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-			------ĞÂÔö½Ü×÷ÊıÁ¿¼Ó³É
+			------æ–°å¢æ°ä½œæ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumWorkAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumGreatWorks()>0) then
 			    iModifier =pMyUnit:GetNumWorkAttackMod()*pMyPlayer:GetNumGreatWorks()
@@ -1735,7 +1751,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-			------ĞÂÔöÁÙ½üµĞ¾üÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸´è¿‘æ•Œå†›æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNearNumEnemyAttackMod();
 			local bonus = pMyUnit:GetNumEnemyAdjacent()
 			iModifier =iModifier*bonus
@@ -1745,7 +1761,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
 			end
 							
-			------ĞÂÔöËğÊ§ÑªÁ¿¼Ó³É
+			------æ–°å¢æŸå¤±è¡€é‡åŠ æˆ
 			iModifier = pMyUnit:GetCurrentHitPointAttackMod();
 			local Hitbonus = pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()
 			if pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()>100 then
@@ -1758,7 +1774,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
 			end
 
-			------ĞÂÔöÊÀ½çÆæ¹ÛÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸–ç•Œå¥‡è§‚æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumWonderAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumWorldWonders()>0) then
 			    iModifier =pMyUnit:GetNumWonderAttackMod()*pMyPlayer:GetNumWorldWonders()
@@ -1767,7 +1783,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-			------ĞÂÔö¼äµıÊıÁ¿¼Ó³É
+			------æ–°å¢é—´è°æ•°é‡åŠ æˆ
 			iModifier = pMyUnit:GetNumSpyAttackMod();
 			if (iModifier ~= 0 and  pMyPlayer:GetNumSpies()>0) then
 			    iModifier =pMyUnit:GetNumSpyAttackMod()*pMyPlayer:GetNumSpies()
@@ -1787,7 +1803,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-				-- ĞÂÔö¼äµı¶ÔÁìÓò¹¥»÷¼Ó³É
+				-- æ–°å¢é—´è°å¯¹é¢†åŸŸæ”»å‡»åŠ æˆ
 				
 			iModifier = pMyUnit:GetNumSpyStayAttackMod();
 			if (iModifier ~= 0 and Teams[pMyUnit:GetTeam()]:HasSpyAtTeam(pTheirUnit:GetTeam()) ) then
@@ -1796,7 +1812,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
 
-----------------------------------------------------------------½úÉı¶Ô½úÉıµÄÏÔÊ¾Ğ§¹û----------------------------------------------------------------
+----------------------------------------------------------------æ™‹å‡å¯¹æ™‹å‡çš„æ˜¾ç¤ºæ•ˆæœ----------------------------------------------------------------
 		
 		
 		----------------------------------------------------------------------------
@@ -1840,8 +1856,24 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
     		
-   ----------------------------------------------------------------½úÉı¶Ô½úÉıµÄÏÔÊ¾Ğ§¹ûend----------------------------------------------------------------
+   ----------------------------------------------------------------æ™‹å‡å¯¹æ™‹å‡çš„æ˜¾ç¤ºæ•ˆæœend----------------------------------------------------------------
 
+			-- Away From Capital Combat Modifier
+			if (pMyPlayer:GetAwayFromCapitalCombatModifier() >0) then
+				iModifier = pMyPlayer:GetAwayFromCapitalCombatModifier();
+				local AFCmax = pMyPlayer:GetAwayFromCapitalCombatModifierMax();
+				local pCapital = pMyPlayer:GetCapitalCity();
+				local plotDistance = Map.PlotDistance(pMyUnit:GetX(), pMyUnit:GetY(), pCapital:GetX(), pCapital:GetY())
+				iModifier = iModifier * plotDistance
+				if (iModifier > AFCmax) then
+					iModifier = AFCmax
+				end
+				if (iModifier ~= 0) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_AFC_COMBAT_BONUS");
+					controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+				end
+			end
 			-- UnitClassAttackModifier
 			iModifier = pMyUnit:UnitClassAttackModifier(pTheirUnit:GetUnitClassType());
 			if (iModifier ~= 0) then
@@ -1853,7 +1885,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 
 
-			-- ĞÂÔö¶ÔÁìÓò¹¥»÷¼Ó³É
+			-- æ–°å¢å¯¹é¢†åŸŸæ”»å‡»åŠ æˆ
 			iModifier = pMyUnit:DomainAttack(pTheirUnit:GetDomainType());
 			if (iModifier ~= 0) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -1910,7 +1942,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_WOUND_UNITS" );
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 				end
-             ------------------------------------¶ÔÂúÑªµ¥Î»¼Ó³É-------------------------------------
+             ------------------------------------å¯¹æ»¡è¡€å•ä½åŠ æˆ-------------------------------------
 			else
 				iModifier = pMyUnit:AttackFullyHealedModifier();
 
@@ -1921,7 +1953,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 
 			end
-			  -------------------------¶Ô²»Í¬ÑªÁ¿µ¥Î»¼Ó³É------------------------------------
+			  -------------------------å¯¹ä¸åŒè¡€é‡å•ä½åŠ æˆ------------------------------------
 			if (pTheirUnit:GetDamage() < (pTheirUnit:GetMaxHitPoints() / 2)) then
 				iModifier = pMyUnit:AttackAbove50Modifier();
 
@@ -2045,7 +2077,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			--else
 	
 
-				-- TerrainAttackModifier	µØĞÎ¼Ó³É	
+				-- TerrainAttackModifier	åœ°å½¢åŠ æˆ	
 
 				--if not (bRanged) then
 
@@ -2156,7 +2188,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 			---------------------
-			-- ³·ÍË¼¸ÂÊ --
+			-- æ’¤é€€å‡ ç‡ --
 			---------------------
 			if (not bRanged) then
 				iChance = pTheirUnit:GetWithdrawChance(pMyUnit,true);
@@ -2178,7 +2210,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText("");
 			end
 			----------------------------------------------------------------------------
-			-- ½áÊø
+			-- ç»“æŸ
 			----------------------------------------------------------------------------
 
 			Controls.TheirDamageValue:SetText("[COLOR_RED]" .. iTheirDamageInflicted .. "[ENDCOLOR]");
@@ -2190,8 +2222,8 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			if (pTheirUnit:IsCombatUnit()) then
 
 				------------------------------------------------------------------------------------
-				--sqlÖĞÓĞÁ½ÖÖ·½Ê½±íÊ¾²»µÈÓÚ£¬Ò»ÖÖÊÇ"<>"(²»º¬ÒıºÅ)£¬ÁíÒ»ÖÖÊÇ"!="(²»º¬ÒıºÅ)£¬ÓÃ·¨ÊÇÒ»ÑùµÄ¡£
-				----------------------------ĞŞ¸´Ô¶³Ì·ÀÓùÁ¦²»ÏÔÊ¾²¢²ğ·Ö--------------
+				--sqlä¸­æœ‰ä¸¤ç§æ–¹å¼è¡¨ç¤ºä¸ç­‰äºï¼Œä¸€ç§æ˜¯"<>"(ä¸å«å¼•å·)ï¼Œå¦ä¸€ç§æ˜¯"!="(ä¸å«å¼•å·)ï¼Œç”¨æ³•æ˜¯ä¸€æ ·çš„ã€‚
+				----------------------------ä¿®å¤è¿œç¨‹é˜²å¾¡åŠ›ä¸æ˜¾ç¤ºå¹¶æ‹†åˆ†--------------
   
 				iModifierFinal = pTheirUnit:GetDefenseModifier()+pTheirUnit:GetRangedDefenseModifier()
 
@@ -2204,7 +2236,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 						   end	
 						end	
 					end						
-				----------------------------½üÕ½·ÀÓùÁ¦¼Ó³ÉÏÔÊ¾--------------
+				----------------------------è¿‘æˆ˜é˜²å¾¡åŠ›åŠ æˆæ˜¾ç¤º--------------
 				-- Defense Modifier
 				local iModifier = pTheirUnit:GetDefenseModifier()+pTheirUnit:GetMeleeDefenseModifier();
 				--local iMeleeModifier = 0
@@ -2219,7 +2251,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
               
 			  
-			-- ĞÂÔö Defense Modifier
+			-- æ–°å¢ Defense Modifier
 		    local iModifier = pTheirUnit:GetNumTimesBeFallBackThisTurn() * pTheirUnit:GetBeFallBackDefenseMod()
 			if (iModifier ~= 0) then
 				controlTable = g_TheirCombatDataIM:GetInstance();		
@@ -2244,7 +2276,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 			
 
-			------ĞÂÔöÔ­Ê¼Ê×¶¼ÊıÁ¿¼Ó³É
+			------æ–°å¢åŸå§‹é¦–éƒ½æ•°é‡åŠ æˆ
 			iModifier = pTheirUnit:GetNumOriginalCapitalAttackMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumOriginalCapital()>1 ) then
 			 local inum =pTheirPlayer:GetNumOriginalCapital()-1
@@ -2260,7 +2292,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 
 	
 
-        	------ĞÂÔö¸ß¶È×ø±ê¼Ó³É
+        	------æ–°å¢é«˜åº¦åæ ‡åŠ æˆ
 			--iModifier = pTheirUnit:GetTotalHeightMod(pFromPlot);
 			--if (iModifier ~= 0 ) then
 				--controlTable = g_TheirCombatDataIM:GetInstance();		
@@ -2268,7 +2300,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				--controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 			--end
 
-			------ĞÂÔö»Æ½ğÊ±´ú¼Ó³É
+			------æ–°å¢é»„é‡‘æ—¶ä»£åŠ æˆ
 			iModifier = pTheirUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pTheirPlayer:IsGoldenAge()) then
 				controlTable = g_TheirCombatDataIM:GetInstance();		
@@ -2276,7 +2308,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 			end
 
-		------ĞÂÔöÓëÊ×¶¼Í¬´óÂ½¼Ó³É
+		------æ–°å¢ä¸é¦–éƒ½åŒå¤§é™†åŠ æˆ
 			  iModifier = pTheirUnit:GetOnCapitalLandDefenseMod();
 			  if pTheirPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -2289,7 +2321,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 			end
 
-			------ĞÂÔöÓëÊ×¶¼²»Í¬´óÂ½¼Ó³É
+			------æ–°å¢ä¸é¦–éƒ½ä¸åŒå¤§é™†åŠ æˆ
 			  iModifier = pTheirUnit:GetOutsideCapitalLandDefenseMod();
 			  if pTheirPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -2303,7 +2335,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 			
-			------ĞÂÔö½Ü×÷ÊıÁ¿¼Ó³É
+			------æ–°å¢æ°ä½œæ•°é‡åŠ æˆ
 			iModifier = pTheirUnit:GetNumWorkDefenseMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumGreatWorks()>0) then
 			    iModifier =pTheirUnit:GetNumWorkDefenseMod()*pTheirPlayer:GetNumGreatWorks()
@@ -2312,7 +2344,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );
 			end
 
-			------ĞÂÔöÊÀ½çÆæ¹ÛÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸–ç•Œå¥‡è§‚æ•°é‡åŠ æˆ
 			iModifier = pTheirUnit:GetNumWonderDefenseMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumWorldWonders()>0) then
 			    iModifier =pTheirUnit:GetNumWonderDefenseMod()*pTheirPlayer:GetNumWorldWonders()
@@ -2321,7 +2353,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );
 			end
 
-			------ĞÂÔö¼äµıÊıÁ¿¼Ó³É
+			------æ–°å¢é—´è°æ•°é‡åŠ æˆ
 			iModifier = pTheirUnit:GetNumSpyDefenseMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumSpies()>0) then
 			    iModifier =pTheirUnit:GetNumSpyDefenseMod()*pTheirPlayer:GetNumSpies()
@@ -2331,7 +2363,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 
 
-			-- ĞÂÔö¼äµı¶ÔÁìÓò·ÀÓù¼Ó³É
+			-- æ–°å¢é—´è°å¯¹é¢†åŸŸé˜²å¾¡åŠ æˆ
 				
 			iModifier = pTheirUnit:GetNumSpyStayAttackMod();
 			if (iModifier ~= 0 and Teams[pTheirUnit:GetTeam()]:HasSpyAtTeam(pMyUnit:GetTeam()) ) then
@@ -2340,7 +2372,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 			end
 
-			------ĞÂÔöÁÙ½üµĞ¾üÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸´è¿‘æ•Œå†›æ•°é‡åŠ æˆ
 			iModifier = pTheirUnit:GetNearNumEnemyDefenseMod();
 			local bonus = pTheirUnit:GetNumEnemyAdjacent()
 			iModifier =iModifier*bonus
@@ -2350,7 +2382,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );
 			end
 
-			------ĞÂÔöËğÊ§ÑªÁ¿¼Ó³É
+			------æ–°å¢æŸå¤±è¡€é‡åŠ æˆ
 			iModifier = pTheirUnit:GetCurrentHitPointDefenseMod();
 			local Hitbonus = pTheirUnit:GetMaxHitPoints()-pTheirUnit:GetCurrHitPoints()
 			if pTheirUnit:GetMaxHitPoints()-pTheirUnit:GetCurrHitPoints()>100 then
@@ -2371,7 +2403,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_BONUS_VS_WOUND_UNITS" );
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 				end
-             ------------------------------------¶ÔÂúÑªµ¥Î»¼Ó³É-------------------------------------
+             ------------------------------------å¯¹æ»¡è¡€å•ä½åŠ æˆ-------------------------------------
 			else
 				iModifier = pTheirUnit:AttackFullyHealedModifier();
 
@@ -2382,7 +2414,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 
 			end
-			  -------------------------¶Ô²»Í¬ÑªÁ¿µ¥Î»¼Ó³É------------------------------------
+			  -------------------------å¯¹ä¸åŒè¡€é‡å•ä½åŠ æˆ------------------------------------
 			if (pMyUnit:GetDamage() < (pMyUnit:GetMaxHitPoints() / 2)) then
 				iModifier = pTheirUnit:AttackAbove50Modifier();
 
@@ -2404,7 +2436,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 	
 
 
-			-- ĞÂÔöÉË
+			-- æ–°å¢ä¼¤
 				-- Damaged unit (cannot combine with other modifiers as it is multiplicative with them)
 				iModifier = pTheirUnit:GetDamageCombatModifier(bRanged);
 				if (iModifier ~= 0 ) then
@@ -2467,7 +2499,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				
 				-- Great General bonus
 				if (pTheirUnit:IsNearGreatGeneral()) then
-					iModifier = GetBonusEffect(pTheirUnit) ---dllĞÂÔöµÄ¹â»·Ğ§¹û
+					iModifier = GetBonusEffect(pTheirUnit) ---dllæ–°å¢çš„å…‰ç¯æ•ˆæœ
 					controlTable = g_TheirCombatDataIM:GetInstance();
 					if (pTheirUnit:GetDomainType() == DomainTypes.DOMAIN_LAND) then
 						controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GG_NEAR" );
@@ -2586,7 +2618,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 
 
-			-- ĞÂÔö¶ÔÁìÓò·ÀÓù¼Ó³É
+			-- æ–°å¢å¯¹é¢†åŸŸé˜²å¾¡åŠ æˆ
 			iModifier = pTheirUnit:DomainDefense(pMyUnit:GetDomainType());
 			if (iModifier ~= 0) then
 				controlTable = g_TheirCombatDataIM:GetInstance();
@@ -2608,7 +2640,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				end
 
 
-				-- ÁÙ½üÕ½¶·ÀàĞÍ
+				-- ä¸´è¿‘æˆ˜æ–—ç±»å‹
 				iModifier = pTheirUnit:PerAdjacentUnitCombatModifier() + pTheirUnit:PerAdjacentUnitCombatDefenseMod();
 				if (iModifier ~= 0 ) then
 					controlTable = g_TheirCombatDataIM:GetInstance();
@@ -2641,7 +2673,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				if (pToPlot:IsOpenGround()) then
 					iModifier = pTheirUnit:OpenDefenseModifier();
 
-					--if (iModifier ~= 0 and (not bRanged)) then  ----¶ÔÔ¶³ÌÎŞĞ§
+					--if (iModifier ~= 0 and (not bRanged)) then  ----å¯¹è¿œç¨‹æ— æ•ˆ
 					  if (iModifier ~= 0 ) then
 						controlTable = g_TheirCombatDataIM:GetInstance();
 						controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_OPEN_TERRAIN_DEF_BONUS" );
@@ -2653,8 +2685,8 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				if (pToPlot:IsRoughGround()) then
 					iModifier = pTheirUnit:RoughDefenseModifier();
 
-					---if (iModifier ~= 0  and (not bRanged) ) then   ----¶ÔÔ¶³ÌÎŞĞ§
-					if (iModifier ~= 0 ) then   ----¶ÔÔ¶³ÌÎŞĞ§
+					---if (iModifier ~= 0  and (not bRanged) ) then   ----å¯¹è¿œç¨‹æ— æ•ˆ
+					if (iModifier ~= 0 ) then   ----å¯¹è¿œç¨‹æ— æ•ˆ
 						controlTable = g_TheirCombatDataIM:GetInstance();
 						controlTable.Text:LocalizeAndSetText(  "TXT_KEY_EUPANEL_ROUGH_TERRAIN_DEF_BONUS" );
 						controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
@@ -2671,6 +2703,23 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 						controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 					end
 				end
+
+				-- Away From Capital Combat Modifier
+				if (pTheirPlayer:GetAwayFromCapitalCombatModifier() >0) then
+					iModifier = pTheirPlayer:GetAwayFromCapitalCombatModifier();
+					local AFCmax = pTheirPlayer:GetAwayFromCapitalCombatModifierMax();
+					local pCapital = pTheirPlayer:GetCapitalCity();
+					local plotDistance = Map.PlotDistance(pTheirUnit:GetX(), pTheirUnit:GetY(), pCapital:GetX(), pCapital:GetY())
+					iModifier = iModifier * plotDistance
+					if (iModifier > AFCmax) then
+						iModifier = AFCmax
+					end
+					if (iModifier ~= 0) then
+						controlTable = g_TheirCombatDataIM:GetInstance();
+						controlTable.Text:LocalizeAndSetText("TXT_KEY_AFC_COMBAT_BONUS");
+						controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+					end
+				end
 				
 				-- CombatBonusVsLargerCiv
 				iModifier = pTheirPlayer:GetCombatBonusVsLargerCiv();
@@ -2680,7 +2729,7 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 					controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 				end
 				
-				-- ¶Ô¸ßÈË¿ÚÊıÁ¿¼Ó³É
+				-- å¯¹é«˜äººå£æ•°é‡åŠ æˆ
 			iModifier = pTheirUnit:GetAntiHigherPopMod();
 			if (iModifier ~= 0 and pMyUnit:IsHigherPopThan(pTheirUnit)) then
 				controlTable = g_MyCombatDataIM:GetInstance();
@@ -2805,7 +2854,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 
 
 
-	--------------------------------------------------ĞÂÔöµÖ¿ÛµÄ×îÖÕÉËº¦--------------------------------------------------
+	--------------------------------------------------æ–°å¢æŠµæ‰£çš„æœ€ç»ˆä¼¤å®³--------------------------------------------------
 	if theirUnit:GetForcedDamageValue() ~= 0 then
 			    if theirUnit:GetForcedDamageValue() > 0 then
 			    myCityDamageInflicted= theirUnit:GetForcedDamageValue()
@@ -2880,7 +2929,23 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		local theirPlot = theirUnit:GetPlot();
 		
 
-	-- ĞÂÔöÉË
+	-- æ–°å¢ä¼¤
+		-- Away From Capital Combat Modifier
+		if (pTheirPlayer:GetAwayFromCapitalCombatModifier() >0) then
+			iModifier = pTheirPlayer:GetAwayFromCapitalCombatModifier();
+			local AFCmax = pTheirPlayer:GetAwayFromCapitalCombatModifierMax();
+			local pCapital = pTheirPlayer:GetCapitalCity();
+			local plotDistance = Map.PlotDistance(theirUnit:GetX(), theirUnit:GetY(), pCapital:GetX(), pCapital:GetY())
+			iModifier = iModifier * plotDistance
+			if (iModifier > AFCmax) then
+				iModifier = AFCmax
+			end
+			if (iModifier ~= 0) then
+				controlTable = g_TheirCombatDataIM:GetInstance();
+				controlTable.Text:LocalizeAndSetText("TXT_KEY_AFC_COMBAT_BONUS");
+				controlTable.Value:SetText(GetFormattedText(strText, iModifier, true, true));
+			end
+		end
 		iModifier = theirUnit:GetDamageCombatModifier(true);
 		if (iModifier ~= 0 ) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
@@ -2921,7 +2986,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		end
 
 
-		-- ÁÙ½üÕ½¶·ÀàĞÍ
+		-- ä¸´è¿‘æˆ˜æ–—ç±»å‹
 		iModifier = theirUnit:PerAdjacentUnitCombatModifier() + theirUnit:PerAdjacentUnitCombatDefenseMod();
 		if (iModifier ~= 0 ) then
 			controlTable = g_TheirCombatDataIM:GetInstance();
@@ -3029,7 +3094,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		end
 
 
-			-- ĞÂÔö Defense Modifier
+			-- æ–°å¢ Defense Modifier
 		    local iModifier = theirUnit:GetNumTimesBeFallBackThisTurn() * theirUnit:GetBeFallBackDefenseMod()
 			if (iModifier ~= 0) then
 				controlTable = g_TheirCombatDataIM:GetInstance();		
@@ -3052,7 +3117,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 			end
 		
-			------ĞÂÔöÔ­Ê¼Ê×¶¼ÊıÁ¿¼Ó³É
+			------æ–°å¢åŸå§‹é¦–éƒ½æ•°é‡åŠ æˆ
 			iModifier = theirUnit:GetNumOriginalCapitalDefenseMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumOriginalCapital()>1 ) then
 			 local inum =pTheirPlayer:GetNumOriginalCapital()-1
@@ -3065,7 +3130,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 			end
 		
-			------ĞÂÔö»Æ½ğÊ±´ú¼Ó³É
+			------æ–°å¢é»„é‡‘æ—¶ä»£åŠ æˆ
 			iModifier = theirUnit:GoldenAgeModTotal();
 			if (iModifier ~= 0 and  pTheirPlayer:IsGoldenAge()) then
 				controlTable = g_TheirCombatDataIM:GetInstance();		
@@ -3074,7 +3139,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			end
 
 
-			------ĞÂÔöÓëÊ×¶¼Í¬´óÂ½¼Ó³É
+			------æ–°å¢ä¸é¦–éƒ½åŒå¤§é™†åŠ æˆ
 			  iModifier = theirUnit:GetOnCapitalLandDefenseMod();
 			  if pTheirPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -3087,7 +3152,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				end
 			end
 
-			------ĞÂÔöÓëÊ×¶¼²»Í¬´óÂ½¼Ó³É
+			------æ–°å¢ä¸é¦–éƒ½ä¸åŒå¤§é™†åŠ æˆ
 			  iModifier = theirUnit:GetOutsideCapitalLandDefenseMod();
 			  if pTheirPlayer:GetCapitalCity()~=nil then
 			  local pCapitalPlot = Map.GetPlot(pTheirPlayer:GetCapitalCity():GetX(),pTheirPlayer:GetCapitalCity():GetY())
@@ -3103,7 +3168,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 
 
 			
-			------ĞÂÔö½Ü×÷ÊıÁ¿¼Ó³É
+			------æ–°å¢æ°ä½œæ•°é‡åŠ æˆ
 			iModifier = theirUnit:GetNumWorkDefenseMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumGreatWorks()>0) then
 			    iModifier =theirUnit()*pTheirPlayer:GetNumGreatWorks()
@@ -3111,7 +3176,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_PLAYER_GREATWORK_BONUS");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );
 			end
-			------ĞÂÔöÊÀ½çÆæ¹ÛÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸–ç•Œå¥‡è§‚æ•°é‡åŠ æˆ
 			iModifier = theirUnit:GetNumWonderDefenseMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumWorldWonders()>0) then
 			    iModifier =theirUnit:GetNumWonderDefenseMod()*pTheirPlayer:GetNumWorldWonders()
@@ -3120,7 +3185,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,false, true) );
 			end
 
-			------ĞÂÔö¼äµıÊıÁ¿¼Ó³É
+			------æ–°å¢é—´è°æ•°é‡åŠ æˆ
 			iModifier = theirUnit:GetNumSpyDefenseMod();
 			if (iModifier ~= 0 and  pTheirPlayer:GetNumSpies()>0) then
 			    iModifier =theirUnit:GetNumSpyDefenseMod()*pTheirPlayer:GetNumSpies()
@@ -3130,7 +3195,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			end
 
 
-			------ĞÂÔöËğÊ§ÑªÁ¿¼Ó³É
+			------æ–°å¢æŸå¤±è¡€é‡åŠ æˆ
 			iModifier = theirUnit:GetCurrentHitPointDefenseMod();
 			local Hitbonus = theirUnit:GetMaxHitPoints()-theirUnit:GetCurrHitPoints()
 			if theirUnit:GetMaxHitPoints()-theirUnit:GetCurrHitPoints()>100 then
@@ -3144,7 +3209,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 			end
 
 
-			------ĞÂÔöÁÙ½üµĞ¾üÊıÁ¿¼Ó³É
+			------æ–°å¢ä¸´è¿‘æ•Œå†›æ•°é‡åŠ æˆ
 			iModifier = theirUnit:GetNearNumEnemyDefenseMod();
 			local bonus = theirUnit:GetNumEnemyAdjacent()
 			iModifier =iModifier*bonus	
@@ -3241,7 +3306,7 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		end
 
 		
-		-- ¶àÖØ¹¥»÷¼Ó³É
+		-- å¤šé‡æ”»å‡»åŠ æˆ
 			--iModifier = myCity:GetMultiAttackBonusCity(theirUnit);
 	---	if (iModifier ~= 0) then
 			--controlTable = g_MyCombatDataIM:GetInstance();
