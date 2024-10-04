@@ -151,6 +151,14 @@ function ShortUnitTip( unit )
 		if unit:IsCanEstablishCorps() then
 			unitTip = unitTip .. Locale.ConvertTextKey("TXT_KEY_SP_UNIT_CAN_ESTABLISH_CORPS_OR_ARMEE")
 		end
+		if PreGame.GetGameOption("GAMEOPTION_SP_NUCLEARWINTER_OFF") == 0 then
+            local iNuclearWinterProcess = GameInfo.Units[unit:GetUnitType()].NuclearWinterProcess
+            if iNuclearWinterProcess > 0 then
+                local iNuclearWinterTotalProcess = Game.GetNuclearWinterProcess();
+                unitTip = unitTip .. Locale.ConvertTextKey("TXT_KEY_SP_UNIT_NUCLEAR_WINTER_PROCESS", iNuclearWinterProcess, iNuclearWinterTotalProcess)
+				unitTip = unitTip .. "[NEWLINE]"
+            end
+        end
 	-- Level, Experience for ActivePlayer
 		if  unit:IsCombatUnit() or unit:CanAirAttack()  then
 			unitTip = unitTip .."[NEWLINE]".. Locale.ConvertTextKey( "TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ):gsub("%[NEWLINE]"," ")

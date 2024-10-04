@@ -9628,7 +9628,8 @@
 		<Replace Tag="TXT_KEY_POLICY_FREE_RELIGION_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]宗教宽容[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]所有神祠和神庙+1[ICON_HAPPINESS_1]本地快乐，+1[ICON_HEALTH]健康度。
+				[NEWLINE][ICON_BULLET]城市中每种宗教+1[ICON_HAPPINESS_1]本地快乐。
+				[NEWLINE][ICON_BULLET]所有神祠和神庙+1[ICON_HEALTH]健康度。
 				[NEWLINE][ICON_BULLET]立刻开启一次黄金时代。
 			</Text>
 		</Replace>
