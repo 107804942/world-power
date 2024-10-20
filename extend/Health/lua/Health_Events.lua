@@ -49,7 +49,7 @@ function AttackReduceHealth(iAttackPlayer, iAttackUnit,iDefenderPlayer, iDefende
 	local Attackplayer = Players[iAttackPlayer]
 	local unit = player:GetUnitByID(iAttackUnit)
 	local city   = Players[iDefenderPlayer]:GetCityByID(iDefenderCity)
-	if player==nil or unit==nil or city==nil
+	if Attackplayer==nil or unit==nil or city==nil
 	then return end
 	if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_HUIHUIPAO"].ID) then  
 	if not city:HasPlague() then  
