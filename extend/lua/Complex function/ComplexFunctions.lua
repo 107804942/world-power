@@ -4,7 +4,7 @@ include("Rog_SaveUtils.lua"); MY_MOD_NAME = "世界强权";
 include("PlotIterators.lua");
 include("FunctionUtilities.lua")
 include("FLuaVector.lua")
-
+include("UtilityFunctions")
 
 
 if Game.IsWPActive() then
@@ -690,6 +690,112 @@ local IronPagodaChargeButton = {
 end
 }
 LuaEvents.UnitPanelActionAddin(IronPagodaChargeButton)
+
+UnitEVACButton = {
+    Name = "Air EVAC",
+    Title = "TXT_KEY_SP_BTNNOTE_UNIT_AIREVAC_SHORT", -- or a TXT_KEY
+    OrderPriority = 200, -- default is 200
+    IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
+    PortraitIndex = 11,
+    ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_AIREVAC", -- or a TXT_KEY_ or a function
+
+    Condition = function(action, unit)
+        return unit:CanMove() and (unit:GetUnitType() == GameInfoTypes.UNIT_TASKFORCE_141  or unit:GetUnitType() == GameInfoTypes.UNIT_GHOST) and Players[unit:GetOwner()]:GetCapitalCity() ~= nil;
+    end, -- or nil or a boolean, default is true
+
+    Disabled = function(action, unit)
+        return false
+    end, -- or nil or a boolean, default is false
+
+    Action = function(action, unit, eClick)
+        local player = Players[unit:GetOwner()]
+        local pCity = player:GetCapitalCity()
+        local pPlot = pCity
+        unit:SetXY(pPlot:GetX(), pPlot:GetY())
+        unit:JumpToNearestValidPlot()
+        unit:SetMoves(0)
+        print("Evac!")
+
+    end
+};
+LuaEvents.UnitPanelActionRemove(UnitEVACButton);
+LuaEvents.UnitPanelActionAddin(UnitEVACButton);
+
+
+GlobalStrikeButton = {
+    Name = "Global Strike",
+    Title = "TXT_KEY_SP_BTNNOTE_GLOBAL_STRIKE_SHORT", -- or a TXT_KEY
+    OrderPriority = 200, -- default is 200
+    IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
+    PortraitIndex = 10,
+    ToolTip = "TXT_KEY_SP_BTNNOTE_GLOBAL_STRIKE", -- or a TXT_KEY_ or a function
+    Condition = function(action, unit)
+        return unit:CanMove() and unit:GetUnitType() == GameInfoTypes.UNIT_ORBITAL_STRIKE;
+    end, -- or nil or a boolean, default is true
+
+    --  Disabled = function(action, unit) 
+    --    
+    --    return 
+    --  end, -- or nil or a boolean, default is false
+
+    Action = function(action, unit, eClick)
+
+        unit:SetMoves(0)
+
+        for playerID, player in pairs(Players) do
+            if player and player:IsAlive() and player:GetNumCities() >= 1 then
+                if not player:IsHuman() then
+                    if PlayerAtWarWithHuman(player) then
+                        for city in player:Cities() do
+                            local CityMaxHP = city:GetMaxHitPoints()
+                            --city:SetDamage(CityMaxHP)
+                            city:ChangeDamage(250)
+                            Events.AudioPlay2DSound("AS2D_SATELLITE_CANNON")
+                            Events.GameplayAlertMessage( Locale.ConvertTextKey( "TXT_KEY_SP_NOTIFICATION_SATELLITE_CANNON"))
+                            print("Global Strike!")
+                        end
+                    end
+                end
+            end
+        end
+
+    end
+
+};
+LuaEvents.UnitPanelActionRemove(GlobalStrikeButton);
+LuaEvents.UnitPanelActionAddin(GlobalStrikeButton);
+
+MoralBoostButton = {
+    Name = "Moral Boost",
+    Title = "TXT_KEY_SP_BTNNOTE_UNIT_MORAL_BOOST_SHORT", -- or a TXT_KEY
+    OrderPriority = 200, -- default is 200
+    IconAtlas = "SP_UNIT_ACTION_ATLAS", -- 45 and 64 variations required
+    PortraitIndex = 22,
+    ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_MORAL_BOOST", -- or a TXT_KEY_ or a function
+
+    Condition = function(action, unit)
+        return unit:CanMove() 
+		and (unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_GENERAL.ID 
+		or unit:GetUnitClassType() == GameInfo.UnitClasses.UNITCLASS_GREAT_ADMIRAL.ID 
+		--or unit:GetUnitType() == GameInfoTypes["UNIT_POLISH_PZLW3_HELICOPTER"] 
+		or unit:GetUnitType() == GameInfoTypes["UNIT_HUN_SHAMAN"]);
+    end, -- or nil or a boolean, default is true
+
+    Disabled = function(action, unit)
+        return unit:GetPlot() == nil or unit:GetPlot():GetNumUnits() <= 1;
+    end, -- or nil or a boolean, default is false
+
+    Action = function(action, unit, eClick)
+        if unit:GetPlot() == nil or unit:GetPlot():GetNumUnits() <= 1 then
+            return;
+        end
+        unit:ClearSamePlotPromotions()
+        print("Moral Boost!")
+        unit:SetMoves(0)
+    end
+};
+LuaEvents.UnitPanelActionRemove(MoralBoostButton);
+LuaEvents.UnitPanelActionAddin(MoralBoostButton);
 
 
 function InputHandler( uiMsg, wParam, lParam )
