@@ -691,6 +691,11 @@ end
 }
 LuaEvents.UnitPanelActionAddin(IronPagodaChargeButton)
 
+
+
+-- ********************************************************
+-- Ìæ»»sp
+-- ********************************************************	
 UnitEVACButton = {
     Name = "Air EVAC",
     Title = "TXT_KEY_SP_BTNNOTE_UNIT_AIREVAC_SHORT", -- or a TXT_KEY
@@ -796,6 +801,10 @@ MoralBoostButton = {
 };
 LuaEvents.UnitPanelActionRemove(MoralBoostButton);
 LuaEvents.UnitPanelActionAddin(MoralBoostButton);
+
+-- ********************************************************
+-- end
+-- ********************************************************
 
 
 function InputHandler( uiMsg, wParam, lParam )

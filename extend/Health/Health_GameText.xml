@@ -42,7 +42,7 @@
 			<Text>痢疾</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_FATIGUE">
-			<Text>肺炭疽</Text>
+			<Text>炭疽</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_FEVER">
 			<Text>回归热</Text>
@@ -63,13 +63,13 @@
 			<Text>脊髓灰质炎</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_LEG">
-			<Text>不宁腿综合征</Text>
+			<Text>钩端螺旋体病</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_LEPROSY">
 			<Text>麻风病</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_LOCKJAW">
-			<Text>破伤风</Text>
+			<Text>猩红热</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_LUNACY">
 			<Text>埃博拉</Text>
@@ -81,25 +81,25 @@
 			<Text>囊尾蚴病</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_MENIERE">
-			<Text>梅尼埃病</Text>
+			<Text>流行性乙脑炎</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_POSSESSION">
 			<Text>出血热</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_PNEUMONIA">
-			<Text>肺炎</Text>
+			<Text>传染性非典型肺炎</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_RABIES">
 			<Text>狂犬病</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_SCURVY">
-			<Text>坏血病</Text>
+			<Text>白喉</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_SEPTICEMIA">
-			<Text>败血症</Text>
+			<Text>百日咳</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_SIDS">
-			<Text>婴儿猝死症</Text>
+			<Text>新生儿破伤风</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_SLEEPING">
 			<Text>昏睡病</Text>
@@ -117,13 +117,13 @@
 			<Text>肺结核</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_TYPHOID">
-			<Text>慢性发热</Text>
+			<Text>新冠肺炎</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_TYPHUS">
-			<Text>斑疹伤寒</Text>
+			<Text>伤寒</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_WEILS">
-			<Text>威尔氏病</Text>
+			<Text>流行性脑脊髓膜炎</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PLAGUE_YELLOW">
 			<Text>黄热病</Text>
