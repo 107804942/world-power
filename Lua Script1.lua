@@ -255,4 +255,18 @@ end
 GameEvents.PlayerDoTurn.Add(SpaceBattleCruiserManaForHuman)
 
 
-	
+-- One City Challenge Achievement: For Those Who Bitch About The Civ Not Being OCC Like In Civ 6 ! !
+-- AA_MHC15_TEOTIHUACAN_SPECIAL
+function AA_MHC15_Teotihuacan_OneCityAchievo(type, team)
+	if IsAAUnlocked('AA_MHC15_TEOTIHUACAN_SPECIAL') then return end
+		if team == Game:GetActiveTeam() then
+		local iPlayer = Game:GetActivePlayer()
+		local pPlayer = Players[iPlayer]
+		local iNumCities = pPlayer:GetNumCities()
+			if HasTrait(pPlayer) and iNumCities == 1 then
+				UnlockAA('AA_MHC15_TEOTIHUACAN_SPECIAL');
+			end
+		end
+	end
+
+Events.EndGameShow.Add(AA_MHC15_Teotihuacan_OneCityAchievo);	
