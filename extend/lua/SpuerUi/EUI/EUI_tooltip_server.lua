@@ -176,7 +176,7 @@ do
 	end)
 
 
-	-----–¬‘ˆ
+	-----Êñ∞Â¢û
 function IsUsingWP()
 	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
 	for _, mod in pairs(Modding.GetActivatedMods()) do
@@ -194,7 +194,7 @@ local WpModActive = IsUsingWP()
 		g_isPoliciesEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_POLICIES)
 		g_isHappinessEnabled = IsCiv5 and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)
 		g_isReligionEnabled = IsCiv5notVanilla and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION)
-		g_isHealthEnabled = WpModActive  ---–¬‘ˆ
+		g_isHealthEnabled = WpModActive  ---Êñ∞Â¢û
 		g_isEspionageDisabled = Game.IsOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)
 		g_isAlwaysWar = Game.IsOption( GameOptionTypes.GAMEOPTION_ALWAYS_WAR )
 		g_isOneCityChallenge = Game.IsOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
@@ -424,7 +424,7 @@ local function ShowResourceToolTip( resourceID, tips )
 		local numResourceImport = activePlayer:GetResourceImport( resourceID ) + activePlayer:GetResourceFromMinors( resourceID )
 		local numResourceLocal = activePlayer:GetNumResourceTotal( resourceID, false ) + numResourceExport
 
-     	if resourceID==GameInfo.Resources.RESOURCE_TROOPS.ID then  ---–¬‘ˆ±¯¡¶
+     	if resourceID==GameInfo.Resources.RESOURCE_TROOPS.ID then  ---Êñ∞Â¢ûÂÖµÂäõ
 			numResourceAvailable = activePlayer:GetDomainTroopsActive();
 			numResourceUsed   = activePlayer:GetDomainTroopsUsed();
 			numResourceLocal = activePlayer:GetDomainTroopsTotal();
@@ -498,7 +498,7 @@ local function ShowResourceToolTip( resourceID, tips )
 							end
 						end
 
-						if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----–¬‘ˆ
+						if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----Êñ∞Â¢û
 
 						if totalResource > 0 then
 							tipIndex = tipIndex+1
@@ -642,7 +642,7 @@ local function ShowResourceToolTip( resourceID, tips )
 						end
 					end
 
-					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----–¬‘ˆ
+					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----Êñ∞Â¢û
 
 					if totalResource > 0 then
 						tipIndex = tipIndex+1
@@ -687,7 +687,7 @@ local function ShowResourceToolTip( resourceID, tips )
 						end						
 					end
 
-					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----–¬‘ˆ
+					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----Êñ∞Â¢û
 
 					if totalResource > 0 then
 						tipIndex = tipIndex+1						
@@ -2000,8 +2000,8 @@ function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
 	    local controls = g_ItemTooltipControls
 		
 
-		controls.Text2:SetText( tip )  ----‘⁄µ⁄“ª∏ˆ…œ≤øœ‘ æ
-		------------------------------------------------–¬‘ˆΩ˙…˝œ‘ æ------------------------------------------------
+		controls.Text2:SetText( tip )  ----Âú®Á¨¨‰∏Ä‰∏™‰∏äÈÉ®ÊòæÁ§∫
+		------------------------------------------------Êñ∞Â¢ûÊôãÂçáÊòæÁ§∫------------------------------------------------
 		local unit = GameInfo.Units[itemID]
 		local i = 0
 		local unitPromotion
@@ -2036,14 +2036,14 @@ function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
 		controls.Box:DoAutoSize()
 
 		Controls.UnitTooltipTimer2:SetToBeginning()
-        Controls.UnitTooltipTimer2:SetPauseTime(0) ---æˆ∂®Ω˙…˝Õº±Í≥ˆœ÷µƒ—”≥Ÿ ±º‰
+        Controls.UnitTooltipTimer2:SetPauseTime(0) ---ÂÜ≥ÂÆöÊôãÂçáÂõæÊ†áÂá∫Áé∞ÁöÑÂª∂ËøüÊó∂Èó¥
 		Controls.UnitTooltipTimer2:Reverse()	
 end
 
 
 
 
-LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿‡ªÒ»°
+LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------ÊâÄÊúâ‰ø°ÊÅØÂàÜÁ±ªËé∑Âèñ
 	local tip = "no tip found"
 	local item, iconIndex, iconAtlas
 
@@ -2251,7 +2251,7 @@ end)
 
 
 --==========================================================
--- TopPanel Tooltips  √øªÿ∫œø∆—–√˜œ∏
+-- TopPanel Tooltips  ÊØèÂõûÂêàÁßëÁ†îÊòéÁªÜ
 --==========================================================
 
 local function ScienceTooltip()
@@ -2328,13 +2328,13 @@ local function ScienceTooltip()
 		if IsCiv5 then
 
 			-- Science from Religion
-			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_RELIGION", activePlayer:GetScienceFromReligion()) ---–¬‘ˆ
+			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_RELIGION", activePlayer:GetScienceFromReligion()) ---Êñ∞Â¢û
 
 			-- Science from Happiness 
-			insertLocalizedIfNonZero( tips, "TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", activePlayer:GetYieldModifierFromHappinessPolicy(GameInfoTypes["YIELD_SCIENCE"]) ) ---–¬‘ˆ
+			insertLocalizedIfNonZero( tips, "TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", activePlayer:GetYieldModifierFromHappinessPolicy(GameInfoTypes["YIELD_SCIENCE"]) ) ---Êñ∞Â¢û
 
             -- Science from Resource
-			insertLocalizedIfNonZero( tips, "TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", activePlayer:GetGlobalYieldModifierFromResource(GameInfoTypes["YIELD_SCIENCE"])) ---–¬‘ˆ
+			insertLocalizedIfNonZero( tips, "TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", activePlayer:GetGlobalYieldModifierFromResource(GameInfoTypes["YIELD_SCIENCE"])) ---Êñ∞Â¢û
 
 
 			-- Science from Happiness
@@ -2426,7 +2426,7 @@ local function ScienceTooltip()
 end
 
 -------------------------------------------------
--- Faith Tooltip (GK & BNW) √øªÿ∫œ–≈—ˆ√˜œ∏
+-- Faith Tooltip (GK & BNW) ÊØèÂõûÂêà‰ø°‰ª∞ÊòéÁªÜ
 -------------------------------------------------
 local function FaithTooltip()
 
@@ -2514,7 +2514,7 @@ local TopPanelTooltips = {
 
 
 -------------------------------------------------
--- √øªÿ∫œΩ«Æ√˜œ∏
+-- ÊØèÂõûÂêàÈáëÈí±ÊòéÁªÜ
 -------------------------------------------------
 	GoldPerTurn = function()
 		local activePlayerID = GetActivePlayer()
@@ -3058,9 +3058,9 @@ local TopPanelTooltips = {
 			local happyProgress = activePlayer:GetGoldenAgeProgressMeter()
 			local happyNeeded = activePlayer:GetGoldenAgeProgressThreshold()
 
-			local iGoldAgePointFromReligion = activePlayer:GetGoldenAgePointPerTurnFromReligion() ---–¬‘ˆ
-		    local iGoldAgePointFromTraits = activePlayer:GetGoldenAgePointPerTurnFromTraits()---–¬‘ˆ
-		    local iGoldAgePointFromCitys = activePlayer:GetGoldenAgePointPerTurnFromCitys()---–¬‘ˆ
+			local iGoldAgePointFromReligion = activePlayer:GetGoldenAgePointPerTurnFromReligion() ---Êñ∞Â¢û
+		    local iGoldAgePointFromTraits = activePlayer:GetGoldenAgePointPerTurnFromTraits()---Êñ∞Â¢û
+		    local iGoldAgePointFromCitys = activePlayer:GetGoldenAgePointPerTurnFromCitys()---Êñ∞Â¢û
 
 			if goldenAgeTurns > 0 then
 			
@@ -3092,35 +3092,21 @@ local TopPanelTooltips = {
 		    insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY", iGoldAgePointFromCitys))
 		end
 		
-		if g_isBasicHelp then
-			insert( tips, "[NEWLINE]")
-
-			if activePlayer:IsGoldenAgeCultureBonusDisabled() then
+			if g_isBasicHelp then
+				insert( tips, "[NEWLINE]")
+				local strGoldenAgeHelp
+				strGoldenAgeHelp = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAHelpText
+				if activePlayer:IsGoldenAgeCultureBonusDisabled() then
 					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE" )
-
-								
-			---------------------------SP China Pax Sinica------------------------		
-		   elseif activePlayer:GetGoldenAgeTurns() > 0
-		   and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[activePlayer:GetLeaderType()].Type, TraitType = "TRAIT_ART_OF_WAR" }()
-		   and(GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy 
-		   and activePlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy])))
-		   then
-		   insert( tips, L"TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS" )
-			---------------------------SP China Pax Sinica END------------------------
-			else
-				insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT" )
-			end
-
-
-				if IsCiv5BNW and activePlayer:GetGoldenAgeTurns() > 0 and activePlayer:GetGoldenAgeTourismModifier() > 0 then
-					insert( tips, "[NEWLINE]")
-					insert( tips, L"TXT_KEY_TP_CARNIVAL_EFFECT" )
+				elseif activePlayer:GetGoldenAgeTurns() > 0 and strGoldenAgeHelp then
+					insert( tips,strGoldenAgeHelp )
+				else
+					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT" )
 				end
+				return concat( tips, "[NEWLINE]" )
+			else
+				return L"TXT_KEY_TOP_PANEL_HAPPINESS_OFF_TOOLTIP"
 			end
-
-			return concat( tips, "[NEWLINE]" )
-		else
-			return L"TXT_KEY_TOP_PANEL_HAPPINESS_OFF_TOOLTIP"
 		end
 	end,
 	-------------------------------------------------
@@ -3326,7 +3312,7 @@ local TopPanelTooltips = {
 		return tipText
 	end,
 	-------------------------------------------------
-	-- Health Tooltip (CivBE) Ω°øµ∂»
+	-- Health Tooltip (CivBE) ÂÅ•Â∫∑Â∫¶
 	-------------------------------------------------
 	HealthString = function()
 		local tipText =L("TXT_KEY_TP_HEALTH_EXPLANATION")
