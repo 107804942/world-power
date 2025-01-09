@@ -231,33 +231,19 @@ function UpdateData()
 			-- Update Golden Age Info
 			-----------------------------
 			local strGoldenAgeStr;
-
+			strGoldenAgeStr = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAText
 			if (Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)) then
 				strGoldenAgeStr = Locale.ConvertTextKey("TXT_KEY_TOP_PANEL_GOLDEN_AGES_OFF");
-			else
-				if (pPlayer:GetGoldenAgeTurns() > 0) then
-					if (pPlayer:GetGoldenAgeTourismModifier() > 0) then
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_UNIQUE_GOLDEN_AGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
-						
-						--------------------------------------------- SP Chinese Pax Sinica ----------------------------------------
-					elseif GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_ART_OF_WAR" }()
-					and(GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy 
-					and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy])))
-					then
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_SP_UA_CHINA_GOLDENAGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
-						
-						--------------------------------------------- SP Chinese Pax Sinica END----------------------------------------
-							
-					else
-						strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_GOLDEN_AGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
-					end
+			elseif (pPlayer:GetGoldenAgeTurns() > 0) then
+				if strGoldenAgeStr then
+					strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey(strGoldenAgeStr)) .. " (%i)", pPlayer:GetGoldenAgeTurns());
 				else
-					strGoldenAgeStr = string.format("%i/%i", pPlayer:GetGoldenAgeProgressMeter(), pPlayer:GetGoldenAgeProgressThreshold());
+					strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_GOLDEN_AGE_ANNOUNCE")) .. " (%i)", pPlayer:GetGoldenAgeTurns());
 				end
-			
-				strGoldenAgeStr = "[ICON_GOLDEN_AGE][COLOR:255:255:255:255]" .. strGoldenAgeStr .. "[/COLOR]";
+			else
+				strGoldenAgeStr = string.format("%i/%i", pPlayer:GetGoldenAgeProgressMeter(), pPlayer:GetGoldenAgeProgressThreshold());
 			end
-			
+				strGoldenAgeStr = "[ICON_GOLDEN_AGE][COLOR:255:255:255:255]" .. strGoldenAgeStr .. "[/COLOR]";
 			Controls.GoldenAgeString:SetText(strGoldenAgeStr);
 
 
@@ -1240,33 +1226,14 @@ function GoldenAgeTipHandler( control )
 		end
 	
 		strText = strText .. "[NEWLINE][NEWLINE]";
+		local strGoldenAgeHelp;
+		strGoldenAgeHelp = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAHelpText
 		if (pPlayer:IsGoldenAgeCultureBonusDisabled()) then
 			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE");
-			
-					
-			---------------------------SP China Pax Sinica------------------------		
-		elseif pPlayer:GetGoldenAgeTurns() > 0
-		and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[pPlayer:GetLeaderType()].Type, TraitType = "TRAIT_ART_OF_WAR" }()
-		and(GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy 
-		and pPlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy])))
-		then
-			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS");
-			---------------------------SP China Pax Sinica END------------------------
-					
-					
+		elseif (pPlayer:GetGoldenAgeTurns() > 0 and strGoldenAgeHelp )then
+			strText = strText ..  Locale.ConvertTextKey(strGoldenAgeHelp);
 		else
 			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_EFFECT");		
-		end
-		
-		
-	
-	
-		
-		
-		
-		if (pPlayer:GetGoldenAgeTurns() > 0 and pPlayer:GetGoldenAgeTourismModifier() > 0) then
-			strText = strText .. "[NEWLINE][NEWLINE]";
-			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_CARNIVAL_EFFECT");			
 		end
 	end
 	
