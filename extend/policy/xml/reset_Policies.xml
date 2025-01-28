@@ -59,16 +59,16 @@
 			<Atlas>ROG_POLICY_ATLAS</Atlas>
 			<IconSize>64</IconSize>
 			<Filename>rog_policy_atlas.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>3</IconsPerColumn>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
 		</Row>
 
 		<Row>
 			<Atlas>ROG_POLICY_ATLAS</Atlas>
 			<IconSize>256</IconSize>
 			<Filename>rog_policy_atlas256.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>3</IconsPerColumn>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
 		</Row>
 		
 		
@@ -76,8 +76,8 @@
 			<Atlas>ROG_POLICY_ATLAS_A</Atlas>
 			<IconSize>64</IconSize>
 			<Filename>rog_policy_atlas_achieved.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>3</IconsPerColumn>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>8</IconsPerColumn>
 		</Row>
 	</IconTextureAtlases>
 
@@ -105,30 +105,7 @@
 			<IconsPerRow>2</IconsPerRow>
 			<IconsPerColumn>1</IconsPerColumn>
 		</Row>
-		<Row>
-			<Atlas>RAF_POLICIES</Atlas>
-			<IconSize>64</IconSize>
-			<Filename>raf_policyicons.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>4</IconsPerColumn>
-		</Row>
-
-		<Row>
-			<Atlas>RAF_POLICIES</Atlas>
-			<IconSize>256</IconSize>
-			<Filename>raf_policyicons256.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>4</IconsPerColumn>
-		</Row>
 		
-		
-		<Row>
-			<Atlas>RAF_POLICIES_A</Atlas>
-			<IconSize>64</IconSize>
-			<Filename>raf_policyicons_achieved.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>4</IconsPerColumn>
-		</Row>
 	</IconTextureAtlases>
 
 
@@ -205,12 +182,12 @@
 	<Policies>
 		<!-- 君主政体-->
 		<Update>
-			<Set PortraitIndex="4" IconAtlasAchieved="ROG_POLICY_ATLAS_A" IconAtlas="ROG_POLICY_ATLAS"/>
+			<Set PortraitIndex="17" IconAtlasAchieved="ROG_POLICY_ATLAS_A" IconAtlas="ROG_POLICY_ATLAS"/>
 			<Where Type="POLICY_MONARCHY" />
 		</Update>
 		<!-- 重商主义-->
 		<Update>
-			<Set PortraitIndex="8" IconAtlasAchieved="ROG_POLICY_ATLAS_A" IconAtlas="ROG_POLICY_ATLAS"/>
+			<Set PortraitIndex="24" IconAtlasAchieved="ROG_POLICY_ATLAS_A" IconAtlas="ROG_POLICY_ATLAS"/>
 			<Where Type="POLICY_MERCANTILISM" />
 		</Update>
 
@@ -268,8 +245,8 @@
 			<GridY>1</GridY>
 			<FreePopulation>1</FreePopulation>
 			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 
 
@@ -303,7 +280,7 @@
 			<CultureCost>10</CultureCost>
 			<GridX>3</GridX>
 			<GridY>1</GridY>
-			<PortraitIndex>7</PortraitIndex>
+			<PortraitIndex>20</PortraitIndex>
 			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 			<WonderProductionModifier>15</WonderProductionModifier>
@@ -389,9 +366,9 @@
 			<GridY>1</GridY>
 			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>13</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<PortraitIndex>23</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 			<GoldenAgeDurationMod>33</GoldenAgeDurationMod>
 			<GreatPeopleRateModifier>10</GreatPeopleRateModifier>
 		</Row>
@@ -418,9 +395,9 @@
 			<GridY>3</GridY>
 			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>2</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<PortraitIndex>11</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 			<GarrisonedCityRangeStrikeModifier>50</GarrisonedCityRangeStrikeModifier>
 			<CityStrengthMod>25</CityStrengthMod>
 		</Row>
@@ -434,9 +411,9 @@
 			<GridY>3</GridY>
 			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		
 		
@@ -467,8 +444,8 @@
 			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>26</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS</IconAtlas>
-			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_INDUSTRY_2</Type>
@@ -480,8 +457,8 @@
 			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>8</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_INDUSTRY_3</Type>
@@ -494,8 +471,8 @@
 			<ProductionBeakerMod>50</ProductionBeakerMod>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>5</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_INDUSTRY_4</Type>
@@ -507,8 +484,8 @@
 			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>9</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 			<BuildingGoldMaintenanceMod>-33</BuildingGoldMaintenanceMod>
 		</Row>
 		<Row>
@@ -520,7 +497,7 @@
 			<GridY>1</GridY>
 			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>3</PortraitIndex>
+			<PortraitIndex>16</PortraitIndex>
 			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 			<BuildingPurchaseCostModifier>-25</BuildingPurchaseCostModifier>
@@ -534,9 +511,9 @@
 			<GridY>3</GridY>
 			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS</IconAtlas>
-			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<PortraitIndex>21</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_INDUSTRY_7</Type>
@@ -547,9 +524,9 @@
 			<GridY>3</GridY>
 			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>10</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<PortraitIndex>13</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 			<NumFreeGreatPeople>1</NumFreeGreatPeople>
 			<IncludesOneShotFreeUnits>true</IncludesOneShotFreeUnits>
 		</Row>
@@ -577,10 +554,10 @@
 			<GridY>1</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>1</CultureCost>
-			<PortraitIndex>9</PortraitIndex>
+			<PortraitIndex>25</PortraitIndex>
 			<!--<IconAtlas>POLYNESIA_POLICY_ATLAS</IconAtlas>-->
 			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
-			<IconAtlasAchieved>POLYNESIA_POLICY_A_ATLAS</IconAtlasAchieved>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_KNOWLEDGE_2</Type>
@@ -592,9 +569,9 @@
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<GreatScientistBeakerPolicyModifier>20</GreatScientistBeakerPolicyModifier>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>1</PortraitIndex>
-			<IconAtlas>SCRAMBLE_POLICY_ATLAS</IconAtlas>
-			<IconAtlasAchieved>SCRAMBLE_POLICY_ACHIEVED_ATLAS</IconAtlasAchieved>
+			<PortraitIndex>31</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_KNOWLEDGE_3</Type>
@@ -606,8 +583,8 @@
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>3</PortraitIndex>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 			<NumFreeTechs>1</NumFreeTechs>
 			<FreeBuildingClass>BUILDINGCLASS_KNOWLEDGE_3</FreeBuildingClass>
 		</Row>
@@ -635,9 +612,9 @@
 			<CultureCost>10</CultureCost>
 			<PortraitIndex>6</PortraitIndex>
 			<ExtraSpies>1</ExtraSpies>
-			<IconAtlas>RAF_POLICIES</IconAtlas>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
 			<StealTechFasterModifier>50</StealTechFasterModifier>
-			<IconAtlasAchieved>RAF_POLICIES_A</IconAtlasAchieved>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_KNOWLEDGE_6</Type>
@@ -648,9 +625,9 @@
 			<GridY>2</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>6</PortraitIndex>
-			<IconAtlas>POLYNESIA_POLICY_ATLAS</IconAtlas>
-			<IconAtlasAchieved>POLYNESIA_POLICY_A_ATLAS</IconAtlasAchieved>
+			<PortraitIndex>32</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_KNOWLEDGE_7</Type>
@@ -661,7 +638,7 @@
 			<GridY>3</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>5</PortraitIndex>
+			<PortraitIndex>18</PortraitIndex>
 			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
