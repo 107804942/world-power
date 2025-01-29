@@ -411,7 +411,7 @@
 			<GridY>3</GridY>
 			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>7</PortraitIndex>
+			<PortraitIndex>15</PortraitIndex>
 			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
@@ -554,7 +554,7 @@
 			<GridY>1</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>1</CultureCost>
-			<PortraitIndex>25</PortraitIndex>
+			<PortraitIndex>4</PortraitIndex>
 			<!--<IconAtlas>POLYNESIA_POLICY_ATLAS</IconAtlas>-->
 			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
@@ -597,9 +597,9 @@
 			<GridY>2</GridY>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<CultureCost>10</CultureCost>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>POLICY_ATLAS</IconAtlas>
-			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>ROG_POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>ROG_POLICY_ATLAS_A</IconAtlasAchieved>
 		</Row>
 		<Row>
 			<Type>POLICY_KNOWLEDGE_5</Type>

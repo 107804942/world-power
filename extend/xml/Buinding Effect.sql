@@ -353,10 +353,10 @@ INSERT INTO Building_Flavors(BuildingType,FlavorType,Flavor) VALUES
 
 ---来自城邦
 INSERT INTO Building_YieldPerFriend(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_ROCKEFELLER','YIELD_GOLD',100);
+VALUES ('BUILDING_ROCKEFELLER','YIELD_GOLD',25);
 
 INSERT INTO Building_YieldPerAlly(BuildingType,YieldType,Yield) 
-VALUES ('BUILDING_ROCKEFELLER','YIELD_GOLD',200);
+VALUES ('BUILDING_ROCKEFELLER','YIELD_GOLD',25);
 
 ---若干个地形
 --INSERT INTO Building_YieldPerXTerrainTimes100(BuildingType,TerrainType,YieldType,Yield) 
