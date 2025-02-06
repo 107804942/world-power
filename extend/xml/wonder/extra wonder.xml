@@ -91,14 +91,6 @@
 
 
 		
-		<!-- 海军学院 -->
-		<Row>
-			<Type>BUILDINGCLASS_NAVAL_ACADEMY</Type>
-			<DefaultBuilding>BUILDING_NAVAL_ACADEMY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_NAVAL_ACADEMY</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-		
 
 
 		<!-- 国会大厦-->
@@ -936,27 +928,6 @@
 		</Row>
 
 
-		<!--皇家海军学院-->
-		<Row>
-			<Type>BUILDING_NAVAL_ACADEMY</Type>
-			<BuildingClass>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClass>
-			<Description>TXT_KEY_BUILDING_NAVAL_ACADEMY</Description>
-			<Help>TXT_KEY_WONDER_NAVAL_ACADEMY_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_NAVAL_ACADEMY_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_NAVAL_ACADEMY_QUOTE</Quote>
-			<Cost>640</Cost>
-			<ConquestProb>100</ConquestProb>
-			<MaxStartEra>ERA_MODERN</MaxStartEra>
-			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>249</PortraitIndex>
-			<FreePromotion>PROMOTION_NAVAL_ACADEMY</FreePromotion>
-			<WonderSplashImage>NAVAL_ACADEMY.dds</WonderSplashImage>
-			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-		</Row>
 	
 
 		<!--贝伦塔-->
@@ -2992,13 +2963,7 @@
 			<Cost>5</Cost>
 		</Row>
 		
-		<!--海军学院-->
-		<Row>
-			<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>8</Cost>
-		</Row>
-
+	
 		
 
 		<!--华盛顿纪念碑-->

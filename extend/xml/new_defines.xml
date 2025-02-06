@@ -67,6 +67,7 @@
 	<!--***********************基础设置***********************-->
 	<CustomModOptions>
 		<!--*****额外新增功能******-->
+		<Replace Name="PROMOTION_AURA_PROMOTION" Value="1"/>
 		<Replace Name="ROG_CORE_BOMBARD_RANGE_BUILDINGS" Value="1"/>
 		<Replace Name="MORE_NATURAL_WONDER" Value="1"/>
 		<!--<Replace Name="EVENTS_CITY_BOMBARD" Value="1"/>-->

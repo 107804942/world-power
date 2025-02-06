@@ -72,7 +72,15 @@ UPDATE Defines          SET Value=2   WHERE Name='CITY_ATTACK_RANGE';
 --INSERT OR REPLACE INTO Defines(Name, Value) SELECT 'MAX_CITY_ATTACK_RANGE', max(BombardRange) FROM Buildings;
 
 
+------------------------------------------------------------------------------------------------------------------------
+-- 英勇伦理
+------------------------------------------------------------------------------------------------------------------------
+--INSERT  INTO Policy_UnitClassProductionModifiers(PolicyType,UnitClassType,ProductionModifier)
+--SELECT 'POLICY_GRANDEUR_2' ,Type, 33 FROM UnitClasses WHERE MaxPlayerInstances = 1;
 
+
+INSERT  INTO Policy_YieldFromNonSpecialistCitizens(PolicyType,YieldType,Yield)VALUES
+('POLICY_KNOWLEDGE_3', 'YIELD_SCIENCE',100);
 ------------------------------------------------------------------------------------------------------------------------
 -- 国家纪念日
 ------------------------------------------------------------------------------------------------------------------------

@@ -7000,8 +7000,16 @@
 			<Text>
 				生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。
 				[NEWLINE]攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。
-				[NEWLINE]免疫溅射和穿透伤害,能够为5格内重步单位提供33%[ICON_STRENGTH]战斗力加成。
+				[NEWLINE]免疫溅射和穿透伤害,能够为5格内除自身外的陆军单位提供特殊光环效果：攻击敌军时会对周围一格内敌军附加50%伤害。
 				[NEWLINE]作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT">
+			<Text>重装冲锋</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT_HELP">
+			<Text>
+				攻击敌军时会对周围一格内敌军附加50%伤害。
 			</Text>
 		</Row>
 		
@@ -7317,7 +7325,10 @@
 	
 		<!-- ********************************新政策******************************* -->
 		<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]奴隶生产[ENDCOLOR][NEWLINE]全国所有城市+1[ICON_CITIZEN]人口。农场，牧场，种植园，植物园+1[ICON_GOLD]金钱。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]奴隶生产[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]全国所有城市+1[ICON_CITIZEN]人口。农场，牧场，种植园，植物园+1[ICON_GOLD]金钱。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_SLAVE_RAIDING">
@@ -7329,7 +7340,10 @@
 
 
 		<Row Tag="TXT_KEY_POLICY_ASSIMILATIONISM_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]同化主义[ENDCOLOR][NEWLINE]+10%[ICON_CULTURE]文化。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]同化主义[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]+10%[ICON_CULTURE]文化。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_POLICY_ASSIMILATIONISM">
@@ -7698,7 +7712,10 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_KNOWLEDGE_1_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]外交使节[ENDCOLOR][NEWLINE]每条商路+2%城市[ICON_RESEARCH]科研产出。</Text>
+			<Text>
+				[COLOR_POSITIVE_TEXT]外交使节[ENDCOLOR]
+				[NEWLINE][ICON_BULLET]每条商路+2%城市[ICON_RESEARCH]科研产出。
+			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_KNOWLEDGE_2">
@@ -7723,8 +7740,7 @@
 		<Row Tag="TXT_KEY_KNOWLEDGE_3_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]佣书业[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]获得一个免费科技。
-				[NEWLINE][ICON_BULLET]所有城市获得一个额外的科学家席位。
+				[NEWLINE][ICON_BULLET]非专家人口+1[ICON_RESEARCH]科研。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_3_TEXT">
@@ -7812,14 +7828,6 @@
 			</Text>
 		</Replace>
 
-
-		<Replace Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP" >
-			<Text>
-				[COLOR_POSITIVE_TEXT]军事传统[ENDCOLOR][NEWLINE]军事单位通过战斗获得经验+50%。
-				[NEWLINE]升级单位所需的[ICON_GOLD]金钱减少60%。
-				[NEWLINE]军营，军械所，城墙，城堡,马厩和军事学院+1[ICON_HAPPINESS_1]快乐。
-			</Text>
-		</Replace>
 
 
 
@@ -8691,32 +8699,7 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_BUILDING_NAVAL_ACADEMY">
-			<Text>皇家海军学院</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_NAVAL_ACADEMY_PEDIA">
-			<Text>
-				英国皇家海军学院，是英国培养海军初级军官的主要院校，被誉为英国海军军官的"摇篮"。学院创建于1863年，设在达特茅斯，故又称"达特茅斯皇家海军学院"。该院由海军本土司令部领导。招生条件是：17～19岁、身体健康、高中以上学生以及优秀士兵。学制1～4年。主要课程有大学文理学科、海军共同课目和专业训练。大学毕业生经过1年的共同课目训练后即可分配工作，被授予海军少尉军衔；高中生则要留校或被送往地方大学学习2～3年的大学课程，然后再回校接受海军专业训练，毕业后被授予见习少尉军衔，去舰队见习半年后，方可成为合格少尉。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_NAVAL_ACADEMY_QUOTE">
-			<Text>
-				[NEWLINE]"特拉法尔加海战在1799年到1813年的拿破仑战争中，是一场有着决定性意义的会战。"[NEWLINE]        —— 威尔逊《剑桥近代史》[NEWLINE]
-			</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_WONDER_NAVAL_ACADEMY_HELP">
-			<Text>
-				海军单位+50生命值上限。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_ACADEMY">
-			<Text>海军传奇</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_ACADEMY_HELP">
-			<Text>+50[ICON_HP]生命值上限。</Text>
-		</Row>
+		
 
 
 

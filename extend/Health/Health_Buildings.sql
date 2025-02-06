@@ -4,6 +4,17 @@
 --INSERT INTO Building_YieldFromOtherYield(BuildingType, InYieldType,InYieldValue,OutYieldType,OutYieldValue) VALUES
 --('BUILDING_PONTDUGARD', 'YIELD_HEALTH',1, 'YIELD_SCIENCE',1);
 
+
+
+
+---污染减少人口产出
+UPDATE Buildings SET FoodKept=-10 WHERE BuildingClass='BUILDINGCLASS_CITY_SIZE_LARGE';
+UPDATE Buildings SET FoodKept=-15 WHERE BuildingClass='BUILDINGCLASS_CITY_SIZE_XL';
+UPDATE Buildings SET FoodKept=-25 WHERE BuildingClass='BUILDINGCLASS_CITY_SIZE_XXL';
+UPDATE Buildings SET FoodKept=-50 WHERE BuildingClass='BUILDINGCLASS_CITY_SIZE_GLOBAL';
+
+
+
 ---全局专家产出
 INSERT INTO Building_SpecialistYieldChanges(BuildingType,	SpecialistType,	YieldType,	  Yield)
 SELECT     'BUILDING_COOKED_MEDICINE',	 'SPECIALIST_DOCTOR',	   'YIELD_SCIENCE',1;
