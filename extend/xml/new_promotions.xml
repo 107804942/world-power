@@ -4059,57 +4059,6 @@
 		</Row>
 
 
-		<!--**************赫梯**************-->
-		<Row>
-			<Type>PROMOTION_COMBAT_TO_DEATH</Type>
-			<Description>TXT_KEY_PROMOTION_COMBAT_TO_DEATH</Description>
-			<Help>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>6</PortraitIndex>
-			<OrderPriority>11</OrderPriority>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
-			<SplashDamageImmune>1</SplashDamageImmune>
-			<CollateralDamageImmune>1</CollateralDamageImmune>
-			<IgnoreDamageChance>20</IgnoreDamageChance>
-			<PediaEntry>TXT_KEY_PROMOTION_COMBAT_TO_DEATH</PediaEntry>
-			<SplashDamagePercent>50</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<MaxHitPointsModifier>100</MaxHitPointsModifier>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>50</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-			<HealPercentFromAttackDamage>FORMULA_HEAL_PERCENT_ON_ATTACK_DAMAGE</HealPercentFromAttackDamage>
-			<AuraPromotionRange>5</AuraPromotionRange>
-			<AuraPromotionNoSelf>true</AuraPromotionNoSelf>
-		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_COMBAT_TO_DEATH_EFFECT</Type>
-			<Description>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT</Description>
-			<Help>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>6</PortraitIndex>
-			<OrderPriority>11</OrderPriority>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
-			<SplashDamageImmune>1</SplashDamageImmune>
-			<CollateralDamageImmune>1</CollateralDamageImmune>
-			<IgnoreDamageChance>20</IgnoreDamageChance>
-			<PediaEntry>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT</PediaEntry>
-			<SplashDamagePercent>50</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>50</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-		</Row>
 		
 		<!--**************暗杀者**************-->
 		<Row>
@@ -4308,6 +4257,53 @@
 			<PediaEntry>TXT_KEY_PROMOTION_REPAIR</PediaEntry>
 		</Row>
 
+
+
+
+		<!--**************赫梯**************-->
+		<Row>
+			<Type>PROMOTION_COMBAT_TO_DEATH</Type>
+			<Description>TXT_KEY_PROMOTION_COMBAT_TO_DEATH</Description>
+			<Help>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>6</PortraitIndex>
+			<OrderPriority>11</OrderPriority>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
+			<SplashDamageImmune>1</SplashDamageImmune>
+			<CollateralDamageImmune>1</CollateralDamageImmune>
+			<IgnoreDamageChance>20</IgnoreDamageChance>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBAT_TO_DEATH</PediaEntry>
+			<SplashDamagePercent>50</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
+			<SplashDamageFixed>1</SplashDamageFixed>
+			<MaxHitPointsModifier>100</MaxHitPointsModifier>
+			<CollateralDamageFixed>1</CollateralDamageFixed>
+			<CollateralDamagePercent>50</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			<HealPercentFromAttackDamage>FORMULA_HEAL_PERCENT_ON_ATTACK_DAMAGE</HealPercentFromAttackDamage>
+			<AuraPromotionRange>5</AuraPromotionRange>
+			<AuraPromotionNoSelf>true</AuraPromotionNoSelf>
+		</Row>
+
+
+		<Row>
+			<Type>PROMOTION_COMBAT_TO_DEATH_EFFECT</Type>
+			<Description>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT</Description>
+			<Help>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>6</PortraitIndex>
+			<OrderPriority>11</OrderPriority>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT</PediaEntry>
+			<!--<ShowInPedia>0</ShowInPedia>
+			<ShowInUnitPanel>0</ShowInUnitPanel>-->
+			<CombatPercent>33</CombatPercent>
+		</Row>
 
 	</UnitPromotions>
 

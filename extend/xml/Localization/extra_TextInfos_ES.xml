@@ -6943,21 +6943,60 @@
 			<Text>
 				生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。
 				[NEWLINE]攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。
-				[NEWLINE]免疫溅射和穿透伤害,能够为5格内除自身外的陆军单位提供特殊光环效果：攻击敌军时会对周围一格内敌军附加50%伤害。
+				[NEWLINE]免疫溅射和穿透伤害,能够为5格内除自身外的陆军单位提供33%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE]作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT">
-			<Text>重装冲锋</Text>
+			<Text>统帅激励</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT_HELP">
 			<Text>
-				攻击敌军时会对周围一格内敌军附加50%伤害。
+				+33%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
-		
-		
+
+		<Row Tag="TXT_KEY_UNIT_HITTITE_WAR_CHARIOT">
+			<Text>[COLOR_YELLOW]赫梯战车[ENDCOLOR]</Text>
+			<Plurality>2</Plurality>
+		</Row>
+		<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
+			<Text>
+				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]战场统帅[ENDCOLOR]：自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。能够为5格内重步单位提供33%[ICON_STRENGTH]战斗力加成。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：能够冲锋击退敌方单位，攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_SP_UNITS_HITTITE_WAR_CHARIOT_STRATEGY">
+			<Text>
+				历史上最早出现的三人战车，强大的远古时期重骑兵单位。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_HITTITE_WAR_CHARIOT_TEXT">
+			<Text>
+				赫梯人（Hittites），其先民是生活在北高加索大草原的游牧部落。这支古印欧语系的草原部落，勇武善战，四处迁徙。传说，他们善于驯服野马，而且发明了更轻便好用的车轮，这大大增强了他们的机动性。大约公元前6000年，美索不达米亚的奥贝德时期，苏美尔人正在制作陶罐，赫梯人不畏艰险，开始翻越海拔4000米的高加索山脉向南迁徙。大约公元前3000年左右，阿卡德人逐渐在美索比达米亚定居的时候，赫梯人在今天的小亚细亚建立了安纳托利亚文明。这是古印欧语系最早的文明。从此，人们把他们称作赫梯人。赫梯人善于制造战车，这种战车，据说是根据埃及人的战车改造而成，也有人认为是赫梯人的独立发明。赫梯战车，准乘三人，比埃及战车多一人，且更轻便、机动性更强，在作战时具有压倒优势。
+				对赫梯战车最初的描绘可能来自埃及的浮雕。与埃及的双人战车不同，赫梯人往战车里塞了三位大汉……赫梯三人战车显然是为冲击作战准备的，距离远的时候用弓箭射击，怼上去就用长矛捅，一副一往无前的架势。它们很可能是最早的“步兵战车”或者可以说是搭载步兵的坦克，其中持盾的成员可以随时转化成步兵，下车作战，完成类似埃及军队“战车跑者“一类的工作，或配合战车进攻，突破敌阵。每辆战车多带一名步兵，3000辆战车就是多带了3000名步兵！
+			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT">
+			<Text>远古战车项目</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT_HELP">
+			<Text>只有[COLOR_POSITIVE_TEXT]首个[ENDCOLOR]完成此项目的文明可以组建单位：[COLOR_YIELD_GOLD]赫梯战车[ENDCOLOR]。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT_PEDIA">
+			<Text>
+				历史上最早出现的三人战车，强大的远古时期重骑兵单位。
+			</Text>
+		</Row>
+
+
+
 		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER">
 			<Text>暗杀者</Text>
 		</Row>
@@ -7054,45 +7093,6 @@
 
 
 
-
-
-		<Row Tag="TXT_KEY_UNIT_HITTITE_WAR_CHARIOT">
-			<Text>[COLOR_YELLOW]赫梯战车[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-		<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
-			<Text>
-				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
-				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。能够为5格内重步单位提供33%[ICON_STRENGTH]战斗力加成。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：能够冲锋击退敌方单位，攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_SP_UNITS_HITTITE_WAR_CHARIOT_STRATEGY">
-			<Text>
-				历史上最早出现的三人战车，强大的远古时期重骑兵单位。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CIV5_HITTITE_WAR_CHARIOT_TEXT">
-			<Text>
-				赫梯人（Hittites），其先民是生活在北高加索大草原的游牧部落。这支古印欧语系的草原部落，勇武善战，四处迁徙。传说，他们善于驯服野马，而且发明了更轻便好用的车轮，这大大增强了他们的机动性。大约公元前6000年，美索不达米亚的奥贝德时期，苏美尔人正在制作陶罐，赫梯人不畏艰险，开始翻越海拔4000米的高加索山脉向南迁徙。大约公元前3000年左右，阿卡德人逐渐在美索比达米亚定居的时候，赫梯人在今天的小亚细亚建立了安纳托利亚文明。这是古印欧语系最早的文明。从此，人们把他们称作赫梯人。赫梯人善于制造战车，这种战车，据说是根据埃及人的战车改造而成，也有人认为是赫梯人的独立发明。赫梯战车，准乘三人，比埃及战车多一人，且更轻便、机动性更强，在作战时具有压倒优势。
-				对赫梯战车最初的描绘可能来自埃及的浮雕。与埃及的双人战车不同，赫梯人往战车里塞了三位大汉……赫梯三人战车显然是为冲击作战准备的，距离远的时候用弓箭射击，怼上去就用长矛捅，一副一往无前的架势。它们很可能是最早的“步兵战车”或者可以说是搭载步兵的坦克，其中持盾的成员可以随时转化成步兵，下车作战，完成类似埃及军队“战车跑者“一类的工作，或配合战车进攻，突破敌阵。每辆战车多带一名步兵，3000辆战车就是多带了3000名步兵！
-			</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT">
-			<Text>远古战车项目</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT_HELP">
-			<Text>只有[COLOR_POSITIVE_TEXT]首个[ENDCOLOR]完成此项目的文明可以组建单位：[COLOR_YIELD_GOLD]赫梯战车[ENDCOLOR]。</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_HITTITE_WAR_CHARIOT_PEDIA">
-			<Text>
-				历史上最早出现的三人战车，强大的远古时期重骑兵单位。
-			</Text>
-		</Row>
 
 
 
