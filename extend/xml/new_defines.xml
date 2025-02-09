@@ -239,67 +239,6 @@
 
 
 
-	<Buildings>
-		<!--<Update>
-			<Where Type="BUILDING_SHRINE"/>
-			<Set ConversionModifier="-10"/>
-		</Update>
-		<Update>
-			<Where Type="BUILDING_MAYA_PYRAMID"/>
-			<Set ConversionModifier="-10"/>
-		</Update>
-
-		<Update>
-			<Where Type="BUILDING_TEMPLE"/>
-			<Set ConversionModifier="-10"/>
-		</Update>
-		<Update>
-			<Where Type="BUILDING_MUD_PYRAMID_MOSQUE"/>
-			<Set ConversionModifier="-10"/>
-		</Update>
-		<Update>
-			<Where Type="BUILDING_BURIAL_TOMB"/>
-			<Set ConversionModifier="-10"/>
-		</Update>
-
-		<Update>
-			<Where Type="BUILDING_STONEHENGE"/>
-			<Set GlobalConversionModifier="-5"/>
-		</Update>
-		<Update>
-			<Where Type="BUILDING_HAGIA_SOPHIA"/>
-			<Set GlobalConversionModifier="-5"/>
-		</Update>
-		<Update>
-			<Where Type="BUILDING_NOTRE_DAME"/>
-			<Set GlobalConversionModifier="-5"/>
-		</Update>
-		<Update>
-			<Where Type="BUILDING_MOSQUE_OF_DJENNE"/>
-			<Set GlobalConversionModifier="-5"/>
-		</Update>
-		<Update>
-			<Where Type="BUILDING_GRAND_TEMPLE"/>
-			<Set GlobalConversionModifier="-20"/>
-		</Update>-->
-
-
-		<Update>
-			<Where Type="BUILDING_POSEIDON_TEMPLE"/>
-			<Set GlobalConversionModifier="-20"/>
-		</Update>
-	</Buildings>
-
-	<!--<Policies>
-		<Update>
-			<Where Type="POLICY_ORGANIZED_RELIGION"/>
-			<Set ConversionModifier="-10"/>
-		</Update>
-	</Policies>-->
-
-
-
-
 	<Building_ResourceQuantity>
 
 

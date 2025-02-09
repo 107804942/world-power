@@ -847,8 +847,8 @@
 			<PrereqTech>TECH_BLITZKRIEG</PrereqTech>
 			<ObsoleteTech>TECH_BVR_COMBAT</ObsoleteTech>
 			<BaseSightRange>3</BaseSightRange>
-			<Combat>380</Combat>
-			<RangedCombat>380</RangedCombat>
+			<Combat>350</Combat>
+			<RangedCombat>350</RangedCombat>
 			<Range>2</Range>
 			<Cost>2500</Cost>
 			<Moves>3</Moves>

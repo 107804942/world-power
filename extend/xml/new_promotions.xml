@@ -1047,10 +1047,61 @@
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			<AuraPromotionRange>5</AuraPromotionRange>
+			<AuraPromotionNoSelf>true</AuraPromotionNoSelf>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_LAND_BATTLESHIP_EFFECT</Type>
+			<Description>TXT_KEY_PROMOTION_LAND_BATTLESHIP_EFFECT</Description>
+			<Help>TXT_KEY_PROMOTION_LAND_BATTLESHIP_EFFECT_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<OrderPriority>11</OrderPriority>
+			<PortraitIndex>55</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_LAND_BATTLESHIP</PediaEntry>
+			<ChangeDamageValue>-10</ChangeDamageValue>
+			<SplashDamageImmune>1</SplashDamageImmune>
+			<CollateralDamageImmune>1</CollateralDamageImmune>
 		</Row>
 
 	</UnitPromotions>
 
+	<Promotion_AuraPromotionProviderNum>
+
+		<Row>
+			<PromotionType>PROMOTION_LAND_BATTLESHIP</PromotionType>
+			<AuraPromotionType>PROMOTION_LAND_BATTLESHIP_EFFECT</AuraPromotionType>
+			<ProviderNum>1</ProviderNum>
+		</Row>
+	</Promotion_AuraPromotionProviderNum>
+
+	<Promotion_AuraPromotionDomains>
+
+		<Row>
+			<PromotionType>PROMOTION_LAND_BATTLESHIP</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+		</Row>
+
+	</Promotion_AuraPromotionDomains>
+
+
+	
+	
+	
+
+	<UnitPromotions_Domains>
+
+		<Row>
+			<PromotionType>PROMOTION_ANTI_ANTI_MOUNTED_BONUS</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Attack>15</Attack>
+			<Defense>15</Defense>
+		</Row>
+
+	</UnitPromotions_Domains>
 
 
 

@@ -4632,10 +4632,20 @@
 			<Text>移动要塞</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_LAND_BATTLESHIP_HELP">
-			<Text>攻击时可造成50%溅射伤害，移动时会对相邻敌方单位造成10点伤害。+400%最大生命值。克制堡垒，被[COLOR_NEGATIVE_TEXT]空军单位[ENDCOLOR]克制。</Text>
+			<Text>
+				攻击时可造成50%溅射伤害，移动时会对相邻敌方单位造成10点伤害。
+				[NEWLINE]+400%最大生命值。
+				[NEWLINE]克制堡垒，被[COLOR_NEGATIVE_TEXT]空军单位[ENDCOLOR]克制。
+				[NEWLINE]能够为5格内除自身外的陆军单位提供光环效果：免疫溅射和穿透伤害并且被攻击时受到的伤害减少10点。
+			</Text>
 		</Row>
 
-
+		<Row Tag="TXT_KEY_PROMOTION_LAND_BATTLESHIP_EFFECT">
+			<Text>叹息之壁</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_LAND_BATTLESHIP_EFFECT_HELP">
+			<Text>免疫溅射和穿透伤害并且被攻击时受到的伤害减少10点。</Text>
+		</Row>
 
 
 
@@ -5639,7 +5649,7 @@
 			<Text>[NEWLINE][TAB][TAB]"任何一个伟大的发明，从火到飞行，都曾被视为对某个上帝的侮辱。没有例外。"[NEWLINE]        ——J.B.S.霍尔丹[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_KNOSSOS_HELP">
-			<Text>本地工程师+1[ICON_PRODUCTION]产能，建造建筑时+10%[ICON_PRODUCTION]产能，敌方单位在该奇观所在城市范围内移动或者结束回合时会受到10点伤害。为城市提供20点[ICON_STRENGTH]防御力加成，且生命值+75。</Text>
+			<Text>全国每处[ICON_RES_MARBLE]大理石，[ICON_RES_STONE]花岗岩+3[ICON_PRODUCTION]产能，+3[ICON_GOLD]金钱。本地工程师+1[ICON_PRODUCTION]产能，建造建筑时+10%[ICON_PRODUCTION]产能，敌方单位在该奇观所在城市范围内移动或者结束回合时会受到10点伤害。为城市提供20点[ICON_STRENGTH]防御力加成，且生命值+75。</Text>
 		</Row>
 
 
@@ -7978,7 +7988,11 @@
 			<Text>[NEWLINE]"请听我说。波塞冬，他是深邃海洋的统治者，他手中紧紧握住的液体围绕着兼施的大地;他在风暴波涛之下，黑暗而深邃的水之君主。"[NEWLINE]        ——俄耳甫斯[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_POSEIDON_TEMPLE_HELP">
-			<Text>码头+2[ICON_PRODUCTION]产能,+2[ICON_PEACE]信仰。海洋区块+2[ICON_FOOD]食物。海军单位在浅海水域获得双倍[ICON_MOVEMENT]移动力，对海域+15%[ICON_STRENGTH]战斗力。所有城市中外来宗教传播速度-20%。国境内敌方海军单位每次移动额外消耗1[ICON_MOVES]移动力。</Text>
+			<Text>
+				码头+2[ICON_PRODUCTION]产能,+2[ICON_PEACE]信仰。海洋区块+2[ICON_FOOD]食物。
+				[NEWLINE]海军单位在浅海水域获得双倍[ICON_MOVEMENT]移动力，对海域+15%[ICON_STRENGTH]战斗力。国境内敌方海军单位每次移动额外消耗1[ICON_MOVES]移动力。
+				[NEWLINE]所有单位掠劫时可为你的所有城市提供一次性的50点[ICON_PRODUCTION]产能、[ICON_GOLD]金钱产出。
+			</Text>
 		</Row>
 
 

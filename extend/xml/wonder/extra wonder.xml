@@ -916,7 +916,7 @@
 			<Civilopedia>TXT_KEY_WONDER_THE_CAPITOL_PEDIA</Civilopedia>
 			<Cost>340</Cost>
 			<ConquestProb>100</ConquestProb>
-			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
 			<NukeImmune>true</NukeImmune>
 			<FreePolicies>1</FreePolicies> 
 			<HurryCostModifier>-1</HurryCostModifier>
