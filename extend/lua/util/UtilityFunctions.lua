@@ -94,19 +94,7 @@ end
 ------------------------------------------------Military/Unit Functions------------------------------------------------------
 
 function GetCivSpecificUnit(player, sUnitClass)
-	local sUnitType = -1
-	local sCivType = GameInfo.Civilizations[player:GetCivilizationType()].Type
-
-	for pOverride in GameInfo.Civilization_UnitClassOverrides { CivilizationType = sCivType, UnitClassType = sUnitClass } do
-		sUnitType = pOverride.UnitType
-		break
-	end
-
-	if sUnitType == -1 or sUnitType == nil then
-		sUnitType = GameInfo.UnitClasses[sUnitClass].DefaultUnit
-	end
-
-	return sUnitType
+	return GameInfo.Units[player:GetCivUnitWithDefault(GameInfoTypes[sUnitClass])].Type
 end
 
 function GetUpgradeUnit(player, sUnitType)
@@ -115,7 +103,7 @@ function GetUpgradeUnit(player, sUnitType)
 	if (sNewUnitClass ~= nil) then
 		local sUpgradeUnitType = GetCivSpecificUnit(player, sNewUnitClass)
 
-		if (sUpgradeUnitType ~= nil and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Units[sUpgradeUnitType].PrereqTech])) then
+		if (sUpgradeUnitType ~= nil and player:HasTech(GameInfoTypes[GameInfo.Units[sUpgradeUnitType].PrereqTech])) then
 			return sUpgradeUnitType
 		end
 	end
@@ -299,7 +287,7 @@ function SetCitadelUnits(iPlayer, x, y)
 	local pTeam = Teams[pPlayer:GetTeam()]
 	local pPlot = Map.GetPlot(x, y)
 
-	local CitadelUnitID = GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID
+	local CitadelUnitID = GameInfoTypes["PROMOTION_CITADEL_DEFENSE"]
 
 	local CitadelUnitEarly = GameInfoTypes.UNIT_CITADEL_EARLY
 	local CitadelUnitMid = GameInfoTypes.UNIT_CITADEL_MID
@@ -357,25 +345,15 @@ function AIForceBuildAirEscortUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_TRIPLANE")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 15
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_DEFENSE_AIR)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_TRIPLANE), unitX, unitY, UNITAI_DEFENSE_AIR)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	NewUnit:PushMission(GameInfoTypes.MISSION_AIRPATROL)
-
 	print("Stupid AI need more Fighters! Now they are set intercepting!")
 end
 
@@ -390,26 +368,14 @@ function AIForceBuildNavalEscortUnits(unitX, unitY, player)
 		return
 	end
 
-
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_GALLEASS")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK_SEA)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_GALLEASS), unitX, unitY, UNITAI_ATTACK_SEA)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
-
 	print("Stupid AI need more Naval Melee Ships!")
 end
 
@@ -423,22 +389,13 @@ function AIForceBuildNavalHRUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_FIRE_SHIP")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 10
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ASSAULT_SEA)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_FIRE_SHIP), unitX, unitY, UNITAI_ASSAULT_SEA)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Naval Hit and Run Ships!")
 end
@@ -460,25 +417,14 @@ function AIForceBuildNavalRangedUnits(unitX, unitY, player)
 		return
 	end
 
-
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_GREAT_GALLEASS")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 10
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ASSAULT_SEA)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_GREAT_GALLEASS), unitX, unitY, UNITAI_ASSAULT_SEA)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
-
 	print("Stupid AI need more Naval Ranged Ships!")
 end
 
@@ -493,26 +439,14 @@ function AIForceBuildInfantryUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_SWORDSMAN")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK)
-
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_SWORDSMAN), unitX, unitY, UNITAI_ATTACK)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
-
 	print("Stupid AI need more Infantry!")
 end
 
@@ -525,24 +459,13 @@ function AIForceBuildLandCounterUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_SPEARMAN")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 5
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ATTACK)
-
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_SPEARMAN), unitX, unitY, UNITAI_ATTACK)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Counter Units!")
 end
@@ -564,22 +487,13 @@ function AIForceBuildMobileUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_HORSEMAN")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 10
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_FAST_ATTACK)
-
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_HORSEMAN), unitX, unitY, UNITAI_FAST_ATTACK)
 	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Mobile Units!")
 end
@@ -602,35 +516,14 @@ function AIForceBuildLandHRUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_MEDIEVAL_CHARIOT")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
 	local PlayerEra = player:GetCurrentEra()
 	local NewUnitEXP = PlayerEra * 20
 	if player:GetCapitalCity() ~= nil then
 		NewUnitEXP = NewUnitEXP + player:GetCapitalCity():GetProductionExperience()
 	end
 
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_FAST_ATTACK)
-
-	NewUnit:SetExperience(NewUnitEXP)
-
-	local plot = NewUnit:GetPlot()
-	local unitCount = plot:GetNumUnits()
-
-	if unitCount >= 3 then
-		if NewUnit:GetDomainType() == DomainTypes.DOMAIN_LAND then
-			NewUnit:JumpToNearestValidPlot()
-			print("Jump out AI stacking units!")
-		else
-			NewUnit:Kill()
-		end
-	end
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_MEDIEVAL_CHARIOT), unitX, unitY, UNITAI_FAST_ATTACK)
+	AINewUnitSetUp(NewUnit, NewUnitEXP)
 	print("Stupid AI need more Land Hit and Run Units!")
 end
 
@@ -639,15 +532,7 @@ function AIConscriptMilitiaUnits(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_WARRIOR")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_DEFENSE)
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_WARRIOR), unitX, unitY, UNITAI_DEFENSE)
 	if player:GetCapitalCity() ~= nil then
 		NewUnit:SetExperience(player:GetCapitalCity():GetProductionExperience())
 	end
@@ -661,15 +546,7 @@ function AIConscriptMilitiaNavy(unitX, unitY, player)
 		return
 	end
 
-	local sUnitType = GetCivSpecificUnit(player, "UNITCLASS_NAVAL_MILITIA")
-	local sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-
-	while (sUpgradeUnitType ~= nil) do
-		sUnitType = sUpgradeUnitType
-		sUpgradeUnitType = GetUpgradeUnit(player, sUnitType)
-	end
-
-	local NewUnit = player:InitUnit(GameInfoTypes[sUnitType], unitX, unitY, UNITAI_ESCORT_SEA)
+	local NewUnit = player:InitUnit(player:GetCivUnitNowTech(GameInfoTypes.UNITCLASS_NAVAL_MILITIA), unitX, unitY, UNITAI_ESCORT_SEA)
 	if player:GetCapitalCity() ~= nil then
 		NewUnit:SetExperience(player:GetCapitalCity():GetProductionExperience())
 	end
@@ -713,49 +590,49 @@ function ImproveTiles(bIsHuman)
 					or (not plot:CanHaveImprovement(plot:GetImprovementType(), player:GetTeam())
 						and GameInfo.Resources[plot:GetResourceType(player:GetTeam())].ResourceClassType ~= "RESOURCECLASS_BONUS"))
 			then
-				if plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_FARM.ID, player:GetTeam()) then
+				if plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_FARM, player:GetTeam()) then
 					if not player:HasTrait(GameInfoTypes["TRAIT_IGNORE_TERRAIN_IN_FOREST"]) then
 						RemoveConflictFeatures(plot)
 					end
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_FARM.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_MINE.ID, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_FARM)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_MINE, player:GetTeam()) then
 					RemoveConflictFeatures(plot)
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_MINE.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_QUARRY.ID, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_MINE)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_QUARRY, player:GetTeam()) then
 					RemoveConflictFeatures(plot)
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_QUARRY.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_PASTURE.ID, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_QUARRY)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_PASTURE, player:GetTeam()) then
 					RemoveConflictFeatures(plot)
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_PASTURE.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_FISHING_BOATS.ID, player:GetTeam()) then
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_FISHING_BOATS.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_FISHFARM_MOD.ID, player:GetTeam()) then
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_FISHFARM_MOD.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_PLANTATION.ID, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_PASTURE)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_FISHING_BOATS, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_FISHING_BOATS)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_FISHFARM_MOD, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_FISHFARM_MOD)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_PLANTATION, player:GetTeam()) then
 					RemoveConflictFeatures(plot)
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_PLANTATION.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_CAMP.ID, player:GetTeam()) then
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_CAMP.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_WELL.ID, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_PLANTATION)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_CAMP, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_CAMP)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_WELL, player:GetTeam()) then
 					RemoveConflictFeatures(plot)
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_WELL.ID)
-				elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_OFFSHORE_PLATFORM.ID, player:GetTeam()) then
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_OFFSHORE_PLATFORM.ID)
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_WELL)
+				elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_OFFSHORE_PLATFORM, player:GetTeam()) then
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_OFFSHORE_PLATFORM)
 				end
 				print("Improve Resource Automatically!")
 			end
 			if not plot:IsWater() or plot:GetResourceType(-1) ~= -1 or plot:GetImprovementType() ~= -1 or (plot:IsUnit() and player:IsHuman()) then
 				if plot:GetFeatureType() == FeatureTypes.FEATURE_JUNGLE and plot:GetImprovementType() == -1
-					and plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_TRADING_POST.ID, player:GetTeam())
+					and plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_TRADING_POST, player:GetTeam())
 					and (GameInfoTypes[GameInfo.Builds["BUILD_TRADING_POST"].PrereqTech] == nil
 						or Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_TRADING_POST"].PrereqTech]))
 				then
-					plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_TRADING_POST.ID);
+					plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_TRADING_POST);
 				end
-			elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_FISHERY_MOD.ID, player:GetTeam()) and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_FISHERY_MOD"].PrereqTech]) then
-				plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_FISHFARM_MOD.ID)
-			elseif plot:CanHaveImprovement(GameInfo.Improvements.IMPROVEMENT_GAS_RIG_MOD.ID, player:GetTeam()) and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_GAS_RIG_MOD"].PrereqTech]) then
-				plot:SetImprovementType(GameInfo.Improvements.IMPROVEMENT_OFFSHORE_PLATFORM.ID)
+			elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_FISHERY_MOD, player:GetTeam()) and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_FISHERY_MOD"].PrereqTech]) then
+				plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_FISHFARM_MOD)
+			elseif plot:CanHaveImprovement(GameInfoTypes.IMPROVEMENT_GAS_RIG_MOD, player:GetTeam()) and Teams[player:GetTeam()]:IsHasTech(GameInfoTypes[GameInfo.Builds["BUILD_GAS_RIG_MOD"].PrereqTech]) then
+				plot:SetImprovementType(GameInfoTypes.IMPROVEMENT_OFFSHORE_PLATFORM)
 			end
 			if plot:IsImprovementPillaged() then
 				plot:SetImprovementPillaged(false)
@@ -875,13 +752,13 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 		local sSpecialCargo = GameInfo.Units[pUnit:GetUnitType()].SpecialCargo;
 
 		local SupplyDiscount = 0;
-		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_1"].ID) then
+		if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_SUPPLY_1"]) then
 			SupplyDiscount = SupplyDiscount + 1
 		end
-		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_2"].ID) then
+		if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_SUPPLY_2"]) then
 			SupplyDiscount = SupplyDiscount + 1
 		end
-		if pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID) then
+		if pUnit:IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_SUPPLY_3"]) then
 			SupplyDiscount = SupplyDiscount + 1
 		end
 		if iCost and iCost > 0 then
@@ -925,13 +802,13 @@ function CarrierRestore(iPlayerID, iUnitID, iCargoUnit)
 			iCost = 0;
 		end
 		local SupplyDiscount = 0;
-		if pUnit:GetTransportUnit():IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_1"].ID) then
+		if pUnit:GetTransportUnit():IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_SUPPLY_1"]) then
 			SupplyDiscount = SupplyDiscount + 1
 		end
-		if pUnit:GetTransportUnit():IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_2"].ID) then
+		if pUnit:GetTransportUnit():IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_SUPPLY_2"]) then
 			SupplyDiscount = SupplyDiscount + 1
 		end
-		if pUnit:GetTransportUnit():IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CARRIER_SUPPLY_3"].ID) then
+		if pUnit:GetTransportUnit():IsHasPromotion(GameInfoTypes["PROMOTION_CARRIER_SUPPLY_3"]) then
 			SupplyDiscount = SupplyDiscount + 1
 		end
 		if iCost and iCost > 0 then
