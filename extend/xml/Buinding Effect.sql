@@ -910,8 +910,8 @@ BEGIN
 	VALUES 	('BUILDING_REGISTAN', NEW.BuildingClass,	'YIELD_CULTURE', 	4);
 END;
 
-
-
+--权力法案加成
+UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Policy_Bill_Of_Right_Trigger';
 
 
 
