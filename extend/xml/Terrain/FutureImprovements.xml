@@ -45,7 +45,7 @@
 		<!--*******************石阵********************* -->
 
 
-		<Row>
+		<Replace>
 			<Type>IMPROVEMENT_CAIRN</Type>
 			<Description>TXT_KEY_IMPROVEMENT_CAIRN</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_CAIRN_TEXT</Civilopedia>
@@ -59,7 +59,7 @@
 			<RequiresFlatlands>0</RequiresFlatlands>
 			<DestroyedWhenPillaged>true</DestroyedWhenPillaged>
 			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
-		</Row>
+		</Replace>
 			
 
 
@@ -232,7 +232,7 @@
 	
 	
 	<Improvement_Yields>
-		
+		<Delete ImprovementType="IMPROVEMENT_CAIRN"/>
 		
 		
 		
@@ -335,7 +335,7 @@
 	<!--*******************关联地形*********************-->
 	
 	<Improvement_ValidTerrains>
-
+		<Delete ImprovementType="IMPROVEMENT_CAIRN"/>
 		
 		
 		<Row>
@@ -778,7 +778,7 @@
 
 
 		<!--*******************石祭坛********************* -->
-		<Row>
+		<Replace>
 			<Type>BUILD_CAIRN</Type>
 			<Time>400</Time>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
@@ -792,7 +792,7 @@
 			<OrderPriority>98</OrderPriority>
 			<IconIndex>15</IconIndex>
 			<IconAtlas>ROG_IMPROVEMENTS_ATLAS</IconAtlas>
-		</Row>
+		</Replace>
 
 
 		<Row>
@@ -1122,7 +1122,7 @@
 	</BuildFeatures>
 	
 	<Unit_Builds>
-		
+		<Delete BuildType="BUILD_CAIRN"/>
 
 		
 		<Row>
