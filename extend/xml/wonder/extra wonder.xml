@@ -16,6 +16,16 @@
 		
 	<BuildingClasses>
 
+
+
+		<!-- 海军学院 -->
+		<Row>
+			<Type>BUILDINGCLASS_ROYAL_COLLEGE</Type>
+			<DefaultBuilding>BUILDING_ROYAL_COLLEGE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ROYAL_COLLEGE</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
 		<!-- 时态演算 -->
 		<Row>
 			<Type>BUILDINGCLASS_DIABLO</Type>
@@ -957,6 +967,31 @@
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
 
+
+
+		<!--海军学院-->
+
+		<Row>
+			<Type>BUILDING_ROYAL_COLLEGE</Type>
+			<BuildingClass>BUILDINGCLASS_ROYAL_COLLEGE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_ROYAL_COLLEGE</Description>
+			<Help>TXT_KEY_WONDER_ROYAL_COLLEGE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_ROYAL_COLLEGE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ROYAL_COLLEGE_QUOTE</Quote>
+			<Cost>750</Cost>
+			<ConquestProb>100</ConquestProb>
+			<PrereqTech>TECH_NEW_HUMANISM</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<FreePromotion>PROMOTION_ROYAL</FreePromotion>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>229</PortraitIndex>
+			<WonderSplashImage>ROYAL.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
+
+		
 		<!--华盛顿纪念碑-->
 		<Row>
 			<Type>BUILDING_WASHION_TOWER</Type>
@@ -2980,8 +3015,13 @@
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>5</Cost>
 		</Row>
-		
-		
+
+		<!--海军学院-->
+		<Row>
+			<BuildingType>BUILDING_ROYAL_COLLEGE</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>5</Cost>
+		</Row>
 
 		<!--乐山大佛-->
 		<Row>

@@ -7002,7 +7002,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_HELP">
 			<Text>
-				生命值上限+100%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。
+				生命值上限+200%，对反骑兵与反装甲单位+50%[ICON_STRENGTH]攻击力。
 				[NEWLINE]攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。
 				[NEWLINE]免疫溅射和穿透伤害,能够为5格内除自身外的陆军单位提供33%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE]作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
@@ -7587,7 +7587,7 @@
 		<Row Tag="TXT_KEY_GRANDEUR_2_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]英勇伦理[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]兵营、军械所、兵工厂、军事基地+2[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]兵营、军械所、兵工厂、军事基地+2[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET]新建单位+15经验值。
 			</Text>
 		</Row>
@@ -7972,7 +7972,7 @@
 			<Text>
 				码头+2[ICON_PRODUCTION]产能,+2[ICON_PEACE]信仰。海洋区块+2[ICON_FOOD]食物。
 				[NEWLINE]海军单位在浅海水域获得双倍[ICON_MOVEMENT]移动力，对海域+15%[ICON_STRENGTH]战斗力。国境内敌方海军单位每次移动额外消耗1[ICON_MOVES]移动力。
-				[NEWLINE]所有单位掠劫时可为你的所有城市提供一次性的50点[ICON_PRODUCTION]产能、[ICON_GOLD]金钱产出。
+				[NEWLINE]所有单位掠劫时可为你的所有城市提供一次性的20点[ICON_PRODUCTION]产能、[ICON_GOLD]金钱产出。
 			</Text>
 		</Row>
 
@@ -9892,6 +9892,37 @@
 			<Text>增加城市最大血量5%伤害。</Text>
 		</Replace>
 
+
+
+
+		<Row Tag="TXT_KEY_BUILDING_ROYAL_COLLEGE">
+			<Text>皇家海军学院</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_ROYAL_COLLEGE_PEDIA">
+			<Text>
+				英国皇家海军学院，是英国培养海军初级军官的主要院校，被誉为英国海军军官的"摇篮"。学院创建于1863年，设在达特茅斯，故又称"达特茅斯皇家海军学院"。该院由海军本土司令部领导。招生条件是:17~19岁、身体健康、高中以上学生以及优秀士兵。学制1~4年。主要课程有大学文理学科、海军共同课目和专业训练。大学毕业生经过1年的共同课目训练后即可分配工作，被授予海军少尉军衔;高中生则要留校或被送往地方大学学习2~3年的大学课程，然后再回校接受海军专业训练，毕业后被授予见习少尉军衔，去舰队见习半年后，方可成为合格少尉。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_ROYAL_COLLEGE_QUOTE">
+			<Text>
+				[NEWLINE]"汝欲和平，即须备战。"[NEWLINE]        —— 皇家海军[NEWLINE]
+			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_WONDER_ROYAL_COLLEGE_HELP">
+			<Text>
+				海军单位+25点生命值上限。
+			</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROMOTION_ROYAL">
+			<Text>皇家海军</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_ROYAL_HELP">
+			<Text>+25点生命值上限。</Text>
+		</Row>
 	
 </Language_zh_CN>
 

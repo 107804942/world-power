@@ -1051,6 +1051,8 @@
 			<AuraPromotionNoSelf>true</AuraPromotionNoSelf>
 		</Row>
 
+		
+		
 		<Row>
 			<Type>PROMOTION_LAND_BATTLESHIP_EFFECT</Type>
 			<Description>TXT_KEY_PROMOTION_LAND_BATTLESHIP_EFFECT</Description>
@@ -1146,19 +1148,19 @@
 		<Row>
 			<PromotionType>PROMOTION_STRATEGIC_BOMBER</PromotionType>
 			<OtherPromotionType>PROMOTION_LAND_BATTLESHIP</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>300</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_AIR_ATTACK</PromotionType>
 			<OtherPromotionType>PROMOTION_LAND_BATTLESHIP</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>300</Attack>
 		</Row>
 
 
 		<Row>
 			<PromotionType>PROMOTION_ANTI_AIR_II</PromotionType>
 			<OtherPromotionType>PROMOTION_LAND_BATTLESHIP</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>300</Attack>
 		</Row>
 
 		<Row>
@@ -4330,7 +4332,7 @@
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
 			<SplashDamageFixed>1</SplashDamageFixed>
-			<MaxHitPointsModifier>100</MaxHitPointsModifier>
+			<MaxHitPointsModifier>200</MaxHitPointsModifier>
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
@@ -4432,7 +4434,20 @@
 
 
 	<UnitPromotions>
-
+		<!--**************海军学院**************-->
+		<Row>
+			<Type>PROMOTION_ROYAL</Type>
+			<Description>TXT_KEY_PROMOTION_ROYAL</Description>
+			<Help>TXT_KEY_PROMOTION_ROYAL_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<ShowInPedia>0</ShowInPedia>
+			<PediaEntry>TXT_KEY_PROMOTION_ROYAL</PediaEntry>
+			<MaxHitPointsModifier>25</MaxHitPointsModifier>
+		</Row>
 
 		<!--**************贝伦塔**************-->
 		<Row>

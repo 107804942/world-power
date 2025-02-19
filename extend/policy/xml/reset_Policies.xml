@@ -228,7 +228,7 @@
 
 
 		<!-- 赞助新增同化主义-->
-		<Row>
+		<!--<Row>
 			<Type>POLICY_ASSIMILATIONISM</Type>
 			<Description>TXT_KEY_POLICY_ASSIMILATIONISM</Description>
 			<Civilopedia>TXT_KEY_POLICY_ASSIMILATIONISM_TEXT</Civilopedia>
@@ -240,7 +240,7 @@
 			<PortraitIndex>43</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
-		</Row>
+		</Row>-->
 
 	
 		
@@ -662,11 +662,11 @@
 	<Policy_YieldModifiers>
 		
 
-		<Row>
+		<!--<Row>
 			<PolicyType>POLICY_ASSIMILATIONISM</PolicyType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>10</Yield>
-		</Row>
+		</Row>-->
 
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_1</PolicyType>
@@ -939,21 +939,21 @@
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldType>YIELD_CULTURE</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
 
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_ARMORY</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldType>YIELD_CULTURE</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
 
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_ARSENAL</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldType>YIELD_CULTURE</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
 
@@ -961,7 +961,7 @@
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_2</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_MILITARY_BASE</BuildingClassType>
-			<YieldType>YIELD_SCIENCE</YieldType>
+			<YieldType>YIELD_CULTURE</YieldType>
 			<YieldChange>2</YieldChange>
 		</Row>
 	</Policy_BuildingClassYieldChanges>
@@ -1491,10 +1491,10 @@
 
 		
 
-		<Row>
+		<!--<Row>
 			<PolicyType>POLICY_ASSIMILATIONISM</PolicyType>
 			<PrereqPolicy>POLICY_SCHOLASTICISM</PrereqPolicy>
-		</Row>	
+		</Row>-->
 		
 		
 		<Row>
@@ -1612,11 +1612,11 @@
 	<Policy_Flavors>
 
 
-		<Row>
+		<!--<Row>
 			<PolicyType>POLICY_ASSIMILATIONISM</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>20</Flavor>
-		</Row>
+		</Row>-->
 
 		<Row>
 			<PolicyType>POLICY_SLAVE_RAIDING</PolicyType>
