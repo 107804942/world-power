@@ -707,6 +707,12 @@ function GetHelpTextForUnit( unitID ) -- isIncludeRequirementsInfo )
 		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
 	end
 
+	-- Required Social Policy:
+	item = unit.PolicyBranchType and GameInfo.PolicyBranchTypes[ unit.PolicyBranchType ]
+	if item then
+		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
+	end
+
 	-- Required Buildings:
 	local buildings = {}
 	for row in GameInfo.Unit_BuildingClassRequireds( thisUnitType ) do
@@ -1233,7 +1239,9 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		EnableAlwaysImmigrantIn = L"TXT_KEY_IMMIGRANT_ALL_SCALE",
 		NoNuclearWinterLocal = L"TXT_KEY_NO_NUCLEAR_WINTER_LOCAL",
 		EnableCrops = L"TXT_KEY_ENABLE_CROPS",
-		EnableArmee = L"TXT_KEY_ENABLE_ARMEE"
+		EnableArmee = L"TXT_KEY_ENABLE_ARMEE",
+		CapitalOnly = L"TXT_KEY_CAPITAL_ONLY",
+		OriginalCapitalOnly = L"TXT_KEY_ORIGINAL_CAPITAL_ONLY"
 	}
 
 
@@ -1310,7 +1318,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
  
 	for k,v in pairs(building) do
-		if v then
+		if v and v ~= 0 then  ---ÐÞ¸´
 			local str = buildingFlag[k]
 			if str then
 				if #str == 0 then
@@ -1320,7 +1328,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			else
 				str = buildingData[k]
 				v = tonumber(v) or 0
-				if str and v ~= 0 then  ---ÐÞ¸´
+				if str then
 					if #str == 0 then
 						str = k .. " %i"
 					end
@@ -4505,6 +4513,12 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 	if unit.PolicyType 
 	and GameInfo.Policies[ unit.PolicyType].Dummy~=1  --New 
 	then
+		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
+	end
+
+	-- Required Social Policy:
+	item = unit.PolicyBranchType and GameInfo.PolicyBranchTypes[ unit.PolicyBranchType ]
+	if item then
 		insert( tips, L"TXT_KEY_PEDIA_PREREQ_POLICY_LABEL" .. " " .. PolicyColor( L(item.Description) ) )
 	end
 
