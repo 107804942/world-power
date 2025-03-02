@@ -86,12 +86,12 @@ function ShortUnitTip( unit )
 		rangedStrength = 0
 		unitMoves = unit:Range()
 	else
-		if unitOwnerID == activePlayerID then
-			unitMoves = unit:MovesLeft()
-		else
-			unitMoves = unit:MaxMoves()
-		end
-		unitMoves = unitMoves / GameDefines.MOVE_DENOMINATOR
+		--if unitOwnerID == activePlayerID then
+			--unitMoves = unit:MovesLeft()
+		--else
+			--unitMoves = unit:MaxMoves()
+		--end
+		unitMoves = unit:MovesLeft() / GameDefines.MOVE_DENOMINATOR
 	end
 
 	-- In Orbit?

@@ -16,7 +16,15 @@
 		
 	<BuildingClasses>
 
-
+		<!-- 万国之门 -->
+		<Row>
+			<Type>BUILDINGCLASS_GATE_ALL</Type>
+			<DefaultBuilding>BUILDING_GATE_ALL</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_GATE_ALL</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+		
+		
 
 		<!-- 海军学院 -->
 		<Row>
@@ -727,7 +735,33 @@
 
 		<Delete Type="BUILDING_NATIONAL_LIBRARY"/>
 
+		<!--万国之门-->
 
+		<Row>
+			<Type>BUILDING_GATE_ALL</Type>
+			<BuildingClass>BUILDINGCLASS_GATE_ALL</BuildingClass>
+			<Cost>130</Cost>
+			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<Help>TXT_KEY_WONDER_GATE_ALL_HELP</Help>
+			<Description>TXT_KEY_BUILDING_GATE_ALL</Description>
+			<Civilopedia>TXT_KEY_WONDER_GATE_ALL_DESC</Civilopedia>
+			<Quote>TXT_KEY_WONDER_GATE_ALL_QUOTE</Quote>
+			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<GreatPeopleRateChange>1</GreatPeopleRateChange>
+			<DisplayPosition>4</DisplayPosition>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>244</PortraitIndex>
+			<WonderSplashImage>GateAll.dds</WonderSplashImage>
+			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
+			<TechEnhancedTourism>4</TechEnhancedTourism>
+		</Row>
+		
+		
 
 		<!--洛克斐尔-->
 		<Row>
@@ -908,10 +942,10 @@
 			<ConquestProb>100</ConquestProb>
 			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<WonderSplashImage>KARLSTEJN.dds</WonderSplashImage>
-			<PortraitIndex>250</PortraitIndex>
+			<PortraitIndex>240</PortraitIndex>
 		</Row>
 	
 
@@ -986,7 +1020,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<FreePromotion>PROMOTION_ROYAL</FreePromotion>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>229</PortraitIndex>
+			<PortraitIndex>241</PortraitIndex>
 			<WonderSplashImage>ROYAL.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
@@ -1576,7 +1610,6 @@
 			<Type>BUILDING_CITADEL_OF_CARCASSONNE</Type>
 			<BuildingClass>BUILDINGCLASS_CITADEL_OF_CARCASSONNE</BuildingClass>
 			<Cost>580</Cost>
-			<NumCityCostMod>0</NumCityCostMod>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<Description>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_PEDIA</Civilopedia>
@@ -1603,7 +1636,6 @@
 			<Type>BUILDING_KRAK_DES_CHEVALIERS</Type>
 			<BuildingClass>BUILDINGCLASS_KRAK_DES_CHEVALIERS</BuildingClass>
 			<Cost>580</Cost>
-			<NumCityCostMod>0</NumCityCostMod>
 			<PrereqTech>TECH_MILITARY_ORDERS</PrereqTech>
 			<Description>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA</Civilopedia>
@@ -1616,7 +1648,7 @@
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>-1</HurryCostModifier>
-			<FreePromotion>PROMOTION_GENERAL_1</FreePromotion>
+			<FreePromotion>PROMOTION_KRAK_DES_CHEVALIERS</FreePromotion>
 			<NearbyTerrainRequired>TERRAIN_DESERT</NearbyTerrainRequired>
 			<Quote>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
@@ -2869,6 +2901,16 @@
 
 
 	<Building_ResourceQuantityRequirements>
+
+		<!--万国-->
+		<Row>
+			<BuildingType>BUILDING_GATE_ALL</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		
+		
 		<!--巨城-->
 		<Row>
 			<BuildingType>BUILDING_MEGACITY_PYRAMID</BuildingType>
@@ -4371,6 +4413,14 @@
 		<Delete BuildingType="BUILDING_STONEHENGE"/>
 		<Delete BuildingType="BUILDING_GRAND_TEMPLE"/>
 
+		<!--万国之门-->
+		<Row>
+			<BuildingType>BUILDING_GATE_ALL</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		
+		
 	
 		<!--克虏伯-->
 		<Row>

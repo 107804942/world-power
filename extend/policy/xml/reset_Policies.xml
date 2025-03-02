@@ -1618,62 +1618,51 @@
 			<Flavor>20</Flavor>
 		</Row>-->
 
-		<Row>
-			<PolicyType>POLICY_SLAVE_RAIDING</PolicyType>
-			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		
+	
 
 
-
+		<!--智慧政策-->
 
 
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>25</Flavor>
 		</Row>
 		
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_1</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>33</Flavor>
 		</Row>
-		<Row>
-			<PolicyType>POLICY_KNOWLEDGE_1</PolicyType>
-			<FlavorType>FLAVOR_DIPLOMACY</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		
-		
+	
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_2</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>28</Flavor>
 		</Row>
 		
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_3</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>10</Flavor>
+			<Flavor>50</Flavor>
 		</Row>
 		
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_4</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>35</Flavor>
 		</Row>
 		
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_5</PolicyType>
 			<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>27</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_5</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>30</Flavor>
 		</Row>
 		
 		
@@ -1681,20 +1670,24 @@
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>29</Flavor>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_KNOWLEDGE_7</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>40</Flavor>
 		</Row>
 
-		<Row>
-			<PolicyType>POLICY_KNOWLEDGE_7</PolicyType>
-			<FlavorType>FLAVOR_GROWTH</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
              <!--宏伟政策-->
+
+
+		<Row>
+			<PolicyType>POLICY_SLAVE_RAIDING</PolicyType>
+			<FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+
+		
 		<Row>
 			<PolicyType>POLICY_GRANDEUR</PolicyType>
 			<FlavorType>FLAVOR_WONDER</FlavorType>
@@ -1810,7 +1803,7 @@
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_4</PolicyType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
+			<Flavor>33</Flavor>
 		</Row>
 
 		<Row>

@@ -3074,7 +3074,20 @@
 		</Row>
 
 
-
+		<Row>
+			<Type>PROMOTION_KRAK_DES_CHEVALIERS</Type>
+			<Description>TXT_KEY_PROMOTION_KRAK_DES_CHEVALIERS</Description>
+			<Help>TXT_KEY_PROMOTION_KRAK_DES_CHEVALIERS_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_KRAK_DES_CHEVALIERS</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<HPHealedIfDestroyEnemyGlobal>5</HPHealedIfDestroyEnemyGlobal>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<ShowInPedia>0</ShowInPedia>
+		</Row>
 
 		<Row>
 			<Type>PROMOTION_WEAPON_SHIP</Type>
@@ -4069,6 +4082,7 @@
 			<CurrentHitPointAttackMod>2</CurrentHitPointAttackMod>
 			<CurrentHitPointDefenseMod>3</CurrentHitPointDefenseMod>
 			<ExtraAttacks>1</ExtraAttacks>
+			<MovesChange>2</MovesChange>
 			<!--<RivalTerritory>true</RivalTerritory>
 			<CanPlunderWithoutWar>1</CanPlunderWithoutWar>-->
 			<PediaEntry>TXT_KEY_PROMOTION_GLADIATOR</PediaEntry>

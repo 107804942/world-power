@@ -96,7 +96,7 @@
 			<BaseSightRange>2</BaseSightRange>
 			<Combat>40</Combat>
 			<Cost>170</Cost>
-			<Moves>4</Moves>
+			<Moves>2</Moves>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>

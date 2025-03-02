@@ -6085,13 +6085,12 @@
 
 
 
-
 		<Row Tag="TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS">
 			<Text>骑士堡</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP">
 			<Text>
-				城市攻击范围+1，满足前置建造条件后可在本城花费信仰购买骑士、枪骑兵、胸甲骑兵、近代骑兵。骑乘单位的训练速度提高20%。每次获得晋升时，重骑兵单位立即恢复50HP。免费提供一个[ICON_GREAT_GENERAL]大军事家,大军事家的增益光环额外提供15%[ICON_STRENGTH]战斗力加成且范围+1。
+				城市攻击范围+1，满足前置建造条件后可在本城花费信仰购买骑士、枪骑兵、胸甲骑兵、近代骑兵。骑乘单位的训练速度提高20%。每次获得晋升时，重骑兵单位立即恢复50HP，骑乘单位杀死敌军时你的所有单位恢复5点生命值。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA">
@@ -6106,11 +6105,11 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_GENERAL_1">
-			<Text>光环增强</Text>
+		<Row Tag="TXT_KEY_PROMOTION_KRAK_DES_CHEVALIERS">
+			<Text>医院骑士</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_GENERAL_1_HELP">
-			<Text>大军事家光环范围+1，额外提供15%[ICON_STRENGTH]战斗力。</Text>
+		<Row Tag="TXT_KEY_PROMOTION_KRAK_DES_CHEVALIERS_HELP">
+			<Text>杀死敌军时你的所有单位恢复5点生命值。</Text>
 		</Row>
 
 
@@ -6153,7 +6152,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_ALCHEMIST_HELP">
 			<Text>
-				+1[ICON_PEACE]信仰和[ICON_RESEARCH]科研。每处[ICON_RES_SULFUR]硫磺、[ICON_RES_COPPER]铜、[ICON_RES_GEMS]宝石、[ICON_RES_GOLD]黄金和[ICON_RES_SILVER]银资源+2[ICON_RESEARCH]科研。
+				+1[ICON_PEACE]信仰和[ICON_RESEARCH]科研。每处[ICON_RES_SULFUR]硫磺、[ICON_RES_COPPER]铜、[ICON_RES_GEMS]宝石、[ICON_RES_GOLD]黄金和[ICON_RES_SILVER]银资源+2[ICON_RESEARCH]科研。本城每处采石场+1[ICON_RESEARCH]科研。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_ALCHEMIST_PEDIA">
@@ -7025,7 +7024,7 @@
 		<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
 			<Text>
 				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]战场统帅[ENDCOLOR]：自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。能够为5格内重步单位提供33%[ICON_STRENGTH]战斗力加成。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]战场统帅[ENDCOLOR]：自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。为5格内除自身外的陆军单位提供33%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：能够冲锋击退敌方单位，攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
 			</Text>
@@ -8254,9 +8253,15 @@
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_GLADIATOR_HELP">
 			<Text>
-				+1攻击次数，无视敌方控制区,临近一格内每存在一个敌人则+10%[ICON_STRENGTH]战斗力。攻击时有几率俘虏敌军。每损失一点生命值（上限100）则+2%[ICON_STRENGTH]攻击力，+3%[ICON_STRENGTH]防御力。对受伤单位+50%[ICON_STRENGTH]战斗力，该单位被攻击时，若敌方单位攻击该单位时损失的生命值超过25，则本单位恢复50生命值。
+				+1攻击次数，+2[ICON_MOVES]移动力，无视敌方控制区,
+				[NEWLINE]临近一格内每存在一个敌人则+10%[ICON_STRENGTH]战斗力。
+				[NEWLINE]攻击时有几率俘虏敌军。
+				[NEWLINE]每损失一点生命值（上限100）则+2%[ICON_STRENGTH]攻击力，+3%[ICON_STRENGTH]防御力。
+				[NEWLINE]对受伤单位+50%[ICON_STRENGTH]战斗力。
+				[NEWLINE]该单位被攻击时，若敌方单位攻击该单位时损失的生命值超过25，则本单位恢复50生命值。
 			</Text>
 		</Row>
+
 
 
 
@@ -9923,7 +9928,30 @@
 		<Row Tag="TXT_KEY_PROMOTION_ROYAL_HELP">
 			<Text>+25点生命值上限。</Text>
 		</Row>
-	
+
+
+
+		<Row Tag="TXT_KEY_BUILDING_GATE_ALL">
+			<Text>万国之门</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_GATE_ALL_HELP">
+			<Text>
+				所有单位可持有数量上限+1。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_GATE_ALL_QUOTE">
+			<Text>
+				[NEWLINE]"愿最高神眷顾我，我的王国，我创造的，吾父所建的。于此，立于宣言，望天神护佑。"[NEWLINE] - 薛西斯[NEWLINE]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_GATE_ALL_PEDIA">
+			<Text>
+				万国之门（Old Persian：duvarthim visadahyum）也被称为薛西斯之门，位于伊朗波斯波利斯古城的废墟中。
+				[NEWLINE]万国阶梯和万国之门的建造是由阿契美尼德国王谢尔克斯一世（公元前486-465年）下令的，波斯人是波斯波利斯创始人大流士一世的继任者。
+				[NEWLINE]在薛西斯门顶上，有楔形文字的古波斯文，新巴比伦文和埃兰语写到：最高神啊！创造大地和天空，创造人及人类辛福和薛西斯王，万王之王，万国之王，广而大之大地之王，大流士子嗣，阿契美尼德系。
+				[NEWLINE]薛西斯王注：我奉最高神（Ahuramazda）之名，建造了万国门（薛西斯门）。帕撒（Parsa）其他美好的建筑布置吾及吾父所筑，所有之一切，都薛西斯道：愿最高神眷顾我，我的王国，我创造的，吾父所建的。于此，立于宣言，望天神护佑。
+			</Text>
+		</Row>
 </Language_zh_CN>
 
 

@@ -244,10 +244,13 @@ SELECT 'PROMOTION_HPMOD1', Type  FROM Units WHERE Class ='UNITCLASS_MECH';
 
 
 
----大军光环增强
+---骑士堡增强
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_GENERAL_1', Type  FROM Units WHERE Class ='UNITCLASS_GREAT_GENERAL';
+SELECT 'PROMOTION_KRAK_DES_CHEVALIERS', Type  FROM Units WHERE CombatClass ='UNITCOMBAT_MOUNTED';
 
+
+
+---大军光环增强
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
 SELECT 'PROMOTION_PEOPLES_HALL', Type  FROM Units WHERE Class ='UNITCLASS_GREAT_GENERAL';
 

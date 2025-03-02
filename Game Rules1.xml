@@ -15,7 +15,44 @@
 
 
 
+	取消所有单位的远程攻击架设准备，
+	
+	
+	<!-- 万国之门 -->
+	<Row>
+		<Type>BUILDINGCLASS_GATE_ALL</Type>
+		<DefaultBuilding>BUILDING_GATE_ALL</DefaultBuilding>
+		<Description>TXT_KEY_BUILDING_GATE_ALL</Description>
+		<MaxGlobalInstances>1</MaxGlobalInstances>
+	</Row>
+	
+	
 
+
+	<UnitPromotions>
+		<Row>
+			<Type>PROMOTION_GENERAL_1</Type>
+			<Description>TXT_KEY_PROMOTION_GENERAL_1</Description>
+			<Help>TXT_KEY_PROMOTION_GENERAL_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_GENERAL_1</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<AuraRangeChange>1</AuraRangeChange>
+			<AuraEffectChange>15</AuraEffectChange>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<ShowInPedia>0</ShowInPedia>
+		</Row>
+
+
+	</UnitPromotions>
+
+
+	
+	
+	
 
 
 	<Row>

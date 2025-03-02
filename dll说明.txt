@@ -891,8 +891,6 @@ ALTER TABLE UnitPromotions ADD 'BeFallBackDefenseMod' INTEGER DEFAULT 0;
 			<CombatBonusFromNearbyUnitPromotion>PROMOTION_GREAT_GENERAL</CombatBonusFromNearbyUnitPromotion>
 
 
-
-
-
+	
 
 
