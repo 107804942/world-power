@@ -26,8 +26,8 @@ SELECT	'UNITCLASS_GREAT_DOCTOR',	'UNIT_GREAT_DOCTOR',		'TXT_KEY_UNIT_GREAT_DOCTO
 -- Units
 --------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Units 	
-(Type, Class,	DontShowYields, Cost, Moves, CivilianAttackPriority, Special, Domain, DefaultUnitAI, Description, Civilopedia, 	Strategy,	AdvancedStartCost,	WorkRate, CombatLimit, DontShowYields, UnitArtInfoEraVariation, UnitArtInfo, UnitFlagIconOffset,	UnitFlagAtlas,MoveRate, PortraitIndex, 	IconAtlas)
-SELECT	'UNIT_GREAT_DOCTOR',	'UNITCLASS_GREAT_DOCTOR',		1,	-1,   3,  'CIVILIAN_ATTACK_PRIORITY_HIGH', 'SPECIALUNIT_PEOPLE', 	'DOMAIN_LAND', 'UNITAI_SCIENTIST', 'TXT_KEY_UNIT_GREAT_DOCTOR', 'TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT',	'TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY',	-1, 1, 0, 1,   1,	'ART_DEF_UNIT_GREAT_DOCTOR',	0,	'UNIT_FLAG_GREAT_DOCTOR_ATLAS',	'GREAT_PERSON', 0, 				'HEALTH_UNIT_ATLAS';
+(Type, Class,FaithCostIncrease,	DontShowYields, Cost, Moves, CivilianAttackPriority, Special, Domain, DefaultUnitAI, Description, Civilopedia, 	Strategy,	AdvancedStartCost,	WorkRate, CombatLimit, DontShowYields, UnitArtInfoEraVariation, UnitArtInfo, UnitFlagIconOffset,	UnitFlagAtlas,MoveRate, PortraitIndex, 	IconAtlas)
+SELECT	'UNIT_GREAT_DOCTOR',	'UNITCLASS_GREAT_DOCTOR',	1,	1,	-1,   3,  'CIVILIAN_ATTACK_PRIORITY_HIGH', 'SPECIALUNIT_PEOPLE', 	'DOMAIN_LAND', 'UNITAI_SCIENTIST', 'TXT_KEY_UNIT_GREAT_DOCTOR', 'TXT_KEY_CIV5_ANTIQUITY_DOCTOR_TEXT',	'TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY',	-1, 1, 0, 1,   1,	'ART_DEF_UNIT_GREAT_DOCTOR',	0,	'UNIT_FLAG_GREAT_DOCTOR_ATLAS',	'GREAT_PERSON', 0, 				'HEALTH_UNIT_ATLAS';
 
 
 INSERT  INTO Unit_FreePromotions(UnitType,PromotionType)
