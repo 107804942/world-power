@@ -27,6 +27,16 @@ GameEvents.PlayerGifted.Add(GiftBonus)
 
 
 
+function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
+   if iBuild == GameInfoTypes.BUILD_REMOVE_JUNGLE 
+   or iBuild == GameInfoTypes.BUILD_REMOVE_FOREST then
+   local  pPlot = Map.GetPlot(iX, iY)
+   if  pPlot:GetResourceType()==GameInfoTypes.RESOURCE_LUMBER then
+   pPlot:SetResourceType(-1)
+       end
+    end
+ end
+GameEvents.PlayerBuilt.Add(RemoveJungle)
 
 -- ********************************************************
 -- 

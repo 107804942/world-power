@@ -28,6 +28,12 @@ AND EXISTS (SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_KGB'
 
 
 
+---------- ÒÆ³ýÄ¾²Ä
+INSERT INTO Build_ResourceRemove(BuildType,ResourceType)VALUES
+('BUILD_REMOVE_JUNGLE', 'RESOURCE_LUMBER'),
+('BUILD_REMOVE_FOREST', 'RESOURCE_LUMBER');
+
+
 
 -----ÂòµØ
 UPDATE Traits SET BuyOwnedTiles = 1 WHERE Type ='TRAIT_RIVER_EXPANSION'; 

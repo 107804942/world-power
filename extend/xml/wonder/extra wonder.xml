@@ -740,8 +740,8 @@
 		<Row>
 			<Type>BUILDING_GATE_ALL</Type>
 			<BuildingClass>BUILDINGCLASS_GATE_ALL</BuildingClass>
-			<Cost>130</Cost>
-			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
+			<Cost>150</Cost>
+			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<Help>TXT_KEY_WONDER_GATE_ALL_HELP</Help>
 			<Description>TXT_KEY_BUILDING_GATE_ALL</Description>
 			<Civilopedia>TXT_KEY_WONDER_GATE_ALL_DESC</Civilopedia>
@@ -755,10 +755,11 @@
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<DisplayPosition>4</DisplayPosition>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>244</PortraitIndex>
+			<PortraitIndex>245</PortraitIndex>
 			<WonderSplashImage>GateAll.dds</WonderSplashImage>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
+			<ExtraUnitPlayerInstances>1</ExtraUnitPlayerInstances>
 		</Row>
 		
 		

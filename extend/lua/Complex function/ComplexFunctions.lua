@@ -1160,7 +1160,6 @@ function PlayerCompletedQuest(iMajor, iMinor, iQuestType, iStartTurn, iOldInflue
 	end
 end
 GameEvents.PlayerCompletedQuest.Add(PlayerCompletedQuest) 
-
 -- **********************************************************************************************************************************************
 --
 -- **********************************************************************************************************************************************
@@ -1183,7 +1182,6 @@ function Denounce_BUFF(PlayerID, OtherPlayerID)
 	end
 end
 GameEvents.DoDenounce.Add(Denounce_BUFF)
-
 
 -- **********************************************************************************************************************************************
 --
@@ -1489,19 +1487,6 @@ function ProduceCopy(iPlayer, iUnit, iGreatWork)
 end
 GameEvents.GreatWorkCreated.Add(ProduceCopy)
 
-
-
-
-function RemoveJungle(iPlayer, iUnit, iX, iY, iBuild)
-   if iBuild == GameInfoTypes.BUILD_REMOVE_JUNGLE 
-   or iBuild == GameInfoTypes.BUILD_REMOVE_FOREST then
-   local  pPlot = Map.GetPlot(iX, iY)
-   if  pPlot:GetResourceType()==GameInfoTypes.RESOURCE_LUMBER then
-   pPlot:SetResourceType(-1)
-       end
-    end
- end
-GameEvents.PlayerBuilt.Add(RemoveJungle)
 
 
 
