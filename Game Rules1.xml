@@ -4,6 +4,8 @@
 
 	PROMOTION_CANNOT_BE_CORPS
 
+	SetterExtraPercent="0"
+	
 	TRAIT_SUPER_CITY_STATE  ----威尼斯
 
 	Building_YieldFromConstruction

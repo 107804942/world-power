@@ -399,9 +399,9 @@ INSERT INTO Building_ImprovementYieldModifiers(BuildingType,ImprovementType,Yiel
 
 
 
----大津巴布韦
+---斯芬克斯
 INSERT INTO Building_YieldFromConstruction(BuildingType, YieldType, Yield)
-VALUES('BUILDING_DZIMBABWE', 'YIELD_GOLD',100);
+VALUES('BUILDING_SPHINX', 'YIELD_GOLD',100);
 
 
 -- 建筑来自国际贸易

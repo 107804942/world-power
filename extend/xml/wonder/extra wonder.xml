@@ -744,7 +744,7 @@
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<Help>TXT_KEY_WONDER_GATE_ALL_HELP</Help>
 			<Description>TXT_KEY_BUILDING_GATE_ALL</Description>
-			<Civilopedia>TXT_KEY_WONDER_GATE_ALL_DESC</Civilopedia>
+			<Civilopedia>TXT_KEY_WONDER_GATE_ALL_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_GATE_ALL_QUOTE</Quote>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>

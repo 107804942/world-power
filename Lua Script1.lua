@@ -2,6 +2,26 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------\
+
+
+-- ********************************************************
+-- 
+-- ******************************************************** 
+function BuffForNaturalWonderDiscovered(iTeam, iFeature, iX, iY, bFirst)
+    local pTeam = Teams[iTeam]
+	local iPlayer = pTeam:GetLeaderID()
+	local pPlayer = Players[iPlayer]
+    if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
+	 	return
+	         end
+		if pPlayer:HasWonder(GameInfoTypes.BUILDING_SPHINX) then
+		pPlayer:ChangeGold(1000)
+	end
+end
+GameEvents.NaturalWonderDiscovered.Add(BuffForNaturalWonderDiscovered)
+
+
+
 -- **********************************************************************************************************************************************
 --/* Current assignments of members of popupInfo
 --Data1 is the player id 
