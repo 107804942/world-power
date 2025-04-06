@@ -1300,6 +1300,10 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 					-- Figure out what the name of the thing is that we're looking at
 					local strImpRouteKey = (improvement and improvement.Description) or (route and route.Description) or ""
 
+					if Game.IsPlotExceedMaxBuild(unit:GetOwner(), unitPlot:GetPlotIndex()) then
+						insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_MAX_BUILD_NUM" ) );
+					end
+
 					local prereqTech = GameInfo.Technologies[build.PrereqTech]
 					if prereqTech and not activeTechs:HasTech(prereqTech.ID) then
 						insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_PREREQ_TECH", prereqTech.Description, strImpRouteKey ) )
