@@ -195,11 +195,11 @@ UPDATE Buildings SET HumanOnly=1 WHERE BuildingClass='BUILDINGCLASS_GAS_PLANT';
 
 INSERT INTO BuildingClass_HealthModifiers (BuildingClassType,	Yield)
 ------------------城市规模------------------------------
-SELECT 'BUILDINGCLASS_CITY_SIZE_SMALL',					         -10 UNION ALL    --小城市
+SELECT 'BUILDINGCLASS_CITY_SIZE_SMALL',					         -5 UNION ALL    --小城市
 SELECT 'BUILDINGCLASS_CITY_SIZE_MEDIUM',					     -10 UNION ALL	--中城市
 SELECT 'BUILDINGCLASS_CITY_SIZE_LARGE',					         -10 UNION ALL	--大城市
 SELECT 'BUILDINGCLASS_CITY_SIZE_XL',					         -15 UNION ALL    --特大城市
-SELECT 'BUILDINGCLASS_CITY_SIZE_XXL',					         -20 UNION ALL	--巨型城市
+SELECT 'BUILDINGCLASS_CITY_SIZE_XXL',					         -15 UNION ALL	--巨型城市
 SELECT 'BUILDINGCLASS_CITY_SIZE_GLOBAL',					     -20 UNION ALL	--大都会
 
 SELECT 'BUILDINGCLASS_BIOLOGICAL_FACTORIES',				     10 UNION ALL   --生物制剂工厂

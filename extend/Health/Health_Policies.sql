@@ -6,9 +6,12 @@
 
 
 
---INSERT INTO Policy_CityYieldPerXPopChanges (PolicyType,	YieldType,			Yield)
---SELECT 'POLICY_AI_REDUCE',	'YIELD_HEALTH',		5 UNION ALL
---SELECT 'POLICY_LEGALISM',	'YIELD_HEALTH',		5;
+
+INSERT INTO Policy_ImprovementYieldChanges (PolicyType,	ImprovementType,YieldType,			Yield)
+SELECT 'POLICY_KNOWLEDGE_6','IMPROVEMENT_PLANTATION',	'YIELD_HEALTH',		2 ;
+
+INSERT INTO Policy_YieldChangesNaturalWonder(PolicyType,YieldType,			Yield)
+SELECT 'POLICY_KNOWLEDGE_6','YIELD_HEALTH',		2 ;
 
 
 INSERT INTO Policy_CityYieldChanges (PolicyType,	YieldType,			Yield)

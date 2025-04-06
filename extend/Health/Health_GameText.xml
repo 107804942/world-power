@@ -939,6 +939,7 @@
 
 
 
+
 		<Replace Tag="TXT_KEY_TRAIT_STRATEGIC_RICHES">
 			<Text>
 				[ICON_BULLET]每座城市+4[ICON_GOLD]金钱产出+2[ICON_RES_CONSUMER]消费品+2[ICON_HAPPINESS_1]本地快乐+1工作范围。
@@ -953,7 +954,17 @@
 		<Replace Tag="TXT_KEY_TRAIT_WONDER_BUILDER">
 			<Text>
 				[ICON_BULLET]所有城市额外+2[ICON_RES_MANPOWER]人力资源，每处沿河地块+1[ICON_GOLD]金，每处冲积平原地块+1[ICON_PRODUCTION]产能。
-				[NEWLINE][ICON_BULLET]沙漠地貌+1[ICON_HEALTH]健康度，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+				[NEWLINE][ICON_BULLET]沙漠+1[ICON_HEALTH]健康度，建造奇观时+25%[ICON_PRODUCTION]产能积累速率。
+			</Text>
+		</Replace>
+
+
+		<Replace Tag="TXT_KEY_TRAIT_LUXURY_RETENTION">
+			<Text>
+				[ICON_BULLET]每种奢侈资源即使全部交易出去也只减少50%的基础[ICON_HAPPINESS_1]快乐奖励。
+				[NEWLINE][ICON_BULLET]所有城市免费获得市场。
+				[NEWLINE][ICON_BULLET]研发完成相应科技时，有前置建筑的城市获得对应经济建筑。
+				[NEWLINE][ICON_BULLET]沼泽+1[ICON_HEALTH]健康度。
 			</Text>
 		</Replace>
 	</Language_en_US>

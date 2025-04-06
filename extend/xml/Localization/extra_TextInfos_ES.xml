@@ -2503,8 +2503,15 @@
 			<Text>[NEWLINE]"任何战术都只适用于一定的历史阶段；如果武器改进了，技术有了新的进步，那么军事组织的形式、军队指挥的方法也会随着改变。"[NEWLINE]        ——伏龙芝（苏）[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_SPACE_FORTRESS_HELP">
-			<Text>建成后获得四个单位。城市攻击次数+2，所有海军基地、空军基地、导弹基地、指挥中心、星际基地-3[ICON_CRIME]犯罪率。所有城市防御效率提升100%。本城市轰炸范围+1，购买或建造的单位可以立即行动。</Text>
+			<Text>
+				建成后获得四个单位。城市攻击次数+2，所有海军基地、空军基地、导弹基地、指挥中心、星际基地-3[ICON_CRIME]犯罪率。
+				[NEWLINE]所有城市防御效率提升100%。本城市轰炸范围+1。
+				[NEWLINE]购买或建造的单位可以立即行动。
+				[NEWLINE]全境内敌人-50%[ICON_STRENGTH]战斗力。
+			</Text>
 		</Row>
+		
+		
 		<Row Tag="TXT_KEY_BUILDING_SERVER_HUB_DESC">
 			<Text>[ICON_RESEARCH]超级计算机中心</Text>
 		</Row>
@@ -5598,18 +5605,23 @@
 
 
 		<!--Knossoss-->
-		<Row Tag="TXT_KEY_WONDER_KNOSSOS_WONDER_TITLE">
+		<Row Tag="TXT_KEY_WONDER_KNOSSOS">
 			<Text>克诺索斯迷宫</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_KNOSSOS_CIVILOPEDIA">
 			<Text>在希腊神话中，克诺索斯的迷宫是由传说中的工匠代达罗斯在克诺索斯为克里特国王米诺斯设计和建造的。它的作用是困住最终被英雄忒修斯杀死的牛头怪。代达罗斯是如此精妙地设计了迷宫，以至于该迷宫几乎无法从内部逃脱。[NEWLINE][NEWLINE]尽管早期克里特货币偶尔会出现分支（多弦）图案，但没有分支或死胡同的单径（单弦）七道“经典”设计早在公元前430年就与货币上的迷宫联系在一起，类似的非分支模式被广泛用作迷宫的视觉表现——尽管逻辑和文学描述都清楚地表明，牛头怪被困在一个复杂的分支迷宫中。即使设计变得更加精致，从罗马时代到文艺复兴时期的神话迷宫的视觉描绘几乎都是单一的。只有当花园迷宫在文艺复兴时期流行时，分支迷宫才被重新引入。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_WONDER_KNOSSOS_WONDER_QUOTE">
+		<Row Tag="TXT_KEY_WONDER_KNOSSOS_QUOTE">
 			<Text>[NEWLINE][TAB][TAB]"任何一个伟大的发明，从火到飞行，都曾被视为对某个上帝的侮辱。没有例外。"[NEWLINE]        ——J.B.S.霍尔丹[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_KNOSSOS_HELP">
-			<Text>全国每处[ICON_RES_MARBLE]大理石，[ICON_RES_STONE]花岗岩+3[ICON_PRODUCTION]产能，+3[ICON_GOLD]金钱。本地工程师+1[ICON_PRODUCTION]产能，建造建筑时+10%[ICON_PRODUCTION]产能，敌方单位在该奇观所在城市范围内移动或者结束回合时会受到10点伤害。为城市提供20点[ICON_STRENGTH]防御力加成，且生命值+75。</Text>
+			<Text>
+				全国每处[ICON_RES_MARBLE]大理石，[ICON_RES_STONE]花岗岩+3[ICON_PRODUCTION]产能，+3[ICON_GOLD]金钱。
+				[NEWLINE]本地工程师+1[ICON_PRODUCTION]产能，建造建筑时+10%[ICON_PRODUCTION]产能。
+				[NEWLINE]敌方单位在该奇观所在城市范围内移动或者结束回合时会受到10点伤害，本城境内陆军敌人-10%[ICON_STRENGTH]战斗力。
+				[NEWLINE]为城市提供20点[ICON_STRENGTH]防御力加成，且生命值+75。
+			</Text>
 		</Row>
 
 
@@ -7706,7 +7718,7 @@
 		<Row Tag="TXT_KEY_KNOWLEDGE_4_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]精英学派[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]科学家+2[ICON_RESEARCH]科研、医学家+1[ICON_HEALTH]健康度。
+				[NEWLINE][ICON_BULLET]科学家+2[ICON_RESEARCH]科研、医学家+2[ICON_HEALTH]健康度。
 				[NEWLINE][ICON_BULLET]使用医生治疗瘟疫能额外减少两回合持续时间。
 			</Text>
 		</Row>
@@ -7746,7 +7758,8 @@
 		<Row Tag="TXT_KEY_KNOWLEDGE_6_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]自然哲学[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]所有自然奇观+2[ICON_RESEARCH]科研，每处种植园+2[ICON_RESEARCH]科研。
+				[NEWLINE][ICON_BULLET]所有自然奇观+2[ICON_RESEARCH]科研、+2[ICON_HEALTH]健康度。
+				[NEWLINE][ICON_BULLET]每处种植园+2[ICON_RESEARCH]科研、+2[ICON_HEALTH]健康度。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_KNOWLEDGE_6_TEXT">

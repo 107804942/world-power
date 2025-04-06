@@ -4,11 +4,14 @@
 ALTER TABLE Feature_YieldChanges ADD OnlyAdjacentCity boolean DEFAULT 0;
 ALTER TABLE Terrain_Yields       ADD OnlyAdjacentCity boolean DEFAULT 0;
 
----埃及，俄国
+---埃及，俄国ua
 INSERT INTO Trait_TerrainYieldChanges(TraitType, TerrainType,YieldType,	Yield)
-SELECT 'TRAIT_STRATEGIC_RICHES', 'TERRAIN_DESERT',	'YIELD_HEALTH',			1 UNION ALL	
-SELECT 'TRAIT_WONDER_BUILDER', 'TERRAIN_TUNDRA',	'YIELD_HEALTH',			1;  
+SELECT 'TRAIT_STRATEGIC_RICHES', 'TERRAIN_TUNDRA',	'YIELD_HEALTH',			1 UNION ALL	  ---俄国
+SELECT 'TRAIT_WONDER_BUILDER', 'TERRAIN_DESERT',	'YIELD_HEALTH',			1;    ---埃及
 
+---荷兰ua
+INSERT INTO Trait_FeatureYieldChanges(TraitType, FeatureType,YieldType,	Yield)
+SELECT 'TRAIT_LUXURY_RETENTION', 'FEATURE_MARSH',	'YIELD_HEALTH',			1 ;    ---荷兰
 
 --地貌
 INSERT INTO Feature_YieldChanges (FeatureType,		YieldType,				Yield,	OnlyAdjacentCity)

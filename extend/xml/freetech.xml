@@ -5,34 +5,39 @@
 	
 	
 	<GameSpeeds>
+		
 		<Update>
-			<Set DealDuration="30" GrowthPercent="250" TrainPercent="250" ConstructPercent="260" CreatePercent="250" ResearchPercent="220"
+			<Set DealDuration="30" GrowthPercent="250" TrainPercent="250" ConstructPercent="260" CreatePercent="250" ResearchPercent="220" SetterExtraPercent="0"
 				 GoldPercent="200" BuildPercent="175" ImprovementPercent="125" GreatPeoplePercent="200" CulturePercent="250" FaithPercent="160" BarbPercent="150"
-			 FeatureProductionPercent="85" UnitHurryPercent="200" UnitTradePercent="200" GoldenAgePercent="200" MinorCivElectionFreqMod="120"
+			     FeatureProductionPercent="85" UnitHurryPercent="200" UnitTradePercent="200" GoldenAgePercent="200" MinorCivElectionFreqMod="120"
 				 OpinionDurationPercent="50" SpyRatePercent="125" RelationshipDuration="25" LeaguePercent="150" ReligiousPressureAdjacentCity="80"/>
 			<Where Type="GAMESPEED_MARATHON"/>
 		</Update>
+		
 		<Update>
-			<Set DealDuration="30" GrowthPercent="150" TrainPercent="150" ConstructPercent="220" CreatePercent="210" ResearchPercent="150"
+			<Set DealDuration="30" GrowthPercent="150" TrainPercent="150" ConstructPercent="220" CreatePercent="210" ResearchPercent="150" SetterExtraPercent="0"
 				 GoldPercent="150" BuildPercent="125" ImprovementPercent="100" GreatPeoplePercent="150" CulturePercent="150" FaithPercent="135" BarbPercent="100"
-			 FeatureProductionPercent="75" UnitHurryPercent="150" UnitTradePercent="150" GoldenAgePercent="150" MinorCivElectionFreqMod="100"
+			     FeatureProductionPercent="75" UnitHurryPercent="150" UnitTradePercent="150" GoldenAgePercent="150" MinorCivElectionFreqMod="100"
 				 OpinionDurationPercent="50" SpyRatePercent="100" RelationshipDuration="25" LeaguePercent="100" ReligiousPressureAdjacentCity="100"/>
 			<Where Type="GAMESPEED_EPIC"/>
 		</Update>
+		
 		<Update>
-			<Set DealDuration="30" GrowthPercent="120" TrainPercent="130" ConstructPercent="190" CreatePercent="170" ResearchPercent="120"
+			<Set DealDuration="30" GrowthPercent="120" TrainPercent="130" ConstructPercent="190" CreatePercent="170" ResearchPercent="120" SetterExtraPercent="0"
 				 GoldPercent="120" ImprovementPercent="85" GreatPeoplePercent="130" CulturePercent="110" FaithPercent="125" BarbPercent="100"
-			 FeatureProductionPercent="60" UnitHurryPercent="115" UnitTradePercent="100" GoldenAgePercent="120" MinorCivElectionFreqMod="80"
+			     FeatureProductionPercent="60" UnitHurryPercent="115" UnitTradePercent="100" GoldenAgePercent="120" MinorCivElectionFreqMod="80"
 				 OpinionDurationPercent="50" SpyRatePercent="80" RelationshipDuration="25" LeaguePercent="80" ReligiousPressureAdjacentCity="150"/>
 			<Where Type="GAMESPEED_STANDARD"/>
 		</Update>
+		
 		<Update>
-			<Set DealDuration="20" GrowthPercent="100" TrainPercent="75" ConstructPercent="100" CreatePercent="100" ResearchPercent="90"
+			<Set DealDuration="20" GrowthPercent="100" TrainPercent="75" ConstructPercent="100" CreatePercent="100" ResearchPercent="90" SetterExtraPercent="0"
 				 GoldPercent="75" ImprovementPercent="45" GreatPeoplePercent="67" CulturePercent="75" FaithPercent="67" BarbPercent="67"
-			 FeatureProductionPercent="40" UnitHurryPercent="75" UnitTradePercent="67" GoldenAgePercent="75" MinorCivElectionFreqMod="67"
+			     FeatureProductionPercent="40" UnitHurryPercent="75" UnitTradePercent="67" GoldenAgePercent="75" MinorCivElectionFreqMod="67"
 				 OpinionDurationPercent="50" SpyRatePercent="67" RelationshipDuration="25" LeaguePercent="67"  ReligiousPressureAdjacentCity="200"/>
 			<Where Type="GAMESPEED_QUICK"/>
 		</Update>
+		
 	</GameSpeeds>
 
 	

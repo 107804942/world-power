@@ -149,7 +149,7 @@ SELECT 'SPECIALIST_DOCTOR',						'YIELD_HEALTH',		2;
 
 
 INSERT  INTO Policy_SpecialistYieldChanges(PolicyType,SpecialistType,YieldType,Yield )
-SELECT 'POLICY_KNOWLEDGE_4', 'SPECIALIST_DOCTOR' ,'YIELD_HEALTH', 1 ;
+SELECT 'POLICY_KNOWLEDGE_4', 'SPECIALIST_DOCTOR' ,'YIELD_HEALTH',2 ;
 
 
 INSERT INTO SpecialistFlavors (SpecialistType,	FlavorType,			Flavor)

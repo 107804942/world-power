@@ -681,11 +681,16 @@ SELECT  'BUILDING_REGISTAN', Type,10 FROM Yields WHERE Type ='YIELD_GOLD' OR Typ
 INSERT  INTO Building_GlobalYieldModifiers(BuildingType,YieldType,Yield)
 SELECT  'BUILDING_SKYCITY', Type,-33  FROM Yields WHERE Type ='YIELD_GOLD';
 
-----史诗
---INSERT  INTO Building_DomainFreeExperiences(BuildingType,DomainType,Experience)
---VALUES('BUILDING_HEROIC_EPIC', 'DOMAIN_SEA',7),
-     -- ('BUILDING_HEROIC_EPIC', 'DOMAIN_LAND',7),
-      --('BUILDING_HEROIC_EPIC', 'DOMAIN_AIR',7);
+----太空基地
+INSERT  INTO Building_DomainEnemyCombatModifierGlobal(BuildingType,DomainType,Modifier)
+VALUES ('BUILDING_SPACE_FORTRESS', 'DOMAIN_SEA',-50),
+        ('BUILDING_SPACE_FORTRESS', 'DOMAIN_LAND',-50),
+        ('BUILDING_SPACE_FORTRESS', 'DOMAIN_AIR',-50);
+
+----迷宫
+INSERT  INTO Building_DomainEnemyCombatModifier(BuildingType,DomainType,Modifier)
+VALUES ('BUILDING_KNOSSOS', 'DOMAIN_LAND',-10);
+
 
 --马尔科夫
 INSERT  INTO Building_DomainFreeExperiencesGlobal(BuildingType,DomainType,Experience)
@@ -866,6 +871,7 @@ SELECT     'BUILDING_GUIGU',	              'SPECIALIST_MUSICIAN',	    'YIELD_TOU
 SELECT     'BUILDING_GUIGU',	               'SPECIALIST_WRITER',	        'YIELD_CULTURE', 2 UNION ALL
 SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ARTIST',	                'YIELD_CULTURE',	 2 UNION ALL
 SELECT     'BUILDING_GUIGU',	      'SPECIALIST_ENGINEER',	            'YIELD_PRODUCTION',	 2  UNION ALL
+SELECT     'BUILDING_GUIGU',	              'SPECIALIST_DOCTOR',	    'YIELD_HEALTH',	 2  UNION ALL
 SELECT     'BUILDING_GUIGU',	      'SPECIALIST_MERCHANT',	            'YIELD_GOLD',	 2 ;
 
 

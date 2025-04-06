@@ -26,7 +26,7 @@
 			<TechType>TECH_MODERN_SANITATION</TechType>
 			<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
 			<YieldType>YIELD_HEALTH</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 
 

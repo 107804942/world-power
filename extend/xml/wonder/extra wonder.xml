@@ -2076,9 +2076,9 @@
 			<Cost>90</Cost>
 			<PrereqTech>TECH_STONE_TOOLS</PrereqTech>
 			<Help>TXT_KEY_WONDER_KNOSSOS_HELP</Help>
-			<Description>TXT_KEY_WONDER_KNOSSOS_WONDER_TITLE</Description>
+			<Description>TXT_KEY_WONDER_KNOSSOS</Description>
 			<Civilopedia>TXT_KEY_WONDER_KNOSSOS_CIVILOPEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_KNOSSOS_WONDER_QUOTE</Quote>
+			<Quote>TXT_KEY_WONDER_KNOSSOS_QUOTE</Quote>
 			<ObsoleteTech>TECH_DYNAMITE</ObsoleteTech>
 			<SpecialistCount>5</SpecialistCount>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
