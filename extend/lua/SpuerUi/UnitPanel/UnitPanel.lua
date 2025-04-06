@@ -1987,6 +1987,16 @@ function TipHandler( control )
 			elseif (pRoute) then
 				strImpRouteKey = pRoute.Description;
 			end
+
+			if Game.IsPlotExceedMaxBuild(unit:GetOwner(), pPlot:GetPlotIndex()) then
+				if (bFirstEntry) then
+					bFirstEntry = false;
+				elseif (not bFirstEntry) then
+					strDisabledString = strDisabledString .. "[NEWLINE]";
+				end
+				strDisabledString = strDisabledString .. "[NEWLINE]";
+				strDisabledString = strDisabledString .. Locale.ConvertTextKey("TXT_KEY_BUILD_BLOCKED_MAX_BUILD_NUM");
+			end
 			
 			-- Don't have Tech for Build?
 			if (pBuild.PrereqTech ~= nil) then
