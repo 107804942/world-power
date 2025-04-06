@@ -235,8 +235,7 @@ function UpdateData()
 			if (Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)) then
 				strGoldenAgeStr = Locale.ConvertTextKey("TXT_KEY_TOP_PANEL_GOLDEN_AGES_OFF");
 			else
-				if (pPlayer:GetGoldenAgeTurns() > 0) then
-			
+				if (pPlayer:GetGoldenAgeTurns() > 0) then			
 			        local xmlGoldenAgeStr = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAText or "TXT_KEY_GOLDEN_AGE_ANNOUNCE"
 					strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey(xmlGoldenAgeStr)) .. " (%i)", pPlayer:GetGoldenAgeTurns());
 
