@@ -2207,6 +2207,12 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			insert( buildings, BuildingColor( L(item.Description) ) )
 		end
 	end
+	for row in GameInfo.Building_BuildingsNeededInCity{ BuildingType = buildingType } do
+		local item = GameInfo.Buildings[ row.PreBuildingType ]
+		if item and not buildings[ item ] then
+			insert( buildings, BuildingColor( L(item.Description) ) )
+		end
+	end
 	items = {}
 	if (building.MutuallyExclusiveGroup or -1) >= 0 then
 		for row in GameInfo.Buildings{ MutuallyExclusiveGroup = building.MutuallyExclusiveGroup } do
@@ -2244,6 +2250,12 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	local buildingsGloabl = {}
 	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingType ) do
 		local item = GetCivBuilding( activeCivilizationType, row.BuildingClassType )
+		if item and not buildingsGloabl[ item ] then
+			insert( buildingsGloabl, BuildingColor( L(item.Description) ) )
+		end
+	end
+	for row in GameInfo.Building_BuildingsNeededGlobal{ BuildingType = buildingType } do
+		local item = GameInfo.Buildings[ row.PreBuildingType ]
 		if item and not buildingsGloabl[ item ] then
 			insert( buildingsGloabl, BuildingColor( L(item.Description) ) )
 		end
@@ -2377,6 +2389,10 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
 		SetKey( buildingsUnlocked, buildingUnlocked and buildingUnlocked.BuildingClass )
 	end
+	for row in GameInfo.Building_BuildingsNeededInCity{ PreBuildingType = buildingType } do
+		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
+		SetKey( buildingsUnlocked, buildingUnlocked and buildingUnlocked.BuildingClass )
+	end
 	items = {}
 	for buildingUnlocked in pairs(buildingsUnlocked) do
 		buildingUnlocked = GetCivBuilding( activeCivilizationType, buildingUnlocked )
@@ -2391,6 +2407,10 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	-- Buildings Unlocked Global:
 	local buildingsUnlockedGlobal = {}
 	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingClassType ) do
+		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
+		SetKey( buildingsUnlockedGlobal, buildingUnlocked and buildingUnlocked.BuildingClass )
+	end
+	for row in GameInfo.Building_BuildingsNeededGlobal{ PreBuildingType = buildingType } do
 		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
 		SetKey( buildingsUnlockedGlobal, buildingUnlocked and buildingUnlocked.BuildingClass )
 	end
@@ -3208,6 +3228,7 @@ if Game then
 			if foodMaxKept > 0 and foodPerTurnTimes100 > 0 then
 				if foodMaxKept > 100 then foodMaxKept = 100 end
 				tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_MAX_KEPT", foodMaxKept)
+				tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_KEPT_NOW", city:GetFoodKept())
 			end
 		end
 
