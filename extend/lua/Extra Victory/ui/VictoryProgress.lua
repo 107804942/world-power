@@ -1647,10 +1647,9 @@ function GetPreReqs(techID)
 	
 	if(not found)then
 		table.insert(g_TechPreReqList, techID);
-	end
-	
-	for row in GameInfo.Technology_PrereqTechs{TechType = techID} do
-		GetPreReqs(row.PrereqTech);
+		for row in GameInfo.Technology_PrereqTechs{TechType = techID} do
+			GetPreReqs(row.PrereqTech);
+		end
 	end
 end
 

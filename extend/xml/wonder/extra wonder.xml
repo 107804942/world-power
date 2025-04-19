@@ -755,7 +755,7 @@
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<DisplayPosition>4</DisplayPosition>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>245</PortraitIndex>
+			<PortraitIndex>246</PortraitIndex>
 			<WonderSplashImage>GateAll.dds</WonderSplashImage>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
