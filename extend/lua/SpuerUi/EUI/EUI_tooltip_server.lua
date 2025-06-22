@@ -2209,9 +2209,17 @@ LuaEvents.PolicyBranchTooltip.Add( function( control )
 		else
 			tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK")
 			local eraPrereq = GameInfoTypes[ policyBranchInfo.EraPrereq ]
+			local civType = GameInfo.Civilizations[player:GetCivilizationType()].Type;
+			local bCivilizationLock = false;
+			if GameInfo.PolicyBranch_CivilizationLocked{ PolicyBranchType = policyBranchInfo.Type, CivilizationType = civType }() then
+				bCivilizationLock = true;
+			end
 			-- Not in prereq Era
 			if eraPrereq and Teams[player:GetTeam()]:GetCurrentEra() < eraPrereq then
 				tip = tip .. " " .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_ERA", GameInfo.Eras[eraPrereq].Description)
+			-- This Civilization should never Unclock it
+			elseif bCivilizationLock then
+				tip = tip .. " " .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION");
 			-- Don't have enough Culture Yet
 			else
 				tip = tip .. " " .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost())

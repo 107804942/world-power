@@ -207,9 +207,9 @@ function ShortUnitTip( unit )
 		unitTip = unitTip ..Locale.ConvertTextKey("TXT_KEY_PEDIA_COST_LABEL") .. " " .. ( costTip or Locale.ConvertTextKey("TXT_KEY_FREE") )
 	end
 
-	if GameInfo.Units[unit:GetUnitType()].ExtraMaintenanceCost > 0 then -- ExtraMaintenanceCost cost
-	   ExtraMaintenanceCost=GameInfo.Units[unit:GetUnitType()].ExtraMaintenanceCost
-		unitTip = unitTip .. " " ..Locale.ConvertTextKey("TXT_KEY_PEDIA_MAINT_LABEL") .. ExtraMaintenanceCost .."[ICON_GOLD]"
+	local iExtraMaintenanceCost = GameInfo.Units[unit:GetUnitType()].ExtraMaintenanceCost + unit:GetPromotionMaintenanceCost()
+	if iExtraMaintenanceCost ~= 0 then -- ExtraMaintenanceCost cost
+		unitTip = unitTip .. " " .. Locale.ConvertTextKey("TXT_KEY_PEDIA_MAINT_LABEL") .. iExtraMaintenanceCost .. "[ICON_GOLD]"
 	end
 
 

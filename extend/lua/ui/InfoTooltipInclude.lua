@@ -1898,6 +1898,20 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 				( " +" .. value .."%" ..L(yieldInfo.IconString) ..L("TXT_KEY_Building_PER_ERA")))
 		end
 	end
+	for row in GameInfo.Building_CityStateTradeRouteYieldModifiers(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.Yield or 0
+		if yieldInfo and value > 0 then
+			insert(tips, L("TXT_KEY_CSTRPM1111") .. " +" .. value .. "%" .. L(yieldInfo.IconString))
+		end
+	end
+	for row in GameInfo.Building_CityStateTradeRouteYieldModifiersGlobal(thisBuildingType) do
+		local yieldInfo = GameInfo.Yields[row.YieldType]
+		local value = row.Yield or 0
+		if yieldInfo and value > 0 then
+			insert(tips, L("TXT_KEY_CSTRPMG") .. " +" .. value .. "%" .. L(yieldInfo.IconString))
+		end
+	end
 
 	-- Yields enhanced by Technology
 	if techFilter( enhancedYieldTech ) then
@@ -4034,6 +4048,15 @@ if Game then
 					)
 				end
 
+				-- Military Promise
+				local iMilitaryPromiseTurnLeft = Players[playerID]:GetMilitaryPromiseTurnLeft(activePlayerID)
+				if iMilitaryPromiseTurnLeft >= 0 then
+					insert( treaties, negativeOrPositiveTextColor[false] .. "[ICON_CITY_STATE]"
+							.. L"TXT_KEY_MILITARY_PROMISE"
+							.. "[ENDCOLOR]" .. inParentheses(iMilitaryPromiseTurnLeft)
+					)
+				end
+
 			end
 
 			if player.GetOpinionTable then
@@ -4749,6 +4772,10 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 	end
 	if maxPlayerInstances > 0 then
 		append( tips, "[COLOR_YELLOW]" .. L( "TXT_KEY_NO_ACTION_PLAYER_COUNT_MAX", maxPlayerInstances ) .. "[ENDCOLOR]" );
+	end
+
+	if not city:CanTrain(unitID) then
+		append( tips, "[COLOR_WARNING_TEXT]" .. city:CanTrainTooltip(unitID) .. "[ENDCOLOR]" );
 	end
 
 	-- Pre-written Help text
