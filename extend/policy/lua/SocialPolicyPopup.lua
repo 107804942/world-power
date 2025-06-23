@@ -354,6 +354,12 @@ function UpdateDisplay()
 			else
 				--thisEraLabel:SetHide(true);
 			end
+
+			local civType = GameInfo.Civilizations[player:GetCivilizationType()].Type;
+			local bCivilizationLock = false;
+			if GameInfo.PolicyBranch_CivilizationLocked{ PolicyBranchType = policyBranchInfo.Type, CivilizationType = civType }() then
+				bCivilizationLock = true;
+			end
 			
 			local lockName = "Lock"..numString;
 			local thisLock = Controls[lockName];
@@ -388,7 +394,11 @@ function UpdateDisplay()
 						--thisEraLabel:SetHide( true );
 						
 						--thisButton:SetHide( true );
-						
+					-- This Civilization should never Unclock it
+					elseif bCivilizationLock then
+						strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION");
+						thisButton:SetHide( false );
+						thisButton:SetText( Locale.ConvertTextKey( "TXT_KEY_POP_ADOPT_BUTTON" ) );
 					-- Don't have enough Culture Yet
 					else
 						strToolTip = strToolTip .. " " .. Locale.ConvertTextKey("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost());
