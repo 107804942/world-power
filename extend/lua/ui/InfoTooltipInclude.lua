@@ -4774,8 +4774,10 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 		append( tips, "[COLOR_YELLOW]" .. L( "TXT_KEY_NO_ACTION_PLAYER_COUNT_MAX", maxPlayerInstances ) .. "[ENDCOLOR]" );
 	end
 
+	if city~=nil then
 	if not city:CanTrain(unitID) then
 		append( tips, "[COLOR_WARNING_TEXT]" .. city:CanTrainTooltip(unitID) .. "[ENDCOLOR]" );
+		end
 	end
 
 	-- Pre-written Help text

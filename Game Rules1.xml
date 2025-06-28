@@ -2,11 +2,27 @@
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
 
+
+	-- Allows for Unit to be purchased in puppet city
+	ALTER TABLE Units ADD PuppetPurchaseOverride boolean DEFAULT 0;
+
+	-- Allows for Building to be purchased in puppet city
+	ALTER TABLE Buildings ADD PuppetPurchaseOverride boolean DEFAULT 0;
+
+	-- Allows for All Units/Buildings to be purchased in all puppet city
+	ALTER TABLE Buildings ADD AllowsPuppetPurchase boolean DEFAULT 0;
+
+
+
+
+
 	PROMOTION_CANNOT_BE_CORPS
 
 	SetterExtraPercent="0"
-	
+
 	TRAIT_SUPER_CITY_STATE  ----威尼斯
+
+	NoAnnexing
 
 	Building_YieldFromConstruction
 

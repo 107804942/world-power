@@ -63,6 +63,7 @@ Controls.Backdrop:SetSize( backdropSize );
 
 local listOfStrings = {};
 
+local g_isCanPurchaseInPuppetsMod = Game.IsCustomModOption("ROG_CORE");
 -------------------------------------------------
 -- Get the current city the popup is working with
 -- Can return nil
@@ -91,7 +92,9 @@ function ProductionSelected( ePurchaseEnum, iData)
 	-- slewis - Venice side-effect. Able to purchase in city-states
 	local player = Players[Game.GetActivePlayer()];
 	g_bTheVeniceException = (player:MayNotAnnex()) and (not g_IsProductionMode);
-	if (UI.IsCityScreenViewingMode() and (not g_bTheVeniceException)) then
+	---g_bTheNewWonderException = (player:AllowsPuppetPurchase()) and (not g_IsProductionMode);
+	g_bTheNewWonderException = ( g_isCanPurchaseInPuppetsMod ) and (not g_IsProductionMode);
+	if (UI.IsCityScreenViewingMode() and (not g_bTheVeniceException)  and (not g_bTheNewWonderException)  ) then
 		return;
 	end
 	
@@ -1084,7 +1087,7 @@ function OnPopup( popupInfo )
 	end
     
     if city and city:IsPuppet() then
-		if (player:MayNotAnnex() and not g_IsProductionMode) then
+		if (player:MayNotAnnex() and not g_IsProductionMode) or ( g_isCanPurchaseInPuppetsMod  and not g_IsProductionMode )   then   ----ÐÂÔö
 			-- You're super-special Venice and are able to update the window. Congrats.
 		else
 			return;
