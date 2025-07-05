@@ -1,7 +1,7 @@
 
 <Context>
-	<Box Style="BGBlock_ClearTopBar" ID="BGBlock" Hidden="0"/>
-	<Grid ID="EA_Welcome" Size="550,750" Anchor="C,C" Style="GridBlackIndent8" ConsumeMouse="1" Hidden="0">
+	<Box Style="BGBlock_ClearTopBar" ID="BGBlock" Hidden="1"/>
+	<Grid ID="EA_Welcome" Size="550,750" Anchor="C,C" Style="GridBlackIndent8" ConsumeMouse="1" Hidden="1">
 		<Grid Anchor="R.T" Offset="0,0" Size="552,757" Style="Grid9Frame" ID="BlackGridFrame" Hidden="0"/>
 		<Box Anchor="C,T" Size="530,32" Offset="0,44" Color="0.0.0.128" >
 			<Stack Anchor="C,T" Size="530,32" Offset="0,0" Padding="30" StackGrowth="Right">
