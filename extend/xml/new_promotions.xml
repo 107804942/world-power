@@ -4186,28 +4186,6 @@
 		</Row>
 
 
-		<!--**************卡尔卡松**************-->
-
-		<Row>
-			<Type>PROMOTION_CARCASSONNE</Type>
-			<Description>TXT_KEY_PROMOTION_CARCASSONNE</Description>
-			<Help>TXT_KEY_PROMOTION_CARCASSONNE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>47</PortraitIndex>
-			<IconAtlas>promoVP_atlas_03</IconAtlas>
-			<!--<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
-			<ExtraResourceType>RESOURCE_FOIEGRAS</ExtraResourceType>
-			<ExtraResourceCombatModifier>1</ExtraResourceCombatModifier>
-			<ExtraResourceCombatModifierMax>25</ExtraResourceCombatModifierMax>-->		
-			<CannotBeChosen>true</CannotBeChosen>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<DefenseMod>33</DefenseMod>
-			<PediaEntry>TXT_KEY_PROMOTION_CARCASSONNE</PediaEntry>
-		</Row>
-
-
-
 
 
 

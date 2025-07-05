@@ -3,6 +3,10 @@
 <GameData>
 
 
+	UPDATE Buildings SET AllowsPuppetPurchase=1 WHERE Type='BUILDING_GATE_ALL';
+	
+	
+
 	-- Allows for Unit to be purchased in puppet city
 	ALTER TABLE Units ADD PuppetPurchaseOverride boolean DEFAULT 0;
 
@@ -13,7 +17,36 @@
 	ALTER TABLE Buildings ADD AllowsPuppetPurchase boolean DEFAULT 0;
 
 
+	//	--------------------------------------------------------------------------------
+	/// How much of a combat bonus do we get VS Barbarian Units?
+	int CvPlayer::GetAllowPuppetPurchase() const
+	{
+	return m_iAllowPuppetPurchase;
+	}
 
+	//	--------------------------------------------------------------------------------
+	/// Sets how much of a combat bonus we get VS Barbarian Units
+	void CvPlayer::SetAllowPuppetPurchase(int iValue)
+	{
+	m_iAllowPuppetPurchase = iValue;
+	}
+
+	//	--------------------------------------------------------------------------------
+	/// Changes how much of a combat bonus we get VS Barbarian Units
+	void CvPlayer::ChangeAllowPuppetPurchase(int iChange)
+	{
+	SetAllowPuppetPurchase(m_iAllowPuppetPurchase + iChange);
+	}
+
+
+
+
+	//	--------------------------------------------------------------------------------
+	/// How much of a combat bonus do we get VS Barbarian Units?
+	int CvPlayer::GetBarbarianCombatBonus() const
+	{
+	return m_iBarbarianCombatBonus;
+	}
 
 
 	PROMOTION_CANNOT_BE_CORPS

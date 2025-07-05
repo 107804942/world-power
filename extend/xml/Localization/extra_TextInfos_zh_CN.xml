@@ -6225,7 +6225,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_HELP">
 			<Text>
-				单位+33%[ICON_STRENGTH]防御力。赠送3份[ICON_RES_FOIEGRAS]鹅肝。所有城市[ICON_STRENGTH]城防+15%，本城+2攻击次数。
+				允许你在傀儡城市购买单位和建筑。赠送3份[ICON_RES_FOIEGRAS]鹅肝。所有城市[ICON_STRENGTH]城防+15%，本城+2攻击次数。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_PEDIA">
@@ -6240,12 +6240,7 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE">
-			<Text>庇护</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_CARCASSONNE_HELP">
-			<Text>防御力+33%。</Text>
-		</Row>
+
 
 		<Row Tag="TXT_KEY_RESOURCE_FOIEGRAS">
 			<Text>鹅肝</Text>

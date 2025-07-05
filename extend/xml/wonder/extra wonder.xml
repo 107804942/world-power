@@ -1621,13 +1621,13 @@
 			<Hill>1</Hill>
 			<ExtraAttacks>2</ExtraAttacks>
 			<GlobalCityStrengthMod>15</GlobalCityStrengthMod>
-			<FreePromotion>PROMOTION_CARCASSONNE</FreePromotion>
 			<Quote>TXT_KEY_BUILDING_CITADEL_OF_CARCASSONNE_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<WonderSplashImage>Carcassonne_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>31</PortraitIndex>	
+			<PortraitIndex>31</PortraitIndex>
+			<AllowsPuppetPurchase>1</AllowsPuppetPurchase>
 	</Row>
 
 		<!--骑士堡-->
