@@ -26,11 +26,7 @@ UPDATE Buildings SET GlobalPlotBuyCostModifier=-35 WHERE Type='BUILDING_PYRAMID'
 
 
 INSERT INTO Building_Flavors(BuildingType,FlavorType,Flavor) VALUES 
-       ('BUILDING_BICER', 'FLAVOR_OFFENSE',999),
-       ('BUILDING_BICER', 'FLAVOR_DEFENSE',999),
-	   ('BUILDING_BICER', 'FLAVOR_MILITARY_TRAINING',999),
-
-
+   
        ('BUILDING_GATE_ALL', 'FLAVOR_OFFENSE',888),
        ('BUILDING_GATE_ALL', 'FLAVOR_DEFENSE',888),
 	   ('BUILDING_GATE_ALL', 'FLAVOR_MILITARY_TRAINING',888),
@@ -216,10 +212,11 @@ INSERT INTO Building_Flavors(BuildingType,FlavorType,Flavor) VALUES
 	    ('BUILDING_RUSHMORE', 'FLAVOR_WONDER',520),
 	   ('BUILDING_RUSHMORE', 'FLAVOR_EXPANSION',456),
 
-	   ('BUILDING_ABUSIMBEL', 'FLAVOR_GROWTH',352),
 	    ('BUILDING_ABUSIMBEL', 'FLAVOR_WONDER',333),
 	   ('BUILDING_ABUSIMBEL', 'FLAVOR_CULTURE',367),
-
+	    ('BUILDING_ABUSIMBEL', 'FLAVOR_OFFENSE',999),
+       ('BUILDING_ABUSIMBEL', 'FLAVOR_DEFENSE',999),
+	   ('BUILDING_ABUSIMBEL', 'FLAVOR_MILITARY_TRAINING',999),
 	
 	  ('BUILDING_SKARABRAE', 'FLAVOR_CULTURE',352),
 	    ('BUILDING_SKARABRAE', 'FLAVOR_WONDER',333),
@@ -785,8 +782,7 @@ SELECT  'BUILDING_INTERSTATE_HIGHWAY_SYSTEM', Type, 'YIELD_GOLD',5 FROM Building
 -- 阿布辛贝勒、古城
 ------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Building_YieldFromOtherYield(BuildingType, InYieldType,InYieldValue,OutYieldType,OutYieldValue) VALUES
-('BUILDING_LESHAN_BUDDHA', 'YIELD_FAITH',50, 'YIELD_CULTURE',10),
-('BUILDING_ABUSIMBEL', 'YIELD_FAITH',50, 'YIELD_SCIENCE',10);
+('BUILDING_LESHAN_BUDDHA', 'YIELD_FAITH',50, 'YIELD_CULTURE',10);
 
 ------------------------------------------------------------------------------------------------------------------------
 -- 情报局免费晋升关联战斗类型

@@ -729,14 +729,6 @@
 		</Row>
 
 
-		<!-- 比尔萨城寨-->
-		<Row>
-			<Type>BUILDINGCLASS_BICER</Type>
-			<DefaultBuilding>BUILDING_BICER</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_BICER</Description>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-		</Row>
-
 	</BuildingClasses>
 
 
@@ -745,32 +737,7 @@
 		<Delete Type="BUILDING_NATIONAL_LIBRARY"/>
 
 
-		<!--比尔萨城寨-->
 
-		<Row>
-			<Type>BUILDING_BICER</Type>
-			<BuildingClass>BUILDINGCLASS_BICER</BuildingClass>
-			<Cost>180</Cost>
-			<PrereqTech>TECH_OPTICS</PrereqTech>
-			<Help>TXT_KEY_WONDER_BICER_HELP</Help>
-			<Description>TXT_KEY_BUILDING_BICER</Description>
-			<Civilopedia>TXT_KEY_WONDER_BICER_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_BICER_QUOTE</Quote>
-			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
-			<SpecialistType>SPECIALIST_GREAT_ADMIRAL</SpecialistType>
-			<NukeImmune>true</NukeImmune>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<MinAreaSize>-1</MinAreaSize>
-			<Water>1</Water>
-			<ConquestProb>100</ConquestProb>
-			<GreatPeopleRateChange>1</GreatPeopleRateChange>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>247</PortraitIndex>
-			<WonderSplashImage>BICER.dds</WonderSplashImage>
-			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
-			<TechEnhancedTourism>4</TechEnhancedTourism>
-			<AllowsPuppetPurchase>1</AllowsPuppetPurchase>
-		</Row>
 
 		
 
@@ -1881,6 +1848,7 @@
 			<PortraitIndex>153</PortraitIndex>
 			<WonderSplashImage>AbuSimbel_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
+			<AllowsPuppetPurchase>1</AllowsPuppetPurchase>
 		</Row>
 
 
@@ -2939,12 +2907,6 @@
 
 	<Building_ResourceQuantityRequirements>
 
-		<!--比尔萨城寨-->
-		<Row>
-			<BuildingType>BUILDING_BICER</BuildingType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>4</Cost>
-		</Row>
 		
 		<!--万国-->
 		<Row>
@@ -4457,18 +4419,7 @@
 		<Delete BuildingType="BUILDING_STONEHENGE"/>
 		<Delete BuildingType="BUILDING_GRAND_TEMPLE"/>
 		
-		<!--比尔萨城寨-->
-		<Row>
-			<BuildingType>BUILDING_BICER</BuildingType>
-			<YieldType>YIELD_GREAT_ADMIRAL_POINTS</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<BuildingType>BUILDING_BICER</BuildingType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		
+
 
 		<!--万国之门-->
 		<Row>

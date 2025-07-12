@@ -6425,7 +6425,7 @@
 			<Text>阿布辛贝勒神庙</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ABUSIMBEL_HELP">
-			<Text>拥有两个艺术品槽位。本城每50点[ICON_PEACE]信仰提供10点[ICON_RESEARCH]科研产出。所有神庙+1[ICON_CULTURE]文化。</Text>
+			<Text>拥有两个艺术品槽位。所有傀儡城市可购买单位和建筑，所有神庙+1[ICON_CULTURE]文化。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_WONDER_ABUSIMBEL_QUOTE">
@@ -8047,7 +8047,7 @@
 			<Text>
 				[ICON_BULLET]专业人员额外产出: 每位科学家+2[ICON_RESEARCH]科研、工程师+1[ICON_PRODUCTION]产能、商业家+2[ICON_GOLD]金钱、文学家、美术家、音乐家+1[ICON_CULTURE]文化。
 				[NEWLINE][ICON_BULLET]来自[ICON_HAPPINESS_1]满意度更低文明的移民[ICON_TEAM_4]迁入速率+50%。
-				[NEWLINE][ICON_BULLET]城市地块扩张时获得10[ICON_PRODUCTION]产能（随时代增加),可花费更多金钱购买其他文明的地块。
+				[NEWLINE][ICON_BULLET]城市地块扩张时获得10[ICON_PRODUCTION]产能（随时代增加),10[ICON_CULTURE]文化，可花费更多金钱购买其他文明的地块。
 			</Text>
 		</Replace>
 
@@ -9925,26 +9925,7 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_BICER">
-			<Text>比尔萨城寨</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_BICER_HELP">
-			<Text>
-				所有傀儡城市可购买单位和建筑。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_BICER_QUOTE">
-			<Text>
-				[NEWLINE]"城市断壁残垣至今仍犹可见。"[NEWLINE] - 利奥·阿非利加努斯[NEWLINE]
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_WONDER_BICER_PEDIA">
-			<Text>
-				在迦太基城市中心的山顶上，耸立着俯瞰全城的比尔萨城塞。其名字的来源众说纷纭——狄多的传说牵强地将其与希腊语“byrsa”（牛皮）联系起来，暗指她获得这片日后演变为迦太基的土地时所使用的方法。然而，这个名字更可能源自腓尼基语“barsat”（要塞）的变体。
-				[NEWLINE]比尔萨城塞是迦太基军事力量的核心，与其所在的山丘（同样被称为“比尔萨”）一起，还容纳着主要的政治和宗教机构。在迦太基陷落后，这座城墙环绕的堡垒先后被罗马人、汪达尔人、拜占庭人等多个文明继续使用。
-				[NEWLINE]如今，它已成为一处重要的考古遗址。
-			</Text>
-		</Row>
+	
 	</Language_en_US>
 
 </GameData>

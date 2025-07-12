@@ -1494,7 +1494,7 @@ function MagaBoughtPlot(iPlayer, iCity, iPlotX, iPlotY, bGold, bCulture)
 	local iGain = GetCultureGain(Player)
 	--city:ChangeProduction(20*iGain)
 	city:ChangeOverflowProduction(10*iGain)
-	--Player:ChangeJONSCulture(20*iGain)
+	Player:ChangeJONSCulture(10)
 	  -- end
 	end
 end

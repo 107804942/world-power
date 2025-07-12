@@ -1,4 +1,25 @@
 
+alter table Traits add column `CanPurchaseWonderInGoldenAge` boolean not null default 0;
+
+           <CanPurchaseWonderInGoldenAge>true</CanPurchaseWonderInGoldenAge>	
+
+
+
+
+	<Row Name="WONDER_GOLDEN_AGE_PURCHASE_MODIFIER">
+			<Value>200</Value>
+		</Row>
+
+
+		const BuildingClassTypes eOrderBuildingClass = (BuildingClassTypes)pkOrderBuildingInfo->GetBuildingClassType();
+	if (eOrderBuildingClass != NO_BUILDINGCLASS)
+	{
+		pkBuildingClassInfo = GC.getBuildingClassInfo(eOrderBuildingClass);
+		if (pkBuildingClassInfo && pkBuildingClassInfo->getMaxGlobalInstances() == 1)
+		{
+			bWonder = true;
+		}
+	}
 
 --------------------------------------------------------------------------------
 int CvCity::GetPurchaseCost(BuildingTypes eBuilding)
@@ -21,7 +42,26 @@ iModifier = iModifier + GET_PLAYER(getOwner()).isGoldenAge();
 if(iModifier == -1)
 return -1;
 
-
+		<Row Tag="TXT_KEY_BUILDING_BICER">
+			<Text>比尔萨城寨</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_BICER_HELP">
+			<Text>
+				所有傀儡城市可购买单位和建筑。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_BICER_QUOTE">
+			<Text>
+				[NEWLINE]"城市断壁残垣至今仍犹可见。"[NEWLINE] - 利奥·阿非利加努斯[NEWLINE]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_BICER_PEDIA">
+			<Text>
+				在迦太基城市中心的山顶上，耸立着俯瞰全城的比尔萨城塞。其名字的来源众说纷纭——狄多的传说牵强地将其与希腊语“byrsa”（牛皮）联系起来，暗指她获得这片日后演变为迦太基的土地时所使用的方法。然而，这个名字更可能源自腓尼基语“barsat”（要塞）的变体。
+				[NEWLINE]比尔萨城塞是迦太基军事力量的核心，与其所在的山丘（同样被称为“比尔萨”）一起，还容纳着主要的政治和宗教机构。在迦太基陷落后，这座城墙环绕的堡垒先后被罗马人、汪达尔人、拜占庭人等多个文明继续使用。
+				[NEWLINE]如今，它已成为一处重要的考古遗址。
+			</Text>
+		</Row>
 
 
 

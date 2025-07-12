@@ -650,7 +650,7 @@
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
 			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>40</Yield>
+			<Yield>10</Yield>
 		</Row>
 		<Row>
 			<PolicyType>POLICY_DIFFICULTY_10</PolicyType>
