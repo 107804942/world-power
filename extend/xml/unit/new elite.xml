@@ -934,7 +934,7 @@
 		<Row>
 			<Class>UNITCLASS_GOLEM</Class>
 			<Type>UNIT_GOLEM</Type>
-			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
+			<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
 			<Combat>1700</Combat>
 			<BaseSightRange>4</BaseSightRange>
 			<Cost>22000</Cost>
@@ -1052,7 +1052,7 @@
 		<Row>
 			<Class>UNITCLASS_SPACE_CARRIER</Class>
 			<Type>UNIT_SPACE_CARRIER</Type>
-			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>1500</Combat>
 			<!--<RangedCombat>1500</RangedCombat>
@@ -3172,7 +3172,7 @@
 		</Update>
 
 		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_FW_NEXUS"/>
+			<Set UnitArtInfo="ART_DEF_UNIT_FW_NEXUS" PrereqTech="TECH_SPACE_COLONIZATION"/>
 			<Where Type="UNIT_ORBITAL_STRIKE" />
 		</Update>
 

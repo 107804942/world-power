@@ -46,7 +46,7 @@
 		<Row>
 			<Class>UNITCLASS_BATTLESUIT</Class>
 			<Type>UNIT_BATTLESUIT</Type>
-			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
 			<Combat>300</Combat>
 			<Cost>2800</Cost>
 			<HurryCostModifier>90</HurryCostModifier>
@@ -83,7 +83,7 @@
 		<Row>
 			<Class>UNITCLASS_AEGIS</Class>
 			<Type>UNIT_AEGIS</Type>
-			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
+			<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>450</Combat>
 			<RangedCombat>450</RangedCombat>
@@ -156,7 +156,7 @@
 		<Row>
 			<Class>UNITCLASS_BEAM_JUMPER</Class>
 			<Type>UNIT_BEAM_JUMPER</Type>
-			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
+			<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
 			<Combat>500</Combat>
 			<Cost>5500</Cost>
 			<HurryCostModifier>90</HurryCostModifier>

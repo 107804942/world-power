@@ -1217,15 +1217,6 @@
 
 
 
-		<Row>
-			<TechType>TECH_SPACE_TECHNOLOGY</TechType>
-			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
-		</Row>
-		<Row>
-			<TechType>TECH_SPACE_TECHNOLOGY</TechType>
-			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
-		</Row>
-
 
 
 
@@ -1235,26 +1226,15 @@
 			<PrereqTech>TECH_EARTH</PrereqTech>
 		</Row>
 
-		<Row>
-			<TechType>TECH_CHAOS</TechType>
-			<PrereqTech>TECH_SPACE_TECHNOLOGY</PrereqTech>
-		</Row>
+	
 
 		<Row>
 			<TechType>TECH_INTERSTELLAR_TRAVEL</TechType>
 			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
 		</Row>
 
-		<Row>
-			<TechType>TECH_INTERSTELLAR_TRAVEL</TechType>
-			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
-		</Row>
 
 
-		<Row>
-			<TechType>TECH_PHOTON_COMPUTER</TechType>
-			<PrereqTech>TECH_NEURAL_INTERFACE</PrereqTech>
-		</Row>
 
 
 		<Row>
@@ -1391,11 +1371,11 @@
 		</Row>
 
 		<Row>
-			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
+			<TechType>TECH_SPACE_TECHNOLOGY</TechType>
 			<PrereqTech>TECH_METAMATERIAL</PrereqTech>
 		</Row>
 		<Row>
-			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
+			<TechType>TECH_SPACE_TECHNOLOGY</TechType>
 			<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
 		</Row>
 
@@ -1422,12 +1402,12 @@
 		</Row>
 		<Row>
 			<TechType>TECH_NANOTECHNOLOGY</TechType>
-			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<PrereqTech>TECH_SPACE_TECHNOLOGY</PrereqTech>
 		</Row>
 
 		<Row>
 			<TechType>TECH_HOMO_SUPERIOR</TechType>
-			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<PrereqTech>TECH_SPACE_TECHNOLOGY</PrereqTech>
 		</Row>
 
 
@@ -1447,17 +1427,16 @@
 			<TechType>TECH_GRID_COMPUTING</TechType>
 			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 		</Row>
-
+		<Row>
+			<TechType>TECH_GRID_COMPUTING</TechType>
+			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
+		</Row>
 		<Row>
 			<TechType>TECH_AUTONOMOUS_SYSTEMS</TechType>
 			<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
 		</Row>
 
 
-		<Row>
-			<TechType>TECH_HOLOGRAPHY</TechType>
-			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
-		</Row>	
 		
 		
 		
@@ -1476,7 +1455,10 @@
 		<TechType>TECH_ORBITAL_SUSPENSION</TechType>
 		<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 	</Row>
-
+		<Row>
+			<TechType>TECH_ORBITAL_SUSPENSION</TechType>
+			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
+		</Row>
 
 
 	<Row>
@@ -1490,20 +1472,9 @@
 		<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 	</Row>
 
-	<Row>
-		<TechType>TECH_NEURAL_INTERFACE</TechType>
-		<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
-	</Row>
 
-	<Row>
-		<TechType>TECH_NEURAL_INTERFACE</TechType>
-		<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
-	</Row>
-	<Row>
-		<TechType>TECH_NEURAL_INTERFACE</TechType>
-		<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
-	</Row>
 
+	
 
 	<Row>
 		<TechType>TECH_SPACE_COLONIZATION</TechType>
@@ -1514,15 +1485,7 @@
 		<PrereqTech>TECH_PARTICLE_PHYSICS</PrereqTech>
 	</Row>
 
-	<Row>
-		<TechType>TECH_PLASMA_PROPULSION</TechType>
-		<PrereqTech>TECH_PARTICLE_PHYSICS</PrereqTech>
-	</Row>
-	<Row>
-		<TechType>TECH_PLASMA_PROPULSION</TechType>
-		<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
-	</Row>
-
+	
 
 
 		<Row>
@@ -1905,66 +1868,6 @@
 
 
 		<Row>
-			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
-			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>25</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_APPLIEDGRAVITONICS</TechType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-
-
-
-
-
-
-
-
-
-
-		<Row>
-			<TechType>TECH_HOLOGRAPHY</TechType>
-			<FlavorType>FLAVOR_CULTURE</FlavorType>
-			<Flavor>25</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_HOLOGRAPHY</TechType>
-			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_HOLOGRAPHY</TechType>
-			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>25</Flavor>
-		</Row>
-
-
-		<Row>
-			<TechType>TECH_PLASMA_PROPULSION</TechType>
-			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_PLASMA_PROPULSION</TechType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>25</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_PLASMA_PROPULSION</TechType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-
-
-
-		<Row>
 			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
 			<FlavorType>FLAVOR_SCIENCE</FlavorType>
 			<Flavor>20</Flavor>
@@ -2134,22 +2037,7 @@
 		</Row>
 
 
-		<Row>
-			<TechType>TECH_NEURAL_INTERFACE</TechType>
-			<FlavorType>FLAVOR_SCIENCE</FlavorType>
-			<Flavor>20</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_NEURAL_INTERFACE</TechType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>25</Flavor>
-		</Row>
-		<Row>
-			<TechType>TECH_NEURAL_INTERFACE</TechType>
-			<FlavorType>FLAVOR_DEFENSE</FlavorType>
-			<Flavor>30</Flavor>
-		</Row>
-
+	
 
 
 		<Row>

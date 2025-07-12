@@ -2679,7 +2679,7 @@
 			<Civilopedia>TXT_KEY_WONDER_SPACE_FORTRESS_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_SPACE_FORTRESS_QUOTE</Quote>
 			<Cost>30000</Cost>
-			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<PrereqTech>TECH_SPACE_TECHNOLOGY</PrereqTech>
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>

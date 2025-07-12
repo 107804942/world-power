@@ -129,7 +129,7 @@
 		<Row>
 			<Class>UNITCLASS_NAVALFIGHTER03P</Class>
 			<Type>UNIT_NAVALFIGHTER03P</Type>
-			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>1000</Combat>
 			<RangedCombat>1000</RangedCombat>
@@ -172,7 +172,7 @@
 		<Row>
 			<Class>UNITCLASS_NAVALCARRIER02</Class>
 			<Type>UNIT_NAVALCARRIER02</Type>
-			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>700</Combat>
 			<Cost>10000</Cost>

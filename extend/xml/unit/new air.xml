@@ -266,7 +266,7 @@
 		<Row>
 			<Class>UNITCLASS_SUPER_MISSILE</Class>
 			<Type>UNIT_SUPER_MISSILE</Type>
-			<PrereqTech>TECH_APPLIEDGRAVITONICS</PrereqTech>
+			<PrereqTech>TECH_SPACE_TECHNOLOGY</PrereqTech>
 			<RangedCombat>420</RangedCombat>
 			<Cost>-1</Cost>
 			<Moves>2</Moves>

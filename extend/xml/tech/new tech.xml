@@ -2780,7 +2780,20 @@
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
 
-
+		<Row>
+			<Type>TECH_SPACE_TECHNOLOGY</Type>
+			<Cost>100000</Cost>
+			<Description>TXT_KEY_TECH_SPACE_TECHNOLOGY_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_SPACE_TECHNOLOGY_DESC</Civilopedia>
+			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GridX>29</GridX>
+			<GridY>8</GridY>
+			<Quote>TXT_KEY_TECH_SPACE_TECHNOLOGY_QUOTE</Quote>
+			<PortraitIndex>16</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
 
 
 
@@ -2838,21 +2851,7 @@
 		</Row>
 
 
-		<Row>
-			<Type>TECH_APPLIEDGRAVITONICS</Type>
-			<Cost>100000</Cost>
-			<Description>TXT_KEY_TECH_APPLIEDGRAVITONICS_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_APPLIEDGRAVITONICS_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>29</GridX>
-			<GridY>8</GridY>
-			<Quote>TXT_KEY_TECH_OPTICALCOMPUTERS_QUOTE</Quote>
-			<PortraitIndex>126</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-		</Row>
-
+		
 
 
 
@@ -2995,28 +2994,7 @@
 			<PortraitIndex>146</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
-		<Row>
-			<Type>TECH_HOLOGRAPHY</Type>
-			<Cost>200000</Cost>
-			<Description>DESC_HOLOGRAPHY</Description>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Civilopedia>PEDIA_HOLOGRAPHY</Civilopedia>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>31</GridX>
-			<GridY>3</GridY>
-			<Quote>QUOTE_HOLOGRAPHY</Quote>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>123</PortraitIndex>
-		</Row>
-
-
-
-
-
-
-
-
+		
 
 
 
@@ -3082,27 +3060,13 @@
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>32</GridX>
-			<GridY>0</GridY>
+			<GridY>1</GridY>
 			<Quote>TXT_KEY_TECH_CYBERNETICS_QUOTE</Quote>
 			<PortraitIndex>231</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 
-		<Row>
-			<Type>TECH_NEURAL_INTERFACE</Type>
-			<Cost>300000</Cost>
-			<Description>TXT_KEY_TECH_NEURAL_INTERFACE</Description>
-			<Civilopedia>TXT_KEY_TECH_NEURAL_INTERFACE_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>32</GridX>
-			<GridY>2</GridY>
-			<Quote>TXT_KEY_TECH_NEURAL_INTERFACE_QUOTE</Quote>
-			<PortraitIndex>194</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
 
 
 		<Row>
@@ -3152,20 +3116,7 @@
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 		</Row>
 
-		<Row>
-			<Type>TECH_SPACE_TECHNOLOGY</Type>
-			<Cost>300000</Cost>
-			<Description>TXT_KEY_TECH_SPACE_TECHNOLOGY_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_SPACE_TECHNOLOGY_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>32</GridX>
-			<GridY>9</GridY>
-			<Quote>TXT_KEY_TECH_SPACE_TECHNOLOGY_QUOTE</Quote>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
+
 
 
 		<Row>

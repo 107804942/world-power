@@ -1635,7 +1635,7 @@
 				<EspionageModifier>-50</EspionageModifier>
 				<Espionage>true</Espionage>
 				<HurryCostModifier>140</HurryCostModifier>
-				<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
+				<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
@@ -1654,7 +1654,7 @@
 				<Cost>7000</Cost>
 				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>
 				<HurryCostModifier>140</HurryCostModifier>
-				<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
+				<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
@@ -1675,7 +1675,7 @@
 				<Cost>7000</Cost>
 				<MutuallyExclusiveGroup>30</MutuallyExclusiveGroup>
 				<HurryCostModifier>140</HurryCostModifier>
-				<PrereqTech>TECH_HOLOGRAPHY</PrereqTech>
+				<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
