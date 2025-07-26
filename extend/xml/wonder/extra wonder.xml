@@ -765,6 +765,7 @@
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
 			<ExtraUnitPlayerInstances>1</ExtraUnitPlayerInstances>
+			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
 		</Row>
 		
 		
@@ -1599,7 +1600,7 @@
 			<NearbyMountainRequired>true</NearbyMountainRequired>
 			<Quote>TXT_KEY_BUILDING_OSARAGI_QUOTE</Quote>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<LiberatedInfluence>40</LiberatedInfluence>
+			<LiberatedInfluence>20</LiberatedInfluence>
 			<ReligiousPressureModifier>300</ReligiousPressureModifier>
 			<WonderSplashImage>OSARAGI.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
@@ -2396,7 +2397,7 @@
 			<Where Type="BUILDING_NATIONAL_FREEDOM" />
 		</Update>
 		<Update>
-			<Set  Cost="25000"/>
+			<Set  Cost="25000"  PrereqTech="TECH_TRANSHUMANISM"  />
 			<Where Type="BUILDING_NATIONAL_ORDER" />
 		</Update>
 		<Update>
@@ -2862,7 +2863,7 @@
 			<TradeRouteLandDistanceModifier>300</TradeRouteLandDistanceModifier>
 			<!--<TradeRouteModifier>50</TradeRouteModifier>-->
 			<BuildingClass>BUILDINGCLASS_INTERSTATE_HIGHWAY_SYSTEM</BuildingClass>
-			<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+			<PrereqTech>TECH_PHOTON_COMPUTER</PrereqTech>
 			<!--<GreatPeopleRateChange>15</GreatPeopleRateChange>-->
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>108</PortraitIndex>

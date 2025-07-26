@@ -3,37 +3,15 @@
 <GameData>
 	<Units>
 
-		<Update>
-			<Set PrereqTech="TECH_CHEMISTRY"/>
-			<Where Type="UNIT_FRENCH_MUSKETEER" />
-		</Update>
-
-		<Update>
-			<Set PrereqTech="TECH_ORBITAL_SUSPENSION"/>
-			<Where Type="UNIT_SATELLITE_ECCM" />
-		</Update>
 
 
-		<Update>
-			<Set PrereqTech="TECH_WAVEMECHANICS"/>
-			<Where Type="UNIT_SATELLITE_RESOURCEPLUS" />
-		</Update>
+	
+		
+		
 
-
-		<Update>
-			<Set PrereqTech="TECH_SPACE_TECHNOLOGY"/>
-			<Where Type="UNIT_SATELLITE_ORBITAL_STRIKE" />
-		</Update>
-
-		<Update>
-			<Set PrereqTech="TECH_ARTIFICIAL_INTELLIGENCE"/>
-			<Where Type="UNIT_SATELLITE_SPACE_ELEVATOR" />
-		</Update>
 
 
 		<Delete Type="UNIT_GUIDED_MISSILE"/>
-
-
 		<Delete Type="UNIT_CITADEL_LATE"/>
 		<Delete Type="UNIT_CITADEL_MID"/>
 		<Delete Type="UNIT_CITADEL_EARLY"/>

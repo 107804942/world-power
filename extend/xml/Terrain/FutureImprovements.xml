@@ -630,13 +630,13 @@
 	
 		<Row>
 			<ImprovementType>IMPROVEMENT_COMM_ARRAY</ImprovementType>
-			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<TechType>TECH_PHOTON_COMPUTER</TechType>
 			<YieldType>YIELD_CULTURE</YieldType>
 			<Yield>2</Yield>
 		</Row>
 		<Row>
 			<ImprovementType>IMPROVEMENT_COMM_ARRAY</ImprovementType>
-			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
+			<TechType>TECH_PHOTON_COMPUTER</TechType>
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>2</Yield>
 		</Row>
@@ -724,12 +724,7 @@
 			<Yield>1</Yield>
 		</Row>
 		
-		<Row>
-			<ImprovementType>IMPROVEMENT_INDUSTRIAL_COMPLEX</ImprovementType>
-			<TechType>TECH_SUPERCONDUCTIVITY</TechType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>1</Yield>
-		</Row>
+
 	</Improvement_TechFreshWaterYieldChanges>
 	
 		
@@ -1426,9 +1421,9 @@
 
 		<Row>
 			<ImprovementType>IMPROVEMENT_INDUSTRIAL_COMPLEX</ImprovementType>
-			<TechType>TECH_MECHANICAL_ENGINEERING</TechType>
+			<TechType>TECH_ENERGY_THEORY</TechType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>2</Yield>
 		</Row>
 		
 	</Improvement_TechYieldChanges>

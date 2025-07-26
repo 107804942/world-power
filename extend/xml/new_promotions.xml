@@ -3350,7 +3350,7 @@
 			<Type>PROMOTION_EQUICK</Type>
 			<Description>TXT_KEY_PROMOTION_EQUICK</Description>
 			<Help>TXT_KEY_PROMOTION_EQUICK_HELP</Help>
-			<TechPrereq>TECH_ORBITAL_SUSPENSION</TechPrereq>
+			<TechPrereq>TECH_AUTONOMOUS_SYSTEMS</TechPrereq>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<RangedAttackModifier>25</RangedAttackModifier>
 			<PortraitIndex>52</PortraitIndex>
@@ -4316,6 +4316,7 @@
 			<OrderPriority>11</OrderPriority>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
+			<OpenAttack>25</OpenAttack>
 			<SplashDamageImmune>1</SplashDamageImmune>
 			<CollateralDamageImmune>1</CollateralDamageImmune>
 			<IgnoreDamageChance>20</IgnoreDamageChance>

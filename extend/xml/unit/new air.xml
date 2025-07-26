@@ -43,7 +43,7 @@
 		<Row>
 			<Class>UNITCLASS_AIRFIGHTER03P</Class>
 			<Type>UNIT_AIRFIGHTER03P</Type>
-			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<RangedCombat>660</RangedCombat>
 			<Cost>3000</Cost>
 			<Moves>3</Moves>
@@ -85,7 +85,7 @@
 		<Row>
 			<Class>UNITCLASS_AIRFIGHTER04P</Class>
 			<Type>UNIT_AIRFIGHTER04P</Type>
-			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<RangedCombat>550</RangedCombat>
 			<Cost>3000</Cost>
 			<Moves>3</Moves>
@@ -129,7 +129,7 @@
 		<Row>
 			<Class>UNITCLASS_DRONE_FIGHTER</Class>
 			<Type>UNIT_DRONE_FIGHTER</Type>
-			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<RangedCombat>800</RangedCombat>
 			<Cost>8000</Cost>
 			<Moves>2</Moves>
@@ -175,7 +175,7 @@
 		<Row>
 			<Class>UNITCLASS_CARRIER_FIGHTER_STORM</Class>
 			<Type>UNIT_CARRIER_FIGHTER_STORM</Type>
-			<PrereqTech>TECH_PLASMA_PROPULSION</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<RangedCombat>700</RangedCombat>
 			<Cost>-1</Cost>
 			<Moves>4</Moves>
@@ -226,7 +226,7 @@
 		<Row>
 			<Class>UNITCLASS_CARRIER_FIGHTER_FUTURE</Class>
 			<Type>UNIT_CARRIER_FIGHTER_FUTURE</Type>
-			<PrereqTech>TECH_SPACE_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<RangedCombat>480</RangedCombat>
 			<Cost>-1</Cost>
 			<Moves>4</Moves>
@@ -640,6 +640,13 @@
 
 	<Units>
 
+
+
+		<Update>
+			<Set PrereqTech="TECH_TRANSHUMANISM"/>
+			<Where Type="UNIT_SS_ENGINE" />
+		</Update>
+		
 		<Update>
 			<Set  RangedCombat="220"/>
 			<Where Type="UNIT_GUIDED_MISSILE" />

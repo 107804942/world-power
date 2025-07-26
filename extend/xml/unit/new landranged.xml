@@ -10,7 +10,7 @@
 		<Row>
 			<Class>UNITCLASS_SABR</Class>
 			<Type>UNIT_SABR</Type>
-			<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
+			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
 			<Combat>130</Combat>
 			<RangedCombat>260</RangedCombat>
 			<Cost>1600</Cost>
@@ -48,7 +48,7 @@
 		<Row>
 			<Class>UNITCLASS_HOVERTANK</Class>
 			<Type>UNIT_HOVERTANK</Type>
-			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
+			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
 			<Combat>100</Combat>
 			<RangedCombat>360</RangedCombat>
 			<Cost>2600</Cost>
@@ -73,8 +73,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_SIEGE04P</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>4</UnitFlagIconOffset>
-			<PortraitIndex>113</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>251</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>WHEELED</MoveRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
@@ -111,7 +111,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_SIEGE05P</UnitArtInfo>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<UnitFlagIconOffset>50</UnitFlagIconOffset>
-			<PortraitIndex>20</PortraitIndex>
+			<PortraitIndex>250</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>WHEELED</MoveRate>
 			<ExtraMaintenanceCost>110</ExtraMaintenanceCost>

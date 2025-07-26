@@ -210,7 +210,7 @@
 		<Row>
 			<Class>UNITCLASS_NAVALFIGHTER04P</Class>
 			<Type>UNIT_NAVALFIGHTER04P</Type>
-			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<BaseSightRange>6</BaseSightRange>
 			<Combat>580</Combat>
 			<RangedCombat>480</RangedCombat>
@@ -252,7 +252,7 @@
 		<Row>
 			<Class>UNITCLASS_NAVALFIGHTER02</Class>
 			<Type>UNIT_NAVALFIGHTER02</Type>
-			<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
+			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>320</Combat>
 			<RangedCombat>320</RangedCombat>

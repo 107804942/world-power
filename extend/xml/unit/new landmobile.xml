@@ -109,7 +109,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_AEGIS</UnitArtInfo>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>54</UnitFlagIconOffset>
-			<PortraitIndex>132</PortraitIndex>
+			<PortraitIndex>252</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
 		</Row>
@@ -194,7 +194,7 @@
 		<Row>
 			<Class>UNITCLASS_VERTOL</Class>
 			<Type>UNIT_VERTOL</Type>
-			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>300</Combat>
 			<RangedCombat>300</RangedCombat>

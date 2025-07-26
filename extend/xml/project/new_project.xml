@@ -358,7 +358,7 @@
 			<Description>TXT_KEY_PROJECT_LEVDESTROYER</Description>
 			<Help>TXT_KEY_PROJECT_LEVDESTROYER_HELP</Help>
 			<Civilopedia>TXT_KEY_PROJECT_LEVDESTROYER_PEDIA</Civilopedia>
-			<TechPrereq>TECH_ORBITAL_SUSPENSION</TechPrereq>
+			<TechPrereq>TECH_INTERSTELLAR_TRAVEL</TechPrereq>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 			<MaxTeamInstances>1</MaxTeamInstances>
 			<Cost>2000</Cost>
@@ -402,7 +402,7 @@
 			<Description>TXT_KEY_PROJECT_ANGEL</Description>
 			<Help>TXT_KEY_PROJECT_ANGEL_HELP</Help>
 			<Civilopedia>TXT_KEY_PROJECT_ANGEL_PEDIA</Civilopedia>
-			<TechPrereq>TECH_GRID_COMPUTING</TechPrereq>
+			<TechPrereq>TECH_HOMO_SUPERIOR</TechPrereq>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 			<MaxTeamInstances>1</MaxTeamInstances>
 			<Cost>1000</Cost>

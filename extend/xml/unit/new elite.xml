@@ -1012,7 +1012,7 @@
 			<Class>UNITCLASS_LEVDESTROYER</Class>
 			<Type>UNIT_LEVDESTROYER</Type>
 			<HurryCostModifier>-1</HurryCostModifier>
-			<PrereqTech>TECH_ORBITAL_SUSPENSION</PrereqTech>
+			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<Combat>2000</Combat>
 			<RangedCombat>2000</RangedCombat>
 			<Cost>70000</Cost>
@@ -1172,7 +1172,7 @@
 			<Type>UNIT_ANGEL</Type>
 			<BaseSightRange>3</BaseSightRange>
 			<AirInterceptRange>5</AirInterceptRange>
-			<PrereqTech>TECH_GRID_COMPUTING</PrereqTech>
+			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<Combat>800</Combat>
 			<RangedCombat>900</RangedCombat>
@@ -2910,7 +2910,10 @@
 			<UnitType>UNIT_MECH</UnitType>
 			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_MECH</UnitType>
+			<PromotionType>PROMOTION_HPMOD1</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_MECH</UnitType>
 			<PromotionType>PROMOTION_MOVE_ALL_TERRAIN</PromotionType>
@@ -3118,7 +3121,7 @@
 		</Update>
 		
 		<Update>
-			<Set Cost="3500"  ObsoleteTech="TECH_SUPERCONDUCTOR"/>
+			<Set Cost="3500"  ObsoleteTech="TECH_MECHANICAL_ENGINEERING"/>
 			<Where Type="UNIT_SUPER_BATTLESHIP" />
 		</Update>
 
@@ -3139,10 +3142,6 @@
 			<Where Type="UNIT_SUPER_TANK" />
 		</Update>
 
-		<Update>
-			<Set PrereqTech="TECH_CHAOS"/>
-			<Where Type="UNIT_SS_STASIS_CHAMBER" />
-		</Update>
 
 		<Update>
 			<Set UnitArtInfo="ART_DEF_UNIT_SMOKEY_LANDSHIP_LEVEL_3"/>
@@ -3172,15 +3171,16 @@
 		</Update>
 
 		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_FW_NEXUS" PrereqTech="TECH_SPACE_COLONIZATION"/>
+			<Set UnitArtInfo="ART_DEF_UNIT_FW_NEXUS"/>
 			<Where Type="UNIT_ORBITAL_STRIKE" />
 		</Update>
-
+	
 
 		<Update>
 			<Set PrereqTech="TECH_NUCLEAR_FUSION"/>
 			<Where Type="UNIT_TASKFORCE_141" />
 		</Update>
+
 
 	</Units>
 

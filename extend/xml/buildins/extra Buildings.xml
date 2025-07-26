@@ -758,7 +758,7 @@
 				<Cost>750</Cost>
 				<GoldMaintenance>8</GoldMaintenance>
 				<Happiness>-2</Happiness>
-				<FoodKept>-3</FoodKept>
+				<FoodKept>-8</FoodKept>
 				<PrereqTech>TECH_SUBTERRANEAN_EXPLORE</PrereqTech>
 				<Help>TXT_KEY_BUILDING_MINING_COMPANY_HELP</Help>
 				<Description>TXT_KEY_BUILDING_MINING_COMPANY</Description>
@@ -1235,7 +1235,7 @@
 			<!--*********************************************未来时代*******************************************************-->
 
 			<Update>
-				<Set  Cost="3300"/>
+				<Set  Cost="4000"/>
 				<Where Type="BUILDING_FUTURE_FACTORY" />
 			</Update>
 
@@ -1243,7 +1243,7 @@
 			<Row>
 				<Type>BUILDING_QUANTUM_LAB</Type>
 				<BuildingClass>BUILDINGCLASS_QUANTUM_LAB</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
 				<Help>TXT_KEY_BUILDING_QUANTUM_LAB_HELP</Help>
@@ -1265,7 +1265,7 @@
 			<Row>
 				<Type>BUILDING_TORPEDO_BATTERY</Type>
 				<BuildingClass>BUILDINGCLASS_TORPEDO_BATTERY</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>50</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
 				<Help>TXT_KEY_BUILDING_TORPEDO_BATTERY_HELP</Help>
@@ -1288,7 +1288,7 @@
 			<Row>
 				<Type>BUILDING_VR_TRAINING</Type>
 				<BuildingClass>BUILDINGCLASS_VR_TRAINING</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
 				<Help>TXT_KEY_BUILDING_VR_TRAINING_HELP</Help>
@@ -1307,7 +1307,7 @@
 			<Row>
 				<Type>BUILDING_DEFENSE_NETWORK</Type>
 				<BuildingClass>BUILDINGCLASS_DEFENSE_NETWORK</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_SUPERCONDUCTOR</PrereqTech>
 				<Help>TXT_KEY_BUILDING_DEFENSE_NETWORK_HELP</Help>
@@ -1331,7 +1331,7 @@
 			<Row>
 				<Type>BUILDING_UNDERGROUND</Type>
 				<BuildingClass>BUILDINGCLASS_UNDERGROUND</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 				<Help>TXT_KEY_BUILDING_UNDERGROUND_HELP</Help>
@@ -1355,7 +1355,7 @@
 			<Row>
 				<Type>BUILDING_MATRIX</Type>
 				<BuildingClass>BUILDINGCLASS_MATRIX</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
 				<Help>TXT_KEY_BUILDING_MATRIX_HELP</Help>
@@ -1383,7 +1383,7 @@
 			<Row>
 				<Type>BUILDING_BIOMOD_TANK</Type>
 				<BuildingClass>BUILDINGCLASS_BIOMOD_TANK</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_OPTICALCOMPUTERS</PrereqTech>
 				<Help>TXT_KEY_BUILDING_BIOMOD_TANK_HELP</Help>
@@ -1408,7 +1408,7 @@
 			<Row>
 				<Type>BUILDING_ECITY</Type>
 				<BuildingClass>BUILDINGCLASS_ECITY</BuildingClass>
-				<Cost>3500</Cost>
+				<Cost>4500</Cost>
 				<PrereqTech>TECH_COGNITIVE</PrereqTech>
 				<Help>TXT_KEY_BUILDING_ECITY_HELP</Help>
 				<Description>TXT_KEY_BUILDING_ECITY</Description>
@@ -1427,8 +1427,8 @@
 			<Row>
 				<Type>BUILDING_SERVER_HUB</Type>
 				<BuildingClass>BUILDINGCLASS_SERVER_HUB</BuildingClass>
-				<Cost>3500</Cost>
-				<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
+				<Cost>4500</Cost>
+				<PrereqTech>TECH_COGNITIVE</PrereqTech>
 				<Description>TXT_KEY_BUILDING_SERVER_HUB_DESC</Description>
 				<Civilopedia>TXT_KEY_BUILDING_SERVER_HUB_PEDIA</Civilopedia>
 				<Help>TXT_KEY_BUILDING_SERVER_HUB_HELP</Help>
@@ -1443,11 +1443,12 @@
 				<GoldMaintenance>100</GoldMaintenance>
 			</Row>
 
+			
 			<!--生物工厂-->
 			<Row>
 				<Type>BUILDING_MYCOPROTEIN_VATS</Type>
 				<BuildingClass>BUILDINGCLASS_MYCOPROTEIN_VATS</BuildingClass>
-				<Cost>3500</Cost>
+				<Cost>4500</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TRANSCENDENTAL_MATH</PrereqTech>
 				<Help>TXT_KEY_BUILDING_MYCOPROTEIN_VATS_HELP</Help>
@@ -1466,7 +1467,7 @@
 			<Row>
 				<Type>BUILDING_GEOTHERMAL_PLANT</Type>
 				<BuildingClass>BUILDINGCLASS_GEOTHERMAL_PLANT</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_ENERGY_THEORY</PrereqTech>
 				<Help>TXT_KEY_BUILDING_GEOTHERMAL_PLANT_HELP</Help>
@@ -1489,9 +1490,9 @@
 			<Row>
 				<Type>BUILDING_TELEPRESENCE_HUB</Type>
 				<BuildingClass>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
-				<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+				<PrereqTech>TECH_PHOTON_COMPUTER</PrereqTech>
 				<Help>TXT_KEY_BUILDING_TELEPRESENCE_HUB_HELP</Help>
 				<Description>TXT_KEY_BUILDING_TELEPRESENCE_HUB_DESC</Description>
 				<Civilopedia>TXT_KEY_BUILDING_TELEPRESENCE_HUB_PEDIA</Civilopedia>
@@ -1508,7 +1509,7 @@
 			<Row>
 				<Type>BUILDING_WAR_MACHINE_FACTORY</Type>
 				<BuildingClass>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_INTEGRATED_DEFENSE</PrereqTech>
 				<Help>TXT_KEY_BUILDING_WAR_MACHINE_FACTORY_HELP</Help>
@@ -1534,7 +1535,7 @@
 				<Help>TXT_KEY_WONDER_AUTOFACTORY_HELP</Help>
 				<Civilopedia>TXT_KEY_WONDER_AUTOFACTORY_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 				<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 				<GreatPeopleRateChange>1</GreatPeopleRateChange>
@@ -1557,7 +1558,7 @@
 			<Row>
 				<Type>BUILDING_XCOM_HEADQUARTERS</Type>
 				<BuildingClass>BUILDINGCLASS_XCOM_HEADQUARTERS</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<PrereqTech>TECH_SDI</PrereqTech>
 				<Help>TXT_KEY_BUILDING_XCOM_HEADQUARTERS_HELP</Help>
 				<Description>TXT_KEY_BUILDING_XCOM_HEADQUARTERS</Description>
@@ -1589,7 +1590,7 @@
 				<Help>HELP_PLANET_MINE</Help>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<Civilopedia>PEDIA_PLANET_MINE</Civilopedia>
-				<Cost>6000</Cost>
+				<Cost>7000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<HurryCostModifier>40</HurryCostModifier>
 				<PrereqTech>TECH_NEW_ENERGY</PrereqTech>
@@ -1608,7 +1609,7 @@
 				<Help>HELP_TITANIUM_FACTORY</Help>
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<Civilopedia>PEDIA_TITANIUM_FACTORY</Civilopedia>
-				<Cost>4500</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<HurryCostModifier>40</HurryCostModifier>
 				<PrereqTech>TECH_LIQUIDMETAL</PrereqTech>
@@ -1693,7 +1694,7 @@
 				<Civilopedia>TXT_KEY_WONDER_FORCE_FIELD_PEDIA</Civilopedia>
 				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
 				<GoldMaintenance>100</GoldMaintenance>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<ConquestProb>100</ConquestProb>
 				<NukeImmune>true</NukeImmune>
 				<HurryCostModifier>40</HurryCostModifier>
@@ -1718,7 +1719,7 @@
 			<Row>
 				<Type>BUILDING_MINEFIELD</Type>
 				<BuildingClass>BUILDINGCLASS_MINEFIELD</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_ARTIFICIAL_INTELLIGENCE</PrereqTech>
 				<Description>TXT_KEY_BUILDING_MINEFIELD</Description>
@@ -1751,7 +1752,7 @@
 			<Row>
 				<Type>BUILDING_DRONE_CONTROL</Type>
 				<BuildingClass>BUILDINGCLASS_DRONE_CONTROL</BuildingClass>
-				<Cost>5000</Cost>
+				<Cost>6000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_WAVEMECHANICS</PrereqTech>
 				<Description>TXT_KEY_BUILDING_DRONE_CONTROL_DESC</Description>
@@ -1775,7 +1776,7 @@
 			<Row>
 				<Type>BUILDING_GEOLOGICAL_ANVIL</Type>
 				<BuildingClass>BUILDINGCLASS_GEOLOGICAL_ANVIL</BuildingClass>
-				<Cost>5000</Cost>
+				<Cost>6000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 				<Help>TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_HELP</Help>
@@ -1795,7 +1796,7 @@
 			<Row>
 				<Type>BUILDING_SANCTUARY</Type>
 				<BuildingClass>BUILDINGCLASS_SANCTUARY</BuildingClass>
-				<Cost>4000</Cost>
+				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
 				<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 				<Help>TXT_KEY_BUILDING_SANCTUARY_HELP</Help>
@@ -1817,7 +1818,7 @@
 		<Row>
 			<Type>BUILDING_BIOFACTORY</Type>
 			<BuildingClass>BUILDINGCLASS_BIOFACTORY</BuildingClass>
-			<Cost>4000</Cost>
+			<Cost>5000</Cost>
 			<GoldMaintenance>100</GoldMaintenance>
 			<PrereqTech>TECH_TERRAFORMING</PrereqTech>
 			<Help>TXT_KEY_BUILDING_BIOFACTORY_HELP</Help>
@@ -1864,7 +1865,7 @@
 				<BuildingClass>BUILDINGCLASS_SUPERCONDUCTING_GRID</BuildingClass>
 				<Cost>6000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
-				<PrereqTech>TECH_SUPERCONDUCTIVITY</PrereqTech>
+				<PrereqTech>TECH_PHOTON_COMPUTER</PrereqTech>
 				<Help>TXT_KEY_BUILDING_SUPERCONDUCTING_GRID_HELP</Help>
 				<Description>TXT_KEY_BUILDING_SUPERCONDUCTING_GRID_DESC</Description>
 				<Civilopedia>TXT_KEY_BUILDING_SUPERCONDUCTING_GRID_PEDIA</Civilopedia>

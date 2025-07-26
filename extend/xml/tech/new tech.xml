@@ -2524,7 +2524,7 @@
 			<Era>ERA_INFORMATION</Era>
 			<Trade>true</Trade>
 			<GridX>26</GridX>
-			<GridY>8</GridY>
+			<GridY>7</GridY>
 			<Quote>TXT_KEY_TECH_SUPERCONDUCTOR_QUOTE</Quote>
 			<PortraitIndex>22</PortraitIndex>
 			<IconAtlas>SPBalance_ATLAS</IconAtlas>
@@ -2801,14 +2801,14 @@
 		<Row>
 			<Type>TECH_COGNITIVE</Type>
 			<Cost>100000</Cost>
-			<Description>TXT_KEY_TECH_FW_COGNITIVE_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_FW_COGNITIVE_DESC</Civilopedia>
+			<Description>TXT_KEY_TECH_COGNITIVE_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_COGNITIVE_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>29</GridX>
 			<GridY>1</GridY>
-			<Quote>TXT_KEY_TECH_FW_COGNITIVE_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_COGNITIVE_QUOTE</Quote>
 			<PortraitIndex>98</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
@@ -2817,14 +2817,14 @@
 		<Row>
 			<Type>TECH_TERRAFORMING</Type>
 			<Cost>100000</Cost>
-			<Description>TXT_KEY_TECH_FW_TERRAFORMING_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_FW_TERRAFORMING_DESC</Civilopedia>
+			<Description>TXT_KEY_TECH_TERRAFORMING_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_TERRAFORMING_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>29</GridX>
 			<GridY>2</GridY>
-			<Quote>TXT_KEY_TECH_FW_TERRAFORMING_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_TERRAFORMING_QUOTE</Quote>
 			<PortraitIndex>192</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
@@ -2858,6 +2858,23 @@
 
 
 
+		
+		<Row>
+			<Type>TECH_TRANSHUMANISM</Type>
+			<Cost>150000</Cost>
+			<Description>TXT_KEY_TECH_TRANSHUMANISM_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_TRANSHUMANISM_DESC</Civilopedia>
+			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GridX>30</GridX>
+			<GridY>1</GridY>
+			<Quote>TXT_KEY_TECH_TRANSHUMANISM_QUOTE</Quote>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
+		</Row>
+
+
 		<Row>
 			<Type>TECH_DIGITAL_SOCIETY</Type>
 			<Cost>150000</Cost>
@@ -2872,40 +2889,23 @@
 			<PortraitIndex>216</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
-		
-		
-		<Row>
-			<Type>TECH_TRANSHUMANISM</Type>
-			<Cost>150000</Cost>
-			<Description>TXT_KEY_TECH_TRANSHUMANISM_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_TRANSHUMANISM_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>30</GridX>
-			<GridY>0</GridY>
-			<Quote>TXT_KEY_TECH_TRANSHUMANISM_QUOTE</Quote>
-			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
 
 
 
 		<Row>
-			<Type>TECH_SUPERCONDUCTIVITY</Type>
+			<Type>TECH_PHOTON_COMPUTER</Type>
 			<Cost>150000</Cost>
-			<Description>TXT_KEY_TECH_FW_SUPERCONDUCTIVITY_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_FW_SUPERCONDUCTIVITY_DESC</Civilopedia>
+			<Description>TXT_KEY_TECH_PHOTON_COMPUTER_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_PHOTON_COMPUTER_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>30</GridX>
 			<GridY>5</GridY>
-			<Quote>TXT_KEY_TECH_FW_SUPERCONDUCTIVITY_QUOTE</Quote>
-			<PortraitIndex>136</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<Quote>TXT_KEY_TECH_PHOTON_COMPUTER_QUOTE</Quote>
+			<PortraitIndex>17</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
-
 
 
 		<Row>
@@ -2934,11 +2934,33 @@
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>30</GridX>
-			<GridY>9</GridY>
+			<GridY>8</GridY>
 			<Quote>TXT_KEY_TECH_HOMO_SUPERIOR_QUOTE</Quote>
 			<PortraitIndex>138</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
+
+
+
+
+
+
+
+		<Row>
+			<Type>TECH_MECHANICAL_ENGINEERING</Type>
+			<Cost>200000</Cost>
+			<Description>TXT_KEY_TECH_MECHANICAL_ENGINEERING_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_MECHANICAL_ENGINEERING_DESC</Civilopedia>
+			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
+			<Era>ERA_FUTURE</Era>
+			<Trade>true</Trade>
+			<GridX>31</GridX>
+			<GridY>1</GridY>
+			<Quote>TXT_KEY_TECH_MECHANICAL_ENGINEERING_QUOTE</Quote>
+			<PortraitIndex>134</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+		</Row>
+
 
 
 
@@ -2952,49 +2974,13 @@
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>31</GridX>
-			<GridY>4</GridY>
+			<GridY>3</GridY>
 			<Quote>TXT_KEY_TECH_PARTICLE_PHYSICS_QUOTE</Quote>
 			<PortraitIndex>7</PortraitIndex>
 			<IconAtlas>TECH_ATLAS_2</IconAtlas>
 			<AudioIntro>AS2D_TECH_PARTICLE_PHYSICS</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_PARTICLE_PHYSICS</AudioIntroHeader>
 		</Row>
-
-
-
-		<Row>
-			<Type>TECH_MECHANICAL_ENGINEERING</Type>
-			<Cost>200000</Cost>
-			<Description>TXT_KEY_TECH_MECHANICAL_ENGINEERING_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_MECHANICAL_ENGINEERING_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>31</GridX>
-			<GridY>0</GridY>
-			<Quote>TXT_KEY_TECH_MECHANICAL_ENGINEERING_QUOTE</Quote>
-			<PortraitIndex>134</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-		</Row>
-
-
-
-
-		<Row>
-			<Type>TECH_GRID_COMPUTING</Type>
-			<Cost>200000</Cost>
-			<Description>TXT_KEY_TECH_FW_GRID_COMPUTING_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_FW_GRID_COMPUTING_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>31</GridX>
-			<GridY>2</GridY>
-			<Quote>TXT_KEY_TECH_FW_GRID_COMPUTING_QUOTE</Quote>
-			<PortraitIndex>146</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-		</Row>
-		
 
 
 
@@ -3016,36 +3002,35 @@
 		<Row>
 			<Type>TECH_NEW_ENERGY</Type>
 			<Cost>200000</Cost>
-			<Description>TXT_KEY_TECH_FW_NEW_ENERGY_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_FW_NEW_ENERGY_DESC</Civilopedia>
+			<Description>TXT_KEY_TECH_NEW_ENERGY_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_NEW_ENERGY_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>31</GridX>
 			<GridY>6</GridY>
-			<Quote>TXT_KEY_TECH_FW_NEW_ENERGY_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_NEW_ENERGY_QUOTE</Quote>
 			<PortraitIndex>196</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 
-
-
-
 		<Row>
-			<Type>TECH_ORBITAL_SUSPENSION</Type>
+			<Type>TECH_INTERSTELLAR_TRAVEL</Type>
 			<Cost>200000</Cost>
-			<Description>TXT_KEY_TECH_ORBITAL_SUSPENSION_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_ORBITAL_SUSPENSION_DESC</Civilopedia>
+			<Description>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>31</GridX>
 			<GridY>8</GridY>
-			<Quote>TXT_KEY_TECH_ORBITAL_SUSPENSION_QUOTE</Quote>
-			<PortraitIndex>139</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<Quote>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_QUOTE</Quote>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>SPBalance_ATLAS</IconAtlas>
 		</Row>
+
+
 
 
 
@@ -3060,7 +3045,7 @@
 			<Era>ERA_FUTURE</Era>
 			<Trade>true</Trade>
 			<GridX>32</GridX>
-			<GridY>1</GridY>
+			<GridY>2</GridY>
 			<Quote>TXT_KEY_TECH_CYBERNETICS_QUOTE</Quote>
 			<PortraitIndex>231</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
@@ -3068,36 +3053,6 @@
 
 
 
-
-		<Row>
-			<Type>TECH_SPACE_COLONIZATION</Type>
-			<Cost>300000</Cost>
-			<Description>TXT_KEY_TECH_SPACE_COLONIZATION_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_SPACE_COLONIZATION_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>32</GridX>
-			<GridY>4</GridY>
-			<Quote>TXT_KEY_TECH_SPACE_COLONIZATION_QUOTE</Quote>
-			<PortraitIndex>106</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-		</Row>
-
-		<Row>
-			<Type>TECH_PLASMA_PROPULSION</Type>
-			<Cost>300000</Cost>
-			<Description>TXT_KEY_TECH_PLASMA_PROPULSION</Description>
-			<Civilopedia>TXT_KEY_TECH_PLASMA_PROPULSION_TEXT</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>32</GridX>
-			<GridY>5</GridY>
-			<Quote>TXT_KEY_TECH_PLASMA_PROPULSION_QUOTE</Quote>
-			<PortraitIndex>144</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
 
 
 
@@ -3119,50 +3074,7 @@
 
 
 
-		<Row>
-			<Type>TECH_PHOTON_COMPUTER</Type>
-			<Cost>350000</Cost>
-			<Description>TXT_KEY_TECH_PHOTON_COMPUTER_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_PHOTON_COMPUTER_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>33</GridX>
-			<GridY>2</GridY>
-			<Quote>TXT_KEY_TECH_PHOTON_COMPUTER_QUOTE</Quote>
-			<PortraitIndex>17</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
-		<Row>
-			<Type>TECH_INTERSTELLAR_TRAVEL</Type>
-			<Cost>350000</Cost>
-			<Description>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>33</GridX>
-			<GridY>4</GridY>
-			<Quote>TXT_KEY_TECH_INTERSTELLAR_TRAVEL_QUOTE</Quote>
-			<PortraitIndex>3</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
-
-		<Row>
-			<Type>TECH_CHAOS</Type>
-			<Cost>350000</Cost>
-			<Description>TXT_KEY_TECH_CHAOS_TITLE</Description>
-			<Civilopedia>TXT_KEY_TECH_CHAOS_DESC</Civilopedia>
-			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
-			<Era>ERA_FUTURE</Era>
-			<Trade>true</Trade>
-			<GridX>33</GridX>
-			<GridY>7</GridY>
-			<Quote>TXT_KEY_TECH_CHAOS_QUOTE</Quote>
-			<PortraitIndex>149</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-		</Row>
-
+	
 
 
 
@@ -3175,7 +3087,7 @@
 			<Era>ERA_FUTURE</Era>
 			<Repeat>true</Repeat>
 			<Trade>true</Trade>
-			<GridX>34</GridX>
+			<GridX>33</GridX>
 			<GridY>4</GridY>
 			<Quote>TXT_KEY_TECH_FUTURE_TECH_QUOTE</Quote>
 			<PortraitIndex>8</PortraitIndex>

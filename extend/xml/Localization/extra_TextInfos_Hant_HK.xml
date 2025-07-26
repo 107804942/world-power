@@ -1919,11 +1919,12 @@
 
 
 
+
 		<Row Tag="TXT_KEY_TECH_ENERGY_THEORY_TITLE">
 			<Text>能量理论</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ENERGY_THEORY_QUOTE">
-			<Text>如果你想找到宇宙的秘密，就从能量、频率和振动的角度来思考。</Text>
+			<Text>[NEWLINE]"物质即能量，能量即物质。万物皆可换算为能量。"[NEWLINE]        ——爱因斯坦[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_ENERGY_THEORY_DESC">
 			<Text>人类对宇宙运行所依据的原则的调查导致了对宇宙在最小和高能状态下的功能的调查。这项研究最明显的成果可以在太阳系的扩展探索和发展中找到，从而产生强大的助推器，能够在星际殖民地之间推动航天器，以及促进新一代空间站和基地在其他世界的发展。</Text>
@@ -1935,8 +1936,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HOMO_SUPERIOR_QUOTE">
 			<Text>
-				广义超结构是指在一定结构层次基础上形成的某种复合结构或变异结构。以体心立方结构的成分为50%的CuZn固溶体为例:完全有序化后，晶体结构类型转变为CsCl型，而点阵类型也转变为简单立方型，但习惯上仍称之为具有超结构的固溶体。上例中超结构的晶胞尺寸和原来相同，但也有不少固溶体中超结构的出现导致晶胞尺寸变大。最突出的例子是一些具有长周期的超结构，如CuAull，晶胞在一个方向扩大10倍。有人采用溅射或蒸发的方法人工制备具有长周期超结构的合金材料，研究其异常的物理性能。
-				适当成分的合金在较高温度形成无序的固溶体，当温度降到临界温度Tc时变成的原子分布规则化的结构。如原子比为1∶3的Au–Cu合金在高于Tc=395℃时是无序的固溶体，在Tc时合金变成有序化的结构，Au占据面心立方晶格的角顶位置，Cu占据晶格的6个面心位置。对比同一成分的两个试样，一个试样在高于Tc温度下淬火，另一试样在低于Tc的温度下长时间退火，发现后者的X射线衍射图出现了超结构对应的衍射条纹。合金中出现超结构时其物理性质如比热、导热性和磁性也发生明显变化。这是合金无序与有序间的转变，一般属于二级相变。
+				[NEWLINE]"超材料的性质源于人工结构而非化学组成——它们是对‘广义原子’的重新定义。"[NEWLINE]        ——约翰·彭德鲁[NEWLINE]
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_HOMO_SUPERIOR_DESC">
@@ -1950,7 +1950,7 @@
 
 
 		<Row Tag="TXT_KEY_TECH_AUTONOMOUS_SYSTEMS">
-			<Text>战术机器人学</Text>
+			<Text>战争机器人学</Text>
 		</Row>
 		<Row Tag="TXT_KEY_TECH_AUTONOMOUS_SYSTEMS_DESC">
 			<Text>随着认知技术的进步，完全自主的机械系统变得越来越可行。这些系统虽然没有完全彻底的感知能力或自我意识，但却能够作出足够复杂的决策，足以应付意想不到的情况。这使得人为操作人员能够提供更简单的指令和命令，而机械系统需要更少的人为干预，使得它们在现实环境中而不是在受控环境中越来越实用。</Text>
@@ -2166,23 +2166,10 @@
 		</Row>
 		<Row Tag="TXT_KEY_TECH_MECHANICAL_ENGINEERING_DESC">
 			<Text>
-				在地球上,只有理论数学家和娱乐软件程序员使用多态性软件----一种具有自我修改能力的软件。在外太空星系上,迅速发展的殖民基地和信息网络技术推动神经网络的广泛发展,因而也需要多态性软件以适应大量的数据输入。
+				[NEWLINE]"突然之间，我们失去了很多控制。 我们不能关掉互联网，不能关掉智能手机，不能关掉电脑。"[NEWLINE]        -- 史蒂夫 · 沃兹尼亚克。
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_TECH_ORBITAL_SUSPENSION_TITLE">
-			<Text>移动悬浮技术</Text>
-		</Row>
-		<Row Tag="TXT_KEY_TECH_ORBITAL_SUSPENSION_QUOTE">
-			<Text>
-				移动悬浮技术的发展被应用于战争单位和城市基础建设。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_TECH_ORBITAL_SUSPENSION_DESC">
-			<Text>
-				悬浮技术的应用是未来科技的一个重要发展方向。这些技术不仅能用在小型飞行器上，也为大型太空战舰的建造提供了技术支持。
-			</Text>
-		</Row>
 
 
 		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER04S">
@@ -2365,26 +2352,19 @@
 		<Row Tag="TXT_KEY_TECH_DIGITAL_SOCIETY_TITLE">
 			<Text>数字社会</Text>
 		</Row>
+		<Row Tag="TXT_KEY_TECH_DIGITAL_SOCIETY_DESC">
+			<Text>随着人工智能的扩散，以及控制论的进步，允许人类利用心机界面和远程呈现，把心灵和人格与身体联系起来的概念变得越来越过时。计算机网络和技术的进步使人们可以将自己投射到地球上的任何地方，或者完全感知人工世界。最终，这样一个社会可能会抛弃对物质世界的担忧，认同感只由一个人的思想决定，而不是由一个人的身体决定，一个人的感知可能在很大程度上取决于他与人类生活的电子环境的互动。</Text>
+		</Row>
 		<Row Tag="TXT_KEY_TECH_DIGITAL_SOCIETY_QUOTE">
 			<Text>
 				[NEWLINE][TAB][TAB]"如果你与真理同在，人们最终都会和你同在。"[NEWLINE][TAB][TAB] - 罗伯特·杜斯诺[NEWLINE][TAB]
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_TECH_DIGITAL_SOCIETY_DESC">
-			<Text>随着人工智能的扩散，以及控制论的进步，允许人类利用心机界面和远程呈现，把心灵和人格与身体联系起来的概念变得越来越过时。计算机网络和技术的进步使人们可以将自己投射到地球上的任何地方，或者完全感知人工世界。最终，这样一个社会可能会抛弃对物质世界的担忧，认同感只由一个人的思想决定，而不是由一个人的身体决定，一个人的感知可能在很大程度上取决于他与人类生活的电子环境的互动。</Text>
-		</Row>
+	
 
 
-		<Row Tag="TXT_KEY_TECH_SPACE_COLONIZATION_TITLE">
-			<Text>太空作战</Text>
-		</Row>
-		<Row Tag="TXT_KEY_TECH_SPACE_COLONIZATION_QUOTE">
-			<Text>[NEWLINE][ TAB ][ TAB ]"星星与地球之间从来都没有捷径。"[NEWLINE][ TAB ][ TAB ] - 塞内卡 [NEWLINE][ TAB ]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_TECH_SPACE_COLONIZATION_DESC">
-			<Text>人类一直都有一种潜在的欲望去探索和拓展，去发现地平线之外的东西。外层空间提供了最终的边界，一个人类可以扩展和探索的广阔空间。在人类历史上，能够让人类前往另一个恒星系统的技术水平的实现可能与第一批工具的开发一样关键。</Text>
-		</Row>
 
+	
 
 
 		<Row Tag="TXT_KEY_ROG_FREE_TECH_BUTTON">
@@ -2895,39 +2875,6 @@
 
 
 
-		<Row Tag="TXT_KEY_TECH_FW_SUPERCONDUCTIVITY_TITLE">
-			<Text>场理论</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TECH_FW_SUPERCONDUCTIVITY_DESC">
-			<Text>统一场论(Unified Field Theory)是从相互作用是由场(或场的量子)来传递的观念出发，统一地描述和揭示基本相互作用的共同本质和内在联系的物理理论。迄今人类所知的各种物理现象所表现的相互作用，都可归结为4种基本相互作用，即强相互作用、电磁相互作用、弱相互作用和引力相互作用。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TECH_FW_SUPERCONDUCTIVITY_QUOTE">
-			<Text>
-				[NEWLINE][TAB][TAB]"物理学是唯一一门预言不仅准确而且常规的学科。"[NEWLINE][TAB][TAB] - 奈尔·德葛拉司·泰森[NEWLINE][TAB]
-			</Text>
-		</Row>
-
-
-
-
-		<Row Tag="TXT_KEY_TECH_FW_GRID_COMPUTING_TITLE">
-			<Text>神经互联</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TECH_FW_GRID_COMPUTING_DESC">
-			<Text>
-				计算机系统的进步日益导致它们在更广泛的计算机网络中的分布。并行处理可以更快地进行计算，因为各种计算可以同时进行，而分布式计算机网络创建的系统更加灵活，对设备故障后的工作更有保障，因为它们不再局限于单台机器。
-				随着机器变得越来越复杂，与它们交互所需的接口也变得越来越复杂。能够用自己的思想来控制机器作为身体的延伸将是一项不可思议的成就，这使得在机械辅助下执行复杂的任务要简单得多。然而，大脑本身是一个高度复杂的器官，实现
-				交互的界面是一个重大挑战。尽管如此，在建立计算机与其他技术设备和人类神经之间的联系方面仍在取得进展，使技术设备既能进行运动控制，又能进行感官输入。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TECH_FW_GRID_COMPUTING_QUOTE">
-			<Text>"突然之间，我们失去了很多控制。 我们不能关掉互联网，不能关掉智能手机，不能关掉电脑。” -- 史蒂夫 · 沃兹尼亚克。</Text>
-		</Row>
-
 
 
 
@@ -3022,11 +2969,11 @@
 
 
 
-		<Row Tag="TXT_KEY_TECH_FW_COGNITIVE_TITLE">
+		<Row Tag="TXT_KEY_TECH_COGNITIVE_TITLE">
 			<Text>深度学习</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_TECH_FW_COGNITIVE_DESC">
+		<Row Tag="TXT_KEY_TECH_COGNITIVE_DESC">
 			<Text>
 				需要使用深度学习解决的问题有以下的特征:深度不足会出现问题。人脑具有一个深度结构。认知过程逐层进行，逐步抽象。在许多情形中深度2就足够表示任何一个带有给定目标精度的函数。但是其代价是:图中所需要的节点数(比如计算和参数数量)可能变的非常大。理论结果证实那些事实上所需要的节点数随着输入的大小指数增长的函数族是存在的。我们可以将深度架构看做一种因子分解。大部分
 				随机选择的函数不能被有效地表示，无论是用深的或者浅的架构。但是许多能够有效地被深度架构表示的却不能被用浅的架构高效表示。一个紧的和深度的表示的存在意味着在潜在的可被表示的函数中存在某种结构。如果不存在任何结构，那将不可能很好地泛化。例如，视觉皮质得到了很好的研究，并显示出一系列的区域，在每一个这种区域中包含一个输入的表示和从一个到另一个的信号流(这里忽略
@@ -3036,58 +2983,38 @@
 
 		</Row>
 
-		<Row Tag="TXT_KEY_TECH_FW_COGNITIVE_QUOTE">
+		<Row Tag="TXT_KEY_TECH_COGNITIVE_QUOTE">
 			<Text>
-				深度学习是机器学习研究中的一个新的领域，其动机在于建立、模拟人脑进行分析学习的神经网络，它模仿人脑的机制来解释数据，例如图像，声音和文本。深度学习是无监督学习的一种。 深度学习的概念源于人工神经网络的研究。含多隐层的多层感知器就是一种深度学习结构。深度学习通过组合低层特征形成更加抽象的高层表示属性类别或特征，以发现数据的分布式特征表示。
+				[NEWLINE]"研究AI一年足以让人相信上帝存在。"[NEWLINE]        ——Alan Perlis[NEWLINE]
 			</Text>
 		</Row>
 
 
 
-		<Row Tag="TXT_KEY_TECH_FW_TERRAFORMING_TITLE">
+		<Row Tag="TXT_KEY_TECH_TERRAFORMING_TITLE">
 			<Text>环境工程学</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_TECH_FW_TERRAFORMING_DESC">
+		<Row Tag="TXT_KEY_TECH_TERRAFORMING_DESC">
 			<Text>环境工程学是环境科学的一个分支。它主要研究运用工程技术和有关学科的原理和方法，保护和合理利用自然资源，防治环境污染，以改善环境质量的学科。环境工程的主要内容包括大气污染防治工程、水污染防治工程、固体废物的处理和利用，以及噪声控制等。环境工程学还研究环境污染综合防治的方法和措施，以及利用系统工程方法，从区域的整体上寻求解决环境问题的最佳方案。</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_TECH_FW_TERRAFORMING_QUOTE">
+		<Row Tag="TXT_KEY_TECH_TERRAFORMING_QUOTE">
 			<Text>
-				迄今为止，人们对环境工程学这门学科还存在着不同的认识。
+				[NEWLINE]"环境保护是一种投资，它的收益是维护人类的财富。"[NEWLINE]        ——乔治·华盛顿[NEWLINE]
 			</Text>
 		</Row>
 
 
 
-		<Row Tag="TXT_KEY_TECH_CHAOS_TITLE">
-			<Text>混沌理论</Text>
-		</Row>
+	
 
-		<Row Tag="TXT_KEY_TECH_CHAOS_DESC">
-			<Text>
-				混沌理论有三个原则:1、能量永远会遵循阻力最小的途径2、始终存在着通常不可见的根本结构，这个结构决定阻力最小的途径。3、这种始终存在而通常不可见的根本结构，不仅可以被发现，而且可以被改变。
-				混沌特性:(1)随机性:体系处于混沌状态是由体系内部动力学随机性产生的不规则性行为，常称之为内随机性.例如，在一维非线性映射中，即使描述系统演化行为的数学模型中不包含任何外加的随机项，即使控制参数、初始值都是确定的，而系统在混沌区的行为仍表现为随机性。
-				这种随机性自发地产生于系统内部，与外随机性有完全不同的来源与机制，显然是确定性系统内部一种内在随机性和机制作用。体系内的局部不稳定是内随机性的特点，也是对初值敏感性的原因所在。(2)敏感性:系统的混沌运动，无论是离散的或连续的，低维的或高维的，保守的或耗散的。时间演化的还是空间分布的，均具有一个基本特征，即系统的运动轨道对初值的极度敏感性。这种敏感性，一方面反映出在非线性动力学系统内，随机性系统运动趋势的强烈影响;另一方面也将导致系统长期时间行为的不可预测性。气象学家洛仑兹提出的所谓"蝴蝶效应"就是对这种敏感性的突出而形象的说明。
-				(3)分维性:混沌具有分维性质，是指系统运动轨道在相空间的几何形态可以用分维来描述。例如Koch雪花曲线的分维数是1.26;描述大气混沌的洛伦兹模型的分维数是2.06体系的混沌运动在相空间无穷缠绕、折叠和扭结，构成具有无穷层次的自相似结构。
-				(4)普适性:当系统趋于混沌时，所表现出来的特征具有普适意义。其特征不因具体系统的不同和系统运动方程的差异而变化。这类系统都与费根鲍姆常数相联系。这是一个重要的普适常数δ=4.669201609l0299097…
-				(5)标度律:混沌现象是一种无周期性的有序态，具有无穷层次的自相似结构，存在无标度区域。只要数值计算的精度或实验的分辨率足够高，则可以从中发现小尺寸混沌的有序运动花样，所以具有标度律性质。例如，在倍周期分叉过程中，混沌吸引子的无穷嵌套相似结构，从层次关系上看，具有结构的自相似，具备标度变换下的结构不变性，从而表现出有序性。
-			</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_TECH_CHAOS_QUOTE">
-			<Text>
-				混沌理论(Chaos theory)是一种兼具质性思考与量化分析的方法，用来探讨动态系统中(如:人口移动、化学反应、气象变化、社会行为等)必须用整体、连续的而不是单一的数据关系才能加以解释和预测的行为。
-			</Text>
-		</Row>
-
-
-		<Row Tag="TXT_KEY_TECH_FW_NEW_ENERGY_TITLE">
+		<Row Tag="TXT_KEY_TECH_NEW_ENERGY_TITLE">
 			<Text>新能源</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_TECH_FW_NEW_ENERGY_DESC">
+		<Row Tag="TXT_KEY_TECH_NEW_ENERGY_DESC">
 			<Text>
 				1980年联合国召开的“联合国新能源和可再生能源会议”对新能源的定义为：以新技术和新材料为基础，使传统的可再生能源得到现代化的开发和利用，用取之不尽、周而复始的可再生能源取代资源有限、对环境有污染的化石能源，重点开发太阳能、风能、生物质能、潮汐能、地热能、氢能和核能等。
 				新能源一般是指在新技术基础上加以开发利用的可再生能源，包括太阳能、生物质能、水能、风能、地热能、波浪能、洋流能和潮汐能，以及海洋表面与深层之间的热循环等；此外，还有氢能、沼气、酒精、甲醇等，而已经广泛利用的煤炭、石油、天然气、水能等能源，称为常规能源。随着常规能源的有限性以及环境问题的日益突出，以环保和可再生为特质的新能源越来越得到各国的重视。
@@ -3095,25 +3022,26 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_TECH_FW_NEW_ENERGY_QUOTE">
-			<Text>生物质能、太阳能、风能以及水力发电、地热能等的利用技术已经得到了应用。</Text>
+		<Row Tag="TXT_KEY_TECH_NEW_ENERGY_QUOTE">
+			<Text>[NEWLINE]"要利用太阳能和风能这样的可再生能源，让我们的地球更加美丽。"[NEWLINE]        ——雷诺·梅蒂克斯[NEWLINE]</Text>
 		</Row>
 
 
 
 		<Row Tag="TXT_KEY_TECH_EARTH_TITLE">
-			<Text>星球物理学</Text>
+			<Text>宇宙物理学</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_EARTH_DESC">
 			<Text>
-				狭义又称地物理学 (geophysics) 是地球科学的主要学科之一，是通过定量的物理方法(如:地震弹性波、重力、地磁、地电、地热和放射能等方法)研究地球以及寻找地球内部矿藏资源的一门综合性学科，研究范围包括地球的地壳、地幔、地核和大气层。 地球物理学有诸多研究分支，包括:固体地球物理学，地球动力学，地震学，大地测量学，地热学，地磁学 ，水文地理学，海洋学，气象学，地核构
-				造学，勘探地球物理学，比较行星学，大地构造物理学和大地天文学;研究内容包括地球内部结构，震源理论，地震波传播理论，大陆地壳大尺度的特征，诸如板块俯冲带和大洋中脊。传统地球物理学主要指固体地球物理学，现代地球物理学的研究延伸到地球大气层外部的现象(例如电离层电机效应〔ionospheric dynamo〕、极光放电〔auroral electrojets〕和磁层顶电流系统〔magnetopause current system〕)，甚至延伸到其他行星及其卫星的物理性质。
+				二十世纪的科技进步使对宇宙起源的猜测成为可能。它也帮助建立了被绝大多数宇宙学家公认作理论和观测基础的大爆炸理论。（虽然职业宇宙学家认为大爆炸理论给观测以最好的解释，一些人至今仍在鼓吹另类宇宙学如等离子体宇宙学和稳恒态宇宙学。）大致来说，物理宇宙学处理的对象是宇宙中最大的物体（如星系，星系团，超团），最早形成的物体（如类星体）和几乎均匀的最早期宇宙（大爆炸，宇宙暴涨，微波背景辐射）。
+				宇宙学是比较特别的学科。它从粒子物理实验，粒子物理唯象学，甚至弦理论中汲取了许多结果。它的其他来源包括天体物理，广义相对论和等离子体物理的研究。
+				现代宇宙学是沿着观测和理论的辐辙发展起来的。1915年爱因斯坦提出了广义相对论。因为那时的物理学家有一种偏见，认为宇宙是静态的、无始无终的，爱因斯坦在他的方程中加入了一个宇宙学常数项。这个物质加宇宙学常数的稳恒态爱因斯坦宇宙模型是不稳定的，它最终总会膨胀或收缩。广义相对论的宇宙学解是由弗里德曼发现的，它被称为弗里德曼——罗伯森——沃克宇宙。它描写的是膨胀或收缩的宇宙。
 			</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_TECH_EARTH_QUOTE">
-			<Text>“人类拥有的一切!来自地球的无私奉献。”</Text>
+			<Text>[NEWLINE]"宇宙是由一个致密炽热的奇点于137亿年前一次大爆炸后膨胀形成的。"[NEWLINE]        ——宇宙学家勒梅特[NEWLINE]</Text>
 		</Row>
 
 
@@ -3686,8 +3614,9 @@
 			<Text>复合材料</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1_HELP">
-			<Text>末日机甲+200最大生命值,获得镇暴能力（可对抵抗中的城市进行镇暴，一次性消除所有抵抗时间，但城市会损失一半人口）</Text>
+			<Text>+200最大生命值,可对抵抗中的城市进行镇暴，一次性消除所有抵抗时间，但城市会损失一半人口。</Text>
 		</Replace>
+
 
 
 
@@ -6791,7 +6720,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_HELP">
 			<Text>
-				本城宗教压力+300%，解放城市后对所有城邦+40[ICON_INFLUENCE]影响力。
+				本城宗教压力+300%，解放城市后对所有城邦+20[ICON_INFLUENCE]影响力。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_OSARAGI_PEDIA">
@@ -6952,6 +6881,7 @@
 				[NEWLINE]攻击敌军时会对周围一格内敌军附加50%伤害。每次攻击均可恢复20HP。
 				[NEWLINE]免疫溅射和穿透伤害,能够为5格内除自身外的陆军单位提供33%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE]作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
+				[NEWLINE]对空旷地形+25%[ICON_STRENGTH]攻击力。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_COMBAT_TO_DEATH_EFFECT">
@@ -6970,9 +6900,9 @@
 		<Row Tag="TXT_KEY_HITTITE_WAR_CHARIOT_HELP">
 			<Text>
 				[COLOR_YIELD_GOLD]精英战车[ENDCOLOR]，需要完成远古战车项目解锁，仅能组建一队。[NEWLINE]
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]战场统帅[ENDCOLOR]：自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。为5格内除自身外的陆军单位提供33%[ICON_STRENGTH]战斗力加成。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]战场统帅[ENDCOLOR]：生命值上限+200%，自带1~2级[ICON_PROMOTION_NEW_SHOCK_2]冲击晋升，且[ICON_MOVES]移动不受地形影响。为5格内除自身外的陆军单位提供33%[ICON_STRENGTH]战斗力加成。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]蹈锋饮血[ENDCOLOR]：对抗[ICON_PROMOTION_NEW_ANTI_MOUNTED][COLOR_POSITIVE_TEXT]方阵步兵[ENDCOLOR]与[ICON_PROMOTION_NEW_ANTI_TANK][COLOR_POSITIVE_TEXT]反装甲单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，每次攻击可恢复自身[COLOR_POSITIVE_TEXT]20[ENDCOLOR][ICON_HP]生命。作战时，有20%几率规避伤害（规避效果对溅射，穿透伤害同样有效）。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：能够冲锋击退敌方单位，攻击可对目标相邻区域的敌方单位造成50%溅射伤害。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]冲坚毁锐[ENDCOLOR]：能够冲锋击退敌方单位，攻击可对目标相邻区域的敌方单位造成50%溅射伤害。对空旷地形+25%[ICON_STRENGTH]攻击力。
 			</Text>
 		</Row>
 
