@@ -1107,6 +1107,7 @@ end
 -- ********************************************************
 -- 
 -- ******************************************************** 
+local iSpaceShipID = GameInfoTypes.PROMOTION_SPACESHIP
 function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
   local pUnit = Players[iPlayer]:GetUnitByID(iUnit)
   local plot = Map.GetPlot(iPlotX, iPlotY)
@@ -1118,7 +1119,7 @@ function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
   return false
   end
 
-  if pUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR and not pUnit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SPACESHIP"].ID) then
+  if pUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR and not pUnit:IsHasPromotion(iSpaceShipID) then
   if IsNotEnemySpaceShipPlot(pUnit,plot) then
 	 return true
   end
