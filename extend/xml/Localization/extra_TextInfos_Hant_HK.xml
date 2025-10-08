@@ -835,7 +835,7 @@
 			<Text>动物祭祀</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_HEALTH_SACRIFICE">
-			<Text>神祠、神庙、寺院+1[ICON_HEALTH]健康度</Text>
+			<Text>神祠、神庙+1[ICON_HEALTH]健康度</Text>
 		</Row>
 
 
@@ -9905,6 +9905,9 @@
 			</Text>
 		</Row>
 
+		<Row Tag="TXT_KEY_PEDIA_USED_RESRC_LABEL">
+			<Text>已用资源</Text>
+		</Row>
 
 
 
