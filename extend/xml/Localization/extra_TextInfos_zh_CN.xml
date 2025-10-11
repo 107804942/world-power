@@ -828,7 +828,7 @@
 			<Text>动物祭祀</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BELIEF_HEALTH_SACRIFICE">
-			<Text>神祠、神庙、寺院+1[ICON_HEALTH]健康度</Text>
+			<Text>神祠、神庙+1[ICON_HEALTH]健康度</Text>
 		</Row>
 
 
@@ -4208,28 +4208,59 @@
 			<Text>机械步兵</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROBORT_COMBAT_HELP">
-			<Text>面对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力，防御[COLOR_POSITIVE_TEXT]反骑兵/反坦克单位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵或火炮单位[ENDCOLOR]时+50%[ICON_STRENGTH]战斗力，被[COLOR_NEGATIVE_TEXT]重型机甲[ENDCOLOR]克制。[NEWLINE]可获得多种地形下的属性晋升。</Text>
+			<Text>
+				主力步兵单位，擅长进攻和防守任务。
+				[NEWLINE][ICON_BULLET]进攻[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]防御[COLOR_POSITIVE_TEXT]反骑兵/反坦克单位[ENDCOLOR]以及[COLOR_POSITIVE_TEXT]民兵单位[ENDCOLOR]时+25%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]无视地貌伤害。
+				[NEWLINE][ICON_BULLET]可获得多种地形下的属性晋升。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]重型机甲[ENDCOLOR]克制。
+			</Text>
 		</Row>
-
-
-
 
 		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ROBORT">
 			<Text>重型机甲</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_HEAVY_ROBORT_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]炮兵及机械步兵[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]反装甲和直升机[ENDCOLOR]单位克制。[COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]时+50%战斗力，攻击城市时会受到50%战斗力惩罚。获得冲锋能力后，能对其同格单位和目标单位造成额外[COLOR_POSITIVE_TEXT]附加[ENDCOLOR]伤害。[NEWLINE]可攻击后移动，但攻城后会丧失所有移动力。</Text>
+			<Text>
+				快速且强力的单位，专用于突破敌军防线及消灭敌方远程单位。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]时+50%战斗力。
+				[NEWLINE][ICON_BULLET]获得冲锋能力后，能对其同格单位和目标单位造成额外[COLOR_POSITIVE_TEXT]附加[ENDCOLOR]伤害。
+				[NEWLINE][ICON_BULLET]可攻击后移动。
+				[NEWLINE][ICON_BULLET]无视地貌伤害。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]克制[COLOR_POSITIVE_TEXT]机械步兵[ENDCOLOR]单位。
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]反装甲[ENDCOLOR]单位克制。
+				[NEWLINE][ICON_BULLET]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]-50%战斗力且失去所有[ICON_MOVES]移动力。
+			</Text>
 		</Row>
 
-
 		<Replace Tag="TXT_KEY_PROMOTION_TANK_COMBAT_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]炮兵[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]反装甲和直升机[ENDCOLOR]单位克制。[COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]时+50%战斗力。获得冲锋能力后，能对其同格单位和目标单位造成额外[COLOR_POSITIVE_TEXT]附加[ENDCOLOR]伤害。[NEWLINE]可攻击后移动。[NEWLINE]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]失去所有[ICON_MOVES]移动力。[NEWLINE]没有地形防御加成。</Text>
+			<Text>
+				快速且强力的单位，专用于突破敌军防线及消灭敌方远程单位。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]时+50%战斗力。
+				[NEWLINE][ICON_BULLET]获得冲锋能力后，能对其同格单位和目标单位造成额外[COLOR_POSITIVE_TEXT]附加[ENDCOLOR]伤害。
+				[NEWLINE][ICON_BULLET]可攻击后移动。
+				[NEWLINE][ICON_BULLET]没有地形防御加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]反装甲[ENDCOLOR]单位克制。
+				[NEWLINE][ICON_BULLET]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]-100%战斗力且失去所有[ICON_MOVES]移动力。
+			</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP">
-			<Text>克制[COLOR_POSITIVE_TEXT]攻城[ENDCOLOR]单位，被[COLOR_NEGATIVE_TEXT]方阵步兵[ENDCOLOR]克制。[COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]时+50%战斗力。获得冲锋能力后，能对其同格单位和目标单位造成额外[COLOR_POSITIVE_TEXT]附加[ENDCOLOR]伤害。[NEWLINE]可攻击后移动。[NEWLINE]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]失去所有[ICON_MOVES]移动力。[NEWLINE]没有地形防御加成。</Text>
+			<Text>
+				快速且强力的单位，专用于突破敌军防线及消灭敌方远程单位。
+				[NEWLINE][ICON_BULLET][COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]时+50%战斗力。
+				[NEWLINE][ICON_BULLET]获得冲锋能力后，能对其同格单位和目标单位造成额外[COLOR_POSITIVE_TEXT]附加[ENDCOLOR]伤害。
+				[NEWLINE][ICON_BULLET]可攻击后移动。
+				[NEWLINE][ICON_BULLET]没有地形防御加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]方阵步兵[ENDCOLOR]克制。
+				[NEWLINE][ICON_BULLET]攻击[COLOR_NEGATIVE_TEXT]城市[ENDCOLOR]-100%战斗力且失去所有[ICON_MOVES]移动力。
+			</Text>
 		</Replace>
-
 
 
 		<Replace Tag="TXT_KEY_PROMOTION_CHARGE_1_HELP" >
@@ -4351,6 +4382,39 @@
 			<Text>+15%[ICON_STRENGTH]攻击力，+15%[ICON_STRENGTH]防御力(在[COLOR_POSITIVE_TEXT]复杂[ENDCOLOR]地形中) (丘陵/森林/丛林)。[NEWLINE]在丘陵地带移动力翻倍。</Text>
 		</Replace>
 
+		<Replace Tag="TXT_KEY_PROMOTION_AIR_ATTACK_HELP">
+			<Text>
+				攻击机，专用于打击战场或城内的敌军地面及海军单位。
+				[NEWLINE][ICON_BULLET]每回合可进行[COLOR_POSITIVE_TEXT]两次[ENDCOLOR]攻击。
+				[NEWLINE][ICON_BULLET]无法攻击[COLOR_NEGATIVE_TEXT]隐形单位[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]不能转场到航空母舰上。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]战斗机[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]防空[ENDCOLOR]单位克制。
+			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP">
+			<Text>
+				航空母舰携带的多用途战斗机
+				[NEWLINE][ICON_BULLET]只能部署在航空母舰上。
+				[NEWLINE][ICON_BULLET]能够与航空母舰共享经验和晋升。
+				[NEWLINE][ICON_BULLET]每回合能够攻击两次。
+				[NEWLINE][ICON_BULLET]每回合拥有两次[COLOR_POSITIVE_TEXT]拦截[ENDCOLOR]或[COLOR_POSITIVE_TEXT]游猎[ENDCOLOR]的机会。
+				[NEWLINE][ICON_BULLET]能够在游猎后继续拦截。
+			</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
+			<Text>
+				固定火力点，当建成[COLOR_POSITIVE_TEXT]军事要塞[ENDCOLOR]时产生。
+				[NEWLINE][ICON_BULLET]攻击时对被轰炸地块周围一格的单位造成50%溅射伤害，对攻击地块造成50%穿透伤害。
+				[NEWLINE][ICON_BULLET]不受[COLOR_POSITIVE_TEXT]负面效果[ENDCOLOR]影响。
+				[NEWLINE][ICON_BULLET]如果所在城市被敌方攻占，每回合会-50HP且-50%[ICON_STRENGTH]战斗力。
+				[NEWLINE][ICON_BULLET]不能[COLOR_NEGATIVE_TEXT]移动[ENDCOLOR]，不能获得[COLOR_NEGATIVE_TEXT]晋升[ENDCOLOR]。
+				[NEWLINE][ICON_BULLET]没有地形防御加成。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]攻城单位[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]旗舰[ENDCOLOR]单位克制。
+			</Text>
+		</Replace>
 
 
 		<Row Tag="TXT_KEY_BUILDING_LEP">
@@ -4466,7 +4530,18 @@
 			<Text>太空战舰</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SPACESHIP_HELP">
-			<Text>不会被[COLOR_NEGATIVE_TEXT]任何[ENDCOLOR]单位克制。[NEWLINE]间接火力，免疫冰冻弹及燃烧弹效果[NEWLINE]能够在陆地和海洋上空自由移动，且不会受到来自地貌的伤害。攻击后可移动,无视敌方控制区，不可进行近战攻击且不可被近战攻击。[NEWLINE]免疫溅射伤害和穿透伤害。</Text>
+			<Text>
+				给敌人带来毁灭性打击的终极武器。
+				[NEWLINE][ICON_BULLET]自带间接火力。
+				[NEWLINE][ICON_BULLET]攻击后可移动。
+				[NEWLINE][ICON_BULLET]不可进行近战攻击且不可被近战攻击。
+				[NEWLINE][ICON_BULLET]不可被除空军、太空战舰外的单位远程攻击。
+				[NEWLINE][ICON_BULLET]免疫冰冻弹及燃烧弹效果。
+				[NEWLINE][ICON_BULLET]免疫溅射伤害和穿透伤害。
+				[NEWLINE][ICON_BULLET]能够在陆地和海洋上空自由移动，且不会受到来自地貌的伤害，无视敌方控制区域（ZOC）。
+				[NEWLINE]
+				[NEWLINE][ICON_BULLET]不会被[COLOR_NEGATIVE_TEXT]任何[ENDCOLOR]单位克制。
+			</Text>
 		</Row>
 
 
@@ -5746,13 +5821,6 @@
 		<Row Tag="TXT_KEY_UNIT_CITADEL_FUTURE_PEDIA">
 			<Text>电磁线性加速器早在“大灾变”前的地球就已为人所知，并可能是为了军事应用而开发。文明融合前的动力局限限制了他们的应用，其中少数已知的操作案例是一台名为GDR-1的机器，由一个中美洲的国家在21世纪中叶所建造。[NEWLINE][NEWLINE]线性加速器作为第一次在月球和小行星采矿的推进工具而重获新生。在更低的逃离引力下，线性加速器是轻松将货物送到轨道的好办法，任务完成后便会返回地球。这些都是缸径大但速率低的任务，只需达到极超音速即可。[NEWLINE][NEWLINE]质量发射器的操作原理和古代的轨道炮差不多，但规模要大上很多。大型电容器组被深埋在地下，它们的电力供应像卷须一般爬升，和炮管内的电磁铁的长齿条合并。炮管安置在枪体螺旋内，附近是高能微波相位雷达阵列，能绘制出经过其上方的潜在目标。[NEWLINE][NEWLINE]这些装置本身的周围是铜质外壳，包含着一个内有陀螺定向机制的镍铁合金盒子。炮管发射时，发穿透大气炮弹的速度使铜融化，陀螺仪进行“瞄准”，以惊人的准确度击落经过其所在城市的卫星。被直接击中的卫星会被打碎成原子形态。被间接击中的卫星（这种失误很罕见）通常会偏离轨道。[NEWLINE][NEWLINE]质量发射器的修复工作揭露了制造它的工程师两段十分吸引人的铭文。弹药架检测舱外部刻着“终极比率雷吉斯”。同一个舱室的内部刻着“滚开，库库尔”。</Text>
 		</Row>
-
-
-		<Replace Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
-			<Text>固定火力点，当建成[COLOR_POSITIVE_TEXT]军事要塞[ENDCOLOR]时产生。[NEWLINE][NEWLINE]拥有防御加成，不受[COLOR_POSITIVE_TEXT]负面效果[ENDCOLOR]影响，但如果所在城市被敌方攻占，每回合会-50HP且-50%[ICON_STRENGTH]战斗力。[NEWLINE]不能[COLOR_NEGATIVE_TEXT]移动[ENDCOLOR]，不能获得[COLOR_NEGATIVE_TEXT]晋升[ENDCOLOR]，攻击时对被轰炸地块周围一格的单位造成50%溅射伤害，被[COLOR_NEGATIVE_TEXT]攻城单位[ENDCOLOR]克制。</Text>
-		</Replace>
-
-
 
 		<Row Tag="TXT_KEY_TECH_LITERATURE_TITLE">
 			<Text>文学</Text>
@@ -9818,9 +9886,9 @@
 			</Text>
 		</Row>
 
-
-
-
+		<Row Tag="TXT_KEY_PEDIA_USED_RESRC_LABEL">
+			<Text>已用资源</Text>
+		</Row>
 	
 
 

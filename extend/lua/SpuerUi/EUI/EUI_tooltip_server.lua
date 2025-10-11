@@ -601,7 +601,7 @@ local function ShowResourceToolTip( resourceID, tips )
 		-- Resource Usage Breakdown  /Output
 		----------------------------
 		insert( tips, "" )
-		insert( tips, (numResourceUsed~=0 and (Colorize(-numResourceUsed) .. " ") or"") .. L"TXT_KEY_PEDIA_REQ_RESRC_LABEL" )
+		insert( tips, (numResourceUsed~=0 and (Colorize(-numResourceUsed) .. " " .. L"TXT_KEY_PEDIA_USED_RESRC_LABEL") or"") )
 		local tipIndex = #tips
 
 		--for unit in GameInfo.Units() do
@@ -700,12 +700,12 @@ local function ShowResourceToolTip( resourceID, tips )
 					end
 				end
 			end
-		end
+		end]]
 		local resourceHappiness = resource.Happiness or 0
 		if resourceHappiness > 0 then
 			insert( tips, resourceHappiness .. "[ICON_HAPPINESS_1]" )
 		end
-		for city in activePlayer:Cities() do
+		--[[for city in activePlayer:Cities() do
 			if city:GetResourceDemanded() == resourceID and city:GetWeLoveTheKingDayCounter() < 1 then
 				insert( tips, "[ICON_CITIZEN] " .. city:GetName() )
 			end
