@@ -156,9 +156,6 @@ SELECT  'PROMOTION_KGB', Type FROM UnitCombatInfos WHERE Type!= 'UNITCOMBAT_SUBM
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_ISHTARGATE', Type FROM UnitCombatInfos WHERE Type!= 'UNITCOMBAT_SUBMARINE'AND Type!= 'UNITCOMBAT_NAVALMELEE'AND Type!= 'UNITCOMBAT_NAVALRANGED' AND Type!= 'UNITCOMBAT_CARRIER' AND Type!= 'UNITCOMBAT_FIGHTER'AND Type!= 'UNITCOMBAT_ARCHER';
 
-INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
-SELECT  'PROMOTION_MAGINOT_LINE', Type FROM UnitCombatInfos WHERE Type!= 'UNITCOMBAT_SUBMARINE'AND Type!= 'UNITCOMBAT_NAVALMELEE'AND Type!= 'UNITCOMBAT_NAVALRANGED' AND Type!= 'UNITCOMBAT_CARRIER' AND Type!= 'UNITCOMBAT_FIGHTER'AND Type!= 'UNITCOMBAT_ARCHER';
-
 
 
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
@@ -302,9 +299,6 @@ SELECT 'PROMOTION_HPMOD2', Type  FROM Units WHERE Class ='UNITCLASS_CITADEL_LATE
 
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
 SELECT 'PROMOTION_HPMOD2', Type  FROM Units WHERE Class ='UNITCLASS_CITADEL_FUTURE';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT  'PROMOTION_MAGINOT_LINE', Type  FROM Units WHERE Domain ='DOMAIN_LAND';
 
 
 ------------------------------------------------------------------------------------------------------------------------
