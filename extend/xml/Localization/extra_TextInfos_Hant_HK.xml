@@ -2330,22 +2330,19 @@
 			<Text>海军游猎单位，此单位隐匿行动表现非常出色，擅长于突袭和埋伏。</Text>
 		</Row>
 
-		<Row>
-			<Tag>TXT_KEY_BUILDING_MILITARY_AIRBASE</Tag>
+
+
+		<Row Tag="TXT_KEY_BUILDING_MILITARY_AIRBASE">
 			<Text>[ICON_WAR]空军基地</Text>
 		</Row>
-		<Row>
-			<Tag>TXT_KEY_CIV5_BUILDINGS_MILITARY_AIRBASE_TEXT</Tag>
+		<Row Tag="TXT_KEY_CIV5_BUILDINGS_MILITARY_AIRBASE_TEXT">
+			<Text>设有停机坪，跑道，维修区，迫降区，指挥部等空军作战单位。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_MILITARY_AIRBASE_HELP">
 			<Text>
-				设有停机坪，跑道，维修区，迫降区，指挥部等空军作战单位。
+				空军基地是保障空军航空兵部队驻扎、作战和训练的地域及机构、设施的统称。有的国家称航空基地。通常是一个设施较完善的机场。按设施完善程度、用途和可使用的持续时间，分永久性基地和临时性基地，现用基地和备用基地。按分布地区，分为本土基地和国外基地。
 			</Text>
 		</Row>
-		<Row>
-			<Tag>TXT_KEY_BUILDING_MILITARY_AIRBASE_HELP</Tag>
-			<Text>空军基地是保障空军航空兵部队驻扎、作战和训练的地域及机构、设施的统称。有的国家称航空基地。通常是一个设施较完善的机场。按设施完善程度、用途和可使用的持续时间，分永久性基地和临时性基地，现用基地和备用基地。按分布地区，分为本土基地和国外基地。</Text>
-		</Row>
-
-
 
 
 
@@ -2474,16 +2471,13 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MAGINOT_LINE_HELP">
 			<Text>
-				堡垒+200点生命值上限，且临近的敌军在回合开始时移动力-1,额外获得一次攻击次数且在非友方领土不会损失生命值。城防效率+20%，陆军单位在堡垒改良设施8格范围内战斗时+100%[ICON_STRENGTH]战斗力。国境内敌方陆军单位每次移动额外消耗1[ICON_MOVES]移动力。
+				堡垒+200点生命值上限，且临近的敌军在回合开始时移动力-1,额外获得一次攻击次数且在非友方领土不会损失生命值。城防效率+20%，
+				[NEWLINE]国境内敌方陆军单位每次移动额外消耗1[ICON_MOVES]移动力。
+				[NEWLINE]全境内陆军敌人-25%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_MAGINOT_LINE">
-			<Text>阵地防御</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_MAGINOT_LINE_HELP">
-			<Text>在堡垒改良设施8格范围内战斗时+100%[ICON_STRENGTH]战斗力。</Text>
-		</Row>
+	
 
 
 		<Update>
@@ -7827,13 +7821,14 @@
 			</Text>
 		</Row>
 
+
 		<Row Tag="TXT_KEY_UNIT_HELP_GLADIATOR">
 			<Text>
 				[COLOR_YIELD_GOLD]精英历战剑士[ENDCOLOR]，具备强大的生存能力，战斗力会随着生命降低而逐渐提升。需要完成竞技计划解锁，仅能组建一队。[NEWLINE]
 				[NEWLINE][ICON_BULLET]自带[ICON_MOVES]移动不受地形影响晋升，[ICON_PROMOTION_NEW_HUNTDOWN_1]攻击次数+1，[ICON_SGM_GROUP_OFF]移动无视敌方控制区域。
 				[NEWLINE][ICON_BULLET]临近一格内每存在一个敌人则+10%[ICON_STRENGTH]战斗力。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]受虐荣光[ENDCOLOR]：对抗受伤单位[ICON_STRENGTH]战斗力+50%，[ICON_PIRATE]击败敌军有几率捕获为[COLOR_POSITIVE_TEXT]己方单位[ENDCOLOR]。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]殇兽死搏[ENDCOLOR]：每损失一点生命值（上限100）则+2%[ICON_STRENGTH]攻击力，+3%[ICON_STRENGTH]防御力。
+				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]殇兽死搏[ENDCOLOR]：每损失一点生命值（上限100）则+2%[ICON_STRENGTH]攻击力，+3%[ICON_STRENGTH]防御力。对抗人口更多的文明时[ICON_STRENGTH]战斗力+50%。
 				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]向死而生[ENDCOLOR]：当受到攻击时，对敌方造成的[ICON_PROMOTION_NEW_CQB_COMBAT_1][COLOR_POSITIVE_TEXT]反击伤害[ENDCOLOR]大于[COLOR_NEGATIVE_TEXT]25[ENDCOLOR]，则自身恢复[COLOR_POSITIVE_TEXT]50[ENDCOLOR][ICON_HP]生命。
 			</Text>
 		</Row>
@@ -8431,6 +8426,7 @@
 		<Row Tag="TXT_KEY_WONDER_SANKORE_HELP">
 			<Text>
 				全国每处炼金术会所、大学、公立学校、研发实验室+5%[ICON_RESEARCH]科研。
+				[NEWLINE]全国所有城市[ICON_CULTURE]文化产出的5%转为[ICON_RESEARCH]科研产出。
 				[NEWLINE][NEWLINE]只能在临近沙漠的城市建造。
 			</Text>
 		</Row>

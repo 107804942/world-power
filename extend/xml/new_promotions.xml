@@ -4083,8 +4083,8 @@
 			<CurrentHitPointDefenseMod>3</CurrentHitPointDefenseMod>
 			<ExtraAttacks>1</ExtraAttacks>
 			<MovesChange>2</MovesChange>
-			<!--<RivalTerritory>true</RivalTerritory>
-			<CanPlunderWithoutWar>1</CanPlunderWithoutWar>-->
+			<!--<RivalTerritory>true</RivalTerritory>-->
+			<AntiHigherPopMod>50</AntiHigherPopMod>
 			<PediaEntry>TXT_KEY_PROMOTION_GLADIATOR</PediaEntry>
 			<CaptureDefeatedEnemy>true</CaptureDefeatedEnemy>
 			<NearNumEnemyAttackMod>10</NearNumEnemyAttackMod>
@@ -4458,23 +4458,7 @@
 		</Row>
 
 
-		<!--**************马奇若**************-->
-		<Row>
-			<Type>PROMOTION_MAGINOT_LINE</Type>
-			<Description>TXT_KEY_PROMOTION_MAGINOT_LINE</Description>
-			<Help>TXT_KEY_PROMOTION_MAGINOT_LINE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<PediaEntry>TXT_KEY_PROMOTION_MAGINOT_LINE</PediaEntry>
-			<NearbyImprovementCombatBonus>100</NearbyImprovementCombatBonus>
-			<NearbyImprovementBonusRange>8</NearbyImprovementBonusRange>
-			<CombatBonusImprovement>IMPROVEMENT_CITADEL</CombatBonusImprovement>
-		</Row>
-
-
+	
 
 		<!--**************伊斯塔尔**************-->
 		<Row>

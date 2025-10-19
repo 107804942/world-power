@@ -517,7 +517,7 @@
 			<Cost>450</Cost>
 			<Maintenance>8</Maintenance>
 			<!--<CostScalerEra>600</CostScalerEra>-->
-			<CityMaxNum>3</CityMaxNum>
+			<CityMaxNum>5</CityMaxNum>
 			<CostScalerNumRepeats>1000</CostScalerNumRepeats>
 			<PortraitIndex>77</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>

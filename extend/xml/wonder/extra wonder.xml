@@ -1361,7 +1361,6 @@
 			<PortraitIndex>92</PortraitIndex>
 			<Happiness>-5</Happiness>
 			<FreePromotion>PROMOTION_HPMOD2</FreePromotion>
-			<FreePromotion2>PROMOTION_MAGINOT_LINE</FreePromotion2>
 			<LandTileMovementReduceGlobal>1</LandTileMovementReduceGlobal>
 			<Defense>8000</Defense>
 			<ExtraCityHitPoints>100</ExtraCityHitPoints>

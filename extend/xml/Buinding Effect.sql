@@ -379,6 +379,30 @@ INSERT INTO Building_DomainFriendsCombatModifierLocal(BuildingType,DomainType,Mo
 VALUES ('BUILDING_CITADEL_OF_CARCASSONNE','DOMAIN_SEA',100),
        ('BUILDING_CITADEL_OF_CARCASSONNE','DOMAIN_LAND',100);
 
+----海军基地
+INSERT INTO Building_DomainFriendsCombatModifierLocal(BuildingType,DomainType,Modifier) 
+VALUES ('BUILDING_NAVAL_BASE','DOMAIN_SEA',15);
+
+----空军基地
+INSERT INTO Building_DomainFriendsCombatModifierLocal(BuildingType,DomainType,Modifier) 
+VALUES ('BUILDING_MILITARY_AIRBASE','DOMAIN_AIR',15);
+
+
+----军事基地
+INSERT INTO Building_DomainFriendsCombatModifierLocal(BuildingType,DomainType,Modifier) 
+SELECT  Type, 'DOMAIN_LAND',10  FROM Buildings WHERE BuildingClass ='BUILDINGCLASS_MILITARY_BASE'; 
+
+INSERT INTO Building_DomainFriendsCombatModifierLocal(BuildingType,DomainType,Modifier) 
+SELECT  Type, 'DOMAIN_SEA',10  FROM Buildings WHERE BuildingClass ='BUILDINGCLASS_MILITARY_BASE'; 
+
+INSERT INTO Building_DomainFriendsCombatModifierLocal(BuildingType,DomainType,Modifier) 
+SELECT  Type, 'DOMAIN_HOVER',10  FROM Buildings WHERE BuildingClass ='BUILDINGCLASS_MILITARY_BASE'; 
+
+INSERT INTO Building_DomainFriendsCombatModifierLocal(BuildingType,DomainType,Modifier) 
+SELECT  Type, 'DOMAIN_AIR',10  FROM Buildings WHERE BuildingClass ='BUILDINGCLASS_MILITARY_BASE'; 
+
+
+
 
 ----间谍偷取产出
 INSERT INTO Building_YieldPerEspionageSpy(BuildingType,YieldType,Yield) 
@@ -687,9 +711,12 @@ SELECT  'BUILDING_REGISTAN', Type,10 FROM Yields WHERE Type ='YIELD_GOLD' OR Typ
 INSERT  INTO Building_GlobalYieldModifiers(BuildingType,YieldType,Yield)
 SELECT  'BUILDING_SKYCITY', Type,-33  FROM Yields WHERE Type ='YIELD_GOLD';
 
-----太空基地
+----太空基地,马奇诺
 INSERT  INTO Building_DomainEnemyCombatModifierGlobal(BuildingType,DomainType,Modifier)
-VALUES ('BUILDING_SPACE_FORTRESS', 'DOMAIN_SEA',-50),
+VALUES  ('BUILDING_MAGINOT_LINE', 'DOMAIN_SEA',-25),
+        ('BUILDING_MAGINOT_LINE', 'DOMAIN_LAND',-25),
+        ('BUILDING_MAGINOT_LINE', 'DOMAIN_AIR',-25),
+         ('BUILDING_SPACE_FORTRESS', 'DOMAIN_SEA',-50),
         ('BUILDING_SPACE_FORTRESS', 'DOMAIN_LAND',-50),
         ('BUILDING_SPACE_FORTRESS', 'DOMAIN_AIR',-50);
 
@@ -782,6 +809,16 @@ SELECT  'BUILDING_INTERSTATE_HIGHWAY_SYSTEM', Type, 'YIELD_GOLD',5 FROM Building
 ------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Building_YieldFromOtherYield(BuildingType, InYieldType,InYieldValue,OutYieldType,OutYieldValue) VALUES
 ('BUILDING_LESHAN_BUDDHA', 'YIELD_FAITH',50, 'YIELD_CULTURE',10);
+
+
+------------------------------------------------------------------------------------------------------------------------
+-- 桑科雷
+------------------------------------------------------------------------------------------------------------------------
+INSERT INTO Building_YieldFromYieldPercentGlobal
+	(BuildingType, YieldIn, YieldOut, Value)
+VALUES
+	('BUILDING_SANKORE', 'YIELD_CULTURE', 'YIELD_SCIENCE', 5);
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- 情报局免费晋升关联战斗类型
