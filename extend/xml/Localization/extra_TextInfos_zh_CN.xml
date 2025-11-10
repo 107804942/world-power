@@ -9561,14 +9561,6 @@
 		</Row>
 
 
-
-
-		<Replace Tag="TXT_KEY_POLICY_REPUBLIC_HELP" >
-			<Text>
-				[COLOR_POSITIVE_TEXT]共和政体[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]每座城市+4[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_HEALTH]健康度,+2[ICON_RES_CONSUMER]商品。</Text>
-		</Replace>
-
 		<Replace Tag="TXT_KEY_POLICY_STATECRAFT_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]经世致用[ENDCOLOR]

@@ -342,6 +342,11 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>extend/Crime/CrimeZhText.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>extend/xml/Localization/extra_TextInfos_Hant_HK.xml</FileName>
       </Action>
       <Action>
@@ -16513,6 +16518,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="extend\Crime\CrimeText.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\Crime\CrimeZhText.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

@@ -70,25 +70,9 @@ SELECT 'POLICY_AI_REDUCE',	                            'BUILDINGCLASS_ORE_REFINE
 ----------------------------------------------------------------------------------------------------- 
 
 
---UPDATE LocalizedText
-	--SET Text = Text||'[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。'
-	--WHERE Tag IN (SELECT Help FROM Policies WHERE Type='POLICY_REPUBLIC');
-
-UPDATE Language_zh_CN
-	SET Text = Text||'[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。'
-	WHERE Tag IN (SELECT Help FROM Policies WHERE Type='POLICY_REPUBLIC');
-
-UPDATE Language_zh_Hant_HK
-	SET Text = Text||'[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。'
-	WHERE Tag IN (SELECT Help FROM Policies WHERE Type='POLICY_REPUBLIC');	
-
-UPDATE Language_zh_CN
-	SET Text = Text||'[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。'
-	WHERE Tag IN (SELECT Help FROM Policies WHERE Type='POLICY_REPUBLIC');
-
-UPDATE Language_zh_Hant_HK
-	SET Text = Text||'[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。'
-	WHERE Tag IN (SELECT Help FROM Policies WHERE Type='POLICY_REPUBLIC');
+UPDATE LocalizedText
+SET Text = Text||'[NEWLINE][ICON_BULLET]每座城市+2[ICON_HEALTH]健康度。'
+WHERE Tag IN (SELECT Help FROM Policies WHERE Type='POLICY_REPUBLIC');
 
 --UPDATE LocalizedText
 	--SET Text = Text||'消除因城市未临近淡水带来的[ICON_HEALTH]健康度惩罚。'
@@ -105,7 +89,7 @@ SELECT	p.Help, h.Yield
 FROM PolicyBranchTypes AS p, PolicyBranch_Health AS h
 WHERE p.Type = h.PolicyBranchType;
 
-UPDATE Language_zh_CN
+UPDATE LocalizedText
 	SET Text = Text||'[NEWLINE][NEWLINE]每个已采纳的政策提升[ICON_HEALTH]健康度'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%。'
 	WHERE Tag IN (SELECT Key FROM Temp);
 
@@ -118,7 +102,7 @@ SELECT	p.Help, h.Yield
 FROM Policies AS p, Policy_YieldModifiers AS h
 WHERE p.Type = h.PolicyType AND h.YieldType = 'YIELD_HEALTH';
 
-UPDATE Language_zh_CN
+UPDATE LocalizedText
 	SET Text = Text||'[NEWLINE]+'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%'||'[ICON_HEALTH]健康度。'
 	WHERE Tag IN (SELECT Key FROM Temp);
 
@@ -131,7 +115,7 @@ SELECT	p.Help, ROUND(100/h.Yield)
 FROM Policies AS p, Policy_CapitalYieldPerPopChanges AS h
 WHERE p.Type = h.PolicyType AND h.YieldType = 'YIELD_HEALTH';
 
-UPDATE Language_zh_CN
+UPDATE LocalizedText
 	SET Text = Text||'[NEWLINE][ICON_CAPITAL]首都每'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'[ICON_CITIZEN]市民+1[ICON_HEALTH]健康度。'
 	WHERE Tag IN (SELECT Key FROM Temp);
 
@@ -151,9 +135,9 @@ WHERE p.Type = h.PolicyType AND h.YieldType = 'YIELD_HEALTH';
 UPDATE Temp SET Building = (SELECT Description FROM BuildingClasses WHERE Building = Type);
 UPDATE Temp SET Building = (SELECT Text FROM Language_zh_CN WHERE Building = Tag);
 
-UPDATE Language_zh_CN
-	SET Text = Text||'[NEWLINE]每个'||(SELECT Building FROM Temp WHERE Tag = Temp.Key)||'+'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%'||'[ICON_HEALTH]健康度。'
-	WHERE Tag IN (SELECT Key FROM Temp);
+--UPDATE LocalizedText
+--	SET Text = Text||'[NEWLINE]每个'||(SELECT Building FROM Temp WHERE Tag = Temp.Key)||'+'||(SELECT Value FROM Temp WHERE Tag = Temp.Key)||'%'||'[ICON_HEALTH]健康度。'
+--	WHERE Tag IN (SELECT Key FROM Temp);
 
 DROP TABLE Temp;
 
