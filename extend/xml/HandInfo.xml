@@ -865,7 +865,7 @@
 
 	
 	
-	<Language_zh_CN>
+	<!--Language_zh_CN>
 		
 		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_9">
 			<Text>军备竞赛</Text>
@@ -907,7 +907,7 @@
 		<Row Tag="TXT_KEY_PROMOTION_DIFFICULTY_10_HELP">
 			<Text>HP最大值+300%,攻城时具备额外加成。</Text>
 		</Row>
-	</Language_zh_CN>
+	</Language_zh_CN-->
 
 
 	<Language_en_US>
