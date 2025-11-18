@@ -552,6 +552,7 @@
     <Folder Include="extend\art\nature\Monument Valley" />
     <Folder Include="extend\art\nature\danxia Mountain" />
     <Folder Include="extend\art\nature\GlassHouse" />
+    <Folder Include="extend\art\nature\Eruption" />
     <Folder Include="extend\art\nature\Volcan" />
     <Folder Include="extend\art\nature\Zhangjiajie" />
     <Folder Include="extend\art\nature\whitedesert" />
@@ -4414,6 +4415,22 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\nature\DelicateArch\sv_DelicateArch.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Eruption\Eruption2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Eruption\Eruption2.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Eruption\Eruption2.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Eruption\FX_Triggers_Eruption.ftsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

@@ -73,8 +73,8 @@
 			<Description>TXT_KEY_FEATURE_NEW_VOLCANO</Description>
 			<Civilopedia>TXT_KEY_FEATURE_NEW_VOLCANO_PEDIA</Civilopedia>
 			<Help>TXT_KEY_FEATURE_NEW_VOLCANO_HELP</Help>
-			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO</ArtDefineTag>
-			<!--<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_1</ArtDefineTag>-->
+			<!--<ArtDefineTag>ART_DEF_FEATURE_VOLCANO</ArtDefineTag>-->
+			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_1</ArtDefineTag>
 			<Movement>1</Movement>
 			<NoCity>true</NoCity>
 			<Volcano>true</Volcano>

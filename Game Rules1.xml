@@ -1,6 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
+
+
+
+
+	<!--DF-41-->
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_DF41</Type>
+			<DamageStates>1</DamageStates>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_DF41</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_DF41</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_DF41</Type>
+			<Scale>0.14</Scale>
+			<Domain>Air</Domain>
+			<Model>CSS-5.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_DF41</UnitMemberType>
+			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLongRangedAttack>1</HasLongRangedAttack>
+			<HasCollisionAttack>1</HasCollisionAttack>
+			<AttackAltitude>160.0</AttackAltitude>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_DF41</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<HitEffect>ART_DEF_VEFFECT_NUCLEAR_BOMB_01</HitEffect>
+			<HitEffectScale>1.0</HitEffectScale>
+			<VisKillStrengthMin>100.0</VisKillStrengthMin>
+			<VisKillStrengthMax>100.0</VisKillStrengthMax>
+			<IsDropped>1</IsDropped>
+			<TargetGround>1</TargetGround>
+			<AreaDamageDelay>0.5</AreaDamageDelay>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
+			<WaitForEffectCompletion>1</WaitForEffectCompletion>
+			<ProjectileChildEffectScale>1.0</ProjectileChildEffectScale>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+	
+	
+	
+	
+	
+	
+	
+	
 	<Row Tag="TXT_KEY_TECH_SPACE_COLONIZATION_TITLE">
 		<Text>太空作战</Text>
 	</Row>

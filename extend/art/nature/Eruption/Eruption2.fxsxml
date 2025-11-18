@@ -1,0 +1,8 @@
+<Asset>
+  <Mesh file="Eruption2.gr2" source="Max" />
+  <BoneUsage>
+    <Bone name="Plane01" />
+  </BoneUsage>
+  <TimedTrigger file="FX_Triggers_Eruption.ftsxml" source="Tool" model="Plane01" state="0,1,2,3" />
+  <DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+</Asset>

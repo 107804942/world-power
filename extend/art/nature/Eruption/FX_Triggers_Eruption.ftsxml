@@ -1,0 +1,13 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound"/>
+      <track id="2" name="Effect"/>
+      <track id="3" name="Transfer"/>
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerEffect" id="1" time="0" duration="10" repeat="0" ec="1000" track="2" tier="0" event="ART_DEF_VEFFECT_VOLCANIC_ERUPTION" bone="Plane01"/>
+    <trigger type="FTimedTriggerSound" id="2" time="0" duration="10" repeat="0" ec="1000" track="1" tier="-1" event="AS3D_RESOURCE_VOLCANO" bone=""/>
+  </triggers>
+</trigger_system>
