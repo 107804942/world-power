@@ -2,24 +2,117 @@
 <!-- Created by ModBuddy on 2021/2/26 22:23:06 -->
 <GameData>
 
-
-
+	<!--KIROV基洛夫-->
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_KIROV_BATTLECRUISER</Type>
+			<DamageStates>3</DamageStates>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_KIROV_BATTLECRUISER</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
-		<Update>
-			<Set Scale="0.11"  Model="Katyusha.fxsxml"/>
-			<Where Type="ART_DEF_UNIT_MEMBER_KATYUSHA"/>
-		</Update>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</Type>
+			<Scale>0.12</Scale>
+			<Domain>Sea</Domain>
+			<Model>Newkirov.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
 	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLeftRightAttack>1</HasLeftRightAttack>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
 
-	
-	
 
+	<!--反物质-->
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_ANTIMATTER</Type>
+			<DamageStates>1</DamageStates>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_ANTIMATTER</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_ANTIMATTER</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
-		<Update>
-			<Set Scale="0.07"  Model="typhoon2.fxsxml"/>
-			<Where Type="ART_DEF_UNIT_MEMBER_UNDERWATER_CARRIER"/>
-		</Update>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_ANTIMATTER</Type>
+			<Scale>0.2</Scale>
+			<Domain>Air</Domain>
+			<Model>CSS-5.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
 	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_ANTIMATTER</UnitMemberType>
+			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLongRangedAttack>1</HasLongRangedAttack>
+			<HasCollisionAttack>1</HasCollisionAttack>
+			<AttackAltitude>160.0</AttackAltitude>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_ANTIMATTER</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<HitEffect>ART_DEF_VEFFECT_NUCLEAR_BOMB_01</HitEffect>
+			<HitEffectScale>2.0</HitEffectScale>
+			<VisKillStrengthMin>100.0</VisKillStrengthMin>
+			<VisKillStrengthMax>100.0</VisKillStrengthMax>
+			<IsDropped>1</IsDropped>
+			<TargetGround>1</TargetGround>
+			<AreaDamageDelay>0.5</AreaDamageDelay>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
+			<WaitForEffectCompletion>1</WaitForEffectCompletion>
+			<ProjectileChildEffectScale>2.0</ProjectileChildEffectScale>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
 	
 	
 	
@@ -720,62 +813,7 @@
 	
 
 	
-	<!--KIROV-->
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_KIROV_BATTLECRUISER</Type>
-			<DamageStates>3</DamageStates>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_KIROV_BATTLECRUISER</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</Type>
-			<Scale>0.12</Scale>
-			<Domain>Sea</Domain>
-			<Model>kirov.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasLeftRightAttack>1</HasLeftRightAttack>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_KIROV_BATTLECRUISER</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
+
 
 	
 	
@@ -873,62 +911,7 @@
 
 
 
-	<!--自行火炮-->
-
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY109</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>TwoBigGuns</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY109</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberInfoType>
-			<NumMembers>2</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_ARTILLERY109</Type>
-			<Scale>0.11</Scale>
-			<Model>M109Generic.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasLongRangedAttack>1</HasLongRangedAttack>
-			<HasStationaryMelee>1</HasStationaryMelee>
-			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<ProjectileSpeed>7.0</ProjectileSpeed>
-			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_ARTILLERY109</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<ProjectileSpeed>4.0</ProjectileSpeed>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
+	
 
 
 	<!--pzh2000-->
@@ -944,13 +927,13 @@
 		<Row>
 			<UnitInfoType>ART_DEF_UNIT_PZH2000</UnitInfoType>
 			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_PZH2000</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
+			<NumMembers>2</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
 			<Type>ART_DEF_UNIT_MEMBER_PZH2000</Type>
-			<Scale>0.14</Scale>
+			<Scale>0.11</Scale>
 			<Model>PZH20000.fxsxml</Model>
 			<MaterialTypeTag>METAL</MaterialTypeTag>
 			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
@@ -964,6 +947,7 @@
 			<HasLongRangedAttack>1</HasLongRangedAttack>
 			<HasStationaryMelee>1</HasStationaryMelee>
 			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+			<ReformBeforeCombat>1</ReformBeforeCombat>
 		</Row>
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
@@ -1159,19 +1143,12 @@
 			<SubIndex>0</SubIndex>
 			<VisKillStrengthMin>25.0</VisKillStrengthMin>
 			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<ProjectileSpeed>4.0</ProjectileSpeed>
-			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
+			<ProjectileSpeed>7.0</ProjectileSpeed>
+			<HitEffect>ART_DEF_VEFFECT_NUCLEAR_BOMB_01</HitEffect>
 			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
 			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
 		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_NUKECANNON</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<ProjectileSpeed>4.0</ProjectileSpeed>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
+	
 	</ArtDefine_UnitMemberCombatWeapons>
 	
 	
@@ -1714,7 +1691,7 @@
 		<Row>
 			<UnitMemberType>ART_DEF_UNIT_MEMBER_RSTEALTHBOMBER2</UnitMemberType>
 			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
-			<AttackRadius>64.0</AttackRadius>
+			<AttackRadius>75.0</AttackRadius>
 			<MoveRate>4.0</MoveRate>
 			<TurnRateMin>0.150000005960464</TurnRateMin>
 			<TurnRateMax>0.349999994039536</TurnRateMax>
@@ -3467,50 +3444,53 @@
 
 
 
-	<!--传送器nexus-->
+	<!--上帝之杖-->
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_FW_NEXUS</Type>
+			<Type>ART_DEF_UNIT_ORBITAL_STRIKE</Type>
 			<DamageStates>1</DamageStates>
 		</Row>
 	</ArtDefine_UnitInfos>
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_FW_NEXUS</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_FW_NEXUS</UnitMemberInfoType>
+			<UnitInfoType>ART_DEF_UNIT_ORBITAL_STRIKE</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_ORBITAL_STRIKE</UnitMemberInfoType>
 			<NumMembers>1</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_FW_NEXUS</Type>
-			<Scale>0.09</Scale>
+			<Type>ART_DEF_UNIT_MEMBER_ORBITAL_STRIKE</Type>
+			<Scale>0.14</Scale>
 			<ZOffset>72</ZOffset>
 			<Domain>Hover</Domain>
-			<Model>seatline.fxsxml</Model>
+			<Model>orbitalstrike.fxsxml</Model>
 			<MaterialTypeTag>METAL</MaterialTypeTag>
 			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberInfos>
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_NEXUS</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_ORBITAL_STRIKE</UnitMemberType>
 			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
 			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLongRangedAttack>1</HasLongRangedAttack>
 			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
 		</Row>
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_FW_NEXUS</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_ORBITAL_STRIKE</UnitMemberType>
 			<Index>0</Index>
-			<SubIndex>1</SubIndex>
+			<SubIndex>0</SubIndex>
 			<ID>PROJECTILE</ID>
-			<VisKillStrengthMin>10.0</VisKillStrengthMin>
-			<VisKillStrengthMax>15.0</VisKillStrengthMax>
-			<ProjectileSpeed>8.0</ProjectileSpeed>
+			<VisKillStrengthMin>100.0</VisKillStrengthMin>
+			<VisKillStrengthMax>100.0</VisKillStrengthMax>
+			<ProjectileSpeed>6.0</ProjectileSpeed>
+			<HitEffect>ART_DEF_VEFFECT_GUIDED_MISSILE_IMPACT_$(TERRAIN)</HitEffect>
+			<ProjectileChildEffectScale>0.5</ProjectileChildEffectScale>
 			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberCombatWeapons>
 
@@ -5728,75 +5708,56 @@
 
 
 
-	<!--b1-->
+	<!--TU160图160-->
 
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_B1_LANCER888</Type>
+			<Type>ART_DEF_UNIT_TU160</Type>
 			<DamageStates>1</DamageStates>
 			<Formation>BomberWing</Formation>
 		</Row>
 	</ArtDefine_UnitInfos>
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_B1_LANCER888</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_B1_LANCER888</UnitMemberInfoType>
+			<UnitInfoType>ART_DEF_UNIT_TU160</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_TU160</UnitMemberInfoType>
 			<NumMembers>1</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_B1_LANCER888</Type>
+			<Type>ART_DEF_UNIT_MEMBER_TU160</Type>
 			<Scale>0.13</Scale>
 			<Domain>Air</Domain>
-			<Model>B-1_Lancer.fxsxml</Model>
+			<Model>tu160.fxsxml</Model>
 			<MaterialTypeTag>METAL</MaterialTypeTag>
 			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberInfos>
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_B1_LANCER888</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_TU160</UnitMemberType>
 			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
-			<AttackRadius>135.0</AttackRadius>
-			<MoveRate>2.2</MoveRate>
-			<TurnRateMin>0.25</TurnRateMin>
-			<TurnRateMax>0.5</TurnRateMax>
+			<AttackRadius>64.0</AttackRadius>
+			<MoveRate>4.0</MoveRate>
+			<TurnRateMin>0.14</TurnRateMin>
+			<TurnRateMax>0.35</TurnRateMax>
 			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
 		</Row>
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
+
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_B1_LANCER888</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_TU160</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>0</SubIndex>
-			<ProjectileSpeed>3.0</ProjectileSpeed>
-			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
-			<HitRadius>15.0</HitRadius>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_B1_LANCER888</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>1.0</VisKillStrengthMin>
-			<VisKillStrengthMax>1.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
-			<HitRadius>15.0</HitRadius>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_B1_LANCER888</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>1</SubIndex>
-			<ID>PROJECTILE</ID>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<ProjectileSpeed>3.0</ProjectileSpeed>
+			<VisKillStrengthMin>35.0</VisKillStrengthMin>
+			<VisKillStrengthMax>60.0</VisKillStrengthMax>
+			<ProjectileSpeed>0.899999976158142</ProjectileSpeed>
+			<TargetGround>1</TargetGround>
+			<IsDropped>1</IsDropped>
 			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberCombatWeapons>
 
@@ -6946,7 +6907,7 @@
 
 
 
-	<!--Independence-->
+	<!--Independence滨海战斗舰-->
 	<ArtDefine_UnitInfos>
 		<Row>
 			<Type>ART_DEF_UNIT_IND</Type>
@@ -7001,4 +6962,47 @@
 			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberCombatWeapons>
+
+
+
+
+	
+
+	
+	
+	
+
+	<ArtDefine_UnitMemberInfos>
+		<!--修复卡秋莎火箭炮模型的动画错误-->
+		
+			<Update>
+				<Set Scale="0.11"  Model="Katyusha.fxsxml"/>
+				<Where Type="ART_DEF_UNIT_MEMBER_KATYUSHA"/>
+			</Update>
+
+
+
+
+		<!--替换九头蛇-->
+		<Update>
+			<Set Scale="0.07"  Model="typhoon2.fxsxml"/>
+			<Where Type="ART_DEF_UNIT_MEMBER_UNDERWATER_CARRIER"/>
+		</Update>
+
+
+		<!--XM2001 Crusader 十字军 -->
+		<Update>
+			<Set Scale="0.143"  Model="XM2001_Crusader.fxsxml" ZOffset="-3"/>
+			<Where Type="ART_DEF_UNIT_MEMBER_CRUSADER_ARTILLERY"/>
+		</Update>
+
+		<!--替换科曼奇-->
+		<Update>
+			<Set Scale="0.1"  Model="RAH66_at.fxsxml"/>
+			<Where Type="ART_DEF_UNIT_MEMBER_STEALTH_HELICOPTER"/>
+		</Update>
+
+	
+	</ArtDefine_UnitMemberInfos>
+
 </GameData>

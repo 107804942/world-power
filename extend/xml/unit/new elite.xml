@@ -368,8 +368,8 @@
 			<AdvancedStartCost>90</AdvancedStartCost>
 			<XPValueAttack>4</XPValueAttack>
 			<XPValueDefense>4</XPValueDefense>
-			<!--<UnitArtInfo>ART_DEF_UNIT_CRUSADER_ARTILLERY</UnitArtInfo>-->
-			<UnitArtInfo>ART_DEF_UNIT_PZH2000</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_CRUSADER_ARTILLERY</UnitArtInfo>
+			<!--<UnitArtInfo>ART_DEF_UNIT_PZH2000</UnitArtInfo>-->
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<UnitFlagIconOffset>39</UnitFlagIconOffset>
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
@@ -914,7 +914,7 @@
 			<ExtraNukeBlastRadius>5</ExtraNukeBlastRadius>
 			<XPValueDefense>0</XPValueDefense>
 			<NukeDamageLevel>5</NukeDamageLevel>
-			<UnitArtInfo>ART_DEF_UNIT_NUCLEAR_MISSILE</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_ANTIMATTER</UnitArtInfo>
 			<UnitFlagAtlas>TTMOD_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>8</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
@@ -3171,7 +3171,7 @@
 		</Update>
 
 		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_FW_NEXUS"/>
+			<Set UnitArtInfo="ART_DEF_UNIT_ORBITAL_STRIKE"/>
 			<Where Type="UNIT_ORBITAL_STRIKE" />
 		</Update>
 	

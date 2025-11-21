@@ -13,7 +13,12 @@
 
 		<Improvements>
 
-		
+			<Update>
+				<Set>
+					<BuildableOnResources>true</BuildableOnResources>
+				</Set>
+				<Where Type="IMPROVEMENT_CITADEL"/>
+			</Update>
 
 			
 				
@@ -192,7 +197,7 @@
 			<Help>TXT_KEY_IMPROVEMENT_BE_ACADEMY_HELP</Help>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BE_ACADEMY</ArtDefineTag>
 			<NoTwoAdjacent>true</NoTwoAdjacent>
-			<PillageGold>30</PillageGold>
+			<PillageGold>200</PillageGold>
 			<PortraitIndex>22</PortraitIndex>
 			<ImprovementResource>RESOURCE_ELECTRICITY</ImprovementResource>
 			<ImprovementResourceQuantity>-2</ImprovementResourceQuantity>

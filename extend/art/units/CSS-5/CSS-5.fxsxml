@@ -1,0 +1,23 @@
+<Asset>
+	<Mesh file="CSS-5.gr2"/>
+	<Animation file="NuclearMissile_IdleA.gr2" ec="1000"/>
+	<Animation file="NuclearMissile_Start_Run_Launch.gr2" ec="1420"/>
+	<Animation file="NuclearMissile_Run.gr2" ec="1400"/>
+	<Animation file="NuclearMissile_DeathA.gr2" ec="1200"/>
+	<Animation file="NuclearMissile_DeathA_Idle.gr2" ec="1220"/>
+	<Animation file="NuclearMissile_AttackA_KABOOM.gr2" ec="1100"/>
+	<Texture file="CSS-5_DIFF.dds"/>
+	<Texture file="CSS-5_SREF.dds"/>
+	<AnimGraph file="ATTACK_A_GRAPH.dge"/>
+	<AnimGraph file="DEATH_FINAL_A_GRAPH.dge"/>
+	<AnimGraph file="RUNNING_LOOP_GRAPH.dge"/>
+	<AnimGraph file="IDLE_A_GRAPH.dge"/>
+	<StateMachine file="MISSLE_STATE_01.fsmxml"/>
+	<AnimGraph file="DEATH_A_GRAPH.dge"/>
+	<AnimGraph file="START_RUN_LAUNCH.dge"/>
+	<TimedTrigger file="fx_triggers_nuclearmissile.ftsxml"/>
+	<BoneUsage>
+		<Bone name="Bone_MainBody"/>
+	</BoneUsage>
+</Asset>
+

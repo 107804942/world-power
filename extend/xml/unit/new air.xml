@@ -679,7 +679,7 @@
 		<Where Type="UNIT_JET_FIGHTER" />
 	</Update>
 	<Update>
-		<Set  UnitArtInfo="ART_DEF_UNIT_B1_LANCER888" Range="30"/>
+		<Set  UnitArtInfo="ART_DEF_UNIT_TU160" Range="30"/>
 		<Where Type="UNIT_JET_BOMBER" />
 	</Update>
 

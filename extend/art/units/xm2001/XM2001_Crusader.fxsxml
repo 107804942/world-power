@@ -1,5 +1,5 @@
 <Asset>
-	<Mesh file="M109Generic.gr2"/>
+	<Mesh file="XM2001_Crusader.gr2"/>
 	<Animation file="Tank_Aim_L.gr2" ec="1700"/>
 	<Animation file="Tank_Aim_R.gr2" ec="1705"/>
 	<Animation file="Tank_Aim_Center.gr2" ec="1710"/>
@@ -31,8 +31,8 @@
 	<Animation file="Tank_DeathA_Idle.gr2" ec="1220"/>
 	<Animation file="Tank_DeathB.gr2" ec="2200"/>
 	<Animation file="Tank_DeathB_Idle.gr2" ec="2220"/>
-	<Texture file="M109Generic.dds"/>
-	<Texture file="M109SREF.dds"/>
+	<Texture file="XM2001_diff.dds"/>
+	<Texture file="XM2001_sref.dds"/>
 	<AnimGraph file="EDITED_AIM_FORTIFY_GRAPH.dge"/>
 	<AnimGraph file="EDITED_AIM_IDLE_GRAPH.dge"/>
 	<AnimGraph file="EDITED_AIM_MELEE_ATTACKS.dge"/>
