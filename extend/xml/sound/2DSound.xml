@@ -985,15 +985,6 @@
 			<FirstSelectionSound>AS2D_BIRTH_BATTLESHIP</FirstSelectionSound>
 		</Row>
 
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<SelectionSound>AS2D_SELECT_SPACESHIP</SelectionSound>
-			<FirstSelectionSound>AS2D_BIRTH_SPACESHIP</FirstSelectionSound>
-		</Row>
-
-
-
-
 
 
 

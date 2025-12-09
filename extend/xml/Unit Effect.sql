@@ -197,27 +197,7 @@ UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Minor_Building_Ov
 ------------------------------------------------------------------------------------------------------------------------
 -- 科技或建筑免费晋升关联单位种类
 ------------------------------------------------------------------------------------------------------------------------
-------特种金属
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_SUPER_ROCKET';
 
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_ROCKET_ARTILLERY';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_CHINESE_WEISHI';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_SABR';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_SAM_INFANTRY';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_SELF_PROPELLED_ARTILLERY';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_SMETAL', Type  FROM Units WHERE Class ='UNITCLASS_HOVERTANK';
 
 ------溅射穿透
 
@@ -1999,13 +1979,9 @@ insert into LuaFormula(Type, Formula) values
 
 
 INSERT INTO Technology_FreePromotions(TechType,PromotionType)
-SELECT 'TECH_EARTH', 'PROMOTION_XCOM_WEAPON_BASE' UNION ALL ---太空部队
-SELECT 'TECH_METAMATERIAL',  'PROMOTION_FORTIFY_PERFORMED' UNION ALL
-SELECT 'TECH_NANOTECHNOLOGY',  'PROMOTION_SMETAL' UNION ALL
+SELECT 'TECH_INTEGRATED_DEFENSE', 'PROMOTION_XCOM_WEAPON_BASE' UNION ALL ---太空部队
 SELECT 'TECH_SDI', 'PROMOTION_ANTIAIRX' UNION ALL
 SELECT 'TECH_PLANETARY_NETWORKS',  'PROMOTION_AERIAL_REFUELING' UNION ALL
---SELECT 'TECH_HOMO_SUPERIOR', 'PROMOTION_HPMOD1' UNION ALL
---SELECT 'TECH_NEURAL_INTERFACE',  'PROMOTION_CAN_RANGE_ATTACK' UNION ALL
 SELECT 'TECH_SPACE_TECHNOLOGY',  'PROMOTION_FIGHTER_ATTACK' UNION ALL
 SELECT 'TECH_MILITARY_OCEANOGRAPHY',  'PROMOTION_NAVAL_SIGHT' UNION ALL
 SELECT 'TECH_MATTERTRANSMISSION', 'PROMOTION_ALUMINIST' ;

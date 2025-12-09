@@ -165,22 +165,7 @@
 			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
 			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
 		</Row>
-		<Row>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
+		
 
 	</UnitPromotions_UnitCombats>
 
@@ -433,16 +418,7 @@
 			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
 		</Row>
 
-		<!--特种金属-->
-		<Row>
-			<PromotionType>PROMOTION_SMETAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>
 
-		<Row>
-			<PromotionType>PROMOTION_SMETAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
 
 		<!--铝热剂-->
 		<Row>
@@ -677,10 +653,7 @@
 		<Delete PromotionType="PROMOTION_FAE_ROCKET_1"/>
 		<Delete PromotionType="PROMOTION_FAE_ROCKET_2"/>
 
-		<Row>
-			<PromotionType>PROMOTION_FORTIFY_PERFORMED</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
+
 
 
 
@@ -724,11 +697,7 @@
 
 	<UnitPromotions>
 
-		<Update>
-			<Where Type="PROMOTION_NUCLEAR_ARTILLERY"/>
-			<Set MutuallyExclusiveGroup="2"/>
-		</Update>
-
+	
 
 		<Row>
 			<Type>PROMOTION_AIR_RANGE_EXTEND</Type>
@@ -738,7 +707,6 @@
 			<PromotionPrereqOr1>PROMOTION_STRATEGIC_BOMBER</PromotionPrereqOr1>
 			<OrderPriority>5</OrderPriority>
 			<RangeChange>10</RangeChange>
-			<MutuallyExclusiveGroup>2</MutuallyExclusiveGroup>
 			<PortraitIndex>34</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
@@ -760,7 +728,6 @@
 			<PortraitIndex>23</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
-			<MutuallyExclusiveGroup>2</MutuallyExclusiveGroup>
 			<PediaEntry>TXT_KEY_PROMOTION_EVASION</PediaEntry>
 		</Row>
 
@@ -1489,20 +1456,7 @@
 		</Row>
 
 
-		<Row>
-			<Type>PROMOTION_FORTIFY_PERFORMED</Type>
-			<Description>TXT_KEY_PROMOTION_FORTIFY_PERFORMED</Description>
-			<Help>TXT_KEY_PROMOTION_FORTIFY_PERFORMED_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>20</PortraitIndex>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<IconAtlas>promoMUC_atlas_01</IconAtlas>
-			<ChangeDamageValue>-5</ChangeDamageValue>
-			<PediaEntry>TXT_KEY_PROMOTION_FORTIFY_PERFORMED</PediaEntry>
-			<DefenseMod>15</DefenseMod>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
+
 
 
 		<Row>
@@ -3148,23 +3102,6 @@
 
 
 
-		<Row>
-			<Type>PROMOTION_SMETAL</Type>
-			<Description>TXT_KEY_PROMOTION_SMETAL</Description>
-			<Help>TXT_KEY_PROMOTION_SMETAL_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>2</PortraitIndex>
-			<!--<DefenseMod>33</DefenseMod>-->
-			<ChangeDamageValue>-15</ChangeDamageValue>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SMETAL</PediaEntry>
-		</Row>
-
-
-
-
 
 
 		<Row>
@@ -4018,18 +3955,6 @@
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
-		<!--*************西北风**************-->
-		<Row>
-			<Type>PROMOTION_FRANCE</Type>
-			<Description>TXT_KEY_PROMOTION_FRANCE</Description>
-			<Help>TXT_KEY_PROMOTION_FRANCE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FRANCE</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
 
 
 
@@ -4139,6 +4064,7 @@
 			<PediaType>PEDIA_MELEE</PediaType>
 			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
 			<IsCanParadropUnLimit>1</IsCanParadropUnLimit>
+			<CanParadropAnyWhere>1</CanParadropAnyWhere>
 			<FightWellDamaged>1</FightWellDamaged>
 			<SplashDamageImmune>1</SplashDamageImmune>
 			<CollateralDamageImmune>1</CollateralDamageImmune>

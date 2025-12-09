@@ -89,33 +89,6 @@ function isInArray(t, val)
 end
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                --function IsCityBordering(playerID, city)
 
-function FranceCruiserMissionButtonValidity(unit)
-local plot=unit:GetPlot()
-local player=Players[unit:GetOwner()]  
-		if  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FRANCE"].ID)
-		and IsCoastalplot(plot) 
-		and player:GetGold()>= player:GetCapitalCity():GetUnitPurchaseCost(GameInfo.Units.UNIT_MECHANIZED_INFANTRY.ID)  then
-	    return true
-		   end
-		--end
-	-- end
-	return false
-end
-
-function IsCoastalplot(plot)
-  if plot:GetTerrainType()== GameInfoTypes.TERRAIN_OCEAN or plot:GetTerrainType()==GameInfoTypes.TERRAIN_COAST then
-  for i = 0, 5 do
-			local adjPlot = Map.PlotDirection(plot:GetX(), plot:GetY(), i)
-            if adjPlot:GetPlotType() == PlotTypes.PLOT_LAND or adjPlot:GetPlotType() == PlotTypes.PLOT_HILLS 
-			--and (not adjPlot:IsMountain()) 
-			-- and (not adjPlot:IsCity())
-			  then
-			  return true
-		   end
-		end
-	end
-	return false
-end
 
 
 function IsCanTransPortPlot(pSelUnit,pPlot)

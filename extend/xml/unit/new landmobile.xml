@@ -109,7 +109,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_AEGIS</UnitArtInfo>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>54</UnitFlagIconOffset>
-			<PortraitIndex>252</PortraitIndex>
+			<PortraitIndex>184</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
 		</Row>

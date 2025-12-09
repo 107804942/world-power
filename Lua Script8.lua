@@ -1,4 +1,264 @@
-﻿------------------------------------------------------------EMP BOMB Mode Switch---------------------------------------------------------------------------
+﻿----Plot Hit Mode Switch
+
+local PlotHitMissionButton = {
+  Name = "Plot Hit",
+  Title = "TXT_KEY_SP_BTNNOTE_UNIT_LEVDESTROYER_ON_SHORT", -- or a TXT_KEY
+  OrderPriority = 200, -- default is 200
+  IconAtlas = "SP_UNIT_ACTION_ATLAS2", -- 45 and 64 variations required
+  PortraitIndex = 18,
+  ToolTip = "TXT_KEY_SP_BTNNOTE_UNIT_LEVDESTROYER_HIT", -- or a TXT_KEY_ or a function
+  
+  
+  Condition = function(action, unit)
+    return unit:CanMove() and unit:GetUnitType()==GameInfoTypes.UNIT_LEVDESTROYER
+  end, -- or nil or a boolean, default is true
+  
+  Disabled = function(action, unit)   
+    return false;
+  end, -- or nil or a boolean, default is false
+  
+  Action = function(action, unit, eClick) 
+  	if eClick == Mouse.eRClick then
+	Events.ClearHexHighlights()
+	Events.SerialEventMouseOverHex.Remove(DisplayBombardHitArrow)
+		return
+	end
+
+	SpaceBattleCruiserSkill = 6
+	Events.SerialEventMouseOverHex.Add( DisplayBombardHitArrow )
+   	print ("Hit On!")
+  end
+};
+LuaEvents.UnitPanelActionAddin(PlotHitMissionButton);
+
+
+
+
+
+function DisplayBombardHitArrow()
+    --Events.ClearHexHighlights()
+
+	local unit = UI.GetHeadSelectedUnit();
+	if unit and unit:GetUnitType()==GameInfoTypes.UNIT_LEVDESTROYER then
+		attacker = unit
+	end
+	
+	if attacker == nil then
+		return
+	end
+
+    if SpaceBattleCruiserSkill == 6 then
+	Events.ClearHexHighlights()
+	local HitPlot = Map.GetPlot(UI.GetMouseOverHex())
+	--get bombard end hex
+	for iPlot in PlotAreaSpiralIterator(HitPlot, 2, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
+		Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(iPlot:GetX(), iPlot:GetY())), true, Vector4(1.0, 0.0, 0.0, 1.0))
+		Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(HitPlot:GetX(), HitPlot:GetY())), true, Vector4(1.0, 0.0, 0.0, 1.0))	
+		end
+	end
+end	
+Events.SerialEventMouseOverHex.Add( DisplayBombardHitArrow );
+
+
+
+
+
+
+function FranceCruiserMissionButtonValidity(unit)
+local plot=unit:GetPlot()
+local player=Players[unit:GetOwner()]  
+		if  unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FRANCE"].ID)
+		and IsCoastalplot(plot) 
+		and player:GetGold()>= player:GetCapitalCity():GetUnitPurchaseCost(GameInfo.Units.UNIT_MECHANIZED_INFANTRY.ID)  then
+	    return true
+		   end
+		--end
+	-- end
+	return false
+end
+
+function IsCoastalplot(plot)
+  if plot:GetTerrainType()== GameInfoTypes.TERRAIN_OCEAN or plot:GetTerrainType()==GameInfoTypes.TERRAIN_COAST then
+  for i = 0, 5 do
+			local adjPlot = Map.PlotDirection(plot:GetX(), plot:GetY(), i)
+            if adjPlot:GetPlotType() == PlotTypes.PLOT_LAND or adjPlot:GetPlotType() == PlotTypes.PLOT_HILLS 
+			--and (not adjPlot:IsMountain()) 
+			-- and (not adjPlot:IsCity())
+			  then
+			  return true
+		   end
+		end
+	end
+	return false
+end
+
+
+
+
+local FranceCruiserMissionButton = {
+	Name = "TXT_KEY_NAME_FRANCE_TRANSPORT",
+	Title = "TXT_KEY_TITLE_FRANCE_TRANSPORT",
+	OrderPriority = 200,
+	IconAtlas = "UNIT_ACTION_ATLAS",
+	PortraitIndex = 15,
+
+
+	ToolTip = function(action, unit)
+		local sTooltip;
+		local pPlayer = Players[Game:GetActivePlayer()];
+		local goldneed =pPlayer:GetCapitalCity():GetUnitPurchaseCost(GameInfo.Units.UNIT_MECHANIZED_INFANTRY.ID) 
+			local IsValid = FranceCruiserMissionButtonValidity(unit);
+			if IsValid then
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_FRANCE_TRANSPORT", goldneed);
+			else
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_FRANCE_TRANSPORT_2", goldneed);
+			end
+			return sTooltip
+		end, -- or a TXT_KEY_ or a function
+
+	Condition = function(action, unit)
+		if unit:GetMoves() <= 0 then
+			return false
+		end
+		local pPlayer = Players[Game:GetActivePlayer()];
+		local pTeam = Teams[pPlayer:GetTeam()]
+		local plot=unit:GetPlot()
+		if unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_FRANCE"].ID)
+		  then
+			return true
+		else
+			return false
+		end
+	end, -- or nil or a boolean, default is true
+
+
+	Disabled = function(action, unit)
+	    local IsValid = FranceCruiserMissionButtonValidity(unit);
+		--local pPlayer = Players[Game:GetActivePlayer()];
+	    if IsValid then
+				return false
+			end
+			return true;
+		end, -- or nil or a boolean, default is false
+	Action = function(action, unit, eClick)
+	if eClick == Mouse.eRClick then
+		return
+	end
+
+	local pPlayer = Players[Game:GetActivePlayer()];
+	if pPlayer:IsHuman() then
+
+	local plot=unit:GetPlot()
+
+		for iPlot in PlotAreaSpiralIterator(plot, 2, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
+		if  not iPlot:IsMountain() then
+		if  not iPlot:IsWater() then
+		if  not iPlot:IsCity() then
+		if  iPlot:GetNumUnits()==0  
+		then
+			Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(iPlot:GetX(), iPlot:GetY())), true, Vector4(0.0, 1.0, 1.0, 1.0))
+			          end	
+			       end
+			    end
+			 end		   
+		    SpaceBattleCruiserSkill = 4
+		end
+	end
+end
+}
+LuaEvents.UnitPanelActionAddin(FranceCruiserMissionButton)
+
+	
+	
+		--------------------------------------------------------------------------------------
+			
+				elseif SpaceBattleCruiserSkill == 4 then
+		        local pSUnit = UI.GetHeadSelectedUnit()
+		        local sUnitPlot = pSUnit:GetPlot()
+				local pPlayer = Players[Game:GetActivePlayer()]			
+				--if  pSUnit:GetMoves() ~= 0 and  pPlot:GetNumUnits() == 0 and ( pPlot:IsWater()) then
+				local distance = Map.PlotDistance(pPlot:GetX(), pPlot:GetY(), sUnitPlot:GetX(), sUnitPlot:GetY())
+				if distance <= 2 and distance > 0 
+				and pSUnit:GetMoves() ~= 0 
+				and (not pPlot:IsMountain()) 
+				and (not pPlot:IsWater()) 
+				and (not pPlot:IsCity()) 
+				and pPlot:GetNumUnits() == 0  then
+				
+				if pSUnit:GetUnitType() == GameInfoTypes["UNIT_FRANCE_MISTRAL"] then
+							
+				local unit  = pPlayer:InitUnit(GameInfoTypes["UNIT_MECHANIZED_INFANTRY"], pPlot:GetX(),pPlot:GetY())
+				local unit2 = pPlayer:InitUnit(GameInfoTypes["UNIT_MECHANIZED_INFANTRY"], pPlot:GetX(),pPlot:GetY())
+			
+			    SetAbilityForFranceMistralUnit(unit)
+				SetAbilityForFranceMistralUnit(unit2)
+
+                else 
+
+				local unit  = pPlayer:InitUnit(GameInfoTypes["UNIT_GARIO_BATTLESUIT"], pPlot:GetX(),pPlot:GetY())
+				local unit2 = pPlayer:InitUnit(GameInfoTypes["UNIT_GARIO_BATTLESUIT"], pPlot:GetX(),pPlot:GetY())
+			
+			    SetAbilityForFranceMistralUnit2(unit)
+				SetAbilityForFranceMistralUnit2(unit2)
+				end
+				--unit:JumpToNearestValidPlot() 
+				 pSUnit:SetMoves(0)
+				 local goldCost = 0
+			     goldCost = pPlayer:GetCapitalCity():GetUnitPurchaseCost(GameInfo.Units.UNIT_MECHANIZED_INFANTRY.ID) 
+				 pPlayer:ChangeGold(-4*goldCost) 				  
+				 end		
+				 Events.ClearHexHighlights()
+				 SpaceBattleCruiserSkill = 0
+
+
+
+				 	 --------------------------------------------------------------------------------------    
+	            elseif SpaceBattleCruiserSkill == 6 then
+		        local pSUnit = UI.GetHeadSelectedUnit();
+				local pPlayer = Players[Game:GetActivePlayer()]
+				local NumEnemy=0
+				-- Plots that have been done
+				if pSUnit:GetUnitType()==GameInfoTypes.UNIT_LEVDESTROYER
+				and pPlot~=pSUnit:GetPlot() then
+
+				if  pPlot:GetNumUnits()>0 then
+                    for i = 0, pPlot:GetNumUnits() - 1 do
+				    local aUnit = pPlot:GetUnit(i);
+					if  Teams[pPlayer:GetTeam()]:IsAtWar(Players[aUnit:GetOwner()]:GetTeam()) then					
+					local damage= math.floor(pSUnit:GetRangeCombatDamage(aUnit,nil,false));
+		             aUnit:ChangeDamage(damage, pPlayer)
+					 NumEnemy=NumEnemy+1				 
+					  end
+				   end
+				end
+
+				for pTargetPlot in PlotAreaSpiralIterator(pPlot, 2, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
+					       for iVal = 0,(pTargetPlot:GetNumUnits() - 1) do
+	                           local loopUnit = pTargetPlot:GetUnit(iVal)
+	  	                   if  Teams[pPlayer:GetTeam()]:IsAtWar(Players[loopUnit:GetOwner()]:GetTeam()) then
+						       local damage= math.floor(pSUnit:GetRangeCombatDamage(loopUnit,nil,false));
+							   NumEnemy=NumEnemy+1
+		                       loopUnit:ChangeDamage(damage, pPlayer)
+							           end
+							        end
+							    end
+						
+				          if NumEnemy>0 then
+				          pSUnit:SetMoves(0)
+						  Events.AudioPlay2DSound("AS2D_SPACESHIP_CANNON")
+		    	     end
+                 end
+
+				 SpaceBattleCruiserSkill = 0
+				 Events.ClearHexHighlights()					 
+
+
+
+
+
+
+
+------------------------------------------------------------EMP BOMB Mode Switch---------------------------------------------------------------------------
 
   UnitEmpBombOnButton = {
   Name = "Emp Bomb On",

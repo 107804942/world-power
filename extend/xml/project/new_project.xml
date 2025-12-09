@@ -433,19 +433,6 @@
 
 
 
-		<Row>
-			<Type>PROJECT_SPACE_CARRIER</Type>
-			<Description>TXT_KEY_PROJECT_SPACE_CARRIER</Description>
-			<Help>TXT_KEY_PROJECT_SPACE_CARRIER_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_SPACE_CARRIER_PEDIA</Civilopedia>
-			<TechPrereq>TECH_CYBERNETICS</TechPrereq>
-			<MaxGlobalInstances>1</MaxGlobalInstances>
-			<MaxTeamInstances>1</MaxTeamInstances>
-			<Cost>1500</Cost>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>SPBalance_ATLAS</IconAtlas>
-		</Row>
-
 
 		<Row>
 			<Type>PROJECT_STURMTIGER</Type>

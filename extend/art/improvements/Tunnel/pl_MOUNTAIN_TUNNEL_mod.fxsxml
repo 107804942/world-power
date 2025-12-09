@@ -1,0 +1,13 @@
+<Asset>
+  <Mesh file="PL_Fort_MOD.gr2" source="Max" />
+  <Texture file="Fort_MOD_Decal_H.dds" source="Max" />
+  <Texture file="PL_Fort_MOD_DIFF.dds" source="Max" />
+  <Texture file="PL_Fort_MOD_Decal_D.dds" source="Max" />
+  <Texture file="PL_Fort_MOD_SREF.dds" source="Max" />
+  <Texture file="Generic_Grey_8.dds" source="Max" />
+  <BoneUsage>
+    <Bone name="FX_PillagedSmoke" />
+  </BoneUsage>
+  <TimedTrigger file="FX_Triggers_PL_Fort_MOD.ftsxml" source="Tool" model="Fort_MID00" state="0,1,2,3" />
+  <DecisionTree file="StaticLandmarkDecisionTree.ddtxml" source="Tool" />
+</Asset>

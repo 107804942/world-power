@@ -404,11 +404,7 @@
 
 
 
-		<Row>
-			<UnitType>UNIT_FRANCE_MISTRAL</UnitType>
-			<PromotionType>PROMOTION_FRANCE</PromotionType>
-		</Row>
-		
+
 
 
 	</Unit_FreePromotions>

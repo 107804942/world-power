@@ -2441,7 +2441,7 @@
 			<Text>
 				堡垒+200点生命值上限，且临近的敌军在回合开始时移动力-1,额外获得一次攻击次数且在非友方领土不会损失生命值。城防效率+20%，
 				[NEWLINE]国境内敌方陆军单位每次移动额外消耗1[ICON_MOVES]移动力。
-				[NEWLINE]全境内陆军敌人-25%[ICON_STRENGTH]战斗力。
+				[NEWLINE]全境内敌人-25%[ICON_STRENGTH]战斗力。
 			</Text>
 		</Row>
 
@@ -2575,17 +2575,17 @@
 			</Text>
 		</Row>
 
-
 		<Row Tag="TXT_KEY_CIVILOPEDIA_UNITS_SUPER_MISSILE_TEXT">
-			<Text>电磁穿甲弹</Text>
+			<Text>超高速导弹</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_UNIT_SUPER_MISSILE_STRATEGY">
 			<Text>用大功率电磁发射器发射该导弹，发射时极短时间将穿甲弹飞行速度提升直到超过第一宇宙速度，后续弹体二次点火发射推进以达到一个极高的速度突破敌方导弹拦截体系。在强大动能打击之后还能产生二次爆炸伤害。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SUPER_MISSILE">
-			<Text>电磁穿甲弹</Text>
+			<Text>超高速导弹</Text>
 		</Row>
+
 
 
 
@@ -3501,34 +3501,7 @@
 
 
 
-		<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER">
-			<Text>空天母舰项目</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER_HELP">
-			<Text>
-				只有[COLOR_POSITIVE_TEXT]首個[ENDCOLOR]完成此項目的文明可以建造超级航母单位：[COLOR_YIELD_GOLD]空天母舰[ENDCOLOR]。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER_PEDIA">
-			<Text>
-				空天母舰是一种巨大的、空天一体宇宙飞船，空天母舰是以舰载机为主要武器并作为其空中活动基地的大型空中战斗群。
-				依靠空天母舰，一个国家可以在远离其国土的地方，不依赖当地的机场施加军事压力和进行作战行动。
-			</Text>
-		</Row>
 
-
-		<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER">
-			<Text>[COLOR_YELLOW]空天母舰[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER_TEXT">
-			<Text>空天母舰可搭载数量庞大的机群，并且可以主动攻击。</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER_STRATEGY">
-			<Text>空天母舰是具备多层复合结构的大型机动舰载机平台，具有更大的载机量，而且配备了反舰导弹及大口径舰炮，可以主动攻击敌军海军单位，每回合都能自动补充舰载机。</Text>
-		</Row>
 
 
 
@@ -4572,27 +4545,11 @@
 
 
 
-		<Row Tag="TXT_KEY_PROMOTION_FORTIFY_PERFORMED">
-			<Text>丝铁合金</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FORTIFY_PERFORMED_HELP">
-			<Text>
-				步兵系单位被攻击时受到的最终伤害-5。
-			</Text>
-		</Row>
+	
 
 
 
 
-
-		<Row Tag="TXT_KEY_PROMOTION_SMETAL">
-			<Text>特种金属</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SMETAL_HELP">
-			<Text>
-				纳米科技解锁:陆军远程单位受到的最终伤害-15
-			</Text>
-		</Row>
 
 
 
@@ -5248,17 +5205,17 @@
 			<Text>绿洲是浩瀚沙漠中的片片沃土，出现於终年淡水源不断之处。绿洲大小不一，从小泉水周围1公顷(15亩)左右到大面积有天然水或灌溉的土地，它就像是沙漠瀚海上美丽的珍珠，镶嵌在沙漠里，闪烁着神奇的色彩。随着科技进步，人类已经能够建造出类似天然绿洲一样的人工景观。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_IMPROVEMENT_TERRASCAPE_HELP">
-			<Text>该景观为所建成地块提供6[ICON_FOOD]食物及1[ICON_RESEARCH]科研产出。</Text>
+			<Text>该景观为所建成地块提供6[ICON_FOOD]食物、1[ICON_RESEARCH]科研、1[ICON_HEALTH]健康度产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_TERRASCAPE">
 			<Text>人造绿洲</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_TERRASCAPE_HELP">
-			<Text>建造一个绿洲，提高地块[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。</Text>
+			<Text>建造一个绿洲，提高地块[ICON_FOOD]食物、[ICON_RESEARCH]科研、[ICON_HEALTH]健康度产出。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_TERRASCAPE_REC">
 			<Text>
-				该景观可以增加地块的[ICON_FOOD]食物和[ICON_RESEARCH]科研产出。
+				该景观可以增加地块的[ICON_FOOD]食物、[ICON_RESEARCH]科研、[ICON_HEALTH]健康度产出。
 			</Text>
 		</Row>
 
@@ -6938,7 +6895,6 @@
 		</Row>
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_GHOST_POWER">
 			<Text>暗杀者</Text>
 		</Row>
@@ -6946,7 +6902,7 @@
 			<Text>
 				周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。
 				[NEWLINE]在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
-				[NEWLINE]每回合可以无限次空降直到移动力用尽，每次空降会对目标地块周围一格内的敌人造成33点伤害。
+				[NEWLINE]单位在国境外也能执行空降任务，每回合可以无限次空降直到移动力用尽，每次空降会对目标地块周围一格内的敌人造成33点伤害。
 			</Text>
 		</Row>
 
@@ -7013,24 +6969,6 @@
 			<Text>
 				单位改造
 			</Text>
-		</Row>
-
-
-		<Row Tag='TXT_KEY_TITLE_FRANCE_TRANSPORT'>
-			<Text>[COLOR_MANA]登陆作战[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag='TXT_KEY_COND_FRANCE_TRANSPORT'>
-			<Text>消耗本回合内所有剩余[ICON_MOVES]移动力并在指定地块登陆我方机械化步兵。(消耗{1_Gold}金钱，并且只能在临近海岸两格内的非山脉无单位地块）</Text>
-		</Row>
-		<Row Tag='TXT_KEY_COND_FRANCE_TRANSPORT_2'>
-			<Text>[COLOR_UNIQUE]未满足使用条件(本单位需要临近陆地，且需要花费{1_Gold}金钱）。[ENDCOLOR]</Text>
-		</Row>
-
-		<Row Tag="TXT_KEY_PROMOTION_FRANCE">
-			<Text>登录作战</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FRANCE_HELP">
-			<Text>可消耗一定量金币在沿岸执行步兵登录（根据当前军舰类型分为机械化步兵或盖里欧机甲）。</Text>
 		</Row>
 
 
@@ -7338,7 +7276,7 @@
 			<Text>
 				[COLOR_POSITIVE_TEXT]都市主义[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]购买建筑的所需[ICON_GOLD]金钱-25%。
-				[NEWLINE][ICON_BULLET]每城+2[ICON_HEALTH]健康度，-2[ICON_CRIME]犯罪率。
+				[NEWLINE][ICON_BULLET]每城+7[ICON_HEALTH]健康度，-2[ICON_CRIME]犯罪率。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_INDUSTRY_5_TEXT">
@@ -9439,13 +9377,7 @@
 			<Text>伞兵系单位在国境外也能执行空降任务，对陆作战时+150%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_LEVDESTROYER_ON_SHORT">
-			<Text>[COLOR_POSITIVE_TEXT]区域轰炸[ENDCOLOR] </Text>
-		</Row>
-		<Row Tag="TXT_KEY_SP_BTNNOTE_UNIT_LEVDESTROYER_HIT">
-			<Text>可对被点亮地块内的所有敌方单位执行打击。[NEWLINE][NEWLINE]该命令会消耗所有剩余[ICON_MOVES]移动力。</Text>
-		</Row>
-
+	
 
 
 		<Row Tag="TXT_KEY_PROMOTION_DESERT_EXTRA">

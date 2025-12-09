@@ -1266,3 +1266,33 @@ VALUES	('FEATURE_NEW_VOLCANO',	'PLOT_LAND',		'YIELD_FOOD',			1,		1),
 
 
 
+
+----------------------------------------------------------
+-- ArtDefine_Landmarks ÐÂËíµÀ
+----------------------------------------------------------
+INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName) VALUES
+('ART_DEF_IMPROVEMENT_MOUNTAIN_TUNNEL',				'Improvement',	'Tunnel'	);
+
+INSERT INTO ArtDefine_StrategicView (StrategicViewType, TileType, Asset) VALUES
+('ART_DEF_IMPROVEMENT_MOUNTAIN_TUNNEL',			'Improvement',	'sv_Tunnel.dds'	);
+
+
+INSERT INTO ArtDefine_Landmarks (Era, State, Scale,	ImprovementType,					LayoutHandler,	ResourceType,					Model,						TerrainContour) VALUES
+('Any', 'UnderConstruction',	0.9,  				'ART_DEF_IMPROVEMENT_MOUNTAIN_TUNNEL',		'RANDOM',		'ART_DEF_RESOURCE_NONE',		'hb_MOUNTAIN_TUNNEL_mod.fxsxml',			1	),
+('Any', 'Constructed',			0.9,  				'ART_DEF_IMPROVEMENT_MOUNTAIN_TUNNEL',		'RANDOM',		'ART_DEF_RESOURCE_NONE',		'MOUNTAIN_TUNNEL.fxsxml',			1	),
+('Any', 'Pillaged',				0.9,  				'ART_DEF_IMPROVEMENT_MOUNTAIN_TUNNEL',		'RANDOM',		'ART_DEF_RESOURCE_NONE',		'pl_MOUNTAIN_TUNNEL_mod.fxsxml',			1	);
+
+
+UPDATE Improvements SET ArtDefineTag = 'ART_DEF_IMPROVEMENT_MOUNTAIN_TUNNEL' WHERE Type = 'IMPROVEMENT_TUNNEL';
+
+
+
+
+
+
+
+
+
+
+
+

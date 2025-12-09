@@ -1492,7 +1492,7 @@
 				<BuildingClass>BUILDINGCLASS_TELEPRESENCE_HUB</BuildingClass>
 				<Cost>5000</Cost>
 				<GoldMaintenance>100</GoldMaintenance>
-				<PrereqTech>TECH_PHOTON_COMPUTER</PrereqTech>
+				<PrereqTech>TECH_METAMATERIAL</PrereqTech>
 				<Help>TXT_KEY_BUILDING_TELEPRESENCE_HUB_HELP</Help>
 				<Description>TXT_KEY_BUILDING_TELEPRESENCE_HUB_DESC</Description>
 				<Civilopedia>TXT_KEY_BUILDING_TELEPRESENCE_HUB_PEDIA</Civilopedia>

@@ -2,7 +2,44 @@
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
 
+	<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER">
+		<Text>空天母舰项目</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER_HELP">
+		<Text>
+			只有[COLOR_POSITIVE_TEXT]首個[ENDCOLOR]完成此項目的文明可以建造超级航母单位：[COLOR_YIELD_GOLD]空天母舰[ENDCOLOR]。
+		</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PROJECT_SPACE_CARRIER_PEDIA">
+		<Text>
+			空天母舰是一种巨大的、空天一体宇宙飞船，空天母舰是以舰载机为主要武器并作为其空中活动基地的大型空中战斗群。
+			依靠空天母舰，一个国家可以在远离其国土的地方，不依赖当地的机场施加军事压力和进行作战行动。
+		</Text>
+	</Row>
 
+
+	<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER">
+		<Text>[COLOR_YELLOW]空天母舰[ENDCOLOR]</Text>
+		<Plurality>2</Plurality>
+	</Row>
+
+	<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER_TEXT">
+		<Text>空天母舰可搭载数量庞大的机群，并且可以主动攻击。</Text>
+	</Row>
+
+	<Row Tag="TXT_KEY_UNIT_SPACE_CARRIER_STRATEGY">
+		<Text>空天母舰是具备多层复合结构的大型机动舰载机平台，具有更大的载机量，而且配备了反舰导弹及大口径舰炮，可以主动攻击敌军海军单位，每回合都能自动补充舰载机。</Text>
+	</Row>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	<!--RBomber2  超级轰炸机-->
 	<ArtDefine_UnitInfos>

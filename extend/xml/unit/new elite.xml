@@ -663,7 +663,7 @@
 			<Type>UNIT_ALIEN_SIEGE_WORM</Type>
 			<Class>UNITCLASS_ALIEN_SIEGE_WORM</Class>
 			<Combat>1200</Combat>
-			<Cost>18000</Cost>
+			<Cost>10000</Cost>
 			<Moves>3</Moves>
 			<PrereqTech>TECH_MASS</PrereqTech>
 			<CombatClass>UNITCOMBAT_MELEE</CombatClass>
@@ -699,7 +699,7 @@
 			<Combat>1200</Combat>
 			<RangedCombat>1200</RangedCombat>
 			<Range>8</Range>
-			<Cost>18000</Cost>
+			<Cost>10000</Cost>
 			<Moves>10</Moves>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PrereqTech>TECH_COGNITIVE</PrereqTech>
@@ -732,7 +732,7 @@
 			<Type>UNIT_NAVAL_MONSTER</Type>
 			<Class>UNITCLASS_NAVAL_MONSTER</Class>
 			<Combat>1200</Combat>
-			<Cost>18000</Cost>
+			<Cost>10000</Cost>
 			<Moves>9</Moves>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<PrereqTech>TECH_MATTERTRANSMISSION</PrereqTech>
@@ -1049,47 +1049,7 @@
 
 	
 
-		<Row>
-			<Class>UNITCLASS_SPACE_CARRIER</Class>
-			<Type>UNIT_SPACE_CARRIER</Type>
-			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>1500</Combat>
-			<!--<RangedCombat>1500</RangedCombat>
-			<Range>2</Range>-->
-			<Cost>60000</Cost>
-			<Moves>11</Moves>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
-			<!--<Domain>DOMAIN_SEA</Domain>-->
-			<Domain>DOMAIN_HOVER</Domain>
-			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SPACE_CARRIER</Description>
-			<Civilopedia>TXT_KEY_UNIT_SPACE_CARRIER_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SPACE_CARRIER_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CARRIER_UNIT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>120</AdvancedStartCost>
-			<MinAreaSize>10</MinAreaSize>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<!--<SpecialCargo>SPECIALUNIT_FIGHTER</SpecialCargo>-->
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<UnitArtInfo>ART_DEF_UNIT_GX3</UnitArtInfo>
-			<UnitFlagIconOffset>15</UnitFlagIconOffset>
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>224</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<MoveRate>BOAT</MoveRate>
-			<MaxHitPoints>1000</MaxHitPoints>
-			<ProjectPrereq>PROJECT_SPACE_CARRIER</ProjectPrereq>
-			<ExtraMaintenanceCost>1000</ExtraMaintenanceCost>
-		</Row>
-
+		
 
 
 
@@ -1474,76 +1434,6 @@
 		</Row>
 
 
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_ARMORER</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_GAIN_EXPERIENCE</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_CARRIER_SUPPLY_1</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_CARRIER_SUPPLY_2</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_MEDIC</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_SPACESHIP</PromotionType>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_CARGO_VI</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<PromotionType>PROMOTION_FW_EXPLOSION</PromotionType>
-		</Row>
-		
 
 
 		<Row>
@@ -2082,33 +1972,6 @@
 
 
 
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>35</Cost>
-		</Row>
-
-
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-			<Cost>20</Cost>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<ResourceType>RESOURCE_URANIUM</ResourceType>
-			<Cost>10</Cost>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
-			<Cost>30</Cost>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<ResourceType>RESOURCE_TITANIUM</ResourceType>
-			<Cost>15</Cost>
-		</Row>
 
 
 
@@ -2371,12 +2234,6 @@
 		</Row>
 
 
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<UnitAIType>UNITAI_CARRIER_SEA</UnitAIType>
-		</Row>
-
-
 
 
 
@@ -2554,23 +2411,7 @@
 
 
 
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_SPACE_CARRIER</UnitType>
-			<FlavorType>FLAVOR_OFFENSE</FlavorType>
-			<Flavor>999</Flavor>
-		</Row>
-
+		
 		<Row>
 			<UnitType>UNIT_ANGEL</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
