@@ -1307,6 +1307,13 @@
 			<YieldType>YIELD_FOOD</YieldType>
 			<Yield>1</Yield>
 		</Row>
+
+		<Row>
+			<ImprovementType>IMPROVEMENT_SAND_BASE</ImprovementType>
+			<TechType>TECH_FERTILIZER</TechType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
 		
 		
 

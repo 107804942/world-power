@@ -570,9 +570,9 @@ INSERT INTO Building_YieldFromYieldPercentGlobal(BuildingType, 						YieldIn, 		
 VALUES	('BUILDING_SOVIET_PALACE', 	'YIELD_SCIENCE', 	'YIELD_PRODUCTION', 	10);
 
 
-----
+----À­Ë¹¿Æ
 INSERT  INTO Building_ResourceYieldChangesGlobal(BuildingType,ResourceType,YieldType,Yield) 
-SELECT 'BUILDING_LASCAUX_CAVES', p.Type, h.Type, 1
+SELECT 'BUILDING_LASCAUX_CAVES', p.Type, h.Type, 2
 FROM Resources AS p, Yields AS h 
 WHERE (p.Type ='RESOURCE_DEER' OR p.Type ='RESOURCE_BISON'OR p.Type ='RESOURCE_IVORY'OR p.Type ='RESOURCE_HORSE'OR p.Type ='RESOURCE_COW'OR p.Type ='RESOURCE_SHEEP'OR p.Type ='RESOURCE_CRAB' OR p.Type ='RESOURCE_TRUFFLES')AND (h.Type = 'YIELD_GOLD' OR h.Type = 'YIELD_FOOD');
 

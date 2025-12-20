@@ -633,11 +633,11 @@
     <Folder Include="extend\art\units\GX1" />
     <Folder Include="extend\art\units\GX3" />
     <Folder Include="extend\art\units\CSS-5" />
+    <Folder Include="extend\art\units\FutureSuperCarrier" />
     <Folder Include="extend\art\units\Orbitalstrike" />
     <Folder Include="extend\art\units\RAH66" />
     <Folder Include="extend\art\units\tu160" />
     <Folder Include="extend\art\units\NewKirov" />
-    <Folder Include="extend\art\units\xm2001" />
     <Folder Include="extend\art\units\rangedmarine04sp" />
     <Folder Include="extend\art\units\RangedMarine04s" />
     <Folder Include="extend\art\units\Slinger" />
@@ -647,8 +647,6 @@
     <Folder Include="extend\art\units\pzh20000" />
     <Folder Include="extend\art\units\siege05p" />
     <Folder Include="extend\art\units\sui fleet" />
-    <Folder Include="extend\art\units\stormcarrier" />
-    <Folder Include="extend\art\units\rocketartillery" />
     <Folder Include="extend\art\units\nukecannon" />
     <Folder Include="extend\art\units\RangedMarine02" />
     <Folder Include="extend\art\units\usa arsenalship" />
@@ -674,7 +672,6 @@
     <Folder Include="extend\art\units\Joffre_Class" />
     <Folder Include="extend\art\units\Leopard 2" />
     <Folder Include="extend\art\units\LevDestroyer" />
-    <Folder Include="extend\art\units\liaoningcarrier" />
     <Folder Include="extend\art\units\Hovertank" />
     <Folder Include="extend\art\units\losangeles" />
     <Folder Include="extend\art\units\M4A4" />
@@ -9435,6 +9432,18 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\units\FutureSuperCarrier\FutureSuperCarrier.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\FutureSuperCarrier\FutureSuperCarrier.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\FutureSuperCarrier\FutureSuperCarrier.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\units\fx_triggers_guidedmissile.ftsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -10528,38 +10537,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\LevDestroyer\lev_destroyer_victory.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\liaoningcarrier.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\liaoningcarrier.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\pCube190#M#M.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\pCube3#M#M.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\pCube71#M#M.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\pCube8#M#M.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\pCube81.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\liaoningcarrier\pSphere4 pSphere5#M#M.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -14811,18 +14788,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\rocketartillery\rocketartillery2.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\rocketartillery\rocketartillery2.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\rocketartillery\rocketartillery2_diff.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\art\units\rocktopus\2_omni_state_ground_rocktopus.fsmxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -16067,50 +16032,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier01.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier02.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier03.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier04.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier05.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier06.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier07.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier08.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\carrier09.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\stormcarrier.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\stormcarrier\stormcarrier.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\art\units\sturmtiger\fx_triggers_sturmtiger.ftsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -16580,22 +16501,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\usa arsenalship\USN_ArsenalShip_sref.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\xm2001\XM2001_Crusader.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\xm2001\XM2001_Crusader.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\xm2001\XM2001_diff.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\xm2001\XM2001_sref.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

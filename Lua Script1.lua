@@ -3,6 +3,18 @@
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------\
 
+	if  unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"] then
+	    local iNumFighters = unit:GetCargo()
+		local iNumFightersIn =unit:CargoSpace()  
+		local pPlot = unit:GetPlot()
+	    if iNumFighters-iNumFightersIn >=2  then
+		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		else
+	    player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
+		   end
+	    end	
+
 
 -- ********************************************************
 -- 

@@ -1,5 +1,5 @@
 <Asset>
-	<Mesh file="liaoningcarrier.gr2"/>
+	<Mesh file="FutureSuperCarrier.gr2"/>
 	<Animation file="Carrier_Aim_Left.gr2" ec="1700"/>
 	<Animation file="Carrier_Aim_Right.gr2" ec="1705"/>
 	<Animation file="Carrier_Aim_Center.gr2" ec="1710"/>

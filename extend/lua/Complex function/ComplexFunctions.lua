@@ -33,19 +33,6 @@ function SomeUnitEffects(iPlayer)
 				end
 		    end
 	    end
-
-		if  unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"] then
-	    local iNumFighters = unit:GetCargo()
-		local iNumFightersIn =unit:CargoSpace()  
-		local pPlot = unit:GetPlot()
-	    if iNumFighters-iNumFightersIn >=2  then
-		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		else
-	    player:InitUnit(GameInfoTypes["UNIT_CARRIER_FIGHTER_STORM"], pPlot:GetX(), pPlot:GetY())
-		   end
-	    end	
-
    end
 end
 GameEvents.PlayerDoTurn.Add(SomeUnitEffects)

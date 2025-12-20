@@ -409,10 +409,7 @@
 			<Where Type="UNIT_FRANCE_BATTERY" />
 		</Update>
 
-		<Update>
-			<Set   UnitArtInfo="ART_DEF_UNIT_ROCKETARTILLERY2"/>
-			<Where Type="UNIT_ROCKET_ARTILLERY" />
-		</Update>
+	
 
 
 		<Update>

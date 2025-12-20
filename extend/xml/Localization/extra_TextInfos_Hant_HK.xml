@@ -1744,41 +1744,6 @@
 
 
 
-		<Replace Tag="TXT_KEY_PROJECT_PAK_FA">
-			<Text>未来前线战斗机系统</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROJECT_PAK_FA_HELP">
-			<Text>只有[COLOR_POSITIVE_TEXT]首个[ENDCOLOR]完成此项目的文明可以建造隐形多用途实验型战机单位：[COLOR_YIELD_GOLD]YF23[ENDCOLOR]。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROJECT_PAK_FA_PEDIA">
-			<Text>
-				YF-23的第一架原型机于1990年6月23日出厂，8月27日进行第一次试飞，YF-22第一架要到8月29日才出厂。9月29日进行第一次试飞。YF-23于9月18日第5次试飞时在不使用后燃器下达到1.43马赫的超音速巡航纪录，YF-22则是在11月3日达到1.58马赫。YF-23第二架原型机于9月29日出厂。两架原型机分别使用不同的发动机：一号原型机使用普惠YF119，二号原型机则是奇异YF120，与YF-22刚好颠倒。
-				YF-23原型机设计概念与YF-22有很大的不同，除了采用许多现有的零组件之外，YF-23的试飞计划里面并未包括试射空对空导弹与验证高攻角飞行能力，多是以风洞测试蒐集与验证资料。根据测试的结果显示，YF-23没有攻角限制，飞机能够自任何螺旋（Spin）轻易恢复稳定飞行，只有当导弹舱门呈开启状态时会有困难。YF-23一共进行50次，总计65小时的试飞项目，最大空速达到1.5马赫，最大负载达到7G，最大攻角达到25度。
-			</Text>
-		</Replace>
-
-
-
-		<Replace Tag="TXT_KEY_UNIT_PAKFA_T50">
-			<Text>[COLOR_YELLOW]YF23[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Replace>
-		<Replace Tag="TXT_KEY_UNIT_HELP_PAKFA_T50">
-			<Text>先进的隐形多功能战机。能够胜任空中游猎到拦截到攻击陆海单位等诸多任务。它所装备的反辐射导弹使其对防空导弹车同样杀伤力巨大。[NEWLINE][NEWLINE]需要未来前线战斗机系统项目解锁，你只能组建一支编队。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_UNIT_PAKFA_T50_STRATEGY">
-			<Text>这种多功能隐形战机不仅拥有优秀的空战性能，还能够摧毁各种地面海面单位。同时它还可以以反辐射导弹扫荡地面防空单位，为后续的轰炸机和强击机打开空中走廊。每回合能够出击两次。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_UNIT_PAKFA_T50_HEADING">
-			<Text>[COLOR_YELLOW]YF23[ENDCOLOR]</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_UNIT_PAKFA_T50_PEDIA">
-			<Text>
-				YF-23的第一架原型机于1990年6月23日出厂，8月27日进行第一次试飞，YF-22第一架要到8月29日才出厂。9月29日进行第一次试飞。YF-23于9月18日第5次试飞时在不使用后燃器下达到1.43马赫的超音速巡航纪录，YF-22则是在11月3日达到1.58马赫。YF-23第二架原型机于9月29日出厂。两架原型机分别使用不同的发动机：一号原型机使用普惠YF119，二号原型机则是奇异YF120，与YF-22刚好颠倒。
-				YF-23原型机设计概念与YF-22有很大的不同，除了采用许多现有的零组件之外，YF-23的试飞计划里面并未包括试射空对空导弹与验证高攻角飞行能力，多是以风洞测试蒐集与验证资料。根据测试的结果显示，YF-23没有攻角限制，飞机能够自任何螺旋（Spin）轻易恢复稳定飞行，只有当导弹舱门呈开启状态时会有困难。YF-23一共进行50次，总计65小时的试飞项目，最大空速达到1.5马赫，最大负载达到7G，最大攻角达到25度。
-			</Text>
-		</Replace>
-
 
 
 
@@ -5601,7 +5566,7 @@
 			<Text>[NEWLINE]"当你经过时，动物会从黑暗中出现。没有什么是静止不动的。影子依偎在洞穴里；在苍白突出的岩石上闪烁的光线会使蹄转动或抬起头。一个形状随着另一个形状的出现而消失，一切都停留在想象中。"[NEWLINE]        ——简布· 罗克斯《辉煌：人造光的进化》[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_LASCAUX_CAVES_WONDER_HELP">
-			<Text>全国每处[ICON_RES_SHEEP]绵羊，[ICON_RES_DEER]鹿,[ICON_RES_BISON]野牛,[ICON_RES_HORSE]马,[ICON_RES_COW]牛，[ICON_RES_CRAB]螃蟹，[ICON_RES_IVORY]象牙，[ICON_RES_TRUFFLES]松露资源+1[ICON_FOOD]食物、+1[ICON_GOLD]金钱。</Text>
+			<Text>全国每处[ICON_RES_SHEEP]绵羊，[ICON_RES_DEER]鹿,[ICON_RES_BISON]野牛,[ICON_RES_HORSE]马,[ICON_RES_COW]牛，[ICON_RES_CRAB]螃蟹，[ICON_RES_IVORY]象牙，[ICON_RES_TRUFFLES]松露资源+2[ICON_FOOD]食物、+2[ICON_GOLD]金钱。</Text>
 		</Row>
 
 
@@ -7107,7 +7072,8 @@
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MEDICAL_COMPANY_HELP</Tag>
-			<Text>只能在巨型城市（60人口）建造。</Text>
+			<Text>本城[ICON_HEALTH]健康度+12。
+			[NEWLINE][NEWLINE]只能在巨型城市（60人口）建造。</Text>
 		</Row>
 
 

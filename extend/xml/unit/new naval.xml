@@ -196,11 +196,11 @@
 			<XPValueDefense>10</XPValueDefense>
 			<SpecialCargo>SPECIALUNIT_FIGHTER</SpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03S</UnitArtInfo>
-			<!--<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER02</UnitArtInfo>-->
+			<!--<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03S</UnitArtInfo>-->
+			<UnitArtInfo>ART_DEF_UNIT_FUTURE_SUPER_CARRIER</UnitArtInfo>
 			<UnitFlagIconOffset>3</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>140</PortraitIndex>
+			<PortraitIndex>166</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
@@ -809,17 +809,14 @@
 		</Update>
 
 		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_LIAONING_CARRIER" PrereqTech="TECH_MILITARY_OCEANOGRAPHY"/>
+			<Set  PrereqTech="TECH_MILITARY_OCEANOGRAPHY"/>
 			<Where Type="UNIT_NUCLEAR_CARRIER" />
 		</Update>
 		<Update>
 			<Set  UnitArtInfo="ART_DEF_UNIT_AMERICAN_FORD"  PrereqTech="TECH_MILITARY_OCEANOGRAPHY"/>
 			<Where Type="UNIT_AMERICAN_NIMITZ" />
 		</Update>
-		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_STORMCARRIER" />
-			<Where Type="UNIT_SUPER_CARRIER" />
-		</Update>
+	
 
 		<Update>
 			<Set  UnitArtInfo="ART_DEF_UNIT_KIROV_BATTLECRUISER" />
