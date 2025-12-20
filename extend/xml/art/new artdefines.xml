@@ -191,58 +191,7 @@
 	
 	
 
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_WARRIOR_MONK</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>Pikeman</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_WARRIOR_MONK</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_WARRIOR_MONK</UnitMemberInfoType>
-			<NumMembers>12</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_WARRIOR_MONK</Type>
-			<Scale>0.140000000596046</Scale>
-			<Model>Monk.fxsxml</Model>
-			<MaterialTypeTag>ARMOR</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>ARMOR</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_WARRIOR_MONK</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
-			<ShortMoveRadius>12.0</ShortMoveRadius>
-			<ShortMoveRate>0.349999994039536</ShortMoveRate>
-			<TargetHeight>8.0</TargetHeight>
-			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
-			<ReformBeforeCombat>1</ReformBeforeCombat>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_WARRIOR_MONK</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<WeaponTypeTag>METAL</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>SPEAR</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_WARRIOR_MONK</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>10.0</VisKillStrengthMin>
-			<VisKillStrengthMax>20.0</VisKillStrengthMax>
-			<WeaponTypeTag>FLAMING_ARROW</WeaponTypeTag>
-			<MissTargetSlopRadius>10.0</MissTargetSlopRadius>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
+	
 
 
 
@@ -1753,13 +1702,6 @@
 	</ArtDefine_UnitInfoMemberInfos>
 
 
-	<!--super carrier-->
-	<ArtDefine_UnitMemberInfos>
-		<Update>
-			<Set Scale="0.10"  Model="Porte-Avions_2.fxsxml"/>
-			<Where Type="ART_DEF_UNIT_MEMBER_SUPER_CARRIER"/>
-		</Update>
-	</ArtDefine_UnitMemberInfos>
 	
 	
 	
@@ -3108,84 +3050,7 @@
 
 
 
-	<!--YF23-->
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_YF23</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>BomberWing</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_YF23</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_YF23</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-
-
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_YF23</Type>
-			<Scale>.1</Scale>
-			<Domain>Air</Domain>
-			<Model>ART/YF23.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_YF23</UnitMemberType>
-			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
-			<AttackRadius>135.0</AttackRadius>
-			<MoveRate>3</MoveRate>
-			<TurnRateMin>0.3</TurnRateMin>
-			<TurnRateMax>0.5</TurnRateMax>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_YF23</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<ProjectileSpeed>3.0</ProjectileSpeed>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
-			<HitRadius>15.0</HitRadius>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_YF23</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
-			<HitRadius>15.0</HitRadius>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_YF23</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>1</SubIndex>
-			<ID>PROJECTILE</ID>
-			<HitRadius>20</HitRadius>
-			<VisKillStrengthMin>30.0</VisKillStrengthMin>
-			<VisKillStrengthMax>60.0</VisKillStrengthMax>
-			<ProjectileSpeed>3.0</ProjectileSpeed>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-
+	
 
 	<!--F-14-->
 
@@ -3801,67 +3666,6 @@
 
 
 
-	<!--QUEEN_ELIZABETH-->
-
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_QUEEN_ELIZABETH_CLASS_AIRCRAFT_CARRIER888</Type>
-			<DamageStates>3</DamageStates>
-			<Formation />
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_QUEEN_ELIZABETH_CLASS_AIRCRAFT_CARRIER888</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_QUEEN_ELIZABETH_CLASS_AIRCRAFT_CARRIER888</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_QUEEN_ELIZABETH_CLASS_AIRCRAFT_CARRIER888</Type>
-			<Scale>0.10</Scale>
-			<Domain>Sea</Domain>
-			<Model>Art/Queen_Elizabeth_Class_Carrier.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_QUEEN_ELIZABETH_CLASS_AIRCRAFT_CARRIER888</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
-			<DisableActions></DisableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasLeftRightAttack>1</HasLeftRightAttack>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_QUEEN_ELIZABETH_CLASS_AIRCRAFT_CARRIER888</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25</VisKillStrengthMin>
-			<VisKillStrengthMax>50</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_QUEEN_ELIZABETH_CLASS_AIRCRAFT_CARRIER888</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25</VisKillStrengthMin>
-			<VisKillStrengthMax>50</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
 
 
 

@@ -620,7 +620,6 @@
     <Folder Include="extend\art\units\age3 cannon" />
     <Folder Include="extend\art\units\Knight_Egypt" />
     <Folder Include="extend\art\units\iron knight" />
-    <Folder Include="extend\art\units\monk" />
     <Folder Include="extend\art\units\Chariot_Persia" />
     <Folder Include="extend\art\units\common" />
     <Folder Include="extend\art\units\F53" />
@@ -700,7 +699,6 @@
     <Folder Include="extend\art\units\RangedMarine04p" />
     <Folder Include="extend\art\units\REJETFIGHTER" />
     <Folder Include="extend\art\units\ROBOT01" />
-    <Folder Include="extend\art\units\Queen_Elizabeth_Carrier" />
     <Folder Include="extend\art\units\SABR" />
     <Folder Include="extend\art\units\seatline" />
     <Folder Include="extend\art\units\siege worm" />
@@ -713,7 +711,6 @@
     <Folder Include="extend\art\units\SukhoiPAKFAT50korea" />
     <Folder Include="extend\art\units\sutosled" />
     <Folder Include="extend\art\units\type212" />
-    <Folder Include="extend\art\units\yf23" />
     <Folder Include="extend\Crime\art" />
     <Folder Include="extend\Health\font" />
     <Folder Include="extend\Health\lua" />
@@ -11516,26 +11513,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\monk\Flag_MONK.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\monk\Monk.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\monk\Monk.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\monk\mon_fuke_553_d.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\monk\mon_fuke_553_w_d.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\art\units\naval monster\fx_triggers_kraken.ftsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -13365,22 +13342,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\pzh20000\PZH20000.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Queen_Elizabeth_Carrier\Queen_Elizabeth_Class_Carrier.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Queen_Elizabeth_Carrier\Queen_Elizabeth_Class_Carrier.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Queen_Elizabeth_Carrier\Queen_Elizabeth_Class_Carrier.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Queen_Elizabeth_Carrier\Queen_Elizabeth_Class_Carrier_gloss.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -16501,22 +16462,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\usa arsenalship\USN_ArsenalShip_sref.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\yf23\YF23.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\yf23\YF23.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\yf23\YF23.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\yf23\YF23_SREF.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

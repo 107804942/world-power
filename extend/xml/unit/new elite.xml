@@ -526,11 +526,11 @@
 			<CombatLimit>0</CombatLimit>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_YF23</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_SUKHOI_PAK_FA_T50KOREA</UnitArtInfo>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
 			<UnitFlagIconOffset>29</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
+			<PortraitIndex>13</PortraitIndex>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ProjectPrereq>PROJECT_PAK_FA</ProjectPrereq>
 			<HurryCostModifier>-1</HurryCostModifier>
