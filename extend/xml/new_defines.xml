@@ -494,10 +494,7 @@
 			<Where Name="CIRCUMNAVIGATE_FREE_MOVES"/>
 			<Set Value="1"/>
 		</Update>
-		<Update>
-			<Where Name="INSTA_HEAL_RATE"/>
-			<Set Value="50"/>
-		</Update>
+
 		<Update>
 			<Where Name="MAX_HIT_POINTS"/>
 			<Set Value="100"/>

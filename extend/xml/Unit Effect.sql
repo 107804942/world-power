@@ -1933,7 +1933,7 @@ INSERT OR IGNORE INTO UnitPromotions(Type, Description, Help, Sound, CannotBeCho
 ('PROMOTION_HPMOD3', 'TXT_KEY_PROMOTION_HPMOD3', 'TXT_KEY_PROMOTION_HPMOD3_HELP', 'AS2D_IF_LEVELUP', 1, 0, 1, 300, 1, 11, 4, 'MainRobotPromo_Atlas', 'PEDIA_ATTRIBUTES', 'TXT_KEY_PROMOTION_HPMOD3', 0, 0,0,0);
 
 
-UPDATE UnitPromotions SET AdjacentEnemySapMovement = 1 WHERE Type = 'PROMOTION_HPMOD2';
+UPDATE UnitPromotions SET AdjacentEnemySapMovement = 60 WHERE Type = 'PROMOTION_HPMOD2';
 
 
 -- ±ù¶³µ¯

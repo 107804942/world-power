@@ -1,0 +1,429 @@
+<trigger_system type="FGrannyTimedTriggerSystem">
+  <event_tracks>
+    <event_track ec="1000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2000">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2040">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2020">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1500">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1520">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1540">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1560">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1580">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1600">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1620">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1450">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1640">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1420">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1400">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1120">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2440">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1140">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1160">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1180">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2100">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1130">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1800">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1280">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1285">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1290">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="1220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2200">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+    <event_track ec="2220">
+      <track id="1" name="Sound" />
+      <track id="2" name="Effect" />
+      <track id="3" name="Transfer" />
+      <track id="4" name="Action" />
+    </event_track>
+  </event_tracks>
+  <triggers>
+    <trigger type="FTimedTriggerSound" id="3" time="0" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SUB04S_ATTACK_HATCH_OPEN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="4" time="1.46897709" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SUB04S_ATTACK_HATCH_CLOSE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="20" time="0.4388889" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_ELECTRICITY" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="175" time="0.35499686" duration="0.11" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_Torpedo_L01" />
+    <trigger type="FTimedTriggerEffect" id="176" time="0.3683214" duration="0.05" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_Torpedo_L01" />
+    <trigger type="FTimedTriggerTransfer" id="5" time="0.440740734" duration="0" repeat="0" ec="1100" track="3" refid="175" speed="0" tangent.x="0" tangent.y="-1" tangent.z="0" />
+    <trigger type="FTimedTriggerEffect" id="7" time="0.436840147" duration="0.05" repeat="0" ec="1100" track="4" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_Torpedo_R01" />
+    <trigger type="FTimedTriggerTransfer" id="8" time="0.50555557" duration="0" repeat="0" ec="1100" track="3" refid="83" speed="0" tangent.x="0" tangent.y="-1" tangent.z="0" />
+    <trigger type="FTimedTriggerTransfer" id="27" time="0.440740734" duration="0" repeat="0" ec="1140" track="3" refid="84" speed="0" tangent.x="0" tangent.y="-1" tangent.z="0" />
+    <trigger type="FTimedTriggerTransfer" id="28" time="0.50555557" duration="0" repeat="0" ec="1140" track="3" refid="86" speed="0" tangent.x="0" tangent.y="-1" tangent.z="0" />
+    <trigger type="FTimedTriggerEffect" id="40" time="0" duration="3.333333" repeat="0" ec="1000" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="77" time="0" duration="0.6666667" repeat="0" ec="1020" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="78" time="0" duration="4" repeat="0" ec="1040" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="61" time="0" duration="2.166667" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="62" time="0" duration="2.16666675" repeat="0" ec="1130" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="67" time="0" duration="2.166667" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="68" time="0" duration="1.33333337" repeat="0" ec="1180" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="34" time="0" duration="1" repeat="0" ec="1290" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="105" time="0" duration="0.6666667" repeat="0" ec="1120" track="2" event="ART_DEF_VEFFECT_WAKE_TRAIL_SM_CENTERED" bone="FX_Cockpit" />
+    <trigger type="FTimedTriggerEffect" id="108" time="0" duration="0.6666667" repeat="0" ec="1120" track="4" event="ART_DEF_VEFFECT_SUB_TRAIL_SUB03P" bone="Bone_Prop_01" />
+    <trigger type="FTimedTriggerEffect" id="109" time="0" duration="0.6666667" repeat="0" ec="1120" track="3" event="ART_DEF_VEFFECT_SUB_TRAIL_SUB03P" bone="Bone_Prop_01" />
+    <trigger type="FTimedTriggerEffect" id="35" time="1.09999967" duration="0.095" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_L02" />
+    <trigger type="FTimedTriggerEffect" id="37" time="1.1252687" duration="0.05" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_L02" />
+    <trigger type="FTimedTriggerEffect" id="33" time="1.11839163" duration="0" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_L02" />
+    <trigger type="FTimedTriggerTransfer" id="55" time="1.15555561" duration="0" repeat="0" ec="1130" track="3" refid="35" speed="0" tangent.x="5.83508637E-08" tangent.y="0" tangent.z="1" />
+    <trigger type="FTimedTriggerEffect" id="56" time="1.15740716" duration="0.095" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_R01" />
+    <trigger type="FTimedTriggerEffect" id="57" time="1.17712009" duration="0.05" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_R01" />
+    <trigger type="FTimedTriggerEffect" id="58" time="1.17024291" duration="0" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_R01" />
+    <trigger type="FTimedTriggerTransfer" id="59" time="1.30740821" duration="0" repeat="0" ec="1130" track="3" refid="124" speed="0" tangent.x="4.909036E-08" tangent.y="0" tangent.z="1" />
+    <trigger type="FTimedTriggerEffect" id="80" time="1.04193521" duration="0.05" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="81" time="1.02037" duration="0.095" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_L01" />
+    <trigger type="FTimedTriggerTransfer" id="69" time="1.08148181" duration="0" repeat="0" ec="1130" track="3" refid="81" speed="0" tangent.x="4.87663669E-08" tangent.y="0" tangent.z="1" />
+    <trigger type="FTimedTriggerEffect" id="82" time="1.03690934" duration="0" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="83" time="0.4216637" duration="0.11" repeat="0" ec="1100" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_Torpedo_R01" />
+    <trigger type="FTimedTriggerEffect" id="84" time="0.35499686" duration="0.11" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_Torpedo_L01" />
+    <trigger type="FTimedTriggerEffect" id="86" time="0.4216637" duration="0.11" repeat="0" ec="1140" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_Torpedo_R01" />
+    <trigger type="FTimedTriggerEffect" id="87" time="0.3664696" duration="0.05" repeat="0" ec="1140" track="4" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_Torpedo_L01" />
+    <trigger type="FTimedTriggerEffect" id="88" time="0.436840147" duration="0.05" repeat="0" ec="1140" track="4" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_Torpedo_R01" />
+    <trigger type="FTimedTriggerEffect" id="94" time="0" duration="1.333333" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="60" time="0" duration="1.33333337" repeat="0" ec="1100" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="63" time="0" duration="1.333333" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="64" time="0" duration="1.33333337" repeat="0" ec="1140" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="65" time="0" duration="2.166667" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="66" time="0" duration="1.33333337" repeat="0" ec="1160" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="121" time="0.0277778879" duration="0.05" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_Muzzle_Torpedo_L01" />
+    <trigger type="FTimedTriggerEffect" id="122" time="0.152210563" duration="0.15" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_Muzzle_AntiAir_R01" />
+    <trigger type="FTimedTriggerEffect" id="123" time="0.288820535" duration="0.2" repeat="0" ec="1200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="126" time="0.0229294859" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_WATER_DEATH_MD_01" bone="FX_Exp_FrontLeft" />
+    <trigger type="FTimedTriggerEffect" id="125" time="0.394444436" duration="0" repeat="0" ec="1200" track="2" event="ART_DEF_VEFFECT_EXP_METAL_SHIP_DEATH_XSM_01" bone="FX_Exp_BackLeft" />
+    <trigger type="FTimedTriggerEffect" id="127" time="0.00185185182" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_UNDERWATER_EXPLOSION" bone="Bone_Root" />
+    <trigger type="FTimedTriggerEffect" id="128" time="0.08888856" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_EXP_METAL_SHIP_DEATH_XSM_01" bone="bone_Door_MissTurret_R01" />
+    <trigger type="FTimedTriggerEffect" id="129" time="0.189187616" duration="0.75" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_BOAT_SINKING_LONG_NF03S" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="130" time="0.509137452" duration="0" repeat="0" ec="1200" track="3" event="ART_DEF_VEFFECT_WATER_DEATH_MD_01" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerStopSound" id="23" time="0.05925926" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="96" time="0.124074072" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SQUEAK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="97" time="0.211111218" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_DEATH_GROAN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="98" time="0.4388889" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_DEATH_ELECTRICITY" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="102" time="0.562963" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SCREECH_SHORT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="107" time="0.6907412" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_DEATH_CREAK" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="76" time="0" duration="0.5" repeat="0" ec="1280" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="39" time="0" duration="3" repeat="0" ec="1285" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="106" time="0" duration="0.6666667" repeat="0" ec="1400" track="4" event="ART_DEF_VEFFECT_WAKE_TRAIL_SM_CENTERED" bone="FX_Cockpit" />
+    <trigger type="FTimedTriggerEffect" id="111" time="0" duration="0.6666667" repeat="0" ec="1400" track="2" event="ART_DEF_VEFFECT_SUB_TRAIL_SUB03P" bone="Bone_Prop_01" />
+    <trigger type="FTimedTriggerSound" id="6" time="0" duration="0.67" repeat="0" ec="1400" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="1" time="0" duration="0.67" repeat="0" ec="1400" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="110" time="0" duration="0.67" repeat="0" ec="1400" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="72" time="0" duration="0.4" repeat="0" ec="1420" track="4" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontLeft" />
+    <trigger type="FTimedTriggerEffect" id="112" time="0" duration="0.400000036" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="118" time="0" duration="0.4" repeat="0" ec="1420" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontRight" />
+    <trigger type="FTimedTriggerEffect" id="74" time="0" duration="0.400000036" repeat="0" ec="1420" track="3" event="ART_DEF_VEFFECT_SUB_PROP_TRAIL_MD" bone="Bone_Prop_01" />
+    <trigger type="FTimedTriggerEffect" id="71" time="0" duration="0.533333361" repeat="0" ec="1440" track="4" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontLeft" />
+    <trigger type="FTimedTriggerEffect" id="113" time="0.02777778" duration="0.400000036" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="70" time="0" duration="0.533333361" repeat="0" ec="1440" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontRight" />
+    <trigger type="FTimedTriggerSound" id="2" time="0" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="73" time="0" duration="0.533333361" repeat="0" ec="1440" track="3" event="ART_DEF_VEFFECT_SUB_PROP_TRAIL_MD" bone="Bone_Prop_01" />
+    <trigger type="FTimedTriggerEffect" id="36" time="0" duration="5.00000048" repeat="0" ec="1450" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="114" time="0.0277777761" duration="0.8055556" repeat="0" ec="1500" track="4" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="104" time="0" duration="0.8333334" repeat="0" ec="1500" track="4" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontRight" />
+    <trigger type="FTimedTriggerEffect" id="103" time="0" duration="0.8333334" repeat="0" ec="1500" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontLeft" />
+    <trigger type="FTimedTriggerEffect" id="38" time="0" duration="0.8333334" repeat="0" ec="1500" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="41" time="0" duration="3.00000024" repeat="0" ec="1520" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="42" time="0" duration="5.00000048" repeat="0" ec="1540" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="75" time="0" duration="0.533333361" repeat="0" ec="1560" track="4" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontRight" />
+    <trigger type="FTimedTriggerEffect" id="79" time="0" duration="0.533333361" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontLeft" />
+    <trigger type="FTimedTriggerEffect" id="115" time="0.0277777761" duration="0.6388889" repeat="0" ec="1560" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="43" time="0" duration="0.6666667" repeat="0" ec="1560" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="85" time="0" duration="0.533333361" repeat="0" ec="1580" track="4" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontRight" />
+    <trigger type="FTimedTriggerEffect" id="116" time="0.0277777761" duration="0.54" repeat="0" ec="1580" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="91" time="0" duration="0.533333361" repeat="0" ec="1580" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontLeft" />
+    <trigger type="FTimedTriggerEffect" id="44" time="0" duration="0.6666667" repeat="0" ec="1580" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="54" time="0" duration="0.6666667" repeat="0" ec="1600" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="53" time="0" duration="5.00000048" repeat="0" ec="1620" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="52" time="0" duration="0.6666667" repeat="0" ec="1640" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="50" time="0" duration="1.33333337" repeat="0" ec="1800" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="51" time="0" duration="1.33333337" repeat="0" ec="1800" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="49" time="0" duration="3.33333349" repeat="0" ec="2000" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="48" time="0" duration="0.6666667" repeat="0" ec="2020" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="47" time="0" duration="4" repeat="0" ec="2040" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="10" time="0.3664696" duration="0.05" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_Torpedo_L01" />
+    <trigger type="FTimedTriggerEffect" id="9" time="0.436840147" duration="0.05" repeat="0" ec="2100" track="4" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_Torpedo_R01" />
+    <trigger type="FTimedTriggerEffect" id="11" time="0.35499686" duration="0.11" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_Torpedo_L01" />
+    <trigger type="FTimedTriggerEffect" id="12" time="0.4216637" duration="0.11" repeat="0" ec="2100" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_Torpedo_R01" />
+    <trigger type="FTimedTriggerEffect" id="45" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="46" time="0" duration="1.33333337" repeat="0" ec="2100" track="3" event="ART_DEF_VEFFECT_IDLE_WATER_WAKE_LONG_SUB03P" bone="World" />
+    <trigger type="FTimedTriggerTransfer" id="13" time="0.440740734" duration="0" repeat="0" ec="2100" track="3" refid="11" speed="0" tangent.x="0" tangent.y="-1" tangent.z="0" />
+    <trigger type="FTimedTriggerTransfer" id="14" time="0.50555557" duration="0" repeat="0" ec="2100" track="3" refid="12" speed="0" tangent.x="0" tangent.y="-1" tangent.z="0" />
+    <trigger type="FTimedTriggerEffect" id="184" time="0.0592593662" duration="0.05" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_Exp_FrontRight" />
+    <trigger type="FTimedTriggerEffect" id="187" time="0.1818402" duration="0" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_Cockpit" />
+    <trigger type="FTimedTriggerEffect" id="183" time="0.283264965" duration="0.03" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_Exp_BackLeft" />
+    <trigger type="FTimedTriggerEffect" id="185" time="0.462483346" duration="0.03" repeat="0" ec="2200" track="4" event="ART_DEF_VEFFECT_SUPREMACY_DEATH_HIT_MD" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="188" time="0.268518448" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_EXP_METAL_SHIP_DEATH_XSM_01" bone="bone_Door_MissTurret_R01" />
+    <trigger type="FTimedTriggerEffect" id="189" time="0.4007073" duration="0" repeat="0" ec="2200" track="2" event="ART_DEF_VEFFECT_WATER_DEATH_MD_01" bone="FX_Cockpit" />
+    <trigger type="FTimedTriggerStopSound" id="24" time="0.05925926" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="16" time="0.124074072" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SQUEAK" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="17" time="0.211111218" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_GROAN" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="120" time="0.4388889" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_ELECTRICITY" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="21" time="0.562963" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SCREECH_SHORT" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="22" time="0.6907412" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_CREAK" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="197" time="0" duration="0" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_UNDERWATER_EXPLOSION" bone="Bone_Root" />
+    <trigger type="FTimedTriggerEffect" id="192" time="0.087036714" duration="0" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_EXP_METAL_SHIP_DEATH_XSM_01" bone="FX_Muzzle_AntiAir_L03" />
+    <trigger type="FTimedTriggerEffect" id="196" time="0.205854326" duration="0.75" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_BOAT_SINKING_LONG_NF03S" bone="World" />
+    <trigger type="FTimedTriggerEffect" id="195" time="0.338766754" duration="0" repeat="0" ec="2200" track="3" event="ART_DEF_VEFFECT_WATER_DEATH_MD_01" bone="FX_Muzzle_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="99" time="0" duration="0.533333361" repeat="0" ec="2440" track="4" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontRight" />
+    <trigger type="FTimedTriggerEffect" id="117" time="0.02777778" duration="0.50555557" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_BackRight" />
+    <trigger type="FTimedTriggerEffect" id="100" time="0.00185185182" duration="0.533333361" repeat="0" ec="2440" track="2" event="ART_DEF_VEFFECT_WATER_SURFACE_TURBULANCE_LG" bone="FX_Exp_FrontLeft" />
+    <trigger type="FTimedTriggerEffect" id="101" time="0" duration="0.533333361" repeat="0" ec="2440" track="3" event="ART_DEF_VEFFECT_SUB_PROP_TRAIL_MD" bone="Bone_Prop_01" />
+    <trigger type="FTimedTriggerEffect" id="124" time="1.25370336" duration="0.095" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="131" time="1.27897274" duration="0.05" repeat="0" ec="1130" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="132" time="1.27765036" duration="0" repeat="0" ec="1130" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_R02" />
+    <trigger type="FTimedTriggerTransfer" id="133" time="1.21041656" duration="0" repeat="0" ec="1130" track="3" refid="56" speed="0" tangent.x="4.836673E-08" tangent.y="-1.54773531E-07" tangent.z="1" />
+    <trigger type="FTimedTriggerSound" id="134" time="0" duration="0" repeat="0" ec="1440" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="135" time="0.32962963" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="136" time="0.442592561" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="137" time="0.3888889" duration="0" repeat="0" ec="1100" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="138" time="0.442592561" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="139" time="0.3888889" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="140" time="0.32962963" duration="0" repeat="0" ec="1140" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="147" time="0.442592561" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="148" time="0.3888889" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="149" time="0.32962963" duration="0" repeat="0" ec="2100" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="150" time="1.03518486" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="151" time="1.10740745" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="152" time="1.18518531" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="153" time="1.27777767" duration="0" repeat="0" ec="1130" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="15" time="0.0148148146" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="95" time="0.2574074" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="154" time="0.468518525" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="155" time="0.7722222" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="156" time="0.375925928" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="157" time="0.00555555569" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerStopSound" id="160" time="0.470370382" duration="0" repeat="0" ec="2200" track="1" event="" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="161" time="0.15925926" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="162" time="0.2888889" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="163" time="0.5222222" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="164" time="0.74444443" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_IMPACT_INCOMING" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="158" time="0.0759259239" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SPLASH_B" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="159" time="0.2888889" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SPLASH_A" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="165" time="0.5092593" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="166" time="0.8240741" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="167" time="1.1240741" duration="0" repeat="0" ec="1200" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="168" time="0.025925925" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SPLASH_B" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="169" time="0.355555564" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_DEATH_SPLASH_A" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="170" time="0.2574074" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="171" time="0.4037037" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="172" time="0.6296296" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="173" time="1.062963" duration="0" repeat="0" ec="2200" track="1" event="AS3D_UNIT_SUB04S_ATTACK_TORPEDO_LAUNCH_BUBBLES" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="174" time="0" duration="0.67" repeat="0" ec="1120" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="177" time="0" duration="0.67" repeat="0" ec="1120" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="178" time="0" duration="0.67" repeat="0" ec="1120" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="179" time="0" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="182" time="0" duration="0" repeat="0" ec="2440" track="1" event="AS3D_UNIT_SUBMARINE_UNDERWATER" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="186" time="0.0166666675" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_SUB04S_FORTIFY_ENGINE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="190" time="0.0462962948" duration="0" repeat="0" ec="1500" track="1" event="AS3D_UNIT_SUB04S_FORTIFY_SPLASH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="191" time="0.0462962948" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_SUB04S_FORTIFY_SPLASH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="193" time="0.0166666675" duration="0" repeat="0" ec="1560" track="1" event="AS3D_UNIT_SUB04S_FORTIFY_ENGINE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="194" time="0.0462962948" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_SUB04S_FORTIFY_SPLASH" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="198" time="0.0166666675" duration="0" repeat="0" ec="1580" track="1" event="AS3D_UNIT_SUB04S_FORTIFY_ENGINE" bone="" tier="0" />
+    <trigger type="FTimedTriggerEffect" id="19" time="0.905427754" duration="0" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="25" time="1.61283588" duration="0" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_L02" />
+    <trigger type="FTimedTriggerEffect" id="26" time="1.47394693" duration="0" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_R01" />
+    <trigger type="FTimedTriggerEffect" id="29" time="1.20913386" duration="0" repeat="0" ec="1160" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="30" time="0.8907403" duration="0.095" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="31" time="0.9104541" duration="0.05" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="89" time="1.62156343" duration="0.05" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_L02" />
+    <trigger type="FTimedTriggerEffect" id="90" time="1.45740545" duration="0.095" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_R01" />
+    <trigger type="FTimedTriggerEffect" id="92" time="1.48082411" duration="0.05" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_R01" />
+    <trigger type="FTimedTriggerEffect" id="93" time="1.200001" duration="0.095" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="141" time="1.21786308" duration="0.05" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_R02" />
+    <trigger type="FTimedTriggerSound" id="207" time="0.905555" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="208" time="1.47777724" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="209" time="1.20925891" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="210" time="1.61481357" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="211" time="1.52638376" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SUB04S_ATTACK_HATCH_CLOSE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="212" time="0" duration="0" repeat="0" ec="1160" track="1" event="AS3D_UNIT_SUB04S_ATTACK_HATCH_OPEN" bone="" tier="0" />
+    <trigger type="FTimedTriggerTransfer" id="213" time="0.9500008" duration="0" repeat="0" ec="1160" track="3" refid="30" speed="0" tangent.x="-7.683949E-08" tangent.y="-0.5400863" tangent.z="0.8416096" />
+    <trigger type="FTimedTriggerTransfer" id="214" time="1.52222145" duration="0" repeat="0" ec="1160" track="3" refid="90" speed="0" tangent.x="-7.1733794E-08" tangent.y="-0.531155765" tangent.z="0.8472742" />
+    <trigger type="FTimedTriggerTransfer" id="215" time="1.25856376" duration="0" repeat="0" ec="1160" track="3" refid="93" speed="0" tangent.x="-9.115629E-08" tangent.y="-0.535193264" tangent.z="0.8447296" />
+    <trigger type="FTimedTriggerTransfer" id="216" time="1.66111231" duration="0" repeat="0" ec="1160" track="3" refid="217" speed="0" tangent.x="-3.52367451E-08" tangent.y="-0.528572" tangent.z="0.8488884" />
+    <trigger type="FTimedTriggerEffect" id="217" time="1.60185039" duration="0.095" repeat="0" ec="1160" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_L02" />
+    <trigger type="FTimedTriggerEffect" id="218" time="0.905427754" duration="0" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="219" time="1.20913386" duration="0" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="220" time="1.47394693" duration="0" repeat="0" ec="1180" track="4" event="ART_DEF_VEFFECT_SUB03S_LAUNCH_RINGOUT_WATER" bone="FX_Muzzle_AntiAir_L02" />
+    <trigger type="FTimedTriggerEffect" id="221" time="0.892592132" duration="0.095" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="222" time="0.9104541" duration="0.05" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_L01" />
+    <trigger type="FTimedTriggerEffect" id="223" time="1.200001" duration="0.095" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="224" time="1.21786308" duration="0.05" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_R02" />
+    <trigger type="FTimedTriggerEffect" id="225" time="1.45740545" duration="0.095" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE" bone="FX_Projectile_AntiAir_L02" />
+    <trigger type="FTimedTriggerEffect" id="226" time="1.48082411" duration="0.05" repeat="0" ec="1180" track="2" event="ART_DEF_VEFFECT_PROJ_SUB04S_MUZZ" bone="FX_Muzzle_AntiAir_L02" />
+    <trigger type="FTimedTriggerSound" id="227" time="1.52268088" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SUB04S_ATTACK_HATCH_CLOSE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="228" time="1.47777724" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="229" time="1.20925891" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="230" time="0.905555" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SUB04S_MISSILE_FIRE" bone="" tier="0" />
+    <trigger type="FTimedTriggerSound" id="231" time="0" duration="0" repeat="0" ec="1180" track="1" event="AS3D_UNIT_SUB04S_ATTACK_HATCH_OPEN" bone="" tier="0" />
+    <trigger type="FTimedTriggerTransfer" id="232" time="0.9500008" duration="0" repeat="0" ec="1180" track="3" refid="221" speed="0" tangent.x="-7.683878E-08" tangent.y="-0.540086269" tangent.z="0.8416097" />
+    <trigger type="FTimedTriggerTransfer" id="233" time="1.27152646" duration="0" repeat="0" ec="1180" track="3" refid="223" speed="0" tangent.x="-8.936051E-08" tangent.y="-0.535193145" tangent.z="0.8447297" />
+    <trigger type="FTimedTriggerTransfer" id="234" time="1.52222145" duration="0" repeat="0" ec="1180" track="3" refid="225" speed="0" tangent.x="-2.12643329E-07" tangent.y="-0.5299599" tangent.z="0.84802264" />
+    <trigger type="FTimedTriggerSound" id="32" time="1.687037" duration="0" repeat="0" ec="1160" track="1" event="AS3D_IMPACT_EXPLOSION6_POUND_CITY" bone="" tier="0" />
+  </triggers>
+</trigger_system>
+
+

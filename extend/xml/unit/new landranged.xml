@@ -390,7 +390,7 @@
 		</Update>
 
 		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_SA19" />
+			<Set  UnitArtInfo="ART_DEF_UNIT_HQ22" />
 			<Where Class="UNITCLASS_SAM_INFANTRY" />
 		</Update>
 

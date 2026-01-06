@@ -753,23 +753,7 @@
 
 
 
-		<Row>
-			<ProjectType>PROJECT_SPACE_CARRIER</ProjectType>
-			<FlavorType>FLAVOR_NAVAL</FlavorType>
-			<Flavor>950</Flavor>
-		</Row>
 	
-		<Row>
-			<ProjectType>PROJECT_SPACE_CARRIER</ProjectType>
-			<FlavorType>FLAVOR_NAVAL_RECON</FlavorType>
-			<Flavor>950</Flavor>
-		</Row>
-		<Row>
-			<ProjectType>PROJECT_SPACE_CARRIER</ProjectType>
-			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
-			<Flavor>950</Flavor>
-		</Row>
-
 
 		
 		<!--<Row>

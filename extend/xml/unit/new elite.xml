@@ -526,7 +526,7 @@
 			<CombatLimit>0</CombatLimit>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_SUKHOI_PAK_FA_T50KOREA</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_PAKFA_T50</UnitArtInfo>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
 			<UnitFlagIconOffset>29</UnitFlagIconOffset>
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>

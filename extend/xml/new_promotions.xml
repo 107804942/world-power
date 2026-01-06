@@ -4,7 +4,7 @@
 
 	<UnitPromotions>
 
-		<Delete Type="PROMOTION_INSTA_HEAL"/>
+
 		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
 
 		<!--<Update>
@@ -65,20 +65,7 @@
 			<Where Type="PROMOTION_AIR_SIEGE_3" />
 		</Update>
 		
-		<Row>
-			<ID>0</ID>
-			<Type>PROMOTION_INSTA_HEAL</Type>
-			<Description>TXT_KEY_PROMOTION_HEAL_INSTANTLY</Description>
-			<Help>TXT_KEY_PROMOTION_HEAL_INSTANTLY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>99</OrderPriority>
-			<InstaHeal>true</InstaHeal>
-			<PortraitIndex>26</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_HEAL</PediaType>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<PediaEntry>TXT_KEY_PROMOTION_HEAL_INSTANTLY</PediaEntry>
-		</Row>
+
 
 		<Row>
 			<Type>PROMOTION_NUCLEAR_ARTILLERY</Type>
@@ -99,66 +86,7 @@
 
 	<UnitPromotions_UnitCombats>
 
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_FIGHTER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_INSTA_HEAL</PromotionType>
-			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-		</Row>
-
-
-
-
+		
 		<!--xcom-->
 
 		<Row>
@@ -2762,7 +2690,7 @@
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
 			<SplashDamageFixed>1</SplashDamageFixed>
 			<CannotBeCaptured>true</CannotBeCaptured>
-			<AdjacentEnemySapMovement>1</AdjacentEnemySapMovement>
+			<AdjacentEnemySapMovement>60</AdjacentEnemySapMovement>
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>50</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>

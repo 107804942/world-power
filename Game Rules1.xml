@@ -2,6 +2,410 @@
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
 
+	<Update>
+		<Set UnitArtInfo="ART_DEF_UNIT_TYPE_212_SUBMARINE888" />
+		<Where Type="UNIT_NUCLEAR_SUBMARINE" />
+	</Update>
+
+
+	<!--TYPE_212-->
+
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_TYPE_212_SUBMARINE888</Type>
+			<DamageStates>3</DamageStates>
+			<Formation />
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_TYPE_212_SUBMARINE888</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_TYPE_212_SUBMARINE888</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_TYPE_212_SUBMARINE888</Type>
+			<Scale>0.11</Scale>
+			<Domain>Sea</Domain>
+			<Model>212A.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_TYPE_212_SUBMARINE888</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLongRangedAttack>1</HasLongRangedAttack>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_TYPE_212_SUBMARINE888</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+
+
+
+
+	<!--losangeles-->
+
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_LOS_ANGELES_KLASSE</Type>
+			<DamageStates>3</DamageStates>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_LOS_ANGELES_KLASSE</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_LOS_ANGELES_KLASSE</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_LOS_ANGELES_KLASSE</Type>
+			<Scale>0.100000001490116</Scale>
+			<Domain>Sea</Domain>
+			<Model>losangeles.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_LOS_ANGELES_KLASSE</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLongRangedAttack>1</HasLongRangedAttack>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_LOS_ANGELES_KLASSE</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+
+
+
+
+	<!--散兵-->
+
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_EE_EXPLORER</Type>
+			<DamageStates>1</DamageStates>
+			<Formation>Scout</Formation>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_EE_EXPLORER</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_1</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_EE_EXPLORER</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_2</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_EE_EXPLORER</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_3</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_EE_EXPLORER</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_4</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_EE_EXPLORER_1</Type>
+			<Scale>0.14</Scale>
+			<Model>conquistador_musket_1.fxsxml</Model>
+			<MaterialTypeTag>CLOTH</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_EE_EXPLORER_2</Type>
+			<Scale>0.14</Scale>
+			<Model>conquistador_musket_2.fxsxml</Model>
+			<MaterialTypeTag>CLOTH</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
+		</Row>
+
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_EE_EXPLORER_3</Type>
+			<Scale>0.14</Scale>
+			<Model>conquistador_musket_3.fxsxml</Model>
+			<MaterialTypeTag>CLOTH</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_EE_EXPLORER_4</Type>
+			<Scale>0.14</Scale>
+			<Model>conquistador_musket_4.fxsxml</Model>
+			<MaterialTypeTag>CLOTH</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_1</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasStationaryMelee>1</HasStationaryMelee>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+			<ReformBeforeCombat>1</ReformBeforeCombat>
+			<HasOpponentTracking>1</HasOpponentTracking>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_2</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasStationaryMelee>1</HasStationaryMelee>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+			<ReformBeforeCombat>1</ReformBeforeCombat>
+			<HasOpponentTracking>1</HasOpponentTracking>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_3</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasStationaryMelee>1</HasStationaryMelee>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+			<ReformBeforeCombat>1</ReformBeforeCombat>
+			<HasOpponentTracking>1</HasOpponentTracking>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_4</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasStationaryMelee>1</HasStationaryMelee>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+			<ReformBeforeCombat>1</ReformBeforeCombat>
+			<HasOpponentTracking>1</HasOpponentTracking>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_1</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>BULLET</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLET</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_2</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>BULLET</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLET</WeaponTypeSoundOverrideTag>
+		</Row>
+
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_3</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>BULLET</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLET</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_EE_EXPLORER_4</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>BULLET</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLET</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--PAK_FA-->
+
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_SUKHOI_PAK_FA_T50KOREA</Type>
+			<DamageStates>1</DamageStates>
+			<Formation>BomberWing</Formation>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_SUKHOI_PAK_FA_T50KOREA</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_SUKHOI_PAK_FA_T50KOREA</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_SUKHOI_PAK_FA_T50KOREA</Type>
+			<Scale>.1</Scale>
+			<Domain>Air</Domain>
+			<Model>JETS3/ART/SuT-50cammo2f.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_SUKHOI_PAK_FA_T50KOREA</UnitMemberType>
+			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
+			<AttackRadius>135.0</AttackRadius>
+			<MoveRate>2.2</MoveRate>
+			<TurnRateMin>0.25</TurnRateMin>
+			<TurnRateMax>0.5</TurnRateMax>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_SUKHOI_PAK_FA_T50KOREA</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<ProjectileSpeed>3.0</ProjectileSpeed>
+			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
+			<HitRadius>15.0</HitRadius>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_SUKHOI_PAK_FA_T50KOREA</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>1.0</VisKillStrengthMin>
+			<VisKillStrengthMax>1.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
+			<HitRadius>15.0</HitRadius>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_SUKHOI_PAK_FA_T50KOREA</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>1</SubIndex>
+			<ID>PROJECTILE</ID>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<ProjectileSpeed>3.0</ProjectileSpeed>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+
+
+
+	<Update>
+		<Set UnitArtInfo="ART_DEF_UNIT_JAPAN_BATTLESHIP"/>
+		<Where Type="UNIT_JAPANESE_BATTLESHIP" />
+	</Update>
+	
+	
+
+	<!--超级弩-->
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_JAPAN_BATTLESHIP</Type>
+			<DamageStates>3</DamageStates>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_JAPAN_BATTLESHIP</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_JAPAN_BATTLESHIP</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_JAPAN_BATTLESHIP</Type>
+			<Scale>0.11</Scale>
+			<Domain>Sea</Domain>
+			<Model>Fusang_Class.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_JAPAN_BATTLESHIP</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasLeftRightAttack>1</HasLeftRightAttack>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_JAPAN_BATTLESHIP</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_JAPAN_BATTLESHIP</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>25.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+
+
+	
+	
+	
 	<!--QUEEN_ELIZABETH-->
 
 	<ArtDefine_UnitInfos>

@@ -198,8 +198,8 @@
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<!--<UnitArtInfo>ART_DEF_UNIT_NAVALCARRIER03S</UnitArtInfo>-->
 			<UnitArtInfo>ART_DEF_UNIT_FUTURE_SUPER_CARRIER</UnitArtInfo>
-			<UnitFlagIconOffset>3</UnitFlagIconOffset>
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
+			<UnitFlagIconOffset>18</UnitFlagIconOffset>
+			<UnitFlagAtlas>TTMOD_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<PortraitIndex>166</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
@@ -756,11 +756,7 @@
 	<Units>
 
 
-		
-		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_JAPAN_BATTLESHIP"/>
-			<Where Type="UNIT_JAPANESE_BATTLESHIP" />
-		</Update>
+
 		
 		<Update>
 			<Set UnitArtInfo="ART_DEF_UNIT_DESTROYER_CLASS"/>
@@ -774,12 +770,7 @@
 
 
 
-		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_TYPE_212_SUBMARINE888" />
-			<Where Type="UNIT_NUCLEAR_SUBMARINE" />
-		</Update>
-
-
+	
 
 
 
