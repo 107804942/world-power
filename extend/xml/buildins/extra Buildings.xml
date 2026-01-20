@@ -1203,9 +1203,9 @@
 				<Defense>2500</Defense>
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
 				<HurryCostModifier>50</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>35</PortraitIndex>
+				<PortraitIndex>253</PortraitIndex>
 			</Row>
 
 			<Row>

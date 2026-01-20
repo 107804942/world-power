@@ -971,8 +971,8 @@
 
 
 		<Row>
-			<Class>UNITCLASS_NAVALCARRIER03S</Class>
-			<Type>UNIT_NAVALCARRIER03S</Type>
+			<Class>UNITCLASS_NAVALFIGHTER04P</Class>
+			<Type>UNIT_NAVALFIGHTER04P</Type>
 			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<Combat>1700</Combat>
 			<RangedCombat>1700</RangedCombat>
@@ -984,10 +984,10 @@
 			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NAVALCARRIER03S</Description>
-			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_NAVALCARRIER03S_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NAVALCARRIER03S_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_NAVALCARRIER03S</Help>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER04P</Description>
+			<Civilopedia>TXT_KEY_CIV5_ANTIQUITY_NAVALFIGHTER04P_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_NAVALFIGHTER04P_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_NAVALFIGHTER04P</Help>
 			<MilitarySupport>true</MilitarySupport>
 			<MilitaryProduction>true</MilitaryProduction>
 			<Pillage>true</Pillage>
@@ -999,11 +999,11 @@
 			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04P</UnitArtInfo>
 			<UnitFlagIconOffset>28</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>154</PortraitIndex>
+			<PortraitIndex>254</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
 			<MaxHitPoints>600</MaxHitPoints>
-			<ProjectPrereq>PROJECT_NAVALCARRIER03S</ProjectPrereq>
+			<ProjectPrereq>PROJECT_NAVALFIGHTER04P</ProjectPrereq>
 			<ExtraMaintenanceCost>1800</ExtraMaintenanceCost>
 		</Row>
 
@@ -1589,29 +1589,29 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_WEAPON_SHIP</PromotionType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_FW_EXPLOSION</PromotionType>
 		</Row>
 
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_ANTI_DEBUFF</PromotionType>
 		</Row>
 
@@ -1619,28 +1619,28 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
 		</Row>
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
 		</Row>
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_MARCH</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_CAN_MOVE_AFTER_ATTACKING</PromotionType>
 		</Row>
 
@@ -1649,7 +1649,7 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
 		</Row>
 		<Row>
@@ -1853,32 +1853,32 @@
 			<Cost>5</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>50</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>20</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Cost>10</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>15</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>20</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<Cost>35</Cost>
 		</Row>
@@ -2189,15 +2189,15 @@
 			<UnitAIType>UNITAI_COUNTER</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
 		</Row>
 
@@ -2486,33 +2486,33 @@
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_DEFENSE</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
 			<FlavorType>FLAVOR_ANTIAIR</FlavorType>
 			<Flavor>999</Flavor>
 		</Row>
@@ -2990,21 +2990,16 @@
 		</Update>
 
 
-		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_RANGEDMARINE02"/>
-			<Where Type="UNIT_HACKER" />
-		</Update>
+	
 
 
 		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_ENTERPRISE2" IconAtlas="ROBOT_ICON_ATLAS" PortraitIndex="116" />
-			<Where Type="UNIT_ENTERPRISE" />
+			<Set UnitArtInfo="ART_DEF_UNIT_ENTERPRISE2" />
+			<Where Class="UNITCLASS_ENTERPRISE" />
 		</Update>
 
-		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_ENTERPRISE2" IconAtlas="ROBOT_ICON_ATLAS" PortraitIndex="116" />
-			<Where Type="UNIT_HORNET" />
-		</Update>
+	
+		
 
 		<Update>
 			<Set UnitArtInfo="ART_DEF_UNIT_NUKECANNON"/>

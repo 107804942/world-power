@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>70</ModVersion>
+    <ModVersion>71</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Description>
@@ -630,7 +630,8 @@
     <Folder Include="extend\art\units\GX3" />
     <Folder Include="extend\art\units\CSS-5" />
     <Folder Include="extend\art\units\FutureSuperCarrier" />
-    <Folder Include="extend\art\units\Hq22" />
+    <Folder Include="extend\art\units\Nimitz" />
+    <Folder Include="extend\art\units\Sa11" />
     <Folder Include="extend\art\units\XM2001" />
     <Folder Include="extend\art\units\UnderWaterCarrier" />
     <Folder Include="extend\art\units\RAH66" />
@@ -662,7 +663,6 @@
     <Folder Include="extend\art\units\F52" />
     <Folder Include="extend\art\units\fieldgun" />
     <Folder Include="extend\art\units\Flak88" />
-    <Folder Include="extend\art\units\ford carrier" />
     <Folder Include="extend\art\units\Gangut_Class" />
     <Folder Include="extend\art\units\geliopod" />
     <Folder Include="extend\art\units\golem" />
@@ -7256,7 +7256,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\AAS2\0301.dds">
+    <Content Include="extend\art\units\AAS2\AAS2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -7265,30 +7265,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\AAS2\AAS2.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\AAS2\boatextra.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\AAS2\boatjiaban.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\AAS2\boatred.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\AAS2\boatwhite.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\AAS2\boatyellow.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\AAS2\mianboat.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -9212,86 +9188,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0091_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0092_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0117_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0246_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0249_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0252_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0255_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0258_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0261_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0264_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0275_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0278_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0281_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0284_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0287_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0290_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0298_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\Tex_0317_1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\USS_Ford.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\ford carrier\USS_Ford.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\art\units\FutureSuperCarrier\FutureSuperCarrier.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -10021,22 +9917,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\Hovertank\hovertank_sref.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Hq22\HQ22.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Hq22\HQ22_wheel.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Hq22\HQ22.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Hq22\HQ22.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -13024,22 +12904,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\new land\SV_FW_Automaton.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\new land\SV_FW_Robot_Infantry.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\new land\SV_FW_Vertol.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\new land\SV_T800.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\art\units\new land\VV_metalgear.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -13060,6 +12924,22 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\units\Nimitz\NimitzCarrier.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Nimitz\NimitzCarrier2.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Nimitz\NimitzCarrier.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Nimitz\NimitzCarrier.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\units\nuclearmissile.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -13069,10 +12949,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\nukecannon\2s74.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\nukecannon\2s78.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -14757,6 +14633,26 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\RStealthBomber\RStealthBomberSERF.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Sa11\hull_SA11.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Sa11\kub_BaseColor.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Sa11\SA11.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Sa11\SA11.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\Sa11\Track_SA11_BaseColor.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

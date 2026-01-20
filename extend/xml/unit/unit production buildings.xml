@@ -350,11 +350,11 @@
 
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<BuildingClassType>BUILDINGCLASS_BIOMOD_TANK</BuildingClassType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER03S</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<BuildingClassType>BUILDINGCLASS_WAR_MACHINE_FACTORY</BuildingClassType>
 		</Row>
 		

@@ -153,12 +153,12 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER03S</UnitClassType>
+			<UnitClassType>UNITCLASS_NAVALFIGHTER04P</UnitClassType>
 			<UnitType/>
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER03S</UnitClassType>
+			<UnitClassType>UNITCLASS_NAVALFIGHTER04P</UnitClassType>
 			<UnitType/>
 		</Row>
 
@@ -624,9 +624,9 @@
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
 		<Row>
-			<Type>UNITCLASS_NAVALCARRIER03S</Type>
-			<Description>TXT_KEY_UNIT_NAVALCARRIER03S</Description>
-			<DefaultUnit>UNIT_NAVALCARRIER03S</DefaultUnit>
+			<Type>UNITCLASS_NAVALFIGHTER04P</Type>
+			<Description>TXT_KEY_UNIT_NAVALFIGHTER04P</Description>
+			<DefaultUnit>UNIT_NAVALFIGHTER04P</DefaultUnit>
 			<MaxPlayerInstances>1</MaxPlayerInstances>
 		</Row>
 
@@ -650,9 +650,9 @@
 
 
 		<Row>
-			<Type>UNITCLASS_NAVALFIGHTER04P</Type>
-			<Description>TXT_KEY_UNIT_NAVALFIGHTER04P</Description>
-			<DefaultUnit>UNIT_NAVALFIGHTER04P</DefaultUnit>
+			<Type>UNITCLASS_SUB04S</Type>
+			<Description>TXT_KEY_UNIT_SUB04S</Description>
+			<DefaultUnit>UNIT_SUB04S</DefaultUnit>
 		</Row>
 		<Row>
 			<Type>UNITCLASS_NAVALFIGHTER03P</Type>

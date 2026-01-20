@@ -208,8 +208,8 @@
 
 		<!--****************潜艇****************-->
 		<Row>
-			<Class>UNITCLASS_NAVALFIGHTER04P</Class>
-			<Type>UNIT_NAVALFIGHTER04P</Type>
+			<Class>UNITCLASS_SUB04S</Class>
+			<Type>UNIT_SUB04S</Type>
 			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<BaseSightRange>6</BaseSightRange>
 			<Combat>580</Combat>
@@ -221,8 +221,8 @@
 			<CombatClass>UNITCOMBAT_SUBMARINE</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NAVALFIGHTER04P</Description>
-			<Civilopedia>TXT_KEY_UNIT_NAVALFIGHTER04P_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_SUB04S</Description>
+			<Civilopedia>TXT_KEY_UNIT_SUB04S_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_NAVAL_HIT_AND_RUN_SHIPS_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SSBN_HELP</Help>
 			<ProjectPrereq>PROJECT_MANHATTAN_PROJECT</ProjectPrereq>
@@ -319,15 +319,15 @@
 		
 
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<PromotionType>PROMOTION_SUBMARINE_COMBAT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
 		</Row>
 	
@@ -466,33 +466,33 @@
 		
 
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>3</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>5</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>12</Cost>
 		</Row>
@@ -600,7 +600,7 @@
 		</Row>
 		
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
 		</Row>
 
@@ -654,7 +654,7 @@
 		
 		
 		<Row>
-			<UnitType>UNIT_NAVALFIGHTER04P</UnitType>
+			<UnitType>UNIT_SUB04S</UnitType>
 			<FlavorType>FLAVOR_NUKE</FlavorType>
 			<Flavor>12</Flavor>
 		</Row>
@@ -804,7 +804,7 @@
 			<Where Type="UNIT_NUCLEAR_CARRIER" />
 		</Update>
 		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_AMERICAN_FORD"  PrereqTech="TECH_MILITARY_OCEANOGRAPHY"/>
+			<Set  UnitArtInfo="ART_DEF_UNIT_NIMITZ"  PrereqTech="TECH_MILITARY_OCEANOGRAPHY"/>
 			<Where Type="UNIT_AMERICAN_NIMITZ" />
 		</Update>
 	

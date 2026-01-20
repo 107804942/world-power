@@ -3,34 +3,35 @@
 <GameData>
 
 
-	<!--HQ22防空导弹-->
+
+	<!--SA11防空导弹-->
 
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_HQ22</Type>
+			<Type>ART_DEF_UNIT_SA11</Type>
 			<DamageStates>1</DamageStates>
 			<Formation>TwoBigGuns</Formation>
 		</Row>
 	</ArtDefine_UnitInfos>
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_HQ22</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_HQ22</UnitMemberInfoType>
+			<UnitInfoType>ART_DEF_UNIT_SA11</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_SA11</UnitMemberInfoType>
 			<NumMembers>2</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_HQ22</Type>
+			<Type>ART_DEF_UNIT_MEMBER_SA11</Type>
 			<Scale>0.11</Scale>
-			<Model>HQ22.fxsxml</Model>
+			<Model>SA11.fxsxml</Model>
 			<MaterialTypeTag>METAL</MaterialTypeTag>
 			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberInfos>
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_HQ22</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_SA11</UnitMemberType>
 			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
 			<HasShortRangedAttack>1</HasShortRangedAttack>
 			<HasLongRangedAttack>1</HasLongRangedAttack>
@@ -41,7 +42,7 @@
 	</ArtDefine_UnitMemberCombats>
 	<ArtDefine_UnitMemberCombatWeapons>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_HQ22</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_SA11</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>0</SubIndex>
 			<VisKillStrengthMin>25.0</VisKillStrengthMin>
@@ -51,7 +52,7 @@
 			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
 		</Row>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_HQ22</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_SA11</UnitMemberType>
 			<Index>1</Index>
 			<SubIndex>0</SubIndex>
 			<ProjectileSpeed>4.0</ProjectileSpeed>
@@ -59,8 +60,6 @@
 			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
 		</Row>
 	</ArtDefine_UnitMemberCombatWeapons>
-	
-	
 	
 	<!--FUTURE_SUPER_CARRIER-->
 
@@ -2503,8 +2502,9 @@
 
 	
 
-	<!--RANGEDMARINE02-->
-	<ArtDefine_UnitInfos>
+	<!--RANGEDMARINE02  -->
+
+	<!-- <ArtDefine_UnitInfos>
 		<Row>
 			<Type>ART_DEF_UNIT_RANGEDMARINE02</Type>
 			<DamageStates>1</DamageStates>
@@ -2549,7 +2549,7 @@
 			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
 			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
 		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
+	</ArtDefine_UnitMemberCombatWeapons>-->
 
 
 
@@ -4792,65 +4792,7 @@
 
 
 
-	<!--spaceship3-->
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_SPACESHIP3</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>Vehicle</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_SPACESHIP3</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_SPACESHIP3</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_SPACESHIP3</Type>
-			<Scale>0.14</Scale>
-			<ZOffset>72</ZOffset>
-			<Domain>Hover</Domain>
-			<Model>GX4_Grey Variant.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_SPACESHIP3</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasLongRangedAttack>1</HasLongRangedAttack>
-			<HasStationaryMelee>1</HasStationaryMelee>
-			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
-			<ReformBeforeCombat>1</ReformBeforeCombat>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_SPACESHIP3</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_TANK_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION20POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_SPACESHIP3</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<ProjectileSpeed>8.0</ProjectileSpeed>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-
-
+	
 
 
 
@@ -5557,10 +5499,10 @@
 
 
 
-	<!--Ford-->
+	<!--NIMITZ-->
 	<ArtDefine_UnitInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_AMERICAN_FORD</Type>
+			<Type>ART_DEF_UNIT_NIMITZ</Type>
 			<DamageStates>3</DamageStates>
 			<Formation></Formation>
 		</Row>
@@ -5568,18 +5510,18 @@
 
 	<ArtDefine_UnitInfoMemberInfos>
 		<Row>
-			<UnitInfoType>ART_DEF_UNIT_AMERICAN_FORD</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_AMERICAN_FORD</UnitMemberInfoType>
+			<UnitInfoType>ART_DEF_UNIT_NIMITZ</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_NIMITZ</UnitMemberInfoType>
 			<NumMembers>1</NumMembers>
 		</Row>
 	</ArtDefine_UnitInfoMemberInfos>
 
 	<ArtDefine_UnitMemberInfos>
 		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_AMERICAN_FORD</Type>
-			<Scale>0.09</Scale>
+			<Type>ART_DEF_UNIT_MEMBER_NIMITZ</Type>
+			<Scale>0.1</Scale>
 			<Domain>Sea</Domain>
-			<Model>USS_Ford.fxsxml</Model>
+			<Model>NimitzCarrier.fxsxml</Model>
 			<MaterialTypeTag>METAL</MaterialTypeTag>
 			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
 		</Row>
@@ -5587,7 +5529,7 @@
 
 	<ArtDefine_UnitMemberCombats>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_AMERICAN_FORD</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_NIMITZ</UnitMemberType>
 			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
 			<DisableActions></DisableActions>
 			<HasShortRangedAttack>1</HasShortRangedAttack>
@@ -5599,7 +5541,7 @@
 
 	<ArtDefine_UnitMemberCombatWeapons>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_AMERICAN_FORD</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_NIMITZ</UnitMemberType>
 			<Index>0</Index>
 			<SubIndex>0</SubIndex>
 			<ID>ART_DEF_VEFFECT_MECH_ROCKET_PROJECTILE</ID>
@@ -5610,7 +5552,7 @@
 			<WeaponTypeSoundOverrideTag>EXPLOSION1TON</WeaponTypeSoundOverrideTag>
 		</Row>
 		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_AMERICAN_FORD</UnitMemberType>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_NIMITZ</UnitMemberType>
 			<Index>1</Index>
 			<SubIndex>0</SubIndex>
 			<ID>ART_DEF_VEFFECT_TRAIL_RAILGUN_PROJ</ID>

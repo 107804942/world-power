@@ -2031,31 +2031,31 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER03S">
+		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER04P">
 			<Text>[COLOR_YELLOW]泰坦战舰[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_HELP_NAVALCARRIER03S">
+		<Row Tag="TXT_KEY_UNIT_HELP_NAVALFIGHTER04P">
 			<Text>同时代战斗力最高的海军单位。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_CIV5_ANTIQUITY_NAVALCARRIER03S_TEXT">
+		<Row Tag="TXT_KEY_CIV5_ANTIQUITY_NAVALFIGHTER04P_TEXT">
 			<Text>
 				泰坦战舰开始建造直到完工花了相当长的时间。这是由于在资源和建造设施两方面所包含的高建设成本以及超高的技术难度。因此，在确保实验成功的可靠性之前，不可能开始大力建造这些大型多用途船只。最初的设计时与21世纪旧地球的航空母舰体积相当。这些战舰包括各种轻武器，重武器和飞机搭载平台。随着殖民地的飞机开始进化，他们的超级战舰也开始进化。多次实验设计导致技术的不断发展。技术的发展又提供了许多独特的配置，从浮桥平台到核聚变动力发动机驱动的大型超合金战舰。无论是防御外部入侵还是攻击其他地盘，无论是其搭载的先进战机，还是其自带的粒子炮，激光束或者导弹以及双联装超级巨炮都能给城市和单位带来毁灭性打击。这些长约2000米，宽约800米的巨型战舰是噩梦般可怕的战争单位。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER03S_STRATEGY">
+		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER04P_STRATEGY">
 			<Text>
 				建造一艘泰坦战舰需要大量的资源和很长的时间。随着太空殖民地开始扩张他们的领土，对强大武装力量的需求就变得更加强烈，所有的军事指挥官都知道舰载战斗机能提供的火力是有限的。于是，第一批新式重火力战舰就在这样的背景下建成了。这些舰船和它们在旧地球上的表亲战列舰有些相似——船体预计长度为1000米。随着殖民地技术的发展，新的、不同型号的大型军舰被研发出来，包括浮船平台，双船体模型等都被用于实践。事实证明，这些新型战舰能够非常有效地将武装力量投射到远离殖民地边缘的地方，既能对付外来目标，也能执行侵略任务。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROJECT_NAVALCARRIER03S">
+		<Row Tag="TXT_KEY_PROJECT_NAVALFIGHTER04P">
 			<Text>泰坦战舰项目</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROJECT_NAVALCARRIER03S_HELP">
+		<Row Tag="TXT_KEY_PROJECT_NAVALFIGHTER04P_HELP">
 			<Text>
 				只有[COLOR_POSITIVE_TEXT]首个[ENDCOLOR]完成此項目的文明可以建造战舰：[COLOR_YIELD_GOLD]泰坦战舰[ENDCOLOR]。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROJECT_NAVALCARRIER03S_PEDIA">
+		<Row Tag="TXT_KEY_PROJECT_NAVALFIGHTER04P_PEDIA">
 			<Text>泰坦战舰配备了最尖端科技武器装备，其搭载的能量护盾系统、能量武器、激光发射器、电磁炮、多用途导弹系统使得这个体长2000米的舰船充满杀伤力。是游戏中最强大的海军单位。</Text>
 		</Row>
 
@@ -2261,10 +2261,10 @@
 				担负一定海区作战任务并为辖区内海军兵力驻扎训练和战斗活动提供基本保障。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER04P">
+		<Row Tag="TXT_KEY_UNIT_SUB04S">
 			<Text>利维坦</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER04P_PEDIA">
+		<Row Tag="TXT_KEY_UNIT_SUB04S_PEDIA">
 			<Text>海军游猎单位，此单位隐匿行动表现非常出色，擅长于突袭和埋伏。</Text>
 		</Row>
 

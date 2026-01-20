@@ -342,10 +342,10 @@
 		</Row>
 
 		<Row>
-			<Type>PROJECT_NAVALCARRIER03S</Type>
-			<Description>TXT_KEY_PROJECT_NAVALCARRIER03S</Description>
-			<Help>TXT_KEY_PROJECT_NAVALCARRIER03S_HELP</Help>
-			<Civilopedia>TXT_KEY_PROJECT_NAVALCARRIER03S_PEDIA</Civilopedia>
+			<Type>PROJECT_NAVALFIGHTER04P</Type>
+			<Description>TXT_KEY_PROJECT_NAVALFIGHTER04P</Description>
+			<Help>TXT_KEY_PROJECT_NAVALFIGHTER04P_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_NAVALFIGHTER04P_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CYBERNETICS</TechPrereq>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 			<MaxTeamInstances>1</MaxTeamInstances>
@@ -708,17 +708,17 @@
 			<Flavor>999</Flavor>
 		</Row>
 		<Row>
-			<ProjectType>PROJECT_NAVALCARRIER03S</ProjectType>
+			<ProjectType>PROJECT_NAVALFIGHTER04P</ProjectType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
 			<Flavor>950</Flavor>
 		</Row>
 		<Row>
-			<ProjectType>PROJECT_NAVALCARRIER03S</ProjectType>
+			<ProjectType>PROJECT_NAVALFIGHTER04P</ProjectType>
 			<FlavorType>FLAVOR_RANGED</FlavorType>
 			<Flavor>950</Flavor>
 		</Row>
 		<Row>
-			<ProjectType>PROJECT_NAVALCARRIER03S</ProjectType>
+			<ProjectType>PROJECT_NAVALFIGHTER04P</ProjectType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>950</Flavor>
 		</Row>
