@@ -1120,6 +1120,16 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			end
 			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%s", tip, L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_TRLGB1", tradeRouteLandGoldBonusGlobal, yield.IconString or "?" )
 		end
+		if yield.Type == "YIELD_GOLD" and building.TradeRouteRiverBonusModifier > 0 then
+			local tradeRouteRiverBonus = building.TradeRouteRiverBonusModifier
+			if tradeRouteRiverBonus > 0 then
+				tradeRouteRiverBonus = format("+%s", tradeRouteRiverBonus);
+			end
+			if tip ~= "" then
+				tip = format("%s, ", tip )
+			end
+			tip = format("%s[ICON_INTERNATIONAL_TRADE]%s%s%%", tip, L"TXT_KEY_LOCAL_POP_SP" .. L"TXT_KEY_TR_RIVER_BONUS", tradeRouteRiverBonus)
+		end
 
 		if tip ~= "" then
 			insert( tips, L(yield.Description) .. ": " .. tip )
@@ -3184,7 +3194,7 @@ if Game then
 	-- Yield Tooltip Helper
 	function GetYieldTooltipHelper( city, yieldID, yieldIconString )
 
-		return GetYieldTooltip( city, yieldID, city:GetBaseYieldRate( yieldID ) + city:GetYieldPerPopTimes100( yieldID ) * city:GetPopulation() / 100, yieldID == YieldTypes.YIELD_FOOD and city:FoodDifferenceTimes100()/100 or city:GetYieldRateTimes100( yieldID )/100, yieldIconString, city:GetYieldModifierTooltip( yieldID ) )
+		return GetYieldTooltip( city, yieldID, city:GetBaseYieldRate( yieldID ) + city:GetExtraBaseYieldRateTimes100( yieldID ) / 100, yieldID == YieldTypes.YIELD_FOOD and city:FoodDifferenceTimes100()/100 or city:GetYieldRateTimes100( yieldID )/100, yieldIconString, city:GetYieldModifierTooltip( yieldID ) )
 	end
 	local GetYieldTooltipHelper = GetYieldTooltipHelper
 
@@ -3359,7 +3369,7 @@ if Game then
 				strModifiersString = strModifiersString .. L( "TXT_KEY_PRODMOD_FOOD_CONVERSION", productionFromFood / 100 )
 			end
 		end
-		tipText = GetYieldTooltip( city, YieldTypes.YIELD_PRODUCTION, city:GetBaseYieldRate( YieldTypes.YIELD_PRODUCTION ), productionPerTurn100 / 100, "[ICON_PRODUCTION]", strModifiersString ) .. "[NEWLINE][NEWLINE]" .. tipText
+		tipText = GetYieldTooltip( city, YieldTypes.YIELD_PRODUCTION, city:GetBaseYieldRate( YieldTypes.YIELD_PRODUCTION ) + city:GetExtraBaseYieldRateTimes100( YieldTypes.YIELD_PRODUCTION ) / 100, productionPerTurn100 / 100, "[ICON_PRODUCTION]", strModifiersString ) .. "[NEWLINE][NEWLINE]" .. tipText
 
 		-- Basic explanation of production
 		if isNoob then
