@@ -23,10 +23,10 @@
 			<Label Anchor="C,C" Offset="0,-2" String="TXT_KEY_MUSIC" Font="TwCenMT16"
 			FontStyle="Shadow" ColorSet="Beige_Black_Alpha" />
 		</GridButton>
-		
 
 
-		<GridButton ID="CLEAR" Size="70,20" Anchor="C,T" Offset="-90,0" Style="BaseButton"
+
+		<!--<GridButton ID="CLEAR" Size="70,20" Anchor="C,T" Offset="-90,0" Style="BaseButton"
 		ToolTip="TXT_KEY_SKIPS_THE_CURRENT_PLAYER_ALL_UNIT">
 
 			<ShowOnMouseOver>
@@ -45,7 +45,7 @@
 
 			<Label Anchor="C,C" Offset="0,-2" String="Clear" Font="TwCenMT16"
 			FontStyle="Shadow" ColorSet="Beige_Black_Alpha" />
-		</GridButton>
+		</GridButton>-->
 		
 	</Container>
 </Context>
