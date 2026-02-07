@@ -70,7 +70,6 @@ local ShowProgressToolTip = ShowProgressToolTip
 --==========================================================
 -- Minor lua optimizations
 --==========================================================
-
 local print = print
 local ipairs = ipairs
 local pairs = pairs
@@ -121,7 +120,6 @@ local MAX_MAJOR_CIVS = GameDefines.MAX_MAJOR_CIVS
 local DOF_EXPIRATION_TIME = GameDefines.DOF_EXPIRATION_TIME or 50
 local MINOR_CIV_QUEST_CONNECT_RESOURCE = MinorCivQuestTypes.MINOR_CIV_QUEST_CONNECT_RESOURCE
 
-
 local ORDER_TRAIN = OrderTypes.ORDER_TRAIN
 local ORDER_CONSTRUCT = OrderTypes.ORDER_CONSTRUCT
 local ORDER_CREATE = OrderTypes.ORDER_CREATE
@@ -134,7 +132,6 @@ local g_yieldCurrency = IsCiv5 and YieldTypes.YIELD_GOLD or YieldTypes.YIELD_ENE
 --local g_maintenanceCurrency = IsCiv5 and "GoldMaintenance" or "EnergyMaintenance"
 --local g_happinessIcon = IsCiv5 and "[ICON_HAPPY]" or "[ICON_HEALTH]"
 local g_happinessString = IsCiv5 and "HAPPINESS" or "HEALTH"
-
 
 local g_UnitTooltipControls = {}
 TTManager:GetTypeControlTable( "EUI_UnitTooltip", g_UnitTooltipControls )
@@ -158,13 +155,10 @@ local g_isCityStateLeaders, g_isBasicHelp, g_isScienceEnabled, g_isReligionEnabl
 
 local g_UnitTooltipTimer = Controls.UnitTooltipTimer
 
-
 local g_ItemTooltipControls = {}
 TTManager:GetTypeControlTable( "EUI_ItemTooltip", g_ItemTooltipControls )
 
 local g_PromotionIconIM2 = StackInstanceManager( "PromotionIcon2", "Image2", g_ItemTooltipControls.IconStack2 )
-
-
 
 do
 	g_UnitTooltipTimer:RegisterAnimCallback( function()
@@ -176,7 +170,7 @@ do
 	end)
 
 
-	-----新增
+-----新增
 function IsUsingWP()
 	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
 	for _, mod in pairs(Modding.GetActivatedMods()) do
@@ -188,8 +182,8 @@ function IsUsingWP()
 end
 local WpModActive = IsUsingWP()
 
-	local GetTooltip2Seconds = OptionsManager.GetTooltip2Seconds
-	local function UpdateOptions()
+local GetTooltip2Seconds = OptionsManager.GetTooltip2Seconds
+local function UpdateOptions()
 		g_isScienceEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_SCIENCE)
 		g_isPoliciesEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_POLICIES)
 		g_isHappinessEnabled = IsCiv5 and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)
@@ -202,7 +196,7 @@ local WpModActive = IsUsingWP()
 		g_UnitTooltipTimer:SetToBeginning()
 		g_UnitTooltipTimer:SetPauseTime( GetTooltip2Seconds() / 100 )
 		g_isCityStateLeaders = UserInterfaceSettings.CityStateLeaders ~= 0
-	end
+end
 	Events.GameOptionsChanged.Add( UpdateOptions )
 	UpdateOptions()
 end

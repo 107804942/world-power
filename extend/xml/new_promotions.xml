@@ -2643,12 +2643,6 @@
 
 
 
-		<Update>
-			<Set IconAtlas="MORE_NEW_PROMOS_ATLAS" PortraitIndex="4" ChangeDamageValue="-15"
-				 DefenseMod="100" />
-			<Where Type="PROMOTION_ELITE_DEFENSE" />
-		</Update>
-
 
 
 

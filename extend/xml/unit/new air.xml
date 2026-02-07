@@ -674,14 +674,8 @@
 		<Where Type="UNIT_ATTACK_AIRCRAFT" />
 	</Update>
 
-	<Update>
-		<Set  UnitArtInfo="ART_DEF_UNIT_PAKFA_T50" />
-		<Where Type="UNIT_JET_FIGHTER" />
-	</Update>
-	<Update>
-		<Set  UnitArtInfo="ART_DEF_UNIT_TU160" Range="30"/>
-		<Where Type="UNIT_JET_BOMBER" />
-	</Update>
+
+
 
 	<Update>
 		<Set  UnitArtInfo="ART_DEF_UNIT_RSTEALTHBOMBER" Range="40"/>

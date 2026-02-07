@@ -8339,9 +8339,6 @@
 		</Row>
 
 
-		<Replace Tag="TXT_KEY_PROMOTION_ELITE_DEFENSE_HELP">
-			<Text>[ICON_STRENGTH]防御力+100%，被攻击时受到的最终伤害减少15点。[NEWLINE]每回合回复10点生命值。近战攻击本单位的敌军将失去所有移动力（拥有人造意志晋升的单位除外）。</Text>
-		</Replace>
 
 
 
