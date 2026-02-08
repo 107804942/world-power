@@ -169,53 +169,6 @@
 
 
 
-		<!--舰载机-->
-
-		
-		<Row>
-			<Class>UNITCLASS_CARRIER_FIGHTER_STORM</Class>
-			<Type>UNIT_CARRIER_FIGHTER_STORM</Type>
-			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
-			<RangedCombat>700</RangedCombat>
-			<Cost>-1</Cost>
-			<Moves>4</Moves>
-			<Immobile>true</Immobile>
-			<Range>30</Range>
-			<AirInterceptRange>20</AirInterceptRange>
-			<HurryCostModifier>100</HurryCostModifier>
-			<PurchaseOnly>true</PurchaseOnly>
-			<Special>SPECIALUNIT_FIGHTER</Special>
-			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
-			<Domain>DOMAIN_AIR</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CARRIER_FIGHTER_STORM</Description>
-			<Civilopedia>TXT_KEY_UNIT_CARRIER_FIGHTER_STORM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_AIRCRAFT_CARRIERS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>50</AdvancedStartCost>
-			<AirUnitCap>1</AirUnitCap>
-			<RangedCombatLimit>100</RangedCombatLimit>
-			<CombatLimit>0</CombatLimit>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_RSTEALTHBOMBER2</UnitArtInfo>
-			<UnitFlagIconOffset>5</UnitFlagIconOffset>
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>217</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<MoveRate>AIR_REBASE</MoveRate>
-			<ShowInPedia>false</ShowInPedia>
-			<ShowInTechTree>0</ShowInTechTree>
-			<ExtraMaintenanceCost>170</ExtraMaintenanceCost>
-		</Row>
-		
-		
-		
-		
 		
 		
 		
@@ -306,17 +259,6 @@
 	<Unit_FreePromotions>
 		
 
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<PromotionType>PROMOTION_HIGH_EXPLOSIVES</PromotionType>
-		</Row>
-		
-		
 		
 		
 
@@ -374,35 +316,7 @@
 	<Unit_ResourceQuantityRequirements>
 		
 	
-		
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<ResourceType>RESOURCE_OIL</ResourceType>
-			<Cost>4</Cost>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<ResourceType>RESOURCE_MANPOWER</ResourceType>
-			<Cost>2</Cost>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
-			<Cost>2</Cost>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<ResourceType>RESOURCE_TITANIUM</ResourceType>
-			<Cost>1</Cost>
-		</Row>
-		
-		
-		
-		
-		
+	
 		
 		
 		<Row>
@@ -512,15 +426,6 @@
 
 		
 		
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_CARRIER_FIGHTER_STORM</UnitType>
-			<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
-		</Row>
-
 
 		<Row>
 			<UnitType>UNIT_SUPER_MISSILE</UnitType>

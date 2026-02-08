@@ -38,6 +38,11 @@ UPDATE Units SET PrereqTech = 'TECH_ROBOTICS' ,ObsoleteTech = 'TECH_HOMO_SUPERIO
 --UPDATE Units SET ObsoleteTech = 'TECH_GRID_COMPUTING' WHERE Class  = 'UNITCLASS_TASKFORCE_141';
 
 
+-----ÐÂº½Ä¸½úÉý
+INSERT INTO SPCarrierTransferPromotions
+        (CarrierPromotionType,                      FighterPromotionType)
+VALUES	 ('PROMOTION_CARRIER_FIGHTER_SORTIE_2',               'PROMOTION_CARRIER_FIGHTER_SORTIE_2');
+
 
 
 ---Ô¶³Ì¼Ð»÷
