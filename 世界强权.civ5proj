@@ -630,6 +630,7 @@
     <Folder Include="extend\art\units\GX3" />
     <Folder Include="extend\art\units\CSS-5" />
     <Folder Include="extend\art\units\FutureSuperCarrier" />
+    <Folder Include="extend\art\units\ParticleCannon" />
     <Folder Include="extend\art\units\Nimitz" />
     <Folder Include="extend\art\units\Sa11" />
     <Folder Include="extend\art\units\XM2001" />
@@ -12984,6 +12985,18 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\p1500\p1500.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\ParticleCannon\PARTICLE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\ParticleCannon\ParticleCannon.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\ParticleCannon\ParticleCannon.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

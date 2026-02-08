@@ -73,7 +73,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_REJETFIGHT</UnitArtInfo>
 			<UnitFlagIconOffset>17</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>22</PortraitIndex>
+			<PortraitIndex>23</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
@@ -256,8 +256,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_F52</UnitArtInfo>
 			<UnitFlagIconOffset>5</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>23</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>255</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
 		</Row>

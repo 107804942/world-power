@@ -724,6 +724,22 @@
 
 
 		<Row>
+			<Type>PROMOTION_CARRIER_FIGHTER_SORTIE_2</Type>
+			<Description>TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_2</Description>
+			<Help>TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<ExtraAttacks>1</ExtraAttacks>
+			<PortraitIndex>13</PortraitIndex>
+			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<PediaType>PEDIA_AIR</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_2</PediaEntry>
+		</Row>
+
+		
+		
+
+		<Row>
 			<Type>PROMOTION_NAVAL_SIGHT</Type>
 			<Description>TXT_KEY_PROMOTION_NAVAL_SIGHT</Description>
 			<Help>TXT_KEY_PROMOTION_NAVAL_SIGHT_HELP</Help>
@@ -833,7 +849,7 @@
 		<Row>
 			<Type>PROMOTION_CHAIN_REACTION</Type>
 			<Description>TXT_KEY_PROMOTION_CHAIN_REACTION</Description>
-			<Help>TXT_KEY_PROMOTION_CHAIN_REACTION_HELP</Help>
+			<Help>TXT_KEY_PROMOTION_CHAIN_REACTION_EFFECT_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
 			<OnlyDefensive>true</OnlyDefensive>

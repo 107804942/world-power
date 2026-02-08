@@ -644,11 +644,11 @@
 			<MinAreaSize>16</MinAreaSize>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04HS</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_PARTICLE_CANNON</UnitArtInfo>
 			<UnitFlagIconOffset>70</UnitFlagIconOffset>
 			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>142</PortraitIndex>
+			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
+			<PortraitIndex>18</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<MaxHitPoints>300</MaxHitPoints>
 			<ProjectPrereq>PROJECT_PARTICLE_CANNON</ProjectPrereq>
@@ -996,11 +996,11 @@
 			<AdvancedStartCost>400</AdvancedStartCost>
 			<XPValueAttack>3</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04P</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_NAVALFIGHTER04HS</UnitArtInfo>
 			<UnitFlagIconOffset>28</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>254</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>142</PortraitIndex>
 			<MoveRate>BOAT</MoveRate>
 			<MaxHitPoints>600</MaxHitPoints>
 			<ProjectPrereq>PROJECT_NAVALFIGHTER04P</ProjectPrereq>

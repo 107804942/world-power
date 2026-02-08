@@ -330,9 +330,12 @@
 			<UnitType>UNIT_SUB04S</UnitType>
 			<PromotionType>PROMOTION_NUKE_IMMUNE</PromotionType>
 		</Row>
-	
 
 
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_CARRIER_FIGHTER_SORTIE_2</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_NAVALCARRIER02</UnitType>
 			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>

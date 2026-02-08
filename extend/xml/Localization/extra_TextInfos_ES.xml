@@ -4021,18 +4021,11 @@
 			<Text>对游戏中的绝大部分单位均可一击必杀。[NEWLINE]攻击后本单位被[COLOR_NEGATIVE_TEXT]消耗[ENDCOLOR]。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_CHAIN_REACTION">
-			<Text>链式反应</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_CHAIN_REACTION_HELP">
+
+
+		<Row Tag="TXT_KEY_PROMOTION_CHAIN_REACTION_EFFECT_HELP">
 			<Text>攻击时可对被击地块及其周围12格内的敌方单位造成链式反应伤害。[NEWLINE][NEWLINE]无法进行近战攻击。</Text>
-		</Replace>
-
-
-
-
-
-
+		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_CITY_ASSUALT400">
 			<Text>攻城冲车</Text>
@@ -9759,7 +9752,16 @@
 		<Replace Tag="TXT_KEY_UNIT_SAM_INFANTRY_PEDIA">
 			<Text>如同其他尖端武器系统一样，地对空导弹的概念也由德国人首先提出；1941年，弗里德里克·哈尔德提出“对空火箭”这一概念，用来对抗同盟国的轰炸机，然而由于科技暗斗，该设计直到1943年才真正开始付诸实施。虽然设计了几个样品，但没有一个能在二战结束前投入使用。同时，美国海军因为受到纳粹成功研制的滑翔炸弹以及日本的神风自杀式袭击的刺激，设计制造了SAM-N-2百灵鸟，这是一款采用冲压式喷气发动机的防空导弹，用于远程打击…然而同样直到二战结束也没能投入使用。尽管其他同盟国在地对空导弹设计上进展缓慢，但苏联还是制造出了S-75德维纳导弹，那是世界上第一枚成功使用的地对空导弹（1959年10月在大陆击落台湾的一架轰炸机）。越南战争期间，地对空导弹第一次在现代战场上使用，表现不俗，并促成了“单兵防空导弹”的设计制造，到了20世纪90年代，世界各地的游击战争和恐怖主义袭击都开始使用地对空导弹。</Text>
 		</Replace>
-	
+
+
+
+
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_2">
+			<Text>快速调度</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_2_HELP">
+			<Text>每回合+1[COLOR_POSITIVE_TEXT]攻击[ENDCOLOR]或[COLOR_POSITIVE_TEXT]游猎[ENDCOLOR]次数。</Text>
+		</Row>
 	</Language_en_US>
 
 </GameData>
