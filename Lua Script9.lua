@@ -1984,7 +1984,7 @@ local function UpdatePromotions(playerID, unitID)
 	flag.m_Instance.EarnedPromotionStack2:ReprocessAnchoring()
 end
 local function RefreshUnitPromotionsGlobally()
-	local swStart = os.clock()
+	--local swStart = os.clock()
 	local unitCount = 0
 	for playerID, unitList in pairs(g_MasterList) do
 		for unitID, flag in pairs(unitList) do
@@ -1992,7 +1992,7 @@ local function RefreshUnitPromotionsGlobally()
 			unitCount = unitCount + 1
 		end
 	end
-	print(string.format("RefreshUnitPromotionsGlobally processed %i units in %.3f seconds", unitCount, os.clock()-swStart))
+	--print(string.format("RefreshUnitPromotionsGlobally processed %i units in %.3f seconds", unitCount, os.clock()-swStart))
 end
 if isPromotionFlagsEUI then
 	Events.SerialEventUnitCreated.Add(UpdatePromotions);

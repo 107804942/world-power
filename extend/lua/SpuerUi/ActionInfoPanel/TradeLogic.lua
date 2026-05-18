@@ -583,8 +583,10 @@ local function SetPocketCities( instanceManager, fromPlayer, fromPlayerID, toPla
 				and (city:GetOriginalOwner() ~= fromPlayerID and city:GetOriginalOwner() ~= toPlayerID) 
 				then
 					instance.Button:SetDisabled(true);
+					instance.Button:SetToolTipString(L"TXT_KEY_DIPLO_TO_TRADE_CITY_DISABLED");
 				else
 					instance.Button:SetDisabled(false);
+					instance.Button:SetToolTipString();
 				end
 
 			end
