@@ -3318,7 +3318,7 @@
 			<Description>TXT_KEY_PROMOTION_VOLLEY</Description>
 			<Help>TXT_KEY_PROMOTION_VOLLEY_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>5</OrderPriority>
+			<OrderPriority>1</OrderPriority>
 			<PromotionPrereqOr1>PROMOTION_CITY_SIEGE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_ONLY_ATTACKS_CITIES</PromotionPrereqOr2>
 			<AttackFortifiedMod>50</AttackFortifiedMod>
@@ -3333,10 +3333,10 @@
 		<Row>
 			<Type>PROMOTION_VOLLEY_2</Type>
 			<Description>TXT_KEY_PROMOTION_VOLLEY_2</Description>
-			<Help>TXT_KEY_PROMOTION_VOLLEY_HELP</Help>
+			<Help>TXT_KEY_PROMOTION_VOLLEY_2_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_VOLLEY_1</PromotionPrereqOr1>
-			<OrderPriority>5</OrderPriority>
+			<OrderPriority>1</OrderPriority>
 			<AttackFortifiedMod>50</AttackFortifiedMod>
 			<CityAttack>100</CityAttack>
 			<PortraitIndex>41</PortraitIndex>
@@ -3349,10 +3349,10 @@
 		<Row>
 			<Type>PROMOTION_VOLLEY_3</Type>
 			<Description>TXT_KEY_PROMOTION_VOLLEY_3</Description>
-			<Help>TXT_KEY_PROMOTION_VOLLEY_HELP</Help>
+			<Help>TXT_KEY_PROMOTION_VOLLEY_3_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_VOLLEY_2</PromotionPrereqOr1>
-			<OrderPriority>5</OrderPriority>
+			<OrderPriority>1</OrderPriority>
 			<CityAttack>100</CityAttack>
 			<AttackFortifiedMod>50</AttackFortifiedMod>
 			<PortraitIndex>42</PortraitIndex>

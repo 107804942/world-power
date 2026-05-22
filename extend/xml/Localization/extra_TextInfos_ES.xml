@@ -544,24 +544,6 @@
 
 
 
-		<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL">
-			<Text>运河</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL_HELP">
-			<Text>允许海军通过该地块。只能在苏伊士和巴拿马建造。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_IMPROVEMENT_CANAL_TEXT">
-			<Text>运河是指人工开凿的规模比较大的，可以使水流流过的通道。运河通常为连接湖泊、河流和海洋，或横贯半岛、地峡而造。运河可以让驳船或运河船通行，海船运河可以让海上的船舶通行到不靠海的港口（例如曼彻斯特大运河），或是由一个海洋到另一个海洋（例如巴拿马运河或苏伊士运河）。[NEWLINE][NEWLINE]允许海军通过该地块。在运河中的单位可获得50%的防御战斗力加成。只能在苏伊士和巴拿马建造。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BUILD_CANAL">
-			<Text>建造[LINK=IMPROVEMENT_CANAL]运河[\LINK]</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BUILD_CANAL_HELP">
-			<Text>允许海军通过该地块。只能在苏伊士和巴拿马建造。</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_BUILD_CANAL_REC">
-			<Text>允许海军通过该地块。</Text>
-		</Replace>
 
 
 
@@ -1214,14 +1196,6 @@
 
 
 
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILT_COUNT">
-			<Text>该类已拥有[COLOR_YELLOW]{1_HaveCount}[ENDCOLOR]个</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_ACTION_CLASS_BUILDING_COUNT">
-			<Text>该类在建[COLOR_POSITIVE_TEXT]{1_BuildingCount}[ENDCOLOR]个</Text>
-		</Replace>
-
-
 
 
 
@@ -1589,30 +1563,14 @@
 		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_3_HELP" >
 			<Text>对[COLOR_POSITIVE_TEXT]驻防单位[ENDCOLOR]+50%[ICON_STRENGTH]战斗力，对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_2">
-			<Text>攻坚二级</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_2_HELP" >
+
+		<Row Tag="TXT_KEY_PROMOTION_VOLLEY_2_HELP" >
+			<Text>对[COLOR_POSITIVE_TEXT]驻防单位[ENDCOLOR]+50%[ICON_STRENGTH]战斗力，对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
+		</Row>
+
+		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_HELP" >
 			<Text>对[COLOR_POSITIVE_TEXT]驻防单位[ENDCOLOR]+50%[ICON_STRENGTH]战斗力，对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
 		</Replace>
-
-		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_1">
-			<Text>攻坚一级</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_VOLLEY_1_HELP" >
-			<Text>对[COLOR_POSITIVE_TEXT]驻防单位[ENDCOLOR]+50%[ICON_STRENGTH]战斗力，对[COLOR_POSITIVE_TEXT]城市[ENDCOLOR]+100%[ICON_STRENGTH]战斗力。</Text>
-		</Replace>
-
-
-
-
-
-		<Replace Tag="TXT_KEY_PROMOTION_NAVAL_CAPITAL_SHIP_HELP" >
-			<Text>同时代[ICON_STRENGTH]战斗力最强的单位。[NEWLINE]攻击目标时对临近单位造成50%伤害。[NEWLINE]进攻[COLOR_POSITIVE_TEXT]军事要塞固定炮台[ENDCOLOR]+350%[ICON_STRENGTH]战斗力。[NEWLINE]被[COLOR_NEGATIVE_TEXT]空军[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]潜艇[ENDCOLOR]单位克制，无法近战。</Text>
-		</Replace>
-
-
-
 
 
 
@@ -1721,24 +1679,12 @@
 
 
 
-		<Replace Tag="TXT_KEY_UNIT_ICBM_MISSILE">
-			<Text>[COLOR_NEGATIVE_TEXT]洲际核弹道导弹[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Replace>
+
 
 		<Replace Tag="TXT_KEY_UNIT_ICBM_MISSILE_HELP">
 			<Text>噩梦般恐怖的核武器。洲际核弹道导弹是游戏中最强大的武器，引爆时会摧毁距离3个区块内的单位和设施，并将非首都城市完全摧毁。洲际核弹道导弹占用三个停机位。能够部署在弹道导弹核潜艇上。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_UNIT_ATOMIC_BOMB">
-			<Text>[COLOR_NEGATIVE_TEXT]原子弹[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Replace>
-
-		<Replace Tag="TXT_KEY_UNIT_NUCLEAR_MISSILE">
-			<Text>[COLOR_NEGATIVE_TEXT]核导弹[ENDCOLOR]</Text>
-			<Plurality>2</Plurality>
-		</Replace>
 
 
 
@@ -1763,10 +1709,7 @@
 		<Replace Tag="TXT_KEY_PROMOTION_SHOCK_2_HELP" >
 			<Text>+15%[ICON_STRENGTH]战斗力。[NEWLINE]在林地和丘陵地带移动力翻倍。</Text>
 		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_NUKE_IMMUNE_HELP">
-			<Text>对[COLOR_POSITIVE_TEXT]核攻击[ENDCOLOR]免疫。</Text>
-		</Replace>
-
+	
 
 		<!--*********************新增文本********************-->
 

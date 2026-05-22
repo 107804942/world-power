@@ -1982,11 +1982,7 @@
 			<Tourism>500</Tourism>
 		</Row>
 
-		<Row>
-			<PolicyType>POLICY_GUNBOAT_DIPLOMACY</PolicyType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER03S</UnitClassType>
-			<Tourism>1000</Tourism>
-		</Row>
+	
 		<Row>
 			<PolicyType>POLICY_GUNBOAT_DIPLOMACY</PolicyType>
 			<UnitClassType>UNITCLASS_LEVDESTROYER</UnitClassType>

@@ -439,12 +439,6 @@
 
 
 
-		<Row>
-			<Type>UNITCLASS_CARRIER_FIGHTER_STORM</Type>
-			<Description>TXT_KEY_UNIT_CARRIER_FIGHTER_STORM</Description>
-			<DefaultUnit>UNIT_CARRIER_FIGHTER_STORM</DefaultUnit>
-		</Row>
-		
 		
 		<Row>
 			<Type>UNITCLASS_CARRIER_FIGHTER_FUTURE</Type>

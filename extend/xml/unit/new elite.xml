@@ -978,7 +978,7 @@
 			<RangedCombat>1700</RangedCombat>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<Cost>25000</Cost>
-			<Moves>9</Moves>
+			<Moves>14</Moves>
 			<Range>9</Range>
 			<BaseSightRange>8</BaseSightRange>
 			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>

@@ -746,7 +746,7 @@
 		<Row>
 			<Type>BUILDING_GATE_ALL</Type>
 			<BuildingClass>BUILDINGCLASS_GATE_ALL</BuildingClass>
-			<Cost>160</Cost>
+			<Cost>170</Cost>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<Help>TXT_KEY_WONDER_GATE_ALL_HELP</Help>
 			<Description>TXT_KEY_BUILDING_GATE_ALL</Description>

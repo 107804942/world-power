@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>73</ModVersion>
+    <ModVersion>75</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Description>
@@ -649,7 +649,6 @@
     <Folder Include="extend\art\units\nukecannon" />
     <Folder Include="extend\art\units\RangedMarine02" />
     <Folder Include="extend\art\units\usa arsenalship" />
-    <Folder Include="extend\art\units\restealbomber2" />
     <Folder Include="extend\art\units\super helicopter" />
     <Folder Include="extend\art\units\spaceship2" />
     <Folder Include="extend\art\units\Challenger 2" />
@@ -3929,14 +3928,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\flag\FGM_148_Javelin_Schuetze_Flag.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\flag\FGM_148_Javelin_Schuetze_SV.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\flag\HelghastThirdArmyAPCFlags.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -14241,18 +14232,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\REJETFIGHTER\OrbitalBomber_gloss.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\restealbomber2\H_Base_Color.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\restealbomber2\rstealthbomber2.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\restealbomber2\rstealthbomber2.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
