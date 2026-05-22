@@ -2046,10 +2046,12 @@ function RefreshCultureVictory()
 			
 			
 			---------------------------- SP International Immigration (replace the old "excesshappiness")----------------
-			
-			if pPlayer ~= activePlayer and CheckMoveOutCounter then
+			local iImmigrationRegressand = Game.GetImmigrationRegressand();
+            local ImmigrationRegressandModifier = activePlayer:GetImmigrationRegressandModifier();
+			if pPlayer ~= activePlayer and CheckMoveOutCounter and iImmigrationRegressand > 0 then
 			    local AITeam = Teams[pPlayer:GetTeam()];
 			    local PlayerTeam = Teams[activePlayer:GetTeam()];
+			    local ImmigrationRate = activePlayer:GetImmigrationRate(iPlayer);
 			    local ImmigrationCounter = CheckMoveOutCounter(Game.GetActivePlayer(), iPlayer);
 			    local strInternationalImmigrationToolTip = "";
 			    
@@ -2089,8 +2091,14 @@ function RefreshCultureVictory()
 				row.iExcessHappiness = ImmigrationCounter[1];
 				row.strExcessHappiness = strImmigrationCount .. " (" .. 2*ImmigrationCounter[2] .. "/" .. ImmigrationCounter[3] ..")";
 				strInternationalImmigrationToolTip = Locale.ConvertTextKey("TXT_KEY_CO_SP_IMMIGRATION_RATE_BASE",activePlayer:GetInfluenceLevel(iPlayer)-pPlayer:GetInfluenceLevel(Game.GetActivePlayer()),strImmigrationIcon)
-			    end
-				
+                if ImmigrationRegressandModifier ~= 0 then
+                    if ImmigrationRegressandModifier < 0 then
+                        ImmigrationRegressandModifier = " [COLOR_POSITIVE_TEXT]" .. ImmigrationRegressandModifier .. "[ENDCOLOR]";
+                    else                        
+                        ImmigrationRegressandModifier = " [COLOR_NEGATIVE_TEXT]+" .. ImmigrationRegressandModifier .. "[ENDCOLOR]";
+                    end
+                    strInternationalImmigrationToolTip = strInternationalImmigrationToolTip .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_CO_SP_IMMIGRATION_REGRESSAND_MODIFIER", ImmigrationRegressandModifier)
+                end
 			    if ImmigrationCounter ~= nil then
 				
 				if PlayerTeam:IsAllowsOpenBordersToTeam(pPlayer:GetTeam()) then
