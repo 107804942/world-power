@@ -2286,9 +2286,9 @@
 		<Row Tag="TXT_KEY_UNIT_SUB04S_PEDIA">
 			<Text>海军游猎单位，此单位隐匿行动表现非常出色，擅长于突袭和埋伏。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_UNIT_NAVALFIGHTER04P_STRATEGY">
+		<!-- <Row Tag="TXT_KEY_UNIT_NAVALFIGHTER04P_STRATEGY">
 			<Text>用于克制海军远程单位与海军旗舰单位的游猎单位，取代了旧时代的潜艇。</Text>
-		</Row>
+		</Row> -->
 
 		<Row Tag="TXT_KEY_BUILDING_MILITARY_AIRBASE">
 			<Text>[ICON_WAR]空军基地</Text>

@@ -614,6 +614,25 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
+			--Gold/Culture/Faith Bonus
+			iModifier = pMyUnit:GetGoldAttackBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GOLD_ATTACK_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+			iModifier = pMyUnit:GetCultureAttackBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CULTURE_ATTACK_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+			iModifier = pMyUnit:GetFaithAttackBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_FAITH_ATTACK_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
 
 			------新增原始首都数量加成
 			iModifier = pMyUnit:GetNumOriginalCapitalAttackMod();
@@ -1672,6 +1691,25 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP" );
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
 			end
+			--Gold/Culture/Faith Bonus
+			iModifier = pMyUnit:GetGoldAttackBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GOLD_ATTACK_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+			iModifier = pMyUnit:GetCultureAttackBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CULTURE_ATTACK_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
+			iModifier = pMyUnit:GetFaithAttackBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_MyCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_FAITH_ATTACK_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+			end
 
 			-- 多重攻击加成
 			iModifier = pMyUnit:GetMultiAttackBonus(pTheirUnit);
@@ -2302,6 +2340,25 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
 			end
+			--Gold/Culture/Faith Bonus
+				iModifier = pTheirUnit:GetGoldDefenseBonus();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GOLD_DEFENSE_BONUS");
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+				end
+				iModifier = pTheirUnit:GetCultureDefenseBonus();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CULTURE_DEFENSE_BONUS");
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+				end
+				iModifier = pTheirUnit:GetFaithDefenseBonus();
+				if (iModifier ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();		
+					controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_FAITH_DEFENSE_BONUS");
+					controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
+				end
 			
 
 			------新增原始首都数量加成
@@ -3156,6 +3213,25 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 				controlTable = g_TheirCombatDataIM:GetInstance();
 				controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_UNIT_PROMOTION_NEAR_SP");
 				controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
+			end
+			--Gold/Culture/Faith Bonus
+			iModifier = theirUnit:GetGoldDefenseBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_GOLD_DEFENSE_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+			end
+			iModifier = theirUnit:GetCultureDefenseBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_CULTURE_DEFENSE_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
+			end
+			iModifier = theirUnit:GetFaithDefenseBonus();
+			if (iModifier ~= 0) then
+				controlTable = g_TheirCombatDataIM:GetInstance();		
+				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_FAITH_DEFENSE_BONUS");
+				controlTable.Value:SetText( GetFormattedText(strText, iModifier, false, true) );
 			end
 		
 			------新增原始首都数量加成
