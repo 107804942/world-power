@@ -3301,33 +3301,44 @@ function OnBuildingClicked(iBuildingID)
 	Controls.SellBuildingConfirm:SetHide(false);
 end
 
+local policyUnitedFront = GameInfo.Policies["POLICY_UNITED_FRONT"].ID
 function OnYes( )
 	Controls.SellBuildingConfirm:SetHide(true);
 	if Players[Game.GetActivePlayer()]:IsTurnActive() then
 		local pCity = UI.GetHeadSelectedCity();
 		Network.SendSellBuilding(pCity:GetID(), g_iBuildingToSell);
 		
-		--------------------------------------Selling City Hall Create Puppet Start--------------------------------------
-		if GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV0" or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV1"
-		or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV2" or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV3"
-		or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV4" or GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CITY_HALL_LV5"
+		--SP Selling City Hall Create Puppet Start
+		if GameInfo.Buildings[g_iBuildingToSell].BuildingClass:match("_CITY_HALL_LV[0-9]+$")
 		then
 			print("City Hall sold! Set Puppet!")
 			
 			pCity:SetNumRealBuilding(GameInfoTypes["BUILDING_PUPPET_GOVERNEMENT"],1);
+			--Policy United Front effect:if city has Military Base, donnot sell Military Buildings
+			local pPlayer = Players[pCity:GetOwner()]
+			if pPlayer == nil then return end
+
+			local isHasUnitedFront = pPlayer:HasPolicy(policyUnitedFront) and not pPlayer:IsPolicyBlocked(policyUnitedFront) 
+			if isHasUnitedFront then
+				print("Player has policy United Front")
+				if not pCity:HasBuildingClass(GameInfoTypes["BUILDINGCLASS_MILITARY_BASE"]) then
+					print("City donnot have Military Base")
+					isHasUnitedFront = false
+				end
+			end
 			
 			for building in GameInfo.Buildings() do
 				if pCity:IsHasBuilding(building.ID)
-				and(	-- SP5
-				    building.BuildingClass == "BUILDINGCLASS_CONSTABLE_I"
-				or  building.BuildingClass == "BUILDINGCLASS_POLICE_STATION_I"
-				or  building.BuildingClass == "BUILDINGCLASS_POLICE_STATION_II"
-					-- SP6
-				or  building.BuildingClass == "BUILDINGCLASS_CONSTABLE"
+				and(building.BuildingClass == "BUILDINGCLASS_CONSTABLE"
 				or  building.BuildingClass == "BUILDINGCLASS_SHERIFF_OFFICE"
 				or  building.BuildingClass == "BUILDINGCLASS_POLICE_STATION"
 				or  building.BuildingClass == "BUILDINGCLASS_PROCURATORATE"
-				)then
+				
+				or  ((building.BuildingClass == "BUILDINGCLASS_BARRACKS"
+				or  building.BuildingClass == "BUILDINGCLASS_ARMORY"
+				or  building.BuildingClass == "BUILDINGCLASS_ARSENAL"
+				or  building.BuildingClass == "BUILDINGCLASS_MILITARY_BASE") and not isHasUnitedFront))
+				then
 					pCity:SetNumRealBuilding(building.ID, 0);
 				end
 			end
@@ -3335,30 +3346,11 @@ function OnYes( )
 			pCity:SetPuppet(true)
 			pCity:SetProductionAutomated(true)
 			
---			if not Players[Game.GetActivePlayer()]:HasPolicy(GameInfo.Policies["POLICY_TREATY_ORGANIZATION"].ID)then
-				local CityPop = pCity:GetPopulation()
-				local CityResTime = CityPop * 0.5
-				pCity:ChangeResistanceTurns(CityResTime)
---			end
+			local CityPop = pCity:GetPopulation()
+			local CityResTime = CityPop * 0.5
+			pCity:ChangeResistanceTurns(CityResTime)
 		end
-		
-		-- selling anti-corruption will disable its function
-		local iConstableI      = GameInfoTypes["BUILDING_CONSTABLE_I"];
-		local iPoliceStationI  = GameInfoTypes["BUILDING_POLICE_STATION_I"];
-		local iPoliceStationII = GameInfoTypes["BUILDING_POLICE_STATION_II"];
-		if     GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_CONSTABLE" then
-		    if iConstableI and pCity:IsHasBuilding(iConstableI) then
-			pCity:SetNumRealBuilding(iConstableI,0);
-		    end
-		elseif GameInfo.Buildings[g_iBuildingToSell].BuildingClass == "BUILDINGCLASS_POLICE_STATION" then
-		    if iPoliceStationI  and pCity:IsHasBuilding(iPoliceStationI)  then
-			pCity:SetNumRealBuilding(iPoliceStationI, 0);
-		    end
-		    if iPoliceStationII and pCity:IsHasBuilding(iPoliceStationII) then
-			pCity:SetNumRealBuilding(iPoliceStationII,0);
-		    end
-		end
-		--------------------------------------Selling City Hall Create Puppet End--------------------------------------
+		--SP Selling City Hall Create Puppet End
 	end
 	g_iBuildingToSell = -1;
 end
