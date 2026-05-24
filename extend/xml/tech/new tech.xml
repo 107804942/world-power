@@ -1045,16 +1045,16 @@
 		</Row>
 
 		<Row>
-			<Type>TECH_EXPLORATION2</Type>
+			<Type>TECH_DISCOVER</Type>
 			<Cost>2500</Cost>
-			<Description>TXT_KEY_TECH_EXPLORATION2</Description>
-			<Civilopedia>TXT_KEY_TECH_EXPLORATION2_DESC</Civilopedia>
+			<Description>TXT_KEY_TECH_DISCOVER</Description>
+			<Civilopedia>TXT_KEY_TECH_DISCOVER_DESC</Civilopedia>
 			<Help>TXT_KEY_SP_TECH_GENERAL_HELP</Help>
 			<Era>ERA_RENAISSANCE</Era>
 			<Trade>true</Trade>
 			<GridX>10</GridX>
 			<GridY>5</GridY>
-			<Quote>TXT_KEY_TECH_EXPLORATION2_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_DISCOVER_QUOTE</Quote>
 			<PortraitIndex>244</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<AudioIntro>AS2D_TECH_MED_EXPLORATION</AudioIntro>

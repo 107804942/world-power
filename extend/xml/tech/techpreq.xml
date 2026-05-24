@@ -515,7 +515,7 @@
 		</Row>
 
 		<Row>
-			<TechType>TECH_EXPLORATION2</TechType>
+			<TechType>TECH_DISCOVER</TechType>
 			<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
 		</Row>
 
@@ -527,12 +527,12 @@
 
 		<Row>
 			<TechType>TECH_NEW_HUMANISM</TechType>
-			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+			<PrereqTech>TECH_DISCOVER</PrereqTech>
 		</Row>
 
 		<Row>
 			<TechType>TECH_SCIENTIFIC_THEORY</TechType>
-			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+			<PrereqTech>TECH_DISCOVER</PrereqTech>
 		</Row>
 
 
@@ -2004,27 +2004,27 @@
 
 
 		<Row>
-			<TechType>TECH_EXPLORATION2</TechType>
+			<TechType>TECH_DISCOVER</TechType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>6</Flavor>
 		</Row>
 		<Row>
-			<TechType>TECH_EXPLORATION2</TechType>
+			<TechType>TECH_DISCOVER</TechType>
 			<FlavorType>FLAVOR_MOBILE</FlavorType>
 			<Flavor>8</Flavor>
 		</Row>
 		<Row>
-			<TechType>TECH_EXPLORATION2</TechType>
+			<TechType>TECH_DISCOVER</TechType>
 			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
 			<Flavor>7</Flavor>
 		</Row>
 		<Row>
-			<TechType>TECH_EXPLORATION2</TechType>
+			<TechType>TECH_DISCOVER</TechType>
 			<FlavorType>FLAVOR_WONDER</FlavorType>
 			<Flavor>15</Flavor>
 		</Row>
 		<Row>
-			<TechType>TECH_EXPLORATION2</TechType>
+			<TechType>TECH_DISCOVER</TechType>
 			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
 			<Flavor>8</Flavor>
 		</Row>

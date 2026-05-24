@@ -764,7 +764,7 @@
 			<WonderSplashImage>GateAll.dds</WonderSplashImage>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
-			<ExtraUnitPlayerInstances>1</ExtraUnitPlayerInstances>
+			<!--<ExtraUnitPlayerInstances>1</ExtraUnitPlayerInstances>-->
 			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
 		</Row>
 		
@@ -1065,7 +1065,7 @@
 			<Civilopedia>TXT_KEY_WONDER_SANKORE_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_SANKORE_QUOTE</Quote>
 			<Cost>690</Cost>
-			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+			<PrereqTech>TECH_DISCOVER</PrereqTech>
 			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
 			<!--<GreatPeopleRateChange>1</GreatPeopleRateChange>-->
 			<NukeImmune>true</NukeImmune>
@@ -2120,7 +2120,7 @@
 			<Civilopedia>TXT_KEY_WONDER_KRONBORG_PEDIA</Civilopedia>
 			<Quote>TXT_KEY_WONDER_KRONBORG_QUOTE</Quote>
 			<Cost>780</Cost>
-			<PrereqTech>TECH_EXPLORATION2</PrereqTech>
+			<PrereqTech>TECH_DISCOVER</PrereqTech>
 			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>

@@ -1198,8 +1198,13 @@ end
 
 
 
+
+
+
+
 function CanHavePromotion(iPlayer, iUnit, iPromotionType)
   local pUnit = Players[iPlayer]:GetUnitByID(iUnit)
+
 
 
   if iPromotionType == GameInfoTypes.PROMOTION_GUN_2 then

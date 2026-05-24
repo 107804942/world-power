@@ -1436,6 +1436,13 @@
 			<Text>隐形歼击机、幽浮歼击机与同时代舰载机单位对海军及陆地单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
+
+
+	
+
+
+		
+
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_1">
 			<Text>舰炮一级</Text>
 		</Row>
@@ -1450,12 +1457,14 @@
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_2_HELP">
 			<Text>对陆军单位+25%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
+
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_3">
 			<Text>舰炮三级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_3_HELP">
-			<Text>攻城+50%[ICON_STRENGTH]战斗力</Text>
+			<Text>攻城+50%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
+
 
 
 		<Row Tag="TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_3">
@@ -4761,13 +4770,13 @@
 
 
 		<!--Exploration-->
-		<Row Tag="TXT_KEY_TECH_EXPLORATION2">
+		<Row Tag="TXT_KEY_TECH_DISCOVER">
 			<Text>理性主义</Text>
 		</Row>
-		<Row Tag="TXT_KEY_TECH_EXPLORATION2_QUOTE">
+		<Row Tag="TXT_KEY_TECH_DISCOVER_QUOTE">
 			<Text>[NEWLINE][TAB][TAB]"我不同意你说的每一个字，但是我誓死捍卫你说话的权利。"[NEWLINE][TAB][TAB] -- 伏尔泰[NEWLINE][TAB]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_TECH_EXPLORATION2_DESC">
+		<Row Tag="TXT_KEY_TECH_DISCOVER_DESC">
 			<Text>启蒙时代或启蒙运动，又称理性时代，是指在17世纪及18世纪欧洲地区发生的一场知识及文化运动，该运动相信理性发展知识可以解决人类实存的基本问题。人类历史从此展开在思潮、知识及媒体上的"启蒙"，开启现代化和现代性的发展历程。德意志哲学家康德以"敢于求知"的启蒙精神来阐述人类的理性担当。他认为启蒙运动是人类的最终解放时代，将人类意识从不成熟的无知和错误状态中解放。</Text>
 		</Row>
 
@@ -9661,7 +9670,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_GATE_ALL_HELP">
 			<Text>
-				所有单位可持有数量上限+1。
+				工业时代之前的精英单位可持有数量上限+1。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_GATE_ALL_QUOTE">

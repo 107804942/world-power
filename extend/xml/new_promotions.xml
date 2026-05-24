@@ -5,6 +5,11 @@
 	<UnitPromotions>
 
 
+
+		
+	
+		
+		
 		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
 
 		<!--<Update>
@@ -2251,7 +2256,11 @@
 	<!--**************************海军晋升*****************************-->
 	<UnitPromotions>
 
-
+		<Update>
+			<Set IconAtlas="SP_PROMOTION_OLD_ATLAS" PortraitIndex="14"/>
+			<Where Type="PROMOTION_CLUSTER_ROCKET_2"/>
+		</Update>
+		
 
 		<Row>
 			<Type>PROMOTION_INVISIBLE_DESTROYER</Type>
@@ -2362,7 +2371,8 @@
 
 
 
-
+		
+		
 
 		<Row>
 			<Type>PROMOTION_LAND_TARGETING_1</Type>
@@ -2536,6 +2546,8 @@
 
 	<UnitPromotions_UnitCombats>
 
+
+			
 		<Row>
 			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_3</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
