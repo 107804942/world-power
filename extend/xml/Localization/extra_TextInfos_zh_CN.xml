@@ -1455,11 +1455,27 @@
 		</Row>
 
 
+
+		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT">
+			<Text>集束弹初始化</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT_HELP">
+			<Text>重置集束弹攻击效果。</Text>
+		</Row>
+		
+		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_3">
+			<Text>集束弹三级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_3_HELP">
+			<Text>溅射范围从1提升到2。</Text>
+		</Row>
+		
+
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_1">
 			<Text>舰炮一级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_1_HELP">
-			<Text>对陆军单位+25%[ICON_STRENGTH]攻击力。</Text>
+			<Text>对陆军单位与城市+15%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 
 
@@ -1467,14 +1483,14 @@
 			<Text>舰炮二级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_2_HELP">
-			<Text>对陆军单位+25%[ICON_STRENGTH]攻击力。</Text>
+			<Text>对陆军单位与城市+15%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_3">
 			<Text>舰炮三级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_3_HELP">
-			<Text>攻城+50%[ICON_STRENGTH]战斗力。</Text>
+			<Text>对陆军单位与城市+15%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 
 

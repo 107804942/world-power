@@ -2256,12 +2256,13 @@
 	<!--**************************海军晋升*****************************-->
 	<UnitPromotions>
 
-		<Update>
-			<Set IconAtlas="SP_PROMOTION_OLD_ATLAS" PortraitIndex="14"/>
-			<Where Type="PROMOTION_CLUSTER_ROCKET_2"/>
-		</Update>
-		
 
+		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_1"/>
+		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_2"/>
+		<Delete Type="PROMOTION_CLUSTER_ROCKET_1"/>
+		<Delete Type="PROMOTION_CLUSTER_ROCKET_2"/>
+		
+		
 		<Row>
 			<Type>PROMOTION_INVISIBLE_DESTROYER</Type>
 			<Description>TXT_KEY_PROMOTION_INVISIBLE_DESTROYER</Description>
@@ -2370,7 +2371,72 @@
 
 
 
+		<Row>
+			<Type>PROMOTION_CLUSTER_ROCKET_INIT</Type>
+			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT</Description>
+			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_INIT</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<ShowInPedia>0</ShowInPedia>
+			<ShowInUnitPanel>0</ShowInUnitPanel>
+			<SplashDamagePercent>-100</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+		</Row>
 
+
+		<Row>
+			<Type>PROMOTION_CLUSTER_ROCKET_1</Type>
+			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1</Description>
+			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>38</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_SPLASH_DAMAGE</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionPrereqOr2>
+			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1</PediaEntry>
+			<SplashDamagePercent>25</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+		</Row>
+
+	
+		
+		<Row>
+			<Type>PROMOTION_CLUSTER_ROCKET_2</Type>
+			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2</Description>
+			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>14</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_CLUSTER_ROCKET_1</PromotionPrereqOr1>
+			<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2</PediaEntry>
+			<SplashDamagePercent>25</SplashDamagePercent>
+			<SplashDamageRadius>1</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+		</Row>
+
+
+		<Row>
+			<Type>PROMOTION_CLUSTER_ROCKET_3</Type>
+			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3</Description>
+			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>15</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_CLUSTER_ROCKET_2</PromotionPrereqOr1>
+			<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
+			<PediaType>PEDIA_RANGED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3</PediaEntry>
+			<SplashDamagePercent>100</SplashDamagePercent>
+			<SplashDamageRadius>2</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+		</Row>
 		
 		
 
@@ -2385,6 +2451,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_LAND_TARGETING_1</PediaEntry>
+			<CityAttack>15</CityAttack>
 		</Row>
 		<Row>
 			<Type>PROMOTION_LAND_TARGETING_2</Type>
@@ -2397,6 +2464,7 @@
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_LAND_TARGETING_2</PediaEntry>
+			<CityAttack>15</CityAttack>
 		</Row>
 
 
@@ -2410,15 +2478,14 @@
 			<PortraitIndex>12</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
-			<CityAttack>50</CityAttack>
+			<CityAttack>15</CityAttack>
 			<PediaEntry>TXT_KEY_PROMOTION_LAND_TARGETING_3</PediaEntry>
 		</Row>
 
 
 
 
-		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_1"/>
-		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_2"/>
+	
 
 
 		<Row>
@@ -2526,14 +2593,19 @@
 		<Row>
 			<PromotionType>PROMOTION_LAND_TARGETING_1</PromotionType>
 			<DomainType>DOMAIN_LAND</DomainType>
-			<Attack>25</Attack>
+			<Attack>15</Attack>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_LAND_TARGETING_2</PromotionType>
 			<DomainType>DOMAIN_LAND</DomainType>
-			<Attack>25</Attack>
+			<Attack>15</Attack>
 		</Row>
-
+		<Row>
+			<PromotionType>PROMOTION_LAND_TARGETING_3</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Attack>15</Attack>
+		</Row>
+		
 		<Row>
 			<PromotionType>PROMOTION_INVISIBLE_DESTROYER</PromotionType>
 			<DomainType>DOMAIN_LAND</DomainType>
@@ -2546,7 +2618,10 @@
 
 	<UnitPromotions_UnitCombats>
 
-
+		<Row>
+			<PromotionType>PROMOTION_CLUSTER_ROCKET_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
 			
 		<Row>
 			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_3</PromotionType>

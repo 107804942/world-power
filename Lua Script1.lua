@@ -3,21 +3,19 @@
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------\
 
-
 function ClusterRocketInit(iPlayer, iUnit, ePromotion)
 	local pPlayer = Players[iPlayer]
 	local pUnit = pPlayer:GetUnitByID(iUnit)
-	if player == nil  then
+	if pPlayer == nil  then
 		return
 	end 
 	if  ePromotion== GameInfoTypes.PROMOTION_CLUSTER_ROCKET_3 then
-		pUnit:SetHasPromotion(GameInfoTypes.CLUSTER_ROCKET_INIT, true)
+		pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_CLUSTER_ROCKET_INIT, true)
 	end
-	if  ePromotion== GameInfoTypes.PROMOTION_LAND_TARGETING_3  then
-		pUnit:SetHasPromotion(GameInfoTypes.CLUSTER_ROCKET_INIT, true)
-	end
+
 end
 GameEvents.UnitPromoted.Add(ClusterRocketInit)
+
 
 	if  unit:GetUnitType() == GameInfoTypes["UNIT_NAVALCARRIER03P"] then
 	    local iNumFighters = unit:GetCargo()

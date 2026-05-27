@@ -1200,6 +1200,18 @@ end
 
 
 
+function ClusterRocketInit(iPlayer, iUnit, ePromotion)
+	local pPlayer = Players[iPlayer]
+	local pUnit = pPlayer:GetUnitByID(iUnit)
+	if pPlayer == nil  then
+		return
+	end 
+	if  ePromotion== GameInfoTypes.PROMOTION_CLUSTER_ROCKET_3 then
+		pUnit:SetHasPromotion(GameInfoTypes.PROMOTION_CLUSTER_ROCKET_INIT, true)
+	end
+
+end
+GameEvents.UnitPromoted.Add(ClusterRocketInit)
 
 
 function CanHavePromotion(iPlayer, iUnit, iPromotionType)
