@@ -571,7 +571,7 @@
 			<Description>TXT_KEY_BUILDING_SPHINX</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
-
+		<!-- 塔尔欣寺庙 -->
 		<Row>
 			<Type>BUILDINGCLASS_MALTA</Type>
 			<DefaultBuilding>BUILDING_MALTA</DefaultBuilding>
@@ -580,6 +580,7 @@
 		</Row>
 
 
+		<!-- 麦罗埃 -->
 		<Row>
 			<Type>BUILDINGCLASS_MEROE</Type>
 			<DefaultBuilding>BUILDING_MEROE</DefaultBuilding>

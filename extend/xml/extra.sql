@@ -185,6 +185,14 @@ VALUES('POLICY_GRANDEUR_5', 'YIELD_HEALTH', 3);
 
 
 
+
+-- 军港和海防
+INSERT INTO Improvement_TechYieldChanges (ImprovementType, TechType, YieldType, Yield)
+VALUES
+    ('IMPROVEMENT_FORT',	   'TECH_MILITARY_OCEANOGRAPHY',      'YIELD_GREAT_ADMIRAL_POINTS',       1),
+	('IMPROVEMENT_COASTAL_FORT',  'TECH_MILITARY_OCEANOGRAPHY',      'YIELD_GREAT_ADMIRAL_POINTS', 1);
+
+
 -- Manufactory 
 INSERT INTO Improvement_TechYieldChanges (ImprovementType, TechType, YieldType, Yield)
 VALUES

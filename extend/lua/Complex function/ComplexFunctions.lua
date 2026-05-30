@@ -1269,8 +1269,21 @@ function ProduceCopy(iPlayer, iUnit, iGreatWork)
 end
 GameEvents.GreatWorkCreated.Add(ProduceCopy)
 
-
-
+-- ********************************************************
+-- 
+-- ******************************************************** 
+function BuffForNaturalWonderDiscovered(iTeam, iFeature, iX, iY, bFirst)
+    local pTeam = Teams[iTeam]
+	local iPlayer = pTeam:GetLeaderID()
+	local pPlayer = Players[iPlayer]
+    if pPlayer == nil or (not pPlayer:IsMajorCiv()) then
+	 	return
+	         end
+		if pPlayer:HasWonder(GameInfoTypes.BUILDING_MALTA) then
+		pPlayer:ChangeGold(1000)
+	end
+end
+GameEvents.NaturalWonderDiscovered.Add(BuffForNaturalWonderDiscovered)
 
 -- **********************************************************************************************************************************************
 -- ¹ºÂòµØ¿é

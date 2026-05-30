@@ -11,7 +11,7 @@
 		
 		
 		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
-
+	
 		<!--<Update>
 			<Set OriginalCapitalDamageFix="2"/>
 			<Where Type="PROMOTION_NEW_ORDER"/>
@@ -69,8 +69,11 @@
 			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="5" />
 			<Where Type="PROMOTION_AIR_SIEGE_3" />
 		</Update>
-		
 
+
+
+	
+		
 
 		<Row>
 			<Type>PROMOTION_NUCLEAR_ARTILLERY</Type>
@@ -91,6 +94,8 @@
 
 	<UnitPromotions_UnitCombats>
 
+		
+		
 		
 		<!--xcom-->
 
@@ -2246,7 +2251,7 @@
 	
 		
 		<Update>
-			<Set PromotionPrereqOr7="PROMOTION_LAND_TARGETING_3"/>
+			<Set PromotionPrereqOr7="PROMOTION_LAND_TARGETING_3" />
 			<Where Type="PROMOTION_LOGISTICS"/>
 		</Update>
 		
@@ -2577,6 +2582,11 @@
 
 
 
+		<Row>
+			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+
 
 
 		<Row>
@@ -2698,12 +2708,6 @@
 	<UnitPromotions>
 
 		<!--NearbyImprovementCombatBonus="100" NearbyImprovementBonusRange="1" CombatBonusImprovement="IMPROVEMENT_CITADEL"/>-->
-
-
-
-
-
-
 
 
 		<Delete Type="PROMOTION_ANTI_TANK_BAZOOKA"/>

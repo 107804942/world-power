@@ -5652,7 +5652,7 @@
 			<Text>塔尔欣寺庙</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MALTA_HELP">
-			<Text>所有城市赠送神祠，所有神祠+2[ICON_PEACE]信仰。大幅度增加本城的宗教压力。</Text>
+			<Text>所有城市赠送神祠，所有神祠+2[ICON_PEACE]信仰。大幅度增加本城的宗教压力。发现自然奇观时+1000[ICON_GOLD]金钱。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_WONDER_MALTA_QUOTE">
@@ -5670,9 +5670,8 @@
 			<Text>麦罗埃</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_MEROE_HELP">
-			<Text>国境内每处沙漠地块+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰。本城绿洲地貌+2[ICON_PRODUCTION]产能+2[ICON_GOLD]金钱。</Text>
+			<Text>国境内每处沙漠地块+1[ICON_CULTURE]文化、+1[ICON_PEACE]信仰、+1[ICON_HEALTH]健康度。本城绿洲地貌+2[ICON_PRODUCTION]产能、+2[ICON_GOLD]金钱、+2[ICON_HEALTH]健康度。</Text>
 		</Row>
-
 		<Row Tag="TXT_KEY_WONDER_MEROE_QUOTE">
 			<Text>
 				[NEWLINE]"土地或许被毁了，但它依旧完整如初。"[NEWLINE]        ——苏丹格言[NEWLINE]
@@ -6064,7 +6063,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_CLOACA_HELP">
 			<Text>
-				城市街道下的主要排水和污水处理设施。+1[ICON_HAPPINESS_1]快乐,+2[ICON_HEALTH]健康度。
+				城市街道下的主要排水和污水处理设施。+1[ICON_HAPPINESS_1]快乐,+3[ICON_HEALTH]健康度。
 			</Text>
 		</Row>
 
@@ -6081,7 +6080,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_BALNEAE_HELP">
 			<Text>
-				+2[ICON_HAPPINESS_1]快乐,+5%[ICON_HEALTH]健康度。
+				+2[ICON_HAPPINESS_1]快乐,+3[ICON_HEALTH]健康度，+5%[ICON_HEALTH]健康度。
 			</Text>
 		</Row>
 
