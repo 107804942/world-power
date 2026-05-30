@@ -2,6 +2,125 @@
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
 
+	<Row>
+		<Type>PROMOTION_NAVAL_SIEGE_1</Type>
+		<Description>TXT_KEY_PROMOTION_NAVAL_SIEGE1</Description>
+		<Help>TXT_KEY_PROMOTION_NAVAL_SIEGE1_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PromotionPrereqOr1>PROMOTION_DESTROYER_COMBAT</PromotionPrereqOr1>
+		<PortraitIndex>40</PortraitIndex>
+		<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+		<PediaType>PEDIA_NAVAL</PediaType>
+		<OrderPriority>5</OrderPriority>
+		<PediaEntry>TXT_KEY_PROMOTION_NAVAL_SIEGE1</PediaEntry>
+		<CityAttack>75</CityAttack>
+	</Row>
+
+
+
+	<Row>
+		<Type>PROMOTION_NAVAL_SIEGE_2</Type>
+		<Description>TXT_KEY_PROMOTION_NAVAL_SIEGE2</Description>
+		<Help>TXT_KEY_PROMOTION_NAVAL_SIEGE2_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PromotionPrereqOr1>PROMOTION_NAVAL_SIEGE_1</PromotionPrereqOr1>
+		<PortraitIndex>41</PortraitIndex>
+		<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+		<PediaType>PEDIA_NAVAL</PediaType>
+		<OrderPriority>5</OrderPriority>
+		<PediaEntry>TXT_KEY_PROMOTION_NAVAL_SIEGE2</PediaEntry>
+		<CityAttack>75</CityAttack>
+	</Row>
+	
+	
+
+	<Delete Type="PROMOTION_CLUSTER_ROCKET_1"/>
+	<Delete Type="PROMOTION_CLUSTER_ROCKET_2"/>
+
+
+
+	<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT">
+		<Text>集束弹初始化</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT_HELP">
+		<Text>重置集束弹攻击效果。</Text>
+	</Row>
+
+	<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_3">
+		<Text>集束弹三级</Text>
+	</Row>
+	<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_3_HELP">
+		<Text>溅射范围从1提升到2。</Text>
+	</Row>
+	
+	<Row>
+		<Type>PROMOTION_CLUSTER_ROCKET_1</Type>
+		<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1</Description>
+		<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PortraitIndex>38</PortraitIndex>
+		<PromotionPrereqOr1>PROMOTION_SPLASH_DAMAGE</PromotionPrereqOr1>
+		<PromotionPrereqOr2>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionPrereqOr2>
+		<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+		<PediaType>PEDIA_RANGED</PediaType>
+		<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1</PediaEntry>
+		<SplashDamagePercent>25</SplashDamagePercent>
+		<SplashDamageRadius>1</SplashDamageRadius>
+		<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+	</Row>
+
+
+
+	<Row>
+		<Type>PROMOTION_CLUSTER_ROCKET_2</Type>
+		<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2</Description>
+		<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PortraitIndex>14</PortraitIndex>
+		<PromotionPrereqOr1>PROMOTION_CLUSTER_ROCKET_1</PromotionPrereqOr1>
+		<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
+		<PediaType>PEDIA_RANGED</PediaType>
+		<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2</PediaEntry>
+		<SplashDamagePercent>25</SplashDamagePercent>
+		<SplashDamageRadius>1</SplashDamageRadius>
+		<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+	</Row>
+
+
+	<Row>
+		<Type>PROMOTION_CLUSTER_ROCKET_3</Type>
+		<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3</Description>
+		<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PortraitIndex>15</PortraitIndex>
+		<PromotionPrereqOr1>PROMOTION_CLUSTER_ROCKET_2</PromotionPrereqOr1>
+		<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
+		<PediaType>PEDIA_RANGED</PediaType>
+		<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3</PediaEntry>
+		<SplashDamagePercent>100</SplashDamagePercent>
+		<SplashDamageRadius>2</SplashDamageRadius>
+		<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+	</Row>
+	
+	
+	
+	<Row>
+		<Type>PROMOTION_CLUSTER_ROCKET_INIT</Type>
+		<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT</Description>
+		<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PortraitIndex>39</PortraitIndex>
+		<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+		<PediaType>PEDIA_RANGED</PediaType>
+		<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_INIT</PediaEntry>
+		<CannotBeChosen>true</CannotBeChosen>
+		<ShowInPedia>0</ShowInPedia>
+		<ShowInUnitPanel>0</ShowInUnitPanel>
+		<SplashDamagePercent>-100</SplashDamagePercent>
+		<SplashDamageRadius>1</SplashDamageRadius>
+		<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
+	</Row>
+
 
 
 	<!--RBomber2  超级轰炸机-->

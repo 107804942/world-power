@@ -1133,9 +1133,25 @@
 		</Row>
 
 
+		<Row>
+			<PolicyType>POLICY_GRANDEUR_3</PolicyType>
+			<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_GRANDEUR_3</PolicyType>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_TIPI</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
 
-
-
+		<Row>
+			<PolicyType>POLICY_GRANDEUR_3</PolicyType>
+			<ImprovementType>IMPROVEMENT_SHOSHONE_WILDDOME</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
 
 		<Row>
 			<PolicyType>POLICY_GRANDEUR_3</PolicyType>

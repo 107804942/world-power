@@ -744,22 +744,6 @@
 		
 		
 
-		<Row>
-			<Type>PROMOTION_NAVAL_SIGHT</Type>
-			<Description>TXT_KEY_PROMOTION_NAVAL_SIGHT</Description>
-			<Help>TXT_KEY_PROMOTION_NAVAL_SIGHT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
-			<ExtraAttacks>1</ExtraAttacks>	
-			<PortraitIndex>63</PortraitIndex>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_SIGHT</PediaEntry>
-		</Row>
-
-
-
 
 
 		<Row>
@@ -2259,9 +2243,12 @@
 
 		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_1"/>
 		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_2"/>
-		<Delete Type="PROMOTION_CLUSTER_ROCKET_1"/>
-		<Delete Type="PROMOTION_CLUSTER_ROCKET_2"/>
+	
 		
+		<Update>
+			<Set PromotionPrereqOr7="PROMOTION_LAND_TARGETING_3"/>
+			<Where Type="PROMOTION_LOGISTICS"/>
+		</Update>
 		
 		<Row>
 			<Type>PROMOTION_INVISIBLE_DESTROYER</Type>
@@ -2279,34 +2266,50 @@
 
 
 		<Row>
-			<Type>PROMOTION_NAVAL_SIEGE_1</Type>
-			<Description>TXT_KEY_PROMOTION_NAVAL_SIEGE1</Description>
-			<Help>TXT_KEY_PROMOTION_NAVAL_SIEGE1_HELP</Help>
+			<Type>PROMOTION_COASTAL_RAIDER_1</Type>
+			<Description>TXT_KEY_PROMOTION_COASTAL_RAIDER_1</Description>
+			<Help>TXT_KEY_PROMOTION_COASTAL_RAIDER_1_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CityAttack>50</CityAttack>
+			<FreePillageMoves>true</FreePillageMoves>
+			<!--<CityAttackPlunderModifier>33</CityAttackPlunderModifier>-->
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COASTAL_RAIDER_1</PediaEntry>
 			<PromotionPrereqOr1>PROMOTION_DESTROYER_COMBAT</PromotionPrereqOr1>
-			<PortraitIndex>40</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
-			<OrderPriority>5</OrderPriority>
-			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_SIEGE1</PediaEntry>
-			<CityAttack>75</CityAttack>
 		</Row>
-
-
-
 		<Row>
-			<Type>PROMOTION_NAVAL_SIEGE_2</Type>
-			<Description>TXT_KEY_PROMOTION_NAVAL_SIEGE2</Description>
-			<Help>TXT_KEY_PROMOTION_NAVAL_SIEGE2_HELP</Help>
+			<Type>PROMOTION_COASTAL_RAIDER_2</Type>
+			<Description>TXT_KEY_PROMOTION_COASTAL_RAIDER_2</Description>
+			<Help>TXT_KEY_PROMOTION_COASTAL_RAIDER_2_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_NAVAL_SIEGE_1</PromotionPrereqOr1>
-			<PortraitIndex>41</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PromotionPrereqOr1>PROMOTION_COASTAL_RAIDER_1</PromotionPrereqOr1>
+			<CityAttack>50</CityAttack>
+			<PillageReplenishHealth>25</PillageReplenishHealth>
+			<!--<CityAttackPlunderModifier>33</CityAttackPlunderModifier>-->
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
-			<OrderPriority>5</OrderPriority>
-			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_SIEGE2</PediaEntry>
-			<CityAttack>75</CityAttack>
+			<PediaEntry>TXT_KEY_PROMOTION_COASTAL_RAIDER_2</PediaEntry>
 		</Row>
+		<Row>
+			<Type>PROMOTION_COASTAL_RAIDER_3</Type>
+			<Description>TXT_KEY_PROMOTION_COASTAL_RAIDER_3</Description>
+			<Help>TXT_KEY_PROMOTION_COASTAL_RAIDER_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_COASTAL_RAIDER_2</PromotionPrereqOr1>
+			<CityAttack>50</CityAttack>
+			<PillageReplenishHealth>25</PillageReplenishHealth>
+			<!--<CityAttackPlunderModifier>34</CityAttackPlunderModifier>-->
+			<PortraitIndex>5</PortraitIndex>
+			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COASTAL_RAIDER_3</PediaEntry>
+		</Row>
+		
+
+		
 
 
 
@@ -2331,7 +2334,7 @@
 			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2</Description>
 			<Help>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>7</PortraitIndex>
+			<PortraitIndex>6</PortraitIndex>
 			<PromotionPrereqOr1>PROMOTION_NAVAL_INTERCEPTOR_1</PromotionPrereqOr1>
 			<IconAtlas>promoVP_atlas_02</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
@@ -2340,7 +2343,19 @@
 		</Row>
 
 
-
+		<Row>
+			<Type>PROMOTION_NAVAL_INTERCEPTOR_3</Type>
+			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3</Description>
+			<Help>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>7</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_NAVAL_INTERCEPTOR_2</PromotionPrereqOr1>
+			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
+			<OrderPriority>4</OrderPriority>
+			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3</PediaEntry>
+			<AirInterceptRangeChange>1</AirInterceptRangeChange>
+		</Row>
 
 
 
@@ -2371,72 +2386,9 @@
 
 
 
-		<Row>
-			<Type>PROMOTION_CLUSTER_ROCKET_INIT</Type>
-			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT</Description>
-			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>39</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_INIT</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<SplashDamagePercent>-100</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
-		</Row>
 
 
-		<Row>
-			<Type>PROMOTION_CLUSTER_ROCKET_1</Type>
-			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1</Description>
-			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>38</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_SPLASH_DAMAGE</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionPrereqOr2>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_1</PediaEntry>
-			<SplashDamagePercent>25</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
-		</Row>
-
-	
 		
-		<Row>
-			<Type>PROMOTION_CLUSTER_ROCKET_2</Type>
-			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2</Description>
-			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>14</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_CLUSTER_ROCKET_1</PromotionPrereqOr1>
-			<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_2</PediaEntry>
-			<SplashDamagePercent>25</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
-		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_CLUSTER_ROCKET_3</Type>
-			<Description>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3</Description>
-			<Help>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>15</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_CLUSTER_ROCKET_2</PromotionPrereqOr1>
-			<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CLUSTER_ROCKET_3</PediaEntry>
-			<SplashDamagePercent>100</SplashDamagePercent>
-			<SplashDamageRadius>2</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>1</SplashDamagePlotUnitLimit>
-		</Row>
 		
 		
 
@@ -2573,12 +2525,17 @@
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_INTERCEPTOR_1</PromotionType>
 			<DomainType>DOMAIN_AIR</DomainType>
-			<Modifier>50</Modifier>
+			<Modifier>33</Modifier>
 		</Row>
 		<Row>
 			<PromotionType>PROMOTION_NAVAL_INTERCEPTOR_2</PromotionType>
 			<DomainType>DOMAIN_AIR</DomainType>
-			<Modifier>50</Modifier>
+			<Modifier>33</Modifier>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_NAVAL_INTERCEPTOR_3</PromotionType>
+			<DomainType>DOMAIN_AIR</DomainType>
+			<Modifier>34</Modifier>
 		</Row>
 
 
@@ -2618,15 +2575,7 @@
 
 	<UnitPromotions_UnitCombats>
 
-		<Row>
-			<PromotionType>PROMOTION_CLUSTER_ROCKET_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-			
-		<Row>
-			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
+
 
 
 
@@ -2664,19 +2613,25 @@
 			<PromotionType>PROMOTION_NAVAL_INTERCEPTOR_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
 		</Row>
-
+		<Row>
+			<PromotionType>PROMOTION_NAVAL_INTERCEPTOR_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
 
 		<Row>
-			<PromotionType>PROMOTION_NAVAL_SIEGE_1</PromotionType>
+			<PromotionType>PROMOTION_COASTAL_RAIDER_1</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
 		</Row>
 
 
 		<Row>
-			<PromotionType>PROMOTION_NAVAL_SIEGE_2</PromotionType>
+			<PromotionType>PROMOTION_COASTAL_RAIDER_2</PromotionType>
 			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
 		</Row>
-
+		<Row>
+			<PromotionType>PROMOTION_COASTAL_RAIDER_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
 
 	</UnitPromotions_UnitCombats>
 

@@ -1444,8 +1444,17 @@
 
 
 
-	
-
+		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_1_HELP" >
+			<Text>对城市+50%[ICON_STRENGTH]战斗力。掠劫不消耗移动力。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_2_HELP" >
+			<Text>对城市+50%[ICON_STRENGTH]战斗力。掠劫时额外恢复25点生命值。</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_COASTAL_RAIDER_3_HELP" >
+			<Text>对城市+50%[ICON_STRENGTH]战斗力。掠劫时额外恢复25点生命值。</Text>
+		</Replace>
+		
+		
 
 		<Row Tag="TXT_KEY_PROMOTION_FIGHTER_ATTACK">
 			<Text>精确制导</Text>
@@ -1455,20 +1464,6 @@
 		</Row>
 
 
-
-		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT">
-			<Text>集束弹初始化</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_INIT_HELP">
-			<Text>重置集束弹攻击效果。</Text>
-		</Row>
-		
-		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_3">
-			<Text>集束弹三级</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_CLUSTER_ROCKET_3_HELP">
-			<Text>溅射范围从1提升到2。</Text>
-		</Row>
 		
 
 		<Row Tag="TXT_KEY_PROMOTION_LAND_TARGETING_1">
@@ -1542,16 +1537,21 @@
 			<Text>防空一级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR1_HELP">
-			<Text>对空袭+50%[ICON_STRENGTH]战斗力。</Text>
+			<Text>对空袭+33%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2">
 			<Text>防空二级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2_HELP">
-			<Text>对空袭+50%[ICON_STRENGTH]战斗力。</Text>
+			<Text>对空袭+33%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
-
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3">
+			<Text>防空三级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3_HELP">
+			<Text>对空袭+34%[ICON_STRENGTH]战斗力，拦截范围+1。</Text>
+		</Row>
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SP_BARRAGE_3">
@@ -5319,12 +5319,6 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_SIGHT">
-			<Text>船舰补给</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_NAVAL_SIGHT_HELP">
-			<Text>海军旗舰单位可攻击后移动，额外获得一次攻击次数。</Text>
-		</Row>
 
 		<Row Tag="TXT_KEY_CITY_BOMB_HELP">
 			<Text>城市焚毁行动将立即完成。</Text>
@@ -7393,7 +7387,7 @@
 		<Row Tag="TXT_KEY_GRANDEUR_3_HELP">
 			<Text>
 				[COLOR_POSITIVE_TEXT]强迫劳役[ENDCOLOR]
-				[NEWLINE][ICON_BULLET]农场、圩田、梯田+1[ICON_FOOD]食物，矿井、采石场+1[ICON_PRODUCTION]产能。
+				[NEWLINE][ICON_BULLET]农场、圩田、梯田、牧场、蹄皮帐篷、野兽驯养+1[ICON_FOOD]食物，矿井、采石场+1[ICON_PRODUCTION]产能。
 				[NEWLINE][ICON_BULLET]失业人口+1[ICON_PRODUCTION]产能。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_POLICY_GRANDEUR_3_TEXT">
