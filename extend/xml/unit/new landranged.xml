@@ -152,6 +152,12 @@
 		</Row>
 		<Row>
 			<UnitType>UNIT_HOVERTANK</UnitType>
+			<PromotionType>PROMOTION_POWERFUL_CANNON</PromotionType>
+		</Row>
+		
+		
+		<Row>
+			<UnitType>UNIT_HOVERTANK</UnitType>
 			<PromotionType>PROMOTION_INDIRECT_FIRE</PromotionType>
 		</Row>
 

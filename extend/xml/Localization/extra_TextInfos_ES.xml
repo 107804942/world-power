@@ -1428,14 +1428,12 @@
 		</Row>
 
 
-
 		<Row Tag="TXT_KEY_PROMOTION_FIGHTER_ATTACK">
 			<Text>精确制导</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIGHTER_ATTACK_HELP">
-			<Text>隐形歼击机、幽浮歼击机与同时代舰载机单位对海军及陆地单位+25%[ICON_STRENGTH]战斗力。</Text>
+			<Text>空军单位对海军及陆地单位+25%[ICON_STRENGTH]战斗力。</Text>
 		</Row>
-
 
 
 
@@ -3925,12 +3923,7 @@
 			<Text>掠劫地块额外恢复25点生命值且不消耗移动力，通过掠劫可额外获得一移动力与一攻击次数并且对临近一格内的敌人造成25点伤害。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_EQUICK">
-			<Text>火力覆盖</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_EQUICK_HELP">
-			<Text>陆军AOE单位远程攻击力+20%。</Text>
-		</Row>
+
 
 
 		<Row Tag="TXT_KEY_BUILDING_MINEFIELD">

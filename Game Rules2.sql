@@ -8,7 +8,18 @@ WHERE U.Cost > 1 AND ProjectPrereq !=-1 AND E.ID < 4 ;
 
 
 
+---¼ß»÷»ú
+INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
+SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_AIRFIGHTER04P';
 
+INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
+SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_CARRIER_FIGHTER_FUTURE';
+
+INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
+SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_STEALTH_ATTACK_AIRCRAFT';
+
+INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
+SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_CARRIER_FIGHTER_ADV';
 
 
 

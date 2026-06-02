@@ -203,22 +203,12 @@ UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Minor_Building_Ov
 -- 科技或建筑免费晋升关联单位种类
 ------------------------------------------------------------------------------------------------------------------------
 
-
-------溅射穿透
-
+------精确制导
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_EQUICK', Type  FROM Units WHERE Class ='UNITCLASS_SUPER_ROCKET';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_EQUICK', Type  FROM Units WHERE Class ='UNITCLASS_ROCKET_ARTILLERY';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_EQUICK', Type  FROM Units WHERE Class ='UNITCLASS_CHINESE_WEISHI';
-
-
-
-
-
+SELECT 'PROMOTION_FIGHTER_ATTACK',U.Type  FROM Units U  
+JOIN Technologies T ON U.PrereqTech = T.Type  
+JOIN Eras E ON T.Era = E.Type  
+WHERE (U.CombatClass ='UNITCOMBAT_ARCHER'OR U.CombatClass ='UNITCOMBAT_FIGHTER') AND E.ID > 6 ;
 
 
 ---海军防空
@@ -237,18 +227,6 @@ INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
 SELECT 'PROMOTION_AERIAL_REFUELING', Type  FROM Units WHERE Class ='UNITCLASS_DRONE_FIGHTER';
 
 
----歼击机
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_AIRFIGHTER04P';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_CARRIER_FIGHTER_FUTURE';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_STEALTH_ATTACK_AIRCRAFT';
-
-INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
-SELECT 'PROMOTION_FIGHTER_ATTACK', Type  FROM Units WHERE Class ='UNITCLASS_CARRIER_FIGHTER_ADV';
 
 
 ---机甲
@@ -1987,7 +1965,7 @@ INSERT INTO Technology_FreePromotions(TechType,PromotionType)
 SELECT 'TECH_INTEGRATED_DEFENSE', 'PROMOTION_XCOM_WEAPON_BASE' UNION ALL ---太空部队
 SELECT 'TECH_SDI', 'PROMOTION_ANTIAIRX' UNION ALL
 SELECT 'TECH_PLANETARY_NETWORKS',  'PROMOTION_AERIAL_REFUELING' UNION ALL
-SELECT 'TECH_SPACE_TECHNOLOGY',  'PROMOTION_FIGHTER_ATTACK' UNION ALL
+SELECT 'TECH_ARMOR',  'PROMOTION_FIGHTER_ATTACK' UNION ALL
 SELECT 'TECH_MATTERTRANSMISSION', 'PROMOTION_ALUMINIST' ;
 
 
@@ -1998,4 +1976,4 @@ INSERT  INTO Building_UnitClassMaxInstances(BuildingType,UnitClassType,ExtraMax)
 SELECT 'BUILDING_GATE_ALL',U.Class,1  FROM Units U  
 JOIN Technologies T ON U.PrereqTech = T.Type  
 JOIN Eras E ON T.Era = E.Type  
-WHERE U.Cost > 1 AND ProjectPrereq !=-1 AND E.ID < 4 ;
+WHERE U.Cost > 1 AND U.ProjectPrereq !=-1 AND E.ID < 4 ;

@@ -350,12 +350,6 @@
 
 	
 
-		<!--火力覆盖-->
-		<Row>
-			<PromotionType>PROMOTION_EQUICK</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
-
 
 
 		<!--铝热剂-->
@@ -3267,20 +3261,7 @@
 
 
 		
-		<Row>
-			<Type>PROMOTION_EQUICK</Type>
-			<Description>TXT_KEY_PROMOTION_EQUICK</Description>
-			<Help>TXT_KEY_PROMOTION_EQUICK_HELP</Help>
-			<TechPrereq>TECH_AUTONOMOUS_SYSTEMS</TechPrereq>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<RangedAttackModifier>25</RangedAttackModifier>
-			<PortraitIndex>52</PortraitIndex>
-			<IconAtlas>VALERY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_EQUICK</PediaEntry>
-			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
-		</Row>
-
+	
 
 	
 
