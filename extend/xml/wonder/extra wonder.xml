@@ -970,7 +970,6 @@
 			<ConquestProb>100</ConquestProb>
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
 			<NukeImmune>true</NukeImmune>
-			<FreePolicies>1</FreePolicies> 
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
@@ -3726,25 +3725,25 @@
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV1</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>1</YieldChange>
+			<YieldChange>10</YieldChange>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV2</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>1</YieldChange>
+			<YieldChange>10</YieldChange>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV3</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>1</YieldChange>
+			<YieldChange>10</YieldChange>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_CITY_HALL_LV4</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>1</YieldChange>
+			<YieldChange>10</YieldChange>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
@@ -3756,13 +3755,13 @@
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
 			<YieldType>YIELD_CULTURE</YieldType>
-			<YieldChange>1</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_THE_CAPITOL</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_PUBLISHER</BuildingClassType>
 			<YieldType>YIELD_SCIENCE</YieldType>
-			<YieldChange>1</YieldChange>
+			<YieldChange>5</YieldChange>
 		</Row>
 		
 
@@ -4417,7 +4416,7 @@
 
 	<Building_YieldChanges>
 
-		<Delete BuildingType="BUILDING_STONEHENGE"/>
+	
 		<Delete BuildingType="BUILDING_GRAND_TEMPLE"/>
 		
 
@@ -4508,12 +4507,7 @@
 			<Yield>2</Yield>
 		</Row>
 
-		<!--巨石阵 -->
-		<Row>
-			<BuildingType>BUILDING_STONEHENGE</BuildingType>
-			<YieldType>YIELD_FAITH</YieldType>
-			<Yield>12</Yield>
-		</Row>
+
 
 		<!--圣殿 -->
 		<Row>

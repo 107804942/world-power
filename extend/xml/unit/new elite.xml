@@ -415,7 +415,7 @@
 			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
 			<PortraitIndex>11</PortraitIndex>
 			<MoveRate>SUB</MoveRate>
-			<!--<RangeAttackOnlyInDomain>true</RangeAttackOnlyInDomain>-->
+			<RangeAttackOnlyInDomain>true</RangeAttackOnlyInDomain>
 			<ProjectPrereq>PROJECT_UNDERWATER_CARRIER</ProjectPrereq>
 			<ExtraMaintenanceCost>300</ExtraMaintenanceCost>
 		</Row>

@@ -3211,7 +3211,7 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT_HELP">
-			<Text>单位处于灼烧状态，每回合减少等同于最大生命值15%的生命值。</Text>
+			<Text>单位处于灼烧状态，每回合减少20点生命值，防御力-10%。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_BURNING_EFFECT">
@@ -6174,7 +6174,7 @@
 			<Text>喷火器</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_FIRE_WEAPON_HELP">
-			<Text>攻击时可造成溅射伤害，对被溅射的单位附加燃烧效果（燃烧持续两回合，每回合扣除20点生命值）攻击燃烧状态的敌人时[ICON_STRENGTH]攻击力+50%，若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
+			<Text>攻击时可对目标地块极其相邻地块内的所有敌方单位附加燃烧效果（燃烧持续两回合，每回合扣除20点生命值，防御力-10%）攻击燃烧状态的敌人时[ICON_STRENGTH]攻击力+50%，若敌方拥有人造意志晋升则无法附加燃烧效果。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_BUILDING_SILKROAD">
@@ -8509,7 +8509,7 @@
 
 		<Row Tag="TXT_KEY_WONDER_THE_CAPITOL_HELP">
 			<Text>
-				赠送一个免费政策。在世界会议获得额外2个代表票数。各类型市政厅+1[ICON_CULTURE]文化，出版社+1[ICON_CULTURE]文化，+1[ICON_RESEARCH]科研。
+				在世界会议获得额外2个代表票数。各类型市政厅+10[ICON_CULTURE]文化，出版社+5[ICON_CULTURE]文化，+5[ICON_RESEARCH]科研。
 			</Text>
 		</Row>
 
@@ -9602,7 +9602,7 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_HELP">
 			<Text>
-				火山喷发不会对本城地块产生伤害，但加成效果依旧有效。本城范围内每个平原地形+10%[ICON_PRODUCTION]产能。提供五份[ICON_RES_TITANIUM]钛资源。
+				火山喷发不会对本城地块产生伤害，但加成效果依旧有效。本城范围内每个平原地形+5%[ICON_PRODUCTION]产能。提供五份[ICON_RES_TITANIUM]钛资源。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_GEOLOGICAL_ANVIL_TEXT">

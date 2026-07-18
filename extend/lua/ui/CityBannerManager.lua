@@ -872,7 +872,7 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		           --- local tip = GetHelpTextForProject( projectProduction, true )
 					---ShowTextToolTipAndPicture4( tip,thisProjectInfo.PortraitIndex, thisProjectInfo.IconAtlas)
 					--------------------------------------------------------
-					controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )
+					--controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )
 					
 				else
 					controls.CityBannerProductionImage:SetHide( true );
@@ -887,7 +887,7 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		           --local tip =  GetHelpTextForProcess( processProduction, true )
 					---ShowTextToolTipAndPicture4( tip,thisProcessInfo.PortraitIndex, thisProcessInfo.IconAtlas)
 					--------------------------------------------------------
-						controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )		
+						--controls.CityBannerProductionButton:SetToolTipType( "City_Tooltip" )		
 				else
 					controls.CityBannerProductionImage:SetHide( true );
 				end

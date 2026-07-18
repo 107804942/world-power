@@ -448,6 +448,18 @@ function GetCityPlagueTypeToSpawn(city)
 end
 
 
+------------------------------------------------------
+function CheckUploading(iPlotX, iPlotY, iOldPop, iNewPop)
+	local city = Map.GetPlot(iPlotX, iPlotY):GetPlotCity()
+	local iCityOwner = city:GetOwner()
+	local pPlayer = Players[iCityOwner] 
+	if (pPlayer:GetCivilizationType() == GameInfoTypes.CIVILIZATION_VENICE ) and (iNewPop > iOldPop) then
+	city:SetPlagueType(-1)
+	city:SetPlagueCounter(0)
+	city:SetPlagueTurns(0)
+	end
+end
+GameEvents.SetPopulation.Add(CheckUploading)
 
 
 

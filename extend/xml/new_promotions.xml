@@ -2490,13 +2490,13 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
 			<PortraitIndex>0</PortraitIndex>
-			<SplashDamagePercent>100</SplashDamagePercent>
+			<!--<SplashDamagePercent>100</SplashDamagePercent>
 			<SplashDamageRadius>1</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
 			<SplashDamageFixed>1</SplashDamageFixed>
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>100</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>-->
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaEntry>TXT_KEY_PROMOTION_FIRE_WEAPON</PediaEntry>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
@@ -4142,6 +4142,7 @@
 			<ShowInPedia>0</ShowInPedia>
 			<RemoveAfterXTurns>2</RemoveAfterXTurns>
 			<!--<TurnDamagePercent>15</TurnDamagePercent>-->
+			<DefenseMod>-10</DefenseMod>
 			<TurnDamage>20</TurnDamage>
 			<PediaEntry>TXT_KEY_PROMOTION_BURNING_EFFECT</PediaEntry>
 		</Row>

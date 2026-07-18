@@ -226,7 +226,7 @@ SELECT 'BUILDINGCLASS_OIL_PLANT',					            -15  ;        --燃石油厂;
 INSERT INTO BuildingClass_HealthModifiersGlobal (BuildingClassType,	Yield)
 SELECT 'BUILDINGCLASS_CENTERS',						             20 UNION ALL  ---疾控
 SELECT 'BUILDINGCLASS_COOKED_MEDICINE',						     20 UNION ALL  ---熟药所
-SELECT 'BUILDINGCLASS_INDUSTRIAL_ZONE',					        -20 UNION ALL --鲁尔工业区
+SELECT 'BUILDINGCLASS_INDUSTRIAL_ZONE',					        -10 UNION ALL --鲁尔工业区
 SELECT 'BUILDINGCLASS_PONTDUGARD',					             20 UNION ALL    --加尔桥
 SELECT 'BUILDINGCLASS_NATIONAL_HOSPITAL',					     50 ;   --量子生物学中心
 
