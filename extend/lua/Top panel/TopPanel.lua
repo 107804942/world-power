@@ -1086,7 +1086,7 @@ function HappinessTipHandler( control )
 		strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_UNHAPPINESS_TOTAL", iTotalUnhappiness);
 		strText = strText .. "[NEWLINE]";
 		
-		strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_UNHAPPINESS_CITY_COUNT", iUnhappinessFromCityCount);
+		strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_UNHAPPINESS_CORRUPTION", iUnhappinessFromCityCount);
 		
 		if (iUnhappinessFromCapturedCityCount ~= "0") then
 			strText = strText .. "[NEWLINE]";

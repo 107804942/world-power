@@ -42,7 +42,8 @@
 						</Stack>
 						<Stack StackGrowth="Bottom" ID="NormalStack" >
 							<CheckBox TextAnchorSide="Right" TextOffset="40,0" ID="ShowResources" String="TXT_KEY_MAP_OPTIONS_RESOURCE_ICONS" ToolTip="TXT_KEY_MAP_OPTIONS_RESOURCE_ICONS_TT" />
-							<CheckBox TextAnchorSide="Right" TextOffset="40,0" ID="ShowCityBanners" String="TXT_KEY_EUI_CITY_BANNERS"/>
+							<CheckBox TextAnchorSide="Right" TextOffset="40,0" ID="ShowPlotNames" String="TXT_KEY_SP_SHOW_PLOT_NAMES" ToolTip="TXT_KEY_SP_SHOW_PLOT_NAMES_TT"/>
+<CheckBox TextAnchorSide="Right" TextOffset="40,0" ID="ShowCityBanners" String="TXT_KEY_EUI_CITY_BANNERS"/>
 							<CheckBox TextAnchorSide="Right" TextOffset="40,0" ID="ShowUnitFlags" String="TXT_KEY_MAP_OPTIONS_UNIT_FLAGS" ToolTip="TXT_KEY_MAP_OPTIONS_UNIT_FLAGS_TT"/>
 						</Stack>
 						<Box Anchor="C,T" Offset="0,5" Size="175,1" Color="Beige,120" />
