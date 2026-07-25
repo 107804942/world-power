@@ -1,6 +1,5 @@
 -- PLAGUE MOD
 include( "Plague_UI.lua" );
-include( "UnitPanel.lua" );
 --end addition
 
 

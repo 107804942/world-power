@@ -1403,7 +1403,7 @@ function OnUnitRClicked()
 	if unit then
 	
 		-- search by name
-		local searchString = Locale.ConvertTextKey( unit:GetNameKey() );
+		local unitInfo = GameInfo.Units[unit:GetUnitType()]; local searchString = (unitInfo and unitInfo.Description) or unit:GetNameKey();
 		Events.SearchForPediaEntry( searchString );
 	end
 end

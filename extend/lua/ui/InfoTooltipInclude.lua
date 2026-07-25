@@ -4067,6 +4067,24 @@ if Game then
 							.. "[ENDCOLOR]" .. inParentheses(iMilitaryPromiseTurnLeft)
 					)
 				end
+				-- Expansion Promise
+				local iExpansionPromiseTurnLeft = Players[playerID]:GetExpansionPromiseTurnLeft(activePlayerID)
+				if iExpansionPromiseTurnLeft >= 0 then
+					insert( treaties, negativeOrPositiveTextColor[false] .. "[ICON_CITY_STATE]"
+							.. L"TXT_KEY_EXPANSION_PROMISE"
+							.. "[ENDCOLOR]" .. inParentheses(iExpansionPromiseTurnLeft)
+					)
+				end
+
+				-- Border Promise
+				local iBorderPromiseTurnLeft = Players[playerID]:GetBorderPromiseTurnLeft(activePlayerID)
+				if iBorderPromiseTurnLeft >= 0 then
+					insert( treaties, negativeOrPositiveTextColor[false] .. "[ICON_CITY_STATE]"
+							.. L"TXT_KEY_BORDER_PROMISE"
+							.. "[ENDCOLOR]" .. inParentheses(iBorderPromiseTurnLeft)
+					)
+				end
+
 
 			end
 

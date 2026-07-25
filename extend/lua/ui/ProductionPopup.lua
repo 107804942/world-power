@@ -1189,16 +1189,16 @@ function OnPortraitRClicked()
 
 	if unitProduction ~= -1 then
 		local thisUnitInfo = GameInfo.Units[unitProduction];
-		searchString = Locale.ConvertTextKey( thisUnitInfo.Description );
+		searchString = thisUnitInfo.Description;
 	elseif buildingProduction ~= -1 then
 		local thisBuildingInfo = GameInfo.Buildings[buildingProduction];
-		searchString = Locale.ConvertTextKey( thisBuildingInfo.Description );
+		searchString = thisBuildingInfo.Description;
 	elseif projectProduction ~= -1 then
 		local thisProjectInfo = GameInfo.Projects[projectProduction];
-		searchString = Locale.ConvertTextKey( thisProjectInfo.Description );
+		searchString = thisProjectInfo.Description;
 	elseif processProduction ~= -1 then
 		local pProcessInfo = GameInfo.Processes[processProduction];
-		searchString = Locale.ConvertTextKey( pProcessInfo.Description );
+		searchString = pProcessInfo.Description;
 	else
 		noProduction = true;
 	end
@@ -1381,7 +1381,7 @@ function AddProductionButton( id, description, orderType, turnsLeft, column, isD
     
     local nameString = Locale.ConvertTextKey( description );
     
-    listOfStrings[tostring(controlTable.Button)] = nameString;
+    listOfStrings[tostring(controlTable.Button)] = description;
     
     controlTable.UnitName:SetText( nameString );
     if g_IsProductionMode then

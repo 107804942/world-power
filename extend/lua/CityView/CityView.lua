@@ -376,7 +376,7 @@ function AddBuildingButton( pCity, building )
 		
 		controlTable.BuildingName:SetText(strBuildingName);
 
-		pediaSearchStrings[tostring(controlTable.BuildingButton)] = Locale.ConvertTextKey(building.Description);
+		pediaSearchStrings[tostring(controlTable.BuildingButton)] = building.Description;
 		controlTable.BuildingButton:RegisterCallback( Mouse.eRClick, GetPedia );
 				
 		-- Portrait
@@ -3129,16 +3129,16 @@ function OnPortraitRClicked()
 
 	if unitProduction ~= -1 then
 		local thisUnitInfo = GameInfo.Units[unitProduction];
-		searchString = Locale.ConvertTextKey( thisUnitInfo.Description );
+		searchString = thisUnitInfo.Description;
 	elseif buildingProduction ~= -1 then
 		local thisBuildingInfo = GameInfo.Buildings[buildingProduction];
-		searchString = Locale.ConvertTextKey( thisBuildingInfo.Description );
+		searchString = thisBuildingInfo.Description;
 	elseif projectProduction ~= -1 then
 		local thisProjectInfo = GameInfo.Projects[projectProduction];
-		searchString = Locale.ConvertTextKey( thisProjectInfo.Description );
+		searchString = thisProjectInfo.Description;
 	elseif processProduction ~= -1 then
 		local pProcessInfo = GameInfo.Processes[processProduction];
-		searchString = Locale.ConvertTextKey( pProcessInfo.Description );
+		searchString = pProcessInfo.Description;
 	else
 		noProduction = true;
 	end

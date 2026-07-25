@@ -50,6 +50,9 @@ local g_OptionActions = {
 		Controls.PlotHelpToolTipGrid:SetHide( isChecked )
 		LuaEvents.PlotHelpToolTip( not isChecked and Controls )
 	end,
+	ShowPlotNames = function( isChecked )
+		LuaEvents.PlotNameToggleLabels( isChecked )
+	end,
 }
 local g_SaveOptions = {
 	CivilianYields = OptionsManager.SetCivilianYields_Cached,
@@ -68,15 +71,15 @@ local g_GetOptions = {
 	ShowGrid = OptionsManager.GetGridOn_Cached,
 }
 local g_YieldDisplayActions = {
-	[YieldDisplayTypes.USER_ALL_ON or -1] = { "ShowYield", true },
-	[YieldDisplayTypes.USER_ALL_OFF or -1] = { "ShowYield", false },
-	[YieldDisplayTypes.USER_ALL_RESOURCE_ON or -1] = { "ShowResources", true },
-	[YieldDisplayTypes.USER_ALL_RESOURCE_OFF or -1] = { "ShowResources", false },
+		[YieldDisplayTypes.USER_ALL_ON or -1] = { "ShowYield", true },
+		[YieldDisplayTypes.USER_ALL_OFF or -1] = { "ShowYield", false },
+		[YieldDisplayTypes.USER_ALL_RESOURCE_ON or -1] = { "ShowResources", true },
+		[YieldDisplayTypes.USER_ALL_RESOURCE_OFF or -1] = { "ShowResources", false },
 [-1] = nil }
 
 local g_PerPlayerMapOptions = {}
 local g_MapOptions
-local g_MapOptionDefaults = { IconMode = 1, OverlayMode = 1, ShowFeatures = true, ShowFogOfWar = true, ShowCityBanners = true, ShowUnitFlags = true, PlotHelpToolTip = true }
+local g_MapOptionDefaults = { IconMode = 1, OverlayMode = 1, ShowFeatures = true, ShowFogOfWar = true, ShowCityBanners = true, ShowUnitFlags = true, PlotHelpToolTip = true, ShowPlotNames = true }
 for k, isOption in pairs( g_GetOptions ) do
 	g_MapOptionDefaults[k] = isOption()
 end

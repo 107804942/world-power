@@ -786,6 +786,8 @@ function UpdateCargoList()
                 controlTable.Button:SetVoid1(pAirUnit:GetOwner());
                 controlTable.Button:SetVoid2(pAirUnit:GetID());
                 controlTable.Button:RegisterCallback(Mouse.eLClick, UnitFlagClicked);
+                controlTable.Button:SetToolTipType("EUI_UnitTooltip");
+                controlTable.Button:SetToolTipCallback(UnitFlagToolTipCall);
 
                 if unitCount == 1 and pPlot ~= selecPlot and pAirUnit:GetOwner() == Game.GetActivePlayer() then
                     controlTable.SelectHighlight:SetHide(false);
@@ -828,6 +830,8 @@ function UpdateCargoList()
                 controlTable.Button:SetVoid1(pCarrierUnit:GetOwner());
                 controlTable.Button:SetVoid2(pCarrierUnit:GetID());
                 controlTable.Button:RegisterCallback(Mouse.eLClick, UnitFlagClicked);
+                controlTable.Button:SetToolTipType("EUI_UnitTooltip");
+                controlTable.Button:SetToolTipCallback(UnitFlagToolTipCall);
 
                 if carrCount == 1 and pPlot ~= selecPlot and pCarrierUnit:GetOwner() == Game.GetActivePlayer() then
                     controlTable.SelectHighlight:SetHide(false);
@@ -869,6 +873,8 @@ function UpdateCargoList()
                         cargoCoTable.Button:SetVoid1(pCargoUnit:GetOwner());
                         cargoCoTable.Button:SetVoid2(pCargoUnit:GetID());
                         cargoCoTable.Button:RegisterCallback(Mouse.eLClick, UnitFlagClicked);
+                        cargoCoTable.Button:SetToolTipType("EUI_UnitTooltip");
+                        cargoCoTable.Button:SetToolTipCallback(UnitFlagToolTipCall);
 
                         if (pCargoUnit == UI.GetHeadSelectedUnit()) then
                             cargoCoTable.SelectHighlight:SetHide(false);
