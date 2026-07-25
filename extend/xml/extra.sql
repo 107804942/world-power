@@ -717,7 +717,8 @@ VALUES	('Any',	'UnderConstruction',	0.001,	'ART_DEF_IMPROVEMENT_YERBAMATE',	'SNA
 		('Any',	'Constructed',			0.001,	'ART_DEF_IMPROVEMENT_YERBAMATE',	'SNAPSHOT',		'ART_DEF_RESOURCE_ALL',	'yerbamate.fxsxml',		1),
 		('Any',	'Pillaged',				0.001,	'ART_DEF_IMPROVEMENT_YERBAMATE',	'SNAPSHOT',		'ART_DEF_RESOURCE_ALL',	'yerbamate_pl.fxsxml',	1);
 
-
+INSERT INTO ArtDefine_StrategicView(StrategicViewType, TileType, Asset)
+SELECT 'ART_DEF_IMPROVEMENT_YERBAMATE', 'Improvement', 'SV_Yerbamate.dds';
 
 --==========================================================================================================================
 -- ÐÂÅ©³¡
@@ -731,6 +732,9 @@ SELECT 'Any', 'UnderConstruction', 0.8,  'ART_DEF_IMPROVEMENT_KIBBUTZ', 'SNAPSHO
 SELECT 'Any', 'Constructed', 0.8,  'ART_DEF_IMPROVEMENT_KIBBUTZ', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'kibbutz.fxsxml', 1 UNION ALL
 SELECT 'Any', 'Pillaged', 0.6,  'ART_DEF_IMPROVEMENT_KIBBUTZ', 'SNAPSHOT', 'ART_DEF_RESOURCE_ALL', 'kibbutz_pl.fxsxml', 1;
 
+INSERT INTO ArtDefine_StrategicView(StrategicViewType, TileType, Asset)
+SELECT 'ART_DEF_IMPROVEMENT_KIBBUTZ', 'Improvement', 'sv_KIBBUTZ.dds';
+
 
 --==========================================================================================================================
 -- Embassy
@@ -742,6 +746,9 @@ INSERT INTO ArtDefine_Landmarks(Era, State, Scale, ImprovementType, LayoutHandle
 SELECT 'Any', 'UnderConstruction', 1.45,  'ART_DEF_IMPROVEMENT_EMBASSY', 'RANDOM', 'ART_DEF_RESOURCE_ALL', 'Embassy.fxsxml', 1 UNION ALL
 SELECT 'Any', 'Constructed', 1.45,  'ART_DEF_IMPROVEMENT_EMBASSY', 'RANDOM', 'ART_DEF_RESOURCE_ALL', 'Embassy.fxsxml', 1 UNION ALL
 SELECT 'Any', 'Pillaged', 1.45,  'ART_DEF_IMPROVEMENT_EMBASSY', 'RANDOM', 'ART_DEF_RESOURCE_ALL', 'Embassy.fxsxml', 1;
+
+INSERT INTO ArtDefine_StrategicView(StrategicViewType, TileType, Asset)
+SELECT 'ART_DEF_IMPROVEMENT_EMBASSY', 'Improvement', 'SV_Embassy.dds';
 --==========================================================================================================================
 
 --==========================================================================================================================

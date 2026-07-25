@@ -4271,7 +4271,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\improvements\Yerbamate\SV_Improvement_Yerbamate.dds">
+    <Content Include="extend\art\improvements\Yerbamate\SV_Yerbamate.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

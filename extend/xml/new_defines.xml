@@ -39,7 +39,14 @@
 		</Row>
 	</Tech_SpecialistYieldChanges>
 
-	
+	<SpecialistYields>
+		<Row>
+			<SpecialistType>SPECIALIST_CITIZEN</SpecialistType>
+			<YieldType>YIELD_CRIME</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+	</SpecialistYields>
 
 	<Specialists>
 
