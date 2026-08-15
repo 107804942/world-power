@@ -5,17 +5,9 @@
 	<UnitPromotions>
 
 
-
-		
-	
-		
-		
 		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
 	
-		<!--<Update>
-			<Set OriginalCapitalDamageFix="2"/>
-			<Where Type="PROMOTION_NEW_ORDER"/>
-		</Update>-->
+	
 		
 		
 		<Update>
@@ -88,34 +80,18 @@
 			<CanDoNukeDamage>true</CanDoNukeDamage>
 			<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
 		</Row>
+
+
+
+		
 	</UnitPromotions>
 
 
 
-	<UnitPromotions_UnitCombats>
-
-		
-		
-		
-		<!--xcom-->
-
-		<Row>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-		</Row>
-		
-
-	</UnitPromotions_UnitCombats>
 
 
 	<UnitPromotions_Domains>
 
-
-		<Row>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Modifier>150</Modifier>
-		</Row>
 
 
 
@@ -341,6 +317,13 @@
 	</UnitPromotions>
 
 	<UnitPromotions_UnitCombats>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+
+
 
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_3</PromotionType>
@@ -785,23 +768,6 @@
 		</Row>
 
 
-
-
-		<Row>
-			<Type>PROMOTION_XCOM_WEAPON_BASE</Type>
-			<Description>TXT_KEY_PROMOTION_XCOM_WEAPON_BASE</Description>
-			<Help>TXT_KEY_PROMOTION_XCOM_WEAPON_BASE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>29</PortraitIndex>
-			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_XCOM_WEAPON_BASE</PediaEntry>
-			<OrderPriority>11</OrderPriority>
-			<ShowInPedia>0</ShowInPedia>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<CanParadropAnyWhere>1</CanParadropAnyWhere>
-		</Row>
 
 
 
@@ -1573,98 +1539,7 @@
 			<Defense>20</Defense>
 		</Row>
 
-
-
-
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<TerrainType>TERRAIN_DESERT</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<TerrainType>TERRAIN_GRASS</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<TerrainType>TERRAIN_PLAINS</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<TerrainType>TERRAIN_HILL</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
-			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-
-
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<TerrainType>TERRAIN_SNOW</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<TerrainType>TERRAIN_DESERT</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<TerrainType>TERRAIN_GRASS</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<TerrainType>TERRAIN_PLAINS</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<TerrainType>TERRAIN_HILL</TerrainType>
-			<Defense>15</Defense>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
-			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
-			<Defense>15</Defense>
-		</Row>
+	
 	</UnitPromotions_Terrains>
 
 
@@ -2704,7 +2579,6 @@
 		<!--NearbyImprovementCombatBonus="100" NearbyImprovementBonusRange="1" CombatBonusImprovement="IMPROVEMENT_CITADEL"/>-->
 
 
-		<Delete Type="PROMOTION_ANTI_TANK_BAZOOKA"/>
 		<Delete Type="PROMOTION_ANTI_EMP"/>
 		<Delete Type="PROMOTION_IGNORE_TERRAIN_COST"/>
 		<Delete Type="PROMOTION_CITADEL_DEFENSE"/>
@@ -3446,7 +3320,6 @@
 		</Row>
 
 
-
 		<Row>
 			<Type>PROMOTION_CQB_COMBAT_1</Type>
 			<Description>TXT_KEY_PROMOTION_CQB_COMBAT_1</Description>
@@ -3455,13 +3328,11 @@
 			<PromotionPrereqOr1>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_ANTI_TANK</PromotionPrereqOr2>
 			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>14</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>56</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_1</PediaEntry>
 		</Row>
-
-
 		<Row>
 			<Type>PROMOTION_CQB_COMBAT_2</Type>
 			<Description>TXT_KEY_PROMOTION_CQB_COMBAT_2</Description>
@@ -3469,15 +3340,34 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_CQB_COMBAT_1</PromotionPrereqOr1>
 			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>15</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>57</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_2</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_CQB_COMBAT_3</Type>
+			<Description>TXT_KEY_PROMOTION_CQB_COMBAT_3</Description>
+			<Help>TXT_KEY_PROMOTION_CQB_COMBAT_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_CQB_COMBAT_2</PromotionPrereqOr1>
+			<OrderPriority>1</OrderPriority>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PediaType>PEDIA_MELEE</PediaType>
+			<DefenseInflictDamageChange>5</DefenseInflictDamageChange>
+			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_3</PediaEntry>
 		</Row>
 
 
 	</UnitPromotions>
 
+
+
+
+
+
+	
 
 	<UnitPromotions_PromotionModifiers>
 		<!--********************Siege Attack Bonus**************-->
@@ -3876,6 +3766,24 @@
 	<UnitPromotions>
 		<Delete Type="PROMOTION_ANTI_DEBUFF"/>
 		<Delete Type="PROMOTION_NUKE_IMMUNE"/>
+
+
+		<!--*************环球航行**************-->
+		<Row>
+			<Type>PROMOTION_CIRCUMNAVIGATED</Type>
+			<Description>TXT_KEY_PROMOTION_CIRCUMNAVIGATED</Description>
+			<Help>TXT_KEY_PROMOTION_CIRCUMNAVIGATED_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>26</PortraitIndex>
+			<MovesChange>2</MovesChange>
+			<MaxHitPointsChange>25</MaxHitPointsChange>
+			<IconAtlas>promoVP_atlas_01</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_CIRCUMNAVIGATED</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		
+		
 
 
 		<Row>
@@ -4286,6 +4194,25 @@
 	<UnitPromotions_UnitCombats>
 		<Row>
 			<PromotionType>PROMOTION_REPAIR</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_REPAIR</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_REPAIR</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_REPAIR</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+		
+		
+		
+		<Row>
+			<PromotionType>PROMOTION_REPAIR</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
 		</Row>
 
@@ -4534,12 +4461,28 @@
 			<PortraitIndex>31</PortraitIndex>
 			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<AttackMod>300</AttackMod>
+			<DefenseMod>300</DefenseMod>
 			<ShowInPedia>0</ShowInPedia>
+			<CanParadropAnyWhere>1</CanParadropAnyWhere>
 			<PediaEntry>TXT_KEY_PROMOTION_PARATROOPER_BUFF</PediaEntry>
 		</Row>
 
 
-
+		<!--*************太空堡垒**************-->
+		<Row>
+			<Type>PROMOTION_SPACE_FORTRESS</Type>
+			<Description>TXT_KEY_PROMOTION_SPACE_FORTRESS</Description>
+			<Help>TXT_KEY_PROMOTION_SPACE_FORTRESS_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SPACE_FORTRESS</PediaEntry>
+			<OrderPriority>11</OrderPriority>
+			<DefenseInflictDamageChangeMaxHPPercent>10</DefenseInflictDamageChangeMaxHPPercent>
+		</Row>
 
 	</UnitPromotions>
 

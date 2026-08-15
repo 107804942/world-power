@@ -2,6 +2,30 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------\
+function OnCircumnavigatedGlobe(iTeam)
+  local pPlayer = Players[Game.GetActivePlayer()]
+  local sHead = Locale.ConvertTextKey("TXT_KEY_MAGELLAN_HEAD")
+  local sText = Locale.ConvertTextKey("TXT_KEY_MAGELLAN_TEXT_UNKNOWN")
+
+  local Team = Teams[iTeam]
+  local Player = Players[Team:GetLeaderID()];
+
+  local plot =  Player:GetCapitalCity():Plot()
+  ---local Unit  = Player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, plot:GetX(), plot:GetY())
+
+  if (Game.GetActiveTeam() == iTeam) then
+    sText = Locale.ConvertTextKey("TXT_KEY_MAGELLAN_TEXT_YOU")
+  else
+    if (Teams[Game.GetActiveTeam()]:IsHasMet(iTeam)) then
+      sText = Locale.ConvertTextKey("TXT_KEY_MAGELLAN_TEXT_KNOWN", Players[Teams[iTeam]:GetLeaderID()]:GetCivilizationShortDescriptionKey())
+	end
+  end
+  ---Player:SetNumFreeTechs(1)
+  Player:ChangeFreePromotionCount(GameInfoTypes.PROMOTION_CIRCUMNAVIGATED,1)
+  pPlayer:AddNotification(g_NotificationType, sText, sHead, -1, -1, -1, -1)
+end
+GameEvents.CircumnavigatedGlobe.Add(OnCircumnavigatedGlobe)
+
 
 function ClusterRocketInit(iPlayer, iUnit, ePromotion)
 	local pPlayer = Players[iPlayer]

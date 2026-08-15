@@ -325,128 +325,6 @@ local SpaceBattleCruiserMissionButton2 = {
 	}
 LuaEvents.UnitPanelActionAddin(SpaceBattleCruiserMissionButton2)
 
-local TransPortMissionButton = {
-	Name = "TXT_KEY_NAME_SUPER_TRANSPORT",
-	Title = "TXT_KEY_TITLE_SUPER_TRANSPORT",
-	OrderPriority = 200,
-	IconAtlas = "SP_UNIT_ACTION_ATLAS2",
-	PortraitIndex = 15,
-	ToolTip = function(action, unit)
-		local sTooltip;
-		local pPlayer = Players[Game:GetActivePlayer()];
-		sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SUPER_TRANSPORT");
-		return sTooltip
-	end, -- or a TXT_KEY_ or a function
-	Condition = function(action, unit)
-		if unit:GetMoves() <= 0 then
-			return false
-		end
-		local pPlayer = Players[Game:GetActivePlayer()];
-		local pTeam = Teams[pPlayer:GetTeam()]
-		if  pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_HELIOS_BUILDING.ID) > 0 
-		and  unit:IsCombatUnit()
-		 and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_SPACESHIP"].ID)
-		 and not unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_CITADEL_DEFENSE"].ID)
-		  then
-			return true
-		else
-			return false
-		end
-	end, -- or nil or a boolean, default is true
-	Disabled = function(action, unit)
-		local pPlayer = Players[Game:GetActivePlayer()];
-		if pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_HELIOS_BUILDING.ID) > 0 then
-			return false
-		end
-		return true;
-	end, -- or nil or a boolean, default is false
-	Action = function(action, unit, eClick)
-	if eClick == Mouse.eRClick then
-		return
-	end
-	local pPlayer = Players[Game:GetActivePlayer()];
-	if  pPlayer:IsHuman() then
-
-	---------------------------------------------------------------------------------------------------------------------------------------
-	if  unit:GetDomainType()==DomainTypes.DOMAIN_LAND then
-		for iPlot in PlotAreaSpiralIterator(unit:GetPlot(), 20, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		if  iPlot:GetNumUnits() == 0  and (not iPlot:IsMountain()) and (not iPlot:IsWater()) and (not iPlot:IsCity()) 
-		and ((iPlot:GetOwner()== -1) 
-	or  (iPlot:GetOwner()~= -1 and   pPlayer== Players[iPlot:GetOwner()]) 
-	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and (not Players[iPlot:GetOwner()]:IsMajorCiv())) 
-	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and  Players[iPlot:GetOwner()]:IsMajorCiv() and pPlayer:IsAtWarWith(iPlot:GetOwner()) 
-	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and  Players[iPlot:GetOwner()]:IsMajorCiv() and Teams[iPlot:GetTeam()]:IsAllowsOpenBordersToTeam(pPlayer:GetTeam()) ))) then
-			  Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(iPlot:GetX(), iPlot:GetY())), true, Vector4(0.0, 1.0, 1.0, 1.0))
-			  end
-		   end
-    if  pPlayer:GetNumSpies() >0  then
-		for k, v in pairs(pPlayer:GetEspionageSpies()) do
-	        local Plot = Map.GetPlot(v.CityX, v.CityY)
-			if Plot~=nil then
-				 for spyPlot in PlotAreaSpiralIterator(Plot, 3, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		         if  spyPlot:GetOwner()~= -1 and spyPlot:GetWorkingCity()~=nil and spyPlot:GetWorkingCity()==Plot:GetPlotCity() 
-				 and (not spyPlot:IsMountain()) 
-				 and (spyPlot:GetNumUnits() == 0)
-				 and (not spyPlot:IsWater()) 
-				 and (not spyPlot:IsCity()) then
-				 if pPlayer== Players[spyPlot:GetOwner()] 
-				 or pPlayer:IsAtWarWith(spyPlot:GetOwner()) 
-				 or (not Players[spyPlot:GetOwner()]:IsMajorCiv())
-				 or (Players[spyPlot:GetOwner()]:IsMajorCiv() and Teams[spyPlot:GetTeam()]:IsAllowsOpenBordersToTeam(pPlayer:GetTeam())) 
-				 then
-				  Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(spyPlot:GetX(), spyPlot:GetY())), true, Vector4(0.0, 1.0, 1.0, 1.0)) 
-				            end 
-				         end 
-				      end  
-			       end
-			    end
-			end
-		end
-		---------------------------------------------------------------------------------------------------------------------------------------
-
-	if  unit:GetDomainType()==DomainTypes.DOMAIN_SEA then
-		for iPlot in PlotAreaSpiralIterator(unit:GetPlot(), 20, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		if  iPlot:GetNumUnits() == 0  and iPlot:IsWater()  and (not iPlot:IsCity())  
-		and ((iPlot:GetOwner()== -1) 
-	or  (iPlot:GetOwner()~= -1 and   pPlayer== Players[iPlot:GetOwner()]) 
-	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and (not Players[iPlot:GetOwner()]:IsMajorCiv())) 
-	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and  Players[iPlot:GetOwner()]:IsMajorCiv() and pPlayer:IsAtWarWith(iPlot:GetOwner())  
-	or  (iPlot:GetOwner()~= -1 and   pPlayer~= Players[iPlot:GetOwner()]  and  Players[iPlot:GetOwner()]:IsMajorCiv() and Teams[iPlot:GetTeam()]:IsAllowsOpenBordersToTeam(pPlayer:GetTeam()) ))) then
-			  Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(iPlot:GetX(), iPlot:GetY())), true, Vector4(0.0, 1.0, 1.0, 1.0))
-			     --end
-			  end
-		   end
-    if  pPlayer:GetNumSpies() >0  then
-		for k, v in pairs(pPlayer:GetEspionageSpies()) do
-	        local Plot = Map.GetPlot(v.CityX, v.CityY)
-			if Plot~=nil then
-				 for spyPlot in PlotAreaSpiralIterator(Plot, 3, SECTOR_NORTH, DIRECTION_CLOCKWISE, DIRECTION_OUTWARDS, CENTRE_EXCLUDE) do
-		         if  spyPlot:GetOwner()~= -1 and spyPlot:GetWorkingCity()~=nil and  spyPlot:GetWorkingCity()==Plot:GetPlotCity() 
-				 and spyPlot:IsWater() and spyPlot:GetNumUnits() == 0 
-				 and (not spyPlot:IsCity()) then
-				 if pPlayer== Players[spyPlot:GetOwner()] 
-				 or pPlayer:IsAtWarWith(spyPlot:GetOwner()) 
-				 or (not Players[spyPlot:GetOwner()]:IsMajorCiv())
-				 or (Players[spyPlot:GetOwner()]:IsMajorCiv() and Teams[spyPlot:GetTeam()]:IsAllowsOpenBordersToTeam(pPlayer:GetTeam())) 
-				 then
-				  Events.SerialEventHexHighlight(ToHexFromGrid(Vector2(spyPlot:GetX(), spyPlot:GetY())), true, Vector4(0.0, 1.0, 1.0, 1.0)) 
-				            end 
-				         end 
-				      end  
-			       end
-			    end
-			end
-		end
-		---------------------------------------------------------------------------------------------------------------------------------------
-		SpaceBattleCruiserSkill = 3
-	end
-end
-}
-LuaEvents.UnitPanelActionAddin(TransPortMissionButton)
-
-
-
-
 
 
 
@@ -546,7 +424,7 @@ local IronPagodaChargeButton = {
 			end
 		end
 	end
-	SpaceBattleCruiserSkill = 4
+	SpaceBattleCruiserSkill = 3
 end
 }
 LuaEvents.UnitPanelActionAddin(IronPagodaChargeButton)
@@ -784,25 +662,8 @@ function InputHandler( uiMsg, wParam, lParam )
                 Events.ClearHexHighlights()
 				SpaceBattleCruiserSkill = 0
 				--------------------------------------------------------------------------------------
-		        elseif SpaceBattleCruiserSkill == 3 then
-		        local pSelUnit = UI.GetHeadSelectedUnit()		    
-				if IsCanTransPortPlot(pSelUnit,pPlot)  then
-				pSelUnit:SetXY(pPlot:GetX(), pPlot:GetY());
-                pSelUnit:SetMoves(0)
-				Events.AddPopupTextEvent(PositionCalculator(pPlot:GetX(), pPlot:GetY()), Locale.ConvertTextKey("TXT_KEY_ALERT_SPY_TRANSPORT",pSelUnit:GetName()),0.1)
-				Events.AudioPlay2DSound("AS2D_SPACE_TRANSPORT") 
-				end
-		
-				Events.ClearHexHighlights()
-				SpaceBattleCruiserSkill = 0
 
-		
-		
-			
-				 --------------------------------------------------------------------------------------
-
-
-				 elseif SpaceBattleCruiserSkill == 4 then
+				 elseif SpaceBattleCruiserSkill == 3 then
 			     local uniqueRange = 5
 			     local pPlayer = Players[Game:GetActivePlayer()]
 			     local num = 0
@@ -891,6 +752,81 @@ end
 -- ********************************************************
 -- 
 -- ******************************************************** 
+
+function revealCities()
+  local iplayer = Game.GetActivePlayer()
+  local iTeam = Game.GetActiveTeam()
+  local pTeam = Teams[iTeam]
+
+   if (citiesVisible(pTeam)) then
+
+	local ihelios =  Players[Game:GetActivePlayer()]:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_HELIOS_BUILDING.ID) 
+
+    for iPlotLoop = 0, Map.GetNumPlots()-1, 1 do
+      local pPlot = Map.GetPlotByIndex(iPlotLoop)
+
+      if (pPlot:IsCity()) then
+        local pCity = pPlot:GetPlotCity()
+
+        if (pCity:GetTeam() ~= iTeam) then
+          if (ihelios > 0) then
+            revealCell(iTeam, pPlot)
+          else
+            revealPlot(iTeam, pPlot)
+          end
+        end
+      end
+    end
+  end
+end
+
+function citiesVisible(pTeam)
+  local pOtherTeam = Teams[iOtherTeam]
+  for tech in GameInfo.Technologies() do
+    if (tech.MapVisible and pTeam:IsHasTech(tech.ID)) then
+      return true
+    end
+  end
+
+  return false
+end
+
+
+function revealCell(iTeam, pPlot)
+  directions = {DirectionTypes.DIRECTION_NORTHEAST, DirectionTypes.DIRECTION_EAST, DirectionTypes.DIRECTION_SOUTHEAST,
+                DirectionTypes.DIRECTION_SOUTHWEST, DirectionTypes.DIRECTION_WEST, DirectionTypes.DIRECTION_NORTHWEST}
+
+  revealPlot(iTeam, pPlot)
+
+  for loop, direction in ipairs(directions) do
+    revealPlot(iTeam, Map.PlotDirection(pPlot:GetX(), pPlot:GetY(), direction))
+  end
+end
+
+function revealPlot(iTeam, pPlot)
+  if (pPlot:GetFeatureType() == -1 or not GameInfo.Features[pPlot:GetFeatureType()].NaturalWonder) then
+
+    if (pPlot:GetVisibilityCount(iTeam) > 0) then
+      pPlot:ChangeVisibilityCount(iTeam, -1, -1, true)
+    end
+
+    pPlot:SetRevealed(iTeam, false)
+
+    pPlot:ChangeVisibilityCount(iTeam, 1, -1, true)
+    pPlot:SetRevealed(iTeam, true)
+  end
+end
+
+function onActivePlayerTurnStart()
+  revealCities()
+end
+Events.ActivePlayerTurnStart.Add(onActivePlayerTurnStart)
+
+
+-- ********************************************************
+-- 
+-- ******************************************************** 
+
 local iSpaceShipID = GameInfoTypes.PROMOTION_SPACESHIP
 function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
   local pUnit = Players[iPlayer]:GetUnitByID(iUnit)
@@ -1314,6 +1250,8 @@ GameEvents.CityBoughtPlot.Add(MagaBoughtPlot)
 -- »·Çòº½ÐÐ
 -- ********************************************************
 local g_NotificationType = NotificationTypes.NOTIFICATION_GENERIC
+local g_NotificationTypeTech = NotificationTypes.NOTIFICATION_FREE_TECH
+
 function OnMagellanNotificationId(id)
   print(string.format("Setting magellan notification id to %i", id))
   g_NotificationType = id
@@ -1329,16 +1267,21 @@ function OnCircumnavigatedGlobe(iTeam)
   local Player = Players[Team:GetLeaderID()];
 
   local plot =  Player:GetCapitalCity():Plot()
-  local Unit  = Player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, plot:GetX(), plot:GetY())
+  --- local Unit  = Player:InitUnit(GameInfoTypes.UNIT_SCIENTIST, plot:GetX(), plot:GetY())
+
+  Player:SetNumFreeTechs(2)
+  Player:ChangeFreePromotionCount(GameInfoTypes.PROMOTION_CIRCUMNAVIGATED,1)
 
   if (Game.GetActiveTeam() == iTeam) then
     sText = Locale.ConvertTextKey("TXT_KEY_MAGELLAN_TEXT_YOU")
+	 Player:AddNotification(g_NotificationTypeTech, Locale.ConvertTextKey("TXT_KEY_NOTIFICATION_NEW_RESEARCH"), Locale.ConvertTextKey("TXT_KEY_NOTIFICATION_SUMMARY_NEW_RESEARCH"), -1, -1, -1, -1)
   else
     if (Teams[Game.GetActiveTeam()]:IsHasMet(iTeam)) then
       sText = Locale.ConvertTextKey("TXT_KEY_MAGELLAN_TEXT_KNOWN", Players[Teams[iTeam]:GetLeaderID()]:GetCivilizationShortDescriptionKey())
 	end
   end
 
+ 
   pPlayer:AddNotification(g_NotificationType, sText, sHead, -1, -1, -1, -1)
 end
 GameEvents.CircumnavigatedGlobe.Add(OnCircumnavigatedGlobe)

@@ -11,7 +11,7 @@
 		<Delete Type="UNIT_UNDERWATER_CARRIER"/>
 		<Delete Type="UNIT_TASKFORCE_141"/>
 		<Delete Type="UNIT_CHINESE_WEISHI"/>
-		<Delete Class="UNITCLASS_BAZOOKA"/>
+
 
 
 
@@ -1178,7 +1178,6 @@
 
 	<Unit_FreePromotions>
 
-		<Delete UnitType="UNIT_BAZOOKA"/>
 
 		<Row>
 			<UnitType>UNIT_BLIALI</UnitType>
@@ -1660,10 +1659,7 @@
 			<UnitType>UNIT_GHOST</UnitType>
 			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_GHOST</UnitType>
-			<PromotionType>PROMOTION_XCOM_WEAPON_BASE</PromotionType>
-		</Row>
+
 
 		<Row>
 			<UnitType>UNIT_GHOST</UnitType>
@@ -2109,7 +2105,7 @@
 
 	<!--************************************ai********************************-->
 	<Unit_AITypes>
-		<Delete UnitType="UNIT_BAZOOKA"/>
+	
 
 		<Row>
 			<UnitType>UNIT_BLIALI</UnitType>
@@ -2348,7 +2344,6 @@
 
 	<!--************************************倾向********************************-->
 	<Unit_Flavors>
-		<Delete UnitType="UNIT_BAZOOKA"/>
 
 
 		<Row>
@@ -2816,8 +2811,7 @@
 	<Unit_ResourceQuantityRequirements>
 		<Delete UnitType="UNIT_MECH"/>
 		<Delete UnitType="UNIT_PARTICLE_CANNON"/>
-		<Delete UnitType="UNIT_BAZOOKA"/>
-
+		
 		<Row>
 			<UnitType>UNIT_IRON_BUDDHA</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>

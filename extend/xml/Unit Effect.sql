@@ -117,13 +117,6 @@ INSERT INTO Unit_TechRangedCombatStrength (UnitType, TechType,	RangedCombatStren
 
 
 
----对领域加成
-INSERT  INTO UnitPromotions_Domains(PromotionType,DomainType,Defense)
-VALUES('PROMOTION_PARATROOPER_BUFF', 'DOMAIN_AIR',50);
-
-
-
-
 
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_CAUSEWAY', Type FROM UnitCombatInfos WHERE ID >= 0;
@@ -149,8 +142,6 @@ INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_STEAM_POWERED', Type FROM UnitCombatInfos WHERE Type= 'UNITCOMBAT_SUBMARINE'OR Type= 'UNITCOMBAT_NAVALMELEE'OR Type= 'UNITCOMBAT_NAVALRANGED' OR Type= 'UNITCOMBAT_CARRIER';
 
 
-INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
-SELECT  'PROMOTION_PARATROOPER_BUFF', Type FROM UnitCombatInfos WHERE Type!= 'UNITCOMBAT_SUBMARINE'AND Type!= 'UNITCOMBAT_NAVALMELEE'AND Type!= 'UNITCOMBAT_NAVALRANGED' AND Type!= 'UNITCOMBAT_CARRIER' AND Type!= 'UNITCOMBAT_FIGHTER'AND Type!= 'UNITCOMBAT_ARCHER';
 
 INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
 SELECT  'PROMOTION_FASIL_GHEBBI', Type FROM UnitCombatInfos WHERE Type!= 'UNITCOMBAT_SUBMARINE'AND Type!= 'UNITCOMBAT_NAVALMELEE'AND Type!= 'UNITCOMBAT_NAVALRANGED' AND Type!= 'UNITCOMBAT_CARRIER' AND Type!= 'UNITCOMBAT_FIGHTER'AND Type!= 'UNITCOMBAT_ARCHER';
@@ -202,6 +193,16 @@ UPDATE SPTriggerControler SET Enabled = 1 WHERE TriggerType = 'Minor_Building_Ov
 ------------------------------------------------------------------------------------------------------------------------
 -- 科技或建筑免费晋升关联单位种类
 ------------------------------------------------------------------------------------------------------------------------
+----太空堡垒
+INSERT  INTO UnitPromotions_UnitCombats(PromotionType,UnitCombatType)
+SELECT  'PROMOTION_SPACE_FORTRESS', Type FROM UnitCombatInfos WHERE  Type!= 'UNITCOMBAT_FIGHTER'AND Type!= 'UNITCOMBAT_ARCHER';
+
+
+
+----行星扫描仪
+INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
+SELECT 'PROMOTION_PARATROOPER_BUFF', Type  FROM Units WHERE CombatClass ='UNITCOMBAT_GUN'; 
+ 
 
 ------精确制导
 INSERT  INTO UnitPromotions_UnitType(PromotionType,UnitType)
@@ -1962,7 +1963,6 @@ insert into LuaFormula(Type, Formula) values
 
 
 INSERT INTO Technology_FreePromotions(TechType,PromotionType)
-SELECT 'TECH_INTEGRATED_DEFENSE', 'PROMOTION_XCOM_WEAPON_BASE' UNION ALL ---太空部队
 SELECT 'TECH_SDI', 'PROMOTION_ANTIAIRX' UNION ALL
 SELECT 'TECH_PLANETARY_NETWORKS',  'PROMOTION_AERIAL_REFUELING' UNION ALL
 SELECT 'TECH_ARMOR',  'PROMOTION_FIGHTER_ATTACK' UNION ALL

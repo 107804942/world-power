@@ -2,6 +2,147 @@
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 <GameData>
 
+
+	<UnitPromotions_Terrains>
+
+
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
+			<TerrainType>TERRAIN_HILL</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_1</PromotionType>
+			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+
+
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_HILL</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_2</PromotionType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<TerrainType>TERRAIN_HILL</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
+			<Defense>15</Defense>
+		</Row>
+	</UnitPromotions_Terrains>
+	
+	
 	<!--火力覆盖-->
 	<Row>
 		<PromotionType>PROMOTION_EQUICK</PromotionType>

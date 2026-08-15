@@ -6,7 +6,6 @@
 
 
 		<Delete UnitType="UNIT_XCOM_SQUAD"/>
-		<Delete UnitType="UNIT_BAZOOKA"/>
 		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
 
 

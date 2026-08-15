@@ -8,7 +8,7 @@
 
 
 	<Civilization_UnitClassOverrides>
-		<Delete UnitClassType="UNITCLASS_BAZOOKA"/>
+	
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
 		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
 
@@ -347,18 +347,6 @@
 	<UnitClasses>
 	
 			
-		<!-- 核火箭筒 -->
-		<Delete Type="UNITCLASS_BAZOOKA"/>
-
-
-		<!--************************************卫士********************************-->
-		<Update>
-			<Set MaxPlayerInstances="3"/>
-			<Where Type="UNITCLASS_CHINESE_WEISHI" />
-		</Update>
-		
-	
-
 
 
 

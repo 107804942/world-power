@@ -2689,6 +2689,7 @@
 			<Defense>13000</Defense>
 			<NukeModifier>-100</NukeModifier>
 			<ConquestProb>100</ConquestProb>
+			<FreePromotion>PROMOTION_SPACE_FORTRESS</FreePromotion>
 			<GlobalDefenseMod>100</GlobalDefenseMod>
 			<ExtraCityHitPoints>2500</ExtraCityHitPoints>
 			<WonderSplashImage>OrbitalRefinery_Splash.dds</WonderSplashImage>

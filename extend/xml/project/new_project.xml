@@ -463,10 +463,7 @@
 
 
 
-		<Update>
-			<Set TechPrereq="NULL" Cost="-1"/>
-			<Where Type="PROJECT_BAZOOKA_TRAINING"/>
-		</Update>
+
 
 		<Update>
 			<Set TechPrereq="TECH_NAUTICAL_SCIENCE"/>
@@ -525,7 +522,6 @@
 	
 
 
-		<Delete ProjectType="PROJECT_BAZOOKA_TRAINING"/>
 
 		<Row>
 			<ProjectType>PROJECT_COMMOM_ORGANIZED</ProjectType>
