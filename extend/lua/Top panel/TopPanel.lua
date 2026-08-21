@@ -176,6 +176,12 @@ function UpdateData()
 			-----------------------------
 			local iTotalGold = pPlayer:GetGold();
 			local iGoldPerTurn = pPlayer:CalculateGoldRate();
+			if pPlayer.GetGoldFromVassals then
+				iGoldPerTurn = iGoldPerTurn + pPlayer:GetGoldFromVassals();
+			end
+			if pPlayer.GetGoldToOverlord then
+				iGoldPerTurn = iGoldPerTurn - pPlayer:GetGoldToOverlord();
+			end
 			
 			-- Accounting for positive or negative GPT - there's obviously a better way to do this.  If you see this comment and know how, it's up to you ;)
 			-- Text is White when you can buy a Plot
@@ -236,7 +242,12 @@ function UpdateData()
 				strGoldenAgeStr = Locale.ConvertTextKey("TXT_KEY_TOP_PANEL_GOLDEN_AGES_OFF");
 			else
 				if (pPlayer:GetGoldenAgeTurns() > 0) then			
-			        local xmlGoldenAgeStr = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAText or "TXT_KEY_GOLDEN_AGE_ANNOUNCE"
+					local xmlGoldenAgeStr = "TXT_KEY_GOLDEN_AGE_ANNOUNCE";
+					for row in DB.Query("SELECT SpecialGAText FROM Civilizations WHERE ID=" .. pPlayer:GetCivilizationType()) do
+						if row.SpecialGAText ~= nil and row.SpecialGAText ~= "" then
+							xmlGoldenAgeStr = row.SpecialGAText;
+						end
+					end
 					strGoldenAgeStr = string.format(Locale.ToUpper(Locale.ConvertTextKey(xmlGoldenAgeStr)) .. " (%i)", pPlayer:GetGoldenAgeTurns());
 
 				else
@@ -701,6 +712,36 @@ function ScienceTipHandler( control )
 		end
 		
 
+		if pPlayer.GetScienceTimes100FromVassalsTable then
+			local tScienceTimes100FromVassalsTable = pPlayer:GetScienceTimes100FromVassalsTable();
+			local bFirstEntryScienceTimes100FromVassalsTable = true
+			for playerID = 0, GameDefines.MAX_MAJOR_CIVS - 1 do
+				local value = tScienceTimes100FromVassalsTable[playerID]
+				local player = Players[playerID]
+				if value ~= nil and value ~= 0 and player ~= nil then
+					if bFirstEntryScienceTimes100FromVassalsTable then
+						strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_TITLE_SCIENCE_FROM_VASSALS")
+						bFirstEntryScienceTimes100FromVassalsTable = false
+					end
+
+					local civName = player:GetCivilizationShortDescription()
+					strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_VASSALS", civName, value / 100.0)
+				end
+			end
+		end
+
+		if pPlayer.GetOverlord and pPlayer.GetScienceTimes100ToOverlord then
+			local iOverlord = pPlayer:GetOverlord();
+			if iOverlord >= 0 then
+				local iTribute = pPlayer:GetScienceTimes100ToOverlord();
+				if iTribute ~= 0 then
+					local pOverlord = Players[iOverlord];
+					if pOverlord ~= nil then
+						strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_TO_OVERLORD", pOverlord:GetCivilizationShortDescription(), iTribute / 100.0);
+					end
+				end
+			end
+		end
 		-- Science from Other Players
 		local iScienceFromOtherPlayers = pPlayer:GetScienceFromOtherPlayersTimes100();
 		if (iScienceFromOtherPlayers ~= 0) then
@@ -733,6 +774,17 @@ function ScienceTipHandler( control )
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", iScienceModFromResource);
 		end
 	
+		-- Science from Policies (Yield per global population)
+		local iScienceFromGlobalPop = pPlayer:GetPolicyYieldPerGlobalPop(GameInfoTypes["YIELD_SCIENCE"]) * pPlayer:GetTotalPopulation();
+		if (iScienceFromGlobalPop ~= 0) then
+			if (bFirstEntry) then
+				bFirstEntry = false;
+			else
+				strText = strText .. "[NEWLINE]";
+			end
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_SCIENCE_FROM_GLOBAL_POP", iScienceFromGlobalPop / 100);
+			strText = strText .. "[NEWLINE]";
+		end
 		local iScienceFromRAs = pPlayer:GetScienceFromResearchAgreementsTimes100();
 		if (iScienceFromRAs ~= 0) then
 		
@@ -808,7 +860,11 @@ function GoldTipHandler( control )
 	local fCityConnectionGold = pPlayer:GetCityConnectionGoldTimes100() / 100;
 	--local fInternationalTradeRouteGold = pPlayer:GetGoldPerTurnFromTradeRoutesTimes100() / 100;
 	local fTraitGold = pPlayer:GetGoldPerTurnFromTraits();
-	local fTotalIncome = fGoldPerTurnFromCities + iGoldPerTurnFromOtherPlayers + fCityConnectionGold + iGoldPerTurnFromReligion + fTradeRouteGold + fTraitGold;
+	local fGoldFromVassals = 0;
+	if pPlayer.GetGoldFromVassals then
+		fGoldFromVassals = pPlayer:GetGoldFromVassals();
+	end
+	local fTotalIncome = fGoldPerTurnFromCities + iGoldPerTurnFromOtherPlayers + fCityConnectionGold + iGoldPerTurnFromReligion + fTradeRouteGold + fTraitGold + fGoldFromVassals;
 	
 	if (pPlayer:IsAnarchy()) then
 		strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_ANARCHY", pPlayer:GetAnarchyNumTurns());
@@ -834,6 +890,31 @@ function GoldTipHandler( control )
 	if (iGoldPerTurnFromReligion > 0) then
 		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_RELIGION", iGoldPerTurnFromReligion);
 	end
+
+	if pPlayer.GetGoldFromVassalsTable then
+		local tGoldFromVassalsTable = pPlayer:GetGoldFromVassalsTable();
+		local bFirstEntryGoldFromVassalsTable = true
+		for playerID = 0, GameDefines.MAX_MAJOR_CIVS - 1 do
+			local value = tGoldFromVassalsTable[playerID]
+			local player = Players[playerID]
+			if value ~= nil and value ~= 0 and player ~= nil then
+				if bFirstEntryGoldFromVassalsTable then
+					strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_TITLE_GOLD_FROM_VASSALS")
+					bFirstEntryGoldFromVassalsTable = false
+				end
+
+				local civName = player:GetCivilizationShortDescription()
+				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_VASSALS", civName, value)
+			end
+		end
+	end
+
+	if pPlayer.GetGoldFromVassalDealsLumpSum then
+		local iVassalDealGold = pPlayer:GetGoldFromVassalDealsLumpSum();
+		if iVassalDealGold > 0 then
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_VASSAL_DEAL_GOLD", iVassalDealGold)
+		end
+	end
 	
 	strText = strText .. "[/COLOR]";
 
@@ -841,7 +922,11 @@ function GoldTipHandler( control )
 	local iUnitSupply = pPlayer:CalculateUnitSupply();
 	local iBuildingMaintenance = pPlayer:GetBuildingGoldMaintenance();
 	local iImprovementMaintenance = pPlayer:GetImprovementGoldMaintenance();
-	local iTotalExpenses = iUnitCost + iUnitSupply + iBuildingMaintenance + iImprovementMaintenance + iGoldPerTurnToOtherPlayers;
+	local iGoldToOverlord = 0;
+	if pPlayer.GetGoldToOverlord then
+		iGoldToOverlord = pPlayer:GetGoldToOverlord();
+	end
+	local iTotalExpenses = iUnitCost + iUnitSupply + iBuildingMaintenance + iImprovementMaintenance + iGoldPerTurnToOtherPlayers + iGoldToOverlord;
 	
 	strText = strText .. "[NEWLINE]";
 	strText = strText .. "[COLOR:255:150:150:255]";
@@ -860,6 +945,15 @@ function GoldTipHandler( control )
 	end
 	if (iGoldPerTurnToOtherPlayers > 0) then
 		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_TO_OTHERS", iGoldPerTurnToOtherPlayers);
+	end
+	if (iGoldToOverlord > 0) then
+		local iOverlord = pPlayer:GetOverlord();
+		if iOverlord >= 0 then
+			local pOverlord = Players[iOverlord];
+			if pOverlord ~= nil then
+				strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_TO_OVERLORD", pOverlord:GetCivilizationShortDescription(), iGoldToOverlord);
+			end
+		end
 	end
 	strText = strText .. "[/COLOR]";
 	
@@ -931,6 +1025,7 @@ function HappinessTipHandler( control )
 		local iMinorCivHappiness = pPlayer:GetHappinessFromMinorCivs();
 		local iLeagueHappiness = pPlayer:GetHappinessFromLeagues();
 		local iFaithHappiness = pPlayer:GetHappinessFromFaith();
+		local iGoldDonationHappiness = pPlayer:GetGoldDonationHappiness();
 
 		--SP Flat Hadicap Happiness
 		local iHandicapHappiness = Game.GetHappinessFromHandicap();
@@ -976,6 +1071,13 @@ function HappinessTipHandler( control )
 	
 		-- Individual Resource Info
 	
+		-- Luxury happiness percentage modifier (Mercantile CS allies + CSUA), shown before the per-resource list
+		local iLuxHappinessMod = pPlayer:GetTotalLuxuryHappinessModifier();
+		local iLuxHappinessValue = pPlayer:GetTotalLuxuryHappinessValue();
+		if (iLuxHappinessMod > 0 and iLuxHappinessValue > 0) then
+			strText = strText .. "[NEWLINE]";
+			strText = strText .. "          " .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_LUXURY_MOD", iLuxHappinessMod, iLuxHappinessValue);
+		end
 		local iBaseHappinessFromResources = 0;
 		local iNumHappinessResources = 0;
 
@@ -1003,8 +1105,8 @@ function HappinessTipHandler( control )
 			strText = strText .. "          " .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_EXTRA_PER_RESOURCE", iExtraLuxuryHappiness, iNumHappinessResources * iExtraLuxuryHappiness);
 		end
 	
-		-- Misc Happiness from Resources
-		local iMiscHappiness = iResourcesHappiness - iBaseHappinessFromResources - iHappinessFromExtraResources - (iExtraLuxuryHappiness * iNumHappinessResources);
+		-- Misc Happiness from Resources (excluding the luxury modifier which is listed separately)
+		local iMiscHappiness = iResourcesHappiness - iBaseHappinessFromResources - iHappinessFromExtraResources - (iExtraLuxuryHappiness * iNumHappinessResources) - iLuxHappinessValue;
 		if (iMiscHappiness > 0) then
 			strText = strText .. "[NEWLINE]";
 			strText = strText .. "          +" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_OTHER_SOURCES", iMiscHappiness);
@@ -1041,6 +1143,10 @@ function HappinessTipHandler( control )
 		if (iMinorCivHappiness ~= 0) then
 			strText = strText .. "[NEWLINE]";
 			strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_CITY_STATE_FRIENDSHIP", iMinorCivHappiness);
+		end
+		if (iGoldDonationHappiness ~= 0) then
+			strText = strText .. "[NEWLINE]";
+			strText = strText .. "  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_HAPPINESS_GOLD_DONATION", iGoldDonationHappiness);
 		end
 		if (iLeagueHappiness ~= 0) then
 			strText = strText .. "[NEWLINE]";
@@ -1145,6 +1251,39 @@ function HappinessTipHandler( control )
 	
 	
 	
+		--------------------------------------SP Population Unhappiness Modifiers-----------------------------
+		local function AddPopUnhappinessModRow(strText, iValue, strKey)
+			if (iValue ~= 0) then
+				local strColorStart = "";
+				local strColorEnd = "";
+				if (iValue < 0) then
+					strColorStart = "[COLOR:150:220:150:255]";
+					strColorEnd = "[/COLOR]";
+				end
+				strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. strColorStart .. Locale.ConvertTextKey(strKey, iValue) .. strColorEnd;
+			end
+			return strText;
+		end
+
+		local iPopModTrait = pPlayer:GetTraitPopUnhappinessMod();
+		local iPopModHandicap = 0;
+		local iHandicap = pPlayer:GetHandicapType();
+		if (GameInfo.HandicapInfos[iHandicap] ~= nil and GameInfo.HandicapInfos[iHandicap].PopulationUnhappinessMod ~= nil) then
+			iPopModHandicap = GameInfo.HandicapInfos[iHandicap].PopulationUnhappinessMod - 100;
+		end
+		local iPopModOverextension = pPlayer:GetDiplomaticOverextensionUnhappinessPercent();
+		local iPopModCityState = pPlayer:GetCrossContinentRouteUnhappinessReduction();
+
+		local strPopMods = "";
+		strPopMods = AddPopUnhappinessModRow(strPopMods, iPopModTrait, "TXT_KEY_TP_UNHAPPINESS_POP_MOD_TRAIT");
+		strPopMods = AddPopUnhappinessModRow(strPopMods, iPopModHandicap, "TXT_KEY_TP_UNHAPPINESS_POP_MOD_HANDICAP");
+		strPopMods = AddPopUnhappinessModRow(strPopMods, iPopModOverextension, "TXT_KEY_TP_UNHAPPINESS_POP_MOD_OVEREXTENSION");
+		strPopMods = AddPopUnhappinessModRow(strPopMods, iPopModCityState, "TXT_KEY_TP_UNHAPPINESS_POP_MOD_CITY_STATE");
+
+		if (strPopMods ~= "") then
+			strText = strText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_UNHAPPINESS_POP_MOD_TITLE") .. strPopMods;
+		end
+		--------------------------------------SP Population Unhappiness Modifiers END-----------------------------
 		--------------------------------------SP Additional Happiness by Extra Consumer Goods-----------------------------
 	
     	local strSPConsumerHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS")
@@ -1232,7 +1371,13 @@ function GoldenAgeTipHandler( control )
 			strText = strText ..  Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE");
 			
 		elseif pPlayer:GetGoldenAgeTurns() > 0 then
-			local strGoldenAgeHelp = GameInfo.Civilizations[pPlayer:GetCivilizationType()].SpecialGAHelpText or "TXT_KEY_TP_GOLDEN_AGE_EFFECT";
+			-- 兼容性修复：与 SpecialGAText 相同，GameInfo 列访问不可靠，改用 DB.Query。
+			local strGoldenAgeHelp = "TXT_KEY_TP_GOLDEN_AGE_EFFECT";
+			for row in DB.Query("SELECT SpecialGAHelpText FROM Civilizations WHERE ID=" .. pPlayer:GetCivilizationType()) do
+				if row.SpecialGAHelpText ~= nil and row.SpecialGAHelpText ~= "" then
+					strGoldenAgeHelp = row.SpecialGAHelpText;
+				end
+			end
 			strText = strText ..  Locale.ConvertTextKey(strGoldenAgeHelp);				
 				
 		end
@@ -1396,7 +1541,15 @@ function CultureTipHandler( control )
 		end
 		
 		-- Culture from Golden Age
-		local iCultureFromGoldenAge = pPlayer:GetTotalJONSCulturePerTurn() - iCultureForFree - iCultureFromCities - iCultureFromHappiness - iCultureFromMinors - iCultureFromReligion - iCultureFromTraits - iCultureFromBonusTurns;
+		local iCultureFromVassals = 0;
+		local iCultureToOverlord = 0;
+		if pPlayer.GetCultureFromVassals then
+			iCultureFromVassals = pPlayer:GetCultureFromVassals();
+		end
+		if pPlayer.GetCultureToOverlord then
+			iCultureToOverlord = pPlayer:GetCultureToOverlord();
+		end
+		local iCultureFromGoldenAge = pPlayer:GetTotalJONSCulturePerTurn() - iCultureForFree - iCultureFromCities - iCultureFromHappiness - iCultureFromMinors - iCultureFromReligion - iCultureFromTraits - iCultureFromBonusTurns - iCultureFromVassals + iCultureToOverlord;
 		if (iCultureFromGoldenAge ~= 0) then
 		
 			-- Add separator for non-initial entries
@@ -1409,6 +1562,36 @@ function CultureTipHandler( control )
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_CULTURE_FROM_GOLDEN_AGE", iCultureFromGoldenAge);
 		end
 
+		if pPlayer.GetCultureFromVassalsTable then
+			local tCultureFromVassalsTable = pPlayer:GetCultureFromVassalsTable();
+			local bFirstEntryCultureFromVassalsTable = true
+			for playerID = 0, GameDefines.MAX_MAJOR_CIVS - 1 do
+				local value = tCultureFromVassalsTable[playerID]
+				local player = Players[playerID]
+				if value ~= nil and value ~= 0 and player ~= nil then
+					if bFirstEntryCultureFromVassalsTable then
+						strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_TITLE_CULTURE_FROM_VASSALS")
+						bFirstEntryCultureFromVassalsTable = false
+					end
+
+					local civName = player:GetCivilizationShortDescription()
+					strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_CULTURE_FROM_VASSALS", civName, value)
+				end
+			end
+		end
+
+		if pPlayer.GetOverlord and pPlayer.GetCultureToOverlord then
+			local iOverlord = pPlayer:GetOverlord();
+			if iOverlord >= 0 then
+				local iTribute = pPlayer:GetCultureToOverlord();
+				if iTribute ~= 0 then
+					local pOverlord = Players[iOverlord];
+					if pOverlord ~= nil then
+						strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_CULTURE_TO_OVERLORD", pOverlord:GetCivilizationShortDescription(), iTribute);
+					end
+				end
+			end
+		end
 		-- Let people know that building more cities makes policies harder to get
 		if (not OptionsManager.IsNoBasicHelp()) then
 			strText = strText .. "[NEWLINE][NEWLINE]";
@@ -1527,6 +1710,36 @@ function FaithTipHandler( control )
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_FAITH_FROM_RELIGION", iFaithFromReligion);
 		end
 		
+		if pPlayer.GetFaithFromVassalsTable then
+			local tFaithFromVassalsTable = pPlayer:GetFaithFromVassalsTable();
+			local bFirstEntryFaithFromVassalsTable = true
+			for playerID = 0, GameDefines.MAX_MAJOR_CIVS - 1 do
+				local value = tFaithFromVassalsTable[playerID]
+				local player = Players[playerID]
+				if value ~= nil and value ~= 0 and player ~= nil then
+					if bFirstEntryFaithFromVassalsTable then
+						strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_TITLE_FAITH_FROM_VASSALS")
+						bFirstEntryFaithFromVassalsTable = false
+					end
+
+					local civName = player:GetCivilizationShortDescription()
+					strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_FAITH_FROM_VASSALS", civName, value)
+				end
+			end
+		end
+
+		if pPlayer.GetOverlord and pPlayer.GetFaithToOverlord then
+			local iOverlord = pPlayer:GetOverlord();
+			if iOverlord >= 0 then
+				local iTribute = pPlayer:GetFaithToOverlord();
+				if iTribute ~= 0 then
+					local pOverlord = Players[iOverlord];
+					if pOverlord ~= nil then
+						strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_FAITH_TO_OVERLORD", pOverlord:GetCivilizationShortDescription(), iTribute);
+					end
+				end
+			end
+		end
 		if (iFaithFromCities ~= 0 or iFaithFromMinorCivs ~= 0 or iFaithFromReligion ~= 0) then
 			strText = strText .. "[NEWLINE]";
 		end
