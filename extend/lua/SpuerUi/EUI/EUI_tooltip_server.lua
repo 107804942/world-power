@@ -1472,9 +1472,8 @@ local function UnitToolTip( unit )
 		g_PromotionIconIM:ResetInstances()
 		if not( unit.IsTrade and unit:IsTrade() ) then
 			for unitPromotion in GameInfo.UnitPromotions() do
-				if unit:IsHasPromotion(unitPromotion.ID)
-				 and unitPromotion.ShowInUnitPanel ~= 0 
-				 and unitPromotion.ShowInTooltip ~= 0 then
+			       local unitPromotionID = unitPromotion.ID;
+				if (unit:IsHasPromotion(unitPromotionID) and unitPromotion.ShowInUnitPanel ~= 0  and unitPromotion.ShowInTooltip ~= 0 ) then
 					promotionIcon = g_PromotionIconIM:GetInstance()
 					IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image )
 					insert( promotionText, unitPromotion._Name )
