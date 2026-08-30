@@ -118,10 +118,7 @@ VALUES ('POLICY_GRANDEUR_5', 'YIELD_GOLD',10),
 
 INSERT  INTO Policy_ResourceYieldChanges(PolicyType,ResourceType,YieldType,Yield)
 SELECT 'POLICY_KNOWLEDGE_1' ,Type, 'YIELD_GOLD',1 FROM Resources WHERE ResourceClassType='RESOURCECLASS_LUXURY';
-------------------------------------------------------------------------------------------------------------------------
--- 疗养院
-------------------------------------------------------------------------------------------------------------------------
-UPDATE Improvements SET NearbyFriendHeal=50 WHERE Type='IMPROVEMENT_SANATORIUM';
+
 
 ------------------------------------------------------------------------------------------------------------------------
 -- 提供资源

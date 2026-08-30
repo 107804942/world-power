@@ -45,7 +45,41 @@
 			<YieldType>YIELD_CRIME</YieldType>
 			<Yield>1</Yield>
 		</Row>
-
+		<Row>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
 	</SpecialistYields>
 
 	<Specialists>

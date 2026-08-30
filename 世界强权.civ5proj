@@ -16763,10 +16763,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\lua\ui\GameSetupScreen.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\lua\ui\InfoTooltipInclude.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>

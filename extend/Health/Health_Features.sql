@@ -63,7 +63,7 @@ SELECT 'IMPROVEMENT_INDUSTRIAL_COMPLEX',			'YIELD_DISEASE',			2 ;
  --改良设施直接产出
 INSERT INTO Improvement_Yields (ImprovementType,	YieldType,				Yield)
 SELECT 'IMPROVEMENT_SANATORIUM',					'YIELD_GOLDEN_AGE_POINTS',8 UNION ALL  --疗养院
-SELECT 'IMPROVEMENT_SANATORIUM',					'YIELD_HEALTH',			 10 UNION ALL  --疗养院
+SELECT 'IMPROVEMENT_SANATORIUM',					'YIELD_HEALTH',			 15 UNION ALL  --疗养院
 SELECT 'IMPROVEMENT_SANATORIUM',					'YIELD_SCIENCE',		 5 UNION ALL  --疗养院
 
 SELECT 'IMPROVEMENT_TERRASCAPE',					'YIELD_HEALTH',			 1 UNION ALL  --人造绿洲
@@ -73,6 +73,15 @@ SELECT 'IMPROVEMENT_QUARRY',						'YIELD_DISEASE',		1 UNION ALL  --采石场
 SELECT 'IMPROVEMENT_GENERATOR',					'YIELD_DISEASE',		3 UNION ALL  --发电机
 SELECT 'IMPROVEMENT_INDUSTRIAL_COMPLEX',			'YIELD_DISEASE',	    2 UNION ALL  --工业综合体  
 SELECT 'IMPROVEMENT_MANUFACTORY',					'YIELD_DISEASE',		2;
+
+
+------------------------------------------------------------------------------------------------------------------------
+-- 疗养院
+------------------------------------------------------------------------------------------------------------------------
+UPDATE Improvements SET NearbyFriendHeal=50 WHERE Type='IMPROVEMENT_SANATORIUM';
+
+INSERT  INTO Improvement_AdjacentFeatureYieldChanges(ImprovementType,FeatureType,YieldType,Yield)
+SELECT  'IMPROVEMENT_SANATORIUM', Type, 'YIELD_HEALTH' ,1  FROM Features WHERE  ID != -1;
 
 
 --科技提升改良设施产出

@@ -525,7 +525,8 @@ function SetSelectedCiv()
 
 		
         
-		IconHookup( leader.PortraitIndex, 128, leader.IconAtlas, Controls.Portrait );
+		--IconHookup( leader.PortraitIndex, 128, leader.IconAtlas, Controls.Portrait );
+		IconHookup( leader.PortraitIndex, 256, leader.IconAtlas, Controls.Portrait );
 
 		SimpleCivIconHookup( 0, 64, Controls.IconShadow );
          
@@ -551,7 +552,8 @@ function SetSelectedCiv()
 		---------------------------------------------------           
         SetCivName("TXT_KEY_RANDOM_LEADER", "TXT_KEY_RANDOM_CIV", "TXT_KEY_MISC_RANDOMIZE");
 
-		IconHookup( 22, 128, "LEADER_ATLAS", Controls.Portrait );
+		---IconHookup( 22, 128, "LEADER_ATLAS", Controls.Portrait );
+		IconHookup( 22, 256, "LEADER_ATLAS", Controls.Portrait );
 		local questionOffset, questionTextureSheet = IconLookup( 23, 64, "CIV_COLOR_ATLAS" );
 			Controls.IconShadow:SetTexture( questionTextureSheet );
 			Controls.IconShadow:SetTextureOffset( questionOffset );

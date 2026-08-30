@@ -558,9 +558,12 @@
 			<Text>疗养院，指的是提供物理治疗(如水疗,光疗),并配合饮食、体操等疗法以帮助病人恢复健康的医疗机构。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_IMPROVEMENT_SANATORIUM_HELP">
-			<Text>该改良设施为所建成地块+8[ICON_HEALTH]健康度，+8[ICON_GOLDEN_AGE]黄金时代点数。临近一格内的我方单位每回合恢复50点生命值。</Text>
+			<Text>
+				该改良设施为所建成地块+15[ICON_HEALTH]健康度，+8[ICON_GOLDEN_AGE]黄金时代点数，+5[ICON_RESEARCH]科研。
+				[NEWLINE]为临近一格内拥有地貌的地块提供1点[ICON_HEALTH]健康度产出。
+				[NEWLINE]临近一格内的我方单位每回合恢复50点生命值。
+			</Text>
 		</Row>
-
 
 		<Row Tag="TXT_KEY_BUILD_SANATORIUM">
 			<Text>疗养院</Text>
