@@ -81,6 +81,9 @@
 			</Image>
 		</Grid>
 	</ToolTipType>
+	
+	
+	
 
 	<ToolTipType Name="EUI_CityGrowthTooltip" >
 		<Container Size="200,200" >

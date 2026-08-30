@@ -155,6 +155,8 @@ local g_isCityStateLeaders, g_isBasicHelp, g_isScienceEnabled, g_isReligionEnabl
 
 local g_UnitTooltipTimer = Controls.UnitTooltipTimer
 
+
+
 local g_ItemTooltipControls = {}
 TTManager:GetTypeControlTable( "EUI_ItemTooltip", g_ItemTooltipControls )
 
@@ -201,7 +203,7 @@ end
 	UpdateOptions()
 end
 
-local g_PromotionIconIM = StackInstanceManager( "PromotionIcon", "Image", g_UnitTooltipControls.IconStack )
+
 
 function cleanupTable( t )
 	t[-1] = nil
@@ -1452,43 +1454,91 @@ end)
 --==========================================================
 -- Unit Tooltips
 --==========================================================
+local g_PromotionIconIM = StackInstanceManager( "PromotionIcon", "Image", g_UnitTooltipControls.IconStack )
+
 do
 local function UnitToolTip( unit )
-	if unit then
-		local controls = g_UnitTooltipControls
-		local toolTipString = ShortUnitTip( unit )
-		local playerID = unit:GetOwner()
-		if playerID == GetActivePlayer() then
-			toolTipString = toolTipString .. "[NEWLINE]".. L("TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ) .. L"TXT_KEY_UPANEL_CLICK_TO_SELECT"
-		end
-		controls.Text:SetText( toolTipString )
+    if unit then
+        local controls = g_UnitTooltipControls
+        local toolTipString = ShortUnitTip( unit )
+        local playerID = unit:GetOwner()
+        if playerID == GetActivePlayer() then
+            toolTipString = toolTipString .. "[NEWLINE]".. L("TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ) .. L"TXT_KEY_UPANEL_CLICK_TO_SELECT"
+        end
+        controls.Text:SetText( toolTipString )
 
-		local iconIndex, iconAtlas = GetUnitPortraitIcon( unit )
-		IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait )
-		CivIconHookup( playerID, 64, controls.CivIcon, controls.CivIconBG, controls.CivIconShadow, false, true )
-		local i = 0
-		local promotionText = {}
-		local promotionIcon
-		g_PromotionIconIM:ResetInstances()
-		if not( unit.IsTrade and unit:IsTrade() ) then
-			for unitPromotion in GameInfo.UnitPromotions() do
-			       local unitPromotionID = unitPromotion.ID;
-				if (unit:IsHasPromotion(unitPromotionID) and unitPromotion.ShowInUnitPanel ~= 0  and unitPromotion.ShowInTooltip ~= 0 ) then
-					promotionIcon = g_PromotionIconIM:GetInstance()
-					IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image )
-					insert( promotionText, unitPromotion._Name )
-				end
-			end
-		end
-		controls.PortraitFrame:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
-		controls.PromotionText:SetText( concat( promotionText, "[NEWLINE]" ) )
-		controls.PromotionText:SetHide( #promotionText ~= 1 )
-		controls.IconStack:SetWrapWidth( ceil( i / ceil( i / 10 ) ) * 26 )
-		controls.IconStack:CalculateSize()
-		controls.Box:DoAutoSize()
-		Controls.UnitTooltipTimer:SetToBeginning()
-		Controls.UnitTooltipTimer:Reverse()
-	end
+        local iconIndex, iconAtlas = GetUnitPortraitIcon( unit )
+        IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait )
+        CivIconHookup( playerID, 64, controls.CivIcon, controls.CivIconBG, controls.CivIconShadow, false, true )
+
+        -- ========== 修改开始：晋升排序逻辑 ==========
+        local promotionList = {}  -- 临时表，存放 { id, name }
+        if not( unit.IsTrade and unit:IsTrade() ) then
+            for unitPromotion in GameInfo.UnitPromotions() do
+                local unitPromotionID = unitPromotion.ID
+                if (unit:IsHasPromotion(unitPromotionID) and unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0) then
+                    table.insert(promotionList, {
+                        id = unitPromotionID,
+                        name = unitPromotion._Name
+                    })
+                end
+            end
+        end
+
+        -- 自定义排序规则（这里以名称为例，按字母升序）
+        table.sort(promotionList, function(a, b)
+            return 
+                  a.id
+                   < 
+                  b.id
+                     -- 按名称字母顺序
+            -- 如果想按自定义优先级，可改为按预设表索引排序（见下方注释）
+        end)
+
+		--?? 自定义排序的几种常见方式
+
+--你可以替换 table.sort 中的比较函数：
+
+--· 按晋升等级（层级）排序（需自行定义优先级表）：
+  --```lua
+ -- local priorityOrder = { "PROMOTION_DRILL_1", "PROMOTION_SHOCK_1", ... } -- 按你想要的顺序
+ -- table.sort(promotionList, function(a, b)
+     -- local idxA = priorityOrder[a.id] or 999
+      --local idxB = priorityOrder[b.id] or 999
+      --return idxA < idxB
+ -- end)
+ -- ```
+--· 按 ID 升序（原始顺序，但可保证稳定）：
+  --```lua
+  --table.sort(promotionList, function(a, b) return  a.id  <  b.id  end)
+ -- ```
+
+
+        -- 生成最终的晋升文本和图标
+        local promotionText = {}
+        g_PromotionIconIM:ResetInstances()
+        for _, promo in ipairs(promotionList) do
+            local promotionIcon = g_PromotionIconIM:GetInstance()
+            -- 根据ID获取对应的Promotion信息（需要重新查询）
+            local promoRow = GameInfo.UnitPromotions[promo.id]
+            if promoRow then
+                IconHookup(promoRow.PortraitIndex, 32, promoRow.IconAtlas, promotionIcon.Image)
+                table.insert(promotionText, promo.name)
+            end
+        end
+        -- ========== 修改结束 ==========
+
+        controls.PortraitFrame:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
+        controls.PromotionText:SetText( concat( promotionText, "[NEWLINE]" ) )
+        controls.PromotionText:SetHide( #promotionText ~= 1 )  -- 注意原逻辑可能想让1个或更多时显示，但这里写的是~=1，即不等于1时隐藏？原意可能是只有1个时隐藏？但保持原样不变。
+        -- 原代码中 i 未定义，这里用 #promotionList 替代
+        local i = #promotionList
+        controls.IconStack:SetWrapWidth( ceil( i / ceil( i / 10 ) ) * 26 )
+        controls.IconStack:CalculateSize()
+        controls.Box:DoAutoSize()
+        Controls.UnitTooltipTimer:SetToBeginning()
+        Controls.UnitTooltipTimer:Reverse()
+    end
 end
 LuaEvents.UnitToolTip.Add( UnitToolTip )
 
@@ -1980,8 +2030,6 @@ end)
 --==========================================================
 -- Tech Tooltips
 --==========================================================
-
-
 Controls.UnitTooltipTimer2:RegisterAnimCallback( function()
 		g_ItemTooltipControls.PortraitFrame2:SetHide( false )
 		g_ItemTooltipControls.IconStack2:SetWrapWidth( 32 )

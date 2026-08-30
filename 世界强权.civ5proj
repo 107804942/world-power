@@ -52,7 +52,7 @@
         <Type>Mod</Type>
         <Name>CIV5MPDLL</Name>
         <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>48</MinVersion>
+        <MinVersion>63</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
       <Association>
@@ -21320,6 +21320,10 @@
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="Lua Script1.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Lua Script10.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

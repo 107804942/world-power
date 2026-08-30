@@ -47,7 +47,7 @@ end
 --Health_AttackReduce
 function AttackReduceHealth(iAttackPlayer, iAttackUnit,iDefenderPlayer, iDefenderCity, iPlotX, iPlotY)
 	local Attackplayer = Players[iAttackPlayer]
-	local unit = player:GetUnitByID(iAttackUnit)
+	local unit = Attackplayer:GetUnitByID(iAttackUnit)
 	local city   = Players[iDefenderPlayer]:GetCityByID(iDefenderCity)
 	if Attackplayer==nil or unit==nil or city==nil
 	then return end

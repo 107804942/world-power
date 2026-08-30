@@ -4416,6 +4416,9 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 	local thisUnitType = { UnitType = unit.Type }
 	local thisUnitClass =  { UnitClassType = unit.Class }
 
+
+	local freePromotions = {}  ----新增
+
 	local city, item, resource
 
 	------------------------------------------------新增晋升显示------------------------------------------------
@@ -4427,6 +4430,9 @@ function GetHelpTextForUnit2( unitID ) -- isIncludeRequirementsInfo )
 		unitRange = unitRange + (item.RangeChange or 0)
 		unitMoves = unitMoves + (item.MovesChange or 0)
 		unitSight = unitSight + (item.VisibilityChange or 0)
+		if  item.ShowInUnitPanel ~= 0 and item.ShowInTooltip ~= 0 then  ----新增
+			insert( freePromotions, L(item.Description) ) ----新增
+			end
 		end
 	end
 

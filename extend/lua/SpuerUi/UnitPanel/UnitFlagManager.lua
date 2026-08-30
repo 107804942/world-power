@@ -1929,19 +1929,19 @@ local PromotionFlagQuery = DB.CreateQuery([[
 local PromotionFlagTable = {}
 for row in PromotionFlagQuery() do PromotionFlagTable[row.ID] = row end
 local function AddPromotionIcon(flag, promoID, iconPositionID)
-	local button = flag.m_Instance['Promotion'..iconPositionID]
-	local promo = PromotionFlagTable[promoID]
-	
-	if not IconHookup( promo.PortraitIndex, 16, promo.IconAtlas, button ) then
-		print("No 16x16 icon for ".. promo.Type .. " failing back to the yellow triangle")
-		IconHookup( 59, 16, "PROMOTION_ATLAS", button )
-	end
-	
-	local hoverText = string.format("[COLOR_YELLOW]%s[ENDCOLOR][NEWLINE]%s",
+    local button = flag.m_Instance['Promotion'..iconPositionID]
+    local promo = PromotionFlagTable[promoID]
+    
+    if not IconHookup( promo.PortraitIndex, 45, promo.IconAtlas, button ) then   -- 16 ¡ú 45
+        print("No 45x45 icon for ".. promo.Type .. " failing back to the yellow triangle")
+        IconHookup( 59, 45, "PROMOTION_ATLAS", button )                          -- 16 ¡ú 45
+    end
+    
+    local hoverText = string.format("[COLOR_YELLOW]%s[ENDCOLOR][NEWLINE]%s",
         Locale.ConvertTextKey(promo.Description),
         Locale.ConvertTextKey(promo.Help)
     )
-	button:SetToolTipString(hoverText)
+    button:SetToolTipString(hoverText)
 end
 local function UpdatePromotions(playerID, unitID)
 	local flag = g_MasterList[playerID][unitID]
