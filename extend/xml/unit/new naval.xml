@@ -200,7 +200,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_FUTURE_SUPER_CARRIER</UnitArtInfo>
 			<UnitFlagIconOffset>18</UnitFlagIconOffset>
 			<UnitFlagAtlas>TTMOD_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>166</PortraitIndex>
+			<PortraitIndex>185</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>BOAT</MoveRate>
 			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
