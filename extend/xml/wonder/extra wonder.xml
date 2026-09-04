@@ -1752,12 +1752,12 @@
 			<GreatWorkSlotType>GREAT_WORK_SLOT_LITERATURE</GreatWorkSlotType>
 			<FreeGreatWork>GREAT_WORK_ISHTARGATE</FreeGreatWork>
 			<GreatWorkCount>2</GreatWorkCount>
-			<Defense>2500</Defense>
+			<Defense>3000</Defense>
 			<WorkerSpeedModifier>25</WorkerSpeedModifier>
 			<ExtraCityHitPoints>50</ExtraCityHitPoints>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<FreePromotion>PROMOTION_ISHTARGATE</FreePromotion>
-			<PortraitIndex>169</PortraitIndex>
+			<PortraitIndex>246</PortraitIndex>
 			<WonderSplashImage>ISHTAR.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,B</WonderSplashAnchor>
 		</Row>

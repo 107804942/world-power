@@ -31,7 +31,7 @@
 
 
 		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_ANTIMISSILE" />
+			<Set UnitArtInfo="ART_DEF_UNIT_ANTIMISSILE" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="220"/>
 			<Where Type="UNIT_ATGM_VEHICLE" />
 		</Update>
 		<Update>
@@ -469,8 +469,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_RANGEDMARINE04SP</UnitArtInfo>
 			<UnitFlagAtlas>ATLAS_DOOMGUY_FLAG</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>85</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>105</PortraitIndex>
 			<WorkRate>100</WorkRate>
 			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
 		</Row>

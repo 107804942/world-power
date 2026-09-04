@@ -626,8 +626,8 @@
 				<ConquestProb>66</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
 				<Happiness>1</Happiness>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>24</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>41</PortraitIndex>
 			</Row>
 
 			<!--地牢-->

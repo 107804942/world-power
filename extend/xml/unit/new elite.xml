@@ -686,8 +686,8 @@
 			<MaxHitPoints>500</MaxHitPoints>
 			<UnitFlagIconOffset>42</UnitFlagIconOffset>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>100</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>153</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 
@@ -722,9 +722,9 @@
 			<MoveRate>WHEELED</MoveRate>
 			<UnitFlagIconOffset>45</UnitFlagIconOffset>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>58</PortraitIndex>
+			<PortraitIndex>152</PortraitIndex>
 			<MaxHitPoints>700</MaxHitPoints>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 
@@ -1120,8 +1120,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_RANGEDMARINE04HS</UnitArtInfo>
 			<UnitFlagIconOffset>32</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>70</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>103</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MaxHitPoints>300</MaxHitPoints>
 			<ProjectPrereq>PROJECT_GHOST</ProjectPrereq>
 			<ExtraMaintenanceCost>500</ExtraMaintenanceCost>
