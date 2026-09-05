@@ -1490,8 +1490,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<FreeBuildingThisCity>BUILDINGCLASS_OBSERVATORY</FreeBuildingThisCity>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>79</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>68</PortraitIndex>
 			<WonderSplashImage>BEGplash.dds</WonderSplashImage>
 		</Row>
 

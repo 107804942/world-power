@@ -152,10 +152,10 @@
 			<XPValueAttack>5</XPValueAttack>
 			<XPValueDefense>3</XPValueDefense>
 			<UnitArtInfo>ART_DEF_UNIT_CHINA_FIRE_CANNON</UnitArtInfo>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<UnitFlagAtlas>ROG_UU_FLAG_ATLAS3</UnitFlagAtlas>
 			<UnitFlagIconOffset>16</UnitFlagIconOffset>
-			<PortraitIndex>148</PortraitIndex>
+			<PortraitIndex>49</PortraitIndex>
 			<MoveRate>ARTILLERY</MoveRate>
 			<ProjectPrereq>PROJECT_CHINA_FIRE_CANNON</ProjectPrereq>
 			<ExtraMaintenanceCost>10</ExtraMaintenanceCost>
@@ -192,8 +192,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_SUI_FLEET</UnitArtInfo>
 			<UnitFlagAtlas>SUI_UNIT_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>60</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>102</PortraitIndex>
 			<MoveRate>WOODEN_BOAT</MoveRate>
 			<ProjectPrereq>PROJECT_SUI_FLEET</ProjectPrereq>
 			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
@@ -372,8 +372,8 @@
 			<!--<UnitArtInfo>ART_DEF_UNIT_PZH2000</UnitArtInfo>-->
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<UnitFlagIconOffset>39</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>10</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>88</PortraitIndex>
 			<MoveRate>WHEELED</MoveRate>
 			<ProjectPrereq>PROJECT_CRUSADER_ARTILLERY</ProjectPrereq>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
@@ -755,8 +755,8 @@
 			<MaxHitPoints>500</MaxHitPoints>
 			<UnitFlagIconOffset>43</UnitFlagIconOffset>
 			<UnitFlagAtlas>BEYOND_EARTH_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>93</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>151</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 

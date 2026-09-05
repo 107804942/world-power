@@ -1366,9 +1366,9 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<Defense>7000</Defense>
 				<AllowsRangeStrike>true</AllowsRangeStrike>
-				<ExtraCityHitPoints>50</ExtraCityHitPoints>
-				<PortraitIndex>16</PortraitIndex>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<ExtraCityHitPoints>75</ExtraCityHitPoints>
+				<PortraitIndex>167</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<HurryCostModifier>50</HurryCostModifier>
 				<ConquestProb>100</ConquestProb>
 				<NukeInterceptionChance>30</NukeInterceptionChance>
