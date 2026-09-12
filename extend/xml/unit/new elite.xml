@@ -80,8 +80,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_IRON_BUDDHA</UnitArtInfo>
 			<UnitFlagAtlas>IRON_BUDDHA_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>87</PortraitIndex>
 			<MoveRate>QUADRUPED</MoveRate>
 			<ProjectPrereq>PROJECT_IRON_BUDDHA</ProjectPrereq>
 			<ExtraMaintenanceCost>7</ExtraMaintenanceCost>
@@ -830,8 +830,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_SPACESHIP</UnitArtInfo>
 			<UnitFlagAtlas>UNITS_HELIOS_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<PortraitIndex>115</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>179</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<MaxHitPoints>2000</MaxHitPoints>
 			<ProjectPrereq>PROJECT_SPACESHIP</ProjectPrereq>
@@ -869,8 +869,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_P1500</UnitArtInfo>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<UnitFlagIconOffset>45</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>37</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>165</PortraitIndex>
 			<MoveRate>WHEELED</MoveRate>
 			<ProjectPrereq>PROJECT_P1500</ProjectPrereq>
 			<ExtraMaintenanceCost>150</ExtraMaintenanceCost>

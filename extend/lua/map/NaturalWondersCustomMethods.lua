@@ -168,22 +168,26 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 	--elseif method_number == 4 then
 	--elseif method_number == 5 then
 
-	-- reserved: Mt. Everest
-	elseif method_number == 22 then
-		
+	
     -- reserved: 乌尤尼盐湖
-	elseif method_number == 6 then
+	--elseif method_number == 6 then
 
 	-- reserved: Mt. Paektu 长白山
-	elseif method_number == 8 then
+	--elseif method_number == 8 then
 
 	-- reserved: Eye of the Sahara
-	elseif method_number == 12 then
+	--elseif method_number == 12 then
 	
 	-- reserved: 达洛尔火山
-	elseif method_number == 13 then
-			
-	-- HA LONG BAY	
+	--elseif method_number == 13 then
+		
+	-- reserved: Mt. Everest
+	--elseif method_number == 22 then
+
+-- **********************************************************************************************************************************************
+-- HA LONG BAY 下龙湾
+-- **********************************************************************************************************************************************
+
     elseif method_number == 7 then
 		
 		local pPlot = Map.GetPlot(x, y)
@@ -229,8 +233,10 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		if iNumLand == 0 or iNumCoast < 2 or iNumOcean < 2 or bContinent == false or bGrass == false then return false end
 
 		return true
+-- **********************************************************************************************************************************************
+-- 群岛
+-- **********************************************************************************************************************************************
 
-  -- reserved: 群岛
 	elseif method_number == 9 then
 			local pPlot = Map.GetPlot(x, y)
 		
@@ -268,9 +274,12 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 
 		return true
 
+-- **********************************************************************************************************************************************
+-- 瑞特巴湖
+-- **********************************************************************************************************************************************
 
 	elseif method_number == 10 then
-		-- reserved: 瑞特巴湖
+
 		local pMainPlot = Map.GetPlot(x, y)
 		
 		if pMainPlot == nil then return false end
@@ -315,8 +324,10 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		if not bIsHasSeaTiles or iNumLandTiles < 3 or iNumLandTiles > 4 then return false end
 
 		return true
+-- **********************************************************************************************************************************************
+-- GREAT BLUE HOLE 蓝洞
+-- **********************************************************************************************************************************************
 
-		-- GREAT BLUE HOLE
          elseif method_number == 11 then
 		
 		local pPlot = Map.GetPlot(x, y)
@@ -354,9 +365,11 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 
 
+-- **********************************************************************************************************************************************
+-- 荧光海
+-- **********************************************************************************************************************************************
 
 	elseif method_number == 14 then
-		-- 荧光海
 		local pPlot = Map.GetPlot(x, y)
 		
 		if pPlot == nil then return false end
@@ -389,8 +402,10 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 
 
 		
+-- **********************************************************************************************************************************************
+-- 巨人堤
+-- **********************************************************************************************************************************************
 
-		-- 巨人堤
 		elseif method_number == 15 then
 		
 		local pPlot = Map.GetPlot(x, y)
@@ -429,8 +444,9 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		return true
 		-- end
 
-
-        -- reserved: 精致拱门
+-- **********************************************************************************************************************************************
+-- 精致拱门
+-- **********************************************************************************************************************************************
         elseif method_number == 16 then
 		
 		local pMainPlot = Map.GetPlot(x, y)
@@ -467,82 +483,9 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 
 		return true
 
-
-		-- reserved: 峡谷
-		elseif method_number == 24 then
-	
-		local pMainPlot = Map.GetPlot(x, y)
-		
-		if pMainPlot == nil then return false end
-		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
-		if pMainPlot:IsRiver() then return false end  ---不可沿河
-		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
-  
-		local pMainTerrainType = pMainPlot:GetTerrainType()
-
-		if pMainTerrainType ~= eTerrainPlains then return false end  
-		
-		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
-
-		--if pMainAreaNear < 20 then return false end 
-
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			
-			if pAdjacentPlot == nil then return false end
-		
-			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
-
-			if sAdjacentTerrainType ~= eTerrainPlains then return false end  ----附近地块非
-
-			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
-			
-			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
-			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
-
-		end
-
-		return true
-
-
-		-- reserved: 玻璃屋山
-		elseif method_number == 26 then
-	
-		local pMainPlot = Map.GetPlot(x, y)
-		
-		if pMainPlot == nil then return false end
-		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
-		--if pMainPlot:IsRiver() then return false end  ---不可沿河
-		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
-  
-		local pMainTerrainType = pMainPlot:GetTerrainType()
-
-		if pMainTerrainType ~= eTerrainGrass then return false end  
-		
-		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
-
-		--if pMainAreaNear < 20 then return false end 
-
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			
-			if pAdjacentPlot == nil then return false end
-		
-			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
-
-			if sAdjacentTerrainType ~= eTerrainGrass then return false end  ----附近地块非
-
-			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
-			
-			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
-			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
-
-		end
-
-		return true
-
-	
-		-- reserved: 丹霞
+-- **********************************************************************************************************************************************
+-- 丹霞
+-- **********************************************************************************************************************************************
         elseif method_number == 17 then
 		
 		local pMainPlot = Map.GetPlot(x, y)
@@ -574,9 +517,10 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 
 
 	
+-- **********************************************************************************************************************************************
+-- BERMUDA TRIANGLE 百慕大
+-- **********************************************************************************************************************************************
 
-
-		-- BERMUDA TRIANGLE
 		elseif method_number == 18 then
 	
 		local pMainPlot = Map.GetPlot(x, y)		
@@ -658,6 +602,123 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 		
 		if iNumLandSum < 3 or iNumLandSum > 5 then return false end
 		
+		return true
+
+-- **********************************************************************************************************************************************
+-- 魔鬼塔
+-- **********************************************************************************************************************************************
+
+		elseif method_number == 19 then
+	
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
+		if pMainPlot:IsRiver() then return false end  ---不可沿河
+		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
+  
+		local pMainTerrainType = pMainPlot:GetTerrainType()
+
+		if pMainTerrainType ~= eTerrainPlains then return false end  
+		
+		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
+
+		--if pMainAreaNear < 20 then return false end 
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+
+			if sAdjacentTerrainType ~= eTerrainPlains then return false end  ----附近地块非平原
+
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			
+			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
+			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
+
+		end
+
+		return true
+-- **********************************************************************************************************************************************
+-- 克罗拉多峡谷
+-- **********************************************************************************************************************************************
+
+		elseif method_number == 24 then
+	
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
+		if pMainPlot:IsRiver() then return false end  ---不可沿河
+		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
+  
+		local pMainTerrainType = pMainPlot:GetTerrainType()
+
+		if pMainTerrainType ~= eTerrainPlains then return false end  
+		
+		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
+
+		--if pMainAreaNear < 20 then return false end 
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+
+			if sAdjacentTerrainType ~= eTerrainPlains then return false end  ----附近地块非
+
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			
+			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
+			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
+
+		end
+
+		return true
+
+
+-- **********************************************************************************************************************************************
+-- 玻璃屋山
+-- **********************************************************************************************************************************************
+
+		elseif method_number == 26 then
+	
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
+		--if pMainPlot:IsRiver() then return false end  ---不可沿河
+		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
+  
+		local pMainTerrainType = pMainPlot:GetTerrainType()
+
+		if pMainTerrainType ~= eTerrainGrass then return false end  
+		
+		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
+
+		--if pMainAreaNear < 20 then return false end 
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+
+			if sAdjacentTerrainType ~= eTerrainGrass then return false end  ----附近地块非
+
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			
+			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
+			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
+
+		end
+
 		return true
 
 
@@ -968,68 +1029,8 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_HA_LONG_B)
 
 
-    -- MT. EVEREST  珠穆朗玛
-	elseif method_number == 22 then
-		
-		local pPlot = Map.GetPlot(x, y)
-	
-		pPlot:SetPlotType(ePlotFlat, false, false)
-		--pPlot:SetPlotType(ePlotMountain, false, false)
-		pPlot:SetTerrainType(eTerrainSnow, false, false)
-		
-		-- creating Mountains around
-		local iNumMountains = 0
+    
 
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			
-			if pAdjacentPlot:GetPlotType() == ePlotMountain then
-				iNumMountains = iNumMountains + 1
-			end	
-		end
-
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			pAdjacentPlot:SetFeatureType(eFeatureNo)
-
-			if (pAdjacentPlot:GetPlotType() == ePlotHill or pAdjacentPlot:GetPlotType() == ePlotFlat) and iNumMountains < 4 then
-				pAdjacentPlot:SetPlotType(ePlotMountain, false, false)
-				pAdjacentPlot:SetResourceType(-1)		
-				iNumMountains = iNumMountains + 1
-			end	
-			
-			if pAdjacentPlot:GetTerrainType() == eTerrainGrass or pAdjacentPlot:GetTerrainType() == eTerrainPlains then
-				pAdjacentPlot:SetTerrainType(eTerrainTundra, false, false)
-				pAdjacentPlot:SetResourceType(-1)
-			end
-
-			if pAdjacentPlot:GetTerrainType() == eTerrainDesert then
-				pAdjacentPlot:SetTerrainType(eTerrainSnow, false, false)
-				pAdjacentPlot:SetResourceType(-1)
-			end
-		end
-
-    -- LAKE RETBA 瑞特巴湖
-	elseif method_number == 10 then
-		
-		local pPlot = Map.GetPlot(x, y)
-		
-		pPlot:SetPlotType(ePlotFlat, false, false)
-		--pPlot:SetTerrainType(eTerrainPlains, false, false)
-		pPlot:SetResourceType(-1) ---消除资源
-
-		-- setting up Plains around and cleaning Forests and Jungles
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-
-			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainDesert then
-				pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
-				
-				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
-					pAdjacentPlot:SetFeatureType(eFeatureNo)
-				end
-			end
-		end
 
 	-- MT. PAEKTU 长白山
 	elseif method_number == 8 then
@@ -1990,103 +1991,7 @@ function NWCustomPlacement(x, y, row_number, method_number)
 			print("Paketu river at the end of the map X3")
 		end
 
-
-	--巨人堤
-	elseif method_number == 15 then
-		
-		local pPlot = Map.GetPlot(x, y)
-		
-		pPlot:SetPlotType(ePlotOcean, false, false)
-		pPlot:SetTerrainType(eTerrainCoast, false, false)
-		
-		-- finding suitable places for CAUSEWAY
-		local tPossibleSpots = {}
-		
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-			
-			if pAdjacentPlot:GetPlotType() == ePlotOcean then
-				pAdjacentPlot:SetTerrainType(eTerrainCoast, false, false)
-			else
-				table.insert(tPossibleSpots, pAdjacentPlot)
-			end
-		end
-		
-		pChosenPlot = table.remove(tPossibleSpots, Game.Rand(#tPossibleSpots, "Place B tile for Causeway") + 1)
-		pChosenPlot:SetPlotType(ePlotFlat, false, false)
-		pChosenPlot:SetTerrainType(eTerrainTundra, false, false)
-		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_CAUSEWAY_B)
-
-       -- 精致拱门
-      elseif method_number == 16 then
-		
-		local pPlot = Map.GetPlot(x, y)
-		
-		pPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetTerrainType(eTerrainDesert, false, false)
-		pPlot:SetResourceType(-1) ---消除资源
-
-		-- setting up Plains around and cleaning Forests and Jungles
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-
-			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainDesert then
-				pAdjacentPlot:SetTerrainType(eTerrainDesert, false, false)
-				
-				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
-					pAdjacentPlot:SetFeatureType(eFeatureNo)
-				end
-			end
-		end
-
-		-- 峡谷
-		elseif method_number == 24 then
-		
-		local pPlot = Map.GetPlot(x, y)
-		
-		pPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetTerrainType(eTerrainPlains, false, false)
-		pPlot:SetResourceType(-1) ---消除资源
-
-		-- setting up Plains around and cleaning Forests and Jungles
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-
-			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainPlains then
-				pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
-				
-				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
-					pAdjacentPlot:SetFeatureType(eFeatureNo)
-				end
-			end
-		end
-
-
-		-- 玻璃屋山
-		elseif method_number == 26 then
-		
-		local pPlot = Map.GetPlot(x, y)
-		
-		pPlot:SetPlotType(ePlotFlat, false, false)
-		pPlot:SetTerrainType(eTerrainGrass, false, false)
-		pPlot:SetResourceType(-1) ---消除资源
-
-		-- setting up Plains around and cleaning Forests and Jungles
-		for i, direction in ipairs(tDirectionTypes) do
-			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
-
-			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainGrass then
-				pAdjacentPlot:SetTerrainType(eTerrainGrass, false, false)
-				
-				if pAdjacentPlot:GetFeatureType() == eFeatureNo then
-				--if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
-					pAdjacentPlot:SetFeatureType(eFeatureForest)
-				end
-			end
-		end
-
-
-    --科隆群岛
+ --科隆群岛
     elseif method_number == 9 then
 
 	    local tOceanPlots, tCoastPlots, tPlotsAroundForResources = {}, {}, {}
@@ -2163,7 +2068,51 @@ function NWCustomPlacement(x, y, row_number, method_number)
 
 
 
-	-- BIOLUMINESCENT BAY
+    -- LAKE RETBA 瑞特巴湖
+	elseif method_number == 10 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		--pPlot:SetTerrainType(eTerrainPlains, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
+
+		-- setting up Plains around and cleaning Forests and Jungles
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainDesert then
+				pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
+				
+				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
+					pAdjacentPlot:SetFeatureType(eFeatureNo)
+				end
+			end
+		end
+
+
+
+  -- EYE OF THE SAHARA
+     elseif method_number == 12 then
+		
+		local pSAHARAPlot = Map.GetPlot(x, y)
+		local pSAHARASEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
+		local pSAHARASWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+
+		pSAHARAPlot:SetPlotType(ePlotFlat, false, false)
+		pSAHARASEPlot:SetPlotType(ePlotFlat, false, false)
+		pSAHARASWPlot:SetPlotType(ePlotFlat, false, false)
+		pSAHARAPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSAHARASEPlot:SetTerrainType(eTerrainDesert, false, false)
+		pSAHARASWPlot:SetTerrainType(eTerrainDesert, false, false)
+
+		--pSAHARASEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
+		---pSAHARASWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
+		--pSAHARASEPlot:SetResourceType(-1)	
+		--pSAHARASWPlot:SetResourceType(-1)		
+
+
+-- BIOLUMINESCENT BAY
 	elseif method_number == 14 then
 		local iJungleChance = 0
 		
@@ -2183,11 +2132,58 @@ function NWCustomPlacement(x, y, row_number, method_number)
 			end
 		end
 
-    -- reserved for: Great Blue Hole
-	elseif method_number == 11 then
-	
 
-	-- 丹霞
+
+	--巨人堤
+	elseif method_number == 15 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotOcean, false, false)
+		pPlot:SetTerrainType(eTerrainCoast, false, false)
+		
+		-- finding suitable places for CAUSEWAY
+		local tPossibleSpots = {}
+		
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot:GetPlotType() == ePlotOcean then
+				pAdjacentPlot:SetTerrainType(eTerrainCoast, false, false)
+			else
+				table.insert(tPossibleSpots, pAdjacentPlot)
+			end
+		end
+		
+		pChosenPlot = table.remove(tPossibleSpots, Game.Rand(#tPossibleSpots, "Place B tile for Causeway") + 1)
+		pChosenPlot:SetPlotType(ePlotFlat, false, false)
+		pChosenPlot:SetTerrainType(eTerrainTundra, false, false)
+		pChosenPlot:SetFeatureType(GameInfoTypes.FEATURE_CAUSEWAY_B)
+
+       -- 精致拱门
+      elseif method_number == 16 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainDesert, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
+
+		-- setting up Plains around and cleaning Forests and Jungles
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainDesert then
+				pAdjacentPlot:SetTerrainType(eTerrainDesert, false, false)
+				
+				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
+					pAdjacentPlot:SetFeatureType(eFeatureNo)
+				end
+			end
+		end
+
+
+-- 丹霞
 	elseif method_number == 17 then
 		
 		local pPlot = Map.GetPlot(x, y)
@@ -2235,25 +2231,115 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		--pSEPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_B)
 		--pSWPlot:SetFeatureType(GameInfoTypes.FEATURE_BERMUDA_C)
 
-	
-     -- EYE OF THE SAHARA
-     elseif method_number == 12 then
+
+		-- 魔鬼塔
+		elseif method_number == 19 then
 		
-		local pSAHARAPlot = Map.GetPlot(x, y)
-		local pSAHARASEPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHEAST)
-		local pSAHARASWPlot = Map.PlotDirection(x, y, DirectionTypes.DIRECTION_SOUTHWEST)
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainPlains, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
 
-		pSAHARAPlot:SetPlotType(ePlotFlat, false, false)
-		pSAHARASEPlot:SetPlotType(ePlotFlat, false, false)
-		pSAHARASWPlot:SetPlotType(ePlotFlat, false, false)
-		pSAHARAPlot:SetTerrainType(eTerrainDesert, false, false)
-		pSAHARASEPlot:SetTerrainType(eTerrainDesert, false, false)
-		pSAHARASWPlot:SetTerrainType(eTerrainDesert, false, false)
+		-- setting up Plains around and cleaning Forests and Jungles
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
 
-		--pSAHARASEPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_B)
-		---pSAHARASWPlot:SetFeatureType(GameInfoTypes.FEATURE_EYE_OF_SAHARA_C)
-		--pSAHARASEPlot:SetResourceType(-1)	
-		--pSAHARASWPlot:SetResourceType(-1)		
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainPlains then
+				pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
+			end
+		end
+
+
+-- MT. EVEREST  珠穆朗玛
+	elseif method_number == 22 then
+		
+		local pPlot = Map.GetPlot(x, y)
+	
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		--pPlot:SetPlotType(ePlotMountain, false, false)
+		pPlot:SetTerrainType(eTerrainSnow, false, false)
+		
+		-- creating Mountains around
+		local iNumMountains = 0
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot:GetPlotType() == ePlotMountain then
+				iNumMountains = iNumMountains + 1
+			end	
+		end
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			pAdjacentPlot:SetFeatureType(eFeatureNo)
+
+			if (pAdjacentPlot:GetPlotType() == ePlotHill or pAdjacentPlot:GetPlotType() == ePlotFlat) and iNumMountains < 4 then
+				pAdjacentPlot:SetPlotType(ePlotMountain, false, false)
+				pAdjacentPlot:SetResourceType(-1)		
+				iNumMountains = iNumMountains + 1
+			end	
+			
+			if pAdjacentPlot:GetTerrainType() == eTerrainGrass or pAdjacentPlot:GetTerrainType() == eTerrainPlains then
+				pAdjacentPlot:SetTerrainType(eTerrainTundra, false, false)
+				pAdjacentPlot:SetResourceType(-1)
+			end
+
+			if pAdjacentPlot:GetTerrainType() == eTerrainDesert then
+				pAdjacentPlot:SetTerrainType(eTerrainSnow, false, false)
+				pAdjacentPlot:SetResourceType(-1)
+			end
+		end
+
+
+
+		-- 峡谷
+		elseif method_number == 24 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainPlains, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
+
+		-- setting up Plains around and cleaning Forests and Jungles
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainPlains then
+				pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
+				
+				if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
+					pAdjacentPlot:SetFeatureType(eFeatureNo)
+				end
+			end
+		end
+
+
+		-- 玻璃屋山
+		elseif method_number == 26 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainGrass, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
+
+		-- setting up Plains around and cleaning Forests and Jungles
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainGrass then
+				pAdjacentPlot:SetTerrainType(eTerrainGrass, false, false)
+				
+				if pAdjacentPlot:GetFeatureType() == eFeatureNo then
+				--if pAdjacentPlot:GetFeatureType() == eFeatureForest or pAdjacentPlot:GetFeatureType() == eFeatureJungle then
+					pAdjacentPlot:SetFeatureType(eFeatureForest)
+				end
+			end
+		end
+
 
 	end
 end

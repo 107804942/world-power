@@ -16,6 +16,17 @@
 		
 	<BuildingClasses>
 
+
+
+		<!-- 大浴场 -->
+		<Row>
+			<Type>BUILDINGCLASS_BATHS</Type>
+			<DefaultBuilding>BUILDING_BATHS</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_BATHS</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+
+		
 		<!-- 万国之门 -->
 		<Row>
 			<Type>BUILDINGCLASS_GATE_ALL</Type>
@@ -739,6 +750,33 @@
 
 
 
+		<!--大浴场-->
+		<Row>
+			<Type>BUILDING_BATHS</Type>
+			<BuildingClass>BUILDINGCLASS_BATHS</BuildingClass>
+			<Description>TXT_KEY_BUILDING_BATHS</Description>
+			<Help>TXT_KEY_WONDER_BATHS_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_BATHS_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_BATHS_QUOTE</Quote>
+			<Cost>200</Cost>
+			<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+			<GreatPeopleRateChange>2</GreatPeopleRateChange>
+			<!--<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>-->
+			<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
+			<GreatWorkCount>2</GreatWorkCount>
+			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+			<NukeImmune>true</NukeImmune>
+			<ConquestProb>100</ConquestProb>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<FreeBuilding>BUILDINGCLASS_BALNEAE</FreeBuilding>
+			<PortraitIndex>228</PortraitIndex>
+			<Happiness>5</Happiness>
+			<WonderSplashImage>Baths.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,T</WonderSplashAnchor>
+		</Row>
 
 		
 
@@ -1411,8 +1449,8 @@
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<SpecialistCount>3</SpecialistCount>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>107</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>235</PortraitIndex>
 			<WonderSplashImage>PONTE_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
@@ -1631,8 +1669,8 @@
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<WonderSplashImage>Carcassonne_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>31</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>229</PortraitIndex>
 	</Row>
 
 		<!--骑士堡-->
@@ -2062,8 +2100,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>124</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>252</PortraitIndex>
 			<WonderSplashImage>LascauxSplash.dds</WonderSplashImage>
 			<Happiness>2</Happiness>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
@@ -2516,8 +2554,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>92</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>220</PortraitIndex>
 		</Row>
 
 
@@ -2572,8 +2610,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<DisplayPosition>39</DisplayPosition>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>93</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>221</PortraitIndex>
 			<WonderSplashImage>W_LEP.dds</WonderSplashImage>
 		</Row>
 
@@ -3199,6 +3237,13 @@
 		<!--加尔桥-->
 		<Row>
 			<BuildingType>BUILDING_PONTDUGARD</BuildingType>
+			<ResourceType>RESOURCE_MANPOWER</ResourceType>
+			<Cost>3</Cost>
+		</Row>
+
+		<!--大浴场-->
+		<Row>
+			<BuildingType>BUILDING_BATHS</BuildingType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>3</Cost>
 		</Row>

@@ -72,7 +72,7 @@ FROM ArtDefine_UnitMemberInfos WHERE Type = 'ART_DEF_UNIT_MEMBER_GREATMERCHANT_E
 --后期医生
 ------------------------------------------------------------------------------------------------------------------------			
 INSERT INTO ArtDefine_UnitInfos (Type,	DamageStates,	Formation,		IconAtlas,		PortraitIndex)
-SELECT	'ART_DEF_UNIT_GREAT_DOCTOR_LATE',	1,			'TwoBigGuns',	'ROBOT_ICON_ATLAS',	3;
+SELECT	'ART_DEF_UNIT_GREAT_DOCTOR_LATE',	1,			'TwoBigGuns',	'ROBOT_ICON_ATLAS4',	131;
 
 
 INSERT INTO ArtDefine_UnitInfoMemberInfos 

@@ -650,8 +650,8 @@
 				<HurryCostModifier>25</HurryCostModifier>
 				<Espionage>1</Espionage>
 				<EspionageModifier>-10</EspionageModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>47</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>171</PortraitIndex>
 			</Row>
 			
 			
@@ -864,8 +864,8 @@
 				<ConquestProb>66</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
 				<Happiness>2</Happiness>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>17</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>69</PortraitIndex>
 			</Row>
 
 
@@ -959,8 +959,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>66</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>41</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>70</PortraitIndex>
 			</Row>
 
 
@@ -980,7 +980,7 @@
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
 				<HurryCostModifier>25</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>171</PortraitIndex>
+				<PortraitIndex>255</PortraitIndex>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			</Row>
 			
@@ -1158,8 +1158,8 @@
 				<Defense>2500</Defense>
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>15</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>143</PortraitIndex>
 			</Row>
 			
 
@@ -1180,8 +1180,8 @@
 				<Defense>2500</Defense>
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
 				<NeverCapture>true</NeverCapture>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>91</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>219</PortraitIndex>
 			</Row>
 
 			<Row>
@@ -1226,8 +1226,8 @@
 				<ExtraCityHitPoints>35</ExtraCityHitPoints>
 				<HurryCostModifier>25</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>84</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>212</PortraitIndex>
 				<NukeInterceptionChance>30</NukeInterceptionChance>				
 			</Row>
 
@@ -1303,7 +1303,7 @@
 				<PortraitIndex>96</PortraitIndex>
 			</Row>
 
-			<!--机密网络-->
+			<!--指挥中心-->
 			<Row>
 				<Type>BUILDING_DEFENSE_NETWORK</Type>
 				<BuildingClass>BUILDINGCLASS_DEFENSE_NETWORK</BuildingClass>
@@ -1321,8 +1321,8 @@
 				<ExtraCityHitPoints>50</ExtraCityHitPoints>
 				<AirModifier>3</AirModifier>
 				<Airlift>true</Airlift>
-				<PortraitIndex>90</PortraitIndex>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<PortraitIndex>218</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 				<HurryCostModifier>50</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
 			</Row>
@@ -1500,8 +1500,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>75</ConquestProb>
 				<HurryCostModifier>75</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>112</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>100</PortraitIndex>
 			</Row>
 
 
@@ -1571,9 +1571,9 @@
 				<Defense>5000</Defense>
 				<ExtraCityHitPoints>100</ExtraCityHitPoints>
 				<HurryCostModifier>40</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>26</PortraitIndex>
+				<PortraitIndex>154</PortraitIndex>
 			</Row>
 
 
@@ -1640,8 +1640,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>120</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>248</PortraitIndex>
 			</Row>
 			
 			<!---金融网络-->
@@ -1659,8 +1659,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>122</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>250</PortraitIndex>
 			</Row>
 
 
@@ -1680,8 +1680,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>121</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>249</PortraitIndex>
 			</Row>
 
 
@@ -1706,8 +1706,8 @@
 				<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 				<SpecialistCount>1</SpecialistCount>
 				<GreatPeopleRateChange>4</GreatPeopleRateChange>
-				<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-				<PortraitIndex>125</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>253</PortraitIndex>
 				<ExtraDamageHeal>150</ExtraDamageHeal>
 			</Row>
 
@@ -1829,8 +1829,8 @@
 			<NukeImmune>true</NukeImmune>
 			<NeverCapture>true</NeverCapture>
 			<HurryCostModifier>50</HurryCostModifier>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>40</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>71</PortraitIndex>
 		</Row>
 
 

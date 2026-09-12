@@ -10,33 +10,6 @@ include("UtilityFunctions")
 if Game.IsWPActive() then
 
 
-local ATBTEnergy = 
-	{[0] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA,   [1] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_1, 
-	 [2] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_2, [3] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_3,
-	 [4] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_4, [5] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_5, 
-	 [6] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_6, [7] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_7, 
-	 [8] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_8}
-
-function SomeUnitEffects(iPlayer)
-		local player = Players[iPlayer]
-		if player==nil then
-		return
-	         end
-		for unit in player:Units() do  
-
-		if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
-		local iSpaceBattleCruiserEnergy = load(unit, "SpaceBattleCruiserEnergy") or 0
-		if iSpaceBattleCruiserEnergy< 8 then
-				save(unit, "SpaceBattleCruiserEnergy", iSpaceBattleCruiserEnergy + 1)       
-				for i = 0, 8 do
-				unit:SetHasPromotion(ATBTEnergy[i], (i == load(unit, "SpaceBattleCruiserEnergy")))
-				end
-		    end
-	    end
-   end
-end
-GameEvents.PlayerDoTurn.Add(SomeUnitEffects)
-
 
 -- **********************************************************************************************************************************************
 -- ¸¡Ê¯ÕÂÓã
@@ -138,20 +111,16 @@ local SpaceBattleCruiserSkill = 0
 local highlightedPlots = {}
 
 function CheckSpaceBattleCruiserButtonValidity(unit)
-		for i = 0, 3 do
-			if unit:IsHasPromotion(ATBTEnergy[i]) then
+			if unit:IsHasPromotion((GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN"].ID)) then
 				return false
-			end
 		end
 	return true;
 end
 
 function CheckSpaceBattleCruiserButtonValidity2(unit)
-		for i = 0, 1 do
-			if unit:IsHasPromotion(ATBTEnergy[i]) then
+			if unit:GetMoves() < unit:MaxMoves() then
 				return false
 			end
-		end
 	return true;
 end
 
@@ -324,11 +293,6 @@ local SpaceBattleCruiserMissionButton2 = {
 	end
 	}
 LuaEvents.UnitPanelActionAddin(SpaceBattleCruiserMissionButton2)
-
-
-
-
-
 
 
 
@@ -543,8 +507,6 @@ LuaEvents.UnitPanelActionAddin(MoralBoostButton);
 -- ********************************************************
 -- end
 -- ********************************************************
-
-
 function InputHandler( uiMsg, wParam, lParam )
 		if SpaceBattleCruiserSkill ~= 0 then
 			if uiMsg == MouseEvents.LButtonDown then
@@ -626,11 +588,9 @@ function InputHandler( uiMsg, wParam, lParam )
 
                         if attack>0 then
 						Events.AddPopupTextEvent(PositionCalculator(pPlot:GetX(), pPlot:GetY()), Locale.ConvertTextKey("TXT_KEY_ALERT_SPACE_BATTLECRUISER"),0.1)
-						save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") - 4)
 							Events.AudioPlay2DSound("AS2D_ARCTURUS_YAMATO_CANNON")
-							for i = 0, 8 do
-						    pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
-						 end
+						    pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN"].ID, true)
+
 					  end 
 			       end 
 				end
@@ -644,15 +604,11 @@ function InputHandler( uiMsg, wParam, lParam )
 
 						if pPlot~=pUnit:GetPlot()  then
 						local plotDistance = Map.PlotDistance(pUnit:GetX(),pUnit:GetY(), pPlot:GetX(), pPlot:GetY());
-						if plotDistance <= 30 then
-						if load(pUnit, "SpaceBattleCruiserEnergy")~=nil and load(pUnit, "SpaceBattleCruiserEnergy")>=2 then
-						save(pUnit, "SpaceBattleCruiserEnergy", load(pUnit, "SpaceBattleCruiserEnergy") - 2)
-							for i = 0, 8 do
-						    pUnit:SetHasPromotion(ATBTEnergy[i], (i == load(pUnit, "SpaceBattleCruiserEnergy")))
-							end
-								local unit = pPlayer:InitUnit(GameInfoTypes["UNIT_ICBM_MISSILE"], pUnit:GetX(), pUnit:GetY())
-				                unit:PushMission(MissionTypes.MISSION_NUKE, pPlot:GetX(), pPlot:GetY(), 0, 0, 1, MissionTypes.MISSION_NUKE, unit:GetPlot(), unit)
-						 	end
+						if plotDistance <= 30 then					
+						    --pUnit:SetMoves(0)
+							pUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
+							local unit = pPlayer:InitUnit(GameInfoTypes["UNIT_ICBM_MISSILE"], pUnit:GetX(), pUnit:GetY())
+				              unit:PushMission(MissionTypes.MISSION_NUKE, pPlot:GetX(), pPlot:GetY(), 0, 0, 1, MissionTypes.MISSION_NUKE, unit:GetPlot(), unit)
 						end
 					end
                 end

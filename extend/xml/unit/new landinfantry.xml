@@ -315,8 +315,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_ROBOTMARINE</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>1</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>68</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>176</PortraitIndex>
 			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
 			<WorkRate>150</WorkRate>
 		</Row>
@@ -398,8 +398,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_AUTOMATON</UnitArtInfo>
 			<UnitFlagIconOffset>3</UnitFlagIconOffset>
 			<UnitFlagAtlas>BF2142_FLAG_ATLAS2</UnitFlagAtlas>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>79</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>207</PortraitIndex>
 			<ExtraMaintenanceCost>40</ExtraMaintenanceCost>
 		</Row>
 
@@ -430,8 +430,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_CNDR</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>12</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>130</PortraitIndex>
 			<MaxHitPoints>400</MaxHitPoints>
 			<WorkRate>100</WorkRate>
 			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>

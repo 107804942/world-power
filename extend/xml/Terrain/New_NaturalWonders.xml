@@ -4,6 +4,21 @@
 
 
 	<UnitPromotions>
+
+		<Row>
+			<Type>PROMOTION_MATO_TIPILA</Type>
+			<Description>TXT_KEY_PROMOTION_MATO_TIPILA</Description>
+			<Help>TXT_KEY_PROMOTION_MATO_TIPILA_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>promoVP_atlas_03</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<CannotBeChosen>true</CannotBeChosen>
+			<PediaEntry>TXT_KEY_PROMOTION_MATO_TIPILA</PediaEntry>
+			<HeightModPerX>25</HeightModPerX>
+			<HeightModLimited>2</HeightModLimited>
+		</Row>
+		
 		<Row>
 			<Type>PROMOTION_EXPLOSIVE_MIXTURE</Type>
 			<Description>TXT_KEY_PROMOTION_EXPLOSIVE_MIXTURE</Description>
@@ -93,6 +108,7 @@
 			<Description>TXT_KEY_FEATURE_MT_EVEREST</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_MT_EVEREST_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_MT_EVEREST</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_MT_EVEREST_HELP</Help>
 			<Movement>0</Movement>
 			<SeeThrough>3</SeeThrough>
 			<Impassable>true</Impassable>
@@ -114,6 +130,7 @@
 			<Description>TXT_KEY_FEATURE_SALAR_A</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_SALAR_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_SALAR_A</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_SALAR_A_HELP</Help>
 			<Movement>1</Movement>
 			<SeeThrough>0</SeeThrough>
 			<Impassable>false</Impassable>
@@ -134,6 +151,7 @@
 			<Description>TXT_KEY_FEATURE_SALAR_B</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_SALAR_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_SALAR_B</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_SALAR_B_HELP</Help>
 			<Movement>1</Movement>
 			<SeeThrough>0</SeeThrough>
 			<Impassable>false</Impassable>
@@ -155,6 +173,7 @@
 			<Description>TXT_KEY_FEATURE_RETBA</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_RETBA_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_RETBA</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_RETBA_HELP</Help>
 			<Movement>1</Movement>
 			<SeeThrough>0</SeeThrough>
 			<Impassable>true</Impassable>
@@ -174,6 +193,7 @@
 			<Description>TXT_KEY_FEATURE_LUMI_BAY</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_LUMI_BAY_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_LUMI_BAY</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_LUMI_BAY_HELP</Help>
 			<Movement>1</Movement>
 			<SeeThrough>0</SeeThrough>
 			<Impassable>false</Impassable>
@@ -196,6 +216,7 @@
 			<Description>TXT_KEY_FEATURE_DALLOL</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_DALLOL_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_DALLOL</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_DALLOL_HELP</Help>
 			<Movement>0</Movement>
 			<SeeThrough>0</SeeThrough>
 			<Impassable>true</Impassable>
@@ -221,6 +242,7 @@
 			<Description>TXT_KEY_FEATURE_CAUSEWAY_A</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_GIANTS_CAUSEWAY_A</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_CAUSEWAY_A_HELP</Help>
 			<Movement>1</Movement>
 			<SeeThrough>1</SeeThrough>
 			<Impassable>true</Impassable>
@@ -243,6 +265,7 @@
 			<Description>TXT_KEY_FEATURE_CAUSEWAY_B</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_CAUSEWAY_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_GIANTS_CAUSEWAY_B</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_CAUSEWAY_B_HELP</Help>
 			<Movement>0</Movement>
 			<SeeThrough>1</SeeThrough>
 			<Impassable>true</Impassable>
@@ -267,6 +290,7 @@
 			<Description>TXT_KEY_FEATURE_DELICATE_ARCH</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_DELICATE_ARCH_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_DELICATE_ARCH</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_DELICATE_ARCH_HELP</Help>
 			<Movement>1</Movement>
 			<SeeThrough>0</SeeThrough>
 			<Impassable>false</Impassable>
@@ -289,6 +313,7 @@
 			<Description>TXT_KEY_FEATURE_GALAPAGOS</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_GALAPAGOS_TEXT</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_GALAPAGOS_A</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_GALAPAGOS_A_HELP</Help>
 			<Movement>2</Movement>
 			<SeeThrough>2</SeeThrough>
 			<Impassable>true</Impassable>
@@ -309,8 +334,8 @@
 			<Type>FEATURE_GALAPAGOS_B</Type>
 			<Description>TXT_KEY_FEATURE_GALAPAGOS</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_GALAPAGOS_TEXT</Civilopedia>
-			<Help>TXT_KEY_CIV5_FEATURES_GALAPAGOS_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_GALAPAGOS_B</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_GALAPAGOS_B_HELP</Help>
 			<Movement>0</Movement>
 			<SeeThrough>2</SeeThrough>
 			<Impassable>true</Impassable>
@@ -334,6 +359,7 @@
 			<Type>FEATURE_HA_LONG_A</Type>
 			<Description>TXT_KEY_FEATURE_HA_LONG</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_HA_LONG_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_HA_LONG_A_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_HA_LONG_A</ArtDefineTag>
 			<Movement>3</Movement>
 			<SeeThrough>2</SeeThrough>
@@ -355,6 +381,7 @@
 			<Type>FEATURE_HA_LONG_B</Type>
 			<Description>TXT_KEY_FEATURE_HA_LONG</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_HA_LONG_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_HA_LONG_B_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_HA_LONG_B</ArtDefineTag>
 			<Movement>3</Movement>
 			<SeeThrough>2</SeeThrough>
@@ -378,6 +405,7 @@
 			<Type>FEATURE_MT_PAEKTU</Type>
 			<Description>TXT_KEY_FEATURE_MT_PAEKTU</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_MT_PAEKTU_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_MT_PAEKTU_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_MT_PAEKTU</ArtDefineTag>
 			<Movement>0</Movement>
 			<SeeThrough>2</SeeThrough>
@@ -399,6 +427,7 @@
 			<Type>FEATURE_BLUE_HOLE</Type>
 			<Description>TXT_KEY_FEATURE_BLUE_HOLE</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_BLUE_HOLE_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_BLUE_HOLE_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_BLUE_HOLE</ArtDefineTag>
 			<Movement>1</Movement>
 			<SeeThrough>0</SeeThrough>
@@ -421,7 +450,8 @@
 		<Row>
 			<Type>FEATURE_ZHANGJIAJIE</Type>
 			<Description>TXT_KEY_FEATURE_ZHANGJIAJIE</Description>
-			<Civilopedia>TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_TEXT</Civilopedia> 
+			<Civilopedia>TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_ZHANGJIAJIE</ArtDefineTag>
 			<Movement>3</Movement>
 			<SeeThrough>2</SeeThrough>
@@ -445,6 +475,7 @@
 			<Type>FEATURE_EYE_OF_SAHARA_A</Type>
 			<Description>TXT_KEY_FEATURE_EYE_OF_SAHARA</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_EYE_OF_SAHARA_A</ArtDefineTag>
 			<Movement>2</Movement>
 			<SeeThrough>0</SeeThrough>
@@ -471,6 +502,7 @@
 			<Type>FEATURE_BERMUDA_A</Type>
 			<Description>TXT_KEY_FEATURE_BERMUDA</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_BERMUDA_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_BERMUDA_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_BERMUDA_A</ArtDefineTag>
 			<Movement>10</Movement>
 			<SeeThrough>0</SeeThrough>
@@ -495,6 +527,7 @@
 			<Type>FEATURE_DANXIA</Type>
 			<Description>TXT_KEY_FEATURE_DANXIA</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_DANXIA_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_DANXIA_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_DANXIA</ArtDefineTag>
 			<Movement>0</Movement>
 			<SeeThrough>0</SeeThrough>
@@ -519,6 +552,7 @@
 			<Type>FEATURE_VALLEY_A</Type>
 			<Description>TXT_KEY_FEATURE_VALLEY</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_VALLEY_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_VALLEY_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_VALLEY_A</ArtDefineTag>
 			<Movement>1</Movement>
 			<SeeThrough>0</SeeThrough>
@@ -556,7 +590,29 @@
 			<PortraitIndex>84</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>-->
-
+		
+		<!--魔鬼塔-->
+		<Row>
+			<Type>FEATURE_MATO_TIPILA</Type>
+			<Description>TXT_KEY_FEATURE_MATO_TIPILA</Description>
+			<Civilopedia>TXT_KEY_CIV5_FEATURES_MATO_TIPILA_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_MATO_TIPILA</ArtDefineTag>
+			<Help>TXT_KEY_CIV5_FEATURES_MATO_TIPILA_HELP</Help>
+			<Movement>1</Movement>
+			<SeeThrough>0</SeeThrough>
+			<Impassable>true</Impassable>
+			<InfluenceCost>-3</InfluenceCost>
+			<NaturalWonder>false</NaturalWonder>
+			<PseudoNaturalWonder>true</PseudoNaturalWonder>
+			<NoCity>true</NoCity>
+			<NoImprovement>true</NoImprovement>
+			<Rough>true</Rough>
+			<YieldNotAdditive>true</YieldNotAdditive>
+			<InBorderHappiness>6</InBorderHappiness>
+			<PortraitIndex>53</PortraitIndex>
+			<FreePromotionIfOwned>PROMOTION_MATO_TIPILA</FreePromotionIfOwned>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+		</Row>
 
 
 		<!--玻璃屋山-->
@@ -564,6 +620,7 @@
 			<Type>FEATURE_GLASS_HOUSE_MOUNTAIN</Type>
 			<Description>TXT_KEY_FEATURE_GLASS_HOUSE_MOUNTAIN</Description>
 			<Civilopedia>TXT_KEY_CIV5_FEATURES_GLASS_HOUSE_MOUNTAIN_TEXT</Civilopedia>
+			<Help>TXT_KEY_CIV5_FEATURES_GLASS_HOUSE_MOUNTAIN_HELP</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_GLASS_HOUSE_MOUNTAIN</ArtDefineTag>
 			<Movement>3</Movement>
 			<SeeThrough>2</SeeThrough>
@@ -865,9 +922,137 @@
 			<OccurrenceFrequency>0</OccurrenceFrequency>
 			<EligibilityMethodNumber>100</EligibilityMethodNumber>
 		</Row>-->
-		
-		
-		
+
+
+
+
+		<!-- 魔鬼塔 -->
+		<Row>
+			<NaturalWonderType>FEATURE_MATO_TIPILA</NaturalWonderType>
+			<OccurrenceFrequency>20</OccurrenceFrequency>
+			<EligibilityMethodNumber>19</EligibilityMethodNumber>
+			<TileChangesMethodNumber>19</TileChangesMethodNumber>
+			<LandBased>true</LandBased>
+			<RequireBiggestLandmass>false</RequireBiggestLandmass>
+			<AvoidBiggestLandmass>false</AvoidBiggestLandmass>
+			<RequireFreshWater>false</RequireFreshWater>
+			<AvoidFreshWater>false</AvoidFreshWater>
+			<RequireLandAdjacentToOcean>false</RequireLandAdjacentToOcean>
+			<AvoidLandAdjacentToOcean>false</AvoidLandAdjacentToOcean>
+			<CoreTileCanBeAnyPlotType>false</CoreTileCanBeAnyPlotType>
+			<CoreTileCanBeFlatland>false</CoreTileCanBeFlatland>
+			<CoreTileCanBeHills>false</CoreTileCanBeHills>
+			<CoreTileCanBeMountain>false</CoreTileCanBeMountain>
+			<CoreTileCanBeOcean>false</CoreTileCanBeOcean>
+			<CoreTileCanBeAnyTerrainType>false</CoreTileCanBeAnyTerrainType>
+			<CoreTileCanBeGrass>false</CoreTileCanBeGrass>
+			<CoreTileCanBePlains>false</CoreTileCanBePlains>
+			<CoreTileCanBeDesert>false</CoreTileCanBeDesert>
+			<CoreTileCanBeTundra>false</CoreTileCanBeTundra>
+			<CoreTileCanBeSnow>false</CoreTileCanBeSnow>
+			<CoreTileCanBeShallowWater>false</CoreTileCanBeShallowWater>
+			<CoreTileCanBeDeepWater>false</CoreTileCanBeDeepWater>
+			<CoreTileCanBeAnyFeatureType>false</CoreTileCanBeAnyFeatureType>
+			<CoreTileCanBeNoFeature>false</CoreTileCanBeNoFeature>
+			<CoreTileCanBeForest>false</CoreTileCanBeForest>
+			<CoreTileCanBeJungle>false</CoreTileCanBeJungle>
+			<CoreTileCanBeOasis>false</CoreTileCanBeOasis>
+			<CoreTileCanBeFloodPlains>false</CoreTileCanBeFloodPlains>
+			<CoreTileCanBeMarsh>false</CoreTileCanBeMarsh>
+			<CoreTileCanBeIce>false</CoreTileCanBeIce>
+			<CoreTileCanBeAtoll>false</CoreTileCanBeAtoll>
+			<AdjacentTilesAvoidAnyland>false</AdjacentTilesAvoidAnyland>
+			<AdjacentTilesCareAboutPlotTypes>false</AdjacentTilesCareAboutPlotTypes>
+			<AdjacentTilesRequireFlatland>false</AdjacentTilesRequireFlatland>
+			<RequiredNumberOfAdjacentFlatland>0</RequiredNumberOfAdjacentFlatland>
+			<AdjacentTilesRequireHills>false</AdjacentTilesRequireHills>
+			<RequiredNumberOfAdjacentHills>0</RequiredNumberOfAdjacentHills>
+			<AdjacentTilesRequireMountain>false</AdjacentTilesRequireMountain>
+			<RequiredNumberOfAdjacentMountain>0</RequiredNumberOfAdjacentMountain>
+			<AdjacentTilesRequireHillsPlusMountains>false</AdjacentTilesRequireHillsPlusMountains>
+			<RequiredNumberOfAdjacentHillsPlusMountains>0</RequiredNumberOfAdjacentHillsPlusMountains>
+			<AdjacentTilesRequireOcean>false</AdjacentTilesRequireOcean>
+			<RequiredNumberOfAdjacentOcean>0</RequiredNumberOfAdjacentOcean>
+			<AdjacentTilesAvoidFlatland>false</AdjacentTilesAvoidFlatland>
+			<MaximumAllowedAdjacentFlatland>99</MaximumAllowedAdjacentFlatland>
+			<AdjacentTilesAvoidHills>false</AdjacentTilesAvoidHills>
+			<MaximumAllowedAdjacentHills>99</MaximumAllowedAdjacentHills>
+			<AdjacentTilesAvoidMountain>false</AdjacentTilesAvoidMountain>
+			<MaximumAllowedAdjacentMountain>99</MaximumAllowedAdjacentMountain>
+			<AdjacentTilesAvoidHillsPlusMountains>false</AdjacentTilesAvoidHillsPlusMountains>
+			<MaximumAllowedAdjacentHillsPlusMountains>99</MaximumAllowedAdjacentHillsPlusMountains>
+			<AdjacentTilesAvoidOcean>false</AdjacentTilesAvoidOcean>
+			<MaximumAllowedAdjacentOcean>99</MaximumAllowedAdjacentOcean>
+			<AdjacentTilesCareAboutTerrainTypes>false</AdjacentTilesCareAboutTerrainTypes>
+			<AdjacentTilesRequireGrass>false</AdjacentTilesRequireGrass>
+			<RequiredNumberOfAdjacentGrass>0</RequiredNumberOfAdjacentGrass>
+			<AdjacentTilesRequirePlains>false</AdjacentTilesRequirePlains>
+			<RequiredNumberOfAdjacentPlains>0</RequiredNumberOfAdjacentPlains>
+			<AdjacentTilesRequireDesert>false</AdjacentTilesRequireDesert>
+			<RequiredNumberOfAdjacentDesert>0</RequiredNumberOfAdjacentDesert>
+			<AdjacentTilesRequireTundra>false</AdjacentTilesRequireTundra>
+			<RequiredNumberOfAdjacentTundra>0</RequiredNumberOfAdjacentTundra>
+			<AdjacentTilesRequireSnow>false</AdjacentTilesRequireSnow>
+			<RequiredNumberOfAdjacentSnow>0</RequiredNumberOfAdjacentSnow>
+			<AdjacentTilesRequireShallowWater>false</AdjacentTilesRequireShallowWater>
+			<RequiredNumberOfAdjacentShallowWater>0</RequiredNumberOfAdjacentShallowWater>
+			<AdjacentTilesRequireDeepWater>false</AdjacentTilesRequireDeepWater>
+			<RequiredNumberOfAdjacentDeepWater>0</RequiredNumberOfAdjacentDeepWater>
+			<AdjacentTilesAvoidGrass>false</AdjacentTilesAvoidGrass>
+			<MaximumAllowedAdjacentGrass>99</MaximumAllowedAdjacentGrass>
+			<AdjacentTilesAvoidPlains>false</AdjacentTilesAvoidPlains>
+			<MaximumAllowedAdjacentPlains>99</MaximumAllowedAdjacentPlains>
+			<AdjacentTilesAvoidDesert>false</AdjacentTilesAvoidDesert>
+			<MaximumAllowedAdjacentDesert>99</MaximumAllowedAdjacentDesert>
+			<AdjacentTilesAvoidTundra>false</AdjacentTilesAvoidTundra>
+			<MaximumAllowedAdjacentTundra>99</MaximumAllowedAdjacentTundra>
+			<AdjacentTilesAvoidSnow>false</AdjacentTilesAvoidSnow>
+			<MaximumAllowedAdjacentSnow>99</MaximumAllowedAdjacentSnow>
+			<AdjacentTilesAvoidShallowWater>false</AdjacentTilesAvoidShallowWater>
+			<MaximumAllowedAdjacentShallowWater>99</MaximumAllowedAdjacentShallowWater>
+			<AdjacentTilesAvoidDeepWater>false</AdjacentTilesAvoidDeepWater>
+			<MaximumAllowedAdjacentDeepWater>99</MaximumAllowedAdjacentDeepWater>
+			<AdjacentTilesCareAboutFeatureTypes>false</AdjacentTilesCareAboutFeatureTypes>
+			<AdjacentTilesRequireNoFeature>false</AdjacentTilesRequireNoFeature>
+			<RequiredNumberOfAdjacentNoFeature>0</RequiredNumberOfAdjacentNoFeature>
+			<AdjacentTilesRequireForest>false</AdjacentTilesRequireForest>
+			<RequiredNumberOfAdjacentForest>0</RequiredNumberOfAdjacentForest>
+			<AdjacentTilesRequireJungle>false</AdjacentTilesRequireJungle>
+			<RequiredNumberOfAdjacentJungle>0</RequiredNumberOfAdjacentJungle>
+			<AdjacentTilesRequireOasis>false</AdjacentTilesRequireOasis>
+			<RequiredNumberOfAdjacentOasis>0</RequiredNumberOfAdjacentOasis>
+			<AdjacentTilesRequireFloodPlains>false</AdjacentTilesRequireFloodPlains>
+			<RequiredNumberOfAdjacentFloodPlains>0</RequiredNumberOfAdjacentFloodPlains>
+			<AdjacentTilesRequireMarsh>false</AdjacentTilesRequireMarsh>
+			<RequiredNumberOfAdjacentMarsh>0</RequiredNumberOfAdjacentMarsh>
+			<AdjacentTilesRequireIce>false</AdjacentTilesRequireIce>
+			<RequiredNumberOfAdjacentIce>0</RequiredNumberOfAdjacentIce>
+			<AdjacentTilesRequireAtoll>false</AdjacentTilesRequireAtoll>
+			<RequiredNumberOfAdjacentAtoll>0</RequiredNumberOfAdjacentAtoll>
+			<AdjacentTilesAvoidNoFeature>false</AdjacentTilesAvoidNoFeature>
+			<MaximumAllowedAdjacentNoFeature>99</MaximumAllowedAdjacentNoFeature>
+			<AdjacentTilesAvoidForest>false</AdjacentTilesAvoidForest>
+			<MaximumAllowedAdjacentForest>99</MaximumAllowedAdjacentForest>
+			<AdjacentTilesAvoidJungle>false</AdjacentTilesAvoidJungle>
+			<MaximumAllowedAdjacentJungle>99</MaximumAllowedAdjacentJungle>
+			<AdjacentTilesAvoidOasis>false</AdjacentTilesAvoidOasis>
+			<MaximumAllowedAdjacentOasis>99</MaximumAllowedAdjacentOasis>
+			<AdjacentTilesAvoidFloodPlains>false</AdjacentTilesAvoidFloodPlains>
+			<MaximumAllowedAdjacentFloodPlains>99</MaximumAllowedAdjacentFloodPlains>
+			<AdjacentTilesAvoidMarsh>false</AdjacentTilesAvoidMarsh>
+			<MaximumAllowedAdjacentMarsh>99</MaximumAllowedAdjacentMarsh>
+			<AdjacentTilesAvoidIce>false</AdjacentTilesAvoidIce>
+			<MaximumAllowedAdjacentIce>99</MaximumAllowedAdjacentIce>
+			<AdjacentTilesAvoidAtoll>false</AdjacentTilesAvoidAtoll>
+			<MaximumAllowedAdjacentAtoll>99</MaximumAllowedAdjacentAtoll>
+			<ChangeCoreTileToMountain>0</ChangeCoreTileToMountain>
+			<ChangeCoreTileToFlatland>0</ChangeCoreTileToFlatland>
+			<ChangeCoreTileTerrainToGrass>0</ChangeCoreTileTerrainToGrass>
+			<ChangeCoreTileTerrainToPlains>0</ChangeCoreTileTerrainToPlains>
+			<SetAdjacentTilesToShallowWater>0</SetAdjacentTilesToShallowWater>
+		</Row>
+
+
 		<!-- DANXIA -->
 		<Row>
 			<NaturalWonderType>FEATURE_DANXIA</NaturalWonderType>

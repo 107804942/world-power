@@ -3572,12 +3572,12 @@
 		<Row>
 			<Tag>TXT_KEY_CIV5_BUILDINGS_MATRIX_TEXT</Tag>
 			<Text>
-				实时自动化控制的城市防御炮台。当有敌军来袭时会开展猛烈攻击。城市的各处防御点均安装了这种设备，给敌军的行进造成极大的阻滞。本城市轰炸范围增加到5格，对核打击的拦截几率+25%。
+				实时自动化控制的城市防御炮台。当有敌军来袭时会开展猛烈攻击。城市的各处防御点均安装了这种设备，给敌军的行进造成极大的阻滞。本城市轰炸范围增加到5格，对核打击的拦截几率+30%。
 			</Text>
 		</Row>
 		<Row>
 			<Tag>TXT_KEY_BUILDING_MATRIX_HELP</Tag>
-			<Text>本城范围内的敌方陆军单位移动时额外消耗一移动力，本城市轰炸范围+1，对核打击的拦截几率+25%。</Text>
+			<Text>本城范围内的敌方陆军单位移动时额外消耗一移动力，本城市轰炸范围+1，对核打击的拦截几率+30%。</Text>
 		</Row>
 
 
@@ -4606,67 +4606,17 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA">
-			<Text>[COLOR_MIGHT]粒子能量(0)[ENDCOLOR]</Text>
+			<Text>[COLOR_MIGHT]粒子能量[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_1">
-			<Text>[COLOR_MIGHT]粒子能量(25)[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN">
+			<Text>冷却</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_2">
-			<Text>[COLOR_MIGHT]粒子能量(50)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_3">
-			<Text>[COLOR_MIGHT]粒子能量(75)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_4">
-			<Text>[COLOR_MIGHT]粒子能量(100)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_5">
-			<Text>[COLOR_MIGHT]粒子能量(125)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_6">
-			<Text>[COLOR_MIGHT]粒子能量(150)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_7">
-			<Text>[COLOR_MIGHT]粒子能量(175)[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_8">
-			<Text>[COLOR_MIGHT]粒子能量(200)[ENDCOLOR]</Text>
-		</Row>
-		
-		
-		
-
-
-
-
-
 
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_HELP">
-			<Text>[COLOR_MANA]当前能量: 0[ENDCOLOR]</Text>
+			<Text>可使用毁灭性的粒子束轰击指定区域，该攻击可摧毁[COLOR_MIGHT]指定区域极其周围一格范围内所有敌方单位。使用后冷却时间3回合。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_1_HELP">
-			<Text>[COLOR_MANA]当前能量: 25[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_2_HELP">
-			<Text>[COLOR_MANA]当前能量: 50[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_3_HELP">
-			<Text>[COLOR_MANA]当前能量: 75[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_4_HELP">
-			<Text>[COLOR_MANA]当前能量: 100[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_5_HELP">
-			<Text>[COLOR_MANA]当前能量: 125[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_6_HELP">
-			<Text>[COLOR_MANA]当前能量: 150[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_7_HELP">
-			<Text>[COLOR_MANA]当前能量: 175[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_8_HELP">
-			<Text>[COLOR_MANA]当前能量: 200[ENDCOLOR]</Text>
+		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN_HELP">
+			<Text>当前冷却状态不可使用粒子束武器。</Text>
 		</Row>
 
 		
@@ -4682,11 +4632,12 @@
 			<Text>[COLOR_MANA]热核打击[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_NUKE'>
-			<Text>消耗粒子能量立即填充热核弹头，[COLOR_MIGHT]鼠标左键点击被点亮的地块[ENDCOLOR]即可发射核导弹进行攻击。（可选择范围:半径30格,消耗50点粒子能量）</Text>
+			<Text>消耗一点移动力立即填充热核弹头，[COLOR_MIGHT]鼠标左键点击被点亮的地块[ENDCOLOR]即可发射核导弹进行攻击。（可选择范围:半径30格）</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_CANT_NUKE'>
-			<Text>[COLOR_UNIQUE]当前能量不足。[ENDCOLOR]</Text>
+			<Text>[COLOR_UNIQUE]当前移动力不足（只能在满移动力状态下使用）。[ENDCOLOR]</Text>
 		</Row>
+
 
 
 
@@ -4701,14 +4652,14 @@
 			<Text>[COLOR_MANA]充能粒子束[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER'>
-			<Text>用毁灭性的粒子束轰击指定区域，该攻击可摧毁[COLOR_MIGHT]指定区域极其周围一格范围内所有敌方单位。[ENDCOLOR]（可选择范围:半径20格,消耗100点粒子能量与一移动力）</Text>
+			<Text>用毁灭性的粒子束轰击指定区域，该攻击可摧毁[COLOR_MIGHT]指定区域极其周围一格范围内所有敌方单位。[ENDCOLOR]（可选择范围:半径20格,消耗一移动力，技能冷却时间3回合）</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_2'>
-			<Text>[COLOR_UNIQUE]当前能量不足[ENDCOLOR]</Text>
+			<Text>[COLOR_UNIQUE]当前粒子束冷却中。[ENDCOLOR]</Text>
 		</Row>
 
 
-	
+
 
 
 		<!--Defense Network-->
@@ -6978,6 +6929,10 @@
 
 
 
+
+		
+		
+
 		<Row Tag="TXT_KEY_BUILDING_PONTDUGARD">
 			<Text>加尔桥</Text>
 		</Row>
@@ -6990,7 +6945,7 @@
 			<Text>[NEWLINE]"罗马城不是一天建成的。"[NEWLINE]        ——古罗马谚语[NEWLINE]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_PONTDUGARD_HELP">
-			<Text>每处公共浴室+1[ICON_HEALTH]健康度，每处引水渠+3[ICON_HEALTH]健康度，全局健康度+3%。所有城市的[ICON_PLAGUE]瘟疫阈值提升15%。</Text>
+			<Text>每处沿河地块+1[ICON_HEALTH]健康度，每处引水渠+3[ICON_HEALTH]健康度，全局健康度+20%。所有城市的[ICON_PLAGUE]瘟疫阈值提升15%。</Text>
 		</Row>
 
 
@@ -9017,17 +8972,27 @@
 
 
 		<!--EXTRA NATURAL WONDERS-->
-		<!--PUMUKKALE -->
-		<Row Tag="TXT_KEY_FEATURE_PUMUKKALE">
-			<Text>棉花堡</Text>
+
+
+		<Row Tag="TXT_KEY_FEATURE_MATO_TIPILA">
+			<Text>魔鬼塔</Text>
 			<Gender>neuter:no_article</Gender>
 		</Row>
-		<Row Tag="TXT_KEY_CIV5_FEATURES_PUMUKKALE_TEXT">
+		<Row Tag="TXT_KEY_CIV5_FEATURES_MATO_TIPILA_TEXT">
 			<Text>
-				位于土耳其爱琴海边的“棉花堡”并不像它名字那样柔软，但由温泉溢出的方解石所形成的梯田却是格外壮观。这里不仅仅对现代游客来说是一处治愈放松的场所，对于古人而言亦是如此：其上方便是希拉波利斯，一座古罗马温泉城的遗迹。看来在温暖的水中放松放松，对于任何时代的人来说，都是一个不错的选择。
-				[NEWLINE]这处自然景观形成的时间超过了一千年，每年都在缓慢堆叠。温泉水中的碳酸钙逐渐重叠变厚，最终在到达水面后形成结晶，进而转变为石灰华沉积岩。而这种沉积岩则形成了钟乳石、梯田和连绵超过1600米的“白云”。
+				美国的第一个国家纪念区是“Mato Tipila”，俗称魔鬼塔。这座高264的米岩石孤峰坐落在怀俄明州东北部，每年都吸引大量地理爱好者和勇敢登山者的造访。它的形成堪称大自然的鬼斧神工，但具体成因仍是地质学家们猜测的焦点。大多数学者认为它是地质活动引起的岩浆侵入而形成，最终因长年累月的侵蚀而拥有现在的外观。
+				[NEWLINE]它的走红可能是因为曾出现在一个经典的科幻电影的镜头中，但这座石塔的传说其实可以追溯到数千年前的美洲土著部落。今天，这个地点仍然被用于“太阳舞”和“蒸汗棚屋”之类的仪式，周边小径和树木上也摆放着烟草、彩布等各种祭祀用品。
+				[NEWLINE]山顶有什么？登山者成功登顶后会遇到岩石、灌木蒿和小型啮齿动物，以及俯瞰四周的壮丽景观。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_MATO_TIPILA_HELP">
+			<Text>
+				+5[ICON_TOURISM]魅力，+5[ICON_GOLDEN_AGE]黄金时代点数，+6[ICON_CULTURE]文化。
+				[NEWLINE]将本奇观纳入本国境内时，单位获得晋升：魔鬼塔(自身所处[COLOR_POSITIVE_TEXT]高度[ENDCOLOR]大于敌方单位时，每点高度+25%[ICON_STRENGTH]战斗力，上限50%)。
+			</Text>
+		</Row>
+
+
 
 
 		<!-- Glass House Mountains -->
@@ -9041,6 +9006,16 @@
 				[NEWLINE]包括11个高峰，最高比尔瓦峰(Beerwah Peak)海拔556公尺(1,824呎)。群峰由火山粗面岩构成，从海滨平原陡然升高，每座山峰均为国家公园。玻璃屋山脉镇是当地旅游基地，也是附近林区和烟草、凤梨产区的商业中心，有公路通布利斯本。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_GLASS_HOUSE_MOUNTAIN_HELP">
+			<Text>
+				+3[ICON_GOLD]金钱，+7[ICON_FOOD]食物，+2[ICON_TOURISM]魅力。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_GOLD]金钱，+2[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处山脉地块+3[ICON_GOLD]金钱，+3[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处平地地块+1[ICON_GOLD]金钱，+1[ICON_FOOD]食物。
+			</Text>
+		</Row>
+
+
 
 
 		<!--BERMUDA -->
@@ -9053,8 +9028,15 @@
 				最开始是关于奇怪灯光的一些报告，然后演变为失踪和幽灵船只的故事。自19世纪中叶以来（如果哥伦布的日记可信，则确切时间甚至可能更早），便不断有船只和飞机从百慕大三角区消失。据称已有50多艘船只和20架飞机消失在该三角区内，自此渺无音讯。关于大量的交通工具和人类失踪，外星人是一个较为流行的理论，但也有一些更平凡的假设可以解释这个三角区。一些科学家认为存在“空气炸弹”或小型爆炸，船只便因此沉没。其他科学家则认为，（事故根因是）巨大的超级巨浪或磁偏移让罗盘错误显示北向。虽然传说和谣言持续不断，但人们普遍认为，百慕大三角区中失踪和失事的频率并不比其他经常通行的海路更高。
 			</Text>
 		</Row>
-		
-		
+		<Row Tag="TXT_KEY_CIV5_FEATURES_BERMUDA_HELP">
+			<Text>
+				+5[ICON_RESEARCH]科研。
+				[NEWLINE]临近一格内每处海洋地块+3[ICON_RESEARCH]科研。
+				[NEWLINE]临近一格内的单位获得晋升：谜之暗流(+1[ICON_MOVES]移动力，回合开始时临近的敌人[ICON_MOVES]移动力-1)。
+			</Text>
+		</Row>
+
+
 		<!--EYE_OF_SAHARA -->
 		<Row Tag="TXT_KEY_FEATURE_EYE_OF_SAHARA">
 			<Text>撒哈拉之眼</Text>
@@ -9066,7 +9048,16 @@
 				[NEWLINE]理查特结构的成因仍广受争议，陨石冲击而成的初步猜测最终也并无结果。而现行的地质学理论则认为撒哈拉之眼是“侵蚀对称隆起”形成。简单来说就是一种由层状岩体形成的穹丘。
 			</Text>
 		</Row>
-		
+		<Row Tag="TXT_KEY_CIV5_FEATURES_EYE_OF_SAHARA_HELP">
+			<Text>
+				+4[ICON_RESEARCH]科研，+5[ICON_PRODUCTION]产能。
+				[NEWLINE]临近一格内每处丘陵地块+1[ICON_RESEARCH]科研，+1[ICON_TOURISM]魅力。
+				[NEWLINE]临近一格内每处山脉地块+1[ICON_RESEARCH]科研，+1[ICON_TOURISM]魅力。
+				[NEWLINE]临近一格内每处平地地块+1[ICON_RESEARCH]科研，+1[ICON_TOURISM]魅力。
+			</Text>
+		</Row>
+
+
 		<!--ZHANGJIAJIE -->
 		<Row Tag="TXT_KEY_FEATURE_ZHANGJIAJIE">
 			<Text>张家界</Text>
@@ -9075,9 +9066,20 @@
 		<Row Tag="TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_TEXT">
 			<Text>
 				张家界国家森林公园位于张家界市武陵源区金鞭路279号，1988年8月，张家界武陵源旅游区被列入国家重点风景名胜区；1992年12月，因奇特的石英砂岩大峰林被联合国列入《世界自然遗产名录》，2004年2月被列入世界地质公园；2007年被列入中国首批国家5A级旅游景区，公园总面积4810公顷。
-				[NEWLINE武陵源旅游区自然风光以峰称奇、以谷显幽、以林见秀。其间有奇峰3000多座，如人如兽、如器如物，形象逼真，气势壮观，有“奇峰三千，秀水八百”之美称。主要景点有黄石寨、金鞭溪、袁家界、杨家界等。
+				[NEWLINE]武陵源旅游区自然风光以峰称奇、以谷显幽、以林见秀。其间有奇峰3000多座，如人如兽、如器如物，形象逼真，气势壮观，有“奇峰三千，秀水八百”之美称。主要景点有黄石寨、金鞭溪、袁家界、杨家界等。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_ZHANGJIAJIE_HELP">
+			<Text>
+				+6[ICON_GOLD]金钱，+3[ICON_FOOD]食物，+2[ICON_TOURISM]魅力,+2[ICON_RESEARCH]科研，+5[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+1[ICON_RESEARCH]科研，+1[ICON_TOURISM]魅力，+1[ICON_CULTURE]文化，+2[ICON_GOLD]金钱。
+				[NEWLINE]临近一格内每处山脉地块+1[ICON_RESEARCH]科研，+1[ICON_TOURISM]魅力，+1[ICON_CULTURE]文化，+2[ICON_GOLD]金钱。
+				[NEWLINE]临近一格内每处平地地块+1[ICON_RESEARCH]科研，+1[ICON_TOURISM]魅力，+1[ICON_CULTURE]文化，+2[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+
+
+
 		<!--BLUE HOLE -->
 		<Row Tag="TXT_KEY_FEATURE_BLUE_HOLE">
 			<Text>蓝洞</Text>
@@ -9089,7 +9091,14 @@
 				[NEWLINE]1971年，海洋先驱雅各-伊夫·库斯托将大蓝洞评为十大最好的潜水地之一 。洞内钟乳石群交错复杂 ，在水下面可以看到大型钟乳石和石笋，有的甚至达12米长。更有品种繁多的鲨鱼(据说，多为个性温和慵懒不主动攻击的品种)伴您水下同游，身处神秘森幽的海下洞穴，美丽与凶险并存 。潜水越深，水质越清，地质构造越复杂难懂 。蓝色天坑是伯利兹堡礁保护系统的一部分，被联合国科教文组织列为世界历史遗产之一 。
 			</Text>
 		</Row>
-		
+		<Row Tag="TXT_KEY_CIV5_FEATURES_BLUE_HOLE_HELP">
+			<Text>
+				+4[ICON_TOURISM]魅力,+3[ICON_RESEARCH]科研，+4[ICON_CULTURE]食物。
+				[NEWLINE]临近一格内每处海洋地块+1[ICON_RESEARCH]科研，+2[ICON_GOLD]金钱，+2[ICON_CULTURE]食物。
+			</Text>
+		</Row>
+
+
 		<!-- Mt. Everest -->
 		<Row Tag="TXT_KEY_FEATURE_MT_PAEKTU">
 			<Text>长白山</Text>
@@ -9101,6 +9110,16 @@
 				[NEWLINE]长白山景区资源丰富，动植物种类繁多，是欧亚大陆北半部最具有代表性的典型自然综合体，是世界少有的“物种基因库”和“天然博物馆”。据统计，这里生存着1800多种高等植物，栖息着50多种兽类，280多种鸟类，50种鱼类以及1000多种昆虫。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_MT_PAEKTU_HELP">
+			<Text>
+				+5[ICON_PEACE]信仰，+1[ICON_GOLD]金钱，+4[ICON_FOOD]食物，+4[ICON_HEALTH]健康度，+2[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_PEACE]信仰，+1[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处山脉地块+2[ICON_PEACE]信仰，+1[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处平地地块+2[ICON_PEACE]信仰，+1[ICON_FOOD]食物。
+			</Text>
+		</Row>
+
+
 
 		<!-- HA LONG -->
 		<Row Tag="TXT_KEY_FEATURE_HA_LONG">
@@ -9113,8 +9132,21 @@
 				[NEWLINE]早在公元前16000年，此处已是早期渔民部落的家园。而在漫长的历史中，它又是一座抵御侵略者的天然堡垒。1288年越南将军陈兴道以铁头木桩成功阻挡蒙古战船的前进，大破蒙古军队。自2000年起，下龙湾被联合国教科文组织列为世界遗产。
 			</Text>
 		</Row>
-		
-		
+		<Row Tag="TXT_KEY_CIV5_FEATURES_HA_LONG_A_HELP_HELP">
+			<Text>
+				+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]产能，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处海洋地块+1[ICON_PRODUCTION]产能，+1[ICON_TOURISM]魅力。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_HA_LONG_B_HELP_HELP">
+			<Text>
+				+3[ICON_FOOD]食物，+3[ICON_PRODUCTION]产能，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处海洋地块+1[ICON_PRODUCTION]产能，+1[ICON_TOURISM]魅力。
+			</Text>
+		</Row>
+
+
+
 		<!-- white desert -->
 		<Row Tag="TXT_KEY_FEATURE_WHITE_DESERT">
 			<Text>白沙漠</Text>
@@ -9138,6 +9170,19 @@
 				[NEWLINE]群岛的多样性气候和火山地貌的特殊自然环境，使不同生活习性的动物和植物同时生长繁衍在这块土地上。这里奇花异草荟萃，珍禽怪兽云集，被称为“生物进化活博物馆”。群岛上现存有其他地区罕见的多种动物。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_GALAPAGOS_A_HELP">
+			<Text>
+				+3[ICON_GOLD]金钱，+3[ICON_FOOD]食物，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处海洋地块+2[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_GALAPAGOS_B_HELP">
+			<Text>
+				+3[ICON_GOLD]金钱，+3[ICON_FOOD]食物，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处海洋地块+2[ICON_GOLD]金钱，+2[ICON_FOOD]食物，+2[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+
 
 		<!-- DELICATE -->
 		<Row Tag="TXT_KEY_FEATURE_DELICATE_ARCH">
@@ -9150,9 +9195,18 @@
 				[NEWLINE]这扇看似摇摇欲坠的砂岩拱门有六层楼高。地心引力和犹他州无情的风吹注定了它终将坍塌崩坏的命运。然而大自然还并非是它唯一的敌人，一些头脑发热的攀岩者也对精致拱门的宏伟结构产生了破坏。
 			</Text>
 		</Row>
-		
-		
-		
+		<Row Tag="TXT_KEY_CIV5_FEATURES_DELICATE_ARCH_HELP">
+			<Text>
+				+2[ICON_PEACE]信仰，+2[ICON_PRODUCTION]产能，+1[ICON_TOURISM]魅力，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_GOLD]金钱，+2[ICON_PEACE]信仰。
+				[NEWLINE]临近一格内每处山脉地块+2[ICON_GOLD]金钱，+2[ICON_PEACE]信仰。
+				[NEWLINE]临近一格内每处平地地块+2[ICON_GOLD]金钱，+2[ICON_PEACE]信仰。
+			</Text>
+		</Row>
+
+
+
+
 		<!-- Salar de Uyuni -->
 		<Row Tag="TXT_KEY_FEATURE_SALAR_A">
 			<Text>乌尤尼盐湖(大)</Text>
@@ -9162,12 +9216,6 @@
 			<Text>乌尤尼盐湖(小)</Text>
 			<Gender>neuter:no_article</Gender>
 		</Row>
-
-		<Row Tag="TXT_KEY_CIV5_FEATURES_SALAR_HELP">
-			<Text>每处临近地块。</Text>
-		</Row>
-
-
 		<Row Tag="TXT_KEY_CIV5_FEATURES_SALAR_TEXT">
 			<Text>
 				乌尤尼盐沼在玻利维亚波托西省西部高原内，海拔3,656米(11,995英尺)，长150公里，宽130公里，面积9,065平方公里，为世界最大的盐层覆盖的荒原，有"天空之镜"的美称。边缘有盐场，主要盐场间有公路相通。
@@ -9176,6 +9224,29 @@
 				[NEWLINE]据美国地质勘探局的汇报说乌尤尼盐沼下的锂储量大得惊人，几乎占有全世界锂的一半。如果把锂矿资源完全开发出来，南美穷国玻利维亚将富可匹敌中东巨头沙特阿拉伯。但是玻利维亚总统埃沃·莫拉莱斯拒绝了多家汽车公司提出的近10亿美元的投资开发计划，他说:"我们不会让15世纪发生在这个国家的悲剧重演，不会让外资夺走属于我们自己的自然资源，而我们的人民仍生活在贫困当中。"玻利维亚政府正在小规模的开发乌尤尼盐沼的锂矿资源，"必须按照我们的时间表进行。"总统再次声明。
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_CIV5_FEATURES_SALAR_A_HELP">
+			<Text>
+				+3[ICON_GOLD]金钱，+3[ICON_PRDUCTION]产能，+3[ICON_RESEARCH]科研，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_RESEARCH]科研，+3[ICON_GOLD]金钱。
+				[NEWLINE]临近一格内每处山脉地块+2[ICON_RESEARCH]科研，+3[ICON_GOLD]金钱。
+				[NEWLINE]临近一格内每处平地地块+2[ICON_RESEARCH]科研，+3[ICON_GOLD]金钱。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_SALAR_B_HELP">
+			<Text>
+				+1[ICON_GOLD]金钱，+2[ICON_PRDUCTION]产能，+1[ICON_RESEARCH]科研，+1[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_PRDUCTION]产能，+1[ICON_HEALTH]健康度。
+				[NEWLINE]临近一格内每处山脉地块+2[ICON_PRDUCTION]产能，+1[ICON_HEALTH]健康度。
+				[NEWLINE]临近一格内每处平地地块+2[ICON_PRDUCTION]产能，+1[ICON_HEALTH]健康度。
+			</Text>
+		</Row>
+
+
+
+
+
+
 		<!-- Giant's Causeway -->
 		<Row Tag="TXT_KEY_FEATURE_CAUSEWAY_A">
 			<Text>巨人堤</Text>
@@ -9193,6 +9264,24 @@
 				[NEWLINE]另一种说法中，巨人之路是爱尔兰国王军的指挥官--巨人芬·麦库尔为了迎接他心爱的姑娘而专门修建的。传说爱尔兰国王军的指挥官巨人芬·麦库尔力大无穷，一次在同苏格兰巨人的打斗中，他随手拾起一块石块，掷向逃跑的对手。石块落在大海里，就成了今日的巨人岛。后来他爱上了住在内赫布里底群岛的巨人姑娘，为了接她到这里来，才建造了这么一条堤道。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_CAUSEWAY_A_HELP">
+			<Text>
+				+2[ICON_GOLD]金钱，+1[ICON_RESEARCH]科研，+3[ICON_PRDUCTION]产能，+2[ICON_TOURISM]魅力，+2[ICON_GOLDEN_AGE]黄金时代点数。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_PRDUCTION]产能，+2[ICON_GOLDEN_AGE]黄金时代点数。
+				[NEWLINE]临近一格内每处山脉地块+2[ICON_PRDUCTION]产能，+2[ICON_GOLDEN_AGE]黄金时代点数。
+				[NEWLINE]临近一格内每处平地地块+2[ICON_PRDUCTION]产能，+2[ICON_GOLDEN_AGE]黄金时代点数。
+				[NEWLINE]将本奇观纳入本国境内时，单位获得晋升：巨人之矛(+50[ICON_HP]生命值上限)。
+			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_CIV5_FEATURES_CAUSEWAY_B_HELP">
+			<Text>
+				+2[ICON_GOLD]金钱，+1[ICON_RESEARCH]科研，+3[ICON_PRDUCTION]产能，+2[ICON_TOURISM]魅力，+2[ICON_GOLDEN_AGE]黄金时代点数。
+				[NEWLINE]临近一格内每处海洋地块+2[ICON_PRDUCTION]产能，+2[ICON_GOLDEN_AGE]黄金时代点数，+2[ICON_GOLD]金钱。
+				[NEWLINE]将本奇观纳入本国境内时，单位获得晋升：巨人之矛(+50[ICON_HP]生命值上限)。
+			</Text>
+		</Row>
+
 
 
 		<!-- Mt. Everest -->
@@ -9207,6 +9296,17 @@
 				[NEWLINE]珠穆朗玛峰山体呈巨型金字塔状，威武雄壮昂首天外，地形极端险峻，环境非常复杂。雪线高度：北坡为5800～6200米，南坡为5500～6100米。东北山脊、东南山脊和西山山脊中间夹着三大陡壁（北壁、东壁和西南壁），在这些山脊和峭壁之间又分布着548条大陆型冰川，总面积达1457.07k㎡，平均厚度达7260米。冰川的补给主要靠印度洋季风带两大降水带积雪变质形成。冰川上有千姿百态、瑰丽罕见的冰塔林，又有高达数十米的冰陡崖和步步陷阱的明暗冰裂隙，还有险象环生的冰崩雪崩区。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_MT_EVEREST_HELP">
+			<Text>
+				+4[ICON_PEACE]信仰，+4[ICON_GOLD]金钱，+4[ICON_CULTURE]文化，+3[ICON_HEALTH]健康度。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_RESEARCH]科研，+2[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处山脉地块+2[ICON_RESEARCH]科研，+2[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处平地地块+2[ICON_RESEARCH]科研，+2[ICON_FOOD]食物。
+				[NEWLINE]将本奇观纳入本国境内时，单位获得晋升：雪原操练(在[COLOR_POSITIVE_TEXT]雪原[ENDCOLOR]地形中+20%[ICON_STRENGTH]战斗力)。
+			</Text>
+		</Row>
+
+
 
 
 		<!-- Lake Retba -->
@@ -9221,6 +9321,15 @@
 				[NEWLINE]非洲的天气干燥，蒸发强烈，使得这个小小的湖泊含盐量极高，可以达到每升380克，大约相当于世界大洋平均盐度35‰的十倍，就连不会游泳的人都可以在上面漂浮起来，可以与著名的“死海”相媲美。但是，这样极端恶劣的环境并非死水一潭，湖水里居然还生活着几种特殊的微生物，其中最主要的是“杜氏盐藻”，这是一种尾部具有双鞭毛的单细胞真核藻类，为纪念它的发现者法国生物学家杜纳尔而被命名为“盐生杜氏藻”，简称“杜氏盐藻”
 			</Text>
 		</Row>
+
+		<Row Tag="TXT_KEY_CIV5_FEATURES_RETBA_HELP">
+			<Text>
+				+1[ICON_RESEARCH]科研，+2[ICON_PRDUCTION]产能，+1[ICON_TOURISM]魅力，+2[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+
+
+
 		<!-- Dallol -->
 		<Row Tag="TXT_KEY_FEATURE_DALLOL">
 			<Text>达洛尔火山</Text>
@@ -9231,6 +9340,15 @@
 				埃塞俄比亚达洛尔火山活动所导致的盐分沉淀层，构成了神奇的地貌。 达洛尔坐落于埃塞俄比亚东北部靠近与厄立特里亚有争议的边境地区。那里的部落人并不友善，因此该地区形势并不稳定，发生了数起袭击游客车队的事件，影响了当地旅游业的发展。达洛尔的地质活动非常活跃，有达洛尔火山。达洛尔火山位于埃塞俄比亚的达纳吉尔谷地，是地球上最低的陆地火山。该火山上一次喷发还要追溯到1926年。该地热区仍然会从地下释放出大量的热量和腐蚀性气体。
 				[NEWLINE]达洛尔的炽热的温泉主要分布在一个巨大的土堆上，土堆是由岩浆喷发并局部抬升超过1公里厚的盐层所形成的。在滚烫岩浆的加热下，地下水将溶解的盐分带到地表，强烈的阳光会迅速将水分蒸发，盐分会凝结并堆积起来。盐层呈现出绚烂的黄色、红色、白色和绿色。绚烂的色彩主要是来自含有氯化铁、氧化铁、氧化亚铁、 氢氧化铁的钾盐。新凝结成的盐层通常接近白色，形成时间较长的盐层常呈现出红色，因为氧化铁逐渐形成。
 				[NEWLINE]达洛尔的年平均气温为34℃，是地球上的"热极"，是世界上最热的地方。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_DALLOL_HELP">
+			<Text>
+				+3[ICON_RESEARCH]科研，+4[ICON_PRDUCTION]产能，+2[ICON_TOURISM]魅力。
+				[NEWLINE]临近一格内每处丘陵地块+2[ICON_GOLD]金钱。
+				[NEWLINE]临近一格内每处山脉地块+2[ICON_PRDUCTION]产能。
+				[NEWLINE]临近一格内每处平地地块+2[ICON_RESEARCH]科研。
+				[NEWLINE]将本奇观纳入本国境内时，单位获得晋升：爆炸性混合物(+15%[ICON_RANGE_STRENGTH]远程攻击力)。
 			</Text>
 		</Row>
 
@@ -9248,6 +9366,13 @@
 				[NEWLINE]在所有荧光海湾中，最著名的就是波多黎各Vieque岛，海湾里发光的是一种叫做鞭毛藻 (dinoflagellate)的非植物非动物、类似于细菌的单细胞微生物。这个海湾里每加仑的水中有大约72万个这种小东西，它们个头不大， 也就几十微米，肉眼是根本看不到的。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_LUMI_BAY_HELP">
+			<Text>
+				+5[ICON_GOLD]金钱，+4[ICON_RESEARCH]科研，+3[ICON_TOURISM]魅力。
+				[NEWLINE]临近一格内每处海洋地块+1[ICON_FOOD]食物，+2[ICON_GOLD]金钱，+1[ICON_RESEARCH]科研，+1[ICON_TOURISM]魅力。
+			</Text>
+		</Row>
+
 
 
 		<!--BERMUDA -->
@@ -9261,6 +9386,14 @@
 				[NEWLINE]“彩虹山”色泽极为艳丽，因此其天然照片也会呈现出数字滤镜的效果。自然光线对色泽的调配可谓鬼斧神工，每日各时段的景致均独特别致。张掖丹霞可谓大自然创造的真正奇迹。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_DANXIA_HELP">
+			<Text>
+				+2[ICON_TOURISM]魅力，+6[ICON_GOLDEN_AGE]黄金时代点数，+3[ICON_GREAT_GENERAL]大军点数，+6[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+1[ICON_GREAT_GENERAL]大军点数，+1[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处平地地块+1[ICON_GREAT_GENERAL]大军点数，+1[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+
 
 		<!--VALLEY -->
 		<Row Tag="TXT_KEY_FEATURE_VALLEY">
@@ -9273,6 +9406,28 @@
 				[NEWLINE]谷中的孤峰清楚分成多个地层，最主要的地层有三个。最底下的地层是称为 Organ Rock 的页岩，中间则是谢伊层砂岩（de Chelly），最顶层则是称为孟科匹（Moenkopi）层的页岩，更上方被称为 Shinarump 的粉砂岩覆盖。纪念碑谷内有许多巨型岩石结构，其中包含了“太阳之眼”（Eye of the Sun）。
 			</Text>
 		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_VALLEY_HELP">
+			<Text>
+				+2[ICON_PEACE]信仰，+5[ICON_PRDUCTION]产能，+2[ICON_TOURISM]魅力，+3[ICON_GOLDEN_AGE]黄金时代点数，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+1[ICON_PEACE]信仰，+2[ICON_PRDUCTION]产能，+1[ICON_TOURISM]魅力，+2[ICON_GOLDEN_AGE]黄金时代点数，+1[ICON_CULTURE]文化。
+				[NEWLINE]将本奇观纳入本国境内时，单位获得晋升：西部先锋(+1[ICON_MOVES]移动力，在友方领土外作战+15%[ICON_STRENGTH]战斗力)。
+			</Text>
+		</Row>
+
+
+
+		<!--PUMUKKALE -->
+		<Row Tag="TXT_KEY_FEATURE_PUMUKKALE">
+			<Text>棉花堡</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_PUMUKKALE_TEXT">
+			<Text>
+				位于土耳其爱琴海边的“棉花堡”并不像它名字那样柔软，但由温泉溢出的方解石所形成的梯田却是格外壮观。这里不仅仅对现代游客来说是一处治愈放松的场所，对于古人而言亦是如此：其上方便是希拉波利斯，一座古罗马温泉城的遗迹。看来在温暖的水中放松放松，对于任何时代的人来说，都是一个不错的选择。
+				[NEWLINE]这处自然景观形成的时间超过了一千年，每年都在缓慢堆叠。温泉水中的碳酸钙逐渐重叠变厚，最终在到达水面后形成结晶，进而转变为石灰华沉积岩。而这种沉积岩则形成了钟乳石、梯田和连绵超过1600米的“白云”。
+			</Text>
+		</Row>
+		
 		
 		<Row Tag="TXT_KEY_PROMOTION_VALLEY">
 			<Text>西部先锋</Text>
@@ -9717,6 +9872,35 @@
 
 
 
+
+
+
+		<Row Tag="TXT_KEY_BUILDING_BATHS">
+			<Text>戴克里先浴场</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_BATHS_HELP">
+			<Text>
+				每处贸易站、小镇、城镇+1[ICON_HEALTH]健康度与[ICON_GOLD]金钱。
+				[NEWLINE]每处公共浴室+3[ICON_HEALTH]健康度与[ICON_CULTURE]文化。
+				[NEWLINE]+8[ICON_HEALTH]健康度，全国健康度+15%。每4[ICON_CITIZEN]人口+1[ICON_HEALTH]健康度、+1[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_BATHS_QUOTE">
+			<Text>
+				[NEWLINE]"健全的心灵寓于健全的身体。"[NEWLINE] - 尤维纳利斯[NEWLINE]
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_BATHS_PEDIA">
+			<Text>
+				古罗马最大的公共浴场是戴克里先浴场 (Baths of Diocletian)。于公元298年-306年由皇帝戴克里先下令兴建，可容纳3,000人同时入浴。占地约13公顷（约32英亩）。中央主体长280米、宽160米。其内部设施极尽奢华，设有冷水、温水、热水浴室、图书馆、健身房、花园、音乐厅和展览中心等。
+				[NEWLINE]随着历史变迁，其使用的供水水道在公元537年被哥特人切断后逐渐废弃。16世纪起部分遗址被改建为天使与殉教者圣母大殿等建筑，如今也是罗马国家博物馆的一部分。
+			</Text>
+		</Row>
+
+		
+		
+		
+		
 
 		<Row Tag="TXT_KEY_BUILDING_GATE_ALL">
 			<Text>万国之门</Text>

@@ -70,8 +70,8 @@
 			<GridX>0</GridX>
 			<GridY>4</GridY>
 			<Quote>TXT_KEY_TECH_HUNTING_QUOTE</Quote>
-			<PortraitIndex>67</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>195</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 			<AudioIntro>AS2D_TECH_HUNTING</AudioIntro>
 			<AudioIntroHeader>AS2D_TECH_HUNTING</AudioIntroHeader>
 		</Row>
@@ -88,8 +88,8 @@
 			<GridX>0</GridX>
 			<GridY>5</GridY>
 			<Quote>TXT_KEY_TECH_STONE_TOOLS_QUOTE</Quote>
-			<PortraitIndex>104</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>232</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 			<AudioIntro>AS2D_TECH_STONE_TOOLS</AudioIntro>
 			<AudioIntroHeader>AS2D_TECH_STONE_TOOLS</AudioIntroHeader>
 		</Row>
@@ -1934,8 +1934,8 @@
 			<GridX>20</GridX>
 			<GridY>3</GridY>
 			<Quote>TXT_KEY_TECH_CORPORATION_QUOTE</Quote>
-			<PortraitIndex>118</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>246</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 			<AudioIntro>AS2D_TECH_CORPORATION</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_CORPORATION</AudioIntroHeader>
 		</Row>
@@ -2591,8 +2591,8 @@
 			<GridX>27</GridX>
 			<GridY>3</GridY>
 			<Quote>TXT_KEY_TECH_MASS_QUOTE</Quote>
-			<PortraitIndex>77</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>205</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 		</Row>
 
 
@@ -3067,8 +3067,8 @@
 			<GridX>32</GridX>
 			<GridY>7</GridY>
 			<Quote>TXT_KEY_TECH_EARTH_QUOTE</Quote>
-			<PortraitIndex>50</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>178</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 		</Row>
 
 

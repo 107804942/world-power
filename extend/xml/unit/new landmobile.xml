@@ -71,7 +71,7 @@
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>9</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>181</PortraitIndex>
+			<PortraitIndex>86</PortraitIndex>
 			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
 			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
 		</Row>
@@ -180,8 +180,8 @@
 			<!--<UnitArtInfo>ART_DEF_UNIT_DREAD</UnitArtInfo>-->
 			<UnitFlagAtlas>FA_UNIT_FLAG_ATLAS_A</UnitFlagAtlas>
 			<UnitFlagIconOffset>29</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>64</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>180</PortraitIndex>
 			<MoveRate>ROBOT</MoveRate>
 			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
 		</Row>

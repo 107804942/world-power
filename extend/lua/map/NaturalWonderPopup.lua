@@ -74,6 +74,10 @@ function OnPopup( popupInfo )
 			yieldString = yieldString .. Locale.ConvertTextKey("TXT_KEY_POP_NATURAL_WONDER_SUBSEQUENT_FOUND_GOLD", iFinderGold);
 		end
 	end
+
+	--if (info.Help~= 0 ) then
+		--yieldString = yieldString .."[NEWLINE]".. Locale.ConvertTextKey(info.Help);
+	--end
 	
 	Controls.DescriptionLabel:SetText(yieldString);	
 

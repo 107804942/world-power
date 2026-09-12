@@ -822,6 +822,10 @@ VALUES	('FEATURE_LAKE_VICTORIA',	'PLOT_LAND',		'YIELD_FOOD',			1,		0),
 --=======================================================================================================================
 
 INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
+        ('FEATURE_MATO_TIPILA',	'YIELD_GOLDEN_AGE_POINTS',5),
+		('FEATURE_MATO_TIPILA',	'YIELD_TOURISM',5),
+		('FEATURE_MATO_TIPILA',	'YIELD_CULTURE',6),
+
 
         ('FEATURE_GLASS_HOUSE_MOUNTAIN',	'YIELD_GOLD',			3),
 		--('FEATURE_GLASS_HOUSE_MOUNTAIN',	'YIELD_SCIENCE',		2),
@@ -947,7 +951,7 @@ INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	
 		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_LAND',		'YIELD_GOLD',		    1,		0),
 
 		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_HILLS',		'YIELD_FOOD',		    2,		0),
-		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_MOUNTAIN',	'YIELD_FOOD',		    2,		0),
+		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_MOUNTAIN',	'YIELD_FOOD',		    3,		0),
 		('FEATURE_GLASS_HOUSE_MOUNTAIN',			'PLOT_LAND',		'YIELD_FOOD',		    1,		0),
 
         ('FEATURE_VALLEY_A',	    'PLOT_HILLS',       'YIELD_GOLDEN_AGE_POINTS',2,	0),
@@ -962,10 +966,6 @@ INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	
 		--('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_CULTURE',        1,		0),
 		--('FEATURE_VALLEY_B',	    'PLOT_LAND',        'YIELD_FAITH',          1,		0),
 
-        ('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
-		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_GOLD',		    2,		0),
-		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_FOOD',		    1,		0),
-		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_SCIENCE',		1,		0),
 
 		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_TOURISM',		1,		0),
 		('FEATURE_LUMI_BAY',		'PLOT_OCEAN',		'YIELD_GOLD',		    2,		0),
@@ -1140,7 +1140,7 @@ INSERT INTO ArtDefine_LandmarkTypes (Type,	LandmarkType,	FriendlyName)VALUES
 		--	('ART_DEF_FEATURE_PUMUKKALE',	'Resource',		'pamukkale'),
 		-- ('ART_DEF_FEATURE_VALLEY_B',	'Resource',		'Valley B'),
 		  ('ART_DEF_FEATURE_VALLEY_A',	'Resource',		'Valley A'),
-
+		    ('ART_DEF_FEATURE_MATO_TIPILA',	'Resource',		'Mato Tipila'),
 		('ART_DEF_FEATURE_EYE_OF_SAHARA_A',	'Resource',		'Eye of the Sahara A'),
 
 		('ART_DEF_FEATURE_VOLCANO_1',	'Resource',		'Volcan 1'),
@@ -1162,7 +1162,7 @@ INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHand
 
 --('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_B',	'Monument_valley_1.fxsxml',1),       --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_A',	'Monument_valley_2.fxsxml',1),       --important!
-
+('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_MATO_TIPILA',	'Mato_Tipila.fxsxml',1),       --important!
 
 ('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DANXIA',	'Danxia_Mountain.fxsxml',1),       --important!
 
@@ -1230,6 +1230,7 @@ INSERT OR REPLACE INTO ArtDefine_StrategicView(StrategicViewType,				TileType,		
 		('ART_DEF_FEATURE_BERMUDA_A','Feature',		'sv_Bermuda.dds'),
 		('ART_DEF_FEATURE_PUMUKKALE','Feature',		'SV_pamukkale.dds'),
 		('ART_DEF_FEATURE_VALLEY_A','Feature',		'sv_VALLEY.dds'),
+		('ART_DEF_FEATURE_MATO_TIPILA','Feature',		'sv_MatoTipila.dds'),
 		--('ART_DEF_FEATURE_VALLEY_B','Feature',		'sv_VALLEY.dds'),
 
 		('ART_DEF_FEATURE_DANXIA','Feature',		'sv_Dan Xia.dds'),

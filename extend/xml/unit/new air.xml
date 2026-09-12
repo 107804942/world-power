@@ -73,8 +73,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_REJETFIGHT</UnitArtInfo>
 			<UnitFlagIconOffset>17</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>23</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>151</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
 		</Row>
@@ -156,8 +156,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_DRONE_FIGHTER</UnitArtInfo>
 			<UnitFlagIconOffset>21</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>71</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
+			<PortraitIndex>165</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>190</ExtraMaintenanceCost>
 			<HurryCostModifier>250</HurryCostModifier>
@@ -209,7 +209,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_F52</UnitArtInfo>
 			<UnitFlagIconOffset>5</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>255</PortraitIndex>
+			<PortraitIndex>178</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
@@ -245,8 +245,8 @@
 			<UnitFlagAtlas>RFEMOD_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitArtInfo>ART_DEF_UNIT_GUIDED_MISSILE</UnitArtInfo>
 			<UnitFlagIconOffset>5</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS</IconAtlas>
-			<PortraitIndex>65</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>193</PortraitIndex>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
 		</Row>
