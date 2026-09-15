@@ -10,7 +10,6 @@ include("UtilityFunctions")
 if Game.IsWPActive() then
 
 
-
 -- **********************************************************************************************************************************************
 -- ¸¡Ê¯ÕÂÓã
 -- **********************************************************************************************************************************************
@@ -63,7 +62,7 @@ local PlagueMissionButton = {
 }
 LuaEvents.UnitPanelActionAddin(PlagueMissionButton)
 
------------------------------------------------------»ú¼×-----------------------------------------------------------------------
+-----------------------------------------------------ÓÄÁé-----------------------------------------------------------------------
 
 MechRiotControlButton = {
   Name = "Mech Control",
@@ -75,7 +74,7 @@ MechRiotControlButton = {
   
  
   Condition = function(action, unit)
-    return unit:CanMove() and  unit:GetUnitType() == GameInfoTypes.UNIT_MECH and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_HPMOD1"].ID)
+    return unit:CanMove() and  unit:GetUnitType() == GameInfoTypes.UNIT_MECH and unit:IsHasPromotion(GameInfo.UnitPromotions["PROMOTION_GHOST_POWER"].ID)
   end, -- or nil or a boolean, default is true
   
  Disabled = function(action, unit) 
@@ -110,20 +109,6 @@ local rButtonDown = false
 local SpaceBattleCruiserSkill = 0
 local highlightedPlots = {}
 
-function CheckSpaceBattleCruiserButtonValidity(unit)
-			if unit:IsHasPromotion((GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN"].ID)) then
-				return false
-		end
-	return true;
-end
-
-function CheckSpaceBattleCruiserButtonValidity2(unit)
-			if unit:GetMoves() < unit:MaxMoves() then
-				return false
-			end
-	return true;
-end
-
 
 function DisplayCruiserHitArrow()
 
@@ -157,11 +142,10 @@ local SpaceBattleCruiserMissionButton = {
 		ToolTip = function(action, unit)
 			local sTooltip;
 			local pPlayer = Players[Game:GetActivePlayer()];
-			local bIsValid = CheckSpaceBattleCruiserButtonValidity( unit);
-			if bIsValid then
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER");
+			if unit:IsHasPromotion((GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN"].ID))  then
+			    sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER_2" );			
 			else
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER_2" );
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER");
 			end
 			return sTooltip
 		end, -- or a TXT_KEY_ or a function
@@ -177,8 +161,7 @@ local SpaceBattleCruiserMissionButton = {
 			
 		end, -- or nil or a boolean, default is true
 		Disabled = function(action, unit)
-			local bIsValid = CheckSpaceBattleCruiserButtonValidity(unit);
-			if bIsValid then
+			if  not unit:IsHasPromotion((GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN"].ID))  then
 				return false
 			end
 			return true;
@@ -194,6 +177,7 @@ local SpaceBattleCruiserMissionButton = {
 	    end
 }
 LuaEvents.UnitPanelActionAddin(SpaceBattleCruiserMissionButton)
+
 
 function ShowNukeArrow( PlotX, PlotY )
 	--find the selected attacker
@@ -253,11 +237,11 @@ local SpaceBattleCruiserMissionButton2 = {
 		ToolTip = function(action, unit)
 			local sTooltip;
 			local pPlayer = Players[Game:GetActivePlayer()];
-			local bIsValid = CheckSpaceBattleCruiserButtonValidity2(unit);
-			if bIsValid then
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER_NUKE");
+			--local bIsValid = CheckSpaceBattleCruiserButtonValidity2(unit);
+			if unit:IsHasPromotion((GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_NUKE_COLD_DOWN"].ID))   then
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER_CANT_NUKE" ); 
 			else
-				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER_CANT_NUKE" );
+				sTooltip = Locale.ConvertTextKey( "TXT_KEY_COND_SPACE_BATTLECRUISER_NUKE");
 			end
 			return sTooltip
 		end, -- or a TXT_KEY_ or a function
@@ -273,8 +257,8 @@ local SpaceBattleCruiserMissionButton2 = {
 			
 		end, -- or nil or a boolean, default is true
 		Disabled = function(action, unit)
-			local bIsValid = CheckSpaceBattleCruiserButtonValidity2(unit);
-			if bIsValid then
+			---local bIsValid = CheckSpaceBattleCruiserButtonValidity2(unit);
+			if  not unit:IsHasPromotion((GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_NUKE_COLD_DOWN"].ID)) then
 				return false
 			end
 			return true;
@@ -293,28 +277,6 @@ local SpaceBattleCruiserMissionButton2 = {
 	end
 	}
 LuaEvents.UnitPanelActionAddin(SpaceBattleCruiserMissionButton2)
-
-
-
-
-function ShowNukeArrow( PlotX, PlotY )
-	--find the selected attacker
-	local unit = UI.GetHeadSelectedUnit();
-	if unit and unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
-		attacker = unit
-	end
-	
-	if attacker == nil then
-		return
-	end
-	--get bombard end hex
-	if  attacker 	and (Map.PlotDistance(attacker:GetX(), attacker:GetY(), PlotX, PlotY ) <= 30 )  then
-		Events.SpawnArrowEvent( attacker:GetX(), attacker:GetY(),PlotX, PlotY );
-	else
-		Events.RemoveAllArrowsEvent();
-	end
-	
-end
 
 
 
@@ -606,9 +568,10 @@ function InputHandler( uiMsg, wParam, lParam )
 						local plotDistance = Map.PlotDistance(pUnit:GetX(),pUnit:GetY(), pPlot:GetX(), pPlot:GetY());
 						if plotDistance <= 30 then					
 						    --pUnit:SetMoves(0)
+							pUnit:SetHasPromotion(GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_NUKE_COLD_DOWN"].ID, true)
 							pUnit:ChangeMoves(-GameDefines["MOVE_DENOMINATOR"])
 							local unit = pPlayer:InitUnit(GameInfoTypes["UNIT_ICBM_MISSILE"], pUnit:GetX(), pUnit:GetY())
-				              unit:PushMission(MissionTypes.MISSION_NUKE, pPlot:GetX(), pPlot:GetY(), 0, 0, 1, MissionTypes.MISSION_NUKE, unit:GetPlot(), unit)
+				            unit:PushMission(MissionTypes.MISSION_NUKE, pPlot:GetX(), pPlot:GetY(), 0, 0, 1, MissionTypes.MISSION_NUKE, unit:GetPlot(), unit)
 						end
 					end
                 end
@@ -782,8 +745,6 @@ Events.ActivePlayerTurnStart.Add(onActivePlayerTurnStart)
 -- ********************************************************
 -- 
 -- ******************************************************** 
-
-local iSpaceShipID = GameInfoTypes.PROMOTION_SPACESHIP
 function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
   local pUnit = Players[iPlayer]:GetUnitByID(iUnit)
   local plot = Map.GetPlot(iPlotX, iPlotY)
@@ -795,7 +756,7 @@ function UnitCanRangeAttackPlot(iPlayer, iUnit, iPlotX, iPlotY, bNeedWar)
   return false
   end
 
-  if pUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR and not pUnit:IsHasPromotion(iSpaceShipID) then
+  if pUnit:GetDomainType()~=DomainTypes.DOMAIN_AIR and not pUnit:IsHasPromotion(GameInfoTypes.PROMOTION_SPACESHIP) then
   if IsNotEnemySpaceShipPlot(pUnit,plot) then
 	 return true
   end

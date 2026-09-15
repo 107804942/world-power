@@ -39,7 +39,58 @@
 		</Row>
 	</Tech_SpecialistYieldChanges>
 
+
+
 	<SpecialistYields>
+
+		<Delete SpecialistType="SPECIALIST_SCIENTIST"/>
+		<Delete SpecialistType="SPECIALIST_MUSICIAN"/>
+		<Delete SpecialistType="SPECIALIST_ARTIST"/>
+		<Delete SpecialistType="SPECIALIST_WRITER"/>
+		<Delete SpecialistType="SPECIALIST_ENGINEER"/>
+
+
+
+		<Row>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+		<Row>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>-2</Yield>
+		</Row>
+
+		<Row>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+
+		<Row>
+			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+
+
 		<Row>
 			<SpecialistType>SPECIALIST_CITIZEN</SpecialistType>
 			<YieldType>YIELD_CRIME</YieldType>
@@ -81,6 +132,10 @@
 			<Yield>-2</Yield>
 		</Row>
 	</SpecialistYields>
+
+	
+
+	
 
 	<Specialists>
 
@@ -448,55 +503,6 @@
 
 
 
-	<SpecialistYields>
-
-		<Delete SpecialistType="SPECIALIST_SCIENTIST"/>
-		<Delete SpecialistType="SPECIALIST_MUSICIAN"/>
-		<Delete SpecialistType="SPECIALIST_ARTIST"/>
-		<Delete SpecialistType="SPECIALIST_WRITER"/>
-		<Delete SpecialistType="SPECIALIST_ENGINEER"/>
-		
-		
-
-		<Row>
-			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<YieldType>YIELD_SCIENCE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-
-		<Row>
-			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-2</Yield>
-		</Row>
-		<Row>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>-2</Yield>
-		</Row>
-
-		<Row>
-			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
-		</Row>
-
-		<Row>
-			<SpecialistType>SPECIALIST_MUSICIAN</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-		<Row>
-			<SpecialistType>SPECIALIST_WRITER</SpecialistType>
-			<YieldType>YIELD_CULTURE</YieldType>
-			<Yield>2</Yield>
-		</Row>
-	</SpecialistYields>
 
 
 

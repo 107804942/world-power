@@ -772,7 +772,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<FreeBuilding>BUILDINGCLASS_BALNEAE</FreeBuilding>
-			<PortraitIndex>228</PortraitIndex>
+			<PortraitIndex>72</PortraitIndex>
 			<Happiness>5</Happiness>
 			<WonderSplashImage>Baths.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
@@ -799,7 +799,7 @@
 			<ConquestProb>100</ConquestProb>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>248</PortraitIndex>
+			<PortraitIndex>228</PortraitIndex>
 			<WonderSplashImage>GateAll.dds</WonderSplashImage>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
@@ -914,8 +914,8 @@
 			<ForbiddenForeignSpy>1</ForbiddenForeignSpy>
 			<ConquestProb>100</ConquestProb>
 			<!--<EspionageModifier>-999</EspionageModifier>-->
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>15</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>226</PortraitIndex>
 			<FreePromotion>PROMOTION_KGB</FreePromotion>
 			<WonderSplashImage>KGB.dds</WonderSplashImage>
 		</Row>
@@ -1187,8 +1187,8 @@
 			<!--<FreeGreatPeople>1</FreeGreatPeople>-->
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>224</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>3</PortraitIndex>
 			<WonderSplashImage>SOVIET_PALACE.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
@@ -1264,9 +1264,9 @@
 			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
 			<TechEnhancedTourism>6</TechEnhancedTourism>
 			<WaterTileMovementReduceGlobal>1</WaterTileMovementReduceGlobal>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<FreePromotion>PROMOTION_STEAM_POWERED</FreePromotion>
-			<PortraitIndex>175</PortraitIndex>
+			<PortraitIndex>245</PortraitIndex>
 			<WonderSplashImage>POSEIDON_TEMPLE.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
@@ -1725,8 +1725,8 @@
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<WonderSplashImage>MontStMichel_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>215</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>16</PortraitIndex>
 		</Row>
 		
 		
@@ -2043,8 +2043,8 @@
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<FreeBuilding>BUILDINGCLASS_SHRINE</FreeBuilding>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>151</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>73</PortraitIndex>
 			<WonderSplashImage>MALTA.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>

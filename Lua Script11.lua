@@ -2,6 +2,31 @@
 -- Author: 11585
 -- DateCreated: 2026/9/13 0:51:01
 --------------------------------------------------------------
+
+function CheckSpaceBattleCruiserButtonValidity(unit)
+			if unit:IsHasPromotion((GameInfo.UnitPromotions["PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN"].ID)) then
+			return false
+		end
+	return true;
+end
+
+function CheckSpaceBattleCruiserButtonValidity2(unit)
+			if unit:GetMoves() < unit:MaxMoves() then
+				return false
+			end
+	return true;
+end
+
+
+
+function CheckSpaceBattleCruiserButtonValidity2(unit)
+			if unit:GetMoves() < unit:MaxMoves() then
+				return false
+			end
+	return true;
+end
+
+
 local ATBTEnergy = 
 	{[0] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA,   [1] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_1, 
 	 [2] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_2, [3] = GameInfoTypes.PROMOTION_SPACE_BATTLECRUISER_MANA_3,

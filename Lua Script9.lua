@@ -1,4 +1,49 @@
-﻿function AddWaterBuildings(pCity)	
+﻿function ShowNukeArrow( PlotX, PlotY )
+	--find the selected attacker
+	local unit = UI.GetHeadSelectedUnit();
+
+	if unit and unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
+		attacker = unit
+	end
+	
+	if attacker == nil then
+		return
+	end
+
+	--get bombard end hex
+	if  attacker and (Map.PlotDistance(attacker:GetX(), attacker:GetY(), PlotX, PlotY ) <= 30 )  then
+		Events.SpawnArrowEvent( attacker:GetX(), attacker:GetY(),PlotX, PlotY );
+	else
+		Events.RemoveAllArrowsEvent();
+	end
+	
+end
+
+
+function ShowNukeArrow( PlotX, PlotY )
+	--find the selected attacker
+	local unit = UI.GetHeadSelectedUnit();
+	if unit and unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
+		attacker = unit
+	end
+	
+	if attacker == nil then
+		return
+	end
+	--get bombard end hex
+	if  attacker 	and (Map.PlotDistance(attacker:GetX(), attacker:GetY(), PlotX, PlotY ) <= 30 )  then
+		Events.SpawnArrowEvent( attacker:GetX(), attacker:GetY(),PlotX, PlotY );
+	else
+		Events.RemoveAllArrowsEvent();
+	end
+	
+end
+
+
+
+
+
+function AddWaterBuildings(pCity)	
 
 	pCity:SetNumRealBuilding(bProductionDummy, 0);
 

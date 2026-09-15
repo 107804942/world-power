@@ -869,8 +869,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_P1500</UnitArtInfo>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<UnitFlagIconOffset>45</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>165</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>40</PortraitIndex>
 			<MoveRate>WHEELED</MoveRate>
 			<ProjectPrereq>PROJECT_P1500</ProjectPrereq>
 			<ExtraMaintenanceCost>150</ExtraMaintenanceCost>

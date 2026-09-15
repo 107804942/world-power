@@ -643,6 +643,86 @@ local ePlotOcean = PlotTypes.PLOT_OCEAN
 
 		return true
 -- **********************************************************************************************************************************************
+-- 贝马拉哈
+-- **********************************************************************************************************************************************
+
+		elseif method_number == 20 then
+	
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
+		if pMainPlot:IsRiver() then return false end  ---不可沿河
+		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
+  
+		local pMainTerrainType = pMainPlot:GetTerrainType()
+
+		if pMainTerrainType ~= eTerrainGrass then return false end  
+		
+		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
+
+		--if pMainAreaNear < 20 then return false end 
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+		
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+
+			if sAdjacentTerrainType ~= eTerrainGrass then return false end  ----附近地块非草原
+
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			
+			if sAdjacentPlotType == ePlotMountain  then return false end  ---临近地块存在山脉
+			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
+
+		end
+
+		return true
+
+-- **********************************************************************************************************************************************
+-- 百内
+-- **********************************************************************************************************************************************
+
+		elseif method_number == 21 then
+	
+		local pMainPlot = Map.GetPlot(x, y)
+		
+		if pMainPlot == nil then return false end
+		---if not pMainPlot:IsAdjacentToShallowWater() then return false end   --必须临近浅水
+		---if pMainPlot:IsRiver() then return false end  ---不可沿河
+		if pMainPlot:GetPlotType() ~= ePlotFlat  then return false end
+  
+		local pMainTerrainType = pMainPlot:GetTerrainType()
+
+		if pMainTerrainType ~= eTerrainTundra then return false end  
+		
+		--local pMainAreaNear = pMainPlot:Area():GetNumTiles()
+
+		--if pMainAreaNear < 20 then return false end 
+
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+			
+			if pAdjacentPlot == nil then return false end
+
+			local sAdjacentTerrainType = pAdjacentPlot:GetTerrainType()
+
+			if sAdjacentTerrainType == eTerrainCoast then return false end  
+			if sAdjacentTerrainType == eTerrainOcean then return false end  
+
+			local sAdjacentPlotType = pAdjacentPlot:GetPlotType()
+			
+			if sAdjacentPlotType == ePlotOcean  then return false end  ---临近地块存在海洋
+			--if sAdjacentPlotType:IsNaturalWonder()  then return false end  ---临近地块存在自然奇观
+
+		end
+
+		return true
+
+
+-- **********************************************************************************************************************************************
 -- 克罗拉多峡谷
 -- **********************************************************************************************************************************************
 
@@ -2237,7 +2317,9 @@ function NWCustomPlacement(x, y, row_number, method_number)
 		
 		local pPlot = Map.GetPlot(x, y)
 		
+		
 		pPlot:SetPlotType(ePlotFlat, false, false)
+		---pPlot:SetPlotType(ePlotFlat, false, false)
 		pPlot:SetTerrainType(eTerrainPlains, false, false)
 		pPlot:SetResourceType(-1) ---消除资源
 
@@ -2249,6 +2331,46 @@ function NWCustomPlacement(x, y, row_number, method_number)
 				pAdjacentPlot:SetTerrainType(eTerrainPlains, false, false)
 			end
 		end
+
+	-- 贝马拉哈
+		elseif method_number == 20 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		---pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainGrass, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
+
+		-- setting up Plains around and cleaning Forests and Jungles
+		for i, direction in ipairs(tDirectionTypes) do
+			local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainGrass then
+				pAdjacentPlot:SetTerrainType(eTerrainGrass, false, false)
+			end
+		end
+
+	-- 百内
+		elseif method_number == 21 then
+		
+		local pPlot = Map.GetPlot(x, y)
+		
+		
+		pPlot:SetPlotType(ePlotFlat, false, false)
+		---pPlot:SetPlotType(ePlotFlat, false, false)
+		pPlot:SetTerrainType(eTerrainTundra, false, false)
+		pPlot:SetResourceType(-1) ---消除资源
+
+		-- setting up Plains around and cleaning Forests and Jungles
+		--for i, direction in ipairs(tDirectionTypes) do
+			--local pAdjacentPlot = Map.PlotDirection(x, y, direction)
+
+			--if pAdjacentPlot:GetPlotType() ~= ePlotOcean and pAdjacentPlot:GetTerrainType() ~= eTerrainGrass then
+				--pAdjacentPlot:SetTerrainType(eTerrainTundra, false, false)
+			--end
+		--end
 
 
 -- MT. EVEREST  珠穆朗玛

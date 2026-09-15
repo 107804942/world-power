@@ -382,6 +382,11 @@ SELECT     'BUILDING_DESERT_TRANSFORMING_BASE',	'FEATURE_OASIS',	         'YIELD
 
 
 
+---免费单位
+INSERT INTO Building_FreeUnits (BuildingType, UnitType,	NumUnits)
+SELECT 'BUILDING_BATHS','UNIT_GREAT_DOCTOR',1;   --大浴场
+
+
 ---建筑提升建筑产出
 INSERT INTO Building_BuildingClassYieldChanges (BuildingType,	BuildingClassType,			YieldType,		YieldChange)
 SELECT     'BUILDING_COOKED_MEDICINE',	'BUILDINGCLASS_HERBALIST',	                     'YIELD_HEALTH',	  1 UNION ALL

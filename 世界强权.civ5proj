@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>82</ModVersion>
+    <ModVersion>83</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Description>
@@ -555,6 +555,8 @@
     <Folder Include="extend\art\nature\GlassHouse" />
     <Folder Include="extend\art\nature\Eruption" />
     <Folder Include="extend\art\nature\MatoTipila" />
+    <Folder Include="extend\art\nature\Bemalaha" />
+    <Folder Include="extend\art\nature\TorresDel" />
     <Folder Include="extend\art\nature\Volcan" />
     <Folder Include="extend\art\nature\Zhangjiajie" />
     <Folder Include="extend\art\nature\whitedesert" />
@@ -4312,6 +4314,22 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\nature\Bemalaha\Bemalaha.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Bemalaha\Bemalaha.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Bemalaha\Bemalaha.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\Bemalaha\sv_Bemalaha.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\nature\causeway\causeway_land.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -4821,6 +4839,22 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\nature\salar\sv_Salar_S.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\TorresDel\sv_TorresDel.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\TorresDel\TorresDel.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\TorresDel\TorresDel.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\nature\TorresDel\TorresDel.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

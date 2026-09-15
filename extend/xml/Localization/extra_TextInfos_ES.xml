@@ -3478,7 +3478,7 @@
 			<Text>复合材料</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_PROMOTION_HPMOD1_HELP">
-			<Text>+200最大生命值,可对抵抗中的城市进行镇暴，一次性消除所有抵抗时间，但城市会损失一半人口。</Text>
+			<Text>+200最大生命值。</Text>
 		</Replace>
 
 
@@ -4566,23 +4566,28 @@
 
 
 
+
+
+
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA">
 			<Text>[COLOR_MIGHT]粒子能量[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN">
-			<Text>冷却</Text>
-		</Row>
-	
-
-
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_HELP">
 			<Text>可使用毁灭性的粒子束轰击指定区域，该攻击可摧毁[COLOR_MIGHT]指定区域极其周围一格范围内所有敌方单位。使用后冷却时间3回合。</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN">
+			<Text>冷却</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_COLD_DOWN_HELP">
 			<Text>当前冷却状态不可使用粒子束武器。</Text>
 		</Row>
-		
-
+		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_NUKE_COLD_DOWN">
+			<Text>冷却</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_NUKE_COLD_DOWN_HELP">
+			<Text>当前冷却状态不可使用核打击。</Text>
+		</Row>
 
 
 		<Row Tag='TXT_KEY_NAME_SPACE_BATTLECRUISER_NUKE'>
@@ -4592,31 +4597,11 @@
 			<Text>[COLOR_MANA]热核打击[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_NUKE'>
-			<Text>消耗一点移动力立即填充热核弹头，[COLOR_MIGHT]鼠标左键点击被点亮的地块[ENDCOLOR]即可发射核导弹进行攻击。（可选择范围:半径30格）</Text>
+			<Text>消耗一点移动力立即填充热核弹头，[COLOR_MIGHT]鼠标左键点击被点亮的地块[ENDCOLOR]即可发射核导弹进行攻击，使用后冷却时间1回合。（可选择范围:半径30格）</Text>
 		</Row>
 		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_CANT_NUKE'>
-			<Text>[COLOR_UNIQUE]当前移动力不足（只能在满移动力状态下使用）。[ENDCOLOR]</Text>
+			<Text>本回合已使用核打击。</Text>
 		</Row>
-
-
-
-
-		<Row Tag='TXT_KEY_ALERT_SPACE_BATTLECRUISER'>
-			<Text>[COLOR_NEGATIVE_TEXT]该区块极其周围一格范围内所有敌方单位被粒子束毁灭[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag='TXT_KEY_NAME_SPACE_BATTLECRUISER'>
-			<Text>[COLOR_MANA]充能粒子束[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag='TXT_KEY_TITLE_SPACE_BATTLECRUISER'>
-			<Text>[COLOR_MANA]充能粒子束[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER'>
-			<Text>用毁灭性的粒子束轰击指定区域，该攻击可摧毁[COLOR_MIGHT]指定区域极其周围一格范围内所有敌方单位。[ENDCOLOR]（可选择范围:半径20格,消耗一移动力，技能冷却时间3回合）</Text>
-		</Row>
-		<Row Tag='TXT_KEY_COND_SPACE_BATTLECRUISER_2'>
-			<Text>[COLOR_UNIQUE]当前粒子束冷却中。[ENDCOLOR]</Text>
-		</Row>
-
 
 
 
@@ -6783,6 +6768,7 @@
 				周围每存在一个临近的敌人则+50%[ICON_STRENGTH]战斗力。受伤时没有战斗力惩罚。
 				[NEWLINE]在任意地貌均可获得[COLOR_POSITIVE_TEXT]100%[ENDCOLOR]战斗力加成，对抗步兵单位时+33%[ICON_STRENGTH]战斗力。
 				[NEWLINE]单位在国境外也能执行空降任务，每回合可以无限次空降直到移动力用尽，每次空降会对目标地块周围一格内的敌人造成33点伤害。
+				[NEWLINE]可对抵抗中的城市进行镇暴，一次性消除所有抵抗时间，但城市会损失一半人口。
 			</Text>
 		</Row>
 
@@ -8914,6 +8900,47 @@
 		<!--EXTRA NATURAL WONDERS-->
 
 
+		<Row Tag="TXT_KEY_FEATURE_TORRESDEL">
+			<Text>百内国家公园</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_TORRESDEL_TEXT">
+			<Text>
+				百内山脉的垂直峰顶因其颜色而得名，“百内”在特维尔切语中意为“蓝色”。作家和女权主义者弗洛伦斯·迪克西女人在1880年出版的书中将这三座花岗岩塔形容为“克丽奥佩特拉的针”。据传她是该地区的“第一个外国游客”，不过真实性难以考证。但可惜，她并非最后一个。从1985年开始，由于背包旅行者的粗心大意，百内山脉已遭受3次森林火灾。幸运的是，百内山脉的三个顶峰海拔2850米，被湖泊和冰川环绕，相对而言受火灾影响较小。智利政府于1977年建造了公园，环绕着百内山脉的层层峰峦。随后，百内国家公园被联合国教科文组织认定为世界生物圈保护区。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_TORRESDEL_HELP">
+			<Text>
+				+6[ICON_RESEARCH]科研，+5[ICON_PRODUCTION]产能，+5[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处丘陵地块+1[ICON_RESEARCH]科研，+1[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处山脉地块+1[ICON_RESEARCH]科研，+1[ICON_FOOD]食物。
+				[NEWLINE]临近一格内每处平地地块+1[ICON_RESEARCH]科研，+1[ICON_FOOD]食物。
+			</Text>
+		</Row>
+		
+		
+		<Row Tag="TXT_KEY_FEATURE_BEMALAHA">
+			<Text>贝马拉哈国家公园</Text>
+			<Gender>neuter:no_article</Gender>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_BEMALAHA_TEXT">
+			<Text>
+				对小孩来讲，贝马拉哈国家公园可不是他们的度假胜地，这个公园位于马达加斯加岛，为锯齿状石灰石岩层组成的喀斯特地形，底部为灰岩坑和洞穴。毗邻严格自然保护区（许多动物居住在混合岩尖和森林之间，包括11种狐猴），它在1990年被联合国教科文组织指定为世界文化遗产。如迷宫般的垂直岩石有91米高且非常锋利，人们很难到达这里（从马达加斯加首都出发的为期5天的旅程），胆怯的人也不会来这里。一些博物学家曾冒险进入贝马拉哈国家公园，但最后不得不爬出来寻求医疗援助。在马达加斯加语里，tsingy的意思是“不能赤脚行走的地方”，从这个定义里大概能想象到这是个怎样的地方。
+			</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_FEATURES_BEMALAHA_HELP">
+			<Text>
+				+15[ICON_TOURISM]魅力，+5[ICON_FOOD]食物，+10[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处丘陵地块+3[ICON_TOURISM]魅力，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处山脉地块+3[ICON_TOURISM]魅力，+3[ICON_CULTURE]文化。
+				[NEWLINE]临近一格内每处平地地块+3[ICON_TOURISM]魅力，+3[ICON_CULTURE]文化。
+			</Text>
+		</Row>
+
+		
+		
+		
+
 		<Row Tag="TXT_KEY_FEATURE_MATO_TIPILA">
 			<Text>魔鬼塔</Text>
 			<Gender>neuter:no_article</Gender>
@@ -9880,9 +9907,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_BATHS_HELP">
 			<Text>
-				每处贸易站、小镇、城镇+1[ICON_HEALTH]健康度与[ICON_GOLD]金钱。
+				每处贸易站、小镇、城镇+1[ICON_HEALTH]健康度与[ICON_GOLD]金钱。赠送一个大医学家。
 				[NEWLINE]每处公共浴室+3[ICON_HEALTH]健康度与[ICON_CULTURE]文化。
-				[NEWLINE]+8[ICON_HEALTH]健康度，全国健康度+15%。每4[ICON_CITIZEN]人口+1[ICON_HEALTH]健康度、+1[ICON_CULTURE]文化。
+				[NEWLINE]+8[ICON_HEALTH]健康度，全国[ICON_HEALTH]健康度+15%。每4[ICON_CITIZEN]人口+1[ICON_HEALTH]健康度、+1[ICON_CULTURE]文化。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_BATHS_QUOTE">
