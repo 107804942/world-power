@@ -799,7 +799,7 @@
 			<ConquestProb>100</ConquestProb>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>228</PortraitIndex>
+			<PortraitIndex>248</PortraitIndex>
 			<WonderSplashImage>GateAll.dds</WonderSplashImage>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>

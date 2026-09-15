@@ -953,13 +953,13 @@ INSERT INTO Feature_YieldChanges (FeatureType,			YieldType,				Yield)VALUES
 		
 
 INSERT INTO Plot_AdjacentFeatureYieldChanges (FeatureType,	PlotType,	YieldType,	Yield,	IgnoreNaturalWonderPlots)VALUES	
- ('FEATURE_BEMALAHA',			'PLOT_HILLS',		'YIELD_SCIENCE',		    1,		0),
-		('FEATURE_BEMALAHA',			'PLOT_MOUNTAIN',	'YIELD_SCIENCE',		    1,		0),
-		('FEATURE_BEMALAHA',			'PLOT_LAND',		'YIELD_SCIENCE',		    1,		0),
+ ('FEATURE_TORRESDEL',			'PLOT_HILLS',		'YIELD_SCIENCE',		    1,		0),
+		('FEATURE_TORRESDEL',			'PLOT_MOUNTAIN',	'YIELD_SCIENCE',		    1,		0),
+		('FEATURE_TORRESDEL',			'PLOT_LAND',		'YIELD_SCIENCE',		    1,		0),
 
-		('FEATURE_BEMALAHA',			'PLOT_HILLS',		'YIELD_FOOD',		    1,		0),
-		('FEATURE_BEMALAHA',			'PLOT_MOUNTAIN',	'YIELD_FOOD',		    1,		0),
-		('FEATURE_BEMALAHA',			'PLOT_LAND',		'YIELD_FOOD',		    1,		0),
+		('FEATURE_TORRESDEL',			'PLOT_HILLS',		'YIELD_FOOD',		    1,		0),
+		('FEATURE_TORRESDEL',			'PLOT_MOUNTAIN',	'YIELD_FOOD',		    1,		0),
+		('FEATURE_TORRESDEL',			'PLOT_LAND',		'YIELD_FOOD',		    1,		0),
 
 
        ('FEATURE_BEMALAHA',			'PLOT_HILLS',		'YIELD_TOURISM',		    3,		0),
