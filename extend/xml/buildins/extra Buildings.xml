@@ -1158,8 +1158,8 @@
 				<Defense>2500</Defense>
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-				<PortraitIndex>143</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>5</PortraitIndex>
 			</Row>
 			
 
@@ -1180,8 +1180,8 @@
 				<Defense>2500</Defense>
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
 				<NeverCapture>true</NeverCapture>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-				<PortraitIndex>219</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>0</PortraitIndex>
 			</Row>
 
 			<Row>
@@ -1321,8 +1321,8 @@
 				<ExtraCityHitPoints>50</ExtraCityHitPoints>
 				<AirModifier>3</AirModifier>
 				<Airlift>true</Airlift>
-				<PortraitIndex>218</PortraitIndex>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<PortraitIndex>78</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<HurryCostModifier>50</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
 			</Row>
@@ -1501,7 +1501,7 @@
 				<ConquestProb>75</ConquestProb>
 				<HurryCostModifier>75</HurryCostModifier>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-				<PortraitIndex>100</PortraitIndex>
+				<PortraitIndex>248</PortraitIndex>
 			</Row>
 
 

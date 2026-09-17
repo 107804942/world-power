@@ -799,7 +799,7 @@
 			<ConquestProb>100</ConquestProb>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>248</PortraitIndex>
+			<PortraitIndex>4</PortraitIndex>
 			<WonderSplashImage>GateAll.dds</WonderSplashImage>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
@@ -962,11 +962,11 @@
 			<ConquestProb>100</ConquestProb>
 			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 			<SpecialistCount>2</SpecialistCount>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<FreePromotion>PROMOTION_KARRUPP</FreePromotion>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<WonderSplashImage>KARRUPP.dds</WonderSplashImage>
-			<PortraitIndex>13</PortraitIndex>
+			<PortraitIndex>92</PortraitIndex>
 		</Row>
 
 
@@ -991,7 +991,7 @@
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<WonderSplashImage>KARLSTEJN.dds</WonderSplashImage>
-			<PortraitIndex>240</PortraitIndex>
+			<PortraitIndex>106</PortraitIndex>
 		</Row>
 	
 
@@ -1395,8 +1395,8 @@
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>92</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>228</PortraitIndex>
 			<Happiness>-5</Happiness>
 			<FreePromotion>PROMOTION_HPMOD2</FreePromotion>
 			<LandTileMovementReduceGlobal>1</LandTileMovementReduceGlobal>
