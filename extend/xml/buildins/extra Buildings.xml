@@ -289,9 +289,9 @@
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<ConquestProb>66</ConquestProb>
-				<PortraitIndex>19</PortraitIndex>
+				<PortraitIndex>27</PortraitIndex>
 			</Row>
 
 			<!--矿石精炼厂-->
@@ -915,8 +915,8 @@
 				<AllowsRangeStrike>1</AllowsRangeStrike>
 				<Defense>1000</Defense>
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>18</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>110</PortraitIndex>
 			</Row>
 
 
@@ -938,8 +938,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>66</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>10</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>6</PortraitIndex>
 			</Row>
 
 			<!--木工坊-->
@@ -1253,8 +1253,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>100</ConquestProb>
 				<HurryCostModifier>160</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>115</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>30</PortraitIndex>
 				<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 				<SpecialistCount>3</SpecialistCount>
 			</Row>

@@ -2216,7 +2216,7 @@
 			<GridX>23</GridX>
 			<GridY>4</GridY>
 			<Quote>TXT_KEY_TECH_SUBTERRANEAN_EXPLORE_QUOTE</Quote>
-			<PortraitIndex>160</PortraitIndex>
+			<PortraitIndex>46</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<AudioIntro>AS2D_TECH_SUBTERRANEAN_EXPLORE_EXPANSION</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_SUBTERRANEAN_EXPLORE</AudioIntroHeader>

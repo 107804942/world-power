@@ -1191,7 +1191,7 @@ INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHand
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_TORRESDEL',	'TorresDel.fxsxml',1),       --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_VALLEY_A',	'Monument_valley_2.fxsxml',1),       --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_MATO_TIPILA',	'Mato_Tipila.fxsxml',1),       --important!
-('Any',		'Any',	1.0,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BEMALAHA',	'Bemalaha.fxsxml',1),       --important!
+('Any',		'Any',	0.9,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_BEMALAHA',	'Bemalaha.fxsxml',1),       --important!
 ('Any',		'Any',	1,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DANXIA',	'Danxia_Mountain.fxsxml',1),       --important!
 
 ('Any',		'Any',	0.85,	'ART_DEF_IMPROVEMENT_NONE',		'SNAPSHOT',		'ART_DEF_FEATURE_BERMUDA_A',	'bermuda_triangle_1.fxsxml',1),       --important!
@@ -1209,7 +1209,7 @@ INSERT INTO ArtDefine_Landmarks (Era,		State,	Scale,	ImprovementType,	LayoutHand
 
 ('Any',		'Any',	0.85,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_MT_PAEKTU',	'MT_PAEKTU_GRASS.fxsxml',	1),      --important!
 
-('Any',		'Any',	0.7,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DELICATE_ARCH',	'DelicateArch.fxsxml',	1),      --important!
+('Any',		'Any',	1.0,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_DELICATE_ARCH',	'DelicateArch.fxsxml',	1),      --important!
 
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_GIANTS_CAUSEWAY_A',	'causeway_land.fxsxml',1),       --important!
 ('Any',		'Any',	1.3,	'ART_DEF_IMPROVEMENT_NONE',			'SNAPSHOT',		'ART_DEF_FEATURE_GIANTS_CAUSEWAY_B',	'causeway_sea.fxsxml',	0),      --important!

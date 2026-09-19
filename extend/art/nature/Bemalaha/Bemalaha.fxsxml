@@ -1,3 +1,7 @@
 <Asset>
-  <Mesh file="Bemalaha.gr2" source="Max" />
+	<Mesh file="Bemalaha.gr2" source="Max" />
+	<Texture file="Bemalaha.dds" source="Max" />
+	<Texture file="Bemalahadiff.dds" source="Max" />
+    <Texture file="Bemalahaland.dds" source="Max" />
+    <Texture file="kilimanjaro_ground_sref.dds" source="Max" />
 </Asset>
