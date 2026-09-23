@@ -3067,8 +3067,8 @@
 			<GridX>32</GridX>
 			<GridY>7</GridY>
 			<Quote>TXT_KEY_TECH_EARTH_QUOTE</Quote>
-			<PortraitIndex>178</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>126</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 

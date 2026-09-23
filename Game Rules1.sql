@@ -1,3 +1,7 @@
+UPDATE Units SET DomainCargo = 'DOMAIN_LAND'
+WHERE Domain = 'DOMAIN_SEA' AND CombatClass = 'UNITCOMBAT_NAVALMELEE' AND DomainCargo IS NULL AND SpecialCargo IS NULL
+	AND PrereqTech IN (SELECT t.Type FROM Technologies t, Eras e WHERE e.Type = t.Era AND e.ID >= (SELECT ID FROM Eras WHERE Type = 'ERA_RENAISSANCE'));
+
 
 ------溅射穿透
 

@@ -759,7 +759,11 @@
 	<Units>
 
 
-
+		<Update>
+			<Set  IconAtlas="ROBOT_ICON_ATLAS5"  PortraitIndex="9"/>
+			<Where Class="UNITCLASS_ENTERPRISE" />
+		</Update>
+		
 		
 		<Update>
 			<Set UnitArtInfo="ART_DEF_UNIT_DESTROYER_CLASS"/>

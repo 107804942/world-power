@@ -395,11 +395,11 @@
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<GreatWorkSlotType>GREAT_WORK_SLOT_ART_ARTIFACT</GreatWorkSlotType>
 				<GreatWorkCount>1</GreatWorkCount>
 				<ConquestProb>80</ConquestProb>
-				<PortraitIndex>28</PortraitIndex>
+				<PortraitIndex>20</PortraitIndex>
 				<Happiness>2</Happiness>
 				<GreatPeopleRateModifier>15</GreatPeopleRateModifier>
 			</Row>
@@ -1205,7 +1205,7 @@
 				<HurryCostModifier>50</HurryCostModifier>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>253</PortraitIndex>
+				<PortraitIndex>14</PortraitIndex>
 			</Row>
 
 			<Row>
@@ -1299,8 +1299,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>66</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>96</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>243</PortraitIndex>
 			</Row>
 
 			<!--指挥中心-->

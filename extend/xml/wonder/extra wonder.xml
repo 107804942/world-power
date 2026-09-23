@@ -829,8 +829,8 @@
 			<MinorFriendshipChange>200</MinorFriendshipChange>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>30</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>25</PortraitIndex>
 			<WonderSplashImage>ROCKEFELLER_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
@@ -1424,8 +1424,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>163</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>28</PortraitIndex>
 			<WonderSplashImage>BurjAlArab.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
@@ -1962,8 +1962,8 @@
 			<ConquestProb>100</ConquestProb>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>154</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>85</PortraitIndex>
 			<WonderSplashImage>SILKROAD.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
@@ -2394,8 +2394,8 @@
 			<ConquestProb>100</ConquestProb>
 			<NearbyMountainRequired>true</NearbyMountainRequired>
 			<UnhappinessModifier>-15</UnhappinessModifier>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>156</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>26</PortraitIndex>
 			<WorkerSpeedModifier>25</WorkerSpeedModifier>			
 			<GlobalCultureRateModifier>20</GlobalCultureRateModifier> 
 			<WonderSplashImage>Rushmore_Splash.dds</WonderSplashImage>
@@ -2676,8 +2676,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>102</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>253</PortraitIndex>
 			<WonderSplashImage>Skynet_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 			<NukeInterceptionChance>50</NukeInterceptionChance>

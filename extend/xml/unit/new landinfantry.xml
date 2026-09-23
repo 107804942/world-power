@@ -31,7 +31,7 @@
 
 
 		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_ANTIMISSILE" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="220"/>
+			<Set UnitArtInfo="ART_DEF_UNIT_ANTIMISSILE" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="168"/>
 			<Where Type="UNIT_ATGM_VEHICLE" />
 		</Update>
 		<Update>

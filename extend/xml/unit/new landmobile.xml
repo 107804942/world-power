@@ -71,7 +71,7 @@
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>9</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>86</PortraitIndex>
+			<PortraitIndex>181</PortraitIndex>
 			<ExtraMaintenanceCost>25</ExtraMaintenanceCost>
 			<IgnoreBuildingDefense>1</IgnoreBuildingDefense>
 		</Row>

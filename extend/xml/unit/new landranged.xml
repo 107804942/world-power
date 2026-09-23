@@ -380,13 +380,13 @@
 
 	<Units>
 
-		<!--<Update>
-			<Set   UnitArtInfo="ART_DEF_UNIT_SELF_PROPELLED_ARTILLERY109"/>
-			<Where Class="UNITCLASS_SELF_PROPELLED_ARTILLERY" />
-		</Update>-->
+		<Update>
+			<Set  IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="56"/>
+			<Where Class="UNITCLASS_RAILROAD_GUN" />
+		</Update>
 		
        <Update>
-		<Set   UnitArtInfo="ART_DEF_UNIT_PZH2000"/>
+		<Set   UnitArtInfo="ART_DEF_UNIT_PZH2000" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="220"/>
 		<Where Class="UNITCLASS_SELF_PROPELLED_ARTILLERY" />
 	</Update>
 
