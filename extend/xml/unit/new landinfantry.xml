@@ -38,11 +38,8 @@
 			<Set  UnitArtInfo="ART_DEF_UNIT_MODERN_MARINE888" />
 			<Where Type="UNIT_MILITIA_MODERN" />
 		</Update>
-		<Update>
-			<Set  UnitFlagAtlas="SMAN_EXOTIC_UNIT_FLAG_ATLAS" UnitFlagIconOffset="18"/>
-			<Where Type="UNIT_WARRIOR" />
-		</Update>
-	
+		
+
 
 	</Units>
 

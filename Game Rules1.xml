@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
+
+
+
+
 <GameData>
 	--根据己方拥有的改良设施数量缩放该单位能力（Amount为百分比系数，公式：(拥有数×Amount×上下文)/100，⚠ 需MOD_BALANCE_CORE）
 	CREATE TABLE "Unit_ScalingFromOwnedImprovements" (
@@ -25,7 +29,14 @@
 	('PROMOTION_SPACE_BATTLECRUISER_MANA_8', 	'TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_8', 'TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_8_HELP', 'AS2D_IF_LEVELUP',		1,					22,			'MainRobotPromo_Atlas', 	 'TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA',         'PEDIA_ATTRIBUTES'        ,0  ,   10 );
 
 
-<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_2">
+
+	<Update>
+		<Set  UnitFlagAtlas="SMAN_EXOTIC_UNIT_FLAG_ATLAS" UnitFlagIconOffset="18"/>
+		<Where Type="UNIT_WARRIOR" />
+	</Update>
+
+
+	<Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_2">
 	<Text>[COLOR_MIGHT]粒子能量(50)[ENDCOLOR]</Text>
 </Row>
 <Row Tag="TXT_KEY_PROMOTION_SPACE_BATTLECRUISER_MANA_3">

@@ -1161,8 +1161,8 @@
 			<FreeTechs>1</FreeTechs>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>107</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>79</PortraitIndex>
 			<FreePromotion>PROMOTION_PEOPLES_HALL</FreePromotion>
 			<WonderSplashImage>PEOPLES_HALL.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
