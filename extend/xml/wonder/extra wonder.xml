@@ -1449,8 +1449,8 @@
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 			<SpecialistCount>3</SpecialistCount>
 			<GreatPeopleRateChange>1</GreatPeopleRateChange>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>235</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>15</PortraitIndex>
 			<WonderSplashImage>PONTE_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
@@ -2100,8 +2100,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>252</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>42</PortraitIndex>
 			<WonderSplashImage>LascauxSplash.dds</WonderSplashImage>
 			<Happiness>2</Happiness>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
@@ -2754,9 +2754,9 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>124</PortraitIndex>
-			<WonderSplashImage>FWUltimaTower_Splash.dds</WonderSplashImage>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>60</PortraitIndex>
+			<WonderSplashImage>UltimaTower.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
 
@@ -2853,7 +2853,7 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<FreePromotion>PROMOTION_DIABLO</FreePromotion>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>120</PortraitIndex>
+			<PortraitIndex>118</PortraitIndex>
 			<WonderSplashImage>DIABLO.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
@@ -2877,8 +2877,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>121</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
 			<WonderSplashImage>Mnemosyne_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>

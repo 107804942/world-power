@@ -561,8 +561,8 @@
 				<ConquestProb>66</ConquestProb>
 				<HurryCostModifier>25</HurryCostModifier>
 				<Happiness>2</Happiness>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>11</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>169</PortraitIndex>
 			</Row>
 			
 			
@@ -743,8 +743,8 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>75</HurryCostModifier>
 				<ConquestProb>100</ConquestProb>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<PortraitIndex>21</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>13</PortraitIndex>
 			</Row>
 
 
@@ -1226,8 +1226,8 @@
 				<ExtraCityHitPoints>35</ExtraCityHitPoints>
 				<HurryCostModifier>25</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-				<PortraitIndex>212</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>8</PortraitIndex>
 				<NukeInterceptionChance>30</NukeInterceptionChance>				
 			</Row>
 

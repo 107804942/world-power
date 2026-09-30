@@ -775,8 +775,8 @@
 			<GoodyTech>false</GoodyTech>
 			<GridX>7</GridX>
 			<GridY>6</GridY>
-			<PortraitIndex>45</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 
