@@ -30,8 +30,8 @@
 			<Help>TXT_KEY_PROCESS_HEALTH_HELP</Help>
 			<Strategy>TXT_KEY_PROCESS_HEALTH_STRATEGY</Strategy>
 			<TechPrereq>TECH_MODERN_SANITATION</TechPrereq>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>37</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>71</PortraitIndex>
 		</Row>
 
 

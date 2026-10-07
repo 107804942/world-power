@@ -30,7 +30,7 @@
 			<CombatLimit>0</CombatLimit>
 			<UnitArtInfo>ART_DEF_UNIT_SS_STASIS_CHAMBER</UnitArtInfo>
 			<UnitFlagIconOffset>85</UnitFlagIconOffset>
-			<PortraitIndex>117</PortraitIndex>
+			<PortraitIndex>24</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<MoveRate>QUADRUPED</MoveRate>
 			<ExtraMaintenanceCost>19</ExtraMaintenanceCost>
@@ -73,8 +73,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_REJETFIGHT</UnitArtInfo>
 			<UnitFlagIconOffset>17</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>151</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>127</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
 		</Row>
@@ -245,8 +245,8 @@
 			<UnitFlagAtlas>RFEMOD_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitArtInfo>ART_DEF_UNIT_GUIDED_MISSILE</UnitArtInfo>
 			<UnitFlagIconOffset>5</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>193</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>206</PortraitIndex>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>18</ExtraMaintenanceCost>
 		</Row>

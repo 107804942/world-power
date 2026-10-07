@@ -540,61 +540,7 @@
 
 
 
-		<Row>
-			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
-			<IconSize>256</IconSize>
-			<Filename>4ROBOT256.dds</Filename>
-			<IconsPerRow>16</IconsPerRow>
-			<IconsPerColumn>16</IconsPerColumn>
-		</Row>
-
-
-		<Row>
-			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
-			<IconSize>214</IconSize>
-			<Filename>4ROBOT214.dds</Filename>
-			<IconsPerRow>16</IconsPerRow>
-			<IconsPerColumn>16</IconsPerColumn>
-		</Row>
-
-		<Row>
-			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
-			<IconSize>128</IconSize>
-			<Filename>4ROBOT128.dds</Filename>
-			<IconsPerRow>16</IconsPerRow>
-			<IconsPerColumn>16</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
-			<IconSize>80</IconSize>
-			<Filename>4ROBOT80.dds</Filename>
-			<IconsPerRow>16</IconsPerRow>
-			<IconsPerColumn>16</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
-			<IconSize>64</IconSize>
-			<Filename>4ROBOT64.dds</Filename>
-			<IconsPerRow>16</IconsPerRow>
-			<IconsPerColumn>16</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
-			<IconSize>45</IconSize>
-			<Filename>4ROBOT45.dds</Filename>
-			<IconsPerRow>16</IconsPerRow>
-			<IconsPerColumn>16</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>ROBOT_ICON_ATLAS4</Atlas>
-			<IconSize>32</IconSize>
-			<Filename>4ROBOT32.dds</Filename>
-			<IconsPerRow>16</IconsPerRow>
-			<IconsPerColumn>16</IconsPerColumn>
-		</Row>
-
-
-
+		
 
 
 

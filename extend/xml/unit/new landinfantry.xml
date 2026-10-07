@@ -312,8 +312,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_ROBOTMARINE</UnitArtInfo>
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>1</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>176</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>154</PortraitIndex>
 			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
 			<WorkRate>150</WorkRate>
 		</Row>

@@ -141,17 +141,17 @@
 
 		<Update>
 			<Where Type="SPECIALIST_WRITER"/>
-			<Set IconAtlas="ROBOT_ICON_ATLAS4" PortraitIndex="47"/>
+			<Set IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="117"/>
 		</Update>
 		<Update>
 			<Where Type="SPECIALIST_MUSICIAN"/>
-			<Set IconAtlas="ROBOT_ICON_ATLAS4" PortraitIndex="42"/>
+			<Set IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="112"/>
 		</Update>
 
 
 		<Update>
 			<Where Type="SPECIALIST_CITIZEN"/>
-			<Set IconAtlas="ROBOT_ICON_ATLAS4" PortraitIndex="44"/>
+			<Set IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="114"/>
 		</Update>
 		
     </Specialists>

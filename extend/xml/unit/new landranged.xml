@@ -407,7 +407,7 @@
 			<Where Type="UNIT_CULVERIN" />
 		</Update>
 		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_UNION_ARTILLERY_PARROTT" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="172"/>
+			<Set  UnitArtInfo="ART_DEF_UNIT_UNION_ARTILLERY_PARROTT" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="59"/>
 			<Where Type="UNIT_CANNON" />
 		</Update>
 		<Update>
@@ -433,6 +433,7 @@
 			<Set  PrereqTech="TECH_MATHEMATICS"/>
 			<Where Type="UNIT_BABYLONIAN_BOWMAN" />
 		</Update>
+		
 	</Units>
 	
 </GameData>

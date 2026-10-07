@@ -848,8 +848,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>122</PortraitIndex>
 			<NumCityCostMod>30</NumCityCostMod>
 		</Row>
 
@@ -867,9 +867,9 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<FreePromotion>PROMOTION_SPY_ADJACENCY_BUFF</FreePromotion>
-			<PortraitIndex>7</PortraitIndex>
+			<PortraitIndex>41</PortraitIndex>
 			<NumCityCostMod>30</NumCityCostMod>
 		</Row>
 
@@ -940,8 +940,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<UnmoddedHappiness>5</UnmoddedHappiness>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>14</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>162</PortraitIndex>
 			<WonderSplashImage>AP.dds</WonderSplashImage>
 		</Row>
 
@@ -1503,8 +1503,8 @@
 			<WonderSplashImage>Solomon_splash.dds</WonderSplashImage>
 			<FreeBuildingThisCity>BUILDINGCLASS_ACADEMY</FreeBuildingThisCity>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>78</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>7</PortraitIndex>
 		</Row>
 
 
@@ -1820,8 +1820,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>80</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>219</PortraitIndex>
 			<WonderSplashImage>GLOBALCNIEMA_Splash.dds</WonderSplashImage>
 			<FreeBuildingThisCity>BUILDINGCLASS_CINEMA</FreeBuildingThisCity>
 		</Row>
@@ -2554,8 +2554,8 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>220</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>19</PortraitIndex>
 		</Row>
 
 
@@ -2610,8 +2610,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<DisplayPosition>39</DisplayPosition>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-			<PortraitIndex>221</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>198</PortraitIndex>
 			<WonderSplashImage>W_LEP.dds</WonderSplashImage>
 		</Row>
 
@@ -2878,8 +2878,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>12</PortraitIndex>
-			<WonderSplashImage>Mnemosyne_Splash.dds</WonderSplashImage>
+			<PortraitIndex>11</PortraitIndex>
+			<WonderSplashImage>MARKOV.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
 

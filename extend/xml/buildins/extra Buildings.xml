@@ -248,9 +248,9 @@
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 				<ConquestProb>66</ConquestProb>
-				<PortraitIndex>27</PortraitIndex>
+				<PortraitIndex>148</PortraitIndex>
 			</Row>
 	
 			
@@ -307,9 +307,9 @@
 				<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
 				<MinAreaSize>-1</MinAreaSize>
 				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 				<ConquestProb>66</ConquestProb>
-				<PortraitIndex>0</PortraitIndex>
+				<PortraitIndex>17</PortraitIndex>
 				<FoodKept>-5</FoodKept>
 			</Row>
 			
@@ -1571,9 +1571,9 @@
 				<Defense>5000</Defense>
 				<ExtraCityHitPoints>100</ExtraCityHitPoints>
 				<HurryCostModifier>40</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>154</PortraitIndex>
+				<PortraitIndex>152</PortraitIndex>
 			</Row>
 
 
@@ -1640,8 +1640,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-				<PortraitIndex>248</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>9</PortraitIndex>
 			</Row>
 			
 			<!---金融网络-->
@@ -1659,8 +1659,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-				<PortraitIndex>250</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>11</PortraitIndex>
 			</Row>
 
 
@@ -1680,8 +1680,8 @@
 				<NukeImmune>true</NukeImmune>
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-				<PortraitIndex>249</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>10</PortraitIndex>
 			</Row>
 
 
@@ -1706,8 +1706,8 @@
 				<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 				<SpecialistCount>1</SpecialistCount>
 				<GreatPeopleRateChange>4</GreatPeopleRateChange>
-				<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
-				<PortraitIndex>253</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+				<PortraitIndex>63</PortraitIndex>
 				<ExtraDamageHeal>150</ExtraDamageHeal>
 			</Row>
 

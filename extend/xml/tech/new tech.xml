@@ -70,8 +70,8 @@
 			<GridX>0</GridX>
 			<GridY>4</GridY>
 			<Quote>TXT_KEY_TECH_HUNTING_QUOTE</Quote>
-			<PortraitIndex>195</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>207</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<AudioIntro>AS2D_TECH_HUNTING</AudioIntro>
 			<AudioIntroHeader>AS2D_TECH_HUNTING</AudioIntroHeader>
 		</Row>
@@ -88,8 +88,8 @@
 			<GridX>0</GridX>
 			<GridY>5</GridY>
 			<Quote>TXT_KEY_TECH_STONE_TOOLS_QUOTE</Quote>
-			<PortraitIndex>232</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>151</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<AudioIntro>AS2D_TECH_STONE_TOOLS</AudioIntro>
 			<AudioIntroHeader>AS2D_TECH_STONE_TOOLS</AudioIntroHeader>
 		</Row>
@@ -1531,8 +1531,8 @@
 			<GridX>15</GridX>
 			<GridY>1</GridY>
 			<Quote>TXT_KEY_TECH_JOURNALISM_QUOTE</Quote>
-			<PortraitIndex>8</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>167</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
 
 		
@@ -1634,8 +1634,8 @@
 			<GridX>16</GridX>
 			<GridY>5</GridY>
 			<Quote>TXT_KEY_TECH_REFINING_QUOTE</Quote>
-			<PortraitIndex>11</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>92</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
 
 		<Row>
@@ -1902,8 +1902,8 @@
 			<GridX>19</GridX>
 			<GridY>7</GridY>
 			<Quote>TXT_KEY_TECH_BLITZKRIEG_QUOTE</Quote>
-			<PortraitIndex>9</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>164</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
 		
 		
@@ -1918,8 +1918,8 @@
 			<GridX>20</GridX>
 			<GridY>1</GridY>
 			<Quote>TXT_KEY_TECH_MODERN_SANITATION_QUOTE</Quote>
-			<PortraitIndex>10</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>91</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
 
 		
@@ -1934,8 +1934,8 @@
 			<GridX>20</GridX>
 			<GridY>3</GridY>
 			<Quote>TXT_KEY_TECH_CORPORATION_QUOTE</Quote>
-			<PortraitIndex>246</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>172</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<AudioIntro>AS2D_TECH_CORPORATION</AudioIntro>
 			<AudioIntroHeader>AS2D_HEADING_TECH_CORPORATION</AudioIntroHeader>
 		</Row>
@@ -2591,8 +2591,8 @@
 			<GridX>27</GridX>
 			<GridY>3</GridY>
 			<Quote>TXT_KEY_TECH_MASS_QUOTE</Quote>
-			<PortraitIndex>205</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS4</IconAtlas>
+			<PortraitIndex>181</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 		</Row>
 
 

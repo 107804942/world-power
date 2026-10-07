@@ -72,7 +72,7 @@ FROM ArtDefine_UnitMemberInfos WHERE Type = 'ART_DEF_UNIT_MEMBER_GREATMERCHANT_E
 --后期医生
 ------------------------------------------------------------------------------------------------------------------------			
 INSERT INTO ArtDefine_UnitInfos (Type,	DamageStates,	Formation,		IconAtlas,		PortraitIndex)
-SELECT	'ART_DEF_UNIT_GREAT_DOCTOR_LATE',	1,			'TwoBigGuns',	'ROBOT_ICON_ATLAS4',	131;
+SELECT	'ART_DEF_UNIT_GREAT_DOCTOR_LATE',	1,			'TwoBigGuns',	'ROBOT_ICON_ATLAS3',	124;
 
 
 INSERT INTO ArtDefine_UnitInfoMemberInfos 
@@ -140,7 +140,7 @@ FROM Unit_Flavors WHERE UnitType = 'UNIT_ENGINEER';
 	
 
 INSERT INTO Specialists (Type,	Visible,	Description,		Strategy,	GreatPeopleTitle,	IconAtlas,	PortraitIndex,  GreatPeopleUnitClass,  GreatPeopleRateChange) 
-SELECT 'SPECIALIST_DOCTOR',	1,	'TXT_KEY_SPECIALIST_DOCTOR','TXT_KEY_SPECIALIST_DOCTOR_STRATEGY',	'TXT_KEY_SPECIALIST_DOCTOR_TITLE',	'ROBOT_ICON_ATLAS4',	45,'UNITCLASS_GREAT_DOCTOR',	2;
+SELECT 'SPECIALIST_DOCTOR',	1,	'TXT_KEY_SPECIALIST_DOCTOR','TXT_KEY_SPECIALIST_DOCTOR_STRATEGY',	'TXT_KEY_SPECIALIST_DOCTOR_TITLE',	'ROBOT_ICON_ATLAS3',	115,'UNITCLASS_GREAT_DOCTOR',	2;
 
 
 INSERT INTO SpecialistYields (SpecialistType,	YieldType,			Yield)
