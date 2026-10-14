@@ -186,7 +186,6 @@ end
 
 
 
-
 function maximum (a)
     local mi = 1             -- maximum index
     local m = a[mi]          -- maximum value
@@ -505,23 +504,22 @@ end
 
 
 
--- 被封锁的地块数
+-- ============================================================
+-- 被封锁的地块数（修复版：修正 pCity -> city、覆盖 i 变量、playerID 未定义的问题）
+-- ============================================================
 function GetNumBlockadedPlots(city)
-      local numBlockadedPlots = 0
-	  local n = pCity:GetNumCityPlots() - 1
-	  for i = 1, n, 1 do
-		   for i = 0, city:GetNumCityPlots() - 1, 1 do
-                  local plot = city:GetCityIndexPlot(i)
-                  if plot:IsVisibleEnemyUnit(playerID) or city:IsPlotBlockaded(plot) then
-                  numBlockadedPlots = numBlockadedPlots + 1
-              end
-           end
-	   end
+	if not city then return 0 end
+	local playerID = city:GetOwner()
+	local numBlockadedPlots = 0
+	local numPlots = city:GetNumCityPlots() - 1
+	for i = 0, numPlots, 1 do
+		local plot = city:GetCityIndexPlot(i)
+		if plot and (plot:IsVisibleEnemyUnit(playerID) or city:IsPlotBlockaded(plot)) then
+			numBlockadedPlots = numBlockadedPlots + 1
+		end
+	end
 	return numBlockadedPlots
-end	
-
-
-
+end
 
 
 
@@ -574,34 +572,39 @@ end
 
 
 
+-- ============================================================
+-- 获取光环效果（修复版：空表安全返回 0）
+-- ============================================================
 function GetBonusEffect(Unit)
-      local tUnits  ={}
-      local iTileRadius = GameDefines["GREAT_GENERAL_MAX_RANGE"]
-      for iShiftX = -iTileRadius, iTileRadius do
-	  for iShiftY = -iTileRadius, iTileRadius do
-	  local pTargetPlot = Map.PlotXYWithRangeCheck(Unit:GetX(), Unit:GetY(), iShiftX, iShiftY, iTileRadius)
-      if pTargetPlot ~= nil  then
-      unitCount = pTargetPlot:GetNumUnits()
-      if unitCount > 0 then
-      for i = 0, unitCount-1, 1 do
-      local pFoundUnit = pTargetPlot:GetUnit(i)
-      if pFoundUnit:GetOwner()==Unit:GetOwner() and pFoundUnit:GetDomainType()== Unit:GetDomainType() then
-	  if Map.PlotDistance(pFoundUnit:GetX(), pFoundUnit:GetY(), Unit:GetX(), Unit:GetY()) <= GameDefines["GREAT_GENERAL_RANGE"] + pFoundUnit:GetAuraRange() then
-	  table.insert(tUnits, {AuraEffectChange=pFoundUnit:GetAuraEffect(), Unit=pFoundUnit})
-	                    end
-	                 end
-	              end
-	           end
-	        end
-	     end
-	  end
-	  if #tUnits > 0 then
-	  table.sort(tUnits, function(x,y) return (x.AuraEffectChange > y.AuraEffectChange) end)
-	  end
-	  return  tUnits[1].AuraEffectChange 	     
+	local tUnits = {}
+	local iTileRadius = GameDefines["GREAT_GENERAL_MAX_RANGE"]
+	for iShiftX = -iTileRadius, iTileRadius do
+		for iShiftY = -iTileRadius, iTileRadius do
+			local pTargetPlot = Map.PlotXYWithRangeCheck(Unit:GetX(), Unit:GetY(), iShiftX, iShiftY, iTileRadius)
+			if pTargetPlot ~= nil then
+				local unitCount = pTargetPlot:GetNumUnits()
+				if unitCount > 0 then
+					for i = 0, unitCount - 1, 1 do
+						local pFoundUnit = pTargetPlot:GetUnit(i)
+						if pFoundUnit:GetOwner() == Unit:GetOwner()
+							and pFoundUnit:GetDomainType() == Unit:GetDomainType() then
+							if Map.PlotDistance(pFoundUnit:GetX(), pFoundUnit:GetY(), Unit:GetX(), Unit:GetY())
+								<= GameDefines["GREAT_GENERAL_RANGE"] + pFoundUnit:GetAuraRange() then
+								table.insert(tUnits, {AuraEffectChange = pFoundUnit:GetAuraEffect(), Unit = pFoundUnit})
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+	-- ★ 修复：空表时直接返回 0，避免 tUnits[1] 为 nil 导致崩溃
+	if #tUnits == 0 then
+		return 0
+	end
+	table.sort(tUnits, function(x, y) return (x.AuraEffectChange > y.AuraEffectChange) end)
+	return tUnits[1].AuraEffectChange
 end
-
-
 
 
 

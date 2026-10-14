@@ -1964,7 +1964,11 @@ SELECT 'TECH_MATTERTRANSMISSION', 'PROMOTION_ALUMINIST' ;
 
 
 
+
 ---------------------------------------------------
+-- 万国门：为早期世界奇观单位类提供额外建造上限
+---------------------------------------------------
+
 INSERT  INTO Building_UnitClassMaxInstances(BuildingType,UnitClassType,ExtraMax)
 SELECT 'BUILDING_GATE_ALL',U.Class,1  FROM Units U  
 JOIN Technologies T ON U.PrereqTech = T.Type  
@@ -1981,3 +1985,4 @@ JOIN Technologies T ON U.PrereqTech = T.Type
 JOIN Eras E ON T.Era = E.Type  
 WHERE U.Class=NEW.Type AND  U.Cost > 1 AND U.ProjectPrereq !=-1 AND E.ID < 4 ;
 END;
+

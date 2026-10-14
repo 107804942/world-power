@@ -17,7 +17,12 @@
 				<Set  IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="229"/>
 				<Where Type="BUILDING_MAYA_BALLCOURT" />
 			</Update>
-
+			
+			<Update>
+				<Set  IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="127"/>
+				<Where BuildingClass="BUILDINGCLASS_MINGING_FACTORY" />
+			</Update>
+			
 			<Update>
 				<Set  IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="201"/>
 				<Where Type="BUILDING_ARABIA_ISIAMIC_UNIVERSITY" />
@@ -1321,7 +1326,7 @@
 				<ExtraCityHitPoints>50</ExtraCityHitPoints>
 				<AirModifier>3</AirModifier>
 				<Airlift>true</Airlift>
-				<PortraitIndex>78</PortraitIndex>
+				<PortraitIndex>95</PortraitIndex>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<HurryCostModifier>50</HurryCostModifier>
 				<NeverCapture>true</NeverCapture>
@@ -1459,7 +1464,7 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>50</ConquestProb>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-				<PortraitIndex>148</PortraitIndex>
+				<PortraitIndex>184</PortraitIndex>
 			</Row>
 
 

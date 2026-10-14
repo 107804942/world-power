@@ -391,10 +391,15 @@
 	</Update>
 
 		<Update>
+			<Set  IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="45"/>
+			<Where Type="UNIT_KATYUSHA" />
+		</Update>
+		
+		<Update>
 			<Set  IconAtlas="UNIT_ATLAS_2" PortraitIndex="29"/>
 			<Where Type="UNIT_SAM_INFANTRY" />
 		</Update>
-
+		
 		<Update>
 			<Set  UnitArtInfo="ART_DEF_UNIT_SA11" />
 			<Where Class="UNITCLASS_SAM_INFANTRY" />

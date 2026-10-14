@@ -87,6 +87,11 @@ end
 -------------------------------------------------
 -- Updates banner to reflect latest city info.
 -------------------------------------------------
+
+
+
+
+
 function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 	if ( Instances[ cityBanner.playerID ] == nil or Instances[ cityBanner.playerID ][ cityBanner.cityID ] == nil ) then
 	    return;
@@ -787,39 +792,46 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		if (controls.CityProductionName) then
 			convertedKey = Locale.ConvertTextKey(cityProductionName);
 			controls.CityProductionName:SetText(convertedKey);
-			if (controls.CityBannerLeftBackground) then
-				if city:IsProductionProcess() then
-					local cityProductionProcess = city:GetProductionProcess()
-					local tooltipString = GetHelpTextForProcess(cityProductionProcess, false)
-					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
-				elseif city:IsProductionUnit() then
-					local cityProductionUnit = city:GetProductionUnit()
-					local tooltipString = GetHelpTextForUnit(cityProductionUnit)
-					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
-				elseif city:IsProductionBuilding() then
-					local cityProductionBuilding = city:GetProductionBuilding()
-					local tooltipString = GetHelpTextForBuilding(cityProductionBuilding, true, true, true, city)
-					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
-				elseif city:IsProductionProject() then
-					local cityProductionProject = city:GetProductionProject()
-					local tooltipString = GetHelpTextForProject(cityProductionProject, true, city)
-					controls.CityBannerLeftBackground:SetToolTipString(tooltipString)
-				else
-					if cityProductionName == "TXT_KEY_PRODUCTION_NO_PRODUCTION" then
-						controls.CityBannerLeftBackground:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_CITY_NOT_PRODUCING", localizedCityName ));
-					else
-						local productionTurnsLeft = city:GetProductionTurnsLeft();
-						local tooltipString;
-						if productionTurnsLeft > 99 then
-							tooltipString = Locale.ConvertTextKey("TXT_KEY_CITY_CURRENTLY_PRODUCING_99PLUS_TT", localizedCityName, cityProductionName);
-	
-						else
-							tooltipString = Locale.ConvertTextKey("TXT_KEY_CITY_CURRENTLY_PRODUCING_TT", localizedCityName, cityProductionName, productionTurnsLeft);
-						end
 
-						controls.CityBannerLeftBackground:SetToolTipString(tooltipString);
+			if (controls.CityBannerLeftBackground) then
+				-- 用闭包捕获 city 对象，避免依赖 Image 控件不支持的 GetVoid1/GetVoid2
+				local thisCity = city
+				controls.CityBannerLeftBackground:SetToolTipCallback( function()
+					if not thisCity then return "" end
+					
+					local unitProduction = thisCity:GetProductionUnit()
+					local buildingProduction = thisCity:GetProductionBuilding()
+					local projectProduction = thisCity:GetProductionProject()
+					local processProduction = thisCity:GetProductionProcess()
+					
+					if unitProduction ~= -1 then
+						local index, atlas = UI.GetUnitPortraitIcon( unitProduction, thisCity:GetOwner() )
+						local tip = GetHelpTextForUnit( unitProduction, true )
+						-- 通过 LuaEvent 触发 EUI_ItemTooltip 的 handler
+						LuaEvents.EUI_ItemTooltip.Call( tip, index, atlas, unitProduction )
+						return ""
+					elseif buildingProduction ~= -1 then
+						local building = GameInfo.Buildings[ buildingProduction ]
+						local tip = GetHelpTextForBuilding( buildingProduction, false, false, thisCity:GetNumFreeBuilding(buildingProduction) > 0, thisCity )
+						LuaEvents.EUI_ItemTooltip.Call( tip, building and building.PortraitIndex, building and building.IconAtlas, nil )
+						return ""
+					elseif projectProduction ~= -1 then
+						local project = GameInfo.Projects[ projectProduction ]
+						local tip = GetHelpTextForProject( projectProduction, true, thisCity )
+						LuaEvents.EUI_ItemTooltip.Call( tip, project and project.PortraitIndex, project and project.IconAtlas, nil )
+						return ""
+					elseif processProduction ~= -1 then
+						local process = GameInfo.Processes[ processProduction ]
+						local tip = GetHelpTextForProcess( processProduction, true )
+						LuaEvents.EUI_ItemTooltip.Call( tip, process and process.PortraitIndex, process and process.IconAtlas, nil )
+						return ""
+					else
+						local localizedCityName = Locale.ConvertTextKey( thisCity:GetNameKey() )
+						local tip = Locale.ConvertTextKey( "TXT_KEY_CITY_NOT_PRODUCING", localizedCityName )
+						LuaEvents.EUI_ItemTooltip.Call( tip, nil, nil, nil )
+						return ""
 					end
-				end	
+				end )
 			end
 		end
 

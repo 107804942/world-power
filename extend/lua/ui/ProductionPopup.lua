@@ -1559,64 +1559,79 @@ include "IconHookup"
 local g_TooltipControls = {}
 TTManager:GetTypeControlTable( "City_UnitTooltip", g_TooltipControls )
 
-	Controls.UnittipTimer3:RegisterAnimCallback( function()
-		local controls = g_TooltipControls
-		controls.Details3:SetHide( false )
-		controls.IconStack3:SetWrapWidth( 32 )
-		controls.IconStack3:CalculateSize()
-		controls.PromotionText3:SetHide( false )
-		controls.Grid3:ReprocessAnchoring()
-		controls.Grid3:DoAutoSize()
-	end)
+-- 动画回调：只负责重新布局，不再强制显隐子控件
+Controls.UnittipTimer3:RegisterAnimCallback( function()
+    local controls = g_TooltipControls
+    controls.Details3:SetHide( controls.Details3:GetText() == "" )
+    controls.PromotionStack3:CalculateSize()
+    controls.Grid3:ReprocessAnchoring()
+    controls.Grid3:DoAutoSize()
+end)
 
-local City_PromotionIconIM = StackInstanceManager( "PromotionIcon3", "Image3", g_TooltipControls.IconStack3 )
+-- 每行一个晋升（图标 + 名字）
+local g_PromotionRowIM3 = StackInstanceManager( "PromotionRow3", "Row3", g_TooltipControls.PromotionList3 )
 
 --==========================================================
 -- city Tooltips
 --==========================================================
 function ToolTipHandler( button )
+    local id = button:GetVoid2()
+    local controls = g_TooltipControls
 
-		local id = button:GetVoid2()
-		local controls = g_TooltipControls
+    local tip = GetHelpTextForUnit2(id)   -- 含 <<PROMOTION_SPLIT>>
+    local thisUnitInfo = GameInfo.Units[id]
 
-		tip = GetHelpTextForUnit2(id)
-        local thisUnitInfo = GameInfo.Units[id]
-		---local playerID = unit:GetOwner()
+    -- === 按分割符拆成 主文本 / Help 文本 ===
+    local splitMarker = "<<PROMOTION_SPLIT>>"
+    local tipUpper, tipLower = tip, ""
+    local pos = string.find( tip, splitMarker, 1, true )
+    if pos then
+        tipUpper = string.sub( tip, 1, pos - 1 )
+        tipLower = string.sub( tip, pos + #splitMarker )
+    end
+    tipUpper = tipUpper:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+    tipUpper = tipUpper:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
+    tipLower = tipLower:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+    tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
 
-		controls.Text3:SetText( tip )
-		local i = 0
-		local promotionText = {}
-		local promotionIcon
-		City_PromotionIconIM:ResetInstances()
-		
-		if not( thisUnitInfo.IsTrade ) then
-		local thisUnitType = { UnitType = thisUnitInfo.Type }
-		
+    controls.Text3:SetText( tipUpper )
+    controls.Details3:SetText( tipLower )
+    controls.Details3:SetHide( tipLower == "" )
+
+    -- === 晋升列表：每行一个「图标 + 名字」 ===
+    g_PromotionRowIM3:ResetInstances()
+
+    local count = 0
+    if not thisUnitInfo.IsTrade then
+        local thisUnitType = { UnitType = thisUnitInfo.Type }
         for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
-		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
-		if unitPromotion~=nil  then
-		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
-		    promotionIcon = City_PromotionIconIM:GetInstance()
-			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image3 )
-			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
-			    end
-			end
-		end
-		end
+            local unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
+            if unitPromotion
+                and unitPromotion.ShowInUnitPanel ~= 0
+                and unitPromotion.ShowInTooltip ~= 0
+            then
+                local instance = g_PromotionRowIM3:GetInstance( controls.PromotionList3 )
+                IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, instance.Icon3 )
+                instance.Name3:SetText( Locale.ConvertTextKey( unitPromotion.Description ) )
+                count = count + 1
+            end
+        end
+    end
 
-		---local iconIndex, iconAtlas = UI.GetUnitPortraitIcon( id, Game.GetActivePlayer())
-		---IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait3 )
-		--controls.PortraitFrame3:SetAnchor( UIManager.GetMousePos() > 300 and "L,T" or "R,T" )
-	
-		controls.Details3:SetHide( true )
-		controls.PromotionText3:SetText( table.concat( promotionText, "[NEWLINE]" ) )
-		controls.PromotionText3:SetHide( #promotionText ~= 1 )
-		controls.IconStack3:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
-		controls.IconStack3:CalculateSize()
-		controls.Grid3:ReprocessAnchoring()
-		controls.Grid3:DoAutoSize()
-		Controls.UnittipTimer3:SetToBeginning()
-        Controls.UnittipTimer3:SetPauseTime(0) 
-		Controls.UnittipTimer3:Reverse()
-		
+    if count > 0 then
+        g_PromotionRowIM3:Commit()
+        controls.PromotionStack3:SetHide( false )
+    else
+        g_PromotionRowIM3:Commit()   -- 把多余实例收回 Scrap
+        controls.PromotionStack3:SetHide( true )
+    end
+
+    -- 刷新布局
+    controls.PromotionStack3:CalculateSize()
+    controls.Grid3:ReprocessAnchoring()
+    controls.Grid3:DoAutoSize()
+
+    Controls.UnittipTimer3:SetToBeginning()
+    Controls.UnittipTimer3:SetPauseTime(0)
+    Controls.UnittipTimer3:Reverse()
 end

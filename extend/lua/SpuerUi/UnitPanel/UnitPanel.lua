@@ -5,7 +5,7 @@
 
 include( "IconSupport" );
 include( "InstanceManager" );
-
+include( "InfoTooltipInclude" )
 
 
 local function TextColor( c, s )
@@ -63,7 +63,13 @@ local g_WorkerActionPanelOpen = false;
 
 local promotionsTexture = "Promotions512.dds";
 
+--local unitPortraitSize = Controls.UnitPortrait:GetSize().x;
 local unitPortraitSize = Controls.UnitPortrait:GetSize().x;
+if not unitPortraitSize or unitPortraitSize == 0 then
+	unitPortraitSize = 256;
+end
+
+
 local actionIconSize = 64;
 if OptionsManager.GetSmallUIAssets() and not UI.IsTouchScreenEnabled() then
 	actionIconSize = 45;
@@ -663,7 +669,9 @@ local nullOffset = Vector2( 0, 0 );
 --------------------------------------------------------------------------------
 -- Refresh unit portrait and name
 --------------------------------------------------------------------------------
-function UpdateUnitPortrait(  unit )
+function UpdateUnitPortrait( unit )
+	if not unit then return end
+	
 	local name;
 	if(unit:IsGreatPerson()) then
 		name = unit:GetNameNoDesc();
@@ -675,8 +683,9 @@ function UpdateUnitPortrait(  unit )
 	end
 	
 	name = Locale.ToUpper(name);
-	------------------------------------------------------新增------------------------------------------------------------------------------------------
-	if  unit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"] 
+	
+	-- 精英单位/特殊单位名字前缀（保留你原有的逻辑）
+	if unit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"] 
 		and unit:GetUnitType() ~= GameInfoTypes["UNIT_MECH"]
 		and unit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]
 		and unit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]
@@ -688,131 +697,82 @@ function UpdateUnitPortrait(  unit )
 		and unit:GetUnitType() ~= GameInfoTypes["UNIT_NAVAL_MONSTER"]
 		and unit:GetUnitType() ~= GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
 		and unit:GetUnitType() ~= GameInfoTypes["UNIT_PARTICLE_CANNON"] then
-	
-
-	--if not unit:IsHasPromotion(GameInfoTypes["PROMOTION_ELITE_UNIT"]) then --新增
-	if  unit:GetMaxHitPoints() > 1000  then
-		name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  900 then
-		name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  800 then
-		name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  700  then
-		name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  600  then
-		name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  500  then
-		name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  400  then
-		name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  300  then
-		name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  200  then
-		name = "[ICON_PROMOTION_GROUP_EXTRA]" .. name;
-	elseif unit:GetMaxHitPoints() >  100  then
-		name = "[ICON_PROMOTION_ELITE_EXTRA]" .. name;
-	    end
-
-end
-
-
-	if     unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then --新增
-	name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name.. "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]";
+		if unit:GetMaxHitPoints() > 1000 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 900 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 800 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 700 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 600 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 500 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 400 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 300 then
+			name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 200 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 100 then
+			name = "[ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		end
 	end
-	----------------------------------------------------------------------------------------------------------------------------------end
-	if     unit:IsHasPromotion(GameInfoTypes["PROMOTION_CAN_RANGE_ATTACK"]) then --新增
-	name = name .. "[ICON_RANGE_STRENGTH]";
+
+	if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
+		name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name.. "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]";
+	end
+	if unit:IsHasPromotion(GameInfoTypes["PROMOTION_CAN_RANGE_ATTACK"]) then
+		name = name .. "[ICON_RANGE_STRENGTH]";
 	end
 	
-	----------------------------新增
-    --local name = unit:GetNameKey();
-    local convertedKey = Locale.ConvertTextKey(name);
-    convertedKey = Locale.ToUpper(convertedKey);
-
-    Controls.UnitName:SetText(convertedKey);    
-    Controls.UnitName:SetFontByName("TwCenMT24");   
-    
-    local name_length = Controls.UnitName:GetSizeVal();
-    local box_length = Controls.UnitNameButton:GetSizeVal();
-    
-    if (name_length > (box_length - 50)) then
-	    Controls.UnitName:SetFontByName("TwCenMT20");   
-	end
+	local convertedKey = Locale.ConvertTextKey(name);
+	convertedKey = Locale.ToUpper(convertedKey);
+	Controls.UnitName:SetText(convertedKey);    
+	Controls.UnitName:SetFontByName("TwCenMT24");   
 	
+	local name_length = Controls.UnitName:GetSizeVal();
+	local box_length = Controls.UnitNameButton:GetSizeVal();
+	if (name_length > (box_length - 50)) then
+		Controls.UnitName:SetFontByName("TwCenMT20");   
+	end
 	name_length = Controls.UnitName:GetSizeVal();
-	
 	if(name_length > (box_length - 50)) then
 		Controls.UnitName:SetFontByName("TwCenMT14");
 	end
-    
-    -- Tool tip
-
-
-	 ----------------------------------点击单位左下角鼠标浮动显示------------------------------
-	 
-     local strToolTip = Locale.ConvertTextKey("TXT_KEY_CURRENTLY_SELECTED_UNIT");
-    
-    if  unit:IsCombatUnit() or unit:GetDomainType() == DomainTypes.DOMAIN_AIR then
+	
+	-- Tool tip（XP 显示）
+	local strToolTip = Locale.ConvertTextKey("TXT_KEY_CURRENTLY_SELECTED_UNIT");
+	if unit:IsCombatUnit() or unit:GetDomainType() == DomainTypes.DOMAIN_AIR then
 		local iExperience = unit:GetExperience();
-	    
 		local iLevel = unit:GetLevel();
 		local iExperienceNeeded = unit:ExperienceNeeded();
 		local xpString = Locale.ConvertTextKey("TXT_KEY_UNIT_EXPERIENCE_INFO", iLevel, iExperience, iExperienceNeeded);
 		Controls.XPMeter:SetToolTipString( xpString );
 		Controls.XPMeter:SetPercent( iExperience / iExperienceNeeded );
-			
-		if (iExperience > 0) then
-			strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. xpString;
-		end
 		Controls.XPFrame:SetHide( false );
 	else
- 		Controls.XPFrame:SetHide( true );
-   end
+		Controls.XPFrame:SetHide( true );
+	end
 
-
-
-	 local UnitToolTipCall = LuaEvents.UnitToolTip.Call
-	Controls.UnitPortraitButton:SetToolTipCallback( function( control )
-    control:SetToolTipCallback( function() return UnitToolTipCall( UI.GetHeadSelectedUnit(), Locale.ConvertTextKey("TXT_KEY_CURRENTLY_SELECTED_UNIT"), "----------------" ) end )
-	control:SetToolTipType( "EUI_UnitTooltip" )
-	end)
-    
-    local thisUnitInfo = GameInfo.Units[unit:GetUnitType()];
-	--local flagOffset, flagAtlas = UI.GetUnitFlagIcon(unit);	    
-    --local textureOffset, textureAtlas = IconLookup( flagOffset, 32, flagAtlas );
-    --Controls.UnitIcon:SetTexture(textureAtlas);
-    --Controls.UnitIconShadow:SetTexture(textureAtlas);
-    --Controls.UnitIcon:SetTextureOffset(textureOffset);
-    --Controls.UnitIconShadow:SetTextureOffset(textureOffset);
-    
-    local pPlayer = Players[ unit:GetOwner() ];
-    --if (pPlayer ~= nil) then
-		--local iconColor, flagColor = pPlayer:GetPlayerColors();
-	        
-		--if( pPlayer:IsMinorCiv() ) then
-			--flagColor, iconColor = flagColor, iconColor;
-		--end
-
-		--Controls.UnitIcon:SetColor( iconColor );
-		--Controls.UnitIconBackground:SetColor( flagColor );
-	--end    
-    
+	-- 立绘（先清空，再用 IconLookup 处理像素偏移和纹理名）
+	Controls.UnitPortrait:SetTexture( "" );
 	local portraitOffset, portraitAtlas = UI.GetUnitPortraitIcon(unit);
-    textureOffset, textureAtlas = IconLookup( portraitOffset, unitPortraitSize, portraitAtlas );
-    if textureOffset == nil then
+	
+	local textureOffset, textureAtlas = IconLookup( portraitOffset, unitPortraitSize, portraitAtlas );
+	if textureOffset == nil then
 		textureOffset = nullOffset;
 		textureAtlas = defaultErrorTextureSheet;
-    end
-    Controls.UnitPortrait:SetTexture(textureAtlas);
-    Controls.UnitPortrait:SetTextureOffset(textureOffset);
-    
-    --These controls are potentially hidden if the previous selection was a city.
-	--Controls.UnitTypeFrame:SetHide(false);
+	end
+	Controls.UnitPortrait:SetTexture( textureAtlas );
+	Controls.UnitPortrait:SetTextureOffset( textureOffset );
+
 	Controls.CycleLeft:SetHide(false);
 	Controls.CycleRight:SetHide(false);
-    --Controls.UnitMovementBox:SetHide(false);
-  
 end
+
+
 
 
 function UpdateCityPortrait(city)
@@ -840,13 +800,12 @@ function UpdateCityPortrait(city)
     
 	Controls.UnitPortrait:SetToolTipString(nil);
     
-    local textureOffset, textureAtlas = IconLookup( 0, unitPortraitSize, "CITY_ATLAS" );
-    if textureOffset == nil then
-		textureOffset = nullOffset;
-		textureAtlas = defaultErrorTextureSheet;
-    end
-    Controls.UnitPortrait:SetTexture(textureAtlas);
-    Controls.UnitPortrait:SetTextureOffset(textureOffset);
+Controls.UnitPortrait:SetTexture( "" );
+	local ok = IconHookup( 0, unitPortraitSize, "CITY_ATLAS", Controls.UnitPortrait );
+	if not ok then
+		Controls.UnitPortrait:SetTexture( defaultErrorTextureSheet );
+		Controls.UnitPortrait:SetTextureOffsetVal( 0, 0 );
+	end
     
         
     --Hide various aspects of Unit Panel since they don't apply to the city.
@@ -1381,6 +1340,18 @@ function OnUnitRClicked()
 	end
 end
 Controls.UnitPortraitButton:RegisterCallback( Mouse.eRClick, OnUnitRClicked );
+--==========================================================
+-- 单位头像的 tooltip：走 EUI_UnitTooltip 模板
+-- 只设置一次，避免每次切换单位重复设置导致 C stack overflow
+--==========================================================
+Controls.UnitPortraitButton:SetToolTipType( "EUI_UnitTooltip" )
+Controls.UnitPortraitButton:SetToolTipCallback( function()
+	local u = UI.GetHeadSelectedUnit()
+	if u then
+		LuaEvents.EUI_UnitTooltip.Call( u )
+	end
+	return ""
+end )
 
 --------------------------------------------------------------------------------
 -- InfoPane is now dirty.
@@ -1434,14 +1405,15 @@ function OnInfoPaneDirty()
 		-- Attempt to show currently selected city.
 		local city = UI.GetHeadSelectedCity();
 		if(city ~= nil) then
-	
 			UpdateCityPortrait(city);
-				
 		    ContextPtr:SetHide( false );
     	else
+			-- 没有选中任何单位或城市，清空立绘和名字，避免残留
+			Controls.UnitPortrait:SetTexture( "" );
+			Controls.UnitPortrait:SetTextureOffsetVal( 0, 0 );
+			Controls.UnitName:SetText( "" );
 		    ContextPtr:SetHide( true );
     	end
-    
     end
     
 end

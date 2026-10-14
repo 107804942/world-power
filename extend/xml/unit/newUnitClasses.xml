@@ -250,17 +250,7 @@
 			<UnitType/>
 		</Row>
 
-		<Row>
-			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALFIGHTER04P</UnitClassType>
-			<UnitType/>
-		</Row>
-		<Row>
-			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALFIGHTER04P</UnitClassType>
-			<UnitType/>
-		</Row>
-		
+	
 		
 
 		<Row>

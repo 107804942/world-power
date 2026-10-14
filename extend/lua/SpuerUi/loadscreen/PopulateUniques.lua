@@ -223,57 +223,96 @@ PopulateUniquesForGameLoad = populateUniques;
 local g_TooltipControls5 = {}
 TTManager:GetTypeControlTable( "City_UnitTooltip5", g_TooltipControls5 )
 
-	Controls.UnittipTimer5:RegisterAnimCallback( function()
-		local controls = g_TooltipControls5
-		controls.Details5:SetHide( false )
-		controls.IconStack5:SetWrapWidth( 32 )
-		controls.IconStack5:CalculateSize()
-		controls.PromotionText5:SetHide( false )
-		controls.Grid5:ReprocessAnchoring()
-		controls.Grid5:DoAutoSize()
-	end)
+-- 动画回调：只做重新布局，不再强制显隐子控件
+Controls.UnittipTimer5:RegisterAnimCallback( function()
+    local controls = g_TooltipControls5
+    controls.Details5:SetHide( controls.Details5:GetText() == "" )
+    controls.PromotionStack5:CalculateSize()
+    controls.Grid5:ReprocessAnchoring()
+    controls.Grid5:DoAutoSize()
+end)
 
-local City_PromotionIconIM5 = StackInstanceManager( "PromotionIcon5", "Image5", g_TooltipControls5.IconStack5 )
-
+-- 每行一个晋升（图标 + 名字）
+local g_PromotionRowIM5 = StackInstanceManager( "PromotionRow5", "Row5", g_TooltipControls5.PromotionList5 )
 --==========================================================
 -- city Tooltips
 --==========================================================
 function ToolTipHandler( button )
+--- print( "ToolTipHandler called, id=" .. tostring(button:GetVoid2()) )
+    local id = button:GetVoid2()
+    if not id then return end
 
-		local id = button:GetVoid2()
-		local controls = g_TooltipControls5
+ print( "GetHelpTextForUnit type = " .. type(GetHelpTextForUnit) )
+    print( "GetHelpTextForUnit addr = " .. tostring(GetHelpTextForUnit) )
 
-		tip = GetHelpTextForUnit2(id)
-        local thisUnitInfo = GameInfo.Units[id]
-		---local playerID = unit:GetOwner()
 
-		controls.Text5:SetText( tip )
-		local i = 0
-		local promotionText = {}
-		local promotionIcon
-		City_PromotionIconIM5:ResetInstances()
-		
-		local thisUnitType = { UnitType = thisUnitInfo.Type }
-		
-       for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
-		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
-		if unitPromotion~=nil  then
-		if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
-		    promotionIcon = City_PromotionIconIM5:GetInstance()
-			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image5 )
-			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
-			    end
-		    end
-		end
+    -- 预加载界面（文明选择、读取存档）永远走 City_UnitTooltip5
+    -- 不再判断 isInGame，避免误走 EUI_ItemTooltip 的控件
+    local controls = g_TooltipControls5
+    local tip = GetHelpTextForUnit( id, true )
 
-		controls.Details5:SetHide( true )
-		controls.PromotionText5:SetText( table.concat( promotionText, "[NEWLINE]" ) )
-		controls.PromotionText5:SetHide( #promotionText ~= 1 )
-		controls.IconStack5:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
-		controls.IconStack5:CalculateSize()
-		controls.Grid5:ReprocessAnchoring()
-		controls.Grid5:DoAutoSize()
-		Controls.UnittipTimer5:SetToBeginning()
-        Controls.UnittipTimer5:SetPauseTime(0) 
-		Controls.UnittipTimer5:Reverse()		
+    -- 按 <<PROMOTION_SPLIT>> 拆分
+    local splitMarker = "<<PROMOTION_SPLIT>>"
+    local tipUpper, tipLower = tip, ""
+    local pos = string.find( tip, splitMarker, 1, true )
+    if pos then
+        tipUpper = string.sub( tip, 1, pos - 1 )
+        tipLower = string.sub( tip, pos + #splitMarker )
+    end
+    tipUpper = tipUpper:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+    tipUpper = tipUpper:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
+    tipLower = tipLower:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+    tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
+
+ print( "tipUpper=[" .. tipUpper .. "]" )
+    print( "tipLower=[" .. tipLower .. "]" )
+
+    controls.Text5:SetText( tipUpper )
+
+    -- 晋升列表：每行一个「图标 + 名字」
+    g_PromotionRowIM5:ResetInstances()
+    local count = 0
+    local thisUnitInfo = GameInfo.Units[id]
+    if thisUnitInfo then
+        -- 用单位类型判断贸易单位，避免访问 GameInfoCache 里不存在的 IsTrade 字段
+        local unitType = thisUnitInfo.Type
+        local isTrade = ( unitType == "UNIT_CARAVAN" or unitType == "UNIT_CARGO_SHIP" )
+        if not isTrade then
+            local thisUnitType = { UnitType = unitType }
+            for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
+                local unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
+                if unitPromotion
+                    and unitPromotion.ShowInUnitPanel ~= 0
+                    and unitPromotion.ShowInTooltip ~= 0
+                then
+                    local instance = g_PromotionRowIM5:GetInstance( controls.PromotionList5 )
+                    IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, instance.Icon5 )
+                    instance.Name5:SetText( Locale.ConvertTextKey( unitPromotion.Description ) )
+                    count = count + 1
+                end
+            end
+        end
+    end
+
+    if count > 0 then
+        g_PromotionRowIM5:Commit()
+        controls.PromotionStack5:SetHide( false )
+    else
+        g_PromotionRowIM5:Commit()
+        controls.PromotionStack5:SetHide( true )
+    end
+
+    -- Help 文本
+    controls.Details5:SetText( tipLower )
+    controls.Details5:SetHide( tipLower == "" )
+
+    -- 刷新布局
+    controls.PromotionStack5:CalculateSize()
+    controls.Grid5:ReprocessAnchoring()
+    controls.Grid5:DoAutoSize()
+
+    -- 动画
+    Controls.UnittipTimer5:SetToBeginning()
+    Controls.UnittipTimer5:SetPauseTime(0)
+    Controls.UnittipTimer5:Reverse()
 end

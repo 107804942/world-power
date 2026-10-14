@@ -23,7 +23,8 @@
 			</Button>
 			<!-- CityBannerBackground -->
 			<Image Anchor="C,C" Offset="0,0" TextureOffset="0,0" Size="111,32" Texture="Assets/UI/Art/Icons/CityBannerBackground.dds" ID="CityBannerBackground">
-				<Image Anchor="R,C" AnchorSide="O,I" Color="PlayerColor2,180" Size="32,32" Texture="Assets/UI/Art/Icons/CityBannerRightBackground.dds" ID="CityBannerLeftBackground" ToolTip="">
+				
+<Image Anchor="R,C" AnchorSide="O,I" Color="PlayerColor2,180" Size="32,32" Texture="Assets/UI/Art/Icons/CityBannerRightBackground.dds" ID="CityBannerLeftBackground" ToolTipType="EUI_ItemTooltip" ToolTip="">
 					<Image Anchor="C,C" Size="32,32" Texture="Assets/UI/Art/Icons/CityBannerRightBackgroundHL.dds" Hidden="0"/>
 					<Button NoStateChange="1" Anchor="L,C" Size="48,64" Texture="Assets/UI/Art/Icons/CityBannerProductionBackground.dds" Hidden="0" ID="CityBannerProductionButton"/>
 					<Image NoStateChange="1" Anchor="C,C" Offset="0,0" Size="45,45" Texture="Assets/UI/Art/Icons/CityBannerProductionImage.dds" Hidden="0" ID="CityBannerProductionImage"/>

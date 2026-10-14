@@ -1,12 +1,12 @@
 --==========================================================
--- Written by bc1 using Notepad++
+-- EUI tooltip server
 -- Include for EUI context
 --==========================================================
 
 print( "Loading EUI tooltip server..." )
 
-local UserInterfaceSettings = UserInterfaceSettings -- global defined by EUI_context
-local GameInfo = GameInfoCache -- warning! booleans are true, not 1, and use iterator ONLY with table field conditions, NOT string SQL query
+local UserInterfaceSettings = UserInterfaceSettings
+local GameInfo = GameInfoCache
 
 local IsCiv5 = InStrategicView ~= nil
 local IsCivBE = not IsCiv5
@@ -20,30 +20,23 @@ end
 local GreatPeopleIcons = GreatPeopleIcons
 
 include "StackInstanceManager"
-
 include "IconHookup"
 local IconHookup = IconHookup
 local CivIconHookup = CivIconHookup
-
 include "ScanGP"
 local ScanGP = ScanGP
-
 include "ShortUnitTip"
 local ShortUnitTip = ShortUnitTip
-
 include "GetUnitBuildProgressData"
 local GetUnitBuildProgressData = GetUnitBuildProgressData
-
 include "ScratchDeal"
 local ScratchDeal = ScratchDeal
 local PopScratchDeal = PopScratchDeal
 local PushScratchDeal = PushScratchDeal
-
 include "CityStateStatusHelper"
 local GetAllyToolTip = GetAllyToolTip
 local GetActiveQuestToolTip = GetActiveQuestToolTip
 local GetCityStateStatusToolTip = GetCityStateStatusToolTip
-
 include "InfoTooltipInclude"
 local GetHelpTextForUnit = GetHelpTextForUnit
 local GetHelpTextForBuilding = GetHelpTextForBuilding
@@ -59,11 +52,8 @@ local GetFaithTooltip = GetFaithTooltip
 local GetReligionTooltip = GetReligionTooltip
 local GetTourismTooltip = GetTourismTooltip
 local GetMoodInfo = GetMoodInfo
-
-
 include "TechHelpInclude"
 local GetHelpTextForTech = GetHelpTextForTech
-
 include "ShowProgress"
 local ShowProgressToolTip = ShowProgressToolTip
 
@@ -78,7 +68,6 @@ local ceil = math.ceil
 local floor = math.floor
 local min = math.min
 local max = math.max
-local modf = math.modf
 local insert = table.insert
 local concat = table.concat
 local format = string.format
@@ -129,8 +118,6 @@ local g_scienceTextColor = IsCiv5 and "[COLOR:33:190:247:255]" or "[COLOR_MENU_B
 local g_currencyIcon = IsCiv5 and "[ICON_GOLD]" or "[ICON_ENERGY]"
 local g_currencyString = IsCiv5 and "GOLD" or "ENERGY"
 local g_yieldCurrency = IsCiv5 and YieldTypes.YIELD_GOLD or YieldTypes.YIELD_ENERGY
---local g_maintenanceCurrency = IsCiv5 and "GoldMaintenance" or "EnergyMaintenance"
---local g_happinessIcon = IsCiv5 and "[ICON_HAPPY]" or "[ICON_HEALTH]"
 local g_happinessString = IsCiv5 and "HAPPINESS" or "HEALTH"
 
 local g_UnitTooltipControls = {}
@@ -151,59 +138,55 @@ TTManager:GetTypeControlTable( "EUI_CityGrowthTooltip", g_CityGrowthTooltipContr
 local g_TechProgressToolTipControls = {}
 TTManager:GetTypeControlTable( "EUI_TopPanelProgressTooltip", g_TechProgressToolTipControls )
 
-local g_isCityStateLeaders, g_isBasicHelp, g_isScienceEnabled, g_isReligionEnabled, g_isHappinessEnabled, g_isPoliciesEnabled, g_isHealthEnabled, g_isEspionageDisabled, g_isAlwaysWar, g_isOneCityChallenge
-
-local g_UnitTooltipTimer = Controls.UnitTooltipTimer
-
-
-
 local g_ItemTooltipControls = {}
 TTManager:GetTypeControlTable( "EUI_ItemTooltip", g_ItemTooltipControls )
 
-local g_PromotionIconIM2 = StackInstanceManager( "PromotionIcon2", "Image2", g_ItemTooltipControls.IconStack2 )
+--local g_PromotionIconIM2 = StackInstanceManager( "PromotionIcon2", "Image2", g_ItemTooltipControls.IconStack2 )
+
+local g_isCityStateLeaders, g_isBasicHelp, g_isScienceEnabled, g_isReligionEnabled
+local g_isHappinessEnabled, g_isPoliciesEnabled, g_isHealthEnabled, g_isEspionageDisabled
+local g_isAlwaysWar, g_isOneCityChallenge
+
+local g_UnitTooltipTimer = Controls.UnitTooltipTimer
 
 do
 	g_UnitTooltipTimer:RegisterAnimCallback( function()
-	    local controls = g_UnitTooltipControls
+		local controls = g_UnitTooltipControls
 		controls.PromotionText:SetHide( false )
 		controls.IconStack:SetWrapWidth( 32 )
 		controls.IconStack:CalculateSize()
 		controls.Box:DoAutoSize()
 	end)
 
-
------–¬‘ˆ
-function IsUsingWP()
-	local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
-	for _, mod in pairs(Modding.GetActivatedMods()) do
-		if (mod.ID == WPID) then
-			return true
+	function IsUsingWP()
+		local WPID = "41450919-c52c-406f-8752-5ea34be32b2d"
+		for _, mod in pairs(Modding.GetActivatedMods()) do
+			if (mod.ID == WPID) then
+				return true
+			end
 		end
+		return false
 	end
-	return false
-end
-local WpModActive = IsUsingWP()
+	local WpModActive = IsUsingWP()
 
-local GetTooltip2Seconds = OptionsManager.GetTooltip2Seconds
-local function UpdateOptions()
+	local GetTooltip2Seconds = OptionsManager.GetTooltip2Seconds
+	local function UpdateOptions()
 		g_isScienceEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_SCIENCE)
 		g_isPoliciesEnabled = not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_POLICIES)
 		g_isHappinessEnabled = IsCiv5 and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_HAPPINESS)
 		g_isReligionEnabled = IsCiv5notVanilla and not Game.IsOption(GameOptionTypes.GAMEOPTION_NO_RELIGION)
-		g_isHealthEnabled = WpModActive  ---–¬‘ˆ
+		g_isHealthEnabled = WpModActive
 		g_isEspionageDisabled = Game.IsOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)
 		g_isAlwaysWar = Game.IsOption( GameOptionTypes.GAMEOPTION_ALWAYS_WAR )
-		g_isOneCityChallenge = Game.IsOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+		g_isOneCityChallenge = Game.IsOption( GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE )
 		g_isBasicHelp = IsCivBE or not OptionsManager.IsNoBasicHelp()
 		g_UnitTooltipTimer:SetToBeginning()
 		g_UnitTooltipTimer:SetPauseTime( GetTooltip2Seconds() / 100 )
 		g_isCityStateLeaders = UserInterfaceSettings.CityStateLeaders ~= 0
-end
+	end
 	Events.GameOptionsChanged.Add( UpdateOptions )
 	UpdateOptions()
 end
-
-
 
 function cleanupTable( t )
 	t[-1] = nil
@@ -241,13 +224,10 @@ local g_cityFocusTooltips = cleanupTable{
 }
 
 local g_activityMissions = cleanupTable{
-	--[ActivityTypes.ACTIVITY_AWAKE or -1] = nil,
-	[ActivityTypes.ACTIVITY_HOLD or -1] = false, --GameInfo.Missions.MISSION_SKIP, -- only when moves left > 0
-	--[ActivityTypes.ACTIVITY_SLEEP or -1] = GameInfo.Missions.MISSION_SLEEP, -- can be sleep or fortify
+	[ActivityTypes.ACTIVITY_HOLD or -1] = false,
 	[ActivityTypes.ACTIVITY_HEAL or -1] = GameInfo.Missions.MISSION_HEAL,
 	[ActivityTypes.ACTIVITY_SENTRY or -1] = GameInfo.Missions.MISSION_ALERT,
 	[ActivityTypes.ACTIVITY_INTERCEPT or -1] = GameInfo.Missions.MISSION_AIRPATROL,
-	--[ActivityTypes.ACTIVITY_MISSION or -1] = GameInfo.Missions.MISSION_MOVE_TO,
 }
 
 local g_maximumAcquirePlotArea = (GameDefines.MAXIMUM_ACQUIRE_PLOT_DISTANCE+1) * GameDefines.MAXIMUM_ACQUIRE_PLOT_DISTANCE * 3
@@ -264,19 +244,15 @@ if Map.GetPlot(0,0).GetCityPurchaseID then
 			repeat
 				for i = m, n do
 					local plot = city:GetCityIndexPlot( i )
-					if plot	and plot:GetOwner() == cityOwnerID and plot:GetCityPurchaseID() == cityID then
+					if plot and plot:GetOwner() == cityOwnerID and plot:GetCityPurchaseID() == cityID then
 						m = i+1
 						return plot
 					end
 				end
-				-- if no owned plots were found in previous ring then we're done
-				if m <= n-p+1 then
-					return
-				end
-				-- plots found, search next ring
-				m = n + 1	--first plot of next ring
-				p = p + 6	--perimeter of next ring
-				n = n + p	--last plot of next ring
+				if m <= n-p+1 then return end
+				m = n + 1
+				p = p + 6
+				n = n + p
 			until false
 		end
 	end
@@ -287,7 +263,7 @@ else
 			while i <= g_maximumAcquirePlotArea do
 				local plot = city:GetCityIndexPlot( i )
 				i = i+1
-				if plot	and plot:GetWorkingCity() == city then
+				if plot and plot:GetWorkingCity() == city then
 					return plot
 				end
 			end
@@ -298,15 +274,6 @@ end
 local function Colorize( x )
 	if x > 0 then
 		return "[COLOR_POSITIVE_TEXT]" .. x .. "[ENDCOLOR]"
-	elseif x < 0 then
-		return "[COLOR_WARNING_TEXT]" .. x .. "[ENDCOLOR]"
-	else
-		return "0"
-	end
-end
-local function ColorizeSigned( x )
-	if x > 0 then
-		return "[COLOR_POSITIVE_TEXT]+" .. x .. "[ENDCOLOR]"
 	elseif x < 0 then
 		return "[COLOR_WARNING_TEXT]" .. x .. "[ENDCOLOR]"
 	else
@@ -350,25 +317,11 @@ local function GetItemPortraitIcon( GameInfoItems, itemID )
 	end
 end
 
-local function UnitColor( s )
-	return "[COLOR_UNIT_TEXT]"..s.."[ENDCOLOR]"
-end
-
-local function BuildingColor( s )
-	return "[COLOR_YIELD_FOOD]"..s.."[ENDCOLOR]"
-end
-
-local function PolicyColor( s )
-	return "[COLOR_MAGENTA]"..s.."[ENDCOLOR]"
-end
-
-local function TechColor( s )
-	return "[COLOR_CYAN]"..s.."[ENDCOLOR]"
-end
-
-local function ReligionColor( s )
-	return "[COLOR_WHITE]"..s.."[ENDCOLOR]"
-end
+local function UnitColor( s ) return "[COLOR_UNIT_TEXT]"..s.."[ENDCOLOR]" end
+local function BuildingColor( s ) return "[COLOR_YIELD_FOOD]"..s.."[ENDCOLOR]" end
+local function PolicyColor( s ) return "[COLOR_MAGENTA]"..s.."[ENDCOLOR]" end
+local function TechColor( s ) return "[COLOR_CYAN]"..s.."[ENDCOLOR]" end
+local function ReligionColor( s ) return "[COLOR_WHITE]"..s.."[ENDCOLOR]" end
 
 local function TooltipSelect( tooltipTable, control, ... )
 	local tooltip = tooltipTable[ control:GetID() ]
@@ -377,20 +330,132 @@ local function TooltipSelect( tooltipTable, control, ... )
 	end
 end
 
+--==========================================================
+-- Áªü‰∏ÄÁöÑÁâ©ÂìÅÊèêÁ§∫ (ÂêàÂπ∂ ShowTextToolTipAndPicture / ShowTextToolTipAndPicture2)
+-- tip:       ‰∏ªÊñáÊú¨ (ÊîØÊåÅ [NEWLINE] ÂØåÊñáÊú¨)
+-- index:     ‰∏ªÂõæ portrait Á¥¢Âºï
+-- atlas:     ‰∏ªÂõæ atlas ÂêçÁß∞
+-- unitID:    ÂèØÈÄâÔºõÊèê‰æõÊó∂Â°´ÂÖÖÂÖçË¥πÊôãÂçáÂõæÊ†á‰∏éÊñáÂ≠óÔºåÂπ∂Ëß¶Âèë UnitTooltipTimer2 Âä®Áîª
+--==========================================================
+include "StackInstanceManager"
+local g_PromotionRowIM = StackInstanceManager( "PromotionRow", "Row", g_ItemTooltipControls.PromotionList2 )
 
-local function ShowTextToolTipAndPicture( tip, index, altlas )
+function ShowItemTooltip( tip, index, atlas, unitID )
 	local controls = g_ItemTooltipControls
 
-	g_PromotionIconIM2:ResetInstances()
-	controls.PromotionText2:SetHide(true)
-	controls.Text2:SetText( tip )
-	controls.PortraitFrame2:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait2 ) ) )
+	-- Èò≤Ê≠¢ atlas ÊòØÊï∞Â≠óÔºà0/1ÔºâÔºåÈÅøÂÖç IconHookup Êä•Èîô
+	if type(atlas) ~= "string" then
+		atlas = nil
+	end
+
+	-- === Á¨¨‰∏ÄÊ≠•ÔºöÊåâÂç†‰ΩçÁ¨¶ÂàáÂàÜ tip ===
+	local splitMarker = "<<PROMOTION_SPLIT>>"
+	local tipUpper, tipLower = tip, ""
+	local pos = string.find( tip, splitMarker, 1, true )
+	if pos then
+		tipUpper = string.sub( tip, 1, pos - 1 )
+		tipLower = string.sub( tip, pos + #splitMarker )
+		tipUpper = tipUpper:gsub( "%[NEWLINE%]+$", "" )
+		tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" )
+	else
+		tipUpper = tip
+		tipLower = ""
+	end
+
+	-- Ê∏ÖÁêÜÂ§ö‰ΩôÊç¢Ë°å
+	tipUpper = tipUpper:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+	tipUpper = tipUpper:gsub( "^%[NEWLINE%]+", "" )
+	tipUpper = tipUpper:gsub( "%[NEWLINE%]+$", "" )
+	tipLower = tipLower:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+	tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" )
+	tipLower = tipLower:gsub( "%[NEWLINE%]+$", "" )
+
+	-- === ÂÖ≥ÈîÆ‰øÆÂ§çÔºöÊää tipLower ËµãÁªô Text3 ===
+	controls.Text2:SetText( tipUpper )
+	controls.Text3:SetText( tipLower )
+
+	-- ‰∏ªÂõæ
+                 controls.PortraitFrame2:SetHide( not ( atlas and IconHookup( index, 256, atlas, controls.Portrait2 ) ) )
 	controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,C" or "R,C" )
+	-- Ê∞∏ËøúÈöêËóèÁ´ãÁªòÔºàÈÅøÂÖçÊòæÁ§∫ÈªëËâ≤ÂúÜÂΩ¢Ôºâ
+	--controls.PortraitFrame2:SetHide( true )
+
+	-- === ÊôãÂçáË°å ===
+	g_PromotionRowIM:ResetInstances()
+	local promotionCount = 0
+
+	if unitID then
+		local unit = GameInfo.Units[ unitID ]
+		if unit then
+			local thisUnitType = { UnitType = unit.Type }
+			for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
+				local unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
+				if unitPromotion and unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
+					local instance = g_PromotionRowIM:GetInstance( controls.PromotionList2 )
+					IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, instance.Icon )
+					instance.Name:SetText( Locale.ConvertTextKey(unitPromotion.Description))
+					promotionCount = promotionCount + 1
+				end
+			end
+		end
+	end
+
+	-- === ÊòæÁ§∫/ÈöêËóèÊôãÂçáÂå∫ ===
+	local showPromotions = unitID and promotionCount > 0
+	if showPromotions then
+		--controls.PromotionTitle2:SetHide( false )
+		controls.PromotionStack2:SetHide( false )
+		g_PromotionRowIM:Commit()
+	else
+		--controls.PromotionTitle2:SetHide( true )
+		controls.PromotionStack2:SetHide( true )
+	end
+
+	-- === Âà∑Êñ∞Â∏ÉÂ±Ä ===
+	controls.TextStack:CalculateSize()
 	controls.Box:ReprocessAnchoring()
 	controls.Box:DoAutoSize()
+
+
+---print( "PromotionList2 H=" .. tostring(controls.PromotionList2:GetSizeY()) )
+--print( "PromotionStack2 H=" .. tostring(controls.PromotionStack2:GetSizeY()) )
+--print( "Text2 H=" .. tostring(controls.Text2:GetSizeY()) )
+---print( "Text3 H=" .. tostring(controls.Text3:GetSizeY()) )
+--print( "TextStack H=" .. tostring(controls.TextStack:GetSizeY()) )
+
+
+	-- Âä®Áîª
+	if showPromotions then
+		Controls.UnitTooltipTimer2:SetToBeginning()
+		Controls.UnitTooltipTimer2:SetPauseTime(0)
+		Controls.UnitTooltipTimer2:Reverse()
+	end
+end
+
+--==========================================================
+-- EUI_ItemTooltip Á±ªÂûãÁöÑ tooltip handler
+-- ÂºïÊìéÈÄöËøá LuaEvents.EUI_ItemTooltip.Call(...) Ë∞ÉÁî®ÂÆÉ
+-- ÂèÇÊï∞: tip, index, atlas, unitID
+-- ËøîÂõûÂÄº: Á©∫Â≠óÁ¨¶‰∏≤ÔºàÂõ†‰∏∫ ShowItemTooltip Áõ¥Êé•Êìç‰Ωú UI Êéß‰ª∂Ôºâ
+--==========================================================
+LuaEvents.EUI_ItemTooltip.Add( function( tip, index, atlas, unitID )
+	if tip then
+		ShowItemTooltip( tip, index, atlas, unitID )
+	end
+	-- ËøîÂõûÁ©∫Â≠óÁ¨¶‰∏≤ÔºåÈÅøÂÖçÂºïÊìéÊòæÁ§∫ ToolTipType Â≠óÈù¢ÊñáÊú¨
+	return ""
+end )
+
+-- ÂÖºÂÆπÊóß APIÔºöÊó†ÊôãÂçáÁâàÊú¨
+local function ShowTextToolTipAndPicture( tip, index, atlas )
+	return ShowItemTooltip( tip, index, atlas, nil )
 end
 LuaEvents.ShowTextToolTipAndPicture.Add( ShowTextToolTipAndPicture )
 
+-- Â∏¶ÊôãÂçáÁâàÊú¨ (Âéü ShowTextToolTipAndPicture2Ôºå‰øùÁïôÊóßÁ≠æÂêç orderID ‰ª•ÂÖºÂÆπË∞ÉÁî®Êñπ)
+function ShowTextToolTipAndPicture2( tip, orderID, itemID, index, atlas )
+	return ShowItemTooltip( tip, index, atlas, itemID )
+end
 
 local function ShowTextToolTip( ... )
 	return ShowTextToolTipAndPicture( ... and concat( {...}, "[NEWLINE]----------------[NEWLINE]" ) )
@@ -399,7 +464,6 @@ end
 --==========================================================
 -- Resource Tooltip
 --==========================================================
-
 local function ShowResourceToolTip( resourceID, tips )
 	local resource = GameInfo.Resources[ resourceID ]
 	if resource then
@@ -407,323 +471,38 @@ local function ShowResourceToolTip( resourceID, tips )
 		local activeTeamID = GetActiveTeam()
 		local activePlayer = Players[activePlayerID]
 		local activeTeam = Teams[activeTeamID]
-		local activeCivilizationID = activePlayer:GetCivilizationType()
-		local activeCivilization = GameInfo.Civilizations[ activeCivilizationID ]
-		local activeTeamTechs = activeTeam:GetTeamTechs()
-
-		local resourceID = resource.ID
 
 		local numResourceUsed = activePlayer:GetNumResourceUsed( resourceID )
-		local numResourceAvailable = activePlayer:GetNumResourceAvailable( resourceID, true )	-- same as (total - used)
-
+		local numResourceAvailable = activePlayer:GetNumResourceAvailable( resourceID, true )
 		local numResourceExport = activePlayer:GetResourceExport( resourceID )
 		local numResourceImport = activePlayer:GetResourceImport( resourceID ) + activePlayer:GetResourceFromMinors( resourceID )
 		local numResourceLocal = activePlayer:GetNumResourceTotal( resourceID, false ) + numResourceExport
 
-     	if resourceID==GameInfo.Resources.RESOURCE_TROOPS.ID then  ---–¬‘ˆ±¯¡¶
-			numResourceAvailable = activePlayer:GetDomainTroopsActive();
-			numResourceUsed   = activePlayer:GetDomainTroopsUsed();
-			numResourceLocal = activePlayer:GetDomainTroopsTotal();
-        	if (numResourceUsed ~= 0 or numResourceAvailable ~= 0) then
-			end
+		if resourceID == GameInfo.Resources.RESOURCE_TROOPS.ID then
+			numResourceAvailable = activePlayer:GetDomainTroopsActive()
+			numResourceUsed   = activePlayer:GetDomainTroopsUsed()
+			numResourceLocal = activePlayer:GetDomainTroopsTotal()
 		end
 
 		insert( tips, ColorizeAbs(numResourceAvailable) .. resource.IconString .. " " .. Locale.ToUpper(resource._Name) )
 		insert( tips, "----------------" )
-
-		----------------------------
-		-- Local Resources in Cities  Input
-		----------------------------
 		insert( tips, "" )
 		insert( tips, Colorize(numResourceLocal) .. " " .. L"TXT_KEY_EO_LOCAL_RESOURCES" )
 
-		-- Resources from city terrain
-		--[[for city in activePlayer:Cities() do
-			local numConnectedResource = 0
-			local numUnconnectedResource = 0
-			for plot in CityPlots( city ) do
-				local numResource = plot:GetNumResource()
-				if numResource > 0  and resourceID == plot:GetResourceType( activeTeamID ) then
-					if plot:IsCity() or (not plot:IsImprovementPillaged() and plot:IsResourceConnectedByImprovement( plot:GetImprovementType() )) then
-						numConnectedResource = numConnectedResource + numResource
-					else
-						numUnconnectedResource = numUnconnectedResource + numResource
-					end
-				end
-			end
-			local tip = ""
-			if numConnectedResource > 0 then
-				tip = " " .. ColorizeAbs( numConnectedResource ) .. resource.IconString
-			end
-			if numUnconnectedResource > 0 then
-				tip = tip .. " " .. ColorizeAbs( -numUnconnectedResource ) .. resource.IconString
-			end
-			if #tip > 0 then
-				insert( tips, "[ICON_BULLET]" .. city:GetName() .. tip )
-			end
-		end
-		if IsCiv5notVanilla then
-			-- Resources from buildings
-			local tipIndex = #tips
-			for row in GameInfo.Building_ResourceQuantity{ ResourceType = resource.Type } do
-				local building = GameInfo.Buildings[ row.BuildingType ]
-				local numResource = row.Quantity
-				if building and numResource and numResource > 0 then
-					local buildingID = building.ID
-					-- count how many such buildings player has
-					local numExisting = activePlayer:CountNumBuildings( buildingID )
-					-- count how many such units player is building
-					local numBuilds = 0
-					for city in activePlayer:Cities() do
-						if city:GetProductionBuilding() == buildingID then
-							numBuilds = numBuilds + 1
-						end
-					end
-
-					if canBuildSomeday or numExisting > 0 or numBuilds > 0 then
-						local totalResource = (numExisting + numBuilds) * numResource
-						local tip = "[COLOR_YIELD_FOOD]" .. building._Name .. "[ENDCOLOR]"
-						if canBuildSomeday then
-							local tech = building.PrereqTech and GameInfo.Technologies[ building.PrereqTech ]
-							if tech and not activeTeamTechs:HasTech( tech.ID ) then
-								tip = tip .. " [COLOR_CYAN]" .. tech._Name .. "[ENDCOLOR]"
-							end
-							local policyBranch = building.PolicyBranchType and GameInfo.PolicyBranchTypes[ building.PolicyBranchType ]
-							if policyBranch and not activePlayer:GetPolicyBranchChosen( policyBranch.ID ) then
-								tip = tip .. " [COLOR_MAGENTA]" .. policyBranch._Name .. "[ENDCOLOR]"
-							end
-						end
-
-						if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----–¬‘ˆ
-
-						if totalResource > 0 then
-							tipIndex = tipIndex+1
-							local perbuild = totalResource/numExisting
-							insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  perbuild .. resource.IconString .. " x " .. numExisting .. " " .. tip )
-						else
-							insert( tips, "[ICON_BULLET] (" .. numResource .. "/" .. tip .. ")" )
-						    end
-						end
-
-					end
-				end
-			end
-		end]]
-		----------------------------
-		-- Import & Export Breakdown
-		----------------------------
-
-		-- Get specified resource traded with the active player
-
-		--[[local itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID
-		local gameTurn = Game.GetGameTurn()-1
-		local Exports = {}
-		local Imports = {}
-		for playerID = 0, MAX_MAJOR_CIVS-1 do
-			Exports[ playerID ] = {}
-			Imports[ playerID ] = {}
-		end
-		PushScratchDeal()
-		for i = 0, UI.GetNumCurrentDeals( activePlayerID ) - 1 do
-			UI.LoadCurrentDeal( activePlayerID, i )
-			local otherPlayerID = ScratchDeal:GetOtherPlayer( activePlayerID )
-			ScratchDeal:ResetIterator()
-			repeat
-				if IsCiv5BNW_BE then
-					itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID = ScratchDeal:GetNextItem()
-				else
-					itemType, duration, finalTurn, data1, data2, fromPlayerID = ScratchDeal:GetNextItem()
-				end
-				-- data1 is resourceID, data2 is quantity
-
-				if itemType == TRADE_ITEM_RESOURCES and data1 == resourceID and data2 then
-					if fromPlayerID == activePlayerID then
-						Exports[otherPlayerID][finalTurn] = (Exports[otherPlayerID][finalTurn] or 0) + data2
-					else
-						Imports[fromPlayerID][finalTurn] = (Imports[fromPlayerID][finalTurn] or 0) + data2
-					end
-				end
-			until not itemType
-		end
-		PopScratchDeal()]]
-
-		----------------------------
-		-- Resource Imports
-		----------------------------
-		--[[if numResourceImport > 0 then
-			insert( tips, "" )
-			insert( tips, Colorize(numResourceImport) .. " " .. L"TXT_KEY_RESOURCES_IMPORTED" )
-			for playerID, row in pairs( Imports ) do
-				local tip = ""
-				for turn, quantity in pairs( row ) do
-					if quantity > 0 then
-						tip = tip .. " " .. quantity .. resource.IconString .. "(" .. turn - gameTurn .. ")"
-					end
-				end
-				if #tip > 0 then
-					insert( tips, "[ICON_BULLET]" .. Players[ playerID ]:GetCivilizationShortDescription() .. tip )
-				end
-			end
-			for minorID = MAX_MAJOR_CIVS, MAX_CIV_PLAYERS_minus1 do
-				local minor = Players[ minorID ]
-				if minor and minor:IsAlive() and minor:GetAlly() == activePlayerID then
-					local quantity = minor:GetResourceExport(resourceID)
-					if quantity > 0 then
-						insert( tips, "[ICON_BULLET]" .. minor:GetCivilizationShortDescription() .. " " .. quantity .. resource.IconString )
-					end
-				end
-			end
-		end]]
-		----------------------------
-		-- Resource Exports
-		----------------------------
-		--[[if numResourceExport > 0 then
-			insert( tips, "" )
-			insert( tips, Colorize(-numResourceExport) .. " " .. L"TXT_KEY_RESOURCES_EXPORTED" )
-			for playerID, row in pairs( Exports ) do
-				local tip = ""
-				for turn, quantity in pairs( row ) do
-					if quantity > 0 then
-						tip = tip .. " " .. quantity .. resource.IconString .. "(" .. turn - gameTurn .. ")"
-					end
-				end
-				if #tip > 0 then
-					insert( tips, "[ICON_BULLET]" .. Players[ playerID ]:GetCivilizationShortDescription() .. tip )
-				end
-			end
-		end]]
-
-		----------------------------
-		-- Resource Usage Breakdown  /Output
-		----------------------------
 		insert( tips, "" )
 		insert( tips, (numResourceUsed~=0 and (Colorize(-numResourceUsed) .. " " .. L"TXT_KEY_PEDIA_USED_RESRC_LABEL") or"") )
 		local tipIndex = #tips
 
-		--for unit in GameInfo.Units() do
-			--[[ local unitID = unit.ID
-			local numResource = Game.GetNumResourceRequiredForUnit( unitID, resourceID )
-			if numResource > 0 then
-				-- count how many such units player has
-				local numExisting = 0
-				for unit in activePlayer:Units() do
-					if unit:GetUnitType() == unitID then
-						numExisting = numExisting + 1
-					end
-				end
-				-- count how many such units player is building
-				local numBuilds = 0
-				for city in activePlayer:Cities() do
-					for i=0, city:GetOrderQueueLength()-1 do
-						local queuedOrderType, queuedItemType = city:GetOrderFromQueue( i )
-						if queuedOrderType == ORDER_TRAIN and queuedItemType == unitID then
-							numBuilds = numBuilds + 1
-						end
-					end
-				end
-
-				if canBuildSomeday or numExisting > 0 or numBuilds > 0 then
-					local totalResource = (numExisting + numBuilds) * numResource
-					local tip = "[COLOR_YELLOW]" .. unit._Name .. "[ENDCOLOR]"
-					if canBuildSomeday then
-						-- Tech requirements
-						local tech = unit.PrereqTech and GameInfo.Technologies[ unit.PrereqTech ]
-						if tech and not activeTeamTechs:HasTech( tech.ID ) then
-							tip = format( "%s [COLOR_CYAN]%s[ENDCOLOR]", tip, tech._Name )
-						end
-						-- Policy Requirement
-						local policy = IsCiv5BNW and unit.PolicyType and GameInfo.Policies[ unit.PolicyType ]
-						if policy and not activePlayer:HasPolicy( policy.ID ) then
-							tip = format( "%s [COLOR_MAGENTA]%s[ENDCOLOR]", tip, policy._Name )
-						end
-					end
-
-					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----–¬‘ˆ
-
-					if totalResource > 0 then
-						tipIndex = tipIndex+1
-						local perbuild = totalResource/numExisting
-						insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  perbuild .. resource.IconString .. " x " .. numExisting .. " " .. tip )
-					else
-						insert( tips, "[ICON_BULLET] (" .. numResource .. "/" .. tip .. ")" )
-						end
-					end
-
-				end
-			end
-		end
-		for building in GameInfo.Buildings() do
-			local buildingID = building.ID
-			local numResource = Game.GetNumResourceRequiredForBuilding( buildingID, resourceID )
-			if numResource > 0 then
-				-- count how many such buildings player has
-				local numExisting = activePlayer:CountNumBuildings( buildingID )
-				-- count how many such units player is building
-				local numBuilds = 0
-				for city in activePlayer:Cities() do
-					for i=0, city:GetOrderQueueLength()-1 do
-						local queuedOrderType, queuedItemType = city:GetOrderFromQueue( i )
-						if queuedOrderType == ORDER_CONSTRUCT and queuedItemType == buildingID then
-							numBuilds = numBuilds + 1
-						end
-					end
-				end
-
-				if canBuildSomeday or numExisting > 0 or numBuilds > 0 then
-					local totalResource = (numExisting + numBuilds) * numResource
-					local tip = "[COLOR_YIELD_FOOD]" .. building._Name .. "[ENDCOLOR]"
-					if canBuildSomeday then
-						local tech = GameInfo.Technologies[ building.PrereqTech ]
-						if tech and not activeTeamTechs:HasTech( tech.ID ) then
-							tip = format( "%s [COLOR_CYAN]%s[ENDCOLOR]", tip, tech._Name )
-						end
-						local policyBranch = IsCiv5BNW and building.PolicyBranchType and GameInfo.PolicyBranchTypes[ building.PolicyBranchType ]
-						if policyBranch and not activePlayer:GetPolicyBranchChosen( policyBranch.ID ) then
-							tip = format( "%s [COLOR_MAGENTA]%s[ENDCOLOR]", tip, policyBranch._Name )
-						end						
-					end
-
-					if resourceID~=GameInfo.Resources.RESOURCE_TROOPS.ID then  ----–¬‘ˆ
-
-					if totalResource > 0 then
-						tipIndex = tipIndex+1						
-						--insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  numExisting .. " (+" .. numBuilds .. ") " .. tip )
-						local perbuild = totalResource/numExisting
-						insert( tips, tipIndex, "[ICON_BULLET]" .. totalResource .. resource.IconString .. " = " ..  perbuild .. resource.IconString .. " x " .. numExisting .. " " .. tip )
-					else
-						insert( tips, "[ICON_BULLET] (" .. numResource .. "/" .. tip .. ")" )
-						end
-					end
-				end
-			end
-		end]]
 		local resourceHappiness = resource.Happiness or 0
 		if resourceHappiness > 0 then
 			insert( tips, resourceHappiness .. "[ICON_HAPPINESS_1]" )
 		end
-		--[[for city in activePlayer:Cities() do
-			if city:GetResourceDemanded() == resourceID and city:GetWeLoveTheKingDayCounter() < 1 then
-				insert( tips, "[ICON_CITIZEN] " .. city:GetName() )
-			end
-		end
-		for minorPlayerID = MAX_MAJOR_CIVS, MAX_CIV_PLAYERS_minus1 do
-			local minorPlayer = Players[minorPlayerID]
-			if ( IsCiv5notVanilla or minorPlayer:GetActiveQuestForPlayer()==MINOR_CIV_QUEST_CONNECT_RESOURCE ) and minorPlayer:GetQuestData1(activePlayerID, MINOR_CIV_QUEST_CONNECT_RESOURCE) == resourceID then
-				insert( tips, "[ICON_CITY_STATE] " .. minorPlayer:GetCivilizationShortDescription() )
-			end
-		end]]
 
-		----------------------------
-		-- Available for Import
-		----------------------------
-		local tipIndex = #tips
+		tipIndex = #tips
 		local totalResource = 0
 		for playerID = 0, MAX_CIV_PLAYERS_minus1 do
-
 			local player = Players[playerID]
 			local isMinorCiv = player:IsMinorCiv()
-
-			-- Valid player? - Can't be us, has to be alive, and has to be met
 			if playerID ~= activePlayerID
 				and player:IsAlive()
 				and activeTeam:IsHasMet( player:GetTeam() )
@@ -754,7 +533,6 @@ end)
 -- Civilization Tooltips
 --==========================================================
 do
-
 local function ShowCivilizationToolTip( toolTip, playerID )
 	g_CivilizationTooltipControls.Text:SetText( toolTip )
 	g_CivilizationTooltipControls.Box:DoAutoSize()
@@ -765,10 +543,7 @@ local function ShowCivilizationToolTip( toolTip, playerID )
 			local minorCivInfo = GameInfo.MinorCivilizations[ player:GetMinorCivType() ]
 			if minorCivInfo and g_isCityStateLeaders then
 				if Locale.HasTextKey( "TXT_KEY_CSL_ICON_"..minorCivInfo.Type ) then
---					g_CivilizationTooltipControls.Leader:SetTextureSizeVal( 200, 200 )
---					g_CivilizationTooltipControls.Leader:SetTextureOffsetVal( 0, 0 )
 					isMinorCiv = g_CivilizationTooltipControls.Leader:SetTexture( L("TXT_KEY_CSL_ICON_"..minorCivInfo.Type) )
-
 				end
 			end
 		else
@@ -825,8 +600,7 @@ local function Pledge( playerID )
 	return toolTip
 end
 
-local CivilizationToolTips = { 
-
+local CivilizationToolTips = {
 	Button = function( playerID )
 		local player = Players[ playerID ]
 		if player:IsMinorCiv() then
@@ -835,18 +609,14 @@ local CivilizationToolTips = {
 			return GetMoodInfo( playerID, true )
 		end
 	end;
-
 	Quests = function( playerID )
 		return GetActiveQuestToolTip( GetActivePlayer(), playerID )
 	end;
-
 	Ally = function( playerID )
 		return GetAllyToolTip( GetActivePlayer(), playerID )
 	end;
-
 	Pledge1 = Pledge,
 	Pledge2 = Pledge,
-
 	Spy = function( playerID )
 		local player = Players[ playerID ]
 		local activePlayer = Players[ GetActivePlayer() ]
@@ -865,7 +635,6 @@ local CivilizationToolTips = {
 			end
 		end
 	end;
-
 	DeclarationOfFriendship = function( playerID )
 		local toolTipKey = "TXT_KEY_DIPLOMACY_FRIENDSHIP_ADV_QUEST"
 		local activePlayer = Players[ GetActivePlayer() ]
@@ -875,23 +644,14 @@ local CivilizationToolTips = {
 			return L(toolTipKey)
 		end
 	end;
-
 	ResearchAgreement = function( playerID )
 		return TooltipAndGetRemainingTurns( "TXT_KEY_DO_RESEARCH_AGREEMENT", TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT, playerID )
 	end;
-
 	DefenseAgreement = function( playerID )
 		return TooltipAndGetRemainingTurns( "TXT_KEY_DO_PACT", TradeableItems.TRADE_ITEM_DEFENSIVE_PACT, playerID )
 	end;
-
-	TheirBordersClosed = function()
-		return L"TXT_KEY_EUI_CLOSED_BORDERS_THEIR"	--( "Their borders are closed" )
-	end;
-
-	OurBordersClosed = function()
-		return L"TXT_KEY_EUI_CLOSED_BORDERS_YOUR"	--( "Your borders are closed" )
-	end;
-
+	TheirBordersClosed = function() return L"TXT_KEY_EUI_CLOSED_BORDERS_THEIR" end;
+	OurBordersClosed = function() return L"TXT_KEY_EUI_CLOSED_BORDERS_YOUR" end;
 	TheirBordersOpen = function( playerID )
 		local toolTip = "TXT_KEY_EUI_OPEN_BORDERS_THEIR"
 		if not Locale.HasTextKey( toolTip ) then
@@ -899,7 +659,6 @@ local CivilizationToolTips = {
 		end
 		return TooltipAndGetRemainingTurns( toolTip, TradeableItems.TRADE_ITEM_OPEN_BORDERS, playerID )
 	end;
-
 	OurBordersOpen = function( playerID )
 		local toolTip = "TXT_KEY_EUI_OPEN_BORDERS_YOUR"
 		if not Locale.HasTextKey( toolTip ) then
@@ -907,11 +666,7 @@ local CivilizationToolTips = {
 		end
 		return TooltipAndGetRemainingTurns( toolTip, TradeableItems.TRADE_ITEM_OPEN_BORDERS, GetActivePlayer(), playerID )
 	end;
-
-	ActivePlayer = function()
-		return L"TXT_KEY_YOU"
-	end;
-
+	ActivePlayer = function() return L"TXT_KEY_YOU" end;
 	War = function( playerID )
 		local player = Players[ playerID ]
 		local activeTeam = Teams[ GetActiveTeam() ]
@@ -924,15 +679,13 @@ local CivilizationToolTips = {
 			elseif not activeTeam:CanChangeWarPeace( teamID ) then
 				insert( tips, L"TXT_KEY_PEACE_BLOCKED" )
 			end
--- todo TradeableItems.TRADE_ITEM_THIRD_PARTY_WAR & permanent war
 			return concat( tips, "[NEWLINE]" )
 		end
 	end;
-
 	Score = function( playerID )
 		local player = Players[ playerID ]
 		if player then
-			local tips = { L"TXT_KEY_POP_SCORE" .. " " .. player:GetScore(),	--TXT_KEY_VP_SCORE
+			local tips = { L"TXT_KEY_POP_SCORE" .. " " .. player:GetScore(),
 						"----------------",
 						L("TXT_KEY_DIPLO_MY_SCORE_CITIES", player:GetScoreFromCities() ),
 						L("TXT_KEY_DIPLO_MY_SCORE_POPULATION", player:GetScoreFromPopulation() ),
@@ -951,18 +704,9 @@ local CivilizationToolTips = {
 			if player.GetScoreFromGreatWorks then
 				insert( tips, L("TXT_KEY_DIPLO_MY_SCORE_GREAT_WORKS", player:GetScoreFromGreatWorks() ) )
 			end
-			if PreGame.GetLoadWBScenario() then
-				for i = 1, 4 do
-					local key = "TXT_KEY_DIPLO_MY_SCORE_SCENARIO"..i
-					if Locale.HasTextKey( key ) then
-						insert( tips, L( key, player["GetScoreFromScenario"..i](player) ) )
-					end
-				end
-			end
 			return concat( tips, "[NEWLINE]" )
 		end
 	end;
-
 	Gold = function( playerID )
 		local player = Players[ playerID ]
 		if player then
@@ -976,16 +720,13 @@ local CivilizationToolTips = {
 			end
 		end
 	end;
-
 	TheirTradeItems = function( playerID )
 		local player = Players[ playerID ]
 		if player then
-			-- Resources available from them
 			local activePlayerID = GetActivePlayer()
 			local tips = { L( "TXT_KEY_DIPLO_ITEMS_LABEL", player:GetCivilizationAdjective() ) }
 			for usage = RESOURCEUSAGE_LUXURY, RESOURCEUSAGE_STRATEGIC, RESOURCEUSAGE_STRATEGIC - RESOURCEUSAGE_LUXURY do
 				for resource in GameInfo.Resources{ ResourceUsage = usage } do
-					-- IsPossibleToTradeItem includes check on min quantity, banned luxes and obsolete strategics
 					if ScratchDeal:IsPossibleToTradeItem( playerID, activePlayerID, TRADE_ITEM_RESOURCES, resource.ID, 1 ) then
 						local a, b = player:GetNumResourceAvailable( resource.ID, true ), player:GetNumResourceAvailable( resource.ID )
 						insert( tips, format( a == b and "%i%s%s" or "%i%s%s (%i)", a, resource.IconString, resource._Name, b ) )
@@ -995,19 +736,16 @@ local CivilizationToolTips = {
 			return concat( tips, "[NEWLINE]" )
 		end
 	end;
-
 	OurTradeItems = function( playerID )
 		local player = Players[ playerID ]
 		if player then
 			local activePlayerID = GetActivePlayer()
 			local activePlayer = Players[ activePlayerID ]
 			local tips = { L"TXT_KEY_DIPLO_YOUR_ITEMS_LABEL" }
-			-- Resources available from us
 			for usage = RESOURCEUSAGE_LUXURY, RESOURCEUSAGE_STRATEGIC, RESOURCEUSAGE_STRATEGIC - RESOURCEUSAGE_LUXURY do
 				for resource in GameInfo.Resources{ ResourceUsage = usage } do
-					-- IsPossibleToTradeItem includes check on min quantity, banned luxes and obsolete strategics
 					if ScratchDeal:IsPossibleToTradeItem( activePlayerID, playerID, TRADE_ITEM_RESOURCES, resource.ID, 1 )
-						and player:GetNumResourceAvailable( resource.ID, true ) <= player:GetNumCities() -- game limit on AI trading of strategics; no effect on luxes
+						and player:GetNumResourceAvailable( resource.ID, true ) <= player:GetNumCities()
 					then
 						local a, b = activePlayer:GetNumResourceAvailable( resource.ID, true ), activePlayer:GetNumResourceAvailable( resource.ID )
 						insert( tips, format( a == b and "%i%s%s" or "%i%s%s (%i)", a, resource.IconString, resource._Name, b ) )
@@ -1017,11 +755,7 @@ local CivilizationToolTips = {
 			return concat( tips, "[NEWLINE]" ), activePlayerID
 		end
 	end;
-
-	Host = function()
-		return L"TXT_KEY_HOST"
-	end;
-
+	Host = function() return L"TXT_KEY_HOST" end;
 	Connection = function( playerID )
 		local player = Players[ playerID ]
 		if player then
@@ -1064,7 +798,6 @@ local CivilizationToolTips = {
 				.. playerInfo.Longest
 		end
 	end;
-
 	Diplomacy = function( playerID )
 		if UI.ProposedDealExists( playerID, GetActivePlayer() ) then
 			return L"TXT_KEY_DIPLO_REQUEST_INCOMING"
@@ -1072,20 +805,18 @@ local CivilizationToolTips = {
 			return L"TXT_KEY_DIPLO_REQUEST_OUTGOING"
 		end
 	end;
-}-- /CivilizationToolTips
+}
 
 LuaEvents.CivilizationToolTips.Add( function( control, playerID )
 	local toolTip, ID = TooltipSelect( CivilizationToolTips, control, playerID )
 	ShowCivilizationToolTip( toolTip, ID or playerID )
 end)
-
 end
 
 --==========================================================
 -- Unit Action Tooltip
 --==========================================================
 LuaEvents.UnitActionToolTip.Add( function( button )
-
 	local activePlayerID = GetActivePlayer()
 	local activePlayer = Players[ activePlayerID ]
 	local activeTeamID = GetActiveTeam()
@@ -1097,7 +828,6 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 	if unit and activePlayer and activeTeam and action then
 		local activeTechs = activeTeam:GetTeamTechs()
 		local actionType = action.Type
-
 		local unitPlot = unit:GetPlot()
 		local x = unit:GetX()
 		local y = unit:GetY()
@@ -1113,61 +843,40 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 			end
 		end
 
-		-- Able to perform action
 		local gameCanHandleAction = Game.CanHandleAction( actionID, unitPlot, false )
-
-		-- Build data
 		local isBuild = action.SubType == ACTIONSUBTYPE_BUILD
 		local buildID = action.MissionData
 		local build = GameInfo.Builds[ buildID ]
-
-		-- Improvement data
 		local improvement = build and GameInfo.Improvements[ build.ImprovementType ]
 		local improvementID = improvement and improvement.ID
-
-		-- Feature data
 		local featureID = unitPlot:GetFeatureType()
 		local feature = GameInfo.Features[ featureID ]
-
-		-- Route data
 		local route = build and GameInfo.Routes[ build.RouteType ]
 
 		local strBuildTurnsString = ""
 		local toolTip = {}
 		local disabledTip = {}
 
-		-- Upgrade unit
 		if actionType == "COMMAND_UPGRADE" then
-
 			local upgradeUnitTypeID = unit:GetUpgradeUnitType()
 			local unitUpgradePrice = unit:UpgradePrice(upgradeUnitTypeID)
 			local unitUpgradeInfo = GameInfo.Units[upgradeUnitTypeID]
-
 			if unitUpgradeInfo then
 				insert( toolTip, L( "TXT_KEY_UPGRADE_HELP", UnitColor( unitUpgradeInfo._Name ), unitUpgradePrice ) )
 				insert( toolTip, "----------------" )
 				insert( toolTip, GetHelpTextForUnit( upgradeUnitTypeID, true ) )
 			end
-
 			if not gameCanHandleAction then
 				insert( toolTip, "----------------" )
-
-				-- Can't upgrade because we're outside our territory
 				if unitPlot:GetOwner() ~= unit:GetOwner() then
 					insert( disabledTip, L"TXT_KEY_UPGRADE_HELP_DISABLED_TERRITORY" )
 				end
-
-				-- Can't upgrade because we're outside of a city
 				if unit:GetDomainType() == DomainTypes.DOMAIN_AIR and not unitPlot:IsCity() then
 					insert( disabledTip, L"TXT_KEY_UPGRADE_HELP_DISABLED_CITY" )
 				end
-
-				-- Can't upgrade because we lack the Gold
 				if unitUpgradePrice > activePlayer:GetGold() then
 					insert( disabledTip, L"TXT_KEY_UPGRADE_HELP_DISABLED_GOLD" )
 				end
-
-				-- Can't upgrade because we lack the Resources
 				local resourcesNeeded = {}
 				for resource in GameInfo.Resources() do
 					local numResourceNeededToUpgrade = unit:GetNumResourceNeededToUpgrade(resource.ID)
@@ -1178,34 +887,21 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 				if #resourcesNeeded > 0 then
 					insert( disabledTip, L( "TXT_KEY_UPGRADE_HELP_DISABLED_RESOURCES", concat( resourcesNeeded, ", " ) ) )
 				end
-
-				-- if we can't upgrade due to stacking
 				if unitPlot:GetNumFriendlyUnitsOfType(unit) > 1 then
 					insert( disabledTip, L"TXT_KEY_UPGRADE_HELP_DISABLED_STACKING" )
 				end
 			end
-
 		elseif actionType == "MISSION_ALERT" and not unit:IsEverFortifyable() then
-
 			insert( toolTip, L"TXT_KEY_MISSION_ALERT_NO_FORTIFY_HELP" )
-
-		-- Golden Age
 		elseif actionType == "MISSION_GOLDEN_AGE" then
-
 			insert( toolTip, L(  "TXT_KEY_MISSION_START_GOLDENAGE_HELP", unit:GetGoldenAgeTurns() ) )
-
-		-- Spread Religion -- gk+ only
 		elseif actionType == "MISSION_SPREAD_RELIGION" then
-
 			local eMajorityReligion = unit:GetMajorityReligionAfterSpread()
 			insert( toolTip, L"TXT_KEY_MISSION_SPREAD_RELIGION_HELP" )
 			insert( toolTip, "----------------" )
 			insert( toolTip, L("TXT_KEY_MISSION_SPREAD_RELIGION_RESULT", Game.GetReligionName(unit:GetReligion()), unit:GetNumFollowersAfterSpread() ) .. " " ..
 					( eMajorityReligion < RELIGION_PANTHEON and L"TXT_KEY_MISSION_MAJORITY_RELIGION_NONE" or L("TXT_KEY_MISSION_MAJORITY_RELIGION", Game.GetReligionName(eMajorityReligion) ) ) )
-
-		-- Create Great Work -- bnw only
 		elseif actionType == "MISSION_CREATE_GREAT_WORK" then
-
 			insert( toolTip, L"TXT_KEY_MISSION_CREATE_GREAT_WORK_HELP" )
 			if gameCanHandleAction then
 				insert( toolTip, "----------------" )
@@ -1214,117 +910,79 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 				local city = activePlayer:GetCityOfClosestGreatWorkSlot(x, y, eGreatWorkSlotType)
 				insert( toolTip, L( "TXT_KEY_MISSION_CREATE_GREAT_WORK_RESULT", building and building.Description or "???", city and city:GetNameKey() or "???" ) )
 			end
-
-		-- Paradrop
 		elseif actionType == "INTERFACEMODE_PARADROP" then
-
 			insert( toolTip, L( "TXT_KEY_INTERFACEMODE_PARADROP_HELP_WITH_RANGE", unit:GetDropRange() ) )
-
-		-- Sell Exotic Goods -- bnw only
 		elseif actionType == "MISSION_SELL_EXOTIC_GOODS" then
-
 			insert( toolTip, L"TXT_KEY_MISSION_SELL_EXOTIC_GOODS_HELP" )
 			if gameCanHandleAction then
 				insert( toolTip, "----------------" )
 				insert( toolTip, "+" .. unit:GetExoticGoodsGoldAmount() .. "[ICON_GOLD]" )
 				insert( toolTip, L( "TXT_KEY_EXPERIENCE_POPUP", unit:GetExoticGoodsXPAmount() ) )
 			end
-
-		-- Great Scientist, bnw only
 		elseif actionType == "MISSION_DISCOVER" then
-
 			insert( toolTip, L"TXT_KEY_MISSION_DISCOVER_TECH_HELP" )
 			if gameCanHandleAction then
 				insert( toolTip, "----------------" )
 				insert( toolTip, "+" .. unit:GetDiscoverAmount() .. "[ICON_RESEARCH]" )
 			end
-
-		-- Great Engineer, bnw only
 		elseif actionType == "MISSION_HURRY" then
-
 			insert( toolTip, L"TXT_KEY_MISSION_HURRY_PRODUCTION_HELP" )
 			if gameCanHandleAction then
 				insert( toolTip, "----------------" )
 				insert( toolTip, "+" .. unit:GetHurryProduction(unitPlot) .. "[ICON_PRODUCTION]" )
 			end
-
-		-- Great Merchant, bnw only
 		elseif actionType == "MISSION_TRADE" then
-
 			insert( toolTip, L"TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP" )
 			if gameCanHandleAction then
 				insert( toolTip, "----------------" )
 				insert( toolTip, "+" .. unit:GetTradeInfluence(unitPlot) .. "[ICON_INFLUENCE]" )
 				insert( toolTip, "+" .. unit:GetTradeGold(unitPlot) .. "[ICON_GOLD]" )
 			end
-
-		-- Great Writer, bnw only
 		elseif actionType == "MISSION_GIVE_POLICIES" then
-
 			insert( toolTip, L"TXT_KEY_MISSION_GIVE_POLICIES_HELP" )
 			if gameCanHandleAction then
 				insert( toolTip, "----------------" )
 				insert( toolTip, "+" .. unit:GetGivePoliciesCulture() .. "[ICON_CULTURE]" )
 			end
-
-		-- Great Musician, bnw only
 		elseif actionType == "MISSION_ONE_SHOT_TOURISM" then
-
 			insert( toolTip, L"TXT_KEY_MISSION_ONE_SHOT_TOURISM_HELP" )
 			if gameCanHandleAction then
 				insert( toolTip, "----------------" )
 				insert( toolTip, "+" .. unit:GetBlastTourism() .. "[ICON_TOURISM]" )
 			end
-
-		-- Delete unit
 		elseif actionType == "COMMAND_DELETE" then
 			insert( toolTip, L( "TXT_KEY_SCRAP_HELP", unit:GetScrapGold() ) )
-
-		-- Cannned help text
 		elseif ( action.Help or "" ) ~= "" then
 			insert( toolTip, L(action.Help) )
 		end
 
-		-- Not able to perform action
 		if not gameCanHandleAction then
-
-			-- Worker build
 			if isBuild then
-
-				-- Don't have Tech for Build?
 				if improvement or route then
-					-- Figure out what the name of the thing is that we're looking at
 					local strImpRouteKey = (improvement and improvement.Description) or (route and route.Description) or ""
-
 					if Game.IsPlotExceedMaxBuild(unit:GetOwner(), unitPlot:GetPlotIndex()) then
-						insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_MAX_BUILD_NUM" ) );
+						insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_MAX_BUILD_NUM" ) )
 					end
-
 					local prereqTech = GameInfo.Technologies[build.PrereqTech]
 					if prereqTech and not activeTechs:HasTech(prereqTech.ID) then
 						insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_PREREQ_TECH", prereqTech.Description, strImpRouteKey ) )
 					end
-
 					if improvement then
-						-- Trying to build something and are not adjacent to our territory? gk+ only
 						if improvement.InAdjacentFriendly and unitPlot:GetTeam() ~= unit:GetTeam() and not unitPlot:IsAdjacentTeam(unit:GetTeam(), true) then
 							insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_NOT_IN_ADJACENT_TERRITORY", strImpRouteKey ) )
 						end
-						-- Trying to build something in a City-State's territory? bnw only
 						if improvement.OnlyCityStateTerritory then
 							local unitPlotOwner = Players[unitPlot:GetOwner()]
 							if not( unitPlotOwner and unitPlotOwner:IsMinorCiv() ) then
 								insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_NOT_IN_CITY_STATE_TERRITORY", strImpRouteKey ) )
 							end
 						end
-						-- Trying to build something outside of our territory?
 						if improvement.OutsideBorders == false and unitPlot:GetTeam() ~= unit:GetTeam() then
 							insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_OUTSIDE_TERRITORY", strImpRouteKey ) )
 						end
-						-- Trying to build something that requires an adjacent luxury? bnw only
 						if improvement.AdjacentLuxury then
 							local adjacentPlot
-							for direction = 0, 5 do  -- DirectionTypes.NUM_DIRECTION_TYPES-1
+							for direction = 0, 5 do
 								adjacentPlot = PlotDirection(x, y, direction)
 								if adjacentPlot then
 									local eResourceType = adjacentPlot:GetResourceType()
@@ -1337,10 +995,9 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 								end
 							end
 						end
-						-- Trying to build something where we can't have two adjacent? bnw only
 						if improvement.NoTwoAdjacent then
 							local adjacentPlot
-							for direction = 0, 5 do -- DirectionTypes.NUM_DIRECTION_TYPES-1
+							for direction = 0, 5 do
 								adjacentPlot = PlotDirection(x, y, direction)
 								if adjacentPlot then
 									if adjacentPlot:GetImprovementType() == improvementID or adjacentPlot:GetBuildProgress(buildID) > 0 then
@@ -1350,56 +1007,41 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 								end
 							end
 						end
-					end -- improvement
-				end -- improvement or route
-
-				-- Build blocked by a feature here?
+					end
+				end
 				if activePlayer:IsBuildBlockedByFeature(buildID, featureID) then
 					for row in GameInfo.BuildFeatures{ BuildType = build.Type, FeatureType = feature.Type } do
 						local pFeatureTech = GameInfo.Technologies[row.PrereqTech]
 						insert( disabledTip, L( "TXT_KEY_BUILD_BLOCKED_BY_FEATURE", pFeatureTech.Description, feature.Description ) )
 					end
 				end
-
-			-- Not a Worker build, use normal disabled help from XML
 			else
 				if actionType == "MISSION_FOUND" and activePlayer:IsEmpireVeryUnhappy() then
 					insert( disabledTip, L"TXT_KEY_MISSION_BUILD_CITY_DISABLED_UNHAPPY" )
-
 				elseif actionType == "MISSION_CULTURE_BOMB" and activePlayer:GetCultureBombTimer() > 0 then
 					insert( disabledTip, L( "TXT_KEY_MISSION_CULTURE_BOMB_DISABLED_COOLDOWN", activePlayer:GetCultureBombTimer() ) )
-
 				elseif action.DisabledHelp and action.DisabledHelp ~= "" then
 					insert( disabledTip, L( action.DisabledHelp ) )
 				end
 			end
-
 			if #disabledTip > 0 then
 				insert( toolTip, "[COLOR_WARNING_TEXT]" .. concat( disabledTip, "[NEWLINE]" ) .. "[ENDCOLOR]" )
 			end
 		end
 
-		-- Is this a Worker build?
 		if isBuild then
-
 			local turnsRemaining = GetUnitBuildProgressData( unitPlot, buildID, unit )
 			if turnsRemaining > 0 then
 				strBuildTurnsString = " ... " .. L("TXT_KEY_STR_TURNS", turnsRemaining )
 			end
-
-			-- Extra Yield from this build
-
 			for yieldID = 0, NUM_YIELD_TYPES_minus1 do
 				local yieldChange = unitPlot:GetYieldWithBuild( buildID, yieldID, false, activePlayerID ) - unitPlot:CalculateYield(yieldID)
-
 				if yieldChange > 0 then
 					insert( toolTip, "[COLOR_POSITIVE_TEXT]+" .. L( g_yieldString[yieldID], yieldChange) )
 				elseif  yieldChange < 0 then
 					insert( toolTip, "[COLOR_NEGATIVE_TEXT]" .. L( g_yieldString[yieldID], yieldChange) )
 				end
 			end
-
-			-- Resource connection
 			if improvement then
 				local resourceID = unitPlot:GetResourceType( activeTeamID )
 				local resource = GameInfo.Resources[resourceID]
@@ -1410,8 +1052,6 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 					insert( toolTip, L( "TXT_KEY_BUILD_CONNECTS_RESOURCE", resource.IconString, resource.Description ) )
 				end
 			end
-
-			-- Production for clearing a feature
 			if feature and unitPlot:IsBuildRemovesFeature(buildID) then
 				local tip = L( "TXT_KEY_BUILD_FEATURE_CLEARED", feature.Description )
 				local featureProduction = unitPlot:GetFeatureProduction( buildID, activeTeamID )
@@ -1426,26 +1066,18 @@ LuaEvents.UnitActionToolTip.Add( function( button )
 			end
 		end
 
-		-- Tooltip
 		g_UnitActionTooltipControls.UnitActionHelp:SetText( concat( toolTip, "[NEWLINE]" ) )
-
-		-- Title
 		g_UnitActionTooltipControls.UnitActionText:SetText( "[COLOR_POSITIVE_TEXT]" .. L( tostring( action.TextKey or actionType ) ) .. "[ENDCOLOR]".. strBuildTurnsString )
-
-		-- HotKey
 		if action.HotKey and action.HotKey ~= "" and action.SubType ~= ACTIONSUBTYPE_PROMOTION then
 			g_UnitActionTooltipControls.UnitActionHotKey:SetText( "("..tostring(action.HotKey)..")" )
 		else
 			g_UnitActionTooltipControls.UnitActionHotKey:SetText()
 		end
-
-		-- Autosize tooltip
 		g_UnitActionTooltipControls.UnitActionMouseover:DoAutoSize()
 		local mouseoverSizeX = g_UnitActionTooltipControls.UnitActionMouseover:GetSizeX()
 		if mouseoverSizeX < 350 then
 			g_UnitActionTooltipControls.UnitActionMouseover:SetSizeX( 350 )
 		end
-
 	else
 		g_UnitActionTooltipControls.UnitActionMouseover:SetHide( true )
 	end
@@ -1456,91 +1088,85 @@ end)
 --==========================================================
 local g_PromotionIconIM = StackInstanceManager( "PromotionIcon", "Image", g_UnitTooltipControls.IconStack )
 
-do
-local function UnitToolTip( unit )
-    if unit then
-        local controls = g_UnitTooltipControls
-        local toolTipString = ShortUnitTip( unit )
-        local playerID = unit:GetOwner()
-        if playerID == GetActivePlayer() then
-            toolTipString = toolTipString .. "[NEWLINE]".. L("TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ) .. L"TXT_KEY_UPANEL_CLICK_TO_SELECT"
-        end
-        controls.Text:SetText( toolTipString )
+--==========================================================
+-- UnitToolTip ÂáΩÊï∞ÔºöÊõ¥Êñ∞ EUI_UnitTooltip Ê®°ÊùøÁöÑÂÜÖÂÆπ
+-- Âõæ 2 ÊïàÊûúÔºöÂ±ûÊÄß + HP + Á≠âÁ∫ß + ÁªèÈ™å + ÊôãÂçáÂõæÊ†áÂàóË°®
+-- ÂÖ®Â±ÄÂáΩÊï∞Ôºå‰æõ LuaEvents.EUI_UnitTooltip ‰ΩøÁî®
+--==========================================================
+function UnitToolTip( unit )
+	if unit then
+		local controls = g_UnitTooltipControls
+		local toolTipString = ShortUnitTip( unit )
+		local playerID = unit:GetOwner()
+		if playerID == GetActivePlayer() then
+			toolTipString = toolTipString .. "[NEWLINE]".. L("TXT_KEY_UNIT_EXPERIENCE_INFO", unit:GetLevel(), unit:GetExperience(), unit:ExperienceNeeded() ) .. L"TXT_KEY_UPANEL_CLICK_TO_SELECT"
+		end
+		controls.Text:SetText( toolTipString )
 
-        local iconIndex, iconAtlas = GetUnitPortraitIcon( unit )
-        IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait )
-        CivIconHookup( playerID, 64, controls.CivIcon, controls.CivIconBG, controls.CivIconShadow, false, true )
+		local iconIndex, iconAtlas = GetUnitPortraitIcon( unit )
+		IconHookup( iconIndex, 256, iconAtlas, controls.UnitPortrait )
+		CivIconHookup( playerID, 64, controls.CivIcon, controls.CivIconBG, controls.CivIconShadow, false, true )
 
-        -- ========== –ﬁ∏ƒø™ º£∫Ω˙…˝≈≈–Ú¬ﬂº≠ ==========
-        local promotionList = {}  -- ¡Ÿ ±±Ì£¨¥Ê∑≈ { id, name }
-        if not( unit.IsTrade and unit:IsTrade() ) then
-            for unitPromotion in GameInfo.UnitPromotions() do
-                local unitPromotionID = unitPromotion.ID
-                if (unit:IsHasPromotion(unitPromotionID) and unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0) then
-                    table.insert(promotionList, {
-                        id = unitPromotionID,
-                        name = unitPromotion._Name
-                    })
-                end
-            end
-        end
+		local promotionList = {}
+		if not( unit.IsTrade and unit:IsTrade() ) then
+			for unitPromotion in GameInfo.UnitPromotions() do
+				local unitPromotionID = unitPromotion.ID
+				if (unit:IsHasPromotion(unitPromotionID) and unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0) then
+					table.insert(promotionList, {
+						id = unitPromotionID,
+						name = unitPromotion._Name
+					})
+				end
+			end
+		end
 
-        -- ◊‘∂®“Â≈≈–ÚπÊ‘Ú£®’‚¿Ô“‘√˚≥∆Œ™¿˝£¨∞¥◊÷ƒ∏…˝–Ú£©
-        table.sort(promotionList, function(a, b)
-            return 
-                  a.id
-                   < 
-                  b.id
-                     -- ∞¥√˚≥∆◊÷ƒ∏À≥–Ú
-            -- »Áπ˚œÎ∞¥◊‘∂®“Â”≈œ»º∂£¨ø…∏ƒŒ™∞¥‘§…Ë±ÌÀ˜“˝≈≈–Ú£®º˚œ¬∑Ω◊¢ Õ£©
-        end)
+		table.sort(promotionList, function(a, b) return a.id < b.id end)
 
-		--?? ◊‘∂®“Â≈≈–Úµƒº∏÷÷≥£º˚∑Ω Ω
+		local promotionText = {}
+		g_PromotionIconIM:ResetInstances()
+		for _, promo in ipairs(promotionList) do
+			local promotionIcon = g_PromotionIconIM:GetInstance()
+			local promoRow = GameInfo.UnitPromotions[promo.id]
+			if promoRow then
+				IconHookup(promoRow.PortraitIndex, 32, promoRow.IconAtlas, promotionIcon.Image)
+				table.insert(promotionText, promo.name)
+			end
+		end
 
---ƒ„ø…“‘ÃÊªª table.sort ÷–µƒ±»Ωœ∫Ø ˝£∫
-
---°§ ∞¥Ω˙…˝µ»º∂£®≤„º∂£©≈≈–Ú£®–Ë◊‘––∂®“Â”≈œ»º∂±Ì£©£∫
-  --```lua
- -- local priorityOrder = { "PROMOTION_DRILL_1", "PROMOTION_SHOCK_1", ... } -- ∞¥ƒ„œÎ“™µƒÀ≥–Ú
- -- table.sort(promotionList, function(a, b)
-     -- local idxA = priorityOrder[a.id] or 999
-      --local idxB = priorityOrder[b.id] or 999
-      --return idxA < idxB
- -- end)
- -- ```
---°§ ∞¥ ID …˝–Ú£®‘≠ ºÀ≥–Ú£¨µ´ø…±£÷§Œ»∂®£©£∫
-  --```lua
-  --table.sort(promotionList, function(a, b) return  a.id  <  b.id  end)
- -- ```
-
-
-        -- …˙≥…◊Ó÷’µƒΩ˙…˝Œƒ±æ∫ÕÕº±Í
-        local promotionText = {}
-        g_PromotionIconIM:ResetInstances()
-        for _, promo in ipairs(promotionList) do
-            local promotionIcon = g_PromotionIconIM:GetInstance()
-            -- ∏˘æ›IDªÒ»°∂‘”¶µƒPromotion–≈œ¢£®–Ë“™÷ÿ–¬≤È—Ø£©
-            local promoRow = GameInfo.UnitPromotions[promo.id]
-            if promoRow then
-                IconHookup(promoRow.PortraitIndex, 32, promoRow.IconAtlas, promotionIcon.Image)
-                table.insert(promotionText, promo.name)
-            end
-        end
-        -- ========== –ﬁ∏ƒΩ· ¯ ==========
-
-        controls.PortraitFrame:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
-        controls.PromotionText:SetText( concat( promotionText, "[NEWLINE]" ) )
-        controls.PromotionText:SetHide( #promotionText ~= 1 )  -- ◊¢“‚‘≠¬ﬂº≠ø…ƒ‹œÎ»√1∏ˆªÚ∏¸∂‡ ±œ‘ æ£¨µ´’‚¿Ô–¥µƒ «~=1£¨º¥≤ªµ»”⁄1 ±“˛≤ÿ£ø‘≠“‚ø…ƒ‹ «÷ª”–1∏ˆ ±“˛≤ÿ£øµ´±£≥÷‘≠—˘≤ª±‰°£
-        -- ‘≠¥˙¬Î÷– i Œ¥∂®“Â£¨’‚¿Ô”√ #promotionList ÃÊ¥˙
-        local i = #promotionList
-        controls.IconStack:SetWrapWidth( ceil( i / ceil( i / 10 ) ) * 26 )
-        controls.IconStack:CalculateSize()
-        controls.Box:DoAutoSize()
-        Controls.UnitTooltipTimer:SetToBeginning()
-        Controls.UnitTooltipTimer:Reverse()
-    end
+		controls.PortraitFrame:SetAnchor( GetMousePos() > 300 and "L,T" or "R,T" )
+		controls.PromotionText:SetText( concat( promotionText, "[NEWLINE]" ) )
+		controls.PromotionText:SetHide( #promotionText ~= 1 )
+		local i = #promotionList
+		controls.IconStack:SetWrapWidth( ceil( i / ceil( i / 10 ) ) * 26 )
+		controls.IconStack:CalculateSize()
+		controls.Box:DoAutoSize()
+		Controls.UnitTooltipTimer:SetToBeginning()
+		Controls.UnitTooltipTimer:Reverse()
+	end
 end
-LuaEvents.UnitToolTip.Add( UnitToolTip )
+
+--==========================================================
+-- EUI_UnitTooltip Á±ªÂûãÔºöÁî®‰∫éÂçï‰ΩçÈù¢ÊùøÂ∑¶‰∏ãËßíÂ§ßÂõæÊ†áÔºàÂõæ 2 ÊïàÊûúÔºâ
+-- ÂºïÊìéÈÄöËøá LuaEvents.EUI_UnitTooltip.Call(unit) Ë∞ÉÁî®ÂÆÉ
+--==========================================================
+LuaEvents.EUI_UnitTooltip.Add( function( unit )
+	if unit then
+		UnitToolTip( unit )
+	end
+	return ""
+end )
+
+--==========================================================
+-- UnitToolTip Á±ªÂûãÔºàÂú∞ÂõæÊÇ¨ÂÅúÂçï‰Ωç„ÄÅAI Âçï‰ΩçÊèêÁ§∫Ôºâ
+-- Ëµ∞ EUI_ItemTooltip Ê®°ÊùøÔºàÂ±ûÊÄß + ÊôãÂçáÂêçÂ≠ó + Help ÊñáÊú¨Ôºâ
+--==========================================================
+LuaEvents.UnitToolTip.Add( function( unit )
+	local thisUnitInfo = GameInfo.Units[ unit:GetUnitType() ]
+	local index = thisUnitInfo and thisUnitInfo.PortraitIndex
+	local atlas = thisUnitInfo and thisUnitInfo.IconAtlas
+	local tip = GetHelpTextForUnit( unit:GetUnitType(), true )
+	return ShowItemTooltip( tip, index, atlas, unit:GetUnitType() )
+end )
 
 LuaEvents.UnitFlagToolTip.Add( function( button )
 	local player = Players[ button:GetVoid1() ]
@@ -1550,20 +1176,16 @@ end)
 local UnitToolTips = {
 	Button = UnitToolTip,
 	MovementPip = function( unit )
-		return ShowTextToolTip( unit and format( "%s %.3g / %g [ICON_MOVES]", L"TXT_KEY_UPANEL_MOVEMENT", unit:MovesLeft() / MOVE_DENOMINATOR, unit:MaxMoves() / MOVE_DENOMINATOR )
-
-		)
+		return ShowTextToolTip( unit and format( "%s %.3g / %g [ICON_MOVES]", L"TXT_KEY_UPANEL_MOVEMENT", unit:MovesLeft() / MOVE_DENOMINATOR, unit:MaxMoves() / MOVE_DENOMINATOR ) )
 	end,
 	Mission = function( unit )
 		local status = "Unkown unit activity"
 		if unit then
 			local buildID = unit:GetBuildType()
-			if buildID ~= -1 then -- this is a worker who is actively building something
+			if buildID ~= -1 then
 				status = ( GameInfo.Builds[ buildID ]._Name or "???" ).. " (".. GetUnitBuildProgressData( unit:GetPlot(), buildID, unit ) ..")"
-
 			elseif unit:IsEmbarked() then
-				status = L"TXT_KEY_MISSION_EMBARK_HELP" --"TXT_KEY_UNIT_STATUS_EMBARKED"
-
+				status = L"TXT_KEY_MISSION_EMBARK_HELP"
 			elseif unit:IsAutomated() then
 				if unit:IsWork() then
 					status = L"TXT_KEY_ACTION_AUTOMATE_BUILD"
@@ -1572,7 +1194,6 @@ local UnitToolTips = {
 				else
 					status = L"TXT_KEY_ACTION_AUTOMATE_EXPLORE"
 				end
-
 			else
 				local activityType = unit:GetActivityType()
 				local info = g_activityMissions[ activityType ]
@@ -1583,7 +1204,6 @@ local UnitToolTips = {
 						elseif unit:IsGarrisoned() then
 							info = GameInfo.Missions.MISSION_GARRISON
 						elseif unit:IsEverFortifyable() then
---							info = GameInfo.Missions.MISSION_FORTIFY
 							status = format( "%s %+i%%[ICON_STRENGTH]", L"TXT_KEY_UNIT_STATUS_FORTIFIED", unit:FortifyModifier() )
 						else
 							info = GameInfo.Missions.MISSION_SLEEP
@@ -1603,19 +1223,17 @@ local UnitToolTips = {
 	end,
 }
 LuaEvents.UnitToolTips.Add( function( ... ) return TooltipSelect( UnitToolTips, ... ) end )
-
-end
 --==========================================================
 -- Unit Type Tooltip
 --==========================================================
-LuaEvents.UnitPanelItemTooltip.Add( function( control, itemID )
-	return ShowTextToolTipAndPicture( GetHelpTextForUnit( itemID, true ), GetUnitPortraitIcon( itemID, GetActivePlayer() ) )
-end)
 
+LuaEvents.UnitPanelItemTooltip.Add( function( control, itemID )
+	local index, atlas = GetUnitPortraitIcon( itemID, GetActivePlayer() )
+	return ShowItemTooltip( GetHelpTextForUnit( itemID, true ), index, atlas, itemID )
+end)
 --==========================================================
 -- City Banner & Ribbon Tooltips
 --==========================================================
-
 local function CityIsCapital( city )
 	local ownerID = city:GetOwner()
 	local owner = Players[ ownerID ]
@@ -1663,34 +1281,29 @@ local function CityProduction( city )
 	if orderID == ORDER_TRAIN then
 		iconIndex, iconAtlas = GetUnitPortraitIcon( itemID, city:GetOwner() )
 		tip = GetHelpTextForUnit( itemID, true )
-
 	elseif orderID == ORDER_CONSTRUCT then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Buildings, itemID )
 		tip = GetHelpTextForBuilding( itemID, false, false, city:GetNumFreeBuilding(itemID) > 0, city )
-
 	elseif orderID == ORDER_CREATE then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Projects, itemID )
 		tip = GetHelpTextForProject( itemID, true, city)
-
 	elseif orderID == ORDER_MAINTAIN then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Processes, itemID )
 		tip = GetHelpTextForProcess( itemID, true )
 		isProducing = false
---		if tip and city:GetOrderQueueLength() > 0 then
 	else
 		tip = L( "TXT_KEY_CITY_NOT_PRODUCING", city:GetName() )
 		isProducing = false
 	end
-	local change = city:GetCurrentProductionDifferenceTimes100( false, false )	-- bIgnoreFood, bool bOverflow
+	local change = city:GetCurrentProductionDifferenceTimes100( false, false )
 	return ShowProgressToolTip( g_CityProductionTooltipControls, 256, iconIndex, iconAtlas, tip,
 		isProducing and city:GetProductionTurnsLeft(),
 		city:GetProductionNeeded() * 100,
-		city:GetProductionTimes100() + city:GetCurrentProductionDifferenceTimes100( false, true ) - change,	-- bIgnoreFood, bool bOverflow
+		city:GetProductionTimes100() + city:GetCurrentProductionDifferenceTimes100( false, true ) - change,
 		change )
 end
 
 local CityToolTips = {
-	-- CityBanner ToolTip
 	CityBannerButton = function( city )
 		local cityOwnerID = city:GetOwner()
 		local cityOwner = Players[ cityOwnerID ]
@@ -1699,11 +1312,9 @@ local CityToolTips = {
 		local activeTeam = Teams[ activeTeamID ]
 		local tip = ""
 
-		-- city resources
 		local resources = {}
 		for plot in CityPlots( city ) do
-			if plot	and plot:IsRevealed( activeTeamID, true )
-			then
+			if plot and plot:IsRevealed( activeTeamID, true ) then
 				local resourceID = plot:GetResourceType( activeTeamID )
 				local numResource = plot:GetNumResource()
 				if numResource > 0 then
@@ -1717,12 +1328,10 @@ local CityToolTips = {
 		for resourceID, numResource in pairs( resources ) do
 			local resource = GameInfo.Resources[ resourceID ]
 			if resource then
-				local numConnected, numNotConnected = modf( numResource )
+				local numConnected, numNotConnected = math.modf( numResource )
 				numNotConnected = numNotConnected * 65536
 				local usageID = GetResourceUsageType( resourceID )
-				if usageID == RESOURCEUSAGE_STRATEGIC
-					or usageID == RESOURCEUSAGE_LUXURY
-				then
+				if usageID == RESOURCEUSAGE_STRATEGIC or usageID == RESOURCEUSAGE_LUXURY then
 					if numConnected > 0 then
 						tip = tip .. " [COLOR_POSITIVE_TEXT]" .. numConnected .. "[ENDCOLOR]" .. resource.IconString
 					end
@@ -1734,7 +1343,6 @@ local CityToolTips = {
 		end
 
 		if cityTeamID == activeTeamID then
-
 			local cultureStored = city:GetJONSCultureStored()
 			local cultureNeeded = city:GetJONSCultureThreshold()
 			local culturePerTurn = city:GetJONSCulturePerTurn()
@@ -1743,14 +1351,12 @@ local CityToolTips = {
 			else
 				tip = tip .. " 0 [ICON_CULTURE]"
 			end
-
 			if city.GetReligiousMajority and city:GetReligiousMajority() < 0 then
 				local religionTip =  GetReligionTooltip( city )
 				if religionTip and religionTip>"" then
 					tip = tip .. "[NEWLINE]" .. religionTip
 				end
 			end
-
 			if g_isBasicHelp then
 				if cityOwnerID == GetActivePlayer() then
 					tip = tip .. "[NEWLINE]" .. L"TXT_KEY_CITY_ENTER_CITY_SCREEN"
@@ -1758,7 +1364,6 @@ local CityToolTips = {
 					tip = tip .. "[NEWLINE]" .. L"TXT_KEY_CITY_TEAMMATE"
 				end
 			end
-
 		elseif activeTeam:IsHasMet( cityTeamID ) then
 			if city.GetReligiousMajority and city:GetReligiousMajority() < 0 then
 				local religionTip =  GetReligionTooltip( city )
@@ -1767,10 +1372,10 @@ local CityToolTips = {
 				end
 			end
 			if cityOwner.GetWarmongerPreviewString and activeTeam:IsAtWar( cityTeamID ) then
-				tip = tip .. "[NEWLINE]"----------------[NEWLINE]"
+				tip = tip .. "[NEWLINE]----------------[NEWLINE]"
 						.. cityOwner:GetWarmongerPreviewString(city:GetOwner())
 				if city:GetOriginalOwner() ~= city:GetOwner() then
-					tip = tip .. "[NEWLINE]"----------------[NEWLINE]"
+					tip = tip .. "[NEWLINE]----------------[NEWLINE]"
 							.. cityOwner:GetLiberationPreviewString(city:GetOriginalOwner())
 				end
 			elseif g_isAlwaysWar then
@@ -1787,18 +1392,15 @@ local CityToolTips = {
 		local activeTeam = Teams[ GetActiveTeam() ]
 		if cityOwner then
 			if activeTeam and activeTeam:IsHasMet( cityOwner:GetTeam() ) then
-
 				if cityOwner:IsMinorCiv() then
 					tip = GetCityStateStatusToolTip( GetActivePlayer(), cityOwnerID, true )
 				else
 					tip = GetMoodInfo( cityOwnerID, true )
 				end
-
 				if g_isBasicHelp then
 					tip = L"TXT_KEY_TALK_TO_PLAYER" .. "[NEWLINE][NEWLINE]" .. tip
 				end
 			else
-				-- Players we have not met
 				tip = L"TXT_KEY_HAVENT_MET"
 			end
 		end
@@ -1829,12 +1431,8 @@ local CityToolTips = {
 					L("TXT_KEY_CITYVIEW_TURNS_TILL_TILE_TEXT", ceil( (city:GetJONSCultureThreshold() - city:GetJONSCultureStored()) / city:GetJONSCulturePerTurn() ) ),
 					GetCultureTooltip( city ) )
 	end,
-	CityReligion = function( city )
-		return GetReligionTooltip( city )
-	end,
-	CityFocus = function( city )
-		return city and g_cityFocusTooltips[city:GetFocusType()]
-	end,
+	CityReligion = function( city ) return GetReligionTooltip( city ) end,
+	CityFocus = function( city ) return city and g_cityFocusTooltips[city:GetFocusType()] end,
 
 	CityQuests = function( city )
 		local cityOwnerID = city:GetOwner()
@@ -1844,7 +1442,6 @@ local CityToolTips = {
 		if cityOwner and cityOwner:IsMinorCiv() then
 			tip = GetActiveQuestToolTip( activePlayerID, cityOwnerID )
 		else
-			-- We love the king
 			local resource = GameInfo.Resources[ city:GetResourceDemanded() ]
 			local weLoveTheKingDayCounter = city:GetWeLoveTheKingDayCounter()
 			if weLoveTheKingDayCounter > 0 then
@@ -1865,12 +1462,8 @@ local CityToolTips = {
 			return L"TXT_KEY_CITY_PUPPET".."[NEWLINE][NEWLINE]"..L"TXT_KEY_CITY_ANNEX_TT"
 		end
 	end,
-	CityIsRazing = function( city )
-		return L( "TXT_KEY_CITY_BURNING", city:GetRazingTurns() )
-	end,
-	CityIsResistance = function( city )
-		return L( "TXT_KEY_CITY_RESISTANCE", city:GetResistanceTurns() )
-	end,
+	CityIsRazing = function( city ) return L( "TXT_KEY_CITY_BURNING", city:GetRazingTurns() ) end,
+	CityIsResistance = function( city ) return L( "TXT_KEY_CITY_RESISTANCE", city:GetResistanceTurns() ) end,
 	CityIsConnected = function( city )
 		local tip = L"TXT_KEY_CITY_CONNECTED"
 		local cityOwner = Players[ city:GetOwner() ]
@@ -1879,13 +1472,8 @@ local CityToolTips = {
 		end
 		return tip
 	end,
-	CityIsBlockaded = function()
-		return L"TXT_KEY_CITY_BLOCKADED"
-	end,
-	CityIsOccupied = function()
-		return L"TXT_KEY_CITY_OCCUPIED"
-	end,
-
+	CityIsBlockaded = function() return L"TXT_KEY_CITY_BLOCKADED" end,
+	CityIsOccupied = function() return L"TXT_KEY_CITY_OCCUPIED" end,
 	CityIsCapital = CityIsCapital,
 	CityIsOriginalCapital = CityIsCapital,
 
@@ -1929,7 +1517,6 @@ end)
 --==========================================================
 -- City View Tooltips
 --==========================================================
-
 LuaEvents.CityViewBuildingToolTip.Add( function( control )
 	local buildingID = control:GetVoid1()
 	local building = GameInfo.Buildings[ buildingID ]
@@ -1944,9 +1531,8 @@ local function CityOrderItemTooltip( city, isDisabled, purchaseYieldID, orderID,
 		if orderID == ORDER_TRAIN then
 			itemInfo = GameInfo.Units
 			iconIndex, iconAtlas = GetUnitPortraitIcon( itemID, cityOwnerID )
-			tip = GetHelpTextForUnit( itemID, true )
+			tip = GetHelpTextForUnit( itemID, true )  -- Ê≥®ÊÑèËøôÈáåË∞ÉÁî®ÊñπÂºè
 			isRealRepeat = isRepeat
-
 			if isDisabled then
 				if purchaseYieldID == g_yieldCurrency then
 					strDisabledInfo = city:GetPurchaseUnitTooltip(itemID)
@@ -1956,24 +1542,18 @@ local function CityOrderItemTooltip( city, isDisabled, purchaseYieldID, orderID,
 					strDisabledInfo = city:CanTrainTooltip(itemID)
 				end
 			end
-
 		elseif orderID == ORDER_CONSTRUCT then
 			itemInfo = GameInfo.Buildings
 			tip = GetHelpTextForBuilding( itemID, false, false, city:GetNumFreeBuilding(itemID) > 0, city )
 			if isDisabled then
 				if purchaseYieldID == g_yieldCurrency then
---					cash = cityOwner:GetGold() - city:GetBuildingPurchaseCost(itemID)
---					icon = g_currencyIcon
 					strDisabledInfo = city:GetPurchaseBuildingTooltip(itemID)
 				elseif purchaseYieldID == YieldTypes.YIELD_FAITH then
---					cash = cityOwner:GetFaith() - city:GetBuildingFaithPurchaseCost(itemID)
---					icon = "[ICON_PEACE]"
 					strDisabledInfo = city:GetFaithPurchaseBuildingTooltip(itemID)
 				else
 					strDisabledInfo = city:CanConstructTooltip(itemID)
 				end
 			end
-
 		elseif orderID == ORDER_CREATE then
 			itemInfo = GameInfo.Projects
 			tip = GetHelpTextForProject( itemID, true, city)
@@ -1990,7 +1570,6 @@ local function CityOrderItemTooltip( city, isDisabled, purchaseYieldID, orderID,
 			end
 			if strDisabledInfo and #strDisabledInfo > 0 then
 				strDisabledInfo = (strDisabledInfo:gsub("^%[NEWLINE%]","")):gsub("^%[NEWLINE%]","")
-
 				tip = "[COLOR_WARNING_TEXT]" .. strDisabledInfo .. "[ENDCOLOR][NEWLINE][NEWLINE]"..tip
 			elseif purchaseYieldID then
 				if not isDisabled then
@@ -2001,7 +1580,7 @@ local function CityOrderItemTooltip( city, isDisabled, purchaseYieldID, orderID,
 			end
 		end
 		local item = itemInfo and itemInfo[itemID]
-		return ShowTextToolTipAndPicture( tip, iconIndex or (item and item.PortraitIndex), iconAtlas or (item and item.IconAtlas) )
+		return ShowItemTooltip( tip, iconIndex or (item and item.PortraitIndex), iconAtlas or (item and item.IconAtlas), itemID )
 	end
 	return ShowTextToolTip( "Unknown city" )
 end
@@ -2026,103 +1605,47 @@ LuaEvents.CityViewToolTips.Add( function( control )
 	return toolTip and ShowTextToolTip( toolTip )
 end)
 
-
 --==========================================================
 -- Tech Tooltips
 --==========================================================
 Controls.UnitTooltipTimer2:RegisterAnimCallback( function()
-		g_ItemTooltipControls.PortraitFrame2:SetHide( false )
-		g_ItemTooltipControls.IconStack2:SetWrapWidth( 32 )
-		g_ItemTooltipControls.IconStack2:CalculateSize()
-		g_ItemTooltipControls.PromotionText2:SetHide( false )
-		g_ItemTooltipControls.Box:ReprocessAnchoring()
-		g_ItemTooltipControls.Box:DoAutoSize()
+	g_ItemTooltipControls.PortraitFrame2:SetHide( false )
+	--g_ItemTooltipControls.IconStack2:SetWrapWidth( 32 )
+	--g_ItemTooltipControls.IconStack2:CalculateSize()
+	---g_ItemTooltipControls.PromotionText2:SetHide( false )
+	g_ItemTooltipControls.Box:ReprocessAnchoring()
+	g_ItemTooltipControls.Box:DoAutoSize()
 end)
 
 
 
-function ShowTextToolTipAndPicture2( tip,orderID,itemID ,index, altlas )
-	    local controls = g_ItemTooltipControls
-		
-
-		controls.Text2:SetText( tip )  ----‘⁄µ⁄“ª∏ˆ…œ≤øœ‘ æ
-		------------------------------------------------–¬‘ˆΩ˙…˝œ‘ æ------------------------------------------------
-		local unit = GameInfo.Units[itemID]
-		local i = 0
-		local unitPromotion
-		local promotionText = {}
-		local promotionIcon
-		g_PromotionIconIM2:ResetInstances()
-
-		--if not( unit.Trade ) then
-		local thisUnitType = { UnitType = unit.Type }
-        for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
-		unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
-
-		if  unitPromotion~=nil  then
-		    if  unitPromotion.ShowInUnitPanel ~= 0 and unitPromotion.ShowInTooltip ~= 0 then
-		    promotionIcon = g_PromotionIconIM2:GetInstance()
-			IconHookup( unitPromotion.PortraitIndex, 32, unitPromotion.IconAtlas, promotionIcon.Image2 )
-			table.insert( promotionText, Locale.ConvertTextKey( unitPromotion.Description) )
-			    end
-			end
-		end
-	
-	    controls.PortraitFrame2:SetHide( not ( altlas and IconHookup( index, 256, altlas, controls.Portrait2 ) ) )
-	    controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,C" or "R,C" )
-
-		controls.PromotionText2:SetText( table.concat( promotionText, "[NEWLINE]" ) )
-		controls.PromotionText2:SetHide( #promotionText ~= 1 )
-
-		controls.IconStack2:SetWrapWidth( math.ceil( i / math.ceil( i / 10 ) ) * 26 )
-		controls.IconStack2:CalculateSize()
-
-		controls.Box:ReprocessAnchoring()
-		controls.Box:DoAutoSize()
-
-		Controls.UnitTooltipTimer2:SetToBeginning()
-        Controls.UnitTooltipTimer2:SetPauseTime(0) ---æˆ∂®Ω˙…˝Õº±Í≥ˆœ÷µƒ—”≥Ÿ ±º‰
-		Controls.UnitTooltipTimer2:Reverse()	
-end
-
-
-
-
-LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿‡ªÒ»°
+LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )
 	local tip = "no tip found"
 	local item, iconIndex, iconAtlas
 
-	if orderID == OrderTypes.ORDER_TRAIN then	
+	if orderID == OrderTypes.ORDER_TRAIN then
 		iconIndex, iconAtlas = GetUnitPortraitIcon( itemID, GetActivePlayer() )
-		tip = GetHelpTextForUnit2(itemID)
-	    return ShowTextToolTipAndPicture2( tip,orderID,itemID ,iconIndex, iconAtlas )
-
+		tip = GetHelpTextForUnit2(itemID)  -- ËøîÂõûÂ∏¶ <<PROMOTION_SPLIT>> ÁöÑÊñáÊú¨
+		return ShowItemTooltip( tip, iconIndex, iconAtlas, itemID )  -- ÂÖ≥ÈîÆÔºö‰º†ÂÖ• unitID
 
 	elseif orderID == OrderTypes.ORDER_CONSTRUCT then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Buildings, itemID )
 		tip = GetHelpTextForBuilding( itemID )
-		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
-
-
+		return ShowItemTooltip( tip, iconIndex, iconAtlas )  -- Âª∫Á≠ë‰∏çÈúÄË¶Å unitID
+	-- ... ÂÖ∂‰ªñÂàÜÊîØ‰øùÊåÅ‰∏çÂèò ...
 
 	elseif orderID ==  OrderTypes.ORDER_CREATE then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Projects, itemID )
 		tip = GetHelpTextForProject( itemID, true )
 		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
-
-
 	elseif orderID == OrderTypes.ORDER_MAINTAIN then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Processes, itemID )
 		tip = GetHelpTextForProcess( itemID, true )
 		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
-
-
 	elseif orderID == 11 then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Resources, itemID )
 		tip = L("TXT_KEY_REVEALS_RESOURCE_ON_MAP", GameInfo.Resources[itemID]._Name)
 		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
-		       
-
 	elseif orderID == 12 then
 		local build = GameInfo.Builds[ itemID ]
 		if build then
@@ -2142,7 +1665,6 @@ LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿
 			end
 		end
 		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
-
 	elseif orderID == 13 then
 		item = GameInfo.Missions[ itemID ]
 		if item then
@@ -2159,8 +1681,6 @@ LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿
 			end
 		end
 		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
-
-
 	elseif orderID == 14 then
 		item = GameInfo.Terraform[ itemID ]
 		if item then
@@ -2177,11 +1697,8 @@ LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )  -------À˘”––≈œ¢∑÷¿
 			end
 		end
 		return ShowTextToolTipAndPicture( tip, iconIndex, iconAtlas )
-
 	end
-
 end)
-
 
 LuaEvents.TechTooltip.Add( function( techID )
 	return ShowTextToolTipAndPicture( GetHelpTextForTech( techID, Players[ GetActivePlayer() ]:CanResearch( techID ) ), GetItemPortraitIcon( GameInfo.Technologies, techID ) )
@@ -2190,32 +1707,20 @@ end)
 --==========================================================
 -- Policy Tooltips
 --==========================================================
-
 LuaEvents.PolicyTooltip.Add( function( control )
 	local policyID = control:GetVoid1()
 	local policyInfo = GameInfo.Policies[ policyID ]
 	local player = Players[ GetActivePlayer() ]
-
 	if policyInfo and player then
-
-		-- Tooltip
 		local tip = L( policyInfo.Help )
-
-		-- Player already has Policy
 		if player:HasPolicy( policyID ) then
 			if player:IsPolicyBlocked( policyID ) then
 				tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_BLOCKED")
 			end
-
-		-- Can adopt the Policy right now
 		elseif player:CanAdoptPolicy( policyID ) then
-
-		-- Policy is unlocked, but we lack culture
 		elseif player:CanAdoptPolicy( policyID, true ) then
-			-- Tooltip
 			tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost())
 		else
-			-- Tooltip
 			tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_CANNOT_UNLOCK")
 		end
 		return ShowTextToolTipAndPicture( tip, policyInfo.PortraitIndex, policyInfo.IconAtlas )
@@ -2226,27 +1731,16 @@ LuaEvents.PolicyBranchTooltip.Add( function( control )
 	local policyBranchID = control:GetVoid1()
 	local policyBranchInfo = GameInfo.PolicyBranchTypes[ policyBranchID ]
 	local player = Players[ GetActivePlayer() ]
-
 	if policyBranchInfo and player then
-
 		local tip = L( policyBranchInfo.Help )
-
-		-- Branch is unlocked
 		if player:IsPolicyBranchUnlocked( policyBranchID ) then
-			-- Branch is blocked by another branch
 			if player:IsPolicyBranchBlocked( policyBranchID ) then
 				tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_BLOCKED")
 			end
-
-		-- Cannot adopt this branch right now
 		elseif policyBranchInfo.LockedWithoutReligion and not g_isReligionEnabled then
-			tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_RELIGION");
-
-		-- Can adopt this branch right now
+			tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_RELIGION")
 		elseif player:CanUnlockPolicyBranch( policyBranchID ) then
 			tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_UNLOCK_SPEND", player:GetNextPolicyCost())
-
-		-- Branch is not yet unlocked
 		else
 			tip = tip .. "[NEWLINE][NEWLINE]" .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK")
 			local eraPrereq = GameInfoTypes[ policyBranchInfo.EraPrereq ]
@@ -2255,13 +1749,10 @@ LuaEvents.PolicyBranchTooltip.Add( function( control )
 			if GameInfo.PolicyBranch_CivilizationLocked{ PolicyBranchType = policyBranchInfo.Type, CivilizationType = civType }() then
 				bCivilizationLock = true;
 			end
-			-- Not in prereq Era
 			if eraPrereq and Teams[player:GetTeam()]:GetCurrentEra() < eraPrereq then
 				tip = tip .. " " .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_ERA", GameInfo.Eras[eraPrereq].Description)
-			-- This Civilization should never Unclock it
 			elseif bCivilizationLock then
-				tip = tip .. " " .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION");
-			-- Don't have enough Culture Yet
+				tip = tip .. " " .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CIVILIZATION")
 			else
 				tip = tip .. " " .. L("TXT_KEY_POLICY_BRANCH_CANNOT_UNLOCK_CULTURE", player:GetNextPolicyCost())
 			end
@@ -2302,18 +1793,14 @@ LuaEvents.TenetToolTip.Add(	function ( control )
 	return ShowTextToolTip( tip )
 end)
 
-
 --==========================================================
--- TopPanel Tooltips  √øªÿ∫œø∆—–√˜œ∏
+-- TopPanel Tooltips
 --==========================================================
-
 local function ScienceTooltip()
-
 	local tips = {}
 	local tech, sciencePerTurn, researchTurnsLeft, researchCost, researchProgress, reseachLost
 
 	if g_isScienceEnabled then
-
 		local activePlayerID = GetActivePlayer()
 		local activeTeamID = GetActiveTeam()
 		local activePlayer = Players[activePlayerID]
@@ -2330,7 +1817,6 @@ local function ScienceTooltip()
 		end
 
 		if techID ~= -1 then
-		-- Are we researching something right now?
 			tech = GameInfo.Technologies[ techID ]
 			researchTurnsLeft = activePlayer:GetResearchTurnsLeft( techID, true )
 			researchCost = activePlayer:GetResearchCost( techID )
@@ -2349,9 +1835,7 @@ local function ScienceTooltip()
 				end
 				insert( tips, tip )
 			end
-
 		elseif recentTechID ~= -1 then
-		-- maybe we just finished something
 			tech = GameInfo.Technologies[ recentTechID ]
 			local tip = L"TXT_KEY_NOTIFICATION_SUMMARY_NEW_RESEARCH"
 			if tech then
@@ -2366,48 +1850,17 @@ local function ScienceTooltip()
 		insert( tips, g_scienceTextColor )
 		insert( tips, format( "%+g", sciencePerTurn ) .. "[ENDCOLOR] " .. L"TXT_KEY_REPLAY_DATA_SCIENCEPERTURN" )
 
-		-- Science LOSS from Budget Deficits
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_BUDGET_DEFICIT", reseachLost )
-
-		-- Science from Cities
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_CITIES", activePlayer:GetScienceFromCitiesTimes100(true) / 100 )
-
-		-- Science from Trade Routes
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_ITR", ( activePlayer:GetScienceFromCitiesTimes100(false) - activePlayer:GetScienceFromCitiesTimes100(true) ) / 100 )
-
-		-- Science from Other Players
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_MINORS", activePlayer:GetScienceFromOtherPlayersTimes100() / 100 )
 
 		if IsCiv5 then
-
-			-- Science from Religion
-			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_RELIGION", activePlayer:GetScienceFromReligion()) ---–¬‘ˆ
-
-			-- Science from Happiness 
-			insertLocalizedIfNonZero( tips, "TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", activePlayer:GetYieldModifierFromHappinessPolicy(GameInfoTypes["YIELD_SCIENCE"]) ) ---–¬‘ˆ
-
-            -- Science from Resource
-			insertLocalizedIfNonZero( tips, "TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", activePlayer:GetGlobalYieldModifierFromResource(GameInfoTypes["YIELD_SCIENCE"])) ---–¬‘ˆ
-
-
-			-- Science from Happiness
+			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_RELIGION", activePlayer:GetScienceFromReligion())
+			insertLocalizedIfNonZero( tips, "TXT_KEY_SP_UI_SCIENCE_BY_HAPPINESS_NEW", activePlayer:GetYieldModifierFromHappinessPolicy(GameInfoTypes["YIELD_SCIENCE"]) )
+			insertLocalizedIfNonZero( tips, "TXT_KEY_PRODMOD_YIELD_RESOURCE_BUFF", activePlayer:GetGlobalYieldModifierFromResource(GameInfoTypes["YIELD_SCIENCE"]))
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_HAPPINESS", activePlayer:GetScienceFromHappinessTimes100() / 100 )
-
-			-- Science from Vassals / Compatibility with Putmalk's Civ IV Diplomacy Features Mod
-			--if activePlayer.GetScienceFromVassalTimes100 then
-				--insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_VASSALS", activePlayer:GetScienceFromVassalTimes100() / 100 )
-			--end
-
-			-- Compatibility with Gazebo's City-State Diplomacy Mod (CSD) for Brave New World v23
-			--if activePlayer.GetScienceRateFromMinorAllies and activePlayer.GetScienceRateFromLeagueAid then
-				--insertLocalizedIfNonZero( tips, "TXT_KEY_MINOR_SCIENCE_FROM_LEAGUE_ALLIES", activePlayer:GetScienceRateFromMinorAllies() )
-				--insertLocalizedIfNonZero( tips, "TXT_KEY_SCIENCE_FUNDING_FROM_LEAGUE", activePlayer:GetScienceRateFromLeagueAid() )
-			--end
-
-			-- Science from Research Agreements
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_RESEARCH_AGREEMENTS", activePlayer:GetScienceFromResearchAgreementsTimes100() / 100 )
-
-			-- Show Research Agreements
 
 			local itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID
 			local gameTurn = Game.GetGameTurn() - 1
@@ -2423,7 +1876,6 @@ local function ScienceTooltip()
 					else
 						itemType, duration, finalTurn, data1, data2, fromPlayerID = ScratchDeal:GetNextItem()
 					end
-
 					if itemType == TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT and fromPlayerID ~= activePlayerID then
 						researchAgreementCounters[fromPlayerID] = finalTurn - gameTurn
 						break
@@ -2433,15 +1885,10 @@ local function ScienceTooltip()
 			PopScratchDeal()
 
 			local tipIndex = #tips
-
 			for playerID = 0, MAX_MAJOR_CIVS-1 do
-
 				local player = Players[playerID]
 				local teamID = player:GetTeam()
-
 				if playerID ~= activePlayerID and player:IsAlive() and activeTeam:IsHasMet(teamID) then
-
-					-- has reseach agreement ?
 					if activeTeam:IsHasResearchAgreement(teamID) then
 						insert( tips, "[ICON_BULLET][COLOR_POSITIVE_TEXT]" .. player:GetName() .. "[ENDCOLOR]" )
 						if researchAgreementCounters[playerID] then
@@ -2452,15 +1899,12 @@ local function ScienceTooltip()
 					end
 				end
 			end
-
 			if #tips > tipIndex then
 				insert( tips, tipIndex+1, "" )
 				insert( tips, tipIndex+2, L"TXT_KEY_DO_RESEARCH_AGREEMENT" )
 			end
-
 		end
 
-		-- Let people know that building more cities makes techs harder to get
 		if IsCiv5BNW_BE and g_isBasicHelp then
 			insert( tips, "" )
 			insert( tips, L( "TXT_KEY_TP_TECH_CITY_COST", Game.GetNumCitiesTechCostMod() * ( 100 + ( IsCivBE and activePlayer:GetNumCitiesResearchCostDiscount() or 0 ) ) / 100 ) )
@@ -2478,15 +1922,10 @@ local function ScienceTooltip()
 		reseachLost )
 end
 
--------------------------------------------------
--- Faith Tooltip (GK & BNW) √øªÿ∫œ–≈—ˆ√˜œ∏
--------------------------------------------------
 local function FaithTooltip()
-
 	if g_isReligionEnabled then
 		local activePlayerID = GetActivePlayer()
 		local activePlayer = Players[activePlayerID]
-
 		local tips = {}
 		local faithPerTurn = activePlayer:GetTotalFaithPerTurn()
 
@@ -2500,20 +1939,12 @@ local function FaithTooltip()
 		insert( tips, "[COLOR_WHITE]" .. format("%+g", faithPerTurn ) .. "[ENDCOLOR] "
 			.. L"TXT_KEY_YIELD_FAITH" .. "[ICON_PEACE] " .. L"TXT_KEY_GOLD_PERTURN_HEADING4_TITLE" )
 
-		-- Faith from Cities
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_FAITH_FROM_CITIES", activePlayer:GetFaithPerTurnFromCities() )
-
-		-- Faith from Outposts
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_FAITH_FROM_OUTPOSTS", IsCivBE and activePlayer:GetFaithPerTurnFromOutposts() or 0 )
-
-		-- Faith from Minor Civs
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_FAITH_FROM_MINORS", activePlayer:GetFaithPerTurnFromMinorCivs() )
-
-		-- Faith from Religion
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_FAITH_FROM_RELIGION", activePlayer:GetFaithPerTurnFromReligion() )
 
-		-- New World Deluxe Scenario ( you still need to delete TopPanel.lua from ...\Steam\SteamApps\common\sid meier's civilization v\assets\DLC\DLC_07\Scenarios\Conquest of the New World Deluxe\UI )
-		if IsNewWorldDeluxeScenario then	-- global defined by EUI_context
+		if IsNewWorldDeluxeScenario then
 			insert( tips, L"TXT_KEY_NEWWORLD_SCENARIO_TP_RELIGION_TOOLTIP" )
 		else
 			if activePlayer:HasCreatedPantheon() then
@@ -2549,7 +1980,6 @@ local function FaithTooltip()
 						end
 					end
 				end
-
 				if numTips == #tips then
 					insert( tips, "[ICON_BULLET]" .. L"TXT_KEY_RO_YR_NO_GREAT_PEOPLE" )
 				end
@@ -2557,7 +1987,7 @@ local function FaithTooltip()
 		end
 		return concat( tips, "[NEWLINE]" )
 	else
-		return L"TXT_KEY_TOP_PANEL_RELIGION_OFF_TOOLTIP"	--TXT_KEY_TOP_PANEL_RELIGION_OFF
+		return L"TXT_KEY_TOP_PANEL_RELIGION_OFF_TOOLTIP"
 	end
 end
 
@@ -2565,10 +1995,6 @@ local TopPanelTooltips = {
 	SciencePerTurn = ScienceTooltip,
 	TechIcon = ScienceTooltip,
 
-
--------------------------------------------------
--- √øªÿ∫œΩ«Æ√˜œ∏
--------------------------------------------------
 	GoldPerTurn = function()
 		local activePlayerID = GetActivePlayer()
 		local activeTeamID = GetActiveTeam()
@@ -2592,7 +2018,7 @@ local TopPanelTooltips = {
 		local unitSupply = activePlayer:CalculateUnitSupply()
 		local buildingMaintenance = activePlayer:GetBuildingGoldMaintenance()
 		local improvementMaintenance = activePlayer:GetImprovementGoldMaintenance()
-		local vassalMaintenance = activePlayer.GetVassalGoldMaintenance and activePlayer:GetVassalGoldMaintenance() or 0	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
+		local vassalMaintenance = activePlayer.GetVassalGoldMaintenance and activePlayer:GetVassalGoldMaintenance() or 0
 		local routeMaintenance = 0
 		local beaconEnergyDelta = 0
 
@@ -2606,7 +2032,6 @@ local TopPanelTooltips = {
 			end
 		end
 
-		-- Total gold
 		local totalIncome, totalWealth
 		local explicitIncome = goldPerTurnFromCities + goldPerTurnFromOtherPlayers + cityConnectionGold + goldPerTurnFromReligion + tradeRouteGold + playerTraitGold
 		if IsCiv5 then
@@ -2623,16 +2048,8 @@ local TopPanelTooltips = {
 		insert( tips, L( "TXT_KEY_TP_AVAILABLE_GOLD", totalWealth ) )
 		local totalExpenses = unitCost + unitSupply + buildingMaintenance + improvementMaintenance + goldPerTurnToOtherPlayers + vassalMaintenance + routeMaintenance + beaconEnergyDelta
 		insert( tips, "" )
-
-		-- Gold per turn
-
 		insert( tips, format( "[COLOR_YELLOW]%+g[ENDCOLOR] ", activePlayer:CalculateGoldRateTimes100() / 100 ) .. L(format("TXT_KEY_REPLAY_DATA_%sPERTURN", g_currencyString)) )
-
-		-- Science LOSS from Budget Deficits
-
 		insertLocalizedIfNonZero( tips, "TXT_KEY_TP_SCIENCE_FROM_BUDGET_DEFICIT", activePlayer:GetScienceFromBudgetDeficitTimes100() / 100 )
-
-		-- Income
 
 		insert( tips, "[COLOR_WHITE]" )
 		insert( tips, L("TXT_KEY_TP_TOTAL_INCOME", totalIncome / 100 ) )
@@ -2652,47 +2069,33 @@ local TopPanelTooltips = {
 		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_YIELD_FROM_UNCATEGORIZED", (totalIncome - explicitIncome) / 100 )
 		insert( tips, "[ENDCOLOR]" )
 
-		-- Spending
-
 		insert( tips, "[COLOR:255:150:150:255]" .. L("TXT_KEY_TP_TOTAL_EXPENSES", totalExpenses ) )
 		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNIT_MAINT", unitCost )
 		insertLocalizedBulletIfNonZero( tips, format("TXT_KEY_TP_%s_UNIT_SUPPLY", g_currencyString), unitSupply )
 		insertLocalizedBulletIfNonZero( tips, format("TXT_KEY_TP_%s_BUILDING_MAINT", g_currencyString), buildingMaintenance )
 		insertLocalizedBulletIfNonZero( tips, format("TXT_KEY_TP_%s_TILE_MAINT", g_currencyString), improvementMaintenance )
 		insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_ENERGY_ROUTE_MAINT", routeMaintenance )
-		--insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_GOLD_VASSAL_MAINT", vassalMaintenance )	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
 		insertLocalizedBulletIfNonZero( tips, format("TXT_KEY_TP_%s_TO_OTHERS", g_currencyString ), goldPerTurnToOtherPlayers )
 		insert( tips, "[ENDCOLOR]" )
 
-
-		-----------------------------SP Manpower Discount ----------------------------------------
 		local strSPManPowerDiscount = Locale.ConvertTextKey("TXT_KEY_SP_UI_MANPOWER_DISCOUNT")
 		local ManPowerBonus = math.abs(activePlayer:GetGoldHurryCostModifierFromResourceByIndex(GameInfoTypes["RESOURCE_MANPOWER"]))
 		if ManPowerBonus > 0 then
 		  insert( tips, "[NEWLINE]  " .. strSPManPowerDiscount .. " " .. ManPowerBonus .."%")
 		end
-		-----------------------------SP Manpower Discount END----------------------------------------
 
-		-- show gold available for trade to the active player
 		local tipIndex = #tips
-
 		for playerID = 0, MAX_MAJOR_CIVS-1 do
-
 			local player = Players[playerID]
-
-			-- Valid player? - Can't be us, has to be alive, and has to be met
 			if playerID ~= activePlayerID and player:IsAlive() and activeTeam:IsHasMet( player:GetTeam() ) then
 				insert( tips, "[ICON_BULLET]" .. player:GetName() .. format("  %i%s(%+i)",
 						ScratchDeal:GetGoldAvailable(playerID, -1), g_currencyIcon, player:CalculateGoldRate() ) )
 			end
 		end
-
 		if #tips > tipIndex then
 			insert( tips, tipIndex+1, "" )
 			insert( tips, tipIndex+2, L"TXT_KEY_EO_RESOURCES_AVAILBLE" )
 		end
-
-		-- Basic explanation
 
 		if g_isBasicHelp then
 			insert( tips, "" )
@@ -2701,7 +2104,6 @@ local TopPanelTooltips = {
 
 		return concat( tips, "[NEWLINE]" )
 	end,
-
 
 	GpIcon = function()
 		local gp = ScanGP( Players[ GetActivePlayer() ] )
@@ -2716,11 +2118,7 @@ local TopPanelTooltips = {
 		end
 	end,
 
-	-------------------------------------------------
-	-- Happiness Tooltip
-	-------------------------------------------------
 	HappinessString = function()
-
 		if g_isHappinessEnabled then
 			local activePlayerID = GetActivePlayer()
 			local activeTeamID = GetActiveTeam()
@@ -2728,7 +2126,6 @@ local TopPanelTooltips = {
 			local activeTeam = Teams[activeTeamID]
 
 			local tips = {}
-
 			local excessHappiness = activePlayer:GetExcessHappiness()
 
 			if not activePlayer:IsEmpireUnhappy() then
@@ -2755,7 +2152,6 @@ local TopPanelTooltips = {
 				religionHappiness = activePlayer:GetHappinessFromReligion()
 			else
 				garrisonedUnitsHappiness = activePlayer:GetHappinessFromGarrisonedUnits()
-				-- Loop through all the Minors the active player knows
 				for minorPlayerID = MAX_MAJOR_CIVS, MAX_CIV_PLAYERS_minus1 do
 					minorCivHappiness = minorCivHappiness + activePlayer:GetHappinessFromMinor(minorPlayerID)
 				end
@@ -2765,32 +2161,22 @@ local TopPanelTooltips = {
 			local extraHappinessPerCity = activePlayer:GetExtraHappinessPerCity() * activePlayer:GetNumCities()
 			local leagueHappiness = IsCiv5BNW_BE and activePlayer:GetHappinessFromLeagues() or 0
 			local totalHappiness = activePlayer:GetHappiness()
-			--local happinessFromVassals = activePlayer.GetHappinessFromVassals and activePlayer:GetHappinessFromVassals() or 0	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
-			--local handicapHappiness = totalHappiness - policiesHappiness - resourcesHappiness - cityHappiness - buildingHappiness - garrisonedUnitsHappiness - minorCivHappiness - tradeRouteHappiness - religionHappiness - naturalWonderHappiness - extraHappinessPerCity - leagueHappiness - happinessFromVassals	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
-
-			--	SP Flat Hadicap Happiness
-		    local handicapHappiness = Game.GetHappinessFromHandicap();
+			local handicapHappiness = Game.GetHappinessFromHandicap()
 
 			if activePlayer:IsEmpireVeryUnhappy() then
-
 				if activePlayer:IsEmpireSuperUnhappy() then
 					insert( tips, "[COLOR:255:60:60:255]" .. L"TXT_KEY_TP_EMPIRE_SUPER_UNHAPPY" .. "[ENDCOLOR]" )
 				else
 					insert( tips, "[COLOR:255:60:60:255]" .. L"TXT_KEY_TP_EMPIRE_VERY_UNHAPPY" .. "[ENDCOLOR]" )
 				end
 			elseif activePlayer:IsEmpireUnhappy() then
-
 				insert( tips, "[COLOR:255:60:60:255]" .. L"TXT_KEY_TP_EMPIRE_UNHAPPY" .. "[ENDCOLOR]" )
 			end
-			-- Basic explanation of Happiness
-
 			if g_isBasicHelp then
 				insert( tips, L"TXT_KEY_TP_HAPPINESS_EXPLANATION" )
 				insert( tips, "" )
 			end
 
-
-			-- Individual Resource Info
 			local baseHappinessFromResources = 0
 			local numHappinessResources = 0
 			local availableResources = ""
@@ -2800,10 +2186,9 @@ local TopPanelTooltips = {
 
 			for resource in Resources( luxuries ) do
 				local resourceID = resource.ID
-
 				local numResourceAvailable = activePlayer:GetNumResourceAvailable(resource.ID, true)
 				if numResourceAvailable > 0 then
-					local resourceHappiness = IsCiv5notVanilla and activePlayer:GetHappinessFromLuxury( resourceID ) or resource.Happiness	-- GetHappinessFromLuxury includes extra happiness
+					local resourceHappiness = IsCiv5notVanilla and activePlayer:GetHappinessFromLuxury( resourceID ) or resource.Happiness
 					if resourceHappiness > 0 then
 						availableResources = availableResources
 							.. " [COLOR_POSITIVE_TEXT]"
@@ -2824,8 +2209,6 @@ local TopPanelTooltips = {
 				end
 			end
 
-			--------------
-			-- Unhappiness
 			local unhappinessFromPupetCities = activePlayer:GetUnhappinessFromPuppetCityPopulation()
 			local unhappinessFromSpecialists = activePlayer:GetUnhappinessFromCitySpecialists()
 			local unhappinessFromPop = activePlayer:GetUnhappinessFromCityPopulation() - unhappinessFromSpecialists - unhappinessFromPupetCities
@@ -2841,8 +2224,6 @@ local TopPanelTooltips = {
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_POLICIES", min(policiesHappiness,0) )
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_UNHAPPINESS_PUBLIC_OPINION", IsCiv5BNW_BE and activePlayer:GetUnhappinessFromPublicOpinion() or 0 )
 
-			------------
-			-- Happiness
 			insert( tips, "[ENDCOLOR][COLOR:150:255:150:255]" )
 			insert( tips, L("TXT_KEY_TP_HAPPINESS_SOURCES", totalHappiness ) )
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_DIFFICULTY_LEVEL", handicapHappiness )
@@ -2856,38 +2237,25 @@ local TopPanelTooltips = {
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_CITY_COUNT", extraHappinessPerCity )
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_CITY_STATE_FRIENDSHIP", minorCivHappiness )
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_LEAGUES", leagueHappiness )
-			--insertLocalizedBulletIfNonZero( tips, "TXT_KEY_TP_HAPPINESS_VASSALS", happinessFromVassals )	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
-
-			-- Happiness from Luxury Variety
 			insertLocalizedBulletIfNonZero( tips, "          ", "TXT_KEY_TP_HAPPINESS_RESOURCE_VARIETY", happinessFromExtraResources )
-
-			-- Extra Happiness from each Luxury
 			insertLocalizedBulletIfNonZero( tips, "          ", "TXT_KEY_TP_HAPPINESS_EXTRA_PER_RESOURCE", extraLuxuryHappiness, numHappinessResources )
 
-			-- Misc Happiness from Resources
 			local miscHappiness = resourcesHappiness - baseHappinessFromResources - happinessFromExtraResources - (extraLuxuryHappiness * numHappinessResources)
 			insertLocalizedBulletIfNonZero( tips, "          ", "TXT_KEY_TP_HAPPINESS_OTHER_SOURCES", miscHappiness )
 
+			local strSPConsumerHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS")
+			local strSPConsumerPenalty = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY")
+			local SPPolicyConsumerBonus = Locale.ConvertTextKey("TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS")
+			local ConsumerUnhappinessMod = activePlayer:GetUnHappinessModFromResourceByIndex(GameInfoTypes["RESOURCE_CONSUMER"])
 
-				
-		--------------------------------------SP Additional Happiness by Extra Consumer Goods-----------------------------
-	
-    	local strSPConsumerHappiness = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_BONUS")
-		local strSPConsumerPenalty = Locale.ConvertTextKey("TXT_KEY_SP_UI_HAPPINESS_CONSUMERGOODS_PENALTY")
-		local SPPolicyConsumerBonus = Locale.ConvertTextKey("TXT_KEY_POLICY_MERCANTILISM_CONSUMERGOODS_BONUS")
-		
-		local ConsumerUnhappinessMod = activePlayer:GetUnHappinessModFromResourceByIndex(GameInfoTypes["RESOURCE_CONSUMER"])
-
-    	if ConsumerUnhappinessMod < 0 then
-		    insert( tips, "[NEWLINE][NEWLINE]".. strSPConsumerHappiness .." " ..-ConsumerUnhappinessMod.."%" )	
-			if activePlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
-				 insert( tips, "[NEWLINE]"..SPPolicyConsumerBonus)
+			if ConsumerUnhappinessMod < 0 then
+				insert( tips, "[NEWLINE][NEWLINE]".. strSPConsumerHappiness .." " ..-ConsumerUnhappinessMod.."%" )
+				if activePlayer:HasPolicy(GameInfo.Policies["POLICY_MERCANTILISM"].ID) then
+					 insert( tips, "[NEWLINE]"..SPPolicyConsumerBonus)
+				end
+			elseif ConsumerUnhappinessMod > 0 then
+				insert( tips, "[NEWLINE][NEWLINE]".. strSPConsumerPenalty .." " ..ConsumerUnhappinessMod.."%" )
 			end
-		elseif ConsumerUnhappinessMod > 0 then	
-		    insert( tips, "[NEWLINE][NEWLINE]".. strSPConsumerPenalty .." " ..ConsumerUnhappinessMod.."%" )		
-		end
-	--------------------------------------SP Additional Happiness by Extra Consumer Goods END-----------------------------
-
 
 			if #availableResources > 0 then
 				insert( tips, "[ICON_BULLET]" .. L( "TXT_KEY_TP_HAPPINESS_FROM_RESOURCES", resourcesHappiness ) )
@@ -2896,9 +2264,6 @@ local TopPanelTooltips = {
 
 			insert( tips, "[ENDCOLOR]" )
 
-
-			----------------------------
-			-- Local Resources in Cities
 			local tip = ""
 			for resource in Resources( luxuries ) do
 				local resourceID = resource.ID
@@ -2909,8 +2274,6 @@ local TopPanelTooltips = {
 			end
 			insert( tips, L"TXT_KEY_EO_LOCAL_RESOURCES" .. (#tip > 0 and tip or (" : "..L"TXT_KEY_TP_NO_RESOURCES_DISCOVERED")) )
 
-			----------------------------
-			-- Resources from city terrain
 			for city in activePlayer:Cities() do
 				local numConnectedResource = {}
 				local numUnconnectedResource = {}
@@ -2942,8 +2305,6 @@ local TopPanelTooltips = {
 				end
 			end
 
-			----------------------------
-			-- Import & Export Breakdown
 			local itemType, duration, finalTurn, data1, data2, data3, flag1, fromPlayerID
 			local gameTurn = Game.GetGameTurn()-1
 			local Exports = {}
@@ -2963,8 +2324,6 @@ local TopPanelTooltips = {
 					else
 						itemType, duration, finalTurn, data1, data2, fromPlayerID = ScratchDeal:GetNextItem()
 					end
-					-- data1 is resourceID, data2 is quantity
-
 					if data2 and itemType == TRADE_ITEM_RESOURCES and GetResourceUsageType( data1 ) == RESOURCEUSAGE_LUXURY then
 						local trade
 						if fromPlayerID == activePlayerID then
@@ -2983,8 +2342,6 @@ local TopPanelTooltips = {
 			end
 			PopScratchDeal()
 
-			----------------------------
-			-- Imports
 			local tip = ""
 			for resource in Resources( luxuries ) do
 				local resourceID = resource.ID
@@ -3026,8 +2383,6 @@ local TopPanelTooltips = {
 				end
 			end
 
-			----------------------------
-			-- Exports
 			local tip = ""
 			for resource in Resources( luxuries ) do
 				local resourceID = resource.ID
@@ -3053,29 +2408,21 @@ local TopPanelTooltips = {
 					end
 				end
 			end
-			-- show resources available for trade to the active player
 
 			insert( tips, "" )
 			insert( tips, L"TXT_KEY_EO_RESOURCES_AVAILBLE" )
 
-			----------------------------
-			-- Available for Import
 			for resource in Resources( luxuries ) do
 				local resourceID = resource.ID
 				local resources = {}
 				for playerID = 0, MAX_CIV_PLAYERS_minus1 do
-
 					local player = Players[playerID]
 					local isMinorCiv = player:IsMinorCiv()
-
-					-- Valid player? - Can't be us, has to be alive and met, can't be allied city state
 					if playerID ~= activePlayerID
 						and player:IsAlive()
 						and activeTeam:IsHasMet( player:GetTeam() )
 						and not (isMinorCiv and player:IsAllies( activePlayerID ))
 					then
-
-
 						local numResource = ( isMinorCiv and player:GetNumResourceTotal(resourceID, false) + player:GetResourceExport( resourceID ) )
 							or ( ScratchDeal:IsPossibleToTradeItem( playerID, activePlayerID, TRADE_ITEM_RESOURCES, resourceID, 1 ) and player:GetNumResourceAvailable(resourceID, false) )
 							or 0
@@ -3094,13 +2441,9 @@ local TopPanelTooltips = {
 			return L"TXT_KEY_TOP_PANEL_HAPPINESS_OFF_TOOLTIP"
 		end
 	end,
-	-------------------------------------------------
-	-- Golden Age Tooltip
-	-------------------------------------------------
+
 	GoldenAgeString = function()
-
 		if g_isHappinessEnabled then
-
 			local activePlayerID = GetActivePlayer()
 			local activePlayer = Players[activePlayerID]
 
@@ -3111,59 +2454,51 @@ local TopPanelTooltips = {
 			local happyProgress = activePlayer:GetGoldenAgeProgressMeter()
 			local happyNeeded = activePlayer:GetGoldenAgeProgressThreshold()
 
-			local iGoldAgePointFromReligion = activePlayer:GetGoldenAgePointPerTurnFromReligion() ---–¬‘ˆ
-		    local iGoldAgePointFromTraits = activePlayer:GetGoldenAgePointPerTurnFromTraits()---–¬‘ˆ
-		    local iGoldAgePointFromCitys = activePlayer:GetGoldenAgePointPerTurnFromCitys()---–¬‘ˆ
+			local iGoldAgePointFromReligion = activePlayer:GetGoldenAgePointPerTurnFromReligion()
+			local iGoldAgePointFromTraits = activePlayer:GetGoldenAgePointPerTurnFromTraits()
+			local iGoldAgePointFromCitys = activePlayer:GetGoldenAgePointPerTurnFromCitys()
 
 			if goldenAgeTurns > 0 then
-			
-			local GoldAgePointMultiple = GameDefines["GOLDEN_AGE_POINT_MULTIPLE_IN_GA"]
-			iHappiness = math.floor(iHappiness*GoldAgePointMultiple/100);
-			iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion*GoldAgePointMultiple/100);
-			iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits*GoldAgePointMultiple/100);
-			iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys*GoldAgePointMultiple/100);
-			insert( tips, Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW", activePlayer:GetGoldenAgeTurns()))
-			insert( tips, "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple) .. "[NEWLINE]")
-		    end
+				local GoldAgePointMultiple = GameDefines["GOLDEN_AGE_POINT_MULTIPLE_IN_GA"]
+				iHappiness = math.floor(iHappiness*GoldAgePointMultiple/100)
+				iGoldAgePointFromReligion = math.floor(iGoldAgePointFromReligion*GoldAgePointMultiple/100)
+				iGoldAgePointFromTraits = math.floor(iGoldAgePointFromTraits*GoldAgePointMultiple/100)
+				iGoldAgePointFromCitys = math.floor(iGoldAgePointFromCitys*GoldAgePointMultiple/100)
+				insert( tips, Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW", activePlayer:GetGoldenAgeTurns()))
+				insert( tips, "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_NOW_EXTRA",GoldAgePointMultiple) .. "[NEWLINE]")
+			end
 
 			insert( tips, Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_PROGRESS", activePlayer:GetGoldenAgeProgressMeter(), activePlayer:GetGoldenAgeProgressThreshold()))
 			insert( tips, "[NEWLINE]")
 
-			
-		if (iHappiness >= 0) then
-			insert( tips,Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION", iHappiness))
-		else
-		    insert( tips,"[COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_LOSS", -iHappiness) .. "[ENDCOLOR]")
-		end
-		if (iGoldAgePointFromReligion > 0) then
-		    insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION", iGoldAgePointFromReligion))
-		end
-		if (iGoldAgePointFromTraits > 0) then
-		    insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT", iGoldAgePointFromTraits))
-		end
-		if (iGoldAgePointFromCitys > 0) then
-		    insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY", iGoldAgePointFromCitys))
-		end
-		
-		if g_isBasicHelp then
-			insert( tips, "[NEWLINE]")
-
-			if activePlayer:IsGoldenAgeCultureBonusDisabled() then
-					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE" )
-
-								
-			---------------------------SP China Pax Sinica------------------------		
-		   elseif activePlayer:GetGoldenAgeTurns() > 0
-		   and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[activePlayer:GetLeaderType()].Type, TraitType = "TRAIT_ART_OF_WAR" }()
-		   and(GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy 
-		   and activePlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy])))
-		   then
-		   insert( tips, L"TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS" )
-			---------------------------SP China Pax Sinica END------------------------
+			if (iHappiness >= 0) then
+				insert( tips,Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION", iHappiness))
 			else
-				insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT" )
+				insert( tips,"[COLOR_WARNING_TEXT]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_LOSS", -iHappiness) .. "[ENDCOLOR]")
+			end
+			if (iGoldAgePointFromReligion > 0) then
+				insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_RELIGION", iGoldAgePointFromReligion))
+			end
+			if (iGoldAgePointFromTraits > 0) then
+				insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_TRAIT", iGoldAgePointFromTraits))
+			end
+			if (iGoldAgePointFromCitys > 0) then
+				insert( tips,"[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLDEN_AGE_ADDITION_CITY", iGoldAgePointFromCitys))
 			end
 
+			if g_isBasicHelp then
+				insert( tips, "[NEWLINE]")
+				if activePlayer:IsGoldenAgeCultureBonusDisabled() then
+					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT_NO_CULTURE" )
+				elseif activePlayer:GetGoldenAgeTurns() > 0
+				and GameInfo.Leader_Traits{ LeaderType = GameInfo.Leaders[activePlayer:GetLeaderType()].Type, TraitType = "TRAIT_ART_OF_WAR" }()
+				and(GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy == nil or (GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy
+				and activePlayer:HasPolicy(GameInfoTypes[GameInfo.Traits["TRAIT_ART_OF_WAR"].PrereqPolicy])))
+				then
+					insert( tips, L"TXT_KEY_SP_UA_CHINA_GOLDENAGE_EFFECTS" )
+				else
+					insert( tips, L"TXT_KEY_TP_GOLDEN_AGE_EFFECT" )
+				end
 
 				if IsCiv5BNW and activePlayer:GetGoldenAgeTurns() > 0 and activePlayer:GetGoldenAgeTourismModifier() > 0 then
 					insert( tips, "[NEWLINE]")
@@ -3176,9 +2511,7 @@ local TopPanelTooltips = {
 			return L"TXT_KEY_TOP_PANEL_HAPPINESS_OFF_TOOLTIP"
 		end
 	end,
-	-------------------------------------------------
-	-- Culture Tooltip
-	-------------------------------------------------
+
 	CultureString = function()
 		if g_isPoliciesEnabled then
 			local activePlayerID = GetActivePlayer()
@@ -3187,7 +2520,6 @@ local TopPanelTooltips = {
 			local tips = {}
 			local turnsRemaining = 1
 			local cultureProgress, culturePerTurn, culturePerTurnForFree, culturePerTurnFromCities, culturePerTurnFromExcessHappiness, culturePerTurnFromTraits
-			-- Firaxis Cleverness...
 			if IsCiv5 then
 				cultureProgress = activePlayer:GetJONSCulture()
 				culturePerTurn = activePlayer:GetTotalJONSCulturePerTurn()
@@ -3236,46 +2568,31 @@ local TopPanelTooltips = {
 			insert( tips, "[COLOR_MAGENTA]" .. format( "%+g", culturePerTurn )
 					.. "[ENDCOLOR] " .. L"TXT_KEY_REPLAY_DATA_CULTUREPERTURN" )
 
-			-- Culture for Free
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FOR_FREE", culturePerTurnForFree )
-
-			-- Culture from Cities
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_CITIES", culturePerTurnFromCities )
-
-			-- Culture from Excess Happiness / Health
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_" .. g_happinessString, culturePerTurnFromExcessHappiness )
-
-			-- Culture from Traits
 			insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_TRAITS", culturePerTurnFromTraits )
 
 			if IsCiv5 then
-				-- Culture from Minor Civs
 				local culturePerTurnFromMinorCivs = activePlayer:GetJONSCulturePerTurnFromMinorCivs()
 				insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_MINORS", culturePerTurnFromMinorCivs )
 
-				-- Culture from Religion
 				local culturePerTurnFromReligion = IsCiv5notVanilla and activePlayer:GetCulturePerTurnFromReligion() or 0
 				insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_RELIGION", culturePerTurnFromReligion )
 
-				-- Culture from bonus turns (League Project)
 				local culturePerTurnFromBonusTurns = 0
 				if IsCiv5BNW then
 					culturePerTurnFromBonusTurns = activePlayer:GetCulturePerTurnFromBonusTurns()
 					insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_BONUS_TURNS", culturePerTurnFromBonusTurns, activePlayer:GetCultureBonusTurns() )
 				end
 
-				-- Culture from Vassals / Compatibility with Putmalk's Civ IV Diplomacy Features Mod
 				local culturePerTurnFromVassals = activePlayer.GetJONSCulturePerTurnFromVassals and activePlayer:GetJONSCulturePerTurnFromVassals() or 0
 				insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_VASSALS", culturePerTurnFromVassals )
 
-				-- Culture from Golden Age
-				insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_GOLDEN_AGE", culturePerTurn - culturePerTurnForFree - culturePerTurnFromCities - culturePerTurnFromExcessHappiness - culturePerTurnFromMinorCivs - culturePerTurnFromReligion - culturePerTurnFromTraits - culturePerTurnFromBonusTurns - culturePerTurnFromVassals )	-- Compatibility with Putmalk's Civ IV Diplomacy Features Mod
+				insertLocalizedIfNonZero( tips, "TXT_KEY_TP_CULTURE_FROM_GOLDEN_AGE", culturePerTurn - culturePerTurnForFree - culturePerTurnFromCities - culturePerTurnFromExcessHappiness - culturePerTurnFromMinorCivs - culturePerTurnFromReligion - culturePerTurnFromTraits - culturePerTurnFromBonusTurns - culturePerTurnFromVassals )
 			else
-				-- Uncategorized Culture
 				insertLocalizedIfNonZero( tips, "TXT_KEY_TP_YIELD_FROM_UNCATEGORIZED", culturePerTurn - culturePerTurnForFree - culturePerTurnFromCities - culturePerTurnFromExcessHappiness - culturePerTurnFromTraits )
 			end
-
-			-- Let people know that building more cities makes policies harder to get
 
 			if g_isBasicHelp then
 				insert( tips, "" )
@@ -3288,9 +2605,7 @@ local TopPanelTooltips = {
 	end,
 	FaithString = FaithTooltip,
 	FaithIcon = FaithTooltip,
-	-------------------------------------------------
-	-- Tourism Tooltip (BNW)
-	-------------------------------------------------
+
 	TourismString = function()
 		local activePlayerID = GetActivePlayer()
 		local activePlayer = Players[activePlayerID]
@@ -3310,30 +2625,20 @@ local TopPanelTooltips = {
 				.. L( "TXT_KEY_TOP_PANEL_TOURISM_TOOLTIP_3", L("TXT_KEY_CO_VICTORY_INFLUENTIAL_OF", numInfluential, numToBeInfluential) )
 		end
 
-		--------------------------------------SP Additional Tourism boost by Extra Happiness-----------------------------
-	
 		local iBonusFromHappiness = activePlayer:GetYieldModifierFromHappiness(GameInfoTypes["YIELD_TOURISM"])
 		if iBonusFromHappiness ~= 0 then
-			tipText = tipText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS") .. " " .. iBonusFromHappiness .. "%";
+			tipText = tipText .. "[NEWLINE][NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_HAPPINESS") .. " " .. iBonusFromHappiness .. "%"
 		end
 
 		local iBonusFromNumGreakWork = activePlayer:GetYieldModifierFromNumGreakWork(GameInfoTypes["YIELD_TOURISM"])
 		if iBonusFromNumGreakWork ~= 0 then
-			tipText = tipText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK", iBonusFromNumGreakWork) 
+			tipText = tipText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_GREAT_WORK", iBonusFromNumGreakWork)
 		end
-		local iBonusFromNumArtifact = pPlayer:GetYieldModifierFromNumArtifact(GameInfoTypes["YIELD_TOURISM"])
-		if iBonusFromNumArtifact ~= 0 then
-			tipText = tipText .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_SP_UI_TOURISMBOOST_BY_NUM_ARTIFACT", iBonusFromNumArtifact) 
-		end
-		tipText = tipText .. activePlayer:GetInternationalTourismTooltip();
-		
-	--------------------------------------SP Additional Tourism boost by Extra Happiness END-----------------------------
+		tipText = tipText .. activePlayer:GetInternationalTourismTooltip()
 
 		return tipText
 	end,
-	-------------------------------------------------
-	-- International Trade Routes Tooltip (BNW)
-	-------------------------------------------------
+
 	InternationalTradeRoutes = function()
 		local activePlayerID = GetActivePlayer()
 		local activePlayer = Players[activePlayerID]
@@ -3378,16 +2683,10 @@ local TopPanelTooltips = {
 
 		return tipText
 	end,
-	-------------------------------------------------
-	-- Health Tooltip (CivBE) Ω°øµ∂»
-	-------------------------------------------------
+
 	HealthString = function()
-		local tipText =L("TXT_KEY_TP_HEALTH_EXPLANATION")
-		return tipText
+		return L("TXT_KEY_TP_HEALTH_EXPLANATION")
 	end
-	-------------------------------------------------
-	-- Affinity Tooltips 
-	-------------------------------------------------
 }
 
 LuaEvents.TopPanelTooltips.Add( function( control )
@@ -3396,5 +2695,4 @@ LuaEvents.TopPanelTooltips.Add( function( control )
 end)
 
 print( "EUI tooltip server loaded." )
-
 

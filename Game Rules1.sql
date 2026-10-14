@@ -1,3 +1,30 @@
+
+---------------------------------------------------
+INSERT  INTO Building_UnitClassMaxInstances(BuildingType,UnitClassType,ExtraMax)
+SELECT 'BUILDING_GATE_ALL',U.Class,1  FROM Units U  
+JOIN Technologies T ON U.PrereqTech = T.Type  
+JOIN Eras E ON T.Era = E.Type  
+WHERE U.Cost > 1 AND U.ProjectPrereq !=-1 AND E.ID < 4 ;
+
+CREATE TRIGGER Building_UnitClassMaxInstancesEffect
+AFTER INSERT ON UnitClasses
+WHEN NEW.MaxGlobalInstances = 1
+BEGIN
+  INSERT  INTO Building_UnitClassMaxInstances(BuildingType,UnitClassType,ExtraMax)
+SELECT 'BUILDING_GATE_ALL',U.Class,1  FROM Units U  
+JOIN Technologies T ON U.PrereqTech = T.Type  
+JOIN Eras E ON T.Era = E.Type  
+WHERE U.Class=NEW.Type AND  U.Cost > 1 AND U.ProjectPrereq !=-1 AND E.ID < 4 ;
+END;
+
+
+
+
+
+
+
+
+
 UPDATE Units SET DomainCargo = 'DOMAIN_LAND'
 WHERE Domain = 'DOMAIN_SEA' AND CombatClass = 'UNITCOMBAT_NAVALMELEE' AND DomainCargo IS NULL AND SpecialCargo IS NULL
 	AND PrereqTech IN (SELECT t.Type FROM Technologies t, Eras e WHERE e.Type = t.Era AND e.ID >= (SELECT ID FROM Eras WHERE Type = 'ERA_RENAISSANCE'));

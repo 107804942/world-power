@@ -36,25 +36,44 @@
 	<AlphaAnim ID="UnitTooltipTimer2" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
 
 
+
+	
 	<ToolTipType Name="EUI_ItemTooltip" >
 		<Grid ID="Box" Size="530,90" Offset="8.0" Padding="8,8" Style="GridBlack8" NoClip="1" >
-			<!--额外补充部分 -->
-			<Stack Offset="12,12" StackGrowth="Down" Padding="8">
+			<!-- 左侧文本主容器 -->
+			<Stack ID="TextStack" Offset="12,12" StackGrowth="Down" Padding="4">
+				<!-- 上半部分文本 -->
 				<Label ID="Text2" WrapWidth="300" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-				<Stack ID="PromotionStack2" StackGrowth="Right">
-					<Stack ID="IconStack2" StackGrowth="Right" WrapGrowth="Bottom" WrapPadding="-6" Padding="-6" WrapWidth="260"/>
-					<Label ID="PromotionText2" Offset="0,10" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5" />
+				
+				<!-- 晋升区容器（仅在有晋升时显示） -->
+				<Stack ID="PromotionStack2" StackGrowth="Down" Hidden="1" Padding="0">
+					<!-- 晋升标题 -->
+					<!--<Label ID="PromotionTitle2" WrapWidth="300" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" String="TXT_KEY_MOD_EMPIRE_RISE_MOD_UNITDS_HELP" />-->
+					<!-- 晋升列表容器（用于垂直排列每一行） -->
+					<Stack ID="PromotionList2" StackGrowth="Down" Padding="0"/>
 				</Stack>
+
+
+<!-- 下半部分文本（Help 文本，放在晋升列表之后） -->
+				<Label ID="Text3" WrapWidth="300" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="-2"/>
 			</Stack>
-			<!--end -->
+			
+			<!-- 右侧单位立绘 -->
 			<Image ID="PortraitFrame2" Anchor="R,C" Offset="-40,0" AnchorSide="O.i" Size="256,256" Texture="256x256Frame.dds">
 				<Image ID="Portrait2" Size="256,256"/>
 			</Image>
-			<!--<Label ID="Text" Offset="12,12" LeadingOffset="-2" WrapWidth="400" Font="TwCenMT16" ColorSet="Beige_Black"/>-->
 		</Grid>
 	</ToolTipType>
-	
-	
+
+	<!-- 新增：用于在晋升列表中复制的一行（图标 + 名字） -->
+<Instance Name="PromotionRow">
+    <Stack ID="Row" StackGrowth="Right" Padding="4">
+        <Image ID="Icon" Size="32,32" Sampler="Linear" />
+        <Label ID="Name" Anchor="L,C" AnchorSide="I.I" Offset="4,0" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5"/>
+    </Stack>
+</Instance>
+
+
 
 	<!-- Promotion Instances for unit tooltip -->
 	<Instance Name="PromotionIcon">

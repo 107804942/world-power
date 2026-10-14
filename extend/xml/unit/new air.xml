@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2021/2/23 20:26:21 -->
 <GameData>
-	
-
-
 
 
 	<!--************************************单位********************************-->
 	<Units>
 
+		<Update>
+			<Set PrereqTech="TECH_TRANSHUMANISM"/>
+			<Where Type="UNIT_SS_ENGINE" />
+		</Update>
+
+		<Update>
+			<Set  RangedCombat="220"/>
+			<Where Type="UNIT_GUIDED_MISSILE" />
+		</Update>
+
+		<Update>
+			<Set  Cost="2800"/>
+			<Where Type="UNIT_ATOMIC_BOMB" />
+		</Update>
+
+		<Update>
+			<Set  Cost="5000"/>
+			<Where Type="UNIT_NUCLEAR_MISSILE" />
+		</Update>
+
+		<Update>
+			<Set  Cost="7000"/>
+			<Where Type="UNIT_ICBM_MISSILE" />
+		</Update>
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_F-14" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="157"  />
+			<Where Type="UNIT_ATTACK_AIRCRAFT" />
+		</Update>
+
+		<Update>
+			<Set  UnitArtInfo="ART_DEF_UNIT_RSTEALTHBOMBER" Range="40"/>
+			<Where Type="UNIT_STEALTH_BOMBER" />
+		</Update>
+
+		<Update>
+			<Set PrereqTech="TECH_RADAR"/>
+			<Where Type="UNIT_JAPANESE_ZERO" />
+		</Update>
 		
 
 		<!--太阳能卫星-->
@@ -73,7 +109,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_REJETFIGHT</UnitArtInfo>
 			<UnitFlagIconOffset>17</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>127</PortraitIndex>
+			<PortraitIndex>78</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
@@ -543,56 +579,7 @@
 
 
 
-	<Units>
 
-
-
-		<Update>
-			<Set PrereqTech="TECH_TRANSHUMANISM"/>
-			<Where Type="UNIT_SS_ENGINE" />
-		</Update>
-		
-		<Update>
-			<Set  RangedCombat="220"/>
-			<Where Type="UNIT_GUIDED_MISSILE" />
-		</Update>
-
-		<Update>
-			<Set  Cost="2800"/>
-			<Where Type="UNIT_ATOMIC_BOMB" />
-		</Update>
-
-		<Update>
-			<Set  Cost="5000"/>
-			<Where Type="UNIT_NUCLEAR_MISSILE" />
-		</Update>
-		
-		<Update>
-			<Set  Cost="7000"/>
-			<Where Type="UNIT_ICBM_MISSILE" />
-		</Update>
-
-
-
-	<Update>
-		<Set  UnitArtInfo="ART_DEF_UNIT_F-14" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="157"  />
-		<Where Type="UNIT_ATTACK_AIRCRAFT" />
-	</Update>
-
-
-
-
-	<Update>
-		<Set  UnitArtInfo="ART_DEF_UNIT_RSTEALTHBOMBER" Range="40"/>
-		<Where Type="UNIT_STEALTH_BOMBER" />
-	</Update>
-		
-	<Update>
-		<Set PrereqTech="TECH_RADAR"/>
-		<Where Type="UNIT_JAPANESE_ZERO" />
-	</Update>
-		
-	</Units>
 
 
 

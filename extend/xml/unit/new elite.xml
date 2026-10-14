@@ -46,8 +46,8 @@
 			<UnitArtInfo>ART_DEF_UNIT_BLIALI</UnitArtInfo>
 			<UnitFlagAtlas>BLIALI_FLAG_ATLAS</UnitFlagAtlas>
 			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>217</PortraitIndex>
 			<ProjectPrereq>PROJECT_BLIALI</ProjectPrereq>
 			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
 		</Row>

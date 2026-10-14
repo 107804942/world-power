@@ -2591,8 +2591,8 @@
 			<GridX>27</GridX>
 			<GridY>3</GridY>
 			<Quote>TXT_KEY_TECH_MASS_QUOTE</Quote>
-			<PortraitIndex>181</PortraitIndex>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 		</Row>
 
 

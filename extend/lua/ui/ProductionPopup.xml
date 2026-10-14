@@ -198,25 +198,31 @@
 
 
 	<!-- Promotion Instances for unit tooltip -->
-	<Instance Name="PromotionIcon3">
-		<Image ID="Image3" Size="32,32" Sampler="Linear" />
-	</Instance>
+	<!-- 每行一个晋升：图标 + 名字 -->
+<Instance Name="PromotionRow3">
+    <Stack ID="Row3" StackGrowth="Right" Padding="4">
+        <Image ID="Icon3" Size="32,32" Sampler="Linear" />
+        <Label ID="Name3" Offset="0,8" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5"/>
+    </Stack>
+</Instance>
 
-	<AlphaAnim ID="UnittipTimer3" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
+<AlphaAnim ID="UnittipTimer3" Speed="1000" Pause="0" Cycle="Once" Stopped="1" />
 
 	<!-- Unit Tooltip -->
 	<ToolTipType Name="City_UnitTooltip" >
-		<Grid ID="Grid3" Size="300,50" Padding="5,5" Style="GridBlack8" NoClip="1" >
-			<Stack Offset="12,12" StackGrowth="Down" Padding="8">
-				<Label ID="Text3" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-				<Label ID="Details3" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
-				<Stack ID="PromotionStack3" StackGrowth="Right">
-					<Stack ID="IconStack3" StackGrowth="Right" WrapGrowth="Bottom" WrapPadding="-6" Padding="-6" WrapWidth="260"/>
-					<Label ID="PromotionText3" Offset="0,10" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="5" />
-				</Stack>
-			</Stack>
-		</Grid>
-	</ToolTipType>
+    <Grid ID="Grid3" Size="300,50" Padding="5,5" Style="GridBlack8" NoClip="1" >
+        <Stack Offset="12,12" StackGrowth="Down" Padding="8">
+            <!-- 1. 主属性文本（不含 Help） -->
+            <Label ID="Text3" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
+            <!-- 2. 晋升列表：每行一个「图标 + 名字」，纵向排列 -->
+            <Stack ID="PromotionStack3" StackGrowth="Down" Padding="2">
+                <Stack ID="PromotionList3" StackGrowth="Down" Padding="0"/>
+            </Stack>
+            <!-- 3. Help 文本（放到晋升之后） -->
+            <Label ID="Details3" WrapWidth="500" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
+        </Stack>
+    </Grid>
+</ToolTipType>
 	
 	
 	
