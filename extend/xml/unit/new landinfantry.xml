@@ -313,7 +313,7 @@
 			<UnitFlagAtlas>FLAG_ATLAS_BE</UnitFlagAtlas>
 			<UnitFlagIconOffset>1</UnitFlagIconOffset>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>45</PortraitIndex>
+			<PortraitIndex>29</PortraitIndex>
 			<ExtraMaintenanceCost>15</ExtraMaintenanceCost>
 			<WorkRate>150</WorkRate>
 		</Row>
