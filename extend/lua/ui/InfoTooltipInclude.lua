@@ -2390,7 +2390,7 @@ end
 -- city: 可选，用于造价计算以及 CanTrain 检查
 -- ===========================================================================
 function GetHelpTextForUnit( unitID, bIncludeRequirements, city )
-print( "InfoTooltipInclude.GetHelpTextForUnit called, id=" .. tostring(unitID) )
+--print( "InfoTooltipInclude.GetHelpTextForUnit called, id=" .. tostring(unitID) )
 	local unit = GameInfo.Units[ unitID ]
 	if not unit then
 		return "<Unit undefined in game database>"
@@ -2817,7 +2817,7 @@ print( "InfoTooltipInclude.GetHelpTextForUnit called, id=" .. tostring(unitID) )
 
 -- ========== 统一的结尾逻辑（游戏内 / 预加载 / 生产面板 都适用） ==========
 -- ★ 调试：看 freePromotions 到底有没有
-	print( "  freePromotions count=" .. tostring(#freePromotions) )
+	--print( "  freePromotions count=" .. tostring(#freePromotions) )
 
 
 	-- 先插入分割符（★ 必须是 <<PROMOTION_SPLIT>> 这个字符串）
@@ -2870,7 +2870,7 @@ print( "InfoTooltipInclude.GetHelpTextForUnit called, id=" .. tostring(unitID) )
 	finalTip = finalTip:gsub( "^%[NEWLINE%]+", "" )
 	finalTip = finalTip:gsub( "%[NEWLINE%]+$", "" )
 -- ★ 调试：看最终拼接结果里有没有 <<PROMOTION_SPLIT>>
-print( "  finalTip 前 200 字符=" .. string.sub(finalTip, 1, 200) )
+---print( "  finalTip 前 200 字符=" .. string.sub(finalTip, 1, 200) )
 	return finalTip
 
 
