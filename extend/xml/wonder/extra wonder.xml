@@ -394,9 +394,9 @@
 		<!-- 天空城-->
 
 		<Row>
-			<Type>BUILDINGCLASS_SKYCITY</Type>
-			<DefaultBuilding>BUILDING_SKYCITY</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_SKYCITY</Description>
+			<Type>BUILDINGCLASS_FARADAY_CYCLOID</Type>
+			<DefaultBuilding>BUILDING_FARADAY_CYCLOID</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_FARADAY_CYCLOID</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -1586,8 +1586,8 @@
 			<ExtraMissionarySpreads>2</ExtraMissionarySpreads>
 			<WonderSplashImage>LESHAN_BUDDHA.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>236</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>10</PortraitIndex>
 		</Row>
 
 
@@ -2685,12 +2685,12 @@
 
 		
 		<Row>
-			<Type>BUILDING_SKYCITY</Type>
-			<BuildingClass>BUILDINGCLASS_SKYCITY</BuildingClass>
-			<Description>TXT_KEY_BUILDING_SKYCITY</Description>
-			<Help>TXT_KEY_WONDER_SKYCITY_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_SKYCITY_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_SKYCITY_QUOTE</Quote>
+			<Type>BUILDING_FARADAY_CYCLOID</Type>
+			<BuildingClass>BUILDINGCLASS_FARADAY_CYCLOID</BuildingClass>
+			<Description>TXT_KEY_BUILDING_FARADAY_CYCLOID</Description>
+			<Help>TXT_KEY_WONDER_FARADAY_CYCLOID_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_FARADAY_CYCLOID_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_FARADAY_CYCLOID_QUOTE</Quote>
 			<Cost>30000</Cost>
 			<PrereqTech>TECH_DIGITAL_SOCIETY</PrereqTech>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -2701,7 +2701,7 @@
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<PortraitIndex>91</PortraitIndex>
-			<WonderSplashImage>SkyCity_Splash.dds</WonderSplashImage>
+			<WonderSplashImage>CYCLOID.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,T</WonderSplashAnchor>
 		</Row>
 

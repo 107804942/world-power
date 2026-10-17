@@ -2946,15 +2946,15 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_SKYCITY">
+		<Row Tag="TXT_KEY_BUILDING_FARADAY_CYCLOID">
 			<Text>法拉第回旋体</Text>
 		</Row>
-		<Row Tag="TXT_KEY_WONDER_SKYCITY_HELP">
+		<Row Tag="TXT_KEY_WONDER_FARADAY_CYCLOID_HELP">
 			<Text>
 				提供300份[ICON_RES_ELECTRICITY]电力资源。
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_WONDER_SKYCITY_PEDIA">
+		<Row Tag="TXT_KEY_WONDER_FARADAY_CYCLOID_PEDIA">
 			<Text>
 				法拉第回旋体是一个城市规模的电磁体，可以生成巨大的低压电源，并且可为不大的发动机和电池供电。通过播散数百万金属微熔丝，大型涡流式涡轮可以人为地导致海洋环流。如果应用适当，此现象产生的电磁力可以导致巨大的电流。
 				[NEWLINE]超过200,000 立方米的海水会以每分钟60公里的速度涌过涡轮。产生巨大的回旋力并且会永恒旋转下去，这会导致灾难性风暴，要建造一个可以容纳这个风暴的结构，相比而言可要难多了。通过连续介质力学发现了解决办法，那就是可以将海水转向，重新回收到加压的水流中。通过安全距离的水下观察到，人们可以目睹猛烈的漩涡塌缩为一个球心；四处充斥着振荡力。
@@ -2963,7 +2963,7 @@
 			</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_WONDER_SKYCITY_QUOTE">
+		<Row Tag="TXT_KEY_WONDER_FARADAY_CYCLOID_QUOTE">
 			<Text>
 				[NEWLINE]"将这样的系统作为我们的工作和社会的一种交互模式：强大的军队力量针对数不清的特工采取行动、发掘真理般的自然科学定律以及建立行动和进度的实例。"[NEWLINE]        ——科兹洛夫，《中央理事会备忘录》[NEWLINE]
 			</Text>
