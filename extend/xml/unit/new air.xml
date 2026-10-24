@@ -149,7 +149,7 @@
 			<UnitArtInfo>ART_DEF_UNIT_F53</UnitArtInfo>
 			<UnitFlagIconOffset>37</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<PortraitIndex>48</PortraitIndex>
+			<PortraitIndex>110</PortraitIndex>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<MoveRate>AIR_REBASE</MoveRate>
 			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>

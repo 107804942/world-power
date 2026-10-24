@@ -5545,22 +5545,27 @@
 
 
 
-		<!-- 塔尔欣寺庙 -->
-		<Row Tag="TXT_KEY_BUILDING_MALTA">
-			<Text>塔尔欣寺庙</Text>
+		<!-- 纽格兰奇墓 -->
+		<Row Tag="TXT_KEY_BUILDING_NEWGRANGE">
+			<Text>纽格兰奇墓</Text>
 		</Row>
-		<Row Tag="TXT_KEY_WONDER_MALTA_HELP">
+		<Row Tag="TXT_KEY_WONDER_NEWGRANGE_HELP">
 			<Text>所有城市赠送神祠，所有神祠+2[ICON_PEACE]信仰。大幅度增加本城的宗教压力。发现自然奇观时+1000[ICON_GOLD]金钱。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_WONDER_MALTA_QUOTE">
+		<Row Tag="TXT_KEY_WONDER_NEWGRANGE_QUOTE">
 			<Text>
-				[NEWLINE]"恶习是瞬息的结局，宗教是毕生的苦楚。"[NEWLINE]        ——巴尔扎克[NEWLINE]
+				[NEWLINE]"恐怕，建造它的族群、它最初的用意，将永远埋藏在未知之中。"[NEWLINE]        ——理查德·科尔特·霍尔[NEWLINE]
 			</Text>
 		</Row>
-		<Row Tag="TXT_KEY_WONDER_MALTA_PEDIA">
-			<Text>马耳他塔尔欣寺庙，这座寺庙可以说是世界上最古老的寺庙了，修建时间为公元前3150年。寺庙中结构复杂，雕刻工艺十分精湛，堪称世界奇迹。这座神庙的占地面积极大，达到了80000平方千米，是欧洲最早且最多的寺庙石器建筑。塔尔欣寺庙是马耳他考古遗址，分为三处独立建筑，在现场发现的很多石块后来被重新搭建好，或者放置到马耳他国家考古博物馆中。</Text>
+		<Row Tag="TXT_KEY_WONDER_NEWGRANGE_PEDIA">
+			<Text>
+				纽格莱奇是爱尔兰最著名的史前遗迹之一，一座建于约5200年前（公元前3200年左右）的巨型通道式坟墓。它比巨石阵和吉萨金字塔都要古老，是欧洲最重要的新石器时代遗址之一。
+				[NEWLINE]Newgrange 位于爱尔兰米斯郡博因河谷的Brú na Bóinne考古景观中，是联合国教科文组织世界遗产的核心部分。它由当地的新石器时代农耕社群建造，展现了惊人的规划与工程能力。
+				[NEWLINE]其建筑本身就是一个奇迹：巨大的草皮覆盖的圆形石冢，直径约85米，高12米,内部有一条19米长的石砌通道，通向一个带有托臂穹顶的十字形内室。这个穹顶建造得极为精密，历经五千年至今仍不漏水。建造者从30英里（约48公里）外运来了灰岩板和白色石英鹅卵石用于建造和装饰立面。
+			</Text>
 		</Row>
+
 
 
 		<!-- 麦罗埃 -->
@@ -9812,16 +9817,19 @@
 
 
 		<Row Tag="TXT_KEY_BUILDING_ROYAL_COLLEGE">
-			<Text>皇家海军学院</Text>
+			<Text>美国海军学院</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ROYAL_COLLEGE_PEDIA">
 			<Text>
-				英国皇家海军学院，是英国培养海军初级军官的主要院校，被誉为英国海军军官的"摇篮"。学院创建于1863年，设在达特茅斯，故又称"达特茅斯皇家海军学院"。该院由海军本土司令部领导。招生条件是:17~19岁、身体健康、高中以上学生以及优秀士兵。学制1~4年。主要课程有大学文理学科、海军共同课目和专业训练。大学毕业生经过1年的共同课目训练后即可分配工作，被授予海军少尉军衔;高中生则要留校或被送往地方大学学习2~3年的大学课程，然后再回校接受海军专业训练，毕业后被授予见习少尉军衔，去舰队见习半年后，方可成为合格少尉。
+				美国海军学院（United States Naval Academy，简称 USNA），常因其所在地被称为“安纳波利斯军校”，是美国海军和海军陆战队初级军官的核心培养基地，与西点军校齐名。学院由海军部长乔治·班克罗夫特于1845年10月10日创立，最初称为“海军学校”。
+				[NEWLINE]创立背景：旨在应对蒸汽动力战舰的兴起和美国迈向世界强国的需求，为军官建立共同的教育基础。
+				[NEWLINE]关键演变：1850年正式更名为美国海军学院，并确立四年学制及夏季海上训练传统。内战期间（1861-1865）曾短暂迁至罗德岛，战后迁回。1975-1976年，国会授权开始招收女性学员，比例约占新生的15%-18%。
+				[NEWLINE]总的来说，美国海军学院通过其严酷的学术、军事与体能训练，塑造着美国海军的未来领导者，其影响力远超军事领域，深刻烙印在美国的历史与战略之中。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_ROYAL_COLLEGE_QUOTE">
 			<Text>
-				[NEWLINE]"汝欲和平，即须备战。"[NEWLINE]        —— 皇家海军[NEWLINE]
+				[NEWLINE]"三叉戟是用知识铸造的。"[NEWLINE]        —— 美国海军学院校训[NEWLINE]
 			</Text>
 		</Row>
 
@@ -9834,7 +9842,7 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_ROYAL">
-			<Text>皇家海军</Text>
+			<Text>精锐海军</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ROYAL_HELP">
 			<Text>+25点生命值上限。</Text>

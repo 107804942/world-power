@@ -866,20 +866,8 @@
 			<IconsPerRow>4</IconsPerRow>
 			<IconsPerColumn>4</IconsPerColumn>
 		</Row>
-		<Row>
-			<Atlas>FLAG_ATLAS_FUTURE_2</Atlas>
-			<IconSize>32</IconSize>
-			<Filename>FutureIcons2.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>4</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>FLAG_ATLAS_FUTURE_3</Atlas>
-			<IconSize>32</IconSize>
-			<Filename>FutureIcons3.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>4</IconsPerColumn>
-		</Row>
+	
+	
 		<Row>
 			<Atlas>FLAG_ATLAS_FUTURE_4</Atlas>
 			<IconSize>32</IconSize>
@@ -896,13 +884,7 @@
 		</Row>
 
 	
-		<Row>
-			<Atlas>FLAG_ATLAS_FUTURE_8</Atlas>
-			<IconSize>32</IconSize>
-			<Filename>FutureIcons8.dds</Filename>
-			<IconsPerRow>4</IconsPerRow>
-			<IconsPerColumn>4</IconsPerColumn>
-		</Row>
+	
 		
 		<Row>
 			<Atlas>SMAN_IEUP_FLAG_ATLAS</Atlas>

@@ -1576,33 +1576,24 @@ local g_PromotionRowIM3 = StackInstanceManager( "PromotionRow3", "Row3", g_Toolt
 --==========================================================
 function ToolTipHandler( button )
     local id = button:GetVoid2()
+    if not id then return end
     local controls = g_TooltipControls
 
-    local tip = GetHelpTextForUnit2(id)   -- 含 <<PROMOTION_SPLIT>>
-    local thisUnitInfo = GameInfo.Units[id]
-
-    -- === 按分割符拆成 主文本 / Help 文本 ===
-    local splitMarker = "<<PROMOTION_SPLIT>>"
-    local tipUpper, tipLower = tip, ""
-    local pos = string.find( tip, splitMarker, 1, true )
-    if pos then
-        tipUpper = string.sub( tip, 1, pos - 1 )
-        tipLower = string.sub( tip, pos + #splitMarker )
+    -- GetHelpTextForUnit2 现在返回结构化 table
+    local t = GetHelpTextForUnit2( id )
+    if type( t ) ~= "table" then
+        -- 兜底：万一拿到字符串（比如别处误改），直接当 body
+        t = { body = tostring(t) }
     end
-    tipUpper = tipUpper:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
-    tipUpper = tipUpper:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
-    tipLower = tipLower:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
-    tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
 
-    controls.Text3:SetText( tipUpper )
-    controls.Details3:SetText( tipLower )
-    controls.Details3:SetHide( tipLower == "" )
+    controls.Text3:SetText( t.body or "" )
 
     -- === 晋升列表：每行一个「图标 + 名字」 ===
     g_PromotionRowIM3:ResetInstances()
 
     local count = 0
-    if not thisUnitInfo.IsTrade then
+    local thisUnitInfo = GameInfo.Units[id]
+    if thisUnitInfo then
         local thisUnitType = { UnitType = thisUnitInfo.Type }
         for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
             local unitPromotion = GameInfo.UnitPromotions[ row.PromotionType ]
@@ -1622,9 +1613,20 @@ function ToolTipHandler( button )
         g_PromotionRowIM3:Commit()
         controls.PromotionStack3:SetHide( false )
     else
-        g_PromotionRowIM3:Commit()   -- 把多余实例收回 Scrap
+        g_PromotionRowIM3:Commit()
         controls.PromotionStack3:SetHide( true )
     end
+
+  -- === Help + limited（下半部分） ===
+    local lower = {}
+    if t.help and t.help ~= "" then
+        lower[#lower+1] = t.help
+    end
+    if t.limited and t.limited ~= "" then
+        lower[#lower+1] = t.limited
+    end
+    controls.Details3:SetText( table.concat( lower, "[NEWLINE]" ) )
+    controls.Details3:SetHide( #lower == 0 )
 
     -- 刷新布局
     controls.PromotionStack3:CalculateSize()

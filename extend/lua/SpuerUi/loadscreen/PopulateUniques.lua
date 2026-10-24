@@ -238,43 +238,26 @@ local g_PromotionRowIM5 = StackInstanceManager( "PromotionRow5", "Row5", g_Toolt
 -- city Tooltips
 --==========================================================
 function ToolTipHandler( button )
---- print( "ToolTipHandler called, id=" .. tostring(button:GetVoid2()) )
     local id = button:GetVoid2()
     if not id then return end
 
- print( "GetHelpTextForUnit type = " .. type(GetHelpTextForUnit) )
-    print( "GetHelpTextForUnit addr = " .. tostring(GetHelpTextForUnit) )
-
-
-    -- 预加载界面（文明选择、读取存档）永远走 City_UnitTooltip5
-    -- 不再判断 isInGame，避免误走 EUI_ItemTooltip 的控件
+    -- 关键修复：声明 controls 变量
     local controls = g_TooltipControls5
-    local tip = GetHelpTextForUnit( id, true )
 
-    -- 按 <<PROMOTION_SPLIT>> 拆分
-    local splitMarker = "<<PROMOTION_SPLIT>>"
-    local tipUpper, tipLower = tip, ""
-    local pos = string.find( tip, splitMarker, 1, true )
-    if pos then
-        tipUpper = string.sub( tip, 1, pos - 1 )
-        tipLower = string.sub( tip, pos + #splitMarker )
+    -- GetHelpTextForUnit2 现在返回结构化 table
+    local t = GetHelpTextForUnit2( id )
+    if type( t ) ~= "table" then
+        -- 兜底：万一拿到字符串，直接当 body
+        t = { body = tostring(t) }
     end
-    tipUpper = tipUpper:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
-    tipUpper = tipUpper:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
-    tipLower = tipLower:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
-    tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" ):gsub( "%[NEWLINE%]+$", "" )
 
- print( "tipUpper=[" .. tipUpper .. "]" )
-    print( "tipLower=[" .. tipLower .. "]" )
+    controls.Text5:SetText( t.body or "" )
 
-    controls.Text5:SetText( tipUpper )
-
-    -- 晋升列表：每行一个「图标 + 名字」
+    -- === 晋升列表：每行一个「图标 + 名字」 ===
     g_PromotionRowIM5:ResetInstances()
     local count = 0
     local thisUnitInfo = GameInfo.Units[id]
     if thisUnitInfo then
-        -- 用单位类型判断贸易单位，避免访问 GameInfoCache 里不存在的 IsTrade 字段
         local unitType = thisUnitInfo.Type
         local isTrade = ( unitType == "UNIT_CARAVAN" or unitType == "UNIT_CARGO_SHIP" )
         if not isTrade then
@@ -302,9 +285,16 @@ function ToolTipHandler( button )
         controls.PromotionStack5:SetHide( true )
     end
 
-    -- Help 文本
-    controls.Details5:SetText( tipLower )
-    controls.Details5:SetHide( tipLower == "" )
+    -- === Help + limited（下半部分） ===
+    local lower = {}
+    if t.help and t.help ~= "" then
+        lower[#lower+1] = t.help
+    end
+    if t.limited and t.limited ~= "" then
+        lower[#lower+1] = t.limited
+    end
+    controls.Details5:SetText( table.concat( lower, "[NEWLINE]" ) )
+    controls.Details5:SetHide( #lower == 0 )
 
     -- 刷新布局
     controls.PromotionStack5:CalculateSize()

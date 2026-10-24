@@ -331,11 +331,12 @@ local function TooltipSelect( tooltipTable, control, ... )
 end
 
 --==========================================================
--- 统一的物品提示 (合并 ShowTextToolTipAndPicture / ShowTextToolTipAndPicture2)
--- tip:       主文本 (支持 [NEWLINE] 富文本)
--- index:     主图 portrait 索引
--- atlas:     主图 atlas 名称
--- unitID:    可选；提供时填充免费晋升图标与文字，并触发 UnitTooltipTimer2 动画
+-- 统一的物品提示
+-- tip 支持两种形式：
+--   * string           ：直接显示为上半部分
+--   * table            ：结构化，字段 body / promotions / help / limited
+-- index/atlas          ：主图
+-- unitID               ：可选；提供时填充免费晋升图标（与 tips.promotions 二者择一）
 --==========================================================
 include "StackInstanceManager"
 local g_PromotionRowIM = StackInstanceManager( "PromotionRow", "Row", g_ItemTooltipControls.PromotionList2 )
@@ -348,39 +349,28 @@ function ShowItemTooltip( tip, index, atlas, unitID )
 		atlas = nil
 	end
 
-	-- === 第一步：按占位符切分 tip ===
-	local splitMarker = "<<PROMOTION_SPLIT>>"
-	local tipUpper, tipLower = tip, ""
-	local pos = string.find( tip, splitMarker, 1, true )
-	if pos then
-		tipUpper = string.sub( tip, 1, pos - 1 )
-		tipLower = string.sub( tip, pos + #splitMarker )
-		tipUpper = tipUpper:gsub( "%[NEWLINE%]+$", "" )
-		tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" )
+	-- === 规范化 tip ===
+	local body, help, limited, promotionsText
+	if type( tip ) == "table" then
+		body    = tip.body or ""
+		help    = tip.help
+		limited = tip.limited
+		promotionsText = tip.promotions
 	else
-		tipUpper = tip
-		tipLower = ""
+		body = tip or ""
 	end
 
-	-- 清理多余换行
-	tipUpper = tipUpper:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
-	tipUpper = tipUpper:gsub( "^%[NEWLINE%]+", "" )
-	tipUpper = tipUpper:gsub( "%[NEWLINE%]+$", "" )
-	tipLower = tipLower:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
-	tipLower = tipLower:gsub( "^%[NEWLINE%]+", "" )
-	tipLower = tipLower:gsub( "%[NEWLINE%]+$", "" )
+	body = body:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+	body = body:gsub( "^%[NEWLINE%]+", "" )
+	body = body:gsub( "%[NEWLINE%]+$", "" )
 
-	-- === 关键修复：把 tipLower 赋给 Text3 ===
-	controls.Text2:SetText( tipUpper )
-	controls.Text3:SetText( tipLower )
+	controls.Text2:SetText( body )
 
 	-- 主图
-                 controls.PortraitFrame2:SetHide( not ( atlas and IconHookup( index, 256, atlas, controls.Portrait2 ) ) )
+	controls.PortraitFrame2:SetHide( not ( atlas and IconHookup( index, 256, atlas, controls.Portrait2 ) ) )
 	controls.PortraitFrame2:SetAnchor( GetMousePos() > 300 and "L,C" or "R,C" )
-	-- 永远隐藏立绘（避免显示黑色圆形）
-	--controls.PortraitFrame2:SetHide( true )
 
-	-- === 晋升行 ===
+	-- === 晋升行（仅当传了 unitID 且没在 table.promotions 里给文本时） ===
 	g_PromotionRowIM:ResetInstances()
 	local promotionCount = 0
 
@@ -400,29 +390,44 @@ function ShowItemTooltip( tip, index, atlas, unitID )
 		end
 	end
 
-	-- === 显示/隐藏晋升区 ===
-	local showPromotions = unitID and promotionCount > 0
+		local showPromotions = unitID and promotionCount > 0
+	
 	if showPromotions then
-		--controls.PromotionTitle2:SetHide( false )
+		-- 优先渲染图标列表
 		controls.PromotionStack2:SetHide( false )
 		g_PromotionRowIM:Commit()
+	elseif promotionsText and promotionsText ~= "" then
+		-- 如果没有传 unitID 但是有文本，降级为纯文本显示
+		local lowerParts = { "[ICON_BULLET]" .. promotionsText }
+		if help and help ~= "" then
+			lowerParts[#lowerParts+1] = help
+		end
+		if limited and limited ~= "" then
+			lowerParts[#lowerParts+1] = limited
+		end
+		controls.Text3:SetText( concat( lowerParts, "[NEWLINE]" ) )
+		controls.PromotionStack2:SetHide( true )
+		-- 既然已经在文本里输出了，就清空后续的 help 以防重复渲染
+		help = nil
+		limited = nil
 	else
-		--controls.PromotionTitle2:SetHide( true )
 		controls.PromotionStack2:SetHide( true )
 	end
+
+	-- === 下半部分文本：help + limited ===
+	local lowerParts = {}
+	if help and help ~= "" then
+		lowerParts[#lowerParts+1] = help
+	end
+	if limited and limited ~= "" then
+		lowerParts[#lowerParts+1] = limited
+	end
+	controls.Text3:SetText( concat( lowerParts, "[NEWLINE]" ) )
 
 	-- === 刷新布局 ===
 	controls.TextStack:CalculateSize()
 	controls.Box:ReprocessAnchoring()
 	controls.Box:DoAutoSize()
-
-
----print( "PromotionList2 H=" .. tostring(controls.PromotionList2:GetSizeY()) )
---print( "PromotionStack2 H=" .. tostring(controls.PromotionStack2:GetSizeY()) )
---print( "Text2 H=" .. tostring(controls.Text2:GetSizeY()) )
----print( "Text3 H=" .. tostring(controls.Text3:GetSizeY()) )
---print( "TextStack H=" .. tostring(controls.TextStack:GetSizeY()) )
-
 
 	-- 动画
 	if showPromotions then
@@ -1625,13 +1630,12 @@ LuaEvents.TechButtonTooltip.Add( function( orderID, itemID )
 
 	if orderID == OrderTypes.ORDER_TRAIN then
 		iconIndex, iconAtlas = GetUnitPortraitIcon( itemID, GetActivePlayer() )
-		tip = GetHelpTextForUnit2(itemID)  -- 返回带 <<PROMOTION_SPLIT>> 的文本
-		return ShowItemTooltip( tip, iconIndex, iconAtlas, itemID )  -- 关键：传入 unitID
-
+		tip = GetHelpTextForUnit2( itemID )          -- 现在返回 table
+		return ShowItemTooltip( tip, iconIndex, iconAtlas, itemID )  -- 把 itemID 加上！
 	elseif orderID == OrderTypes.ORDER_CONSTRUCT then
 		iconIndex, iconAtlas = GetItemPortraitIcon( GameInfo.Buildings, itemID )
 		tip = GetHelpTextForBuilding( itemID )
-		return ShowItemTooltip( tip, iconIndex, iconAtlas )  -- 建筑不需要 unitID
+		return ShowItemTooltip( tip, iconIndex, iconAtlas )
 	-- ... 其他分支保持不变 ...
 
 	elseif orderID ==  OrderTypes.ORDER_CREATE then
@@ -2695,4 +2699,3 @@ LuaEvents.TopPanelTooltips.Add( function( control )
 end)
 
 print( "EUI tooltip server loaded." )
-

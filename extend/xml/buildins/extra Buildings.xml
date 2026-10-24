@@ -917,8 +917,8 @@
 				<AllowsRangeStrike>1</AllowsRangeStrike>
 				<Defense>1000</Defense>
 				<ExtraCityHitPoints>25</ExtraCityHitPoints>
-				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-				<PortraitIndex>110</PortraitIndex>
+				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<PortraitIndex>195</PortraitIndex>
 			</Row>
 
 

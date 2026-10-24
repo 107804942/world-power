@@ -5,7 +5,7 @@
     <ProjectGuid>{2ce33d35-7a84-4c0d-9e92-e56c07b02514}</ProjectGuid>
     <Name>世界强权</Name>
     <Guid>41450919-c52c-406f-8752-5ea34be32b2d</Guid>
-    <ModVersion>85</ModVersion>
+    <ModVersion>86</ModVersion>
     <Stability>Beta</Stability>
     <Teaser>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Teaser>
     <Description>[COLOR_YELLOW]基于最新版SP的拓展模组[/COLOR]</Description>
@@ -504,8 +504,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="extend\art" />
-    <Folder Include="extend\art\future\splash" />
-    <Folder Include="extend\art\future\icon" />
     <Folder Include="extend\art\health\doctor" />
     <Folder Include="extend\art\improvements\BE array" />
     <Folder Include="extend\art\improvements\BE BARGE" />
@@ -558,6 +556,7 @@
     <Folder Include="extend\art\nature\retba" />
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
+    <Folder Include="extend\art\WonderSplash" />
     <Folder Include="extend\art\Notification" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
     <Folder Include="extend\art\RESOURCES\models\more\Barley" />
@@ -583,7 +582,6 @@
     <Folder Include="extend\art\UI\FONT" />
     <Folder Include="extend\art\units" />
     <Folder Include="extend\art\PROMOTION" />
-    <Folder Include="extend\art\future" />
     <Folder Include="extend\art\units\055destroyer" />
     <Folder Include="extend\art\units\Admiral" />
     <Folder Include="extend\art\units\052d" />
@@ -1333,6 +1331,18 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\flag\FutureIcons1.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\flag\FutureIcons4.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\flag\FutureIcons5.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\flag\HeliosIcon_32.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -1350,334 +1360,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\flag\unitflagatlaswhiteTwo.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\icon\FutureIcons1.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\icon\FutureIcons2.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\icon\FutureIcons3.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\icon\FutureIcons4.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\icon\FutureIcons5.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\icon\FutureIcons8.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\AbuSimbel_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\ANCIENT_CITY.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\AP.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\AsteroidMining_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Baths.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\BEILUN_TOWER.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\COOKED_MEDICINE.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\CYCLOID.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\DIABLO.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\DZIMBABWE.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\GateAll.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\GUIGU.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\KARLSTEJN.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\KARRUPP.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\KGB.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\LESHAN_BUDDHA.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\MARKOV.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Motherland_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\OSARAGI.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\BEGplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\bletchleysplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\BurjAlArab.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Carcassonne_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Crystal_Palace_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\DataHaven_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\death_laser.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\DionysusSplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\FasilGhebbi_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\FOLDING.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\GenomeProject_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\GLOBALCNIEMA_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\HeliosSplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Helios_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\ISHTAR.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\JurassicPark_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\KnossosSplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\KrakChevaliers_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Kronborg_splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\LascauxSplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\LeonardoSplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Lift_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\MaginotLine.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\MALBORK.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\MALTA.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\MEROE_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Meteora_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\MontStMichel_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\OrbitalRefinery_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\PBSplash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\PEOPLES_HALL.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Ponte_splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\POSEIDON_TEMPLE.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Puma.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Rockefeller_splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\ROYAL.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Rushmore_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\SANKORE.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\SILKROAD.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\SkaraBrae.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Skynet_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Smithsonian_splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Solomon_splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\SOVIET_PALACE.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Sphinx_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Torre_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\UltimaTower.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Versailles_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\victory_emancipation.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\VirtualIdol_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\WASHION_TOWER.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\WHITE_HOUSE.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\WonderSummerPalace.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\Wonder_PontDuGard.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\W_LEP.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\YUEYANG_Splash.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\future\splash\ZHENGGUOQU_Splash.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -16041,6 +15723,310 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\WonderSplash\AbuSimbel_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\ANCIENT_CITY.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\AP.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\AsteroidMining_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Baths.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\BEGplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\BEILUN_TOWER.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\bletchleysplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\BurjAlArab.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Carcassonne_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\COOKED_MEDICINE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Crystal_Palace_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\CYCLOID.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\DataHaven_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\death_laser.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\DIABLO.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\DionysusSplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\DZIMBABWE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\FasilGhebbi_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\FOLDING.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\GateAll.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\GenomeProject_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\GLOBALCNIEMA_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\GUIGU.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\HeliosSplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Helios_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\ISHTAR.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\JurassicPark_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\KARLSTEJN.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\KARRUPP.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\KGB.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\KnossosSplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\KrakChevaliers_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Kronborg_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\LascauxSplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\LeonardoSplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\LESHAN_BUDDHA.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Lift_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\MaginotLine.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\MALBORK.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\MARKOV.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\MEROE_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Meteora_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\MontStMichel_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Motherland_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\NEWGRANGE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\OrbitalRefinery_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\OSARAGI.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\PBSplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\PEOPLES_HALL.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Ponte_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\POSEIDON_TEMPLE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Puma.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Rockefeller_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\ROYAL.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Rushmore_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\SANKORE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\SILKROAD.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\SkaraBrae.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Skynet_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Smithsonian_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Solomon_splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\SOVIET_PALACE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Sphinx_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Torre_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\UltimaTower.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\Versailles_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\victory_emancipation.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\VirtualIdol_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\WASHION_TOWER.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\WHITE_HOUSE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\WonderSummerPalace.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\PontDuGard.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\W_LEP.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\YUEYANG_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\ZHENGGUOQU_Splash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\Crime\art\Crime_Icon64.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -21289,7 +21275,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Lua Script3.lua">
+    <Content Include="EnemyUnitPanel.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

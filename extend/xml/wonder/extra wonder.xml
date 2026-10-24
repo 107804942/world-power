@@ -582,11 +582,11 @@
 			<Description>TXT_KEY_BUILDING_SPHINX</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
-		<!-- 塔尔欣寺庙 -->
+		<!-- 纽格兰奇墓 -->
 		<Row>
-			<Type>BUILDINGCLASS_MALTA</Type>
-			<DefaultBuilding>BUILDING_MALTA</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_MALTA</Description>
+			<Type>BUILDINGCLASS_NEWGRANGE</Type>
+			<DefaultBuilding>BUILDING_NEWGRANGE</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_NEWGRANGE</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -1039,7 +1039,7 @@
 			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
 			<TechEnhancedTourism>6</TechEnhancedTourism>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>237</PortraitIndex>
+			<PortraitIndex>158</PortraitIndex>
 			<Water>1</Water>
 			<FreePromotion>PROMOTION_BEILUN_TOWER</FreePromotion>
 			<WonderSplashImage>BEILUN_TOWER.dds</WonderSplashImage>
@@ -1473,8 +1473,8 @@
 			<MinAreaSize>-1</MinAreaSize>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<FreeBuildingThisCity>BUILDINGCLASS_AQUEDUCT</FreeBuildingThisCity>
-			<PortraitIndex>8</PortraitIndex>
-			<WonderSplashImage>Wonder_PontDuGard.dds</WonderSplashImage>
+			<PortraitIndex>174</PortraitIndex>
+			<WonderSplashImage>PontDuGard.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
 
@@ -2024,14 +2024,14 @@
 		
 
 
-		<!-- 塔尔欣寺庙 -->
+		<!-- 纽格兰奇墓 -->
 		<Row>
-			<Type>BUILDING_MALTA</Type>
-			<BuildingClass>BUILDINGCLASS_MALTA</BuildingClass>
-			<Description>TXT_KEY_BUILDING_MALTA</Description>
-			<Help>TXT_KEY_WONDER_MALTA_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_MALTA_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_MALTA_QUOTE</Quote>
+			<Type>BUILDING_NEWGRANGE</Type>
+			<BuildingClass>BUILDINGCLASS_NEWGRANGE</BuildingClass>
+			<Description>TXT_KEY_BUILDING_NEWGRANGE</Description>
+			<Help>TXT_KEY_WONDER_NEWGRANGE_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_NEWGRANGE_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_NEWGRANGE_QUOTE</Quote>
 			<Cost>115</Cost>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -2044,8 +2044,8 @@
 			<FreeBuilding>BUILDINGCLASS_SHRINE</FreeBuilding>
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>73</PortraitIndex>
-			<WonderSplashImage>MALTA.dds</WonderSplashImage>
+			<PortraitIndex>22</PortraitIndex>
+			<WonderSplashImage>NEWGRANGE.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>
 		

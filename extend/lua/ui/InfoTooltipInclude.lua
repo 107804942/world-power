@@ -2384,16 +2384,18 @@ end
 
 
 
--- ===========================================================================
--- Help text for Units (合并版)
--- bIncludeRequirements: 保留参数以兼容旧调用；仅当传入 city 且为 true 时检查 CanTrain
--- city: 可选，用于造价计算以及 CanTrain 检查
--- ===========================================================================
-function GetHelpTextForUnit( unitID, bIncludeRequirements, city )
---print( "InfoTooltipInclude.GetHelpTextForUnit called, id=" .. tostring(unitID) )
+
+-- 内部实现：返回结构化 table
+--   {
+--     body       = 上半部分文本（属性、造价、前提等）
+--     promotions = 晋升行文本（带 [ICON_BULLET]，供 Text3 使用；无晋升时 nil）
+--     help       = Help 文本 + 免费晋升 Help（位于晋升列表之后）
+--     limited    = "每位玩家只允许1个" 之类限制提示（位于最后）
+--   }
+local function GetHelpTextForUnitEx( unitID, bIncludeRequirements, city )
 	local unit = GameInfo.Units[ unitID ]
 	if not unit then
-		return "<Unit undefined in game database>"
+		return { body = "<Unit undefined in game database>" }
 	end
 
 -- === 预加载界面（FrontEnd）场景：没有 UI 层的 ShowItemTooltip，需要手动清理分割符 ===
@@ -2426,6 +2428,8 @@ function GetHelpTextForUnit( unitID, bIncludeRequirements, city )
 	------------------------------------------------
 	-- 免费晋升 (同时累加战斗/移动/视野修正)
 	------------------------------------------------
+	local freePromotionHelps = {}
+
 	for row in GameInfo.Unit_FreePromotions( thisUnitType ) do
 		item = GameInfo.UnitPromotions[ row.PromotionType ]
 		if item then
@@ -2437,6 +2441,20 @@ function GetHelpTextForUnit( unitID, bIncludeRequirements, city )
 			if item.ShowInUnitPanel ~= 0 and item.ShowInTooltip ~= 0 then
 				insert( freePromotions, L(item.Description) )
 			end
+
+			-- Collect free promotion Help texts (skip PEDIA_UNIT_CATEGORY)
+			if item.PediaType ~= "PEDIA_UNIT_CATEGORY" and item.Help and item.Help ~= "" then
+				local promoHelp = L(item.Help)
+				if promoHelp ~= "" then
+					-- Don't double-up [ICON_BULLET] prefix
+					if string.match(promoHelp, "^%s*%[ICON_BULLET%]") then
+						insert( freePromotionHelps, promoHelp )
+					else
+						insert( freePromotionHelps, "[ICON_BULLET]" .. promoHelp )
+					end
+				end
+			end
+			------------------------------------------------
 		end
 	end
 
@@ -2600,21 +2618,26 @@ function GetHelpTextForUnit( unitID, bIncludeRequirements, city )
 		end
 	end
 
-	-- Resources required
+	-- Resources required (横排显示)
+	local resTips = {}
 	if Game then
 		for resource in GameInfo.Resources() do
 			item = Game.GetNumResourceRequiredForUnit( unitID, resource.ID )
 			if item ~= 0 then
-				insert( tips, ResourceQuantity( resource, -item ) )
+				insert( resTips, ResourceQuantity( resource, -item ) )
 			end
 		end
 	else
 		for row in GameInfo.Unit_ResourceQuantityRequirements( thisUnitType ) do
 			resource = GameInfo.Resources[ row.ResourceType ]
 			if resource and (row.Cost or 0) ~= 0 then
-				insert( tips, ResourceQuantity( resource, -row.Cost ) )
+				insert( resTips, ResourceQuantity( resource, -row.Cost ) )
 			end
 		end
+	end
+	if #resTips > 0 then
+		-- 用三个空格隔开资源
+		insert( tips, concat( resTips, "   " ) )
 	end
 
 	insert( tips, "----------------" )
@@ -2815,70 +2838,72 @@ function GetHelpTextForUnit( unitID, bIncludeRequirements, city )
 
 
 
--- ========== 统一的结尾逻辑（游戏内 / 预加载 / 生产面板 都适用） ==========
--- ★ 调试：看 freePromotions 到底有没有
-	--print( "  freePromotions count=" .. tostring(#freePromotions) )
-
-
-	-- 先插入分割符（★ 必须是 <<PROMOTION_SPLIT>> 这个字符串）
-	if #freePromotions > 0 then
-		insert( tips, "<<PROMOTION_SPLIT>>" )
-	end
-
-	-- 把"每位玩家只允许1个"等限制提示追加到分割符之后（晋升列表之后）
-	--if #limitedTip > 0 then
-		---for _, t in ipairs( limitedTip ) do
-			-- 在限制提示末尾追加换行，确保后续的分隔线/文本换到下一行
-			--insert( tips, t .. "[NEWLINE]" )
-		--end
-	--end
-
-	-- 暂存 Help 文本，并临时清空，防止它被自动拼到上半部分
+-- ========== 统一的结尾逻辑（结构化返回） ==========
+	-- 拼接上半部分（body）：把 tips 全部拼起来，Help 文本留到最后单独处理
 	local savedHelpText = unit.Help and L( unit.Help ) or ""
 	local originalHelp = unit.Help
-	if #freePromotions > 0 then
-		unit.Help = nil
-	end
-
-	-- 拼接上半部分
-	local finalTip = AddPreWrittenHelpTextAndConcat( tips, unit )
-
-	-- 还原 unit.Help
+	unit.Help = nil   -- 防止 AddPreWrittenHelpTextAndConcat 把 Help 拼进 body
+	local body = AddPreWrittenHelpTextAndConcat( tips, unit )
 	unit.Help = originalHelp
 
-	-- 把 Help 文本拼接到分割符之后
-	if #freePromotions > 0 and savedHelpText ~= "" then
-		---finalTip = finalTip .. "[NEWLINE]----------------[NEWLINE]" .. savedHelpText
-		finalTip = finalTip .. "----------------[NEWLINE]" .. savedHelpText
+	-- 下半部分（help）：Help 文本 + 免费晋升 Help
+	local helpText = ""
+	if savedHelpText ~= "" then
+		helpText = "----------------[NEWLINE]" .. savedHelpText
 	end
-
-	-- ★ 新增：将“每位玩家只允许”等数量限制移动到 Help 文本结束后
-	if #limitedTip > 0 then
-		for _, t in ipairs( limitedTip ) do
-			finalTip = finalTip .. "[NEWLINE]" .. t
+	if #freePromotionHelps > 0 then
+		if helpText == "" then
+			helpText = "----------------"
 		end
+		helpText = helpText .. "[NEWLINE]" .. concat( freePromotionHelps, "[NEWLINE]" )
 	end
 
-	-- 保留 <<PROMOTION_SPLIT>>，让 UI 层（PopulateUniques.lua / ShowItemTooltip）自己处理
-	-- 不能在 InfoTooltipInclude 里替换掉它，否则 UI 层找不到分割点
-	-- if isPreGame then
-	--     finalTip = finalTip:gsub( "<<PROMOTION_SPLIT>>", "[NEWLINE]----------------[NEWLINE]" )
-	-- end
+	-- 限制提示
+	local limitedText = ""
+	if #limitedTip > 0 then
+		limitedText = concat( limitedTip, "[NEWLINE]" )
+	end
 
-	-- 清理多余换行
-	finalTip = finalTip:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
-	finalTip = finalTip:gsub( "^%[NEWLINE%]+", "" )
-	finalTip = finalTip:gsub( "%[NEWLINE%]+$", "" )
--- ★ 调试：看最终拼接结果里有没有 <<PROMOTION_SPLIT>>
----print( "  finalTip 前 200 字符=" .. string.sub(finalTip, 1, 200) )
-	return finalTip
+	-- 清理多余换行（分别对 body / help 做，避免把两段之间的边界吃掉）
+	local function tidy( s )
+		s = s:gsub( "%[NEWLINE%]+%[NEWLINE%]+", "[NEWLINE]" )
+		s = s:gsub( "^%[NEWLINE%]+", "" )
+		s = s:gsub( "%[NEWLINE%]+$", "" )
+		return s
+	end
+	body = tidy( body )
+	helpText = tidy( helpText )
 
-
+	return {
+		body       = body,
+		-- promotions 字段存的是"带 bullet 的晋升名列表"，供 Text3 使用
+		-- 同时 ShowItemTooltip 若传了 unitID 会走图标行分支，二选一
+		promotions = ( #freePromotions > 0 ) and concat( freePromotions, "[NEWLINE][ICON_BULLET]" ) or nil,
+		help       = ( helpText ~= "" ) and helpText or nil,
+		limited    = ( limitedText ~= "" ) and limitedText or nil,
+	}
 end
 
--- 兼容旧调用：GetHelpTextForUnit2( unitID ) 等价于 GetHelpTextForUnit( unitID, true, nil )
+-- 对外：字符串版本（保持原签名，供其它不关心晋升分区的调用方使用）
+function GetHelpTextForUnit( unitID, bIncludeRequirements, city )
+	local t = GetHelpTextForUnitEx( unitID, bIncludeRequirements, city )
+	local parts = { t.body }
+	if t.promotions then
+		parts[#parts+1] = "[ICON_BULLET]" .. t.promotions
+	end
+	if t.help then
+		parts[#parts+1] = t.help
+	end
+	if t.limited then
+		parts[#parts+1] = t.limited
+	end
+	return concat( parts, "[NEWLINE]" )
+end
+
+-- 对外：结构化版本（供 EUI tooltip server / PopulateUniques / ProductionPopup 使用）
+-- 保留旧签名 GetHelpTextForUnit2( unitID )
 function GetHelpTextForUnit2( unitID )
-	return GetHelpTextForUnit( unitID, true, nil )
+	return GetHelpTextForUnitEx( unitID, true, nil )
 end
 
 -- ===========================================================================

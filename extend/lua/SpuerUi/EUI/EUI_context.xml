@@ -43,7 +43,7 @@
 			<!-- 左侧文本主容器 -->
 			<Stack ID="TextStack" Offset="12,12" StackGrowth="Down" Padding="4">
 				<!-- 上半部分文本 -->
-				<Label ID="Text2" WrapWidth="300" ColorSet="Beige_Black_Alpha" Font="TwCenMT16"/>
+				<Label ID="Text2" WrapWidth="300" ColorSet="Beige_Black_Alpha" Font="TwCenMT14"/>
 				
 				<!-- 晋升区容器（仅在有晋升时显示） -->
 				<Stack ID="PromotionStack2" StackGrowth="Down" Hidden="1" Padding="0">
@@ -55,7 +55,7 @@
 
 
 <!-- 下半部分文本（Help 文本，放在晋升列表之后） -->
-				<Label ID="Text3" WrapWidth="300" ColorSet="Beige_Black_Alpha" Font="TwCenMT16" LeadingOffset="-2"/>
+				<Label ID="Text3" WrapWidth="300" ColorSet="Beige_Black_Alpha" Font="TwCenMT14" LeadingOffset="-2"/>
 			</Stack>
 			
 			<!-- 右侧单位立绘 -->
