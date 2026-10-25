@@ -2443,7 +2443,7 @@ local function GetHelpTextForUnitEx( unitID, bIncludeRequirements, city )
 			end
 
 			-- Collect free promotion Help texts (skip PEDIA_UNIT_CATEGORY)
-			if item.PediaType ~= "PEDIA_UNIT_CATEGORY" and item.Help and item.Help ~= "" then
+			if item.PediaType ~= "PEDIA_UNIT_CATEGORY" and item.Help and item.Help ~= "" and item.ShowInUnitPanel ~= 0 and item.ShowInTooltip ~= 0 then
 				local promoHelp = L(item.Help)
 				if promoHelp ~= "" then
 					-- Don't double-up [ICON_BULLET] prefix

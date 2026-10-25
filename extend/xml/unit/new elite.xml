@@ -2,21 +2,126 @@
 <!-- Created by ModBuddy on 2021/2/23 20:46:58 -->
 <GameData>
 	<Units>
-		<Delete Type="UNIT_SUPER_HOWITZER"/>
-		<Delete Type="UNIT_MECH"/>
-		<Delete Type="UNIT_PARTICLE_CANNON"/>
-		<Delete Type="UNIT_STEALTH_HELICOPTER"/>
-		<Delete Type="UNIT_PAKFA_T50"/>
-		<Delete Type="UNIT_CRUSADER_ARTILLERY"/>
-		<Delete Type="UNIT_UNDERWATER_CARRIER"/>
-		<Delete Type="UNIT_TASKFORCE_141"/>
-		<Delete Type="UNIT_CHINESE_WEISHI"/>
 
 
 
 
+		<!--超级火炮-->
+		<Update>
+			<Where Type="UNIT_SUPER_HOWITZER"/>
+			<Set ExtraMaintenanceCost="20"/>
+		</Update>
+
+		<!--机甲-->
+		<Update>
+			<Where Type="UNIT_MECH"/>
+			<Set
+				PrereqTech="TECH_AUTONOMOUS_SYSTEMS"
+				Combat="1200"
+				RangedCombat="1200"
+				Range="1"
+				Cost="18000"
+				Moves="5"
+				UnitTechUpgrade="1"
+				UnitFlagIconOffset="62"
+				UnitFlagAtlas="SMAN_IEUP_FLAG_ATLAS"
+				MaxHitPoints="300"
+				SpecialCargo="SPECIALUNIT_MISSILE"
+				ExtraMaintenanceCost="2500"/>
+		</Update>
 
 
+		<!--粒子炮-->
+		<Update>
+			<Where Type="UNIT_PARTICLE_CANNON"/>
+			<Set
+				BaseSightRange="1"
+				Combat="960"
+				RangedCombat="960"
+				Cost="18000"
+				Moves="7"
+				Range="8"
+				UnitArtInfo="ART_DEF_UNIT_PARTICLE_CANNON"
+				MaxHitPoints="300"
+				ExtraMaintenanceCost="2000"
+			/>
+		</Update>
+
+		<!--科曼奇-->
+		<Update>
+			<Where Type="UNIT_STEALTH_HELICOPTER"/>
+			<Set
+				Combat="200"
+				RangedCombat="200"
+				Cost="1050"
+				IconAtlas="ROBOT_ICON_ATLAS5"
+				PortraitIndex="147"
+				ExtraMaintenanceCost="150"
+			/>
+		</Update>
+
+		<!--T50-->
+		<Update>
+			<Where Type="UNIT_PAKFA_T50"/>
+			<Set
+				Cost="1400"
+				ExtraMaintenanceCost="180"
+			/>
+		</Update>
+
+
+		<!-- UNIT_CRUSADER_ARTILLERY -->
+		<Update>
+			<Where Type="UNIT_CRUSADER_ARTILLERY"/>
+			<Set
+				Combat="250"
+				RangedCombat="250"
+				Cost="1200"
+				UnitFlagAtlas="UNIT_FLAG_ATLAS_2"
+				UnitFlagIconOffset="39"
+				IconAtlas="ROBOT_ICON_ATLAS5"
+				PortraitIndex="88"
+				ExtraMaintenanceCost="100"
+			/>
+		</Update>
+
+		<!-- UNIT_UNDERWATER_CARRIER -->
+		<Update>
+			<Where Type="UNIT_UNDERWATER_CARRIER"/>
+			<Set
+				Combat="350"
+				RangedCombat="350"
+				Cost="3900"
+				Range="3"
+				ExtraMaintenanceCost="300"
+			/>
+		</Update>
+
+	
+	
+		<!-- UNIT_TASKFORCE_141 -->
+		<Update>
+			<Where Type="UNIT_TASKFORCE_141"/>
+			<Set
+				Combat="150"
+				ExtraMaintenanceCost="70"
+				PrereqTech="TECH_NUCLEAR_FUSION"
+			/>
+		</Update>
+
+		<!-- UNIT_CHINESE_WEISHI -->
+		<Update>
+			<Where Type="UNIT_CHINESE_WEISHI"/>
+			<Set
+				Moves="5"
+				ObsoleteTech="TECH_HOMO_SUPERIOR"
+				UnitArtInfo="ART_DEF_UNIT_WEISHI"
+				ExtraMaintenanceCost="150"
+			/>
+		</Update>
+		
+		
+		
 		<!--巴利阿里投石兵-->
 		<Row>
 			<Class>UNITCLASS_BLIALI</Class>
@@ -305,355 +410,6 @@
 
 
 
-
-		<Row>
-			<Class>UNITCLASS_SUPER_HOWITZER</Class>
-			<Type>UNIT_SUPER_HOWITZER</Type>
-			<PrereqTech>TECH_DYNAMITE</PrereqTech>
-			<BaseSightRange>1</BaseSightRange>
-			<Combat>30</Combat>
-			<RangedCombat>90</RangedCombat>
-			<Cost>600</Cost>
-			<Moves>2</Moves>
-			<Range>5</Range>
-			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_CITY_BOMBARD</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUPER_HOWITZER</Description>
-			<Civilopedia>TXT_KEY_UNIT_SUPER_HOWITZER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SUPER_HOWITZER_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SUPER_HOWITZER_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<ObsoleteTech>TECH_LASERS</ObsoleteTech>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<XPValueAttack>8</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_SUPER_HOWITZER</UnitArtInfo>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<UnitFlagIconOffset>5</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>5</PortraitIndex>
-			<MoveRate>ARTILLERY</MoveRate>
-			<ProjectPrereq>PROJECT_SUPER_HOWITZER</ProjectPrereq>
-			<ExtraMaintenanceCost>20</ExtraMaintenanceCost>
-		</Row>
-
-
-
-
-		<Row>
-			<Class>UNITCLASS_CRUSADER_ARTILLERY</Class>
-			<Type>UNIT_CRUSADER_ARTILLERY</Type>
-			<PrereqTech>TECH_LASERS</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>250</Combat>
-			<RangedCombat>250</RangedCombat>
-			<Cost>1200</Cost>
-			<Moves>6</Moves>
-			<Range>3</Range>
-			<CombatClass>UNITCOMBAT_SIEGE</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_CITY_BOMBARD</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CRUSADER_ARTILLERY</Description>
-			<Strategy>TXT_KEY_UNIT_CRUSADER_ARTILLERY_STRATEGY</Strategy>
-			<Civilopedia>TXT_KEY_UNIT_CRUSADER_ARTILLERY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_CRUSADER_ARTILLERY_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<AdvancedStartCost>90</AdvancedStartCost>
-			<XPValueAttack>4</XPValueAttack>
-			<XPValueDefense>4</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_CRUSADER_ARTILLERY</UnitArtInfo>
-			<!--<UnitArtInfo>ART_DEF_UNIT_PZH2000</UnitArtInfo>-->
-			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
-			<UnitFlagIconOffset>39</UnitFlagIconOffset>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>88</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<ProjectPrereq>PROJECT_CRUSADER_ARTILLERY</ProjectPrereq>
-			<ExtraMaintenanceCost>100</ExtraMaintenanceCost>
-			<HurryCostModifier>-1</HurryCostModifier>
-		</Row>
-
-
-		<Row>
-			<Class>UNITCLASS_UNDERWATER_CARRIER</Class>
-			<Type>UNIT_UNDERWATER_CARRIER</Type>
-			<PrereqTech>TECH_ROBOTICS</PrereqTech>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>350</Combat>
-			<RangedCombat>350</RangedCombat>
-			<Cost>3900</Cost>
-			<Moves>12</Moves>
-			<Range>3</Range>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_SUBMARINE</CombatClass>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_UNDERWATER_CARRIER</Description>
-			<Civilopedia>TXT_KEY_UNIT_UNDERWATER_CARRIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UNDERWATER_CARRIER_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_UNDERWATER_CARRIER_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<MinAreaSize>10</MinAreaSize>
-			<XPValueAttack>6</XPValueAttack>
-			<XPValueDefense>6</XPValueDefense>
-			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<UnitArtInfo>ART_DEF_UNIT_UNDERWATER_CARRIER</UnitArtInfo>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<UnitFlagIconOffset>15</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>11</PortraitIndex>
-			<MoveRate>SUB</MoveRate>
-			<RangeAttackOnlyInDomain>true</RangeAttackOnlyInDomain>
-			<ProjectPrereq>PROJECT_UNDERWATER_CARRIER</ProjectPrereq>
-			<ExtraMaintenanceCost>300</ExtraMaintenanceCost>
-		</Row>
-
-		<Row>
-			<Class>UNITCLASS_TASKFORCE_141</Class>
-			<Type>UNIT_TASKFORCE_141</Type>
-			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>150</Combat>
-			<Cost>1000</Cost>
-			<Moves>3</Moves>
-			<CombatClass>UNITCOMBAT_GUN</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_DEFENSE</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_TASKFORCE_141</Description>
-			<Civilopedia>TXT_KEY_UNIT_TASKFORCE_141_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TASKFORCE_141_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_TASKFORCE_141</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_TASKFORCE_141</UnitArtInfo>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<UnitFlagIconOffset>31</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>12</PortraitIndex>
-			<ProjectPrereq>PROJECT_TASKFORCE141</ProjectPrereq>
-			<ExtraMaintenanceCost>70</ExtraMaintenanceCost>
-		</Row>
-
-
-
-
-		<Row>
-			<Class>UNITCLASS_CHINESE_WEISHI</Class>
-			<Type>UNIT_CHINESE_WEISHI</Type>
-			<PrereqTech>TECH_BVR_COMBAT</PrereqTech>
-			<BaseSightRange>2</BaseSightRange>
-			<Combat>80</Combat>
-			<RangedCombat>400</RangedCombat>
-			<Cost>1600</Cost>
-			<Moves>5</Moves>
-			<Range>8</Range>
-			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
-			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CHINESE_WEISHI</Description>
-			<Civilopedia>TXT_KEY_UNIT_CHINESE_WEISHI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHINESE_WEISHI_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_CHINESE_WEISHI</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>120</AdvancedStartCost>
-			<XPValueAttack>5</XPValueAttack>
-			<XPValueDefense>5</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_WEISHI</UnitArtInfo>
-			<UnitFlagIconOffset>59</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<PortraitIndex>50</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<ProjectPrereq>PROJECT_WEISHI_ROCKETS</ProjectPrereq>
-			<ExtraMaintenanceCost>150</ExtraMaintenanceCost>
-			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-		</Row>
-
-
-
-
-
-
-		<Row>
-			<Class>UNITCLASS_PAKFA_T50</Class>
-			<Type>UNIT_PAKFA_T50</Type>
-			<PrereqTech>TECH_MOBILE_TACTICS</PrereqTech>
-			<RangedCombat>350</RangedCombat>
-			<Cost>1400</Cost>
-			<Moves>3</Moves>
-			<Immobile>true</Immobile>
-			<Range>30</Range>
-			<AirInterceptRange>30</AirInterceptRange>
-			<Special>SPECIALUNIT_STEALTH</Special>
-			<CombatClass>UNITCOMBAT_FIGHTER</CombatClass>
-			<Domain>DOMAIN_AIR</Domain>
-			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PAKFA_T50</Description>
-			<Civilopedia>TXT_KEY_UNIT_PAKFA_T50_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PAKFA_T50_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_PAKFA_T50</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>100</AdvancedStartCost>
-			<AirUnitCap>1</AirUnitCap>
-			<RangedCombatLimit>100</RangedCombatLimit>
-			<CombatLimit>0</CombatLimit>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_PAKFA_T50</UnitArtInfo>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<UnitFlagIconOffset>29</UnitFlagIconOffset>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>13</PortraitIndex>
-			<MoveRate>AIR_REBASE</MoveRate>
-			<ProjectPrereq>PROJECT_PAK_FA</ProjectPrereq>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<ExtraMaintenanceCost>180</ExtraMaintenanceCost>
-		</Row>
-
-
-
-
-
-		<Row>
-			<Class>UNITCLASS_STEALTH_HELICOPTER</Class>
-			<Type>UNIT_STEALTH_HELICOPTER</Type>
-			<PrereqTech>TECH_STEALTH</PrereqTech>
-			<BaseSightRange>5</BaseSightRange>
-			<Combat>200</Combat>
-			<RangedCombat>200</RangedCombat>
-			<Cost>1050</Cost>
-			<Moves>12</Moves>
-			<Range>2</Range>
-			<CombatClass>UNITCOMBAT_HELICOPTER</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_FAST_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_STEALTH_HELICOPTER</Description>
-			<Civilopedia>TXT_KEY_UNIT_STEALTH_HELICOPTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEALTH_HELICOPTER_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_STEALTH_HELICOPTER_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<AdvancedStartCost>120</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_STEALTH_HELICOPTER</UnitArtInfo>
-			<UnitFlagIconOffset>27</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>147</PortraitIndex>
-			<MoveRate>WHEELED</MoveRate>
-			<ProjectPrereq>PROJECT_STEALTH_HELICOPTER</ProjectPrereq>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<ExtraMaintenanceCost>150</ExtraMaintenanceCost>
-		</Row>
-
-		<Row>
-			<Class>UNITCLASS_MECH</Class>
-			<Type>UNIT_MECH</Type>
-			<PrereqTech>TECH_AUTONOMOUS_SYSTEMS</PrereqTech>
-			<Combat>1200</Combat>
-			<RangedCombat>1200</RangedCombat>
-			<Range>1</Range>
-			<BaseSightRange>5</BaseSightRange>
-			<Cost>18000</Cost>
-			<Moves>5</Moves>
-			<CombatClass>UNITCOMBAT_ARMOR</CombatClass>
-			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MECH</Description>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MODERN_MECH_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MECH_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_MECH</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<UnitTechUpgrade>1</UnitTechUpgrade>
-			<AdvancedStartCost>120</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_MECH</UnitArtInfo>
-			<UnitFlagIconOffset>62</UnitFlagIconOffset>
-			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
-			<UnitFlagAtlas>SMAN_IEUP_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>36</PortraitIndex>
-			<MoveRate>ROBOT</MoveRate>
-			<MaxHitPoints>300</MaxHitPoints>
-			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<ProjectPrereq>PROJECT_ADV_MECH</ProjectPrereq>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<ExtraMaintenanceCost>2500</ExtraMaintenanceCost>
-		</Row>
-
-
-
-
-		<Row>
-			<Class>UNITCLASS_PARTICLE_CANNON</Class>
-			<Type>UNIT_PARTICLE_CANNON</Type>
-			<PrereqTech>TECH_PARTICLE_PHYSICS</PrereqTech>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<BaseSightRange>1</BaseSightRange>
-			<Combat>960</Combat>
-			<RangedCombat>960</RangedCombat>
-			<Cost>18000</Cost>
-			<Moves>7</Moves>
-			<Range>8</Range>
-			<CombatClass>UNITCOMBAT_NAVALRANGED</CombatClass>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_PARTICLE_CANNON</Description>
-			<Civilopedia>TXT_KEY_CIV5_PARTICLE_CANNON_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PARTICLE_CANNON_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_PARTICLE_CANNON</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<MinAreaSize>16</MinAreaSize>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_PARTICLE_CANNON</UnitArtInfo>
-			<UnitFlagIconOffset>70</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<PortraitIndex>18</PortraitIndex>
-			<MoveRate>BOAT</MoveRate>
-			<MaxHitPoints>300</MaxHitPoints>
-			<ProjectPrereq>PROJECT_PARTICLE_CANNON</ProjectPrereq>
-			<ExtraMaintenanceCost>2000</ExtraMaintenanceCost>
-		</Row>
 
 
 
@@ -2694,16 +2450,9 @@
 
 		<Row>
 			<UnitType>UNIT_SUI_FLEET</UnitType>
-			<PromotionType>PROMOTION_SUI_FLEET_1</PromotionType>
+			<PromotionType>PROMOTION_SUI_FLEET</PromotionType>
 		</Row>
-		<Row>
-			<UnitType>UNIT_SUI_FLEET</UnitType>
-			<PromotionType>PROMOTION_SUI_FLEET_2</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_SUI_FLEET</UnitType>
-			<PromotionType>PROMOTION_SUI_FLEET_3</PromotionType>
-		</Row>
+
 		<Row>
 			<UnitType>UNIT_SUI_FLEET</UnitType>
 			<PromotionType>PROMOTION_NAVALMELEE_COMBAT</PromotionType>
@@ -3006,10 +2755,7 @@
 		</Update>
 	
 
-		<Update>
-			<Set PrereqTech="TECH_NUCLEAR_FUSION"/>
-			<Where Type="UNIT_TASKFORCE_141" />
-		</Update>
+	
 
 
 	</Units>

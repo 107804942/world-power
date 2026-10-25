@@ -3497,11 +3497,11 @@
 
 
 
-		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER02">
+		<Row Tag="TXT_KEY_UNIT_FUTURE_CARRIER">
 			<Text>双体超级航母</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_UNIT_NAVALCARRIER02_TEXT">
+		<Row Tag="TXT_KEY_UNIT_FUTURE_CARRIER_TEXT">
 			<Text>
 				双体航母采用双体船结构，由两个平行船体通过高强度连接桥组合，形成宽大飞行甲板。其核心设计特点包括：‌
 				[NEWLINE]1.甲板空间最大化‌：双体布局使甲板面积远超同吨位单体航母，例如理论模型可同时起降10架无人机或容纳180架舰载机，支持多机并行作业。
@@ -7044,7 +7044,7 @@
 			<Text>
 				[COLOR_YIELD_GOLD]精英桨帆战舰[ENDCOLOR]，能够对攻击目标相邻的敌人造成大面积范围伤害。需要完成五牙战舰工程解锁，仅能建造一艘。[NEWLINE]
 				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SUNDER_2]破阵晋升。
-				[NEWLINE][ICON_BULLET][COLOR_YIELD_GOLD]百舸皆震[ENDCOLOR]：生命值上限+100%,攻击可对目标同格及邻近1格区域的敌方单位造成100%溅射伤害，对目标邻近2格区域的敌方单位造成50%溅射伤害。
+				[NEWLINE][ICON_BULLET]生命值上限+100%,攻击可对目标同格及邻近1格区域的敌方单位造成100%溅射伤害，对目标邻近2格区域的敌方单位造成50%溅射伤害。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SUI_FLEET_STRATEGY">
@@ -7057,14 +7057,15 @@
 			<Text>五牙战船是隋朝最大的主力战船，可容战士八百人。一般在四川地区建造，由隋朝大将杨素筹措、打造。"五牙"实际上是指战舰有5层结构，高百余尺。左右前后设置六台拍竿，高五十尺。每根木桅顶系巨石，下设辘轳，战斗中和敌舰迫近时，可以迅速用辘轳把巨石放下，砸坏敌船。若一击不中，也可迅速收起再放。若敌舰四面包围，还可以"六管齐下"，其战斗力之强，可见一斑。1000多年前，总长55米的大舰也属于庞然大物了，它在隋朝统一全国的战争中发挥了重要的作用，战争也推动造船业朝着更完善的方向发展。公元588年，隋军五十余万人，水陆并进，大举攻陈。杨素统领的长江上游水军，自永安发船，出三峡，顺江而下，船多势大，锐不可挡。在延州(今湖北江陵西)，隋陈两军展开决战，隋军以四艘五牙战舰冲击敌阵，先后用拍竿击沉十余艘敌船，俘敌二千余人，陈军闻风丧胆。不久，隋灭掉偏安江南的陈王朝，统一了中国。隋代还有比五牙战船次一等的黄龙船，可载战士一百余人，以及平乘、舴艋等各具功能的战船。</Text>
 		</Row>
 
-		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET_1">
+		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET">
 			<Text>百舸皆震</Text>
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET_1_HELP">
-			<Text>生命值上限+100%,攻击可对目标地块三格内的所有单位按照距离分别造成100%、50%、25%的溅射伤害。</Text>
+		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET_HELP">
+			<Text>生命值上限+100%,攻击可对目标地块三格内的所有单位造成100%的溅射伤害。</Text>
 		</Row>
+
 
 
 

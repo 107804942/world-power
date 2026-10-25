@@ -241,12 +241,12 @@
 
 		<Row>
 			<CivilizationType>CIVILIZATION_MINOR</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER02</UnitClassType>
+			<UnitClassType>UNITCLASS_FUTURE_CARRIER</UnitClassType>
 			<UnitType/>
 		</Row>
 		<Row>
 			<CivilizationType>CIVILIZATION_BARBARIAN</CivilizationType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER02</UnitClassType>
+			<UnitClassType>UNITCLASS_FUTURE_CARRIER</UnitClassType>
 			<UnitType/>
 		</Row>
 
@@ -613,9 +613,9 @@
 		</Row>
 		
 		<Row>
-			<Type>UNITCLASS_NAVALCARRIER02</Type>
-			<Description>TXT_KEY_UNIT_NAVALCARRIER02</Description>
-			<DefaultUnit>UNIT_NAVALCARRIER02</DefaultUnit>
+			<Type>UNITCLASS_FUTURE_CARRIER</Type>
+			<Description>TXT_KEY_UNIT_FUTURE_CARRIER</Description>
+			<DefaultUnit>UNIT_FUTURE_CARRIER</DefaultUnit>
 			<MaxPlayerInstances>20</MaxPlayerInstances>
 		</Row>
 		

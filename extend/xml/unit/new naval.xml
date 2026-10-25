@@ -170,8 +170,8 @@
 		<!--****************航母****************-->
 
 		<Row>
-			<Class>UNITCLASS_NAVALCARRIER02</Class>
-			<Type>UNIT_NAVALCARRIER02</Type>
+			<Class>UNITCLASS_FUTURE_CARRIER</Class>
+			<Type>UNIT_FUTURE_CARRIER</Type>
 			<PrereqTech>TECH_MECHANICAL_ENGINEERING</PrereqTech>
 			<BaseSightRange>4</BaseSightRange>
 			<Combat>700</Combat>
@@ -181,8 +181,8 @@
 			<CombatClass>UNITCOMBAT_CARRIER</CombatClass>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_NAVALCARRIER02</Description>
-			<Civilopedia>TXT_KEY_UNIT_NAVALCARRIER02_TEXT</Civilopedia>
+			<Description>TXT_KEY_UNIT_FUTURE_CARRIER</Description>
+			<Civilopedia>TXT_KEY_UNIT_FUTURE_CARRIER_TEXT</Civilopedia>
 			<Strategy>TXT_KEY_SP_UNITS_AIRCRAFT_CARRIERS_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROMOTION_CARRIER_UNIT_HELP</Help>
 			<MilitarySupport>true</MilitarySupport>
@@ -333,7 +333,7 @@
 			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
 			<PromotionType>PROMOTION_CARGO_I</PromotionType>
 		</Row>
 		<Row>
@@ -371,11 +371,11 @@
 			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<UnitType>UNIT_SUPER_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARGO_I</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<UnitType>UNIT_SUPER_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
 		</Row>
 		<Row>
@@ -385,24 +385,24 @@
 
 		<!--*****************************以下为新增*******************************************-->
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARRIER_FIGHTER_SORTIE_2</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
 		</Row>
 
@@ -514,38 +514,38 @@
 		
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>
 			<Cost>30</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 			<Cost>5</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Cost>2</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 			<Cost>8</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>18</Cost>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_IRON</ResourceType>
 			<Cost>15</Cost>
 		</Row>
 
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>7</Cost>
 		</Row>
@@ -720,7 +720,7 @@
 			<UnitAIType>UNITAI_ESCORT_SEA</UnitAIType>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<UnitAIType>UNITAI_CARRIER_SEA</UnitAIType>
 		</Row>
 
@@ -746,17 +746,17 @@
 			<Flavor>12</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<FlavorType>FLAVOR_NAVAL</FlavorType>
 			<Flavor>250</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<FlavorType>FLAVOR_AIR_CARRIER</FlavorType>
 			<Flavor>500</Flavor>
 		</Row>
 		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<UnitType>UNIT_FUTURE_CARRIER</UnitType>
 			<FlavorType>FLAVOR_OFFENSE</FlavorType>
 			<Flavor>340</Flavor>
 		</Row>

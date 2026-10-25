@@ -2141,7 +2141,6 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FLIGHT_DECK_2</PediaEntry>
 			<CargoChange>1</CargoChange>
-			<PromotionPrereq>PROMOTION_FLIGHT_DECK_1</PromotionPrereq>
 		</Row>
 		<Row>
 			<Type>PROMOTION_FLIGHT_DECK_3</Type>
@@ -2154,7 +2153,6 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FLIGHT_DECK_3</PediaEntry>
 			<CargoChange>1</CargoChange>
-			<PromotionPrereq>PROMOTION_FLIGHT_DECK_2</PromotionPrereq>
 		</Row>
 	</UnitPromotions>
 
@@ -2449,17 +2447,17 @@
 			<Where Type="PROMOTION_CITADEL_DEFENSE"/>
 		</Update>
 
-		<!-- ==================== 新增：SUI_FLEET_1~3 ==================== -->
+		<!-- ==================== 新增：SUI_FLEET ==================== -->
 		<Row>
-			<Type>PROMOTION_SUI_FLEET_1</Type>
-			<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
-			<Help>TXT_KEY_PROMOTION_SUI_FLEET_1_HELP</Help>
+			<Type>PROMOTION_SUI_FLEET</Type>
+			<Description>TXT_KEY_PROMOTION_SUI_FLEET</Description>
+			<Help>TXT_KEY_PROMOTION_SUI_FLEET_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PortraitIndex>34</PortraitIndex>
 			<IconAtlas>promoVP_atlas_03</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
-			<SplashDamagePercent>25</SplashDamagePercent>
+			<SplashDamagePercent>100</SplashDamagePercent>
 			<SplashDamageRadius>3</SplashDamageRadius>
 			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
 			<SplashDamageFixed>1</SplashDamageFixed>
@@ -2467,42 +2465,9 @@
 			<CollateralDamagePercent>100</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 			<MaxHitPointsModifier>100</MaxHitPointsModifier>
-			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET</PediaEntry>
 		</Row>
-		<Row>
-			<Type>PROMOTION_SUI_FLEET_2</Type>
-			<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
-			<Help>TXT_KEY_PROMOTION_SUI_FLEET_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>34</PortraitIndex>
-			<IconAtlas>promoVP_atlas_03</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<CannotBeChosen>true</CannotBeChosen>
-			<SplashDamagePercent>25</SplashDamagePercent>
-			<SplashDamageRadius>2</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_SUI_FLEET_3</Type>
-			<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
-			<Help>TXT_KEY_PROMOTION_SUI_FLEET_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>34</PortraitIndex>
-			<IconAtlas>promoVP_atlas_03</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<CannotBeChosen>true</CannotBeChosen>
-			<SplashDamagePercent>50</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
-		</Row>
+	
 
 		<!-- ==================== 新增：NAVAL_MONSTER ==================== -->
 		<Row>
