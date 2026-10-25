@@ -1369,7 +1369,7 @@
 				<Defense>7000</Defense>
 				<AllowsRangeStrike>true</AllowsRangeStrike>
 				<ExtraCityHitPoints>75</ExtraCityHitPoints>
-				<PortraitIndex>167</PortraitIndex>
+				<PortraitIndex>166</PortraitIndex>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<HurryCostModifier>50</HurryCostModifier>
 				<ConquestProb>100</ConquestProb>

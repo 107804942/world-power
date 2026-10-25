@@ -1,4 +1,416 @@
-﻿<!-- Stations -->
+﻿<UnitPromotions>
+
+	PEDIA_UNIT_CATEGORY
+
+
+
+	<Row>
+		<Type>PROMOTION_SUI_FLEET_2</Type>
+		<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
+		<Help>TXT_KEY_PROMOTION_SUI_FLEET_1_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PortraitIndex>34</PortraitIndex>
+		<IconAtlas>promoVP_atlas_03</IconAtlas>
+		<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		<CannotBeChosen>true</CannotBeChosen>
+		<SplashDamagePercent>25</SplashDamagePercent>
+		<SplashDamageRadius>2</SplashDamageRadius>
+		<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
+		<SplashDamageFixed>1</SplashDamageFixed>
+		<ShowInUnitPanel>0</ShowInUnitPanel>
+		<ShowInPedia>0</ShowInPedia>
+		<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
+	</Row>
+	<Row>
+		<Type>PROMOTION_SUI_FLEET_3</Type>
+		<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
+		<Help>TXT_KEY_PROMOTION_SUI_FLEET_1_HELP</Help>
+		<Sound>AS2D_IF_LEVELUP</Sound>
+		<PortraitIndex>34</PortraitIndex>
+		<IconAtlas>promoVP_atlas_03</IconAtlas>
+		<PediaType>PEDIA_ATTRIBUTES</PediaType>
+		<CannotBeChosen>true</CannotBeChosen>
+		<SplashDamagePercent>50</SplashDamagePercent>
+		<SplashDamageRadius>1</SplashDamageRadius>
+		<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
+		<SplashDamageFixed>1</SplashDamageFixed>
+		<ShowInUnitPanel>0</ShowInUnitPanel>
+		<ShowInPedia>0</ShowInPedia>
+		<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
+	</Row>
+	
+	
+	
+
+	<Class>UNITCLASS_CARRIER</Class>
+<Type>UNIT_CARRIER</Type>
+
+
+	<Class>UNITCLASS_NUCLEAR_CARRIER</Class>
+	<Type>UNIT_NUCLEAR_CARRIER</Type>
+
+	<Class>UNITCLASS_NUCLEAR_CARRIER</Class>
+	<Type>UNIT_AMERICAN_NIMITZ</Type>
+
+
+	<Class>UNITCLASS_SUPER_CARRIER</Class>
+	<Type>UNIT_SUPER_CARRIER</Type>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<Unit_FreePromotions>
+
+	<Row>
+		<UnitType>UNIT_CARRIER</UnitType>
+		<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_CARRIER</UnitType>
+		<PromotionType>PROMOTION_CARGO_II</PromotionType>
+	</Row>
+
+	<Row>
+		<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+		<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+		<PromotionType>PROMOTION_CARGO_IV</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+		<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+	</Row>
+
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_CARGO_VI</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_MOBILITY</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_EXTRA_SIGHT_I</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_CARRIER_SUPPLY_1</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_CARRIER_SUPPLY_2</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+		<PromotionType>PROMOTION_CARRIER_SUPPLY_3</PromotionType>
+	</Row>
+
+
+	<Row>
+		<UnitType>UNIT_SUPER_CARRIER</UnitType>
+		<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_SUPER_CARRIER</UnitType>
+		<PromotionType>PROMOTION_CARGO_VI</PromotionType>
+	</Row>
+	<Row>
+		<UnitType>UNIT_SUPER_CARRIER</UnitType>
+		<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+	</Row>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Update>
+		<Set SiegeInflictDamageChangeMaxHPPercent="5"/>
+		<Where Type="PROMOTION_CITY_DAMAGE_MAXHP_PERCENT"/>
+	</Update>
+
+
+	<Update>
+		<Set ShowInUnitPanel="0"/>
+		<Where Type="PROMOTION_FIRST_STRIKE"/>
+	</Update>
+
+
+	<Update>
+		<Set IconAtlas="CIV_COLOR_ATLAS_FW_PROMOTIONS" PortraitIndex="36"/>
+		<Where Type="PROMOTION_SP_ATTACK_25"/>
+	</Update>
+
+
+	<Update>
+		<Set IconAtlas="MainRobotPromo_Atlas" PortraitIndex="23"/>
+		<Where Type="PROMOTION_NO_CASUALTIES"/>
+	</Update>
+
+	<Update>
+		<Set ShowInUnitPanel="0" ShowInPedia="0"/>
+		<Where Type="PROMOTION_FRANCE_MISTRAL" />
+	</Update>
+
+	<Update>
+		<Set IconAtlas="promoVP_atlas_00" PortraitIndex="24" PediaType="PEDIA_ATTRIBUTES"/>
+		<Where Type="PROMOTION_POWERFUL_CANNON" />
+	</Update>
+
+	<Update>
+		<Set IconAtlas="promoVP_atlas_02" PortraitIndex="26" OrderPriority="11" />
+		<Where Type="PROMOTION_INDIRECT_FIRE" />
+	</Update>
+
+
+	<Update>
+		<Set IconAtlas="promoVP_atlas_03" PortraitIndex="3" />
+		<Where Type="PROMOTION_AIR_SIEGE_1" />
+	</Update>
+	<Update>
+		<Set IconAtlas="promoVP_atlas_03" PortraitIndex="4" />
+		<Where Type="PROMOTION_AIR_SIEGE_2" />
+	</Update>
+	<Update>
+		<Set IconAtlas="promoVP_atlas_03" PortraitIndex="5" />
+		<Where Type="PROMOTION_AIR_SIEGE_3" />
+	</Update>
+
+
+
+	<Update>
+		<Where Type="PROMOTION_NUCLEAR_ARTILLERY"/>
+		<Set>
+			<Description>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</Description>
+			<Help>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</PediaEntry>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CanDoNukeDamage>true</CanDoNukeDamage>
+			<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
+			<!-- 清除旧版本中存在但新版本已移除的字段 -->
+			<SplashDamagePercent>NULL</SplashDamagePercent>
+			<SplashDamageRadius>NULL</SplashDamageRadius>
+			<SplashDamagePlotUnitLimit>NULL</SplashDamagePlotUnitLimit>
+			<CollateralDamagePercent>NULL</CollateralDamagePercent>
+			<CollateralDamagePlotUnitLimit>NULL</CollateralDamagePlotUnitLimit>
+		</Set>
+	</Update>
+
+
+
+</UnitPromotions>
+
+
+
+
+
+
+
+
+
+
+<Row>
+	<Type>PROMOTION_NUCLEAR_ARTILLERY</Type>
+	<Description>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</Description>
+	<Help>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<PortraitIndex>58</PortraitIndex>
+	<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_ATTRIBUTES</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</PediaEntry>
+	<CannotBeChosen>true</CannotBeChosen>
+	<CanDoNukeDamage>true</CanDoNukeDamage>
+	<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
+</Row>
+
+
+<Row>
+	<Type>PROMOTION_KNIGHT_COMBAT</Type>
+	<Description>TXT_KEY_PROMOTION_KNIGHT_COMBAT</Description>
+	<Help>TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<!--<HeavyCharge>true</HeavyCharge>-->
+	<NoDefensiveBonus>true</NoDefensiveBonus>
+	<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
+	<AttackMod>50</AttackMod>
+	<CityAttack>-100</CityAttack>
+	<LostWithUpgrade>true</LostWithUpgrade>
+	<OrderPriority>11</OrderPriority>
+	<PortraitIndex>49</PortraitIndex>
+	<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_ATTRIBUTES</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_KNIGHT_COMBAT</PediaEntry>
+	<CannotBeChosen>true</CannotBeChosen>
+	<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
+</Row>
+<Row>
+	<Type>PROMOTION_TANK_COMBAT</Type>
+	<Description>TXT_KEY_PROMOTION_TANK_COMBAT</Description>
+	<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<LostWithUpgrade>true</LostWithUpgrade>
+	<NoDefensiveBonus>true</NoDefensiveBonus>
+	<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
+	<AttackMod>50</AttackMod>
+	<CityAttack>-100</CityAttack>
+	<OrderPriority>11</OrderPriority>
+	<PortraitIndex>50</PortraitIndex>
+	<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_ATTRIBUTES</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_TANK_COMBAT</PediaEntry>
+	<CannotBeChosen>true</CannotBeChosen>
+	<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
+</Row>
+
+
+
+<Row>
+	<Type>PROMOTION_CHARGE_1</Type>
+	<Description>TXT_KEY_PROMOTION_CHARGE_1</Description>
+	<Help>TXT_KEY_PROMOTION_CHARGE_1_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<OrderPriority>6</OrderPriority>
+	<PortraitIndex>5</PortraitIndex>
+	<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_MELEE</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_CHARGE_1</PediaEntry>
+	<CollateralDamageFixed>1</CollateralDamageFixed>
+	<CollateralDamagePercent>25</CollateralDamagePercent>
+	<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+</Row>
+<Row>
+	<Type>PROMOTION_CHARGE_2</Type>
+	<Description>TXT_KEY_PROMOTION_CHARGE_2</Description>
+	<Help>TXT_KEY_PROMOTION_CHARGE_2_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<PromotionPrereq>PROMOTION_CHARGE_1</PromotionPrereq>
+	<OrderPriority>6</OrderPriority>
+	<PortraitIndex>6</PortraitIndex>
+	<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_MELEE</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+	<CollateralDamageFixed>1</CollateralDamageFixed>
+	<CollateralDamagePercent>25</CollateralDamagePercent>
+	<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+</Row>
+<Row>
+	<Type>PROMOTION_CHARGE_3</Type>
+	<Description>TXT_KEY_PROMOTION_CHARGE_3</Description>
+	<Help>TXT_KEY_PROMOTION_CHARGE_3_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<PromotionPrereq>PROMOTION_CHARGE_2</PromotionPrereq>
+	<OrderPriority>6</OrderPriority>
+	<PortraitIndex>7</PortraitIndex>
+	<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_MELEE</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+	<CollateralDamageFixed>1</CollateralDamageFixed>
+	<CollateralDamagePercent>50</CollateralDamagePercent>
+	<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+</Row>
+
+
+
+
+
+
+
+
+<Row>
+	<Type>PROMOTION_HEAVY_SHOCK_1</Type>
+	<Description>TXT_KEY_PROMOTION_SHOCK_1</Description>
+	<Help>TXT_KEY_PROMOTION_HEAVY_SHOCK_1_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<OrderPriority>9</OrderPriority>
+	<PromotionPrereqOr1>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr1>
+	<PromotionPrereqOr2>PROMOTION_TANK_COMBAT</PromotionPrereqOr2>
+	<PromotionPrereqOr3>PROMOTION_HEAVY_ROBORT</PromotionPrereqOr3>
+	<OpenAttack>25</OpenAttack>
+	<!--<OpenRangedAttackMod>25</OpenRangedAttackMod>-->
+	<PortraitIndex>44</PortraitIndex>
+	<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_MELEE</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_SHOCK_1</PediaEntry>
+</Row>
+
+<Row>
+	<Type>PROMOTION_HEAVY_SHOCK_2</Type>
+	<Description>TXT_KEY_PROMOTION_SHOCK_2</Description>
+	<Help>TXT_KEY_PROMOTION_HEAVY_SHOCK_2_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<PromotionPrereq>PROMOTION_HEAVY_SHOCK_1</PromotionPrereq>
+	<OrderPriority>9</OrderPriority>
+	<OpenAttack>25</OpenAttack>
+	<!--<OpenRangedAttackMod>25</OpenRangedAttackMod>-->
+	<PortraitIndex>45</PortraitIndex>
+	<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_MELEE</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_SHOCK_2</PediaEntry>
+</Row>
+<Row>
+	<Type>PROMOTION_HEAVY_SHOCK_3</Type>
+	<Description>TXT_KEY_PROMOTION_SHOCK_3</Description>
+	<Help>TXT_KEY_PROMOTION_HEAVY_SHOCK_3_HELP</Help>
+	<Sound>AS2D_IF_LEVELUP</Sound>
+	<PromotionPrereq>PROMOTION_HEAVY_SHOCK_2</PromotionPrereq>
+	<OrderPriority>9</OrderPriority>
+	<PortraitIndex>46</PortraitIndex>
+	<OpenAttack>25</OpenAttack>
+	<!--<OpenRangedAttackMod>25</OpenRangedAttackMod>-->
+	<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+	<PediaType>PEDIA_MELEE</PediaType>
+	<PediaEntry>TXT_KEY_PROMOTION_SHOCK_3</PediaEntry>
+</Row>
+
+
+
+
+
+
+
+
+
+<!-- Stations -->
 <LandmarkArtInfo>
 	<Era>Any</Era>
 	<State>Any</State>

@@ -2,108 +2,6 @@
 <!-- Created by ModBuddy on 2021/2/21 13:54:26 -->
 <GameData>
 
-	<UnitPromotions>
-
-
-		<Delete Type="PROMOTION_NUCLEAR_ARTILLERY"/>
-	
-	
-		
-		
-		<Update>
-			<Set SiegeInflictDamageChangeMaxHPPercent="5"/>
-			<Where Type="PROMOTION_CITY_DAMAGE_MAXHP_PERCENT"/>
-		</Update>
-		
-		
-		<Update>
-			<Set ShowInUnitPanel="0"/>
-			<Where Type="PROMOTION_FIRST_STRIKE"/>
-		</Update>
-
-
-		<Update>
-			<Set IconAtlas="CIV_COLOR_ATLAS_FW_PROMOTIONS" PortraitIndex="36"/>
-			<Where Type="PROMOTION_SP_ATTACK_25"/>
-		</Update>
-		
-
-		<Update>
-			<Set IconAtlas="MainRobotPromo_Atlas" PortraitIndex="23"/>
-			<Where Type="PROMOTION_NO_CASUALTIES"/>
-		</Update>
-
-		<Update>
-			<Set ShowInUnitPanel="0" ShowInPedia="0"/>
-			<Where Type="PROMOTION_FRANCE_MISTRAL" />
-		</Update>
-
-		<Update>
-			<Set IconAtlas="promoVP_atlas_00" PortraitIndex="24" PediaType="PEDIA_ATTRIBUTES"/>
-			<Where Type="PROMOTION_POWERFUL_CANNON" />
-		</Update>
-
-		<Update>
-			<Set IconAtlas="promoVP_atlas_02" PortraitIndex="26" OrderPriority="11" />
-			<Where Type="PROMOTION_INDIRECT_FIRE" />
-		</Update>
-
-
-		<Update>
-			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="3" />
-			<Where Type="PROMOTION_AIR_SIEGE_1" />
-		</Update>
-		<Update>
-			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="4" />
-			<Where Type="PROMOTION_AIR_SIEGE_2" />
-		</Update>
-		<Update>
-			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="5" />
-			<Where Type="PROMOTION_AIR_SIEGE_3" />
-		</Update>
-
-
-
-	
-		
-
-		<Row>
-			<Type>PROMOTION_NUCLEAR_ARTILLERY</Type>
-			<Description>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</Description>
-			<Help>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>58</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<CanDoNukeDamage>true</CanDoNukeDamage>
-			<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
-		</Row>
-
-
-
-		
-	</UnitPromotions>
-
-
-
-
-
-	<UnitPromotions_Domains>
-
-
-
-
-		<Row>
-			<PromotionType>PROMOTION_FASIL_GHEBBI</PromotionType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Defense>20</Defense>
-		</Row>
-
-
-	</UnitPromotions_Domains>
-
 
 
 
@@ -117,6 +15,11 @@
 		</Update>
 		<Update>
 			<Where Name="PROMOTIONS_CROSS_ICE"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
+			<Where Name="PROMOTIONS_HALF_MOVE"/>
 			<Set Value="1"/>
 		</Update>
 	</CustomModOptions>
@@ -202,69 +105,11 @@
 
 
 
-	<CustomModOptions>
-		<Update>
-			<Where Name="PROMOTIONS_HALF_MOVE"/>
-			<Set Value="1"/>
-		</Update>
-
-	</CustomModOptions>
-
-
-
-	<UnitPromotions_Terrains>
-
-		<Delete PromotionType="PROMOTION_STEAM_POWERED"/>
-
-
-
-		<Row>
-			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
-			<TerrainType>TERRAIN_COAST</TerrainType>
-			<HalfMove>true</HalfMove>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_HALF_MOVE</PromotionType>
-			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
-			<HalfMove>true</HalfMove>
-		</Row>
-
-
-
-		<Row>
-			<PromotionType>PROMOTION_STEAM_POWERED</PromotionType>
-			<TerrainType>TERRAIN_COAST</TerrainType>
-			<DoubleMove>true</DoubleMove>
-		</Row>
-
-
-	</UnitPromotions_Terrains>
-
-	<UnitPromotions_Domains>
-
-		<Row>
-			<PromotionType>PROMOTION_STEAM_POWERED</PromotionType>
-			<DomainType>DOMAIN_SEA</DomainType>
-			<Modifier>15</Modifier>
-		</Row>
-
-	</UnitPromotions_Domains>
-
-
-
-
-
-
-
 
 
 	<!--******************************弓箭单位*************************-->
 	<UnitPromotions>
-		<Delete Type="PROMOTION_ACCURACY_1"/>
-		<Delete Type="PROMOTION_ACCURACY_2"/>
-
+	
 
 		<!-- 潜艇单位不会受到冰块影响! -->
 		<Update>
@@ -272,33 +117,39 @@
 			<Set IgnoreTerrainDamage="1" IgnoreFeatureDamage="1"/>
 		</Update>
 
-		<Row>
-			<Type>PROMOTION_ACCURACY_1</Type>
-			<Description>TXT_KEY_PROMOTION_ACCURACY_1</Description>
-			<Help>TXT_KEY_PROMOTION_ACCURACY_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_ARCHERY_COMBAT</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<RangedAttackModifier>15</RangedAttackModifier>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ACCURACY_1</PediaEntry>
-		</Row>
+		<!-- ==================== PROMOTION_ACCURACY_1 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_ACCURACY_1"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_ACCURACY_1</Description>
+				<Help>TXT_KEY_PROMOTION_ACCURACY_1_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_ARCHERY_COMBAT</PromotionPrereqOr1>
+				<OrderPriority>1</OrderPriority>
+				<RangedAttackModifier>15</RangedAttackModifier>
+				<PortraitIndex>0</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_RANGED</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_ACCURACY_1</PediaEntry>
+			</Set>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_ACCURACY_2</Type>
-			<Description>TXT_KEY_PROMOTION_ACCURACY_2</Description>
-			<Help>TXT_KEY_PROMOTION_ACCURACY_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_ACCURACY_1</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<RangedAttackModifier>15</RangedAttackModifier>
-			<PortraitIndex>1</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ACCURACY_2</PediaEntry>
-		</Row>
+		<!-- ==================== PROMOTION_ACCURACY_2 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_ACCURACY_2"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_ACCURACY_2</Description>
+				<Help>TXT_KEY_PROMOTION_ACCURACY_2_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_ACCURACY_1</PromotionPrereqOr1>
+				<OrderPriority>1</OrderPriority>
+				<RangedAttackModifier>15</RangedAttackModifier>
+				<PortraitIndex>1</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_RANGED</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_ACCURACY_2</PediaEntry>
+			</Set>
+		</Update>
 
 		<Row>
 			<Type>PROMOTION_ACCURACY_3</Type>
@@ -316,128 +167,51 @@
 
 	</UnitPromotions>
 
-	<UnitPromotions_UnitCombats>
 
-		<Row>
-			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-
-
-
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_3</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>
-
-
-	
-
-
-
-		<!--铝热剂-->
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
-		</Row>
-
-
-		<Row>
-			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
-			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
-		</Row>
-
-
-
-
-	</UnitPromotions_UnitCombats>
 
 
 
 	<UnitPromotions_PromotionModifiers>
-		<Delete PromotionType="PROMOTION_ACCURACY_1"/>
-		<Delete PromotionType="PROMOTION_ACCURACY_2"/>
+		<!-- ==================== PROMOTION_ACCURACY_1 ==================== -->
+		<Update>
+			<Where PromotionType="PROMOTION_ACCURACY_1" OtherPromotionType="PROMOTION_ANTI_MOUNTED"/>
+			<Set>
+				<Attack>33</Attack>
+			</Set>
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ACCURACY_1" OtherPromotionType="PROMOTION_ANTI_TANK"/>
+			<Set>
+				<Attack>33</Attack>
+			</Set>
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ACCURACY_1" OtherPromotionType="PROMOTION_HITANDRUN"/>
+			<Set>
+				<Attack>33</Attack>
+			</Set>
+		</Update>
 
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
-			<Attack>33</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
-			<Attack>33</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_1</PromotionType>
-			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Attack>33</Attack>
-		</Row>
-
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
-			<Attack>33</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<OtherPromotionType>PROMOTION_ANTI_TANK</OtherPromotionType>
-			<Attack>33</Attack>
-		</Row>
-		<Row>
-			<PromotionType>PROMOTION_ACCURACY_2</PromotionType>
-			<OtherPromotionType>PROMOTION_HITANDRUN</OtherPromotionType>
-			<Attack>33</Attack>
-		</Row>
-
+		<!-- ==================== PROMOTION_ACCURACY_2 ==================== -->
+		<Update>
+			<Where PromotionType="PROMOTION_ACCURACY_2" OtherPromotionType="PROMOTION_ANTI_MOUNTED"/>
+			<Set>
+				<Attack>33</Attack>
+			</Set>
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ACCURACY_2" OtherPromotionType="PROMOTION_ANTI_TANK"/>
+			<Set>
+				<Attack>33</Attack>
+			</Set>
+		</Update>
+		<Update>
+			<Where PromotionType="PROMOTION_ACCURACY_2" OtherPromotionType="PROMOTION_HITANDRUN"/>
+			<Set>
+				<Attack>33</Attack>
+			</Set>
+		</Update>
+		
 		<Row>
 			<PromotionType>PROMOTION_ACCURACY_3</PromotionType>
 			<OtherPromotionType>PROMOTION_ANTI_MOUNTED</OtherPromotionType>
@@ -568,10 +342,6 @@
 		<Delete PromotionType="PROMOTION_FAE_ROCKET_1"/>
 		<Delete PromotionType="PROMOTION_FAE_ROCKET_2"/>
 
-
-
-
-
 		<Row>
 			<PromotionType>PROMOTION_SP_BARRAGE_3</PromotionType>
 			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
@@ -685,11 +455,58 @@
 	<!--*****************************晋升修改*******************************************-->
 
 	<UnitPromotions>
+		<Update>
+			<Set SiegeInflictDamageChangeMaxHPPercent="5"/>
+			<Where Type="PROMOTION_CITY_DAMAGE_MAXHP_PERCENT"/>
+		</Update>
 
-		<Delete Type="PROMOTION_CHAIN_REACTION"/>
-		<Delete Type="PROMOTION_HOVERING_UNIT"/>
-		<Delete Type="PROMOTION_AIR_RECON"/>
-		<Delete Type="PROMOTION_STEAM_POWERED"/>
+
+		<Update>
+			<Set ShowInUnitPanel="0"/>
+			<Where Type="PROMOTION_FIRST_STRIKE"/>
+		</Update>
+
+
+		<Update>
+			<Set IconAtlas="CIV_COLOR_ATLAS_FW_PROMOTIONS" PortraitIndex="36"/>
+			<Where Type="PROMOTION_SP_ATTACK_25"/>
+		</Update>
+
+
+		<Update>
+			<Set IconAtlas="MainRobotPromo_Atlas" PortraitIndex="23"/>
+			<Where Type="PROMOTION_NO_CASUALTIES"/>
+		</Update>
+
+		<Update>
+			<Set ShowInUnitPanel="0" ShowInPedia="0"/>
+			<Where Type="PROMOTION_FRANCE_MISTRAL" />
+		</Update>
+
+		<Update>
+			<Set IconAtlas="promoVP_atlas_00" PortraitIndex="24" PediaType="PEDIA_ATTRIBUTES"/>
+			<Where Type="PROMOTION_POWERFUL_CANNON" />
+		</Update>
+
+		<Update>
+			<Set IconAtlas="promoVP_atlas_02" PortraitIndex="26" OrderPriority="11" />
+			<Where Type="PROMOTION_INDIRECT_FIRE" />
+		</Update>
+
+
+		<Update>
+			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="3" />
+			<Where Type="PROMOTION_AIR_SIEGE_1" />
+		</Update>
+		<Update>
+			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="4" />
+			<Where Type="PROMOTION_AIR_SIEGE_2" />
+		</Update>
+		<Update>
+			<Set IconAtlas="promoVP_atlas_03" PortraitIndex="5" />
+			<Where Type="PROMOTION_AIR_SIEGE_3" />
+		</Update>
+		
 
 		<Update>
 			<Set IconAtlas="VALERY_ATLAS" PortraitIndex="3"/>
@@ -706,9 +523,43 @@
 				 Help="TXT_KEY_PROMOTION_CITY_ASSUALT400_HELP"/>
 			<Where Type="PROMOTION_CITY_ASSAULT" />
 		</Update>
+		<Update>
+			<Set DefenseMod="15"/>
+			<Where Type="PROMOTION_SHOCK_1" />
+		</Update>
 
+		<Update>
+			<Set DefenseMod="15"/>
+			<Where Type="PROMOTION_SHOCK_2" />
+		</Update>
+		<Update>
+			<Set DropRange="12"/>
+			<Where Type="PROMOTION_PARADROP_I" />
+		</Update>
+		<Update>
+			<Set DropRange="18"/>
+			<Where Type="PROMOTION_PARADROP_II" />
+		</Update>
+		<Update>
+			<Set DropRange="30"/>
+			<Where Type="PROMOTION_PARADROP_III" />
+		</Update>
 
+		<Update>
+			<Set DropRange="50"/>
+			<Where Type="PROMOTION_EXTENDED_PARADROP" />
+		</Update>
 
+		<Update>
+			<Set PortraitIndex="50" IconAtlas="MainRobotPromo_Atlas" StrongerDamaged="1"/>
+			<Where Type="PROMOTION_GREAT_GENERAL" />
+		</Update>
+
+		<Update>
+			<Set PromotionPrereqOr5="PROMOTION_FIRE_TARGETING_2" />
+			<Where Type="PROMOTION_RANGE" />
+		</Update>
+		
 
 		<Row>
 			<Type>PROMOTION_CARRIER_FIGHTER_SORTIE_2</Type>
@@ -722,29 +573,6 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CARRIER_FIGHTER_SORTIE_2</PediaEntry>
 		</Row>
-
-		
-		
-
-
-
-		<Row>
-			<Type>PROMOTION_STEAM_POWERED</Type>
-			<Description>TXT_KEY_PROMOTION_POSEIDON_TEMPLE</Description>
-			<Help>TXT_KEY_PROMOTION_POSEIDON_TEMPLE_HELP</Help>
-			<CannotBeChosen>true</CannotBeChosen>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_POSEIDON_TEMPLE</PediaEntry>
-		</Row>
-
-
-
-
 
 		<Row>
 			<Type>PROMOTION_SPY_ADJACENCY_BUFF</Type>
@@ -769,9 +597,6 @@
 
 
 
-
-
-
 		<Row>
 			<Type>PROMOTION_FIGHTER_ATTACK</Type>
 			<Description>TXT_KEY_PROMOTION_FIGHTER_ATTACK</Description>
@@ -785,42 +610,78 @@
 		</Row>
 
 
-		<Row>
-			<Type>PROMOTION_HOVERING_UNIT</Type>
-			<Description>TXT_KEY_PROMOTION_HOVERING_UNIT</Description>
-			<Help>TXT_KEY_PROMOTION_HOVERING_UNIT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CanMoveImpassable>true</CanMoveImpassable>
-			<OrderPriority>11</OrderPriority>
-			<HoveringUnit>true</HoveringUnit>
-			<PortraitIndex>28</PortraitIndex>
-			<IconAtlas>promoVP_atlas_01</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_HOVERING_UNIT</PediaEntry>
-		</Row>
+		<!-- ==================== PROMOTION_HOVERING_UNIT ==================== -->
+		<Update>
+			<Where Type="PROMOTION_HOVERING_UNIT"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_HOVERING_UNIT</Description>
+				<Help>TXT_KEY_PROMOTION_HOVERING_UNIT_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<CanMoveImpassable>true</CanMoveImpassable>
+				<OrderPriority>11</OrderPriority>
+				<HoveringUnit>true</HoveringUnit>
+				<PortraitIndex>28</PortraitIndex>
+				<IconAtlas>promoVP_atlas_01</IconAtlas>
+				<PediaType>PEDIA_SHARED</PediaType>
+				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_HOVERING_UNIT</PediaEntry>
+			</Set>
+		</Update>
 
+		<!-- ==================== PROMOTION_CHAIN_REACTION ==================== -->
+		<Update>
+			<Where Type="PROMOTION_CHAIN_REACTION"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CHAIN_REACTION</Description>
+				<Help>TXT_KEY_PROMOTION_CHAIN_REACTION_EFFECT_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<OrderPriority>11</OrderPriority>
+				<OnlyDefensive>true</OnlyDefensive>
+				<PortraitIndex>57</PortraitIndex>
+				<IconAtlas>VALERY_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CHAIN_REACTION</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<SplashDamagePercent>100</SplashDamagePercent>
+				<SplashDamageRadius>12</SplashDamageRadius>
+				<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
+				<SplashDamageFixed>1</SplashDamageFixed>
+				<CollateralDamageFixed>1</CollateralDamageFixed>
+				<CollateralDamagePercent>100</CollateralDamagePercent>
+				<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+				<!-- 清除旧定义中独有的字段 -->
+				<InsightEnemyDamageModifier>NULL</InsightEnemyDamageModifier>
+			</Set>
+		</Update>
 
+		<!-- ==================== PROMOTION_AIR_RECON ==================== -->
+		<Update>
+			<Where Type="PROMOTION_AIR_RECON"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_AIR_RECON</Description>
+				<Help>TXT_KEY_PROMOTION_AIR_RECON_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<Recon>true</Recon>
+				<PortraitIndex>56</PortraitIndex>
+				<IconAtlas>promoVP_atlas_02</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_AIR_RECON</PediaEntry>
+			</Set>
+		</Update>
+
+		<!-- ==================== PROMOTION_STEAM_POWERED ==================== -->
 		<Row>
-			<Type>PROMOTION_CHAIN_REACTION</Type>
-			<Description>TXT_KEY_PROMOTION_CHAIN_REACTION</Description>
-			<Help>TXT_KEY_PROMOTION_CHAIN_REACTION_EFFECT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<OnlyDefensive>true</OnlyDefensive>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>VALERY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CHAIN_REACTION</PediaEntry>
+			<Type>PROMOTION_STEAM_POWERED</Type>
+			<Description>TXT_KEY_PROMOTION_POSEIDON_TEMPLE</Description>
+			<Help>TXT_KEY_PROMOTION_POSEIDON_TEMPLE_HELP</Help>
 			<CannotBeChosen>true</CannotBeChosen>
-			<SplashDamagePercent>100</SplashDamagePercent>
-			<SplashDamageRadius>12</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>100</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>11</OrderPriority>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PediaType>PEDIA_NAVAL</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_POSEIDON_TEMPLE</PediaEntry>
 		</Row>
-
 
 
 		<Row>
@@ -840,45 +701,7 @@
 
 
 
-		<Update>
-			<Set DefenseMod="15"/>
-			<Where Type="PROMOTION_SHOCK_1" />
-		</Update>
-
-		<Update>
-			<Set DefenseMod="15"/>
-			<Where Type="PROMOTION_SHOCK_2" />
-		</Update>
-		<Update>
-			<Set DropRange="12"/>
-			<Where Type="PROMOTION_PARADROP_I" />
-		</Update>
-		<Update>
-			<Set DropRange="18"/>
-			<Where Type="PROMOTION_PARADROP_II" />
-		</Update>
-		<Update>
-			<Set DropRange="30"/>
-			<Where Type="PROMOTION_PARADROP_III" />
-		</Update>
-
-
-
-		<Update>
-			<Set DropRange="50"/>
-			<Where Type="PROMOTION_EXTENDED_PARADROP" />
-		</Update>
-
-
-		<Update>
-			<Set PortraitIndex="50" IconAtlas="MainRobotPromo_Atlas" StrongerDamaged="1"/>
-			<Where Type="PROMOTION_GREAT_GENERAL" />
-		</Update>
-
-		<Update>
-			<Set PromotionPrereqOr5="PROMOTION_FIRE_TARGETING_2" />
-			<Where Type="PROMOTION_RANGE" />
-		</Update>
+	
 	</UnitPromotions>
 
 
@@ -886,10 +709,6 @@
 
 	<!--*****************************陆地巡洋舰******************************************-->
 	<UnitPromotions>
-
-
-
-
 
 
 		<Row>
@@ -1097,141 +916,136 @@
 
 	<!--*********************************步兵系******************************-->
 	<UnitPromotions>
-		<Delete Type="PROMOTION_INFANTRY_COMBAT"/>
-		<Delete Type="PROMOTION_GUNPOWDER_INFANTRY_COMBAT"/>
-		<Delete Type="PROMOTION_SHOCK_1"/>
-		<Delete Type="PROMOTION_SHOCK_2"/>
-		<Delete Type="PROMOTION_SHOCK_3"/>
-		<Delete Type="PROMOTION_COVER_1"/>
 
+		<!-- ==================== INFANTRY_COMBAT ==================== -->
+		<Update>
+			<Where Type="PROMOTION_INFANTRY_COMBAT"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_INFANTRY_COMBAT</Description>
+				<Help>TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<LostWithUpgrade>true</LostWithUpgrade>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>40</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_INFANTRY_COMBAT</PediaEntry>
+				<CityAttack>50</CityAttack>
+				<CannotBeChosen>true</CannotBeChosen>
+			</Set>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_INFANTRY_COMBAT</Type>
-			<Description>TXT_KEY_PROMOTION_INFANTRY_COMBAT</Description>
-			<Help>TXT_KEY_PROMOTION_INFANTRY_COMBAT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>40</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_INFANTRY_COMBAT</PediaEntry>
-			<CityAttack>50</CityAttack>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
-		
+		<!-- ==================== GUNPOWDER_INFANTRY_COMBAT ==================== -->
+		<Update>
+			<Where Type="PROMOTION_GUNPOWDER_INFANTRY_COMBAT"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT</Description>
+				<Help>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>41</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PediaEntry>
+				<LostWithUpgrade>true</LostWithUpgrade>
+				<CityAttack>50</CityAttack>
+				<RangedSupportFire>true</RangedSupportFire>
+				<CannotBeChosen>true</CannotBeChosen>
+			</Set>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</Type>
-			<Description>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT</Description>
-			<Help>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>41</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PediaEntry>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<CityAttack>50</CityAttack>
-			<RangedSupportFire>true</RangedSupportFire>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
+		<!-- ==================== COVER_1 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_COVER_1"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_COVER_1</Description>
+				<Help>TXT_KEY_PROMOTION_COVER_1_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
+				<PromotionPrereqOr2>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr2>
+				<PromotionPrereqOr3>PROMOTION_NAVALMELEE_COMBAT</PromotionPrereqOr3>
+				<PromotionPrereqOr4>PROMOTION_DESTROYER_COMBAT</PromotionPrereqOr4>
+				<PromotionPrereqOr5>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr5>
+				<PromotionPrereqOr6>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr6>
+				<PromotionPrereqOr7>PROMOTION_ANTI_TANK</PromotionPrereqOr7>
+				<OrderPriority>1</OrderPriority>
+				<RangedDefenseMod>33</RangedDefenseMod>
+				<HealOutsideFriendly>true</HealOutsideFriendly>
+				<PortraitIndex>14</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_COVER_1</PediaEntry>
+			</Set>
+		</Update>
 
-		<!--*********************************机械步兵******************************-->
+		<!-- ==================== SHOCK_1 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_SHOCK_1"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_SHOCK_1</Description>
+				<Help>TXT_KEY_PROMOTION_SHOCK_1_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
+				<PromotionPrereqOr2>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr2>
+				<PromotionPrereqOr3>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr3>
+				<OrderPriority>1</OrderPriority>
+				<OpenAttack>15</OpenAttack>
+				<OpenDefense>15</OpenDefense>
+				<PortraitIndex>44</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_SHOCK_1</PediaEntry>
+				<!-- 清除旧字段 -->
+				<AttackMod>NULL</AttackMod>
+				<Amphib>NULL</Amphib>
+				<River>NULL</River>
+			</Set>
+		</Update>
 
+		<!-- ==================== SHOCK_2 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_SHOCK_2"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_SHOCK_2</Description>
+				<Help>TXT_KEY_PROMOTION_SHOCK_2_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_SHOCK_1</PromotionPrereqOr1>
+				<OrderPriority>1</OrderPriority>
+				<OpenAttack>15</OpenAttack>
+				<OpenDefense>15</OpenDefense>
+				<PortraitIndex>45</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_SHOCK_2</PediaEntry>
+				<!-- 清除旧字段 -->
+				<AttackMod>NULL</AttackMod>
+				<HillsDoubleMove>NULL</HillsDoubleMove>
+			</Set>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_ROBORT_COMBAT</Type>
-			<Description>TXT_KEY_PROMOTION_ROBORT_COMBAT</Description>
-			<Help>TXT_KEY_PROMOTION_ROBORT_COMBAT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>62</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ROBORT_COMBAT</PediaEntry>
-			<CityAttack>100</CityAttack>
-			<!--<NearbyUnitPromotionBonus>33</NearbyUnitPromotionBonus>
-			<NearbyUnitPromotionBonusRange>5</NearbyUnitPromotionBonusRange>
-			<CombatBonusFromNearbyUnitPromotion>PROMOTION_COMBAT_TO_DEATH</CombatBonusFromNearbyUnitPromotion>-->
-			<PlagueImmune>1</PlagueImmune>
-			<CannotBeChosen>true</CannotBeChosen>
-			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
-		</Row>
+		<!-- ==================== SHOCK_3 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_SHOCK_3"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_SHOCK_3</Description>
+				<Help>TXT_KEY_PROMOTION_SHOCK_3_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_SHOCK_2</PromotionPrereqOr1>
+				<OrderPriority>1</OrderPriority>
+				<OpenAttack>15</OpenAttack>
+				<OpenDefense>15</OpenDefense>
+				<PortraitIndex>46</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_SHOCK_3</PediaEntry>
+				<!-- 清除旧字段 -->
+				<CityAttack>NULL</CityAttack>
+				<RoughDefense>NULL</RoughDefense>
+				<RoughAttack>NULL</RoughAttack>
+			</Set>
+		</Update>
 
-
-
-		<Row>
-			<Type>PROMOTION_COVER_1</Type>
-			<Description>TXT_KEY_PROMOTION_COVER_1</Description>
-			<Help>TXT_KEY_PROMOTION_COVER_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_NAVALMELEE_COMBAT</PromotionPrereqOr3>
-			<PromotionPrereqOr4>PROMOTION_DESTROYER_COMBAT</PromotionPrereqOr4>
-			<PromotionPrereqOr5>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr5>
-			<PromotionPrereqOr6>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr6>
-			<PromotionPrereqOr7>PROMOTION_ANTI_TANK</PromotionPrereqOr7>
-			<OrderPriority>1</OrderPriority>
-			<RangedDefenseMod>33</RangedDefenseMod>
-			<HealOutsideFriendly>true</HealOutsideFriendly>
-			<PortraitIndex>14</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_COVER_1</PediaEntry>
-		</Row>
-
-
-
-
-		<Row>
-			<Type>PROMOTION_SHOCK_1</Type>
-			<Description>TXT_KEY_PROMOTION_SHOCK_1</Description>
-			<Help>TXT_KEY_PROMOTION_SHOCK_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr3>
-			<OrderPriority>1</OrderPriority>
-			<OpenAttack>15</OpenAttack>
-			<OpenDefense>15</OpenDefense>
-			<!--<OpenRangedAttackMod>15</OpenRangedAttackMod>-->
-			<PortraitIndex>44</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_SHOCK_2</Type>
-			<Description>TXT_KEY_PROMOTION_SHOCK_2</Description>
-			<Help>TXT_KEY_PROMOTION_SHOCK_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_SHOCK_1</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<OpenAttack>15</OpenAttack>
-			<OpenDefense>15</OpenDefense>
-			<!--<OpenRangedAttackMod>15</OpenRangedAttackMod>-->
-			<PortraitIndex>45</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_2</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_SHOCK_3</Type>
-			<Description>TXT_KEY_PROMOTION_SHOCK_3</Description>
-			<Help>TXT_KEY_PROMOTION_SHOCK_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_SHOCK_2</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<OpenAttack>15</OpenAttack>
-			<OpenDefense>15</OpenDefense>
-			<!--<OpenRangedAttackMod>15</OpenRangedAttackMod>-->
-			<PortraitIndex>46</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_3</PediaEntry>
-		</Row>
+		<!-- ==================== DRILL_1 ==================== -->
 		<Row>
 			<Type>PROMOTION_DRILL_1</Type>
 			<Description>TXT_KEY_PROMOTION_DRILL_1</Description>
@@ -1242,13 +1056,14 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>2</OrderPriority>
 			<RoughAttack>15</RoughAttack>
-			<!--<RoughRangedAttackMod>15</RoughRangedAttackMod>-->
 			<RoughDefense>15</RoughDefense>
 			<PortraitIndex>19</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DRILL_1</PediaEntry>
 		</Row>
+
+		<!-- ==================== DRILL_2 ==================== -->
 		<Row>
 			<Type>PROMOTION_DRILL_2</Type>
 			<Description>TXT_KEY_PROMOTION_DRILL_2</Description>
@@ -1258,12 +1073,12 @@
 			<OrderPriority>2</OrderPriority>
 			<RoughAttack>15</RoughAttack>
 			<RoughDefense>15</RoughDefense>
-			<!--<RoughRangedAttackMod>15</RoughRangedAttackMod>-->
 			<PortraitIndex>20</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_DRILL_2</PediaEntry>
 		</Row>
+		<!-- ==================== DRILL_3 ==================== -->
 		<Row>
 			<Type>PROMOTION_DRILL_3</Type>
 			<Description>TXT_KEY_PROMOTION_DRILL_3</Description>
@@ -1273,7 +1088,6 @@
 			<OrderPriority>2</OrderPriority>
 			<RoughAttack>15</RoughAttack>
 			<RoughDefense>15</RoughDefense>
-			<!--<RoughRangedAttackMod>15</RoughRangedAttackMod>-->
 			<HillsDoubleMove>true</HillsDoubleMove>
 			<PortraitIndex>21</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
@@ -1281,6 +1095,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_DRILL_3</PediaEntry>
 		</Row>
 
+		<!-- ==================== SIEGE ==================== -->
 		<Row>
 			<Type>PROMOTION_SIEGE</Type>
 			<Description>TXT_KEY_PROMOTION_SIEGE</Description>
@@ -1288,8 +1103,6 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_SHOCK_2</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_DRILL_2</PromotionPrereqOr2>
-			<!--<PromotionPrereqOr3>PROMOTION_ACCURACY_1</PromotionPrereqOr3>
-			<PromotionPrereqOr4>PROMOTION_BARRAGE_1</PromotionPrereqOr4>-->
 			<OrderPriority>3</OrderPriority>
 			<CityAttack>50</CityAttack>
 			<PortraitIndex>40</PortraitIndex>
@@ -1298,7 +1111,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_SIEGE</PediaEntry>
 		</Row>
 
-
+		<!-- ==================== AMPHIBIOUS ==================== -->
 		<Row>
 			<Type>PROMOTION_AMPHIBIOUS</Type>
 			<Description>TXT_KEY_PROMOTION_AMPHIBIOUS</Description>
@@ -1315,103 +1128,23 @@
 			<PediaEntry>TXT_KEY_PROMOTION_AMPHIBIOUS</PediaEntry>
 		</Row>
 
-
-
-
-
-
+		<!-- ==================== 新增 Promotion（UPDATE 无法创建新行，用 Row 插入） ==================== -->
 		<Row>
-			<Type>PROMOTION_GUN_1</Type>
-			<Description>TXT_KEY_PROMOTION_GUN_1</Description>
-			<Help>TXT_KEY_PROMOTION_GUN_1_HELP</Help>
+			<Type>PROMOTION_ROBORT_COMBAT</Type>
+			<Description>TXT_KEY_PROMOTION_ROBORT_COMBAT</Description>
+			<Help>TXT_KEY_PROMOTION_ROBORT_COMBAT_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>59</PortraitIndex>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<IconAtlas>promoVP_atlas_00</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_GUN_1</PediaEntry>
-			<RangedSupportFire>true</RangedSupportFire>
-			<LostWithUpgrade>true</LostWithUpgrade>
+			<PortraitIndex>62</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ROBORT_COMBAT</PediaEntry>
+			<CityAttack>100</CityAttack>
+			<PlagueImmune>1</PlagueImmune>
 			<CannotBeChosen>true</CannotBeChosen>
-			<!--<ShowInUnitPanel>0</ShowInUnitPanel>
-		    <ShowInPedia>0</ShowInPedia>-->
+			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 		</Row>
 
-
-		<Row>
-			<Type>PROMOTION_GUN_2</Type>
-			<Description>TXT_KEY_PROMOTION_GUN_2</Description>
-			<Help>TXT_KEY_PROMOTION_GUN_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>11</OrderPriority>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PortraitIndex>58</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
-			<IconAtlas>promoVP_atlas_00</IconAtlas>
-			<PediaEntry>TXT_KEY_PROMOTION_GUN_2</PediaEntry>
-			<RangedSupportFireMod>100</RangedSupportFireMod>
-		</Row>
-
-
-
-
-
-		<Row>
-			<Type>PROMOTION_DESERT_EXTRA</Type>
-			<Description>TXT_KEY_PROMOTION_DESERT_EXTRA</Description>
-			<Help>TXT_KEY_PROMOTION_DESERT_EXTRA_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr3>
-			<OrderPriority>5</OrderPriority>
-			<PortraitIndex>47</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaEntry>TXT_KEY_PROMOTION_DESERT_EXTRA</PediaEntry>
-		</Row>
-
-
-
-
-		<Row>
-			<Type>PROMOTION_SNOW_EXTRA</Type>
-			<Description>TXT_KEY_PROMOTION_SNOW_EXTRA</Description>
-			<Help>TXT_KEY_PROMOTION_SNOW_EXTRA_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr3>
-			<OrderPriority>6</OrderPriority>
-			<PortraitIndex>46</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaEntry>TXT_KEY_PROMOTION_SNOW_EXTRA</PediaEntry>
-		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_JUNJLE_EXTRA</Type>
-			<Description>TXT_KEY_PROMOTION_JUNJLE_EXTRA</Description>
-			<Help>TXT_KEY_PROMOTION_JUNJLE_EXTRA_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>7</OrderPriority>
-			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr3>
-			<PortraitIndex>51</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
-			<PediaEntry>TXT_KEY_PROMOTION_JUNJLE_EXTRA</PediaEntry>
-		</Row>
-
-
-
-		<!--武僧专属晋升-->
 		<Row>
 			<Type>PROMOTION_DRILL_4</Type>
 			<Description>TXT_KEY_PROMOTION_DRILL_4</Description>
@@ -1428,8 +1161,6 @@
 			<ShowInPedia>0</ShowInPedia>
 			<PediaEntry>TXT_KEY_PROMOTION_DRILL_4</PediaEntry>
 		</Row>
-
-
 
 		<Row>
 			<Type>PROMOTION_SHOCK_4</Type>
@@ -1448,10 +1179,83 @@
 			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_4</PediaEntry>
 		</Row>
 
+		<Row>
+			<Type>PROMOTION_GUN_1</Type>
+			<Description>TXT_KEY_PROMOTION_GUN_1</Description>
+			<Help>TXT_KEY_PROMOTION_GUN_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>11</OrderPriority>
+			<PortraitIndex>59</PortraitIndex>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<PediaEntry>TXT_KEY_PROMOTION_GUN_1</PediaEntry>
+			<RangedSupportFire>true</RangedSupportFire>
+			<LostWithUpgrade>true</LostWithUpgrade>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
 
+		<Row>
+			<Type>PROMOTION_GUN_2</Type>
+			<Description>TXT_KEY_PROMOTION_GUN_2</Description>
+			<Help>TXT_KEY_PROMOTION_GUN_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>11</OrderPriority>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PortraitIndex>58</PortraitIndex>
+			<PromotionPrereqOr1>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
+			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<PediaEntry>TXT_KEY_PROMOTION_GUN_2</PediaEntry>
+			<RangedSupportFireMod>100</RangedSupportFireMod>
+		</Row>
 
+		<Row>
+			<Type>PROMOTION_DESERT_EXTRA</Type>
+			<Description>TXT_KEY_PROMOTION_DESERT_EXTRA</Description>
+			<Help>TXT_KEY_PROMOTION_DESERT_EXTRA_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
+			<PromotionPrereqOr3>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr3>
+			<OrderPriority>5</OrderPriority>
+			<PortraitIndex>47</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PediaType>PEDIA_MELEE</PediaType>
+			<ShowInPedia>0</ShowInPedia>
+			<PediaEntry>TXT_KEY_PROMOTION_DESERT_EXTRA</PediaEntry>
+		</Row>
 
+		<Row>
+			<Type>PROMOTION_SNOW_EXTRA</Type>
+			<Description>TXT_KEY_PROMOTION_SNOW_EXTRA</Description>
+			<Help>TXT_KEY_PROMOTION_SNOW_EXTRA_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
+			<PromotionPrereqOr3>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr3>
+			<OrderPriority>6</OrderPriority>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PediaType>PEDIA_MELEE</PediaType>
+			<ShowInPedia>0</ShowInPedia>
+			<PediaEntry>TXT_KEY_PROMOTION_SNOW_EXTRA</PediaEntry>
+		</Row>
 
+		<Row>
+			<Type>PROMOTION_JUNJLE_EXTRA</Type>
+			<Description>TXT_KEY_PROMOTION_JUNJLE_EXTRA</Description>
+			<Help>TXT_KEY_PROMOTION_JUNJLE_EXTRA_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>7</OrderPriority>
+			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
+			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
+			<PromotionPrereqOr3>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr3>
+			<PortraitIndex>51</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PediaType>PEDIA_MELEE</PediaType>
+			<ShowInPedia>0</ShowInPedia>
+			<PediaEntry>TXT_KEY_PROMOTION_JUNJLE_EXTRA</PediaEntry>
+		</Row>
 
 		<Row>
 			<Type>PROMOTION_FLANK_1</Type>
@@ -1468,6 +1272,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FLANK_1</PediaEntry>
 		</Row>
+
 		<Row>
 			<Type>PROMOTION_FLANK_2</Type>
 			<Description>TXT_KEY_PROMOTION_FLANK_2</Description>
@@ -1482,6 +1287,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FLANK_2</PediaEntry>
 		</Row>
+
 		<Row>
 			<Type>PROMOTION_FLANK_3</Type>
 			<Description>TXT_KEY_PROMOTION_FLANK_3</Description>
@@ -1496,10 +1302,6 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FLANK_3</PediaEntry>
 		</Row>
-		
-		
-		
-		
 
 	</UnitPromotions>
 
@@ -1675,58 +1477,48 @@
 	<UnitPromotions>
 
 
+		<!-- ==================== PROMOTION_KNIGHT_COMBAT ==================== -->
+		<Update>
+			<Where Type="PROMOTION_KNIGHT_COMBAT"/>
+			<Set>
+				<HeavyCharge>NULL</HeavyCharge>
+				<NoDefensiveBonus>true</NoDefensiveBonus>
+				<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
+				<AttackMod>50</AttackMod>
+				<CityAttack>-100</CityAttack>
+				<LostWithUpgrade>true</LostWithUpgrade>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>49</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_KNIGHT_COMBAT</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
+			</Set>
+		</Update>
+
+		<!-- ==================== PROMOTION_TANK_COMBAT ==================== -->
+		<Update>
+			<Where Type="PROMOTION_TANK_COMBAT"/>
+			<Set>
+				<HeavyCharge>NULL</HeavyCharge>
+				<LostWithUpgrade>true</LostWithUpgrade>
+				<NoDefensiveBonus>true</NoDefensiveBonus>
+				<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
+				<AttackMod>50</AttackMod>
+				<CityAttack>-100</CityAttack>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>50</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_TANK_COMBAT</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
+			</Set>
+		</Update>
 
 
-		<Delete Type="PROMOTION_KNIGHT_COMBAT"/>
-		<Delete Type="PROMOTION_TANK_COMBAT"/>
-		<Delete Type="PROMOTION_HEAVY_SHOCK_3"/>
-		<Delete Type="PROMOTION_HEAVY_SHOCK_2"/>
-		<Delete Type="PROMOTION_HEAVY_SHOCK_1"/>
-		<Delete Type="PROMOTION_CHARGE_1"/>
-		<Delete Type="PROMOTION_CHARGE_2"/>
-		<Delete Type="PROMOTION_CHARGE_3"/>
-
-
-
-
-		<Row>
-			<Type>PROMOTION_KNIGHT_COMBAT</Type>
-			<Description>TXT_KEY_PROMOTION_KNIGHT_COMBAT</Description>
-			<Help>TXT_KEY_PROMOTION_KNIGHT_COMBAT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<!--<HeavyCharge>true</HeavyCharge>-->
-			<NoDefensiveBonus>true</NoDefensiveBonus>
-			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
-			<AttackMod>50</AttackMod>
-			<CityAttack>-100</CityAttack>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>49</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_KNIGHT_COMBAT</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
-		</Row>
-		<Row>
-			<Type>PROMOTION_TANK_COMBAT</Type>
-			<Description>TXT_KEY_PROMOTION_TANK_COMBAT</Description>
-			<Help>TXT_KEY_PROMOTION_TANK_COMBAT_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<LostWithUpgrade>true</LostWithUpgrade>
-			<NoDefensiveBonus>true</NoDefensiveBonus>
-			<CanMoveAfterAttacking>true</CanMoveAfterAttacking>
-			<AttackMod>50</AttackMod>
-			<CityAttack>-100</CityAttack>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>50</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_TANK_COMBAT</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
-		</Row>
-
+		<!-- ==================== PROMOTION_HEAVY_ROBORT ==================== -->
 		<Row>
 			<Type>PROMOTION_HEAVY_ROBORT</Type>
 			<Description>TXT_KEY_PROMOTION_HEAVY_ROBORT</Description>
@@ -1739,60 +1531,117 @@
 			<CityAttack>-50</CityAttack>
 			<PortraitIndex>63</PortraitIndex>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_HEAVY_ROBORT</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PlagueImmune>1</PlagueImmune>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
 			<LostAllMovesAttackCity>1</LostAllMovesAttackCity>
 		</Row>
+		
+
+		<!-- ==================== PROMOTION_CHARGE_1 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_CHARGE_1"/>
+			<Set>
+				<HeavyChargeAddMoves>NULL</HeavyChargeAddMoves>
+				<PromotionPrereqOr1>NULL</PromotionPrereqOr1>
+				<PromotionPrereqOr2>NULL</PromotionPrereqOr2>
+				<OrderPriority>6</OrderPriority>
+				<PortraitIndex>5</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CHARGE_1</PediaEntry>
+				<CollateralDamageFixed>1</CollateralDamageFixed>
+				<CollateralDamagePercent>25</CollateralDamagePercent>
+				<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			</Set>
+		</Update>
+
+		<!-- ==================== PROMOTION_CHARGE_2 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_CHARGE_2"/>
+			<Set>
+				<HeavyChargeCollateralPercent>NULL</HeavyChargeCollateralPercent>
+				<HeavyChargeExtraDamage>NULL</HeavyChargeExtraDamage>
+				<PromotionPrereq>PROMOTION_CHARGE_1</PromotionPrereq>
+				<OrderPriority>6</OrderPriority>
+				<PortraitIndex>6</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+				<CollateralDamageFixed>1</CollateralDamageFixed>
+				<CollateralDamagePercent>25</CollateralDamagePercent>
+				<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			</Set>
+		</Update>
+
+		<!-- ==================== PROMOTION_CHARGE_3 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_CHARGE_3"/>
+			<Set>
+				<HeavyChargeCollateralPercent>NULL</HeavyChargeCollateralPercent>
+				<HeavyChargeExtraDamage>NULL</HeavyChargeExtraDamage>
+				<PromotionPrereq>PROMOTION_CHARGE_2</PromotionPrereq>
+				<OrderPriority>6</OrderPriority>
+				<PortraitIndex>7</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+				<CollateralDamageFixed>1</CollateralDamageFixed>
+				<CollateralDamagePercent>50</CollateralDamagePercent>
+				<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+			</Set>
+		</Update>
+
+		<!-- ==================== PROMOTION_HEAVY_SHOCK_1 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_HEAVY_SHOCK_1"/>
+			<Set>
+				<AttackMod>NULL</AttackMod>
+				<PromotionPrereqOr1>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr1>
+				<PromotionPrereqOr2>PROMOTION_TANK_COMBAT</PromotionPrereqOr2>
+				<PromotionPrereqOr3>PROMOTION_HEAVY_ROBORT</PromotionPrereqOr3>
+				<OpenAttack>25</OpenAttack>
+				<PortraitIndex>44</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_SHOCK_1</PediaEntry>
+			</Set>
+		</Update>
+
+		<!-- ==================== PROMOTION_HEAVY_SHOCK_2 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_HEAVY_SHOCK_2"/>
+			<Set>
+				<AttackMod>NULL</AttackMod>
+				<PromotionPrereq>PROMOTION_HEAVY_SHOCK_1</PromotionPrereq>
+				<OpenAttack>25</OpenAttack>
+				<PortraitIndex>45</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_SHOCK_2</PediaEntry>
+			</Set>
+		</Update>
+
+		<!-- ==================== PROMOTION_HEAVY_SHOCK_3 ==================== -->
+		<Update>
+			<Where Type="PROMOTION_HEAVY_SHOCK_3"/>
+			<Set>
+				<HPHealedIfDestroyEnemy>NULL</HPHealedIfDestroyEnemy>
+				<HealIfDestroyExcludesBarbarians>NULL</HealIfDestroyExcludesBarbarians>
+				<PromotionPrereq>PROMOTION_HEAVY_SHOCK_2</PromotionPrereq>
+				<OrderPriority>9</OrderPriority>
+				<PortraitIndex>46</PortraitIndex>
+				<OpenAttack>25</OpenAttack>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_SHOCK_3</PediaEntry>
+			</Set>
+		</Update>
 
 
-		<Row>
-			<Type>PROMOTION_CHARGE_1</Type>
-			<Description>TXT_KEY_PROMOTION_CHARGE_1</Description>
-			<Help>TXT_KEY_PROMOTION_CHARGE_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>6</OrderPriority>
-			<PortraitIndex>5</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_1</PediaEntry>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>25</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-		</Row>
-		<Row>
-			<Type>PROMOTION_CHARGE_2</Type>
-			<Description>TXT_KEY_PROMOTION_CHARGE_2</Description>
-			<Help>TXT_KEY_PROMOTION_CHARGE_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_CHARGE_1</PromotionPrereq>
-			<OrderPriority>6</OrderPriority>
-			<PortraitIndex>6</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>25</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-		</Row>
-		<Row>
-			<Type>PROMOTION_CHARGE_3</Type>
-			<Description>TXT_KEY_PROMOTION_CHARGE_3</Description>
-			<Help>TXT_KEY_PROMOTION_CHARGE_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_CHARGE_2</PromotionPrereq>
-			<OrderPriority>6</OrderPriority>
-			<PortraitIndex>7</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>50</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-		</Row>
-
+		<!-- ==================== 新增 ==================== -->
 		<Row>
 			<Type>PROMOTION_ARMOR_7</Type>
 			<Description>TXT_KEY_PROMOTION_ARMOR_1</Description>
@@ -1821,58 +1670,8 @@
 			<DefenseMod>25</DefenseMod>
 		</Row>
 
-
-
-
-
-
-
-		<Row>
-			<Type>PROMOTION_HEAVY_SHOCK_1</Type>
-			<Description>TXT_KEY_PROMOTION_SHOCK_1</Description>
-			<Help>TXT_KEY_PROMOTION_HEAVY_SHOCK_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>9</OrderPriority>
-			<PromotionPrereqOr1>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_TANK_COMBAT</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_HEAVY_ROBORT</PromotionPrereqOr3>
-			<OpenAttack>25</OpenAttack>
-			<!--<OpenRangedAttackMod>25</OpenRangedAttackMod>-->
-			<PortraitIndex>44</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_1</PediaEntry>
-		</Row>
-
-		<Row>
-			<Type>PROMOTION_HEAVY_SHOCK_2</Type>
-			<Description>TXT_KEY_PROMOTION_SHOCK_2</Description>
-			<Help>TXT_KEY_PROMOTION_HEAVY_SHOCK_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_HEAVY_SHOCK_1</PromotionPrereq>
-			<OrderPriority>9</OrderPriority>
-			<OpenAttack>25</OpenAttack>
-			<!--<OpenRangedAttackMod>25</OpenRangedAttackMod>-->
-			<PortraitIndex>45</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_2</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_HEAVY_SHOCK_3</Type>
-			<Description>TXT_KEY_PROMOTION_SHOCK_3</Description>
-			<Help>TXT_KEY_PROMOTION_HEAVY_SHOCK_3_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_HEAVY_SHOCK_2</PromotionPrereq>
-			<OrderPriority>9</OrderPriority>
-			<PortraitIndex>46</PortraitIndex>
-			<OpenAttack>25</OpenAttack>
-			<!--<OpenRangedAttackMod>25</OpenRangedAttackMod>-->
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SHOCK_3</PediaEntry>
-		</Row>
-
+		
+		
 
 		<Row>
 			<Type>PROMOTION_HEAL_KILL_ENEMY</Type>
@@ -2086,44 +1885,49 @@
 
 
 
-
-	<!--***************Promotions for Archery - Anti-Air Units**************************-->
-
-
-	<UnitPromotions>
-
-		<Row>
-			<Type>PROMOTION_ANTIAIRX</Type>
-			<Description>TXT_KEY_PROMOTION_ANTIAIRX</Description>
-			<Help>TXT_KEY_PROMOTION_ANTIAIRX_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>56</PortraitIndex>
-			<InterceptChanceChange>100</InterceptChanceChange>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
-			<NumInterceptionChange>1</NumInterceptionChange>
-			<AirInterceptRangeChange>2</AirInterceptRangeChange>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ANTIAIRX</PediaEntry>
-		</Row>
-
-	</UnitPromotions>
-
-
-
 	<!--**************************海军晋升*****************************-->
 	<UnitPromotions>
 
-
-		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_1"/>
-		<Delete Type="PROMOTION_ARMOR_BATTLESHIP_2"/>
-	
-		
+		<!-- ==================== LOGISTICS：追加 Or7 ==================== -->
 		<Update>
-			<Set PromotionPrereqOr7="PROMOTION_LAND_TARGETING_3" />
+			<Set>
+				<PromotionPrereqOr7>PROMOTION_LAND_TARGETING_3</PromotionPrereqOr7>
+			</Set>
 			<Where Type="PROMOTION_LOGISTICS"/>
 		</Update>
-		
+
+		<!-- ==================== ARMOR_BATTLESHIP_1 / 2：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</Description>
+				<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PortraitIndex>12</PortraitIndex>
+				<PromotionPrereqOr1>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionPrereqOr1>
+				<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_NAVAL</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</PediaEntry>
+				<DefenseMod>33</DefenseMod>
+			</Set>
+			<Where Type="PROMOTION_ARMOR_BATTLESHIP_1"/>
+		</Update>
+
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</Description>
+				<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PortraitIndex>13</PortraitIndex>
+				<PromotionPrereqOr1>PROMOTION_ARMOR_BATTLESHIP_1</PromotionPrereqOr1>
+				<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_NAVAL</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</PediaEntry>
+				<DefenseMod>33</DefenseMod>
+			</Set>
+			<Where Type="PROMOTION_ARMOR_BATTLESHIP_2"/>
+		</Update>
+
+		<!-- ==================== 新增：INVISIBLE_DESTROYER ==================== -->
 		<Row>
 			<Type>PROMOTION_INVISIBLE_DESTROYER</Type>
 			<Description>TXT_KEY_PROMOTION_INVISIBLE_DESTROYER</Description>
@@ -2138,7 +1942,7 @@
 			<Invisible>INVISIBLE_SUBMARINE</Invisible>
 		</Row>
 
-
+		<!-- ==================== 新增：COASTAL_RAIDER_1~3 ==================== -->
 		<Row>
 			<Type>PROMOTION_COASTAL_RAIDER_1</Type>
 			<Description>TXT_KEY_PROMOTION_COASTAL_RAIDER_1</Description>
@@ -2146,7 +1950,6 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CityAttack>50</CityAttack>
 			<FreePillageMoves>true</FreePillageMoves>
-			<!--<CityAttackPlunderModifier>33</CityAttackPlunderModifier>-->
 			<PortraitIndex>3</PortraitIndex>
 			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
@@ -2161,7 +1964,6 @@
 			<PromotionPrereqOr1>PROMOTION_COASTAL_RAIDER_1</PromotionPrereqOr1>
 			<CityAttack>50</CityAttack>
 			<PillageReplenishHealth>25</PillageReplenishHealth>
-			<!--<CityAttackPlunderModifier>33</CityAttackPlunderModifier>-->
 			<PortraitIndex>4</PortraitIndex>
 			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
@@ -2175,20 +1977,13 @@
 			<PromotionPrereqOr1>PROMOTION_COASTAL_RAIDER_2</PromotionPrereqOr1>
 			<CityAttack>50</CityAttack>
 			<PillageReplenishHealth>25</PillageReplenishHealth>
-			<!--<CityAttackPlunderModifier>34</CityAttackPlunderModifier>-->
 			<PortraitIndex>5</PortraitIndex>
 			<IconAtlas>EXPANSION_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_COASTAL_RAIDER_3</PediaEntry>
 		</Row>
-		
 
-		
-
-
-
-
-
+		<!-- ==================== 新增：NAVAL_INTERCEPTOR_1~3 ==================== -->
 		<Row>
 			<Type>PROMOTION_NAVAL_INTERCEPTOR_1</Type>
 			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR1</Description>
@@ -2201,8 +1996,6 @@
 			<OrderPriority>4</OrderPriority>
 			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR1</PediaEntry>
 		</Row>
-
-
 		<Row>
 			<Type>PROMOTION_NAVAL_INTERCEPTOR_2</Type>
 			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2</Description>
@@ -2215,8 +2008,6 @@
 			<OrderPriority>4</OrderPriority>
 			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2</PediaEntry>
 		</Row>
-
-
 		<Row>
 			<Type>PROMOTION_NAVAL_INTERCEPTOR_3</Type>
 			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3</Description>
@@ -2231,8 +2022,7 @@
 			<AirInterceptRangeChange>1</AirInterceptRangeChange>
 		</Row>
 
-
-
+		<!-- ==================== 新增：FIRE_TARGETING_1/2 ==================== -->
 		<Row>
 			<Type>PROMOTION_FIRE_TARGETING_1</Type>
 			<Description>TXT_KEY_PROMOTION_FIRE_TARGETING_1</Description>
@@ -2258,14 +2048,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_FIRE_TARGETING_2</PediaEntry>
 		</Row>
 
-
-
-
-
-		
-		
-		
-
+		<!-- ==================== 新增：LAND_TARGETING_1~3 ==================== -->
 		<Row>
 			<Type>PROMOTION_LAND_TARGETING_1</Type>
 			<Description>TXT_KEY_PROMOTION_LAND_TARGETING_1</Description>
@@ -2292,8 +2075,6 @@
 			<PediaEntry>TXT_KEY_PROMOTION_LAND_TARGETING_2</PediaEntry>
 			<CityAttack>15</CityAttack>
 		</Row>
-
-
 		<Row>
 			<Type>PROMOTION_LAND_TARGETING_3</Type>
 			<Description>TXT_KEY_PROMOTION_LAND_TARGETING_3</Description>
@@ -2308,37 +2089,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_LAND_TARGETING_3</PediaEntry>
 		</Row>
 
-
-
-
-	
-
-
-		<Row>
-			<Type>PROMOTION_ARMOR_BATTLESHIP_1</Type>
-			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</Description>
-			<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>12</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionPrereqOr1>
-			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_1</PediaEntry>
-			<DefenseMod>33</DefenseMod>
-		</Row>
-		<Row>
-			<Type>PROMOTION_ARMOR_BATTLESHIP_2</Type>
-			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</Description>
-			<Help>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>13</PortraitIndex>
-			<PromotionPrereqOr1>PROMOTION_ARMOR_BATTLESHIP_1</PromotionPrereqOr1>
-			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_NAVAL</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_2</PediaEntry>
-			<DefenseMod>33</DefenseMod>
-		</Row>
-		
+		<!-- ==================== 新增：ARMOR_BATTLESHIP_3 ==================== -->
 		<Row>
 			<Type>PROMOTION_ARMOR_BATTLESHIP_3</Type>
 			<Description>TXT_KEY_PROMOTION_ARMOR_BATTLESHIP_3</Description>
@@ -2352,12 +2103,7 @@
 			<MaxHitPointsChange>100</MaxHitPointsChange>
 		</Row>
 
-
-
-	
-
-		
-
+		<!-- ==================== 新增：FIRE_WEAPON ==================== -->
 		<Row>
 			<Type>PROMOTION_FIRE_WEAPON</Type>
 			<Description>TXT_KEY_PROMOTION_FIRE_WEAPON</Description>
@@ -2365,20 +2111,52 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
 			<PortraitIndex>0</PortraitIndex>
-			<!--<SplashDamagePercent>100</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>100</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>-->
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaEntry>TXT_KEY_PROMOTION_FIRE_WEAPON</PediaEntry>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 		</Row>
 
-	</UnitPromotions>
 
+		<!-- ==================== 新增：航母容量 ==================== -->
+		<Row>
+			<Type>PROMOTION_FLIGHT_DECK_1</Type>
+			<Description>TXT_KEY_PROMOTION_FLIGHT_DECK_1</Description>
+			<Help>TXT_KEY_PROMOTION_FLIGHT_DECK_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>15</PortraitIndex>
+			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_FLIGHT_DECK_1</PediaEntry>
+			<CargoChange>1</CargoChange>
+			<PromotionPrereqOr1>PROMOTION_CARRIER_UNIT</PromotionPrereqOr1>
+		</Row>
+		<Row>
+			<Type>PROMOTION_FLIGHT_DECK_2</Type>
+			<Description>TXT_KEY_PROMOTION_FLIGHT_DECK_2</Description>
+			<Help>TXT_KEY_PROMOTION_FLIGHT_DECK_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FLIGHT_DECK_1</PromotionPrereq>
+			<PortraitIndex>16</PortraitIndex>
+			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_FLIGHT_DECK_2</PediaEntry>
+			<CargoChange>1</CargoChange>
+			<PromotionPrereq>PROMOTION_FLIGHT_DECK_1</PromotionPrereq>
+		</Row>
+		<Row>
+			<Type>PROMOTION_FLIGHT_DECK_3</Type>
+			<Description>TXT_KEY_PROMOTION_FLIGHT_DECK_3</Description>
+			<Help>TXT_KEY_PROMOTION_FLIGHT_DECK_3_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FLIGHT_DECK_2</PromotionPrereq>
+			<PortraitIndex>17</PortraitIndex>
+			<IconAtlas>EXPANSION2_PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_FLIGHT_DECK_3</PediaEntry>
+			<CargoChange>1</CargoChange>
+			<PromotionPrereq>PROMOTION_FLIGHT_DECK_2</PromotionPrereq>
+		</Row>
+	</UnitPromotions>
 
 
 	<UnitPromotions_Domains>
@@ -2449,7 +2227,19 @@
 
 	<UnitPromotions_UnitCombats>
 
-
+		<Row>
+			<PromotionType>PROMOTION_FLIGHT_DECK_1</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLIGHT_DECK_2</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_FLIGHT_DECK_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
+		</Row>
+		
 
 		<Row>
 			<PromotionType>PROMOTION_ARMOR_BATTLESHIP_3</PromotionType>
@@ -2576,53 +2366,90 @@
 
 	<UnitPromotions>
 
-		<!--NearbyImprovementCombatBonus="100" NearbyImprovementBonusRange="1" CombatBonusImprovement="IMPROVEMENT_CITADEL"/>-->
-
-
-		<Delete Type="PROMOTION_ANTI_EMP"/>
-		<Delete Type="PROMOTION_IGNORE_TERRAIN_COST"/>
-		<Delete Type="PROMOTION_CITADEL_DEFENSE"/>
-
-
+		<!-- ==================== BOARDING_PARTY_1：设置互斥组 ==================== -->
 		<Update>
-			<Set MutuallyExclusiveGroup="3" />
-			<Where Type="PROMOTION_BOARDING_PARTY_1" />
+			<Set>
+				<MutuallyExclusiveGroup>3</MutuallyExclusiveGroup>
+			</Set>
+			<Where Type="PROMOTION_BOARDING_PARTY_1"/>
+		</Update>
+
+		<!-- ==================== PROMOTION_NUCLEAR_ARTILLERY：已存在，用 UPDATE 覆盖==================== -->
+		<Update>
+			<Where Type="PROMOTION_NUCLEAR_ARTILLERY"/>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</Description>
+				<Help>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PortraitIndex>58</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_NUCLEAR_ARTILLERY</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<CanDoNukeDamage>true</CanDoNukeDamage>
+				<SiegeKillCitizensPercent>60</SiegeKillCitizensPercent>
+				<!-- 清除旧版本中存在但新版本已移除的字段 -->
+				<SplashDamagePercent>NULL</SplashDamagePercent>
+				<SplashDamageRadius>NULL</SplashDamageRadius>
+				<SplashDamagePlotUnitLimit>NULL</SplashDamagePlotUnitLimit>
+				<CollateralDamagePercent>NULL</CollateralDamagePercent>
+				<CollateralDamagePlotUnitLimit>NULL</CollateralDamagePlotUnitLimit>
+			</Set>
 		</Update>
 		
-		
-
+		<!-- ==================== 新增：ANTIAIRX ==================== -->
 		<Row>
-			<Type>PROMOTION_CITADEL_DEFENSE</Type>
-			<Description>TXT_KEY_PROMOTION_CITADEL_DEFENSE</Description>
-			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+			<Type>PROMOTION_ANTIAIRX</Type>
+			<Description>TXT_KEY_PROMOTION_ANTIAIRX</Description>
+			<Help>TXT_KEY_PROMOTION_ANTIAIRX_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<EnemyDamage>50</EnemyDamage>
-			<NeutralDamage>50</NeutralDamage>
-			<EnemyDamageChance>100</EnemyDamageChance>
-			<NeutralDamageChance>100</NeutralDamageChance>
 			<CannotBeChosen>true</CannotBeChosen>
-			<OnlyDefensive>true</OnlyDefensive>
-			<NoDefensiveBonus>true</NoDefensiveBonus>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>5</PortraitIndex>
-			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
-			<MaxHitPointsModifier>400</MaxHitPointsModifier>
+			<PortraitIndex>56</PortraitIndex>
+			<InterceptChanceChange>100</InterceptChanceChange>
+			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<NumInterceptionChange>1</NumInterceptionChange>
+			<AirInterceptRangeChange>2</AirInterceptRangeChange>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CITADEL_DEFENSE</PediaEntry>
-			<SplashDamagePercent>50</SplashDamagePercent>
-			<SplashDamageRadius>1</SplashDamageRadius>
-			<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
-			<SplashDamageFixed>1</SplashDamageFixed>
-			<CannotBeCaptured>true</CannotBeCaptured>
-			<AdjacentEnemySapMovement>60</AdjacentEnemySapMovement>
-			<CollateralDamageFixed>1</CollateralDamageFixed>
-			<CollateralDamagePercent>50</CollateralDamagePercent>
-			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-			<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
+			<PediaEntry>TXT_KEY_PROMOTION_ANTIAIRX</PediaEntry>
 		</Row>
 
+		<!-- ==================== CITADEL_DEFENSE：已存在，用 UPDATE 覆盖 ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CITADEL_DEFENSE</Description>
+				<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<EnemyDamage>50</EnemyDamage>
+				<NeutralDamage>50</NeutralDamage>
+				<EnemyDamageChance>100</EnemyDamageChance>
+				<NeutralDamageChance>100</NeutralDamageChance>
+				<CannotBeChosen>true</CannotBeChosen>
+				<OnlyDefensive>true</OnlyDefensive>
+				<NoDefensiveBonus>true</NoDefensiveBonus>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>5</PortraitIndex>
+				<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
+				<MaxHitPointsModifier>400</MaxHitPointsModifier>
+				<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CITADEL_DEFENSE</PediaEntry>
+				<SplashDamagePercent>50</SplashDamagePercent>
+				<SplashDamageRadius>1</SplashDamageRadius>
+				<SplashDamagePlotUnitLimit>10</SplashDamagePlotUnitLimit>
+				<SplashDamageFixed>1</SplashDamageFixed>
+				<CannotBeCaptured>true</CannotBeCaptured>
+				<AdjacentEnemySapMovement>60</AdjacentEnemySapMovement>
+				<CollateralDamageFixed>1</CollateralDamageFixed>
+				<CollateralDamagePercent>50</CollateralDamagePercent>
+				<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
+				<CannotBeEstablishedCorps>true</CannotBeEstablishedCorps>
+				<!-- 清除旧字段 -->
+				<FriendlyLandsModifier>NULL</FriendlyLandsModifier>
+				<OutsideFriendlyLandsModifier>NULL</OutsideFriendlyLandsModifier>
+			</Set>
+			<Where Type="PROMOTION_CITADEL_DEFENSE"/>
+		</Update>
 
-		
+		<!-- ==================== 新增：SUI_FLEET_1~3 ==================== -->
 		<Row>
 			<Type>PROMOTION_SUI_FLEET_1</Type>
 			<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
@@ -2642,7 +2469,6 @@
 			<MaxHitPointsModifier>100</MaxHitPointsModifier>
 			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
 		</Row>
-
 		<Row>
 			<Type>PROMOTION_SUI_FLEET_2</Type>
 			<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
@@ -2660,9 +2486,6 @@
 			<ShowInPedia>0</ShowInPedia>
 			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
 		</Row>
-
-
-
 		<Row>
 			<Type>PROMOTION_SUI_FLEET_3</Type>
 			<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
@@ -2681,8 +2504,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET_1</PediaEntry>
 		</Row>
 
-
-
+		<!-- ==================== 新增：NAVAL_MONSTER ==================== -->
 		<Row>
 			<Type>PROMOTION_NAVAL_MONSTER</Type>
 			<Description>TXT_KEY_PROMOTION_NAVAL_MONSTER</Description>
@@ -2709,35 +2531,22 @@
 			<MutuallyExclusiveGroup>3</MutuallyExclusiveGroup>
 		</Row>
 
+		<!-- ==================== IGNORE_TERRAIN_COST：已存在，用 UPDATE 覆盖 ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_IGNORE_TERRAIN_COST</Description>
+				<Help>TXT_KEY_PROMOTION_IGNORE_TERRAIN_COST</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<IgnoreTerrainCost>true</IgnoreTerrainCost>
+				<PortraitIndex>4</PortraitIndex>
+				<IconAtlas>VALERY_ATLAS</IconAtlas>
+				<PediaType>PEDIA_SHARED</PediaType>
+				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_IGNORE_TERRAIN_COST</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_IGNORE_TERRAIN_COST"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_IGNORE_TERRAIN_COST</Type>
-			<Description>TXT_KEY_PROMOTION_IGNORE_TERRAIN_COST</Description>
-			<Help>TXT_KEY_PROMOTION_IGNORE_TERRAIN_COST</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<IgnoreTerrainCost>true</IgnoreTerrainCost>
-			<PortraitIndex>4</PortraitIndex>
-			<IconAtlas>VALERY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_IGNORE_TERRAIN_COST</PediaEntry>
-		</Row>
-
-
-		<!--<Row>
-			<Type>PROMOTION_CAN_RANGE_ATTACK</Type>
-			<Description>TXT_KEY_PROMOTION_CAN_RANGE_ATTACK</Description>
-			<Help>TXT_KEY_PROMOTION_CAN_RANGE_ATTACK_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<PediaEntry>TXT_KEY_PROMOTION_CAN_RANGE_ATTACK</PediaEntry>
-			<RangeChange>2</RangeChange>
-			<RangeAttackIgnoreLOS>true</RangeAttackIgnoreLOS>
-		</Row>-->
-
-
+		<!-- ==================== 新增：MOVE_ALL_TERRAIN ==================== -->
 		<Row>
 			<Type>PROMOTION_MOVE_ALL_TERRAIN</Type>
 			<Description>TXT_KEY_PROMOTION_MOVE_ALL_TERRAIN</Description>
@@ -2752,7 +2561,7 @@
 			<IgnoreTerrainCost>true</IgnoreTerrainCost>
 		</Row>
 
-
+		<!-- ==================== 新增：SPACESHIP ==================== -->
 		<Row>
 			<Type>PROMOTION_SPACESHIP</Type>
 			<Description>TXT_KEY_PROMOTION_SPACESHIP</Description>
@@ -2773,7 +2582,7 @@
 			<NoDefensiveBonus>true</NoDefensiveBonus>
 			<CannotBeCaptured>true</CannotBeCaptured>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaType>PEDIA_UNIT_CATEGORY</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SPACESHIP</PediaEntry>
 			<IgnoreTerrainDamage>true</IgnoreTerrainDamage>
 			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
@@ -2781,6 +2590,7 @@
 			<PlagueImmune>1</PlagueImmune>
 		</Row>
 
+		<!-- ==================== 新增：NO_CAPTURED ==================== -->
 		<Row>
 			<Type>PROMOTION_NO_CAPTURED</Type>
 			<Description>TXT_KEY_PROMOTION_NO_CAPTURED</Description>
@@ -2796,23 +2606,22 @@
 			<CannotBeCaptured>true</CannotBeCaptured>
 		</Row>
 
+		<!-- ==================== ANTI_EMP：已存在，用 UPDATE 覆盖 ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_ANTI_EMP</Description>
+				<Help>TXT_KEY_PROMOTION_ANTI_EMP</Help>
+				<CannotBeChosen>true</CannotBeChosen>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PortraitIndex>1</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_ANTI_EMP</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_ANTI_EMP"/>
+		</Update>
 
-
-
-		<Row>
-			<Type>PROMOTION_ANTI_EMP</Type>
-			<Description>TXT_KEY_PROMOTION_ANTI_EMP</Description>
-			<Help>TXT_KEY_PROMOTION_ANTI_EMP</Help>
-			<CannotBeChosen>true</CannotBeChosen>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>1</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ANTI_EMP</PediaEntry>
-		</Row>
-
-
-
+		<!-- ==================== 新增：WORM ==================== -->
 		<Row>
 			<Type>PROMOTION_WORM</Type>
 			<Description>TXT_KEY_PROMOTION_WORM</Description>
@@ -2832,7 +2641,7 @@
 			<AlwaysHeal>true</AlwaysHeal>
 		</Row>
 
-
+		<!-- ==================== 新增：HOVER_WORM ==================== -->
 		<Row>
 			<Type>PROMOTION_HOVER_WORM</Type>
 			<Description>TXT_KEY_PROMOTION_HOVER_WORM</Description>
@@ -2854,8 +2663,7 @@
 			<ImmueMeleeAttack>1</ImmueMeleeAttack>
 		</Row>
 
-
-
+		<!-- ==================== 新增：EVIL ==================== -->
 		<Row>
 			<Type>PROMOTION_EVIL</Type>
 			<Description>TXT_KEY_PROMOTION_EVIL</Description>
@@ -2879,7 +2687,7 @@
 			<StrongerDamaged>1</StrongerDamaged>
 		</Row>
 
-
+		<!-- ==================== 新增：KRAK_DES_CHEVALIERS ==================== -->
 		<Row>
 			<Type>PROMOTION_KRAK_DES_CHEVALIERS</Type>
 			<Description>TXT_KEY_PROMOTION_KRAK_DES_CHEVALIERS</Description>
@@ -2895,6 +2703,7 @@
 			<ShowInPedia>0</ShowInPedia>
 		</Row>
 
+		<!-- ==================== 新增：WEAPON_SHIP ==================== -->
 		<Row>
 			<Type>PROMOTION_WEAPON_SHIP</Type>
 			<Description>TXT_KEY_PROMOTION_WEAPON_SHIP</Description>
@@ -2910,11 +2719,7 @@
 			<CanDoFallBackDamage>1</CanDoFallBackDamage>
 		</Row>
 
-
-
-
-
-
+		<!-- ==================== 新增：GOLEM ==================== -->
 		<Row>
 			<Type>PROMOTION_GOLEM</Type>
 			<Description>TXT_KEY_PROMOTION_GOLEM</Description>
@@ -2928,11 +2733,7 @@
 			<SplashDamageImmune>100</SplashDamageImmune>
 		</Row>
 
-
-
-
-
-
+		<!-- ==================== 新增：PLASMA_CANNON ==================== -->
 		<Row>
 			<Type>PROMOTION_PLASMA_CANNON</Type>
 			<Description>TXT_KEY_PROMOTION_PLASMA_CANNON</Description>
@@ -2948,14 +2749,7 @@
 			<RangedAttackModifier>20</RangedAttackModifier>
 		</Row>
 
-
-
-
-
-
-
-
-
+		<!-- ==================== 新增：AGILITY ==================== -->
 		<Row>
 			<Type>PROMOTION_AGILITY</Type>
 			<Description>TXT_KEY_AGILITY_X</Description>
@@ -2972,12 +2766,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
-
-
-
-
-
-
+		<!-- ==================== 新增：NUKE_FALLOUT ==================== -->
 		<Row>
 			<Type>PROMOTION_NUKE_FALLOUT</Type>
 			<Description>TXT_KEY_PROMOTION_NUKE_FALLOUT</Description>
@@ -2991,7 +2780,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
-
+		<!-- ==================== 新增：HIGH_EXPLOSIVES ==================== -->
 		<Row>
 			<Type>PROMOTION_HIGH_EXPLOSIVES</Type>
 			<Description>TXT_KEY_PROMOTION_HIGH_EXPLOSIVES</Description>
@@ -3007,7 +2796,7 @@
 			<CityAttack>100</CityAttack>
 		</Row>
 
-
+		<!-- ==================== 新增：FOCUS ==================== -->
 		<Row>
 			<Type>PROMOTION_FOCUS</Type>
 			<Description>TXT_KEY_PROMOTION_FOCUS</Description>
@@ -3028,7 +2817,7 @@
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 		</Row>
 
-
+		<!-- ==================== 新增：WITHDRAW_MELEE ==================== -->
 		<Row>
 			<Type>PROMOTION_WITHDRAW_MELEE</Type>
 			<Description>TXT_KEY_PROMOTION_WITHDRAW_MELEE</Description>
@@ -3042,8 +2831,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
-
-
+		<!-- ==================== 新增：ARMORER ==================== -->
 		<Row>
 			<Type>PROMOTION_ARMORER</Type>
 			<Description>TXT_KEY_PROMOTION_ARMORER_X</Description>
@@ -3056,8 +2844,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_ARMORER_X</PediaEntry>
 		</Row>
 
-
-		
+		<!-- ==================== 新增：EMP_BOMB ==================== -->
 		<Row>
 			<Type>PROMOTION_EMP_BOMB</Type>
 			<Description>TXT_KEY_PROMOTION_EMP_BOMB</Description>
@@ -3077,11 +2864,7 @@
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 		</Row>
 
-
-
-
-
-
+		<!-- ==================== 新增：BURNING_BOMB ==================== -->
 		<Row>
 			<Type>PROMOTION_BURNING_BOMB</Type>
 			<Description>TXT_KEY_PROMOTION_BURNING_BOMB</Description>
@@ -3095,12 +2878,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
-
-
-
-	
-
-
+		<!-- ==================== 新增：FW_EXPLOSION ==================== -->
 		<Row>
 			<Type>PROMOTION_FW_EXPLOSION</Type>
 			<Description>TXT_KEY_PROMOTION_FW_EXPLOSION</Description>
@@ -3114,9 +2892,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_FW_EXPLOSION</PediaEntry>
 		</Row>
 
-
-
-
+		<!-- ==================== 新增：INTERCEPTION_EXTREME ==================== -->
 		<Row>
 			<Type>PROMOTION_INTERCEPTION_EXTREME</Type>
 			<Description>TXT_KEY_PROMOTION_INTERCEPTION_EXTREME</Description>
@@ -3131,15 +2907,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
-
-
-
-		
-	
-
-	
-
-
+		<!-- ==================== 新增：ALUMINIST ==================== -->
 		<Row>
 			<Type>PROMOTION_ALUMINIST</Type>
 			<Description>TXT_KEY_PROMOTION_ALUMINIST</Description>
@@ -3153,9 +2921,7 @@
 			<CannotBeChosen>true</CannotBeChosen>
 		</Row>
 
-
 	</UnitPromotions>
-
 
 
 
@@ -3177,76 +2943,69 @@
 	<!--**************************攻城系与反骑兵、反坦克单位*****************************************-->
 	<UnitPromotions>
 
-		<Delete Type="PROMOTION_MOBILITY"/>
-		<Delete Type="PROMOTION_VOLLEY_2"/>
-		<Delete Type="PROMOTION_VOLLEY_1"/>
-		<Delete Type="PROMOTION_FORMATION_1"/>
-		<Delete Type="PROMOTION_FORMATION_2"/>
-		<Delete Type="PROMOTION_CQB_COMBAT_1"/>
-		<Delete Type="PROMOTION_CQB_COMBAT_2"/>
+		<!-- ==================== MOBILITY：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_MOBILITY</Description>
+				<Help>TXT_KEY_PROMOTION_MOBILITY_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<OrderPriority>1</OrderPriority>
+				<MovesChange>1</MovesChange>
+				<PortraitIndex>33</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_MOBILITY</PediaEntry>
+				<PromotionPrereqOr1>PROMOTION_RECON_UNIT</PromotionPrereqOr1>
+				<PromotionPrereqOr2>PROMOTION_ARMOR_BATTLESHIP_2</PromotionPrereqOr2>
+				<PromotionPrereqOr3>PROMOTION_SPLASH_DAMAGE</PromotionPrereqOr3>
+				<PromotionPrereqOr4>PROMOTION_CITY_SIEGE</PromotionPrereqOr4>
+				<PromotionPrereqOr5>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr5>
+				<PromotionPrereqOr6>PROMOTION_TANK_COMBAT</PromotionPrereqOr6>
+				<PromotionPrereqOr7>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr7>
+				<PromotionPrereqOr8>PROMOTION_ANTI_TANK</PromotionPrereqOr8>
+				<PromotionPrereqOr9>PROMOTION_HEAVY_ROBORT</PromotionPrereqOr9>
+			</Set>
+			<Where Type="PROMOTION_MOBILITY"/>
+		</Update>
 
+		<!-- ==================== VOLLEY_1：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_VOLLEY</Description>
+				<Help>TXT_KEY_PROMOTION_VOLLEY_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<OrderPriority>1</OrderPriority>
+				<PromotionPrereqOr1>PROMOTION_CITY_SIEGE</PromotionPrereqOr1>
+				<PromotionPrereqOr2>PROMOTION_ONLY_ATTACKS_CITIES</PromotionPrereqOr2>
+				<AttackFortifiedMod>50</AttackFortifiedMod>
+				<CityAttack>100</CityAttack>
+				<PortraitIndex>40</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_RANGED</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_VOLLEY</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_VOLLEY_1"/>
+		</Update>
 
+		<!-- ==================== VOLLEY_2：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_VOLLEY_2</Description>
+				<Help>TXT_KEY_PROMOTION_VOLLEY_2_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_VOLLEY_1</PromotionPrereqOr1>
+				<OrderPriority>1</OrderPriority>
+				<AttackFortifiedMod>50</AttackFortifiedMod>
+				<CityAttack>100</CityAttack>
+				<PortraitIndex>41</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_RANGED</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_VOLLEY_2</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_VOLLEY_2"/>
+		</Update>
 
-
-
-		<Row>
-			<Type>PROMOTION_MOBILITY</Type>
-			<Description>TXT_KEY_PROMOTION_MOBILITY</Description>
-			<Help>TXT_KEY_PROMOTION_MOBILITY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>1</OrderPriority>
-			<MovesChange>1</MovesChange>
-			<PortraitIndex>33</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MOBILITY</PediaEntry>
-			<PromotionPrereqOr1>PROMOTION_RECON_UNIT</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ARMOR_BATTLESHIP_2</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_SPLASH_DAMAGE</PromotionPrereqOr3>
-			<PromotionPrereqOr4>PROMOTION_CITY_SIEGE</PromotionPrereqOr4>
-			<PromotionPrereqOr5>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr5>
-			<PromotionPrereqOr6>PROMOTION_TANK_COMBAT</PromotionPrereqOr6>
-			<PromotionPrereqOr7>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr7>
-			<PromotionPrereqOr8>PROMOTION_ANTI_TANK</PromotionPrereqOr8>
-			<PromotionPrereqOr9>PROMOTION_HEAVY_ROBORT</PromotionPrereqOr9>
-		</Row>
-
-
-
-
-		<Row>
-			<Type>PROMOTION_VOLLEY_1</Type>
-			<Description>TXT_KEY_PROMOTION_VOLLEY</Description>
-			<Help>TXT_KEY_PROMOTION_VOLLEY_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<OrderPriority>1</OrderPriority>
-			<PromotionPrereqOr1>PROMOTION_CITY_SIEGE</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ONLY_ATTACKS_CITIES</PromotionPrereqOr2>
-			<AttackFortifiedMod>50</AttackFortifiedMod>
-			<CityAttack>100</CityAttack>
-			<PortraitIndex>40</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_VOLLEY</PediaEntry>
-		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_VOLLEY_2</Type>
-			<Description>TXT_KEY_PROMOTION_VOLLEY_2</Description>
-			<Help>TXT_KEY_PROMOTION_VOLLEY_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_VOLLEY_1</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<AttackFortifiedMod>50</AttackFortifiedMod>
-			<CityAttack>100</CityAttack>
-			<PortraitIndex>41</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_RANGED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_VOLLEY_2</PediaEntry>
-		</Row>
-
-
+		<!-- ==================== 新增：VOLLEY_3 ==================== -->
 		<Row>
 			<Type>PROMOTION_VOLLEY_3</Type>
 			<Description>TXT_KEY_PROMOTION_VOLLEY_3</Description>
@@ -3262,37 +3021,41 @@
 			<PediaEntry>TXT_KEY_PROMOTION_VOLLEY_3</PediaEntry>
 		</Row>
 
+		<!-- ==================== 反骑兵、反坦克单位 ==================== -->
 
+		<!-- FORMATION_1：已存在，用 UPDATE -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_FORMATION_1</Description>
+				<Help>TXT_KEY_PROMOTION_FORMATION_1_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr1>
+				<OrderPriority>5</OrderPriority>
+				<PortraitIndex>24</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_FORMATION_1</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_FORMATION_1"/>
+		</Update>
 
+		<!-- FORMATION_2：已存在，用 UPDATE -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_FORMATION_2</Description>
+				<Help>TXT_KEY_PROMOTION_FORMATION_2_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_FORMATION_1</PromotionPrereqOr1>
+				<OrderPriority>5</OrderPriority>
+				<PortraitIndex>0</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_FORMATION_2</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_FORMATION_2"/>
+		</Update>
 
-		<!--反骑兵、反坦克单位-->
-		<Row>
-			<Type>PROMOTION_FORMATION_1</Type>
-			<Description>TXT_KEY_PROMOTION_FORMATION_1</Description>
-			<Help>TXT_KEY_PROMOTION_FORMATION_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr1>
-			<OrderPriority>5</OrderPriority>
-			<PortraitIndex>24</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FORMATION_1</PediaEntry>
-		</Row>
-
-
-		<Row>
-			<Type>PROMOTION_FORMATION_2</Type>
-			<Description>TXT_KEY_PROMOTION_FORMATION_2</Description>
-			<Help>TXT_KEY_PROMOTION_FORMATION_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_FORMATION_1</PromotionPrereqOr1>
-			<OrderPriority>5</OrderPriority>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_OLD_ATLAS</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FORMATION_2</PediaEntry>
-		</Row>
-
+		<!-- 新增：FORMATION_3 -->
 		<Row>
 			<Type>PROMOTION_FORMATION_3</Type>
 			<Description>TXT_KEY_PROMOTION_FORMATION_3</Description>
@@ -3306,6 +3069,7 @@
 			<PediaEntry>TXT_KEY_PROMOTION_FORMATION_3</PediaEntry>
 		</Row>
 
+		<!-- 新增：AMBUSH_3 -->
 		<Row>
 			<Type>PROMOTION_AMBUSH_3</Type>
 			<Description>TXT_KEY_PROMOTION_AMBUSH_3</Description>
@@ -3319,32 +3083,40 @@
 			<PediaEntry>TXT_KEY_PROMOTION_AMBUSH_3</PediaEntry>
 		</Row>
 
+		<!-- CQB_COMBAT_1：已存在，用 UPDATE -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CQB_COMBAT_1</Description>
+				<Help>TXT_KEY_PROMOTION_CQB_COMBAT_1_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr1>
+				<PromotionPrereqOr2>PROMOTION_ANTI_TANK</PromotionPrereqOr2>
+				<OrderPriority>1</OrderPriority>
+				<PortraitIndex>56</PortraitIndex>
+				<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_1</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_CQB_COMBAT_1"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_CQB_COMBAT_1</Type>
-			<Description>TXT_KEY_PROMOTION_CQB_COMBAT_1</Description>
-			<Help>TXT_KEY_PROMOTION_CQB_COMBAT_1_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_ANTI_TANK</PromotionPrereqOr2>
-			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>56</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_1</PediaEntry>
-		</Row>
-		<Row>
-			<Type>PROMOTION_CQB_COMBAT_2</Type>
-			<Description>TXT_KEY_PROMOTION_CQB_COMBAT_2</Description>
-			<Help>TXT_KEY_PROMOTION_CQB_COMBAT_2_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_CQB_COMBAT_1</PromotionPrereqOr1>
-			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_2</PediaEntry>
-		</Row>
+		<!-- CQB_COMBAT_2：已存在，用 UPDATE -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CQB_COMBAT_2</Description>
+				<Help>TXT_KEY_PROMOTION_CQB_COMBAT_2_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_CQB_COMBAT_1</PromotionPrereqOr1>
+				<OrderPriority>1</OrderPriority>
+				<PortraitIndex>57</PortraitIndex>
+				<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+				<PediaType>PEDIA_MELEE</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_2</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_CQB_COMBAT_2"/>
+		</Update>
+
+		<!-- 新增：CQB_COMBAT_3 -->
 		<Row>
 			<Type>PROMOTION_CQB_COMBAT_3</Type>
 			<Description>TXT_KEY_PROMOTION_CQB_COMBAT_3</Description>
@@ -3358,7 +3130,6 @@
 			<DefenseInflictDamageChange>5</DefenseInflictDamageChange>
 			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_3</PediaEntry>
 		</Row>
-
 
 	</UnitPromotions>
 
@@ -3483,150 +3254,163 @@
 
 	<!--*****************************Cargo Promotions*******************************************-->
 	<UnitPromotions>
-		<Delete Type="PROMOTION_CARGO_I"/>
-		<Delete Type="PROMOTION_CARGO_II"/>
-		<Delete Type="PROMOTION_CARGO_IV"/>
-		<Delete Type="PROMOTION_CARGO_VI"/>
-		<Delete Type="PROMOTION_CARGO_IX"/>
-		<Delete Type="PROMOTION_ADDITIONAL_CARGO_II"/>
-		<Delete Type="PROMOTION_MISSILE_CARRIER"/>
 
+		<!-- ==================== MISSILE_CARRIER：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_MISSILE_CARRIER</Description>
+				<Help>TXT_KEY_PROMOTION_MISSILE_CARRIER_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>4</PortraitIndex>
+				<PediaEntry>TXT_KEY_PROMOTION_MISSILE_CARRIER</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+			</Set>
+			<Where Type="PROMOTION_MISSILE_CARRIER"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_MISSILE_CARRIER</Type>
-			<Description>TXT_KEY_PROMOTION_MISSILE_CARRIER</Description>
-			<Help>TXT_KEY_PROMOTION_MISSILE_CARRIER_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>4</PortraitIndex>
-			<PediaEntry>TXT_KEY_PROMOTION_MISSILE_CARRIER</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
+		<!-- ==================== CARGO_I：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CARGO_I</Description>
+				<Help>TXT_KEY_PROMOTION_CARGO_I</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<CargoChange>1</CargoChange>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>27</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_CARGO_I</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<LostWithUpgrade>true</LostWithUpgrade>
+			</Set>
+			<Where Type="PROMOTION_CARGO_I"/>
+		</Update>
 
+		<!-- ==================== CARGO_II：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CARGO_II</Description>
+				<Help>TXT_KEY_PROMOTION_CARGO_II</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<CargoChange>2</CargoChange>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>28</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_CARGO_II</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<LostWithUpgrade>true</LostWithUpgrade>
+			</Set>
+			<Where Type="PROMOTION_CARGO_II"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_CARGO_I</Type>
-			<Description>TXT_KEY_PROMOTION_CARGO_I</Description>
-			<Help>TXT_KEY_PROMOTION_CARGO_I</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CargoChange>1</CargoChange>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>27</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_CARGO_I</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostWithUpgrade>true</LostWithUpgrade>
-		</Row>
-		<Row>
-			<Type>PROMOTION_CARGO_II</Type>
-			<Description>TXT_KEY_PROMOTION_CARGO_II</Description>
-			<Help>TXT_KEY_PROMOTION_CARGO_II</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CargoChange>2</CargoChange>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>28</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_CARGO_II</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostWithUpgrade>true</LostWithUpgrade>
-		</Row>
+		<!-- ==================== CARGO_IV：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CARGO_IV</Description>
+				<Help>TXT_KEY_PROMOTION_CARGO_IV</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<CargoChange>4</CargoChange>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>29</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CARGO_IV</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<LostWithUpgrade>true</LostWithUpgrade>
+			</Set>
+			<Where Type="PROMOTION_CARGO_IV"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_CARGO_IV</Type>
-			<Description>TXT_KEY_PROMOTION_CARGO_IV</Description>
-			<Help>TXT_KEY_PROMOTION_CARGO_IV</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CargoChange>4</CargoChange>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CARGO_IV</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostWithUpgrade>true</LostWithUpgrade>
-		</Row>
+		<!-- ==================== CARGO_VI：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CARGO_VI</Description>
+				<Help>TXT_KEY_PROMOTION_CARGO_VI</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<CargoChange>6</CargoChange>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>30</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CARGO_VI</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<LostWithUpgrade>true</LostWithUpgrade>
+			</Set>
+			<Where Type="PROMOTION_CARGO_VI"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_CARGO_VI</Type>
-			<Description>TXT_KEY_PROMOTION_CARGO_VI</Description>
-			<Help>TXT_KEY_PROMOTION_CARGO_VI</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CargoChange>6</CargoChange>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>30</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CARGO_VI</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostWithUpgrade>true</LostWithUpgrade>
-		</Row>
+		<!-- ==================== CARGO_IX：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_CARGO_IX</Description>
+				<Help>TXT_KEY_PROMOTION_CARGO_IX</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<CargoChange>9</CargoChange>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>31</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_CARGO_IX</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<LostWithUpgrade>true</LostWithUpgrade>
+			</Set>
+			<Where Type="PROMOTION_CARGO_IX"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_CARGO_IX</Type>
-			<Description>TXT_KEY_PROMOTION_CARGO_IX</Description>
-			<Help>TXT_KEY_PROMOTION_CARGO_IX</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CargoChange>9</CargoChange>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>31</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CARGO_IX</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<LostWithUpgrade>true</LostWithUpgrade>
-		</Row>
-
-		<Row>
-			<Type>PROMOTION_ADDITIONAL_CARGO_II</Type>
-			<Description>TXT_KEY_PROMOTION_ADDITIONAL_CARGO</Description>
-			<Help>TXT_KEY_PROMOTION_ADDITIONAL_CARGO</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CargoChange>2</CargoChange>
-			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>28</PortraitIndex>
-			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ADDITIONAL_CARGO</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-		</Row>
-
+		<!-- ==================== ADDITIONAL_CARGO_II：已存在，用 UPDATE ==================== -->
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_ADDITIONAL_CARGO</Description>
+				<Help>TXT_KEY_PROMOTION_ADDITIONAL_CARGO</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<CargoChange>2</CargoChange>
+				<OrderPriority>11</OrderPriority>
+				<PortraitIndex>28</PortraitIndex>
+				<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_ADDITIONAL_CARGO</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+			</Set>
+			<Where Type="PROMOTION_ADDITIONAL_CARGO_II"/>
+		</Update>
 
 	</UnitPromotions>
 
 
-
 	<!--**********************通用恢复及防御晋升********************************************-->
 	<UnitPromotions>
-		<Delete Type="PROMOTION_MARCH"/>
+		
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_MARCH</Description>
+				<Help>TXT_KEY_PROMOTION_MARCH_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PromotionPrereqOr1>PROMOTION_COVER_3</PromotionPrereqOr1>
+				<PromotionPrereqOr2>PROMOTION_SP_FORCE_X_3</PromotionPrereqOr2>
+				<PromotionPrereqOr3>PROMOTION_INTERCEPTION_3</PromotionPrereqOr3>
+				<PromotionPrereqOr4>PROMOTION_DOGFIGHTING_3</PromotionPrereqOr4>
+				<PromotionPrereqOr5>PROMOTION_GUERRILLA_2</PromotionPrereqOr5>
+				<PromotionPrereqOr6>PROMOTION_CQB_COMBAT_2</PromotionPrereqOr6>
+				<PromotionPrereqOr7>PROMOTION_AIR_BOMBARDMENT_3</PromotionPrereqOr7>
+				<PromotionPrereqOr8>PROMOTION_AIR_TARGETING_3</PromotionPrereqOr8>
+				<PromotionPrereqOr9>PROMOTION_ACCURACY_3</PromotionPrereqOr9>
+				<PromotionPrereqOr10>PROMOTION_LAND_TARGETING_3</PromotionPrereqOr10>
+				<PromotionPrereqOr11>PROMOTION_COLLATERAL_DAMAGE_2</PromotionPrereqOr11>
+				<OrderPriority>7</OrderPriority>
+				<AlwaysHeal>true</AlwaysHeal>
+				<PortraitIndex>31</PortraitIndex>
+				<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+				<PediaType>PEDIA_HEAL</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_MARCH</PediaEntry>
+			</Set>
+			<Where Type="PROMOTION_MARCH"/>
+		</Update>
 
-		<Row>
-			<Type>PROMOTION_MARCH</Type>
-			<Description>TXT_KEY_PROMOTION_MARCH</Description>
-			<Help>TXT_KEY_PROMOTION_MARCH_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereqOr1>PROMOTION_COVER_3</PromotionPrereqOr1>
-			<PromotionPrereqOr2>PROMOTION_SP_FORCE_X_3</PromotionPrereqOr2>
-			<PromotionPrereqOr3>PROMOTION_INTERCEPTION_3</PromotionPrereqOr3>
-			<PromotionPrereqOr4>PROMOTION_DOGFIGHTING_3</PromotionPrereqOr4>
-			<PromotionPrereqOr5>PROMOTION_GUERRILLA_2</PromotionPrereqOr5>
-			<PromotionPrereqOr6>PROMOTION_CQB_COMBAT_2</PromotionPrereqOr6>
-			<PromotionPrereqOr7>PROMOTION_AIR_BOMBARDMENT_3</PromotionPrereqOr7>
-			<PromotionPrereqOr8>PROMOTION_AIR_TARGETING_3</PromotionPrereqOr8>
-			<PromotionPrereqOr9>PROMOTION_ACCURACY_3</PromotionPrereqOr9>
-			<PromotionPrereqOr10>PROMOTION_LAND_TARGETING_3</PromotionPrereqOr10>
-			<PromotionPrereqOr11>PROMOTION_COLLATERAL_DAMAGE_2</PromotionPrereqOr11>
-			<OrderPriority>7</OrderPriority>
-			<AlwaysHeal>true</AlwaysHeal>
-			<PortraitIndex>31</PortraitIndex>
-			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
-			<PediaType>PEDIA_HEAL</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_MARCH</PediaEntry>
-		</Row>
-
+	
 
 		<Row>
 			<Type>PROMOTION_ARMOR_TURTLESHIP_4</Type>
@@ -3764,9 +3548,7 @@
 
 	<!--*****************************Debuff Promotions*******************************************-->
 	<UnitPromotions>
-		<Delete Type="PROMOTION_ANTI_DEBUFF"/>
-		<Delete Type="PROMOTION_NUKE_IMMUNE"/>
-
+	
 
 		<!--*************环球航行**************-->
 		<Row>
@@ -3989,52 +3771,44 @@
 
 
 
-		<!--*************空中侦察**************-->
-		<Row>
-			<Type>PROMOTION_AIR_RECON</Type>
-			<Description>TXT_KEY_PROMOTION_AIR_RECON</Description>
-			<Help>TXT_KEY_PROMOTION_AIR_RECON_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<Recon>true</Recon>
-			<PortraitIndex>56</PortraitIndex>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_AIR_RECON</PediaEntry>
-		</Row>
+
 
 
 		<!--*************人造意志**************-->
-		<Row>
-			<Type>PROMOTION_ANTI_DEBUFF</Type>
-			<Description>TXT_KEY_PROMOTION_ANTI_DEBUFF</Description>
-			<Help>TXT_KEY_PROMOTION_ANTI_DEBUFF_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>9</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DEBUFF</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<!--<IgnoreGreatGeneralBenefit>true</IgnoreGreatGeneralBenefit>-->
-			<IgnoreTerrainDamage>true</IgnoreTerrainDamage>
-			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
-			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
-			<AddEnemyPromotionImmune>true</AddEnemyPromotionImmune>
-		</Row>
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_ANTI_DEBUFF</Description>
+				<Help>TXT_KEY_PROMOTION_ANTI_DEBUFF_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PortraitIndex>9</PortraitIndex>
+				<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_ANTI_DEBUFF</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<IgnoreTerrainDamage>true</IgnoreTerrainDamage>
+				<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
+				<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
+				<AddEnemyPromotionImmune>true</AddEnemyPromotionImmune>
+			</Set>
+			<Where Type="PROMOTION_ANTI_DEBUFF"/>
+		</Update>
 
 		<!--*************核免疫**************-->
-		<Row>
-			<Type>PROMOTION_NUKE_IMMUNE</Type>
-			<Description>TXT_KEY_PROMOTION_NUKE_IMMUNE</Description>
-			<Help>TXT_KEY_PROMOTION_NUKE_IMMUNE_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>58</PortraitIndex>
-			<IconAtlas>VALERY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_NUKE_IMMUNE</PediaEntry>
-			<CannotBeChosen>true</CannotBeChosen>
-			<NukeImmune>true</NukeImmune>
-			<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
-		</Row>
+		<Update>
+			<Set>
+				<Description>TXT_KEY_PROMOTION_NUKE_IMMUNE</Description>
+				<Help>TXT_KEY_PROMOTION_NUKE_IMMUNE_HELP</Help>
+				<Sound>AS2D_IF_LEVELUP</Sound>
+				<PortraitIndex>58</PortraitIndex>
+				<IconAtlas>VALERY_ATLAS</IconAtlas>
+				<PediaType>PEDIA_ATTRIBUTES</PediaType>
+				<PediaEntry>TXT_KEY_PROMOTION_NUKE_IMMUNE</PediaEntry>
+				<CannotBeChosen>true</CannotBeChosen>
+				<NukeImmune>true</NukeImmune>
+				<IgnoreFeatureDamage>true</IgnoreFeatureDamage>
+			</Set>
+			<Where Type="PROMOTION_NUKE_IMMUNE"/>
+		</Update>
 
 
 
@@ -4489,10 +4263,129 @@
 
 
 
+	<UnitPromotions_UnitCombats>
 
-	
+		<Row>
+			<PromotionType>PROMOTION_CQB_COMBAT_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
 
 
+
+		<Row>
+			<PromotionType>PROMOTION_ACCURACY_3</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+
+
+
+		<!--铝热剂-->
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_HELICOPTER</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALMELEE</UnitCombatType>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_ALUMINIST</PromotionType>
+			<UnitCombatType>UNITCOMBAT_NAVALRANGED</UnitCombatType>
+		</Row>
+
+
+	</UnitPromotions_UnitCombats>
+
+
+	<UnitPromotions_Terrains>
+
+
+
+		<Row>
+			<PromotionType>PROMOTION_HELI_ATTACK</PromotionType>
+			<TerrainType>TERRAIN_COAST</TerrainType>
+			<HalfMove>true</HalfMove>
+		</Row>
+
+
+		<Row>
+			<PromotionType>PROMOTION_HALF_MOVE</PromotionType>
+			<TerrainType>TERRAIN_MOUNTAIN</TerrainType>
+			<HalfMove>true</HalfMove>
+		</Row>
+
+
+
+		<Row>
+			<PromotionType>PROMOTION_STEAM_POWERED</PromotionType>
+			<TerrainType>TERRAIN_COAST</TerrainType>
+			<DoubleMove>true</DoubleMove>
+		</Row>
+
+
+	</UnitPromotions_Terrains>
+
+	<UnitPromotions_Domains>
+
+		<Row>
+			<PromotionType>PROMOTION_STEAM_POWERED</PromotionType>
+			<DomainType>DOMAIN_SEA</DomainType>
+			<Modifier>15</Modifier>
+		</Row>
+
+		<Row>
+			<PromotionType>PROMOTION_FASIL_GHEBBI</PromotionType>
+			<DomainType>DOMAIN_LAND</DomainType>
+			<Defense>20</Defense>
+		</Row>
+
+	</UnitPromotions_Domains>
 
 
 </GameData>

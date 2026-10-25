@@ -168,11 +168,11 @@
 		
 		
 
-		<!-- 硅谷 -->
+		<!-- 斯坦福 -->
 		<Row>
-			<Type>BUILDINGCLASS_GUIGU</Type>
-			<DefaultBuilding>BUILDING_GUIGU</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_GUIGU</Description>
+			<Type>BUILDINGCLASS_STANDFORD</Type>
+			<DefaultBuilding>BUILDING_STANDFORD</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_STANDFORD</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 		
@@ -1121,14 +1121,14 @@
 	
 
 
-		<!--硅谷-->
+		<!--斯坦福-->
 		<Row>
-			<Type>BUILDING_GUIGU</Type>
-			<BuildingClass>BUILDINGCLASS_GUIGU</BuildingClass>
-			<Description>TXT_KEY_BUILDING_GUIGU</Description>
-			<Help>TXT_KEY_WONDER_GUIGU_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_GUIGU_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_GUIGU_QUOTE</Quote>
+			<Type>BUILDING_STANDFORD</Type>
+			<BuildingClass>BUILDINGCLASS_STANDFORD</BuildingClass>
+			<Description>TXT_KEY_BUILDING_STANDFORD</Description>
+			<Help>TXT_KEY_WONDER_STANDFORD_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_STANDFORD_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_STANDFORD_QUOTE</Quote>
 			<Cost>5800</Cost>
 			<ConquestProb>100</ConquestProb>
 			<PolicyBranchType>POLICY_BRANCH_FREEDOM</PolicyBranchType>
@@ -1137,9 +1137,9 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<GlobalGreatPeopleRateModifier>33</GlobalGreatPeopleRateModifier> 
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>225</PortraitIndex>
-			<WonderSplashImage>GUIGU.dds</WonderSplashImage>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>160</PortraitIndex>
+			<WonderSplashImage>STANDFORD.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
 		

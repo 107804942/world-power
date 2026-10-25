@@ -289,20 +289,125 @@
 
 
 
-	<Unit_ClassUpgrades>
-
-
-		<Row>
-			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
-			<UnitClassType>UNITCLASS_NAVALCARRIER02</UnitClassType>
-		</Row>
-		
-	</Unit_ClassUpgrades>
 	
 	
 	
 
 	<Unit_FreePromotions>
+
+		<Delete UnitType="UNIT_CARRIER"/>
+		<Delete UnitType="UNIT_NUCLEAR_CARRIER"/>
+		<Delete UnitType="UNIT_AMERICAN_NIMITZ"/>
+		<Delete UnitType="UNIT_SUPER_CARRIER"/>
+
+		<Row>
+			<UnitType>UNIT_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARGO_I</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARGO_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARGO_II</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+		</Row>
+	
+		
+		
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARGO_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_MOBILITY</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_EXTRA_SIGHT_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_CARRIER_SUPPLY_1</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_CARRIER_SUPPLY_2</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_CARRIER_SUPPLY_3</PromotionType>
+		</Row>
+
+
+		<Row>
+			<UnitType>UNIT_SUPER_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
+			<PromotionType>PROMOTION_CARGO_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_AMERICAN_NIMITZ</UnitType>
+			<PromotionType>PROMOTION_CARGO_IV</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SUPER_CARRIER</UnitType>
+			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+		</Row>
+
+		<!--*****************************以下为新增*******************************************-->
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_CARRIER_FIGHTER_SORTIE_2</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+		</Row>
+
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_NAVALCARRIER02</UnitType>
+			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
+		</Row>
+
+		
+		
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER02</UnitType>
 			<PromotionType>PROMOTION_MILITIA_COMBAT</PromotionType>
@@ -332,28 +437,7 @@
 		</Row>
 
 
-		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
-			<PromotionType>PROMOTION_CARRIER_FIGHTER_SORTIE_2</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
-			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
-		</Row>
-
-		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
-			<PromotionType>PROMOTION_CARRIER_UNIT</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
-			<PromotionType>PROMOTION_CARGO_IX</PromotionType>
-		</Row>
-		<Row>
-			<UnitType>UNIT_NAVALCARRIER02</UnitType>
-			<PromotionType>PROMOTION_DRONE_CARRIER</PromotionType>
-		</Row>
-
+		
 		<Row>
 			<UnitType>UNIT_NAVALFIGHTER03P</UnitType>
 			<PromotionType>PROMOTION_NAVAL_CAPITAL_SHIP</PromotionType>
@@ -774,11 +858,6 @@
 			<Set UnitArtInfo="ART_DEF_UNIT_052" />
 			<Where Type="UNIT_MODERN_DESTROYER" />
 		</Update>
-
-
-
-	
-
 
 
 
