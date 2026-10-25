@@ -7043,8 +7043,6 @@
 		<Row Tag="TXT_KEY_UNIT_HELP_SUI_FLEET">
 			<Text>
 				[COLOR_YIELD_GOLD]精英桨帆战舰[ENDCOLOR]，能够对攻击目标相邻的敌人造成大面积范围伤害。需要完成五牙战舰工程解锁，仅能建造一艘。[NEWLINE]
-				[NEWLINE][ICON_BULLET]自带1~2级[ICON_PROMOTION_NEW_SUNDER_2]破阵晋升。
-				[NEWLINE][ICON_BULLET]生命值上限+100%,攻击可对目标同格及邻近1格区域的敌方单位造成100%溅射伤害，对目标邻近2格区域的敌方单位造成50%溅射伤害。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_UNIT_SUI_FLEET_STRATEGY">
@@ -7063,10 +7061,18 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET_HELP">
-			<Text>生命值上限+100%,攻击可对目标地块三格内的所有单位造成100%的溅射伤害。</Text>
+			<Text>攻击可对目标地块三格内的所有单位造成100%的溅射伤害。</Text>
 		</Row>
 
 
+		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET2">
+			<Text>坚固船仓</Text>
+		</Row>
+
+
+		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET2_HELP">
+			<Text>生命值上限+100%,近战主动攻击敌方单位时受到的反击伤害减少50%。</Text>
+		</Row>
 
 
 

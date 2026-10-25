@@ -5674,7 +5674,7 @@
 	<ArtDefine_UnitMemberInfos>
 		<Row>
 			<Type>ART_DEF_UNIT_MEMBER_SUI_FLEET</Type>
-			<Scale>0.08</Scale>
+			<Scale>0.072</Scale>
 			<Domain>Sea</Domain>
 			<Model>SuiWarJunk.fxsxml</Model>
 			<MaterialTypeTag>WOOD</MaterialTypeTag>

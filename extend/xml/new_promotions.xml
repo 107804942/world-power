@@ -2464,11 +2464,23 @@
 			<CollateralDamageFixed>1</CollateralDamageFixed>
 			<CollateralDamagePercent>100</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
-			<MaxHitPointsModifier>100</MaxHitPointsModifier>
 			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET</PediaEntry>
 		</Row>
-	
 
+		<Row>
+			<Type>PROMOTION_SUI_FLEET2</Type>
+			<Description>TXT_KEY_PROMOTION_SUI_FLEET2</Description>
+			<Help>TXT_KEY_PROMOTION_SUI_FLEET2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PortraitIndex>9</PortraitIndex>
+			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<CannotBeChosen>true</CannotBeChosen>
+			<MeleeAttackUnitReduceDamage>50</MeleeAttackUnitReduceDamage>
+			<MaxHitPointsModifier>100</MaxHitPointsModifier>
+			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET2</PediaEntry>
+		</Row>
+		
 		<!-- ==================== 新增：NAVAL_MONSTER ==================== -->
 		<Row>
 			<Type>PROMOTION_NAVAL_MONSTER</Type>
