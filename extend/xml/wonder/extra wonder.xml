@@ -316,11 +316,11 @@
 
 
 
-		<!-- 雷吉斯坦-->
+		<!--达枚克佛塔-->
 		<Row>
-			<Type>BUILDINGCLASS_REGISTAN</Type>
-			<DefaultBuilding>BUILDING_REGISTAN</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_REGISTAN</Description>
+			<Type>BUILDINGCLASS_DHAMEK</Type>
+			<DefaultBuilding>BUILDING_DHAMEK</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_DHAMEK</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -1535,16 +1535,16 @@
 
 	
 		
-		<!-- 雷吉斯坦-->
+		<!-- 达枚克佛塔-->
 		<Row>
-			<Type>BUILDING_REGISTAN</Type>
-			<BuildingClass>BUILDINGCLASS_REGISTAN</BuildingClass>
+			<Type>BUILDING_DHAMEK</Type>
+			<BuildingClass>BUILDINGCLASS_DHAMEK</BuildingClass>
 			<Cost>580</Cost>
 			<PrereqTech>TECH_EPHEMERIDES</PrereqTech>
-			<Description>TXT_KEY_BUILDING_REGISTAN</Description>
-			<Quote>TXT_KEY_WONDER_REGISTAN_QUOTE</Quote>
-			<Civilopedia>TXT_KEY_WONDER_REGISTAN_PEDIA</Civilopedia>
-			<Help>TXT_KEY_WONDER_REGISTAN_HELP</Help>
+			<Description>TXT_KEY_BUILDING_DHAMEK</Description>
+			<Quote>TXT_KEY_WONDER_DHAMEK_QUOTE</Quote>
+			<Civilopedia>TXT_KEY_WONDER_DHAMEK_PEDIA</Civilopedia>
+			<Help>TXT_KEY_WONDER_DHAMEK_HELP</Help>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 			<SpecialistCount>1</SpecialistCount>
@@ -1555,9 +1555,9 @@
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>180</PortraitIndex>
-			<WonderSplashImage>PBSplash.dds</WonderSplashImage>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>57</PortraitIndex>
+			<WonderSplashImage>DHAMEK.dds</WonderSplashImage>
 		</Row>
 
 
