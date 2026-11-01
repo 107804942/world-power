@@ -2,9 +2,52 @@
 
 	PEDIA_UNIT_CATEGORY
 
-
-
+<!--MECHANIZED INFANTRY-->
+<ArtDefine_UnitInfos>
 	<Row>
+		<Type>ART_DEF_UNIT_NEW_MECHANIZED_INFANTRY</Type>
+		<DamageStates>1</DamageStates>
+		<Formation>TwoBigGuns</Formation>
+	</Row>
+</ArtDefine_UnitInfos>
+<ArtDefine_UnitInfoMemberInfos>
+	<Row>
+		<UnitInfoType>ART_DEF_UNIT_NEW_MECHANIZED_INFANTRY</UnitInfoType>
+		<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</UnitMemberInfoType>
+		<NumMembers>2</NumMembers>
+	</Row>
+</ArtDefine_UnitInfoMemberInfos>
+<ArtDefine_UnitMemberInfos>
+	<Row>
+		<Type>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</Type>
+		<Scale>0.11</Scale>
+		<Model>pumamechanizedinfantry.fxsxml</Model>
+		<MaterialTypeTag>CLOTH</MaterialTypeTag>
+		<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
+	</Row>
+</ArtDefine_UnitMemberInfos>
+<ArtDefine_UnitMemberCombats>
+	<Row>
+		<UnitMemberType>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</UnitMemberType>
+		<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
+		<HasShortRangedAttack>1</HasShortRangedAttack>
+		<HasStationaryMelee>1</HasStationaryMelee>
+		<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+		<ReformBeforeCombat>1</ReformBeforeCombat>
+	</Row>
+</ArtDefine_UnitMemberCombats>
+<ArtDefine_UnitMemberCombatWeapons>
+	<Row>
+		<UnitMemberType>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</UnitMemberType>
+		<Index>0</Index>
+		<SubIndex>0</SubIndex>
+		<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+		<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+	</Row>
+</ArtDefine_UnitMemberCombatWeapons>
+
+
+<Row>
 		<Type>PROMOTION_SUI_FLEET_2</Type>
 		<Description>TXT_KEY_PROMOTION_SUI_FLEET_1</Description>
 		<Help>TXT_KEY_PROMOTION_SUI_FLEET_1_HELP</Help>

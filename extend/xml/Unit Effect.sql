@@ -315,29 +315,99 @@ INSERT INTO UnitPromotions_UnitCombats (PromotionType, UnitCombatType)
 SELECT 'PROMOTION_STEAM_POWERED', Type FROM UnitCombatInfos
 WHERE Type IN ('UNITCOMBAT_SUBMARINE','UNITCOMBAT_NAVALMELEE','UNITCOMBAT_NAVALRANGED','UNITCOMBAT_CARRIER');
 
--- 非海军、非飞机、非弓箭单位获得 PROMOTION_FASIL_GHEBBI / ISHTARGATE / KARRUPP
-INSERT INTO UnitPromotions_UnitCombats (PromotionType, UnitCombatType)
-SELECT 'PROMOTION_FASIL_GHEBBI', Type FROM UnitCombatInfos
-WHERE Type NOT IN ('UNITCOMBAT_SUBMARINE','UNITCOMBAT_NAVALMELEE','UNITCOMBAT_NAVALRANGED','UNITCOMBAT_CARRIER','UNITCOMBAT_FIGHTER','UNITCOMBAT_ARCHER');
-
+-- 非海军、非飞机、非弓箭单位获得 ISHTARGATE 
 INSERT INTO UnitPromotions_UnitCombats (PromotionType, UnitCombatType)
 SELECT 'PROMOTION_ISHTARGATE', Type FROM UnitCombatInfos
 WHERE Type NOT IN ('UNITCOMBAT_SUBMARINE','UNITCOMBAT_NAVALMELEE','UNITCOMBAT_NAVALRANGED','UNITCOMBAT_CARRIER','UNITCOMBAT_FIGHTER','UNITCOMBAT_ARCHER');
 
-INSERT INTO UnitPromotions_UnitCombats (PromotionType, UnitCombatType)
-SELECT 'PROMOTION_KARRUPP', Type FROM UnitCombatInfos
-WHERE Type NOT IN ('UNITCOMBAT_SUBMARINE','UNITCOMBAT_NAVALMELEE','UNITCOMBAT_NAVALRANGED','UNITCOMBAT_CARRIER','UNITCOMBAT_FIGHTER','UNITCOMBAT_ARCHER');
+
+-- 炮兵单位获得KARRUPP
+-- =========================================================
+-- 1) 触发器：Units 新增攻城单位
+-- =========================================================
+CREATE TRIGGER IF NOT EXISTS trg_karrupp_units_insert
+AFTER INSERT ON Units
+WHEN NEW.CombatClass = 'UNITCOMBAT_SIEGE'
+BEGIN
+    INSERT OR IGNORE INTO UnitPromotions_UnitType (PromotionType, UnitType)
+    SELECT 'PROMOTION_KARRUPP', NEW.Type
+    WHERE EXISTS (
+        SELECT 1 FROM Unit_FreePromotions fp
+        WHERE fp.UnitType = NEW.Type
+          AND fp.PromotionType = 'PROMOTION_CITY_SIEGE'
+    );
+END;
+
+
+-- =========================================================
+-- 2) 触发器：Unit_FreePromotions 新增 PROMOTION_CITY_SIEGE
+-- =========================================================
+CREATE TRIGGER IF NOT EXISTS trg_karrupp_fp_insert
+AFTER INSERT ON Unit_FreePromotions
+WHEN NEW.PromotionType = 'PROMOTION_CITY_SIEGE'
+BEGIN
+    INSERT OR IGNORE INTO UnitPromotions_UnitType (PromotionType, UnitType)
+    SELECT 'PROMOTION_KARRUPP', u.Type
+    FROM Units u
+    WHERE u.Type = NEW.UnitType
+      AND u.CombatClass = 'UNITCOMBAT_SIEGE';
+END;
+
+
+-- =========================================================
+-- 3) 触发器：Unit_FreePromotions 删除时清理
+--    （只有当该单位已没有 PROMOTION_CITY_SIEGE 时才删）
+-- =========================================================
+CREATE TRIGGER IF NOT EXISTS trg_karrupp_fp_delete
+AFTER DELETE ON Unit_FreePromotions
+WHEN OLD.PromotionType = 'PROMOTION_CITY_SIEGE'
+BEGIN
+    DELETE FROM UnitPromotions_UnitType
+    WHERE PromotionType = 'PROMOTION_KARRUPP'
+      AND UnitType = OLD.UnitType
+      AND NOT EXISTS (
+          SELECT 1 FROM Unit_FreePromotions fp
+          WHERE fp.UnitType = OLD.UnitType
+            AND fp.PromotionType = 'PROMOTION_CITY_SIEGE'
+      );
+END;
+
+
+-- =========================================================
+-- 4) 触发器：Units 删除时清理
+-- =========================================================
+CREATE TRIGGER IF NOT EXISTS trg_karrupp_units_delete
+AFTER DELETE ON Units
+WHEN OLD.CombatClass = 'UNITCOMBAT_SIEGE'
+BEGIN
+    DELETE FROM UnitPromotions_UnitType
+    WHERE PromotionType = 'PROMOTION_KARRUPP'
+      AND UnitType = OLD.Type;
+END;
+
+
+-- =========================================================
+-- 5) 一次性回填（覆盖建触发器之前已存在的数据）
+--    放在最后执行，保证 base game + 已加载内容都补齐
+-- =========================================================
+INSERT OR IGNORE INTO UnitPromotions_UnitType (PromotionType, UnitType)
+SELECT 'PROMOTION_KARRUPP', u.Type
+FROM Units u
+WHERE u.CombatClass = 'UNITCOMBAT_SIEGE'
+  AND EXISTS (
+      SELECT 1 FROM Unit_FreePromotions fp
+      WHERE fp.UnitType = u.Type
+        AND fp.PromotionType = 'PROMOTION_CITY_SIEGE'
+  );
+
+
 
 -- KGB：排除海军、飞机、弓箭、工人、移民
 INSERT INTO UnitPromotions_UnitCombats (PromotionType, UnitCombatType)
 SELECT 'PROMOTION_KGB', Type FROM UnitCombatInfos
 WHERE Type NOT IN ('UNITCOMBAT_SUBMARINE','UNITCOMBAT_NAVALMELEE','UNITCOMBAT_NAVALRANGED','UNITCOMBAT_CARRIER','UNITCOMBAT_FIGHTER','UNITCOMBAT_ARCHER','UNITCOMBAT_WORKER','UNITCOMBAT_SETTLER');
 
--- SOVIET_FRIEND / PEOPLES_HALL：排除飞机、弓箭
-INSERT INTO UnitPromotions_UnitCombats (PromotionType, UnitCombatType)
-SELECT 'PROMOTION_SOVIET_FRIEND', Type FROM UnitCombatInfos
-WHERE Type NOT IN ('UNITCOMBAT_FIGHTER','UNITCOMBAT_ARCHER');
-
+-- PEOPLES_HALL：排除飞机、弓箭
 INSERT INTO UnitPromotions_UnitCombats (PromotionType, UnitCombatType)
 SELECT 'PROMOTION_PEOPLES_HALL', Type FROM UnitCombatInfos
 WHERE Type NOT IN ('UNITCOMBAT_FIGHTER','UNITCOMBAT_ARCHER');
@@ -626,7 +696,30 @@ INSERT OR IGNORE INTO UnitClassResourceRequirement (UnitClassType, ResourceType,
 ('UNITCLASS_CARRIER_FIGHTER_JET',    'RESOURCE_OIL', 1),
 ('UNITCLASS_CARRIER_FIGHTER_ADV',    'RESOURCE_OIL', 1),
 -- 铁
+('UNITCLASS_VOLLEY_GUN',             'RESOURCE_IRON', 1),
+('UNITCLASS_GATLINGGUN',             'RESOURCE_IRON', 1),
+('UNITCLASS_MACHINE_GUN',            'RESOURCE_IRON', 1),
+('UNITCLASS_MOBILE_AA_GUN',          'RESOURCE_IRON', 1),
+('UNITCLASS_SAM_INFANTRY',           'RESOURCE_IRON', 1),
 ('UNITCLASS_ANTI_TANK_GUN',          'RESOURCE_IRON', 1),
+('UNITCLASS_TANK_DESTROYER',         'RESOURCE_IRON', 1),
+('UNITCLASS_ATGM_VEHICLE',           'RESOURCE_IRON', 1),
+('UNITCLASS_WWI_TANK',               'RESOURCE_IRON', 1),
+('UNITCLASS_TANK',                   'RESOURCE_IRON', 1),
+('UNITCLASS_MAIN_BATTLE_TANK',       'RESOURCE_IRON', 1),
+('UNITCLASS_MODERN_ARMOR',           'RESOURCE_IRON', 1),
+('UNITCLASS_CRUISER_TANK',           'RESOURCE_IRON', 1),
+('UNITCLASS_HELICOPTER_GUNSHIP',     'RESOURCE_IRON', 1),
+('UNITCLASS_ATTACK_HELICOPTER',      'RESOURCE_IRON', 1),
+('UNITCLASS_KATYUSHA',               'RESOURCE_IRON', 1),
+('UNITCLASS_ROCKET_ARTILLERY',       'RESOURCE_IRON', 1),
+('UNITCLASS_CARRIER',                'RESOURCE_IRON', 3),
+('UNITCLASS_ENTERPRISE',             'RESOURCE_IRON', 3),
+('UNITCLASS_NUCLEAR_CARRIER',        'RESOURCE_IRON', 3),
+('UNITCLASS_SUPER_CARRIER',          'RESOURCE_IRON', 4),
+('UNITCLASS_SUBMARINE',              'RESOURCE_IRON', 1),
+('UNITCLASS_NUCLEAR_SUBMARINE',      'RESOURCE_IRON', 1),
+('UNITCLASS_SSBN',                   'RESOURCE_IRON', 1),
 -- 铝
 ('UNITCLASS_SAM_INFANTRY',           'RESOURCE_ALUMINUM', 1);
 

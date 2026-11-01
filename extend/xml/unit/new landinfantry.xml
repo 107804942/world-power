@@ -4,11 +4,7 @@
 	<Units>
 
 
-		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_NEW_MECHANIZED_INFANTRY"/>
-			<Where Type="UNIT_MECHANIZED_INFANTRY" />
-		</Update>
-		
+	
 		
 
 		<Update>
@@ -89,7 +85,7 @@
 				 PortraitIndex="62"
 				 IconAtlas="SPUNITS01_ATLAS"
 				 ExtraMaintenanceCost="12"
-				 MaxHitPoints="0"/>
+				 MaxHitPoints="100"/>
 		</Update>
 
 		<!-- UNIT_CITADEL_MID: 前一个 Row.txt -> 后一个 Row.txt -->
@@ -109,7 +105,7 @@
 				 PortraitIndex="25"
 				 IconAtlas="SPUNITS01_ATLAS"
 				 ExtraMaintenanceCost="24"
-				 MaxHitPoints="0"/>
+				 MaxHitPoints="100"/>
 		</Update>
 
 		<!-- UNIT_CITADEL_LATE: 前一个 Row.txt -> 后一个 Row.txt -->
@@ -130,7 +126,7 @@
 				 PortraitIndex="31"
 				 IconAtlas="SPUNITS02_ATLAS"
 				 ExtraMaintenanceCost="60"
-				 MaxHitPoints="0"/>
+				 MaxHitPoints="100"/>
 		</Update>
 		
 		
@@ -737,7 +733,11 @@
 			<Cost>1</Cost>
 		</Row>
 
-
+		<Row>
+			<UnitType>UNIT_RAILGUN_TANK</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>1</Cost>
+		</Row>
 
 
 

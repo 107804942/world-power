@@ -4956,7 +4956,7 @@
 			<Text>法西尔盖比城堡</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_FASIL_GHEBBI_HELP">
-			<Text>所有城市+20%[ICON_RANGE_STRENGTH]远程攻击力。陆军单位在对抗陆军时+20%[ICON_STRENGTH]防御力。</Text>
+			<Text>所有城市+50%[ICON_RANGE_STRENGTH]远程攻击力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_FASIL_GHEBBI_QUOTE">
 			<Text>[NEWLINE]"当蜘蛛联合起来，它们可以杀死一头狮子。"[NEWLINE]        ——埃塞俄比亚谚语[NEWLINE]</Text>
@@ -4964,16 +4964,9 @@
 		<Row Tag="TXT_KEY_WONDER_FASIL_GHEBBI_PEDIA">
 			<Text>法西尔·盖比城堡是位于埃塞俄比亚山坡上，冈达尔境内的一个堡垒。在17和18世纪，它是埃塞俄比亚皇帝的领地。它的建筑风格是埃塞俄比亚独有的，融合了努比亚人、阿拉伯人和巴洛克建筑的风格。它包括城堡，宫殿，马厩和三座教堂，还有其他建筑。在1635年建造堡垒之前，埃塞俄比亚的皇帝旅行并居住在这片土地上，在帐篷里休息。法西里德斯皇帝打破了这个传统，建立了贡达尔城，并把它作为他的首都。在建立城市 fasilides 然后指示创建’法西尔吉布’-法西里德斯城堡。在他死后，后续的皇帝扩大了法希尔吉布，完工后最终占地面积覆盖大约70,000平方米。历史学家托马斯 · 帕肯汉姆在20世纪50年代参观了这个地方，发现在这些殿堂和宫殿中，似乎有帝国城市的亭台楼阁。从1979年开始，法希尔 · 盖比被纳入世界遗产。</Text>
 		</Row>
-		<Row Tag="TXT_KEY_POLICY_FASIL_GHEBBI">
-			<Text>法西尔盖比</Text>
-		</Row>
+	
 
-		<Row Tag="TXT_KEY_PROMOTION_FASIL_GHEBBI">
-			<Text>法西尔盖比</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_FASIL_GHEBBI_HELP">
-			<Text>对抗陆军时+20%[ICON_STRENGTH]防御力。</Text>
-		</Row>
+
 
 
 
@@ -5807,7 +5800,8 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MONT_SAINT_MICHEL_HELP">
 			<Text>
-				[ICON_STRENGTH]城防+50，城市[ICON_HP]生命值上限+50，[ICON_HP]生命值恢复速度+50，受到的最终伤害减少15。+3[ICON_PEACE]信仰，沿河地块+2[ICON_PEACE]信仰+1[ICON_FOOD]食物。
+				[ICON_STRENGTH]城防+50，城市[ICON_HP]生命值上限+50，[ICON_HP]生命值恢复速度+50，城市被攻击时受到的最终伤害减少15。
+				[NEWLINE]+3[ICON_PEACE]信仰，沿河地块+2[ICON_PEACE]信仰+1[ICON_FOOD]食物。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_MONT_SAINT_MICHEL_PEDIA">
@@ -7043,7 +7037,9 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET_HELP">
-			<Text>攻击可对目标地块三格内的所有单位造成100%的溅射伤害。</Text>
+			<Text>
+				攻击可对目标地块三格内的所有单位造成100%的溅射伤害，回合开始时临近的敌人-2[ICON_MOVES]移动力。
+			</Text>
 		</Row>
 
 
@@ -7053,15 +7049,8 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_SUI_FLEET2_HELP">
-			<Text>生命值上限+100%,近战主动攻击敌方单位时受到的反击伤害减少50%。</Text>
+			<Text>生命值上限+100%。</Text>
 		</Row>
-
-
-
-
-
-
-
 
 
 
@@ -7933,7 +7922,10 @@
 			<Text>防御精通</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE_HELP">
-			<Text>受到攻击的最终伤害减少10。</Text>
+			<Text>
+				主动攻击城市和单位时免除受到的反击伤害。
+				[NEWLINE]受到攻击的最终伤害减少10。
+			</Text>
 		</Row>
 
 		<!--Transport-->
@@ -8140,12 +8132,6 @@
 		</Row>
 
 
-		<Row Tag="TXT_KEY_PROMOTION_SOVIET_FRIEND">
-			<Text>卫国战争</Text>
-		</Row>
-		<Row Tag="TXT_KEY_PROMOTION_SOVIET_FRIEND_HELP" >
-			<Text>友方领土内+25%[ICON_STRENGTH]战斗力。</Text>
-		</Row>
 
 
 
@@ -8660,12 +8646,11 @@
 
 
 
-
 		<Row Tag="TXT_KEY_BUILDING_KARRUPP">
 			<Text>克虏伯兵工厂</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_KARRUPP_HELP">
-			<Text>陆军单位被攻击时，受到的最终伤害减少5点。单位已消耗的每点移动力+6%[ICON_STRENGTH]攻击力。</Text>
+			<Text>攻城火炮单位+100%[ICON_STRENGTH]攻击力。</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_KARRUPP_TEXT">
 			<Text>
@@ -8682,14 +8667,15 @@
 
 
 		<Row Tag="TXT_KEY_PROMOTION_KARRUPP">
-			<Text>装备强化</Text>
+			<Text>火炮专家</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_KARRUPP_HELP">
 			<Text>
-				被攻击时，受到的最终伤害减少5点。单位已消耗的每点移动力+6%[ICON_STRENGTH]攻击力。
+				攻击时+100%[ICON_STRENGTH]攻击力。
 			</Text>
 		</Row>
+
 
 
 

@@ -546,7 +546,11 @@
 			<UnitType>UNIT_VERTOL</UnitType>
 			<ResourceType>RESOURCE_TITANIUM</ResourceType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_VERTOL</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>1</Cost>
+		</Row>
 		<Row>
 			<UnitType>UNIT_VERTOL</UnitType>
 			<ResourceType>RESOURCE_MANPOWER</ResourceType>

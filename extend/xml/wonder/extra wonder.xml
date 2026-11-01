@@ -1376,7 +1376,6 @@
 			<InstantMilitaryIncrease>1</InstantMilitaryIncrease>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<PortraitIndex>89</PortraitIndex>
-			<FreePromotion>PROMOTION_SOVIET_FRIEND</FreePromotion>
 			<WonderSplashImage>Motherland_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,T</WonderSplashAnchor>
 		</Row>
@@ -2234,9 +2233,8 @@
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
 			<PortraitIndex>5</PortraitIndex>
-			<FreePromotion>PROMOTION_FASIL_GHEBBI</FreePromotion>
 			<!--<GlobalCityStrengthMod>25</GlobalCityStrengthMod>-->
-			<GlobalRangedStrikeModifier>20</GlobalRangedStrikeModifier>
+			<GlobalRangedStrikeModifier>50</GlobalRangedStrikeModifier>
 			<WonderSplashImage>FasilGhebbi_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
 		</Row>

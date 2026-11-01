@@ -549,8 +549,12 @@
 			<ResourceType>RESOURCE_OIL</ResourceType>
 			<Cost>7</Cost>
 		</Row>
-		
-		
+
+		<Row>
+			<UnitType>UNIT_SUB04S</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+			<Cost>2</Cost>
+		</Row>
 
 		<Row>
 			<UnitType>UNIT_SUB04S</UnitType>

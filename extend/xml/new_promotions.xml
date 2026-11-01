@@ -2465,6 +2465,7 @@
 			<CollateralDamagePercent>100</CollateralDamagePercent>
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET</PediaEntry>
+			<AdjacentEnemySapMovement>120</AdjacentEnemySapMovement>
 		</Row>
 
 		<Row>
@@ -2476,7 +2477,6 @@
 			<IconAtlas>promoVP_atlas_00</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
-			<MeleeAttackUnitReduceDamage>50</MeleeAttackUnitReduceDamage>
 			<MaxHitPointsModifier>100</MaxHitPointsModifier>
 			<PediaEntry>TXT_KEY_PROMOTION_SUI_FLEET2</PediaEntry>
 		</Row>
@@ -3599,7 +3599,8 @@
 			<PortraitIndex>42</PortraitIndex>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<!--<DefenseMod>20</DefenseMod>-->
+			<MeleeAttackCityReduceDamage>100</MeleeAttackCityReduceDamage>
+			<MeleeAttackUnitReduceDamage>100</MeleeAttackUnitReduceDamage>
 			<PediaEntry>TXT_KEY_PROMOTION_ANTI_DAMAGE_MELEE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
 			<ChangeDamageValue>-10</ChangeDamageValue>
@@ -4126,20 +4127,6 @@
 
 		<!--*************特殊效果**************-->
 
-		<Row>
-			<Type>PROMOTION_SOVIET_FRIEND</Type>
-			<Description>TXT_KEY_PROMOTION_SOVIET_FRIEND</Description>
-			<Help>TXT_KEY_PROMOTION_SOVIET_FRIEND_HELP</Help>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>59</PortraitIndex>
-			<CannotBeChosen>true</CannotBeChosen>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
-			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_SOVIET_FRIEND</PediaEntry>
-			<OrderPriority>11</OrderPriority>
-			<ShowInPedia>0</ShowInPedia>
-			<FriendlyLandsModifier>25</FriendlyLandsModifier>
-		</Row>
 
 
 
@@ -4183,22 +4170,10 @@
 			<PediaEntry>TXT_KEY_PROMOTION_KARRUPP</PediaEntry>
 			<OrderPriority>11</OrderPriority>
 			<ShowInUnitPanel>0</ShowInUnitPanel>
-			<MoveUsedAttackMod>6</MoveUsedAttackMod>
-			<ChangeDamageValue>-5</ChangeDamageValue>
+			<AttackMod>100</AttackMod>
 		</Row>
 
-		<!--法西尔盖比-->
-		<Row>
-			<Type>PROMOTION_FASIL_GHEBBI</Type>
-			<Description>TXT_KEY_PROMOTION_FASIL_GHEBBI</Description>
-			<Help>TXT_KEY_PROMOTION_FASIL_GHEBBI_HELP</Help>
-			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>2</PortraitIndex>
-			<IconAtlas>MORE_NEW_PROMOS_ATLAS</IconAtlas>
-			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_FASIL_GHEBBI</PediaEntry>
-		</Row>
-
+	
 
 
 
@@ -4356,11 +4331,7 @@
 			<Modifier>15</Modifier>
 		</Row>
 
-		<Row>
-			<PromotionType>PROMOTION_FASIL_GHEBBI</PromotionType>
-			<DomainType>DOMAIN_LAND</DomainType>
-			<Defense>20</Defense>
-		</Row>
+	
 
 	</UnitPromotions_Domains>
 

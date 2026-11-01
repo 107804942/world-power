@@ -557,7 +557,7 @@
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
     <Folder Include="extend\art\units\F54" />
-    <Folder Include="extend\art\units\NewMechanizedInfantry" />
+    <Folder Include="extend\art\units\NewMechanized" />
     <Folder Include="extend\art\WonderSplash" />
     <Folder Include="extend\art\Notification" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
@@ -12538,6 +12538,18 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\units\NewMechanized\mechanizedinfantry.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\NewMechanized\newmechanizedinfantry.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\NewMechanized\newmechanizedinfantry.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\units\Nimitz\NimitzCarrier.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -12607,22 +12619,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\ParticleCannon\ParticleCannon.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\NewMechanizedInfantry\pumamechanizedinfantry.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\NewMechanizedInfantry\pumamechanizedinfantry.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\NewMechanizedInfantry\puma_diffuse.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\NewMechanizedInfantry\puma_specular.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

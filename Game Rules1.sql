@@ -1,4 +1,6 @@
-
+INSERT INTO UnitPromotions_UnitType (PromotionType, UnitType)
+SELECT 'PROMOTION_KARRUPP', Type FROM Units
+WHERE CombatClass = 'UNITCOMBAT_SIEGE';
 ---------------------------------------------------
 INSERT  INTO Building_UnitClassMaxInstances(BuildingType,UnitClassType,ExtraMax)
 SELECT 'BUILDING_GATE_ALL',U.Class,1  FROM Units U  
