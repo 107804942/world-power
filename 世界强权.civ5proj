@@ -556,6 +556,8 @@
     <Folder Include="extend\art\nature\retba" />
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
+    <Folder Include="extend\art\units\F54" />
+    <Folder Include="extend\art\units\NewMechanizedInfantry" />
     <Folder Include="extend\art\WonderSplash" />
     <Folder Include="extend\art\Notification" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
@@ -631,7 +633,6 @@
     <Folder Include="extend\art\units\Sa11" />
     <Folder Include="extend\art\units\XM2001" />
     <Folder Include="extend\art\units\UnderWaterCarrier" />
-    <Folder Include="extend\art\units\RAH66" />
     <Folder Include="extend\art\units\NewKirov" />
     <Folder Include="extend\art\units\rangedmarine04sp" />
     <Folder Include="extend\art\units\RangedMarine04s" />
@@ -671,7 +672,6 @@
     <Folder Include="extend\art\units\Marine03p" />
     <Folder Include="extend\art\units\Marine03s" />
     <Folder Include="extend\art\units\Marine04p" />
-    <Folder Include="extend\art\units\Marine888" />
     <Folder Include="extend\art\units\mech2" />
     <Folder Include="extend\art\units\huge Bombs" />
     <Folder Include="extend\art\units\NavalCarrier03p" />
@@ -689,7 +689,6 @@
     <Folder Include="extend\art\units\RangedMarine03s" />
     <Folder Include="extend\art\units\RangedMarine04hS" />
     <Folder Include="extend\art\units\RangedMarine04p" />
-    <Folder Include="extend\art\units\REJETFIGHTER" />
     <Folder Include="extend\art\units\ROBOT01" />
     <Folder Include="extend\art\units\SABR" />
     <Folder Include="extend\art\units\seatline" />
@@ -8743,6 +8742,22 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\units\F54\F54.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\F54\F54.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\F54\F54.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\F54\F54window.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\units\fieldgun\Bombard.fxsxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -10743,26 +10758,6 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
-    <Content Include="extend\art\units\Marine888\infantry_128.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Marine888\Infantry_American.blend">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Marine888\Infantry_American_v3.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Marine888\Infantry_American_v3.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\Marine888\Infantry_American_v3.isxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
     <Content Include="extend\art\units\mech2142\MECH2142.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -12615,6 +12610,22 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="extend\art\units\NewMechanizedInfantry\pumamechanizedinfantry.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\NewMechanizedInfantry\pumamechanizedinfantry.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\NewMechanizedInfantry\puma_diffuse.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\NewMechanizedInfantry\puma_specular.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="extend\art\units\pzh20000\gerartil_pzh2000.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -12628,22 +12639,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\pzh20000\PZH20000.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\RAH66\RAH66_at.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\RAH66\RAH66_AT.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\RAH66\RAH66_diff.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\RAH66\RAH66_sref.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -13840,22 +13835,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\RangedMarine04s\unit_sunlight_irradiance.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\REJETFIGHTER\OrbitalBomber.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\REJETFIGHTER\OrbitalBomber.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\REJETFIGHTER\OrbitalBomber.gr2">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\REJETFIGHTER\OrbitalBomber_gloss.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -15792,6 +15771,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\WonderSplash\DZIMBABWE.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\WonderSplash\ERECHTHEION.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

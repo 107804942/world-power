@@ -231,11 +231,11 @@
 		</Row>
 		
 		
-		<!--普马彭谷神庙-->
+		<!--伊瑞克提翁神庙-->
 		<Row>
-			<Type>BUILDINGCLASS_PUMA_PUMKU</Type>
-			<DefaultBuilding>BUILDING_PUMA_PUMKU</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_PUMA_PUMKU</Description>
+			<Type>BUILDINGCLASS_ERECHTHEION</Type>
+			<DefaultBuilding>BUILDING_ERECHTHEION</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ERECHTHEION</Description>
 			<MaxGlobalInstances>1</MaxGlobalInstances>
 		</Row>
 
@@ -913,6 +913,7 @@
 			<GlobalEspionageSpeedModifier>25</GlobalEspionageSpeedModifier>
 			<ForbiddenForeignSpy>1</ForbiddenForeignSpy>
 			<ConquestProb>100</ConquestProb>
+			<SpyPoints>3</SpyPoints>
 			<!--<EspionageModifier>-999</EspionageModifier>-->
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<PortraitIndex>226</PortraitIndex>
@@ -1329,14 +1330,14 @@
 
 
 
-		<!--普马彭谷神庙 -->
+		<!--伊瑞克提翁神庙 -->
 		<Row>
-			<Type>BUILDING_PUMA_PUMKU</Type>
-			<BuildingClass>BUILDINGCLASS_PUMA_PUMKU</BuildingClass>
-			<Description>TXT_KEY_BUILDING_PUMA_PUMKU</Description>
-			<Help>TXT_KEY_WONDER_PUMA_PUMKU_HELP</Help>
-			<Civilopedia>TXT_KEY_WONDER_PUMA_PUMKU_PEDIA</Civilopedia>
-			<Quote>TXT_KEY_WONDER_PUMA_PUMKU_QUOTE</Quote>
+			<Type>BUILDING_ERECHTHEION</Type>
+			<BuildingClass>BUILDINGCLASS_ERECHTHEION</BuildingClass>
+			<Description>TXT_KEY_BUILDING_ERECHTHEION</Description>
+			<Help>TXT_KEY_WONDER_ERECHTHEION_HELP</Help>
+			<Civilopedia>TXT_KEY_WONDER_ERECHTHEION_PEDIA</Civilopedia>
+			<Quote>TXT_KEY_WONDER_ERECHTHEION_QUOTE</Quote>
 			<Cost>150</Cost>
 			<ConquestProb>100</ConquestProb>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
@@ -1344,12 +1345,12 @@
 			<NukeImmune>true</NukeImmune>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
-			<Flat>1</Flat>
+			<!--<Flat>1</Flat>-->
 			<FreeBuilding>BUILDINGCLASS_TEMPLE</FreeBuilding>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>104</PortraitIndex>
+			<PortraitIndex>55</PortraitIndex>
 			<Happiness>2</Happiness>
-			<WonderSplashImage>Puma.dds</WonderSplashImage>
+			<WonderSplashImage>ERECHTHEION.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
 		</Row>
 

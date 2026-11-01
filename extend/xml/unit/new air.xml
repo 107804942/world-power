@@ -106,7 +106,7 @@
 			<CombatLimit>0</CombatLimit>
 			<XPValueAttack>6</XPValueAttack>
 			<XPValueDefense>6</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_REJETFIGHT</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_F53</UnitArtInfo>
 			<UnitFlagIconOffset>17</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<PortraitIndex>78</PortraitIndex>
@@ -146,7 +146,7 @@
 			<CombatLimit>0</CombatLimit>
 			<XPValueAttack>6</XPValueAttack>
 			<XPValueDefense>6</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_F53</UnitArtInfo>
+			<UnitArtInfo>ART_DEF_UNIT_F54</UnitArtInfo>
 			<UnitFlagIconOffset>37</UnitFlagIconOffset>
 			<UnitFlagAtlas>UNIT_FLAG_ATLAS_2</UnitFlagAtlas>
 			<PortraitIndex>48</PortraitIndex>

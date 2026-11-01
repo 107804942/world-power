@@ -4,19 +4,12 @@
 	<Units>
 
 
-
-	
+		<Update>
+			<Set UnitArtInfo="ART_DEF_UNIT_NEW_MECHANIZED_INFANTRY"/>
+			<Where Type="UNIT_MECHANIZED_INFANTRY" />
+		</Update>
 		
 		
-
-
-
-		<Delete Type="UNIT_GUIDED_MISSILE"/>
-		<Delete Type="UNIT_CITADEL_LATE"/>
-		<Delete Type="UNIT_CITADEL_MID"/>
-		<Delete Type="UNIT_CITADEL_EARLY"/>
-
-
 
 		<Update>
 			<Set UnitArtInfo="ART_DEF_UNIT_EXOTIC_UNIT_CONDOTTIERI"/>
@@ -34,18 +27,13 @@
 			<Set UnitArtInfo="ART_DEF_UNIT_ANTIMISSILE" IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="168"/>
 			<Where Type="UNIT_ATGM_VEHICLE" />
 		</Update>
-		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_MODERN_MARINE888" />
-			<Where Type="UNIT_MILITIA_MODERN" />
-		</Update>
 		
 
 
-	</Units>
-
-
-	<Units>
-
+		<Update>
+			<Where Type="UNIT_GUIDED_MISSILE"/>
+			<Set RangedCombat="180" Range="8"/>
+		</Update>
 
 	
 		<!-- 蠕虫 -->
@@ -82,129 +70,70 @@
 
 
 
-		<Row>
-			<Class>UNITCLASS_CITADEL_EARLY</Class>
-			<Type>UNIT_CITADEL_EARLY</Type>
-			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<BaseSightRange>3</BaseSightRange>
-			<Immobile>true</Immobile>
-			<Combat>200</Combat>
-			<RangedCombat>200</RangedCombat>
-			<Cost>-1</Cost>
-			<Moves>2</Moves>
-			<Range>2</Range>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
-			<Domain>DOMAIN_HOVER</Domain>
-			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CITADEL_EARLY</Description>
-			<Civilopedia>TXT_KEY_UNIT_CITADEL_EARLY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>false</Pillage>
-			<Mechanized>true</Mechanized>
-			<ObsoleteTech>TECH_ADV_ENGINEERING</ObsoleteTech>
-			<AdvancedStartCost>25</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_FRANCE_BATTERY</UnitArtInfo>
-			<UnitFlagAtlas>SMAN_EXOTIC_UNIT_FLAG_ATLAS</UnitFlagAtlas>
-			<UnitFlagIconOffset>26</UnitFlagIconOffset>
-			<PortraitIndex>62</PortraitIndex>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<MoveRate>ARTILLERY</MoveRate>
-			<ExtraMaintenanceCost>12</ExtraMaintenanceCost>
-			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
-			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
-			<NoTroopConsume>true</NoTroopConsume>
-		</Row>
+	
 
-		<Row>
-			<Class>UNITCLASS_CITADEL_MID</Class>
-			<Type>UNIT_CITADEL_MID</Type>
-			<PrereqTech>TECH_MILITARY_LOGISTICS</PrereqTech>
-			<BaseSightRange>3</BaseSightRange>
-			<Immobile>true</Immobile>
-			<Combat>350</Combat>
-			<RangedCombat>350</RangedCombat>
-			<AirInterceptRange>2</AirInterceptRange>
-			<Cost>-1</Cost>
-			<Moves>2</Moves>
-			<Range>3</Range>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
-			<Domain>DOMAIN_HOVER</Domain>
-			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CITADEL_MID</Description>
-			<Civilopedia>TXT_KEY_UNIT_CITADEL_MID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>false</Pillage>
-			<Mechanized>true</Mechanized>
-			<ObsoleteTech>TECH_ADV_FLIGHT</ObsoleteTech>
-			<AdvancedStartCost>25</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_FLAK88GUN</UnitArtInfo>
-			<UnitFlagIconOffset>2</UnitFlagIconOffset>
-			<UnitFlagAtlas>WAW_IMPROVEMENTS_FLAG_ATLAS</UnitFlagAtlas>
-			<PortraitIndex>25</PortraitIndex>
-			<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
-			<MoveRate>ARTILLERY</MoveRate>
-			<ExtraMaintenanceCost>24</ExtraMaintenanceCost>
-			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
-			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
-			<NoTroopConsume>true</NoTroopConsume>
-		</Row>
 
-		<Row>
-			<Class>UNITCLASS_CITADEL_LATE</Class>
-			<Type>UNIT_CITADEL_LATE</Type>
-			<PrereqTech>TECH_ADV_FLIGHT</PrereqTech>
-			<BaseSightRange>4</BaseSightRange>
-			<Immobile>true</Immobile>
-			<Combat>550</Combat>
-			<RangedCombat>550</RangedCombat>
-			<ObsoleteTech>TECH_INTEGRATED_DEFENSE</ObsoleteTech>
-			<Cost>-1</Cost>
-			<Moves>2</Moves>
-			<Range>4</Range>
-			<AirInterceptRange>3</AirInterceptRange>
-			<HurryCostModifier>-1</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
-			<Domain>DOMAIN_HOVER</Domain>
-			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CITADEL_LATE</Description>
-			<Civilopedia>TXT_KEY_UNIT_CITADEL_LATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>false</Pillage>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>25</AdvancedStartCost>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_COASTAL_ARTILLERY</UnitArtInfo>
-			<UnitFlagIconOffset>0</UnitFlagIconOffset>
-			<UnitFlagAtlas>COASTAL_CANON_FLAG</UnitFlagAtlas>
-			<PortraitIndex>31</PortraitIndex>
-			<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
-			<MoveRate>WHEELED</MoveRate>
-			<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
-			<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-			<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
-			<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
-			<NoTroopConsume>true</NoTroopConsume>
-		</Row>
+		<!-- UNIT_CITADEL_EARLY: 前一个 Row.txt -> 后一个 Row.txt -->
+		<Update>
+			<Where Type="UNIT_CITADEL_EARLY"/>
+			<Set BaseSightRange="3"
+				 Combat="200"
+				 RangedCombat="200"
+				 Moves="2"
+				 Range="2"
+				 XPValueAttack="3"
+				 XPValueDefense="3"
+				 UnitArtInfo="ART_DEF_UNIT_FRANCE_BATTERY"
+				 UnitFlagAtlas="SMAN_EXOTIC_UNIT_FLAG_ATLAS"
+				 UnitFlagIconOffset="26"
+				 PortraitIndex="62"
+				 IconAtlas="SPUNITS01_ATLAS"
+				 ExtraMaintenanceCost="12"
+				 MaxHitPoints="0"/>
+		</Update>
 
+		<!-- UNIT_CITADEL_MID: 前一个 Row.txt -> 后一个 Row.txt -->
+		<Update>
+			<Where Type="UNIT_CITADEL_MID"/>
+			<Set BaseSightRange="3"
+				 Combat="350"
+				 RangedCombat="350"
+				 AirInterceptRange="2"
+				 Moves="2"
+				 Range="3"
+				 XPValueAttack="3"
+				 XPValueDefense="3"
+				 UnitArtInfo="ART_DEF_UNIT_FLAK88GUN"
+				 UnitFlagAtlas="WAW_IMPROVEMENTS_FLAG_ATLAS"
+				 UnitFlagIconOffset="2"
+				 PortraitIndex="25"
+				 IconAtlas="SPUNITS01_ATLAS"
+				 ExtraMaintenanceCost="24"
+				 MaxHitPoints="0"/>
+		</Update>
+
+		<!-- UNIT_CITADEL_LATE: 前一个 Row.txt -> 后一个 Row.txt -->
+		<Update>
+			<Where Type="UNIT_CITADEL_LATE"/>
+			<Set BaseSightRange="4"
+				 Combat="550"
+				 RangedCombat="550"
+				 Moves="2"
+				 Range="4"
+				 AirInterceptRange="3"
+				 XPValueAttack="3"
+				 XPValueDefense="3"
+				 ObsoleteTech="TECH_INTEGRATED_DEFENSE"
+				 UnitArtInfo="ART_DEF_UNIT_COASTAL_ARTILLERY"
+				 UnitFlagAtlas="COASTAL_CANON_FLAG"
+				 UnitFlagIconOffset="0"
+				 PortraitIndex="31"
+				 IconAtlas="SPUNITS02_ATLAS"
+				 ExtraMaintenanceCost="60"
+				 MaxHitPoints="0"/>
+		</Update>
+		
+		
 
 		<Row>
 			<Class>UNITCLASS_CITADEL_FUTURE</Class>
@@ -249,40 +178,6 @@
 
 
 
-		<Row>
-			<Class>UNITCLASS_GUIDED_MISSILE</Class>
-			<Type>UNIT_GUIDED_MISSILE</Type>
-			<PrereqTech>TECH_ADV_FLIGHT</PrereqTech>
-			<RangedCombat>200</RangedCombat>
-			<Cost>-1</Cost>
-			<Moves>2</Moves>
-			<Immobile>true</Immobile>
-			<!--<NoMaintenance>true</NoMaintenance>-->
-			<Range>10</Range>
-			<Special>SPECIALUNIT_MISSILE</Special>
-			<Domain>DOMAIN_AIR</Domain>
-			<DefaultUnitAI>UNITAI_MISSILE_AIR</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_GUIDED_MISSILE</Description>
-			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MODERN_GUIDEDMISSLE_TEXT</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GUIDED_MISSILE_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HELP_GUIDED_MISSILE</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<Suicide>true</Suicide>
-			<AdvancedStartCost>40</AdvancedStartCost>
-			<AirUnitCap>1</AirUnitCap>
-			<RangedCombatLimit>100</RangedCombatLimit>
-			<CombatLimit>0</CombatLimit>
-			<XPValueDefense>2</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_GUIDED_MISSILE</UnitArtInfo>
-			<UnitFlagIconOffset>77</UnitFlagIconOffset>
-			<IconAtlas>UNIT_ATLAS_2</IconAtlas>
-			<PortraitIndex>30</PortraitIndex>
-			<MoveRate>AIR_REBASE</MoveRate>
-			<ExtraMaintenanceCost>2</ExtraMaintenanceCost>
-		</Row>
 		
 
 

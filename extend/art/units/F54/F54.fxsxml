@@ -1,5 +1,5 @@
 <Asset>
-	<Mesh file="OrbitalBomber.gr2"/>
+	<Mesh file="F54.gr2"/>
 	<Animation file="JetFighter_Run.gr2" ec="1400"/>
 	<Animation file="JetFighter_Idle.gr2" ec="1000"/>
 	<Animation file="JetFighter_Attack_Air.gr2" ec="1100"/>

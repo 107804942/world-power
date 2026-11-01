@@ -2,8 +2,132 @@
 <!-- Created by ModBuddy on 2021/2/26 22:23:06 -->
 <GameData>
 
-	
 
+
+	<!--F-54-->
+
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_F54</Type>
+			<DamageStates>1</DamageStates>
+			<Formation>FighterWing</Formation>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_F54</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_F54</UnitMemberInfoType>
+			<NumMembers>1</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_F54</Type>
+			<Scale>0.1</Scale>
+			<Domain>Air</Domain>
+			<Model>F54.fxsxml</Model>
+			<MaterialTypeTag>METAL</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+
+	<ArtDefine_UnitMemberCombats>
+
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_F54</UnitMemberType>
+			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
+			<AttackRadius>135.0</AttackRadius>
+			<MoveRate>3</MoveRate>
+			<TurnRateMin>0.3</TurnRateMin>
+			<TurnRateMax>0.5</TurnRateMax>
+			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_F54</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<ProjectileSpeed>3.5</ProjectileSpeed>
+			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
+			<HitRadius>25.0</HitRadius>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_F54</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>0</SubIndex>
+			<VisKillStrengthMin>40.0</VisKillStrengthMin>
+			<VisKillStrengthMax>50.0</VisKillStrengthMax>
+			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
+			<HitRadius>25.0</HitRadius>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_F54</UnitMemberType>
+			<Index>1</Index>
+			<SubIndex>1</SubIndex>
+			<ID>PROJECTILE</ID>
+			<VisKillStrengthMin>15.0</VisKillStrengthMin>
+			<VisKillStrengthMax>25.0</VisKillStrengthMax>
+			<ProjectileSpeed>2.5</ProjectileSpeed>
+			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+	
+	
+	
+	<!--MECHANIZED INFANTRY-->
+	<ArtDefine_UnitInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_NEW_MECHANIZED_INFANTRY</Type>
+			<DamageStates>1</DamageStates>
+			<Formation>TwoBigGuns</Formation>
+		</Row>
+	</ArtDefine_UnitInfos>
+	<ArtDefine_UnitInfoMemberInfos>
+		<Row>
+			<UnitInfoType>ART_DEF_UNIT_NEW_MECHANIZED_INFANTRY</UnitInfoType>
+			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</UnitMemberInfoType>
+			<NumMembers>2</NumMembers>
+		</Row>
+	</ArtDefine_UnitInfoMemberInfos>
+	<ArtDefine_UnitMemberInfos>
+		<Row>
+			<Type>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</Type>
+			<Scale>0.11</Scale>
+			<Model>pumamechanizedinfantry.fxsxml</Model>
+			<MaterialTypeTag>CLOTH</MaterialTypeTag>
+			<MaterialTypeSoundOverrideTag>METALSM</MaterialTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberInfos>
+	<ArtDefine_UnitMemberCombats>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</UnitMemberType>
+			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady</EnableActions>
+			<HasShortRangedAttack>1</HasShortRangedAttack>
+			<HasStationaryMelee>1</HasStationaryMelee>
+			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
+			<ReformBeforeCombat>1</ReformBeforeCombat>
+		</Row>
+	</ArtDefine_UnitMemberCombats>
+	<ArtDefine_UnitMemberCombatWeapons>
+		<Row>
+			<UnitMemberType>ART_DEF_UNIT_MEMBER_NEW_MECHANIZED_INFANTRY</UnitMemberType>
+			<Index>0</Index>
+			<SubIndex>0</SubIndex>
+			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
+			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
+		</Row>
+	</ArtDefine_UnitMemberCombatWeapons>
+
+
+
+	<!--粒子炮-->
 	<ArtDefine_UnitInfos>
 		<Row>
 			<Type>ART_DEF_UNIT_PARTICLE_CANNON</Type>
@@ -3915,67 +4039,7 @@
 
 
 
-	<!--MARINE888-->
-
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MODERN_MARINE888</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>HonorableGunpowder</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_MODERN_MARINE888</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_MODERN_MARINE888</UnitMemberInfoType>
-			<NumMembers>10</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_MODERN_MARINE888</Type>
-			<Scale>0.14</Scale>
-			<Model>SURFACE/AMPHIBIOUS/MARINES/MODERN_MARINES/Infantry_American_v3.fxsxml</Model>
-			<MaterialTypeTag>CLOTH</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>FLESH</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_MODERN_MARINE888</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady Walk AttackCharge</EnableActions>
-			<ShortMoveRadius>12.0</ShortMoveRadius>
-			<ShortMoveRate>0.35</ShortMoveRate>
-			<TargetHeight>8.0</TargetHeight>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasRefaceAfterCombat>1</HasRefaceAfterCombat>
-			<ReformBeforeCombat>1</ReformBeforeCombat>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_MODERN_MARINE888</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<WeaponTypeTag>BULLET</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLET</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 
@@ -4594,84 +4658,7 @@
 
 
 
-	<!--REJETFIGHT-->
-
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_REJETFIGHT</Type>
-			<DamageStates>1</DamageStates>
-			<Formation>FighterWing</Formation>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_REJETFIGHT</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_REJETFIGHT</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_REJETFIGHT</Type>
-			<Scale>0.11</Scale>
-			<Domain>Air</Domain>
-			<Model>OrbitalBomber.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_REJETFIGHT</UnitMemberType>
-			<EnableActions>Idle Attack Bombard Death Run</EnableActions>
-			<AttackRadius>135.0</AttackRadius>
-			<MoveRate>2.0</MoveRate>
-			<TurnRateMin>0.25</TurnRateMin>
-			<TurnRateMax>0.5</TurnRateMax>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_REJETFIGHT</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<ProjectileSpeed>3.0</ProjectileSpeed>
-			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
-			<HitRadius>15.0</HitRadius>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_REJETFIGHT</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>1.0</VisKillStrengthMin>
-			<VisKillStrengthMax>1.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_FIGHTER_MACHINE_GUN_HIT_$(TERRAIN)</HitEffect>
-			<HitRadius>15.0</HitRadius>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_REJETFIGHT</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>1</SubIndex>
-			<ID>PROJECTILE</ID>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<ProjectileSpeed>3.0</ProjectileSpeed>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-
-
-
-
-
-
-
+	
 
 
 	<!--p1500-->
@@ -6207,11 +6194,7 @@
 			<Where Type="ART_DEF_UNIT_MEMBER_CRUSADER_ARTILLERY"/>
 		</Update>
 
-		<!--替换科曼奇-->
-		<Update>
-			<Set Scale="0.1"  Model="RAH66_at.fxsxml"/>
-			<Where Type="ART_DEF_UNIT_MEMBER_STEALTH_HELICOPTER"/>
-		</Update>
+	
 
 	
 	</ArtDefine_UnitMemberInfos>

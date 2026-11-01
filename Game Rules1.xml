@@ -2,7 +2,128 @@
 <!-- Created by ModBuddy on 2023/12/13 21:39:14 -->
 
 
+<Row>
+	<Class>UNITCLASS_CITADEL_EARLY</Class>
+	<Type>UNIT_CITADEL_EARLY</Type>
+	<PrereqTech>TECH_GUNPOWDER</PrereqTech>
+	<BaseSightRange>3</BaseSightRange>
+	<Immobile>true</Immobile>
+	<Combat>200</Combat>
+	<RangedCombat>200</RangedCombat>
+	<Cost>-1</Cost>
+	<Moves>2</Moves>
+	<Range>2</Range>
+	<HurryCostModifier>-1</HurryCostModifier>
+	<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+	<Domain>DOMAIN_HOVER</Domain>
+	<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+	<Description>TXT_KEY_UNIT_CITADEL_EARLY</Description>
+	<Civilopedia>TXT_KEY_UNIT_CITADEL_EARLY_PEDIA</Civilopedia>
+	<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
+	<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+	<MilitarySupport>true</MilitarySupport>
+	<MilitaryProduction>true</MilitaryProduction>
+	<Pillage>false</Pillage>
+	<Mechanized>true</Mechanized>
+	<ObsoleteTech>TECH_ADV_ENGINEERING</ObsoleteTech>
+	<AdvancedStartCost>25</AdvancedStartCost>
+	<XPValueAttack>3</XPValueAttack>
+	<XPValueDefense>3</XPValueDefense>
+	<UnitArtInfo>ART_DEF_UNIT_FRANCE_BATTERY</UnitArtInfo>
+	<UnitFlagAtlas>SMAN_EXOTIC_UNIT_FLAG_ATLAS</UnitFlagAtlas>
+	<UnitFlagIconOffset>26</UnitFlagIconOffset>
+	<PortraitIndex>62</PortraitIndex>
+	<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
+	<MoveRate>ARTILLERY</MoveRate>
+	<ExtraMaintenanceCost>12</ExtraMaintenanceCost>
+	<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
+	<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
+	<NoTroopConsume>true</NoTroopConsume>
+</Row>
 
+<Row>
+	<Class>UNITCLASS_CITADEL_MID</Class>
+	<Type>UNIT_CITADEL_MID</Type>
+	<PrereqTech>TECH_MILITARY_LOGISTICS</PrereqTech>
+	<BaseSightRange>3</BaseSightRange>
+	<Immobile>true</Immobile>
+	<Combat>350</Combat>
+	<RangedCombat>350</RangedCombat>
+	<AirInterceptRange>2</AirInterceptRange>
+	<Cost>-1</Cost>
+	<Moves>2</Moves>
+	<Range>3</Range>
+	<HurryCostModifier>-1</HurryCostModifier>
+	<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+	<Domain>DOMAIN_HOVER</Domain>
+	<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+	<Description>TXT_KEY_UNIT_CITADEL_MID</Description>
+	<Civilopedia>TXT_KEY_UNIT_CITADEL_MID_PEDIA</Civilopedia>
+	<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
+	<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+	<MilitarySupport>true</MilitarySupport>
+	<MilitaryProduction>true</MilitaryProduction>
+	<Pillage>false</Pillage>
+	<Mechanized>true</Mechanized>
+	<ObsoleteTech>TECH_ADV_FLIGHT</ObsoleteTech>
+	<AdvancedStartCost>25</AdvancedStartCost>
+	<XPValueAttack>3</XPValueAttack>
+	<XPValueDefense>3</XPValueDefense>
+	<UnitArtInfo>ART_DEF_UNIT_FLAK88GUN</UnitArtInfo>
+	<UnitFlagIconOffset>2</UnitFlagIconOffset>
+	<UnitFlagAtlas>WAW_IMPROVEMENTS_FLAG_ATLAS</UnitFlagAtlas>
+	<PortraitIndex>25</PortraitIndex>
+	<IconAtlas>SPUNITS01_ATLAS</IconAtlas>
+	<MoveRate>ARTILLERY</MoveRate>
+	<ExtraMaintenanceCost>24</ExtraMaintenanceCost>
+	<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
+	<DomainCargo>DOMAIN_AIR</DomainCargo>
+	<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
+	<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
+	<NoTroopConsume>true</NoTroopConsume>
+</Row>
+
+<Row>
+	<Class>UNITCLASS_CITADEL_LATE</Class>
+	<Type>UNIT_CITADEL_LATE</Type>
+	<PrereqTech>TECH_ADV_FLIGHT</PrereqTech>
+	<BaseSightRange>4</BaseSightRange>
+	<Immobile>true</Immobile>
+	<Combat>550</Combat>
+	<RangedCombat>550</RangedCombat>
+	<ObsoleteTech>TECH_INTEGRATED_DEFENSE</ObsoleteTech>
+	<Cost>-1</Cost>
+	<Moves>2</Moves>
+	<Range>4</Range>
+	<AirInterceptRange>3</AirInterceptRange>
+	<HurryCostModifier>-1</HurryCostModifier>
+	<CombatClass>UNITCOMBAT_BOMBER</CombatClass>
+	<Domain>DOMAIN_HOVER</Domain>
+	<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+	<Description>TXT_KEY_UNIT_CITADEL_LATE</Description>
+	<Civilopedia>TXT_KEY_UNIT_CITADEL_LATE_PEDIA</Civilopedia>
+	<Strategy>TXT_KEY_SP_UNITS_CITADEL_STRATEGY</Strategy>
+	<Help>TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP</Help>
+	<MilitarySupport>true</MilitarySupport>
+	<MilitaryProduction>true</MilitaryProduction>
+	<Pillage>false</Pillage>
+	<Mechanized>true</Mechanized>
+	<AdvancedStartCost>25</AdvancedStartCost>
+	<XPValueAttack>3</XPValueAttack>
+	<XPValueDefense>3</XPValueDefense>
+	<UnitArtInfo>ART_DEF_UNIT_COASTAL_ARTILLERY</UnitArtInfo>
+	<UnitFlagIconOffset>0</UnitFlagIconOffset>
+	<UnitFlagAtlas>COASTAL_CANON_FLAG</UnitFlagAtlas>
+	<PortraitIndex>31</PortraitIndex>
+	<IconAtlas>SPUNITS02_ATLAS</IconAtlas>
+	<MoveRate>WHEELED</MoveRate>
+	<ExtraMaintenanceCost>60</ExtraMaintenanceCost>
+	<SpecialCargo>SPECIALUNIT_STEALTH</SpecialCargo>
+	<DomainCargo>DOMAIN_AIR</DomainCargo>
+	<BoundLandImprovement>IMPROVEMENT_CITADEL</BoundLandImprovement>
+	<BoundWaterImprovement>IMPROVEMENT_COASTAL_FORT</BoundWaterImprovement>
+	<NoTroopConsume>true</NoTroopConsume>
+</Row>
 
 <GameData>
 	--根据己方拥有的改良设施数量缩放该单位能力（Amount为百分比系数，公式：(拥有数×Amount×上下文)/100，⚠ 需MOD_BALANCE_CORE）
