@@ -561,26 +561,33 @@ function AddBuildingButton( pCity, building )
 				controlTable.SlotTexture:SetToolTipString( ToolTipString );
 				controlTable.BuildingSpecialistSlot:SetToolTipString( BToolTipString );
 				controlTable.BuildingSpecialistSlot:SetVoid1( iSpecialistID );
-				controlTable.BuildingSpecialistSlot:SetVoid2( buildingID );
+				-- MOD: the corner keeps its "click to add / right-click to remove a Specialist of this
+				-- type" behaviour, but the request no longer names this building: the slot belongs to the
+				-- City (see CvCity::GetMaxSpecialistCount) and the building merely supplies it. Handing
+				-- NO_BUILDING (-1) to the task is what drops the old per-building binding.
+				controlTable.BuildingSpecialistSlot:SetVoid2( -1 );
 				controlTable.BuildingSpecialistSlot:RegisterCallback( Mouse.eLClick, AddSpecialist );
 				controlTable.BuildingSpecialistSlot:RegisterCallback( Mouse.eRClick, RemoveSpecialist );
 				
+				-- A type outside the six above would leave the previous instance icon behind, so show
+				-- nothing at all rather than a stale texture. The Doctor type is a Super Power addition.
+				local bKnownSpecialist = (iSpecialistID >= 1 and iSpecialistID <= 6) or (building.SpecialistType == "SPECIALIST_DOCTOR");
 				if (UI.IsCityScreenViewingMode()) then
-					controlTable.SlotTexture:SetHide( false );
+					controlTable.SlotTexture:SetHide( not bKnownSpecialist );
 					controlTable.BuildingSpecialistSlot:SetHide( true );
 				else
 					controlTable.SlotTexture:SetHide( true );
-					controlTable.BuildingSpecialistSlot:SetHide( false );
+					controlTable.BuildingSpecialistSlot:SetHide( not bKnownSpecialist );
 				end
 			
-				local iNumAssignedSpecialists = pCity:GetNumSpecialistsInBuilding(buildingID);
-				if (iNumAssignedSpecialists > 0) then
+				-- MOD: a Specialist is no longer tied to the building it was assigned from, so the
+				-- tooltip advertises the slots this building supplies instead of how many
+				-- occupants happen to be booked against it (which is internal bookkeeping and
+				-- would read as "nothing happened" right after a click).
+				local strYield = table.concat(yields, " ");
+				local str = Locale.Lookup("TXT_KEY_CITYVIEW_BUILDING_SPECIALIST_YIELD", iNumSpecialistsAllowed, pSpecialistInfo.Description, strYield);
 
-					local strYield = table.concat(yields, " ");
-					local str = Locale.Lookup("TXT_KEY_CITYVIEW_BUILDING_SPECIALIST_YIELD", iNumAssignedSpecialists, pSpecialistInfo.Description, strYield);
-				
-					strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. str;
-				end
+				strToolTip = strToolTip .. "[NEWLINE][NEWLINE]" .. str;
 			end
 			controlTable.BuildingSpecialistSlotBox:SetHide(false);
 		else
@@ -1380,6 +1387,13 @@ function OnCityViewUpdate()
 						iPlayerMod = iPlayerMod - iPolicyMod - iWorldCongressMod;
 						
 						local iCityStateMod = pPlayer:GetCityStateSpecialistPointRate(pSpecialistInfo.ID);
+						-- La Venta UA: move the global great-work GP bonus out of the "city" row and into
+						-- the city-state row so each tooltip line keeps a single, traceable source.
+						local iCSGreatWorkMod = pPlayer:GetCSUAGreatPersonRateModifierFromGreatWorks();
+						if (iCSGreatWorkMod ~= 0) then
+							iCityMod = iCityMod - iCSGreatWorkMod;
+							iCityStateMod = iCityStateMod + iCSGreatWorkMod;
+						end
 						local iMod = iPlayerMod + iPolicyMod + iWorldCongressMod + iCityMod + iGoldenAgeMod + iCityStateMod;
 						iGPPChange = (iGPPChange * (100 + iMod)) / 100;
 						strToolTipText = strToolTipText .. " (+" .. math.floor(iGPPChange/100) .. "[ICON_GREAT_PEOPLE])";	
