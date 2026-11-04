@@ -341,6 +341,27 @@ end
 
 
 --------------------------------------------------------------------------------
+-- Hanoi CS UA helper: scale a fixed-damage value by the owning unit's inside-borders scale.
+-- Mirrors the DLL's integer division (value * scale / 100, truncating toward zero) so the preview
+-- matches the real combat result. Returns the value unchanged when there is nothing to scale.
+--------------------------------------------------------------------------------
+function GetCSUAScaledFixedDamage(pUnit, pPlot, iValue)
+	if iValue == 0 or pUnit == nil or pPlot == nil then
+		return iValue
+	end
+	local iScale = pUnit:GetCSUAFixedDamageScale(pPlot)
+	if iScale == 100 then
+		return iValue
+	end
+	local iResult = iValue * iScale / 100
+	if iResult >= 0 then
+		return math.floor(iResult)
+	else
+		return math.ceil(iResult)
+	end
+end
+
+--------------------------------------------------------------------------------
 -- Refresh Combat Odds
 --------------------------------------------------------------------------------
 function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
@@ -416,11 +437,12 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			end
 
 			--Fixed damage increase
-			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToCity(pCity)
+			iMyDamageInflicted = iMyDamageInflicted + GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetDamageFixValueToCity(pCity))
 
 		--------------------------------------------------新增抵扣的最终伤害--------------------------------------------------
-			if  pCity:GetChangeDamageValue() ~= 0 then
-				iMyDamageInflicted= iMyDamageInflicted+pCity:GetChangeDamageValue()
+			local iCityChangeDamage = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pCity:GetChangeDamageValue())
+			if  iCityChangeDamage ~= 0 then
+				iMyDamageInflicted= iMyDamageInflicted + iCityChangeDamage
 				if iMyDamageInflicted < 0 then
 				iMyDamageInflicted=0
 				end
@@ -428,21 +450,29 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 
 			----------------------------------------------------------------------------------------------------------------------
 			--------------------------------------------------新增抵扣的最终伤害--------------------------------------------------
-			if  pMyUnit:GetForcedDamageValue() ~= 0 then
-			    if pMyUnit:GetForcedDamageValue() > 0 then
-			    iTheirDamageInflicted= pMyUnit:GetForcedDamageValue()
+			local iMyForcedDamage = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetForcedDamageValue())
+			if  iMyForcedDamage ~= 0 then
+			    if iMyForcedDamage > 0 then
+			    iTheirDamageInflicted= iMyForcedDamage
 				   end
 				end
 
-			if  pMyUnit:GetChangeDamageValue() ~= 0 then
-				iTheirDamageInflicted= iTheirDamageInflicted+pMyUnit:GetChangeDamageValue()
+			local iMyChangeDamage = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetChangeDamageValue())
+			if  iMyChangeDamage ~= 0 then
+				iTheirDamageInflicted= iTheirDamageInflicted + iMyChangeDamage
 				if iTheirDamageInflicted < 0 then
 				iTheirDamageInflicted=0
 				end
             end
 			--------------------------------------------------end--------------------------------------------------
 
-			
+			-- Milan CS UA: mirror the DLL's damage-taken scale so the unit's predicted damage taken from
+			-- the city matches the real resolution (the city itself is never protected by this effect).
+			local iMilanUnitScale = pMyUnit:GetCSUADamageTakenScale(nil, pCity)
+			if iMilanUnitScale ~= 100 then
+				iTheirDamageInflicted = math.floor(iTheirDamageInflicted * iMilanUnitScale / 100)
+			end
+
 			-- City's max HP
 			local maxCityHitPoints = pCity:GetMaxHitPoints();
 			if (iMyDamageInflicted > maxCityHitPoints) then
@@ -534,7 +564,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			
 			-- Their Strength
 			Controls.TheirStrengthValue:SetText( Locale.ToNumber(iTheirStrength / 100, "#.##") );
-			local UnitFixDamageValue = pMyUnit:GetDamageFixValueToCity(pCity)
+			local UnitFixDamageValue = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetDamageFixValueToCity(pCity))
             if UnitFixDamageValue ~= 0 then
                 controlTable = g_MyCombatDataIM:GetInstance();
                 controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
@@ -547,7 +577,7 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			----------------------------------------------------------------------------
 
 		   -----------------------------------------------新增抵扣的最终伤害------------
-		    local UnitChangeDamageValue= pMyUnit:GetChangeDamageValue()
+		    local UnitChangeDamageValue = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetChangeDamageValue())
 			if  UnitChangeDamageValue ~= 0 
 			and pMyUnit:GetDomainType() ~= DomainTypes.DOMAIN_AIR 
 			then
@@ -1082,8 +1112,21 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 		local pFromPlot = pMyUnit:GetPlot();
 		local pToPlot = pTheirUnit:GetPlot();
 		
+		-- Air sweep: the interceptor is chosen by the DLL, and the exchange uses the sweep /
+		-- interception strengths instead of the ranged attack ones, so that an interceptor
+		-- without any ranged combat strength (e.g. a destroyer) is still priced correctly.
+		local bAirSweep = (interfaceMode == InterfaceModeTypes.INTERFACEMODE_AIR_SWEEP and pMyUnit:GetDomainType() == DomainTypes.DOMAIN_AIR);
+		
+		-- Air Sweep
+		if (bAirSweep) then
+			iMyStrength = pMyUnit:GetAirSweepCombatStrength(pTheirUnit);
+			iTheirStrength = pTheirUnit:GetInterceptionCombatStrength(pMyUnit);
+			bRanged = true;
+			bInterceptPossible = true;
+			iNumVisibleAAUnits = pMyUnit:GetInterceptorCount(pToPlot, pTheirUnit, true, true);
+			
 		-- Ranged Unit
-		if (pMyUnit:Range() > 0 and pMyUnit:GetBaseRangedCombatStrength() > 0 and melee == false) then
+		elseif (pMyUnit:Range() > 0 and pMyUnit:GetBaseRangedCombatStrength() > 0 and melee == false) then
 			iMyStrength = pMyUnit:GetMaxRangedCombatStrength(pTheirUnit, nil, true, true);
 			bRanged = true;
 			
@@ -1102,8 +1145,14 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			local iTheirFireSupportCombatDamage = 0;
 
 			
+			-- Air Sweep Strike (both directions; mirrors GenerateAirSweepCombatInfo)
+			if (bAirSweep) then
+
+				iMyDamageInflicted = pMyUnit:GetAirSweepDamageToInterceptor(pTheirUnit, false);
+				iTheirDamageInflicted = pMyUnit:GetAirSweepDamageFromInterceptor(pTheirUnit, false);
+
 			-- Ranged Strike
-			if (bRanged) then
+			elseif (bRanged) then
 				
 				iMyDamageInflicted = pMyUnit:GetRangeCombatDamage(pTheirUnit, nil, false);
 				
@@ -1169,39 +1218,66 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 				
 			end
 
+			-- CSUA flat damage and damage-taken scaling play no part in an air sweep exchange
+			local iMyScale = 100;
+			local iTheirScale = 100;
+			if (not bAirSweep) then
+
 			--Fixed damage increase
-			iMyDamageInflicted = iMyDamageInflicted + pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
-			iTheirDamageInflicted = iTheirDamageInflicted + pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false)
+			iMyDamageInflicted = iMyDamageInflicted + GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetDamageFixValueToUnit(pTheirUnit))
+			iTheirDamageInflicted = iTheirDamageInflicted + GetCSUAScaledFixedDamage(pTheirUnit, pToPlot, pTheirUnit:GetDamageFixValueToUnit(pMyUnit, false))
 
 			--------------------------------------------------新增抵扣的最终伤害--------------------------------------------------
-			if  pTheirUnit:GetForcedDamageValue() ~= 0 then
-			    if pTheirUnit:GetForcedDamageValue() > 0 then
-			    iMyDamageInflicted= pTheirUnit:GetForcedDamageValue()
+			-- Budapest CS UA: the ally's units deal extra flat damage against an already-wounded target
+			if pTheirUnit:GetDamage() > 0 then
+				iMyDamageInflicted = iMyDamageInflicted + GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyPlayer:GetCSUAWoundedFixedDamage())
+			end
+			if pMyUnit:GetDamage() > 0 then
+				iTheirDamageInflicted = iTheirDamageInflicted + GetCSUAScaledFixedDamage(pTheirUnit, pToPlot, pTheirPlayer:GetCSUAWoundedFixedDamage())
+			end
+
+			local iTheirForcedDamage = GetCSUAScaledFixedDamage(pTheirUnit, pToPlot, pTheirUnit:GetForcedDamageValue())
+			if  iTheirForcedDamage ~= 0 then
+			    if iTheirForcedDamage > 0 then
+			    iMyDamageInflicted= iTheirForcedDamage
 				   end
 				end
 
-			if  pTheirUnit:GetChangeDamageValue() ~= 0 then
-				iMyDamageInflicted= iMyDamageInflicted+pTheirUnit:GetChangeDamageValue()
+			local iTheirChangeDamage = GetCSUAScaledFixedDamage(pTheirUnit, pToPlot, pTheirUnit:GetChangeDamageValue())
+			if  iTheirChangeDamage ~= 0 then
+				iMyDamageInflicted= iMyDamageInflicted + iTheirChangeDamage
 				if iMyDamageInflicted < 0 then
 				iMyDamageInflicted=0
 				end
             end
 
-
-
-				if pMyUnit:GetForcedDamageValue() ~= 0 then
-			    if pMyUnit:GetForcedDamageValue() > 0 then
-			    iTheirDamageInflicted= pMyUnit:GetForcedDamageValue()
+			local iMyForcedDamage = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetForcedDamageValue())
+				if iMyForcedDamage ~= 0 then
+			    if iMyForcedDamage > 0 then
+			    iTheirDamageInflicted= iMyForcedDamage
 				   end
 				end
 
-			if  pMyUnit:GetChangeDamageValue() ~= 0 then
-				iTheirDamageInflicted= iTheirDamageInflicted+pMyUnit:GetChangeDamageValue()
+			local iMyChangeDamage = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetChangeDamageValue())
+			if  iMyChangeDamage ~= 0 then
+				iTheirDamageInflicted= iTheirDamageInflicted + iMyChangeDamage
 				if iTheirDamageInflicted < 0 then
 				iTheirDamageInflicted=0
 				end
             end
 			--------------------------------------------------新增抵扣的最终伤害--------------------------------------------------
+
+			-- Milan CS UA: mirror the DLL's damage-taken scale so the preview matches the real result
+			iTheirScale = pTheirUnit:GetCSUADamageTakenScale(pMyUnit, nil)
+			if iTheirScale ~= 100 then
+				iMyDamageInflicted = math.floor(iMyDamageInflicted * iTheirScale / 100)
+			end
+			iMyScale = pMyUnit:GetCSUADamageTakenScale(pTheirUnit, nil)
+			if iMyScale ~= 100 then
+				iTheirDamageInflicted = math.floor(iTheirDamageInflicted * iMyScale / 100)
+			end
+
+			end -- not bAirSweep
 
 			local iMyDie = false;  --Modified
 			local iTheydie = false;
@@ -1272,7 +1348,11 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			    
 			if (eCombatPrediction == CombatPredictionTypes.COMBAT_PREDICTION_RANGED) then
 				Controls.RangedAttackIndicator:SetHide(false);
-				Controls.RangedAttackButtonLabel:SetText(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_INTERFACEMODE_RANGE_ATTACK")));
+				if (bAirSweep) then
+					Controls.RangedAttackButtonLabel:SetText(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_INTERFACEMODE_AIR_SWEEP")));
+				else
+					Controls.RangedAttackButtonLabel:SetText(Locale.ToUpper(Locale.ConvertTextKey("TXT_KEY_INTERFACEMODE_RANGE_ATTACK")));
+				end
 			elseif (eCombatPrediction == CombatPredictionTypes.COMBAT_PREDICTION_STALEMATE) then
 				Controls.StalemateIndicator:SetHide(false);
 			elseif (eCombatPrediction == CombatPredictionTypes.COMBAT_PREDICTION_TOTAL_DEFEAT) then
@@ -1313,11 +1393,35 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			----------------------------------------------------------------------------
 			-- BONUSES MY UNIT GETS
 			----------------------------------------------------------------------------
+			----------------------------------------------------------------------------
+			-- AIR SWEEP / INTERCEPTION STRENGTH MODIFIERS
+			-- These two never appear in the promotion table above, so without them a
+			-- sweeping aircraft carrying PROMOTION_AIR_SWEEP (+400%) shows a strength
+			-- several times larger than its listed bonuses can explain.
+			----------------------------------------------------------------------------
+			if (bAirSweep) then
+
+				local iSweepCombatMod = pMyUnit:AirSweepCombatMod();
+				if (iSweepCombatMod ~= 0) then
+					controlTable = g_MyCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_AIR_SWEEP_STRENGTH");
+					controlTable.Value:SetText(GetFormattedText(strText, iSweepCombatMod, true, true));
+				end
+
+				local iInterceptionCombatMod = pTheirUnit:InterceptionCombatMod();
+				if (iInterceptionCombatMod ~= 0) then
+					controlTable = g_TheirCombatDataIM:GetInstance();
+					controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_BONUS_INTERCEPTION_STRENGTH");
+					controlTable.Value:SetText(GetFormattedText(strText, iInterceptionCombatMod, false, true));
+				end
+
+			end
+
 			local movementRules;
 			-------------------------
 			-- force damage --
 			-------------------------
-			local UnitFixDamageValue = pMyUnit:GetDamageFixValueToUnit(pTheirUnit)
+			local UnitFixDamageValue = GetCSUAScaledFixedDamage(pMyUnit, pToPlot, pMyUnit:GetDamageFixValueToUnit(pTheirUnit))
             if UnitFixDamageValue ~= 0 then
                 controlTable = g_MyCombatDataIM:GetInstance();
                 controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_FIXVALUE_SP");
@@ -3016,19 +3120,29 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 
 
 	--------------------------------------------------新增抵扣的最终伤害--------------------------------------------------
-	if theirUnit:GetForcedDamageValue() ~= 0 then
-			    if theirUnit:GetForcedDamageValue() > 0 then
-			    myCityDamageInflicted= theirUnit:GetForcedDamageValue()
+	local pCSUABattlePlot = theirUnit:GetPlot()
+	local iTheirForcedDamage = GetCSUAScaledFixedDamage(theirUnit, pCSUABattlePlot, theirUnit:GetForcedDamageValue())
+	if iTheirForcedDamage ~= 0 then
+			    if iTheirForcedDamage > 0 then
+			    myCityDamageInflicted = iTheirForcedDamage
 				   end
 				end
 
-	if  theirUnit:GetChangeDamageValue() ~= 0 then
-				myCityDamageInflicted= myCityDamageInflicted+theirUnit:GetChangeDamageValue()
+	local iTheirChangeDamage = GetCSUAScaledFixedDamage(theirUnit, pCSUABattlePlot, theirUnit:GetChangeDamageValue())
+	if  iTheirChangeDamage ~= 0 then
+				myCityDamageInflicted = myCityDamageInflicted + iTheirChangeDamage
 				if myCityDamageInflicted < 0 then
 				myCityDamageInflicted=0
 				end
             end
 --------------------------------------------------end--------------------------------------------------
+
+	-- Milan CS UA: the attacking unit may take reduced damage from the city. Mirrors the DLL's
+	-- damage-taken scale (the city itself is never protected by this effect).
+	local iMilanCityAttackerScale = theirUnit:GetCSUADamageTakenScale(nil, myCity)
+	if iMilanCityAttackerScale ~= 100 then
+		myCityDamageInflicted = math.floor(myCityDamageInflicted * iMilanCityAttackerScale / 100)
+	end
 
 	if (myCityDamageInflicted > theirUnitMaxHP) then
 		myCityDamageInflicted = theirUnitMaxHP;
