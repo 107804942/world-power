@@ -3825,8 +3825,37 @@ function OnMouseOverHex( hexX, hexY )
 		local pHeadCity = UI.GetHeadSelectedCity();
 				
 		if (pHeadUnit ~= nil) then
-			
-			if (pHeadUnit:IsCombatUnit() and (pHeadUnit:IsRanged() and pHeadUnit:IsEmbarked()) == false) and ((pHeadUnit:IsRanged() and pHeadUnit:IsRangeAttackOnlyInDomain() and not pPlot:IsWater()) == false) then
+
+			-- Air sweep: the sweep only aims at a plot, and the DLL then picks the best interceptor
+			-- in range, which is usually NOT the unit standing on the hovered plot. Preview the
+			-- exchange that would really happen.
+			if (UI.GetInterfaceMode() == InterfaceModeTypes.INTERFACEMODE_AIR_SWEEP and
+				pHeadUnit:GetDomainType() == DomainTypes.DOMAIN_AIR) then
+
+				local iTeam = Game.GetActiveTeam()
+				local pTeam = Teams[iTeam]
+
+				-- Don't show info for stuff we can't see
+				if (pPlot:IsRevealed(iTeam, false) and pPlot:IsVisible(iTeam, false)) then
+
+					local pInterceptor = pHeadUnit:GetBestInterceptor(pPlot, nil, false, false);
+
+					if (pInterceptor ~= nil and not pInterceptor:IsInvisible(iTeam, false) and
+						(pTeam:IsAtWar(pInterceptor:GetTeam()) or (UIManager:GetAlt() and pInterceptor:GetOwner() ~= iTeam))) then
+
+						UpdateUnitPortrait(pInterceptor);
+						UpdateUnitPromotions(pInterceptor);
+						UpdateUnitStats(pInterceptor);
+						UpdateCombatOddsUnitVsUnit(pHeadUnit, pInterceptor);
+
+						Controls.MyCombatResultsStack:SetHide(false);
+						Controls.TheirCombatResultsStack:SetHide(false);
+
+						g_bShowPanel = true;
+					end
+				end
+
+			elseif (pHeadUnit:IsCombatUnit() and (pHeadUnit:IsRanged() and pHeadUnit:IsEmbarked()) == false) and ((pHeadUnit:IsRanged() and pHeadUnit:IsRangeAttackOnlyInDomain() and not pPlot:IsWater()) == false) then
 				
 				local iTeam = Game.GetActiveTeam()
 				local pTeam = Teams[iTeam]
