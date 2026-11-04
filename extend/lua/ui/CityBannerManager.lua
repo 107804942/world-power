@@ -422,8 +422,14 @@ function RefreshCityBanner(cityBanner, iActiveTeam, iActivePlayer)
 		if city:GetPopulation() > 0 and cityOwner:IsHuman() and controls.CityIcon_NOUTILITY ~= nil then
 		
 			if not city:CanGrowNormally() then
+				local strNoUtilityTT = Locale.ConvertTextKey( "TXT_KEY_CITY_NO_UTILITY_HELP");
+				-- WHO resolution: the city keeps part of its surplus even without the building
+				local iWHOKept = (Game.GetLeagueWHOSanitationFoodKeptPercent and Game.GetLeagueWHOSanitationFoodKeptPercent()) or 0;
+				if iWHOKept > 0 then
+					strNoUtilityTT = strNoUtilityTT .. "[NEWLINE]" .. Locale.ConvertTextKey("TXT_KEY_WHO_FOOD_KEPT_HELP", iWHOKept);
+				end
 				controls.CityIcon_NOUTILITY:SetHide(false);
-				controls.CityIcon_NOUTILITY:SetToolTipString(Locale.ConvertTextKey( "TXT_KEY_CITY_NO_UTILITY_HELP"));
+				controls.CityIcon_NOUTILITY:SetToolTipString(strNoUtilityTT);
 			else
 				controls.CityIcon_NOUTILITY:SetHide(true);
 			end
