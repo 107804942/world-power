@@ -1387,13 +1387,6 @@ function OnCityViewUpdate()
 						iPlayerMod = iPlayerMod - iPolicyMod - iWorldCongressMod;
 						
 						local iCityStateMod = pPlayer:GetCityStateSpecialistPointRate(pSpecialistInfo.ID);
-						-- La Venta UA: move the global great-work GP bonus out of the "city" row and into
-						-- the city-state row so each tooltip line keeps a single, traceable source.
-						local iCSGreatWorkMod = pPlayer:GetCSUAGreatPersonRateModifierFromGreatWorks();
-						if (iCSGreatWorkMod ~= 0) then
-							iCityMod = iCityMod - iCSGreatWorkMod;
-							iCityStateMod = iCityStateMod + iCSGreatWorkMod;
-						end
 						local iMod = iPlayerMod + iPolicyMod + iWorldCongressMod + iCityMod + iGoldenAgeMod + iCityStateMod;
 						iGPPChange = (iGPPChange * (100 + iMod)) / 100;
 						strToolTipText = strToolTipText .. " (+" .. math.floor(iGPPChange/100) .. "[ICON_GREAT_PEOPLE])";	
