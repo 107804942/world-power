@@ -397,6 +397,65 @@ local function GetSpecialistYields( city, specialist )
 	return tip
 end
 
+-- SP V11: city-state unique abilities (CSUA) that modify yields per building class.
+-- Cached once per game session; the SQL is wrapped in pcall so a mod set without the
+-- CSUA tables (base game, MP-other mods) simply produces an empty index.
+local g_csuaBCYieldCache = nil
+local function GetCSUABuildingClassYieldCache()
+	if g_csuaBCYieldCache then
+		return g_csuaBCYieldCache
+	end
+	if not Game then
+		return { index = {}, yieldNames = {} }
+	end
+
+	local index = {}
+	local function findOrAddEntry( byClass, civType, civName )
+		for i = 1, #byClass do
+			if byClass[i].civType == civType then return byClass[i] end
+		end
+		local entry = { civType = civType, name = civName or civType, ally = {}, friend = {} }
+		byClass[ #byClass + 1 ] = entry
+		return entry
+	end
+	local strBase = "SELECT m.Type AS CivType, m.ShortDescription AS CivName,"
+		.. " y.BuildingClassType AS BuildingClassType, y.YieldType AS YieldType, y.YieldMod AS YieldMod"
+		.. " FROM MinorCivilizations m"
+		.. " JOIN CityStateUAs ua ON ua.Type = m.UAType"
+		.. " JOIN %s y ON y.EffectType = ua.%s"
+	local function collectRows( strTable, strEffectColumn, strStance, bGlobal )
+		pcall( function()
+			for row in DB.Query( format( strBase, strTable, strEffectColumn ) ) do
+				local buildingClassType = row.BuildingClassType
+				if buildingClassType ~= nil and row.YieldType ~= nil then
+					local byClass = index[ buildingClassType ]
+					if byClass == nil then
+						byClass = {}
+						index[ buildingClassType ] = byClass
+					end
+					local entry = findOrAddEntry( byClass, row.CivType, row.CivName )
+					local list = entry[ strStance ]
+					list[ #list + 1 ] = { yieldType = row.YieldType, mod = row.YieldMod, global = bGlobal }
+				end
+			end
+		end )
+	end
+	collectRows( "CityStateUAEffect_BuildingClassYieldModifiers", "AllyEffectType", "ally", false )
+	collectRows( "CityStateUAEffect_BuildingClassYieldModifiers", "FriendEffectType", "friend", false )
+	collectRows( "CityStateUAEffect_BuildingClassGlobalYieldModifiers", "AllyEffectType", "ally", true )
+	collectRows( "CityStateUAEffect_BuildingClassGlobalYieldModifiers", "FriendEffectType", "friend", true )
+
+	local yieldNames = {}
+	pcall( function()
+		for row in DB.Query( "SELECT Type, Description FROM Yields" ) do
+			yieldNames[ row.Type ] = L( row.Description )
+		end
+	end )
+
+	g_csuaBCYieldCache = { index = index, yieldNames = yieldNames }
+	return g_csuaBCYieldCache
+end
+
 function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMaintenance, city )
 	local building = GameInfo.Buildings[ buildingID ]
 	if not building then
@@ -663,6 +722,63 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 			insert( tips, L(yield.Description) .. ": " .. tip )
 		end
 	end
+	if Game and activePlayer and buildingClassType then
+		local csuaCache = GetCSUABuildingClassYieldCache()
+		local csuaEntries = csuaCache.index[ buildingClassType ]
+		if csuaEntries ~= nil then
+			local strColon = ": "
+			local strSep = ", "
+			local iMajor = Game.GetActivePlayer()
+			local minorPlayers = {}
+			for iPlayer = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
+				local pPlayer = Players[ iPlayer ]
+				if pPlayer ~= nil and pPlayer:IsMinorCiv() then
+					-- GetMinorCivType() returns the integer MinorCivTypes id, but the entries built from
+					-- the SQL query are keyed by MinorCivilizations.Type (a string), so translate here.
+					local kMinorInfo = GameInfo.MinorCivilizations[ pPlayer:GetMinorCivType() ]
+					if kMinorInfo ~= nil then
+						minorPlayers[ kMinorInfo.Type ] = pPlayer
+					end
+				end
+			end
+
+			local function csuaYieldList( rows )
+				local parts = {}
+				for i = 1, #rows do
+					local e = rows[i]
+					local strYield = csuaCache.yieldNames[ e.yieldType ] or e.yieldType or "?"
+					local strPart = format( "%+i%%%s%s", e.mod or 0, YieldIcons[ e.yieldType ] or "", strYield )
+					if e.global then
+						strPart = strPart .. L"TXT_KEY_CSUA_UI_GLOBAL"
+					end
+					parts[ #parts + 1 ] = strPart
+				end
+				return concat( parts, strSep )
+			end
+
+			local function csuaAddRow( entry, rows, strSuffixKey, bActive )
+				if rows == nil or #rows == 0 then return end
+				local strPrefix = "[ICON_BULLET]"
+				if not bActive then
+					strPrefix = strPrefix .. "[COLOR_CYAN]" .. L( entry.name ) .. L( strSuffixKey ) .. "[ENDCOLOR]" .. strColon
+				end
+				insert( tips, strPrefix .. csuaYieldList( rows ) )
+			end
+
+			for i = 1, #csuaEntries do
+				local entry = csuaEntries[i]
+				local pMinor = minorPlayers[ entry.civType ]
+				local bAllies = pMinor ~= nil and iMajor >= 0 and pMinor:IsAllies( iMajor )
+				local bFriends = pMinor ~= nil and iMajor >= 0 and pMinor:IsFriends( iMajor )
+
+				csuaAddRow( entry, entry.ally, "TXT_KEY_CSUA_UI_ALLY", bAllies )
+				if not bAllies then
+					csuaAddRow( entry, entry.friend, "TXT_KEY_CSUA_UI_FRIEND", bFriends )
+				end
+			end
+		end
+	end
+
 	-- Culture leftovers
 	if cultureChange ~= 0 then
 		tip = format(" %+i[ICON_CULTURE]", cultureChange )
@@ -791,6 +907,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		GreatGeneralRateModifier = L"TXT_KEY_GGRM2" .. "%+i%%" .. "[ICON_GREAT_GENERAL]",-- TOTO
 		GreatPersonExpendGold = L"TXT_KEY_GPEG1" .. "%+i".."[ICON_GOLD]",		-- TOTO
 		GoldenAgeModifier = L"TXT_KEY_REPLAY_DATA_GOLDAGETURNS" .. ":" .. "%+i%% ",
+		GoldenAgeMeterMod = L"TXT_KEY_GOLDEN_AGE_THRESHOLD_SP" .. "%+i%%",
 		UnitUpgradeCostMod = L"TXT_KEY_UUCM1" .. "%+i%%".."[ICON_GOLD]",		-- TOTO
 		Experience = L("TXT_KEY_EXPERIENCE_POPUP", "%i"),			-- TOTO
 		GlobalExperience = L"TXT_KEY_GLOBAL1" .. L("TXT_KEY_EXPERIENCE_POPUP", "%i"),-- TOTO
@@ -807,6 +924,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		UnhappinessModifier = L"TXT_KEY_UNHAPPINESS_MODIFIER111" .. "%+i%%",	-- TOTO
 		HappinessPerCity = L"TXT_KEY_HAPPINESS_PERCITY111" .. "%+i".."[ICON_HAPPINESS_1]",-- TOTO
 		CorruptionUnhappinessChange = L"TXT_KEY_CORRUPTION_UNHAPPINESS_CHANGE" .. "%+i[ICON_HAPPINESS_4]",
+		CorruptionUnhappinessModifier = L"TXT_KEY_CORRUPTION_UNHAPPINESS_MODIFIER" .. "%+i%%",
 		DiplomaticPrestige = L"TXT_KEY_DIPLOMATIC_PRESTIGE_LABEL" .. "%+i[ICON_DIPLOMATIC_PRESTIGE]",
 		WorkerSpeedModifier = L"TXT_KEY_WORKER_SPEED_MODIFIER111" .. "%+i%%",	-- TOTO
 		MilitaryProductionModifier = L"TXT_KEY_MILITARY_PRODUCTION_MODIFIER111" .. "%+i%%".."[ICON_PRODUCTION]",-- TOTO
@@ -838,6 +956,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		EspionageModifier = L"TXT_KEY_EM561" .. "%+i%%",			-- TOTO
 		GlobalEspionageModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_EM561" .. "%+i%%",-- TOTO
 		ExtraSpies = L"TXT_KEY_ES123123" .. " %+i" .. "[ICON_SPY]",		-- TOTO
+		SpyPoints = L"TXT_KEY_SPY_POINTS_GAIN_SP" .. "%+i",
 		SpyRankChange = L"TXT_KEY_SC_10" .. "[ICON_SPY]" .. "^%i",		-- TOTO
 		InstantSpyRankChange = L"TXT_KEY_ISC_10" .. "[ICON_SPY]" .. "^%i",	-- TOTO
 		TradeRouteRecipientBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_LEFT]",
@@ -918,11 +1037,11 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		end
 		if (building.SpecialistCount or 0) ~= 0 then
 			if IsCiv5 then
-				local numSpecialistsInBuilding = city and city:GetNumSpecialistsInBuilding( buildingID ) or building.SpecialistCount
-				if numSpecialistsInBuilding ~= building.SpecialistCount then
-					numSpecialistsInBuilding = numSpecialistsInBuilding.."/"..building.SpecialistCount
-				end
-				insert( tips, L( "TXT_KEY_CITYVIEW_BUILDING_SPECIALIST_YIELD", numSpecialistsInBuilding, specialist.Description, GetSpecialistYields( city, specialist ) ) )
+				-- MOD: a Specialist is no longer tied to the building it was assigned from, so
+				-- advertise the slots the building supplies rather than a per-building occupant
+				-- count. Old behaviour removed: read city:GetNumSpecialistsInBuilding(buildingID)
+				-- and showed it as "occupied/total".
+				insert( tips, L( "TXT_KEY_CITYVIEW_BUILDING_SPECIALIST_YIELD", building.SpecialistCount, specialist.Description, GetSpecialistYields( city, specialist ) ) )
 			else
 				insert( tips, format( "%i[ICON_CITIZEN]%s /%s", building.SpecialistCount, UnitColor( L(specialist.Description or "???") ), GetSpecialistYields( city, specialist ) ) )
 			end
@@ -996,6 +1115,12 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 					tempstring = ""
 				end
 				insert( tips, UnitColor(L"TXT_KEY_EXPERIENCE_DOMAIN_GLOBAL_SP"..L"TXT_KEY_WITHIN_BORDERS"..L"TXT_KEY_ENEMY"..L(item.Description)).." "..tempstring..Modifier.."%"..L"TXT_KEY_COMBAT")
+			end
+		end
+		for row in GameInfo.Building_DomainEnemyCombatModifierPerGold( thisBuildingType ) do
+			item = GameInfo.Domains[ row.DomainType ]
+			if item and row.Modifier ~= 0 then
+				insert( tips, UnitColor(L"TXT_KEY_LOCAL_POP_SP"..L"TXT_KEY_WITHIN_BORDERS"..L"TXT_KEY_ENEMY"..L(item.Description)).." "..L("TXT_KEY_SP_CS_ENEMY_COMBAT_PER_GOLD", -row.Modifier) )
 			end
 		end
 		for row in GameInfo.Building_DomainFriendsCombatModifierLocal( thisBuildingType ) do
@@ -2545,7 +2670,10 @@ local function GetHelpTextForUnitEx( unitID, bIncludeRequirements, city )
 
 	-- Great Merchant
 	if (unit.BaseGold or 0) > 0 then
-		insert( tips, format( "[ICON_BULLET]%s %i%s%+i[ICON_INFLUENCE]", L"TXT_KEY_MISSION_CONDUCT_TRADE_MISSION", unit.BaseGold + ( unit.NumGoldPerEra or 0 ) * ( Game and Teams[Game.GetActiveTeam()]:GetCurrentEra() or PreGame.GetEra() ), g_currencyIcon, GameDefines.MINOR_FRIENDSHIP_FROM_TRADE_MISSION or 0 ) )
+		local iEra = Game and Teams[Game.GetActiveTeam()]:GetCurrentEra() or PreGame.GetEra()
+		-- Influence scales with era for units with NumInfluencePerEra (matches CvUnit::getTradeInfluence)
+		local iInfluence = ( GameDefines.MINOR_FRIENDSHIP_FROM_TRADE_MISSION or 0 ) + ( unit.NumInfluencePerEra or 0 ) * iEra
+		insert( tips, format( "[ICON_BULLET]%s %i%s%+i[ICON_INFLUENCE]", L"TXT_KEY_MISSION_CONDUCT_TRADE_MISSION", unit.BaseGold + ( unit.NumGoldPerEra or 0 ) * iEra, g_currencyIcon, iInfluence ) )
 	end
 
 	-- Other tags
@@ -3058,6 +3186,9 @@ if Game then
 			[ TradeableItems.TRADE_ITEM_DEFENSIVE_PACT or-1] = function( from, item )
 				return ScratchDeal:AddDefensivePact( from, item[2] )
 			end,
+			[ TradeableItems.TRADE_ITEM_NON_AGGRESSION_PACT or-1] = function( from, item )
+				return ScratchDeal:AddNonAggressionPact( from, item[2] )
+			end,
 			[ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or-1] = function( from, item )
 				return ScratchDeal:AddResearchAgreement( from, item[2] )
 			end,
@@ -3224,6 +3355,11 @@ if Game then
 		if yieldID == YieldTypes.YIELD_FOOD then
 			insertLocalizedBulletIfNonZero( tips, "TXT_KEY_FOOD_FROM_TRADE_ROUTES", city:GetYieldRate( yieldID, false ) - city:GetYieldRate( yieldID, true ) )
 			strModifiersString = "[NEWLINE][ICON_BULLET]" .. L( "TXT_KEY_YIELD_EATEN_BY_POP_PULS", city:FoodConsumption( true, 0 ), yieldIconString, city:GetFoodConsumptionPerPopTimes100() / 100) .. strModifiersString
+			-- WHO resolution: show the reduced per-citizen food consumption
+			local iWHOFoodMod = (Game.GetLeagueWHOFoodConsumptionModifier and Game.GetLeagueWHOFoodConsumptionModifier()) or 0
+			if iWHOFoodMod ~= 0 then
+				insert( tips, "[ICON_BULLET]" .. L( "TXT_KEY_WHO_FOOD_CONSUMPTION_HELP", -iWHOFoodMod ) )
+			end
 		elseif IsCivBE then
 			local yieldFromTrade = city:GetYieldPerTurnFromTrade( yieldID )
 			if yieldFromTrade ~= 0 then
@@ -3293,6 +3429,10 @@ if Game then
 
 		tipText = GetYieldTooltipHelper( city, YieldTypes.YIELD_FOOD ) .. "[NEWLINE][NEWLINE]" .. tipText .. "  " .. foodStoredTimes100 / 100 .. "[ICON_FOOD]/ " .. foodThreshold .. "[ICON_FOOD][NEWLINE]"
 
+		-- WHO resolution: cities without the required sanitation building still keep some surplus
+		local iWHOKept = (Game.GetLeagueWHOSanitationFoodKeptPercent and Game.GetLeagueWHOSanitationFoodKeptPercent()) or 0
+		local bWHOKeptApplies = iWHOKept > 0 and not city:CanGrowNormally()
+
 		if foodPerTurnTimes100 == 0 then
 
 			tipText = tipText .. L"TXT_KEY_CITYVIEW_STAGNATION_TEXT"
@@ -3306,7 +3446,11 @@ if Game then
 			local foodMaxKept = city:GetMaxFoodKeptPercent()
 			if foodMaxKept > 0 and foodPerTurnTimes100 > 0 then
 				if foodMaxKept > 100 then foodMaxKept = 100 end
-				tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_MAX_KEPT", foodMaxKept)
+				if bWHOKeptApplies then
+					tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_WHO_FOOD_KEPT_HELP", iWHOKept )
+				else
+					tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_MAX_KEPT", foodMaxKept)
+				end
 				tipText = tipText .. "[NEWLINE]" .. L( "TXT_KEY_FOOD_KEPT_NOW", city:GetFoodKept())
 			end
 		end
@@ -3810,7 +3954,8 @@ if Game then
 	--]]
 
 		-- Gold (can be seen in diplo relation ship)
-		insert( tips, format( "%i%s(%+i)", player:GetGold(), g_currencyIcon, player:CalculateGoldRate() ) )
+		-- Economic Aid is not part of CalculateGoldRate(); net it out so the figure is what the player really gets.
+		insert( tips, format( "%i%s(%+i)", player:GetGold(), g_currencyIcon, player:CalculateGoldRate() - player:GetEconomicAidExpensePerTurn() ) )
 
 
 		--------------------------------------------------------------------
@@ -4033,7 +4178,7 @@ if Game then
 
 				-- Open Borders to them
 				isTradeable = ScratchDeal:IsPossibleToTradeItem( activePlayerID, playerID, TradeableItems.TRADE_ITEM_OPEN_BORDERS, g_dealDuration )
-				isActiveDeal = activeTeam:IsAllowsOpenBordersToTeam(teamID)
+				isActiveDeal = Players[activePlayerID]:IsAllowsOpenBordersToPlayer(playerID)
 
 				if isTradeable or isActiveDeal then
 					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "<"
@@ -4044,7 +4189,7 @@ if Game then
 
 				-- Open Borders from them
 				isTradeable = ScratchDeal:IsPossibleToTradeItem( playerID, activePlayerID, TradeableItems.TRADE_ITEM_OPEN_BORDERS, g_dealDuration )
-				isActiveDeal = team:IsAllowsOpenBordersToTeam( activeTeamID )
+				isActiveDeal = Players[playerID]:IsAllowsOpenBordersToPlayer( activePlayerID )
 
 				if isTradeable or isActiveDeal then
 					insert( treaties, negativeOrPositiveTextColor[isActiveDeal]
@@ -4353,6 +4498,7 @@ if Game then
 		local allied = {}
 		local friends = {}
 		local protected = {}
+		local economicAid = {}
 		local denouncements = {}
 		local backstabs = {}
 		local denouncedBy = {}
@@ -4387,6 +4533,10 @@ if Game then
 					if player:IsProtectingMinor(otherPlayerID) then
 						insert( protected, otherPlayerName .. inParentheses( not IsCiv5Vanilla and isUs and ( otherPlayer:GetTurnLastPledgedProtectionByMajor(playerID) - Game.GetGameTurn() + 10 ) ) )  -- todo check scaling % game speed
 					end
+					-- Economic aid (Super Power V11)
+					if Game.IsEconomicAidActive() and otherPlayer:IsEconomicAidFromMajor(playerID) then
+						insert( economicAid, otherPlayerName )
+					end
 				else
 					-- Defensive pacts
 					if team:IsDefensivePact(otherTeamID) then
@@ -4420,6 +4570,9 @@ if Game then
 		end
 		if #protected > 0 then
 			insert( tips, "[ICON_CITY_STATE]" .. L"TXT_KEY_POP_CSTATE_PLEDGE_TO_PROTECT" .. ": " .. concat( protected, ", ") )
+		end
+		if #economicAid > 0 then
+			insert( tips, "[ICON_GOLD]" .. L"TXT_KEY_TOOLTIP_ECONOMIC_AID_ACTIVE" .. ": " .. concat( economicAid, ", ") )
 		end
 		if #backstabs > 0 then
 			insert( tips, "[ICON_PIRATE]" .. L( "TXT_KEY_DIPLO_BACKSTABBED", concat( backstabs, ", ") ) )
