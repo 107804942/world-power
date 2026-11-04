@@ -557,7 +557,6 @@
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
     <Folder Include="extend\art\units\F54" />
-    <Folder Include="extend\art\units\NewMechanized" />
     <Folder Include="extend\art\WonderSplash" />
     <Folder Include="extend\art\Notification" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
@@ -12535,18 +12534,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\NewKirov\Newkirov_sref.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\NewMechanized\mechanizedinfantry.dds">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\NewMechanized\newmechanizedinfantry.fxsxml">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="extend\art\units\NewMechanized\newmechanizedinfantry.gr2">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

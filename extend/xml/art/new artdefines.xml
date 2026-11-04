@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2021/2/26 22:23:06 -->
 <GameData>
-
-
-
+	
 	<!--F-54-->
 
 	<ArtDefine_UnitInfos>
@@ -5618,7 +5616,7 @@
 	<ArtDefine_UnitMemberInfos>
 		<Row>
 			<Type>ART_DEF_UNIT_MEMBER_SUI_FLEET</Type>
-			<Scale>0.072</Scale>
+			<Scale>0.0576</Scale>
 			<Domain>Sea</Domain>
 			<Model>SuiWarJunk.fxsxml</Model>
 			<MaterialTypeTag>WOOD</MaterialTypeTag>
@@ -6151,11 +6149,7 @@
 			<Where Type="ART_DEF_UNIT_MEMBER_CRUSADER_ARTILLERY"/>
 		</Update>
 
-		<!--步战车 -->
-		<Update>
-			<Set Model="newmechanizedinfantry.fxsxml" />
-			<Where Type="ART_DEF_UNIT_MEMBER_MECHANIZED_INFANTRY"/>
-		</Update>
+	
 
 
 
