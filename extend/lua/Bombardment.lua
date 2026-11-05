@@ -10,6 +10,53 @@ local ms_CityBombardPlayer = -1;
 local ms_CityBombardID = -1;
 
 -------------------------------------------------
+-- Shared range iteration, also used by InGame.lua (which includes this file).
+-- A (2*range+1)^2 box walk is far cheaper than scanning every plot, but
+-- Map.GetPlotXY treats dx as a hexspace offset and wraps out-of-bounds
+-- coordinates: a range close to the map size revisits the same plots over and
+-- over and floods the engine hex-highlight system, which crashes the game.
+-- Fall back to a single full-map scan whenever the box is unsafe or would
+-- visit more plots than the map has.
+function SP_CanUseBoxWalk(iRange)
+	local iPlotCount = (iRange * 2 + 1) * (iRange * 2 + 1);
+	if iPlotCount >= Map.GetNumPlots() then
+		return false;
+	end
+	local iWidth, iHeight = Map.GetGridSize();
+	if Map.IsWrapX() and iRange * 2 >= iWidth then
+		return false;
+	end
+	if Map.IsWrapY() and iRange * 2 >= iHeight then
+		return false;
+	end
+	return true;
+end
+
+function SP_ForEachPlotInRange(iX, iY, iRange, fn)
+	-- GetPlotXY reads dx through lua_tointeger, which truncates; a float range
+	-- would repeat and skip columns, so normalise once at the shared entry.
+	iRange = math.floor(iRange);
+
+	if SP_CanUseBoxWalk(iRange) then
+		for iDX = -iRange, iRange, 1 do
+			for iDY = -iRange, iRange, 1 do
+				local pPlot = Map.GetPlotXY(iX, iY, iDX, iDY);
+				if pPlot ~= nil then
+					fn(pPlot);
+				end
+			end
+		end
+	else
+		for iPlotLoop = 0, Map.GetNumPlots() - 1, 1 do
+			local pPlot = Map.GetPlotByIndex(iPlotLoop);
+			if pPlot ~= nil then
+				fn(pPlot);
+			end
+		end
+	end
+end
+
+-------------------------------------------------
 function RangedStrikeHighlight()
 	local pHeadSelectedCity = UI.GetHeadSelectedCity();
 	local pHeadSelectedUnit = UI.GetHeadSelectedUnit();
@@ -46,45 +93,42 @@ function RangedStrikeHighlight()
 	if thingThatCanActuallyFire ~= nil and thisPlot then
 		-- highlight the bombardable plots
 		local NO_DIRECTION = -1;
-		for iDX = -iRange, iRange do
-			for iDY = -iRange, iRange do
-				local pTargetPlot = Map.GetPlotXY(thisX, thisY, iDX, iDY);
-				local bCanRangeStrike = true;
+		SP_ForEachPlotInRange(thisX, thisY, iRange, function(pTargetPlot)
+			local bCanRangeStrike = true;
 
-				if pTargetPlot then
-					if not bIndirectFireAllowed then
-						if not thisPlot:CanSeePlot(pTargetPlot, thisTeam, iRange - 1, NO_DIRECTION) then
-							bCanRangeStrike = false;
-						end
+			if pTargetPlot then
+				if not bIndirectFireAllowed then
+					if not thisPlot:CanSeePlot(pTargetPlot, thisTeam, iRange - 1, NO_DIRECTION) then
+						bCanRangeStrike = false;
 					end
-					
-					if bDomainOnly then
-						if thingThatCanActuallyFire:GetDomainType() == DomainTypes.DOMAIN_LAND and pTargetPlot:IsWater() then
-							bCanRangeStrike = false;
-						elseif thingThatCanActuallyFire:GetDomainType() == DomainTypes.DOMAIN_SEA and not pTargetPlot:IsWater() then
-							bCanRangeStrike = false;
-						end
-					end
+				end
 
-					if bCanRangeStrike then
-						if pTargetPlot:IsVisible(thisTeam, false) then
-							local plotX = pTargetPlot:GetX();
-							local plotY = pTargetPlot:GetY();
-							local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY);
-							if plotDistance <= iRange then
-								local hexID = ToHexFromGrid( Vector2( plotX, plotY) );
-								if thingThatCanActuallyFire:CanRangeStrikeAt(plotX,plotY) then
-									Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
-									Events.SerialEventHexHighlight( hexID, true, redColor, "ValidFireTargetBorder");
-								else
-									Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
-								end
+				if bDomainOnly then
+					if thingThatCanActuallyFire:GetDomainType() == DomainTypes.DOMAIN_LAND and pTargetPlot:IsWater() then
+						bCanRangeStrike = false;
+					elseif thingThatCanActuallyFire:GetDomainType() == DomainTypes.DOMAIN_SEA and not pTargetPlot:IsWater() then
+						bCanRangeStrike = false;
+					end
+				end
+
+				if bCanRangeStrike then
+					if pTargetPlot:IsVisible(thisTeam, false) then
+						local plotX = pTargetPlot:GetX();
+						local plotY = pTargetPlot:GetY();
+						local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY);
+						if plotDistance <= iRange then
+							local hexID = ToHexFromGrid( Vector2( plotX, plotY) );
+							if thingThatCanActuallyFire:CanRangeStrikeAt(plotX,plotY) then
+								Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
+								Events.SerialEventHexHighlight( hexID, true, redColor, "ValidFireTargetBorder");
+							else
+								Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
 							end
 						end
 					end
 				end
 			end
-		end
+		end);
 	end
 end
 
@@ -111,25 +155,22 @@ function AirStrikeHighlight()
 	if thingThatCanActuallyFire ~= nil then
 		-- highlight the bombardable plots
 		local NO_DIRECTION = -1;
-		for iDX = -iRange, iRange, 1 do
-			for iDY = -iRange, iRange, 1 do
-				local pTargetPlot = Map.GetPlotXY(thisX, thisY, iDX, iDY);
-				if pTargetPlot ~= nil then
-					local plotX = pTargetPlot:GetX();
-					local plotY = pTargetPlot:GetY();
-					local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY);
-					if plotDistance <= iRange then
-						local hexID = ToHexFromGrid( Vector2( plotX, plotY) );
-						if thingThatCanActuallyFire:CanRangeStrikeAt(plotX,plotY) then
-							Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
-							Events.SerialEventHexHighlight( hexID, true, redColor, "ValidFireTargetBorder");
-						else
-							Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
-						end
+		SP_ForEachPlotInRange(thisX, thisY, iRange, function(pTargetPlot)
+			if pTargetPlot ~= nil then
+				local plotX = pTargetPlot:GetX();
+				local plotY = pTargetPlot:GetY();
+				local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY);
+				if plotDistance <= iRange then
+					local hexID = ToHexFromGrid( Vector2( plotX, plotY) );
+					if thingThatCanActuallyFire:CanRangeStrikeAt(plotX,plotY) then
+						Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
+						Events.SerialEventHexHighlight( hexID, true, redColor, "ValidFireTargetBorder");
+					else
+						Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
 					end
 				end
 			end
-		end
+		end);
 	end
 end
 
@@ -157,22 +198,19 @@ function NukeStrikeHighlight()
 	if thingThatCanActuallyFire ~= nil then
 		-- highlight the nukable plots
 		local NO_DIRECTION = -1;
-		for iDX = -iRange, iRange, 1 do
-			for iDY = -iRange, iRange, 1 do
-				local pTargetPlot = Map.GetPlotXY(thisX, thisY, iDX, iDY);
-				if pTargetPlot ~= nil then
-					local plotX = pTargetPlot:GetX();
-					local plotY = pTargetPlot:GetY();
-					local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY);
-					if plotDistance <= iRange then
-						local hexID = ToHexFromGrid( Vector2( plotX, plotY) );
-						if thingThatCanActuallyFire:CanNukeAt(plotX,plotY) then
-							Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
-						end
+		SP_ForEachPlotInRange(thisX, thisY, iRange, function(pTargetPlot)
+			if pTargetPlot ~= nil then
+				local plotX = pTargetPlot:GetX();
+				local plotY = pTargetPlot:GetY();
+				local plotDistance = Map.PlotDistance(thisX, thisY, plotX, plotY);
+				if plotDistance <= iRange then
+					local hexID = ToHexFromGrid( Vector2( plotX, plotY) );
+					if thingThatCanActuallyFire:CanNukeAt(plotX,plotY) then
+						Events.SerialEventHexHighlight( hexID, true, highlightColor, "FireRangeBorder" );
 					end
 				end
 			end
-		end
+		end);
 	end
 end
 

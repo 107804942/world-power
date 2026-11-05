@@ -182,7 +182,10 @@ function UpdateData()
 			if pPlayer.GetGoldToOverlord then
 				iGoldPerTurn = iGoldPerTurn - pPlayer:GetGoldToOverlord();
 			end
-			
+			-- Economic Aid expense: computed in C++ (CvPlayer::GetEconomicAidExpensePerTurn)
+			-- so the top bar, the breakdown tooltip and the trade screen all agree.
+			iGoldPerTurn = iGoldPerTurn - pPlayer:GetEconomicAidExpensePerTurn();
+
 			-- Accounting for positive or negative GPT - there's obviously a better way to do this.  If you see this comment and know how, it's up to you ;)
 			-- Text is White when you can buy a Plot
 			--if (iTotalGold >= pPlayer:GetBuyPlotCost(-1,-1)) then
@@ -825,6 +828,24 @@ function ScienceTipHandler( control )
 			strText = strText .. "[NEWLINE][NEWLINE]";
 			strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_TECH_CITY_COST", Game.GetNumCitiesTechCostMod());
 		end
+
+		-- Research threshold breakdown: list every source and its value
+		if pPlayer.GetResearchThresholdMod ~= nil then
+			local iModPerCity, iEffCities, iPuppetDiscount, iBCPercent, iGAPercent, iTotal = pPlayer:GetResearchThresholdMod();
+			strText = strText .. "[NEWLINE][NEWLINE]";
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_SP_TP_TECH_THRESHOLD_TITLE");
+			strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_TECH_THRESHOLD_BASE", iModPerCity, iEffCities, iModPerCity * iEffCities);
+			if iPuppetDiscount > 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_TECH_THRESHOLD_PUPPET", iPuppetDiscount);
+			end
+			if iBCPercent > 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_TECH_THRESHOLD_BUILDING", iBCPercent);
+			end
+			if iGAPercent ~= 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_TECH_THRESHOLD_GOLDENAGE", iGAPercent);
+			end
+			strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_TECH_THRESHOLD_TOTAL", iTotal);
+		end
 	end
 	
 	tipControlTable.TooltipLabel:SetText( strText );
@@ -854,6 +875,16 @@ function GoldTipHandler( control )
 	end
 	
 	local iGoldPerTurnFromReligion = pPlayer:GetGoldPerTurnFromReligion();
+	-- Religion gold may be negative (e.g. GoldPerFollowingCity penalty); move it to expenses
+	local iGoldPerTurnToReligion = 0;
+	if (iGoldPerTurnFromReligion < 0) then
+		iGoldPerTurnToReligion = -iGoldPerTurnFromReligion;
+		iGoldPerTurnFromReligion = 0;
+	end
+
+	-- Economic Aid per-turn expense (Super Power V11): computed in C++ so the top bar
+	-- and this breakdown always report the same number.
+	local iEconomicAidExpense = pPlayer:GetEconomicAidExpensePerTurn();
 
 	local fTradeRouteGold = (pPlayer:GetGoldFromCitiesTimes100() - pPlayer:GetGoldFromCitiesMinusTradeRoutesTimes100()) / 100;
 	local fGoldPerTurnFromCities = pPlayer:GetGoldFromCitiesMinusTradeRoutesTimes100() / 100;
@@ -926,7 +957,7 @@ function GoldTipHandler( control )
 	if pPlayer.GetGoldToOverlord then
 		iGoldToOverlord = pPlayer:GetGoldToOverlord();
 	end
-	local iTotalExpenses = iUnitCost + iUnitSupply + iBuildingMaintenance + iImprovementMaintenance + iGoldPerTurnToOtherPlayers + iGoldToOverlord;
+	local iTotalExpenses = iUnitCost + iUnitSupply + iBuildingMaintenance + iImprovementMaintenance + iGoldPerTurnToOtherPlayers + iGoldToOverlord + iEconomicAidExpense + iGoldPerTurnToReligion;
 	
 	strText = strText .. "[NEWLINE]";
 	strText = strText .. "[COLOR:255:150:150:255]";
@@ -945,6 +976,12 @@ function GoldTipHandler( control )
 	end
 	if (iGoldPerTurnToOtherPlayers > 0) then
 		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_TO_OTHERS", iGoldPerTurnToOtherPlayers);
+	end
+	if (iEconomicAidExpense > 0) then
+		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_ECONOMIC_AID", iEconomicAidExpense);
+	end
+	if (iGoldPerTurnToReligion > 0) then
+		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_TO_RELIGION", iGoldPerTurnToReligion);
 	end
 	if (iGoldToOverlord > 0) then
 		local iOverlord = pPlayer:GetOverlord();
@@ -1013,9 +1050,7 @@ function HappinessTipHandler( control )
 		local iResourcesHappiness = pPlayer:GetHappinessFromResources();
 		local iExtraLuxuryHappiness = pPlayer:GetExtraHappinessPerLuxury();
 
-		local iCityHappinessRaw = pPlayer:GetHappinessFromCities();
-		local SPUnhappinessCityException = SPUnhappinessFromCitiesCount (pPlayer)
-		local iCityHappiness = iCityHappinessRaw + SPUnhappinessCityException
+		local iCityHappiness = pPlayer:GetHappinessFromCities();
 
 		local iBuildingHappiness = pPlayer:GetHappinessFromBuildings();
 		local iTradeRouteHappiness = pPlayer:GetHappinessFromTradeRoutes();
@@ -1161,16 +1196,10 @@ function HappinessTipHandler( control )
 		strText = strText .. "[/COLOR]";
 	
 
---		local iUnhappinessFromCityCount = Locale.ToNumber( pPlayer:GetUnhappinessFromCityCount() / 100, "#.##" );
-		
-		local iUnhappinessFromCityCount = SPUnhappinessFromCitiesCount (pPlayer)
-	
-		
-		
-		
-		
-			-- Unhappiness
-		local iTotalUnhappiness = pPlayer:GetUnhappiness() + iUnhappinessFromCityCount
+		local iUnhappinessFromCityCount = pPlayer:GetUnhappinessFromCorruption() / 100
+
+		-- Unhappiness
+		local iTotalUnhappiness = pPlayer:GetUnhappiness()
 		
 		
 		local iUnhappinessFromUnits = Locale.ToNumber( pPlayer:GetUnhappinessFromUnits() / 100, "#.##" );
@@ -1603,6 +1632,36 @@ function CultureTipHandler( control )
 				strText = strText .. Locale.ConvertTextKey("TXT_KEY_TP_CULTURE_CITY_COST");
 			end
 		end
+
+		-- Policy cost breakdown: list every source and its value
+		if pPlayer.GetPolicyCostModifierBreakdown ~= nil then
+			local iTotal, iPolicies, iBuildings, iMinorCivs, iTraits, iCulturedCS, iCorruption, iUncapped, iCap = pPlayer:GetPolicyCostModifierBreakdown();
+			strText = strText .. "[NEWLINE][NEWLINE]";
+			strText = strText .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_TITLE");
+			strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_BASE", pPlayer:GetNextPolicyCost());
+			if iPolicies ~= 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_POLICIES", iPolicies);
+			end
+			if iBuildings ~= 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_BUILDING", iBuildings);
+			end
+			if iMinorCivs ~= 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_MINORCIV", iMinorCivs);
+			end
+			if iTraits ~= 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_TRAITS", iTraits);
+			end
+			if iCulturedCS ~= 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_CULTURED_CS", iCulturedCS);
+			end
+			if iCorruption ~= 0 then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_CORRUPTION", iCorruption);
+			end
+			if iTotal ~= iUncapped then
+				strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_CAP", iCap);
+			end
+			strText = strText .. "[NEWLINE][ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_SP_TP_POLICY_COST_TOTAL", iTotal);
+		end
 	end
 	
 	tipControlTable.TooltipLabel:SetText( strText );
@@ -1990,48 +2049,6 @@ DoInitTooltips();
 --		local Lv5CitiesUnhappiness = pPlayer:GetPlayerBuildingClassHappiness(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV5.ID)	
 		
 
-function SPUnhappinessFromCitiesCount (pPlayer)
-		local Lv1CitiesCount = pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV1.ID)
-		local Lv2CitiesCount = pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV2.ID)
-		local Lv3CitiesCount = pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV3.ID)
-		local Lv4CitiesCount = pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV4.ID)
-		local Lv5CitiesCount = pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_CITY_HALL_LV5.ID)	
-
-
-		local Lv1CitiesUnhappiness = 2 * Lv1CitiesCount
-		local Lv2CitiesUnhappiness = 4 * Lv2CitiesCount
-		local Lv3CitiesUnhappiness = 6 * Lv3CitiesCount
-		local Lv4CitiesUnhappiness = 8 * Lv4CitiesCount
-		local Lv5CitiesUnhappiness = 10 * Lv5CitiesCount
-		
-		print ("Lv1CitiesCount:"..Lv1CitiesCount)
-		print ("Lv2CitiesCount:"..Lv2CitiesCount)
-		print ("Lv3CitiesCount:"..Lv3CitiesCount)
-		print ("Lv4CitiesCount:"..Lv4CitiesCount)
-		print ("Lv5CitiesCount:"..Lv5CitiesCount)	
-			
-		local SPCitiesUnhappinessTotal = Lv1CitiesUnhappiness + Lv2CitiesUnhappiness + Lv3CitiesUnhappiness + Lv4CitiesUnhappiness + Lv5CitiesUnhappiness
-		
-		local SPCitiesUnhappinessMod = 1
-		
-		if pPlayer:HasPolicy(GameInfo.Policies["POLICY_REPRESENTATION"].ID) then
-			SPCitiesUnhappinessMod = SPCitiesUnhappinessMod - 0.5		
-		end
-		
-		
-		if pPlayer:GetBuildingClassCount(GameInfo.BuildingClasses.BUILDINGCLASS_FORBIDDEN_PALACE.ID) >= 1 then
-			SPCitiesUnhappinessMod = SPCitiesUnhappinessMod - 0.5
-		end
-
-		
-	
-		print ("CitiesUnhappinessTotal:"..SPCitiesUnhappinessTotal)
-		print ("CitiesUnhappinessMod:"..SPCitiesUnhappinessMod)
-		
-		SPCitiesUnhappinessTotal = SPCitiesUnhappinessTotal * SPCitiesUnhappinessMod
-		
-		return SPCitiesUnhappinessTotal
-end		
 
 
 

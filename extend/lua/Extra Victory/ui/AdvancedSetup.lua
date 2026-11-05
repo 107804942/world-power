@@ -1118,7 +1118,8 @@ ScreenOptions = {
 		if ( not PreGame.IsRandomWorldSize() ) then
 			Controls.MinorCivsSlider:SetHide(false);
 			Controls.MinorCivsLabel:SetHide(false);
-			
+			Controls.SelectCityStatesRow:SetHide(false);
+
 			if (PreGame.GetNumMinorCivs() == -1) then
 				PreGame.SetNumMinorCivs(GameInfo.Worlds[ PreGame.GetWorldSize() ].DefaultMinorCivs);
 			end
@@ -1127,7 +1128,8 @@ ScreenOptions = {
 		else
 			Controls.MinorCivsSlider:SetHide(true);
 			Controls.MinorCivsLabel:SetHide(true);
-			
+			Controls.SelectCityStatesRow:SetHide(true);
+
 			if (PreGame.GetNumMinorCivs() == -1) then
 				Controls.MinorCivsSlider:SetValue(0 / maxMinorCivs);
 				Controls.MinorCivsLabel:LocalizeAndSetText("TXT_KEY_AD_SETUP_CITY_STATES", 0);
@@ -1293,8 +1295,20 @@ function PerformFullSync()
 	ForEachScreenOption("FullSync");
 end
 ------------------------------------------------------------------
+function RefreshSelectCityStatesCount()
+	local n = 0;
+	if (PreGame.GetGameOption("GAMEOPTION_SP_CS_ENABLED") or 0) == 1 then
+		for slot = GameDefines.MAX_MAJOR_CIVS, GameDefines.MAX_CIV_PLAYERS - 1 do
+			local v = PreGame.GetGameOption("GAMEOPTION_SP_CS_" .. slot) or -1;
+			if v >= 0 then n = n + 1; end
+		end
+	end
+	Controls.SelectCityStatesCount:LocalizeAndSetText("TXT_KEY_SP_SELECT_CITY_STATES_SELECTED", n);
+end
+
 function PerformPartialSync()
 	ForEachScreenOption("PartialSync");
+	RefreshSelectCityStatesCount();
 end
 ------------------------------------------------------------------
 function PerformValidation()
@@ -1316,6 +1330,11 @@ end
 ------------------------------------------------------------------
 Controls.EditButton:RegisterCallback( Mouse.eLClick, function()
 	UIManager:PushModal(Controls.SetCivNames);
+end);
+
+-- Select City-States popup entry.
+Controls.SelectCityStatesButton:RegisterCallback( Mouse.eLClick, function()
+	UIManager:PushModal(Controls.SelectCityStates);
 end);
 -------------------------------------------------
 function OnCancelEditPlayerDetails()

@@ -703,6 +703,15 @@ function PopulateCultural()
 			
 				item.IconFrameGlow:SetHide(influencePercent ~= 1);
 				local txt = Locale.Lookup(influenceKey, influencePercent * 100, pPlayer:GetCivilizationShortDescriptionKey());
+				-- CSUA (Quebec-style): the target's lifetime culture is inflated when another civilization
+				-- computes its culture-victory progress against it. Only reveal for met civilizations so an
+				-- unmet civ's city-state alliances are not leaked.
+				if (bHasMet) then
+					local iCSInfluenceMod = pPlayer:GetCSUACultureVictoryProgressModifier();
+					if (iCSInfluenceMod > 0) then
+						txt = txt .. Locale.Lookup("TXT_KEY_VP_CULTURE_CS_UA_CULTURE_BONUS", iCSInfluenceMod);
+					end
+				end
 				item.IconFrame:SetToolTipString(txt);
 			
 				curCol = curCol + 1;

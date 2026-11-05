@@ -288,7 +288,13 @@ local function SetupDisplay( diploPlayerID, diploUIstateID, diploMessage, diploD
 			elseif g_activeTeam:IsForcePeace(g_diploTeamID) then
 				Controls.WarButton:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_MAY_NOT_ATTACK" )
 			elseif not g_activeTeam:CanDeclareWar(g_diploTeamID) then
-				Controls.WarButton:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_MAY_NOT_ATTACK_MOD" )
+				-- SP: explain when a Non-Aggression Pact is what blocks the war declaration
+				local iPactTurns = g_activeTeam:GetNonAggressionPactTurnsLeft(g_diploTeamID)
+				if iPactTurns and iPactTurns > 0 then
+					Controls.WarButton:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_NON_AGGRESSION_PACT_BLOCK_WAR_TT", iPactTurns )
+				else
+					Controls.WarButton:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_MAY_NOT_ATTACK_MOD" )
+				end
 			else
 				isDisabled = false
 				Controls.WarButton:LocalizeAndSetToolTip( "TXT_KEY_DIPLO_DECLARES_WAR_TT" )
