@@ -9813,7 +9813,9 @@
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_GEOLOGICAL_ANVIL_HELP">
 			<Text>
-				火山喷发不会对本城地块产生伤害，但加成效果依旧有效。本城范围内每个平原地形+5%[ICON_PRODUCTION]产能。提供五份[ICON_RES_TITANIUM]钛资源。
+				火山喷发不会对本城地块产生伤害，但加成效果依旧有效。
+				[NEWLINE]本城范围内每个丘陵地形+3%[ICON_PRODUCTION]产能。
+				[NEWLINE]提供五份[ICON_RES_TITANIUM]钛资源。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CIV5_BUILDINGS_GEOLOGICAL_ANVIL_TEXT">
@@ -9948,6 +9950,7 @@
 		<Row Tag="TXT_KEY_WONDER_GATE_ALL_HELP">
 			<Text>
 				工业时代之前的精英单位可持有数量上限+1。
+				[NEWLINE]额外+2[ICON_DIPLOMATIC_PRESTIGE]外交威望。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_GATE_ALL_QUOTE">

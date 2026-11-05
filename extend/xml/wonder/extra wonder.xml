@@ -803,6 +803,7 @@
 			<WonderSplashImage>GateAll.dds</WonderSplashImage>
 			<EnhancedYieldTech>TECH_ARCHAEOLOGY</EnhancedYieldTech>
 			<TechEnhancedTourism>4</TechEnhancedTourism>
+			<DiplomaticPrestige>2</DiplomaticPrestige>
 			<!--<ExtraUnitPlayerInstances>1</ExtraUnitPlayerInstances>-->
 			<PolicyBranchType>POLICY_BRANCH_GRANDEUR</PolicyBranchType>
 		</Row>
