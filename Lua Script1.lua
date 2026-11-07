@@ -2,6 +2,109 @@
 -- Author: 11585
 -- DateCreated: 2023/7/26 0:13:52
 --------------------------------------------------------------\
+function UpdateUnitPortrait( unit )
+	if not unit then return end
+	
+	local name;
+	if(unit:IsGreatPerson()) or unit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_MAGICALGIRL then
+		name = unit:GetNameNoDesc();
+		if(name == nil or #name == 0) then
+			name = unit:GetName();
+		end
+	else
+		name = unit:GetName();
+	end
+	
+	name = Locale.ToUpper(name);
+	
+	-- 精英单位/特殊单位名字前缀（保留你原有的逻辑）
+	if unit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"] 
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_MECH"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_SIEGE04H"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_LEVDESTROYER"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03P"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_ANGEL"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_NAVAL_MONSTER"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
+		and unit:GetUnitType() ~= GameInfoTypes["UNIT_PARTICLE_CANNON"] then
+		if unit:GetMaxHitPoints() > 1000 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 900 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 800 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 700 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 600 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 500 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 400 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 300 then
+			name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 200 then
+			name = "[ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		elseif unit:GetMaxHitPoints() > 100 then
+			name = "[ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		end
+	end
+
+	if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
+		name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name.. "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]";
+	end
+	if unit:IsHasPromotion(GameInfoTypes["PROMOTION_CAN_RANGE_ATTACK"]) then
+		name = name .. "[ICON_RANGE_STRENGTH]";
+	end
+	
+	local convertedKey = Locale.ConvertTextKey(name);
+	convertedKey = Locale.ToUpper(convertedKey);
+	Controls.UnitName:SetText(convertedKey);    
+	Controls.UnitName:SetFontByName("TwCenMT24");   
+	
+	local name_length = Controls.UnitName:GetSizeVal();
+	local box_length = Controls.UnitNameButton:GetSizeVal();
+	if (name_length > (box_length - 50)) then
+		Controls.UnitName:SetFontByName("TwCenMT20");   
+	end
+	name_length = Controls.UnitName:GetSizeVal();
+	if(name_length > (box_length - 50)) then
+		Controls.UnitName:SetFontByName("TwCenMT14");
+	end
+	
+	-- Tool tip（XP 显示）
+	local strToolTip = Locale.ConvertTextKey("TXT_KEY_CURRENTLY_SELECTED_UNIT");
+	if unit:IsCombatUnit() or unit:GetDomainType() == DomainTypes.DOMAIN_AIR then
+		local iExperience = unit:GetExperience();
+		local iLevel = unit:GetLevel();
+		local iExperienceNeeded = unit:ExperienceNeeded();
+		local xpString = Locale.ConvertTextKey("TXT_KEY_UNIT_EXPERIENCE_INFO", iLevel, iExperience, iExperienceNeeded);
+		Controls.XPMeter:SetToolTipString( xpString );
+		Controls.XPMeter:SetPercent( iExperience / iExperienceNeeded );
+		Controls.XPFrame:SetHide( false );
+	else
+		Controls.XPFrame:SetHide( true );
+	end
+
+	-- 立绘（先清空，再用 IconLookup 处理像素偏移和纹理名）
+	Controls.UnitPortrait:SetTexture( "" );
+	local portraitOffset, portraitAtlas = UI.GetUnitPortraitIcon(unit);
+	
+	local textureOffset, textureAtlas = IconLookup( portraitOffset, unitPortraitSize, portraitAtlas );
+	if textureOffset == nil then
+		textureOffset = nullOffset;
+		textureAtlas = defaultErrorTextureSheet;
+	end
+	Controls.UnitPortrait:SetTexture( textureAtlas );
+	Controls.UnitPortrait:SetTextureOffset( textureOffset );
+
+	Controls.CycleLeft:SetHide(false);
+	Controls.CycleRight:SetHide(false);
+end
+
+
 
 function Processes_CanMaintain(playerID, cityID, processID)
 	local player = Players[playerID]

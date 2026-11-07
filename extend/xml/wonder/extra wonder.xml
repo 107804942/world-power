@@ -2523,7 +2523,6 @@
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 			<PortraitIndex>47</PortraitIndex>
-			<WorkerSpeedModifier>25</WorkerSpeedModifier>
 			<WonderSplashImage>DataHaven_Splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>R,B</WonderSplashAnchor>
 		</Row>

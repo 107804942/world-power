@@ -1,3 +1,18 @@
+INSERT INTO UnitPromotions_Plagues
+	(PromotionType, PlaguePromotionType, DomainType, ApplyOnAttack, ApplyOnDefense)
+VALUES
+	('PROMOTION_BOARDING_PARTY_1', 'PROMOTION_BOARDED_1', 'DOMAIN_SEA', 1, 1),
+	('PROMOTION_BOARDING_PARTY_3', 'PROMOTION_BOARDED_2', 'DOMAIN_SEA', 1, 1);
+
+INSERT INTO UnitPromotions_BlockedPromotions
+	(PromotionType, BlockedPromotionType)
+VALUES
+	('PROMOTION_BOARDING_PARTY_2', 'PROMOTION_BOARDED_1'),
+	('PROMOTION_BOARDING_PARTY_2', 'PROMOTION_BOARDED_2');
+
+
+
+
 INSERT INTO UnitPromotions_UnitType (PromotionType, UnitType)
 SELECT 'PROMOTION_KARRUPP', Type FROM Units
 WHERE CombatClass = 'UNITCOMBAT_SIEGE';

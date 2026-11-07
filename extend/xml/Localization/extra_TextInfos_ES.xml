@@ -4253,26 +4253,7 @@
 			<Text>+15%[ICON_STRENGTH]攻击力，+15%[ICON_STRENGTH]防御力(在[COLOR_POSITIVE_TEXT]复杂[ENDCOLOR]地形中) (丘陵/森林/丛林)。[NEWLINE]在丘陵地带移动力翻倍。</Text>
 		</Replace>
 
-		<Replace Tag="TXT_KEY_PROMOTION_AIR_ATTACK_HELP">
-			<Text>
-				攻击机，专用于打击战场或城内的敌军地面及海军单位。
-				[NEWLINE][ICON_BULLET]每回合可进行[COLOR_POSITIVE_TEXT]两次[ENDCOLOR]攻击。
-				[NEWLINE][ICON_BULLET]无法攻击[COLOR_NEGATIVE_TEXT]隐形单位[ENDCOLOR]。
-				[NEWLINE][ICON_BULLET]不能转场到航空母舰上。
-				[NEWLINE]
-				[NEWLINE][ICON_BULLET]被[COLOR_NEGATIVE_TEXT]战斗机[ENDCOLOR]和[COLOR_NEGATIVE_TEXT]防空[ENDCOLOR]单位克制。
-			</Text>
-		</Replace>
-		<Replace Tag="TXT_KEY_PROMOTION_CARRIER_FIGHTER_HELP">
-			<Text>
-				航空母舰携带的多用途战斗机
-				[NEWLINE][ICON_BULLET]只能部署在航空母舰上。
-				[NEWLINE][ICON_BULLET]能够与航空母舰共享经验和晋升。
-				[NEWLINE][ICON_BULLET]每回合能够攻击两次。
-				[NEWLINE][ICON_BULLET]每回合拥有两次[COLOR_POSITIVE_TEXT]拦截[ENDCOLOR]或[COLOR_POSITIVE_TEXT]游猎[ENDCOLOR]的机会。
-				[NEWLINE][ICON_BULLET]能够在游猎后继续拦截。
-			</Text>
-		</Replace>
+
 
 		<Replace Tag="TXT_KEY_PROMOTION_CITADEL_DEFENSE_HELP">
 			<Text>
@@ -9916,6 +9897,25 @@
 				古罗马最大的公共浴场是戴克里先浴场 (Baths of Diocletian)。于公元298年-306年由皇帝戴克里先下令兴建，可容纳3,000人同时入浴。占地约13公顷（约32英亩）。中央主体长280米、宽160米。其内部设施极尽奢华，设有冷水、温水、热水浴室、图书馆、健身房、花园、音乐厅和展览中心等。
 				[NEWLINE]随着历史变迁，其使用的供水水道在公元537年被哥特人切断后逐渐废弃。16世纪起部分遗址被改建为天使与殉教者圣母大殿等建筑，如今也是罗马国家博物馆的一部分。
 			</Text>
+		</Row>
+
+		<Row Tag="TXT_KEY_PROMOTION_BOAT_1">
+			<Text>船体一级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BOAT_1_HELP">
+			<Text>+15%生命值上限。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BOAT_2">
+			<Text>船体二级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BOAT_2_HELP">
+			<Text>+15%生命值上限。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BOAT_3">
+			<Text>船体三级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_BOAT_3_HELP">
+			<Text>+20%生命值上限。</Text>
 		</Row>
 	</Language_en_US>
 

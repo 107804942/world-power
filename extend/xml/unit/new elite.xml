@@ -1475,7 +1475,10 @@
 			<UnitType>UNIT_GOLEM</UnitType>
 			<PromotionType>PROMOTION_CANNOT_BE_CORPS</PromotionType>
 		</Row>
-
+		<Row>
+			<UnitType>UNIT_GOLEM</UnitType>
+			<PromotionType>PROMOTION_HEAVY_ROBORT</PromotionType>
+		</Row>
 		<Row>
 			<UnitType>UNIT_GOLEM</UnitType>
 			<PromotionType>PROMOTION_GOLEM</PromotionType>

@@ -673,7 +673,7 @@ function UpdateUnitPortrait( unit )
 	if not unit then return end
 	
 	local name;
-	if(unit:IsGreatPerson()) then
+	if(unit:IsGreatPerson()) or unit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_MAGICALGIRL then
 		name = unit:GetNameNoDesc();
 		if(name == nil or #name == 0) then
 			name = unit:GetName();
@@ -684,49 +684,30 @@ function UpdateUnitPortrait( unit )
 	
 	name = Locale.ToUpper(name);
 	
-	-- 精英单位/特殊单位名字前缀（保留你原有的逻辑）
-	if unit:GetUnitType() ~= GameInfoTypes["UNIT_SPACESHIP"] 
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_MECH"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_GOLEM"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_GHOST"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_SIEGE04H"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_LEVDESTROYER"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03P"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_ANGEL"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_NAVALCARRIER03S"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_NAVAL_MONSTER"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_ALIEN_SIEGE_WORM"]
-		and unit:GetUnitType() ~= GameInfoTypes["UNIT_PARTICLE_CANNON"] then
-		if unit:GetMaxHitPoints() > 1000 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 900 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 800 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 700 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 600 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 500 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 400 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 300 then
-			name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 200 then
-			name = "[ICON_PROMOTION_GROUP_EXTRA]" .. name;
-		elseif unit:GetMaxHitPoints() > 100 then
-			name = "[ICON_PROMOTION_ELITE_EXTRA]" .. name;
-		end
-	end
 
-	if unit:GetUnitType() == GameInfoTypes["UNIT_SPACESHIP"] then
-		name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name.. "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]";
-	end
-	if unit:IsHasPromotion(GameInfoTypes["PROMOTION_CAN_RANGE_ATTACK"]) then
-		name = name .. "[ICON_RANGE_STRENGTH]";
-	end
+		--if unit:GetMaxHitPoints() > 1000 then
+			--name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 900 then
+			---name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 800 then
+			--name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 700 then
+			--name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		---elseif unit:GetMaxHitPoints() > 600 then
+			--name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 500 then
+			---name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 400 then
+			--name = "[ICON_PROMOTION_GROUP_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 300 then
+			--name = "[ICON_PROMOTION_ELITE_EXTRA][ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 200 then
+			--name = "[ICON_PROMOTION_GROUP_EXTRA]" .. name;
+		--elseif unit:GetMaxHitPoints() > 100 then
+			--name = "[ICON_PROMOTION_ELITE_EXTRA]" .. name;
+		--end
 	
+
 	local convertedKey = Locale.ConvertTextKey(name);
 	convertedKey = Locale.ToUpper(convertedKey);
 	Controls.UnitName:SetText(convertedKey);    
