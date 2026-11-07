@@ -1455,9 +1455,9 @@
 				<MinAreaSize>-1</MinAreaSize>
 				<ConquestProb>66</ConquestProb>
 				<Happiness>-4</Happiness>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
 				<HurryCostModifier>40</HurryCostModifier>
-				<PortraitIndex>123</PortraitIndex>
+				<PortraitIndex>199</PortraitIndex>
 			</Row>
 
 

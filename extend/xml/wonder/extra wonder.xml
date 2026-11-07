@@ -2892,7 +2892,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTATE_HIGHWAY_SYSTEM_DESC</Civilopedia>
 			<Help>TXT_KEY_BUILDING_INTERSTATE_HIGHWAY_SYSTEM_HELP</Help>
 			<NukeImmune>true</NukeImmune>
-			<Cost>5000</Cost>
+			<Cost>7000</Cost>
 			<HurryCostModifier>-1</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
@@ -2903,8 +2903,8 @@
 			<BuildingClass>BUILDINGCLASS_INTERSTATE_HIGHWAY_SYSTEM</BuildingClass>
 			<PrereqTech>TECH_PHOTON_COMPUTER</PrereqTech>
 			<!--<GreatPeopleRateChange>15</GreatPeopleRateChange>-->
-			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>108</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
+			<PortraitIndex>86</PortraitIndex>
 		</Row>
 
 	</Buildings>

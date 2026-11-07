@@ -557,6 +557,8 @@
     <Folder Include="extend\art\nature\everest" />
     <Folder Include="extend\art\nature\salar" />
     <Folder Include="extend\art\units\F54" />
+    <Folder Include="extend\art\units\052d" />
+    <Folder Include="extend\art\units\StormCarrier" />
     <Folder Include="extend\art\WonderSplash" />
     <Folder Include="extend\art\Notification" />
     <Folder Include="extend\art\RESOURCES\models\more\Lavender" />
@@ -585,7 +587,6 @@
     <Folder Include="extend\art\PROMOTION" />
     <Folder Include="extend\art\units\055destroyer" />
     <Folder Include="extend\art\units\Admiral" />
-    <Folder Include="extend\art\units\052d" />
     <Folder Include="extend\art\units\AEGIS" />
     <Folder Include="extend\art\units\ANGEL" />
     <Folder Include="extend\art\units\Arty_Laser" />
@@ -15165,6 +15166,22 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="extend\art\units\Spore Launcher\worm_strike_anim.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\StormCarrier\StormCarrier.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\StormCarrier\StormCarrier.fxsxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\StormCarrier\StormCarrier.gr2">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="extend\art\units\StormCarrier\StormCarrier2.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

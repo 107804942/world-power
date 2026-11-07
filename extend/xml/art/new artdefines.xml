@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2021/2/26 22:23:06 -->
 <GameData>
-	
+
+
+
+
+
+
 	<!--F-54-->
 
 	<ArtDefine_UnitInfos>
@@ -5465,79 +5470,6 @@
 
 
 
-
-
-
-
-	<!--052d-->
-
-	<ArtDefine_UnitInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_052</Type>
-			<DamageStates>3</DamageStates>
-		</Row>
-	</ArtDefine_UnitInfos>
-	<ArtDefine_UnitInfoMemberInfos>
-		<Row>
-			<UnitInfoType>ART_DEF_UNIT_052</UnitInfoType>
-			<UnitMemberInfoType>ART_DEF_UNIT_MEMBER_052</UnitMemberInfoType>
-			<NumMembers>1</NumMembers>
-		</Row>
-	</ArtDefine_UnitInfoMemberInfos>
-	<ArtDefine_UnitMemberInfos>
-		<Row>
-			<Type>ART_DEF_UNIT_MEMBER_052</Type>
-			<Scale>0.105</Scale>
-			<Domain>Sea</Domain>
-			<Model>052d.fxsxml</Model>
-			<MaterialTypeTag>METAL</MaterialTypeTag>
-			<MaterialTypeSoundOverrideTag>METALLRG</MaterialTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberInfos>
-	<ArtDefine_UnitMemberCombats>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_052</UnitMemberType>
-			<EnableActions>Idle Attack RunCharge AttackCity Bombard Death BombardDefend Run Fortify CombatReady AttackSurfaceToAir</EnableActions>
-			<HasShortRangedAttack>1</HasShortRangedAttack>
-			<HasLeftRightAttack>1</HasLeftRightAttack>
-			<HasRefaceAfterCombat>0</HasRefaceAfterCombat>
-			<HasIndependentWeaponFacing>1</HasIndependentWeaponFacing>
-		</Row>
-	</ArtDefine_UnitMemberCombats>
-	<ArtDefine_UnitMemberCombatWeapons>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_052</UnitMemberType>
-			<Index>0</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>EXPLOSIVE</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>EXPLOSION200POUND</WeaponTypeSoundOverrideTag>
-		</Row>
-		<Row>
-			<UnitMemberType>ART_DEF_UNIT_MEMBER_052</UnitMemberType>
-			<Index>1</Index>
-			<SubIndex>0</SubIndex>
-			<VisKillStrengthMin>25.0</VisKillStrengthMin>
-			<VisKillStrengthMax>50.0</VisKillStrengthMax>
-			<HitEffect>ART_DEF_VEFFECT_ARTILLERY_IMPACT_$(TERRAIN)</HitEffect>
-			<WeaponTypeTag>BULLETHC</WeaponTypeTag>
-			<WeaponTypeSoundOverrideTag>BULLETHC</WeaponTypeSoundOverrideTag>
-		</Row>
-	</ArtDefine_UnitMemberCombatWeapons>
-
-
-
-
-
-
-
-
-
-	
-
-
 	<!--SUPER Helicopter-->
 
 	<ArtDefine_UnitInfos>
@@ -6149,8 +6081,13 @@
 			<Where Type="ART_DEF_UNIT_MEMBER_CRUSADER_ARTILLERY"/>
 		</Update>
 
-	
 
+
+		<!--现代驱逐舰-->
+		<Update>
+			<Set Model="052d.fxsxml" />
+			<Where Type="ART_DEF_UNIT_MEMBER_MODERNDESTROYER"/>
+		</Update>
 
 
 	</ArtDefine_UnitMemberInfos>
