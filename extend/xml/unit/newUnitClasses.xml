@@ -10,8 +10,6 @@
 	<Civilization_UnitClassOverrides>
 	
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
-		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
-
 
 
 		<!--************ 禁止城邦野蛮人建造**********************************	-->

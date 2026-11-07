@@ -1041,7 +1041,7 @@
 			<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
 			<TechEnhancedTourism>6</TechEnhancedTourism>
 			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-			<PortraitIndex>158</PortraitIndex>
+			<PortraitIndex>237</PortraitIndex>
 			<Water>1</Water>
 			<FreePromotion>PROMOTION_BEILUN_TOWER</FreePromotion>
 			<WonderSplashImage>BEILUN_TOWER.dds</WonderSplashImage>
@@ -1587,8 +1587,8 @@
 			<ExtraMissionarySpreads>2</ExtraMissionarySpreads>
 			<WonderSplashImage>LESHAN_BUDDHA.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,T</WonderSplashAnchor>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>10</PortraitIndex>
+			<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
+			<PortraitIndex>236</PortraitIndex>
 		</Row>
 
 

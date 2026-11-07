@@ -230,25 +230,12 @@
 	</Units>
 
 
-
-
-	<Unit_ClassUpgrades>
-
-		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
-
-
-
-	</Unit_ClassUpgrades>
-
-
+	
 	<Unit_FreePromotions>
 
-		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
 		
 		
-
-
 
 		<Row>
 			<UnitType>UNIT_MARINE02</UnitType>
@@ -330,9 +317,7 @@
 
 	<Unit_AITypes>
 
-		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
-
 
 
 		<Row>
@@ -401,20 +386,15 @@
 	<!--************************Resource Required**********************-->
 	<Unit_ResourceQuantityRequirements>
 
-		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
 		
 		
-		
-	
-
 		<Row>
 			<UnitType>UNIT_MODERN_ARMOR</UnitType>
 			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
 		</Row>
 		
-		
-	
+			
 		
 		<Row>
 			<UnitType>UNIT_BATTLESUIT</UnitType>
@@ -565,9 +545,7 @@
 
 
 	<Unit_Flavors>
-		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
-
 
 
 		<Row>
@@ -669,6 +647,7 @@
 
 
 	<Units>
+		<Delete Type="UNIT_AMERICAN_APACHE"/>
 
 		<Update>
 			<Set  IconAtlas="ROBOT_ICON_ATLAS5" PortraitIndex="101"/>
@@ -716,108 +695,12 @@
 		</Update>
 
 
-
-		<Delete Type="UNIT_AMERICAN_APACHE"/>
-
-		<Delete Type="UNIT_POLISH_PZLW3_HELICOPTER"/>
-
-
-		<!--游猎锤子调整-->
-
 		<Update>
-			<Set Cost="60" />
-			<Where Type="UNIT_CHARIOT_ARCHER" />
-		</Update>
-		<Update>
-			<Set Cost="53" />
-			<Where Type="UNIT_EGYPTIAN_WARCHARIOT" />
-		</Update>
-		<Update>
-			<Set Cost="42" />
-			<Where Type="UNIT_HUN_HORSE_ARCHER" />
-		</Update>
-		<Update>
-			<Set Cost="38" />
-			<Where Type="UNIT_BARBARIAN_AXMAN" />
-		</Update>
-		<Update>
-			<Set Cost="87" PrereqTech="TECH_MANIPULAR_SYSTEM" />
-			<Where Type="UNIT_MEDIEVAL_CHARIOT" />
-		</Update>
-		<Update>
-			<Set Cost="87" PrereqTech="TECH_MANIPULAR_SYSTEM"/>
-			<Where Type="UNIT_MONGOLIAN_KESHIK" />
-		</Update>
-		<Update>
-			<Set Cost="77"  PrereqTech="TECH_MANIPULAR_SYSTEM"/>
-			<Where Type="UNIT_ARABIAN_CAMELARCHER" />
-		</Update>
-
-		<Update>
-			<Set Cost="130" />
-			<Where Type="UNIT_BOMBARD" />
-		</Update>
-
-		<Update>
-			<Set Cost="115" />
-			<Where Type="UNIT_AZTEC_EAGLE" />
-		</Update>
-		<Update>
-			<Set Cost="130" />
-			<Where Type="UNIT_INDIAN_WARELEPHANT" />
-		</Update>
-
-		<Update>
-			<Set Cost="185" />
-			<Where Type="UNIT_CAVALRY" />
-		</Update>
-
-		<Update>
-			<Set Cost="185" />
-			<Where Type="UNIT_AUSTRIAN_HUSSAR" />
-		</Update>
-
-
-		<Update>
-			<Set Cost="161" />
-			<Where Type="UNIT_SHOSHONE_COMANCHE_RIDERS" />
-		</Update>
-
-
-
-		<Update>
-			<Set Cost="311" />
-			<Where Type="UNIT_CRUISER_TANK" />
-		</Update>
-
-		<Update>
-			<Set Cost="311" />
-			<Where Type="UNIT_ENGLISH_CROMWELL_TANK" />
-		</Update>
-
-
-		<Update>
-			<Set Cost="504" />
-			<Where Type="UNIT_HELICOPTER_GUNSHIP" />
-		</Update>
-
-		<!--<Update>
-			<Set Cost="504" />
-			<Where Type="UNIT_POLISH_PZLW3_HELICOPTER" />
-		</Update>-->
-
-
-
-		<Update>
-			<Set Cost="721" UnitArtInfo="ART_DEF_UNIT_AMERICAN_APACHE"/>
+			<Set UnitArtInfo="ART_DEF_UNIT_AMERICAN_APACHE"/>
 			<Where Type="UNIT_ATTACK_HELICOPTER" />
 		</Update>
 
 
-		<Update>
-			<Set Cost="721" />
-			<Where Type="UNIT_GERMAN_EUROCOPTER_TIGER" />
-		</Update>
 	</Units>
 
 

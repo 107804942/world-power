@@ -1099,12 +1099,8 @@
 		</Row>
 
 		
-
-	
 		<Delete UnitType="UNIT_AMERICAN_APACHE"/>
-		<Delete UnitType="UNIT_POLISH_PZLW3_HELICOPTER"/>
-		
-		
+	
 	</UnitGameplay2DScripts>
 
 </GameData>

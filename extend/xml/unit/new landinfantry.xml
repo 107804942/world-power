@@ -3,16 +3,6 @@
 <GameData>
 	<Units>
 
-
-	
-		
-
-		<Update>
-			<Set UnitArtInfo="ART_DEF_UNIT_EXOTIC_UNIT_CONDOTTIERI"/>
-			<Where Type="UNIT_LONGSWORDSMAN" />
-		</Update>
-
-
 		<Update>
 			<Set   IconAtlas="ROBOT_ICON_ATLAS3" PortraitIndex="149"/>
 			<Where Type="UNIT_INFANTRY" />

@@ -8254,21 +8254,6 @@
 
 
 
-		<Row Tag="TXT_KEY_BUILDING_POLAND_BARBICAN">
-			<Text>
-				[ICON_WAR]巴比肯
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILDING_POLAND_BARBICAN_HELP">
-			<Text>
-				+2[ICON_CULTURE]文化，+15%[ICON_CULTURE]文化。提供4份[ICON_RES_MANPOWER]人力资源。[NEWLINE][NEWLINE]该建筑不会过期。[NEWLINE][NEWLINE]研发互联网科技后+2[ICON_TOURISM]魅力产出。
-			</Text>
-		</Row>
-		<Row Tag="TXT_KEY_CIV5_BUILDINGS_POLAND_BARBICAN_TEXT">
-			<Text>
-				巴比肯，位于华沙老城区内，是历史悠久的军事防御堡垒，暗红色的外墙，城堡上面用来射击的垛口，整体堡垒呈半圆形，这座堡垒在二战中被德军摧毁，如今看到的是二战后重建的。
-			</Text>
-		</Row>
 
 
 

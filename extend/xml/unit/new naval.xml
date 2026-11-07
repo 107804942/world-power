@@ -7,46 +7,27 @@
 	<Units>
 
 
-		<Delete Type="UNIT_CHINESE_052D"/>
+		
+		<!--基洛夫-->
+		<Update>
+			<Where Type="UNIT_KIROV_BATTLECRUISER"/>
+			<Set RangedCombat="450"
+				 UnitArtInfo="ART_DEF_UNIT_KIROV_BATTLECRUISER"/>
+		</Update>
 
-		<Row>
-			<Class>UNITCLASS_MODERN_DESTROYER</Class>
-			<Type>UNIT_CHINESE_052D</Type>
-			<PrereqTech>TECH_ROBOTICS</PrereqTech>
-			<BaseSightRange>4</BaseSightRange>
-			<Combat>350</Combat>
-			<RangedCombat>350</RangedCombat>
-			<Cost>1250</Cost>
-			<Moves>11</Moves>
-			<Range>1</Range>
-			<AirInterceptRange>1</AirInterceptRange>
-			<HurryCostModifier>50</HurryCostModifier>
-			<CombatClass>UNITCOMBAT_NAVALMELEE</CombatClass>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CHINESE_055</Description>
-			<Civilopedia>TXT_KEY_UNIT_CHINESE_055_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SP_UNITS_NAVALMELEE_SHIPS_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROMOTION_DESTROYER_COMBAT_HELP</Help>
-			<MilitarySupport>true</MilitarySupport>
-			<MilitaryProduction>true</MilitaryProduction>
-			<Pillage>true</Pillage>
-			<IgnoreBuildingDefense>true</IgnoreBuildingDefense>
-			<Mechanized>true</Mechanized>
-			<AdvancedStartCost>80</AdvancedStartCost>
-			<MinAreaSize>16</MinAreaSize>
-			<XPValueAttack>3</XPValueAttack>
-			<XPValueDefense>3</XPValueDefense>
-			<UnitArtInfo>ART_DEF_UNIT_055DESTROYER</UnitArtInfo>
-			<UnitFlagIconOffset>120</UnitFlagIconOffset>
-			<UnitFlagAtlas>SPUnitFlags_FLAG</UnitFlagAtlas>
-			<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-			<PortraitIndex>240</PortraitIndex>
-			<MoveRate>BOAT</MoveRate>
-			<ExtraMaintenanceCost>22</ExtraMaintenanceCost>
-			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<DomainCargo>DOMAIN_AIR</DomainCargo>
-		</Row>
+		
+		<!--052D-->
+		<Update>
+			<Where Type="UNIT_CHINESE_052D"/>
+			<Set
+                Combat="350"
+                RangedCombat="350"
+                Description="TXT_KEY_UNIT_CHINESE_055"
+                Civilopedia="TXT_KEY_UNIT_CHINESE_055_PEDIA"
+                UnitArtInfo="ART_DEF_UNIT_055DESTROYER"
+                IconAtlas="ROBOT_ICON_ATLAS5"
+                PortraitIndex="240"/>
+		</Update>
 
 		
 
@@ -490,10 +471,6 @@
 		</Row>
 
 
-
-
-
-
 	</Unit_FreePromotions>
 
 
@@ -899,10 +876,6 @@
 		</Update>
 	
 
-		<Update>
-			<Set  UnitArtInfo="ART_DEF_UNIT_KIROV_BATTLECRUISER" />
-			<Where Type="UNIT_KIROV_BATTLECRUISER" />
-		</Update>
 
 		<Update>
 			<Set  IconAtlas="ROBOT_ICON_ATLAS3"  PortraitIndex="232"/>

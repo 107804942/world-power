@@ -428,32 +428,7 @@
 			</Row>
 			
 			
-			<!--波兰城堡-->
-			<Row>
-				<Type>BUILDING_POLAND_BARBICAN</Type>
-				<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
-				<Cost>80</Cost>
-				<PrereqTech>TECH_ENGINEERING</PrereqTech>
-				<Help>TXT_KEY_BUILDING_POLAND_BARBICAN_HELP</Help>
-				<Description>TXT_KEY_BUILDING_POLAND_BARBICAN</Description>
-				<Civilopedia>TXT_KEY_CIV5_BUILDINGS_POLAND_BARBICAN_TEXT</Civilopedia>
-				<Strategy>TXT_KEY_SP_CITY_MILITARY_BUILDINGS_STRATEGY</Strategy>
-				<ArtDefineTag>CASTLE</ArtDefineTag>
-				<MinAreaSize>-1</MinAreaSize>
-				<AllowsRangeStrike>true</AllowsRangeStrike>
-				<Defense>5000</Defense>
-				<ExtraCityHitPoints>50</ExtraCityHitPoints>
-				<HurryCostModifier>25</HurryCostModifier>
-				<IconAtlas>ROBOT_ICON_ATLAS3</IconAtlas>
-				<ArtInfoCulturalVariation>true</ArtInfoCulturalVariation>
-				<DisplayPosition>1</DisplayPosition>
-				<NeverCapture>true</NeverCapture>
-				<PortraitIndex>235</PortraitIndex>
-				<!--<TrainedFreePromotion>PROMOTION_UNIT_POLAND_BARBICAN</TrainedFreePromotion>--> 
-				<EnhancedYieldTech>TECH_MASS_MEDIA</EnhancedYieldTech>
-				<TechEnhancedTourism>2</TechEnhancedTourism>
-			</Row>
-
+		
 	
 
 			<!--私人药店-->
@@ -1619,7 +1594,7 @@
 				<NeverCapture>true</NeverCapture>
 				<MinAreaSize>-1</MinAreaSize>
 				<IconAtlas>ROBOT_ICON_ATLAS5</IconAtlas>
-				<PortraitIndex>145</PortraitIndex>
+				<PortraitIndex>201</PortraitIndex>
 			</Row>
 
 

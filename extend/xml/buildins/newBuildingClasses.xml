@@ -89,14 +89,7 @@
 			<Description>TXT_KEY_BUILDING_PUBLISHER</Description>
 		</Row>
 
-		<!-- 波兰城堡-->
-		<Row>
-			<Type>BUILDINGCLASS_POLAND_BARBICAN</Type>
-			<DefaultBuilding>BUILDING_POLAND_BARBICAN</DefaultBuilding>
-			<Description>TXT_KEY_BUILDING_POLAND_BARBICAN</Description>
-		</Row>
-		
-		
+
 		<!-- 私人药店-->
 		<Row>
 			<Type>BUILDINGCLASS_PRIVATE_PHARMACY</Type>
@@ -490,16 +483,7 @@
 
 	<Civilization_BuildingClassOverrides>
 
-		<Row>
-			<CivilizationType>CIVILIZATION_POLAND</CivilizationType>
-			<BuildingClassType>BUILDINGCLASS_CASTLE</BuildingClassType>
-			<BuildingType>BUILDING_POLAND_BARBICAN</BuildingType>
-		</Row>
-
-
-
-
-
+		
 		<Row>
 			<CivilizationType>CIVILIZATION_AMERICA</CivilizationType>
 			<BuildingClassType>BUILDINGCLASS_STABLE</BuildingClassType>
