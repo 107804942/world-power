@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- CQB_COMBAT_2：已存在，用 UPDATE -->
 
+
+<Update>
+	<Set IconAtlas="promoVP_atlas_00" PortraitIndex="24" PediaType="PEDIA_ATTRIBUTES"/>
+	<Where Type="PROMOTION_POWERFUL_CANNON" />
+</Update>
+
+
+
 <!--*****************************Cargo Promotions*******************************************-->
 <UnitPromotions>
 

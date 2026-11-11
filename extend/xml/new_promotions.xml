@@ -471,11 +471,6 @@
 		</Update>
 
 
-		<Update>
-			<Set IconAtlas="CIV_COLOR_ATLAS_FW_PROMOTIONS" PortraitIndex="36"/>
-			<Where Type="PROMOTION_SP_ATTACK_25"/>
-		</Update>
-
 
 		<Update>
 			<Set IconAtlas="MainRobotPromo_Atlas" PortraitIndex="23"/>
@@ -487,10 +482,7 @@
 			<Where Type="PROMOTION_FRANCE_MISTRAL" />
 		</Update>
 
-		<Update>
-			<Set IconAtlas="promoVP_atlas_00" PortraitIndex="24" PediaType="PEDIA_ATTRIBUTES"/>
-			<Where Type="PROMOTION_POWERFUL_CANNON" />
-		</Update>
+	
 
 		<Update>
 			<Set IconAtlas="promoVP_atlas_02" PortraitIndex="26" OrderPriority="11" />
@@ -601,29 +593,14 @@
 			<Help>TXT_KEY_PROMOTION_FIGHTER_ATTACK_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>9</PortraitIndex>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<PortraitIndex>19</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_FIGHTER_ATTACK</PediaEntry>
 		</Row>
 
 
-		<!-- ==================== PROMOTION_HOVERING_UNIT ==================== -->
-		<Update>
-			<Where Type="PROMOTION_HOVERING_UNIT"/>
-			<Set>
-				<Description>TXT_KEY_PROMOTION_HOVERING_UNIT</Description>
-				<Help>TXT_KEY_PROMOTION_HOVERING_UNIT_HELP</Help>
-				<Sound>AS2D_IF_LEVELUP</Sound>
-				<CanMoveImpassable>true</CanMoveImpassable>
-				<OrderPriority>11</OrderPriority>
-				<HoveringUnit>true</HoveringUnit>
-				<PortraitIndex>28</PortraitIndex>
-				<IconAtlas>promoVP_atlas_01</IconAtlas>
-				<PediaType>PEDIA_SHARED</PediaType>
-				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_HOVERING_UNIT</PediaEntry>
-			</Set>
-		</Update>
+
 
 		<!-- ==================== PROMOTION_CHAIN_REACTION ==================== -->
 		<Update>
@@ -659,8 +636,8 @@
 				<Help>TXT_KEY_PROMOTION_AIR_RECON_HELP</Help>
 				<Sound>AS2D_IF_LEVELUP</Sound>
 				<Recon>true</Recon>
-				<PortraitIndex>56</PortraitIndex>
-				<IconAtlas>promoVP_atlas_02</IconAtlas>
+				<PortraitIndex>7</PortraitIndex>
+				<IconAtlas>promoVP_atlas_05</IconAtlas>
 				<PediaType>PEDIA_ATTRIBUTES</PediaType>
 				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_AIR_RECON</PediaEntry>
 			</Set>
@@ -1213,9 +1190,9 @@
 			<Help>TXT_KEY_PROMOTION_GUN_1_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
-			<PortraitIndex>59</PortraitIndex>
+			<PortraitIndex>18</PortraitIndex>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaEntry>TXT_KEY_PROMOTION_GUN_1</PediaEntry>
 			<RangedSupportFire>true</RangedSupportFire>
 			<LostWithUpgrade>true</LostWithUpgrade>
@@ -1229,10 +1206,10 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>11</OrderPriority>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PortraitIndex>58</PortraitIndex>
+			<PortraitIndex>31</PortraitIndex>
 			<PromotionPrereqOr1>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
-			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaEntry>TXT_KEY_PROMOTION_GUN_2</PediaEntry>
 			<RangedSupportFireMod>100</RangedSupportFireMod>
 		</Row>
@@ -1249,7 +1226,6 @@
 			<PortraitIndex>47</PortraitIndex>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
 			<PediaEntry>TXT_KEY_PROMOTION_DESERT_EXTRA</PediaEntry>
 		</Row>
 
@@ -1265,7 +1241,6 @@
 			<PortraitIndex>46</PortraitIndex>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
 			<PediaEntry>TXT_KEY_PROMOTION_SNOW_EXTRA</PediaEntry>
 		</Row>
 
@@ -1278,10 +1253,9 @@
 			<PromotionPrereqOr1>PROMOTION_INFANTRY_COMBAT</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_ROBORT_COMBAT</PromotionPrereqOr2>
 			<PromotionPrereqOr3>PROMOTION_GUNPOWDER_INFANTRY_COMBAT</PromotionPrereqOr3>
-			<PortraitIndex>51</PortraitIndex>
+			<PortraitIndex>52</PortraitIndex>
 			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
-			<ShowInPedia>0</ShowInPedia>
 			<PediaEntry>TXT_KEY_PROMOTION_JUNJLE_EXTRA</PediaEntry>
 		</Row>
 
@@ -1781,18 +1755,49 @@
 			<Description>TXT_KEY_PROMOTION_SIEGE6</Description>
 			<Help>TXT_KEY_PROMOTION_SIEGE6_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<CityAttack>100</CityAttack>
+			<CityAttack>33</CityAttack>
 			<PromotionPrereqOr1>PROMOTION_TANK_COMBAT</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_KNIGHT_COMBAT</PromotionPrereqOr2>
 			<PromotionPrereqOr3>PROMOTION_HEAVY_ROBORT</PromotionPrereqOr3>
 			<OrderPriority>5</OrderPriority>
-			<PortraitIndex>26</PortraitIndex>
-			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<PortraitIndex>40</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SIEGE6</PediaEntry>
 			<LostAllMovesAttackCity>-1</LostAllMovesAttackCity>
 		</Row>
 
+		<Row>
+			<Type>PROMOTION_SIEGE7</Type>
+			<Description>TXT_KEY_PROMOTION_SIEGE7</Description>
+			<Help>TXT_KEY_PROMOTION_SIEGE7_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CityAttack>33</CityAttack>
+			<MeleeAttackCityReduceDamage>10</MeleeAttackCityReduceDamage>
+			<PromotionPrereqOr1>PROMOTION_SIEGE6</PromotionPrereqOr1>
+			<OrderPriority>5</OrderPriority>
+			<PortraitIndex>41</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SIEGE7</PediaEntry>
+		</Row>
+
+		<Row>
+			<Type>PROMOTION_SIEGE8</Type>
+			<Description>TXT_KEY_PROMOTION_SIEGE8</Description>
+			<Help>TXT_KEY_PROMOTION_SIEGE8_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CityAttack>34</CityAttack>
+			<MeleeAttackCityReduceDamage>10</MeleeAttackCityReduceDamage>
+			<PromotionPrereqOr1>PROMOTION_SIEGE7</PromotionPrereqOr1>
+			<OrderPriority>5</OrderPriority>
+			<PortraitIndex>42</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
+			<PediaType>PEDIA_ATTRIBUTES</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_SIEGE8</PediaEntry>
+		</Row>
+		
+		
 
 		<Row>
 			<Type>PROMOTION_ZHONGCHENGWS</Type>
@@ -1885,13 +1890,27 @@
 			<PromotionType>PROMOTION_SIEGE6</PromotionType>
 			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
 		</Row>
-
-
 		<Row>
 			<PromotionType>PROMOTION_SIEGE6</PromotionType>
 			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
 		</Row>
 
+		<Row>
+			<PromotionType>PROMOTION_SIEGE7</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SIEGE7</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SIEGE8</PromotionType>
+			<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SIEGE8</PromotionType>
+			<UnitCombatType>UNITCOMBAT_ARMOR</UnitCombatType>
+		</Row>
 	</UnitPromotions_UnitCombats>
 
 
@@ -1913,9 +1932,18 @@
 		<Row>
 			<PromotionType>PROMOTION_SIEGE6</PromotionType>
 			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
-			<Attack>100</Attack>
+			<Attack>33</Attack>
 		</Row>
-
+		<Row>
+			<PromotionType>PROMOTION_SIEGE7</PromotionType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
+			<Attack>33</Attack>
+		</Row>
+		<Row>
+			<PromotionType>PROMOTION_SIEGE8</PromotionType>
+			<OtherPromotionType>PROMOTION_CITADEL_DEFENSE</OtherPromotionType>
+			<Attack>34</Attack>
+		</Row>
 	</UnitPromotions_PromotionModifiers>
 
 
@@ -2035,9 +2063,9 @@
 			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR1</Description>
 			<Help>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR1_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>5</PortraitIndex>
+			<PortraitIndex>8</PortraitIndex>
 			<PromotionPrereqOr1>PROMOTION_NAVAL_RANGED_CRUISER</PromotionPrereqOr1>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<OrderPriority>4</OrderPriority>
 			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR1</PediaEntry>
@@ -2047,9 +2075,9 @@
 			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2</Description>
 			<Help>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>6</PortraitIndex>
+			<PortraitIndex>9</PortraitIndex>
 			<PromotionPrereqOr1>PROMOTION_NAVAL_INTERCEPTOR_1</PromotionPrereqOr1>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<OrderPriority>4</OrderPriority>
 			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR2</PediaEntry>
@@ -2059,9 +2087,9 @@
 			<Description>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3</Description>
 			<Help>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>7</PortraitIndex>
+			<PortraitIndex>10</PortraitIndex>
 			<PromotionPrereqOr1>PROMOTION_NAVAL_INTERCEPTOR_2</PromotionPrereqOr1>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<OrderPriority>4</OrderPriority>
 			<PediaEntry>TXT_KEY_PROMOTION_NAVAL_INTERCEPTOR3</PediaEntry>
@@ -2196,8 +2224,8 @@
 			<Help>TXT_KEY_PROMOTION_BOAT_1_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<MaxHitPointsModifier>15</MaxHitPointsModifier>
-			<PortraitIndex>27</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<PortraitIndex>11</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_BOAT_1</PediaEntry>
 			<PromotionPrereqOr1>PROMOTION_NAVALMELEE_COMBAT</PromotionPrereqOr1>
@@ -2213,8 +2241,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_BOAT_1</PromotionPrereqOr1>
 			<MaxHitPointsModifier>15</MaxHitPointsModifier>
-			<PortraitIndex>28</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_BOAT_2</PediaEntry>
 		</Row>
@@ -2225,8 +2253,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_BOAT_2</PromotionPrereqOr1>
 			<MaxHitPointsModifier>20</MaxHitPointsModifier>
-			<PortraitIndex>29</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<PortraitIndex>13</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_NAVAL</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_BOAT_3</PediaEntry>
 		</Row>
@@ -2456,8 +2484,8 @@
 			<Help>TXT_KEY_PROMOTION_AERIAL_REFUELING_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>3</OrderPriority>
-			<PortraitIndex>10</PortraitIndex>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AERIAL_REFUELING</PediaEntry>
 			<SplashDamagePercent>100</SplashDamagePercent>
@@ -2516,9 +2544,9 @@
 			<Help>TXT_KEY_PROMOTION_ANTIAIRX_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>56</PortraitIndex>
+			<PortraitIndex>16</PortraitIndex>
 			<InterceptChanceChange>100</InterceptChanceChange>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<NumInterceptionChange>1</NumInterceptionChange>
 			<AirInterceptRangeChange>2</AirInterceptRangeChange>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
@@ -2587,8 +2615,8 @@
 			<Description>TXT_KEY_PROMOTION_SUI_FLEET2</Description>
 			<Help>TXT_KEY_PROMOTION_SUI_FLEET2_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>9</PortraitIndex>
-			<IconAtlas>promoVP_atlas_00</IconAtlas>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
 			<MaxHitPointsModifier>100</MaxHitPointsModifier>
@@ -2622,20 +2650,7 @@
 			<MutuallyExclusiveGroup>3</MutuallyExclusiveGroup>
 		</Row>
 
-		<!-- ==================== IGNORE_TERRAIN_COST：已存在，用 UPDATE 覆盖 ==================== -->
-		<Update>
-			<Set>
-				<Description>TXT_KEY_PROMOTION_IGNORE_TERRAIN_COST</Description>
-				<Help>TXT_KEY_PROMOTION_IGNORE_TERRAIN_COST</Help>
-				<Sound>AS2D_IF_LEVELUP</Sound>
-				<IgnoreTerrainCost>true</IgnoreTerrainCost>
-				<PortraitIndex>4</PortraitIndex>
-				<IconAtlas>VALERY_ATLAS</IconAtlas>
-				<PediaType>PEDIA_SHARED</PediaType>
-				<PediaEntry>TXT_KEY_PEDIA_PROMOTION_IGNORE_TERRAIN_COST</PediaEntry>
-			</Set>
-			<Where Type="PROMOTION_IGNORE_TERRAIN_COST"/>
-		</Update>
+		
 
 		<!-- ==================== 新增：MOVE_ALL_TERRAIN ==================== -->
 		<Row>
@@ -2893,8 +2908,8 @@
 			<Description>TXT_KEY_PROMOTION_FOCUS</Description>
 			<Help>TXT_KEY_PROMOTION_FOCUS_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>12</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaEntry>TXT_KEY_PROMOTION_FOCUS</PediaEntry>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -2908,6 +2923,7 @@
 			<CollateralDamagePlotUnitLimit>10</CollateralDamagePlotUnitLimit>
 		</Row>
 
+		
 		<!-- ==================== 新增：WITHDRAW_MELEE ==================== -->
 		<Row>
 			<Type>PROMOTION_WITHDRAW_MELEE</Type>
@@ -2915,8 +2931,8 @@
 			<Help>TXT_KEY_PROMOTION_WITHDRAW_MELEE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<ExtraWithdrawal>60</ExtraWithdrawal>
-			<PortraitIndex>23</PortraitIndex>
-			<IconAtlas>robotPromo_Atlas</IconAtlas>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_WITHDRAW_MELEE</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -2929,8 +2945,8 @@
 			<Help>TXT_KEY_PROMOTION_ARMORER</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>58</PortraitIndex>
-			<IconAtlas>promoVP_atlas_02</IconAtlas>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_ARMORER_X</PediaEntry>
 		</Row>
@@ -2991,8 +3007,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<InterceptChanceChange>100</InterceptChanceChange>
 			<NumInterceptionChange>8</NumInterceptionChange>
-			<PortraitIndex>16</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<PortraitIndex>30</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_INTERCEPTION_EXTREME</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
@@ -3037,6 +3053,8 @@
 		<Delete Type="PROMOTION_VOLLEY_2"/>
 		<Delete Type="PROMOTION_FORMATION_1"/>
 		<Delete Type="PROMOTION_FORMATION_2"/>
+		<Delete Type="PROMOTION_AMBUSH_1"/>
+		<Delete Type="PROMOTION_AMBUSH_2"/>
 		<Delete Type="PROMOTION_CQB_COMBAT_1"/>
 		<Delete Type="PROMOTION_CQB_COMBAT_2"/>
 		<!-- ==================== MOBILITY：已存在，用 UPDATE ==================== -->
@@ -3155,6 +3173,33 @@
 			<PediaEntry>TXT_KEY_PROMOTION_FORMATION_3</PediaEntry>
 		</Row>
 
+
+		<Row>
+			<Type>PROMOTION_AMBUSH_1</Type>
+			<Description>TXT_KEY_PROMOTION_AMBUSH_1</Description>
+			<Help>TXT_KEY_PROMOTION_AMBUSH_1_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_ANTI_TANK</PromotionPrereqOr1>
+			<!--<PromotionPrereqOr2>PROMOTION_HELI_ATTACK</PromotionPrereqOr2>-->
+			<OrderPriority>6</OrderPriority>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_MELEE</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_AMBUSH_1</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_AMBUSH_2</Type>
+			<Description>TXT_KEY_PROMOTION_AMBUSH_2</Description>
+			<Help>TXT_KEY_PROMOTION_AMBUSH_2_HELP</Help>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereqOr1>PROMOTION_AMBUSH_1</PromotionPrereqOr1>
+			<OrderPriority>6</OrderPriority>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_MELEE</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_AMBUSH_2</PediaEntry>
+		</Row>
+
 		<!-- 新增：AMBUSH_3 -->
 		<Row>
 			<Type>PROMOTION_AMBUSH_3</Type>
@@ -3178,8 +3223,8 @@
 			<PromotionPrereqOr1>PROMOTION_ANTI_MOUNTED</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_ANTI_TANK</PromotionPrereqOr2>
 			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>56</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PortraitIndex>24</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_1</PediaEntry>
 		</Row>
@@ -3191,8 +3236,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_CQB_COMBAT_1</PromotionPrereqOr1>
 			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>57</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PortraitIndex>25</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_2</PediaEntry>
 		</Row>
@@ -3207,8 +3252,8 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_CQB_COMBAT_2</PromotionPrereqOr1>
 			<OrderPriority>1</OrderPriority>
-			<PortraitIndex>58</PortraitIndex>
-			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
+			<PortraitIndex>26</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
 			<DefenseInflictDamageChange>5</DefenseInflictDamageChange>
 			<PediaEntry>TXT_KEY_PROMOTION_CQB_COMBAT_3</PediaEntry>
@@ -3503,10 +3548,16 @@
 	</UnitPromotions_UnitCombats>
 
 
-	<!--*****************************Debuff Promotions*******************************************-->
+	<!--*****************************Buff Promotions*******************************************-->
 	<UnitPromotions>
-	
 
+
+		<Update>
+			<Where Type="PROMOTION_HOVERING_UNIT"/>
+			<Set IconAtlas="promoVP_atlas_01" PortraitIndex="13"/>
+		</Update>
+		
+		
 		<!--*************环球航行**************-->
 		<Row>
 			<Type>PROMOTION_CIRCUMNAVIGATED</Type>
@@ -3673,9 +3724,9 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<IgnoreZOC>true</IgnoreZOC>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>19</PortraitIndex>
+			<PortraitIndex>10</PortraitIndex>
 			<PediaType>PEDIA_MELEE</PediaType>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<IsCanParadropUnLimit>1</IsCanParadropUnLimit>
 			<CanParadropAnyWhere>1</CanParadropAnyWhere>
 			<FightWellDamaged>1</FightWellDamaged>
@@ -4035,8 +4086,8 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<NumSpyAttackMod>3</NumSpyAttackMod>
 			<NumSpyDefenseMod>3</NumSpyDefenseMod>
-			<PortraitIndex>0</PortraitIndex>
-			<IconAtlas>SPY_PROMOTION_ATLAS</IconAtlas>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>MainRobotPromo_Atlas</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_KGB</PediaEntry>
 		</Row>
@@ -4164,8 +4215,8 @@
 			<Help>TXT_KEY_PROMOTION_PARATROOPER_BUFF_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CannotBeChosen>true</CannotBeChosen>
-			<PortraitIndex>31</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+			<IconAtlas>promoVP_atlas_05</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<AttackMod>300</AttackMod>
 			<DefenseMod>300</DefenseMod>

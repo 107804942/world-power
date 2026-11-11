@@ -4153,12 +4153,23 @@
 			<Text>对同一格的另外一个敌方单位造成100%的伤害。</Text>
 		</Replace>
 
-
 		<Row Tag="TXT_KEY_PROMOTION_SIEGE6">
-			<Text>攻坚</Text>
+			<Text>攻坚一级</Text>
 		</Row>
 		<Row Tag="TXT_KEY_PROMOTION_SIEGE6_HELP" >
-			<Text>攻击城市与堡垒时+100%[ICON_STRENGTH]战斗力。攻击城市后若还有剩余移动力则可以自由行动。</Text>
+			<Text>攻击城市与堡垒时+33%[ICON_STRENGTH]战斗力。攻击城市后若还有剩余移动力则可以自由行动。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SIEGE7">
+			<Text>攻坚二级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SIEGE7_HELP" >
+			<Text>攻击城市与堡垒时+33%[ICON_STRENGTH]战斗力。主动攻击城市时受到的反伤减少10%。</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SIEGE8">
+			<Text>攻坚三级</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_SIEGE8_HELP" >
+			<Text>攻击城市与堡垒时+34%[ICON_STRENGTH]战斗力。主动攻击城市时受到的反伤减少10%。</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_PROMOTION_HEAVY_SHOCK_4">

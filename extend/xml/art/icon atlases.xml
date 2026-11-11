@@ -719,41 +719,7 @@
 
 	
 
-		<Row>
-			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
-			<IconSize>256</IconSize>
-			<Filename>FWPromotionIconAtlas256.dds</Filename>
-			<IconsPerRow>8</IconsPerRow>
-			<IconsPerColumn>8</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
-			<IconSize>64</IconSize>
-			<Filename>FWPromotionIconAtlas64.dds</Filename>
-			<IconsPerRow>8</IconsPerRow>
-			<IconsPerColumn>8</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
-			<IconSize>45</IconSize>
-			<Filename>FWPromotionIconAtlas45.dds</Filename>
-			<IconsPerRow>8</IconsPerRow>
-			<IconsPerColumn>8</IconsPerColumn>
-		</Row>
-		<Row>
-			<Atlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</Atlas>
-			<IconSize>32</IconSize>
-			<Filename>FWPromotionIconAtlas32.dds</Filename>
-			<IconsPerRow>8</IconsPerRow>
-			<IconsPerColumn>8</IconsPerColumn>
-		</Row>
-
-
-	
-
-
-	
-
+		
 
 		<Row>
 			<Atlas>SMAN_EXOTIC_UNIT_FLAG_ATLAS</Atlas>

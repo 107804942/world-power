@@ -24,8 +24,8 @@
 			<Description>TXT_KEY_PROMOTION_EXPLOSIVE_MIXTURE</Description>
 			<Help>TXT_KEY_PROMOTION_EXPLOSIVE_MIXTURE_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>14</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PediaEntry>TXT_KEY_PROMOTION_EXPLOSIVE_MIXTURE</PediaEntry>
@@ -68,8 +68,8 @@
 			<Description>TXT_KEY_PROMOTION_VALLEY</Description>
 			<Help>TXT_KEY_PROMOTION_VALLEY_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PortraitIndex>31</PortraitIndex>
-			<IconAtlas>CIV_COLOR_ATLAS_FW_PROMOTIONS</IconAtlas>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>ABILITY_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<CannotBeChosen>true</CannotBeChosen>
 			<PediaEntry>TXT_KEY_PROMOTION_VALLEY</PediaEntry>

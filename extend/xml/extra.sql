@@ -315,29 +315,12 @@ INSERT INTO IconTextureAtlases	(Atlas, IconSize, Filename, IconsPerRow, IconsPer
 	('MainRobotPromo_Atlas', 045, 'MianRobotPromotionAtlas45.dds', '8', '8'),
 	('MainRobotPromo_Atlas', 032, 'MianRobotPromotionAtlas32.dds', '8', '8'),
 
-	('robotPromo_Atlas', 256, 'ROBOTPromo_256.dds', '8', '8'),
-	('robotPromo_Atlas', 064, 'ROBOTPromo_064.dds', '8', '8'),
-	('robotPromo_Atlas', 045, 'ROBOTPromo_045.dds', '8', '8'),
-	('robotPromo_Atlas', 032, 'ROBOTPromo_032.dds', '8', '8'),
-	('robotPromo_Atlas', 016, 'ROBOTPromo_016.dds', '8', '8'),
 
 	('VALERY_ATLAS', 256, 'PromoIconAtlasx256.dds', '8', '8'),
 	('VALERY_ATLAS', 064, 'PromoIconAtlasx64.dds', '8', '8'),
 	('VALERY_ATLAS', 045, 'PromoIconAtlasx45.dds', '8', '8'),
 	('VALERY_ATLAS', 032, 'PromoIconAtlasx32.dds', '8', '8'),
 	
-
-    ('SPY_PROMOTION_ATLAS',	256,'SpyPromotion256.dds','2','1'),
-	('SPY_PROMOTION_ATLAS',	64, 'SpyPromotion64.dds','2','1'),
-	('SPY_PROMOTION_ATLAS',	45, 'SpyPromotion45.dds','2','1'),
-	('SPY_PROMOTION_ATLAS',	32, 'SpyPromotion32.dds','2','1'),
-
-
-	('promoVP_atlas_00', 256, 'promoVP_00_256.dds', '8', '8'),
-	('promoVP_atlas_00', 064, 'promoVP_00_064.dds', '8', '8'),
-	('promoVP_atlas_00', 045, 'promoVP_00_045.dds', '8', '8'),
-	('promoVP_atlas_00', 032, 'promoVP_00_032.dds', '8', '8'),
-	('promoVP_atlas_00', 016, 'promoVP_00_016.dds', '8', '8'),
 		
 	('promoVP_atlas_01', 256, 'promoVP_01_256.dds', '8', '8'),
 	('promoVP_atlas_01', 064, 'promoVP_01_064.dds', '8', '8'),
@@ -357,11 +340,16 @@ INSERT INTO IconTextureAtlases	(Atlas, IconSize, Filename, IconsPerRow, IconsPer
 	('promoVP_atlas_03', 032, 'promoVP_03_032.dds', '8', '8'),
 	('promoVP_atlas_03', 016, 'promoVP_03_016.dds', '8', '8'),
 	
-	('promoMUC_atlas_00', 	256, 	'0_muc_PI_256.dds', '8', '8'),
-	('promoMUC_atlas_00', 	064, 	'0_muc_PI_064.dds', '8', '8'),
-	('promoMUC_atlas_00', 	045, 	'0_muc_PI_045.dds', '8', '8'),
-	('promoMUC_atlas_00', 	032, 	'0_muc_PI_032.dds', '8', '8'),
-	('promoMUC_atlas_00', 	016, 	'0_muc_PI_016.dds', '8', '8'),
+	('promoVP_atlas_04', 256, 'promoVP_04_256.dds', '8', '8'),
+	('promoVP_atlas_04', 064, 'promoVP_04_064.dds', '8', '8'),
+	('promoVP_atlas_04', 045, 'promoVP_04_045.dds', '8', '8'),
+	('promoVP_atlas_04', 032, 'promoVP_04_032.dds', '8', '8'),
+	('promoVP_atlas_04', 016, 'promoVP_04_016.dds', '8', '8'),
+
+	('promoVP_atlas_05', 256, 'promoVP_05_256.dds', '8', '8'),
+	('promoVP_atlas_05', 064, 'promoVP_05_64.dds', '8', '8'),
+	('promoVP_atlas_05', 045, 'promoVP_05_45.dds', '8', '8'),
+	('promoVP_atlas_05', 032, 'promoVP_05_32.dds', '8', '8'),
 				
 	('promoMUC_atlas_01', 	256, 	'1_muc_PI_256.dds', '8','4'),
 	('promoMUC_atlas_01', 	064, 	'1_muc_PI_064.dds', '8', '4'),
